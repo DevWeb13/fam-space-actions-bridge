@@ -4,10 +4,12 @@ on:
   workflow_dispatch:
     inputs:
       automation_branch:
-        description: "Branche Fam Space automation/... à traiter"
-        required: true
+        description: "Branche Fam Space automation/... à traiter (facultatif)"
+        required: false
         type: string
-        default: "automation/review-20260814-2030-voyager-a-l-etranger-avec-un-enfant-les-documents-a-preparer"
+  schedule:
+    - cron: "10 * * * *"
+    - cron: "40 * * * *"
 
 permissions:
   contents: read
@@ -25,15 +27,111 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: DevWeb13/fam-space-qwik
-          ref: ${{ inputs.automation_branch }}
+          ref: master
           token: ${{ secrets.FAM_SPACE_TOKEN }}
           fetch-depth: 0
 
-      - name: Identifier et valider l'automatisation
-        id: automation
+      - name: Récupérer les branches d'automatisation
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
+
+      - name: Nettoyer le stock antérieur au bridge
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          cutoff="1786789020"
+
+          while IFS= read -r ref; do
+            [ -n "$ref" ] || continue
+            branch="${ref#origin/}"
+            commit_time="$(git show -s --format=%ct "$ref")"
+
+            if [ "$commit_time" -lt "$cutoff" ]; then
+              echo "Suppression de l'ancienne branche: $branch"
+              git push origin --delete "$branch" || true
+            fi
+          done < <(
+            git for-each-ref --format='%(refname:short)' refs/remotes/origin/automation/ \
+              | grep -E '^origin/automation/(publication|review)-' \
+              | sort
+          )
+
+          git fetch origin '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
+
+      - name: Choisir l'automatisation à traiter
+        id: select
         shell: bash
         env:
-          AUTOMATION_BRANCH: ${{ inputs.automation_branch }}
+          MANUAL_BRANCH: ${{ github.event.inputs.automation_branch }}
+          SCHEDULE: ${{ github.event.schedule }}
+        run: |
+          set -euo pipefail
+
+          branch=""
+
+          if [ -n "${MANUAL_BRANCH:-}" ]; then
+            branch="$MANUAL_BRANCH"
+
+            if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
+              echo "Branche introuvable: $branch" >&2
+              exit 1
+            fi
+          else
+            case "${SCHEDULE:-}" in
+              "10 * * * *") prefix="automation/publication-" ;;
+              "40 * * * *") prefix="automation/review-" ;;
+              *)
+                echo "Aucune branche manuelle et aucun créneau automatique reconnu."
+                echo "found=false" >> "$GITHUB_OUTPUT"
+                exit 0
+                ;;
+            esac
+
+            branch="$(
+              git for-each-ref --format='%(refname:short)' refs/remotes/origin/automation/ \
+                | sed 's#^origin/##' \
+                | grep -E "^${prefix}" \
+                | sort \
+                | tail -n 1
+            )"
+
+            if [ -z "$branch" ]; then
+              echo "Aucune branche récente à traiter."
+              echo "found=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+
+            automation_commit="$(git rev-parse "origin/$branch")"
+            commit_time="$(git show -s --format=%ct "$automation_commit")"
+            now="$(date +%s)"
+            age="$((now - commit_time))"
+
+            if [ "$age" -gt 10800 ]; then
+              echo "La branche la plus récente est trop ancienne (${age}s): $branch"
+              echo "found=false" >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+          fi
+
+          echo "Branche sélectionnée: $branch"
+          echo "found=true" >> "$GITHUB_OUTPUT"
+          echo "branch=$branch" >> "$GITHUB_OUTPUT"
+          echo "AUTOMATION_BRANCH=$branch" >> "$GITHUB_ENV"
+
+      - name: Charger la branche sélectionnée
+        if: steps.select.outputs.found == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git checkout -B bridge-automation "origin/$AUTOMATION_BRANCH"
+
+      - name: Identifier et valider l'automatisation
+        if: steps.select.outputs.found == 'true'
+        id: automation
+        shell: bash
         run: |
           set -euo pipefail
 
@@ -82,14 +180,17 @@ jobs:
           echo "AUTOMATION_FILE=$automation_file" >> "$GITHUB_ENV"
 
       - uses: actions/setup-node@v4
+        if: steps.select.outputs.found == 'true'
         with:
           node-version: 24
           cache: npm
 
-      - run: npm ci
+      - name: Installer les dépendances
+        if: steps.select.outputs.found == 'true'
+        run: npm ci
 
       - name: Publier l'article
-        if: steps.automation.outputs.mode == 'publication'
+        if: steps.select.outputs.found == 'true' && steps.automation.outputs.mode == 'publication'
         shell: bash
         run: |
           bash .github/scripts/publish-automated-article.sh \
@@ -97,7 +198,7 @@ jobs:
             "$AUTOMATION_FILE"
 
       - name: Publier la vérification
-        if: steps.automation.outputs.mode == 'review'
+        if: steps.select.outputs.found == 'true' && steps.automation.outputs.mode == 'review'
         shell: bash
         run: |
           bash .github/scripts/publish-reviewed-article.sh \
@@ -105,10 +206,8 @@ jobs:
             "$AUTOMATION_FILE"
 
       - name: Supprimer la branche temporaire
-        if: success()
+        if: success() && steps.select.outputs.found == 'true'
         shell: bash
-        env:
-          AUTOMATION_BRANCH: ${{ inputs.automation_branch }}
         run: |
           for attempt in 1 2 3; do
             if git push origin --delete "$AUTOMATION_BRANCH"; then
