@@ -1,0 +1,123 @@
+name: Fam Space bridge
+
+on:
+  workflow_dispatch:
+    inputs:
+      automation_branch:
+        description: "Branche Fam Space automation/... à traiter"
+        required: true
+        type: string
+        default: "automation/review-20260814-2030-voyager-a-l-etranger-avec-un-enfant-les-documents-a-preparer"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fam-space-master-write
+  cancel-in-progress: false
+
+jobs:
+  validate-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer Fam Space
+        uses: actions/checkout@v4
+        with:
+          repository: DevWeb13/fam-space-qwik
+          ref: ${{ inputs.automation_branch }}
+          token: ${{ secrets.FAM_SPACE_TOKEN }}
+          fetch-depth: 0
+
+      - name: Identifier et valider l'automatisation
+        id: automation
+        shell: bash
+        env:
+          AUTOMATION_BRANCH: ${{ inputs.automation_branch }}
+        run: |
+          set -euo pipefail
+
+          git fetch origin master
+
+          mapfile -t automation_commits < <(git rev-list --reverse origin/master..HEAD)
+          if [ "${#automation_commits[@]}" -ne 1 ]; then
+            echo "La branche doit contenir exactement un commit d'automatisation."
+            exit 1
+          fi
+
+          mapfile -t changes < <(git diff --name-status origin/master...HEAD)
+          if [ "${#changes[@]}" -ne 1 ]; then
+            echo "La branche doit contenir exactement un changement."
+            printf '%s\n' "${changes[@]}"
+            exit 1
+          fi
+
+          automation_commit="${automation_commits[0]}"
+          read -r status automation_file <<< "${changes[0]}"
+
+          case "$AUTOMATION_BRANCH" in
+            automation/publication-*)
+              if [ "$status" != "A" ] || [ "$automation_file" != "content-candidates/article.md" ]; then
+                echo "Candidat de publication invalide."
+                exit 1
+              fi
+              echo "mode=publication" >> "$GITHUB_OUTPUT"
+              ;;
+
+            automation/review-*)
+              if [ "$status" != "M" ] || [[ ! "$automation_file" =~ ^src/routes/articles/.+/index\.md$ ]]; then
+                echo "Vérification d'article invalide."
+                exit 1
+              fi
+              echo "mode=review" >> "$GITHUB_OUTPUT"
+              ;;
+
+            *)
+              echo "Branche d'automatisation invalide: $AUTOMATION_BRANCH"
+              exit 1
+              ;;
+          esac
+
+          echo "AUTOMATION_COMMIT=$automation_commit" >> "$GITHUB_ENV"
+          echo "AUTOMATION_FILE=$automation_file" >> "$GITHUB_ENV"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Publier l'article
+        if: steps.automation.outputs.mode == 'publication'
+        shell: bash
+        run: |
+          bash .github/scripts/publish-automated-article.sh \
+            "$AUTOMATION_COMMIT" \
+            "$AUTOMATION_FILE"
+
+      - name: Publier la vérification
+        if: steps.automation.outputs.mode == 'review'
+        shell: bash
+        run: |
+          bash .github/scripts/publish-reviewed-article.sh \
+            "$AUTOMATION_COMMIT" \
+            "$AUTOMATION_FILE"
+
+      - name: Supprimer la branche temporaire
+        if: success()
+        shell: bash
+        env:
+          AUTOMATION_BRANCH: ${{ inputs.automation_branch }}
+        run: |
+          for attempt in 1 2 3; do
+            if git push origin --delete "$AUTOMATION_BRANCH"; then
+              exit 0
+            fi
+
+            echo "Tentative $attempt de suppression de la branche temporaire échouée."
+            sleep 2
+          done
+
+          echo "::warning::Publication réussie, mais la branche temporaire n'a pas pu être supprimée."
+          exit 0
