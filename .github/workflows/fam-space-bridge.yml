@@ -9,6 +9,7 @@ on:
         type: string
   schedule:
     - cron: "10 * * * *"
+    - cron: "25 * * * *"
     - cron: "40 * * * *"
 
 permissions:
@@ -55,7 +56,7 @@ jobs:
             fi
           done < <(
             git for-each-ref --format='%(refname:short)' refs/remotes/origin/automation/ \
-              | grep -E '^origin/automation/(publication|review)-' \
+              | grep -E '^origin/automation/(publication|review|destination)-' \
               | sort
           )
 
@@ -82,6 +83,7 @@ jobs:
           else
             case "${SCHEDULE:-}" in
               "10 * * * *") prefix="automation/publication-" ;;
+              "25 * * * *") prefix="automation/destination-" ;;
               "40 * * * *") prefix="automation/review-" ;;
               *)
                 echo "Aucune branche manuelle et aucun créneau automatique reconnu."
@@ -170,6 +172,21 @@ jobs:
               echo "mode=review" >> "$GITHUB_OUTPUT"
               ;;
 
+            automation/destination-*)
+              if [ "$status" != "A" ] || [ "$automation_file" != "content-candidates/destination.md" ]; then
+                echo "Candidat Destination invalide."
+                exit 1
+              fi
+
+              actual_message="$(git show -s --format=%s "$automation_commit")"
+              if [ "$actual_message" != "content: destination candidate" ]; then
+                echo "Message de commit Destination invalide: $actual_message"
+                exit 1
+              fi
+
+              echo "mode=destination" >> "$GITHUB_OUTPUT"
+              ;;
+
             *)
               echo "Branche d'automatisation invalide: $AUTOMATION_BRANCH"
               exit 1
@@ -202,6 +219,14 @@ jobs:
         shell: bash
         run: |
           bash .github/scripts/publish-reviewed-article.sh \
+            "$AUTOMATION_COMMIT" \
+            "$AUTOMATION_FILE"
+
+      - name: Publier la Destination
+        if: steps.select.outputs.found == 'true' && steps.automation.outputs.mode == 'destination'
+        shell: bash
+        run: |
+          bash .github/scripts/publish-destination-candidate.sh \
             "$AUTOMATION_COMMIT" \
             "$AUTOMATION_FILE"
 
