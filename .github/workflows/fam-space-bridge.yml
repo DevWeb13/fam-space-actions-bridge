@@ -97,7 +97,8 @@ jobs:
                 | sed 's#^origin/##' \
                 | grep -E "^${prefix}" \
                 | sort \
-                | tail -n 1
+                | tail -n 1 \
+                || true
             )"
 
             if [ -z "$branch" ]; then
