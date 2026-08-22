@@ -72,6 +72,17 @@ jobs:
           set -euo pipefail
 
           branch=""
+          fallback_prefix=""
+
+          pick_latest_branch() {
+            local prefix="$1"
+            git for-each-ref --format='%(refname:short)' refs/remotes/origin/automation/ \
+              | sed 's#^origin/##' \
+              | grep -E "^${prefix}" \
+              | sort \
+              | tail -n 1 \
+              || true
+          }
 
           if [ -n "${MANUAL_BRANCH:-}" ]; then
             branch="$MANUAL_BRANCH"
@@ -83,7 +94,10 @@ jobs:
           else
             case "${SCHEDULE:-}" in
               "10 * * * *") prefix="automation/publication-" ;;
-              "25 * * * *") prefix="automation/destination-" ;;
+              "25 * * * *")
+                prefix="automation/destination-"
+                fallback_prefix="automation/review-"
+                ;;
               "40 * * * *") prefix="automation/review-" ;;
               *)
                 echo "Aucune branche manuelle et aucun créneau automatique reconnu."
@@ -92,28 +106,40 @@ jobs:
                 ;;
             esac
 
-            branch="$(
-              git for-each-ref --format='%(refname:short)' refs/remotes/origin/automation/ \
-                | sed 's#^origin/##' \
-                | grep -E "^${prefix}" \
-                | sort \
-                | tail -n 1 \
-                || true
-            )"
+            branch="$(pick_latest_branch "$prefix")"
+
+            if [ -n "$branch" ]; then
+              automation_commit="$(git rev-parse "origin/$branch")"
+              commit_time="$(git show -s --format=%ct "$automation_commit")"
+              now="$(date +%s)"
+              age="$((now - commit_time))"
+
+              if [ "$age" -gt 10800 ]; then
+                echo "La branche la plus récente est trop ancienne (${age}s): $branch"
+                branch=""
+              fi
+            fi
+
+            if [ -z "$branch" ] && [ -n "$fallback_prefix" ]; then
+              branch="$(pick_latest_branch "$fallback_prefix")"
+
+              if [ -n "$branch" ]; then
+                automation_commit="$(git rev-parse "origin/$branch")"
+                commit_time="$(git show -s --format=%ct "$automation_commit")"
+                now="$(date +%s)"
+                age="$((now - commit_time))"
+
+                if [ "$age" -gt 10800 ]; then
+                  echo "La branche de secours est trop ancienne (${age}s): $branch"
+                  branch=""
+                else
+                  echo "Aucune Destination exploitable: utilisation du créneau pour une review."
+                fi
+              fi
+            fi
 
             if [ -z "$branch" ]; then
               echo "Aucune branche récente à traiter."
-              echo "found=false" >> "$GITHUB_OUTPUT"
-              exit 0
-            fi
-
-            automation_commit="$(git rev-parse "origin/$branch")"
-            commit_time="$(git show -s --format=%ct "$automation_commit")"
-            now="$(date +%s)"
-            age="$((now - commit_time))"
-
-            if [ "$age" -gt 10800 ]; then
-              echo "La branche la plus récente est trop ancienne (${age}s): $branch"
               echo "found=false" >> "$GITHUB_OUTPUT"
               exit 0
             fi
