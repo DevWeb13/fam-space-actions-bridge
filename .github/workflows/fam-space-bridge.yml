@@ -38,13 +38,14 @@ jobs:
           set -euo pipefail
           git fetch origin '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
 
-      - name: Nettoyer le stock historique et les reviews obsolètes
+      - name: Nettoyer le stock historique et les branches obsolètes
         shell: bash
         run: |
           set -euo pipefail
 
           # Point de reprise validé le 26 août 2026 à 16:00 (heure de Paris).
-          # Les branches créées après ce point restent en file jusqu'à traitement.
+          # Les branches créées après ce point restent en file jusqu'à traitement
+          # sauf si leur affectation a déjà été consommée par un candidat plus récent.
           legacy_cutoff="1787752800"
 
           while IFS= read -r ref; do
@@ -64,6 +65,51 @@ jobs:
 
           git fetch origin '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
           git fetch origin master
+
+          current_category="$(
+            sed -n 's/^- Catégorie: `\([^`]*\)`.*/\1/p' content-data/publication-workflow.md \
+              | head -n 1
+          )"
+          current_department="$(
+            sed -n 's/^- Département: \(.*\)$/\1/p' content-data/publication-workflow.md \
+              | head -n 1
+          )"
+
+          while IFS= read -r ref; do
+            [ -n "$ref" ] || continue
+            branch="${ref#origin/}"
+            candidate="$(git show "$ref:content-candidates/article.md" 2>/dev/null || true)"
+            [ -n "$candidate" ] || continue
+
+            candidate_category="$(
+              printf '%s\n' "$candidate" \
+                | sed -n 's/^category: *"\([^"]*\)".*/\1/p' \
+                | head -n 1
+            )"
+            candidate_department="$(
+              printf '%s\n' "$candidate" \
+                | sed -n 's/^  department: *"\([^"]*\)".*/\1/p' \
+                | head -n 1
+            )"
+
+            stale=false
+            if [ -n "$candidate_category" ] && [ -n "$current_category" ] && [ "$candidate_category" != "$current_category" ]; then
+              stale=true
+            elif [ -n "$current_department" ] && [ -n "$candidate_department" ] && [ "$candidate_department" != "$current_department" ]; then
+              stale=true
+            fi
+
+            if [ "$stale" = true ]; then
+              echo "Suppression du candidat de publication obsolète: $branch"
+              git push origin --delete "$branch" || true
+            fi
+          done < <(
+            git for-each-ref --format='%(refname:short)' refs/remotes/origin/automation/ \
+              | grep -E '^origin/automation/publication-' \
+              | sort
+          )
+
+          git fetch origin '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
 
           while IFS= read -r ref; do
             [ -n "$ref" ] || continue
@@ -95,7 +141,8 @@ jobs:
               git push origin --delete "$branch" || true
             fi
           done < <(
-            git for-each-ref --format='%(refname:short)' refs/remotes/origin/automation/review- \
+            git for-each-ref --format='%(refname:short)' refs/remotes/origin/automation/ \
+              | grep -E '^origin/automation/review-' \
               | sort
           )
 
