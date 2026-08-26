@@ -1,0 +1,73 @@
+name: Fam Space production release
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "55 6,18 * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fam-space-master-write
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer Fam Space
+        uses: actions/checkout@v4
+        with:
+          repository: DevWeb13/fam-space-qwik
+          ref: master
+          token: ${{ secrets.FAM_SPACE_TOKEN }}
+          fetch-depth: 0
+
+      - name: Avancer production vers master
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          git fetch origin master production
+
+          master_sha="$(git rev-parse origin/master)"
+          production_sha="$(git rev-parse origin/production)"
+
+          echo "master:     $master_sha"
+          echo "production: $production_sha"
+
+          if [ "$master_sha" = "$production_sha" ]; then
+            echo "Aucun changement à publier."
+            {
+              echo "## Release Fam Space"
+              echo
+              echo "- Résultat: aucun changement"
+              echo "- master: \`$master_sha\`"
+              echo "- production: déjà synchronisée"
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+
+          if ! git merge-base --is-ancestor origin/production origin/master; then
+            echo "::error::La branche production a divergé de master. Release annulée, aucun push forcé."
+            exit 1
+          fi
+
+          git push origin "$master_sha:refs/heads/production"
+          git fetch origin production
+
+          deployed_sha="$(git rev-parse origin/production)"
+          if [ "$deployed_sha" != "$master_sha" ]; then
+            echo "::error::production ne pointe pas sur le master attendu après le push."
+            exit 1
+          fi
+
+          {
+            echo "## Release Fam Space"
+            echo
+            echo "- Résultat: succès"
+            echo "- production avancée vers: \`$master_sha\`"
+            echo "- Vercel doit déclencher une production depuis la branche \`production\`."
+          } >> "$GITHUB_STEP_SUMMARY"
