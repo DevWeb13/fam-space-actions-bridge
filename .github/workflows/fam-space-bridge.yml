@@ -38,25 +38,64 @@ jobs:
           set -euo pipefail
           git fetch origin '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
 
-      - name: Nettoyer le stock antérieur au bridge
+      - name: Nettoyer le stock historique et les reviews obsolètes
         shell: bash
         run: |
           set -euo pipefail
 
-          cutoff="1786789020"
+          # Point de reprise validé le 26 août 2026 à 16:00 (heure de Paris).
+          # Les branches créées après ce point restent en file jusqu'à traitement.
+          legacy_cutoff="1787752800"
 
           while IFS= read -r ref; do
             [ -n "$ref" ] || continue
             branch="${ref#origin/}"
             commit_time="$(git show -s --format=%ct "$ref")"
 
-            if [ "$commit_time" -lt "$cutoff" ]; then
+            if [ "$commit_time" -lt "$legacy_cutoff" ]; then
               echo "Suppression de l'ancienne branche: $branch"
               git push origin --delete "$branch" || true
             fi
           done < <(
             git for-each-ref --format='%(refname:short)' refs/remotes/origin/automation/ \
               | grep -E '^origin/automation/(publication|review|destination)-' \
+              | sort
+          )
+
+          git fetch origin '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
+          git fetch origin master
+
+          while IFS= read -r ref; do
+            [ -n "$ref" ] || continue
+            branch="${ref#origin/}"
+            review_commit="$(git rev-parse "$ref")"
+            review_parent="$(git rev-parse "${review_commit}^")"
+            mapfile -t changes < <(git diff --name-status "$review_parent" "$review_commit")
+
+            if [ "${#changes[@]}" -ne 1 ]; then
+              continue
+            fi
+
+            read -r status review_file <<< "${changes[0]}"
+            if [ "$status" != "M" ] || [[ ! "$review_file" =~ ^src/routes/articles/.+/index\.md$ ]]; then
+              continue
+            fi
+
+            if ! git cat-file -e "origin/master:$review_file" 2>/dev/null; then
+              echo "Suppression de la review obsolète (article absent): $branch"
+              git push origin --delete "$branch" || true
+              continue
+            fi
+
+            parent_file_sha="$(git rev-parse "$review_parent:$review_file" 2>/dev/null || true)"
+            master_file_sha="$(git rev-parse "origin/master:$review_file" 2>/dev/null || true)"
+
+            if [ -z "$parent_file_sha" ] || [ "$parent_file_sha" != "$master_file_sha" ]; then
+              echo "Suppression de la review obsolète (article déjà modifié): $branch"
+              git push origin --delete "$branch" || true
+            fi
+          done < <(
+            git for-each-ref --format='%(refname:short)' refs/remotes/origin/automation/review- \
               | sort
           )
 
@@ -108,38 +147,16 @@ jobs:
 
             branch="$(pick_latest_branch "$prefix")"
 
-            if [ -n "$branch" ]; then
-              automation_commit="$(git rev-parse "origin/$branch")"
-              commit_time="$(git show -s --format=%ct "$automation_commit")"
-              now="$(date +%s)"
-              age="$((now - commit_time))"
-
-              if [ "$age" -gt 10800 ]; then
-                echo "La branche la plus récente est trop ancienne (${age}s): $branch"
-                branch=""
-              fi
-            fi
-
             if [ -z "$branch" ] && [ -n "$fallback_prefix" ]; then
               branch="$(pick_latest_branch "$fallback_prefix")"
 
               if [ -n "$branch" ]; then
-                automation_commit="$(git rev-parse "origin/$branch")"
-                commit_time="$(git show -s --format=%ct "$automation_commit")"
-                now="$(date +%s)"
-                age="$((now - commit_time))"
-
-                if [ "$age" -gt 10800 ]; then
-                  echo "La branche de secours est trop ancienne (${age}s): $branch"
-                  branch=""
-                else
-                  echo "Aucune Destination exploitable: utilisation du créneau pour une review."
-                fi
+                echo "Aucune Destination exploitable: utilisation du créneau pour une review."
               fi
             fi
 
             if [ -z "$branch" ]; then
-              echo "Aucune branche récente à traiter."
+              echo "Aucune branche à traiter."
               echo "found=false" >> "$GITHUB_OUTPUT"
               exit 0
             fi
