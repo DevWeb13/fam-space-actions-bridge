@@ -36,7 +36,7 @@ jobs:
 
       - name: Valider master avant la release
         run: |
-          npm run content:check
+          npm run content:validate
           npm run build.types
 
       - name: Avancer production vers master
