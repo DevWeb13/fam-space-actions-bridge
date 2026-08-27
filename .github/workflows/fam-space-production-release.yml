@@ -34,7 +34,10 @@ jobs:
         run: |
           set -euo pipefail
 
-          git fetch origin master production
+          marker="automation-control/production-release"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin master production --tags --prune
 
           master_sha="$(git rev-parse origin/master)"
           production_sha="$(git rev-parse origin/production)"
@@ -44,6 +47,11 @@ jobs:
 
           if [ "$master_sha" = "$production_sha" ]; then
             echo "Aucun changement à publier."
+            if ! git show-ref --verify --quiet "refs/tags/$marker"; then
+              git tag -a "$marker" "$production_sha" -m "Production release marker"
+              git push origin "refs/tags/$marker"
+              echo "Marqueur de dernière release initialisé."
+            fi
             exit 0
           fi
 
@@ -52,10 +60,10 @@ jobs:
             exit 1
           fi
 
-          if [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
-            production_time="$(git show -s --format=%ct origin/production)"
+          if [ "${{ github.event_name }}" != "workflow_dispatch" ] && git show-ref --verify --quiet "refs/tags/$marker"; then
+            last_release="$(git for-each-ref --format='%(taggerdate:unix)' "refs/tags/$marker")"
             now="$(date +%s)"
-            age_seconds=$((now - production_time))
+            age_seconds=$((now - last_release))
             if [ "$age_seconds" -lt $((6 * 60 * 60)) ]; then
               echo "Dernière release trop récente: production reste inchangée."
               exit 0
@@ -71,10 +79,13 @@ jobs:
             exit 1
           fi
 
+          git tag -fa "$marker" "$master_sha" -m "Production release marker"
+          git push --force origin "refs/tags/$marker"
+
           {
             echo "## Release Fam Space"
             echo
             echo "- Résultat: succès"
             echo "- production avancée vers: \`$master_sha\`"
-            echo "- Déclenchement Vercel limité à une release toutes les 6 heures."
+            echo "- Déclenchement Vercel limité à une release toutes les 6 heures réelles."
           } >> "$GITHUB_STEP_SUMMARY"
