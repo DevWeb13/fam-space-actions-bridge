@@ -12,6 +12,8 @@ on:
         description: "Branche Fam Space automation/... à traiter (facultatif)"
         required: false
         type: string
+  schedule:
+    - cron: "17 * * * *"
 
 permissions:
   contents: read
@@ -126,6 +128,16 @@ jobs:
 
             automation_commit="$(git rev-parse "origin/$branch")"
             mapfile -t automation_commits < <(git rev-list --reverse origin/master.."origin/$branch")
+
+            if [ "${#automation_commits[@]}" -eq 0 ]; then
+              echo "Branche temporaire déjà absorbée par master: $branch"
+              if ! git push origin --delete "$branch"; then
+                echo "::warning::Impossible de supprimer la branche temporaire déjà absorbée: $branch"
+              fi
+              echo "::endgroup::"
+              continue
+            fi
+
             if [ "${#automation_commits[@]}" -ne 1 ] || [ "${automation_commits[0]}" != "$automation_commit" ]; then
               echo "La branche doit contenir exactement un commit d'automatisation au-dessus de master." >&2
               failed=1
