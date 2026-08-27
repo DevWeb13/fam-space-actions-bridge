@@ -150,12 +150,17 @@ jobs:
                   git for-each-ref \
                     --sort=committerdate \
                     --format='%(refname:short)' \
-                    refs/remotes/origin/automation/review-
+                    refs/remotes/origin/automation/ \
+                    | grep -E '^origin/automation/review-' || true
                 )
 
                 node scripts/advance-review-state.mjs "${pending_review_files[@]}"
                 git add -- content-data/article-review-workflow.md
-                git commit -m "chore: advance review assignment"
+                if ! git diff --cached --quiet; then
+                  git commit -m "chore: advance review assignment"
+                else
+                  echo "Affectation reviewer déjà avancée pour les reviews en attente."
+                fi
                 ;;
             esac
 
