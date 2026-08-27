@@ -12,8 +12,6 @@ on:
         description: "Branche Fam Space automation/... à traiter (facultatif)"
         required: false
         type: string
-  schedule:
-    - cron: "17 * * * *"
 
 permissions:
   contents: read
@@ -126,26 +124,25 @@ jobs:
               continue
             fi
 
-            git checkout -B bridge-automation "origin/$branch"
-
-            mapfile -t automation_commits < <(git rev-list --reverse origin/master..HEAD)
-            if [ "${#automation_commits[@]}" -ne 1 ]; then
-              echo "La branche doit contenir exactement un commit d'automatisation." >&2
+            automation_commit="$(git rev-parse "origin/$branch")"
+            mapfile -t automation_commits < <(git rev-list --reverse origin/master.."origin/$branch")
+            if [ "${#automation_commits[@]}" -ne 1 ] || [ "${automation_commits[0]}" != "$automation_commit" ]; then
+              echo "La branche doit contenir exactement un commit d'automatisation au-dessus de master." >&2
               failed=1
               echo "::endgroup::"
               continue
             fi
 
-            mapfile -t changes < <(git diff --name-status origin/master...HEAD)
+            automation_parent="$(git rev-parse "${automation_commit}^")"
+            mapfile -t changes < <(git diff --name-status "$automation_parent" "$automation_commit")
             if [ "${#changes[@]}" -ne 1 ]; then
-              echo "La branche doit contenir exactement un changement." >&2
+              echo "Le commit d'automatisation doit contenir exactement un changement." >&2
               printf '%s\n' "${changes[@]}" >&2
               failed=1
               echo "::endgroup::"
               continue
             fi
 
-            automation_commit="${automation_commits[0]}"
             read -r status automation_file <<< "${changes[0]}"
             mode=""
 
@@ -186,6 +183,12 @@ jobs:
                 ;;
             esac
 
+            # La plomberie est toujours exécutée depuis le master courant.
+            # La branche d'automatisation ne fournit que son unique commit de contenu.
+            git checkout -B bridge-runner origin/master
+            git reset --hard origin/master
+            git clean -fd
+
             success=false
             case "$mode" in
               publication)
@@ -210,7 +213,7 @@ jobs:
                 echo "::warning::Travail publié mais branche temporaire non supprimée: $branch"
               fi
             else
-              echo "::error::Échec du traitement de $branch. Les branches suivantes seront quand même traitées."
+              echo "::error::Échec du traitement de $branch. Les autres demandes restent indépendantes."
               failed=1
             fi
 
