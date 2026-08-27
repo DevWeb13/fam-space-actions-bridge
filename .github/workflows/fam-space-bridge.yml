@@ -7,8 +7,6 @@ on:
     paths:
       - bridge-request.txt
   workflow_dispatch:
-  schedule:
-    - cron: "45 * * * *"
 
 permissions:
   contents: read
@@ -18,8 +16,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  advance-state:
-    if: ${{ github.event_name == 'push' }}
+  process:
     runs-on: ubuntu-latest
 
     steps:
@@ -40,207 +37,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-
-      - name: Avancer les états des branches terminées
-        working-directory: fam-space
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          request="$(tail -n 1 ../bridge/bridge-request.txt | tr -d '\r\n')"
-          if [[ ! "$request" =~ ^automation/(publication|review)- ]]; then
-            echo "Signal invalide: $request" >&2
-            exit 1
-          fi
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin master '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
-          git fetch origin --tags --prune
-
-          queue_file="$RUNNER_TEMP/fam-space-state-queue.txt"
-          : > "$queue_file"
-
-          while IFS= read -r remote_ref; do
-            [ -n "$remote_ref" ] || continue
-            branch="${remote_ref#origin/}"
-            automation_commit="$(git rev-parse "$remote_ref")"
-            state_tag="automation-state/${branch#automation/}"
-
-            if git show-ref --verify --quiet "refs/tags/$state_tag"; then
-              state_commit="$(git rev-parse "refs/tags/$state_tag")"
-              if [ "$state_commit" = "$automation_commit" ]; then
-                continue
-              fi
-              echo "Le marqueur $state_tag ne correspond plus à $branch." >&2
-              exit 1
-            fi
-
-            printf '%s\n' "$branch" >> "$queue_file"
-          done < <(
-            git for-each-ref \
-              --sort=committerdate \
-              --format='%(refname:short)' \
-              refs/remotes/origin/automation/ \
-              | grep -E '^origin/automation/(publication|review)-' || true
-          )
-
-          echo "États à avancer: $(wc -l < "$queue_file" | tr -d ' ')"
-          cat "$queue_file"
-
-          while IFS= read -r branch; do
-            [ -n "$branch" ] || continue
-
-            git fetch origin master '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
-            git fetch origin --tags --prune
-
-            if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
-              echo "Branche introuvable: $branch" >&2
-              exit 1
-            fi
-
-            automation_commit="$(git rev-parse "origin/$branch")"
-            state_tag="automation-state/${branch#automation/}"
-            if git show-ref --verify --quiet "refs/tags/$state_tag"; then
-              state_commit="$(git rev-parse "refs/tags/$state_tag")"
-              if [ "$state_commit" = "$automation_commit" ]; then
-                continue
-              fi
-              echo "Le marqueur $state_tag ne correspond plus à $branch." >&2
-              exit 1
-            fi
-
-            base_sha="$(git rev-parse origin/master)"
-            git checkout -B state-advance origin/master
-            git reset --hard origin/master
-            git clean -fd
-
-            case "$branch" in
-              automation/publication-*)
-                node scripts/advance-publication-state.mjs
-                git add -- \
-                  content-data/publication-rotation.json \
-                  content-data/publication-category-rotation.json \
-                  content-data/publication-workflow.md
-                git commit -m "chore: advance publication assignment"
-                ;;
-              automation/review-*)
-                pending_review_files=()
-                while IFS= read -r review_ref; do
-                  [ -n "$review_ref" ] || continue
-                  review_branch="${review_ref#origin/}"
-                  review_commit="$(git rev-parse "$review_ref")"
-                  processed_tag="automation-processed/${review_branch#automation/}"
-
-                  if git show-ref --verify --quiet "refs/tags/$processed_tag"; then
-                    processed_commit="$(git rev-parse "refs/tags/$processed_tag")"
-                    if [ "$processed_commit" = "$review_commit" ]; then
-                      continue
-                    fi
-                  fi
-
-                  review_parent="$(git rev-parse "${review_commit}^")"
-                  mapfile -t review_changes < <(git diff --name-only "$review_parent" "$review_commit")
-                  if [ "${#review_changes[@]}" -ne 1 ] || [[ ! "${review_changes[0]}" =~ ^src/routes/articles/.+/index\.md$ ]]; then
-                    echo "Branche review invalide: $review_branch" >&2
-                    exit 1
-                  fi
-                  pending_review_files+=("${review_changes[0]}")
-                done < <(
-                  git for-each-ref \
-                    --sort=committerdate \
-                    --format='%(refname:short)' \
-                    refs/remotes/origin/automation/ \
-                    | grep -E '^origin/automation/review-' || true
-                )
-
-                node scripts/advance-review-state.mjs "${pending_review_files[@]}"
-                git add -- content-data/article-review-workflow.md
-                if ! git diff --cached --quiet; then
-                  git commit -m "chore: advance review assignment"
-                else
-                  echo "Affectation reviewer déjà avancée pour les reviews en attente."
-                fi
-                ;;
-            esac
-
-            git fetch origin master
-            latest_master_sha="$(git rev-parse origin/master)"
-            if [ "$latest_master_sha" != "$base_sha" ]; then
-              echo "master a avancé pendant le changement d'état, relance nécessaire." >&2
-              exit 1
-            fi
-
-            git push origin HEAD:master
-            git tag "$state_tag" "$automation_commit"
-            git push origin "refs/tags/$state_tag"
-          done < "$queue_file"
-
-  publish-queue:
-    if: ${{ github.event_name != 'push' }}
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Récupérer Fam Space
-        uses: actions/checkout@v4
-        with:
-          repository: DevWeb13/fam-space-qwik
-          ref: master
-          token: ${{ secrets.FAM_SPACE_TOKEN }}
-          fetch-depth: 0
-          path: fam-space
-
-      - name: Récupérer la file d'automatisation
-        working-directory: fam-space
-        shell: bash
-        run: |
-          set -euo pipefail
-          git fetch origin '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
-          git fetch origin --tags --prune
-
-      - name: Préparer la file à traiter
-        id: queue
-        working-directory: fam-space
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          queue_file="$RUNNER_TEMP/fam-space-bridge-queue.txt"
-          : > "$queue_file"
-
-          while IFS= read -r remote_ref; do
-            [ -n "$remote_ref" ] || continue
-            branch="${remote_ref#origin/}"
-            automation_commit="$(git rev-parse "$remote_ref")"
-            processed_tag="automation-processed/${branch#automation/}"
-
-            if git show-ref --verify --quiet "refs/tags/$processed_tag"; then
-              processed_commit="$(git rev-parse "refs/tags/$processed_tag")"
-              if [ "$processed_commit" = "$automation_commit" ]; then
-                echo "Déjà traitée, branche conservée: $branch"
-                continue
-              fi
-              echo "Le marqueur $processed_tag ne correspond plus à $branch." >&2
-              exit 1
-            fi
-
-            printf '%s\n' "$branch" >> "$queue_file"
-          done < <(
-            git for-each-ref \
-              --sort=committerdate \
-              --format='%(refname:short)' \
-              refs/remotes/origin/automation/ \
-              | grep -E '^origin/automation/(publication|review|destination)-' || true
-          )
-
-          count="$(wc -l < "$queue_file" | tr -d ' ')"
-          echo "Branches en attente: $count"
-          cat "$queue_file"
-          echo "queue_file=$queue_file" >> "$GITHUB_OUTPUT"
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
           cache: npm
           cache-dependency-path: fam-space/package-lock.json
 
@@ -248,13 +44,43 @@ jobs:
         working-directory: fam-space
         run: npm ci
 
-      - name: Publier toute la file
+      - name: Traiter la demande
         working-directory: fam-space
         shell: bash
-        env:
-          QUEUE_FILE: ${{ steps.queue.outputs.queue_file }}
         run: |
           set -euo pipefail
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin master '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
+          git fetch origin --tags --prune
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            request="drain"
+          else
+            request="$(tail -n 1 ../bridge/bridge-request.txt | tr -d '\r\n')"
+          fi
+
+          queue_file="$RUNNER_TEMP/fam-space-bridge-queue.txt"
+          : > "$queue_file"
+
+          if [ "$request" = "drain" ]; then
+            git for-each-ref \
+              --sort=-committerdate \
+              --format='%(refname:short)' \
+              refs/remotes/origin/automation/ \
+              | grep -E '^origin/automation/(publication|review|destination)-' \
+              | sed 's#^origin/##' > "$queue_file" || true
+          elif [[ "$request" =~ ^automation/(publication|review|destination)- ]]; then
+            printf '%s\n' "$request" > "$queue_file"
+          else
+            echo "Signal invalide: $request" >&2
+            exit 1
+          fi
+
+          echo "Demande: $request"
+          echo "Branches à traiter: $(wc -l < "$queue_file" | tr -d ' ')"
+          cat "$queue_file"
 
           failed=0
 
@@ -265,43 +91,32 @@ jobs:
             git fetch origin master '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
             git fetch origin --tags --prune
 
+            processed_tag="automation-processed/${branch#automation/}"
+
             if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
-              echo "Branche introuvable, elle reste hors traitement: $branch"
+              if git show-ref --verify --quiet "refs/tags/$processed_tag"; then
+                echo "Branche déjà traitée et supprimée: $branch"
+                echo "::endgroup::"
+                continue
+              fi
+              echo "Branche introuvable: $branch" >&2
               failed=1
               echo "::endgroup::"
               continue
             fi
 
             automation_commit="$(git rev-parse "origin/$branch")"
-            processed_tag="automation-processed/${branch#automation/}"
 
             if git show-ref --verify --quiet "refs/tags/$processed_tag"; then
               processed_commit="$(git rev-parse "refs/tags/$processed_tag")"
-              if [ "$processed_commit" = "$automation_commit" ]; then
-                echo "Branche déjà traitée: $branch"
+              if [ "$processed_commit" != "$automation_commit" ]; then
+                echo "Le marqueur $processed_tag ne correspond plus à $branch." >&2
+                failed=1
                 echo "::endgroup::"
                 continue
               fi
-              echo "Le marqueur $processed_tag ne correspond plus à $branch." >&2
-              failed=1
-              echo "::endgroup::"
-              continue
-            fi
-
-            mapfile -t automation_commits < <(git rev-list --reverse origin/master.."origin/$branch")
-            if [ "${#automation_commits[@]}" -eq 0 ]; then
-              echo "Branche déjà absorbée par master, elle reste conservée: $branch"
-              git tag "$processed_tag" "$automation_commit"
-              if ! git push origin "refs/tags/$processed_tag"; then
-                failed=1
-              fi
-              echo "::endgroup::"
-              continue
-            fi
-
-            if [ "${#automation_commits[@]}" -ne 1 ] || [ "${automation_commits[0]}" != "$automation_commit" ]; then
-              echo "La branche doit contenir exactement un commit d'automatisation au-dessus de sa base." >&2
-              failed=1
+              echo "Déjà traitée: $branch"
+              git push origin --delete "$branch" || true
               echo "::endgroup::"
               continue
             fi
@@ -327,11 +142,24 @@ jobs:
                   echo "::endgroup::"
                   continue
                 fi
+                if [ "$(git show -s --format=%s "$automation_commit")" != "content: candidate" ]; then
+                  echo "Message de commit publication invalide." >&2
+                  failed=1
+                  echo "::endgroup::"
+                  continue
+                fi
                 mode="publication"
                 ;;
               automation/review-*)
                 if [ "$status" != "M" ] || [[ ! "$automation_file" =~ ^src/routes/articles/.+/index\.md$ ]]; then
                   echo "Vérification d'article invalide." >&2
+                  failed=1
+                  echo "::endgroup::"
+                  continue
+                fi
+                slug="$(basename "$(dirname "$automation_file")")"
+                if [ "$(git show -s --format=%s "$automation_commit")" != "content: review $slug" ]; then
+                  echo "Message de commit review invalide." >&2
                   failed=1
                   echo "::endgroup::"
                   continue
@@ -345,9 +173,8 @@ jobs:
                   echo "::endgroup::"
                   continue
                 fi
-                actual_message="$(git show -s --format=%s "$automation_commit")"
-                if [ "$actual_message" != "content: destination candidate" ]; then
-                  echo "Message de commit Destination invalide: $actual_message" >&2
+                if [ "$(git show -s --format=%s "$automation_commit")" != "content: destination candidate" ]; then
+                  echo "Message de commit Destination invalide." >&2
                   failed=1
                   echo "::endgroup::"
                   continue
@@ -355,6 +182,80 @@ jobs:
                 mode="destination"
                 ;;
             esac
+
+            if [ "$mode" = "publication" ] || [ "$mode" = "review" ]; then
+              state_tag="automation-state/${branch#automation/}"
+              if git show-ref --verify --quiet "refs/tags/$state_tag"; then
+                state_commit="$(git rev-parse "refs/tags/$state_tag")"
+                if [ "$state_commit" != "$automation_commit" ]; then
+                  echo "Le marqueur $state_tag ne correspond plus à $branch." >&2
+                  failed=1
+                  echo "::endgroup::"
+                  continue
+                fi
+              else
+                base_sha="$(git rev-parse origin/master)"
+                git checkout -B state-advance origin/master
+                git reset --hard origin/master
+                git clean -fd
+
+                if [ "$mode" = "publication" ]; then
+                  node scripts/advance-publication-state.mjs
+                  git add -- \
+                    content-data/publication-rotation.json \
+                    content-data/publication-category-rotation.json \
+                    content-data/publication-workflow.md
+                  git commit -m "chore: advance publication assignment"
+                else
+                  node scripts/advance-review-state.mjs "$automation_file"
+                  git add -- content-data/article-review-workflow.md
+                  git commit -m "chore: advance review assignment"
+                fi
+
+                git fetch origin master
+                latest_master_sha="$(git rev-parse origin/master)"
+                if [ "$latest_master_sha" != "$base_sha" ]; then
+                  echo "master a avancé pendant le changement d'état." >&2
+                  failed=1
+                  echo "::endgroup::"
+                  continue
+                fi
+
+                if ! git push origin HEAD:master; then
+                  failed=1
+                  echo "::endgroup::"
+                  continue
+                fi
+                git tag "$state_tag" "$automation_commit"
+                if ! git push origin "refs/tags/$state_tag"; then
+                  failed=1
+                  echo "::endgroup::"
+                  continue
+                fi
+                git fetch origin master --tags --prune
+              fi
+            fi
+
+            if [ "$mode" = "review" ]; then
+              if ! git cat-file -e "origin/master:$automation_file" 2>/dev/null; then
+                echo "Review obsolète: article absent de master."
+                git tag "$processed_tag" "$automation_commit"
+                git push origin "refs/tags/$processed_tag"
+                git push origin --delete "$branch" || true
+                echo "::endgroup::"
+                continue
+              fi
+              parent_file_sha="$(git rev-parse "$automation_parent:$automation_file")"
+              master_file_sha="$(git rev-parse "origin/master:$automation_file")"
+              if [ "$parent_file_sha" != "$master_file_sha" ]; then
+                echo "Review obsolète: l'article a déjà changé sur master."
+                git tag "$processed_tag" "$automation_commit"
+                git push origin "refs/tags/$processed_tag"
+                git push origin --delete "$branch" || true
+                echo "::endgroup::"
+                continue
+              fi
+            fi
 
             git checkout -B bridge-runner origin/master
             git reset --hard origin/master
@@ -384,18 +285,19 @@ jobs:
               if ! git show-ref --verify --quiet "refs/tags/$processed_tag"; then
                 git tag "$processed_tag" "$automation_commit"
                 if ! git push origin "refs/tags/$processed_tag"; then
-                  echo "Travail publié mais impossible de créer le marqueur: $branch" >&2
+                  echo "Contenu publié mais marqueur impossible à créer: $branch" >&2
                   failed=1
                 fi
               fi
-              echo "Travail publié, branche conservée: $branch"
+              git push origin --delete "$branch" || true
+              echo "Travail publié: $branch"
             else
-              echo "Échec du traitement de $branch. La branche reste intacte pour un prochain cron." >&2
+              echo "Échec du traitement de $branch. La branche est conservée." >&2
               failed=1
             fi
 
             echo "::endgroup::"
-          done < "$QUEUE_FILE"
+          done < "$queue_file"
 
           if [ "$failed" -ne 0 ]; then
             exit 1

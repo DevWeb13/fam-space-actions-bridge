@@ -1,9 +1,12 @@
 name: Fam Space production release
 
 on:
+  workflow_run:
+    workflows:
+      - Fam Space bridge
+    types:
+      - completed
   workflow_dispatch:
-  schedule:
-    - cron: "55 0,6,12,18 * * *"
 
 permissions:
   contents: read
@@ -14,6 +17,7 @@ concurrency:
 
 jobs:
   release:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -25,7 +29,7 @@ jobs:
           token: ${{ secrets.FAM_SPACE_TOKEN }}
           fetch-depth: 0
 
-      - name: Avancer production vers master
+      - name: Avancer production vers master au maximum toutes les 6 heures
         shell: bash
         run: |
           set -euo pipefail
@@ -40,19 +44,22 @@ jobs:
 
           if [ "$master_sha" = "$production_sha" ]; then
             echo "Aucun changement à publier."
-            {
-              echo "## Release Fam Space"
-              echo
-              echo "- Résultat: aucun changement"
-              echo "- master: \`$master_sha\`"
-              echo "- production: déjà synchronisée"
-            } >> "$GITHUB_STEP_SUMMARY"
             exit 0
           fi
 
           if ! git merge-base --is-ancestor origin/production origin/master; then
-            echo "::error::La branche production a divergé de master. Release annulée, aucun push forcé."
+            echo "::error::La branche production a divergé de master. Aucun push forcé."
             exit 1
+          fi
+
+          if [ "${{ github.event_name }}" != "workflow_dispatch" ]; then
+            production_time="$(git show -s --format=%ct origin/production)"
+            now="$(date +%s)"
+            age_seconds=$((now - production_time))
+            if [ "$age_seconds" -lt $((6 * 60 * 60)) ]; then
+              echo "Dernière release trop récente: production reste inchangée."
+              exit 0
+            fi
           fi
 
           git push origin "$master_sha:refs/heads/production"
@@ -69,5 +76,5 @@ jobs:
             echo
             echo "- Résultat: succès"
             echo "- production avancée vers: \`$master_sha\`"
-            echo "- Vercel doit déclencher une production depuis la branche \`production\`."
+            echo "- Déclenchement Vercel limité à une release toutes les 6 heures."
           } >> "$GITHUB_STEP_SUMMARY"
