@@ -12,10 +12,16 @@ on:
         description: "Branche Fam Space automation/... à traiter (facultatif)"
         required: false
         type: string
+      continuous:
+        description: "Relancer automatiquement le bridge"
+        required: false
+        default: "false"
+        type: string
   schedule:
-    - cron: "2,7,12,17,22,27,32,37,42,47,52,57 * * * *"
+    - cron: "17 * * * *"
 
 permissions:
+  actions: write
   contents: read
 
 concurrency:
@@ -55,14 +61,26 @@ jobs:
         env:
           EVENT_NAME: ${{ github.event_name }}
           MANUAL_BRANCH: ${{ github.event.inputs.automation_branch }}
+          CONTINUOUS: ${{ github.event.inputs.continuous }}
         run: |
           set -euo pipefail
 
           request=""
+          continuous="false"
+
           if [ "$EVENT_NAME" = "push" ]; then
             request="$(tail -n 1 ../bridge/bridge-request.txt | tr -d '\r\n')"
-          elif [ "$EVENT_NAME" = "workflow_dispatch" ] && [ -n "${MANUAL_BRANCH:-}" ]; then
-            request="$MANUAL_BRANCH"
+            if [ "$request" = "__CONTINUOUS__" ]; then
+              request=""
+              continuous="true"
+            fi
+          elif [ "$EVENT_NAME" = "workflow_dispatch" ]; then
+            if [ "${CONTINUOUS:-false}" = "true" ]; then
+              continuous="true"
+            fi
+            if [ -n "${MANUAL_BRANCH:-}" ]; then
+              request="$MANUAL_BRANCH"
+            fi
           fi
 
           queue_file="$RUNNER_TEMP/fam-space-bridge-queue.txt"
@@ -93,6 +111,7 @@ jobs:
           echo "Branches à traiter: $count"
           cat "$queue_file"
           echo "queue_file=$queue_file" >> "$GITHUB_OUTPUT"
+          echo "continuous=$continuous" >> "$GITHUB_OUTPUT"
 
       - uses: actions/setup-node@v4
         with:
@@ -250,3 +269,19 @@ jobs:
           if [ "$failed" -ne 0 ]; then
             exit 1
           fi
+
+      - name: Relancer le prochain passage du bridge
+        if: ${{ always() && (github.event.inputs.continuous == 'true' || steps.queue.outputs.continuous == 'true') }}
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          sleep 120
+          curl --fail-with-body --silent --show-error --location \
+            --request POST \
+            --header "Accept: application/vnd.github+json" \
+            --header "Authorization: Bearer $GH_TOKEN" \
+            --header "X-GitHub-Api-Version: 2026-03-10" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/fam-space-bridge.yml/dispatches" \
+            --data '{"ref":"main","inputs":{"continuous":"true"}}'
