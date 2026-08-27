@@ -195,6 +195,21 @@ jobs:
                 ;;
             esac
 
+            if [ "$mode" = "review" ]; then
+              review_base_blob="$(git rev-parse "$automation_parent:$automation_file" 2>/dev/null || true)"
+              master_blob="$(git rev-parse "origin/master:$automation_file" 2>/dev/null || true)"
+
+              if [ -n "$review_base_blob" ] && [ -n "$master_blob" ] && [ "$review_base_blob" != "$master_blob" ]; then
+                echo "Review devenue obsolète: l'article a déjà changé sur master. Suppression de $branch."
+                if ! git push origin --delete "$branch"; then
+                  echo "::warning::Impossible de supprimer la review obsolète: $branch"
+                  failed=1
+                fi
+                echo "::endgroup::"
+                continue
+              fi
+            fi
+
             # La plomberie est toujours exécutée depuis le master courant.
             # La branche d'automatisation ne fournit que son unique commit de contenu.
             git checkout -B bridge-runner origin/master
