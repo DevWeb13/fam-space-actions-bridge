@@ -1,6 +1,11 @@
 name: Fam Space bridge
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - bridge-request.txt
   workflow_dispatch:
     inputs:
       automation_branch:
@@ -8,9 +13,7 @@ on:
         required: false
         type: string
   schedule:
-    - cron: "10 * * * *"
-    - cron: "25 * * * *"
-    - cron: "40 * * * *"
+    - cron: "17 * * * *"
 
 permissions:
   contents: read
@@ -24,6 +27,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Récupérer la demande du bridge
+        uses: actions/checkout@v4
+        with:
+          path: bridge
+
       - name: Récupérer Fam Space
         uses: actions/checkout@v4
         with:
@@ -31,308 +39,184 @@ jobs:
           ref: master
           token: ${{ secrets.FAM_SPACE_TOKEN }}
           fetch-depth: 0
+          path: fam-space
 
       - name: Récupérer les branches d'automatisation
+        working-directory: fam-space
         shell: bash
         run: |
           set -euo pipefail
           git fetch origin '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
 
-      - name: Nettoyer le stock historique et les branches obsolètes
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          # Point de reprise validé le 26 août 2026 à 16:00 (heure de Paris).
-          # Les branches créées après ce point restent en file jusqu'à traitement
-          # sauf si leur affectation a déjà été consommée par un candidat plus récent.
-          legacy_cutoff="1787752800"
-
-          while IFS= read -r ref; do
-            [ -n "$ref" ] || continue
-            branch="${ref#origin/}"
-            commit_time="$(git show -s --format=%ct "$ref")"
-
-            if [ "$commit_time" -lt "$legacy_cutoff" ]; then
-              echo "Suppression de l'ancienne branche: $branch"
-              git push origin --delete "$branch" || true
-            fi
-          done < <(
-            git for-each-ref --format='%(refname:short)' refs/remotes/origin/automation/ \
-              | grep -E '^origin/automation/(publication|review|destination)-' \
-              | sort
-          )
-
-          git fetch origin '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
-          git fetch origin master
-
-          current_category="$(
-            sed -n 's/^- Catégorie: `\([^`]*\)`.*/\1/p' content-data/publication-workflow.md \
-              | head -n 1
-          )"
-          current_department="$(
-            sed -n 's/^- Département: \(.*\)$/\1/p' content-data/publication-workflow.md \
-              | head -n 1
-          )"
-
-          while IFS= read -r ref; do
-            [ -n "$ref" ] || continue
-            branch="${ref#origin/}"
-            candidate="$(git show "$ref:content-candidates/article.md" 2>/dev/null || true)"
-            [ -n "$candidate" ] || continue
-
-            candidate_category="$(
-              printf '%s\n' "$candidate" \
-                | sed -n 's/^category: *"\([^"]*\)".*/\1/p' \
-                | head -n 1
-            )"
-            candidate_department="$(
-              printf '%s\n' "$candidate" \
-                | sed -n 's/^  department: *"\([^"]*\)".*/\1/p' \
-                | head -n 1
-            )"
-
-            stale=false
-            if [ -n "$candidate_category" ] && [ -n "$current_category" ] && [ "$candidate_category" != "$current_category" ]; then
-              stale=true
-            elif [ -n "$current_department" ] && [ -n "$candidate_department" ] && [ "$candidate_department" != "$current_department" ]; then
-              stale=true
-            fi
-
-            if [ "$stale" = true ]; then
-              echo "Suppression du candidat de publication obsolète: $branch"
-              git push origin --delete "$branch" || true
-            fi
-          done < <(
-            git for-each-ref --format='%(refname:short)' refs/remotes/origin/automation/ \
-              | grep -E '^origin/automation/publication-' \
-              | sort
-          )
-
-          git fetch origin '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
-
-          while IFS= read -r ref; do
-            [ -n "$ref" ] || continue
-            branch="${ref#origin/}"
-            review_commit="$(git rev-parse "$ref")"
-            review_parent="$(git rev-parse "${review_commit}^")"
-            mapfile -t changes < <(git diff --name-status "$review_parent" "$review_commit")
-
-            if [ "${#changes[@]}" -ne 1 ]; then
-              continue
-            fi
-
-            read -r status review_file <<< "${changes[0]}"
-            if [ "$status" != "M" ] || [[ ! "$review_file" =~ ^src/routes/articles/.+/index\.md$ ]]; then
-              continue
-            fi
-
-            if ! git cat-file -e "origin/master:$review_file" 2>/dev/null; then
-              echo "Suppression de la review obsolète (article absent): $branch"
-              git push origin --delete "$branch" || true
-              continue
-            fi
-
-            parent_file_sha="$(git rev-parse "$review_parent:$review_file" 2>/dev/null || true)"
-            master_file_sha="$(git rev-parse "origin/master:$review_file" 2>/dev/null || true)"
-
-            if [ -z "$parent_file_sha" ] || [ "$parent_file_sha" != "$master_file_sha" ]; then
-              echo "Suppression de la review obsolète (article déjà modifié): $branch"
-              git push origin --delete "$branch" || true
-            fi
-          done < <(
-            git for-each-ref --format='%(refname:short)' refs/remotes/origin/automation/ \
-              | grep -E '^origin/automation/review-' \
-              | sort
-          )
-
-          git fetch origin '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
-
-      - name: Choisir l'automatisation à traiter
-        id: select
+      - name: Préparer la file à traiter
+        id: queue
+        working-directory: fam-space
         shell: bash
         env:
+          EVENT_NAME: ${{ github.event_name }}
           MANUAL_BRANCH: ${{ github.event.inputs.automation_branch }}
-          SCHEDULE: ${{ github.event.schedule }}
         run: |
           set -euo pipefail
 
-          branch=""
-          fallback_prefix=""
+          request=""
+          if [ "$EVENT_NAME" = "push" ]; then
+            request="$(tail -n 1 ../bridge/bridge-request.txt | tr -d '\r\n')"
+          elif [ "$EVENT_NAME" = "workflow_dispatch" ] && [ -n "${MANUAL_BRANCH:-}" ]; then
+            request="$MANUAL_BRANCH"
+          fi
 
-          pick_latest_branch() {
-            local prefix="$1"
-            git for-each-ref --format='%(refname:short)' refs/remotes/origin/automation/ \
-              | sed 's#^origin/##' \
-              | grep -E "^${prefix}" \
-              | sort \
-              | tail -n 1 \
-              || true
-          }
+          queue_file="$RUNNER_TEMP/fam-space-bridge-queue.txt"
+          : > "$queue_file"
 
-          if [ -n "${MANUAL_BRANCH:-}" ]; then
-            branch="$MANUAL_BRANCH"
-
-            if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
-              echo "Branche introuvable: $branch" >&2
+          if [ -n "$request" ]; then
+            if [[ ! "$request" =~ ^automation/(publication|review|destination)- ]]; then
+              echo "Branche demandée invalide: $request" >&2
               exit 1
+            fi
+
+            if git show-ref --verify --quiet "refs/remotes/origin/$request"; then
+              printf '%s\n' "$request" > "$queue_file"
+            else
+              echo "La branche demandée n'existe plus: $request"
             fi
           else
-            case "${SCHEDULE:-}" in
-              "10 * * * *") prefix="automation/publication-" ;;
-              "25 * * * *")
-                prefix="automation/destination-"
-                fallback_prefix="automation/review-"
-                ;;
-              "40 * * * *") prefix="automation/review-" ;;
-              *)
-                echo "Aucune branche manuelle et aucun créneau automatique reconnu."
-                echo "found=false" >> "$GITHUB_OUTPUT"
-                exit 0
-                ;;
-            esac
-
-            branch="$(pick_latest_branch "$prefix")"
-
-            if [ -z "$branch" ] && [ -n "$fallback_prefix" ]; then
-              branch="$(pick_latest_branch "$fallback_prefix")"
-
-              if [ -n "$branch" ]; then
-                echo "Aucune Destination exploitable: utilisation du créneau pour une review."
-              fi
-            fi
-
-            if [ -z "$branch" ]; then
-              echo "Aucune branche à traiter."
-              echo "found=false" >> "$GITHUB_OUTPUT"
-              exit 0
-            fi
+            git for-each-ref \
+              --sort=committerdate \
+              --format='%(refname:short)' \
+              refs/remotes/origin/automation/ \
+              | sed 's#^origin/##' \
+              | grep -E '^automation/(publication|review|destination)-' \
+              > "$queue_file" || true
           fi
 
-          echo "Branche sélectionnée: $branch"
-          echo "found=true" >> "$GITHUB_OUTPUT"
-          echo "branch=$branch" >> "$GITHUB_OUTPUT"
-          echo "AUTOMATION_BRANCH=$branch" >> "$GITHUB_ENV"
-
-      - name: Charger la branche sélectionnée
-        if: steps.select.outputs.found == 'true'
-        shell: bash
-        run: |
-          set -euo pipefail
-          git checkout -B bridge-automation "origin/$AUTOMATION_BRANCH"
-
-      - name: Identifier et valider l'automatisation
-        if: steps.select.outputs.found == 'true'
-        id: automation
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          git fetch origin master
-
-          mapfile -t automation_commits < <(git rev-list --reverse origin/master..HEAD)
-          if [ "${#automation_commits[@]}" -ne 1 ]; then
-            echo "La branche doit contenir exactement un commit d'automatisation."
-            exit 1
-          fi
-
-          mapfile -t changes < <(git diff --name-status origin/master...HEAD)
-          if [ "${#changes[@]}" -ne 1 ]; then
-            echo "La branche doit contenir exactement un changement."
-            printf '%s\n' "${changes[@]}"
-            exit 1
-          fi
-
-          automation_commit="${automation_commits[0]}"
-          read -r status automation_file <<< "${changes[0]}"
-
-          case "$AUTOMATION_BRANCH" in
-            automation/publication-*)
-              if [ "$status" != "A" ] || [ "$automation_file" != "content-candidates/article.md" ]; then
-                echo "Candidat de publication invalide."
-                exit 1
-              fi
-              echo "mode=publication" >> "$GITHUB_OUTPUT"
-              ;;
-
-            automation/review-*)
-              if [ "$status" != "M" ] || [[ ! "$automation_file" =~ ^src/routes/articles/.+/index\.md$ ]]; then
-                echo "Vérification d'article invalide."
-                exit 1
-              fi
-              echo "mode=review" >> "$GITHUB_OUTPUT"
-              ;;
-
-            automation/destination-*)
-              if [ "$status" != "A" ] || [ "$automation_file" != "content-candidates/destination.md" ]; then
-                echo "Candidat Destination invalide."
-                exit 1
-              fi
-
-              actual_message="$(git show -s --format=%s "$automation_commit")"
-              if [ "$actual_message" != "content: destination candidate" ]; then
-                echo "Message de commit Destination invalide: $actual_message"
-                exit 1
-              fi
-
-              echo "mode=destination" >> "$GITHUB_OUTPUT"
-              ;;
-
-            *)
-              echo "Branche d'automatisation invalide: $AUTOMATION_BRANCH"
-              exit 1
-              ;;
-          esac
-
-          echo "AUTOMATION_COMMIT=$automation_commit" >> "$GITHUB_ENV"
-          echo "AUTOMATION_FILE=$automation_file" >> "$GITHUB_ENV"
+          count="$(wc -l < "$queue_file" | tr -d ' ')"
+          echo "Branches à traiter: $count"
+          cat "$queue_file"
+          echo "queue_file=$queue_file" >> "$GITHUB_OUTPUT"
 
       - uses: actions/setup-node@v4
-        if: steps.select.outputs.found == 'true'
         with:
           node-version: 24
           cache: npm
+          cache-dependency-path: fam-space/package-lock.json
 
       - name: Installer les dépendances
-        if: steps.select.outputs.found == 'true'
+        working-directory: fam-space
         run: npm ci
 
-      - name: Publier l'article
-        if: steps.select.outputs.found == 'true' && steps.automation.outputs.mode == 'publication'
+      - name: Publier la file
+        working-directory: fam-space
         shell: bash
+        env:
+          QUEUE_FILE: ${{ steps.queue.outputs.queue_file }}
         run: |
-          bash .github/scripts/publish-automated-article.sh \
-            "$AUTOMATION_COMMIT" \
-            "$AUTOMATION_FILE"
+          set -euo pipefail
 
-      - name: Publier la vérification
-        if: steps.select.outputs.found == 'true' && steps.automation.outputs.mode == 'review'
-        shell: bash
-        run: |
-          bash .github/scripts/publish-reviewed-article.sh \
-            "$AUTOMATION_COMMIT" \
-            "$AUTOMATION_FILE"
+          failed=0
 
-      - name: Publier la Destination
-        if: steps.select.outputs.found == 'true' && steps.automation.outputs.mode == 'destination'
-        shell: bash
-        run: |
-          bash .github/scripts/publish-destination-candidate.sh \
-            "$AUTOMATION_COMMIT" \
-            "$AUTOMATION_FILE"
+          while IFS= read -r branch; do
+            [ -n "$branch" ] || continue
+            echo "::group::Traitement de $branch"
 
-      - name: Supprimer la branche temporaire
-        if: success() && steps.select.outputs.found == 'true'
-        shell: bash
-        run: |
-          for attempt in 1 2 3; do
-            if git push origin --delete "$AUTOMATION_BRANCH"; then
-              exit 0
+            git fetch origin master '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
+
+            if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
+              echo "Branche déjà traitée ou supprimée: $branch"
+              echo "::endgroup::"
+              continue
             fi
 
-            echo "Tentative $attempt de suppression de la branche temporaire échouée."
-            sleep 2
-          done
+            git checkout -B bridge-automation "origin/$branch"
 
-          echo "::warning::Publication réussie, mais la branche temporaire n'a pas pu être supprimée."
-          exit 0
+            mapfile -t automation_commits < <(git rev-list --reverse origin/master..HEAD)
+            if [ "${#automation_commits[@]}" -ne 1 ]; then
+              echo "La branche doit contenir exactement un commit d'automatisation." >&2
+              failed=1
+              echo "::endgroup::"
+              continue
+            fi
+
+            mapfile -t changes < <(git diff --name-status origin/master...HEAD)
+            if [ "${#changes[@]}" -ne 1 ]; then
+              echo "La branche doit contenir exactement un changement." >&2
+              printf '%s\n' "${changes[@]}" >&2
+              failed=1
+              echo "::endgroup::"
+              continue
+            fi
+
+            automation_commit="${automation_commits[0]}"
+            read -r status automation_file <<< "${changes[0]}"
+            mode=""
+
+            case "$branch" in
+              automation/publication-*)
+                if [ "$status" != "A" ] || [ "$automation_file" != "content-candidates/article.md" ]; then
+                  echo "Candidat de publication invalide." >&2
+                  failed=1
+                  echo "::endgroup::"
+                  continue
+                fi
+                mode="publication"
+                ;;
+              automation/review-*)
+                if [ "$status" != "M" ] || [[ ! "$automation_file" =~ ^src/routes/articles/.+/index\.md$ ]]; then
+                  echo "Vérification d'article invalide." >&2
+                  failed=1
+                  echo "::endgroup::"
+                  continue
+                fi
+                mode="review"
+                ;;
+              automation/destination-*)
+                if [ "$status" != "A" ] || [ "$automation_file" != "content-candidates/destination.md" ]; then
+                  echo "Candidat Destination invalide." >&2
+                  failed=1
+                  echo "::endgroup::"
+                  continue
+                fi
+                actual_message="$(git show -s --format=%s "$automation_commit")"
+                if [ "$actual_message" != "content: destination candidate" ]; then
+                  echo "Message de commit Destination invalide: $actual_message" >&2
+                  failed=1
+                  echo "::endgroup::"
+                  continue
+                fi
+                mode="destination"
+                ;;
+            esac
+
+            success=false
+            case "$mode" in
+              publication)
+                if bash .github/scripts/publish-automated-article.sh "$automation_commit" "$automation_file"; then
+                  success=true
+                fi
+                ;;
+              review)
+                if bash .github/scripts/publish-reviewed-article.sh "$automation_commit" "$automation_file"; then
+                  success=true
+                fi
+                ;;
+              destination)
+                if bash .github/scripts/publish-destination-candidate.sh "$automation_commit" "$automation_file"; then
+                  success=true
+                fi
+                ;;
+            esac
+
+            if [ "$success" = true ]; then
+              if ! git push origin --delete "$branch"; then
+                echo "::warning::Travail publié mais branche temporaire non supprimée: $branch"
+              fi
+            else
+              echo "::error::Échec du traitement de $branch. Les branches suivantes seront quand même traitées."
+              failed=1
+            fi
+
+            echo "::endgroup::"
+          done < "$QUEUE_FILE"
+
+          if [ "$failed" -ne 0 ]; then
+            exit 1
+          fi
