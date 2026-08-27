@@ -55,6 +55,7 @@ jobs:
           git fetch origin master '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
           git fetch origin --tags --prune
 
+          recovery=false
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             request="drain"
           else
@@ -65,6 +66,7 @@ jobs:
           : > "$queue_file"
 
           if [ "$request" = "drain" ]; then
+            recovery=true
             git for-each-ref \
               --sort=-committerdate \
               --format='%(refname:short)' \
@@ -80,9 +82,20 @@ jobs:
 
           echo "Demande: $request"
           echo "Branches à traiter: $(wc -l < "$queue_file" | tr -d ' ')"
-          cat "$queue_file"
 
           failed=0
+
+          mark_processed() {
+            local branch="$1"
+            local commit="$2"
+            local tag="automation-processed/${branch#automation/}"
+            git fetch origin --tags --prune
+            if ! git show-ref --verify --quiet "refs/tags/$tag"; then
+              git tag "$tag" "$commit"
+              git push origin "refs/tags/$tag"
+            fi
+            git push origin --delete "$branch" || true
+          }
 
           while IFS= read -r branch; do
             [ -n "$branch" ] || continue
@@ -92,31 +105,27 @@ jobs:
             git fetch origin --tags --prune
 
             processed_tag="automation-processed/${branch#automation/}"
-
             if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
               if git show-ref --verify --quiet "refs/tags/$processed_tag"; then
-                echo "Branche déjà traitée et supprimée: $branch"
-                echo "::endgroup::"
-                continue
+                echo "Déjà traitée et supprimée: $branch"
+              else
+                echo "Branche introuvable: $branch" >&2
+                failed=1
               fi
-              echo "Branche introuvable: $branch" >&2
-              failed=1
               echo "::endgroup::"
               continue
             fi
 
             automation_commit="$(git rev-parse "origin/$branch")"
-
             if git show-ref --verify --quiet "refs/tags/$processed_tag"; then
               processed_commit="$(git rev-parse "refs/tags/$processed_tag")"
               if [ "$processed_commit" != "$automation_commit" ]; then
                 echo "Le marqueur $processed_tag ne correspond plus à $branch." >&2
                 failed=1
-                echo "::endgroup::"
-                continue
+              else
+                git push origin --delete "$branch" || true
+                echo "Déjà traitée: $branch"
               fi
-              echo "Déjà traitée: $branch"
-              git push origin --delete "$branch" || true
               echo "::endgroup::"
               continue
             fi
@@ -125,7 +134,6 @@ jobs:
             mapfile -t changes < <(git diff --name-status "$automation_parent" "$automation_commit")
             if [ "${#changes[@]}" -ne 1 ]; then
               echo "Le commit d'automatisation doit contenir exactement un changement." >&2
-              printf '%s\n' "${changes[@]}" >&2
               failed=1
               echo "::endgroup::"
               continue
@@ -133,17 +141,10 @@ jobs:
 
             read -r status automation_file <<< "${changes[0]}"
             mode=""
-
             case "$branch" in
               automation/publication-*)
-                if [ "$status" != "A" ] || [ "$automation_file" != "content-candidates/article.md" ]; then
+                if [ "$status" != "A" ] || [ "$automation_file" != "content-candidates/article.md" ] || [ "$(git show -s --format=%s "$automation_commit")" != "content: candidate" ]; then
                   echo "Candidat de publication invalide." >&2
-                  failed=1
-                  echo "::endgroup::"
-                  continue
-                fi
-                if [ "$(git show -s --format=%s "$automation_commit")" != "content: candidate" ]; then
-                  echo "Message de commit publication invalide." >&2
                   failed=1
                   echo "::endgroup::"
                   continue
@@ -151,15 +152,9 @@ jobs:
                 mode="publication"
                 ;;
               automation/review-*)
-                if [ "$status" != "M" ] || [[ ! "$automation_file" =~ ^src/routes/articles/.+/index\.md$ ]]; then
-                  echo "Vérification d'article invalide." >&2
-                  failed=1
-                  echo "::endgroup::"
-                  continue
-                fi
                 slug="$(basename "$(dirname "$automation_file")")"
-                if [ "$(git show -s --format=%s "$automation_commit")" != "content: review $slug" ]; then
-                  echo "Message de commit review invalide." >&2
+                if [ "$status" != "M" ] || [[ ! "$automation_file" =~ ^src/routes/articles/.+/index\.md$ ]] || [ "$(git show -s --format=%s "$automation_commit")" != "content: review $slug" ]; then
+                  echo "Vérification d'article invalide." >&2
                   failed=1
                   echo "::endgroup::"
                   continue
@@ -167,14 +162,8 @@ jobs:
                 mode="review"
                 ;;
               automation/destination-*)
-                if [ "$status" != "A" ] || [ "$automation_file" != "content-candidates/destination.md" ]; then
+                if [ "$status" != "A" ] || [ "$automation_file" != "content-candidates/destination.md" ] || [ "$(git show -s --format=%s "$automation_commit")" != "content: destination candidate" ]; then
                   echo "Candidat Destination invalide." >&2
-                  failed=1
-                  echo "::endgroup::"
-                  continue
-                fi
-                if [ "$(git show -s --format=%s "$automation_commit")" != "content: destination candidate" ]; then
-                  echo "Message de commit Destination invalide." >&2
                   failed=1
                   echo "::endgroup::"
                   continue
@@ -183,7 +172,8 @@ jobs:
                 ;;
             esac
 
-            if [ "$mode" = "publication" ] || [ "$mode" = "review" ]; then
+            legacy_state=false
+            if [ "$recovery" = true ] && { [ "$mode" = "publication" ] || [ "$mode" = "review" ]; }; then
               state_tag="automation-state/${branch#automation/}"
               if git show-ref --verify --quiet "refs/tags/$state_tag"; then
                 state_commit="$(git rev-parse "refs/tags/$state_tag")"
@@ -193,55 +183,15 @@ jobs:
                   echo "::endgroup::"
                   continue
                 fi
-              else
-                base_sha="$(git rev-parse origin/master)"
-                git checkout -B state-advance origin/master
-                git reset --hard origin/master
-                git clean -fd
-
-                if [ "$mode" = "publication" ]; then
-                  node scripts/advance-publication-state.mjs
-                  git add -- \
-                    content-data/publication-rotation.json \
-                    content-data/publication-category-rotation.json \
-                    content-data/publication-workflow.md
-                  git commit -m "chore: advance publication assignment"
-                else
-                  node scripts/advance-review-state.mjs "$automation_file"
-                  git add -- content-data/article-review-workflow.md
-                  git commit -m "chore: advance review assignment"
-                fi
-
-                git fetch origin master
-                latest_master_sha="$(git rev-parse origin/master)"
-                if [ "$latest_master_sha" != "$base_sha" ]; then
-                  echo "master a avancé pendant le changement d'état." >&2
-                  failed=1
-                  echo "::endgroup::"
-                  continue
-                fi
-
-                if ! git push origin HEAD:master; then
-                  failed=1
-                  echo "::endgroup::"
-                  continue
-                fi
-                git tag "$state_tag" "$automation_commit"
-                if ! git push origin "refs/tags/$state_tag"; then
-                  failed=1
-                  echo "::endgroup::"
-                  continue
-                fi
-                git fetch origin master --tags --prune
+                legacy_state=true
               fi
             fi
 
             if [ "$mode" = "review" ]; then
+              git fetch origin master
               if ! git cat-file -e "origin/master:$automation_file" 2>/dev/null; then
                 echo "Review obsolète: article absent de master."
-                git tag "$processed_tag" "$automation_commit"
-                git push origin "refs/tags/$processed_tag"
-                git push origin --delete "$branch" || true
+                mark_processed "$branch" "$automation_commit"
                 echo "::endgroup::"
                 continue
               fi
@@ -249,9 +199,7 @@ jobs:
               master_file_sha="$(git rev-parse "origin/master:$automation_file")"
               if [ "$parent_file_sha" != "$master_file_sha" ]; then
                 echo "Review obsolète: l'article a déjà changé sur master."
-                git tag "$processed_tag" "$automation_commit"
-                git push origin "refs/tags/$processed_tag"
-                git push origin --delete "$branch" || true
+                mark_processed "$branch" "$automation_commit"
                 echo "::endgroup::"
                 continue
               fi
@@ -264,12 +212,25 @@ jobs:
             success=false
             case "$mode" in
               publication)
-                if bash scripts/publish-queued-publication.sh "$automation_commit" "$automation_file"; then
+                if [ "$legacy_state" = true ]; then
+                  if bash scripts/publish-queued-publication.sh "$automation_commit" "$automation_file"; then
+                    success=true
+                  elif [ "$recovery" = true ]; then
+                    echo "Candidat historique rejeté par la validation: $branch"
+                    mark_processed "$branch" "$automation_commit"
+                    echo "::endgroup::"
+                    continue
+                  fi
+                elif bash .github/scripts/publish-automated-article.sh "$automation_commit" "$automation_file"; then
                   success=true
                 fi
                 ;;
               review)
-                if bash scripts/publish-queued-review.sh "$automation_commit" "$automation_file"; then
+                if [ "$legacy_state" = true ]; then
+                  if bash scripts/publish-queued-review.sh "$automation_commit" "$automation_file"; then
+                    success=true
+                  fi
+                elif bash .github/scripts/publish-reviewed-article.sh "$automation_commit" "$automation_file"; then
                   success=true
                 fi
                 ;;
@@ -281,18 +242,10 @@ jobs:
             esac
 
             if [ "$success" = true ]; then
-              git fetch origin --tags --prune
-              if ! git show-ref --verify --quiet "refs/tags/$processed_tag"; then
-                git tag "$processed_tag" "$automation_commit"
-                if ! git push origin "refs/tags/$processed_tag"; then
-                  echo "Contenu publié mais marqueur impossible à créer: $branch" >&2
-                  failed=1
-                fi
-              fi
-              git push origin --delete "$branch" || true
+              mark_processed "$branch" "$automation_commit"
               echo "Travail publié: $branch"
             else
-              echo "Échec du traitement de $branch. La branche est conservée." >&2
+              echo "Échec du traitement de $branch. La branche est conservée et aucun état nouveau n'est consommé." >&2
               failed=1
             fi
 
