@@ -31,10 +31,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git fetch origin \
-            '+refs/heads/automation/*:refs/remotes/origin/automation/*' \
-            '+refs/tags/automation-processed/*:refs/tags/automation-processed/*' \
-            --prune
+          git fetch origin '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
+          git fetch origin --tags --prune
 
       - name: Préparer la file à traiter
         id: queue
