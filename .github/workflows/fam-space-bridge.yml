@@ -1,27 +1,11 @@
 name: Fam Space bridge
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - bridge-request.txt
   workflow_dispatch:
-    inputs:
-      automation_branch:
-        description: "Branche Fam Space automation/... à traiter (facultatif)"
-        required: false
-        type: string
-      continuous:
-        description: "Relancer automatiquement le bridge"
-        required: false
-        default: "false"
-        type: string
   schedule:
-    - cron: "17 * * * *"
+    - cron: "45 * * * *"
 
 permissions:
-  actions: write
   contents: read
 
 concurrency:
@@ -33,11 +17,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Récupérer la demande du bridge
-        uses: actions/checkout@v4
-        with:
-          path: bridge
-
       - name: Récupérer Fam Space
         uses: actions/checkout@v4
         with:
@@ -47,71 +26,54 @@ jobs:
           fetch-depth: 0
           path: fam-space
 
-      - name: Récupérer les branches d'automatisation
+      - name: Récupérer la file d'automatisation
         working-directory: fam-space
         shell: bash
         run: |
           set -euo pipefail
           git fetch origin '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
+          git fetch origin --tags --prune
 
       - name: Préparer la file à traiter
         id: queue
         working-directory: fam-space
         shell: bash
-        env:
-          EVENT_NAME: ${{ github.event_name }}
-          MANUAL_BRANCH: ${{ github.event.inputs.automation_branch }}
-          CONTINUOUS: ${{ github.event.inputs.continuous }}
         run: |
           set -euo pipefail
-
-          request=""
-          continuous="false"
-
-          if [ "$EVENT_NAME" = "push" ]; then
-            request="$(tail -n 1 ../bridge/bridge-request.txt | tr -d '\r\n')"
-            if [ "$request" = "__CONTINUOUS__" ]; then
-              request=""
-              continuous="true"
-            fi
-          elif [ "$EVENT_NAME" = "workflow_dispatch" ]; then
-            if [ "${CONTINUOUS:-false}" = "true" ]; then
-              continuous="true"
-            fi
-            if [ -n "${MANUAL_BRANCH:-}" ]; then
-              request="$MANUAL_BRANCH"
-            fi
-          fi
 
           queue_file="$RUNNER_TEMP/fam-space-bridge-queue.txt"
           : > "$queue_file"
 
-          if [ -n "$request" ]; then
-            if [[ ! "$request" =~ ^automation/(publication|review|destination)- ]]; then
-              echo "Branche demandée invalide: $request" >&2
+          while IFS= read -r remote_ref; do
+            [ -n "$remote_ref" ] || continue
+            branch="${remote_ref#origin/}"
+            automation_commit="$(git rev-parse "$remote_ref")"
+            processed_tag="automation-processed/${branch#automation/}"
+
+            if git show-ref --verify --quiet "refs/tags/$processed_tag"; then
+              processed_commit="$(git rev-parse "refs/tags/$processed_tag")"
+              if [ "$processed_commit" = "$automation_commit" ]; then
+                echo "Déjà traitée, branche conservée: $branch"
+                continue
+              fi
+
+              echo "::error::Le marqueur $processed_tag ne correspond plus à $branch."
               exit 1
             fi
 
-            if git show-ref --verify --quiet "refs/remotes/origin/$request"; then
-              printf '%s\n' "$request" > "$queue_file"
-            else
-              echo "La branche demandée n'existe plus: $request"
-            fi
-          else
+            printf '%s\n' "$branch" >> "$queue_file"
+          done < <(
             git for-each-ref \
               --sort=committerdate \
               --format='%(refname:short)' \
               refs/remotes/origin/automation/ \
-              | sed 's#^origin/##' \
-              | grep -E '^automation/(publication|review|destination)-' \
-              > "$queue_file" || true
-          fi
+              | grep -E '^origin/automation/(publication|review|destination)-' || true
+          )
 
           count="$(wc -l < "$queue_file" | tr -d ' ')"
-          echo "Branches à traiter: $count"
+          echo "Branches en attente: $count"
           cat "$queue_file"
           echo "queue_file=$queue_file" >> "$GITHUB_OUTPUT"
-          echo "continuous=$continuous" >> "$GITHUB_OUTPUT"
 
       - uses: actions/setup-node@v4
         with:
@@ -123,7 +85,7 @@ jobs:
         working-directory: fam-space
         run: npm ci
 
-      - name: Publier la file
+      - name: Publier toute la file
         working-directory: fam-space
         shell: bash
         env:
@@ -140,25 +102,44 @@ jobs:
             git fetch origin master '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
 
             if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
-              echo "Branche déjà traitée ou supprimée: $branch"
+              echo "Branche introuvable, conservée hors traitement: $branch"
+              failed=1
               echo "::endgroup::"
               continue
             fi
 
             automation_commit="$(git rev-parse "origin/$branch")"
+            processed_tag="automation-processed/${branch#automation/}"
+
+            if git show-ref --verify --quiet "refs/tags/$processed_tag"; then
+              processed_commit="$(git rev-parse "refs/tags/$processed_tag")"
+              if [ "$processed_commit" = "$automation_commit" ]; then
+                echo "Branche déjà traitée: $branch"
+                echo "::endgroup::"
+                continue
+              fi
+
+              echo "::error::Le marqueur $processed_tag ne correspond plus à $branch."
+              failed=1
+              echo "::endgroup::"
+              continue
+            fi
+
             mapfile -t automation_commits < <(git rev-list --reverse origin/master.."origin/$branch")
 
             if [ "${#automation_commits[@]}" -eq 0 ]; then
-              echo "Branche temporaire déjà absorbée par master: $branch"
-              if ! git push origin --delete "$branch"; then
-                echo "::warning::Impossible de supprimer la branche temporaire déjà absorbée: $branch"
+              echo "Branche déjà absorbée par master, elle reste conservée: $branch"
+              git tag "$processed_tag" "$automation_commit"
+              if ! git push origin "refs/tags/$processed_tag"; then
+                echo "::warning::Impossible de marquer la branche déjà absorbée: $branch"
+                failed=1
               fi
               echo "::endgroup::"
               continue
             fi
 
             if [ "${#automation_commits[@]}" -ne 1 ] || [ "${automation_commits[0]}" != "$automation_commit" ]; then
-              echo "La branche doit contenir exactement un commit d'automatisation au-dessus de master." >&2
+              echo "La branche doit contenir exactement un commit d'automatisation au-dessus de sa base." >&2
               failed=1
               echo "::endgroup::"
               continue
@@ -214,23 +195,6 @@ jobs:
                 ;;
             esac
 
-            if [ "$mode" = "review" ]; then
-              review_base_blob="$(git rev-parse "$automation_parent:$automation_file" 2>/dev/null || true)"
-              master_blob="$(git rev-parse "origin/master:$automation_file" 2>/dev/null || true)"
-
-              if [ -n "$review_base_blob" ] && [ -n "$master_blob" ] && [ "$review_base_blob" != "$master_blob" ]; then
-                echo "Review devenue obsolète: l'article a déjà changé sur master. Suppression de $branch."
-                if ! git push origin --delete "$branch"; then
-                  echo "::warning::Impossible de supprimer la review obsolète: $branch"
-                  failed=1
-                fi
-                echo "::endgroup::"
-                continue
-              fi
-            fi
-
-            # La plomberie est toujours exécutée depuis le master courant.
-            # La branche d'automatisation ne fournit que son unique commit de contenu.
             git checkout -B bridge-runner origin/master
             git reset --hard origin/master
             git clean -fd
@@ -255,11 +219,15 @@ jobs:
             esac
 
             if [ "$success" = true ]; then
-              if ! git push origin --delete "$branch"; then
-                echo "::warning::Travail publié mais branche temporaire non supprimée: $branch"
+              git tag "$processed_tag" "$automation_commit"
+              if git push origin "refs/tags/$processed_tag"; then
+                echo "Travail publié et branche conservée: $branch"
+              else
+                echo "::error::Travail publié mais impossible de créer le marqueur de traitement pour $branch."
+                failed=1
               fi
             else
-              echo "::error::Échec du traitement de $branch. Les autres demandes restent indépendantes."
+              echo "::error::Échec du traitement de $branch. La branche reste intacte pour un prochain cron."
               failed=1
             fi
 
@@ -269,19 +237,3 @@ jobs:
           if [ "$failed" -ne 0 ]; then
             exit 1
           fi
-
-      - name: Relancer le prochain passage du bridge
-        if: ${{ always() && (github.event.inputs.continuous == 'true' || steps.queue.outputs.continuous == 'true') }}
-        shell: bash
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          set -euo pipefail
-          sleep 120
-          curl --fail-with-body --silent --show-error --location \
-            --request POST \
-            --header "Accept: application/vnd.github+json" \
-            --header "Authorization: Bearer $GH_TOKEN" \
-            --header "X-GitHub-Api-Version: 2026-03-10" \
-            "https://api.github.com/repos/${GITHUB_REPOSITORY}/actions/workflows/fam-space-bridge.yml/dispatches" \
-            --data '{"ref":"main","inputs":{"continuous":"true"}}'

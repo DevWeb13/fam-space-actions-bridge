@@ -3,13 +3,13 @@ name: Fam Space production release
 on:
   workflow_dispatch:
   schedule:
-    - cron: "55 6,18 * * *"
+    - cron: "55 0,6,12,18 * * *"
 
 permissions:
   contents: read
 
 concurrency:
-  group: fam-space-master-write
+  group: fam-space-production-release
   cancel-in-progress: false
 
 jobs:
