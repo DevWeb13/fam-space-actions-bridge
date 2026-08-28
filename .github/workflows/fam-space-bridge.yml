@@ -143,13 +143,24 @@ jobs:
             mode=""
             case "$branch" in
               automation/publication-*)
-                if [ "$status" != "A" ] || [ "$automation_file" != "content-candidates/article.md" ] || [ "$(git show -s --format=%s "$automation_commit")" != "content: candidate" ]; then
-                  echo "Candidat de publication invalide." >&2
+                commit_message="$(git show -s --format=%s "$automation_commit")"
+                if [ "$status" = "A" ] && [ "$automation_file" = "content-candidates/article.md" ] && [ "$commit_message" = "content: candidate" ]; then
+                  mode="publication"
+                elif [ "$status" = "A" ] && [ "$automation_file" = "content-candidates/publication-skip.txt" ] && [ "$commit_message" = "content: skip publication" ]; then
+                  skip_position="$(git show "$automation_commit:$automation_file" | tr -d '\r\n[:space:]')"
+                  if [[ ! "$skip_position" =~ ^[0-9]+$ ]]; then
+                    echo "Position de saut invalide: $skip_position" >&2
+                    failed=1
+                    echo "::endgroup::"
+                    continue
+                  fi
+                  mode="publication_skip"
+                else
+                  echo "Publication d'automatisation invalide." >&2
                   failed=1
                   echo "::endgroup::"
                   continue
                 fi
-                mode="publication"
                 ;;
               automation/review-*)
                 slug="$(basename "$(dirname "$automation_file")")"
@@ -222,6 +233,11 @@ jobs:
                     continue
                   fi
                 elif bash .github/scripts/publish-automated-article.sh "$automation_commit" "$automation_file"; then
+                  success=true
+                fi
+                ;;
+              publication_skip)
+                if bash .github/scripts/skip-publication-assignment.sh "$skip_position"; then
                   success=true
                 fi
                 ;;
