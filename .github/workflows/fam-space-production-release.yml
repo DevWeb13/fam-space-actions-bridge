@@ -37,7 +37,7 @@ jobs:
       - run: npm ci
 
       - name: Valider le contenu avant la release
-        run: npm run content:check
+        run: npm run content:validate
 
       - name: Avancer production vers master au maximum toutes les 6 heures
         shell: bash
