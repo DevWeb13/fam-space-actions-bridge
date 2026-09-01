@@ -29,16 +29,6 @@ jobs:
           token: ${{ secrets.FAM_SPACE_TOKEN }}
           fetch-depth: 0
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
-          cache: npm
-
-      - run: npm ci
-
-      - name: Valider le contenu avant la release
-        run: npm run content:validate
-
       - name: Avancer production vers master au maximum toutes les 6 heures
         shell: bash
         run: |
