@@ -81,6 +81,18 @@ jobs:
           candidate_commit="$(git rev-parse "origin/$request")"
           candidate_parent="$(git rev-parse "${candidate_commit}^")"
 
+          if ! git merge-base --is-ancestor "$candidate_parent" origin/master; then
+            echo "La branche candidate image ne part pas d'un historique de master reconnu." >&2
+            exit 1
+          fi
+
+          mapfile -t candidate_commits < <(git rev-list --reverse origin/master.."origin/$request")
+          if [ "${#candidate_commits[@]}" -ne 1 ] || [ "${candidate_commits[0]}" != "$candidate_commit" ]; then
+            echo "La branche candidate image doit contenir exactement un commit propre à la branche." >&2
+            printf '%s\n' "${candidate_commits[@]}" >&2
+            exit 1
+          fi
+
           if git show-ref --verify --quiet "refs/tags/$processed_tag"; then
             processed_commit="$(git rev-parse "refs/tags/$processed_tag")"
             if [ "$processed_commit" != "$candidate_commit" ]; then
