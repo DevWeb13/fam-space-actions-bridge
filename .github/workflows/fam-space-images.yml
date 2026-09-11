@@ -1,0 +1,133 @@
+name: Fam Space images
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - image-request.txt
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fam-space-master-write
+  cancel-in-progress: false
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le signal
+        uses: actions/checkout@v4
+        with:
+          path: bridge
+
+      - name: Récupérer Fam Space
+        uses: actions/checkout@v4
+        with:
+          repository: DevWeb13/fam-space-qwik
+          ref: master
+          token: ${{ secrets.FAM_SPACE_TOKEN }}
+          fetch-depth: 0
+          path: fam-space
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: fam-space/package-lock.json
+
+      - name: Installer les dépendances
+        working-directory: fam-space
+        run: npm ci
+
+      - name: Traiter la demande image
+        working-directory: fam-space
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          request="$(grep -v '^[[:space:]]*$' ../bridge/image-request.txt | tail -n 1 | tr -d '\r\n')"
+
+          if [ -z "$request" ] || [ "$request" = "idle" ]; then
+            echo "Aucune demande image à traiter."
+            exit 0
+          fi
+
+          if [[ ! "$request" =~ ^automation/image-[a-zA-Z0-9._-]+$ ]]; then
+            echo "Demande image invalide: $request" >&2
+            exit 1
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin master --tags --prune
+          git fetch origin "+refs/heads/$request:refs/remotes/origin/$request" --prune || true
+
+          processed_tag="automation-processed/${request#automation/}"
+
+          if ! git show-ref --verify --quiet "refs/remotes/origin/$request"; then
+            if git show-ref --verify --quiet "refs/tags/$processed_tag"; then
+              echo "Demande déjà traitée: $request"
+              exit 0
+            fi
+            echo "Branche candidate image introuvable: $request" >&2
+            exit 1
+          fi
+
+          candidate_commit="$(git rev-parse "origin/$request")"
+          candidate_parent="$(git rev-parse "${candidate_commit}^")"
+
+          if git show-ref --verify --quiet "refs/tags/$processed_tag"; then
+            processed_commit="$(git rev-parse "refs/tags/$processed_tag")"
+            if [ "$processed_commit" != "$candidate_commit" ]; then
+              echo "Le marqueur $processed_tag ne correspond plus à $request." >&2
+              exit 1
+            fi
+            git push origin --delete "$request" || true
+            echo "Demande image déjà traitée: $request"
+            exit 0
+          fi
+
+          mapfile -t changes < <(git diff --name-status "$candidate_parent" "$candidate_commit")
+          if [ "${#changes[@]}" -ne 1 ]; then
+            echo "Le commit candidat image doit contenir exactement un changement." >&2
+            printf '%s\n' "${changes[@]}" >&2
+            exit 1
+          fi
+
+          read -r status candidate_file <<< "${changes[0]}"
+          if [ "$status" != "A" ] || [ "$candidate_file" != "content-candidates/article-images.json" ]; then
+            echo "Candidat image invalide: ${changes[0]}" >&2
+            exit 1
+          fi
+
+          commit_message="$(git show -s --format=%s "$candidate_commit")"
+          if [ "$commit_message" != "content: image candidate" ]; then
+            echo "Message de commit candidat image invalide: $commit_message" >&2
+            exit 1
+          fi
+
+          if ! bash .github/scripts/publish-article-images.sh "$candidate_commit" "$candidate_file"; then
+            echo "Échec du traitement image. La branche candidate est conservée: $request" >&2
+            exit 1
+          fi
+
+          git fetch origin --tags --prune
+          if ! git show-ref --verify --quiet "refs/tags/$processed_tag"; then
+            git tag "$processed_tag" "$candidate_commit"
+            git push origin "refs/tags/$processed_tag"
+          fi
+
+          git push origin --delete "$request" || true
+
+          {
+            echo "## Bridge images Fam Space"
+            echo
+            echo "- Résultat: succès"
+            echo "- Branche candidate: \`$request\`"
+            echo "- Commit candidat: \`$candidate_commit\`"
+          } >> "$GITHUB_STEP_SUMMARY"
