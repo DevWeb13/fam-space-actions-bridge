@@ -2,3 +2,4 @@ idle
 automation/image-test-20260911-1755
 automation/image-test-20260911-1755
 automation/image-catchup-20260911-01
+automation/image-catchup-20260911-02
