@@ -195,20 +195,27 @@ const buildInstagramCaption = (article, credit) =>
     .filter(Boolean)
     .join("\n\n");
 
-const buildThreadsText = (article, credit) => {
+const buildThreadsContent = (article, credit) => {
   const full = [article.title, article.url, buildCreditText(credit)]
     .filter(Boolean)
     .join("\n\n");
-  if (full.length <= 500) return full;
+  if (full.length <= 500) {
+    return { text: full, useFallbackImage: false };
+  }
 
   const compact = [article.title, article.url, buildCreditText(credit, true)]
     .filter(Boolean)
     .join("\n\n");
-  if (compact.length <= 500) return compact;
+  if (compact.length <= 500) {
+    return { text: compact, useFallbackImage: false };
+  }
 
   const roomForTitle = Math.max(40, 500 - article.url.length - 4);
   const title = article.title.slice(0, roomForTitle - 1).trimEnd() + "…";
-  return `${title}\n\n${article.url}`.slice(0, 500);
+  return {
+    text: `${title}\n\n${article.url}`.slice(0, 500),
+    useFallbackImage: Boolean(credit),
+  };
 };
 
 const parseJsonResponse = async (response) => {
@@ -308,13 +315,21 @@ const publishInstagram = async (article, image) => {
 };
 
 const publishThreads = async (article, image) => {
+  const content = buildThreadsContent(article, image.credit);
+  const threadsImageUrl = content.useFallbackImage
+    ? fallbackImageUrl
+    : image.url;
+  const threadsAlt = content.useFallbackImage
+    ? `Fam Space - ${article.title}`
+    : image.alt;
+
   const created = await postForm(
     `https://graph.threads.net/v1.0/${threadsUserId}/threads`,
     {
       media_type: "IMAGE",
-      image_url: image.url,
-      text: buildThreadsText(article, image.credit),
-      alt_text: image.alt.slice(0, 1_000),
+      image_url: threadsImageUrl,
+      text: content.text,
+      alt_text: threadsAlt.slice(0, 1_000),
       access_token: tokens.threads,
     },
   );
