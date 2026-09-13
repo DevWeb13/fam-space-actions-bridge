@@ -1,0 +1,120 @@
+name: Fam Space social publisher
+
+on:
+  workflow_run:
+    workflows:
+      - Fam Space production release
+    types:
+      - completed
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fam-space-social-publisher
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le bridge
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: bridge
+          fetch-depth: 0
+
+      - name: Récupérer Fam Space en production
+        uses: actions/checkout@v4
+        with:
+          repository: DevWeb13/fam-space-qwik
+          ref: production
+          token: ${{ secrets.FAM_SPACE_TOKEN }}
+          path: fam-space
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Préparer le visuel de secours Instagram
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          fallback="bridge/social-assets/fam-space-default.jpg"
+          if [ -f "$fallback" ]; then
+            echo "Visuel de secours déjà présent."
+            exit 0
+          fi
+
+          (cd fam-space && npm ci)
+          mkdir -p bridge/social-assets
+          (
+            cd fam-space
+            node --input-type=module <<'NODE'
+          import sharp from "sharp";
+          await sharp("public/images/social/fam-space-default.png")
+            .flatten({ background: "#ffffff" })
+            .jpeg({ quality: 90, mozjpeg: true })
+            .toFile("../bridge/social-assets/fam-space-default.jpg");
+          NODE
+          )
+
+          cd bridge
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add social-assets/fam-space-default.jpg
+          git commit -m "social: add fallback image"
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Vérifier le visuel de secours public
+        shell: bash
+        run: |
+          set -euo pipefail
+          url="https://raw.githubusercontent.com/DevWeb13/fam-space-actions-bridge/main/social-assets/fam-space-default.jpg"
+          for attempt in $(seq 1 15); do
+            if curl -fsSL --range 0-0 "$url" -o /dev/null; then
+              exit 0
+            fi
+            echo "Visuel pas encore disponible, tentative $attempt/15."
+            sleep 2
+          done
+          echo "Le visuel de secours n'est pas accessible publiquement." >&2
+          exit 1
+
+      - name: Publier les nouveaux articles
+        shell: bash
+        env:
+          FAM_SPACE_DIR: ${{ github.workspace }}/fam-space
+          FACEBOOK_PAGE_ID: "1314472035081859"
+          INSTAGRAM_USER_ID: "28082762261424741"
+          THREADS_USER_ID: "28413878778293545"
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+        run: |
+          set -uo pipefail
+
+          set +e
+          node bridge/scripts/publish-social.mjs bridge/social-state.json
+          social_status=$?
+          set -e
+
+          cd bridge
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add social-state.json
+
+          if ! git diff --cached --quiet; then
+            git commit -m "social: advance publication state"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+
+          exit "$social_status"
