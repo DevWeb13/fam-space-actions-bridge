@@ -22,7 +22,22 @@ jobs:
       THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
 
     steps:
+      - name: Vérifier la configuration Meta
+        id: meta
+        shell: bash
+        run: |
+          if [ -n "$FACEBOOK_PAGE_ACCESS_TOKEN" ] && \
+             [ -n "$INSTAGRAM_ACCESS_TOKEN" ] && \
+             [ -n "$THREADS_ACCESS_TOKEN" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+            echo "Configuration Meta prête."
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Secrets Meta absents: rafraîchissement ignoré sans erreur."
+          fi
+
       - name: Vérifier le token Facebook
+        if: steps.meta.outputs.ready == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -33,6 +48,7 @@ jobs:
           echo "Token Facebook valide."
 
       - name: Rafraîchir le token Instagram
+        if: steps.meta.outputs.ready == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -54,6 +70,7 @@ jobs:
           fi
 
       - name: Rafraîchir le token Threads
+        if: steps.meta.outputs.ready == 'true'
         shell: bash
         run: |
           set -euo pipefail
