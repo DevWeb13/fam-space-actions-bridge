@@ -21,7 +21,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Vérifier la configuration Meta
+        id: meta
+        shell: bash
+        env:
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+        run: |
+          if [ -n "$FACEBOOK_PAGE_ACCESS_TOKEN" ] && \
+             [ -n "$INSTAGRAM_ACCESS_TOKEN" ] && \
+             [ -n "$THREADS_ACCESS_TOKEN" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+            echo "Configuration Meta prête."
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "Secrets Meta absents: publication ignorée sans erreur."
+          fi
+
       - name: Récupérer le bridge
+        if: steps.meta.outputs.ready == 'true'
         uses: actions/checkout@v4
         with:
           ref: main
@@ -29,6 +48,7 @@ jobs:
           fetch-depth: 0
 
       - name: Récupérer Fam Space en production
+        if: steps.meta.outputs.ready == 'true'
         uses: actions/checkout@v4
         with:
           repository: DevWeb13/fam-space-qwik
@@ -38,10 +58,12 @@ jobs:
           fetch-depth: 0
 
       - uses: actions/setup-node@v4
+        if: steps.meta.outputs.ready == 'true'
         with:
           node-version: 24
 
-      - name: Préparer le visuel de secours Instagram
+      - name: Préparer le visuel de secours Meta
+        if: steps.meta.outputs.ready == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -74,6 +96,7 @@ jobs:
           git push origin HEAD:main
 
       - name: Vérifier le visuel de secours public
+        if: steps.meta.outputs.ready == 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -89,6 +112,7 @@ jobs:
           exit 1
 
       - name: Publier les nouveaux articles
+        if: steps.meta.outputs.ready == 'true'
         shell: bash
         env:
           FAM_SPACE_DIR: ${{ github.workspace }}/fam-space
