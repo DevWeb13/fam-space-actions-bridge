@@ -1,0 +1,80 @@
+name: Fam Space social token refresh
+
+on:
+  schedule:
+    - cron: "23 7 * * 3"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fam-space-social-token-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.FAM_SPACE_TOKEN }}
+      FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+      INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+      THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+
+    steps:
+      - name: Vérifier le token Facebook
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fsSG "https://graph.facebook.com/v26.0/1314472035081859" \
+            --data-urlencode "fields=id" \
+            --data-urlencode "access_token=$FACEBOOK_PAGE_ACCESS_TOKEN" \
+            -o /dev/null
+          echo "Token Facebook valide."
+
+      - name: Rafraîchir le token Instagram
+        shell: bash
+        run: |
+          set -euo pipefail
+          response="$(curl -fsSG "https://graph.instagram.com/refresh_access_token" \
+            --data-urlencode "grant_type=ig_refresh_token" \
+            --data-urlencode "access_token=$INSTAGRAM_ACCESS_TOKEN")"
+
+          refreshed="$(printf '%s' "$response" | python3 -c 'import json,sys; data=json.load(sys.stdin); print(data.get("access_token", ""))')"
+          if [ -z "$refreshed" ]; then
+            echo "Instagram n'a pas renvoyé de token rafraîchi." >&2
+            exit 1
+          fi
+
+          if [ "$refreshed" != "$INSTAGRAM_ACCESS_TOKEN" ]; then
+            printf '%s' "$refreshed" | gh secret set INSTAGRAM_ACCESS_TOKEN --repo "$GITHUB_REPOSITORY"
+            echo "Secret Instagram mis à jour."
+          else
+            echo "Token Instagram rafraîchi sans rotation du secret."
+          fi
+
+      - name: Rafraîchir le token Threads
+        shell: bash
+        run: |
+          set -euo pipefail
+          response="$(curl -fsSG "https://graph.threads.net/refresh_access_token" \
+            --data-urlencode "grant_type=th_refresh_token" \
+            --data-urlencode "access_token=$THREADS_ACCESS_TOKEN")"
+
+          if [ -z "$response" ]; then
+            echo "Token Threads rafraîchi sans réponse à persister."
+            exit 0
+          fi
+
+          refreshed="$(printf '%s' "$response" | python3 -c 'import json,sys; data=json.load(sys.stdin); print(data.get("access_token", ""))')"
+          if [ -z "$refreshed" ]; then
+            echo "Threads n'a pas renvoyé de token exploitable." >&2
+            exit 1
+          fi
+
+          if [ "$refreshed" != "$THREADS_ACCESS_TOKEN" ]; then
+            printf '%s' "$refreshed" | gh secret set THREADS_ACCESS_TOKEN --repo "$GITHUB_REPOSITORY"
+            echo "Secret Threads mis à jour."
+          else
+            echo "Token Threads rafraîchi sans rotation du secret."
+          fi
