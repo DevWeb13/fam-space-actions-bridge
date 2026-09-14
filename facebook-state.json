@@ -1,6 +1,11 @@
 {
-  "version": 2,
-  "baselineProductionSha": "87d84e71a266a4ab593e15232134d3e468f2c181",
+  "version": 3,
   "activatedAt": "2026-09-14T18:37:00+02:00",
+  "backfillStartAt": "2026-09-01T00:00:00+02:00",
+  "backfill": {
+    "dateParis": null,
+    "publishedToday": 0,
+    "lastPublishedAt": null
+  },
   "posts": {}
 }
