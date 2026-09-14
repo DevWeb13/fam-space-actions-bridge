@@ -3,9 +3,18 @@
   "activatedAt": "2026-09-14T18:37:00+02:00",
   "backfillStartAt": "2026-09-01T00:00:00+02:00",
   "backfill": {
-    "dateParis": null,
-    "publishedToday": 0,
-    "lastPublishedAt": null
+    "dateParis": "2026-09-14",
+    "publishedToday": 1,
+    "lastPublishedAt": "2026-09-14T17:31:48.974Z"
   },
-  "posts": {}
+  "posts": {
+    "coeur-de-ville-en-lumieres-2026-avec-des-enfants-comment-preparer-la-soiree-sans-voiture": {
+      "id": "1314472035081859_122099782287477492",
+      "at": "2026-09-14T17:31:48.974Z",
+      "productionSha": "87d84e71a266a4ab593e15232134d3e468f2c181",
+      "mode": "hero",
+      "kind": "backfill",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Place_de_la_Com%C3%A9die_%28Montpellier%29_de_nuit_en_juin_2019.jpg/1920px-Place_de_la_Com%C3%A9die_%28Montpellier%29_de_nuit_en_juin_2019.jpg"
+    }
+  }
 }
