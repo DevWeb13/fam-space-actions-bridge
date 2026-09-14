@@ -1,58 +1,53 @@
-name: Fam Space social publisher
+name: Fam Space Facebook publisher
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - scripts/publish-social.mjs
-      - .github/workflows/fam-space-social.yml
+  workflow_run:
+    workflows:
+      - Fam Space production release
+    types:
+      - completed
   workflow_dispatch:
     inputs:
       dry_run:
-        description: "Analyser les publications sans rien envoyer à Meta"
+        description: "Analyser Facebook sans publier"
         required: false
-        default: false
+        default: true
         type: boolean
 
 permissions:
   contents: write
 
 concurrency:
-  group: fam-space-social-publisher
+  group: fam-space-facebook-publisher
   cancel-in-progress: false
 
 jobs:
   publish:
-    if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
     steps:
-      - name: Vérifier la configuration Meta
-        id: meta
+      - name: Vérifier la configuration Facebook
+        id: facebook
         shell: bash
         env:
           FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
-          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
-          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
           REQUESTED_DRY_RUN: ${{ inputs.dry_run && 'true' || 'false' }}
         run: |
-          if [ "$GITHUB_EVENT_NAME" = "push" ] || [ "$REQUESTED_DRY_RUN" = "true" ]; then
+          if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] && [ "$REQUESTED_DRY_RUN" = "true" ]; then
             echo "ready=true" >> "$GITHUB_OUTPUT"
-            echo "Mode audit: aucun appel de publication Meta ne sera effectué."
-          elif [ -n "$FACEBOOK_PAGE_ACCESS_TOKEN" ] || \
-               [ -n "$INSTAGRAM_ACCESS_TOKEN" ] || \
-               [ -n "$THREADS_ACCESS_TOKEN" ]; then
+            echo "Mode dry-run: aucun appel de publication Facebook."
+          elif [ -n "$FACEBOOK_PAGE_ACCESS_TOKEN" ]; then
             echo "ready=true" >> "$GITHUB_OUTPUT"
-            echo "Au moins un réseau Meta est configuré."
+            echo "Token Facebook présent."
           else
             echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "Aucun secret Meta présent: publication ignorée sans erreur."
+            echo "::error::FACEBOOK_PAGE_ACCESS_TOKEN absent."
           fi
 
       - name: Récupérer le bridge
-        if: steps.meta.outputs.ready == 'true'
+        if: steps.facebook.outputs.ready == 'true'
         uses: actions/checkout@v4
         with:
           ref: main
@@ -60,7 +55,7 @@ jobs:
           fetch-depth: 0
 
       - name: Récupérer Fam Space en production
-        if: steps.meta.outputs.ready == 'true'
+        if: steps.facebook.outputs.ready == 'true'
         uses: actions/checkout@v4
         with:
           repository: DevWeb13/fam-space-qwik
@@ -70,39 +65,42 @@ jobs:
           fetch-depth: 0
 
       - uses: actions/setup-node@v4
-        if: steps.meta.outputs.ready == 'true'
+        if: steps.facebook.outputs.ready == 'true'
         with:
           node-version: 24
 
-      - name: Publier les nouveaux articles et rattraper l'historique
-        if: steps.meta.outputs.ready == 'true'
+      - name: Vérifier le publisher Facebook
+        if: steps.facebook.outputs.ready == 'true'
+        shell: bash
+        run: node --check bridge/scripts/publish-facebook.mjs
+
+      - name: Publier les nouveaux articles sur Facebook
+        if: steps.facebook.outputs.ready == 'true'
         shell: bash
         env:
           FAM_SPACE_DIR: ${{ github.workspace }}/fam-space
           FACEBOOK_PAGE_ID: "1314472035081859"
-          INSTAGRAM_USER_ID: "28082762261424741"
-          THREADS_USER_ID: "28413878778293545"
           FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
-          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
-          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
-          SOCIAL_DRY_RUN: ${{ (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.dry_run == true)) && 'true' || 'false' }}
+          META_GRAPH_VERSION: v26.0
+          FACEBOOK_MAX_PER_RUN: 10
+          SOCIAL_DRY_RUN: ${{ (github.event_name == 'workflow_dispatch' && inputs.dry_run == true) && 'true' || 'false' }}
         run: |
           set -uo pipefail
 
           set +e
-          node bridge/scripts/publish-social.mjs bridge/social-state.json
-          social_status=$?
+          node bridge/scripts/publish-facebook.mjs bridge/facebook-state.json
+          facebook_status=$?
           set -e
 
           cd bridge
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add social-state.json
+          git add facebook-state.json
 
           if ! git diff --cached --quiet; then
-            git commit -m "social: advance publication state"
+            git commit -m "facebook: advance publication state"
             git pull --rebase origin main
             git push origin HEAD:main
           fi
 
-          exit "$social_status"
+          exit "$facebook_status"
