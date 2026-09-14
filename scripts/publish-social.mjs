@@ -19,6 +19,19 @@ const instagramUserId = process.env.INSTAGRAM_USER_ID ?? "28082762261424741";
 const threadsUserId = process.env.THREADS_USER_ID ?? "28413878778293545";
 const dryRun = process.env.SOCIAL_DRY_RUN === "true";
 
+// Backfill is intentionally gradual even when Meta reports a large remaining
+// quota. This avoids a burst of hundreds of posts while still clearing the
+// history quickly through the hourly workflow.
+const PER_RUN_LIMIT = {
+  facebook: 20,
+  instagram: 10,
+  threads: 20,
+};
+const INSTAGRAM_QUOTA_RESERVE = 10;
+const THREADS_QUOTA_RESERVE = 20;
+const FACEBOOK_USAGE_STOP_PERCENT = 80;
+const FACEBOOK_NO_HEADER_LIMIT = 10;
+
 const tokens = {
   facebook: process.env.FACEBOOK_PAGE_ACCESS_TOKEN ?? "",
   instagram: process.env.INSTAGRAM_ACCESS_TOKEN ?? "",
@@ -283,6 +296,8 @@ const parseJsonResponse = async (response) => {
   return data;
 };
 
+const getJson = async (url) => parseJsonResponse(await fetch(url));
+
 const postForm = async (url, fields) => {
   const body = new URLSearchParams();
   for (const [key, value] of Object.entries(fields)) {
@@ -292,6 +307,138 @@ const postForm = async (url, fields) => {
   }
   const response = await fetch(url, { method: "POST", body });
   return parseJsonResponse(response);
+};
+
+const readQuotaWindow = async (platform) => {
+  const url =
+    platform === "threads"
+      ? new URL("https://graph.threads.net/v1.0/me/threads_publishing_limit")
+      : new URL(
+          `https://graph.instagram.com/${GRAPH_VERSION}/${instagramUserId}/content_publishing_limit`,
+        );
+  url.searchParams.set("fields", "quota_usage,config");
+  url.searchParams.set("access_token", tokens[platform]);
+  const data = await getJson(url);
+  const item = data?.data?.[0] ?? {};
+  const usage = Number(item.quota_usage);
+  const total = Number(item?.config?.quota_total);
+  const duration = Number(item?.config?.quota_duration);
+  if (!Number.isFinite(usage) || !Number.isFinite(total)) {
+    throw new Error(`${platform}: réponse quota invalide`);
+  }
+  return { usage, total, duration };
+};
+
+const maxUsagePercent = (value) => {
+  let max = null;
+  const visit = (node) => {
+    if (Array.isArray(node)) {
+      for (const item of node) visit(item);
+      return;
+    }
+    if (!node || typeof node !== "object") return;
+    for (const [key, child] of Object.entries(node)) {
+      if (["call_count", "total_cputime", "total_time"].includes(key)) {
+        const numeric = Number(child);
+        if (Number.isFinite(numeric)) max = Math.max(max ?? 0, numeric);
+      } else {
+        visit(child);
+      }
+    }
+  };
+  visit(value);
+  return max;
+};
+
+const readFacebookUsage = async () => {
+  const url = new URL(
+    `https://graph.facebook.com/${GRAPH_VERSION}/${facebookPageId}`,
+  );
+  url.searchParams.set("fields", "id,name");
+  url.searchParams.set("access_token", tokens.facebook);
+  const response = await fetch(url);
+  const headers = [
+    "x-business-use-case-usage",
+    "x-page-usage",
+    "x-app-usage",
+  ];
+  let usagePercent = null;
+  for (const name of headers) {
+    const raw = response.headers.get(name);
+    if (!raw) continue;
+    try {
+      const parsed = JSON.parse(raw);
+      const current = maxUsagePercent(parsed);
+      if (current !== null) {
+        usagePercent = Math.max(usagePercent ?? 0, current);
+      }
+    } catch {
+      // Ignore malformed usage headers but still validate the API response.
+    }
+  }
+  await parseJsonResponse(response);
+  return usagePercent;
+};
+
+const buildLiveBudgets = async () => {
+  const budgets = { facebook: 0, instagram: 0, threads: 0 };
+
+  if (tokens.threads) {
+    try {
+      const quota = await readQuotaWindow("threads");
+      const remaining = Math.max(
+        0,
+        quota.total - quota.usage - THREADS_QUOTA_RESERVE,
+      );
+      budgets.threads = Math.min(PER_RUN_LIMIT.threads, remaining);
+      console.log(
+        `Threads quota: ${quota.usage}/${quota.total} sur ${quota.duration || 86400}s; budget run=${budgets.threads}, réserve=${THREADS_QUOTA_RESERVE}.`,
+      );
+    } catch (error) {
+      console.error(`Threads quota indisponible: ${error.message}; publication suspendue pour ce réseau.`);
+    }
+  }
+
+  if (tokens.instagram) {
+    try {
+      const quota = await readQuotaWindow("instagram");
+      const remaining = Math.max(
+        0,
+        quota.total - quota.usage - INSTAGRAM_QUOTA_RESERVE,
+      );
+      budgets.instagram = Math.min(PER_RUN_LIMIT.instagram, remaining);
+      console.log(
+        `Instagram quota: ${quota.usage}/${quota.total} sur ${quota.duration || 86400}s; budget run=${budgets.instagram}, réserve=${INSTAGRAM_QUOTA_RESERVE}.`,
+      );
+    } catch (error) {
+      console.error(`Instagram quota indisponible: ${error.message}; publication suspendue pour ce réseau.`);
+    }
+  }
+
+  if (tokens.facebook) {
+    try {
+      const usage = await readFacebookUsage();
+      if (usage === null) {
+        budgets.facebook = FACEBOOK_NO_HEADER_LIMIT;
+        console.log(
+          `Facebook: aucun compteur de quota exposé; budget prudent=${budgets.facebook}.`,
+        );
+      } else if (usage >= FACEBOOK_USAGE_STOP_PERCENT) {
+        console.log(
+          `Facebook usage=${usage}% >= ${FACEBOOK_USAGE_STOP_PERCENT}%; publication suspendue pour ce run.`,
+        );
+      } else {
+        budgets.facebook = PER_RUN_LIMIT.facebook;
+        console.log(
+          `Facebook usage=${usage}%; budget run=${budgets.facebook}, arrêt automatique à ${FACEBOOK_USAGE_STOP_PERCENT}%.`,
+        );
+      }
+    } catch (error) {
+      console.error(`Facebook quota indisponible: ${error.message}; publication suspendue pour ce réseau.`);
+    }
+  }
+
+  return budgets;
 };
 
 const waitForArticle = async (url) => {
@@ -436,8 +583,9 @@ const ensureRuntimeConfiguration = () => {
 const loadState = async () => {
   const raw = await fs.readFile(stateFile, "utf8");
   const state = JSON.parse(raw);
+  state.version = Math.max(Number(state.version) || 1, 2);
   state.articles ??= {};
-  if (!state.startedAt) throw new Error("social state is missing startedAt");
+  delete state.startedAt;
   return state;
 };
 
@@ -448,10 +596,6 @@ const saveState = async (state) => {
 const main = async () => {
   ensureRuntimeConfiguration();
   const state = await loadState();
-  const startedAtMs = Date.parse(state.startedAt);
-  if (!Number.isFinite(startedAtMs)) {
-    throw new Error("invalid startedAt in social state");
-  }
 
   const articleRoot = path.join(famSpaceDir, "src", "routes", "articles");
   const files = await walkIndexFiles(articleRoot);
@@ -461,21 +605,47 @@ const main = async () => {
     const article = parseArticle(file, markdown);
     if (!article || article.status !== "published") continue;
     const publishedAtMs = Date.parse(article.publishedAt);
-    if (!Number.isFinite(publishedAtMs) || publishedAtMs < startedAtMs) continue;
+    if (!Number.isFinite(publishedAtMs)) continue;
     articles.push(article);
   }
-  articles.sort((a, b) => Date.parse(a.publishedAt) - Date.parse(b.publishedAt));
+
+  // Historical catch-up is oldest-first. Once the backlog is empty, the same
+  // ordering naturally handles each newly published article.
+  articles.sort((a, b) => {
+    const byDate = Date.parse(a.publishedAt) - Date.parse(b.publishedAt);
+    return byDate || a.slug.localeCompare(b.slug, "fr");
+  });
+
+  const budgets = dryRun
+    ? { facebook: Infinity, instagram: Infinity, threads: Infinity }
+    : await buildLiveBudgets();
+  const publishedThisRun = { facebook: 0, instagram: 0, threads: 0 };
+
+  console.log(
+    `Historique éligible: ${articles.length} article(s), ordre=du plus ancien au plus récent.`,
+  );
 
   let failures = 0;
   for (const article of articles) {
+    if (
+      !dryRun &&
+      PLATFORMS.every(
+        (platform) => !tokens[platform] || budgets[platform] <= 0,
+      )
+    ) {
+      break;
+    }
+
     const current = (state.articles[article.slug] ??= {});
     const unposted = PLATFORMS.filter((platform) => !current[platform]);
     const pending = dryRun
-      ? PLATFORMS
-      : unposted.filter((platform) => Boolean(tokens[platform]));
+      ? unposted
+      : unposted.filter(
+          (platform) => Boolean(tokens[platform]) && budgets[platform] > 0,
+        );
     if (pending.length === 0) continue;
 
-    console.log(`Article: ${article.slug}`);
+    console.log(`Article: ${article.publishedAt} ${article.slug}`);
     try {
       if (!dryRun) await waitForArticle(article.url);
     } catch (error) {
@@ -528,8 +698,31 @@ const main = async () => {
           at: new Date().toISOString(),
           mode: result.mode,
         };
+        budgets[platform] = Math.max(0, budgets[platform] - 1);
+        publishedThisRun[platform] += 1;
         await saveState(state);
         console.log(`  ${platform}: published ${result.mode} (${result.id})`);
+
+        if (
+          platform === "facebook" &&
+          publishedThisRun.facebook % 5 === 0 &&
+          budgets.facebook > 0
+        ) {
+          try {
+            const usage = await readFacebookUsage();
+            if (usage !== null && usage >= FACEBOOK_USAGE_STOP_PERCENT) {
+              budgets.facebook = 0;
+              console.log(
+                `  facebook: usage=${usage}% — arrêt du rattrapage Facebook pour ce run.`,
+              );
+            }
+          } catch (error) {
+            budgets.facebook = 0;
+            console.error(
+              `  facebook: contrôle quota impossible (${error.message}) — arrêt prudent pour ce run.`,
+            );
+          }
+        }
       } catch (error) {
         failures += 1;
         console.error(`  ${platform}: ${error.message}`);
@@ -538,11 +731,18 @@ const main = async () => {
   }
 
   if (dryRun) {
-    console.log(`Dry-run complete: ${articles.length} eligible article(s).`);
+    console.log(`Dry-run complete: ${articles.length} article(s) historiques analysés.`);
     return;
   }
 
   await saveState(state);
+  console.log(
+    `Publié pendant ce run: facebook=${publishedThisRun.facebook}, instagram=${publishedThisRun.instagram}, threads=${publishedThisRun.threads}.`,
+  );
+  console.log(
+    `Budgets restants: facebook=${budgets.facebook}, instagram=${budgets.instagram}, threads=${budgets.threads}.`,
+  );
+
   if (failures > 0) {
     console.error(
       `${failures} social publication(s) failed and will be retried.`,
