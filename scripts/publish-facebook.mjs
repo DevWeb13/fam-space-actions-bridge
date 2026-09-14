@@ -8,9 +8,11 @@ import { promisify } from "node:util";
 const execFile = promisify(execFileCallback);
 
 const SITE_URL = "https://www.fam-space.fr";
+const FALLBACK_IMAGE_URL = `${SITE_URL}/images/social/fam-space-default.png`;
 const GRAPH_VERSION = process.env.META_GRAPH_VERSION || "v26.0";
 const DEFAULT_PAGE_ID = "1314472035081859";
 const DEFAULT_MAX_PER_RUN = 10;
+const DEFAULT_IMAGE_GRACE_HOURS = 24;
 
 const stateFile = process.argv[2];
 if (!stateFile) {
@@ -23,9 +25,15 @@ const pageId = process.env.FACEBOOK_PAGE_ID || DEFAULT_PAGE_ID;
 const accessToken = process.env.FACEBOOK_PAGE_ACCESS_TOKEN || "";
 const dryRun = process.env.SOCIAL_DRY_RUN === "true";
 const maxPerRun = Number(process.env.FACEBOOK_MAX_PER_RUN || DEFAULT_MAX_PER_RUN);
+const imageGraceHours = Number(
+  process.env.FACEBOOK_IMAGE_GRACE_HOURS || DEFAULT_IMAGE_GRACE_HOURS,
+);
 
 if (!Number.isInteger(maxPerRun) || maxPerRun < 1 || maxPerRun > 25) {
   throw new Error(`FACEBOOK_MAX_PER_RUN invalide: ${maxPerRun}`);
+}
+if (!Number.isFinite(imageGraceHours) || imageGraceHours < 0 || imageGraceHours > 168) {
+  throw new Error(`FACEBOOK_IMAGE_GRACE_HOURS invalide: ${imageGraceHours}`);
 }
 
 const normalizeWhitespace = (value) => String(value ?? "").replace(/\s+/g, " ").trim();
@@ -105,7 +113,7 @@ const buildCreditText = (credit) => {
   return `Photo: ${credit.creator} - ${credit.license} - ${credit.licenseUrl} - ${credit.sourceUrl}`;
 };
 
-const prepareImage = async (article) => {
+const prepareHeroImage = async (article) => {
   const provenancePath = path.join(
     famSpaceDir,
     "content-data",
@@ -117,28 +125,25 @@ const prepareImage = async (article) => {
   try {
     provenance = JSON.parse(await fs.readFile(provenancePath, "utf8"));
   } catch {
-    return {
-      status: "pending",
-      reason: "provenance héros absente ou illisible",
-    };
+    return { status: "unavailable", reason: "provenance héros absente ou illisible" };
   }
 
   if (provenance.role !== "hero") {
-    return { status: "pending", reason: "provenance non marquée hero" };
+    return { status: "unavailable", reason: "provenance non marquée hero" };
   }
 
   if (provenance.provider !== "wikimedia-commons") {
     return {
-      status: "skipped",
-      reason: `provider non autorisé automatiquement: ${provenance.provider || "inconnu"}`,
+      status: "unavailable",
+      reason: `provider non autorisé pour la hero: ${provenance.provider || "inconnu"}`,
     };
   }
 
   const license = provenance.license || "";
   if (!isAllowedMetaLicense(license)) {
     return {
-      status: "skipped",
-      reason: `licence non autorisée: ${license || "inconnue"}`,
+      status: "unavailable",
+      reason: `licence hero non autorisée: ${license || "inconnue"}`,
     };
   }
 
@@ -154,8 +159,8 @@ const prepareImage = async (article) => {
       !provenance.sourcePage
     ) {
       return {
-        status: "skipped",
-        reason: "métadonnées d’attribution incomplètes",
+        status: "unavailable",
+        reason: "métadonnées d’attribution hero incomplètes",
       };
     }
 
@@ -173,10 +178,7 @@ const prepareImage = async (article) => {
   );
 
   if (!jpeg) {
-    return {
-      status: "pending",
-      reason: "source JPEG héros pas encore disponible",
-    };
+    return { status: "unavailable", reason: "source JPEG héros pas encore disponible" };
   }
 
   let imageUrl;
@@ -184,22 +186,57 @@ const prepareImage = async (article) => {
     imageUrl = stripTracking(jpeg.url);
     const parsed = new URL(imageUrl);
     if (parsed.protocol !== "https:") {
-      return { status: "skipped", reason: "URL image non HTTPS" };
+      return { status: "unavailable", reason: "URL hero non HTTPS" };
     }
   } catch {
-    return { status: "skipped", reason: "URL image invalide" };
+    return { status: "unavailable", reason: "URL hero invalide" };
   }
 
   return {
     status: "ready",
+    mode: "hero",
     url: imageUrl,
     credit,
     license: normalizeWhitespace(license),
   };
 };
 
+const articleAgeHours = (publishedAt) => {
+  const publishedMs = Date.parse(publishedAt);
+  if (!Number.isFinite(publishedMs)) return Number.POSITIVE_INFINITY;
+  return (Date.now() - publishedMs) / 3_600_000;
+};
+
+const selectFacebookImage = async (article) => {
+  const hero = await prepareHeroImage(article);
+  if (hero.status === "ready") return hero;
+
+  const ageHours = articleAgeHours(article.publishedAt);
+  if (ageHours < imageGraceHours) {
+    const remaining = Math.max(0, imageGraceHours - ageHours);
+    return {
+      status: "pending",
+      reason: `${hero.reason}; fallback générique dans environ ${remaining.toFixed(1)} h`,
+    };
+  }
+
+  return {
+    status: "ready",
+    mode: "fallback",
+    url: FALLBACK_IMAGE_URL,
+    credit: null,
+    license: "Fam Space",
+    fallbackReason: hero.reason,
+  };
+};
+
 const buildCaption = (article, credit) =>
-  [article.title, article.summary, `👉 Lire l’article sur Fam Space : ${article.url}`, buildCreditText(credit)]
+  [
+    article.title,
+    article.summary,
+    `👉 Lire l’article sur Fam Space : ${article.url}`,
+    buildCreditText(credit),
+  ]
     .filter(Boolean)
     .join("\n\n");
 
@@ -267,9 +304,9 @@ const loadState = async () => {
   if (!state.baselineProductionSha) {
     throw new Error("facebook-state.json: baselineProductionSha manquant");
   }
-  state.version = 1;
+  state.version = 2;
   state.posts ??= {};
-  state.skipped ??= {};
+  delete state.skipped;
   return state;
 };
 
@@ -327,17 +364,19 @@ const main = async () => {
   console.log(`Production: ${productionSha}`);
   console.log(`Baseline Facebook: ${state.baselineProductionSha}`);
   console.log(`Nouveaux articles depuis baseline: ${articles.length}`);
+  console.log(`Délai maximal avant fallback: ${imageGraceHours} h`);
 
   let published = 0;
   let pending = 0;
-  let skipped = 0;
+  let heroReady = 0;
+  let fallbackReady = 0;
   let failures = 0;
 
   for (const article of articles) {
-    if (state.posts[article.slug] || state.skipped[article.slug]) continue;
+    if (state.posts[article.slug]) continue;
     if (!dryRun && published >= maxPerRun) break;
 
-    const image = await prepareImage(article);
+    const image = await selectFacebookImage(article);
 
     if (image.status === "pending") {
       pending += 1;
@@ -345,24 +384,15 @@ const main = async () => {
       continue;
     }
 
-    if (image.status === "skipped") {
-      skipped += 1;
-      console.log(`SKIP ${article.slug}: ${image.reason}`);
-      if (!dryRun) {
-        state.skipped[article.slug] = {
-          reason: image.reason,
-          at: new Date().toISOString(),
-          productionSha,
-        };
-        await saveState(state);
-      }
-      continue;
+    if (image.mode === "fallback") {
+      fallbackReady += 1;
+      console.log(`READY ${article.slug}: fallback Fam Space (${image.fallbackReason})`);
+    } else {
+      heroReady += 1;
+      console.log(`READY ${article.slug}: hero ${image.license}`);
     }
 
-    if (dryRun) {
-      console.log(`READY ${article.slug}: photo ${image.license}`);
-      continue;
-    }
+    if (dryRun) continue;
 
     try {
       await waitForArticle(article.url);
@@ -371,11 +401,13 @@ const main = async () => {
         id: facebookId,
         at: new Date().toISOString(),
         productionSha,
-        mode: "photo",
+        mode: image.mode,
+        imageUrl: image.url,
+        ...(image.fallbackReason ? { fallbackReason: image.fallbackReason } : {}),
       };
       await saveState(state);
       published += 1;
-      console.log(`PUBLISHED ${article.slug}: ${facebookId}`);
+      console.log(`PUBLISHED ${article.slug}: ${facebookId} (${image.mode})`);
     } catch (error) {
       failures += 1;
       console.error(`FAILED ${article.slug}: ${error.message}`);
@@ -383,7 +415,7 @@ const main = async () => {
   }
 
   console.log(
-    `Facebook run: published=${published}, pending=${pending}, skipped=${skipped}, failures=${failures}, dryRun=${dryRun}.`,
+    `Facebook run: published=${published}, pending=${pending}, heroReady=${heroReady}, fallbackReady=${fallbackReady}, failures=${failures}, dryRun=${dryRun}.`,
   );
 
   if (failures > 0) process.exitCode = 1;
