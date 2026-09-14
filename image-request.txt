@@ -19,3 +19,4 @@ automation/image-20260914-0747
 automation/image-test-20260914-1152-v2
 automation/image-controlled-search-20260914
 automation/image-backfill-20260914-clermont-nancy-mayenne
+automation/image-backfill-20260914-clermont-retry
