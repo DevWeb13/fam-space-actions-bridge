@@ -5,6 +5,7 @@ import path from "node:path";
 
 const SITE_URL = "https://www.fam-space.fr";
 const GRAPH_VERSION = "v26.0";
+const PLATFORMS = ["facebook", "instagram", "threads"];
 
 const stateFile = process.argv[2];
 if (!stateFile) {
@@ -25,7 +26,6 @@ const tokens = {
 };
 
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
-
 const normalizeWhitespace = (value) => value.replace(/\s+/g, " ").trim();
 
 const cleanScalar = (raw) => {
@@ -51,6 +51,7 @@ const getFrontmatterScalar = (frontmatter, key) => {
 const parseArticle = (filePath, markdown) => {
   const match = markdown.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   if (!match) return null;
+
   const frontmatter = match[1];
   const article = {
     filePath,
@@ -62,6 +63,7 @@ const parseArticle = (filePath, markdown) => {
     publishedAt: getFrontmatterScalar(frontmatter, "publishedAt"),
     category: getFrontmatterScalar(frontmatter, "category"),
   };
+
   if (
     !article.title ||
     !article.slug ||
@@ -70,6 +72,7 @@ const parseArticle = (filePath, markdown) => {
   ) {
     return null;
   }
+
   article.url = `${SITE_URL}/articles/${article.category}/${article.slug}/`;
   return article;
 };
@@ -163,6 +166,7 @@ const getSocialImage = async (article) => {
     ) {
       return unavailableImage("métadonnées d’attribution incomplètes");
     }
+
     credit = {
       creator: normalizeWhitespace(provenance.creator),
       sourceUrl: provenance.sourcePage,
@@ -258,6 +262,7 @@ const parseJsonResponse = async (response) => {
   } catch {
     data = { raw: text };
   }
+
   if (!response.ok || data.error) {
     const message =
       data?.error?.message ?? data?.message ?? text ?? response.statusText;
@@ -402,13 +407,18 @@ const publishThreads = async (article, image) => {
   throw lastError;
 };
 
-const ensureTokens = () => {
+const ensureRuntimeConfiguration = () => {
   if (dryRun) return;
-  const missing = Object.entries(tokens)
-    .filter(([, value]) => !value)
-    .map(([name]) => name);
+  const configured = PLATFORMS.filter((platform) => Boolean(tokens[platform]));
+  if (configured.length === 0) {
+    throw new Error("no social access token configured");
+  }
+
+  const missing = PLATFORMS.filter((platform) => !tokens[platform]);
   if (missing.length > 0) {
-    throw new Error(`missing access token(s): ${missing.join(", ")}`);
+    console.log(
+      `Tokens absents: ${missing.join(", ")} — les autres réseaux continueront normalement.`,
+    );
   }
 };
 
@@ -425,7 +435,7 @@ const saveState = async (state) => {
 };
 
 const main = async () => {
-  ensureTokens();
+  ensureRuntimeConfiguration();
   const state = await loadState();
   const startedAtMs = Date.parse(state.startedAt);
   if (!Number.isFinite(startedAtMs)) {
@@ -448,9 +458,10 @@ const main = async () => {
   let failures = 0;
   for (const article of articles) {
     const current = (state.articles[article.slug] ??= {});
-    const pending = ["facebook", "instagram", "threads"].filter(
-      (platform) => !current[platform],
-    );
+    const unposted = PLATFORMS.filter((platform) => !current[platform]);
+    const pending = dryRun
+      ? unposted
+      : unposted.filter((platform) => Boolean(tokens[platform]));
     if (pending.length === 0) continue;
 
     console.log(`Article: ${article.slug}`);
