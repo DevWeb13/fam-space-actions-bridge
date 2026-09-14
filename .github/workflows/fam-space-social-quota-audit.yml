@@ -1,0 +1,77 @@
+name: Fam Space social quota audit
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/fam-space-social-quota-audit.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Threads publishing quota
+        shell: bash
+        env:
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "$THREADS_ACCESS_TOKEN" ]; then
+            echo "Threads: token absent"
+            exit 0
+          fi
+          response=$(curl -fsSG "https://graph.threads.net/v1.0/me/threads_publishing_limit" \
+            --data-urlencode "fields=quota_usage,config" \
+            --data-urlencode "access_token=$THREADS_ACCESS_TOKEN")
+          printf '%s' "$response" | python3 -c 'import json,sys; d=json.load(sys.stdin); x=(d.get("data") or [{}])[0]; c=x.get("config") or {}; print(f"Threads: usage={x.get(\"quota_usage\")} total={c.get(\"quota_total\")} duration={c.get(\"quota_duration\")}s")'
+
+      - name: Instagram publishing quota
+        shell: bash
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "$INSTAGRAM_ACCESS_TOKEN" ]; then
+            echo "Instagram: token absent"
+            exit 0
+          fi
+          response=$(curl -fsSG "https://graph.instagram.com/v26.0/28082762261424741/content_publishing_limit" \
+            --data-urlencode "fields=quota_usage,config" \
+            --data-urlencode "access_token=$INSTAGRAM_ACCESS_TOKEN")
+          printf '%s' "$response" | python3 -c 'import json,sys; d=json.load(sys.stdin); x=(d.get("data") or [{}])[0]; c=x.get("config") or {}; print(f"Instagram: usage={x.get(\"quota_usage\")} total={c.get(\"quota_total\")} duration={c.get(\"quota_duration\")}s")'
+
+      - name: Facebook Graph usage headers
+        shell: bash
+        env:
+          FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
+        run: |
+          set -euo pipefail
+          if [ -z "$FACEBOOK_PAGE_ACCESS_TOKEN" ]; then
+            echo "Facebook: token absent"
+            exit 0
+          fi
+          headers=$(mktemp)
+          body=$(mktemp)
+          curl -fsSG -D "$headers" -o "$body" "https://graph.facebook.com/v26.0/1314472035081859" \
+            --data-urlencode "fields=id,name" \
+            --data-urlencode "access_token=$FACEBOOK_PAGE_ACCESS_TOKEN"
+          echo "Facebook: API reachable"
+          python3 - "$headers" <<'PY'
+import sys
+wanted={"x-app-usage","x-page-usage","x-business-use-case-usage"}
+seen=False
+for raw in open(sys.argv[1], encoding="utf-8", errors="ignore"):
+    if ":" not in raw:
+        continue
+    key,value=raw.split(":",1)
+    if key.lower() in wanted:
+        print(f"Facebook {key.strip()}: {value.strip()}")
+        seen=True
+if not seen:
+    print("Facebook: aucun en-tête de quota renvoyé sur cette lecture; pas de plafond de publications simple exposé par cet endpoint.")
+PY
