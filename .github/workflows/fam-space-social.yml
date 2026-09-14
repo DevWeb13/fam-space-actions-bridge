@@ -6,14 +6,17 @@ on:
       - Fam Space production release
     types:
       - completed
-  schedule:
-    - cron: "15 7 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
         description: "Analyser Facebook sans publier"
         required: false
         default: true
+        type: boolean
+      catch_up_all:
+        description: "Rattraper en une fois tous les articles depuis le 1er septembre"
+        required: false
+        default: false
         type: boolean
 
 permissions:
@@ -25,9 +28,9 @@ concurrency:
 
 jobs:
   publish:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
 
     steps:
       - name: Vérifier la configuration Facebook
@@ -74,7 +77,9 @@ jobs:
       - name: Vérifier le publisher Facebook
         if: steps.facebook.outputs.ready == 'true'
         shell: bash
-        run: node --check bridge/scripts/publish-facebook.mjs
+        run: |
+          node --check bridge/scripts/publish-facebook.mjs
+          node --check bridge/scripts/facebook-catchup-once.mjs
 
       - name: Publier les articles sur Facebook
         if: steps.facebook.outputs.ready == 'true'
@@ -85,16 +90,22 @@ jobs:
           FACEBOOK_PAGE_ID: "1314472035081859"
           FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
           META_GRAPH_VERSION: v26.0
-          FACEBOOK_MAX_NEW_PER_RUN: 20
-          FACEBOOK_BACKFILL_MAX_PER_DAY: 5
-          FACEBOOK_BACKFILL_MIN_INTERVAL_HOURS: 3
+          FACEBOOK_MAX_NEW_PER_RUN: 50
+          FACEBOOK_BACKFILL_MAX_PER_DAY: 0
+          FACEBOOK_BACKFILL_MIN_INTERVAL_HOURS: 0
           FACEBOOK_IMAGE_GRACE_HOURS: 24
           SOCIAL_DRY_RUN: ${{ (github.event_name == 'workflow_dispatch' && inputs.dry_run == true) && 'true' || 'false' }}
+          FACEBOOK_CATCH_UP_ALL: ${{ (github.event_name == 'workflow_dispatch' && inputs.catch_up_all == true) && 'true' || 'false' }}
         run: |
           set -uo pipefail
 
           set +e
-          node bridge/scripts/publish-facebook.mjs bridge/facebook-state.json
+          if [ "$FACEBOOK_CATCH_UP_ALL" = "true" ]; then
+            echo "Rattrapage Facebook unique de tous les articles depuis le 1er septembre."
+            node bridge/scripts/facebook-catchup-once.mjs bridge/facebook-state.json
+          else
+            node bridge/scripts/publish-facebook.mjs bridge/facebook-state.json
+          fi
           facebook_status=$?
           set -e
 
