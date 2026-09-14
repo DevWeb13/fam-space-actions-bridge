@@ -7,6 +7,12 @@ on:
     types:
       - completed
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Analyser les publications sans rien envoyer à Meta"
+        required: false
+        default: false
+        type: boolean
 
 permissions:
   contents: write
@@ -29,14 +35,14 @@ jobs:
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
         run: |
-          if [ -n "$FACEBOOK_PAGE_ACCESS_TOKEN" ] && \
-             [ -n "$INSTAGRAM_ACCESS_TOKEN" ] && \
+          if [ -n "$FACEBOOK_PAGE_ACCESS_TOKEN" ] || \
+             [ -n "$INSTAGRAM_ACCESS_TOKEN" ] || \
              [ -n "$THREADS_ACCESS_TOKEN" ]; then
             echo "ready=true" >> "$GITHUB_OUTPUT"
-            echo "Configuration Meta prête."
+            echo "Au moins un réseau Meta est configuré."
           else
             echo "ready=false" >> "$GITHUB_OUTPUT"
-            echo "Secrets Meta absents: publication ignorée sans erreur."
+            echo "Aucun secret Meta présent: publication ignorée sans erreur."
           fi
 
       - name: Récupérer le bridge
@@ -62,55 +68,6 @@ jobs:
         with:
           node-version: 24
 
-      - name: Préparer le visuel de secours Meta
-        if: steps.meta.outputs.ready == 'true'
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          fallback="bridge/social-assets/fam-space-default.jpg"
-          if [ -f "$fallback" ]; then
-            echo "Visuel de secours déjà présent."
-            exit 0
-          fi
-
-          (cd fam-space && npm ci)
-          mkdir -p bridge/social-assets
-          (
-            cd fam-space
-            node --input-type=module <<'NODE'
-          import sharp from "sharp";
-          await sharp("public/images/social/fam-space-default.png")
-            .flatten({ background: "#ffffff" })
-            .jpeg({ quality: 90, mozjpeg: true })
-            .toFile("../bridge/social-assets/fam-space-default.jpg");
-          NODE
-          )
-
-          cd bridge
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add social-assets/fam-space-default.jpg
-          git commit -m "social: add fallback image"
-          git pull --rebase origin main
-          git push origin HEAD:main
-
-      - name: Vérifier le visuel de secours public
-        if: steps.meta.outputs.ready == 'true'
-        shell: bash
-        run: |
-          set -euo pipefail
-          url="https://raw.githubusercontent.com/DevWeb13/fam-space-actions-bridge/main/social-assets/fam-space-default.jpg"
-          for attempt in $(seq 1 15); do
-            if curl -fsSL --range 0-0 "$url" -o /dev/null; then
-              exit 0
-            fi
-            echo "Visuel pas encore disponible, tentative $attempt/15."
-            sleep 2
-          done
-          echo "Le visuel de secours n'est pas accessible publiquement." >&2
-          exit 1
-
       - name: Publier les nouveaux articles
         if: steps.meta.outputs.ready == 'true'
         shell: bash
@@ -122,6 +79,7 @@ jobs:
           FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          SOCIAL_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == true && 'true' || 'false' }}
         run: |
           set -uo pipefail
 
