@@ -7,6 +7,8 @@ on:
     paths:
       - scripts/publish-social.mjs
       - .github/workflows/fam-space-social.yml
+  schedule:
+    - cron: "17 * * * *"
   workflow_run:
     workflows:
       - Fam Space production release
@@ -29,8 +31,9 @@ concurrency:
 
 jobs:
   publish:
-    if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
       - name: Vérifier la configuration Meta
@@ -78,7 +81,7 @@ jobs:
         with:
           node-version: 24
 
-      - name: Publier les nouveaux articles
+      - name: Publier les nouveaux articles et rattraper l'historique
         if: steps.meta.outputs.ready == 'true'
         shell: bash
         env:
@@ -89,7 +92,7 @@ jobs:
           FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
-          SOCIAL_DRY_RUN: ${{ github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.dry_run == true) && 'true' || 'false' }}
+          SOCIAL_DRY_RUN: ${{ (github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.dry_run == true)) && 'true' || 'false' }}
         run: |
           set -uo pipefail
 
