@@ -6,6 +6,8 @@ on:
       - Fam Space production release
     types:
       - completed
+  schedule:
+    - cron: "15 7 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -23,7 +25,7 @@ concurrency:
 
 jobs:
   publish:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
