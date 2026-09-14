@@ -5,8 +5,6 @@ import path from "node:path";
 
 const SITE_URL = "https://www.fam-space.fr";
 const GRAPH_VERSION = "v26.0";
-const DEFAULT_FALLBACK_IMAGE =
-  "https://raw.githubusercontent.com/DevWeb13/fam-space-actions-bridge/main/social-assets/fam-space-default.jpg";
 
 const stateFile = process.argv[2];
 if (!stateFile) {
@@ -18,8 +16,6 @@ const famSpaceDir = path.resolve(process.env.FAM_SPACE_DIR ?? "../fam-space");
 const facebookPageId = process.env.FACEBOOK_PAGE_ID ?? "1314472035081859";
 const instagramUserId = process.env.INSTAGRAM_USER_ID ?? "28082762261424741";
 const threadsUserId = process.env.THREADS_USER_ID ?? "28413878778293545";
-const fallbackImageUrl =
-  process.env.SOCIAL_FALLBACK_IMAGE_URL ?? DEFAULT_FALLBACK_IMAGE;
 const dryRun = process.env.SOCIAL_DRY_RUN === "true";
 
 const tokens = {
@@ -92,10 +88,11 @@ const walkIndexFiles = async (directory) => {
   return files;
 };
 
+const normalizeLicense = (license) =>
+  normalizeWhitespace(license).toLowerCase().replace(/[–—]/g, "-");
+
 const isAllowedMetaLicense = (license) => {
-  const normalized = normalizeWhitespace(license)
-    .toLowerCase()
-    .replace(/[–—]/g, "-");
+  const normalized = normalizeLicense(license);
   if (
     normalized === "public domain" ||
     normalized === "public-domain" ||
@@ -106,6 +103,9 @@ const isAllowedMetaLicense = (license) => {
   }
   return /^cc by(?:-sa)?(?: [1-4](?:\.0)?)?$/.test(normalized);
 };
+
+const licenseRequiresAttribution = (license) =>
+  /^cc by(?:-sa)?(?: [1-4](?:\.0)?)?$/.test(normalizeLicense(license));
 
 const stripTracking = (rawUrl) => {
   try {
@@ -119,19 +119,13 @@ const stripTracking = (rawUrl) => {
   }
 };
 
-const parseHeroCredit = (markdown) => {
-  const match = markdown.match(
-    /\*Photo:\s*\[([^\]]+)\]\(([^)]+)\)\s*-\s*\[([^\]]+)\]\(([^)]+)\)\s+via Wikimedia Commons(?:\s+\(([^)]+)\))?\.\*/i,
-  );
-  if (!match) return null;
-  return {
-    creator: normalizeWhitespace(match[1]),
-    sourceUrl: match[2],
-    license: normalizeWhitespace(match[3]),
-    licenseUrl: match[4],
-    transformation: match[5] ? normalizeWhitespace(match[5]) : "",
-  };
-};
+const unavailableImage = (reason) => ({
+  available: false,
+  reason,
+  url: "",
+  alt: "",
+  credit: null,
+});
 
 const getSocialImage = async (article) => {
   const provenancePath = path.join(
@@ -140,38 +134,58 @@ const getSocialImage = async (article) => {
     "article-images",
     `${article.slug}.json`,
   );
+
+  let provenance;
   try {
-    const provenance = JSON.parse(await fs.readFile(provenancePath, "utf8"));
-    if (provenance.role !== "hero") throw new Error("not hero");
-    if (!isAllowedMetaLicense(provenance.license ?? "")) {
-      throw new Error("license not allowed");
-    }
-
-    const credit = parseHeroCredit(article.markdown);
-    if (provenance.requiresAttribution === true && !credit) {
-      throw new Error("missing attribution");
-    }
-
-    const candidates = [provenance.download, provenance.original].filter(Boolean);
-    const jpeg = candidates.find(
-      (candidate) => candidate?.mime === "image/jpeg" && candidate?.url,
-    );
-    if (!jpeg) throw new Error("no jpeg source");
-
-    return {
-      url: stripTracking(jpeg.url),
-      alt: article.title,
-      credit,
-      kind: "hero",
-    };
+    provenance = JSON.parse(await fs.readFile(provenancePath, "utf8"));
   } catch {
-    return {
-      url: fallbackImageUrl,
-      alt: `Fam Space - ${article.title}`,
-      credit: null,
-      kind: "fallback",
+    return unavailableImage("provenance héros absente ou illisible");
+  }
+
+  if (provenance.role !== "hero") {
+    return unavailableImage("provenance non marquée hero");
+  }
+
+  const license = provenance.license ?? "";
+  if (!isAllowedMetaLicense(license)) {
+    return unavailableImage(`licence non autorisée: ${license || "inconnue"}`);
+  }
+
+  const needsAttribution =
+    provenance.requiresAttribution === true || licenseRequiresAttribution(license);
+  let credit = null;
+  if (needsAttribution) {
+    if (
+      !provenance.creator ||
+      !provenance.license ||
+      !provenance.licenseUrl ||
+      !provenance.sourcePage
+    ) {
+      return unavailableImage("métadonnées d’attribution incomplètes");
+    }
+    credit = {
+      creator: normalizeWhitespace(provenance.creator),
+      sourceUrl: provenance.sourcePage,
+      license: normalizeWhitespace(provenance.license),
+      licenseUrl: provenance.licenseUrl,
     };
   }
+
+  const candidates = [provenance.download, provenance.original].filter(Boolean);
+  const jpeg = candidates.find(
+    (candidate) => candidate?.mime === "image/jpeg" && candidate?.url,
+  );
+  if (!jpeg) {
+    return unavailableImage("aucune source JPEG publique dans la provenance");
+  }
+
+  return {
+    available: true,
+    reason: "",
+    url: stripTracking(jpeg.url),
+    alt: article.title,
+    credit,
+  };
 };
 
 const buildCreditText = (credit, compact = false) => {
@@ -179,44 +193,62 @@ const buildCreditText = (credit, compact = false) => {
   if (compact) {
     return `Photo: ${credit.creator} - ${credit.license} ${credit.licenseUrl}`;
   }
-  const transformation = credit.transformation
-    ? ` (${credit.transformation})`
-    : "";
-  return `Photo: ${credit.creator} - ${credit.license} - ${credit.licenseUrl} - ${credit.sourceUrl}${transformation}`;
+  return `Photo: ${credit.creator} - ${credit.license} - ${credit.licenseUrl} - ${credit.sourceUrl}`;
 };
 
-const buildFacebookCaption = (article, credit) =>
+const buildFacebookPhotoCaption = (article, credit) =>
   [article.title, article.summary, article.url, buildCreditText(credit)]
     .filter(Boolean)
     .join("\n\n");
+
+const buildFacebookLinkMessage = (article) =>
+  [article.title, article.summary].filter(Boolean).join("\n\n");
 
 const buildInstagramCaption = (article, credit) =>
   [article.title, article.summary, article.url, buildCreditText(credit)]
     .filter(Boolean)
     .join("\n\n");
 
-const buildThreadsContent = (article, credit) => {
-  const full = [article.title, article.url, buildCreditText(credit)]
-    .filter(Boolean)
-    .join("\n\n");
-  if (full.length <= 500) {
-    return { text: full, useFallbackImage: false };
-  }
+const fitThreadsText = (parts) => {
+  const clean = parts.filter(Boolean).map((part) => normalizeWhitespace(part));
+  let text = clean.join("\n\n");
+  if (text.length <= 500) return text;
 
-  const compact = [article.title, article.url, buildCreditText(credit, true)]
-    .filter(Boolean)
-    .join("\n\n");
-  if (compact.length <= 500) {
-    return { text: compact, useFallbackImage: false };
-  }
-
-  const roomForTitle = Math.max(40, 500 - article.url.length - 4);
-  const title = article.title.slice(0, roomForTitle - 1).trimEnd() + "…";
-  return {
-    text: `${title}\n\n${article.url}`.slice(0, 500),
-    useFallbackImage: Boolean(credit),
-  };
+  const url = clean.at(-1) ?? "";
+  const title = clean[0] ?? "Fam Space";
+  const reserved = url ? url.length + 2 : 0;
+  const maxTitle = Math.max(40, 500 - reserved);
+  const shortTitle =
+    title.length > maxTitle
+      ? `${title.slice(0, Math.max(1, maxTitle - 1)).trimEnd()}…`
+      : title;
+  text = [shortTitle, url].filter(Boolean).join("\n\n");
+  return text.slice(0, 500);
 };
+
+const buildThreadsImageText = (article, credit) => {
+  const full = [
+    article.title,
+    article.summary,
+    article.url,
+    buildCreditText(credit),
+  ].filter(Boolean);
+  const text = full.join("\n\n");
+  if (text.length <= 500) return text;
+
+  const compact = [
+    article.title,
+    article.url,
+    buildCreditText(credit, true),
+  ].filter(Boolean);
+  const compactText = compact.join("\n\n");
+  if (compactText.length <= 500) return compactText;
+
+  return fitThreadsText([article.title, article.url]);
+};
+
+const buildThreadsTextOnly = (article) =>
+  fitThreadsText([article.title, article.summary, article.url]);
 
 const parseJsonResponse = async (response) => {
   const text = await response.text();
@@ -265,16 +297,28 @@ const waitForArticle = async (url) => {
 };
 
 const publishFacebook = async (article, image) => {
+  if (image.available) {
+    const data = await postForm(
+      `https://graph.facebook.com/${GRAPH_VERSION}/${facebookPageId}/photos`,
+      {
+        url: image.url,
+        caption: buildFacebookPhotoCaption(article, image.credit),
+        published: "true",
+        access_token: tokens.facebook,
+      },
+    );
+    return { id: data.post_id ?? data.id, mode: "photo" };
+  }
+
   const data = await postForm(
-    `https://graph.facebook.com/${GRAPH_VERSION}/${facebookPageId}/photos`,
+    `https://graph.facebook.com/${GRAPH_VERSION}/${facebookPageId}/feed`,
     {
-      url: image.url,
-      caption: buildFacebookCaption(article, image.credit),
-      published: "true",
+      message: buildFacebookLinkMessage(article),
+      link: article.url,
       access_token: tokens.facebook,
     },
   );
-  return data.post_id ?? data.id;
+  return { id: data.id, mode: "link" };
 };
 
 const waitForInstagramContainer = async (containerId) => {
@@ -295,6 +339,8 @@ const waitForInstagramContainer = async (containerId) => {
 };
 
 const publishInstagram = async (article, image) => {
+  if (!image.available) return null;
+
   const created = await postForm(
     `https://graph.instagram.com/${instagramUserId}/media`,
     {
@@ -311,27 +357,27 @@ const publishInstagram = async (article, image) => {
       access_token: tokens.instagram,
     },
   );
-  return published.id;
+  return { id: published.id, mode: "image" };
 };
 
 const publishThreads = async (article, image) => {
-  const content = buildThreadsContent(article, image.credit);
-  const threadsImageUrl = content.useFallbackImage
-    ? fallbackImageUrl
-    : image.url;
-  const threadsAlt = content.useFallbackImage
-    ? `Fam Space - ${article.title}`
-    : image.alt;
+  const fields = image.available
+    ? {
+        media_type: "IMAGE",
+        image_url: image.url,
+        text: buildThreadsImageText(article, image.credit),
+        alt_text: image.alt.slice(0, 1_000),
+        access_token: tokens.threads,
+      }
+    : {
+        media_type: "TEXT",
+        text: buildThreadsTextOnly(article),
+        access_token: tokens.threads,
+      };
 
   const created = await postForm(
     `https://graph.threads.net/v1.0/${threadsUserId}/threads`,
-    {
-      media_type: "IMAGE",
-      image_url: threadsImageUrl,
-      text: content.text,
-      alt_text: threadsAlt.slice(0, 1_000),
-      access_token: tokens.threads,
-    },
+    fields,
   );
 
   let lastError;
@@ -344,7 +390,10 @@ const publishThreads = async (article, image) => {
           access_token: tokens.threads,
         },
       );
-      return published.id;
+      return {
+        id: published.id,
+        mode: image.available ? "image" : "text",
+      };
     } catch (error) {
       lastError = error;
       if (attempt < 5) await sleep(2_000 * attempt);
@@ -414,27 +463,51 @@ const main = async () => {
     }
 
     const image = await getSocialImage(article);
-    console.log(`  image: ${image.kind}`);
-
-    const publishers = {
-      facebook: publishFacebook,
-      instagram: publishInstagram,
-      threads: publishThreads,
-    };
+    console.log(
+      image.available
+        ? "  image: hero JPEG autorisée"
+        : `  image: indisponible (${image.reason})`,
+    );
 
     for (const platform of pending) {
-      if (dryRun) {
-        console.log(`  ${platform}: dry-run`);
+      if (platform === "instagram" && !image.available) {
+        console.log(
+          `  instagram: non publié, sera réévalué plus tard (${image.reason})`,
+        );
         continue;
       }
+
+      if (dryRun) {
+        const mode =
+          platform === "facebook"
+            ? image.available
+              ? "photo"
+              : "lien sans upload photo"
+            : platform === "instagram"
+              ? "image"
+              : image.available
+                ? "image"
+                : "texte";
+        console.log(`  ${platform}: dry-run (${mode})`);
+        continue;
+      }
+
       try {
-        const id = await publishers[platform](article, image);
+        const result =
+          platform === "facebook"
+            ? await publishFacebook(article, image)
+            : platform === "instagram"
+              ? await publishInstagram(article, image)
+              : await publishThreads(article, image);
+
+        if (!result) continue;
         current[platform] = {
-          id: String(id),
+          id: String(result.id),
           at: new Date().toISOString(),
+          mode: result.mode,
         };
         await saveState(state);
-        console.log(`  ${platform}: published (${id})`);
+        console.log(`  ${platform}: published ${result.mode} (${result.id})`);
       } catch (error) {
         failures += 1;
         console.error(`  ${platform}: ${error.message}`);
