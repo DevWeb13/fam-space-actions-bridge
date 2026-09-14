@@ -52,7 +52,7 @@ jobs:
         if: steps.facebook.outputs.ready == 'true'
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.event_name == 'workflow_dispatch' && github.ref_name || 'main' }}
           path: bridge
           fetch-depth: 0
 
