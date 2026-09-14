@@ -6,6 +6,8 @@ on:
       - Fam Space production release
     types:
       - completed
+  schedule:
+    - cron: "15 7 * * *"
   workflow_dispatch:
     inputs:
       dry_run:
@@ -23,7 +25,7 @@ concurrency:
 
 jobs:
   publish:
-    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -50,7 +52,7 @@ jobs:
         if: steps.facebook.outputs.ready == 'true'
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.event_name == 'workflow_dispatch' && github.ref_name || 'main' }}
           path: bridge
           fetch-depth: 0
 
@@ -74,15 +76,19 @@ jobs:
         shell: bash
         run: node --check bridge/scripts/publish-facebook.mjs
 
-      - name: Publier les nouveaux articles sur Facebook
+      - name: Publier les articles sur Facebook
         if: steps.facebook.outputs.ready == 'true'
         shell: bash
         env:
           FAM_SPACE_DIR: ${{ github.workspace }}/fam-space
+          LEGACY_SOCIAL_STATE_FILE: ${{ github.workspace }}/bridge/social-state.json
           FACEBOOK_PAGE_ID: "1314472035081859"
           FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
           META_GRAPH_VERSION: v26.0
-          FACEBOOK_MAX_PER_RUN: 10
+          FACEBOOK_MAX_NEW_PER_RUN: 20
+          FACEBOOK_BACKFILL_MAX_PER_DAY: 5
+          FACEBOOK_BACKFILL_MIN_INTERVAL_HOURS: 3
+          FACEBOOK_IMAGE_GRACE_HOURS: 24
           SOCIAL_DRY_RUN: ${{ (github.event_name == 'workflow_dispatch' && inputs.dry_run == true) && 'true' || 'false' }}
         run: |
           set -uo pipefail
