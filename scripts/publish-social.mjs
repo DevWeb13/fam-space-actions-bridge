@@ -183,10 +183,20 @@ const getSocialImage = async (article) => {
     return unavailableImage("aucune source JPEG publique dans la provenance");
   }
 
+  let jpegUrl;
+  try {
+    jpegUrl = new URL(stripTracking(jpeg.url));
+  } catch {
+    return unavailableImage("URL JPEG invalide");
+  }
+  if (jpegUrl.protocol !== "https:") {
+    return unavailableImage("URL JPEG non HTTPS");
+  }
+
   return {
     available: true,
     reason: "",
-    url: stripTracking(jpeg.url),
+    url: jpegUrl.href,
     alt: article.title,
     credit,
   };
@@ -409,6 +419,7 @@ const publishThreads = async (article, image) => {
 
 const ensureRuntimeConfiguration = () => {
   if (dryRun) return;
+
   const configured = PLATFORMS.filter((platform) => Boolean(tokens[platform]));
   if (configured.length === 0) {
     throw new Error("no social access token configured");
@@ -460,7 +471,7 @@ const main = async () => {
     const current = (state.articles[article.slug] ??= {});
     const unposted = PLATFORMS.filter((platform) => !current[platform]);
     const pending = dryRun
-      ? unposted
+      ? PLATFORMS
       : unposted.filter((platform) => Boolean(tokens[platform]));
     if (pending.length === 0) continue;
 
