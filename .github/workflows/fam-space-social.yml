@@ -7,13 +7,6 @@ on:
     paths:
       - scripts/publish-social.mjs
       - .github/workflows/fam-space-social.yml
-  schedule:
-    - cron: "17 * * * *"
-  workflow_run:
-    workflows:
-      - Fam Space production release
-    types:
-      - completed
   workflow_dispatch:
     inputs:
       dry_run:
@@ -31,7 +24,7 @@ concurrency:
 
 jobs:
   publish:
-    if: ${{ github.event_name == 'push' || github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    if: ${{ github.event_name == 'push' || github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
