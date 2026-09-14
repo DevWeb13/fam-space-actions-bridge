@@ -228,9 +228,6 @@ const buildFacebookPhotoCaption = (article, credit) =>
     .filter(Boolean)
     .join("\n\n");
 
-const buildFacebookLinkMessage = (article) =>
-  [article.title, article.summary].filter(Boolean).join("\n\n");
-
 const buildInstagramCaption = (article, credit) =>
   [article.title, article.summary, article.url, buildCreditText(credit)]
     .filter(Boolean)
@@ -273,9 +270,6 @@ const buildThreadsImageText = (article, credit) => {
 
   return fitThreadsText([article.title, article.url]);
 };
-
-const buildThreadsTextOnly = (article) =>
-  fitThreadsText([article.title, article.summary, article.url]);
 
 const parseJsonResponse = async (response) => {
   const text = await response.text();
@@ -459,28 +453,18 @@ const waitForArticle = async (url) => {
 };
 
 const publishFacebook = async (article, image) => {
-  if (image.available) {
-    const data = await postForm(
-      `https://graph.facebook.com/${GRAPH_VERSION}/${facebookPageId}/photos`,
-      {
-        url: image.url,
-        caption: buildFacebookPhotoCaption(article, image.credit),
-        published: "true",
-        access_token: tokens.facebook,
-      },
-    );
-    return { id: data.post_id ?? data.id, mode: "photo" };
-  }
+  if (!image.available) throw new Error("facebook: image héros exploitable requise");
 
   const data = await postForm(
-    `https://graph.facebook.com/${GRAPH_VERSION}/${facebookPageId}/feed`,
+    `https://graph.facebook.com/${GRAPH_VERSION}/${facebookPageId}/photos`,
     {
-      message: buildFacebookLinkMessage(article),
-      link: article.url,
+      url: image.url,
+      caption: buildFacebookPhotoCaption(article, image.credit),
+      published: "true",
       access_token: tokens.facebook,
     },
   );
-  return { id: data.id, mode: "link" };
+  return { id: data.post_id ?? data.id, mode: "photo" };
 };
 
 const waitForInstagramContainer = async (containerId) => {
@@ -501,7 +485,7 @@ const waitForInstagramContainer = async (containerId) => {
 };
 
 const publishInstagram = async (article, image) => {
-  if (!image.available) return null;
+  if (!image.available) throw new Error("instagram: image héros exploitable requise");
 
   const created = await postForm(
     `https://graph.instagram.com/${instagramUserId}/media`,
@@ -523,23 +507,17 @@ const publishInstagram = async (article, image) => {
 };
 
 const publishThreads = async (article, image) => {
-  const fields = image.available
-    ? {
-        media_type: "IMAGE",
-        image_url: image.url,
-        text: buildThreadsImageText(article, image.credit),
-        alt_text: image.alt.slice(0, 1_000),
-        access_token: tokens.threads,
-      }
-    : {
-        media_type: "TEXT",
-        text: buildThreadsTextOnly(article),
-        access_token: tokens.threads,
-      };
+  if (!image.available) throw new Error("threads: image héros exploitable requise");
 
   const created = await postForm(
     `https://graph.threads.net/v1.0/${threadsUserId}/threads`,
-    fields,
+    {
+      media_type: "IMAGE",
+      image_url: image.url,
+      text: buildThreadsImageText(article, image.credit),
+      alt_text: image.alt.slice(0, 1_000),
+      access_token: tokens.threads,
+    },
   );
 
   let lastError;
@@ -552,10 +530,7 @@ const publishThreads = async (article, image) => {
           access_token: tokens.threads,
         },
       );
-      return {
-        id: published.id,
-        mode: image.available ? "image" : "text",
-      };
+      return { id: published.id, mode: "image" };
     } catch (error) {
       lastError = error;
       if (attempt < 5) await sleep(2_000 * attempt);
@@ -583,9 +558,18 @@ const ensureRuntimeConfiguration = () => {
 const loadState = async () => {
   const raw = await fs.readFile(stateFile, "utf8");
   const state = JSON.parse(raw);
-  state.version = Math.max(Number(state.version) || 1, 2);
+  state.version = Math.max(Number(state.version) || 1, 3);
   state.articles ??= {};
   delete state.startedAt;
+
+  // Legacy cleanup: link/text posts created before image-only publishing was
+  // enforced must never block a future proper image post for the same article.
+  for (const entry of Object.values(state.articles)) {
+    if (!entry || typeof entry !== "object") continue;
+    if (entry.facebook?.mode === "link") delete entry.facebook;
+    if (entry.threads?.mode === "text") delete entry.threads;
+  }
+
   return state;
 };
 
@@ -645,7 +629,21 @@ const main = async () => {
         );
     if (pending.length === 0) continue;
 
+    const image = await getSocialImage(article);
+    if (!image.available) {
+      console.log(`Article: ${article.publishedAt} ${article.slug}`);
+      console.log(`  image: indisponible (${image.reason})`);
+      for (const platform of pending) {
+        console.log(
+          `  ${platform}: non publié, sera réévalué plus tard (${image.reason})`,
+        );
+      }
+      continue;
+    }
+
     console.log(`Article: ${article.publishedAt} ${article.slug}`);
+    console.log("  image: hero JPEG autorisée");
+
     try {
       if (!dryRun) await waitForArticle(article.url);
     } catch (error) {
@@ -654,32 +652,9 @@ const main = async () => {
       continue;
     }
 
-    const image = await getSocialImage(article);
-    console.log(
-      image.available
-        ? "  image: hero JPEG autorisée"
-        : `  image: indisponible (${image.reason})`,
-    );
-
     for (const platform of pending) {
-      if (platform === "instagram" && !image.available) {
-        console.log(
-          `  instagram: non publié, sera réévalué plus tard (${image.reason})`,
-        );
-        continue;
-      }
-
       if (dryRun) {
-        const mode =
-          platform === "facebook"
-            ? image.available
-              ? "photo"
-              : "lien sans upload photo"
-            : platform === "instagram"
-              ? "image"
-              : image.available
-                ? "image"
-                : "texte";
+        const mode = platform === "facebook" ? "photo" : "image";
         console.log(`  ${platform}: dry-run (${mode})`);
         continue;
       }
@@ -692,7 +667,6 @@ const main = async () => {
               ? await publishInstagram(article, image)
               : await publishThreads(article, image);
 
-        if (!result) continue;
         current[platform] = {
           id: String(result.id),
           at: new Date().toISOString(),
