@@ -19,6 +19,8 @@ jobs:
   release:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
+    outputs:
+      advanced: ${{ steps.release.outputs.advanced }}
 
     steps:
       - name: Récupérer Fam Space
@@ -30,9 +32,12 @@ jobs:
           fetch-depth: 0
 
       - name: Avancer production vers master au maximum toutes les 6 heures
+        id: release
         shell: bash
         run: |
           set -euo pipefail
+
+          echo "advanced=false" >> "$GITHUB_OUTPUT"
 
           marker="automation-control/production-release"
           git config user.name "github-actions[bot]"
@@ -81,6 +86,7 @@ jobs:
 
           git tag -fa "$marker" "$master_sha" -m "Production release marker"
           git push --force origin "refs/tags/$marker"
+          echo "advanced=true" >> "$GITHUB_OUTPUT"
 
           {
             echo "## Release Fam Space"
@@ -89,3 +95,11 @@ jobs:
             echo "- production avancée vers: \`$master_sha\`"
             echo "- Déclenchement Vercel limité à une release toutes les 6 heures réelles."
           } >> "$GITHUB_STEP_SUMMARY"
+
+  facebook:
+    needs: release
+    if: ${{ needs.release.outputs.advanced == 'true' }}
+    permissions:
+      contents: write
+    uses: ./.github/workflows/fam-space-social.yml
+    secrets: inherit
