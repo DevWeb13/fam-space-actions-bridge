@@ -1,0 +1,72 @@
+name: Fam Space Threads
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Mode d'exécution"
+        required: true
+        type: choice
+        default: dry-run
+        options:
+          - dry-run
+          - live-one
+          - live-all
+      target_slug:
+        description: "Slug uniquement pour live-one"
+        required: false
+        type: string
+  schedule:
+    - cron: "37 8 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fam-space-threads
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Recuperer le bridge
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Verifier le publisher Threads
+        shell: bash
+        run: node --check scripts/publish-threads.mjs
+
+      - name: Executer le publisher Threads
+        shell: bash
+        env:
+          PINTEREST_FEED_URL: https://www.fam-space.fr/pinterest-v2.xml
+          THREADS_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'live-all' }}
+          THREADS_TARGET_SLUG: ${{ inputs.target_slug }}
+          THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+        run: node scripts/publish-threads.mjs threads-state.json
+
+      - name: Enregistrer l'etat Threads
+        if: ${{ always() }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- threads-state.json; then
+            echo "Aucun changement d'état Threads à enregistrer."
+            exit 0
+          fi
+          git config user.name "fam-space-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add threads-state.json
+          git commit -m "state: record Threads publications"
+          git push origin HEAD:main
