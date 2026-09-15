@@ -21,3 +21,4 @@ automation/image-controlled-search-20260914
 automation/image-backfill-20260914-clermont-nancy-mayenne
 automation/image-backfill-20260914-clermont-retry
 automation/image-20260915-catchup-3
+automation/image-oise-parent-workshop-hero
