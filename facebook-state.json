@@ -3,8 +3,8 @@
   "activatedAt": "2026-09-14T18:37:00+02:00",
   "backfillStartAt": "2026-09-01T00:00:00+02:00",
   "backfill": {
-    "dateParis": "2026-09-14",
-    "publishedToday": 1,
+    "dateParis": "2026-09-15",
+    "publishedToday": 0,
     "lastPublishedAt": "2026-09-14T17:31:48.974Z"
   },
   "posts": {
@@ -404,6 +404,14 @@
       "mode": "hero",
       "kind": "backfill",
       "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/Rocamadour_%282024%29.jpg/1920px-Rocamadour_%282024%29.jpg"
+    },
+    "parc-animalier-de-serre-poncon-comment-organiser-la-visite-avec-des-enfants": {
+      "id": "1314472035081859_122100789897477492",
+      "at": "2026-09-15T18:04:15.748Z",
+      "productionSha": "503de842a2442be4f838cdf9e676c564bcd1188d",
+      "mode": "hero",
+      "kind": "new",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Marmotte_et_salade.JPG/1920px-Marmotte_et_salade.JPG"
     }
   }
 }
