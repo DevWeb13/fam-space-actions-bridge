@@ -192,7 +192,7 @@ const verifyRemoteJpeg = async (rawUrl) => {
 };
 
 const buildCaption = (entry) =>
-  [entry.title, entry.description, `A lire sur Fam Space :\n${entry.url}`]
+  [entry.title, entry.description, `À lire sur Fam Space :\n${entry.url}`]
     .filter(Boolean)
     .join("\n\n");
 
@@ -208,12 +208,12 @@ const main = async () => {
   let blocked = 0;
 
   console.log(`Instagram dry-run - source: ${FEED_URL}`);
-  console.log(`Entrees trouvees dans le flux Pinterest: ${entries.length}`);
+  console.log(`Entrées trouvées dans le flux Pinterest: ${entries.length}`);
 
   for (const entry of entries) {
     if (!entry.title || !entry.url || !entry.description) {
       blocked += 1;
-      console.error("[BLOQUE] entree RSS incomplete");
+      console.error("[BLOQUÉ] entrée RSS incomplète");
       continue;
     }
 
@@ -222,20 +222,20 @@ const main = async () => {
       slug = slugFromArticleUrl(entry.url);
     } catch (error) {
       blocked += 1;
-      console.error(`[BLOQUE] ${error.message}`);
+      console.error(`[BLOQUÉ] ${error.message}`);
       continue;
     }
 
     if (seenSlugs.has(slug)) {
       blocked += 1;
-      console.error(`[BLOQUE] ${slug}: doublon dans le flux Pinterest`);
+      console.error(`[BLOQUÉ] ${slug}: doublon dans le flux Pinterest`);
       continue;
     }
     seenSlugs.add(slug);
 
     if (state.posts[slug]) {
       alreadyPublished += 1;
-      console.log(`[DEJA PUBLIE] ${slug} -> ${state.posts[slug].id ?? "id inconnu"}`);
+      console.log(`[DÉJÀ PUBLIÉ] ${slug} -> ${state.posts[slug].id ?? "id inconnu"}`);
       continue;
     }
 
@@ -245,26 +245,26 @@ const main = async () => {
       await verifyRemoteJpeg(image.url);
       const caption = buildCaption(entry);
       if (caption.length > 2_200) {
-        throw new Error(`legende trop longue: ${caption.length}/2200`);
+        throw new Error(`légende trop longue: ${caption.length}/2200`);
       }
 
       ready += 1;
       console.log(
-        `[PRET] ${slug} | ${image.width || "?"}x${image.height || "?"} | ${image.license || "licence via flux"} | legende=${caption.length}`,
+        `[PRÊT] ${slug} | ${image.width || "?"}x${image.height || "?"} | ${image.license || "licence via flux"} | légende=${caption.length}`,
       );
     } catch (error) {
       blocked += 1;
-      console.error(`[BLOQUE] ${slug}: ${error.message}`);
+      console.error(`[BLOQUÉ] ${slug}: ${error.message}`);
     }
   }
 
   console.log("---");
   console.log(`Flux Pinterest: ${entries.length}`);
-  console.log(`Deja publie Instagram: ${alreadyPublished}`);
+  console.log(`Déjà publié Instagram: ${alreadyPublished}`);
   console.log(`Candidats Instagram: ${candidates}`);
-  console.log(`Prets pour une future publication: ${ready}`);
-  console.log(`Bloques: ${blocked}`);
-  console.log("Aucune publication Instagram n'a ete effectuee (dry-run uniquement)." );
+  console.log(`Prêts pour une future publication: ${ready}`);
+  console.log(`Bloqués: ${blocked}`);
+  console.log("Aucune publication Instagram n'a été effectuée (dry-run uniquement).");
 
   if (blocked > 0) process.exitCode = 1;
 };
