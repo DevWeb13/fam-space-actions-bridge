@@ -36,6 +36,16 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
+          path: bridge
+          fetch-depth: 0
+
+      - name: Recuperer Fam Space production
+        uses: actions/checkout@v4
+        with:
+          repository: DevWeb13/fam-space-qwik
+          ref: production
+          token: ${{ secrets.FAM_SPACE_TOKEN }}
+          path: fam-space
           fetch-depth: 0
 
       - uses: actions/setup-node@v4
@@ -44,23 +54,25 @@ jobs:
 
       - name: Verifier le publisher Threads
         shell: bash
-        run: node --check scripts/publish-threads.mjs
+        run: node --check bridge/scripts/publish-threads.mjs
 
       - name: Executer le publisher Threads
         shell: bash
         env:
+          FAM_SPACE_DIR: ${{ github.workspace }}/fam-space
           PINTEREST_FEED_URL: https://www.fam-space.fr/pinterest-v2.xml
           THREADS_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'live-all' }}
           THREADS_TARGET_SLUG: ${{ inputs.target_slug }}
           THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
           THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
-        run: node scripts/publish-threads.mjs threads-state.json
+        run: node bridge/scripts/publish-threads.mjs bridge/threads-state.json
 
       - name: Enregistrer l'etat Threads
         if: ${{ always() }}
         shell: bash
         run: |
           set -euo pipefail
+          cd bridge
           if git diff --quiet -- threads-state.json; then
             echo "Aucun changement d'état Threads à enregistrer."
             exit 0
