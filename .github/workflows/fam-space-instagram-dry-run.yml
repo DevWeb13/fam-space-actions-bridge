@@ -2,13 +2,18 @@ name: Fam Space Instagram dry-run
 
 on:
   workflow_dispatch:
+  pull_request:
+    paths:
+      - "scripts/publish-instagram.mjs"
+      - "instagram-state.json"
+      - ".github/workflows/fam-space-instagram-dry-run.yml"
 
 permissions:
   contents: read
 
 concurrency:
-  group: fam-space-instagram-dry-run
-  cancel-in-progress: false
+  group: fam-space-instagram-dry-run-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   audit:
@@ -19,7 +24,7 @@ jobs:
       - name: Recuperer le bridge
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.ref_name }}
+          ref: ${{ github.head_ref || github.ref_name }}
           path: bridge
           fetch-depth: 0
 
