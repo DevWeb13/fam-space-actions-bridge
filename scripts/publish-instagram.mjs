@@ -97,7 +97,7 @@ const loadState = async () => {
 
 const fetchFeed = async () => {
   const response = await fetch(FEED_URL, {
-    headers: { "user-agent": "FamSpaceInstagramDryRun/1.0" },
+    headers: { "user-agent": "FamSpaceInstagramDryRun/1.0 (https://www.fam-space.fr/)" },
     redirect: "follow",
   });
   if (!response.ok) {
@@ -173,20 +173,22 @@ const retryDelayMs = (response, attempt) => {
   if (retryAfter) {
     const seconds = Number(retryAfter);
     if (Number.isFinite(seconds) && seconds >= 0) {
-      return Math.max(1_000, seconds * 1_000);
+      return Math.max(2_000, seconds * 1_000);
     }
     const date = Date.parse(retryAfter);
     if (Number.isFinite(date)) {
-      return Math.max(1_000, date - Date.now());
+      return Math.max(2_000, date - Date.now());
     }
   }
   return 2_000 * 2 ** attempt;
 };
 
 const verifyRemoteJpeg = async (rawUrl) => {
-  const headers = { "user-agent": "FamSpaceInstagramDryRun/1.0" };
+  const headers = {
+    "user-agent": "FamSpaceInstagramDryRun/1.0 (https://www.fam-space.fr/)",
+  };
 
-  for (let attempt = 0; attempt < 4; attempt += 1) {
+  for (let attempt = 0; attempt < 3; attempt += 1) {
     let response = await fetch(rawUrl, {
       method: "HEAD",
       headers,
@@ -205,7 +207,7 @@ const verifyRemoteJpeg = async (rawUrl) => {
       if (contentType && !contentType.toLowerCase().includes("image/jpeg")) {
         throw new Error(`JPEG public renvoie ${contentType}`);
       }
-      return;
+      return { verified: true, deferred: false, status: response.status };
     }
 
     const retryable =
@@ -214,8 +216,13 @@ const verifyRemoteJpeg = async (rawUrl) => {
       response.status === 502 ||
       response.status === 503 ||
       response.status === 504;
-    if (!retryable || attempt === 3) {
+
+    if (!retryable) {
       throw new Error(`JPEG public inaccessible: HTTP ${response.status}`);
+    }
+
+    if (attempt === 2) {
+      return { verified: false, deferred: true, status: response.status };
     }
 
     const delay = retryDelayMs(response, attempt);
@@ -224,6 +231,8 @@ const verifyRemoteJpeg = async (rawUrl) => {
     );
     await sleep(delay);
   }
+
+  return { verified: false, deferred: true, status: 0 };
 };
 
 const buildCaption = (entry) =>
@@ -241,7 +250,8 @@ const main = async () => {
   let candidates = 0;
   let ready = 0;
   let blocked = 0;
-  let portraitThreeFour = 0;
+  let remoteChecksDeferred = 0;
+  let legacyRatioOutliers = 0;
 
   console.log(`Instagram dry-run - source: ${FEED_URL}`);
   console.log(`Entrées trouvées dans le flux Pinterest: ${entries.length}`);
@@ -279,10 +289,13 @@ const main = async () => {
     try {
       const image = await resolveInstagramImage(entry, slug);
 
-      // Avoid hammering Wikimedia with a burst of 40 HEAD requests. This is a
-      // validation-only delay and has no effect on future publication cadence.
+      // Validation distante volontairement espacée. Un 429/5xx persistant est
+      // signalé comme contrôle différé, pas comme défaut de l'article : la
+      // provenance reste la source de vérité et le futur publisher devra gérer
+      // les erreurs de récupération Meta avec retry.
       await sleep(1_250);
-      await verifyRemoteJpeg(image.url);
+      const remote = await verifyRemoteJpeg(image.url);
+      if (remote.deferred) remoteChecksDeferred += 1;
 
       const caption = buildCaption(entry);
       if (caption.length > 2_200) {
@@ -291,14 +304,15 @@ const main = async () => {
 
       const ratio =
         image.width > 0 && image.height > 0 ? image.width / image.height : null;
-      if (ratio !== null && ratio >= 0.74 && ratio <= 0.76) {
-        portraitThreeFour += 1;
-      }
+      const outsideLegacyRatio = ratio !== null && (ratio < 0.8 || ratio > 1.91);
+      if (outsideLegacyRatio) legacyRatioOutliers += 1;
 
       ready += 1;
       console.log(
         `[PRÊT] ${slug} | ${image.width || "?"}x${image.height || "?"}` +
           `${ratio === null ? "" : ` | ratio=${ratio.toFixed(3)}`}` +
+          `${outsideLegacyRatio ? " | ratio atypique (diagnostic)" : ""}` +
+          `${remote.deferred ? ` | contrôle distant différé (HTTP ${remote.status})` : ""}` +
           ` | ${image.license || "licence via flux"} | légende=${caption.length}`,
       );
     } catch (error) {
@@ -312,7 +326,8 @@ const main = async () => {
   console.log(`Déjà publié Instagram: ${alreadyPublished}`);
   console.log(`Candidats Instagram: ${candidates}`);
   console.log(`Prêts pour une future publication: ${ready}`);
-  console.log(`Sources JPEG au format portrait ~3:4: ${portraitThreeFour}`);
+  console.log(`Contrôles JPEG distants différés (429/5xx): ${remoteChecksDeferred}`);
+  console.log(`Ratios hors ancienne plage 4:5–1.91:1 (diagnostic): ${legacyRatioOutliers}`);
   console.log(`Bloqués: ${blocked}`);
   console.log("Aucune publication Instagram n'a été effectuée (dry-run uniquement).");
 
