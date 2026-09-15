@@ -1,22 +1,40 @@
-name: Fam Space Instagram dry-run
+name: Fam Space Instagram
 
 on:
   workflow_dispatch:
-  pull_request:
+    inputs:
+      mode:
+        description: "Mode d'exécution"
+        required: true
+        type: choice
+        default: dry-run
+        options:
+          - dry-run
+          - live-one
+      target_slug:
+        description: "Slug obligatoire en mode live-one"
+        required: false
+        type: string
+  # Déclencheur temporaire, limité à ce commit précis, pour le premier test réel.
+  # Il sera retiré immédiatement après vérification du Mucem.
+  push:
+    branches:
+      - main
     paths:
-      - "scripts/publish-instagram.mjs"
-      - "instagram-state.json"
       - ".github/workflows/fam-space-instagram-dry-run.yml"
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
-  group: fam-space-instagram-dry-run-${{ github.ref }}
-  cancel-in-progress: true
+  group: fam-space-instagram
+  cancel-in-progress: false
 
 jobs:
-  audit:
+  publish:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'push' && github.event.head_commit.message == 'test: publish Instagram Mucem once')
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
@@ -24,7 +42,7 @@ jobs:
       - name: Recuperer le bridge
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.head_ref || github.ref_name }}
+          ref: main
           path: bridge
           fetch-depth: 0
 
@@ -45,10 +63,29 @@ jobs:
         shell: bash
         run: node --check bridge/scripts/publish-instagram.mjs
 
-      - name: Analyser les publications Instagram sans publier
+      - name: Executer le publisher Instagram
         shell: bash
         env:
           FAM_SPACE_DIR: ${{ github.workspace }}/fam-space
           PINTEREST_FEED_URL: https://www.fam-space.fr/pinterest-v2.xml
-          SOCIAL_DRY_RUN: "true"
+          SOCIAL_DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.mode == 'dry-run' && 'true' || 'false' }}
+          INSTAGRAM_TARGET_SLUG: ${{ github.event_name == 'push' && 'mucem-en-famille-billets-gratuites-et-conseils-pour-la-visite' || inputs.target_slug }}
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
         run: node bridge/scripts/publish-instagram.mjs bridge/instagram-state.json
+
+      - name: Enregistrer l'etat Instagram apres publication
+        if: ${{ github.event_name == 'push' || inputs.mode == 'live-one' }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd bridge
+          if git diff --quiet -- instagram-state.json; then
+            echo "Aucun changement d'état Instagram à enregistrer."
+            exit 0
+          fi
+          git config user.name "fam-space-actions"
+          git config user.email "actions@users.noreply.github.com"
+          git add instagram-state.json
+          git commit -m "state: record Instagram publication"
+          git push origin HEAD:main
