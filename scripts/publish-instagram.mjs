@@ -23,6 +23,8 @@ if (!dryRun) {
   );
 }
 
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
 const decodeXml = (value) =>
   value
     .replace(/&#x([0-9a-f]+);/gi, (_, hex) =>
@@ -142,7 +144,7 @@ const resolveInstagramImage = async (entry, slug) => {
   const enclosurePath = new URL(entry.imageUrl).pathname;
   if (!provenance.output?.path || provenance.output.path !== enclosurePath) {
     throw new Error(
-      `hero incoherente: feed=${enclosurePath} provenance=${provenance.output?.path ?? "absent"}`,
+      `hero incohérente: feed=${enclosurePath} provenance=${provenance.output?.path ?? "absent"}`,
     );
   }
 
@@ -166,28 +168,61 @@ const resolveInstagramImage = async (entry, slug) => {
   };
 };
 
+const retryDelayMs = (response, attempt) => {
+  const retryAfter = response.headers.get("retry-after");
+  if (retryAfter) {
+    const seconds = Number(retryAfter);
+    if (Number.isFinite(seconds) && seconds >= 0) {
+      return Math.max(1_000, seconds * 1_000);
+    }
+    const date = Date.parse(retryAfter);
+    if (Number.isFinite(date)) {
+      return Math.max(1_000, date - Date.now());
+    }
+  }
+  return 2_000 * 2 ** attempt;
+};
+
 const verifyRemoteJpeg = async (rawUrl) => {
   const headers = { "user-agent": "FamSpaceInstagramDryRun/1.0" };
-  let response = await fetch(rawUrl, {
-    method: "HEAD",
-    headers,
-    redirect: "follow",
-  });
 
-  if (response.status === 405 || response.status === 501) {
-    response = await fetch(rawUrl, {
-      headers: { ...headers, range: "bytes=0-0" },
+  for (let attempt = 0; attempt < 4; attempt += 1) {
+    let response = await fetch(rawUrl, {
+      method: "HEAD",
+      headers,
       redirect: "follow",
     });
-  }
 
-  if (!response.ok) {
-    throw new Error(`JPEG public inaccessible: HTTP ${response.status}`);
-  }
+    if (response.status === 405 || response.status === 501) {
+      response = await fetch(rawUrl, {
+        headers: { ...headers, range: "bytes=0-0" },
+        redirect: "follow",
+      });
+    }
 
-  const contentType = response.headers.get("content-type") ?? "";
-  if (contentType && !contentType.toLowerCase().includes("image/jpeg")) {
-    throw new Error(`JPEG public renvoie ${contentType}`);
+    if (response.ok) {
+      const contentType = response.headers.get("content-type") ?? "";
+      if (contentType && !contentType.toLowerCase().includes("image/jpeg")) {
+        throw new Error(`JPEG public renvoie ${contentType}`);
+      }
+      return;
+    }
+
+    const retryable =
+      response.status === 429 ||
+      response.status === 500 ||
+      response.status === 502 ||
+      response.status === 503 ||
+      response.status === 504;
+    if (!retryable || attempt === 3) {
+      throw new Error(`JPEG public inaccessible: HTTP ${response.status}`);
+    }
+
+    const delay = retryDelayMs(response, attempt);
+    console.log(
+      `  Wikimedia HTTP ${response.status}; nouvelle tentative dans ${Math.ceil(delay / 1_000)}s.`,
+    );
+    await sleep(delay);
   }
 };
 
@@ -206,6 +241,7 @@ const main = async () => {
   let candidates = 0;
   let ready = 0;
   let blocked = 0;
+  let portraitThreeFour = 0;
 
   console.log(`Instagram dry-run - source: ${FEED_URL}`);
   console.log(`Entrées trouvées dans le flux Pinterest: ${entries.length}`);
@@ -242,15 +278,28 @@ const main = async () => {
     candidates += 1;
     try {
       const image = await resolveInstagramImage(entry, slug);
+
+      // Avoid hammering Wikimedia with a burst of 40 HEAD requests. This is a
+      // validation-only delay and has no effect on future publication cadence.
+      await sleep(1_250);
       await verifyRemoteJpeg(image.url);
+
       const caption = buildCaption(entry);
       if (caption.length > 2_200) {
         throw new Error(`légende trop longue: ${caption.length}/2200`);
       }
 
+      const ratio =
+        image.width > 0 && image.height > 0 ? image.width / image.height : null;
+      if (ratio !== null && ratio >= 0.74 && ratio <= 0.76) {
+        portraitThreeFour += 1;
+      }
+
       ready += 1;
       console.log(
-        `[PRÊT] ${slug} | ${image.width || "?"}x${image.height || "?"} | ${image.license || "licence via flux"} | légende=${caption.length}`,
+        `[PRÊT] ${slug} | ${image.width || "?"}x${image.height || "?"}` +
+          `${ratio === null ? "" : ` | ratio=${ratio.toFixed(3)}`}` +
+          ` | ${image.license || "licence via flux"} | légende=${caption.length}`,
       );
     } catch (error) {
       blocked += 1;
@@ -263,6 +312,7 @@ const main = async () => {
   console.log(`Déjà publié Instagram: ${alreadyPublished}`);
   console.log(`Candidats Instagram: ${candidates}`);
   console.log(`Prêts pour une future publication: ${ready}`);
+  console.log(`Sources JPEG au format portrait ~3:4: ${portraitThreeFour}`);
   console.log(`Bloqués: ${blocked}`);
   console.log("Aucune publication Instagram n'a été effectuée (dry-run uniquement).");
 
