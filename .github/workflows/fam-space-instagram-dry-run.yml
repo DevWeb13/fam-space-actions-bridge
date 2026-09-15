@@ -11,10 +11,18 @@ on:
         options:
           - dry-run
           - live-one
+          - live-all
       target_slug:
-        description: "Slug obligatoire en mode live-one"
+        description: "Slug uniquement pour live-one"
         required: false
         type: string
+  schedule:
+    - cron: "17 8 * * *"
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/fam-space-instagram-dry-run.yml"
 
 permissions:
   contents: write
@@ -58,14 +66,14 @@ jobs:
         env:
           FAM_SPACE_DIR: ${{ github.workspace }}/fam-space
           PINTEREST_FEED_URL: https://www.fam-space.fr/pinterest-v2.xml
-          SOCIAL_DRY_RUN: ${{ inputs.mode == 'dry-run' && 'true' || 'false' }}
+          INSTAGRAM_MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'live-all' }}
           INSTAGRAM_TARGET_SLUG: ${{ inputs.target_slug }}
           INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
           INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
         run: node bridge/scripts/publish-instagram.mjs bridge/instagram-state.json
 
-      - name: Enregistrer l'etat Instagram apres publication
-        if: ${{ inputs.mode == 'live-one' }}
+      - name: Enregistrer l'etat Instagram
+        if: ${{ always() }}
         shell: bash
         run: |
           set -euo pipefail
@@ -77,5 +85,5 @@ jobs:
           git config user.name "fam-space-actions"
           git config user.email "actions@users.noreply.github.com"
           git add instagram-state.json
-          git commit -m "state: record Instagram publication"
+          git commit -m "state: record Instagram publications"
           git push origin HEAD:main
