@@ -26,3 +26,4 @@ automation/image-2026-09-10-catchup-1
 automation/image-sigean-body-retry-20260915
 automation/image-catchup-20260915-02
 automation/image-catchup-20260915-03
+automation/image-jura-twins-retry-20260915
