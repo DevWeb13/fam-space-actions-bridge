@@ -18,11 +18,6 @@ on:
         type: string
   schedule:
     - cron: "17 8 * * *"
-  push:
-    branches:
-      - main
-    paths:
-      - ".github/workflows/fam-space-instagram-dry-run.yml"
 
 permissions:
   contents: write
