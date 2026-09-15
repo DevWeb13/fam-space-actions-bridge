@@ -1,0 +1,54 @@
+name: Fam Space Instagram dry-run
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "scripts/publish-instagram.mjs"
+      - "instagram-state.json"
+      - ".github/workflows/fam-space-instagram-dry-run.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fam-space-instagram-dry-run-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Recuperer le bridge
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.head_ref || github.ref_name }}
+          path: bridge
+          fetch-depth: 0
+
+      - name: Recuperer Fam Space production
+        uses: actions/checkout@v4
+        with:
+          repository: DevWeb13/fam-space-qwik
+          ref: production
+          token: ${{ secrets.FAM_SPACE_TOKEN }}
+          path: fam-space
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Verifier le publisher Instagram
+        shell: bash
+        run: node --check bridge/scripts/publish-instagram.mjs
+
+      - name: Analyser les publications Instagram sans publier
+        shell: bash
+        env:
+          FAM_SPACE_DIR: ${{ github.workspace }}/fam-space
+          PINTEREST_FEED_URL: https://www.fam-space.fr/pinterest-v2.xml
+          SOCIAL_DRY_RUN: "true"
+        run: node bridge/scripts/publish-instagram.mjs bridge/instagram-state.json
