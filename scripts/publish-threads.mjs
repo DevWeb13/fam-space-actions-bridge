@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 
 import { promises as fs } from "node:fs";
+import path from "node:path";
 
 const FEED_URL =
   process.env.PINTEREST_FEED_URL ?? "https://www.fam-space.fr/pinterest-v2.xml";
 const DEFAULT_THREADS_USER_ID = "28413878778293545";
+const famSpaceDir = path.resolve(process.env.FAM_SPACE_DIR ?? "../fam-space");
 const mode = (process.env.THREADS_MODE ?? "dry-run").trim();
 const targetSlug = (process.env.THREADS_TARGET_SLUG ?? "").trim();
 const threadsUserId =
@@ -103,6 +105,43 @@ const fetchFeed = async () => {
   return response.text();
 };
 
+const stripTracking = (rawUrl) => {
+  const url = new URL(rawUrl);
+  for (const key of [...url.searchParams.keys()]) {
+    if (key.toLowerCase().startsWith("utm_")) url.searchParams.delete(key);
+  }
+  return url.href;
+};
+
+// Le flux Pinterest est l'unique source d'éligibilité.
+// La provenance sert seulement à récupérer un JPEG accepté par Threads
+// pour la hero WebP déjà sélectionnée dans ce flux.
+const resolveThreadsImage = async (entry, slug) => {
+  if (!entry.imageUrl) throw new Error("image absente du flux Pinterest");
+
+  const provenancePath = path.join(
+    famSpaceDir,
+    "content-data",
+    "article-images",
+    `${slug}.json`,
+  );
+  const provenance = JSON.parse(await fs.readFile(provenancePath, "utf8"));
+
+  const feedImagePath = new URL(entry.imageUrl).pathname;
+  if (!provenance.output?.path || provenance.output.path !== feedImagePath) {
+    throw new Error("la provenance ne correspond pas à la hero du flux Pinterest");
+  }
+
+  const jpeg = [provenance.download, provenance.original]
+    .filter(Boolean)
+    .find((candidate) => candidate?.mime === "image/jpeg" && candidate?.url);
+  if (!jpeg) throw new Error("aucune source JPEG pour cette hero");
+
+  const url = new URL(stripTracking(jpeg.url));
+  if (url.protocol !== "https:") throw new Error("source JPEG non HTTPS");
+  return { url: url.href };
+};
+
 const fitThreadsText = (entry) => {
   const title = normalizeWhitespace(entry.title);
   const description = normalizeWhitespace(entry.description);
@@ -120,20 +159,19 @@ const fitThreadsText = (entry) => {
   return `${shortened}\n\n${url}`.slice(0, 500);
 };
 
-const validateEntry = (entry) => {
+const validateEntry = async (entry, slug) => {
   if (!entry.title || !entry.description || !entry.url || !entry.imageUrl) {
     throw new Error("entrée incomplète dans le flux Pinterest");
   }
   const articleUrl = new URL(entry.url);
-  const imageUrl = new URL(entry.imageUrl);
-  if (articleUrl.protocol !== "https:" || imageUrl.protocol !== "https:") {
-    throw new Error("URL article ou image non HTTPS");
-  }
+  if (articleUrl.protocol !== "https:") throw new Error("URL article non HTTPS");
+
   const text = fitThreadsText(entry);
   if (text.length > 500) {
     throw new Error(`texte Threads trop long: ${text.length}/500`);
   }
-  return { text, imageUrl: imageUrl.href };
+  const image = await resolveThreadsImage(entry, slug);
+  return { text, imageUrl: image.url };
 };
 
 const parseJsonResponse = async (response) => {
@@ -225,7 +263,7 @@ const runDryRun = async (entriesBySlug, state) => {
       continue;
     }
     try {
-      validateEntry(entry);
+      await validateEntry(entry, slug);
       ready += 1;
       console.log(`[PRÊT] ${slug}`);
     } catch (error) {
@@ -243,7 +281,7 @@ const runDryRun = async (entriesBySlug, state) => {
 };
 
 const publishOne = async (slug, entry, state) => {
-  const prepared = validateEntry(entry);
+  const prepared = await validateEntry(entry, slug);
   const mediaId = await publishThreads(entry, prepared);
   state.posts[slug] = {
     id: mediaId,
