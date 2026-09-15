@@ -122,17 +122,17 @@ const parseArticle = (filePath, markdown) => {
 const normalizeLicense = (license) =>
   normalizeWhitespace(license).toLowerCase().replace(/[–—]/g, "-");
 
+// Keep this allowlist aligned with docs/social-image-policy.md.
+// Third-party CC BY / CC BY-SA images are intentionally excluded because
+// Fam Space cannot grant Meta broader transfer/sublicensing rights than it holds.
 const isAllowedMetaLicense = (license) => {
   const normalized = normalizeLicense(license);
-  if (
+  return (
     normalized === "public domain" ||
     normalized === "public-domain" ||
     /^public domain mark(?: 1\.0)?$/.test(normalized) ||
     /^cc0(?: 1\.0(?: universal)?)?$/.test(normalized)
-  ) {
-    return true;
-  }
-  return /^cc by(?:-sa)?(?: [1-4](?:\.0)?)?$/.test(normalized);
+  );
 };
 
 const licenseRequiresAttribution = (license) =>
