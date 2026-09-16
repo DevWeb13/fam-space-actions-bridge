@@ -420,6 +420,78 @@
       "mode": "hero",
       "kind": "new",
       "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Four_compost_bins.jpg/1920px-Four_compost_bins.jpg"
+    },
+    "pass-culture-en-duo-comment-un-jeune-peut-inviter-un-parent-ou-un-proche": {
+      "id": "1314472035081859_122101695903477492",
+      "at": "2026-09-16T14:54:09.526Z",
+      "productionSha": "6d289ca7e22589518390781a02df4408ff29e196",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "source JPEG héros pas encore disponible"
+    },
+    "le-vaisseau-a-strasbourg-quel-billet-choisir-pour-une-sortie-avec-des-enfants": {
+      "id": "1314472035081859_122101695963477492",
+      "at": "2026-09-16T14:54:12.728Z",
+      "productionSha": "6d289ca7e22589518390781a02df4408ff29e196",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY 3.0"
+    },
+    "noel-au-chateau-de-valencay-ce-qu-il-faut-savoir-avant-d-y-aller": {
+      "id": "1314472035081859_122101696095477492",
+      "at": "2026-09-16T14:54:16.460Z",
+      "productionSha": "6d289ca7e22589518390781a02df4408ff29e196",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY 3.0"
+    },
+    "visiter-une-cave-d-affinage-de-brie-a-jouarre-ce-qu-il-faut-savoir-avec-des-enfants": {
+      "id": "1314472035081859_122101696161477492",
+      "at": "2026-09-16T14:54:19.823Z",
+      "productionSha": "6d289ca7e22589518390781a02df4408ff29e196",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY-SA 3.0"
+    },
+    "cafe-papote-a-lyon-4e-ou-echanger-gratuitement-avec-d-autres-parents": {
+      "id": "1314472035081859_122101696299477492",
+      "at": "2026-09-16T14:54:23.180Z",
+      "productionSha": "6d289ca7e22589518390781a02df4408ff29e196",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY-SA 3.0"
+    },
+    "grottes-d-isturitz-et-d-oxocelhaya-avec-des-enfants-les-contraintes-a-connaitre-avant-la-visite": {
+      "id": "1314472035081859_122101696431477492",
+      "at": "2026-09-16T14:54:27.019Z",
+      "productionSha": "6d289ca7e22589518390781a02df4408ff29e196",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY-SA 3.0"
+    },
+    "pic-du-midi-moins-cher-quand-choisir-le-billet-date-plutot-que-le-pass-liberte": {
+      "id": "1314472035081859_122101697151477492",
+      "at": "2026-09-16T14:54:31.017Z",
+      "productionSha": "6d289ca7e22589518390781a02df4408ff29e196",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY-SA 4.0"
+    },
+    "repto-terra-expo-a-colmar-faut-il-y-aller-avec-des-enfants": {
+      "id": "1314472035081859_122101697463477492",
+      "at": "2026-09-16T14:54:34.689Z",
+      "productionSha": "6d289ca7e22589518390781a02df4408ff29e196",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY-SA 4.0"
     }
   }
 }
