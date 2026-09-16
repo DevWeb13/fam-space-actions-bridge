@@ -3,7 +3,7 @@
   "activatedAt": "2026-09-14T18:37:00+02:00",
   "backfillStartAt": "2026-09-01T00:00:00+02:00",
   "backfill": {
-    "dateParis": "2026-09-15",
+    "dateParis": "2026-09-16",
     "publishedToday": 0,
     "lastPublishedAt": "2026-09-14T17:31:48.974Z"
   },
@@ -412,6 +412,14 @@
       "mode": "hero",
       "kind": "new",
       "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Marmotte_et_salade.JPG/1920px-Marmotte_et_salade.JPG"
+    },
+    "composteur-gratuit-a-niort-agglo-comment-l-obtenir-et-bien-l-utiliser": {
+      "id": "1314472035081859_122101190049477492",
+      "at": "2026-09-16T02:05:25.407Z",
+      "productionSha": "81f3e87c2bde3f7357d968991a5ea198eb18109a",
+      "mode": "hero",
+      "kind": "new",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Four_compost_bins.jpg/1920px-Four_compost_bins.jpg"
     }
   }
 }
