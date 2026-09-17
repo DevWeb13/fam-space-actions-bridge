@@ -3,7 +3,7 @@
   "activatedAt": "2026-09-14T18:37:00+02:00",
   "backfillStartAt": "2026-09-01T00:00:00+02:00",
   "backfill": {
-    "dateParis": "2026-09-16",
+    "dateParis": "2026-09-17",
     "publishedToday": 0,
     "lastPublishedAt": "2026-09-14T17:31:48.974Z"
   },
@@ -492,6 +492,69 @@
       "kind": "new",
       "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
       "fallbackReason": "licence hero non autorisée: CC BY-SA 4.0"
+    },
+    "week-end-au-lac-des-settons-ou-dormir-et-que-faire-avec-des-enfants": {
+      "id": "1314472035081859_122102286687477492",
+      "at": "2026-09-17T02:48:54.596Z",
+      "productionSha": "fc80500a1a76f09973101970c758c8076bbcc910",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY-SA 3.0"
+    },
+    "monuments-nationaux-avec-des-enfants-quand-l-entree-est-gratuite-et-quand-le-pass-vaut-le-coup": {
+      "id": "1314472035081859_122102286729477492",
+      "at": "2026-09-17T02:48:57.433Z",
+      "productionSha": "fc80500a1a76f09973101970c758c8076bbcc910",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY-SA 3.0"
+    },
+    "arbora-lumina-a-harcourt-ce-qu-il-faut-prevoir-avec-des-enfants": {
+      "id": "1314472035081859_122102286783477492",
+      "at": "2026-09-17T02:49:00.573Z",
+      "productionSha": "fc80500a1a76f09973101970c758c8076bbcc910",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY-SA 4.0"
+    },
+    "ecotravo-a-rennes-metropole-qui-peut-obtenir-jusqu-a-15-000-pour-renover-sa-maison": {
+      "id": "1314472035081859_122102286927477492",
+      "at": "2026-09-17T02:49:03.714Z",
+      "productionSha": "fc80500a1a76f09973101970c758c8076bbcc910",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY 4.0"
+    },
+    "visiter-une-cooperative-de-beaufort-avec-des-enfants-a-val-cenis": {
+      "id": "1314472035081859_122102287077477492",
+      "at": "2026-09-17T02:49:07.353Z",
+      "productionSha": "fc80500a1a76f09973101970c758c8076bbcc910",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY-SA 3.0"
+    },
+    "musee-de-tautavel-moins-cher-avec-lio-le-bon-plan-a-connaitre": {
+      "id": "1314472035081859_122102287311477492",
+      "at": "2026-09-17T02:49:10.536Z",
+      "productionSha": "fc80500a1a76f09973101970c758c8076bbcc910",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "provenance héros absente ou illisible"
+    },
+    "parc-animalier-de-charleville-mezieres-une-sortie-gratuite-toute-l-annee": {
+      "id": "1314472035081859_122102287461477492",
+      "at": "2026-09-17T02:49:14.440Z",
+      "productionSha": "fc80500a1a76f09973101970c758c8076bbcc910",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "provenance héros absente ou illisible"
     }
   }
 }
