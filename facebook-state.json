@@ -555,6 +555,24 @@
       "kind": "new",
       "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
       "fallbackReason": "provenance héros absente ou illisible"
+    },
+    "musee-de-prehistoire-de-solutre-avec-des-enfants-musee-parc-et-roche": {
+      "id": "1314472035081859_122102530527477492",
+      "at": "2026-09-17T09:30:26.022Z",
+      "productionSha": "5777801fbe35631b7809abfb22bc76d2827baae2",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "provenance héros absente ou illisible"
+    },
+    "ecopark-la-castille-avec-des-enfants-quel-parcours-choisir-selon-leur-taille": {
+      "id": "1314472035081859_122102530581477492",
+      "at": "2026-09-17T09:30:29.597Z",
+      "productionSha": "5777801fbe35631b7809abfb22bc76d2827baae2",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "provenance héros absente ou illisible"
     }
   }
 }
