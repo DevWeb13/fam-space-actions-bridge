@@ -573,6 +573,14 @@
       "kind": "new",
       "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
       "fallbackReason": "provenance héros absente ou illisible"
+    },
+    "ateliers-au-jardin-de-la-pmi-a-bobigny-quelles-dates-choisir-cet-automne": {
+      "id": "1314472035081859_122102861439477492",
+      "at": "2026-09-17T15:34:49.131Z",
+      "productionSha": "9c2e28f411e2ee57d2ca427cff5eadf6d270bb7b",
+      "mode": "hero",
+      "kind": "new",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Children_prepare_to_plant_plants.jpg/1920px-Children_prepare_to_plant_plants.jpg"
     }
   }
 }
