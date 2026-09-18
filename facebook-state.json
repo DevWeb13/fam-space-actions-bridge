@@ -3,7 +3,7 @@
   "activatedAt": "2026-09-14T18:37:00+02:00",
   "backfillStartAt": "2026-09-01T00:00:00+02:00",
   "backfill": {
-    "dateParis": "2026-09-17",
+    "dateParis": "2026-09-18",
     "publishedToday": 0,
     "lastPublishedAt": "2026-09-14T17:31:48.974Z"
   },
@@ -581,6 +581,33 @@
       "mode": "hero",
       "kind": "new",
       "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Children_prepare_to_plant_plants.jpg/1920px-Children_prepare_to_plant_plants.jpg"
+    },
+    "prendre-l-avion-avec-un-bebe-poussette-siege-auto-et-bagages-a-verifier-avant-de-reserver": {
+      "id": "1314472035081859_122103978609477492",
+      "at": "2026-09-18T15:52:40.264Z",
+      "productionSha": "43046f07d774238757799ca9fc82e14c620df78f",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY-SA 2.0"
+    },
+    "renovation-energetique-en-haute-savoie-jusqu-a-3-000-d-aide-departementale": {
+      "id": "1314472035081859_122103978657477492",
+      "at": "2026-09-18T15:52:44.481Z",
+      "productionSha": "43046f07d774238757799ca9fc82e14c620df78f",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY-SA 4.0"
+    },
+    "trouver-un-mode-de-garde-a-limoges-par-ou-commencer": {
+      "id": "1314472035081859_122103978747477492",
+      "at": "2026-09-18T15:52:47.782Z",
+      "productionSha": "43046f07d774238757799ca9fc82e14c620df78f",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY 2.0"
     }
   }
 }
