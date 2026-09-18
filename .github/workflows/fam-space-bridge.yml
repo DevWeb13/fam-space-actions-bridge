@@ -63,10 +63,17 @@ jobs:
           git fetch origin master '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
           git fetch origin --tags --prune
 
+          requested_commit=""
           if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
             branch="$MANUAL_BRANCH"
           else
-            branch="$(tail -n 1 ../bridge/bridge-request.txt | tr -d '\r\n')"
+            signal="$(tail -n 1 ../bridge/bridge-request.txt | tr -d '\r\n')"
+            if [[ "$signal" == *"|"* ]]; then
+              branch="${signal%%|*}"
+              requested_commit="${signal#*|}"
+            else
+              branch="$signal"
+            fi
           fi
 
           if [[ ! "$branch" =~ ^automation/(publication|destination)- ]]; then
@@ -97,6 +104,18 @@ jobs:
 
           automation_commit="$(git rev-parse "origin/$branch")"
           automation_parent="$(git rev-parse "${automation_commit}^")"
+
+          if [ "$publication_branch" = true ] && [ "$EVENT_NAME" != "workflow_dispatch" ]; then
+            if [[ ! "$requested_commit" =~ ^[0-9a-f]{40}$ ]]; then
+              echo "Signal Publication invalide: SHA de phase absent ou invalide." >&2
+              exit 1
+            fi
+            if [ "$requested_commit" != "$automation_commit" ]; then
+              echo "Signal Publication obsolète: demandé=$requested_commit, branche=$automation_commit." >&2
+              exit 1
+            fi
+          fi
+
           if [ "$publication_branch" = true ]; then
             processed_tag="$base_processed_tag/$automation_commit"
           else
