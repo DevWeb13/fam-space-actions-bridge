@@ -64,7 +64,8 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin master --tags --prune
+          git fetch origin master --prune
+          git fetch origin "+refs/tags/automation-processed/image-*:refs/tags/automation-processed/image-*" --prune || true
           git fetch origin "+refs/heads/$request:refs/remotes/origin/$request" --prune || true
 
           processed_tag="automation-processed/${request#automation/}"
@@ -128,7 +129,7 @@ jobs:
             exit 1
           fi
 
-          git fetch origin --tags --prune
+          git fetch origin "+refs/tags/automation-processed/image-*:refs/tags/automation-processed/image-*" --prune || true
           if ! git show-ref --verify --quiet "refs/tags/$processed_tag"; then
             git tag "$processed_tag" "$candidate_commit"
             git push origin "refs/tags/$processed_tag"
