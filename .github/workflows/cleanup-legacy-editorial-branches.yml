@@ -15,7 +15,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Supprimer uniquement les branches historiques auditées
+      - name: Supprimer les dernières branches review historiques auditées
         shell: bash
         env:
           FAM_SPACE_TOKEN: ${{ secrets.FAM_SPACE_TOKEN }}
@@ -23,74 +23,49 @@ jobs:
           set -euo pipefail
 
           branches=(
-            "automation/destination-20260913-0449-bordeaux"
-            "automation/destination-20260915-1647-versailles"
-            "automation/publication-20260829-1000-billet-conge-annuel"
-            "automation/publication-20260829-1200-carte-familles-nombreuses"
-            "automation/publication-20260829-1400-pass-colo-2026"
-            "automation/publication-20260904-0359-lit-superpose"
-            "automation/publication-20260907-0602-grands-parcs"
-            "automation/publication-20260907-1957-belfort-malsaucy"
-            "automation/publication-20260911-0158-maison-coco"
-            "automation/publication-20260913-0400-composteur-marseille"
-            "automation/publication-20260913-0559-encombrants-marseille"
-            "automation/publication-context-safe-test"
-            "automation/review-20260903-0927-dejeuner-aux-halles-de-troyes-avec-des-enfants-comment-ca-marche"
-            "automation/review-20260905-1230-congeler-les-plats-maison"
-            "automation/review-20260905-2230-patrimoine-en-partage-a-luneville-faut-il-inscrire-son-enfant-pour-toute-la-semaine"
-            "automation/review-20260906-0129-bafa-dans-l-orne-demandez-l-aide-departementale-avant-la-formation"
-            "automation/review-20260906-0530-parents-separes-en-charente-maritime-une-aide-caf-pour-les-visites-a-distance"
-            "automation/review-20260906-0628-parents-separes-en-charente-maritime-une-aide-caf-pour-les-visites-a-distance"
-            "automation/review-20260906-0830-aide-a-domicile-caf-en-tarn-et-garonne-quand-un-parent-peut-demander-du-renfort"
-            "automation/review-20260906-1827-samara-avec-des-enfants-faut-il-prevoir-la-journee-complete"
-            "automation/review-20260906-2029-a-claveisolles-decouvrir-comment-le-lait-de-chevre-devient-fromage-avec-les-enfants"
-            "automation/review-20260908-1727-semaine-du-gout-2026-comment-trouver-une-activite-adaptee-aux-enfants"
-            "automation/review-20260908-2031-castagnade-de-joyeuse-2026-avec-des-enfants-venir-samedi-ou-dimanche"
-            "automation/review-20260911-1728-jardin-d-imany-a-mayotte-demi-journee-ou-journee-complete-avec-des-enfants"
-            "automation/review-20260913-0529-prime-demenagement-caf-2026-conditions-demarches"
-            "automation/review-20260913-0628-prime-demenagement-caf-2026-conditions-demarches"
-            "automation/review-20260913-1127-maison-de-vacances-a-lans-en-vercors-en-famille-les-criteres-qui-changent-vraiment-le-sejour"
-            "automation/review-20260915-0729-fraispertuis-city"
-            "automation/review-20260916-0032-premier-week-end-a-cluny-avec-un-bebe-ou-dormir-et-quoi-prevoir"
-            "automation/review-20260916-0129-premier-week-end-a-cluny-avec-un-bebe-ou-dormir-et-quoi-prevoir"
-            "automation/review-20260916-0228-premier-week-end-a-cluny-avec-un-bebe-ou-dormir-et-quoi-prevoir"
-            "automation/review-20260916-0333-premier-week-end-a-cluny-avec-un-bebe-ou-dormir-et-quoi-prevoir"
-            "automation/review-20260916-0429-premier-week-end-a-cluny-avec-un-bebe-ou-dormir-et-quoi-prevoir"
-            "automation/review-20260916-0532-premier-week-end-a-cluny-avec-un-bebe-ou-dormir-et-quoi-prevoir"
-            "automation/review-20260916-0631-premier-week-end-a-cluny-avec-un-bebe-ou-dormir-et-quoi-prevoir"
-            "automation/review-20260916-0732-premier-week-end-a-cluny-avec-un-bebe-ou-dormir-et-quoi-prevoir"
-            "automation/review-20260916-0827-premier-week-end-a-cluny-avec-un-bebe-ou-dormir-et-quoi-prevoir"
-            "automation/review-20260916-0856-premier-week-end-a-cluny-avec-un-bebe-ou-dormir-et-quoi-prevoir"
-            "automation/review-20260916-0905-premier-week-end-a-cluny-avec-un-bebe-ou-dormir-et-quoi-prevoir"
-            "automation/review-20260916-0930-musee-de-tautavel-moins-cher-avec-lio-le-bon-plan-a-connaitre"
-            "automation/review-20260917-1031-premier-week-end-a-avignon-avec-un-bebe-ou-dormir-et-quoi-prevoir"
-            "automation/review-20260917-2028-premier-week-end-avec-un-bebe-hotel-ou-location-comment-choisir"
-            "automation/review-20260917-2128-premier-week-end-avec-un-bebe-hotel-ou-location-comment-choisir"
+
           )
 
           for branch in "${branches[@]}"; do
             encoded="$(jq -rn --arg value "$branch" '$value|@uri')"
-            body_file="$(mktemp)"
-            status="$(
-              curl --silent --show-error \
-                --output "$body_file" \
-                --write-out "%{http_code}" \
-                --request DELETE \
-                --header "Accept: application/vnd.github+json" \
-                --header "Authorization: Bearer $FAM_SPACE_TOKEN" \
-                --header "X-GitHub-Api-Version: 2022-11-28" \
-                "https://api.github.com/repos/DevWeb13/fam-space-qwik/git/refs/heads/$encoded"
-            )"
 
-            if [ "$status" = "204" ]; then
-              echo "Supprimée: $branch"
-            elif [ "$status" = "404" ]; then
-              echo "Déjà absente: $branch"
-            else
+            for attempt in 1 2 3; do
+              body_file="$(mktemp)"
+              status="$(
+                curl --silent --show-error \
+                  --output "$body_file" \
+                  --write-out "%{http_code}" \
+                  --request DELETE \
+                  --header "Accept: application/vnd.github+json" \
+                  --header "Authorization: Bearer $FAM_SPACE_TOKEN" \
+                  --header "X-GitHub-Api-Version: 2022-11-28" \
+                  "https://api.github.com/repos/DevWeb13/fam-space-qwik/git/refs/heads/$encoded"
+              )"
+
+              if [ "$status" = "204" ]; then
+                echo "Supprimée: $branch"
+                rm -f "$body_file"
+                break
+              fi
+
+              if [ "$status" = "404" ]; then
+                echo "Déjà absente: $branch"
+                rm -f "$body_file"
+                break
+              fi
+
+              if { [ "$status" = "403" ] || [ "$status" = "429" ] || [[ "$status" =~ ^5 ]]; } && [ "$attempt" -lt 3 ]; then
+                echo "Réponse temporaire $status pour $branch, nouvelle tentative."
+                rm -f "$body_file"
+                sleep 5
+                continue
+              fi
+
               echo "Échec de suppression ($status): $branch" >&2
               cat "$body_file" >&2
               rm -f "$body_file"
               exit 1
-            fi
-            rm -f "$body_file"
+            done
+
+            sleep 1
           done
