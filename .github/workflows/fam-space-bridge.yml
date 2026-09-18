@@ -120,8 +120,8 @@ jobs:
 
           case "$branch" in
             automation/publication-*)
-              if [ "$status" = "A" ] && [ "$automation_file" = "content-candidates/article.md" ]; then
-                mode="publication"
+              if [ "$status" = "A" ] && [ "$automation_file" = "content-candidates/publication-stage.md" ]; then
+                mode="publication_stage"
               elif [ "$status" = "A" ] && [ "$automation_file" = "content-candidates/publication-skip.txt" ]; then
                 skip_value="$(git show "$automation_commit:$automation_file" | tr -d '\r\n[:space:]')"
                 if [[ "$skip_value" =~ ^[0-9]+$ ]]; then
@@ -157,6 +157,16 @@ jobs:
               ;;
           esac
 
+          if [ "$mode" = "publication_skip" ]; then
+            current_phase="$(
+              git show "origin/master:content-data/publication-phase.json"                 | node -e 'let s="";process.stdin.on("data",d=>s+=d);process.stdin.on("end",()=>process.stdout.write(String(JSON.parse(s).phase)))'
+            )"
+            if [ "$current_phase" != "1" ]; then
+              echo "Un skip n'est autorisé qu'en phase 1; phase courante: $current_phase." >&2
+              exit 1
+            fi
+          fi
+
           if [ "$mode" = "review" ]; then
             git fetch origin master
             if ! git cat-file -e "origin/master:$automation_file" 2>/dev/null; then
@@ -178,8 +188,8 @@ jobs:
           git clean -fd
 
           case "$mode" in
-            publication)
-              bash .github/scripts/publish-automated-article.sh "$automation_commit" "$automation_file"
+            publication_stage)
+              bash .github/scripts/process-publication-stage.sh "$automation_commit" "$automation_file"
               ;;
             publication_skip)
               bash .github/scripts/skip-publication-assignment.sh "$skip_position"

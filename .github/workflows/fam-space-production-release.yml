@@ -52,6 +52,23 @@ jobs:
             exit 1
           fi
 
+          internal_only=true
+          while IFS= read -r path; do
+            case "$path" in
+              content-data/publication-workflow.md|content-data/publication-phase.json|content-data/publication-work-in-progress.md|content-data/publication-rotation.json|content-data/publication-category-rotation.json)
+                ;;
+              *)
+                internal_only=false
+                break
+                ;;
+            esac
+          done < <(git diff --name-only origin/production..origin/master)
+
+          if [ "$internal_only" = true ]; then
+            echo "Uniquement une transition interne du pipeline publication: aucune release production."
+            exit 0
+          fi
+
           git push origin "$master_sha:refs/heads/production"
           git fetch origin production
 
