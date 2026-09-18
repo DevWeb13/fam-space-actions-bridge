@@ -69,7 +69,7 @@ jobs:
             branch="$(tail -n 1 ../bridge/bridge-request.txt | tr -d '\r\n')"
           fi
 
-          if [[ ! "$branch" =~ ^automation/(publication|review|destination)- ]]; then
+          if [[ ! "$branch" =~ ^automation/(publication|destination)- ]]; then
             echo "Branche demandée invalide: $branch" >&2
             exit 1
           fi
@@ -206,13 +206,6 @@ jobs:
                 exit 1
               fi
               ;;
-            automation/review-*)
-              if [ "$status" != "M" ] || [[ ! "$automation_file" =~ ^src/routes/articles/.+/index\.md$ ]]; then
-                echo "Vérification d'article invalide: ${changes[0]}" >&2
-                exit 1
-              fi
-              mode="review"
-              ;;
             automation/destination-*)
               if [ "$status" != "A" ] || [ "$automation_file" != "content-candidates/destination.md" ]; then
                 echo "Candidat Destination invalide: ${changes[0]}" >&2
@@ -221,22 +214,6 @@ jobs:
               mode="destination"
               ;;
           esac
-
-          if [ "$mode" = "review" ]; then
-            git fetch origin master
-            if ! git cat-file -e "origin/master:$automation_file" 2>/dev/null; then
-              echo "Review obsolète: article absent de master."
-              mark_processed "$automation_commit" true
-              exit 0
-            fi
-            parent_file_sha="$(git rev-parse "$automation_parent:$automation_file")"
-            master_file_sha="$(git rev-parse "origin/master:$automation_file")"
-            if [ "$parent_file_sha" != "$master_file_sha" ]; then
-              echo "Review obsolète: l'article a déjà changé sur master."
-              mark_processed "$automation_commit" true
-              exit 0
-            fi
-          fi
 
           git checkout -B bridge-runner origin/master
           git reset --hard origin/master
@@ -248,9 +225,6 @@ jobs:
               ;;
             publication_skip)
               bash .github/scripts/skip-publication-assignment.sh "$skip_position"
-              ;;
-            review)
-              bash .github/scripts/publish-reviewed-article.sh "$automation_commit" "$automation_file"
               ;;
             destination)
               bash .github/scripts/publish-destination-candidate.sh "$automation_commit" "$automation_file"
