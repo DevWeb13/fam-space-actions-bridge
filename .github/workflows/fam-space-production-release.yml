@@ -4,6 +4,12 @@ on:
   schedule:
     - cron: "18 5,11,17,23 * * *"
       timezone: "Europe/Paris"
+  workflow_run:
+    workflows:
+      - Fam Space bridge
+      - Fam Space images
+    types:
+      - completed
   workflow_dispatch:
 
 permissions:
@@ -15,6 +21,7 @@ concurrency:
 
 jobs:
   release:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event_name == 'schedule' || github.event.workflow_run.conclusion == 'success' }}
     runs-on: ubuntu-latest
     outputs:
       advanced: ${{ steps.release.outputs.advanced }}
@@ -36,7 +43,10 @@ jobs:
 
           echo "advanced=false" >> "$GITHUB_OUTPUT"
 
-          git fetch origin master production --prune
+          marker="automation-control/production-release"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin master production --tags --prune
           master_sha="$(git rev-parse origin/master)"
           production_sha="$(git rev-parse origin/production)"
 
@@ -45,12 +55,26 @@ jobs:
 
           if [ "$master_sha" = "$production_sha" ]; then
             echo "Aucun changement à publier."
+            if ! git show-ref --verify --quiet "refs/tags/$marker"; then
+              git tag -a "$marker" "$production_sha" -m "Production release marker"
+              git push origin "refs/tags/$marker"
+            fi
             exit 0
           fi
 
           if ! git merge-base --is-ancestor origin/production origin/master; then
             echo "::error::La branche production a divergé de master. Aucun push forcé."
             exit 1
+          fi
+
+          if [ "${{ github.event_name }}" != "workflow_dispatch" ] && git show-ref --verify --quiet "refs/tags/$marker"; then
+            last_release="$(git for-each-ref --format='%(taggerdate:unix)' "refs/tags/$marker")"
+            now="$(date +%s)"
+            age_seconds=$((now - last_release))
+            if [ "$age_seconds" -lt $((6 * 60 * 60)) ]; then
+              echo "Dernière release trop récente: production reste inchangée."
+              exit 0
+            fi
           fi
 
           internal_only=true
@@ -79,6 +103,8 @@ jobs:
             exit 1
           fi
 
+          git tag -fa "$marker" "$master_sha" -m "Production release marker"
+          git push --force origin "refs/tags/$marker"
           echo "advanced=true" >> "$GITHUB_OUTPUT"
 
           {
