@@ -7,6 +7,11 @@ on:
     paths:
       - bridge-request.txt
   workflow_dispatch:
+    inputs:
+      automation_branch:
+        description: "Branche automation précise à traiter; vide = récupération manuelle globale"
+        required: false
+        type: string
 
 permissions:
   contents: read
@@ -57,7 +62,12 @@ jobs:
 
           recovery=false
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-            request="drain"
+            requested_branch="${{ github.event.inputs.automation_branch }}"
+            if [ -n "$requested_branch" ]; then
+              request="$requested_branch"
+            else
+              request="drain"
+            fi
           else
             request="$(tail -n 1 ../bridge/bridge-request.txt | tr -d '\r\n')"
           fi
@@ -143,13 +153,20 @@ jobs:
             mode=""
             case "$branch" in
               automation/publication-*)
-                commit_message="$(git show -s --format=%s "$automation_commit")"
-                if [ "$status" = "A" ] && [ "$automation_file" = "content-candidates/article.md" ] && [ "$commit_message" = "content: candidate" ]; then
+                if [ "$status" = "A" ] && [ "$automation_file" = "content-candidates/article.md" ]; then
                   mode="publication"
-                elif [ "$status" = "A" ] && [ "$automation_file" = "content-candidates/publication-skip.txt" ] && [ "$commit_message" = "content: skip publication" ]; then
-                  skip_position="$(git show "$automation_commit:$automation_file" | tr -d '\r\n[:space:]')"
-                  if [[ ! "$skip_position" =~ ^[0-9]+$ ]]; then
-                    echo "Position de saut invalide: $skip_position" >&2
+                elif [ "$status" = "A" ] && [ "$automation_file" = "content-candidates/publication-skip.txt" ]; then
+                  skip_value="$(git show "$automation_commit:$automation_file" | tr -d '\r\n[:space:]')"
+                  if [[ "$skip_value" =~ ^[0-9]+$ ]]; then
+                    # Compatibilité avec les anciens marqueurs qui transportaient eux-mêmes la position.
+                    skip_position="$skip_value"
+                  elif [ "$skip_value" = "skip" ]; then
+                    # La position appartient à la plomberie: elle est déduite de la base de la branche.
+                    skip_position="$(
+                      git show "$automation_parent:content-data/publication-rotation.json"                         | node -e 'let s="";process.stdin.on("data",d=>s+=d);process.stdin.on("end",()=>process.stdout.write(String(JSON.parse(s).position)))'
+                    )"
+                  else
+                    echo "Marqueur sans candidat invalide: $skip_value" >&2
                     failed=1
                     echo "::endgroup::"
                     continue
@@ -164,7 +181,7 @@ jobs:
                 ;;
               automation/review-*)
                 slug="$(basename "$(dirname "$automation_file")")"
-                if [ "$status" != "M" ] || [[ ! "$automation_file" =~ ^src/routes/articles/.+/index\.md$ ]] || [ "$(git show -s --format=%s "$automation_commit")" != "content: review $slug" ]; then
+                if [ "$status" != "M" ] || [[ ! "$automation_file" =~ ^src/routes/articles/.+/index\.md$ ]]; then
                   echo "Vérification d'article invalide." >&2
                   failed=1
                   echo "::endgroup::"
