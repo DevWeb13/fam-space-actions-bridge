@@ -3,7 +3,7 @@
   "activatedAt": "2026-09-14T18:37:00+02:00",
   "backfillStartAt": "2026-09-01T00:00:00+02:00",
   "backfill": {
-    "dateParis": "2026-09-18",
+    "dateParis": "2026-09-19",
     "publishedToday": 0,
     "lastPublishedAt": "2026-09-14T17:31:48.974Z"
   },
@@ -608,6 +608,42 @@
       "kind": "new",
       "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
       "fallbackReason": "licence hero non autorisée: CC BY 2.0"
+    },
+    "acheter-son-premier-logement-dans-l-albigeois-jusqu-a-8-000-avec-ma-prime-1re-clef": {
+      "id": "1314472035081859_122104293207477492",
+      "at": "2026-09-18T23:22:28.434Z",
+      "productionSha": "c0097cf250272a2525e00636fad957b207e74d9d",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY-SA 4.0"
+    },
+    "les-terres-de-natae-les-reductions-famille-a-connaitre-avant-de-reserver": {
+      "id": "1314472035081859_122104293249477492",
+      "at": "2026-09-18T23:22:31.809Z",
+      "productionSha": "c0097cf250272a2525e00636fad957b207e74d9d",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY-SA 3.0"
+    },
+    "la-maison-des-petits-pas-a-troyes-un-lieu-pour-souffler-avec-son-jeune-enfant": {
+      "id": "1314472035081859_122104293351477492",
+      "at": "2026-09-18T23:22:34.830Z",
+      "productionSha": "c0097cf250272a2525e00636fad957b207e74d9d",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY-SA 4.0"
+    },
+    "halloween-a-avignon-une-visite-familiale-pour-decouvrir-l-archeologie-funeraire": {
+      "id": "1314472035081859_122104293483477492",
+      "at": "2026-09-18T23:22:37.751Z",
+      "productionSha": "c0097cf250272a2525e00636fad957b207e74d9d",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY-SA 4.0"
     }
   }
 }
