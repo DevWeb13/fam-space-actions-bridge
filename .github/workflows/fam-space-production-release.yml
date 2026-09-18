@@ -55,7 +55,7 @@ jobs:
           internal_only=true
           while IFS= read -r path; do
             case "$path" in
-              content-data/publication-workflow.md|content-data/publication-phase.json|content-data/publication-work-in-progress.md|content-data/publication-rotation.json|content-data/publication-category-rotation.json)
+              content-data/publication-workflow.md|content-data/publication-phase.json|content-data/publication-rotation.json|content-data/publication-category-rotation.json)
                 ;;
               *)
                 internal_only=false

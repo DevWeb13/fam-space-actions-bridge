@@ -74,20 +74,20 @@ jobs:
             exit 1
           fi
 
-          processed_tag="automation-processed/${branch#automation/}"
-
-          mark_processed() {
-            local commit="$1"
-            git fetch origin --tags --prune
-            if ! git show-ref --verify --quiet "refs/tags/$processed_tag"; then
-              git tag "$processed_tag" "$commit"
-              git push origin "refs/tags/$processed_tag"
-            fi
-            git push origin --delete "$branch" || true
-          }
+          base_processed_tag="automation-processed/${branch#automation/}"
+          completed_tag="automation-completed/${branch#automation/}"
+          publication_branch=false
+          if [[ "$branch" =~ ^automation/publication- ]]; then
+            publication_branch=true
+          fi
 
           if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
-            if git show-ref --verify --quiet "refs/tags/$processed_tag"; then
+            if [ "$publication_branch" = true ]; then
+              if git show-ref --verify --quiet "refs/tags/$completed_tag"; then
+                echo "Branche de publication déjà finalisée et supprimée: $branch"
+                exit 0
+              fi
+            elif git show-ref --verify --quiet "refs/tags/$base_processed_tag"; then
               echo "Branche déjà traitée et supprimée: $branch"
               exit 0
             fi
@@ -96,18 +96,42 @@ jobs:
           fi
 
           automation_commit="$(git rev-parse "origin/$branch")"
-          if git show-ref --verify --quiet "refs/tags/$processed_tag"; then
-            processed_commit="$(git rev-parse "refs/tags/$processed_tag")"
-            if [ "$processed_commit" != "$automation_commit" ]; then
-              echo "Le marqueur $processed_tag ne correspond plus à $branch." >&2
-              exit 1
+          automation_parent="$(git rev-parse "${automation_commit}^")"
+          if [ "$publication_branch" = true ]; then
+            processed_tag="$base_processed_tag/$automation_commit"
+          else
+            processed_tag="$base_processed_tag"
+          fi
+
+          mark_processed() {
+            local commit="$1"
+            local delete_branch="$2"
+
+            git fetch origin --tags --prune
+            if ! git show-ref --verify --quiet "refs/tags/$processed_tag"; then
+              git tag "$processed_tag" "$commit"
+              git push origin "refs/tags/$processed_tag"
             fi
-            git push origin --delete "$branch" || true
-            echo "Branche déjà traitée: $branch"
+
+            if [ "$delete_branch" = true ]; then
+              if [ "$publication_branch" = true ] && ! git show-ref --verify --quiet "refs/tags/$completed_tag"; then
+                git tag "$completed_tag" "$commit"
+                git push origin "refs/tags/$completed_tag"
+              fi
+              git push origin --delete "$branch" || true
+            fi
+          }
+
+          if git show-ref --verify --quiet "refs/tags/$processed_tag"; then
+            if [ "$publication_branch" = true ]; then
+              echo "Commit de phase déjà traité, branche conservée: $branch"
+            else
+              git push origin --delete "$branch" || true
+              echo "Branche déjà traitée: $branch"
+            fi
             exit 0
           fi
 
-          automation_parent="$(git rev-parse "${automation_commit}^")"
           mapfile -t changes < <(git diff --name-status "$automation_parent" "$automation_commit")
           if [ "${#changes[@]}" -ne 1 ]; then
             echo "Le commit d'automatisation doit contenir exactement un changement." >&2
@@ -117,12 +141,53 @@ jobs:
 
           read -r status automation_file <<< "${changes[0]}"
           mode=""
+          publication_phase=""
 
           case "$branch" in
             automation/publication-*)
-              if [ "$status" = "A" ] && [ "$automation_file" = "content-candidates/publication-stage.md" ]; then
+              current_state="$(git show "origin/master:content-data/publication-phase.json")"
+              current_phase="$(printf '%s' "$current_state" | node -e 'let s="";process.stdin.on("data",d=>s+=d);process.stdin.on("end",()=>process.stdout.write(String(JSON.parse(s).phase)))')"
+              current_active="$(printf '%s' "$current_state" | node -e 'let s="";process.stdin.on("data",d=>s+=d);process.stdin.on("end",()=>process.stdout.write(JSON.parse(s).activeBranch || ""))')"
+
+              if [[ "$automation_file" = "content-candidates/publication-stage.md" && "$status" =~ ^(A|M)$ ]]; then
                 mode="publication_stage"
+                publication_phase="$current_phase"
+
+                if [ "$current_phase" = "1" ]; then
+                  if [ "$status" != "A" ] || [ -n "$current_active" ]; then
+                    echo "La phase 1 doit ajouter un nouveau candidat sur une nouvelle branche." >&2
+                    exit 1
+                  fi
+
+                  parent_rotation="$(git rev-parse "$automation_parent:content-data/publication-rotation.json" 2>/dev/null || true)"
+                  master_rotation="$(git rev-parse "origin/master:content-data/publication-rotation.json" 2>/dev/null || true)"
+                  parent_workflow="$(git rev-parse "$automation_parent:content-data/publication-workflow.md" 2>/dev/null || true)"
+                  master_workflow="$(git rev-parse "origin/master:content-data/publication-workflow.md" 2>/dev/null || true)"
+                  if [ "$parent_rotation" != "$master_rotation" ] || [ "$parent_workflow" != "$master_workflow" ]; then
+                    echo "Branche de phase 1 devenue obsolète: affectation ou rotation modifiée."
+                    mark_processed "$automation_commit" true
+                    exit 0
+                  fi
+                else
+                  if [ "$status" != "M" ]; then
+                    echo "Les phases 2 à 4 doivent remplacer le candidat existant sur la même branche." >&2
+                    exit 1
+                  fi
+                  if [ "$current_active" != "$branch" ]; then
+                    echo "Branche de publication incorrecte: active=$current_active, reçue=$branch." >&2
+                    exit 1
+                  fi
+                  previous_tag="$base_processed_tag/$automation_parent"
+                  if ! git show-ref --verify --quiet "refs/tags/$previous_tag"; then
+                    echo "La phase précédente de cette branche n'a pas été traitée par le bridge." >&2
+                    exit 1
+                  fi
+                fi
               elif [ "$status" = "A" ] && [ "$automation_file" = "content-candidates/publication-skip.txt" ]; then
+                if [ "$current_phase" != "1" ] || [ -n "$current_active" ]; then
+                  echo "Un skip n'est autorisé qu'en phase 1 sans branche active." >&2
+                  exit 1
+                fi
                 skip_value="$(git show "$automation_commit:$automation_file" | tr -d '\r\n[:space:]')"
                 if [[ "$skip_value" =~ ^[0-9]+$ ]]; then
                   skip_position="$skip_value"
@@ -157,28 +222,18 @@ jobs:
               ;;
           esac
 
-          if [ "$mode" = "publication_skip" ]; then
-            current_phase="$(
-              git show "origin/master:content-data/publication-phase.json"                 | node -e 'let s="";process.stdin.on("data",d=>s+=d);process.stdin.on("end",()=>process.stdout.write(String(JSON.parse(s).phase)))'
-            )"
-            if [ "$current_phase" != "1" ]; then
-              echo "Un skip n'est autorisé qu'en phase 1; phase courante: $current_phase." >&2
-              exit 1
-            fi
-          fi
-
           if [ "$mode" = "review" ]; then
             git fetch origin master
             if ! git cat-file -e "origin/master:$automation_file" 2>/dev/null; then
               echo "Review obsolète: article absent de master."
-              mark_processed "$automation_commit"
+              mark_processed "$automation_commit" true
               exit 0
             fi
             parent_file_sha="$(git rev-parse "$automation_parent:$automation_file")"
             master_file_sha="$(git rev-parse "origin/master:$automation_file")"
             if [ "$parent_file_sha" != "$master_file_sha" ]; then
               echo "Review obsolète: l'article a déjà changé sur master."
-              mark_processed "$automation_commit"
+              mark_processed "$automation_commit" true
               exit 0
             fi
           fi
@@ -189,7 +244,7 @@ jobs:
 
           case "$mode" in
             publication_stage)
-              bash .github/scripts/process-publication-stage.sh "$automation_commit" "$automation_file"
+              bash .github/scripts/process-publication-stage.sh "$automation_commit" "$automation_file" "$branch"
               ;;
             publication_skip)
               bash .github/scripts/skip-publication-assignment.sh "$skip_position"
@@ -202,5 +257,15 @@ jobs:
               ;;
           esac
 
-          mark_processed "$automation_commit"
-          echo "Travail publié: $branch"
+          delete_branch=true
+          if [ "$mode" = "publication_stage" ] && [ "$publication_phase" -lt 4 ]; then
+            delete_branch=false
+          fi
+
+          mark_processed "$automation_commit" "$delete_branch"
+
+          if [ "$delete_branch" = true ]; then
+            echo "Travail publié et branche supprimée: $branch"
+          else
+            echo "Phase $publication_phase traitée; branche conservée pour la phase suivante: $branch"
+          fi
