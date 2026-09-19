@@ -141,6 +141,22 @@ jobs:
             fi
           }
 
+          has_processed_publication_ancestor() {
+            local candidate_commit="$1"
+            local tag_ref
+            local tagged_commit
+
+            while IFS= read -r tag_ref; do
+              [ -n "$tag_ref" ] || continue
+              tagged_commit="$(git rev-parse "$tag_ref^{commit}" 2>/dev/null || true)"
+              if [ -n "$tagged_commit" ] && git merge-base --is-ancestor "$tagged_commit" "$candidate_commit"; then
+                return 0
+              fi
+            done < <(git for-each-ref --format='%(refname)' "refs/tags/$base_processed_tag/")
+
+            return 1
+          }
+
           if git show-ref --verify --quiet "refs/tags/$processed_tag"; then
             if [ "$publication_branch" = true ]; then
               echo "Commit de phase déjà traité, branche conservée: $branch"
@@ -165,9 +181,7 @@ jobs:
             if [ "$current_phase" = "4" ] && [ "$current_active" = "$branch" ]; then
               parent_stage="$(git rev-parse "$automation_parent:$stage_file" 2>/dev/null || true)"
               commit_stage="$(git rev-parse "$automation_commit:$stage_file" 2>/dev/null || true)"
-              previous_tag="$base_processed_tag/$automation_parent"
-
-              if [ -n "$parent_stage" ] && [ "$parent_stage" = "$commit_stage" ] && git show-ref --verify --quiet "refs/tags/$previous_tag"; then
+              if [ -n "$parent_stage" ] && [ "$parent_stage" = "$commit_stage" ] && has_processed_publication_ancestor "$automation_commit"; then
                 allow_empty_publication_phase4=true
                 status="M"
                 automation_file="$stage_file"
@@ -221,9 +235,8 @@ jobs:
                     echo "Branche de publication incorrecte: active=$current_active, reçue=$branch." >&2
                     exit 1
                   fi
-                  previous_tag="$base_processed_tag/$automation_parent"
-                  if ! git show-ref --verify --quiet "refs/tags/$previous_tag"; then
-                    echo "La phase précédente de cette branche n'a pas été traitée par le bridge." >&2
+                  if ! has_processed_publication_ancestor "$automation_commit"; then
+                    echo "Aucune phase validée de cette branche n'est dans l'historique du candidat." >&2
                     exit 1
                   fi
                 fi
