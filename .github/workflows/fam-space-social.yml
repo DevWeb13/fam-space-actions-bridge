@@ -85,14 +85,12 @@ jobs:
         shell: bash
         env:
           FAM_SPACE_DIR: ${{ github.workspace }}/fam-space
+          PINTEREST_FEED_URL: https://www.fam-space.fr/pinterest-v2.xml
           LEGACY_SOCIAL_STATE_FILE: ${{ github.workspace }}/bridge/social-state.json
           FACEBOOK_PAGE_ID: "1314472035081859"
           FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
           META_GRAPH_VERSION: v26.0
           FACEBOOK_MAX_NEW_PER_RUN: 50
-          FACEBOOK_BACKFILL_MAX_PER_DAY: 0
-          FACEBOOK_BACKFILL_MIN_INTERVAL_HOURS: 0
-          FACEBOOK_IMAGE_GRACE_HOURS: 24
           SOCIAL_DRY_RUN: ${{ inputs.dry_run && 'true' || 'false' }}
         run: |
           set -uo pipefail
