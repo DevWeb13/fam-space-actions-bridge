@@ -644,6 +644,33 @@
       "kind": "new",
       "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
       "fallbackReason": "licence hero non autorisée: CC BY-SA 4.0"
+    },
+    "visiter-guedelon-avec-des-enfants-preparer-la-journee-en-2026": {
+      "id": "1314472035081859_122104633857477492",
+      "at": "2026-09-19T05:52:07.557Z",
+      "productionSha": "db77bc076bf2cb6e5be0d433cc46eaabe55ac89d",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY-SA 2.5"
+    },
+    "marche-de-noel-du-mazet-saint-voy-preparer-le-week-end-des-28-et-29-novembre": {
+      "id": "1314472035081859_122104634049477492",
+      "at": "2026-09-19T05:52:12.205Z",
+      "productionSha": "db77bc076bf2cb6e5be0d433cc46eaabe55ac89d",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY-SA 3.0"
+    },
+    "renover-son-logement-a-grand-poitiers-par-ou-commencer-avant-de-signer-les-devis": {
+      "id": "1314472035081859_122104634205477492",
+      "at": "2026-09-19T05:52:16.041Z",
+      "productionSha": "db77bc076bf2cb6e5be0d433cc46eaabe55ac89d",
+      "mode": "fallback",
+      "kind": "new",
+      "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
+      "fallbackReason": "licence hero non autorisée: CC BY-SA 4.0"
     }
   }
 }
