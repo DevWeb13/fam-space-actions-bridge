@@ -16,7 +16,7 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     env:
-      GH_TOKEN: ${{ secrets.FAM_SPACE_TOKEN }}
+      GH_TOKEN: ${{ secrets.FAM_SPACE_SECRETS_TOKEN }}
       FACEBOOK_PAGE_ACCESS_TOKEN: ${{ secrets.FACEBOOK_PAGE_ACCESS_TOKEN }}
       INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
       THREADS_ACCESS_TOKEN: ${{ secrets.THREADS_ACCESS_TOKEN }}
