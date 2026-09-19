@@ -1,158 +1,122 @@
-# Fam Space — politique images et licences pour les réseaux Meta
+# Fam Space — politique images et publications sociales
 
-Date de référence : 15 septembre 2026
+Date de référence : 19 septembre 2026
 
 ## Objet
 
-Ce document est la source de vérité pour les images publiées automatiquement par Fam Space sur Facebook, Instagram et Threads.
+Ce document est la source de vérité pour l'éligibilité des images et la publication automatique des articles Fam Space sur Pinterest, Facebook, Instagram et Threads.
 
-Il concerne les publications effectuées via les API Meta et les futurs publishers du dépôt `fam-space-actions-bridge`. Il ne modifie pas les règles éditoriales du site ni les licences des images utilisées dans les articles sur `fam-space.fr`.
+Le flux `https://www.fam-space.fr/pinterest-v2.xml` est la source opérationnelle unique d'éligibilité sociale.
 
-Cette politique est volontairement prudente. Elle ne constitue pas un avis juridique. Si les conditions Meta ou Creative Commons changent, cette politique doit être réévaluée avant de modifier les publishers.
+Règle simple :
 
-## Principe juridique retenu
+- article présent dans `pinterest-v2.xml` : il peut être publié automatiquement sur les réseaux avec sa hero ;
+- article absent du flux : il ne doit pas être publié automatiquement sur Facebook, Instagram ou Threads.
 
-Les conditions de la Meta Platform prévoient que le contenu fourni à Meta dans le cadre de la plateforme est soumis à une licence accordée à Meta comprenant notamment des droits de reproduction, modification, distribution, création d'œuvres dérivées, transfert et sous-licence.
+Les publishers restent séparés et conservent leurs propres fichiers d'état, mais ils ne doivent pas maintenir chacun une liste indépendante de licences autorisées.
 
-Creative Commons indique de son côté que ses licences ne permettent pas au réutilisateur de sous-licencier l'œuvre. Sa FAQ donne précisément l'exemple d'une image tierce sous licence Creative Commons partagée sur Facebook : le réutilisateur ne peut pas accorder à Facebook des droits qu'il ne possède pas lui-même.
+## Principe de droits retenu
 
-En conséquence, le fait qu'une image soit exploitable commercialement sous `CC BY` ou `CC BY-SA`, même avec attribution correcte, n'est pas suffisant pour que Fam Space l'envoie automatiquement à Meta.
+Une image n'est éligible au flux social que si Fam Space peut raisonnablement démontrer qu'il dispose des droits nécessaires pour l'utiliser sur les plateformes concernées.
+
+Cette politique est volontairement prudente. Elle ne constitue pas un avis juridique.
 
 Références :
 
 - Meta Platform Terms : https://developers.facebook.com/terms/
-- Creative Commons FAQ, section sur les conditions des réseaux sociaux : https://creativecommons.org/faq/
-- Creative Commons — absence de sous-licence dans les licences CC : https://creativecommons.org/faq/
+- Creative Commons FAQ : https://creativecommons.org/faq/
 - CC0 1.0 : https://creativecommons.org/publicdomain/zero/1.0/
 - Public Domain Mark 1.0 : https://creativecommons.org/publicdomain/mark/1.0/
 
-## Politique commune d'éligibilité
+## Images autorisées dans le flux
 
-Une image n'est éligible à une publication automatique Meta que si Fam Space peut raisonnablement démontrer qu'il dispose des droits nécessaires pour la transmettre à Meta dans les conditions imposées par la plateforme.
+### 1. Images dont Fam Space détient les droits
 
-### Autorisé
+Une image créée par Fam Space ou par son auteur pour Fam Space n'a pas besoin de recevoir une fausse licence Creative Commons.
 
-1. **Image dont Fam Space détient les droits nécessaires**
-   - création Fam Space ;
-   - création commandée ou cédée à Fam Space avec des droits suffisants ;
-   - aucune restriction contractuelle incompatible avec Meta.
+Sa provenance doit être déclarée explicitement avec au minimum :
 
-2. **CC0 1.0**
-   - provenance vérifiable ;
-   - aucune restriction tierce connue qui empêcherait l'utilisation ;
-   - les droits à l'image, marques, vie privée ou autres droits distincts du copyright restent à contrôler lorsque le sujet l'exige.
+- `role: "hero"` ;
+- `provider: "fam-space"` ;
+- `rightsStatus: "owned"` ;
+- un `creator` non vide ;
+- le fichier hero réellement utilisé par l'article dans `output.path`.
 
-3. **Domaine public / Public Domain Mark fiable**
-   - statut vérifiable auprès de la source ;
-   - aucune restriction de copyright connue incompatible avec l'utilisation ;
-   - les autres droits éventuels restent à contrôler ;
-   - lorsque l'auteur est connu, Fam Space conserve le crédit/source dans la mesure du possible, notamment par prudence vis-à-vis des droits moraux.
+Aucune valeur `CC0`, `Public Domain` ou autre licence tierce ne doit être inventée pour une image appartenant à Fam Space.
 
-4. **Autorisation explicite du titulaire des droits**
-   - l'autorisation doit couvrir la publication sur les produits Meta et être suffisamment large pour ne pas entrer en conflit avec les licences exigées par Meta ;
-   - toute obligation d'attribution ou autre condition prévue par cette autorisation doit être respectée.
+### 2. CC0
 
-### Refusé pour l'automatisation Meta
+Les images tierces sous CC0 sont admises lorsque leur provenance est vérifiable et que le fichier publié correspond à la provenance enregistrée.
 
-Les catégories suivantes sont considérées non éligibles pour Facebook, Instagram et Threads lorsqu'elles proviennent d'un tiers :
+### 3. Domaine public / Public Domain Mark
 
-- `CC BY`, toutes versions ;
-- `CC BY-SA`, toutes versions ;
+Les images tierces identifiées de manière fiable comme domaine public ou Public Domain Mark sont admises lorsque leur provenance est vérifiable.
+
+## Images tierces non admises actuellement
+
+Les images tierces suivantes ne sont pas intégrées au flux social automatique :
+
+- `CC BY` ;
+- `CC BY-SA` ;
 - `CC BY-NC`, `CC BY-NC-SA` ;
 - `CC BY-ND`, `CC BY-NC-ND` ;
-- toute autre licence Creative Commons tierce qui ne transfère pas à Fam Space les droits nécessaires pour satisfaire les conditions Meta ;
-- `All Rights Reserved` sans autorisation explicite ;
+- `All Rights Reserved` sans droits détenus par Fam Space ;
 - licence inconnue, ambiguë ou absente ;
-- provenance insuffisante ou contradictoire ;
-- image dont les droits nécessaires ne peuvent pas être raisonnablement vérifiés.
+- provenance insuffisante ou contradictoire.
 
-**Important : ajouter un crédit ne rend pas une image `CC BY` ou `CC BY-SA` éligible à l'automatisation Meta.** Le problème ici n'est pas seulement l'attribution ; il concerne aussi l'étendue des droits que Fam Space doit pouvoir accorder à Meta.
+Ajouter un crédit ne suffit pas à rendre automatiquement une image tierce éligible au flux.
 
-## Provenance minimale exigée
+## Provenance et rôle du flux Pinterest
 
-Avant qu'une vraie image soit transmise à Meta, le publisher doit pouvoir vérifier au minimum :
+Le fichier `src/lib/seo/pinterest-feed-v2.ts` du dépôt Fam Space décide si une hero entre dans `pinterest-v2.xml`.
 
-- le rôle de l'image (`hero` pour une publication d'article) ;
-- la provenance/provider ;
-- le statut ou la licence ;
-- la page source ;
-- le fichier réellement publié ;
-- les informations d'auteur lorsque disponibles ;
-- toute obligation d'attribution applicable ;
-- l'absence d'une restriction connue incompatible avec la publication Meta.
+Pour les images externes issues du pipeline actuel, Wikimedia Commons reste la provenance utilisée par défaut.
 
-Pour les images externes importées par le pipeline actuel, **Wikimedia Commons reste la source de provenance acceptée par défaut**. L'existence d'une fiche Wikimedia ne suffit toutefois pas : le statut de licence doit lui-même être éligible selon la présente politique.
+Pour les images appartenant à Fam Space, la provenance `provider: "fam-space"` avec `rightsStatus: "owned"` est utilisée.
 
-Une image ne doit jamais être considérée autorisée uniquement parce que son URL pointe vers Wikimedia Commons, parce qu'elle est déjà utilisée dans un article Fam Space ou parce qu'un ancien state la marque comme publiée.
+Une fois une image admise dans le flux, Facebook, Instagram et Threads ne doivent pas refaire une seconde décision juridique indépendante. Ils peuvent consulter le fichier de provenance uniquement pour retrouver la source JPEG correspondant à la hero WebP présente dans le flux.
 
-## Attribution
-
-Pour une image autorisée :
-
-- toute attribution exigée par une autorisation spécifique doit être reproduite dans la publication ;
-- pour une image du domaine public ou CC0, un crédit n'est pas automatiquement exigé par ces outils de copyright, mais Fam Space conserve auteur et source lorsque les métadonnées disponibles ou les droits moraux le justifient ;
-- une attribution incomplète ou impossible lorsqu'elle est obligatoire rend l'image non éligible.
-
-## Comportement par réseau
-
-La règle de droits est commune. Le comportement de publication reste propre à chaque réseau.
+## Comportement commun des réseaux
 
 ### Facebook
 
-Objectif : publier à terme tous les articles éligibles au calendrier social.
+Facebook publie uniquement les articles présents dans `pinterest-v2.xml`.
 
-- vraie hero conforme à cette politique : publier la vraie image ;
-- vraie hero non conforme : ne jamais envoyer cette image à Facebook ;
-- hero absente, non vérifiable ou non conforme : utiliser le placeholder Fam Space détenu par Fam Space, après le délai d'attente prévu par le publisher ;
-- si la vraie image nécessite un crédit autorisé par cette politique, inclure le crédit complet.
-
-Le placeholder est donc une solution normale de sécurité juridique pour Facebook, pas un échec de publication.
+- article présent : publication avec la vraie hero correspondante ;
+- article absent : aucune publication ;
+- aucun placeholder générique ;
+- aucun fallback après délai.
 
 ### Instagram
 
-Instagram étant un réseau centré sur le média visuel, le placeholder générique ne doit pas servir à publier artificiellement des séries d'articles sans vraie image exploitable.
+Instagram publie uniquement les articles présents dans `pinterest-v2.xml`, avec leur image.
 
-- vraie hero conforme : article publiable ;
-- hero absente, non vérifiable ou non conforme : **ne pas publier l'article pour le moment** ;
-- conserver l'article en attente et le réévaluer lors d'un passage futur si une hero conforme devient disponible.
+Un article absent du flux reste non publié.
 
 ### Threads
 
-Threads permet une publication utile sans image.
+Threads publie uniquement les articles présents dans `pinterest-v2.xml`, avec leur image.
 
-- vraie hero conforme : publication avec image possible ;
-- hero absente, non vérifiable ou non conforme : ne pas transmettre l'image et publier, selon la politique Threads qui sera implémentée ultérieurement, un post texte/lien sans image ;
-- pas de placeholder générique par défaut sur Threads.
+La précédente règle prévoyant un post texte + lien sans image est abandonnée et ne doit plus être appliquée.
 
-## Séparation des publishers
+## Fichiers d'état
 
-Facebook, Instagram et Threads doivent conserver :
+Les états restent séparés :
 
-- des publishers séparés ;
-- des fichiers d'état séparés ;
-- des limites de rattrapage séparées ;
-- des décisions de publication propres à chaque réseau.
+- `facebook-state.json` ;
+- `instagram-state.json` ;
+- `threads-state.json`.
 
-En revanche, **la décision “cette image est-elle juridiquement éligible pour Meta ?” doit reposer sur la présente politique commune**, afin d'éviter trois listes de licences divergentes.
-
-À terme, cette logique pourra être centralisée dans un module de validation partagé par les trois publishers. Cette centralisation de code n'est pas réalisée dans l'étape 1.
+La présence d'un article dans un ancien fichier d'état ne le rend pas éligible : l'éligibilité vient du flux `pinterest-v2.xml`.
 
 ## Règle de sécurité
 
-En cas de doute :
+En cas de doute sur les droits ou la provenance d'une hero, elle ne doit pas entrer dans `pinterest-v2.xml`.
 
-**ne pas transmettre la vraie image à Meta.**
+Comme les publishers sociaux reposent sur ce flux, l'article concerné ne sera alors publié automatiquement sur aucun des trois réseaux Meta.
 
-- Facebook : placeholder Fam Space ;
-- Instagram : attente ;
-- Threads : texte/lien sans image.
+## Existant
 
-Aucun publisher ne doit élargir de lui-même la liste des images autorisées.
+Cette règle s'applique aux publications futures.
 
-## Conséquence pour l'existant
-
-Cette politique devient la référence pour l'audit Facebook de l'étape suivante.
-
-Les publications Facebook déjà créées avec une vraie image `CC BY`, `CC BY-SA` ou toute autre image désormais refusée devront être identifiées précisément avant toute suppression. Aucun post existant n'est supprimé par la présente étape.
-
-De même, aucun comportement Facebook, Instagram ou Threads n'est modifié par ce document seul.
+Les anciens posts Facebook déjà publiés avec un placeholder ou selon une logique précédente ne sont pas supprimés ni modifiés automatiquement.
