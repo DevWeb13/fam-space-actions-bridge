@@ -671,6 +671,17 @@
       "kind": "new",
       "imageUrl": "https://www.fam-space.fr/images/social/fam-space-default.png",
       "fallbackReason": "licence hero non autorisée: CC BY-SA 4.0"
+    },
+    "nausicaa-a-8-pour-les-adultes-et-6-pour-les-enfants-qui-peut-profiter-des-dimanches-boulonnais": {
+      "id": "1314472035081859_122105155167477492",
+      "at": "2026-09-19T13:13:23.575Z",
+      "productionSha": "4441505afe2e07f37e917360067604e35964ffb9",
+      "mode": "hero",
+      "kind": "feed",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c4/Nausicaa_-_aquarium_tunnel3.jpg/1920px-Nausicaa_-_aquarium_tunnel3.jpg",
+      "feedImageUrl": "https://www.fam-space.fr/images/articles/2026/09/nausicaa-a-8-pour-les-adultes-et-6-pour-les-enfants-qui-peut-profiter-des-dimanches-boulonnais.webp",
+      "feedPubDate": "Tue, 15 Sep 2026 05:29:54 GMT",
+      "source": "pinterest-v2"
     }
   }
 }
