@@ -168,7 +168,7 @@ jobs:
           fi
 
           mapfile -t changes < <(git diff --name-status "$automation_parent" "$automation_commit")
-          allow_empty_publication_phase4=false
+          allow_empty_publication_phase=false
           status=""
           automation_file=""
 
@@ -178,22 +178,26 @@ jobs:
             current_active="$(printf '%s' "$current_state" | node -e 'let s="";process.stdin.on("data",d=>s+=d);process.stdin.on("end",()=>process.stdout.write(JSON.parse(s).activeBranch || ""))')"
             stage_file="content-candidates/publication-stage.md"
 
-            if [ "$current_phase" = "4" ] && [ "$current_active" = "$branch" ]; then
+            if { [ "$current_phase" = "3" ] || [ "$current_phase" = "4" ]; } && [ "$current_active" = "$branch" ]; then
               parent_stage="$(git rev-parse "$automation_parent:$stage_file" 2>/dev/null || true)"
               commit_stage="$(git rev-parse "$automation_commit:$stage_file" 2>/dev/null || true)"
               if [ -n "$parent_stage" ] && [ "$parent_stage" = "$commit_stage" ] && has_processed_publication_ancestor "$automation_commit"; then
-                allow_empty_publication_phase4=true
+                allow_empty_publication_phase=true
                 status="M"
                 automation_file="$stage_file"
-                echo "Phase 4 sans correction éditoriale: candidat inchangé explicitement accepté."
+                if [ "$current_phase" = "3" ]; then
+                  echo "::warning::Phase 3 sans modification éditoriale: candidat inchangé accepté pour poursuivre vers la phase 4."
+                else
+                  echo "Phase 4 sans correction éditoriale: candidat inchangé explicitement accepté."
+                fi
               fi
             fi
           fi
 
           if [ "${#changes[@]}" -eq 1 ]; then
             read -r status automation_file <<< "${changes[0]}"
-          elif [ "$allow_empty_publication_phase4" != true ]; then
-            echo "Le commit d'automatisation doit contenir exactement un changement, sauf validation finale inchangée en phase 4." >&2
+          elif [ "$allow_empty_publication_phase" != true ]; then
+            echo "Le commit d'automatisation doit contenir exactement un changement, sauf candidat inchangé validé en phase 3 ou 4." >&2
             printf '%s\n' "${changes[@]}" >&2
             exit 1
           fi
