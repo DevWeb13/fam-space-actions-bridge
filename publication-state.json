@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20260923-1308-chateau-enigmes-pons",
+  "lastProcessedCommit": "d91fd3f3aec45573f0c87b8c49d01500eb8085c6"
 }
