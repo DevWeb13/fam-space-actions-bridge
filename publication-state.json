@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20260923-2158-musee-fermat",
+  "lastProcessedCommit": "9466e92c51eb4a27f705eeebbfabd8778f0fc54c"
 }
