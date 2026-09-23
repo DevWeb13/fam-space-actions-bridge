@@ -89,7 +89,7 @@ jobs:
                 if [ "$next_phase" = "1" ]; then
                   printf '{\n  "phase": 1\n}\n' > publication-state.json
                 else
-                  PHASE="$next_phase" ACTIVE_BRANCH="$active_branch" LAST_PROCESSED="$last_processed" node -e 'const fs=require("node:fs");const value={phase:Number(process.env.PHASE),activeBranch:process.env.ACTIVE_BRANCH,lastProcessedCommit:process.env.LAST_PROCESSED};fs.writeFileSync("publication-state.json",JSON.stringify(value,null,2)+"\\n");'
+                  PHASE="$next_phase" ACTIVE_BRANCH="$active_branch" LAST_PROCESSED="$last_processed" node -e 'const fs=require("node:fs");const value={phase:Number(process.env.PHASE),activeBranch:process.env.ACTIVE_BRANCH,lastProcessedCommit:process.env.LAST_PROCESSED};fs.writeFileSync("publication-state.json",JSON.stringify(value,null,2)+"\n");'
                 fi
                 git add publication-state.json
                 if git diff --cached --quiet; then
