@@ -14,7 +14,7 @@ on:
         type: string
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: fam-space-master-write
@@ -63,6 +63,57 @@ jobs:
           git fetch origin master '+refs/heads/automation/*:refs/remotes/origin/automation/*' --prune
           git fetch origin --tags --prune
 
+          publication_state_file="../bridge/publication-state.json"
+
+          read_publication_state() {
+            if [ -f "$publication_state_file" ]; then
+              cat "$publication_state_file"
+            else
+              git show "origin/master:content-data/publication-phase.json"
+            fi
+          }
+
+          write_publication_state() {
+            local next_phase="$1"
+            local active_branch="${2:-}"
+            local last_processed="${3:-}"
+            local attempt
+
+            for attempt in 1 2 3; do
+              if (
+                cd ../bridge
+                git config user.name "github-actions[bot]"
+                git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+                git fetch origin main
+                git checkout -B publication-state-update origin/main
+                if [ "$next_phase" = "1" ]; then
+                  printf '{\n  "phase": 1\n}\n' > publication-state.json
+                else
+                  PHASE="$next_phase" ACTIVE_BRANCH="$active_branch" LAST_PROCESSED="$last_processed" node - <<'NODE'
+const fs = require("node:fs");
+const value = {
+  phase: Number(process.env.PHASE),
+  activeBranch: process.env.ACTIVE_BRANCH,
+  lastProcessedCommit: process.env.LAST_PROCESSED,
+};
+fs.writeFileSync("publication-state.json", JSON.stringify(value, null, 2) + "\n");
+NODE
+                fi
+                git add publication-state.json
+                if git diff --cached --quiet; then
+                  exit 0
+                fi
+                git commit -m "state: publication phase $next_phase"
+                git push origin HEAD:main
+              ); then
+                return 0
+              fi
+            done
+
+            echo "Impossible de mettre à jour publication-state.json après 3 tentatives." >&2
+            return 1
+          }
+
           requested_commit=""
           if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
             branch="$MANUAL_BRANCH"
@@ -84,13 +135,23 @@ jobs:
           base_processed_tag="automation-processed/${branch#automation/}"
           completed_tag="automation-completed/${branch#automation/}"
           publication_branch=false
+          publication_phase=""
+          current_active=""
+          last_processed_commit=""
           if [[ "$branch" =~ ^automation/publication- ]]; then
             publication_branch=true
+            current_state="$(read_publication_state)"
+            publication_phase="$(printf '%s' "$current_state" | node -e 'let s="";process.stdin.on("data",d=>s+=d);process.stdin.on("end",()=>process.stdout.write(String(JSON.parse(s).phase)))')"
+            current_active="$(printf '%s' "$current_state" | node -e 'let s="";process.stdin.on("data",d=>s+=d);process.stdin.on("end",()=>process.stdout.write(JSON.parse(s).activeBranch || ""))')"
+            last_processed_commit="$(printf '%s' "$current_state" | node -e 'let s="";process.stdin.on("data",d=>s+=d);process.stdin.on("end",()=>process.stdout.write(JSON.parse(s).lastProcessedCommit || ""))')"
           fi
 
           if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
             if [ "$publication_branch" = true ]; then
               if git show-ref --verify --quiet "refs/tags/$completed_tag"; then
+                if [ "$publication_phase" != "1" ] || [ -n "$current_active" ]; then
+                  write_publication_state 1
+                fi
                 echo "Branche de publication déjà finalisée et supprimée: $branch"
                 exit 0
               fi
@@ -159,7 +220,20 @@ jobs:
 
           if git show-ref --verify --quiet "refs/tags/$processed_tag"; then
             if [ "$publication_branch" = true ]; then
-              echo "Commit de phase déjà traité, branche conservée: $branch"
+              if [ "$last_processed_commit" = "$automation_commit" ]; then
+                echo "Commit de phase déjà traité et état déjà avancé: $branch"
+                exit 0
+              fi
+
+              if [ "$publication_phase" -lt 4 ]; then
+                write_publication_state "$((publication_phase + 1))" "$branch" "$automation_commit"
+                echo "Commit de phase déjà traité; état du bridge réparé vers la phase $((publication_phase + 1))."
+                exit 0
+              fi
+
+              mark_processed "$automation_commit" true
+              write_publication_state 1
+              echo "Phase finale déjà traitée; état du bridge remis en phase 1."
             else
               git push origin --delete "$branch" || true
               echo "Branche déjà traitée: $branch"
@@ -173,9 +247,7 @@ jobs:
           automation_file=""
 
           if [ "$publication_branch" = true ] && [ "${#changes[@]}" -eq 0 ]; then
-            current_state="$(git show "origin/master:content-data/publication-phase.json")"
-            current_phase="$(printf '%s' "$current_state" | node -e 'let s="";process.stdin.on("data",d=>s+=d);process.stdin.on("end",()=>process.stdout.write(String(JSON.parse(s).phase)))')"
-            current_active="$(printf '%s' "$current_state" | node -e 'let s="";process.stdin.on("data",d=>s+=d);process.stdin.on("end",()=>process.stdout.write(JSON.parse(s).activeBranch || ""))')"
+            current_phase="$publication_phase"
             stage_file="content-candidates/publication-stage.md"
 
             if { [ "$current_phase" = "3" ] || [ "$current_phase" = "4" ]; } && [ "$current_active" = "$branch" ]; then
@@ -203,7 +275,6 @@ jobs:
           fi
 
           mode=""
-          publication_phase=""
 
           case "$branch" in
             automation/publication-*)
@@ -282,7 +353,7 @@ jobs:
 
           case "$mode" in
             publication_stage)
-              bash .github/scripts/process-publication-stage.sh "$automation_commit" "$automation_file" "$branch"
+              bash .github/scripts/process-publication-stage.sh "$automation_commit" "$automation_file" "$branch" "$publication_phase"
               ;;
             publication_skip)
               bash .github/scripts/skip-publication-assignment.sh "$skip_position"
@@ -299,8 +370,16 @@ jobs:
 
           mark_processed "$automation_commit" "$delete_branch"
 
+          if [ "$mode" = "publication_stage" ]; then
+            if [ "$publication_phase" -lt 4 ]; then
+              write_publication_state "$((publication_phase + 1))" "$branch" "$automation_commit"
+            else
+              write_publication_state 1
+            fi
+          fi
+
           if [ "$delete_branch" = true ]; then
             echo "Travail publié et branche supprimée: $branch"
           else
-            echo "Phase $publication_phase traitée; branche conservée pour la phase suivante: $branch"
+            echo "Phase $publication_phase traitée hors master; branche conservée pour la phase suivante: $branch"
           fi
