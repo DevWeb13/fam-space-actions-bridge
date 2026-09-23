@@ -207,6 +207,10 @@ NODE
             local tag_ref
             local tagged_commit
 
+            if [ -n "$last_processed_commit" ] && git merge-base --is-ancestor "$last_processed_commit" "$candidate_commit"; then
+              return 0
+            fi
+
             while IFS= read -r tag_ref; do
               [ -n "$tag_ref" ] || continue
               tagged_commit="$(git rev-parse "$tag_ref^{commit}" 2>/dev/null || true)"
@@ -366,8 +370,6 @@ NODE
             delete_branch=false
           fi
 
-          mark_processed "$automation_commit" "$delete_branch"
-
           if [ "$mode" = "publication_stage" ]; then
             if [ "$publication_phase" -lt 4 ]; then
               write_publication_state "$((publication_phase + 1))" "$branch" "$automation_commit"
@@ -375,6 +377,8 @@ NODE
               write_publication_state 1
             fi
           fi
+
+          mark_processed "$automation_commit" "$delete_branch"
 
           if [ "$delete_branch" = true ]; then
             echo "Travail publié et branche supprimée: $branch"
