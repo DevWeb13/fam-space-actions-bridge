@@ -278,9 +278,7 @@ NODE
 
           case "$branch" in
             automation/publication-*)
-              current_state="$(git show "origin/master:content-data/publication-phase.json")"
-              current_phase="$(printf '%s' "$current_state" | node -e 'let s="";process.stdin.on("data",d=>s+=d);process.stdin.on("end",()=>process.stdout.write(String(JSON.parse(s).phase)))')"
-              current_active="$(printf '%s' "$current_state" | node -e 'let s="";process.stdin.on("data",d=>s+=d);process.stdin.on("end",()=>process.stdout.write(JSON.parse(s).activeBranch || ""))')"
+              current_phase="$publication_phase"
 
               if [[ "$automation_file" = "content-candidates/publication-stage.md" && "$status" =~ ^(A|M)$ ]]; then
                 mode="publication_stage"
