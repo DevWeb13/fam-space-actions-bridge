@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20260924-0659-ofun-park",
+  "lastProcessedCommit": "799d6cc5249cf883c57cba252721a334af9e2cfc"
 }
