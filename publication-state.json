@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20260924-1457-parc-marquenterre",
+  "lastProcessedCommit": "df9e8f5ba1e4269f357060eff83086d7c32a6610"
 }
