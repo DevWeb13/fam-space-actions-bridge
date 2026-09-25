@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20260925-1059-foire-automne-saint-jean-du-gard",
+  "lastProcessedCommit": "01fefeb3647fe9e564e4e5a783baf72b8ab28cc8"
 }
