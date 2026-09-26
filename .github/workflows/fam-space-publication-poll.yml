@@ -1,6 +1,11 @@
 name: Fam Space publication poll
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/fam-space-publication-poll.yml
   schedule:
     - cron: "7,17,27,37,47,57 * * * *"
   workflow_dispatch:
