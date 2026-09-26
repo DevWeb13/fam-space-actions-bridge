@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20260926-1218-ferme-marine-cancale",
+  "lastProcessedCommit": "f7f4af435322517c4f219296604c389dc36c139d"
 }
