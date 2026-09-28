@@ -63,3 +63,4 @@ automation/image-20260928-0756|70ca5f94534edea6ae62c1195dbdcfbf54ed535d
 automation/image-20260928-0756|4dc654c3941d0651c2bf2ec9e672d53538ff70e3
 automation/image-20260928-hero-2|6d953852373a9e049849026ec64ee02781c7f615
 automation/image-20260928-redo-local-fallback|38f39b5bd7ff5e03a5517ccd62a334cc9799aa21
+automation/image-20260928-redo-local-fallback|d37e0a7b33a7f51a219738463fc7f0a6fa806d82
