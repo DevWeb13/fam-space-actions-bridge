@@ -108,7 +108,18 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m "facebook: advance publication state"
             git pull --rebase origin main
-            git push origin HEAD:main
+            for attempt in 1 2 3; do
+              if git push origin HEAD:main; then
+                break
+              fi
+              if [ "$attempt" -lt 3 ]; then
+                git pull --rebase origin main
+                sleep $((attempt * 5))
+              else
+                echo "::error::Impossible d'enregistrer l'état Facebook après 3 tentatives."
+                exit 1
+              fi
+            done
           fi
 
           exit "$facebook_status"
