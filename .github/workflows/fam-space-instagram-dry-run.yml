@@ -23,7 +23,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: fam-space-instagram
+  group: fam-space-social-publisher
   cancel-in-progress: false
 
 jobs:
@@ -81,4 +81,15 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add instagram-state.json
           git commit -m "state: record Instagram publications"
-          git push origin HEAD:main
+          git pull --rebase origin main
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            if [ "$attempt" -lt 3 ]; then
+              git pull --rebase origin main
+              sleep $((attempt * 5))
+            fi
+          done
+          echo "::error::Impossible d'enregistrer l'état Instagram après 3 tentatives."
+          exit 1
