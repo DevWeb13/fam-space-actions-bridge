@@ -119,7 +119,7 @@ jobs:
             fi
           fi
 
-          # Radar uses the same master-write lock, with its own four-phase processor.
+          # Radar uses the same master-write lock, with its own three-phase processor.
           if [[ "$branch" =~ ^automation/radar-(refresh|opportunity)- ]]; then
             completed_radar_tag="automation-completed/${branch#automation/}"
             if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
