@@ -1,0 +1,91 @@
+name: Radar request
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - radar-request.md
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fam-space-master-write
+  cancel-in-progress: false
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer la requête
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          path: bridge
+
+      - name: Ignorer le marqueur prêt
+        id: ready
+        working-directory: bridge
+        shell: bash
+        run: |
+          if [ "$(tr -d '\r\n' < radar-request.md)" = "# Ready" ]; then
+            echo "skip=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "skip=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Récupérer Fam Space
+        if: steps.ready.outputs.skip != 'true'
+        uses: actions/checkout@v4
+        with:
+          repository: DevWeb13/fam-space-qwik
+          ref: master
+          token: ${{ secrets.FAM_SPACE_TOKEN }}
+          fetch-depth: 0
+          path: fam-space
+
+      - name: Préparer Node
+        if: steps.ready.outputs.skip != 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: fam-space/package-lock.json
+
+      - name: Installer les dépendances
+        if: steps.ready.outputs.skip != 'true'
+        working-directory: fam-space
+        run: npm ci
+
+      - name: Traiter la requête Radar
+        if: steps.ready.outputs.skip != 'true'
+        working-directory: fam-space
+        run: bash .github/scripts/process-radar-request.sh ../bridge/radar-request.md ../bridge/radar-gsc-snapshot.json
+
+      - name: Remettre l'entrée Radar à zéro
+        if: always() && steps.ready.outputs.skip != 'true'
+        working-directory: bridge
+        shell: bash
+        env:
+          TRIGGER_SHA: ${{ github.sha }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          trigger_blob="$(git rev-parse "$TRIGGER_SHA:radar-request.md")"
+          current_blob="$(git rev-parse "origin/main:radar-request.md")"
+          if [ "$trigger_blob" != "$current_blob" ]; then
+            echo "Une requête Radar plus récente existe déjà; aucun reset."
+            exit 0
+          fi
+          git checkout -B radar-request-reset origin/main
+          printf '# Ready\n' > radar-request.md
+          git add radar-request.md
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "radar: reset request"
+          git push origin HEAD:main
