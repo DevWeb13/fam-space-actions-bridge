@@ -119,31 +119,6 @@ jobs:
             fi
           fi
 
-          # Radar uses the same master-write lock, with its own three-phase processor.
-          if [[ "$branch" =~ ^automation/radar-(refresh|opportunity)- ]]; then
-            completed_radar_tag="automation-completed/${branch#automation/}"
-            if ! git show-ref --verify --quiet "refs/remotes/origin/$branch"; then
-              if git show-ref --verify --quiet "refs/tags/$completed_radar_tag"; then
-                echo "Radar déjà publié et branche supprimée: $branch"
-                exit 0
-              fi
-              echo "Branche Radar introuvable: $branch" >&2
-              exit 1
-            fi
-            radar_commit="$(git rev-parse "origin/$branch")"
-            if [ "$EVENT_NAME" != "workflow_dispatch" ]; then
-              if [[ ! "$requested_commit" =~ ^[0-9a-f]{40}$ ]] || [ "$requested_commit" != "$radar_commit" ]; then
-                echo "Signal Radar absent ou obsolète." >&2
-                exit 1
-              fi
-            fi
-            git checkout -B bridge-radar-runner origin/master
-            git reset --hard origin/master
-            git clean -fd
-            bash .github/scripts/process-radar-stage.sh "$radar_commit" "$branch"
-            exit 0
-          fi
-
           if [[ ! "$branch" =~ ^automation/(publication|destination)- ]]; then
             echo "Branche demandée invalide: $branch" >&2
             exit 1
