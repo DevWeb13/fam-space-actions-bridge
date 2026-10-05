@@ -303,19 +303,15 @@ const reconcileInstagramState = async (entriesBySlug, state) => {
 };
 
 const reconcilePublishedSlug = async (slug) => {
-  try {
-    const remoteBySlug = await readInstagramMediaBySlug(new Set([slug]));
-    const remote = sortRemoteMediaNewestFirst(remoteBySlug.get(slug) ?? []);
-    return remote[0] ?? null;
-  } catch (error) {
-    console.error(`[RÉCONCILIATION IMPOSSIBLE] ${slug}: ${error.message}`);
-    return null;
-  }
+  const remoteBySlug = await readInstagramMediaBySlug(new Set([slug]));
+  const remote = sortRemoteMediaNewestFirst(remoteBySlug.get(slug) ?? []);
+  return remote[0] ?? null;
 };
 
 const isFatalBatchError = (error) => {
   const status = Number(error?.status);
   return (
+    error?.publishStateUncertain === true ||
     status === 403 ||
     status === 429 ||
     /application request limit reached/i.test(error?.message ?? "")
@@ -403,7 +399,17 @@ const publishInstagram = async (entry, image, slug) => {
       }
     }
 
-    const remote = await reconcilePublishedSlug(slug);
+    let remote = null;
+    let reconciliationFailed = false;
+    try {
+      remote = await reconcilePublishedSlug(slug);
+    } catch (reconciliationError) {
+      reconciliationFailed = true;
+      console.error(
+        `[RÉCONCILIATION IMPOSSIBLE] ${slug}: ${reconciliationError.message}`,
+      );
+    }
+
     if (remote) {
       console.warn(
         `[RÉCUPÉRÉ APRÈS ERREUR] ${slug}: publication distante ${remote.id} détectée malgré "${error.message}"`,
@@ -411,6 +417,9 @@ const publishInstagram = async (entry, image, slug) => {
       return { id: remote.id, source: "instagram-reconciliation-after-error" };
     }
 
+    if (creationId || reconciliationFailed) {
+      error.publishStateUncertain = true;
+    }
     throw error;
   }
 };
