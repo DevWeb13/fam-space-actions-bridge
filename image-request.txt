@@ -107,3 +107,4 @@ automation/image-20261004-1321-a7c4|7d23fe2a6ea231fcfbd10b9cee516285e7c75cb2
 automation/image-20261004-1321-a7c4|25e5da87b44757d006da8a260e01461dc24ed75d
 automation/image-20261004-1926-thouzon|a478e56f616a6fe84a407c09b6e3c71c63d97a93
 automation/image-20261004-1926-thouzon|30d5dcbcbe9a2add280e5f76e1773d3684ffcd95
+automation/image-20261005-hero-lapenne-cavrois-cite|ad35409a7b7f24ee64bfeffbaacb7b88ff820aa1
