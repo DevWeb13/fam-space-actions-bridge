@@ -109,3 +109,4 @@ automation/image-20261004-1926-thouzon|a478e56f616a6fe84a407c09b6e3c71c63d97a93
 automation/image-20261004-1926-thouzon|30d5dcbcbe9a2add280e5f76e1773d3684ffcd95
 automation/image-20261005-hero-lapenne-cavrois-cite|ad35409a7b7f24ee64bfeffbaacb7b88ff820aa1
 automation/image-20261005-hero-lapenne-cavrois-cite|d7f732343e37ddccef95b96f51361501a5507fc5
+automation/image-20261005-1932-valrhona-caen|94e34bf37e8fa4da3215fa678954f55fdedb29a2
