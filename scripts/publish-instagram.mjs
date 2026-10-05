@@ -137,6 +137,17 @@ const resolveInstagramImage = async (entry, slug) => {
     .find((candidate) => candidate?.mime === "image/jpeg" && candidate?.url);
   if (!jpeg) throw new Error("aucune source JPEG pour cette hero");
 
+  const width = Number(jpeg.width);
+  const height = Number(jpeg.height);
+  if (Number.isFinite(width) && Number.isFinite(height) && height > 0) {
+    const ratio = width / height;
+    if (ratio < 0.8 || ratio > 1.91) {
+      throw new Error(
+        `ratio JPEG non autorisé par Instagram: ${width}x${height} (${ratio.toFixed(3)})`,
+      );
+    }
+  }
+
   const url = new URL(stripTracking(jpeg.url));
   if (url.protocol !== "https:") throw new Error("source JPEG non HTTPS");
 
@@ -160,6 +171,15 @@ const validateEntry = async (entry, slug) => {
   return { image, caption };
 };
 
+class InstagramApiError extends Error {
+  constructor(status, message, data = {}) {
+    super(`${status} ${message}`);
+    this.name = "InstagramApiError";
+    this.status = status;
+    this.data = data;
+  }
+}
+
 const parseJsonResponse = async (response) => {
   const text = await response.text();
   let data;
@@ -170,7 +190,7 @@ const parseJsonResponse = async (response) => {
   }
   if (!response.ok || data.error) {
     const message = data?.error?.message ?? data?.message ?? text ?? response.statusText;
-    throw new Error(`${response.status} ${message}`);
+    throw new InstagramApiError(response.status, message, data);
   }
   return data;
 };
@@ -183,6 +203,123 @@ const postForm = async (url, fields) => {
     }
   }
   return parseJsonResponse(await fetch(url, { method: "POST", body }));
+};
+
+const extractFamSpaceSlugFromCaption = (caption) => {
+  if (!caption) return "";
+  const urls =
+    caption.match(/https?:\/\/(?:www\.)?fam-space\.fr\/articles\/[^\s<>"']+/gi) ?? [];
+  for (const rawUrl of urls) {
+    const cleaned = rawUrl.replace(/[),.;!?]+$/, "");
+    try {
+      return slugFromArticleUrl(cleaned);
+    } catch {
+      // Une autre URL Fam Space éventuelle dans la légende pourra être testée.
+    }
+  }
+  return "";
+};
+
+const readInstagramMediaBySlug = async (targetSlugs) => {
+  const wanted = targetSlugs instanceof Set ? targetSlugs : new Set(targetSlugs);
+  const bySlug = new Map();
+  if (wanted.size === 0) return bySlug;
+
+  let next = new URL(
+    `https://graph.instagram.com/${GRAPH_VERSION}/${instagramUserId}/media`,
+  );
+  next.searchParams.set("fields", "id,caption,timestamp,permalink");
+  next.searchParams.set("limit", "100");
+  next.searchParams.set("access_token", instagramAccessToken);
+
+  const seenPages = new Set();
+  while (next) {
+    const pageUrl = next.href;
+    if (seenPages.has(pageUrl)) {
+      throw new Error("Instagram: pagination des médias en boucle");
+    }
+    seenPages.add(pageUrl);
+
+    const data = await parseJsonResponse(await fetch(next));
+    for (const media of data?.data ?? []) {
+      const slug = extractFamSpaceSlugFromCaption(media.caption ?? "");
+      if (!slug || !wanted.has(slug) || !media.id) continue;
+      const list = bySlug.get(slug) ?? [];
+      list.push({
+        id: String(media.id),
+        timestamp: media.timestamp ?? "",
+        permalink: media.permalink ?? "",
+      });
+      bySlug.set(slug, list);
+    }
+
+    const nextUrl = data?.paging?.next;
+    next = nextUrl ? new URL(nextUrl) : null;
+  }
+
+  return bySlug;
+};
+
+const sortRemoteMediaNewestFirst = (media) =>
+  [...media].sort((a, b) => {
+    const aTime = Date.parse(a.timestamp);
+    const bTime = Date.parse(b.timestamp);
+    if (Number.isFinite(aTime) && Number.isFinite(bTime)) return bTime - aTime;
+    return 0;
+  });
+
+const reconcileInstagramState = async (entriesBySlug, state) => {
+  const remoteBySlug = await readInstagramMediaBySlug(new Set(entriesBySlug.keys()));
+  let repaired = 0;
+  let duplicateSlugs = 0;
+
+  for (const [slug, media] of remoteBySlug) {
+    const sorted = sortRemoteMediaNewestFirst(media);
+    const canonical = sorted[0];
+    if (sorted.length > 1) {
+      duplicateSlugs += 1;
+      console.warn(
+        `[DOUBLON DISTANT] ${slug}: ${sorted.map((item) => item.id).join(", ")}`,
+      );
+    }
+
+    if (!state.posts[slug]) {
+      state.posts[slug] = {
+        id: canonical.id,
+        at: canonical.timestamp || new Date().toISOString(),
+        mode: "image",
+        source: "instagram-reconciliation",
+      };
+      repaired += 1;
+      console.log(`[RÉCONCILIÉ] ${slug} -> ${canonical.id}`);
+    }
+  }
+
+  if (repaired > 0) await saveState(state);
+  console.log(
+    `Réconciliation Instagram: ${repaired} état(s) réparé(s), ${duplicateSlugs} slug(s) avec doublon distant.`,
+  );
+  return { repaired, duplicateSlugs };
+};
+
+const reconcilePublishedSlug = async (slug) => {
+  try {
+    const remoteBySlug = await readInstagramMediaBySlug(new Set([slug]));
+    const remote = sortRemoteMediaNewestFirst(remoteBySlug.get(slug) ?? []);
+    return remote[0] ?? null;
+  } catch (error) {
+    console.error(`[RÉCONCILIATION IMPOSSIBLE] ${slug}: ${error.message}`);
+    return null;
+  }
+};
+
+const isFatalBatchError = (error) => {
+  const status = Number(error?.status);
+  return (
+    status === 403 ||
+    status === 429 ||
+    /application request limit reached/i.test(error?.message ?? "")
+  );
 };
 
 const readInstagramQuota = async () => {
@@ -201,37 +338,81 @@ const readInstagramQuota = async () => {
   return { usage, total, remaining: Math.max(0, total - usage) };
 };
 
+const readInstagramContainerStatus = async (containerId) => {
+  const url = new URL(`https://graph.instagram.com/${containerId}`);
+  url.searchParams.set("fields", "status_code,status");
+  url.searchParams.set("access_token", instagramAccessToken);
+  return parseJsonResponse(await fetch(url));
+};
+
 const waitForInstagramContainer = async (containerId) => {
-  for (let attempt = 1; attempt <= 20; attempt += 1) {
-    const url = new URL(`https://graph.instagram.com/${containerId}`);
-    url.searchParams.set("fields", "status_code,status");
-    url.searchParams.set("access_token", instagramAccessToken);
-    const data = await parseJsonResponse(await fetch(url));
-    if (data.status_code === "FINISHED") return;
+  const delays = [2_000, 3_000, 5_000, 8_000, 13_000, 21_000];
+  for (let attempt = 0; attempt < delays.length; attempt += 1) {
+    const data = await readInstagramContainerStatus(containerId);
+    if (data.status_code === "FINISHED" || data.status_code === "PUBLISHED") {
+      return data.status_code;
+    }
     if (data.status_code === "ERROR" || data.status_code === "EXPIRED") {
       throw new Error(`container Instagram ${data.status_code}: ${data.status ?? ""}`);
     }
-    await sleep(2_000);
+    await sleep(delays[attempt]);
   }
   throw new Error("timeout du container Instagram");
 };
 
-const publishInstagram = async (entry, image) => {
-  const created = await postForm(`https://graph.instagram.com/${instagramUserId}/media`, {
-    image_url: image.url,
-    caption: buildCaption(entry),
-    access_token: instagramAccessToken,
-  });
-  if (!created.id) throw new Error("Instagram n'a pas renvoyé de creation_id");
+const publishInstagram = async (entry, image, slug) => {
+  let creationId = "";
 
-  await waitForInstagramContainer(created.id);
+  try {
+    const created = await postForm(
+      `https://graph.instagram.com/${instagramUserId}/media`,
+      {
+        image_url: image.url,
+        caption: buildCaption(entry),
+        access_token: instagramAccessToken,
+      },
+    );
+    if (!created.id) throw new Error("Instagram n'a pas renvoyé de creation_id");
+    creationId = String(created.id);
 
-  const published = await postForm(
-    `https://graph.instagram.com/${instagramUserId}/media_publish`,
-    { creation_id: created.id, access_token: instagramAccessToken },
-  );
-  if (!published.id) throw new Error("Instagram n'a pas renvoyé de media id");
-  return published.id;
+    const containerStatus = await waitForInstagramContainer(creationId);
+    if (containerStatus === "PUBLISHED") {
+      const remote = await reconcilePublishedSlug(slug);
+      if (remote) {
+        return { id: remote.id, source: "instagram-reconciliation-after-publish" };
+      }
+    }
+
+    const published = await postForm(
+      `https://graph.instagram.com/${instagramUserId}/media_publish`,
+      { creation_id: creationId, access_token: instagramAccessToken },
+    );
+    if (!published.id) throw new Error("Instagram n'a pas renvoyé de media id");
+    return { id: String(published.id), source: "instagram-publisher" };
+  } catch (error) {
+    if (creationId) {
+      try {
+        const status = await readInstagramContainerStatus(creationId);
+        console.error(
+          `[CONTAINER] ${slug}: ${creationId} -> ${status.status_code ?? "inconnu"}`,
+        );
+      } catch (statusError) {
+        console.error(
+          `[CONTAINER INDISPONIBLE] ${slug}: ${creationId}: ${statusError.message}`,
+        );
+      }
+    }
+
+    const remote = await reconcilePublishedSlug(slug);
+    if (remote) {
+      console.warn(
+        `[RÉCUPÉRÉ APRÈS ERREUR] ${slug}: publication distante ${remote.id} détectée malgré "${error.message}"`,
+      );
+      return { id: remote.id, source: "instagram-reconciliation-after-error" };
+    }
+
+    throw error;
+  }
 };
 
 const uniqueFeedEntries = (entries) => {
@@ -271,17 +452,16 @@ const runDryRun = async (entriesBySlug, state) => {
   console.log("Aucune publication effectuée.");
 };
 
-const publishOne = async (slug, entry, state) => {
-  const { image } = await validateEntry(entry, slug);
-  const mediaId = await publishInstagram(entry, image);
+const publishOne = async (slug, entry, state, prepared) => {
+  const result = await publishInstagram(entry, prepared.image, slug);
   state.posts[slug] = {
-    id: mediaId,
+    id: result.id,
     at: new Date().toISOString(),
     mode: "image",
-    source: "instagram-publisher",
+    source: result.source,
   };
   await saveState(state);
-  console.log(`[PUBLIÉ] ${slug} -> ${mediaId}`);
+  console.log(`[PUBLIÉ] ${slug} -> ${result.id}`);
 };
 
 const runLiveOne = async (entriesBySlug, state) => {
@@ -291,9 +471,13 @@ const runLiveOne = async (entriesBySlug, state) => {
     console.log(`[DÉJÀ PUBLIÉ] ${targetSlug}`);
     return;
   }
+
+  const prepared = await validateEntry(entry, targetSlug);
   const quota = await readInstagramQuota();
-  if (quota.remaining < 1) throw new Error(`Quota Instagram épuisé: ${quota.usage}/${quota.total}`);
-  await publishOne(targetSlug, entry, state);
+  if (quota.remaining < 1) {
+    throw new Error(`Quota Instagram épuisé: ${quota.usage}/${quota.total}`);
+  }
+  await publishOne(targetSlug, entry, state, prepared);
 };
 
 const runLiveAll = async (entriesBySlug, state) => {
@@ -303,29 +487,61 @@ const runLiveAll = async (entriesBySlug, state) => {
     return;
   }
 
+  const ready = [];
+  let blocked = 0;
+  for (const [slug, entry] of pending) {
+    try {
+      const prepared = await validateEntry(entry, slug);
+      ready.push({ slug, entry, prepared });
+    } catch (error) {
+      blocked += 1;
+      console.error(`[BLOQUÉ] ${slug}: ${error.message}`);
+    }
+  }
+
+  if (ready.length === 0) {
+    console.log("---");
+    console.log("Aucune publication Instagram à effectuer.");
+    console.log(`Bloqués localement: ${blocked}`);
+    return;
+  }
+
   const quota = await readInstagramQuota();
-  const batch = pending.slice(0, quota.remaining);
+  const batch = ready.slice(0, quota.remaining);
   console.log(
-    `Instagram: ${pending.length} en attente, quota ${quota.usage}/${quota.total}, ` +
+    `Instagram: ${ready.length} prête(s), ${blocked} bloquée(s), quota ${quota.usage}/${quota.total}, ` +
       `${batch.length} publication(s) prévue(s).`,
   );
 
   let published = 0;
   let failed = 0;
-  for (const [slug, entry] of batch) {
+  let stopped = false;
+
+  for (const { slug, entry, prepared } of batch) {
     try {
-      await publishOne(slug, entry, state);
+      await publishOne(slug, entry, state, prepared);
       published += 1;
     } catch (error) {
       failed += 1;
       console.error(`[ÉCHEC] ${slug}: ${error.message}`);
+      if (isFatalBatchError(error)) {
+        stopped = true;
+        console.error(
+          "Instagram: erreur de limite ou d'autorisation, arrêt immédiat du lot pour éviter toute duplication.",
+        );
+        break;
+      }
     }
   }
 
   console.log("---");
-  console.log(`Publiés: ${published}`);
-  console.log(`Échecs: ${failed}`);
-  console.log(`Restants après ce passage: ${pending.length - published}`);
+  console.log(`Publiés ou réconciliés: ${published}`);
+  console.log(`Échecs API: ${failed}`);
+  console.log(`Bloqués localement: ${blocked}`);
+  console.log(`Prêts restant à traiter: ${Math.max(0, ready.length - published)}`);
+  if (stopped) console.log("Lot interrompu après erreur Meta fatale.");
+
+  if (failed > 0) process.exitCode = 1;
 };
 
 const main = async () => {
@@ -333,6 +549,10 @@ const main = async () => {
   const entries = parseFeed(xml);
   if (entries.length === 0) throw new Error("Flux Pinterest vide ou illisible");
   const entriesBySlug = uniqueFeedEntries(entries);
+
+  if (mode !== "dry-run") {
+    await reconcileInstagramState(entriesBySlug, state);
+  }
 
   if (mode === "dry-run") await runDryRun(entriesBySlug, state);
   else if (mode === "live-one") await runLiveOne(entriesBySlug, state);
