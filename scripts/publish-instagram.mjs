@@ -275,18 +275,27 @@ const reconcileInstagramState = async (entriesBySlug, state) => {
 
   for (const [slug, media] of remoteBySlug) {
     const sorted = sortRemoteMediaNewestFirst(media);
-    const canonical = sorted[0];
+    const canonical = sorted[sorted.length - 1];
+
     if (sorted.length > 1) {
       duplicateSlugs += 1;
+      const duplicatesToDelete = sorted.slice(0, -1);
       console.warn(
-        `[DOUBLON DISTANT] ${slug}: ${sorted.map((item) => item.id).join(", ")}`,
+        `[DOUBLON DISTANT] ${slug}: conserver ${canonical.id} (${canonical.timestamp || "date inconnue"}); ` +
+          `supprimer ${duplicatesToDelete
+            .map(
+              (item) =>
+                `${item.id} (${item.timestamp || "date inconnue"})${item.permalink ? ` ${item.permalink}` : ""}`,
+            )
+            .join(", ")}`,
       );
     }
 
-    if (!state.posts[slug]) {
+    const current = state.posts[slug];
+    if (!current || current.id !== canonical.id) {
       state.posts[slug] = {
         id: canonical.id,
-        at: canonical.timestamp || new Date().toISOString(),
+        at: canonical.timestamp || current?.at || new Date().toISOString(),
         mode: "image",
         source: "instagram-reconciliation",
       };
