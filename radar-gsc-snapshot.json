@@ -1,67 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-05T09:05:18.000Z",
-  "dataThrough": "2026-10-02",
-  "from": "2026-09-05",
+  "generatedAt": "2026-10-06T09:54:34.309Z",
+  "dataThrough": "2026-10-03",
+  "from": "2026-09-06",
   "refresh": [
-    {
-      "url": "/articles/evenements/semaine-du-gout-2026-comment-trouver-une-activite-adaptee-aux-enfants/",
-      "title": "Semaine du Goût 2026: comment trouver une activité adaptée aux enfants",
-      "category": "evenements",
-      "publishedAt": "2026-09-08T16:02:10+02:00",
-      "eventEndsAt": "2026-10-18",
-      "ageDays": 27,
-      "peakStart": "2026-09-13",
-      "peakEnd": "2026-09-19",
-      "recentStart": "2026-09-26",
-      "recentEnd": "2026-10-02",
-      "peakImpressions": 654,
-      "recentImpressions": 3,
-      "signal": "uncertain",
-      "basis": "Aucune requête comparable suffisante; ratio d'impressions 0; la baisse ne peut pas être attribuée au classement.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "semaine du goût 2026",
-        "semaine du goût 2026 école",
-        "semaine du gout 2026 maternelle",
-        "semaine du gout 2026",
-        "la semaine du gout 2026"
-      ],
-      "score": 585.9
-    },
-    {
-      "url": "/articles/vie-pratique/carte-okay-savoie-2026-2027-comment-obtenir-et-utiliser-les-80-du-collegien/",
-      "title": "Carte OKAY Savoie 2026-2027: comment obtenir et utiliser les 80 € du collégien",
-      "category": "vie-pratique",
-      "location": {
-        "city": "Chambéry",
-        "department": "Savoie",
-        "region": "Auvergne-Rhône-Alpes"
-      },
-      "publishedAt": "2026-09-02T02:00:51+02:00",
-      "ageDays": 33,
-      "peakStart": "2026-09-14",
-      "peakEnd": "2026-09-20",
-      "recentStart": "2026-09-26",
-      "recentEnd": "2026-10-02",
-      "peakImpressions": 433,
-      "recentImpressions": 60,
-      "signal": "coverage_loss",
-      "basis": "1 requête comparable reste globalement stable (-0.669 position) tandis que le ratio d'impressions tombe à 0.143.",
-      "commonQueries": 1,
-      "positionDelta": -0.669,
-      "impressionRatio": 0.143,
-      "focusQueries": [
-        "carte okay savoie 2026",
-        "okay savoie 2026",
-        "carte okay savoie validité",
-        "carte okay",
-        "carte okay savoie renouvellement"
-      ],
-      "score": 373
-    },
     {
       "url": "/articles/evenements/lire-en-poche-2026-a-gradignan-avec-des-enfants-organiser-une-journee-sans-perdre-les-ateliers/",
       "title": "Lire en Poche 2026 à Gradignan avec des enfants: organiser une journée sans perdre les ateliers",
@@ -73,13 +15,13 @@
       },
       "publishedAt": "2026-09-07T04:00:46+02:00",
       "eventEndsAt": "2026-10-11",
-      "ageDays": 28,
-      "peakStart": "2026-09-12",
-      "peakEnd": "2026-09-18",
-      "recentStart": "2026-09-26",
-      "recentEnd": "2026-10-02",
-      "peakImpressions": 287,
-      "recentImpressions": 10,
+      "ageDays": 29,
+      "peakStart": "2026-09-13",
+      "peakEnd": "2026-09-19",
+      "recentStart": "2026-09-27",
+      "recentEnd": "2026-10-03",
+      "peakImpressions": 654,
+      "recentImpressions": 2,
       "signal": "uncertain",
       "basis": "Aucune requête comparable suffisante; ratio d'impressions 0; la baisse ne peut pas être attribuée au classement.",
       "commonQueries": 0,
@@ -88,11 +30,11 @@
       "focusQueries": [
         "lire en poche gradignan 2026",
         "livre en poche gradignan 2026",
-        "salon du livre gradignan 2026",
         "programme lire en poche 2026",
+        "salon du livre gradignan 2026",
         "lire en poche"
       ],
-      "score": 258.533
+      "score": 630.267
     },
     {
       "url": "/articles/sorties/aquarium-reunion-fermeture-2026-visite-famille/",
@@ -104,26 +46,26 @@
         "region": "La Réunion"
       },
       "publishedAt": "2026-07-22T11:57:00+02:00",
-      "ageDays": 75,
+      "ageDays": 76,
       "peakStart": "2026-09-10",
       "peakEnd": "2026-09-16",
-      "recentStart": "2026-09-26",
-      "recentEnd": "2026-10-02",
+      "recentStart": "2026-09-27",
+      "recentEnd": "2026-10-03",
       "peakImpressions": 233,
-      "recentImpressions": 39,
+      "recentImpressions": 40,
       "signal": "uncertain",
-      "basis": "Aucune requête comparable suffisante; ratio d'impressions 0.833; la baisse ne peut pas être attribuée au classement.",
+      "basis": "Aucune requête comparable suffisante; ratio d'impressions 1; la baisse ne peut pas être attribuée au classement.",
       "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": 0.833,
+      "impressionRatio": 1,
       "focusQueries": [
         "aquarium de la réunion tarifs 2026 officiel",
         "aquarium de la réunion tarifs 2026",
         "aquarium de la réunion",
-        "aquarium la reunion",
+        "aquarium st gilles",
         "warum geschlossen"
       ],
-      "score": 194
+      "score": 193
     },
     {
       "url": "/articles/evenements/fete-de-la-chataigne-a-collobrieres-quel-dimanche-choisir-avec-des-enfants/",
@@ -136,13 +78,13 @@
       },
       "publishedAt": "2026-09-07T15:36:42+02:00",
       "eventEndsAt": "2026-10-25",
-      "ageDays": 28,
+      "ageDays": 29,
       "peakStart": "2026-09-13",
       "peakEnd": "2026-09-19",
-      "recentStart": "2026-09-26",
-      "recentEnd": "2026-10-02",
+      "recentStart": "2026-09-27",
+      "recentEnd": "2026-10-03",
       "peakImpressions": 195,
-      "recentImpressions": 5,
+      "recentImpressions": 6,
       "signal": "uncertain",
       "basis": "Aucune requête comparable suffisante; ratio d'impressions 0; la baisse ne peut pas être attribuée au classement.",
       "commonQueries": 0,
@@ -155,47 +97,20 @@
         "fete de la chataigne collobrieres 2026",
         "fete de la chataignes collobrieres"
       ],
-      "score": 177.333
-    },
-    {
-      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
-      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
-      "category": "voyages",
-      "location": {
-        "city": "Paris",
-        "department": "Paris",
-        "region": "Île-de-France"
-      },
-      "publishedAt": "2026-08-29T00:00:45+02:00",
-      "ageDays": 37,
-      "peakStart": "2026-09-18",
-      "peakEnd": "2026-09-24",
-      "recentStart": "2026-09-26",
-      "recentEnd": "2026-10-02",
-      "peakImpressions": 958,
-      "recentImpressions": 794,
-      "signal": "uncertain",
-      "basis": "Aucune requête comparable suffisante; ratio d'impressions 0; la baisse ne peut pas être attribuée au classement.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "quel est le plus économique"
-      ],
-      "score": 164
+      "score": 182.7
     },
     {
       "url": "/articles/parentalite/educonnect-pour-les-parents-activer-son-compte-et-retrouver-les-demarches-scolaires/",
       "title": "EduConnect pour les parents: activer son compte et retrouver les démarches scolaires",
       "category": "parentalite",
       "publishedAt": "2026-09-12T20:02:41+02:00",
-      "ageDays": 23,
+      "ageDays": 24,
       "peakStart": "2026-09-15",
       "peakEnd": "2026-09-21",
-      "recentStart": "2026-09-26",
-      "recentEnd": "2026-10-02",
+      "recentStart": "2026-09-27",
+      "recentEnd": "2026-10-03",
       "peakImpressions": 209,
-      "recentImpressions": 18,
+      "recentImpressions": 20,
       "signal": "uncertain",
       "basis": "Aucune requête comparable suffisante; ratio d'impressions 0; la baisse ne peut pas être attribuée au classement.",
       "commonQueries": 0,
@@ -208,7 +123,7 @@
         "educonnect parent",
         "il me manque un enfant sur educonnect"
       ],
-      "score": 146.433
+      "score": 151.2
     },
     {
       "url": "/articles/bons-plans/carte-tattoo-isere-2026-2027-comment-obtenir-60-a-120-pour-les-activites-d-un-collegien/",
@@ -220,18 +135,18 @@
         "region": "Auvergne-Rhône-Alpes"
       },
       "publishedAt": "2026-09-12T18:04:35+02:00",
-      "ageDays": 23,
+      "ageDays": 24,
       "peakStart": "2026-09-14",
       "peakEnd": "2026-09-20",
-      "recentStart": "2026-09-26",
-      "recentEnd": "2026-10-02",
+      "recentStart": "2026-09-27",
+      "recentEnd": "2026-10-03",
       "peakImpressions": 195,
-      "recentImpressions": 21,
+      "recentImpressions": 12,
       "signal": "uncertain",
-      "basis": "Aucune requête comparable suffisante; ratio d'impressions 0.063; la baisse ne peut pas être attribuée au classement.",
+      "basis": "Aucune requête comparable suffisante; ratio d'impressions 0; la baisse ne peut pas être attribuée au classement.",
       "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": 0.063,
+      "impressionRatio": 0,
       "focusQueries": [
         "carte tatoo",
         "carte tattoo isère montant",
@@ -239,32 +154,60 @@
         "carte tattoo montant",
         "montant carte tatoo"
       ],
-      "score": 133.4
+      "score": 146.4
     },
     {
       "url": "/articles/parentalite/petite-section-peut-on-alleger-les-apres-midis-a-l-ecole-maternelle/",
       "title": "Petite section: peut-on alléger les après-midis à l'école maternelle?",
       "category": "parentalite",
       "publishedAt": "2026-08-28T12:03:36+02:00",
-      "ageDays": 38,
+      "ageDays": 39,
       "peakStart": "2026-09-15",
       "peakEnd": "2026-09-21",
-      "recentStart": "2026-09-26",
-      "recentEnd": "2026-10-02",
+      "recentStart": "2026-09-27",
+      "recentEnd": "2026-10-03",
       "peakImpressions": 211,
-      "recentImpressions": 79,
+      "recentImpressions": 75,
       "signal": "uncertain",
-      "basis": "Aucune requête comparable suffisante; ratio d'impressions 1; la baisse ne peut pas être attribuée au classement.",
+      "basis": "Aucune requête comparable suffisante; ratio d'impressions 1.111; la baisse ne peut pas être attribuée au classement.",
       "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": 1,
+      "impressionRatio": 1.111,
       "focusQueries": [
         "amenagement ecole maternelle",
         "aménagement du temps scolaire maternelle moyenne section",
         "dérogation école après-midi petite section",
-        "école à la maison petite section"
+        "école à la maison petite section",
+        "petit section"
       ],
-      "score": 132
+      "score": 136
+    },
+    {
+      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
+      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
+      "category": "voyages",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "publishedAt": "2026-08-29T00:00:45+02:00",
+      "ageDays": 38,
+      "peakStart": "2026-09-18",
+      "peakEnd": "2026-09-24",
+      "recentStart": "2026-09-27",
+      "recentEnd": "2026-10-03",
+      "peakImpressions": 958,
+      "recentImpressions": 828,
+      "signal": "uncertain",
+      "basis": "Aucune requête comparable suffisante; ratio d'impressions 0; la baisse ne peut pas être attribuée au classement.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "quel est le plus économique"
+      ],
+      "score": 130
     },
     {
       "url": "/articles/vie-pratique/tarification-solidaire-naolib-a-nantes-combien-paie-une-famille-et-comment-faire-la-demande/",
@@ -276,11 +219,11 @@
         "region": "Pays de la Loire"
       },
       "publishedAt": "2026-09-05T04:00:05+02:00",
-      "ageDays": 30,
+      "ageDays": 31,
       "peakStart": "2026-09-15",
       "peakEnd": "2026-09-21",
-      "recentStart": "2026-09-26",
-      "recentEnd": "2026-10-02",
+      "recentStart": "2026-09-27",
+      "recentEnd": "2026-10-03",
       "peakImpressions": 141,
       "recentImpressions": 20,
       "signal": "uncertain",
@@ -305,11 +248,11 @@
         "region": "Auvergne-Rhône-Alpes"
       },
       "publishedAt": "2026-09-04T18:01:50+02:00",
-      "ageDays": 31,
+      "ageDays": 32,
       "peakStart": "2026-09-13",
       "peakEnd": "2026-09-19",
-      "recentStart": "2026-09-26",
-      "recentEnd": "2026-10-02",
+      "recentStart": "2026-09-27",
+      "recentEnd": "2026-10-03",
       "peakImpressions": 118,
       "recentImpressions": 1,
       "signal": "uncertain",
@@ -327,37 +270,6 @@
       "score": 117
     },
     {
-      "url": "/articles/parentalite/laep-a-grenoble-ou-aller-avec-un-enfant-de-moins-de-6-ans/",
-      "title": "LAEP à Grenoble: où aller avec un enfant de moins de 6 ans?",
-      "category": "parentalite",
-      "location": {
-        "city": "Grenoble",
-        "department": "Isère",
-        "region": "Auvergne-Rhône-Alpes"
-      },
-      "publishedAt": "2026-09-05T09:59:12+02:00",
-      "ageDays": 30,
-      "peakStart": "2026-09-14",
-      "peakEnd": "2026-09-20",
-      "recentStart": "2026-09-26",
-      "recentEnd": "2026-10-02",
-      "peakImpressions": 142,
-      "recentImpressions": 26,
-      "signal": "uncertain",
-      "basis": "Aucune requête comparable suffisante; ratio d'impressions 0; la baisse ne peut pas être attribuée au classement.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "laep grenoble",
-        "pirouette grenoble",
-        "laep a petit pas",
-        "laep la marelle",
-        "espace famille"
-      ],
-      "score": 116
-    },
-    {
       "url": "/articles/vie-pratique/cantine-au-college-en-essonne-obtenir-son-tarif-2026-2027-sans-refaire-la-mauvaise-demarche/",
       "title": "Cantine au collège en Essonne: obtenir son tarif 2026-2027 sans refaire la mauvaise démarche",
       "category": "vie-pratique",
@@ -367,13 +279,13 @@
         "region": "Île-de-France"
       },
       "publishedAt": "2026-09-13T16:03:15+02:00",
-      "ageDays": 22,
+      "ageDays": 23,
       "peakStart": "2026-09-16",
       "peakEnd": "2026-09-22",
-      "recentStart": "2026-09-26",
-      "recentEnd": "2026-10-02",
+      "recentStart": "2026-09-27",
+      "recentEnd": "2026-10-03",
       "peakImpressions": 182,
-      "recentImpressions": 29,
+      "recentImpressions": 30,
       "signal": "uncertain",
       "basis": "Aucune requête comparable suffisante; ratio d'impressions 0; la baisse ne peut pas être attribuée au classement.",
       "commonQueries": 0,
@@ -386,7 +298,38 @@
         "coupon restauration scolaire collège 2026 2027",
         "coupon restauration college essonne"
       ],
-      "score": 112.2
+      "score": 116.533
+    },
+    {
+      "url": "/articles/parentalite/laep-a-grenoble-ou-aller-avec-un-enfant-de-moins-de-6-ans/",
+      "title": "LAEP à Grenoble: où aller avec un enfant de moins de 6 ans?",
+      "category": "parentalite",
+      "location": {
+        "city": "Grenoble",
+        "department": "Isère",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "publishedAt": "2026-09-05T09:59:12+02:00",
+      "ageDays": 31,
+      "peakStart": "2026-09-14",
+      "peakEnd": "2026-09-20",
+      "recentStart": "2026-09-27",
+      "recentEnd": "2026-10-03",
+      "peakImpressions": 142,
+      "recentImpressions": 30,
+      "signal": "uncertain",
+      "basis": "Aucune requête comparable suffisante; ratio d'impressions 0; la baisse ne peut pas être attribuée au classement.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "laep grenoble",
+        "pirouette grenoble",
+        "laep a petit pas",
+        "laep la marelle",
+        "espace famille"
+      ],
+      "score": 112
     },
     {
       "url": "/articles/cuisine/cueillir-pommes-et-poires-a-mezieres-lez-clery-ce-qu-il-faut-verifier-avant-de-partir/",
@@ -398,13 +341,13 @@
         "region": "Centre-Val de Loire"
       },
       "publishedAt": "2026-09-04T16:04:39+02:00",
-      "ageDays": 31,
+      "ageDays": 32,
       "peakStart": "2026-09-14",
       "peakEnd": "2026-09-20",
-      "recentStart": "2026-09-26",
-      "recentEnd": "2026-10-02",
+      "recentStart": "2026-09-27",
+      "recentEnd": "2026-10-03",
       "peakImpressions": 108,
-      "recentImpressions": 0,
+      "recentImpressions": 1,
       "signal": "uncertain",
       "basis": "Aucune requête comparable suffisante; ratio d'impressions 0; la baisse ne peut pas être attribuée au classement.",
       "commonQueries": 0,
@@ -416,38 +359,98 @@
         "cueillette pommes loiret",
         "quelle prix"
       ],
-      "score": 108
+      "score": 107
     },
     {
-      "url": "/articles/vie-pratique/quel-ticket-twisto-choisir-a-caen-avec-des-enfants/",
-      "title": "Quel ticket Twisto choisir à Caen avec des enfants?",
-      "category": "vie-pratique",
+      "url": "/articles/activites/la-cite-de-la-mer-a-cherbourg-en-famille-tarifs-duree-et-conseils-de-visite/",
+      "title": "La Cité de la Mer à Cherbourg en famille: billets, tarifs et durée",
+      "category": "activites",
       "location": {
-        "city": "Caen",
-        "department": "Calvados",
+        "city": "Cherbourg-en-Cotentin",
+        "department": "Manche",
         "region": "Normandie"
       },
-      "publishedAt": "2026-09-07T11:04:46+02:00",
-      "ageDays": 28,
+      "publishedAt": "2026-08-18T15:06:21+02:00",
+      "ageDays": 49,
       "peakStart": "2026-09-13",
       "peakEnd": "2026-09-19",
-      "recentStart": "2026-09-26",
-      "recentEnd": "2026-10-02",
-      "peakImpressions": 154,
-      "recentImpressions": 39,
+      "recentStart": "2026-09-27",
+      "recentEnd": "2026-10-03",
+      "peakImpressions": 133,
+      "recentImpressions": 33,
       "signal": "uncertain",
       "basis": "Aucune requête comparable suffisante; ratio d'impressions 0; la baisse ne peut pas être attribuée au classement.",
       "commonQueries": 0,
       "positionDelta": null,
       "impressionRatio": 0,
       "focusQueries": [
-        "prix ticket twisto caen",
-        "ticket famille twisto",
-        "ticket 24h twisto prix",
-        "ticket tram caen",
-        "ticket twisto prix"
+        "cité de la mer cherbourg tarif",
+        "cité de la mer cherbourg horaires",
+        "le redoutable sous-marin prix",
+        "prix entree cite de la mer cherbourg",
+        "cité de la mer durée visite"
       ],
-      "score": 107.333
+      "score": 100
+    },
+    {
+      "url": "/articles/vie-pratique/rennes-avec-des-enfants-les-transports-sont-gratuits-avant-12-ans-mais-pas-sans-carte/",
+      "title": "Rennes avec des enfants: transports gratuits avant 12 ans, comment ça marche?",
+      "category": "vie-pratique",
+      "location": {
+        "city": "Rennes",
+        "department": "Ille-et-Vilaine",
+        "region": "Bretagne"
+      },
+      "publishedAt": "2026-09-07T00:02:33+02:00",
+      "ageDays": 29,
+      "peakStart": "2026-09-14",
+      "peakEnd": "2026-09-20",
+      "recentStart": "2026-09-27",
+      "recentEnd": "2026-10-03",
+      "peakImpressions": 165,
+      "recentImpressions": 63,
+      "signal": "uncertain",
+      "basis": "Aucune requête comparable suffisante; ratio d'impressions 0; la baisse ne peut pas être attribuée au classement.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "pass pluriel",
+        "metro gratuit enfant",
+        "pass pluriel rennes",
+        "transport gratuit rennes samedi"
+      ],
+      "score": 98.6
+    },
+    {
+      "url": "/articles/evenements/arbora-lumina-a-harcourt-ce-qu-il-faut-prevoir-avec-des-enfants/",
+      "title": "Arbora Lumina à Harcourt: ce qu'il faut prévoir avec des enfants",
+      "category": "evenements",
+      "location": {
+        "city": "Harcourt",
+        "department": "Eure",
+        "region": "Normandie"
+      },
+      "publishedAt": "2026-09-15T19:00:19+02:00",
+      "ageDays": 21,
+      "peakStart": "2026-09-18",
+      "peakEnd": "2026-09-24",
+      "recentStart": "2026-09-27",
+      "recentEnd": "2026-10-03",
+      "peakImpressions": 143,
+      "recentImpressions": 4,
+      "signal": "uncertain",
+      "basis": "Aucune requête comparable suffisante; ratio d'impressions 0; la baisse ne peut pas être attribuée au classement.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "arbora lumina",
+        "arbora lumina horaire",
+        "arbora lumina harcourt tarif",
+        "arbora lumina harcourt"
+      ],
+      "score": 97.3
     }
   ],
   "strongPages": [
@@ -455,10 +458,10 @@
       "url": "/articles/bons-plans/carte-avantage-adulte-sncf-quand-est-elle-interessante-avec-des-enfants/",
       "title": "Carte Avantage Adulte SNCF: quand est-elle intéressante avec des enfants?",
       "category": "bons-plans",
-      "recentImpressions": 212,
+      "recentImpressions": 218,
       "recentClicks": 5,
-      "recentPosition": 8.123,
-      "retention": 1.211
+      "recentPosition": 8.216,
+      "retention": 1.246
     },
     {
       "url": "/articles/evenements/foire-de-la-barguillere-a-foix-samedi-ou-dimanche-avec-des-enfants/",
@@ -469,10 +472,24 @@
         "department": "Ariège",
         "region": "Occitanie"
       },
-      "recentImpressions": 137,
+      "recentImpressions": 151,
+      "recentClicks": 5,
+      "recentPosition": 7.132,
+      "retention": 0.576
+    },
+    {
+      "url": "/articles/evenements/ci-t-as-la-trouille-2026-a-saint-jean-de-monts-que-faire-et-que-reserver/",
+      "title": "Ci t’as la trouille 2026 à Saint-Jean-de-Monts: que faire et que réserver ?",
+      "category": "evenements",
+      "location": {
+        "city": "Saint-Jean-de-Monts",
+        "department": "Vendée",
+        "region": "Pays de la Loire"
+      },
+      "recentImpressions": 39,
       "recentClicks": 4,
-      "recentPosition": 7.058,
-      "retention": 0.523
+      "recentPosition": 4.641,
+      "retention": 1.5
     },
     {
       "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
@@ -483,10 +500,10 @@
         "department": "Paris",
         "region": "Île-de-France"
       },
-      "recentImpressions": 794,
+      "recentImpressions": 828,
       "recentClicks": 2,
-      "recentPosition": 8.668,
-      "retention": 0.829
+      "recentPosition": 8.599,
+      "retention": 0.864
     },
     {
       "url": "/articles/voyages/futuroween-2026-futuroscope-billet-programme-enfants/",
@@ -497,10 +514,10 @@
         "department": "Vienne",
         "region": "Nouvelle-Aquitaine"
       },
-      "recentImpressions": 233,
-      "recentClicks": 1,
-      "recentPosition": 7.893,
-      "retention": 29.125
+      "recentImpressions": 326,
+      "recentClicks": 2,
+      "recentPosition": 7.816,
+      "retention": 40.75
     },
     {
       "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
@@ -511,10 +528,10 @@
         "department": "Paris",
         "region": "Île-de-France"
       },
-      "recentImpressions": 109,
+      "recentImpressions": 111,
       "recentClicks": 1,
-      "recentPosition": 7.33,
-      "retention": 1.16
+      "recentPosition": 7.559,
+      "retention": 1.181
     },
     {
       "url": "/articles/evenements/quai-des-bulles-2026-a-saint-malo-en-famille-tarifs-programme-et-conseils/",
@@ -525,10 +542,10 @@
         "department": "Ille-et-Vilaine",
         "region": "Bretagne"
       },
-      "recentImpressions": 56,
+      "recentImpressions": 62,
       "recentClicks": 1,
-      "recentPosition": 6.286,
-      "retention": 1.647
+      "recentPosition": 6.339,
+      "retention": 1.722
     },
     {
       "url": "/articles/sorties/cite-du-chocolat-valrhona-en-famille-tarifs-duree-et-conseils-de-visite/",
@@ -539,10 +556,10 @@
         "department": "Drôme",
         "region": "Auvergne-Rhône-Alpes"
       },
-      "recentImpressions": 47,
+      "recentImpressions": 48,
       "recentClicks": 1,
-      "recentPosition": 8.255,
-      "retention": 1.27
+      "recentPosition": 8,
+      "retention": 1.263
     },
     {
       "url": "/articles/vie-pratique/bus-gratuit-a-poitiers-pour-les-moins-de-12-ans-quelle-carte-faut-il-prevoir/",
@@ -553,43 +570,34 @@
         "department": "Vienne",
         "region": "Nouvelle-Aquitaine"
       },
-      "recentImpressions": 37,
+      "recentImpressions": 41,
       "recentClicks": 1,
-      "recentPosition": 7.811,
-      "retention": 0.86
+      "recentPosition": 8.024,
+      "retention": 0.953
     },
     {
-      "url": "/articles/sorties/mucem-en-famille-billets-gratuites-et-conseils-pour-la-visite/",
-      "title": "Mucem Marseille en famille: tarifs 2026, billets et gratuités",
-      "category": "sorties",
+      "url": "/articles/vie-pratique/transports-scolaires-dans-le-val-d-oise-imagine-r-csb-ou-scol-r-en-2026-2027/",
+      "title": "Transports scolaires dans le Val-d’Oise: Imagine R, CSB ou Scol’R en 2026-2027 ?",
+      "category": "vie-pratique",
       "location": {
-        "city": "Marseille",
-        "department": "Bouches-du-Rhône",
-        "region": "Provence-Alpes-Côte d'Azur"
+        "city": "Cergy",
+        "department": "Val-d'Oise",
+        "region": "Île-de-France"
       },
-      "recentImpressions": 64,
-      "recentClicks": 0,
-      "recentPosition": 8.969,
-      "retention": 0.688
-    },
-    {
-      "url": "/articles/cuisine/ratte-du-touquet-eau-vapeur-ou-four-quelle-cuisson-choisir/",
-      "title": "Ratte du Touquet: eau, vapeur ou four, quelle cuisson choisir?",
-      "category": "cuisine",
-      "recentImpressions": 59,
-      "recentClicks": 0,
-      "recentPosition": 7.322,
-      "retention": 1.372
+      "recentImpressions": 35,
+      "recentClicks": 1,
+      "recentPosition": 6.886,
+      "retention": 0.522
     }
   ],
   "excluded": {
     "expired": 67,
-    "cooling": 2
+    "cooling": 5
   },
   "warnings": [
     "Les lignes absentes valent zéro dans les données retournées. GSC peut masquer des requêtes; les signaux ne prouvent ni désindexation ni causalité.",
-    "Collecte Windsor.ai Search Console réalisée avec include_fresh_data=false; aucune ligne brute n'est conservée.",
+    "Collecte Windsor.ai Search Console réalisée avec include_fresh_data=false et search_type=web sur chaque appel; aucune ligne brute n'est conservée.",
     "Les diagnostics de requêtes sont limités aux requêtes visibles dans GSC.",
-    "Le lot GSC du 26 septembre au 2 octobre contient 1500 lignes et total_rows=1500; conformément au workflow, ce compte rond n'est pas traité seul comme une troncature."
+    "Les quatre lots GSC de sept jours ont retourné 915, 1575, 1591 et 1528 lignes; pour chacun, total_rows correspond exactement au nombre de lignes reçues et aucun indicateur de troncature n'est présent."
   ]
 }
