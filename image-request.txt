@@ -123,3 +123,4 @@ automation/image-20261006-2229-events|5c1fd91e7911719de13f57db5d12e47fa9637a2c
 automation/image-20261006-2229-events|5bc7886316cbf3c0c63e4450433cbf86f6356166
 automation/image-20261007-0853-editorial-fix|aba6587d403377b008c816bd8878fa35590d0aac
 automation/image-20261007-0853-editorial-fix|148431d36aeab66b4724711003c157e3ab21a519
+automation/image-20261007-1325-rennes-paleosite|f31bc835feae8e42acd7c07bc4cbbb964d390b6c
