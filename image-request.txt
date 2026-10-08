@@ -130,3 +130,4 @@ automation/image-20261007-2227-guadeloupe-lens|ce649bf39657b851cc84138cc5eb1418d
 automation/image-20261008-0734-galette-chantilly|aa58544d57cc4f1dd9c08af32f5afea486c9ecae
 automation/image-20261008-0734-galette-chantilly|163e00943659ba639a379df7aa8f9119f0208bb0
 automation/image-20261008-1334-kaz-le-port|30344ca3c1cfdd01784b166600067064814b9a33
+automation/image-20261008-1334-kaz-le-port|1f189c0893efec7f72d75ef419a15eeae9c1322e
