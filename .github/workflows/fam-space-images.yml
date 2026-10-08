@@ -19,13 +19,11 @@ on:
 permissions:
   contents: read
 
-concurrency:
-  group: fam-space-master-write
-  cancel-in-progress: false
-
 jobs:
-  process:
+  select:
     runs-on: ubuntu-latest
+    outputs:
+      signal: ${{ steps.selection.outputs.signal }}
 
     steps:
       - name: Récupérer le signal
@@ -33,7 +31,7 @@ jobs:
         with:
           path: bridge
 
-      - name: Récupérer Fam Space
+      - name: Récupérer Fam Space en lecture seule
         uses: actions/checkout@v4
         with:
           repository: DevWeb13/fam-space-qwik
@@ -45,8 +43,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-          cache: npm
-          cache-dependency-path: fam-space/package-lock.json
 
       - name: Sélectionner la demande image
         id: selection
@@ -58,7 +54,7 @@ jobs:
           set -euo pipefail
 
           if [ "$GITHUB_EVENT_NAME" = "schedule" ] || { [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] && [ "$RECOVER" = "true" ]; }; then
-            # Lecture seule : découvre les candidats déjà présents, sans créer de signal GitHub.
+            # Lecture seule : retrouve les candidats déjà présents, sans écrire de signal.
             refs="$(git ls-remote --heads origin 'refs/heads/automation/image-*')"
             if [ -n "$refs" ]; then
               git fetch --prune origin '+refs/heads/automation/image-*:refs/remotes/origin/automation/image-*'
@@ -84,17 +80,41 @@ jobs:
           echo "Demande image retenue: $signal"
           echo "signal=$signal" >> "$GITHUB_OUTPUT"
 
+  process:
+    needs: select
+    if: needs.select.outputs.signal != ''
+    runs-on: ubuntu-latest
+
+    # Les vérifications vides ne bloquent jamais Publication, Radar ou Destinations.
+    concurrency:
+      group: fam-space-master-write
+      cancel-in-progress: false
+
+    steps:
+      - name: Récupérer Fam Space
+        uses: actions/checkout@v4
+        with:
+          repository: DevWeb13/fam-space-qwik
+          ref: master
+          token: ${{ secrets.FAM_SPACE_TOKEN }}
+          fetch-depth: 0
+          path: fam-space
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: fam-space/package-lock.json
+
       - name: Installer les dépendances
-        if: steps.selection.outputs.signal != ''
         working-directory: fam-space
         run: npm ci
 
       - name: Traiter la demande image
-        if: steps.selection.outputs.signal != ''
         working-directory: fam-space
         shell: bash
         env:
-          SIGNAL: ${{ steps.selection.outputs.signal }}
+          SIGNAL: ${{ needs.select.outputs.signal }}
         run: |
           set -euo pipefail
 
