@@ -1,6 +1,12 @@
 name: Fam Space production release
 
 on:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/workflows/fam-space-production-release.yml
+      - scripts/export-radar-catalog.mjs
   schedule:
     - cron: "18 5,11,17,23 * * *"
       timezone: "Europe/Paris"
@@ -15,6 +21,7 @@ concurrency:
 
 jobs:
   release:
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     outputs:
       advanced: ${{ steps.release.outputs.advanced }}
@@ -56,7 +63,7 @@ jobs:
           internal_only=true
           while IFS= read -r path; do
             case "$path" in
-              content-data/publication-workflow.md|content-data/publication-phase.json|content-data/publication-rotation.json|content-data/publication-category-rotation.json)
+              content-data/publication-workflow.md|content-data/publication-phase.json|content-data/publication-rotation.json|content-data/publication-category-rotation.json|content-data/radar-workflow.md|content-data/radar-phases/01-detect.md)
                 ;;
               *)
                 internal_only=false
@@ -88,6 +95,71 @@ jobs:
             echo "- production avancée vers: `$master_sha`"
             echo "- Prochain passage automatique: dans environ 6 heures."
           } >> "$GITHUB_STEP_SUMMARY"
+
+  radar_catalog:
+    name: Actualiser le catalogue Radar depuis master
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Récupérer Fam Space master
+        uses: actions/checkout@v4
+        with:
+          repository: DevWeb13/fam-space-qwik
+          ref: master
+          token: ${{ secrets.FAM_SPACE_TOKEN }}
+          fetch-depth: 0
+          persist-credentials: false
+          path: fam-space
+
+      - name: Récupérer le bridge
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: bridge
+
+      - name: Préparer Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: fam-space/package-lock.json
+
+      - name: Réutiliser le catalogue et l'index éditorial du site
+        working-directory: fam-space
+        shell: bash
+        run: |
+          npm ci --no-audit --no-fund
+          npm run content:compile --silent
+          node ../bridge/scripts/export-radar-catalog.mjs . "$RUNNER_TEMP/radar-catalog.json"
+
+      - name: Synchroniser uniquement si le contenu a changé
+        working-directory: bridge
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B radar-catalog-sync origin/main
+            cp "$RUNNER_TEMP/radar-catalog.json" radar-catalog.json
+            git add -- radar-catalog.json
+            if git diff --cached --quiet; then
+              echo "Catalogue Radar inchangé: aucune écriture GitHub."
+              exit 0
+            fi
+            git commit -m "data: sync Radar editorial catalog"
+            if git push origin HEAD:main; then
+              echo "Catalogue Radar actualisé sans déploiement Vercel."
+              exit 0
+            fi
+          done
+
+          echo "Échec de synchronisation du catalogue Radar après 3 tentatives." >&2
+          exit 1
 
   facebook:
     needs: release
