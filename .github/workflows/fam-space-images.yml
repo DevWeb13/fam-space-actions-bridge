@@ -6,7 +6,15 @@ on:
       - main
     paths:
       - image-request.txt
+  schedule:
+    - cron: "47 * * * *"
   workflow_dispatch:
+    inputs:
+      recover:
+        description: "Rattraper un candidat image sans nouveau signal"
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -40,17 +48,25 @@ jobs:
           cache: npm
           cache-dependency-path: fam-space/package-lock.json
 
-      - name: Installer les dépendances
-        working-directory: fam-space
-        run: npm ci
-
-      - name: Traiter la demande image
+      - name: Sélectionner la demande image
+        id: selection
         working-directory: fam-space
         shell: bash
+        env:
+          RECOVER: ${{ inputs.recover || 'false' }}
         run: |
           set -euo pipefail
 
-          signal="$(grep -v '^[[:space:]]*$' ../bridge/image-request.txt | tail -n 1 | tr -d '\r\n')"
+          if [ "$GITHUB_EVENT_NAME" = "schedule" ] || { [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] && [ "$RECOVER" = "true" ]; }; then
+            # Lecture seule : découvre les candidats déjà présents, sans créer de signal GitHub.
+            refs="$(git ls-remote --heads origin 'refs/heads/automation/image-*')"
+            if [ -n "$refs" ]; then
+              git fetch --prune origin '+refs/heads/automation/image-*:refs/remotes/origin/automation/image-*'
+            fi
+            signal="$(node ../bridge/.github/scripts/select-image-recovery.mjs)"
+          else
+            signal="$(grep -v '^[[:space:]]*$' ../bridge/image-request.txt | tail -n 1 | tr -d '\r\n' || true)"
+          fi
 
           if [ -z "$signal" ] || [ "$signal" = "idle" ]; then
             echo "Aucune demande image à traiter."
@@ -64,6 +80,26 @@ jobs:
             echo "Signal image invalide: $signal" >&2
             exit 1
           fi
+
+          echo "Demande image retenue: $signal"
+          echo "signal=$signal" >> "$GITHUB_OUTPUT"
+
+      - name: Installer les dépendances
+        if: steps.selection.outputs.signal != ''
+        working-directory: fam-space
+        run: npm ci
+
+      - name: Traiter la demande image
+        if: steps.selection.outputs.signal != ''
+        working-directory: fam-space
+        shell: bash
+        env:
+          SIGNAL: ${{ steps.selection.outputs.signal }}
+        run: |
+          set -euo pipefail
+
+          branch="${SIGNAL%%|*}"
+          requested_commit="${SIGNAL##*|}"
 
           git fetch origin master --prune
           git fetch origin "+refs/heads/$branch:refs/remotes/origin/$branch" --prune || true
@@ -88,5 +124,5 @@ jobs:
             echo "## Bridge images Fam Space"
             echo
             echo "- Résultat: succès"
-            echo "- Signal: $signal"
+            echo "- Signal: $SIGNAL"
           } >> "$GITHUB_STEP_SUMMARY"
