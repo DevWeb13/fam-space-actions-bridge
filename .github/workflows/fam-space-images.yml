@@ -6,24 +6,18 @@ on:
       - main
     paths:
       - image-request.txt
-  schedule:
-    - cron: "47 * * * *"
   workflow_dispatch:
-    inputs:
-      recover:
-        description: "Rattraper un candidat image sans nouveau signal"
-        required: false
-        type: boolean
-        default: false
 
 permissions:
   contents: read
 
+concurrency:
+  group: fam-space-master-write
+  cancel-in-progress: false
+
 jobs:
-  select:
+  process:
     runs-on: ubuntu-latest
-    outputs:
-      signal: ${{ steps.selection.outputs.signal }}
 
     steps:
       - name: Récupérer le signal
@@ -31,66 +25,6 @@ jobs:
         with:
           path: bridge
 
-      - name: Récupérer Fam Space en lecture seule
-        uses: actions/checkout@v4
-        with:
-          repository: DevWeb13/fam-space-qwik
-          ref: master
-          token: ${{ secrets.FAM_SPACE_TOKEN }}
-          fetch-depth: 0
-          path: fam-space
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 24
-
-      - name: Sélectionner la demande image
-        id: selection
-        working-directory: fam-space
-        shell: bash
-        env:
-          RECOVER: ${{ inputs.recover || 'false' }}
-        run: |
-          set -euo pipefail
-
-          if [ "$GITHUB_EVENT_NAME" = "schedule" ] || { [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] && [ "$RECOVER" = "true" ]; }; then
-            # Lecture seule : retrouve les candidats déjà présents, sans écrire de signal.
-            refs="$(git ls-remote --heads origin 'refs/heads/automation/image-*')"
-            if [ -n "$refs" ]; then
-              git fetch --prune origin '+refs/heads/automation/image-*:refs/remotes/origin/automation/image-*'
-            fi
-            signal="$(node ../bridge/.github/scripts/select-image-recovery.mjs)"
-          else
-            signal="$(grep -v '^[[:space:]]*$' ../bridge/image-request.txt | tail -n 1 | tr -d '\r\n' || true)"
-          fi
-
-          if [ -z "$signal" ] || [ "$signal" = "idle" ]; then
-            echo "Aucune demande image à traiter."
-            exit 0
-          fi
-
-          branch="${signal%%|*}"
-          requested_commit="${signal##*|}"
-
-          if [ "$branch" = "$signal" ] || [[ ! "$branch" =~ ^automation/image-[A-Za-z0-9._-]+$ ]] || [[ ! "$requested_commit" =~ ^[0-9a-f]{40}$ ]]; then
-            echo "Signal image invalide: $signal" >&2
-            exit 1
-          fi
-
-          echo "Demande image retenue: $signal"
-          echo "signal=$signal" >> "$GITHUB_OUTPUT"
-
-  process:
-    needs: select
-    if: needs.select.outputs.signal != ''
-    runs-on: ubuntu-latest
-
-    # Les vérifications vides ne bloquent jamais Publication, Radar ou Destinations.
-    concurrency:
-      group: fam-space-master-write
-      cancel-in-progress: false
-
-    steps:
       - name: Récupérer Fam Space
         uses: actions/checkout@v4
         with:
@@ -113,13 +47,23 @@ jobs:
       - name: Traiter la demande image
         working-directory: fam-space
         shell: bash
-        env:
-          SIGNAL: ${{ needs.select.outputs.signal }}
         run: |
           set -euo pipefail
 
-          branch="${SIGNAL%%|*}"
-          requested_commit="${SIGNAL##*|}"
+          signal="$(grep -v '^[[:space:]]*$' ../bridge/image-request.txt | tail -n 1 | tr -d '\r\n')"
+
+          if [ -z "$signal" ] || [ "$signal" = "idle" ]; then
+            echo "Aucune demande image à traiter."
+            exit 0
+          fi
+
+          branch="${signal%%|*}"
+          requested_commit="${signal##*|}"
+
+          if [ "$branch" = "$signal" ] || [[ ! "$branch" =~ ^automation/image-[A-Za-z0-9._-]+$ ]] || [[ ! "$requested_commit" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "Signal image invalide: $signal" >&2
+            exit 1
+          fi
 
           git fetch origin master --prune
           git fetch origin "+refs/heads/$branch:refs/remotes/origin/$branch" --prune || true
@@ -144,5 +88,5 @@ jobs:
             echo "## Bridge images Fam Space"
             echo
             echo "- Résultat: succès"
-            echo "- Signal: $SIGNAL"
+            echo "- Signal: $signal"
           } >> "$GITHUB_STEP_SUMMARY"
