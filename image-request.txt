@@ -128,3 +128,4 @@ automation/image-20261007-1325-rennes-paleosite|195d43f32a423704b16f14f6f5021cb2
 automation/image-20261007-2227-guadeloupe-lens|85241d408f95f5c13d480c52d3d5e3b7193ca7ab
 automation/image-20261007-2227-guadeloupe-lens|ce649bf39657b851cc84138cc5eb1418dbffb79c
 automation/image-20261008-0734-galette-chantilly|aa58544d57cc4f1dd9c08af32f5afea486c9ecae
+automation/image-20261008-0734-galette-chantilly|163e00943659ba639a379df7aa8f9119f0208bb0
