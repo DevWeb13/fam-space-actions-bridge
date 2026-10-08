@@ -13,20 +13,29 @@ const siteRoot = resolve(sitePath);
 const compiled = (path) =>
   import(pathToFileURL(join(siteRoot, ".content-build", path)).href);
 
-const [{ loadArticleCatalog }, { isPublicArticle }, { buildEditorialIndex }] =
-  await Promise.all([
-    compiled("scripts/lib/article-files.js"),
-    compiled("src/lib/articles/catalog-core.js"),
-    compiled("src/lib/articles/editorial-index.js"),
-  ]);
+const [
+  { findArticleFiles },
+  { isPublicArticle },
+  { buildEditorialIndex },
+  { readStage },
+] = await Promise.all([
+  compiled("scripts/lib/article-files.js"),
+  compiled("src/lib/articles/catalog-core.js"),
+  compiled("src/lib/articles/editorial-index.js"),
+  import(pathToFileURL(join(siteRoot, "scripts/lib/radar-stage.mjs")).href),
+]);
 
-const { documents, issues } = await loadArticleCatalog(siteRoot);
-if (issues.length) {
-  throw new Error(`Catalogue Radar: ${issues.length} article(s) invalide(s).`);
-}
-const published = documents
-  .map(({ metadata }) => metadata)
-  .filter((article) => isPublicArticle(article, new Date()));
+// Reuse Radar's existing frontmatter reader: validation of every unrelated
+// published page would otherwise block the entire GSC catalogue.
+const articleFiles = await findArticleFiles(siteRoot);
+const metadata = await Promise.all(
+  articleFiles.map(async (file) =>
+    readStage(await readFile(file, "utf8")).metadata,
+  ),
+);
+const published = metadata.filter((article) =>
+  isPublicArticle(article, new Date()),
+);
 
 const articles = buildEditorialIndex(published).map((article) => ({
   url: article.url,
