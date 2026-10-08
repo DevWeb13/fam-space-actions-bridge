@@ -68,7 +68,7 @@ function validCandidate(ref, state, pending, masterWorkflowBlob) {
 const state = JSON.parse(readFileSync("content-data/article-image-phase.json", "utf8"));
 const pending = JSON.parse(readFileSync("content-data/article-image-pending.json", "utf8"));
 const workflowBlob = git("rev-parse", `origin/master:${WORKFLOW}`);
-const refs = git("for-each-ref", "--format=%(refname:short)", "refs/remotes/origin/automation/image-")
+const refs = git("for-each-ref", "--format=%(refname:short)", "refs/remotes/origin/automation/image-*")
   .split("\n").filter(ref => ref.startsWith(BRANCH_PREFIX));
 const eligible = refs.map(ref => validCandidate(ref, state, pending, workflowBlob)).filter(Boolean)
   .sort((a, b) => b.timestamp - a.timestamp || b.head.localeCompare(a.head));
