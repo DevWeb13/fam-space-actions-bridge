@@ -72,3 +72,4 @@ Le festival recommande d'acheter les billets à l'avance. Les places sont garant
 Pour une famille qui transforme le festival en week-end, le [MEININGER Hotel Lyon Centre Berthelot](https://www.booking.com/hotel/fr/meininger-lyon-centre-berthelot.fr.html) propose des chambres familiales et une cuisine commune. Vérifiez les disponibilités et les conditions pour vos dates avant de réserver.
 
 Pour ajouter une autre sortie au séjour sans refaire un programme complet de Lyon, notre guide [Mini World Lyon en famille](https://www.fam-space.fr/articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/) détaille les tarifs, la durée de visite et les conseils pratiques.
+
