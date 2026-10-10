@@ -152,6 +152,7 @@ Pour ajouter une autre sortie au séjour sans refaire un programme complet de Ly
 
 ### Articles publiés
 
+- /articles/activites/zoo-de-martinique-en-famille-tarifs-poussette-et-visite-de-l-habitation-latouche/ | Zoo de Martinique en famille: tarifs, poussette et visite de l'Habitation Latouche | activites | Le Carbet, Martinique, Martinique
 - /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | Monument Jeu d’Enfant au château d’Angers: dragons et ateliers le 17 octobre 2026 | evenements | Angers, Maine-et-Loire, Pays de la Loire
 - /articles/maison/a-paris-ou-donner-ou-deposer-meubles-jouets-et-electromenager/ | À Paris, où donner ou déposer meubles, jouets et électroménager ? | maison | Paris, Paris, Île-de-France
 - /articles/vie-pratique/perigueux-en-famille-ou-se-garer-pour-visiter-le-centre/ | Périgueux en famille: où se garer pour visiter le centre ? | vie-pratique | Périgueux, Dordogne, Nouvelle-Aquitaine
@@ -847,4 +848,4 @@ En phase 3 seulement, ajoute `radarReview` dans la requête avec `summary`, `sou
 
 N'effectue aucune plomberie Git. Ne crée, ne nomme et ne supprime aucune branche Radar; ne choisis aucun SHA; ne modifie aucun fichier de DevWeb13/fam-space-qwik.
 
-Écris uniquement `radar-request.md` sur la branche `main` de `DevWeb13/fam-space-actions-bridge` selon le format fourni dans ce runtime. Le workflow GitHub se charge du reste. Une fois cette requête écrite, termine le passage.
+Écris uniquement radar-request.md sur la branche main de DevWeb13/fam-space-actions-bridge selon le format fourni dans ce runtime. Le workflow GitHub se charge du reste. Une fois cette requête écrite, termine le passage.
