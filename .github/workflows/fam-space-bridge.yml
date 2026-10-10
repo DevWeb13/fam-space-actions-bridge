@@ -79,10 +79,6 @@ jobs:
             local last_processed="${3:-}"
             local attempt
 
-            if [ "$next_phase" = "1" ]; then
-              node scripts/render-publication-runtime.mjs --phase 1 --output "$RUNNER_TEMP/publication-runtime.md"
-            fi
-
             for attempt in 1 2 3; do
               if (
                 cd ../bridge
@@ -92,14 +88,10 @@ jobs:
                 git checkout -B publication-state-update origin/main
                 if [ "$next_phase" = "1" ]; then
                   printf '{\n  "phase": 1\n}\n' > publication-state.json
-                  cp "$RUNNER_TEMP/publication-runtime.md" publication-runtime.md
                 else
                   PHASE="$next_phase" ACTIVE_BRANCH="$active_branch" LAST_PROCESSED="$last_processed" node -e 'const fs=require("node:fs");const value={phase:Number(process.env.PHASE),activeBranch:process.env.ACTIVE_BRANCH,lastProcessedCommit:process.env.LAST_PROCESSED};fs.writeFileSync("publication-state.json",JSON.stringify(value,null,2)+"\n");'
                 fi
                 git add publication-state.json
-                if [ "$next_phase" = "1" ]; then
-                  git add publication-runtime.md
-                fi
                 if git diff --cached --quiet; then
                   exit 0
                 fi
