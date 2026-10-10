@@ -1,0 +1,77 @@
+name: Radar runtime
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - radar-gsc-snapshot.json
+      - radar-catalog.json
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fam-space-master-write
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Récupérer le bridge
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          path: bridge
+
+      - name: Récupérer Fam Space
+        uses: actions/checkout@v4
+        with:
+          repository: DevWeb13/fam-space-qwik
+          ref: master
+          token: ${{ secrets.FAM_SPACE_TOKEN }}
+          fetch-depth: 0
+          path: fam-space
+
+      - name: Préparer Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: fam-space/package-lock.json
+
+      - name: Installer les dépendances
+        working-directory: fam-space
+        run: npm ci --no-audit --no-fund
+
+      - name: Générer le runtime
+        working-directory: fam-space
+        run: bash .github/scripts/render-radar-runtime.sh ../bridge/radar-gsc-snapshot.json ../bridge/radar-catalog.json "$RUNNER_TEMP/radar-runtime.md"
+
+      - name: Synchroniser le runtime
+        working-directory: bridge
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B radar-runtime-sync origin/main
+            cp "$RUNNER_TEMP/radar-runtime.md" radar-runtime.md
+            git add radar-runtime.md
+            if git diff --cached --quiet; then
+              exit 0
+            fi
+            git commit -m "state: refresh Radar runtime"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+
+          echo "Impossible de synchroniser radar-runtime.md après 3 tentatives." >&2
+          exit 1
