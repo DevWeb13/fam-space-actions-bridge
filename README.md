@@ -2,22 +2,22 @@
 
 Ce dépôt porte les GitHub Actions publiques utilisées par Fam Space afin de ne pas dépendre du quota Actions du dépôt privé `DevWeb13/fam-space-qwik`.
 
-## Livraison éditoriale
+## Publication
 
-Publication, Review et Destination travaillent dans `fam-space-qwik` et créent chacune une branche `automation/*` contenant uniquement leur résultat.
+La planification Publication lit uniquement `publication-runtime.md`.
 
-Une fois cette branche créée, l'automatisation écrit son nom dans `bridge-request.txt`. Ce push déclenche immédiatement `.github/workflows/fam-space-bridge.yml`.
+Elle écrit uniquement `publication-request.md`. Le workflow `.github/workflows/publication-request.yml` gère mécaniquement la branche `automation/publication-*`, l'état `publication-state.json`, les transitions de phase et la génération du runtime suivant.
 
-Le bridge traite uniquement la branche explicitement demandée. Il utilise les scripts techniques présents sur le `master` courant de `fam-space-qwik`, publie le résultat sur `master`, avance uniquement l'affectation concernée après succès, puis supprime la branche d'automatisation.
+Les phases 1 à 3 restent hors de `master`. Après la phase 4, `bridge-request.txt` déclenche `.github/workflows/fam-space-bridge.yml`, qui ne fait plus que la finalisation Publication: validation finale, publication sur `master`, rotation, remise en phase 1 et suppression de la branche.
 
-Il n'existe aucun polling périodique ni balayage automatique des anciennes branches éditoriales.
+## Destination
+
+Destination conserve son fonctionnement existant: une branche `automation/destination-*` est signalée via `bridge-request.txt`, puis le bridge publie le candidat validé sur `master` et supprime la branche.
 
 ## Mise en production
 
-`.github/workflows/fam-space-production-release.yml` s'exécute réellement toutes les 6 heures et peut aussi être lancé manuellement.
-
-S'il existe de nouveaux commits sur `master`, il avance `production` par fast-forward. S'il n'y a aucun changement, il ne fait rien. Les publications sociales liées à une release ne sont lancées que lorsqu'une nouvelle version a effectivement été avancée vers `production`.
+`.github/workflows/fam-space-production-release.yml` avance périodiquement `production` vers `master` par fast-forward lorsqu'un changement public doit réellement être livré. Les transitions internes Publication et Radar ne déclenchent pas de release inutile.
 
 ## Autres automatisations
 
-Les workflows Images et réseaux sociaux restent indépendants de la livraison éditoriale décrite ci-dessus.
+Radar, Images et les réseaux sociaux restent indépendants de la livraison Publication décrite ci-dessus.
