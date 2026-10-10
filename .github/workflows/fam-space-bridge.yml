@@ -67,8 +67,7 @@ jobs:
           else
             signal="$(tail -n 1 ../bridge/bridge-request.txt | tr -d '\r\n')"
             if [[ "$signal" == *"|"* ]]; then
-              branch="${signal%%|*}"
-              requested_commit="${signal#*|}"
+              IFS='|' read -r branch requested_commit request_nonce <<< "$signal"
             else
               branch="$signal"
             fi
