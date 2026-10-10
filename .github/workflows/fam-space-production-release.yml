@@ -110,7 +110,7 @@ jobs:
           ref: master
           token: ${{ secrets.FAM_SPACE_TOKEN }}
           fetch-depth: 0
-          persist-credentials: false
+          persist-credentials: true
           path: fam-space
 
       - name: Récupérer le bridge
