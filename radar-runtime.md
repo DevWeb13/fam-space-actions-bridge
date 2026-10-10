@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les faits utilisés sont liés naturellement dans le corps et présents dans `sources`. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de les règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Festival Lumière 2026 à Lyon : quelles séances choisir avec des enfants ?"
-subtitle: Chaplin en ciné-concert le 11 octobre, conférence dès 5 ans le 14 et Laurel & Hardy le 17
-summary: "Trois rendez-vous familiaux au festival Lumière 2026 à Lyon : horaires, âges, tarifs, réservation et choix selon le rythme des enfants."
+title: "Festival Lumière 2026 avec des enfants : Chaplin, Laurel & Hardy et les bons billets"
+subtitle: Deux ciné-concerts familiaux à comparer les 11 et 17 octobre ; la conférence Chaplin du 14 est complète
+summary: À Lyon, le festival Lumière propose Chaplin sur écran géant le 11 octobre et Laurel & Hardy le 17. Horaires, durées, tarifs enfants et adultes, accréditation moins de 26 ans et état des réservations.
 category: evenements
 location:
   city: Lyon
@@ -69,20 +74,30 @@ location:
 keywords:
   - Festival Lumière 2026 enfants Lyon
   - Chaplin ciné-concert 11 octobre 2026
-  - La mécanique du rire Chaplin 14 octobre
   - Laurel et Hardy 17 octobre 2026 Lyon
+  - Festival Lumière tarif enfant
 sources:
   - title: Festival Lumière 2026 — Ciné-concert Chaplin
     url: https://www.festival-lumiere.org/cine-concert-chaplin
-  - title: Festival Lumière 2026 — Conférence familiale Chaplin
+    accessedAt: 2026-10-10
+  - title: Festival Lumière 2026 — Master Class Famille Chaplin
     url: https://www.festival-lumiere.org/la-mecanique-du-rire-chez-charlie-chaplin
-  - title: Festival Lumière 2026 — Programme du 17 octobre
+    accessedAt: 2026-10-10
+  - title: Ville de Lyon — inscription Master Class Famille Chaplin
+    url: https://inscriptions.lyon.fr/inscriptionSimple/InscriptionSimple/jsp/site/Portal.jsp?id_form=2823&page=appointment&view=getAppointmentFormFirstStep
+    accessedAt: 2026-10-10
+  - title: Festival Lumière 2026 — samedi 17 octobre
     url: https://www.festival-lumiere.org/samedi-17-octobre-2026
-  - title: Festival Lumière 2026 — Billetterie et tarifs
+    accessedAt: 2026-10-10
+  - title: Festival Lumière 2026 — billetterie et tarifs
     url: https://www.festival-lumiere.org/billetterie
+    accessedAt: 2026-10-10
+  - title: Festival Lumière 2026 — accréditations
+    url: https://www.festival-lumiere.org/accreditations-2026
+    accessedAt: 2026-10-10
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants
   decision: Choisir entre une première expérience de cinéma muet en musique, une découverte gratuite des gags de Chaplin dès 5 ans et une séance Laurel & Hardy, puis savoir quel billet ou inscription prévoir pour la date choisie.
@@ -92,32 +107,46 @@ radar:
     dataThrough: 2026-10-06
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Festival Lumière 2026 — Ciné-concert Chaplin »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-10-18
 ---
 
-## Mission retenue
-Festival Lumière 2026 à Lyon (10-18 octobre) : aider les familles à choisir parmi trois propositions distinctes du 11 au 17 octobre, sans prétendre que l'ensemble du festival est jeune public.
+Pour une première découverte du cinéma muet avec des enfants, le **Festival Lumière 2026 à Lyon** propose deux rendez-vous faciles à comparer : **Chaplin le dimanche 11 octobre à 10 h 15** à la Halle Tony Garnier et **Laurel & Hardy le samedi 17 octobre à 14 h 30** au Pathé Bellecour. Une troisième proposition familiale, la conférence Chaplin du 14 octobre, est bien annoncée dès 5 ans mais son formulaire officiel affiche désormais complet.
 
-## Pourquoi cette mission
-Opportunité saisonnière imminente, avec trois séances confirmées par l'organisateur et une réservation utile maintenant. Le refresh Aquarium de La Réunion est `uncertain` sans date ferme de réouverture nouvelle ; l'expansion autour de la Carte Avantage SNCF risque de recouper les guides existants sur le train et la Carte Familles Nombreuses. Aucun article sur le Festival Lumière lyonnais 2026 dans le catalogue (649 articles) ni dans les contenus proches contrôlés sur master. Publication active : Zoo de Martinique au Carbet ; Destination active : Vincennes ; pas de chevauchement.
+## Chaplin le 11 octobre : le grand spectacle familial
 
-## Décision du lecteur
-Comparer les trois formats selon l'âge, l'envie d'écouter une histoire, la disponibilité du jour et le budget, puis réserver correctement sans confondre séance payante et conférence gratuite sur inscription.
+Le [ciné-concert Chaplin](https://www.festival-lumiere.org/cine-concert-chaplin) réunit trois courts métrages de 1915-1916, accompagnés en direct au piano par Didier Martel. Le programme dure **1 h 23** et le festival annonce aussi des animations ainsi qu'un petit-déjeuner offert avant la séance.
 
-## Faits à traiter
-- Dimanche 11 octobre à 10 h 15 : trois courts métrages de Chaplin au piano par Didier Martel à la Halle Tony Garnier, ouverture des portes à 9 h 15, fin annoncée à midi ; 12 € adulte et 8 € moins de 14 ans (10 € accrédité). Petit-déjeuner et animations annoncés par l'organisateur.
-- Mercredi 14 octobre à 14 h 30 : conférence « La mécanique du rire chez Charlie Chaplin » aux salons de l'Hôtel de Ville, dès 5 ans, entrée gratuite mais inscription obligatoire dans la limite des places ; goûter offert après.
-- Samedi 17 octobre à 14 h 30 : ciné-concert Laurel & Hardy au Pathé Bellecour, programme de quatre courts métrages (1 h 15) accompagné au piano par Fred Escoffier. Vérifier le tarif applicable à cette séance spéciale sur la billetterie avant rédaction.
-- Distinguer clairement les lieux et les conditions de réservation ; ne pas inventer un âge minimum pour les séances sans indication officielle ; rappeler les règles de billets, l'accréditation gratuite pour les moins de 26 ans et les modalités réelles de retrait si utile.
-- Contenu temporaire pur : `eventEndsAt: 2026-10-18`.
+La séance commence à **10 h 15 à la Halle Tony Garnier**. Les tarifs annoncés sont de **12 € pour un adulte**, **10 € pour une personne accréditée** et **8 € pour un enfant de moins de 14 ans**.
 
-## Sources de départ
-Pages officielles Festival Lumière du ciné-concert Chaplin, de la conférence familiale, du samedi 17 octobre et de la billetterie. Vérifier les changements d'horaire et les réservations au moment de rédiger.
+C'est le choix le plus simple si l'on cherche une sortie pensée explicitement comme un grand rendez-vous familial, avec écran géant et accompagnement musical en direct.
 
-## Affiliation
-L'action principale est la billetterie officielle du festival, sans partenaire de billetterie exacte confirmé. Piste hébergement pour un séjour : fiche Booking.com du MEININGER Hotel Lyon Centre Berthelot, rue Professeur-Zimmermann, chambres familiales 4 à 6 places, cuisine commune ; vérifier les dates et ne promettre aucune disponibilité.
+## La conférence Chaplin du 14 octobre est complète
 
-## Continuations internes
-La page Fam Space « Mon Premier Festival 2026 à Paris » couvre un autre festival dans une autre ville : ne pas en reprendre les programmes. La destination « Lyon en famille » (/destinations/auvergne-rhone-alpes/rhone/lyon/) peut prendre le relais pour préparer un séjour ; l'article « Mini World Lyon en famille » peut être proposé seulement si une seconde sortie correspond au programme.
+La Master Class Famille [« La mécanique du rire chez Charlie Chaplin »](https://www.festival-lumiere.org/la-mecanique-du-rire-chez-charlie-chaplin) est prévue **mercredi 14 octobre à 14 h 30**, dans les salons de l'Hôtel de Ville de Lyon. Elle est annoncée **à partir de 5 ans**, gratuite, avec un goûter offert aux enfants.
+
+Mais il ne faut plus la présenter comme une option immédiatement réservable : le [formulaire officiel de la Ville de Lyon](https://inscriptions.lyon.fr/inscriptionSimple/InscriptionSimple/jsp/site/Portal.jsp?id_form=2823&page=appointment&view=getAppointmentFormFirstStep) indique actuellement **« Complet »** pour le créneau de 14 h 30 à 16 h 30. Vérifiez à nouveau le formulaire avant de vous déplacer au cas où des places seraient remises à disposition.
+
+## Laurel & Hardy le 17 octobre : plus court et en salle de cinéma
+
+Le [programme Laurel & Hardy](https://www.festival-lumiere.org/samedi-17-octobre-2026) commence **samedi 17 octobre à 14 h 30 au Pathé Bellecour**. Quatre courts métrages sont réunis sur **1 h 15**, avec accompagnement au piano par Fred Escoffier.
+
+La billetterie classe ces ciné-concerts au piano parmi les séances spéciales : **10 € au tarif normal**, **7 € pour les accrédités** et **6 € pour les moins de 14 ans**. Le programme officiel le présente comme une découverte du burlesque à faire en famille, sans indiquer d'âge minimum pour cette séance.
+
+Par rapport à Chaplin, c'est une formule plus courte et moins chère, dans une salle de cinéma classique plutôt que dans la grande Halle Tony Garnier.
+
+## Quel billet choisir ?
+
+Pour un enfant de moins de 14 ans, utilisez directement le **tarif enfant** : 8 € pour Chaplin et 6 € pour Laurel & Hardy.
+
+L'[accréditation Lumière 2026](https://www.festival-lumiere.org/accreditations-2026) est gratuite pour les moins de 26 ans, sur justificatif. Elle donne accès aux tarifs accrédités sur les séances concernées. Pour un enfant de moins de 14 ans, le tarif enfant reste toutefois plus avantageux sur ces deux ciné-concerts.
+
+Le festival recommande d'acheter les billets à l'avance. Les places sont garanties jusqu'à **15 minutes avant le début de la séance**. Un billet acheté en ligne peut être présenté sur smartphone ; il n'est pas nécessaire de le retirer en salle.
+
+## Si vous restez à Lyon
+
+Pour une famille qui transforme le festival en week-end, le [MEININGER Hotel Lyon Centre Berthelot](https://www.booking.com/hotel/fr/meininger-lyon-centre-berthelot.fr.html) propose des chambres familiales et une cuisine commune. Vérifiez les disponibilités et les conditions pour vos dates avant de réserver.
+
+Pour ajouter une autre sortie au séjour sans refaire un programme complet de Lyon, notre guide [Mini World Lyon en famille](https://www.fam-space.fr/articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/) détaille les tarifs, la durée de visite et les conseils pratiques.
 
 ## Catalogue éditorial compact pour le maillage et les doublons
 
