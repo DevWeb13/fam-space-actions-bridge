@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les faits utilisés sont liés naturellement dans le corps et présents dans `sources`. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Monument jeu d’enfant 2026 à Aigues-Mortes : mini-sacre ou escape game avec les enfants ?"
-subtitle: Les 17 et 18 octobre, deux activités sans supplément à choisir selon l’âge, la réservation et le rythme de la famille
-summary: À Aigues-Mortes, Monument jeu d’enfant propose un mini-sacre dès 4 ans sur réservation et un escape game dès 6 ans en continu. Horaires, tarifs, poussette et choix pratique.
+title: "Monument jeu d’enfant à Aigues-Mortes : mini-sacre et escape game les 17 et 18 octobre 2026"
+subtitle: Deux activités autour de Saint Louis à choisir selon l’âge, la réservation et le rythme des enfants
+summary: Aux tours et remparts d’Aigues-Mortes, les familles peuvent choisir entre une visite-atelier dès 4 ans sur réservation et un escape game dès 6 ans en accès libre selon les places.
 category: evenements
 location:
   city: Aigues-Mortes
@@ -74,15 +79,22 @@ keywords:
 sources:
   - title: Tours et remparts d’Aigues-Mortes — Monument jeu d’enfant 2026
     url: https://www.aigues-mortes-monument.fr/agenda/monument-jeu-d-enfant-2026-800-ans-de-sacre-sur-les-pas-de-saint-louis
+    accessedAt: 2026-10-10
   - title: Tours et remparts d’Aigues-Mortes — Mon mini sacre
     url: https://www.aigues-mortes-monument.fr/agenda/monument-jeu-d-enfant-2026-800-ans-de-sacre-sur-les-pas-de-saint-louis/mon-mini-sacre
+    accessedAt: 2026-10-10
   - title: Tours et remparts d’Aigues-Mortes — Escape Game La couronne perdue de Saint-Louis
     url: https://www.aigues-mortes-monument.fr/agenda/monument-jeu-d-enfant-2026-800-ans-de-sacre-sur-les-pas-de-saint-louis/escape-game-la-couronne-perdue-de-saint-louis
+    accessedAt: 2026-10-10
   - title: Tours et remparts d’Aigues-Mortes — Informations pratiques
     url: https://www.aigues-mortes-monument.fr/visiter/informations-pratiques
+    accessedAt: 2026-10-10
+  - title: Tours et remparts d’Aigues-Mortes — En famille
+    url: https://www.aigues-mortes-monument.fr/visiter/en-famille
+    accessedAt: 2026-10-10
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: monument-jeu-d-enfant-2026-a-aigues-mortes-mini-sacre-ou-escape-game-avec-les-enfants
   decision: Choisir l’activité adaptée à l’âge et au rythme des enfants, savoir laquelle exige une réservation et anticiper la contrainte poussette avant de venir aux remparts les 17 ou 18 octobre.
@@ -92,32 +104,66 @@ radar:
     dataThrough: 2026-10-06
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Tours et remparts d’Aigues-Mortes — Monument jeu d’enfant 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-10-18
 ---
 
-## Mission retenue
-Monument jeu d’enfant 2026 aux tours et remparts d’Aigues-Mortes, les 17 et 18 octobre : deux activités autour des 800 ans du sacre de Saint Louis, avec des conditions très différentes selon l’âge.
+Les **17 et 18 octobre 2026**, les tours et remparts d’Aigues-Mortes participent à **Monument jeu d’enfant** avec deux propositions autour des 800 ans du sacre de Saint Louis. Elles ne s’adressent pas exactement aux mêmes enfants : **« Mon mini sacre »** est une visite contée avec atelier créatif pour les 4-10 ans, tandis que **« La couronne perdue de Saint-Louis »** est un escape game conseillé dès 6 ans.
 
-## Pourquoi cette mission
-L’événement est imminent et les informations officielles permettent une décision concrète. Le refresh Aquarium de La Réunion reste `uncertain` et le site officiel annonce toujours une fermeture sans date de réouverture. L’expansion autour de la Carte Avantage Adulte SNCF est distincte mais moins urgente. Aucun article Fam Space ne traite ce programme local ; le guide national Monument jeu d’enfant couvre seulement la méthode de choix et la page Aigues-Mortes existante traite l’hébergement.
+Le choix dépend surtout de trois points : l’âge des enfants, l’envie de suivre un horaire fixe et la possibilité de réserver à l’avance. Les deux activités sont proposées **sans supplément au droit d’entrée du monument**.
 
-## Décision du lecteur
-Choisir entre le mini-sacre et l’escape game selon l’âge, la réservation et le rythme des enfants, puis préparer l’entrée et la poussette sans mauvaise surprise.
+## Mon mini sacre : pour les 4-10 ans qui aiment écouter puis créer
 
-## Faits à traiter
-- « Mon mini sacre » : les 17 et 18 octobre à 14 h, 1 h, pour les 4-10 ans, accompagnement adulte obligatoire, tenue adaptée à la peinture, réservation en ligne obligatoire.
-- Escape game « La couronne perdue de Saint-Louis » : les 17 et 18 octobre, départs en continu de 10 h à 16 h selon les places, dès 6 ans, adulte accompagnant obligatoire.
-- Les deux activités sont sans supplément du droit d’entrée ; tarif adulte saison basse 9 €, principales gratuités dont les moins de 18 ans et certains 18-25 ans.
-- Le circuit des remparts n’est pas accessible aux poussettes : elles doivent être déposées à l’accueil. Un espace change bébé est disponible dans les toilettes.
-- Ne pas refaire le guide national : rester centré sur le choix local entre les deux activités et les contraintes propres au site.
+La visite contée [« Mon mini sacre »](https://www.aigues-mortes-monument.fr/agenda/monument-jeu-d-enfant-2026-800-ans-de-sacre-sur-les-pas-de-saint-louis/mon-mini-sacre) a lieu **samedi 17 et dimanche 18 octobre à 14 h**. Elle dure environ **1 heure**.
 
-## Sources de départ
-Pages officielles des tours et remparts d’Aigues-Mortes pour l’événement, les deux activités et les informations pratiques.
+Le parcours raconte le sacre de Saint Louis et conduit les familles sur ses traces dans les remparts. La visite se termine par un atelier pendant lequel chaque enfant fabrique sa propre couronne.
 
-## Affiliation
-Aucune billetterie partenaire exacte vérifiée ; utiliser la réservation officielle quand nécessaire. Pour un séjour, La Maison de Famille sur Booking.com est une piste exacte : maison intra-muros avec quatre chambres, annoncée pour huit personnes et un bébé.
+Le monument recommande cette activité aux **4-10 ans**. Un adulte doit accompagner les enfants et il faut prévoir une tenue qui ne craint pas la peinture.
 
-## Continuations internes
-Le guide Fam Space « Monument jeu d’enfant 2026 : comment choisir une visite adaptée à l’âge des enfants » prend le relais pour comparer les monuments au niveau national. « Où dormir à Aigues-Mortes pour visiter à pied avec des enfants ? » prend le relais pour le choix du secteur, la gare et le stationnement.
+Surtout, la jauge est limitée : **la réservation en ligne est obligatoire**. C’est donc le meilleur choix si votre enfant aime les histoires et les activités manuelles, à condition de pouvoir vous engager sur le créneau de 14 h.
+
+## L’escape game : plus souple pour les enfants dès 6 ans
+
+L’[escape game « La couronne perdue de Saint-Louis »](https://www.aigues-mortes-monument.fr/agenda/monument-jeu-d-enfant-2026-800-ans-de-sacre-sur-les-pas-de-saint-louis/escape-game-la-couronne-perdue-de-saint-louis) transforme la disparition de la couronne royale en enquête familiale.
+
+Les parties sont proposées **en continu de 10 h à 16 h**, les 17 et 18 octobre, **selon les places disponibles**. L’activité est annoncée dès **6 ans** et un adulte doit là aussi accompagner les enfants.
+
+La page officielle la présente en accès libre dans la limite des places. Ce format est donc plus souple qu’un rendez-vous unique à 14 h, mais il ne garantit pas pour autant une place immédiate au moment où vous arrivez.
+
+Pour une famille avec des enfants qui aiment chercher des indices, résoudre des énigmes et avancer ensemble, c’est l’option la plus naturelle. Avec un enfant de 4 ou 5 ans, le mini-sacre reste en revanche le format officiellement adapté.
+
+## Combien coûte l’après-midi ?
+
+Les deux animations sont **sans supplément** : vous payez uniquement le droit d’entrée applicable aux tours et remparts.
+
+Du 1er septembre au 30 avril, le [tarif individuel officiel](https://www.aigues-mortes-monument.fr/visiter/informations-pratiques) est de **9 €**. Les moins de 18 ans bénéficient de la gratuité, ainsi que les 18-25 ans inclus ressortissants de l’Union européenne ou résidents réguliers non européens en France, parmi les principales catégories gratuites.
+
+La page de l’événement résume également la manifestation comme gratuite pour les moins de 26 ans. Pour un jeune adulte, vérifiez simplement que votre situation correspond bien aux conditions détaillées de gratuité du monument.
+
+Si vous choisissez le mini-sacre, l’entrée dans le monument ne remplace pas la réservation de l’activité : pensez à réserver le créneau en amont.
+
+## Avec une poussette, il faut prévoir de la laisser à l’accueil
+
+C’est le point pratique à connaître avant de venir avec un bébé ou un jeune enfant : **le circuit de visite des remparts n’est pas accessible aux poussettes**. Le monument demande de les déposer à l’accueil.
+
+Pour une famille concernée, un porte-bébé peut donc être plus pratique pour parcourir le site. Le monument indique aussi qu’un **espace change bébé** est disponible dans les toilettes et qu’un espace détente ombragé se trouve dans la cour d’honneur.
+
+Les tours et remparts ouvrent à **10 h** et ferment à **17 h 30** à cette période. Le dernier accès au monument intervient 45 minutes avant la fermeture, mais les animations Monument jeu d’enfant se terminent plus tôt : l’escape game annonce ses derniers départs au plus tard à 16 h.
+
+## Mini-sacre ou escape game : lequel choisir ?
+
+Pour un enfant de **4 ou 5 ans**, le choix est simple : le mini-sacre est la seule des deux activités annoncée pour cet âge.
+
+À partir de **6 ans**, regardez plutôt le tempérament de l’enfant. Le mini-sacre combine récit et création manuelle dans un format d’une heure ; l’escape game mise davantage sur la recherche d’indices et l’action collective.
+
+Le deuxième critère est votre organisation. Le mini-sacre impose d’être présent pour **14 h avec une réservation**. L’escape game permet une arrivée plus souple entre 10 h et 16 h, mais reste soumis aux places disponibles.
+
+Si vous hésitez encore avec d’autres monuments participant au même week-end, notre guide [Monument jeu d’enfant 2026 : comment choisir une visite adaptée à l’âge des enfants](https://www.fam-space.fr/articles/evenements/monument-jeu-d-enfant-2026-comment-choisir-une-visite-adaptee-a-l-age-des-enfants/) aide à comparer les formats sans reprendre ici tout le programme national.
+
+## Si vous restez dormir à Aigues-Mortes
+
+Pour prolonger la sortie sur un week-end, [La Maison de Famille à Aigues-Mortes](https://www.booking.com/hotel/fr/la-maison-de-famille-aigues-mortes.fr.html) est une maison de quatre chambres annoncée pour accueillir jusqu’à huit personnes et un bébé. Vérifiez les disponibilités, les conditions et le prix pour vos dates avant de réserver.
+
+Pour choisir un secteur selon la gare, la voiture et le stationnement, consultez plutôt notre guide [Où dormir à Aigues-Mortes pour visiter à pied avec des enfants ?](https://www.fam-space.fr/articles/voyages/ou-dormir-a-aigues-mortes-pour-visiter-a-pied-avec-des-enfants/), qui détaille déjà ces questions.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -125,23 +171,23 @@ Le guide Fam Space « Monument jeu d’enfant 2026 : comment choisir une visite 
 
 - /articles/voyages/ou-dormir-a-aigues-mortes-pour-visiter-a-pied-avec-des-enfants/ | Où dormir à Aigues-Mortes pour visiter à pied avec des enfants? | voyages | Aigues-Mortes, Gard, Occitanie
 - /articles/sorties/bambouseraie-avec-de-jeunes-enfants-poussette-ou-balade-aerienne/ | Bambouseraie avec de jeunes enfants: poussette ou balade aérienne? | sorties | Générargues, Gard, Occitanie
-- /articles/parentalite/premier-week-end-a-nimes-avec-un-bebe-ou-dormir-et-quoi-faire/ | Nîmes avec un bébé: Romanité, Jardins de la Fontaine et où dormir | parentalite | Nîmes, Gard, Occitanie
-- /articles/evenements/contes-et-histoires-2026-comment-choisir-un-monument-a-visiter-avec-les-enfants/ | Contes et Histoires 2026: comment choisir un monument à visiter avec les enfants | evenements
-- /articles/evenements/monument-jeu-d-enfant-2026-a-la-villa-cavrois-quelle-activite-choisir-selon-l-age/ | Monument jeu d'enfant 2026 à la Villa Cavrois: énigme, mosaïque ou linogravure? | evenements | Croix, Nord, Hauts-de-France
 - /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/ | Monument jeu d'enfant 2026 au château de Vincennes: quel atelier choisir ? | evenements | Vincennes, Val-de-Marne, Île-de-France
 - /articles/evenements/monument-jeu-d-enfant-2026-comment-choisir-une-visite-adaptee-a-l-age-des-enfants/ | Monument jeu d'enfant 2026: comment choisir une visite adaptée à l'âge des enfants | evenements
-- /articles/activites/escape-game-du-chateau-de-la-roche-en-famille-alerte-submersion-des-10-ans/ | Escape game du Château de la Roche en famille: Alerte Submersion dès 10 ans | activites | Saint-Priest-la-Roche, Loire, Auvergne-Rhône-Alpes
+- /articles/parentalite/premier-week-end-a-nimes-avec-un-bebe-ou-dormir-et-quoi-faire/ | Nîmes avec un bébé: Romanité, Jardins de la Fontaine et où dormir | parentalite | Nîmes, Gard, Occitanie
+- /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | Monument Jeu d’Enfant au château d’Angers: dragons et ateliers le 17 octobre 2026 | evenements | Angers, Maine-et-Loire, Pays de la Loire
+- /articles/sorties/gardiens-temps-villarceaux-famille-2026/ | Les gardiens du temps à Villarceaux: une dernière visite-jeu le 24 octobre | sorties | Chaussy, Val-d'Oise, Île-de-France
+- /articles/evenements/contes-et-histoires-2026-comment-choisir-un-monument-a-visiter-avec-les-enfants/ | Contes et Histoires 2026: comment choisir un monument à visiter avec les enfants | evenements
 - /articles/evenements/foire-d-automne-de-saint-jean-du-gard-2026-en-famille-animations-et-conseils/ | Foire d'Automne de Saint-Jean-du-Gard 2026 en famille: animations et conseils | evenements | Saint-Jean-du-Gard, Gard, Occitanie
 - /articles/bons-plans/pont-du-gard-a-petit-budget-comment-visiter-sans-payer-plus-que-necessaire/ | Pont du Gard à petit budget: comment visiter sans payer plus que nécessaire | bons-plans | Vers-Pont-du-Gard, Gard, Occitanie
 - /articles/sorties/le-grau-du-roi-en-famille-3-activites-a-reserver-en-2026/ | Le Grau-du-Roi en famille: 3 activités à réserver en 2026 | sorties | Le Grau-du-Roi, Gard, Occitanie
 - /articles/sorties/tous-en-vadrouille-nimes-2026-famille/ | Tous en vadrouille à Nîmes: une visite-jeu en famille jusqu’au 23 août 2026 | sorties | Nîmes, Gard, Occitanie
-- /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | Monument Jeu d’Enfant au château d’Angers: dragons et ateliers le 17 octobre 2026 | evenements | Angers, Maine-et-Loire, Pays de la Loire
 - /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/noel-2026-au-chateau-de-grignan-dates-tarifs-et-visite-en-famille/ | Noël 2026 au château de Grignan: dates, tarifs et visite en famille | evenements | Grignan, Drôme, Auvergne-Rhône-Alpes
 - /articles/evenements/dia-de-los-muertos-2026-au-jardin-d-acclimatation-billets-et-animations-en-famille/ | Día de los Muertos 2026 au Jardin d’Acclimatation: programme, billets et tailles | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | Mondial de l’Auto 2026 avec des enfants: billets, horaires et créneaux | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/fete-de-la-mer-2026-a-marseille-avec-des-enfants-quelle-escale-choisir-le-18-octobre/ | Fête de la mer 2026 à Marseille avec des enfants: quelle escale choisir? | evenements | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur
 - /articles/evenements/marche-de-noel-de-lille-2026-en-famille-village-grande-roue-et-infos-pratiques/ | Marché de Noël de Lille 2026 en famille: village, Grande Roue et infos pratiques | evenements | Lille, Nord, Hauts-de-France
+- /articles/evenements/monument-jeu-d-enfant-2026-a-la-villa-cavrois-quelle-activite-choisir-selon-l-age/ | Monument jeu d'enfant 2026 à la Villa Cavrois: énigme, mosaïque ou linogravure? | evenements | Croix, Nord, Hauts-de-France
 - /articles/evenements/mucem-a-la-toussaint-2026-quelle-activite-en-ribambelle-choisir-selon-l-age/ | Mucem à la Toussaint 2026: le programme En Ribambelle avec des enfants | evenements | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur
 - /articles/evenements/fete-des-rues-aux-enfants-2026-a-paris-ou-aller-selon-l-arrondissement/ | Fête des rues aux enfants 2026 à Paris: où aller selon l'arrondissement? | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/marche-de-noel-de-cusset-2026-en-famille-quel-jour-choisir/ | Marché de Noël de Cusset 2026 en famille: quel jour choisir? | evenements | Cusset, Allier, Auvergne-Rhône-Alpes
