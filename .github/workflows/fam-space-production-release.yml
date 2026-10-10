@@ -165,10 +165,23 @@ jobs:
         working-directory: fam-space
         shell: bash
         run: |
+          set +e
           bash .github/scripts/render-radar-runtime.sh \
             ../bridge/radar-gsc-snapshot.json \
             ../bridge/radar-catalog.json \
-            "$RUNNER_TEMP/radar-runtime.md"
+            "$RUNNER_TEMP/radar-runtime.md" \
+            >"$RUNNER_TEMP/radar-runtime-render.log" 2>&1
+          status=$?
+          cat "$RUNNER_TEMP/radar-runtime-render.log"
+          exit "$status"
+
+      - name: Conserver le diagnostic runtime Radar
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: radar-runtime-diagnostic
+          path: ${{ runner.temp }}/radar-runtime-render.log
+          retention-days: 1
 
       - name: Synchroniser le runtime Radar
         working-directory: bridge
