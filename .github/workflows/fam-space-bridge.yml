@@ -66,6 +66,10 @@ jobs:
             branch="$MANUAL_BRANCH"
           else
             signal="$(tail -n 1 ../bridge/bridge-request.txt | tr -d '\r\n')"
+            if [ "$signal" = "# Ready" ]; then
+              echo "Aucun signal bridge à traiter."
+              exit 0
+            fi
             if [[ "$signal" == *"|"* ]]; then
               IFS='|' read -r branch requested_commit request_nonce <<< "$signal"
             else
