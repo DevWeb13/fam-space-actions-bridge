@@ -63,7 +63,7 @@ jobs:
           internal_only=true
           while IFS= read -r path; do
             case "$path" in
-              content-data/publication-workflow.md|content-data/publication-phase.json|content-data/publication-rotation.json|content-data/publication-category-rotation.json|content-data/radar-workflow.md|content-data/radar-phases/01-detect.md)
+              content-data/publication-workflow.md|content-data/publication-phase.json|content-data/publication-rotation.json|content-data/publication-category-rotation.json|content-data/radar-workflow.md|content-data/radar-phases/01-detect.md|.github/scripts/process-publication-request.sh|.github/scripts/render-radar-runtime.sh|scripts/process-publication-request.mjs|scripts/render-publication-runtime.mjs|scripts/render-radar-runtime.mjs)
                 ;;
               *)
                 internal_only=false
