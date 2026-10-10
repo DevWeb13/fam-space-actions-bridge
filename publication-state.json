@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 3,
+  "activeBranch": "automation/publication-20261010-1602-reemploi-chartres",
+  "lastProcessedCommit": "688d549a933e45a20668d9c6678baeb0106be55d"
 }
