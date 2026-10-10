@@ -81,7 +81,7 @@ jobs:
           fi
 
       - name: Enregistrer l'état et remettre l'entrée à zéro
-        if: always() && steps.ready.outputs.skip != 'true' && steps.process.outcome == 'success'
+        if: always() && steps.ready.outputs.skip != 'true'
         working-directory: bridge
         shell: bash
         env:
@@ -94,15 +94,25 @@ jobs:
           for attempt in 1 2 3; do
             git fetch origin main
             git checkout -B publication-request-state origin/main
-            cp "$RUNNER_TEMP/publication-state.json" publication-state.json
-            cp "$RUNNER_TEMP/publication-runtime.md" publication-runtime.md
-            if [ "$BRIDGE_REQUEST_CHANGED" = "true" ]; then
+            if [ -f "$RUNNER_TEMP/publication-state.json" ]; then
+              cp "$RUNNER_TEMP/publication-state.json" publication-state.json
+            fi
+            if [ -f "$RUNNER_TEMP/publication-runtime.md" ]; then
+              cp "$RUNNER_TEMP/publication-runtime.md" publication-runtime.md
+            fi
+            if [ "$BRIDGE_REQUEST_CHANGED" = "true" ] && [ -f "$RUNNER_TEMP/bridge-request.txt" ]; then
               cp "$RUNNER_TEMP/bridge-request.txt" bridge-request.txt
             fi
             printf '# Ready\n' > publication-request.md
 
-            git add publication-state.json publication-runtime.md publication-request.md
-            if [ "$BRIDGE_REQUEST_CHANGED" = "true" ]; then
+            git add publication-request.md
+            if [ -f "$RUNNER_TEMP/publication-state.json" ]; then
+              git add publication-state.json
+            fi
+            if [ -f "$RUNNER_TEMP/publication-runtime.md" ]; then
+              git add publication-runtime.md
+            fi
+            if [ "$BRIDGE_REQUEST_CHANGED" = "true" ] && [ -f "$RUNNER_TEMP/bridge-request.txt" ]; then
               git add bridge-request.txt
             fi
             if git diff --cached --quiet; then
