@@ -161,6 +161,41 @@ jobs:
           echo "Échec de synchronisation du catalogue Radar après 3 tentatives." >&2
           exit 1
 
+      - name: Préparer le runtime Radar depuis le catalogue courant
+        working-directory: fam-space
+        shell: bash
+        run: |
+          bash .github/scripts/render-radar-runtime.sh \
+            ../bridge/radar-gsc-snapshot.json \
+            ../bridge/radar-catalog.json \
+            "$RUNNER_TEMP/radar-runtime.md"
+
+      - name: Synchroniser le runtime Radar
+        working-directory: bridge
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git checkout -B radar-runtime-after-catalog origin/main
+            cp "$RUNNER_TEMP/radar-runtime.md" radar-runtime.md
+            git add radar-runtime.md
+            if git diff --cached --quiet; then
+              echo "Runtime Radar inchangé."
+              exit 0
+            fi
+            git commit -m "state: refresh Radar runtime from catalog"
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+          done
+
+          echo "Impossible de synchroniser le runtime Radar après 3 tentatives." >&2
+          exit 1
+
   facebook:
     needs: release
     if: ${{ needs.release.outputs.advanced == 'true' }}
