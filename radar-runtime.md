@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les faits utilisés sont liés naturellement dans le corps et présents dans `sources`. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,39 +60,44 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Toussaint 2026 à Vaux-le-Vicomte: lampe torche ou Carnaval des Animaux avec les enfants?"
-subtitle: Deux animations à des dates différentes, selon l'âge des enfants, le billet et le créneau à réserver
-summary: Du 18 au 31 octobre 2026, Vaux-le-Vicomte propose une exploration à la lampe torche dès 8 ans et le Carnaval des Animaux pour les 4-6 ans. Dates, prix, réservation et alternatives pour les autres âges.
+title: "Toussaint 2026 à Vaux-le-Vicomte: deux animations à choisir selon l'âge"
+subtitle: "Exploration à la lampe torche dès 8 ans ou Carnaval des Animaux pour les 4-6 ans: dates, billets et accès"
+summary: "Du 18 au 31 octobre 2026, Vaux-le-Vicomte propose deux animations selon l'âge des enfants. Attention: le billet Carnaval à 8 € s'ajoute à l'entrée du domaine, contrairement à l'exploration à 23,50 €."
 category: evenements
 location:
   city: Maincy
   department: Seine-et-Marne
   region: Île-de-France
 keywords:
-  - Vaux-le-Vicomte Toussaint 2026
-  - Vaux-le-Vicomte exploration lampe torche enfants
-  - Carnaval des Animaux Vaux-le-Vicomte 2026
-  - Toussaint 2026 château Seine-et-Marne activités familles
+  - Toussaint 2026 Vaux-le-Vicomte
+  - exploration lampe torche Vaux-le-Vicomte enfants
+  - Carnaval des Animaux Vaux-le-Vicomte billets
+  - vacances Toussaint château Maincy famille
 sources:
-  - title: Château de Vaux-le-Vicomte — Les vacances de la Toussaint 2026
+  - title: Château de Vaux-le-Vicomte — Programme Toussaint 2026
     url: https://vaux-le-vicomte.com/event/vos-vacances-de-la-toussaint-a-vaux-le-vicomte/
-  - title: Château de Vaux-le-Vicomte — Conseils de visite de la Toussaint en famille
+    accessedAt: 2026-10-11
+  - title: Château de Vaux-le-Vicomte — Conseils de visite pendant les vacances
     url: https://vaux-le-vicomte.com/actualites/nos-conseils-de-visite-la-toussaint-en-famille-a-vaux-le-vicomte/
-  - title: Château de Vaux-le-Vicomte — Informations pratiques, tarifs et accès
+    accessedAt: 2026-10-11
+  - title: Billetterie officielle — Exploration nocturne à la lampe torche
+    url: https://billetterie-vaux-le-vicomte.recreatex.be/Exhibitions/Register?ID=bfe92f5d-5a77-f011-959c-8aa9bba9d9b4
+    accessedAt: 2026-10-11
+  - title: Billetterie officielle — Le Carnaval des Animaux
+    url: https://billetterie-vaux-le-vicomte.recreatex.be/Exhibitions/Register?ID=199523b2-e900-f011-959c-8aa9bba9d9b4
+    accessedAt: 2026-10-11
+  - title: Château de Vaux-le-Vicomte — Informations pratiques
     url: https://vaux-le-vicomte.com/preparer-sa-visite-au-chateau-de-vaux-le-vicomte/informations-pratiques/
+    accessedAt: 2026-10-11
+  - title: Château de Vaux-le-Vicomte — Navettes saison 2026
+    url: https://vaux-le-vicomte.com/wp-content/uploads/2026/04/Navettes-VF-2026.pdf
+    accessedAt: 2026-10-11
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: toussaint-2026-a-vaux-le-vicomte-lampe-torche-ou-carnaval-des-animaux-avec-les-enfants
   decision: Identifier l'animation réellement adaptée à l'âge des enfants et aux dates du séjour, connaître le coût et ce que couvre le billet, puis réserver le bon créneau sans confondre les deux expériences.
@@ -90,84 +107,96 @@ radar:
     dataThrough: 2026-10-08
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Château de Vaux-le-Vicomte — Les vacances de la Toussaint 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-10-31
 ---
 
-## Mission retenue
+Du **18 au 31 octobre 2026**, le château de Vaux-le-Vicomte, à Maincy en Seine-et-Marne, propose deux animations différentes pour les vacances de la Toussaint. **L'Exploration à la lampe torche** s'adresse aux enfants dès 8 ans, tandis que **le Carnaval des Animaux** est conçu pour les 4-6 ans.
 
-Préparer une page événementielle sur les **vacances de la Toussaint 2026 au château de Vaux-le-Vicomte**, à Maincy, centrée sur deux expériences différentes: **l'Exploration à la lampe torche**, dès 8 ans, et **le Carnaval des Animaux**, de 4 à 6 ans. Les journées et les créneaux ne sont pas interchangeables. Le programme spécial va du **18 au 31 octobre**, tandis que le 17 octobre et le 1er novembre relèvent des activités permanentes.
+Au-delà de l'âge, la différence importante se trouve dans le billet: **23,50 € par personne, visite du domaine comprise** pour l'exploration, contre **8 € par enfant, en plus du billet d'entrée au domaine** pour le Carnaval. Les deux activités nécessitent une réservation en ligne.
 
-## Pourquoi cette mission
+## Exploration à la lampe torche: dès 8 ans, en fin de journée
 
-L'événement approche, son programme détaillé et ses réservations sont publiés, et aucun article Fam Space du catalogue fourni ne couvre Vaux-le-Vicomte ni ces deux animations. Les articles Toussaint déjà présents concernent d'autres lieux: ils ne constituent pas des doublons. L'exploration Vaux répond à un besoin de choix immédiat selon l'âge, la date et le budget.
+Cape sur les épaules et lampe en main, les participants suivent un médiateur dans les salons du château plongés dans la pénombre. Le parcours mêle observation, anecdotes et énigmes autour de l'histoire de Vaux-le-Vicomte.
 
-**Refresh comparé:** l'Aquarium de La Réunion connaît une baisse d'impressions avec un signal GSC `uncertain`; l'article existant décrit correctement la fermeture depuis le 17 août et la divergence entre fermeture annoncée jusqu'au 31 décembre et absence de date ferme de réouverture. Le site officiel de l'aquarium n'annonce toujours pas de réouverture: aucun ajout éditorial substantiel n'est justifié.
+D'après le [programme officiel de la Toussaint](https://vaux-le-vicomte.com/event/vos-vacances-de-la-toussaint-a-vaux-le-vicomte/), les séances sont prévues les **18, 20, 21, 23, 25, 26, 27, 28 et 30 octobre**, à **17 h, 17 h 30 et 18 h 15**.
 
-**Expansion comparée:** la page forte sur les transports parisiens en famille couvre déjà les tickets, les forfaits et les dessertes aéroportuaires, avec une mise à jour récente. Une intention complémentaire serait possible, mais moins urgente et moins distincte aujourd'hui que le programme daté de Vaux-le-Vicomte.
+L'activité dure **1 heure**, se déroule en français et accueille au maximum **30 personnes par départ**. Elle est conseillée **à partir de 8 ans**. Il faut se présenter **15 minutes avant le créneau choisi** à l'entrée du château.
 
-## Décision du lecteur
+Le [billet officiel Exploration à la lampe torche](https://billetterie-vaux-le-vicomte.recreatex.be/Exhibitions/Register?ID=bfe92f5d-5a77-f011-959c-8aa9bba9d9b4) coûte **23,50 € par adulte ou enfant**. Il comprend également la visite libre du château en journée, entre 10 h et 16 h, et l'accès aux jardins. **N'achetez donc pas une deuxième entrée de jour pour ce même visiteur.** À titre d'exemple, un adulte et un enfant de 8 ans paient **47 €** pour les deux expériences incluses.
 
-Permettre à une famille de choisir **une activité effectivement proposée le jour prévu, adaptée à l'âge des enfants et au budget**, puis de réserver sans confondre visite ordinaire, animation du matin et exploration tardive.
+## Carnaval des Animaux: une chasse aux détails pour les 4-6 ans
 
-## Faits à traiter
+Au cours du [Carnaval des Animaux](https://vaux-le-vicomte.com/actualites/nos-conseils-de-visite-la-toussaint-en-famille-a-vaux-le-vicomte/), une comédienne accompagne les enfants à travers le château. Vêtus d'une cape vénitienne, ils cherchent les animaux cachés dans les tableaux, les tapisseries et les sculptures.
 
-- **Exploration à la lampe torche:** les **18, 20, 21, 23, 25, 26, 27, 28 et 30 octobre**, départs à **17 h, 17 h 30 et 18 h 15**; **dès 8 ans**, environ **1 h**, en français, jauge de **30 personnes** par créneau. Se présenter **15 minutes avant** au vestibule du château.
-- Son billet coûte **23,50 € par personne**, avec **visite libre du château et du jardin en journée incluse**; réserver en ligne obligatoirement. Ne pas ajouter un billet ordinaire par automatisme.
-- **Carnaval des Animaux:** les **19, 22, 24, 29 et 31 octobre**, séances à **10 h 30 et 14 h 30**; **4-6 ans**, environ **1 h 15**, en français, réservation en ligne obligatoire, **8 € par enfant** et présence obligatoire d'un adulte **gratuit dans la limite d'un accompagnant par enfant**. Vérifier en phase 2 si d'autres entrées sont nécessaires pour visiter le reste du domaine, sans présumer que l'animation donne un billet journée à tous les accompagnants.
-- Pour les enfants qui n'ont pas l'âge d'une de ces animations, citer brièvement les alternatives **dès 6 ans**: parcours sonore immersif, Forêt Sonore et Mystère du Masque de Fer. **Location de costumes offerte dès 3 ans du 17 octobre au 1er novembre**. Réduire les détails sur ces parcours pour ne pas diluer la comparaison principale.
-- Le château ouvre à **10 h**, dernière entrée aux guichets à **17 h 30**. Les animations spéciales ne sont **pas accessibles aux personnes à mobilité réduite**. Vérifier et présenter les contraintes pratiques pour une famille, sans supposer une accessibilité ou un service bébé non mentionné.
-- Accès: **Maincy**, parking gratuit, train ligne R jusqu'à **Melun** puis navette sur réservation ou taxi. Vérifier les horaires de retour après les créneaux tardifs avant de conseiller le train; ne pas extrapoler les horaires d'autres saisons.
+Les séances ont lieu les **19, 22, 24, 29 et 31 octobre**, à **10 h 30 et 14 h 30**. La visite dure environ **1 h 15**, en français, et s'adresse aux enfants de **4 à 6 ans**. Le rendez-vous est fixé au vestibule du château, à environ **10 minutes à pied de l'entrée du domaine**.
 
-## Sources de départ
+La [billetterie officielle du Carnaval des Animaux](https://billetterie-vaux-le-vicomte.recreatex.be/Exhibitions/Register?ID=199523b2-e900-f011-959c-8aa9bba9d9b4) annonce **8 € par enfant**. Un adulte doit accompagner chaque enfant et sa participation à l'animation est gratuite, dans la limite d'un accompagnant par enfant.
 
-Pages officielles du château sur les vacances de Toussaint, le programme jour par jour, les tarifs et la réservation; page officielle « Informations pratiques » pour l'accès, les tarifs de visite ordinaire et les contraintes. Les pages de réservation des animations déterminent les créneaux disponibles, et non une page partenaire générique.
+**Attention au prix final:** le billet du Carnaval **ne comprend pas l'entrée au domaine**. Il faut ajouter pour chaque visiteur un billet « Château et jardin » ou « Jardin uniquement », y compris pour l'adulte accompagnateur. Aux [tarifs de visite de jour 2026](https://vaux-le-vicomte.com/preparer-sa-visite-au-chateau-de-vaux-le-vicomte/informations-pratiques/), l'entrée château et jardin coûte **18 € par adulte**, **14,50 € de 6 à 17 ans**, et est gratuite pour les **moins de 6 ans**. Vérifiez le total proposé au moment de réserver, et choisissez des créneaux distincts pour l'entrée et l'animation.
 
-## Affiliation
+Par exemple, pour un adulte au plein tarif et un enfant de 5 ans, comptez **26 €** avec la visite château et jardin et l'animation (18 € + 8 €). Pour un enfant de 6 ans, le total passe à **40,50 €** (18 € + 14,50 € + 8 €), avant toute éventuelle option.
 
-Billetterie du château pour les deux animations: **aucune billetterie partenaire exacte vérifiée**, donc ne pas concurrencer le billet officiel par un billet ordinaire Tiqets/GetYourGuide. Si la famille transforme cette visite en week-end, l'**ibis Styles Melun à Rubelles**, présent sur Booking.com, propose notamment une suite avec lit double et lits jumeaux ainsi qu'un parking gratuit. Ne pas promettre un tarif ni une chambre disponibles aux dates choisies.
+## Et si les enfants n'ont pas l'âge requis?
 
-## Continuations internes
+Le château propose d'autres expériences, sans les confondre avec ces deux animations à réserver. Dès **6 ans**, la **Forêt Sonore**, qui fait écouter des fables de La Fontaine parmi les arbres, et le parcours **Mystère du Masque de Fer** sont annoncés sans supplément au billet d'entrée. Le **Parcours sonore immersif** dans le château propose également une version jeunesse dès 6 ans.
 
-Ne pas répéter les programmes Toussaint d'autres monuments. Si une famille compare les châteaux et animations d'automne, l'article Fam Space **Halloween 2026 au château de Chantilly** peut prolonger la lecture, mais ne traite pas Vaux-le-Vicomte. Pour une autre sortie en Seine-et-Marne pendant un séjour, **Parrot World en famille** constitue une piste distincte; ne pas la présenter comme une activité du château.
+La **location de costumes est offerte dès 3 ans du 17 octobre au 1er novembre**. Les **17 octobre et 1er novembre**, il n'y a pas de séance spéciale des deux animations présentées ci-dessus: le château propose ses activités permanentes.
+
+Pour comparer avec une autre sortie de château pendant les vacances, notre article [Halloween 2026 au château de Chantilly](https://www.fam-space.fr/articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/) présente un programme différent, dans l'Oise.
+
+## Réservation, poussette et accès: ce qui change l'organisation
+
+Le château ouvre chaque jour à **10 h**, avec une **dernière entrée aux guichets à 17 h 30**. Les deux animations spéciales se réservent obligatoirement en ligne. La billetterie indique aussi qu'un retard sur la séance réservée peut entraîner la perte de l'animation sans remboursement.
+
+**Les poussettes sont interdites à l'intérieur du château** sur ces visites, tout comme les parapluies. Les parcours comprennent des escaliers et des passages étroits; le château précise qu'ils **ne sont pas adaptés aux personnes en fauteuil roulant**. Le site présente plus largement les deux animations comme non accessibles aux personnes à mobilité réduite.
+
+En voiture, Vaux-le-Vicomte dispose d'un **parking gratuit**. Sans voiture, rejoignez **Melun par la ligne R** au départ de Paris-Gare-de-Lyon, puis utilisez la navette du domaine sur réservation ou un taxi.
+
+Point important pour la lampe torche: selon les [horaires officiels des navettes 2026](https://vaux-le-vicomte.com/wp-content/uploads/2026/04/Navettes-VF-2026.pdf), le **dernier retour vers la gare de Melun part de Vaux-le-Vicomte à 18 h 30**. La séance de 17 h 30 finit à cette heure-là et celle de 18 h 15 se termine plus tard: **ne comptez pas sur cette navette pour ces deux créneaux**. Même pour le départ de 17 h, prévoyez du temps pour rejoindre l'arrêt après la visite. Un retour en taxi ou un autre transport doit être organisé à l'avance pour les visites tardives.
+
+## Rester dormir près de Vaux-le-Vicomte
+
+Pour prolonger la visite sur un week-end, l'[ibis Styles Melun à Rubelles](https://www.booking.com/hotel/fr/ibis-styles-melun.fr.html) propose notamment une **suite avec un lit double et deux lits simples**, adaptée à quatre personnes, et un **parking gratuit**. Vérifiez la disponibilité, la configuration des couchages et le tarif aux dates choisies avant de réserver.
+
+Si vous cherchez une seconde sortie en Seine-et-Marne plutôt qu'un autre programme au château, notre guide [Parrot World en famille](https://www.fam-space.fr/articles/activites/parrot-world-en-famille-tarifs-2026-duree-et-conseils-pour-la-visite/) détaille les billets et l'organisation de la visite.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
-- /articles/evenements/la-legende-des-chevaliers-a-provins-en-famille-tarifs-horaires-et-conseils-2026/ | La Légende des Chevaliers à Provins en famille: tarifs, horaires et conseils 2026 | evenements | Provins, Seine-et-Marne, Île-de-France
-- /articles/cuisine/visiter-une-cave-d-affinage-de-brie-a-jouarre-ce-qu-il-faut-savoir-avec-des-enfants/ | Visiter une cave d'affinage de brie à Jouarre: ce qu'il faut savoir avec des enfants | cuisine | Jouarre, Seine-et-Marne, Île-de-France
-- /articles/evenements/fete-saint-louis-fontainebleau-2026-famille/ | Fête de la Saint-Louis 2026 à Fontainebleau: une journée gratuite en famille au Grand Canal | evenements | Fontainebleau, Seine-et-Marne, Île-de-France
+- /articles/evenements/mon-premier-festival-2026-paris-film-age/ | Mon Premier Festival 2026 à Paris: quel film choisir selon l'âge? | evenements | Paris, Paris, Île-de-France
+- /articles/activites/port-aux-cerises-a-draveil-quelle-activite-choisir-selon-l-age-des-enfants/ | Port aux Cerises à Draveil: quelle activité choisir selon l'âge des enfants? | activites | Draveil, Essonne, Île-de-France
+- /articles/sorties/chateau-de-castelnaud-avec-des-enfants-est-ce-une-bonne-sortie-selon-leur-age/ | Château de Castelnaud avec des enfants: est-ce une bonne sortie selon leur âge? | sorties | Castelnaud-la-Chapelle, Dordogne, Nouvelle-Aquitaine
+- /articles/sorties/toussaint-2026-au-louvre-lens-quelle-activite-choisir-selon-l-age/ | Toussaint 2026 au Louvre-Lens: quelle activité choisir selon l'âge? | sorties | Lens, Pas-de-Calais, Hauts-de-France
+- /articles/cuisine/ferme-marine-de-cancale-avec-des-enfants-quelle-visite-choisir-a-la-toussaint-2026/ | Ferme Marine de Cancale avec des enfants: quelle visite choisir à la Toussaint 2026? | cuisine | Cancale, Ille-et-Vilaine, Bretagne
+- /articles/evenements/fete-de-la-science-2026-en-famille/ | Fête de la science 2026: choisir une expérience adaptée à l’âge des enfants | evenements
+- /articles/sorties/vacances-de-la-toussaint-2026-au-musee-carnavalet-quelle-activite-choisir-selon-l-age/ | Vacances de la Toussaint 2026 au musée Carnavalet: activités en famille dès 4 ans | sorties | Paris, Paris, Île-de-France
 - /articles/vie-pratique/scol-r-ou-imagine-r-en-seine-et-marne-quel-titre-choisir-pour-la-rentree-2026/ | Scol'R ou imagine R en Seine-et-Marne: quel titre choisir pour la rentrée 2026? | vie-pratique | Melun, Seine-et-Marne, Île-de-France
-- /articles/parentalite/laep-en-seine-et-marne-ou-aller-et-comment-se-passe-une-premiere-visite/ | LAEP en Seine-et-Marne: où aller et comment se passe une première visite? | parentalite | Meaux, Seine-et-Marne, Île-de-France
-- /articles/maison/couches-lavables-dans-le-nord-de-la-seine-et-marne-acheter-louer-ou-choisir-l-occasion/ | Couches lavables dans le nord de la Seine-et-Marne: acheter, louer ou choisir l'occasion? | maison | Monthyon, Seine-et-Marne, Île-de-France
-- /articles/evenements/fete-moisson-provins-2026-famille/ | Fête de la Moisson 2026 à Provins: chars de blé et traditions en famille | evenements | Provins, Seine-et-Marne, Île-de-France
-- /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | Halloween 2026 au Château de Chantilly avec des enfants: ateliers, nocturnes et spectacle | sorties | Chantilly, Oise, Hauts-de-France
 - /articles/voyages/noel-2026-disneyland-paris-billet-2-parcs-arendelle/ | Noël 2026 à Disneyland Paris: faut-il un billet 2 parcs pour voir Arendelle? | voyages | Chessy, Seine-et-Marne, Île-de-France
+- /articles/parentalite/laep-en-seine-et-marne-ou-aller-et-comment-se-passe-une-premiere-visite/ | LAEP en Seine-et-Marne: où aller et comment se passe une première visite? | parentalite | Meaux, Seine-et-Marne, Île-de-France
+- /articles/cuisine/visiter-une-cave-d-affinage-de-brie-a-jouarre-ce-qu-il-faut-savoir-avec-des-enfants/ | Visiter une cave d'affinage de brie à Jouarre: ce qu'il faut savoir avec des enfants | cuisine | Jouarre, Seine-et-Marne, Île-de-France
+- /articles/maison/couches-lavables-dans-le-nord-de-la-seine-et-marne-acheter-louer-ou-choisir-l-occasion/ | Couches lavables dans le nord de la Seine-et-Marne: acheter, louer ou choisir l'occasion? | maison | Monthyon, Seine-et-Marne, Île-de-France
 - /articles/activites/parrot-world-en-famille-tarifs-2026-duree-et-conseils-pour-la-visite/ | Parrot World en famille: tarifs 2026, durée et conseils pour la visite | activites | Crécy-la-Chapelle, Seine-et-Marne, Île-de-France
+- /articles/evenements/la-legende-des-chevaliers-a-provins-en-famille-tarifs-horaires-et-conseils-2026/ | La Légende des Chevaliers à Provins en famille: tarifs, horaires et conseils 2026 | evenements | Provins, Seine-et-Marne, Île-de-France
 - /articles/voyages/halloween-2026-a-disneyland-paris-en-famille-billets-hotel-et-duree-du-sejour/ | Halloween 2026 à Disneyland Paris en famille: billets, hôtel et durée du séjour | voyages | Chessy, Seine-et-Marne, Île-de-France
 - /articles/voyages/disneyland-paris-en-famille-en-2026-combien-de-jours-quel-hotel-et-quel-budget-prevoir/ | Disneyland Paris en famille en 2026: combien de jours, quel hôtel et quel budget prévoir | voyages | Chessy, Seine-et-Marne, Île-de-France
+- /articles/evenements/fete-moisson-provins-2026-famille/ | Fête de la Moisson 2026 à Provins: chars de blé et traditions en famille | evenements | Provins, Seine-et-Marne, Île-de-France
+- /articles/evenements/fete-saint-louis-fontainebleau-2026-famille/ | Fête de la Saint-Louis 2026 à Fontainebleau: une journée gratuite en famille au Grand Canal | evenements | Fontainebleau, Seine-et-Marne, Île-de-France
 - /articles/evenements/nuit-des-chateaux-2026-a-tanlay-visite-aux-bougies-avec-des-enfants-les-16-et-17-octobre/ | Nuit des Châteaux 2026 à Tanlay: visites aux bougies les 16 et 17 octobre | evenements | Tanlay, Yonne, Bourgogne-Franche-Comté
 - /articles/evenements/monument-jeu-d-enfant-2026-a-aigues-mortes-mini-sacre-ou-escape-game-avec-les-enfants/ | Monument jeu d’enfant à Aigues-Mortes: mini-sacre et escape game les 17 et 18 octobre 2026 | evenements | Aigues-Mortes, Gard, Occitanie
 - /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | Festival Lumière 2026 avec des enfants: Chaplin, Laurel & Hardy et les bons billets | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | Monument Jeu d’Enfant au château d’Angers: dragons et ateliers le 17 octobre 2026 | evenements | Angers, Maine-et-Loire, Pays de la Loire
-- /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/ | Monument jeu d'enfant 2026 au château de Vincennes: quel atelier choisir ? | evenements | Vincennes, Val-de-Marne, Île-de-France
-- /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/noel-2026-au-chateau-de-grignan-dates-tarifs-et-visite-en-famille/ | Noël 2026 au château de Grignan: dates, tarifs et visite en famille | evenements | Grignan, Drôme, Auvergne-Rhône-Alpes
-- /articles/evenements/dia-de-los-muertos-2026-au-jardin-d-acclimatation-billets-et-animations-en-famille/ | Día de los Muertos 2026 au Jardin d’Acclimatation: programme, billets et tailles | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | Mondial de l’Auto 2026 avec des enfants: billets, horaires et créneaux | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/fete-de-la-mer-2026-a-marseille-avec-des-enfants-quelle-escale-choisir-le-18-octobre/ | Fête de la mer 2026 à Marseille avec des enfants: quelle escale choisir? | evenements | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur
 
 ### Historique Radar lié
 
-- opportunity | /articles/evenements/dia-de-los-muertos-2026-au-jardin-d-acclimatation-billets-et-animations-en-famille/ | 2026-10-08T14:56:52.034Z
 - opportunity | /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | 2026-10-10T15:40:28.185Z
-- opportunity | /articles/evenements/fete-de-la-mer-2026-a-marseille-avec-des-enfants-quelle-escale-choisir-le-18-octobre/ | 2026-10-06T16:58:51.946Z
-- opportunity | /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | 2026-10-08T02:18:12.427Z
-- opportunity | /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | 2026-10-06T19:20:39.093Z
+- opportunity | /articles/evenements/mon-premier-festival-2026-paris-film-age/ | 2026-10-03T06:21:55.257Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-aigues-mortes-mini-sacre-ou-escape-game-avec-les-enfants/ | 2026-10-10T17:38:43.806Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | 2026-10-10T08:38:56.921Z
-- opportunity | /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/ | 2026-10-09T18:35:04.031Z
 - opportunity | /articles/voyages/noel-2026-disneyland-paris-billet-2-parcs-arendelle/ | 2026-10-02T21:22:46.733Z
 - opportunity | /articles/evenements/nuit-des-chateaux-2026-a-tanlay-visite-aux-bougies-avec-des-enfants-les-16-et-17-octobre/ | 2026-10-11T09:17:01.561Z
+- opportunity | /articles/sorties/toussaint-2026-au-louvre-lens-quelle-activite-choisir-selon-l-age/ | 2026-10-07T19:13:00.627Z
+- opportunity | /articles/sorties/vacances-de-la-toussaint-2026-au-musee-carnavalet-quelle-activite-choisir-selon-l-age/ | 2026-10-07T12:23:23.783Z
 
 ### Phases 2 et 3
 
