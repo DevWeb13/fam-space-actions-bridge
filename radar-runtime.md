@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les faits utilisés sont liés naturellement dans le corps et présents dans `sources`. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Monument Jeu d'enfant 2026 à Azay-le-Rideau: animaux cachés, atelier et contes"
-subtitle: Les 17 et 18 octobre, deux animations pour des âges différents et une divergence d'horaires à vérifier
-summary: Au château d'Azay-le-Rideau, Monument Jeu d'enfant propose une enquête sur les animaux cachés et un atelier créatif dès 5 ans, plus des contes dès 3 ans le samedi. Horaires, prix et conseils pour choisir.
+title: "Monument Jeu d'enfant 2026 à Azay-le-Rideau: animaux cachés et contes en famille"
+subtitle: Les 17 et 18 octobre, une enquête et un atelier dès 5 ans; des contes dès 3 ans le samedi
+summary: Au château d'Azay-le-Rideau, Monument Jeu d'enfant propose les 17 et 18 octobre une chasse aux animaux de Karen Knorr et un atelier créatif, avec des contes le samedi. Horaires, tarifs et informations familiales.
 category: evenements
 location:
   city: Azay-le-Rideau
@@ -74,13 +79,16 @@ keywords:
 sources:
   - title: Château d'Azay-le-Rideau — Monument Jeu d'enfant 2026
     url: https://www.azay-le-rideau.fr/agenda/agenda-2026/monument-jeu-d-enfant
+    accessedAt: 2026-10-11
   - title: Château d'Azay-le-Rideau — Informations pratiques et tarifs
     url: https://www.azay-le-rideau.fr/visiter/informations-pratiques
+    accessedAt: 2026-10-11
   - title: Château d'Azay-le-Rideau — FAQ billetterie et accès
     url: https://www.azay-le-rideau.fr/visiter/faq-toutes-les-reponses-a-vos-questions
+    accessedAt: 2026-10-11
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: monument-jeu-d-enfant-2026-a-azay-le-rideau-animaux-caches-atelier-et-contes
   decision: Choisir entre contes dès 3 ans le samedi et enquête/atelier dès 5 ans les deux jours, connaître les horaires réellement proposés, les conditions d'entrée et la préparation pratique avant de venir en famille.
@@ -90,45 +98,52 @@ radar:
     dataThrough: 2026-10-08
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Château d'Azay-le-Rideau — Monument Jeu d'enfant 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-10-18
 ---
 
-## Mission retenue
+Les **samedi 17 et dimanche 18 octobre 2026**, le château d'Azay-le-Rideau, en Touraine, accueille **Monument Jeu d'enfant**. Au programme: une enquête dans le château pour retrouver des animaux cachés dans les photographies de Karen Knorr, suivie d'un atelier créatif **dès 5 ans**. Le samedi, une lecture de contes autour des animaux s'ajoute à la visite **dès 3 ans**.
 
-**Monument Jeu d'enfant au château d'Azay-le-Rideau**, les **samedi 17 et dimanche 18 octobre 2026**: enquête autonome au premier étage avec livret-jeu sur les animaux des photographies de Karen Knorr, suivie d'un atelier animé où les enfants inventent une créature. **Dès 5 ans**, les deux jours. En complément, **lecture de contes sur les animaux dès 3 ans**, samedi seulement.
+Les deux activités ne s'adressent pas exactement aux mêmes âges, et les contes ne sont annoncés que le samedi. Voici comment choisir la journée et préparer la visite.
 
-## Pourquoi cette mission
+## L'enquête et l'atelier animaux: samedi et dimanche dès 5 ans
 
-Opportunité familiale imminente, annoncée directement par le château avec activités différenciées selon l'âge, prix et horaires; intention concrète sans article dédié à cet événement à Azay-le-Rideau. Le catalogue contient déjà **« Azay-le-Rideau en famille: une journée entre château et troglodytes »**, qui explique la visite ordinaire, le parc et les Goupillières, et plusieurs autres pages « Monument Jeu d'enfant » concernant des monuments différents. La nouvelle page doit donc traiter les **animations spécifiques des 17-18 octobre**, pas refaire un guide général.
+Le [programme officiel du château](https://www.azay-le-rideau.fr/agenda/agenda-2026/monument-jeu-d-enfant) invite les familles à chercher, à l'aide d'un **livret-jeu remis à l'arrivée**, les animaux qui apparaissent dans les photographies de **Karen Knorr** exposées au premier étage.
 
-Le meilleur refresh, **Aquarium de La Réunion**, reste `uncertain` côté GSC: l'article complet préserve correctement l'information de fermeture sans annoncer de date certaine de réouverture et aucune amélioration éditoriale substantielle indépendante n'est établie. L'expansion à partir d'une page forte, notamment les transports en famille à Paris, est moins urgente et le guide existant couvre déjà les principaux choix tarifaires.
+Cette première partie se parcourt **en autonomie**. Ensuite, dans une salle pédagogique, les enfants imaginent leur propre animal, réel ou fantastique, avec l'aide des médiatrices du château.
 
-Les travaux actifs Publication (fouées autour de Saumur) et Destination (Vincennes) ne chevauchent pas cette mission.
+L'activité est annoncée **les 17 et 18 octobre**, jusqu'à **16 h 30**, mais **le site officiel se contredit sur l'heure de début**: son encadré pratique indique **14 h**, tandis que la présentation détaillée mentionne **14 h 30**. Le dernier accès annoncé pour cet événement est à **16 h**. Pour arriver au bon moment de l'atelier, il faut demander confirmation au château au **02 47 45 42 04**, surtout si vous avez prévu de venir spécialement pour cette animation.
 
-## Décision du lecteur
+## Les contes: samedi seulement dès 3 ans
 
-Permettre aux parents de sélectionner **samedi ou dimanche selon l'âge des enfants et l'animation voulue**, de prévoir l'horaire réaliste et le budget familial, puis de vérifier les modalités avant de venir, sans confondre carte-jeu habituelle et enquête temporaire sur les œuvres de Karen Knorr.
+Le **samedi 17 octobre, de 14 h 30 à 15 h 30**, Hélène, libraire à Azay-le-Rideau, raconte des histoires dans lesquelles les animaux occupent une place importante. Le château indique que l'on peut **rejoindre la lecture en cours**.
 
-## Faits à traiter
+C'est l'animation à privilégier pour un enfant de **3 ou 4 ans** qui n'a pas encore l'âge requis pour l'enquête-atelier. Avec un enfant de **5 ans ou plus**, le samedi permet d'envisager les deux propositions, sans garantie de pouvoir suivre l'intégralité de l'atelier et des contes qui se déroulent sur des horaires proches.
 
-- **Visite et atelier animaux**, samedi 17 et dimanche 18 octobre: livret-jeu remis à l'arrivée; enquête autonome parmi les œuvres exposées puis création d'un animal avec les médiatrices en salle pédagogique. **Dès 5 ans**.
-- **Divergence à signaler sans trancher:** la page officielle annonce **14 h à 16 h 30** dans son encadré horaires, puis **14 h 30 à 16 h 30** plus bas. Confirmer avec le château le début effectif de l'atelier; **dernier accès à 16 h** pour la manifestation.
-- **Contes** par Hélène, libraire locale: **samedi 17 octobre de 14 h 30 à 15 h 30**, dès **3 ans**; possibilité de rejoindre la séance en cours. Aucun conte annoncé le dimanche.
-- **Tarif événement**: **13 € par adulte**, gratuité affichée pour les **moins de 26 ans**. La page générale des tarifs précise cependant que la gratuité habituelle des **18-25 ans** dépend de conditions de résidence/nationalité: ne pas promettre à tout adulte de 18 à 25 ans un billet gratuit sans vérifier la règle appliquée à l'événement.
-- Le site officiel ne précise pas de supplément dédié ni de réservation obligatoire pour l'atelier: **ne pas en inventer**. Le billet d'entrée ordinaire s'achète en ligne via la billetterie du monument ou sur place; vérifier directement les modalités de participation si nécessaire.
-- Organisation: château ouvert **10 h-17 h 15** en octobre, mais suivre **l'accès spécifique de l'événement jusqu'à 16 h**. Poussettes **acceptées dans le parc, non dans le château**; table à langer et chauffe-biberon disponibles. Pique-nique interdit dans l'enceinte; salon de thé saisonnier normalement fermé en octobre.
-- Accès: **19 rue Balzac, Azay-le-Rideau**. Parking proche **payant**, avec possibilités plus éloignées dans le village; gare SNCF sur la ligne Tours-Chinon à **2,1 km à pied**. Vérifier l'accessibilité du parcours avec l'établissement plutôt que de la présumer.
+Le **dimanche 18 octobre**, aucune lecture de contes n'est annoncée: l'enquête et l'atelier restent au programme.
 
-## Sources de départ
+## Quel prix prévoir? Faut-il réserver?
 
-Priorité à la page officielle de l'événement, à la page tarifs et accès du château ainsi qu'à sa FAQ. La réservation et les éventuelles restrictions doivent être clarifiées avec le château si les sources ne tranchent pas.
+Le château affiche **13 € par adulte** pour l'événement et la gratuité pour les **moins de 26 ans**. Pour préparer le budget familial, la [page des tarifs](https://www.azay-le-rideau.fr/visiter/informations-pratiques) confirme une entrée ordinaire gratuite pour tous les **moins de 18 ans**. En revanche, la gratuité des **18-25 ans** dépend normalement de conditions de nationalité ou de résidence; demandez confirmation si un jeune adulte vous accompagne, car l'annonce de l'événement est moins précise.
 
-## Affiliation
+Pour deux adultes au plein tarif et deux enfants de moins de 18 ans, le **budget d'entrée est donc de 26 €**.
 
-Pour l'activité, orienter vers **la billetterie officielle**, pas vers un billet partenaire générique qui n'assurerait pas l'atelier. Pour un séjour sur place, **Le grand nid charmant** sur Booking.com: appartement de deux chambres avec cuisine, à quelques minutes à pied du château. Présenter cette piste de façon facultative sans promettre disponibilité ni prix pour les 17 et 18 octobre.
+La page de l'événement ne mentionne **ni supplément spécifique pour l'atelier ni réservation obligatoire à un créneau**. N'en déduisez pas pour autant qu'une place à l'atelier est garantie: renseignez-vous auprès du monument sur les modalités de participation. Le [billet d'entrée du château](https://tickets.monuments-nationaux.fr/fr-FR/familles?site=2129766360470401831) peut être acheté à l'avance; la [FAQ officielle](https://www.azay-le-rideau.fr/visiter/faq-toutes-les-reponses-a-vos-questions) précise qu'une visite individuelle peut également être payée sur place.
 
-## Continuations internes
+## Poussette, goûter et accès: les détails utiles
 
-La page [Azay-le-Rideau en famille: une journée entre château et troglodytes](https://www.fam-space.fr/articles/voyages/azay-le-rideau-en-famille-une-journee-entre-chateau-et-troglodytes/) prend le relais pour la visite ordinaire, le parc, les Goupillières et le programme d'une journée. Un renvoi vers la page générale [Monument Jeu d'enfant 2026: choisir une visite adaptée à l'âge](https://www.fam-space.fr/articles/evenements/monument-jeu-d-enfant-2026-comment-choisir-une-visite-adaptee-a-l-age-des-enfants/) n'est utile que pour comparer plusieurs monuments: ne pas reproduire ici le tour de France des animations.
+En octobre, le monument est ouvert **de 10 h à 17 h 15**, mais pour participer à Monument Jeu d'enfant, retenez bien la **limite spécifique de 16 h** indiquée sur la page de l'événement.
+
+Les **poussettes sont autorisées dans le parc, mais pas à l'intérieur du château**. Elles doivent être laissées dans un espace **non surveillé** près de l'escalier d'honneur. Avec un bébé, un porte-bébé sera donc plus pratique pour les salles et l'enquête à l'étage. Une **table à langer** et un **chauffe-biberon** sont disponibles sur place. Pour les visiteurs ayant des difficultés de mobilité, vérifiez directement quelles parties du parcours de l'événement leur sont accessibles: le monument n'est que partiellement accessible.
+
+Le **pique-nique est interdit dans l'enceinte**; la cour avant la billetterie permet en revanche de manger son repas apporté. Le salon de thé « Le Lavoir » n'est normalement ouvert que de Pâques à fin septembre: ne comptez donc pas sur son ouverture pour ce week-end d'octobre.
+
+Le château se situe au **19 rue Balzac, 37190 Azay-le-Rideau**. À proximité, le **parking du Château est payant**, avec environ **5 à 10 minutes de marche** jusqu'à l'entrée; des places gratuites plus éloignées existent dans le village. En train, la gare d'**Azay-le-Rideau**, sur la ligne Tours-Chinon, se trouve à **2,1 km à pied** du monument.
+
+## Prolonger la visite dans la région
+
+Pour un week-end, [Le grand nid charmant à Azay-le-Rideau](https://www.booking.com/hotel/fr/le-grand-nid-charmant.fr.html) est un appartement entier avec **deux chambres et une cuisine**, annoncé à environ **500 m du château**. Les disponibilités et les tarifs pour le week-end du 17 octobre restent à vérifier.
+
+Si vous voulez compléter la journée avec le parc et une visite des habitations troglodytiques voisines, notre guide [Azay-le-Rideau en famille: une journée entre château et troglodytes](https://www.fam-space.fr/articles/voyages/azay-le-rideau-en-famille-une-journee-entre-chateau-et-troglodytes/) détaille cet itinéraire et les horaires des Goupillières.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
