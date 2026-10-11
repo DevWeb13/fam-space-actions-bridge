@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les faits utilisés sont liés naturellement dans le corps et présents dans `sources`. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Toussaint 2026 au château de Pierrefonds: atelier lanterne ou Halloween spirite?"
-subtitle: "Deux rendez-vous distincts: exploration dès 4 ans pendant les vacances, enquête nocturne dès 10 ans le 31 octobre"
-summary: Au château de Pierrefonds, les familles choisissent entre une visite-atelier à la lanterne dès 4 ans et une enquête spirite d'Halloween dès 10 ans. Dates, tarifs, réservation et accès.
+title: "Pierrefonds à la Toussaint 2026: atelier lanterne et soirée d'Halloween"
+subtitle: Cinq après-midi dès 4 ans et une enquête nocturne dès 10 ans le 31 octobre
+summary: Au château de Pierrefonds, la Toussaint 2026 propose un atelier-visite à la lanterne les 20, 21, 24, 27 et 28 octobre, puis une enquête spirite le 31 octobre. Âges, horaires, billets et accès pour les familles.
 category: evenements
 location:
   city: Pierrefonds
@@ -68,21 +73,31 @@ location:
   region: Hauts-de-France
 keywords:
   - Toussaint 2026 château de Pierrefonds famille
-  - Raconte-moi le château à la lanterne octobre 2026
+  - Raconte-moi le château à la lanterne Pierrefonds octobre 2026
   - Halloween Eugénie es-tu là Pierrefonds 31 octobre
   - atelier Pierrefonds enfants 4 ans 10 ans
 sources:
   - title: Château de Pierrefonds — Raconte-moi le château à la lanterne
     url: https://www.chateau-pierrefonds.fr/agenda/raconte-moi-le-chateau-a-la-lanterne
+    accessedAt: 2026-10-11
   - title: "Château de Pierrefonds — Halloween: Eugénie es-tu là?"
     url: https://www.chateau-pierrefonds.fr/agenda/halloween-eugenie-es-tu-la
+    accessedAt: 2026-10-11
+  - title: Château de Pierrefonds — Agenda des événements
+    url: https://www.chateau-pierrefonds.fr/agenda
+    accessedAt: 2026-10-11
   - title: Château de Pierrefonds — Informations pratiques
     url: https://www.chateau-pierrefonds.fr/visiter/informations-pratiques
-  - title: Château de Pierrefonds — Accessibilité
+    accessedAt: 2026-10-11
+  - title: Château de Pierrefonds — Visiteurs en situation de handicap
     url: https://www.chateau-pierrefonds.fr/visiter/visiteurs-en-situation-de-handicap
+    accessedAt: 2026-10-11
+  - title: Commune de Pierrefonds — Transports
+    url: https://www.mairie-pierrefonds.fr/vie-quotidienne/transports/
+    accessedAt: 2026-10-11
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite
   decision: Choisir et réserver l'animation réellement adaptée à l'âge des enfants et au jour de visite, sans confondre billet d'atelier, billet de la soirée d'Halloween et entrée ordinaire au château.
@@ -92,42 +107,50 @@ radar:
     dataThrough: 2026-10-08
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Château de Pierrefonds — Raconte-moi le château à la lanterne »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-10-31
 ---
 
-## Mission retenue
+Pendant les vacances de la Toussaint 2026, le **château de Pierrefonds**, dans l'Oise, organise deux rendez-vous qui ne s'adressent pas aux mêmes enfants. Les **20, 21, 24, 27 et 28 octobre**, les familles fabriquent une lanterne avant de découvrir des salles habituellement fermées, **dès 4 ans**. Le **31 octobre**, l'enquête d'Halloween « Eugénie es-tu là? » propose une soirée spirite **dès 10 ans**. Chaque animation dispose de sa propre billetterie: ne réservez pas une simple entrée au château en pensant qu'elle donne accès à l'atelier ou à la soirée.
 
-Préparer une page sur **deux animations familiales distinctes au château de Pierrefonds pendant la Toussaint 2026**: « Raconte-moi le château à la lanterne » (atelier et visite hors circuit, dès 4 ans) et « Halloween: Eugénie es-tu là? » (enquête spirite immersive nocturne, dès 10 ans). Ne pas les confondre avec la visite libre ordinaire.
+## À partir de 4 ans: fabriquer une lanterne et explorer le château
 
-## Pourquoi cette mission
+L'animation [« Raconte-moi le château à la lanterne »](https://www.chateau-pierrefonds.fr/agenda/raconte-moi-le-chateau-a-la-lanterne) commence par la fabrication d'une lanterne. La famille part ensuite, accompagnée, à la découverte de salles normalement fermées au public, d'escaliers cachés et de leurs histoires, à la lueur des lanternes.
 
-**Opportunité imminente et documentée** sur les pages officielles du monument, avec âges, dates, séances, tarifs et billetteries spécifiques. Aucun article Pierrefonds dans le catalogue compact, et les pages Halloween de Chantilly ou de Villersexel concernent d'autres lieux: pas de doublon local. La Publication en cours (restaurants de fouées à Saumur) et la Destination en cours (Vincennes) ne chevauchent pas ce sujet.
+Cinq séances sont annoncées, toutes à **14 h 30**: **mardi 20, mercredi 21, samedi 24, mardi 27 et mercredi 28 octobre 2026**. L'[agenda officiel](https://www.chateau-pierrefonds.fr/agenda) présente l'animation de **14 h 30 à 16 h 30**, soit un créneau de deux heures.
 
-Le meilleur refresh GSC, **Aquarium de La Réunion**, porte un signal `uncertain`: son article explique déjà la fermeture et l'absence de date ferme de réouverture, sans correction substantielle justifiée. La carte Tattoo Isère est elle aussi complète sur les montants, dates et conditions, sans défaut indépendant établi. L'expansion envisagée depuis la page forte « Transports à Paris avec des enfants » n'apporte pas ici de décision suffisamment distincte: les tickets enfants, forfaits, aéroports et arbitrages sont déjà traités dans la page existante. La fenêtre de réservation des activités à Pierrefonds rend l'opportunité plus utile maintenant.
+Le prix est de **9 € par adulte** et **6 € par enfant de moins de 18 ans**. Une famille de deux adultes et deux enfants paie donc **30 €** pour cette activité. Attention: les enfants ne bénéficient pas ici de la gratuité ordinaire de la visite libre. La [page de l'atelier](https://www.chateau-pierrefonds.fr/agenda/raconte-moi-le-chateau-a-la-lanterne) mène directement à sa billetterie; vérifiez-y les places disponibles pour la date souhaitée.
 
-## Décision du lecteur
+C'est le choix le plus accessible aux jeunes enfants parmi ces deux rendez-vous. Il comporte toutefois une exploration du château à éclairage réduit, à prendre en compte pour un enfant peu à l'aise dans l'obscurité.
 
-Identifier **la bonne séance et le bon billet selon l'âge, la sensibilité aux ambiances inquiétantes, le budget et la date**, puis organiser l'arrivée au château avec les contraintes pratiques d'une sortie en famille.
+## Le 31 octobre: une enquête spirite pour les 10 ans et plus
 
-## Faits à traiter
+Pour Halloween, [« Eugénie es-tu là? »](https://www.chateau-pierrefonds.fr/agenda/halloween-eugenie-es-tu-la) entraîne les participants dans une **enquête immersive autour du spiritisme au XIXe siècle**, inspirée notamment de l'intérêt de l'impératrice Eugénie pour ces pratiques. Les visiteurs suivent des indices dans une atmosphère de mystère et de tension.
 
-- **Lanterne**: mardi **20**, mercredi **21**, samedi **24**, mardi **27** et mercredi **28 octobre 2026**, départ à **14 h 30**, durée annoncée de **14 h 30 à 16 h 30** dans l'agenda; **dès 4 ans**. Fabrication d'une lanterne puis découverte de salles normalement fermées au public. **Adulte 9 €, moins de 18 ans 6 €** pour cette animation: ne pas appliquer automatiquement la gratuité enfant de la visite libre.
-- **Halloween « Eugénie es-tu là? »**: **samedi 31 octobre**, séances à **18 h 30, 20 h 30 et 22 h 30**, **dès 10 ans**, **tarif unique 13 €**. Enquête spirite inspirée du XIXe siècle; atmosphère potentiellement impressionnante et horaires tardifs, à prendre en compte sans inventer une interdiction supplémentaire.
-- Les deux pages d'événement renvoient à **leurs propres achats de billets**. Vérifier disponibilité, éventuelles modalités d'accès et durée exacte au moment de rédiger; ne pas supposer que le billet d'entrée ordinaire à **9 €** inclut l'une de ces activités.
-- En octobre, visite ordinaire **10 h-17 h 30**, dernier accès ordinaire une heure avant la fermeture: les **séances nocturnes du 31 octobre relèvent d'un dispositif distinct**, pas de l'horaire ordinaire.
-- **Poussettes autorisées dans le parc mais pas dans le château**, stationnement poussettes dans la cour d'honneur. Adresse: **rue Viollet-le-Duc, 60350 Pierrefonds**; parking gratuit rue Sabatier à environ 10 minutes, pente depuis le village et accessibilité partielle à vérifier selon les parcours spéciaux. Pour venir sans voiture, correspondance en bus depuis Compiègne à contrôler auprès du réseau.
-- **Fin de validité événementielle: 31 octobre 2026**.
+Le spectacle a lieu **samedi 31 octobre 2026**, avec trois départs à **18 h 30, 20 h 30 et 22 h 30**. Le château l'annonce **à partir de 10 ans**, au **tarif unique de 13 € par participant**: pour quatre personnes remplissant la condition d'âge, comptez **52 €**. Aucune réduction enfant n'est indiquée pour cet événement.
 
-## Sources de départ
+La mise en scène et les horaires tardifs peuvent être difficiles pour un enfant sensible aux ambiances inquiétantes, même âgé de 10 ans. À l'inverse, cette enquête convient davantage à une famille recherchant une véritable soirée d'Halloween qu'un atelier manuel. La [fiche officielle de la soirée](https://www.chateau-pierrefonds.fr/agenda/halloween-eugenie-es-tu-la) renvoie à une billetterie propre à l'événement: choisissez soigneusement l'horaire au moment de l'achat. La durée exacte de la soirée n'y est pas indiquée; prévoyez le retour sans supposer une heure de fin.
 
-Les deux pages agenda officielles du château et ses pages d'informations pratiques et d'accessibilité ci-dessus. Elles priment sur toute fiche touristique ancienne, notamment pour les animations Halloween des années précédentes.
+## Billet d'animation ou visite libre: quelle différence?
 
-## Affiliation
+Le [billet ordinaire du château](https://www.chateau-pierrefonds.fr/visiter/informations-pratiques) coûte **9 €**; les moins de 18 ans bénéficient normalement de la gratuité pour cette visite. Ces conditions **ne remplacent pas les tarifs propres aux animations**: 6 € pour un mineur inscrit à l'atelier lanterne, ou 13 € par personne pour l'enquête du 31 octobre. Aucune des fiches d'événement ne précise que l'entrée classique donne accès à sa séance.
 
-**Billetterie officielle de chaque animation** comme action principale, sans lien partenaire générique qui promettrait à tort l'accès à l'atelier. Pour un séjour, **Maison de charme avec vue sur château** sur Booking.com: maison de **trois chambres**, cuisine et proximité du château; suggérer uniquement comme option pour une famille qui dort sur place, sous réserve des disponibilités et tarifs réels.
+En octobre, la visite ordinaire ouvre de **10 h à 17 h 30**, avec un dernier accès **une heure avant la fermeture**. Les séances d'Halloween commencent après cet horaire: elles relèvent donc bien d'un rendez-vous séparé. Pour éviter d'acheter le mauvais billet, partez de la fiche de l'animation qui vous intéresse, et vérifiez les disponibilités ainsi que les conditions affichées dans sa billetterie.
 
-## Continuations internes
+## Accès, poussettes et mobilité: préparer la sortie
 
-Ne pas réécrire un guide général sur les châteaux de l'Oise. En alternative régionale réellement utile pour une autre ambiance d'Halloween, orienter éventuellement vers [Halloween 2026 au château de Chantilly](https://www.fam-space.fr/articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/), sans comparer des prix ou horaires non vérifiés.
+Le château se trouve **rue Viollet-le-Duc, 60350 Pierrefonds**. Le [site officiel](https://www.chateau-pierrefonds.fr/visiter/informations-pratiques) indique un stationnement gratuit **rue Sabatier**, à environ **10 minutes du château**. L'accès depuis le village monte vers une esplanade: le château conseille de prévoir **environ 20 minutes à pied** pour la sente en pente douce depuis le village, selon votre point de départ.
+
+Les **poussettes sont autorisées dans le parc mais interdites à l'intérieur du château**; un espace de stationnement se trouve dans la cour d'honneur. Avec un jeune enfant, un porte-bébé peut faciliter la visite des salles, notamment durant le parcours à la lanterne.
+
+L'accessibilité est **partielle**: la [page dédiée du château](https://www.chateau-pierrefonds.fr/visiter/visiteurs-en-situation-de-handicap) précise que le premier étage n'est pas accessible aux personnes en fauteuil roulant. Deux places PMR et un dépose-minute sont proposés sur l'esplanade. Les parcours spéciaux des deux animations n'étant pas détaillés en matière d'accessibilité, contactez le monument au **03 44 42 72 72** avant de réserver si un membre de la famille a des difficultés de mobilité.
+
+Sans voiture, Pierrefonds est desservie depuis le secteur de Compiègne. La [mairie renvoie au réseau Oise Mobilité](https://www.mairie-pierrefonds.fr/vie-quotidienne/transports/) pour les lignes et horaires: vérifiez impérativement les correspondances aux dates choisies, **surtout pour le retour après l'enquête nocturne**.
+
+## Rester sur place pour Halloween
+
+Pour éviter un trajet tardif après la soirée, [Maison de charme avec vue sur château à Pierrefonds](https://www.booking.com/hotel/fr/maison-de-charme-avec-vue-sur-chateau.fr.html), au **7 rue du Beaudon**, propose une **maison entière de trois chambres avec cuisine**, près du château. C'est une possibilité pour les familles qui prolongent la sortie en séjour; les tarifs et disponibilités pour le **31 octobre** sont à vérifier avant de réserver.
+
+Si les enfants préfèrent une autre ambiance d'Halloween dans l'Oise, notre guide [Halloween 2026 au château de Chantilly](https://www.fam-space.fr/articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/) présente d'autres ateliers, spectacles et nocturnes, avec leurs propres conditions d'accès.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
