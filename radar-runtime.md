@@ -1026,6 +1026,7 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 
 ### Articles publiés
 
+- /articles/evenements/nuit-des-chateaux-2026-a-tanlay-visite-aux-bougies-avec-des-enfants-les-16-et-17-octobre/ | Nuit des Châteaux 2026 à Tanlay: visites aux bougies les 16 et 17 octobre | evenements | Tanlay, Yonne, Bourgogne-Franche-Comté
 - /articles/evenements/monument-jeu-d-enfant-2026-a-aigues-mortes-mini-sacre-ou-escape-game-avec-les-enfants/ | Monument jeu d’enfant à Aigues-Mortes: mini-sacre et escape game les 17 et 18 octobre 2026 | evenements | Aigues-Mortes, Gard, Occitanie
 - /articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/ | Recycleries autour de Chartres: où donner et acheter d'occasion ? | maison | Chartres, Eure-et-Loir, Centre-Val de Loire
 - /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | Festival Lumière 2026 avec des enfants: Chaplin, Laurel & Hardy et les bons billets | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
@@ -1703,6 +1704,7 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 - opportunity | /articles/evenements/mucem-a-la-toussaint-2026-quelle-activite-en-ribambelle-choisir-selon-l-age/ | 2026-10-04T10:54:39.216Z
 - opportunity | /articles/sorties/musee-de-l-air-et-de-l-espace-a-la-toussaint-2026-quelle-activite-choisir-selon-l-age/ | 2026-10-05T20:22:10.692Z
 - opportunity | /articles/voyages/noel-2026-disneyland-paris-billet-2-parcs-arendelle/ | 2026-10-02T21:22:46.733Z
+- opportunity | /articles/evenements/nuit-des-chateaux-2026-a-tanlay-visite-aux-bougies-avec-des-enfants-les-16-et-17-octobre/ | 2026-10-11T09:17:01.561Z
 - opportunity | /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | 2026-10-09T14:37:47.734Z
 - opportunity | /articles/sorties/parc-en-folie-2026-a-rennes-billet-en-ligne-ou-sur-place-quelle-formule-choisir-en-famille/ | 2026-10-07T09:18:46.414Z
 - opportunity | /articles/activites/paris-sport-vacances-automne-2026-demi-journee-gratuite-ou-stage-a-la-journee/ | 2026-10-03T20:20:25.508Z
@@ -1720,7 +1722,7 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 ### Publication en cours
 
 - Branche: automation/publication-20261011-0059-titre-de-travail-ou-manger-des-fouees-en-famille-autour-de-saumur-quat
-- HEAD: publication: phase 2 20261011-0059-titre-de-travail-ou-manger-des-fouees-en-famille-autour-de-saumur-quat
+- HEAD: publication: phase 3 20261011-0059-titre-de-travail-ou-manger-des-fouees-en-famille-autour-de-saumur-quat
 
 ---
 category: "cuisine"
@@ -1814,6 +1816,10 @@ Pour le décor, **Les Cathédrales de la Saulaie** offrent les volumes souterrai
 Enfin, **Les Nobles Fouées** sont le choix le plus simple pour une famille qui séjourne déjà dans Saumur et ne veut pas reprendre la voiture pour rejoindre Doué-en-Anjou ou les villages voisins.
 
 Dans les quatre cas, réserver est prudent, particulièrement le week-end, pendant les vacances scolaires et hors saison. Pour les poussettes, chaises hautes ou contraintes d'accessibilité précises, mieux vaut interroger directement l'établissement choisi: les sites officiels ne donnent pas tous le même niveau de détail sur ces équipements.
+
+## Dormir près des Caves de la Genevraie
+
+Si vous prolongez la découverte des fouées par un séjour dans le Saumurois, [le Rocaminori Hôtel à Louresse-Rochemenier](https://www.booking.com/hotel/fr/rocaminori.fr.html) est attenant aux Caves de la Genevraie. Il propose notamment des chambres triples et des chambres troglodytiques. Vérifiez la configuration des couchages et les disponibilités pour votre famille avant de réserver.
 
 
 ### Destination en cours
