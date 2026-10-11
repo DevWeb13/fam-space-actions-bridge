@@ -143,3 +143,4 @@ automation/image-20261011-0046-0c2aaad|fa8beb3a9d1d33387fbbd23e388310a551b8c49c
 automation/image-20261011-0046-0c2aaad|b10ae90e175f711854d12d85f11c9da21b21361f
 automation/image-tanlay-20261011-1243-8b9ce|0ff403b9b3a6bf3eb796f5f4ed732f0a0903a4f5
 automation/image-tanlay-20261011-1243-8b9ce|b0f9eebe59a151f38ac6dbfd6d452e53062a56df
+automation/image-20261011-344d8af-fouees-azay-vaux|ba9d037404f68f8c6298cc83933754892c885036
