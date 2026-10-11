@@ -12,6 +12,10 @@ on:
         description: "Branche automation précise à traiter"
         required: true
         type: string
+      automation_commit:
+        description: "Commit exact (facultatif pour une relance manuelle)"
+        required: false
+        type: string
 
 permissions:
   contents: write
@@ -55,6 +59,7 @@ jobs:
         env:
           EVENT_NAME: ${{ github.event_name }}
           MANUAL_BRANCH: ${{ github.event.inputs.automation_branch }}
+          MANUAL_COMMIT: ${{ github.event.inputs.automation_commit }}
         run: |
           set -euo pipefail
 
@@ -64,6 +69,7 @@ jobs:
           requested_commit=""
           if [ "$EVENT_NAME" = "workflow_dispatch" ]; then
             branch="$MANUAL_BRANCH"
+            requested_commit="$MANUAL_COMMIT"
           else
             signal="$(tail -n 1 ../bridge/bridge-request.txt | tr -d '\r\n')"
             if [ "$signal" = "# Ready" ]; then
@@ -133,7 +139,7 @@ jobs:
             fi
 
             automation_commit="$(git rev-parse "origin/$branch")"
-            if [ "$EVENT_NAME" != "workflow_dispatch" ]; then
+            if [ "$EVENT_NAME" != "workflow_dispatch" ] || [ -n "$requested_commit" ]; then
               if [[ ! "$requested_commit" =~ ^[0-9a-f]{40}$ ]] ||
                  [ "$requested_commit" != "$automation_commit" ]; then
                 echo "Signal Publication obsolète ou invalide." >&2
@@ -187,8 +193,6 @@ jobs:
 
             bash .github/scripts/process-publication-stage.sh               "$automation_commit" "$stage_file" "$branch"
 
-            git tag "$completed_tag" "$automation_commit"
-            git push origin "refs/tags/$completed_tag"
             git push origin --delete "$branch" || true
             git fetch origin master
             update_publication_ready

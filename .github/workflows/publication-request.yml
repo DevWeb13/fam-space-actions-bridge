@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: fam-space-master-write
@@ -81,7 +82,8 @@ jobs:
           fi
 
       - name: Enregistrer l'état et remettre l'entrée à zéro
-        if: always() && steps.ready.outputs.skip != 'true'
+        id: save
+        if: steps.ready.outputs.skip != 'true' && steps.process.outcome == 'success'
         working-directory: bridge
         shell: bash
         env:
@@ -116,13 +118,29 @@ jobs:
               git add bridge-request.txt
             fi
             if git diff --cached --quiet; then
+              echo "saved=true" >> "$GITHUB_OUTPUT"
               exit 0
             fi
             git commit -m "state: advance Publication runtime"
             if git push origin HEAD:main; then
+              echo "saved=true" >> "$GITHUB_OUTPUT"
               exit 0
             fi
           done
 
           echo "Impossible d'enregistrer l'état Publication après 3 tentatives." >&2
           exit 1
+
+      - name: Déclencher la finalisation Publication
+        if: steps.save.outputs.saved == 'true' && steps.process.outputs.bridge_request_changed == 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          IFS='|' read -r branch commit nonce < "$RUNNER_TEMP/bridge-request.txt"
+          if [[ ! "$branch" =~ ^automation/publication- ]] || [[ ! "$commit" =~ ^[0-9a-f]{40}$ ]]; then
+            echo "Signal de finalisation Publication invalide." >&2
+            exit 1
+          fi
+          gh workflow run fam-space-bridge.yml --repo "$GITHUB_REPOSITORY" --ref main -f "automation_branch=$branch" -f "automation_commit=$commit"
