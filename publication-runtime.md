@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,91 +14,143 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Haute-Corse
 - Région: Corse
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Titre de travail:** « LAEP en Haute-Corse: où rencontrer d'autres parents avec un tout-petit à Bastia et en Balagne ? »
-
-**Angle:** expliquer à quoi sert un lieu d'accueil enfants-parents (LAEP), puis donner les informations vérifiées pour deux lieux accessibles gratuitement: A Casa Aperta à Bastia et A Casa Zitellina à Losari, en Balagne. Le sujet concerne les familles avec des enfants de moins de 4 ans, accompagnés d'un parent ou d'un adulte référent. Ce sont des espaces de jeux et de rencontres, pas des solutions de garde.
-
-## Besoin du lecteur
-
-Comprendre ce qu'un LAEP permet de faire avec son enfant, à qui s'adresse l'accueil, si une inscription est nécessaire et comment se déroule une première visite. Pouvoir choisir un lieu selon son secteur de Haute-Corse, vérifier les créneaux, distinguer le LAEP du Relais Petite Enfance (RPE) et connaître les bonnes coordonnées avant de se déplacer.
-
-## Valeur éditoriale
-
-- **Bastia, A Casa Aperta:** accueil libre et gratuit pour les moins de 4 ans, au Relais Petite Enfance, résidence Terralbore, rue Pierre-et-Marie-Curie, 20600 Bastia; mardi 14 h-16 h 30 et vendredi 9 h-11 h 30; téléphone 04 95 33 48 53.
-- **Balagne, A Casa Zitellina à Losari:** LAEP ouvert librement, gratuitement et sans inscription aux enfants de 0 à 4 ans accompagnés; mardi 14 h 30-17 h et vendredi 9 h-11 h 30; téléphone 06 48 78 19 32. Jeux libres, activités d'éveil et échanges entre familles. Le même espace héberge un RPE, consacré notamment aux renseignements sur les modes de garde.
-- Expliquer concrètement la différence entre **jouer avec son enfant en restant sur place** (LAEP) et **chercher des informations sur la garde** (RPE). Ne pas présenter ces lieux comme un service de garde ou comme deux adresses proches l'une de l'autre.
-- Prévenir que les horaires peuvent varier pendant les vacances; inviter à confirmer l'ouverture avant une visite. Ne pas présenter les deux lieux comme une liste exhaustive des LAEP du département.
-- Piste secondaire examinée: l'association OPRA, à Bastia, propose des ateliers de parentalité gratuits mais avec entretien préalable obligatoire; ce n'est pas un LAEP à accès libre. Les ateliers de Calvi existent également, mais les annonces trouvées décrivent surtout des séances ponctuelles déjà passées.
-
-## Affiliation
-
-**Aucune offre partenaire pertinente retenue après recherche.** Les LAEP sont gratuits, sans réservation de billet; les ateliers associatifs examinés ne correspondent pas non plus à une offre chez GetYourGuide, Tiqets ou Klook. Booking.com et Expedia proposent des hébergements familiaux en Haute-Corse, mais un déplacement pour utiliser un service de parentalité de proximité ne justifie pas un séjour. Ne pas insérer d'hôtel, de billet, de transfert ni de lien commercial artificiel.
-
-## Sources de départ
-
-- Ville de Bastia, A Casa Aperta (conditions, horaires, adresse, téléphone): https://www.bastia.corsica/servizii/petite-enfance/a-casa-aperta/
-- Communauté de communes de L'Île-Rousse - Balagne, A Casa Zitellina (LAEP, RPE, activités, horaires et contact): https://www.lisula-balagna.fr/espace-parentalite/
-- CAF, fonctionnement national des lieux d'accueil enfants-parents: https://www.caf.fr/allocataires/aides-et-demarches/thematique-libre/lieu-d-accueil-enfants-parents-laep
-- Monenfant.fr, explication du LAEP, accueil des familles, absence d'inscription: https://www.monenfant.fr/fr/web/guest/les-lieux-d-accueil-enfants-parents
-- Association OPRA à Bastia, ateliers gratuits sur entretien préalable, à distinguer des LAEP: https://opra.corsica/activite/soutien-a-la-parentalite-reaap/
-- Ville de Calvi, exemple d'atelier parentalité au centre Cardellu (activité ponctuelle non retenue comme sujet principal): https://ville-calvi.corsica/social-aide-a-la-parentalite-un-atelier-potager-gratuit-au-centre-cardellu/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "parentalite"
+title: "LAEP à Bastia et en Balagne: deux lieux gratuits pour les tout-petits"
+subtitle: "Horaires, accueil sans inscription et différence avec le Relais Petite Enfance"
+summary: "À Bastia et à Losari, deux lieux d'accueil enfants-parents proposent des jeux et des rencontres aux moins de 4 ans. Horaires et conseils pour une première visite."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "LAEP Bastia"
+  - "LAEP Balagne"
+  - "lieu accueil enfants parents Haute-Corse"
+  - "A Casa Aperta"
+  - "A Casa Zitellina"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Bastia"
+  department: "Haute-Corse"
+  region: "Corse"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Ville de Bastia - A Casa Aperta"
+    url: "https://www.bastia.corsica/servizii/petite-enfance/a-casa-aperta/"
+  - title: "Communauté de communes de L'Île-Rousse - Balagne - A Casa Zitellina"
+    url: "https://www.lisula-balagna.fr/espace-parentalite/"
+  - title: "Caisse nationale des Allocations familiales - Les lieux d'accueil enfants-parents"
+    url: "https://www.monenfant.fr/fr/web/guest/les-lieux-d-accueil-enfants-parents"
+  - title: "Caf - Lieu d'accueil enfants-parents"
+    url: "https://www.caf.fr/allocataires/aides-et-demarches/thematique-libre/lieu-d-accueil-enfants-parents-laep"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Un lieu d'accueil enfants-parents (LAEP), c'est un endroit où un jeune enfant peut jouer, découvrir d'autres enfants et passer un moment avec l'adulte qui l'accompagne. Pour les parents, c'est aussi l'occasion de rencontrer d'autres familles, sans s'inscrire à une activité ni confier son enfant à une structure de garde.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+En Haute-Corse, deux lieux proposent cet accueil aux **enfants de moins de 4 ans**: **A Casa Aperta à Bastia** et **A Casa Zitellina à Losari**, en Balagne, dans le secteur de L'Île-Rousse. Les deux sont gratuits, mais ils ne se trouvent pas dans le même bassin de vie et n'ont pas tout à fait les mêmes horaires.
+
+## Un LAEP, pour quoi faire?
+
+Ce n'est ni une crèche, ni une garderie, ni un cours organisé. L'enfant reste avec son parent ou un adulte référent. Il peut explorer des jeux adaptés à son âge, observer les autres, participer à son rythme et retrouver son accompagnant quand il en a besoin.
+
+Les adultes peuvent échanger entre eux ou avec les accueillants, qui sont formés à l'écoute. Il n'est pas nécessaire d'arriver avec une difficulté particulière: on peut simplement vouloir sortir de chez soi, partager un temps avec son enfant ou découvrir un premier lieu collectif avant l'entrée en crèche ou à l'école.
+
+La [Caisse nationale des Allocations familiales, sur monenfant.fr](https://www.monenfant.fr/fr/web/guest/les-lieux-d-accueil-enfants-parents), rappelle deux principes de ces accueils: **l'accès libre, sans inscription, et la confidentialité des échanges**. Si les LAEP peuvent généralement recevoir des enfants jusqu'à 6 ans, **les deux structures présentées ici annoncent un accueil jusqu'à 4 ans**.
+
+## A Casa Aperta: le rendez-vous des familles à Bastia
+
+À Bastia, **A Casa Aperta**, ou « maison ouverte », accueille les enfants de moins de 4 ans avec un parent ou un adulte référent. Des accueillantes sont présentes, et les familles disposent d'un espace de jeux, de découverte et de rencontres.
+
+**Informations pratiques**
+
+- **Adresse:** résidence Terralbore, rue Pierre-et-Marie-Curie, 20600 Bastia, dans les locaux du Relais Petite Enfance.
+- **Mardi:** 14h à 16h30.
+- **Vendredi:** 9h à 11h30.
+- **Accès:** libre et gratuit.
+- **Téléphone:** 04 95 33 48 53.
+
+Ces renseignements proviennent directement de la [Ville de Bastia, page A Casa Aperta](https://www.bastia.corsica/servizii/petite-enfance/a-casa-aperta/). Le lieu convient notamment aux familles qui habitent Bastia ou ses environs et cherchent une activité régulière, sans inscription préalable.
+
+## A Casa Zitellina: jeux et rencontres à Losari, en Balagne
+
+**A Casa Zitellina** se situe à Losari, sur le territoire de la communauté de communes de L'Île-Rousse - Balagne. Son espace parentalité rassemble deux services distincts: un LAEP ouvert aux familles et un Relais Petite Enfance (RPE) consacré notamment aux questions de garde.
+
+Pour les enfants, le LAEP propose du jeu libre et des possibilités d'éveil, avec des jeux sensoriels ou moteurs, des histoires et des activités simples selon les moments. Les parents et autres proches accompagnants peuvent rencontrer d'autres adultes et échanger avec des professionnels.
+
+**Informations pratiques**
+
+- **Lieu:** A Casa Zitellina, à Losari, en Balagne.
+- **Public:** enfants de 0 à 4 ans accompagnés d'un parent, grand-parent ou adulte référent.
+- **Mardi:** 14h30 à 17h.
+- **Vendredi:** 9h à 11h30.
+- **Accès:** libre, gratuit et sans inscription.
+- **Téléphone:** 06 48 78 19 32.
+- **Contact:** directionpedagogique@ccirb.fr.
+
+La [Communauté de communes de L'Île-Rousse - Balagne détaille le fonctionnement d'A Casa Zitellina](https://www.lisula-balagna.fr/espace-parentalite/). Sa page indique Losari mais ne donne pas d'adresse de rue précise pour cet espace: mieux vaut demander le point d'accès exact avant un premier déplacement.
+
+## LAEP ou Relais Petite Enfance: à qui s'adresser?
+
+La confusion est facile, puisque ces services partagent des locaux à Bastia et à Losari. Pourtant, ils ne répondent pas au même besoin.
+
+**Le LAEP** accueille l'enfant **avec son adulte accompagnant**, pour jouer, rencontrer d'autres familles et partager un moment sur place. Il ne prend pas l'enfant en charge à la place de ses parents.
+
+**Le Relais Petite Enfance (RPE)** est le bon interlocuteur pour obtenir des renseignements sur les modes de garde, les assistants maternels, les démarches et les aides liées à l'accueil du jeune enfant. À Losari, ces missions sont clairement décrites sur la [page officielle de l'espace parentalité](https://www.lisula-balagna.fr/espace-parentalite/). Pour une recherche de garde, il faut donc se renseigner sur les permanences du RPE plutôt que se présenter à une séance du LAEP.
+
+## Préparer une première visite
+
+Pour ces deux lieux, il n'y a **ni billet à acheter ni dossier d'inscription à préparer**. Venez avec votre enfant pendant une plage d'accueil, en prévoyant simplement ce dont il a besoin au quotidien. Vous restez avec lui pendant la séance: l'objectif n'est pas de le laisser seul quelques heures.
+
+Choisissez d'abord selon votre secteur: **Bastia** pour les familles du bassin bastiais, **Losari** pour celles de Balagne. Les deux lieux accueillent le vendredi matin; le mardi, Bastia commence une demi-heure plus tôt et termine également une demi-heure plus tôt.
+
+Enfin, avant de partir, vérifiez les horaires auprès de la structure, notamment pendant les vacances ou les jours fériés. Les coordonnées ci-dessus permettent de confirmer qu'une séance a bien lieu. Pour rechercher d'autres accueils ailleurs dans le département, le site [monenfant.fr](https://www.monenfant.fr/fr/web/guest/les-lieux-d-accueil-enfants-parents) explique aussi comment trouver un LAEP près de chez soi.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même action payante, si une offre partenaire pertinente permet réellement l'achat ou la réservation, utilise-la comme chemin d'action dans le corps et évite de lui faire concurrence avec un lien officiel équivalent. Conserve la source officielle dans `sources` lorsqu'elle reste nécessaire à la vérification des faits. Sans équivalent partenaire pertinent, conserve le lien officiel utile.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -127,4 +179,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
