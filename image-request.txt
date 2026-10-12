@@ -149,3 +149,4 @@ automation/image-20261011-069bece-pierrefonds-bastia-c510139|c510139448e20623924
 automation/image-20261011-069bece-pierrefonds-bastia-c510139|c692c911450e9039bd65bae5f3f19f5e65b6458a
 automation/image-20261012-5d5defc-famille-guines-62d0f46|62d0f46db2d1080eb08f49dd80c9ad30edd1740d
 automation/image-20261012-5d5defc-famille-guines-62d0f46|d9505c14697a08b77cf97203a44995b5a5c6cf24
+automation/image-20261012-2011f8e-couches-4b12c0d|4b12c0d096ea11bbd3b43eb2c09eb69d1b0446ab
