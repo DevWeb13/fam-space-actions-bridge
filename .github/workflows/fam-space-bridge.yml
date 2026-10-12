@@ -213,9 +213,9 @@ jobs:
           fi
 
           automation_commit="$(git rev-parse "origin/$branch")"
-          automation_parent="$(git rev-parse "${automation_commit}^")"
+          automation_base="$(git merge-base origin/master "$automation_commit")"
           mapfile -t changes < <(
-            git diff --name-status "$automation_parent" "$automation_commit"
+            git diff --name-status "$automation_base" "$automation_commit"
           )
           if [ "${#changes[@]}" -ne 1 ]; then
             echo "Le commit Destination doit contenir exactement un changement." >&2
@@ -238,7 +238,15 @@ jobs:
           git checkout -B bridge-runner origin/master
           git reset --hard origin/master
           git clean -fd
-          bash .github/scripts/publish-destination-candidate.sh             "$automation_commit" "$automation_file"
+
+          # Recréer un commit unique depuis le candidat final, même après plusieurs retouches.
+          mkdir -p "$(dirname "$automation_file")"
+          git show "$automation_commit:$automation_file" > "$automation_file"
+          git add -- "$automation_file"
+          git commit -m "content: destination candidate"
+          candidate_commit="$(git rev-parse HEAD)"
+
+          bash .github/scripts/publish-destination-candidate.sh             "$candidate_commit" "$automation_file"
 
           git tag "$processed_tag" "$automation_commit"
           git push origin "refs/tags/$processed_tag"
