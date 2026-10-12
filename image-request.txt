@@ -147,3 +147,4 @@ automation/image-20261011-344d8af-fouees-azay-vaux|ba9d037404f68f8c6298cc8393375
 automation/image-20261011-344d8af-fouees-azay-vaux|a20b910036e56b2c60d088cd75f79d890e428cce
 automation/image-20261011-069bece-pierrefonds-bastia-c510139|c510139448e20623924cc3f543b7b2c5e1c0faf2
 automation/image-20261011-069bece-pierrefonds-bastia-c510139|c692c911450e9039bd65bae5f3f19f5e65b6458a
+automation/image-20261012-5d5defc-famille-guines-62d0f46|62d0f46db2d1080eb08f49dd80c9ad30edd1740d
