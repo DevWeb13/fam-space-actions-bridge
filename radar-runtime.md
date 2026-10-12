@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les faits utilisés sont liés naturellement dans le corps et présents dans `sources`. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Halloween 2026 au Safari de Peaugres: animations et Lumières Sauvages"
-subtitle: Du 17 octobre au 1er novembre en Ardèche, choisir entre une journée au zoo et la visite lumineuse du soir.
-summary: "Halloween 2026 au Wow Safari Peaugres: animations pour enfants, Festival Lumières Sauvages, tarifs et choix entre billet journée et billet soirée."
+title: "Halloween 2026 au Safari de Peaugres: journée complète ou Lumières Sauvages le soir?"
+subtitle: Du 17 octobre au 1er novembre en Ardèche, deux façons de profiter d'Halloween en famille sans acheter le mauvais billet.
+summary: À Peaugres, les animations d'Halloween précèdent un parcours de lanternes de 2,5 km. Comparez le billet journée avec festival inclus et le billet soirée seul, les tarifs et le rythme à prévoir avec des enfants.
 category: evenements
 location:
   city: Peaugres
@@ -69,8 +74,8 @@ location:
 keywords:
   - Halloween 2026 Safari de Peaugres
   - Festival Lumières Sauvages 2026 Peaugres
-  - Halloween Wow Safari Peaugres famille
   - billet festival Lumières Sauvages ou journée
+  - Halloween Wow Safari Peaugres en famille
 sources:
   - title: Wow Safari Peaugres - Programme Halloween 2026
     url: https://www.safari-peaugres.com/actualites/halloween-wow-safari-peaugres/
@@ -80,11 +85,11 @@ sources:
     url: https://www.safari-peaugres.com/peaugres-lumieres-sauvages/
   - title: Wow Safari Peaugres - Tarifs et formules
     url: https://www.safari-peaugres.com/tarifs/
-  - title: Wow Safari Peaugres - Horaires selon la date
+  - title: Wow Safari Peaugres - Calendrier des horaires
     url: https://www.safari-peaugres.com/calendrier-horaires-ouverture/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: halloween-2026-au-safari-de-peaugres-animations-et-lumieres-sauvages
   decision: Choisir entre visiter le safari et ses animations d'Halloween avant de voir les lanternes le soir, ou venir seulement au Festival Lumières Sauvages, en connaissant les tarifs, la durée et les contraintes pour les enfants.
@@ -94,31 +99,50 @@ radar:
     dataThrough: 2026-10-09
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Wow Safari Peaugres - Programme Halloween 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-11-01
 ---
 
-## Mission retenue
-Halloween du 17 octobre au 1er novembre 2026 au Wow Safari Peaugres, en Ardèche: animations sur les animaux nocturnes, nourrissages thématisés, Souterrains du Manoir et Festival Lumières Sauvages qui débute le 17 octobre. L'article est centré sur le choix entre la journée complète et le festival du soir.
+Au Wow Safari Peaugres, Halloween se fête **du 17 octobre au 1er novembre 2026**, pendant les vacances de la Toussaint. Les familles peuvent passer la journée parmi les animaux et les décors d'Halloween, puis rester pour le Festival Lumières Sauvages à la nuit tombée. Mais il est aussi possible de venir uniquement voir les lanternes. Le choix change à la fois le prix et le temps à prévoir avec les enfants.
 
-## Pourquoi cette mission
-Opportunité saisonnière imminente, documentée par l'organisateur, avec une vraie décision d'achat: billet journée avec festival inclus ou billet festival seul. Le meilleur refresh GSC (carte Tattoo Isère) est classé « uncertain », sans recul de classement démontré, et l'article existant répond déjà aux principales décisions. L'expansion d'une page forte comme Futuroween est moins prioritaire car le thème est déjà couvert. L'article Fam Space existant sur Peaugres traite les billets habituels, le safari voiture, la poussette et le pique-nique, mais pas ce programme Halloween ni le choix propre au parcours nocturne.
+## Quel billet choisir pour Halloween à Peaugres?
 
-## Décision du lecteur
-Savoir si sa famille profitera davantage des animaux et animations d'Halloween en journée avec les lumières à la nuit tombée, ou d'une visite lumineuse seule, et réserver la formule appropriée sans perdre du temps ni payer deux fois.
+Le **billet journée** donne accès au safari en voiture, au circuit à pied, aux animations d'Halloween et au Festival Lumières Sauvages le soir. Le tarif Liberté annoncé par le parc est de **32,90 € dès 11 ans**, **27,50 € de 3 à 10 ans** et **gratuit avant 3 ans**. Il n'y a donc **pas de second billet à acheter pour les lumières** après une visite en journée.
 
-## Faits à traiter
-- Halloween au parc du 17 octobre au 1er novembre 2026: animaux et citrouilles lors de certains nourrissages, Souterrains du Manoir, Serre aux 1000 cachettes, Cimetière des espèces disparues, petits déguisements et bonbons; les animations précises et leurs horaires varient.
-- Festival Lumières Sauvages du 17 octobre 2026 au 28 mars 2027 selon sa page officielle détaillée (d'autres rubriques du site annoncent le 27 mars: faire prévaloir la page de l'événement et recontrôler); environ 3000 lanternes, 2,5 km et 1 h 30 de marche à la tombée de la nuit. Le safari voiture et l'observation des animaux ne se poursuivent pas de nuit.
-- Billet journée Safari voiture + circuit à pied + Festival: adulte à partir de 11 ans 32,90 €, enfant de 3 à 10 ans 27,50 €, moins de 3 ans gratuit. Billet Festival seul: adulte 24,90 €, enfant 20,90 €. Contrôler les offres Futé, les packs, les horaires et les conditions du billet choisi; ne pas supposer une réservation obligatoire du Festival.
-- Pour de jeunes enfants, anticiper la durée, les distances, la pénombre et le repas entre visite animalière et lumières; vérifier l'accessibilité selon la situation familiale. Fixer eventEndsAt au 1er novembre 2026 pour cette page Halloween, distinct de la saison hivernale du festival.
+Le **billet Festival seul** coûte **24,90 € dès 11 ans** et **20,90 € de 3 à 10 ans**. Il permet de parcourir les installations lumineuses, **pas de visiter les animaux ni de faire le safari voiture**. Pour deux adultes et deux enfants âgés de 3 à 10 ans, comptez 91,60 € pour le Festival seul contre 120,80 € au tarif Liberté journée: la différence est de 29,20 € pour toute la famille.
 
-## Sources de départ
-Les cinq pages officielles du safari mentionnées dans le frontmatter: programme Halloween, présentation de saison, Festival, tarifs et calendrier.
+Si la sortie est prévue à l'avance, le **billet Futé** peut changer le calcul: **27,90 € par adulte et 22,50 € par enfant**, à acheter en ligne au moins sept jours avant la visite. Il est valable le jour choisi ou le lendemain si le billet n'a pas été utilisé le premier jour et si le parc est ouvert. Il est non remboursable, non modifiable et non coupe-file. À quatre (deux adultes et deux enfants de 3 à 10 ans), cela représente 100,80 € pour une journée complète, soit seulement 9,20 € de plus que le Festival seul au tarif indiqué. Les familles de deux adultes et trois enfants peuvent aussi comparer le pack tribu à 120,80 € avec les billets Futé.
 
-## Affiliation
-Examiner d'abord l'entrée Safari vendue par Tiqets, sans présenter la fiche comme preuve d'un billet spécifique au Festival. Pour un séjour après les lumières, vérifier Villa Bianca sur Booking.com ou les hébergements immersifs du parc. Ne pas laisser une liste d'offres détourner l'article du choix de billet.
+Tous ces tarifs et conditions sont détaillés dans les [formules officielles du Safari de Peaugres](https://www.safari-peaugres.com/tarifs/). Le parc indique qu'une réservation n'est pas obligatoire pour le Festival seul, mais il reste prudent de vérifier les conditions du billet choisi et les jours d'ouverture avant le déplacement.
 
-## Continuations internes
-- Pour les billets hors Halloween, le safari voiture, la poussette et le pique-nique, renvoyer à [Safari de Peaugres avec enfants](/articles/sorties/safari-de-peaugres-avec-enfants-quel-billet-choisir-et-comment-organiser-la-journee/) au lieu de répéter ses explications.
+## Animaux nocturnes, citrouilles et déguisements: que voir en journée?
+
+Le [programme Halloween 2026 annoncé par le parc](https://www.safari-peaugres.com/actualites/halloween-wow-safari-peaugres/) mise davantage sur la curiosité que sur la peur. Dans les **Souterrains du Manoir**, la pénombre et les décors de saison accompagnent la découverte d'espèces nocturnes ou souterraines. La **Serre aux 1 000 cachettes** invite à observer les serpents et leurs techniques de camouflage. Le **Cimetière des espèces disparues** raconte, quant à lui, l'histoire d'animaux disparus, avec une dimension pédagogique.
+
+Lors de certains rendez-vous avec les animaux, les soigneurs proposent des nourrissages thématisés, notamment autour des citrouilles. Les espèces concernées et les horaires varient suivant le jour: mieux vaut regarder le programme à l'arrivée plutôt que promettre aux enfants un nourrissage précis. Les petits déguisements sont les bienvenus, et le parc annonce des bonbons et des rencontres costumées dans les allées.
+
+Ce programme intéressera surtout les familles qui veulent **voir les animaux et profiter des activités de saison**. Si l'enfant apprécie les lumières mais supporte mal une très longue journée, mieux vaut envisager uniquement le Festival.
+
+## Lumières Sauvages: une vraie promenade après la tombée de la nuit
+
+Le [Festival Lumières Sauvages 2026-2027](https://www.safari-peaugres.com/peaugres-lumieres-sauvages/) débute le **17 octobre 2026** et doit se poursuivre jusqu'au **28 mars 2027**. L'édition rassemble environ **3 000 sculptures lumineuses** sur un parcours de **plus de 2,5 km**, avec **environ 1 h 30 de marche**. Les décors explorent les milieux extrêmes de la planète et des créatures imaginaires, avec une séquence inspirée de la Fête des morts mexicaine.
+
+Le Festival commence **à la tombée de la nuit**, à une heure qui change avec la date. Il ne s'agit pas d'un safari nocturne: les animaux sont rentrés et le circuit voiture ne fonctionne plus le soir. Les familles qui ne viennent que pour les lanternes n'ont donc aucune raison d'arriver plusieurs heures en avance pour espérer voir les animaux.
+
+## Avec de jeunes enfants, prévoir la fatigue autant que l'horaire
+
+Pour combiner animaux et lanternes, arrivez assez tôt pour profiter du safari voiture et des activités à pied avant leur fermeture. Entre la fin de l'observation des animaux et l'allumage des lumières, le parc indique que **l'aire de jeux Jumbo et des points de restauration restent ouverts**. Cela permet de prévoir une pause et un repas sans attendre la fin du parcours lumineux.
+
+Le soir, ajoutez des vêtements chauds, des chaussures adaptées à la marche et, pour les plus petits, de quoi tenir jusqu'à la fin des 2,5 km. Les enfants sensibles aux ambiances sombres pourront être impressionnés par les Souterrains du Manoir, même si la programmation se veut familiale.
+
+En matière d'accessibilité, le parc signale des **pentes supérieures à 20 %** et conseille un fauteuil électrique pour certaines situations. Pour une mobilité réduite ou une poussette, vérifiez le parcours adapté directement avec le parc avant d'acheter. Les Souterrains du Manoir ne sont notamment pas accessibles en poussette. Pour le fonctionnement habituel du zoo, les aires de pique-nique, les services bébé et le circuit voiture, retrouvez notre guide [Safari de Peaugres avec enfants: quel billet choisir et comment organiser la journée](/articles/sorties/safari-de-peaugres-avec-enfants-quel-billet-choisir-et-comment-organiser-la-journee/).
+
+Enfin, le [calendrier officiel des horaires](https://www.safari-peaugres.com/calendrier-horaires-ouverture/) est à consulter pour **la date exacte** de votre sortie: l'ouverture, la fermeture des circuits et le début des illuminations ne doivent pas être déduits d'un horaire valable un autre jour.
+
+## Où vérifier ses billets et dormir après les lumières?
+
+Pour une journée au zoo, vous pouvez consulter le [billet d'entrée Safari de Peaugres sur Tiqets](https://www.tiqets.com/fr/activites-attractions-peaugres-c179024/billets-pour-safari-de-peaugres-billet-d-entree-p979491/). Cette fiche annonce le safari en voiture et le parcours à pied, **mais ne détaille pas explicitement l'inclusion du Festival Lumières Sauvages**: contrôlez ce point et le tarif applicable à votre date avant de payer. Si vous voulez seulement les lanternes, choisissez bien la formule **Festival seul**, et non un billet zoo classique.
+
+Pour les familles qui viennent de loin, une nuit sur place évite de reprendre la route après une visite qui se termine dans l'obscurité. La [chambre d'hôtes Villa Bianca à Peaugres sur Booking.com](https://www.booking.com/hotel/fr/villa-bianca-peaugres.fr.html) est une possibilité à examiner selon le nombre de voyageurs, les dates et les disponibilités. Réserver une chambre ne donne pas accès au Festival: les billets se choisissent séparément.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -126,12 +150,12 @@ Examiner d'abord l'entrée Safari vendue par Tiqets, sans présenter la fiche co
 
 - /articles/sorties/safari-de-peaugres-avec-enfants-quel-billet-choisir-et-comment-organiser-la-journee/ | Safari de Peaugres avec enfants: quel billet choisir et comment organiser la journée | sorties | Peaugres, Ardèche, Auvergne-Rhône-Alpes
 - /articles/activites/wow-safari-thoiry-en-famille-tarifs-duree-et-conseils-pour-organiser-la-visite/ | Wow Safari Thoiry en famille: tarifs 2026, billets et durée | activites | Thoiry, Yvelines, Île-de-France
+- /articles/activites/jardin-d-imany-a-mayotte-demi-journee-ou-journee-complete-avec-des-enfants/ | Jardin d'Imany à Mayotte: demi-journée ou journée complète avec des enfants ? | activites | Combani, Mayotte, Mayotte
 - /articles/evenements/grand-bivouac-2026-a-albertville-en-famille-preparer-sa-journee-au-festival/ | Grand Bivouac 2026 à Albertville en famille: préparer sa journée au festival | evenements | Albertville, Savoie, Auvergne-Rhône-Alpes
-- /articles/evenements/equidays-2026-en-famille-dans-le-calvados-villages-gratuits-parade-et-animations/ | Équidays 2026 en famille dans le Calvados: villages gratuits, parade et animations | evenements | Caen, Calvados, Normandie
+- /articles/activites/parc-zoo-du-reynou-avec-des-enfants-billet-date-poussette-ou-journee-complete/ | Parc Zoo du Reynou avec des enfants: billet daté, poussette ou journée complète? | activites | Le Vigen, Haute-Vienne, Nouvelle-Aquitaine
+- /articles/activites/samara-avec-des-enfants-faut-il-prevoir-la-journee-complete/ | Samara avec des enfants: faut-il prévoir la journée complète? | activites | La Chaussée-Tirancourt, Somme, Hauts-de-France
 - /articles/voyages/peur-sur-le-parc-2026-en-famille-journee-nocturne-billets-et-hebergement/ | Peur sur le Parc 2026 en famille: journée, nocturne, billets et hébergement | voyages | Plailly, Oise, Hauts-de-France
-- /articles/activites/cite-du-chocolat-valrhona-a-la-toussaint-2026-quel-atelier-choisir-selon-l-age/ | Cité du Chocolat Valrhona à la Toussaint 2026: animations et ateliers avec des enfants | activites | Tain-l'Hermitage, Drôme, Auvergne-Rhône-Alpes
 - /articles/evenements/lire-en-poche-2026-a-gradignan-avec-des-enfants-organiser-une-journee-sans-perdre-les-ateliers/ | Lire en Poche 2026 à Gradignan avec des enfants: organiser une journée sans perdre les ateliers | evenements | Gradignan, Gironde, Nouvelle-Aquitaine
-- /articles/evenements/partir-en-livre-2026-en-famille/ | Partir en Livre 2026: trouver une animation jeunesse avant le 19 juillet | evenements
 - /articles/vie-pratique/transport-scolaire-en-ardeche-peut-on-utiliser-scolaire-le-week-end-et-pendant-les-vacances/ | Transport scolaire en Ardèche: peut-on utiliser Scolaire+ le week-end et pendant les vacances? | vie-pratique | Privas, Ardèche, Auvergne-Rhône-Alpes
 - /articles/activites/canoe-en-ardeche-avec-des-enfants-6-ou-12-km-quel-parcours-choisir/ | Canoë en Ardèche avec des enfants: 6 ou 12 km, quel parcours choisir ? | activites | Vallon-Pont-d'Arc, Ardèche, Auvergne-Rhône-Alpes
 - /articles/evenements/castagnade-de-joyeuse-2026-avec-des-enfants-venir-samedi-ou-dimanche/ | Castagnade de Joyeuse 2026 avec des enfants: venir samedi ou dimanche? | evenements | Joyeuse, Ardèche, Auvergne-Rhône-Alpes
@@ -149,7 +173,6 @@ Examiner d'abord l'entrée Safari vendue par Tiqets, sans présenter la fiche co
 
 ### Historique Radar lié
 
-- opportunity | /articles/activites/cite-du-chocolat-valrhona-a-la-toussaint-2026-quel-atelier-choisir-selon-l-age/ | 2026-10-05T14:27:51.219Z
 - opportunity | /articles/evenements/famille-en-fete-2026-pres-de-bordeaux-ateliers-gratuits-pour-les-0-6-ans/ | 2026-10-12T08:10:30.674Z
 - opportunity | /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | 2026-10-10T15:40:28.185Z
 - opportunity | /articles/evenements/halloween-2026-a-la-tour-de-l-horloge-de-guines-musee-hante-contes-et-nocturne/ | 2026-10-12T10:40:26.563Z
