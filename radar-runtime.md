@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les faits utilisés sont liés naturellement dans le corps et présents dans `sources`. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Famille en fête 2026 près de Bordeaux: ateliers gratuits pour les 0-6 ans"
-subtitle: Du 19 au 24 octobre, choisir selon l'âge, la commune et les places encore accessibles
-summary: Dans les six communes des Rives de la Laurence en Gironde, Famille en fête propose des ateliers et spectacles gratuits pour les 0-6 ans. Programme, inscriptions, séances complètes, listes d'attente et changements de lieux.
+title: "Famille en fête 2026 en Gironde: ateliers gratuits pour les 0-6 ans"
+subtitle: Du 19 au 24 octobre, les séances à choisir et les lieux à vérifier dans les Rives de la Laurence
+summary: Famille en fête revient du 19 au 24 octobre 2026 dans les Rives de la Laurence, en Gironde. Découvrez les animations pour les 0-6 ans, les inscriptions, les listes d'attente et les changements d'adresse.
 category: evenements
 location:
   city: Saint-Loubès
@@ -69,18 +74,21 @@ location:
 keywords:
   - Famille en fête 2026 Rives de la Laurence
   - ateliers gratuits 0-6 ans Gironde Toussaint
-  - famille en fête Saint-Loubès Sainte-Eulalie Yvrac
-  - spectacles jeune enfant 19 24 octobre 2026
+  - Famille en fête Saint-Loubès Sainte-Eulalie Yvrac
+  - spectacles jeune enfant octobre 2026 Gironde
 sources:
   - title: Rives de la Laurence — Famille en fête 2026, programme et inscriptions
     url: https://www.rivesdelalaurence.fr/retour-de-famille-en-fete-inscriptions-aux-ateliers-et-spectacles/
-  - title: Formulaire officiel — Inscriptions ateliers et spectacles Famille en fête 2026
-    url: https://docs.google.com/forms/d/e/1FAIpQLSelrayWhPjQ9bh9Tdn-l2Dbi3BKGZ36MbxKghZNoT0vI_evvQ/viewform
-  - title: Rives de la Laurence — Consignes d'inscription via IntraMuros
+    accessedAt: 2026-10-12
+  - title: Rives de la Laurence — Formulaire officiel d'inscription Famille en fête 2026
+    url: https://docs.google.com/forms/d/e/1FAIpQLSelrayWhPjQ9bh9Tdn-l2Dbi3BKGZ36MbxKghZNoT0vI_evvQ/viewform?pli=1
+    accessedAt: 2026-10-12
+  - title: Rives de la Laurence — Conditions de réservation annoncées sur IntraMuros
     url: https://www.intramuros.org/montussan/actualites/994743
+    accessedAt: 2026-10-12
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: famille-en-fete-2026-pres-de-bordeaux-ateliers-gratuits-pour-les-0-6-ans
   decision: Trouver une animation effectivement accessible à l'âge de son enfant entre le 19 et le 24 octobre, dans la bonne commune et au bon horaire, puis savoir s'il faut réserver, rejoindre une liste d'attente ou simplement venir.
@@ -90,35 +98,64 @@ radar:
     dataThrough: 2026-10-09
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Rives de la Laurence — Famille en fête 2026, programme et inscriptions »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-10-24
 ---
 
-## Mission retenue
+Du **19 au 24 octobre 2026**, **Famille en fête** revient dans les six communes des **Rives de la Laurence**, en Gironde, avec des ateliers, spectacles et découvertes pour les enfants de **0 à 6 ans**. Cette 12e édition se déroule pendant les vacances de la Toussaint. Les propositions sont gratuites, mais certaines séances nécessitent une inscription et plusieurs sont déjà complètes.
 
-Préparer une page locale sur la 12e édition de **Famille en fête**, festival itinérant gratuit des **Rives de la Laurence en Gironde**, du **19 au 24 octobre 2026**, consacré aux **0-6 ans** dans six communes: Beychac-et-Caillau, Montussan, Sainte-Eulalie, Saint-Loubès, Saint-Sulpice-et-Cameyrac et Yvrac. Saint-Loubès est le point territorial du frontmatter, **pas le lieu unique du festival**.
+Le festival est itinérant: les activités ne se déroulent pas toutes à Saint-Loubès. Le territoire comprend aussi Beychac-et-Caillau, Montussan, Sainte-Eulalie, Saint-Sulpice-et-Cameyrac et Yvrac. Voici les séances à repérer selon l'âge de l'enfant, les places annoncées et les adresses actualisées.
 
-## Pourquoi cette mission
+## Comment s'inscrire sans se tromper de séance?
 
-L'opportunité est imminente, officielle et déjà marquée par des changements pratiques susceptibles de faire manquer une séance à une famille. Le meilleur refresh GSC, **Carte Tattoo Isère**, relève du signal **uncertain** (aucune requête comparable montrant une perte de classement): l'article existant, lu entièrement sur master, couvre déjà 60/120 €, bonus Caf, critères, démarches, utilisation et échéances; aucune lacune substantielle indépendante n'a été établie. L'expansion depuis la page forte **Transports à Paris avec des enfants** n'apporte pas de décision distincte immédiate: les arbitrages tickets/Navigo/Paris Visite, enfants et aéroports y sont déjà détaillés. La Destination en cours concerne Vincennes, sans chevauchement. Le catalogue compact et `probableDuplicates` ne révèlent pas de page consacrée à ce festival en Gironde; les proximités lexicales portent sur d'autres communes et événements.
+La [page officielle de Famille en fête](https://www.rivesdelalaurence.fr/retour-de-famille-en-fete-inscriptions-aux-ateliers-et-spectacles/) donne accès au programme complet et au [formulaire d'inscription aux ateliers et spectacles](https://docs.google.com/forms/d/e/1FAIpQLSelrayWhPjQ9bh9Tdn-l2Dbi3BKGZ36MbxKghZNoT0vI_evvQ/viewform?pli=1).
 
-## Faits à traiter
+Pour les rendez-vous qui demandent une réservation, **l'inscription préalable est obligatoire et aucune inscription sur place n'est prévue**, précise [l'organisateur](https://www.intramuros.org/montussan/actualites/994743). Dans le formulaire, indiquez le **nombre d'enfants et d'accompagnants pour chaque séance**, ainsi que des coordonnées pour recevoir une confirmation ou être informé d'un changement.
 
-- Toutes les propositions sont **gratuites**, mais plusieurs nécessitent une **inscription préalable obligatoire**, sans inscription sur place pour ces activités. Le formulaire exige de compter enfants et accompagnants.
-- Vérifier **au moment de la rédaction** les disponibilités: mardi 20, **Drôle de poisson** et **À vos branches, prêts, modelez!** sont indiqués complets avec liste d'attente; mercredi 21 **Gestes et comptines** également; jeudi 22 **médiation animale** est complète et **sans nouvelle inscription**; vendredi 23 **séance de lecture à Montussan** en liste d'attente.
-- **Lieux corrigés dans le formulaire**: mardi 20, **Raconte-moi une histoire** à 10 h 30 et 11 h 15 au foyer François-et-Jean-Pierre-Chabry, impasse Max-Linder, **Saint-Loubès**; jeudi 22, **Explore en fluo** à 9 h au petit dojo, 1 chemin de Nice, **Saint-Loubès**, et médiation animale à l'annexe du pôle mobilité, même chemin.
-- Les âges varient par séance: **Explore en fluo** 15 mois-3 ans, **danse parent/enfant** vendredi 23 dès 4 ans, **goûter santé** 15 mois-4 ans, **La cuisine en folie** jeudi 22 à Yvrac de 6 mois à 6 ans (17 h et 18 h); **Premier envol** samedi 24 dès 9 mois (16 h et 17 h, arrivée 15 min avant).
-- Distinguer le programme général et l'état dynamique des réservations. Donner le téléphone de l'organisateur **05 56 78 91 11** en cas de doute; ne jamais présenter une liste d'attente comme une place garantie. Fin événementielle: **24 octobre 2026**.
+Attention à la distinction entre **liste d'attente** et inscription confirmée: si un atelier est complet, remplir la partie « liste d'attente » ne garantit pas de pouvoir y participer. Les situations ci-dessous sont celles affichées dans le formulaire consulté le **12 octobre 2026**; vérifiez-les à nouveau avant de partir.
 
-## Sources de départ
+## Mardi 20 et mercredi 21 octobre: histoires et ateliers pour les petits
 
-La page officielle de l'intercommunalité pour les dates et la gratuité, **le formulaire officiel d'inscription pour les états de séances et changements d'adresse**, et l'annonce IntraMuros de l'organisateur pour la règle de réservation. Ces états peuvent évoluer rapidement.
+Le **mardi 20 octobre**, à **Sainte-Eulalie**, deux ateliers affichent déjà complet, mais permettent de rejoindre une liste d'attente:
 
-## Affiliation
+- **Drôle de poisson**, atelier artistique et sensoriel pour les enfants **jusqu'à 4 ans**, de **10 h à 11 h**.
+- **À vos branches, prêts, modelez!**, atelier art et nature **jusqu'à 6 ans**, à **16 h**.
 
-Réservation gratuite officielle prioritaire; aucune billetterie payante à substituer. Évoquer éventuellement **Guest house arboré à Saint-Loubès** uniquement pour un séjour dans la région, sous réserve de disponibilité réelle et sans détourner l'article de son utilité locale.
+Une autre proposition pour les enfants **jusqu'à 4 ans**, **Raconte-moi une histoire**, est annoncée à **10 h 30** et **11 h 15**. **Le lieu a changé**: rendez-vous au **foyer François-et-Jean-Pierre-Chabry, impasse Max-Linder à Saint-Loubès**, et non à une ancienne adresse du programme.
 
-## Continuations internes
+Le **mercredi 21 octobre**, le spectacle **Gestes et comptines**, prévu à **10 h 30** à la **Maison des Arts de Sainte-Eulalie** pour les enfants **jusqu'à 3 ans**, est également **complet, avec liste d'attente possible**.
 
-Ne pas refaire un guide général de la petite enfance. Pour les familles cherchant un accueil régulier toute l'année plutôt qu'un événement ponctuel, un seul renvoi naturel éventuel vers **LAEP: découvrir un lieu d'accueil enfants-parents près de chez soi** (/articles/parentalite/laep-enfants-parents-gratuit-sans-inscription/). Pas de maillage artificiel vers des festivals d'autres départements.
+## Jeudi 22 octobre: éveil sensoriel, carton et magie
+
+Plusieurs activités s'adressent aux moins de 3 ans, mais les modalités et lieux diffèrent:
+
+- **Explore en fluo**, découverte sensorielle dans la pénombre, pour les **15 mois à 3 ans**, à **9 h**. **Nouvelle adresse: petit dojo, 1 chemin de Nice à Saint-Loubès**.
+- **Médiation animale**, avec Amandine Roulin, jusqu'à **3 ans**, à **10 h 30**. **Nouvelle adresse: annexe du pôle mobilité, 1 chemin de Nice à Saint-Loubès**. Cette séance est **complète et le formulaire indique qu'aucune nouvelle inscription n'est possible**.
+- **Tous en carton**, installation pédagogique pour les tout-petits jusqu'à **3 ans**, à **16 h 30** ou **17 h 30**, à Saint-Loubès.
+
+Pour les enfants un peu plus grands ou une fratrie d'âges différents, **La cuisine en folie**, spectacle de magie à **Yvrac**, propose deux horaires, **17 h** et **18 h**, et accueille les enfants **de 6 mois à 6 ans**. Contrôlez les places et l'adresse exacte dans le programme avant le déplacement.
+
+## Vendredi 23 et samedi 24 octobre: danse, lecture et spectacle de clôture
+
+Le **vendredi 23 octobre**, la **séance de lecture à la médiathèque de Montussan**, à **10 h**, pour les enfants **jusqu'à 3 ans**, est annoncée **complète, avec liste d'attente**.
+
+Deux autres rendez-vous figurent dans le formulaire:
+
+- **Danse parent/enfant**, à **10 h 30** à **Saint-Loubès**, **à partir de 4 ans**.
+- **Goûter santé**, animé par une diététicienne, à **16 h** à **Yvrac**, pour les **15 mois à 4 ans**.
+
+Le **samedi 24 octobre**, la journée de clôture propose notamment **Raconte-moi une histoire** à **Beychac-et-Caillau**, à **10 h** et **15 h**, pour les enfants **jusqu'à 4 ans**. Le spectacle **Premier envol**, par la compagnie Naine Rouge, est annoncé **dès 9 mois**, avec des séances à **16 h** et **17 h**. Pour chacune, l'organisateur demande d'**arriver 15 minutes à l'avance**. Retrouvez le lieu précis dans le programme avant de vous déplacer.
+
+## Préparer sa venue dans les bonnes communes
+
+Ne vous fiez pas seulement au titre d'une activité: certaines se tiennent à **Saint-Loubès**, d'autres à **Sainte-Eulalie, Montussan, Yvrac ou Beychac-et-Caillau**. Le programme général couvre les six communes et comprend aussi des propositions avec ou sans inscription. Pour chaque sortie envisagée, croisez donc **l'âge autorisé, l'horaire, la commune et l'état de la réservation**.
+
+En cas d'incertitude sur une séance complète, une adresse corrigée ou une confirmation, contactez directement les **Rives de la Laurence au 05 56 78 91 11**. L'organisateur communique aussi via l'adresse **accueil@rivesdelalaurence.fr**.
+
+## Et si vous restez quelques jours près de Bordeaux?
+
+Les activités étant réparties sur plusieurs communes, une famille venue de plus loin peut choisir de loger dans le secteur. À **Saint-Loubès**, [Guest house arboré](https://www.booking.com/hotel/fr/guest-house-arbore.fr.html) est une petite maison indépendante avec **une chambre, un canapé-lit et une cuisine**, annoncée pour **quatre personnes et un bébé**, avec **lits bébé sur demande, sous réserve de disponibilité**. Les prix et les nuits disponibles du 19 au 24 octobre sont à vérifier avant toute réservation.
+
+Si vous recherchez plutôt un lieu régulier où jouer avec un jeune enfant en compagnie d'autres familles, notre guide des [lieux d'accueil enfants-parents (LAEP)](https://www.fam-space.fr/articles/parentalite/laep-enfants-parents-gratuit-sans-inscription/) explique leur fonctionnement et comment en trouver un près de chez vous.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -127,12 +164,15 @@ Ne pas refaire un guide général de la petite enfance. Pour les familles cherch
 - /articles/sorties/vacances-de-la-toussaint-2026-a-la-cite-des-sciences-quels-ateliers-choisir-selon-l-age/ | Vacances de la Toussaint 2026 à la Cité des sciences: les ateliers numériques gratuits avec des enfants | sorties | Paris, Paris, Île-de-France
 - /articles/parentalite/bulles-girondines-a-villenave-d-ornon-un-espace-pour-les-parents-et-les-jeunes-enfants/ | Bulles Girondines à Villenave-d'Ornon: un espace pour les parents et les jeunes enfants | parentalite | Villenave-d'Ornon, Gironde, Nouvelle-Aquitaine
 - /articles/evenements/lire-en-poche-2026-a-gradignan-avec-des-enfants-organiser-une-journee-sans-perdre-les-ateliers/ | Lire en Poche 2026 à Gradignan avec des enfants: organiser une journée sans perdre les ateliers | evenements | Gradignan, Gironde, Nouvelle-Aquitaine
-- /articles/sorties/visites-famille-art-deco-bordeaux-2026/ | Art déco à Bordeaux: deux visites en famille au MusBA en 2026 | sorties | Bordeaux, Gironde, Nouvelle-Aquitaine
 - /articles/evenements/les-expressifs-2026-a-poitiers-trois-jours-de-spectacles-gratuits/ | Les Expressifs 2026 à Poitiers: trois jours de spectacles gratuits | evenements | Poitiers, Vienne, Nouvelle-Aquitaine
-- /articles/sorties/cite-du-vin-a-bordeaux-en-famille-tarifs-duree-et-conseils-de-visite/ | Cité du Vin à Bordeaux en famille: tarifs, durée et conseils de visite | sorties | Bordeaux, Gironde, Nouvelle-Aquitaine
+- /articles/sorties/vacances-de-la-toussaint-2026-au-musee-carnavalet-quelle-activite-choisir-selon-l-age/ | Vacances de la Toussaint 2026 au musée Carnavalet: activités en famille dès 4 ans | sorties | Paris, Paris, Île-de-France
+- /articles/sorties/visites-famille-art-deco-bordeaux-2026/ | Art déco à Bordeaux: deux visites en famille au MusBA en 2026 | sorties | Bordeaux, Gironde, Nouvelle-Aquitaine
+- /articles/activites/ateliers-manga-saint-esprit-2026/ | Ateliers manga au Saint-Esprit en Martinique: trois mercredis pour les jeunes fans | activites | Le Saint-Esprit, Martinique, Martinique
+- /articles/parentalite/l-ilot-des-familles-a-tarbes-quels-ateliers-pour-les-parents-d-enfants-de-0-a-6-ans/ | L'îlot des Familles à Tarbes: quels ateliers pour les parents d'enfants de 0 à 6 ans? | parentalite | Tarbes, Hautes-Pyrénées, Occitanie
 - /articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/ | Planète Préhistorique à Bordeaux avec des enfants: âge, durée et tarifs | sorties | Bordeaux, Gironde, Nouvelle-Aquitaine
 - /articles/activites/anatomik-park-a-cap-sciences-a-partir-de-quel-age-et-combien-de-temps-prevoir/ | Anatomik Park à Cap Sciences: à partir de quel âge et combien de temps prévoir? | activites | Bordeaux, Gironde, Nouvelle-Aquitaine
 - /articles/voyages/dune-du-pilat-avec-une-poussette-ce-qu-il-faut-prevoir-avant-la-montee/ | Dune du Pilat avec une poussette: ce qu'il faut prévoir avant la montée | voyages | La Teste-de-Buch, Gironde, Nouvelle-Aquitaine
+- /articles/sorties/cite-du-vin-a-bordeaux-en-famille-tarifs-duree-et-conseils-de-visite/ | Cité du Vin à Bordeaux en famille: tarifs, durée et conseils de visite | sorties | Bordeaux, Gironde, Nouvelle-Aquitaine
 - /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | Pierrefonds à la Toussaint 2026: atelier lanterne et soirée d'Halloween | evenements | Pierrefonds, Oise, Hauts-de-France
 - /articles/evenements/monument-jeu-d-enfant-2026-a-azay-le-rideau-animaux-caches-atelier-et-contes/ | Monument Jeu d'enfant 2026 à Azay-le-Rideau: animaux cachés et contes en famille | evenements | Azay-le-Rideau, Indre-et-Loire, Centre-Val de Loire
 - /articles/evenements/toussaint-2026-a-vaux-le-vicomte-lampe-torche-ou-carnaval-des-animaux-avec-les-enfants/ | Toussaint 2026 à Vaux-le-Vicomte: les animations pour les enfants | evenements | Maincy, Seine-et-Marne, Île-de-France
@@ -143,22 +183,19 @@ Ne pas refaire un guide général de la petite enfance. Pour les familles cherch
 - /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/ | Monument jeu d'enfant 2026 au château de Vincennes: quel atelier choisir ? | evenements | Vincennes, Val-de-Marne, Île-de-France
 - /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/noel-2026-au-chateau-de-grignan-dates-tarifs-et-visite-en-famille/ | Noël 2026 au château de Grignan: dates, tarifs et visite en famille | evenements | Grignan, Drôme, Auvergne-Rhône-Alpes
-- /articles/evenements/dia-de-los-muertos-2026-au-jardin-d-acclimatation-billets-et-animations-en-famille/ | Día de los Muertos 2026 au Jardin d’Acclimatation: programme, billets et tailles | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | Mondial de l’Auto 2026 avec des enfants: billets, horaires et créneaux | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/fete-de-la-mer-2026-a-marseille-avec-des-enfants-quelle-escale-choisir-le-18-octobre/ | Fête de la mer 2026 à Marseille avec des enfants: quelle escale choisir? | evenements | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur
 
 ### Historique Radar lié
 
-- opportunity | /articles/evenements/dia-de-los-muertos-2026-au-jardin-d-acclimatation-billets-et-animations-en-famille/ | 2026-10-08T14:56:52.034Z
 - opportunity | /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | 2026-10-10T15:40:28.185Z
-- opportunity | /articles/evenements/fete-de-la-mer-2026-a-marseille-avec-des-enfants-quelle-escale-choisir-le-18-octobre/ | 2026-10-06T16:58:51.946Z
 - refresh | /articles/evenements/lire-en-poche-2026-a-gradignan-avec-des-enfants-organiser-une-journee-sans-perdre-les-ateliers/ | 2026-10-06T12:23:52.449Z
-- opportunity | /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | 2026-10-06T19:20:39.093Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-aigues-mortes-mini-sacre-ou-escape-game-avec-les-enfants/ | 2026-10-10T17:38:43.806Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-azay-le-rideau-animaux-caches-atelier-et-contes/ | 2026-10-11T16:33:21.125Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | 2026-10-10T08:38:56.921Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/ | 2026-10-09T18:35:04.031Z
 - opportunity | /articles/evenements/nuit-des-chateaux-2026-a-tanlay-visite-aux-bougies-avec-des-enfants-les-16-et-17-octobre/ | 2026-10-11T09:17:01.561Z
+- opportunity | /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | 2026-10-09T14:37:47.734Z
+- opportunity | /articles/evenements/toussaint-2026-a-vaux-le-vicomte-lampe-torche-ou-carnaval-des-animaux-avec-les-enfants/ | 2026-10-11T11:27:54.175Z
+- opportunity | /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | 2026-10-11T19:35:57.703Z
 
 ### Phases 2 et 3
 
