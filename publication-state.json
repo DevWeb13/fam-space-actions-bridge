@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261012-1817-titre-de-travail-centre-spatial-guyanais-a-kourou-trois-experiences-gr",
+  "lastProcessedCommit": "3580540384b91a496a7599ab524430290a4d699e"
 }
