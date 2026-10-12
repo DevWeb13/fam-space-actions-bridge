@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les faits utilisés sont liés naturellement dans le corps et présents dans `sources`. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Halloween 2026 à la Tour de l'Horloge de Guînes: musée hanté, contes et nocturne"
-subtitle: Du 18 octobre au 1er novembre, choisir entre visite libre, Soupe aux Contes et soirée gratuite du 30 octobre
-summary: "À Guînes, la Tour de l'Horloge propose un musée hanté pour Halloween 2026: visites sans réservation, contes à dates fixes et nocturne gratuite le 30 octobre sur inscription. Horaires, tarifs et formule famille."
+title: "Halloween 2026 à la Tour de l'Horloge de Guînes: visites, contes et nocturne"
+subtitle: Du 18 octobre au 1er novembre, les dates, les tarifs famille et les animations à réserver
+summary: "Musée hanté à Guînes du 18 octobre au 1er novembre 2026: visites libres, Soupe aux Contes, nocturne gratuite du 30 octobre et tarifs pour les familles."
 category: evenements
 location:
   city: Guînes
@@ -68,20 +73,23 @@ location:
   region: Hauts-de-France
 keywords:
   - Halloween 2026 Guînes Tour de l'Horloge
-  - musée hanté Guînes 18 octobre 1er novembre 2026
-  - Soupe aux Contes Guînes 19 22 26 29 octobre
+  - musée hanté Guînes Toussaint 2026
+  - Soupe aux Contes Guînes octobre 2026
   - nocturne gratuite Tour de l'Horloge 30 octobre
-  - Tour de l'Horloge Guînes tarifs famille 2026
+  - Tour de l'Horloge Guînes tarif famille
 sources:
   - title: La Tour de l'Horloge — Le musée hanté, Halloween 2026
     url: https://www.tour-horloge-guines.com/actualites/musee-hante-halloween-2026
-  - title: La Tour de l'Horloge — Horaires, tarifs 2026, accessibilité et parking
+    accessedAt: 2026-10-12
+  - title: La Tour de l'Horloge — Horaires, tarifs et accessibilité
     url: https://www.tour-horloge-guines.com/horaires-tarifs-pmr
-  - title: La Tour de l'Horloge — Présentation du musée et durée de visite
+    accessedAt: 2026-10-12
+  - title: La Tour de l'Horloge — Présentation du musée
     url: https://www.tour-horloge-guines.com/
+    accessedAt: 2026-10-12
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: halloween-2026-a-la-tour-de-l-horloge-de-guines-musee-hante-contes-et-nocturne
   decision: Choisir la formule adaptée à sa famille (visite libre, séance de contes ou nocturne gratuite), connaître le coût réel selon le nombre et l'âge des enfants et réserver uniquement lorsque c'est nécessaire, sans se déplacer un samedi où le musée est fermé.
@@ -91,78 +99,99 @@ radar:
     dataThrough: 2026-10-09
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « La Tour de l'Horloge — Le musée hanté, Halloween 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-11-01
 ---
 
-## Mission retenue
+Du **18 octobre au 1er novembre 2026**, la **Tour de l'Horloge de Guînes**, dans le Pas-de-Calais, se transforme en **Musée Hanté** pour Halloween. Costumes, jeux anciens, drakkar et atelier de panier à bonbons attendent les familles pendant les vacances de la Toussaint.
 
-Une page pratique sur **Le Musée Hanté, Halloween 2026 à la Tour de l'Horloge de Guînes**, musée interactif d'histoire situé **rue du Château, 62340 Guînes**, du **18 octobre au 1er novembre 2026**. Montrer les trois expériences réellement distinctes: la visite costumée accessible sans réservation, **La Soupe aux Contes** à dates fixes et la **nocturne gratuite du vendredi 30 octobre**, limitée à la salle médiévale au rez-de-chaussée.
+Trois formules se distinguent: la visite du musée **sans réservation**, les séances de **Soupe aux Contes** sur inscription et une **nocturne gratuite le vendredi 30 octobre**, elle aussi sur réservation. Le bon choix dépend du jour, du budget et de l'envie des enfants.
 
-## Pourquoi cette mission
+## Visiter le Musée Hanté librement pendant les vacances
 
-Le meilleur refresh du snapshot, **Carte Tattoo Isère 2026-2027**, porte le signal **uncertain** et son article complet sur master traite déjà montants, bonus Caf, éligibilité, partenaires, démarches, échéances et aide téléphonique: aucune correction substantielle indépendante n'a été vérifiée. L'expansion envisagée depuis la page forte **Transports à Paris avec des enfants** est moins urgente: le guide existant traite déjà le choix des titres, les réductions enfants, les aéroports et la durée du séjour. À Guînes, l'événement est imminent, avec plusieurs formules et des dates de réservation différentes qui nécessitent une vraie décision familiale. Le catalogue de 659 articles et le contrôle `probableDuplicates` ne trouvent aucun article sur ce musée à Guînes; les correspondances concernent d'autres manifestations de Toussaint, notamment au Louvre-Lens. Le travail Destination actuellement indiqué est consacré à Vincennes, sans chevauchement.
+D'après le [programme officiel d'Halloween 2026](https://www.tour-horloge-guines.com/actualites/musee-hante-halloween-2026), les visites libres ont lieu **tous les jours sauf le samedi, de 14 h à 18 h**, du dimanche 18 octobre au dimanche 1er novembre. **Aucune réservation n'est demandée** pour cette formule.
 
-## Décision du lecteur
+Les enfants peuvent se costumer, monter dans un drakkar et découvrir les jeux anciens. Un atelier permet aussi de **fabriquer un panier à bonbons sous la surveillance des parents**. Les enfants doivent être accompagnés d'un adulte dans le musée.
 
-Savoir **quel jour venir, quelle formule choisir, combien payer en famille et quand appeler pour réserver**. Ne pas confondre l'accès libre payant au musée, les séances de contes sur réservation et la seule animation nocturne annoncée gratuite.
+La [visite habituelle de la Tour de l'Horloge](https://www.tour-horloge-guines.com/) dure environ **1 h 30**: c'est un bon repère pour organiser l'après-midi, sans promesse de durée exacte pendant les animations d'Halloween.
 
-## Faits à traiter
+**Attention aux samedis 24 et 31 octobre**: le musée n'annonce pas de visites libres ces jours-là. Pour une sortie pendant le week-end, privilégiez le dimanche et vérifiez les informations de l'organisateur.
 
-- **18 octobre au 1er novembre**: musée hanté ouvert **de 14 h à 18 h tous les jours sauf le samedi**; **visite libre sans réservation**. Costumes, drakkar, jeux anciens et confection d'un panier à bonbons avec surveillance parentale. Durée indicative du parcours normal: **1 h 30**.
-- **La Soupe aux Contes**: lundis **19 et 26** et jeudis **22 et 29 octobre**, à **14 h et 16 h**, sur réservation au **03 21 19 59 00**. Ne pas inventer un tarif supplémentaire ou affirmer que les contes sont inclus sans vérification.
-- **Vendredi 30 octobre**: nocturne **gratuite sur réservation**, à **18 h 30 et 19 h 30**, avec conte, dégustation de soupe, **accès au rez-de-chaussée seulement (salle médiévale)** et places limitées. Ne pas la présenter comme une visite gratuite intégrale.
-- Tarifs d'entrée 2026 du musée: **7 € adulte**, **5 € enfant de 4 à 12 ans**, **gratuit moins de 4 ans**, **pack famille 24 € pour deux adultes et deux à quatre enfants**. Comparer au besoin les sommes à l'unité: avantage tarifaire du pack surtout avec trois ou quatre enfants payants.
-- **Rue du Château, Guînes**. Stationnement annoncé place Foch et place des Tilleuls; deux places PMR place Foch, à environ 50 m. Accessibilité labellisée Tourisme & Handicap (moteur et mental), contacter le musée pour les besoins individuels. Enfants accompagnés. Bien distinguer règles de visite et éventuelles conditions propres aux animations.
-- Source organisatrice prioritaire, informations susceptibles d'évoluer: confirmer les places de contes et de nocturne par téléphone.
+## Réserver la Soupe aux Contes: quatre dates, deux séances par jour
 
-## Sources de départ
+La **Soupe aux Contes** est annoncée les **lundis 19 et 26 octobre** et les **jeudis 22 et 29 octobre**, avec deux séances à **14 h et 16 h**.
 
-L'[annonce officielle du Musée Hanté 2026](https://www.tour-horloge-guines.com/actualites/musee-hante-halloween-2026) pour dates, activités, réservation et nocturne; les [horaires, prix et informations d'accessibilité officiels](https://www.tour-horloge-guines.com/horaires-tarifs-pmr) pour le calcul familial; le [site du musée](https://www.tour-horloge-guines.com/) pour le caractère interactif et la durée habituelle.
+**Réservation obligatoire par téléphone au 03 21 19 59 00.** Le programme officiel ne précise pas clairement si un supplément s'applique à cette animation ou si elle est comprise dans le billet du musée: demandez le tarif applicable et la disponibilité lors de l'appel, avant de vous déplacer.
 
-## Affiliation
+## Vendredi 30 octobre: une nocturne gratuite, mais pas la visite entière
 
-Ne remplacer ni le numéro de réservation officiel ni les entrées sur place par un lien de billetier tiers. En seconde intention seulement, pour une famille organisant plusieurs sorties autour de Calais, **L'Échappée Verte à Guînes** est un hébergement entier à deux chambres avec cuisine et parking, repéré sur Booking.com. Vérifier disponibilité, capacité et conditions aux dates envisagées avant de le mentionner dans l'article.
+La **visite nocturne gratuite** du **vendredi 30 octobre** propose deux créneaux, à **18 h 30** et **19 h 30**. Au programme: lecture de conte et dégustation de soupe dans une ambiance d'Halloween.
 
-## Continuations internes
+L'offre est limitée à **la salle médiévale du rez-de-chaussée**: il ne s'agit **pas d'une visite gratuite de tout le musée**. Les places sont limitées et la réservation est obligatoire, au **03 21 19 59 00**. C'est la formule à privilégier pour profiter d'un moment gratuit en soirée, à condition d'avoir obtenu une place.
 
-La page **Toussaint 2026 au Louvre-Lens** (/articles/sorties/toussaint-2026-au-louvre-lens-quelle-activite-choisir-selon-l-age/) peut servir uniquement de **seconde idée de sortie** pour des vacances plus longues dans le Pas-de-Calais; ne pas répéter son programme. Éviter les autres articles Halloween situés hors du secteur: leurs conseils de billetterie ou d'animations ne s'appliquent pas à la Tour de l'Horloge.
+## Combien coûte la visite pour une famille?
+
+La [grille officielle des tarifs 2026](https://www.tour-horloge-guines.com/horaires-tarifs-pmr) annonce:
+
+- **7 € par adulte**.
+- **5 € par enfant de 4 à 12 ans**.
+- **Gratuit pour les moins de 4 ans**.
+- **24 € le pack famille**, prévu pour **2 adultes et 2 à 4 enfants**.
+
+Le pack mérite d'être comparé à la somme des billets individuels. Avec **2 adultes et 2 enfants payants**, les billets totalisent **24 €**: le pack coûte autant. Avec **3 enfants payants**, ils totalisent **29 €** et le pack économise **5 €**; avec **4 enfants payants**, la somme atteint **34 €**, soit **10 €** de plus que le pack.
+
+Si votre famille comprend des enfants de moins de 4 ans, ou si vous venez surtout pour la Soupe aux Contes, vérifiez les conditions exactes par téléphone plutôt que de supposer que la formule familiale ou l'animation s'applique automatiquement.
+
+## Adresse, stationnement et accessibilité
+
+Le musée se situe **rue du Château, 62340 Guînes**. Les parkings signalés à proximité sont **place Foch** et **place des Tilleuls**. Deux places de stationnement réservées aux personnes en situation de handicap se trouvent **place Foch, à environ 50 m de l'entrée**.
+
+La Tour de l'Horloge possède la marque **Tourisme & Handicap pour les handicaps moteur et mental** et présente [ses informations d'accessibilité](https://www.tour-horloge-guines.com/horaires-tarifs-pmr). Pour une poussette, un fauteuil ou un besoin d'accompagnement particulier, mieux vaut demander au musée quelles parties du parcours et quelles animations sont adaptées. Le téléphone d'accueil est le **03 21 19 59 00**.
+
+## Profiter d'un séjour autour de Guînes
+
+Si vous combinez Halloween avec d'autres sorties dans le Pas-de-Calais, [L'Échappée Verte à Guînes](https://www.booking.com/hotel/fr/petite-maison-2-chambres-a-20min-du-site-des-2-caps.fr.html) propose une maison entière avec **deux chambres, une cuisine et un parking**.
+
+Un point important pour les familles: le propriétaire prévient que **les chambres sont à l'étage, accessibles par un escalier assez raide**, et l'établissement **ne fournit pas de lit bébé**. Ce logement est donc à évaluer avec prudence si vous voyagez avec de très jeunes enfants; vérifiez aussi la capacité, le prix et les disponibilités aux dates choisies.
+
+Pour une autre journée de vacances dans le département, le [programme de la Toussaint 2026 au Louvre-Lens](/articles/sorties/toussaint-2026-au-louvre-lens-quelle-activite-choisir-selon-l-age/) aide à choisir une activité adaptée à l'âge des enfants.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
-- /articles/sorties/vacances-de-la-toussaint-2026-au-louvre-quelles-activites-choisir-avec-des-enfants/ | Vacances de la Toussaint 2026 au Louvre: le programme famille du 17 octobre au 1er novembre | sorties | Paris, Paris, Île-de-France
 - /articles/sorties/toussaint-2026-au-louvre-lens-quelle-activite-choisir-selon-l-age/ | Toussaint 2026 au Louvre-Lens: quelle activité choisir selon l'âge? | sorties | Lens, Pas-de-Calais, Hauts-de-France
-- /articles/evenements/fete-des-rues-aux-enfants-2026-a-paris-ou-aller-selon-l-arrondissement/ | Fête des rues aux enfants 2026 à Paris: où aller selon l'arrondissement? | evenements | Paris, Paris, Île-de-France
 - /articles/sorties/vacances-de-la-toussaint-2026-au-musee-carnavalet-quelle-activite-choisir-selon-l-age/ | Vacances de la Toussaint 2026 au musée Carnavalet: activités en famille dès 4 ans | sorties | Paris, Paris, Île-de-France
-- /articles/evenements/fete-de-la-mer-2026-a-marseille-avec-des-enfants-quelle-escale-choisir-le-18-octobre/ | Fête de la mer 2026 à Marseille avec des enfants: quelle escale choisir? | evenements | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur
-- /articles/evenements/fete-de-la-science-2026-au-c2n-de-palaiseau-une-journee-gratuite-en-famille/ | Fête de la science 2026 au C2N de Palaiseau: une journée gratuite en famille | evenements | Palaiseau, Essonne, Île-de-France
-- /articles/voyages/peur-sur-le-parc-2026-en-famille-journee-nocturne-billets-et-hebergement/ | Peur sur le Parc 2026 en famille: journée, nocturne, billets et hébergement | voyages | Plailly, Oise, Hauts-de-France
-- /articles/cuisine/foire-aux-harengs-de-dieppe-2026-quoi-gouter-et-comment-preparer-la-journee/ | Foire aux Harengs de Dieppe 2026: quoi goûter et comment préparer la journée | cuisine | Dieppe, Seine-Maritime, Normandie
+- /articles/evenements/fete-des-rues-aux-enfants-2026-a-paris-ou-aller-selon-l-arrondissement/ | Fête des rues aux enfants 2026 à Paris: où aller selon l'arrondissement? | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | Pierrefonds à la Toussaint 2026: atelier lanterne et soirée d'Halloween | evenements | Pierrefonds, Oise, Hauts-de-France
+- /articles/evenements/nuit-des-chateaux-2026-a-tanlay-visite-aux-bougies-avec-des-enfants-les-16-et-17-octobre/ | Nuit des Châteaux 2026 à Tanlay: visites aux bougies les 16 et 17 octobre | evenements | Tanlay, Yonne, Bourgogne-Franche-Comté
+- /articles/voyages/vulcania-a-la-toussaint-2026-1-ou-2-jours-billets-et-ou-dormir/ | Vulcania à la Toussaint 2026: 1 ou 2 jours, billets et où dormir | voyages | Saint-Ours-les-Roches, Puy-de-Dôme, Auvergne-Rhône-Alpes
+- /articles/voyages/futuroween-2026-futuroscope-billet-programme-enfants/ | Futuroween 2026 au Futuroscope: billet, programme et conseils avec des enfants | voyages | Chasseneuil-du-Poitou, Vienne, Nouvelle-Aquitaine
+- /articles/sorties/vacances-de-la-toussaint-2026-au-louvre-quelles-activites-choisir-avec-des-enfants/ | Vacances de la Toussaint 2026 au Louvre: le programme famille du 17 octobre au 1er novembre | sorties | Paris, Paris, Île-de-France
 - /articles/sorties/parc-bagatelle-en-famille-quelles-attractions-selon-la-taille-des-enfants/ | Parc Bagatelle en famille: quelles attractions selon la taille des enfants? | sorties | Merlimont, Pas-de-Calais, Hauts-de-France
 - /articles/bons-plans/nausicaa-a-8-pour-les-adultes-et-6-pour-les-enfants-qui-peut-profiter-des-dimanches-boulonnais/ | Nausicaá à 8 € pour les adultes et 6 € pour les enfants: qui peut profiter des Dimanches Boulonnais? | bons-plans | Boulogne-sur-Mer, Pas-de-Calais, Hauts-de-France
 - /articles/parentalite/creche-a-l-abordage-a-etaples-accueil-ponctuel-ou-regulier-que-choisir/ | Crèche À l'abordage à Étaples: accueil ponctuel ou régulier, que choisir ? | parentalite | Étaples-sur-Mer, Pas-de-Calais, Hauts-de-France
 - /articles/cuisine/ratte-du-touquet-eau-vapeur-ou-four-quelle-cuisson-choisir/ | Ratte du Touquet: eau, vapeur ou four, quelle cuisson choisir? | cuisine | Le Touquet-Paris-Plage, Pas-de-Calais, Hauts-de-France
 - /articles/maison/lens-lievin-jusqu-a-240-pour-recuperer-l-eau-de-pluie/ | Lens-Liévin: jusqu'à 240 € pour récupérer l'eau de pluie | maison | Lens, Pas-de-Calais, Hauts-de-France
 - /articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/ | Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers | vie-pratique | Hénin-Beaumont, Pas-de-Calais, Hauts-de-France
-- /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | Pierrefonds à la Toussaint 2026: atelier lanterne et soirée d'Halloween | evenements | Pierrefonds, Oise, Hauts-de-France
 - /articles/evenements/monument-jeu-d-enfant-2026-a-azay-le-rideau-animaux-caches-atelier-et-contes/ | Monument Jeu d'enfant 2026 à Azay-le-Rideau: animaux cachés et contes en famille | evenements | Azay-le-Rideau, Indre-et-Loire, Centre-Val de Loire
 - /articles/evenements/toussaint-2026-a-vaux-le-vicomte-lampe-torche-ou-carnaval-des-animaux-avec-les-enfants/ | Toussaint 2026 à Vaux-le-Vicomte: les animations pour les enfants | evenements | Maincy, Seine-et-Marne, Île-de-France
-- /articles/evenements/nuit-des-chateaux-2026-a-tanlay-visite-aux-bougies-avec-des-enfants-les-16-et-17-octobre/ | Nuit des Châteaux 2026 à Tanlay: visites aux bougies les 16 et 17 octobre | evenements | Tanlay, Yonne, Bourgogne-Franche-Comté
 - /articles/evenements/monument-jeu-d-enfant-2026-a-aigues-mortes-mini-sacre-ou-escape-game-avec-les-enfants/ | Monument jeu d’enfant à Aigues-Mortes: mini-sacre et escape game les 17 et 18 octobre 2026 | evenements | Aigues-Mortes, Gard, Occitanie
 - /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | Festival Lumière 2026 avec des enfants: Chaplin, Laurel & Hardy et les bons billets | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | Monument Jeu d’Enfant au château d’Angers: dragons et ateliers le 17 octobre 2026 | evenements | Angers, Maine-et-Loire, Pays de la Loire
 - /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/ | Monument jeu d'enfant 2026 au château de Vincennes: quel atelier choisir ? | evenements | Vincennes, Val-de-Marne, Île-de-France
+- /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/noel-2026-au-chateau-de-grignan-dates-tarifs-et-visite-en-famille/ | Noël 2026 au château de Grignan: dates, tarifs et visite en famille | evenements | Grignan, Drôme, Auvergne-Rhône-Alpes
 
 ### Historique Radar lié
 
 - opportunity | /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | 2026-10-10T15:40:28.185Z
-- opportunity | /articles/evenements/fete-de-la-mer-2026-a-marseille-avec-des-enfants-quelle-escale-choisir-le-18-octobre/ | 2026-10-06T16:58:51.946Z
 - opportunity | /articles/evenements/fete-des-rues-aux-enfants-2026-a-paris-ou-aller-selon-l-arrondissement/ | 2026-10-03T14:16:09.016Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-aigues-mortes-mini-sacre-ou-escape-game-avec-les-enfants/ | 2026-10-10T17:38:43.806Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-azay-le-rideau-animaux-caches-atelier-et-contes/ | 2026-10-11T16:33:21.125Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | 2026-10-10T08:38:56.921Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/ | 2026-10-09T18:35:04.031Z
 - opportunity | /articles/evenements/nuit-des-chateaux-2026-a-tanlay-visite-aux-bougies-avec-des-enfants-les-16-et-17-octobre/ | 2026-10-11T09:17:01.561Z
+- opportunity | /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | 2026-10-09T14:37:47.734Z
 - opportunity | /articles/evenements/toussaint-2026-a-vaux-le-vicomte-lampe-torche-ou-carnaval-des-animaux-avec-les-enfants/ | 2026-10-11T11:27:54.175Z
 - opportunity | /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | 2026-10-11T19:35:57.703Z
 
