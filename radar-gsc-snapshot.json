@@ -1,39 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-11T05:37:00.000Z",
-  "dataThrough": "2026-10-08",
-  "from": "2026-09-11",
+  "generatedAt": "2026-10-12T04:49:15.779Z",
+  "dataThrough": "2026-10-09",
+  "from": "2026-09-12",
   "refresh": [
-    {
-      "url": "/articles/sorties/aquarium-reunion-fermeture-2026-visite-famille/",
-      "title": "Aquarium de La Réunion fermé depuis le 17 août 2026: quand pourra-t-on revenir en famille ?",
-      "category": "sorties",
-      "location": {
-        "city": "Saint-Gilles-les-Bains",
-        "department": "La Réunion",
-        "region": "La Réunion"
-      },
-      "publishedAt": "2026-07-22T11:57:00+02:00",
-      "ageDays": 81,
-      "peakStart": "2026-09-11",
-      "peakEnd": "2026-09-17",
-      "recentStart": "2026-10-02",
-      "recentEnd": "2026-10-08",
-      "peakImpressions": 225,
-      "recentImpressions": 25,
-      "score": 200,
-      "signal": "uncertain",
-      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0.6,
-      "focusQueries": [
-        "aquarium de la réunion tarifs 2026 officiel",
-        "aquarium de la réunion tarifs 2026",
-        "aquarium st gilles",
-        "warum geschlossen"
-      ]
-    },
     {
       "url": "/articles/bons-plans/carte-tattoo-isere-2026-2027-comment-obtenir-60-a-120-pour-les-activites-d-un-collegien/",
       "title": "Carte Tattoo Isère 2026-2027: comment obtenir 60 à 120 € pour les activités d'un collégien",
@@ -44,14 +14,14 @@
         "region": "Auvergne-Rhône-Alpes"
       },
       "publishedAt": "2026-09-12T18:04:35+02:00",
-      "ageDays": 29,
+      "ageDays": 30,
       "peakStart": "2026-09-14",
       "peakEnd": "2026-09-20",
-      "recentStart": "2026-10-02",
-      "recentEnd": "2026-10-08",
+      "recentStart": "2026-10-03",
+      "recentEnd": "2026-10-09",
       "peakImpressions": 195,
-      "recentImpressions": 13,
-      "score": 175.933,
+      "recentImpressions": 14,
+      "score": 181,
       "signal": "uncertain",
       "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
       "commonQueries": 0,
@@ -66,18 +36,46 @@
       ]
     },
     {
+      "url": "/articles/sorties/aquarium-reunion-fermeture-2026-visite-famille/",
+      "title": "Aquarium de La Réunion fermé depuis le 17 août 2026: quand pourra-t-on revenir en famille ?",
+      "category": "sorties",
+      "location": {
+        "city": "Saint-Gilles-les-Bains",
+        "department": "La Réunion",
+        "region": "La Réunion"
+      },
+      "publishedAt": "2026-07-22T11:57:00+02:00",
+      "ageDays": 82,
+      "peakStart": "2026-09-12",
+      "peakEnd": "2026-09-18",
+      "recentStart": "2026-10-03",
+      "recentEnd": "2026-10-09",
+      "peakImpressions": 206,
+      "recentImpressions": 25,
+      "score": 181,
+      "signal": "uncertain",
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0.667,
+      "focusQueries": [
+        "aquarium de la réunion tarifs 2026 officiel",
+        "aquarium st gilles"
+      ]
+    },
+    {
       "url": "/articles/parentalite/educonnect-pour-les-parents-activer-son-compte-et-retrouver-les-demarches-scolaires/",
       "title": "EduConnect pour les parents: activer son compte et retrouver les démarches scolaires",
       "category": "parentalite",
       "publishedAt": "2026-09-12T20:02:41+02:00",
-      "ageDays": 29,
+      "ageDays": 30,
       "peakStart": "2026-09-15",
       "peakEnd": "2026-09-21",
-      "recentStart": "2026-10-02",
-      "recentEnd": "2026-10-08",
+      "recentStart": "2026-10-03",
+      "recentEnd": "2026-10-09",
       "peakImpressions": 209,
-      "recentImpressions": 50,
-      "score": 153.7,
+      "recentImpressions": 49,
+      "score": 160,
       "signal": "uncertain",
       "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
       "commonQueries": 0,
@@ -101,14 +99,14 @@
         "region": "Île-de-France"
       },
       "publishedAt": "2026-09-13T16:03:15+02:00",
-      "ageDays": 28,
+      "ageDays": 29,
       "peakStart": "2026-09-16",
       "peakEnd": "2026-09-22",
-      "recentStart": "2026-10-02",
-      "recentEnd": "2026-10-08",
+      "recentStart": "2026-10-03",
+      "recentEnd": "2026-10-09",
       "peakImpressions": 182,
-      "recentImpressions": 20,
-      "score": 151.2,
+      "recentImpressions": 18,
+      "score": 158.533,
       "signal": "uncertain",
       "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
       "commonQueries": 0,
@@ -127,25 +125,25 @@
       "title": "Petite section: peut-on alléger les après-midis à l'école maternelle?",
       "category": "parentalite",
       "publishedAt": "2026-08-28T12:03:36+02:00",
-      "ageDays": 44,
+      "ageDays": 45,
       "peakStart": "2026-09-15",
       "peakEnd": "2026-09-21",
-      "recentStart": "2026-10-02",
-      "recentEnd": "2026-10-08",
+      "recentStart": "2026-10-03",
+      "recentEnd": "2026-10-09",
       "peakImpressions": 211,
-      "recentImpressions": 74,
-      "score": 137,
+      "recentImpressions": 82,
+      "score": 129,
       "signal": "uncertain",
       "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
       "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": 1.333,
+      "impressionRatio": 1.222,
       "focusQueries": [
         "amenagement ecole maternelle",
         "aménagement du temps scolaire maternelle moyenne section",
         "dérogation école après-midi petite section",
-        "formulaire aménagement temps scolaire petite section",
-        "petit section"
+        "dérogation sieste petite section 2025",
+        "formulaire aménagement temps scolaire petite section"
       ]
     },
     {
@@ -158,11 +156,11 @@
         "region": "Auvergne-Rhône-Alpes"
       },
       "publishedAt": "2026-09-04T18:01:50+02:00",
-      "ageDays": 37,
+      "ageDays": 38,
       "peakStart": "2026-09-13",
       "peakEnd": "2026-09-19",
-      "recentStart": "2026-10-02",
-      "recentEnd": "2026-10-08",
+      "recentStart": "2026-10-03",
+      "recentEnd": "2026-10-09",
       "peakImpressions": 118,
       "recentImpressions": 1,
       "score": 117,
@@ -180,6 +178,35 @@
       ]
     },
     {
+      "url": "/articles/vie-pratique/tarification-solidaire-naolib-a-nantes-combien-paie-une-famille-et-comment-faire-la-demande/",
+      "title": "Tarification solidaire Naolib à Nantes: combien paie une famille et comment faire la demande?",
+      "category": "vie-pratique",
+      "location": {
+        "city": "Nantes",
+        "department": "Loire-Atlantique",
+        "region": "Pays de la Loire"
+      },
+      "publishedAt": "2026-09-05T04:00:05+02:00",
+      "ageDays": 37,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-03",
+      "recentEnd": "2026-10-09",
+      "peakImpressions": 141,
+      "recentImpressions": 24,
+      "score": 117,
+      "signal": "uncertain",
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "tarification solidaire",
+        "tarif solidaire naolib nantes",
+        "tarification solidaire tan"
+      ]
+    },
+    {
       "url": "/articles/parentalite/laep-a-grenoble-ou-aller-avec-un-enfant-de-moins-de-6-ans/",
       "title": "LAEP à Grenoble: où aller avec un enfant de moins de 6 ans?",
       "category": "parentalite",
@@ -189,14 +216,14 @@
         "region": "Auvergne-Rhône-Alpes"
       },
       "publishedAt": "2026-09-05T09:59:12+02:00",
-      "ageDays": 36,
+      "ageDays": 37,
       "peakStart": "2026-09-14",
       "peakEnd": "2026-09-20",
-      "recentStart": "2026-10-02",
-      "recentEnd": "2026-10-08",
+      "recentStart": "2026-10-03",
+      "recentEnd": "2026-10-09",
       "peakImpressions": 142,
-      "recentImpressions": 29,
-      "score": 113,
+      "recentImpressions": 27,
+      "score": 115,
       "signal": "uncertain",
       "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
       "commonQueries": 0,
@@ -211,35 +238,6 @@
       ]
     },
     {
-      "url": "/articles/vie-pratique/tarification-solidaire-naolib-a-nantes-combien-paie-une-famille-et-comment-faire-la-demande/",
-      "title": "Tarification solidaire Naolib à Nantes: combien paie une famille et comment faire la demande?",
-      "category": "vie-pratique",
-      "location": {
-        "city": "Nantes",
-        "department": "Loire-Atlantique",
-        "region": "Pays de la Loire"
-      },
-      "publishedAt": "2026-09-05T04:00:05+02:00",
-      "ageDays": 36,
-      "peakStart": "2026-09-15",
-      "peakEnd": "2026-09-21",
-      "recentStart": "2026-10-02",
-      "recentEnd": "2026-10-08",
-      "peakImpressions": 141,
-      "recentImpressions": 30,
-      "score": 111,
-      "signal": "uncertain",
-      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "tarification solidaire",
-        "tarif solidaire naolib nantes",
-        "tarification solidaire tan"
-      ]
-    },
-    {
       "url": "/articles/vie-pratique/rennes-avec-des-enfants-les-transports-sont-gratuits-avant-12-ans-mais-pas-sans-carte/",
       "title": "Rennes avec des enfants: transports gratuits avant 12 ans, comment ça marche?",
       "category": "vie-pratique",
@@ -249,14 +247,14 @@
         "region": "Bretagne"
       },
       "publishedAt": "2026-09-07T00:02:33+02:00",
-      "ageDays": 34,
+      "ageDays": 35,
       "peakStart": "2026-09-14",
       "peakEnd": "2026-09-20",
-      "recentStart": "2026-10-02",
-      "recentEnd": "2026-10-08",
+      "recentStart": "2026-10-03",
+      "recentEnd": "2026-10-09",
       "peakImpressions": 165,
-      "recentImpressions": 58,
-      "score": 107,
+      "recentImpressions": 53,
+      "score": 112,
       "signal": "uncertain",
       "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
       "commonQueries": 0,
@@ -279,14 +277,14 @@
         "region": "Centre-Val de Loire"
       },
       "publishedAt": "2026-09-04T16:04:39+02:00",
-      "ageDays": 37,
+      "ageDays": 38,
       "peakStart": "2026-09-14",
       "peakEnd": "2026-09-20",
-      "recentStart": "2026-10-02",
-      "recentEnd": "2026-10-08",
+      "recentStart": "2026-10-03",
+      "recentEnd": "2026-10-09",
       "peakImpressions": 108,
-      "recentImpressions": 2,
-      "score": 106,
+      "recentImpressions": 3,
+      "score": 105,
       "signal": "uncertain",
       "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
       "commonQueries": 0,
@@ -304,14 +302,14 @@
       "title": "Déménagement: comment changer d'école maternelle ou élémentaire sans rater une étape",
       "category": "vie-pratique",
       "publishedAt": "2026-09-03T08:02:20+02:00",
-      "ageDays": 38,
+      "ageDays": 39,
       "peakStart": "2026-09-15",
       "peakEnd": "2026-09-21",
-      "recentStart": "2026-10-02",
-      "recentEnd": "2026-10-08",
+      "recentStart": "2026-10-03",
+      "recentEnd": "2026-10-09",
       "peakImpressions": 112,
-      "recentImpressions": 7,
-      "score": 105,
+      "recentImpressions": 8,
+      "score": 104,
       "signal": "uncertain",
       "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
       "commonQueries": 0,
@@ -335,14 +333,14 @@
         "region": "Normandie"
       },
       "publishedAt": "2026-09-07T11:04:46+02:00",
-      "ageDays": 34,
+      "ageDays": 35,
       "peakStart": "2026-09-13",
       "peakEnd": "2026-09-19",
-      "recentStart": "2026-10-02",
-      "recentEnd": "2026-10-08",
+      "recentStart": "2026-10-03",
+      "recentEnd": "2026-10-09",
       "peakImpressions": 154,
-      "recentImpressions": 49,
-      "score": 105,
+      "recentImpressions": 53,
+      "score": 101,
       "signal": "uncertain",
       "basis": "Diagnostic requêtes non collecté pour ce candidat; contrôle obligatoire avant refresh.",
       "commonQueries": 0,
@@ -360,14 +358,39 @@
         "region": "Normandie"
       },
       "publishedAt": "2026-09-15T19:00:19+02:00",
-      "ageDays": 26,
+      "ageDays": 27,
       "peakStart": "2026-09-18",
       "peakEnd": "2026-09-24",
-      "recentStart": "2026-10-02",
-      "recentEnd": "2026-10-08",
+      "recentStart": "2026-10-03",
+      "recentEnd": "2026-10-09",
       "peakImpressions": 143,
-      "recentImpressions": 29,
-      "score": 98.8,
+      "recentImpressions": 31,
+      "score": 100.8,
+      "signal": "uncertain",
+      "basis": "Diagnostic requêtes non collecté pour ce candidat; contrôle obligatoire avant refresh.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": []
+    },
+    {
+      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
+      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
+      "category": "voyages",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "publishedAt": "2026-08-29T00:00:45+02:00",
+      "ageDays": 44,
+      "peakStart": "2026-09-18",
+      "peakEnd": "2026-09-24",
+      "recentStart": "2026-10-03",
+      "recentEnd": "2026-10-09",
+      "peakImpressions": 958,
+      "recentImpressions": 861,
+      "score": 97,
       "signal": "uncertain",
       "basis": "Diagnostic requêtes non collecté pour ce candidat; contrôle obligatoire avant refresh.",
       "commonQueries": 0,
@@ -385,39 +408,14 @@
         "region": "Normandie"
       },
       "publishedAt": "2026-09-08T22:03:31+02:00",
-      "ageDays": 33,
+      "ageDays": 34,
       "peakStart": "2026-09-14",
       "peakEnd": "2026-09-20",
-      "recentStart": "2026-10-02",
-      "recentEnd": "2026-10-08",
+      "recentStart": "2026-10-03",
+      "recentEnd": "2026-10-09",
       "peakImpressions": 110,
-      "recentImpressions": 15,
-      "score": 95,
-      "signal": "uncertain",
-      "basis": "Diagnostic requêtes non collecté pour ce candidat; contrôle obligatoire avant refresh.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": []
-    },
-    {
-      "url": "/articles/activites/parrot-world-en-famille-tarifs-2026-duree-et-conseils-pour-la-visite/",
-      "title": "Parrot World en famille: tarifs 2026, durée et conseils pour la visite",
-      "category": "activites",
-      "location": {
-        "city": "Crécy-la-Chapelle",
-        "department": "Seine-et-Marne",
-        "region": "Île-de-France"
-      },
-      "publishedAt": "2026-08-25T10:58:03+02:00",
-      "ageDays": 47,
-      "peakStart": "2026-09-12",
-      "peakEnd": "2026-09-18",
-      "recentStart": "2026-10-02",
-      "recentEnd": "2026-10-08",
-      "peakImpressions": 97,
-      "recentImpressions": 3,
-      "score": 94,
+      "recentImpressions": 14,
+      "score": 96,
       "signal": "uncertain",
       "basis": "Diagnostic requêtes non collecté pour ce candidat; contrôle obligatoire avant refresh.",
       "commonQueries": 0,
@@ -436,10 +434,10 @@
         "department": "Charente",
         "region": "Nouvelle-Aquitaine"
       },
-      "recentImpressions": 64,
+      "recentImpressions": 65,
       "recentClicks": 5,
-      "recentPosition": 6.469,
-      "retention": 1.28
+      "recentPosition": 6.585,
+      "retention": 1.3
     },
     {
       "url": "/articles/evenements/ci-t-as-la-trouille-2026-a-saint-jean-de-monts-que-faire-et-que-reserver/",
@@ -450,94 +448,10 @@
         "department": "Vendée",
         "region": "Pays de la Loire"
       },
-      "recentImpressions": 52,
-      "recentClicks": 5,
-      "recentPosition": 5.192,
-      "retention": 2
-    },
-    {
-      "url": "/articles/evenements/foire-de-la-barguillere-a-foix-samedi-ou-dimanche-avec-des-enfants/",
-      "title": "Foire de la Barguillère à Foix: samedi ou dimanche avec des enfants ?",
-      "category": "evenements",
-      "location": {
-        "city": "Foix",
-        "department": "Ariège",
-        "region": "Occitanie"
-      },
-      "recentImpressions": 168,
+      "recentImpressions": 46,
       "recentClicks": 4,
-      "recentPosition": 8.75,
-      "retention": 0.641
-    },
-    {
-      "url": "/articles/evenements/foire-d-automne-de-saint-jean-du-gard-2026-en-famille-animations-et-conseils/",
-      "title": "Foire d'Automne de Saint-Jean-du-Gard 2026 en famille: animations et conseils",
-      "category": "evenements",
-      "location": {
-        "city": "Saint-Jean-du-Gard",
-        "department": "Gard",
-        "region": "Occitanie"
-      },
-      "recentImpressions": 74,
-      "recentClicks": 4,
-      "recentPosition": 6.108,
-      "retention": 1.762
-    },
-    {
-      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
-      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
-      "category": "voyages",
-      "location": {
-        "city": "Paris",
-        "department": "Paris",
-        "region": "Île-de-France"
-      },
-      "recentImpressions": 878,
-      "recentClicks": 3,
-      "recentPosition": 8.726,
-      "retention": 0.916
-    },
-    {
-      "url": "/articles/voyages/futuroween-2026-futuroscope-billet-programme-enfants/",
-      "title": "Futuroween 2026 au Futuroscope: billet, programme et conseils avec des enfants",
-      "category": "voyages",
-      "location": {
-        "city": "Chasseneuil-du-Poitou",
-        "department": "Vienne",
-        "region": "Nouvelle-Aquitaine"
-      },
-      "recentImpressions": 254,
-      "recentClicks": 2,
-      "recentPosition": 7.732,
-      "retention": 1.388
-    },
-    {
-      "url": "/articles/evenements/quai-des-bulles-2026-a-saint-malo-en-famille-tarifs-programme-et-conseils/",
-      "title": "Quai des Bulles 2026 à Saint-Malo en famille: tarifs, programme et conseils",
-      "category": "evenements",
-      "location": {
-        "city": "Saint-Malo",
-        "department": "Ille-et-Vilaine",
-        "region": "Bretagne"
-      },
-      "recentImpressions": 153,
-      "recentClicks": 2,
-      "recentPosition": 6.458,
-      "retention": 2.732
-    },
-    {
-      "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
-      "title": "Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite",
-      "category": "sorties",
-      "location": {
-        "city": "Paris",
-        "department": "Paris",
-        "region": "Île-de-France"
-      },
-      "recentImpressions": 123,
-      "recentClicks": 2,
-      "recentPosition": 7.472,
-      "retention": 1.139
+      "recentPosition": 5.304,
+      "retention": 1.484
     },
     {
       "url": "/articles/maison/decheteries-de-caen-la-mer-qr-code-ou-plaque-obligatoires-depuis-septembre-2026/",
@@ -548,10 +462,75 @@
         "department": "Calvados",
         "region": "Normandie"
       },
-      "recentImpressions": 59,
+      "recentImpressions": 65,
+      "recentClicks": 3,
+      "recentPosition": 8.831,
+      "retention": 0.867
+    },
+    {
+      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
+      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
+      "category": "voyages",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "recentImpressions": 861,
+      "recentClicks": 2,
+      "recentPosition": 8.713,
+      "retention": 0.899
+    },
+    {
+      "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
+      "title": "Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite",
+      "category": "sorties",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "recentImpressions": 128,
+      "recentClicks": 2,
+      "recentPosition": 7.797,
+      "retention": 1.174
+    },
+    {
+      "url": "/articles/bons-plans/pass-culture-en-duo-comment-un-jeune-peut-inviter-un-parent-ou-un-proche/",
+      "title": "Pass Culture en duo: comment un jeune peut inviter un parent ou un proche",
+      "category": "bons-plans",
+      "recentImpressions": 47,
+      "recentClicks": 2,
+      "recentPosition": 4.957,
+      "retention": 0.522
+    },
+    {
+      "url": "/articles/voyages/futuroween-2026-futuroscope-billet-programme-enfants/",
+      "title": "Futuroween 2026 au Futuroscope: billet, programme et conseils avec des enfants",
+      "category": "voyages",
+      "location": {
+        "city": "Chasseneuil-du-Poitou",
+        "department": "Vienne",
+        "region": "Nouvelle-Aquitaine"
+      },
+      "recentImpressions": 221,
       "recentClicks": 1,
-      "recentPosition": 8.39,
-      "retention": 0.738
+      "recentPosition": 7.815,
+      "retention": 0.948
+    },
+    {
+      "url": "/articles/evenements/foire-d-automne-de-saint-jean-du-gard-2026-en-famille-animations-et-conseils/",
+      "title": "Foire d'Automne de Saint-Jean-du-Gard 2026 en famille: animations et conseils",
+      "category": "evenements",
+      "location": {
+        "city": "Saint-Jean-du-Gard",
+        "department": "Gard",
+        "region": "Occitanie"
+      },
+      "recentImpressions": 72,
+      "recentClicks": 1,
+      "recentPosition": 6.278,
+      "retention": 1.309
     },
     {
       "url": "/articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/",
@@ -562,14 +541,28 @@
         "department": "Pas-de-Calais",
         "region": "Hauts-de-France"
       },
-      "recentImpressions": 56,
+      "recentImpressions": 55,
       "recentClicks": 1,
-      "recentPosition": 7.696,
-      "retention": 0.767
+      "recentPosition": 7.655,
+      "retention": 0.753
+    },
+    {
+      "url": "/articles/sorties/parc-spirou-avec-de-jeunes-enfants-regardez-la-taille-avant-d-acheter-les-billets/",
+      "title": "Parc Spirou avec de jeunes enfants: regardez la taille avant d'acheter les billets",
+      "category": "sorties",
+      "location": {
+        "city": "Monteux",
+        "department": "Vaucluse",
+        "region": "Provence-Alpes-Côte d’Azur"
+      },
+      "recentImpressions": 49,
+      "recentClicks": 1,
+      "recentPosition": 7.388,
+      "retention": 0.544
     }
   ],
   "excluded": {
-    "expired": 74,
+    "expired": 78,
     "cooling": 7
   },
   "warnings": [
