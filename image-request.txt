@@ -146,3 +146,4 @@ automation/image-tanlay-20261011-1243-8b9ce|b0f9eebe59a151f38ac6dbfd6d452e53062a
 automation/image-20261011-344d8af-fouees-azay-vaux|ba9d037404f68f8c6298cc83933754892c885036
 automation/image-20261011-344d8af-fouees-azay-vaux|a20b910036e56b2c60d088cd75f79d890e428cce
 automation/image-20261011-069bece-pierrefonds-bastia-c510139|c510139448e20623924cc3f543b7b2c5e1c0faf2
+automation/image-20261011-069bece-pierrefonds-bastia-c510139|c692c911450e9039bd65bae5f3f19f5e65b6458a
