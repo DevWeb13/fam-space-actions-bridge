@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les faits utilisés sont liés naturellement dans le corps et présents dans `sources`. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Halloween 2026 au Parc Spirou: nocturnes Naruto, réservation et maison hantée"
-subtitle: À Monteux, quelles dates et animations choisir avec des enfants pendant la Toussaint?
-summary: Du 3 octobre au 11 novembre 2026, le Parc Spirou propose Halloween, quatre soirées Naruto et le Cirque Carnage. Réservation des billets non datés, dates et choix selon l'âge.
+title: "Halloween 2026 au Parc Spirou: billets, nocturnes Naruto et maison hantée"
+subtitle: À Monteux, les dates à choisir, la réservation des billets et les animations pour les enfants.
+summary: "Halloween au Parc Spirou du 3 octobre au 11 novembre 2026: réservation des billets non datés, nocturnes Naruto, maison hantée et budget familial."
 category: evenements
 location:
   city: Monteux
@@ -69,22 +74,30 @@ location:
 keywords:
   - Halloween Parc Spirou 2026
   - réservation Halloween Parc Spirou billet non daté
-  - nocturnes Naruto Parc Spirou octobre 2026
-  - Cirque Carnage Parc Spirou âge
+  - nocturnes Naruto Parc Spirou
+  - Cirque Carnage Parc Spirou 2026
 sources:
   - title: Parc Spirou - Halloween 2026
     url: https://www.parc-spirou.com/halloween/
-  - title: Parc Spirou - Réservation Halloween 2026
+  - title: Parc Spirou - Réservation Halloween
     url: https://www.parc-spirou.com/reservation-halloween/
+  - title: Parc Spirou - Calendrier et horaires 2026
+    url: https://www.parc-spirou.com/calendrier/
   - title: Parc Spirou - Nocturnes Naruto
     url: https://www.parc-spirou.com/nocturnes-halloween/
   - title: Parc Spirou - Maison hantée Cirque Carnage
     url: https://www.parc-spirou.com/maison-hantee-cirque-carnage/
-  - title: Parc Spirou - Calendrier 2026
-    url: https://www.parc-spirou.com/calendrier/
+  - title: Parc Spirou - Animations Halloween
+    url: https://www.parc-spirou.com/animations-halloween/
+  - title: Parc Spirou - Mascottes Halloween
+    url: https://www.parc-spirou.com/mascottes-halloween/
+  - title: Parc Spirou - Tarifs 2026
+    url: https://www.parc-spirou.com/tarifs/
+  - title: Parc Spirou - Hébergement Wave Village
+    url: https://www.parc-spirou.com/wave-village/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: halloween-2026-au-parc-spirou-nocturnes-naruto-reservation-et-maison-hantee
   decision: Choisir une date et un billet qui donnent réellement accès au parc, distinguer les animations accessibles selon l'âge et identifier les suppléments avant de payer.
@@ -94,33 +107,46 @@ radar:
     dataThrough: 2026-10-09
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Parc Spirou - Halloween 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-11-11
 ---
 
-## Mission retenue
-Halloween 2026 au Parc Spirou Provence à Monteux: programmation saisonnière du 3 octobre au 11 novembre, quatre nocturnes Naruto et maison hantée Cirque Carnage. La page doit guider la réservation pour les visites de la Toussaint, pas refaire un guide général du parc.
+Du **3 octobre au 11 novembre 2026**, le Parc Spirou Provence, à Monteux (Vaucluse), prend les couleurs d'Halloween. Mais toutes les visites ne se ressemblent pas: quatre dates permettent de rester jusqu'à 21h pour un spectacle Naruto, tandis qu'une maison hantée plus intense est proposée pendant les vacances de la Toussaint. Avant de choisir, il faut aussi vérifier **si votre billet impose une réservation de date**.
 
-## Pourquoi cette mission
-La fenêtre du 17 octobre au 1er novembre arrive immédiatement et comporte une démarche préalable peu évidente. Le meilleur refresh GSC (carte Tattoo Isère) est classé « uncertain » sans preuve de perte de position, et son article répond déjà aux questions principales. L'expansion d'une page forte (notamment Futuroween) est moins urgente et déjà bien couverte. Le guide Fam Space sur le Parc Spirou traite les tailles, billets habituels et accès mais pas les différences de programmation Halloween en détail: cette nouvelle décision est distincte.
+## Un billet non daté? Réservez votre journée avant le départ
 
-## Décision du lecteur
-Savoir quel jour venir, s'il faut réserver une date avant de se déplacer, quelles animations conviennent à ses enfants et ce qui coûte plus cher que l'entrée.
+Du **17 octobre au 1er novembre inclus**, les visiteurs munis d'un **billet non daté** doivent réserver leur date sur le [site de réservation Halloween du parc](https://www.parc-spirou.com/reservation-halloween/). Cette règle concerne aussi les billets achetés auprès d'un revendeur, d'un CSE, d'une association ou d'un hébergeur, ainsi que les invitations. Sans réservation, l'accès peut être refusé en cas de forte affluence.
 
-## Faits à traiter
-- Halloween annoncé du 3 octobre au 11 novembre, mais le parc n'ouvre pas chaque jour: contrôler le calendrier officiel; nocturnes Naruto les 17, 24, 30 et 31 octobre jusqu'à 21h, avec horaires de spectacle évolutifs et éventuelle annulation météo.
-- Entre le 17 octobre et le 1er novembre inclus, réserver une date est obligatoire avec billet non daté, y compris revendeur/CSE, ou invitation; attendre deux heures après achat d'un billet non daté. Le billet réservé remplace l'ancien et n'est pas échangeable. Pas de réservation additionnelle pour billet déjà daté, pass saison/gold ou séjour Wave Village; clarifier les cas particuliers depuis la page officielle.
-- Cirque Carnage du 23 octobre au 1er novembre, déconseillé aux moins de 12 ans, supplément non compris dans l'entrée, créneau à réserver lorsque la billetterie ouvre. Maquillage également annoncé hors billet.
-- Mascottes, décors et animations plus accessibles aux jeunes enfants, en distinguant l'ambiance familiale générale et les expériences effrayantes. Vérifier conditions exactes, tarifs et disponibilité au moment de la rédaction.
-- Vérifier les prix pertinents du billet et le calendrier plutôt que déduire que toutes les journées Halloween proposent la même chose.
+Après l'achat d'un billet non daté, le parc demande d'**attendre deux heures** avant de sélectionner la date. La procédure émet alors un nouveau billet daté, qui remplace l'ancien. Ce choix est définitif: les billets ainsi réservés ne sont ni modifiables ni échangeables.
 
-## Sources de départ
-Pages officielles du Parc Spirou présentes dans l'en-tête: programme, réservation, nocturnes, maison hantée et calendrier.
+La démarche supplémentaire n'est **pas nécessaire** si vous avez déjà acheté un billet daté, si vous détenez un pass saison ou Gold, ou si vous séjournez au Wave Village dans le cadre d'un séjour comprenant l'accès au parc. Les enfants de moins de 1 mètre entrent gratuitement sans réservation, comme les femmes enceintes sur présentation d'un justificatif. Les détenteurs d'un bon à échanger en caisse doivent suivre la procédure particulière indiquée sur la même page officielle. En dehors de la période du 17 octobre au 1er novembre, le parc ne demande pas cette réservation Halloween supplémentaire.
 
-## Affiliation
-Billets Parc Spirou effectivement référencés sur Tiqets, à vérifier pour la date retenue, sans présenter comme acquis un accès particulier aux nocturnes ou un billet Halloween. Pour un séjour après la nocturne, comparer une option familiale à Monteux sur Booking.com ou le Wave Village présenté par le parc, en contrôlant les disponibilités réelles. Aucune page partenaire ne prouve les faits éditoriaux.
+Côté prix, les [tarifs 2026 sur place](https://www.parc-spirou.com/tarifs/) sont de **41 € à partir de 11 ans** et **36 € avant 11 ans**, avec entrée gratuite pour les enfants de moins de 1 mètre. Les tarifs en ligne dépendent de l'offre choisie. [Tiqets présente également des billets pour le Parc Spirou](https://www.tiqets.com/fr/billets-parc-spirou-provence-l149738/): comparez le prix et les conditions exactes de votre billet, surtout s'il est non daté. Une offre d'entrée classique ne doit pas être confondue avec un supplément pour une animation spéciale. Les tarifs réduits sont proposés en caisse, sous conditions et sur présentation des justificatifs originaux.
 
-## Continuations internes
-- Renvoyer au guide Fam Space [Parc Spirou avec de jeunes enfants](/articles/sorties/parc-spirou-avec-de-jeunes-enfants-regardez-la-taille-avant-d-acheter-les-billets/) pour les seuils de taille, les poussettes, l'accès et les billets habituels, sans recopier ces sous-sujets.
-- Si le lecteur prolonge son séjour, une courte ouverture vers la [destination Avignon](/destinations/provence-alpes-cote-d-azur/vaucluse/avignon/) peut suffire; ne pas développer un second itinéraire.
+## Quelles dates choisir pour les nocturnes Naruto?
+
+Les **17, 24, 30 et 31 octobre 2026**, le parc ouvre de **10h à 21h** et programme un spectacle spécial à **Naruto – Konoha Land**, avec lasers, flammes, musique et effets lumineux. Pour une famille qui veut profiter d'Halloween jusqu'au soir, ce sont les quatre dates à privilégier. Le [programme des nocturnes](https://www.parc-spirou.com/nocturnes-halloween/) précise toutefois que l'horaire du spectacle peut changer et que celui-ci peut être modifié ou annulé pour des raisons météo, de sécurité ou d'autorisations administratives.
+
+Les autres journées ouvertes de la Toussaint sont généralement annoncées de **10h à 18h**, avec une éventuelle fermeture à **19h décidée le jour même**. La période d'Halloween se prolonge ensuite les **7, 8 et 11 novembre**, mais le parc est fermé les autres jours entre le 2 et le 10 novembre. Vérifiez le [calendrier officiel](https://www.parc-spirou.com/calendrier/) pour votre date: « Halloween jusqu'au 11 novembre » ne signifie pas ouverture quotidienne.
+
+## Avec de jeunes enfants: personnages, mascottes et maquillage
+
+Les journées d'Halloween ne reposent pas uniquement sur les frissons. Le parc annonce des décors thématiques, des rencontres avec les mascottes Spirou et ses amis en version Halloween, et des personnages qui déambulent dans les allées, notamment une sorcière chanteuse et un trio de vampires décalés. Pour connaître leurs lieux et horaires de rencontre, le parc renvoie à **son application le jour de la visite**.
+
+L'[atelier maquillage](https://www.parc-spirou.com/animations-halloween/) permet aux enfants de prendre l'apparence d'une sorcière ou d'un petit monstre, mais **il n'est pas inclus dans le billet d'entrée**. Vérifiez le supplément applicable avant de le promettre aux enfants. Si les vôtres craignent les personnages inquiétants, privilégiez les rencontres avec les mascottes et les décors de jour plutôt que de miser toute la visite sur les expériences les plus sombres.
+
+Pour savoir quelles attractions seront réellement accessibles selon la taille de chaque enfant, retrouvez notre [guide du Parc Spirou avec de jeunes enfants](/articles/sorties/parc-spirou-avec-de-jeunes-enfants-regardez-la-taille-avant-d-acheter-les-billets/). Il détaille aussi les poussettes, les repas et l'accès au parc.
+
+## Cirque Carnage: une expérience à part, déconseillée avant 12 ans
+
+Du **23 octobre au 1er novembre**, la maison hantée **Cirque Carnage** installe son univers de clowns inquiétants, couloirs sombres et apparitions surprises. Le [parc la déconseille aux moins de 12 ans](https://www.parc-spirou.com/maison-hantee-cirque-carnage/) et précise que **l'activité n'est pas comprise dans le billet d'entrée**. Ce n'est donc pas une animation à prévoir automatiquement pour toute une fratrie.
+
+Un créneau distinct doit être réservé lorsque la billetterie le permet. La page officielle annonçait l'ouverture de cette réservation sans afficher un prix confirmé: consultez-la avant d'acheter et prévoyez un supplément dont le montant sera celui indiqué à la réservation.
+
+## Rester dormir après une nocturne
+
+Si la fin de soirée à 21h rend le trajet de retour trop long, le [Wave Village](https://www.parc-spirou.com/wave-village/), situé entre le Parc Spirou et Wave Island, propose des mobil-homes et des formules associant hébergement et entrée au parc; l'espace est lui aussi décoré pour Halloween. Vérifiez les dates, la composition réelle du séjour et les conditions avant de réserver.
+
+Pour une autre formule, l'[appartement Harmonie à Monteux sur Booking.com](https://www.booking.com/hotel/fr/harmonie-monteux.fr.html) est présenté comme adapté à une petite famille, avec cuisine équipée et canapé convertible. Comparez la capacité, le trajet depuis le parc et les conditions d'annulation pour votre nuit. Une réservation d'hébergement seule ne vaut pas réservation d'une journée au Parc Spirou.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -128,12 +154,12 @@ Billets Parc Spirou effectivement référencés sur Tiqets, à vérifier pour la
 
 - /articles/sorties/parc-spirou-avec-de-jeunes-enfants-regardez-la-taille-avant-d-acheter-les-billets/ | Parc Spirou avec de jeunes enfants: regardez la taille avant d'acheter les billets | sorties | Monteux, Vaucluse, Provence-Alpes-Côte d’Azur
 - /articles/evenements/halloween-a-avignon-une-visite-familiale-pour-decouvrir-l-archeologie-funeraire/ | Halloween à Avignon: un atelier familial pour découvrir l'archéologie funéraire | evenements | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
-- /articles/evenements/festival-du-cirque-du-val-d-oise-2026-en-famille-tarifs-horaires-et-conseils/ | Festival du Cirque du Val d'Oise 2026 en famille: tarifs, horaires et conseils | evenements | Domont, Val-d'Oise, Île-de-France
-- /articles/evenements/monument-jeu-d-enfant-2026-comment-choisir-une-visite-adaptee-a-l-age-des-enfants/ | Monument jeu d'enfant 2026: comment choisir une visite adaptée à l'âge des enfants | evenements
 - /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | Halloween 2026 au Château de Chantilly avec des enfants: ateliers, nocturnes et spectacle | sorties | Chantilly, Oise, Hauts-de-France
 - /articles/activites/parc-zoo-du-reynou-avec-des-enfants-billet-date-poussette-ou-journee-complete/ | Parc Zoo du Reynou avec des enfants: billet daté, poussette ou journée complète? | activites | Le Vigen, Haute-Vienne, Nouvelle-Aquitaine
-- /articles/sorties/toussaint-2026-au-louvre-lens-quelle-activite-choisir-selon-l-age/ | Toussaint 2026 au Louvre-Lens: quelle activité choisir selon l'âge? | sorties | Lens, Pas-de-Calais, Hauts-de-France
-- /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | Monument Jeu d’Enfant au château d’Angers: dragons et ateliers le 17 octobre 2026 | evenements | Angers, Maine-et-Loire, Pays de la Loire
+- /articles/voyages/peur-sur-le-parc-2026-en-famille-journee-nocturne-billets-et-hebergement/ | Peur sur le Parc 2026 en famille: journée, nocturne, billets et hébergement | voyages | Plailly, Oise, Hauts-de-France
+- /articles/cuisine/maison-de-la-salers-visite-degustation-et-budget-avec-des-enfants/ | Maison de la Salers: visite, dégustation et budget avec des enfants | cuisine | Saint-Bonnet-de-Salers, Cantal, Auvergne-Rhône-Alpes
+- /articles/evenements/halloween-au-chateau-de-villersexel-2026-en-famille-quelle-experience-choisir/ | Halloween au Château de Villersexel 2026 en famille: quelle expérience choisir? | evenements | Villersexel, Haute-Saône, Bourgogne-Franche-Comté
+- /articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/ | Noël à Trévarez 2026 en famille: dates, horaires et réservation | evenements | Saint-Goazec, Finistère, Bretagne
 - /articles/activites/grottes-de-thouzon-avec-des-enfants-preparer-la-visite-sous-terre/ | Grottes de Thouzon avec des enfants: préparer la visite sous terre | activites | Le Thor, Vaucluse, Provence-Alpes-Côte d’Azur
 - /articles/voyages/orange-avec-des-enfants-ou-dormir-pour-tout-faire-a-pied/ | Orange avec des enfants: où dormir pour tout faire à pied | voyages | Orange, Vaucluse, Provence-Alpes-Côte d’Azur
 - /articles/bons-plans/avignonnais-palais-des-papes-et-pont-gratuits-le-week-end/ | Avignonnais: Palais des Papes et Pont gratuits le week-end | bons-plans | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
@@ -147,7 +173,7 @@ Billets Parc Spirou effectivement référencés sur Tiqets, à vérifier pour la
 - /articles/evenements/nuit-des-chateaux-2026-a-tanlay-visite-aux-bougies-avec-des-enfants-les-16-et-17-octobre/ | Nuit des Châteaux 2026 à Tanlay: visites aux bougies les 16 et 17 octobre | evenements | Tanlay, Yonne, Bourgogne-Franche-Comté
 - /articles/evenements/monument-jeu-d-enfant-2026-a-aigues-mortes-mini-sacre-ou-escape-game-avec-les-enfants/ | Monument jeu d’enfant à Aigues-Mortes: mini-sacre et escape game les 17 et 18 octobre 2026 | evenements | Aigues-Mortes, Gard, Occitanie
 - /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | Festival Lumière 2026: Laurel & Hardy en famille le 17 octobre à Lyon | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/ | Monument jeu d'enfant 2026 au château de Vincennes: quel atelier choisir ? | evenements | Vincennes, Val-de-Marne, Île-de-France
+- /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | Monument Jeu d’Enfant au château d’Angers: dragons et ateliers le 17 octobre 2026 | evenements | Angers, Maine-et-Loire, Pays de la Loire
 
 ### Historique Radar lié
 
@@ -158,9 +184,9 @@ Billets Parc Spirou effectivement référencés sur Tiqets, à vérifier pour la
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-aigues-mortes-mini-sacre-ou-escape-game-avec-les-enfants/ | 2026-10-10T17:38:43.806Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-azay-le-rideau-animaux-caches-atelier-et-contes/ | 2026-10-11T16:33:21.125Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | 2026-10-10T08:38:56.921Z
-- opportunity | /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/ | 2026-10-09T18:35:04.031Z
 - opportunity | /articles/evenements/nuit-des-chateaux-2026-a-tanlay-visite-aux-bougies-avec-des-enfants-les-16-et-17-octobre/ | 2026-10-11T09:17:01.561Z
 - opportunity | /articles/evenements/toussaint-2026-a-vaux-le-vicomte-lampe-torche-ou-carnaval-des-animaux-avec-les-enfants/ | 2026-10-11T11:27:54.175Z
+- opportunity | /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | 2026-10-11T19:35:57.703Z
 
 ### Phases 2 et 3
 
