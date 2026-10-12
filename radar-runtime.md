@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les faits utilisés sont liés naturellement dans le corps et présents dans `sources`. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Halloween 2026 au château de Couches: atelier citrouille ou jeu géant en famille?"
-subtitle: Du 21 octobre au 1er novembre, choisir l'activité selon l'âge et le budget.
-summary: Comparer l'atelier de sculpture de citrouille et le jeu géant Mystères & Sortilèges pour organiser une sortie familiale au château de Couches.
+title: "Halloween 2026 au château de Couches: citrouilles ou jeu géant?"
+subtitle: Deux animations pour les familles du 21 octobre au 1er novembre, avec des budgets et des âges différents.
+summary: "Atelier citrouille à 14 €, accompagnant à 6 €, ou jeu d'enquête dès 7 ans à 20 €: dates, choix et réservations pour Halloween au château de Couches."
 category: evenements
 location:
   city: Couches
@@ -68,18 +73,20 @@ location:
   region: Bourgogne-Franche-Comté
 keywords:
   - Halloween château de Couches 2026
-  - atelier citrouille Couches
-  - Mystères et Sortilèges château de Couches
+  - atelier citrouille château de Couches
+  - Mystères et Sortilèges Couches
 sources:
-  - title: Château de Couches - Halloween
+  - title: Château de Couches - Halloween et billetterie
     url: https://www.chateaudecouches.com/fr_FR/evenements/halloween
-  - title: Destination Saône-et-Loire - Halloween au château
+  - title: Destination Saône-et-Loire - Halloween au château de Couches
     url: https://www.destination-saone-et-loire.fr/fr/evenement/halloween-au-chateau-de-couches.html
-  - title: Destination Saône-et-Loire - Jeu géant
+  - title: Destination Saône-et-Loire - Jeu géant Mystères & Sortilèges
     url: https://www.destination-saone-et-loire.fr/fr/evenement/jeu-geant-mysteres-sortileges.html
+  - title: Office de tourisme Creusot Montceau - Halloween au château
+    url: https://www.creusotmontceautourisme.fr/offres/halloween-au-chateau-de-couches-couches-fr-5369734/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: halloween-2026-au-chateau-de-couches-atelier-citrouille-ou-jeu-geant-en-famille
   decision: Choisir entre l'atelier citrouille et le jeu géant selon l'âge des enfants, les dates, les horaires, le budget et la réservation.
@@ -89,37 +96,48 @@ radar:
     dataThrough: 2026-10-09
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Château de Couches - Halloween »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-11-01
 ---
 
-## Mission retenue
-Halloween 2026 au château de Couches: ateliers citrouille du 21 octobre au 1er novembre et jeu géant le 31 octobre.
+Du 21 octobre au 1er novembre 2026, le château de Couches, en Saône-et-Loire, accueille les familles pour Halloween. Deux expériences sont proposées: fabriquer sa lanterne-citrouille et repartir avec, ou résoudre une enquête collective le 31 octobre. Le bon choix dépend surtout de l'âge des enfants et de leur envie de bricoler ou de jouer en équipe.
 
-## Pourquoi cette mission
-Opportunité locale imminente, officiellement documentée, avec deux activités et une décision familiale concrète. Les reculs GSC des meilleurs refresh sont classés incertains et ne suffisent pas seuls à justifier une réécriture; l'expansion d'une page forte est moins urgente.
+## L'atelier citrouille: créer sa décoration et visiter le château
 
-## Décision du lecteur
-Savoir quelle animation convient à ses enfants, combien coûte la sortie et quand réserver.
+L'[atelier de sculpture de citrouille](https://www.chateaudecouches.com/fr_FR/evenements/halloween) permet à chaque participant de creuser sa jack-o'-lantern puis de l'emporter à la maison. Le château est décoré pour Halloween et le billet inclut une visite libre. Attention: les courges utilisées **ne sont pas comestibles**.
 
-## Faits à traiter
-Atelier citrouille à 14 € par participant, accompagnant à 6 €, visite libre incluse, courges non comestibles. Jeu Mystères & Sortilèges le 31 octobre de 16h à 18h, dès 7 ans, 20 € par personne, huit ateliers et enquête. Confirmer les créneaux et disponibilités à la réservation; ne pas confondre les horaires généraux du château avec ceux de chaque animation.
+L'animation est annoncée du **21 octobre au 1er novembre 2026**. L'office de tourisme indique une ouverture de **10h à 12h et de 14h à 17h** sur cette période; il faut toutefois choisir le créneau précis proposé au moment de la réservation, plutôt que supposer qu'un atelier commence à n'importe quelle heure. Le créneau du matin présenté dans la billetterie comme « Groupes scolaires - Atelier Jack O Lantern » est réservé aux scolaires, œuvres sociales et centres de loisirs.
 
-## Sources de départ
-Château de Couches et Destination Saône-et-Loire, URLs en en-tête.
+Le tarif est de **14 € par participant** et **6 € pour l'adulte accompagnant**. Un enfant doit être accompagné pendant l'atelier; le billet accompagnant donne également accès à la visite libre. Pour un enfant et un adulte, comptez donc **20 €**. Ces conditions figurent sur la [billetterie du château](https://www.chateaudecouches.com/fr_FR/evenements/halloween) et sur la [fiche de l'office de tourisme](https://www.creusotmontceautourisme.fr/offres/halloween-au-chateau-de-couches-couches-fr-5369734/).
 
-## Affiliation
-La réservation principale se fait auprès de l'organisateur. Examiner une offre d'hébergement réellement pertinente autour de Couches pour les familles en séjour; ne pas inventer de disponibilité ni de partenariat billetterie.
+## Le 31 octobre: une enquête pour les enfants dès 7 ans
 
-## Continuations internes
-- Relier aux pages Fam Space de destination locale si elles existent, sans réécrire leurs conseils généraux.
-- Éviter de reprendre les guides génériques Halloween; se concentrer sur le choix entre ces deux animations.
+Le samedi **31 octobre, de 16h à 18h**, le jeu géant **Mystères & Sortilèges** propose une aventure en équipe à travers huit ateliers thématiques. Les participants collectent des indices, résolvent des énigmes et suivent une chasse au trésor. Quatre animateurs costumés encadrent l'expérience; matériel, carte des lieux et feuille de route sont prévus.
+
+Cette formule s'adresse aux enfants **dès 7 ans**, aux adolescents et aux adultes qui souhaitent participer à une enquête plutôt qu'à un atelier manuel. Le prix annoncé est de **20 € par personne**, soit **60 € pour deux adultes et un enfant**. Les costumes sont encouragés. Le programme est détaillé par le [château](https://www.chateaudecouches.com/fr_FR/evenements/halloween) et [Destination Saône-et-Loire](https://www.destination-saone-et-loire.fr/fr/evenement/jeu-geant-mysteres-sortileges.html).
+
+## Quelle activité réserver selon votre famille?
+
+Avec un jeune enfant qui aime les activités manuelles, l'atelier citrouille est le choix le plus simple: on crée un objet à rapporter chez soi et on peut découvrir les décors du château à son rythme. Le château ne précise pas d'âge minimum pour cet atelier; contactez l'équipe si votre enfant est très jeune ou a besoin d'aide pour manipuler les outils.
+
+Avec des enfants d'au moins 7 ans qui aiment les énigmes, le jeu du 31 octobre offre une activité collective de deux heures. Le tarif s'applique à chaque participant: vérifiez le coût pour l'ensemble de la famille avant de réserver. Ne confondez pas non plus ce rendez-vous unique avec les ateliers citrouille proposés sur plusieurs jours.
+
+## Réserver et préparer la visite
+
+Les **deux animations sont sur réservation**. Consultez les créneaux encore disponibles sur la [page officielle Halloween du château de Couches](https://www.chateaudecouches.com/fr_FR/evenements/halloween); la présence d'un horaire dans le programme général ne garantit pas qu'il reste des places. Pour une question sur l'âge, les conditions d'accès ou l'organisation avec une poussette, contactez directement le château au **03 85 45 57 99**.
+
+Le château se trouve sur la **D978, 71490 Couches**. Prévoyez des vêtements adaptés à la météo d'automne et, pour le jeu du 31 octobre, une tenue qui permette de circuler et de participer aux défis. Avant le départ, vérifiez les éventuelles consignes d'accès et la disponibilité réelle du créneau réservé.
+
+## Prolonger la sortie en Saône-et-Loire
+
+Pour les familles qui viennent de loin, Halloween au château peut être l'étape d'un séjour dans la région. Comparez les hébergements à Couches ou dans les environs en tenant compte du trajet jusqu'au château, surtout pour le jeu qui se termine à 18h. Sur [Booking.com](https://www.booking.com/searchresults.fr.html?ss=Couches%2C%20Sa%C3%B4ne-et-Loire%2C%20France), vérifiez la capacité familiale, les conditions d'annulation et les disponibilités à vos dates avant de choisir. La réservation de l'animation, elle, reste distincte et s'effectue auprès du château.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
 - /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/ | Monument jeu d'enfant 2026 au château de Vincennes: quel atelier choisir ? | evenements | Vincennes, Val-de-Marne, Île-de-France
-- /articles/evenements/halloween-au-chateau-de-villersexel-2026-en-famille-quelle-experience-choisir/ | Halloween au Château de Villersexel 2026 en famille: quelle expérience choisir? | evenements | Villersexel, Haute-Saône, Bourgogne-Franche-Comté
 - /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | Pierrefonds à la Toussaint 2026: atelier lanterne et soirée d'Halloween | evenements | Pierrefonds, Oise, Hauts-de-France
+- /articles/evenements/halloween-au-chateau-de-villersexel-2026-en-famille-quelle-experience-choisir/ | Halloween au Château de Villersexel 2026 en famille: quelle expérience choisir? | evenements | Villersexel, Haute-Saône, Bourgogne-Franche-Comté
 - /articles/evenements/monument-jeu-d-enfant-2026-a-azay-le-rideau-animaux-caches-atelier-et-contes/ | Monument Jeu d'enfant 2026 à Azay-le-Rideau: animaux cachés et contes en famille | evenements | Azay-le-Rideau, Indre-et-Loire, Centre-Val de Loire
 - /articles/sorties/halloween-2026-a-france-miniature-en-famille/ | Halloween 2026 à France Miniature avec des enfants: billets et visite | sorties | Élancourt, Yvelines, Île-de-France
 - /articles/sorties/petit-archeologue-puilaurens-famille-2026/ | Le petit archéologue à Puilaurens: un jeu de piste en famille | sorties | Puilaurens, Aude, Occitanie
