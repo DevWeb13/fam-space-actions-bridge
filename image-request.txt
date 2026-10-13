@@ -155,3 +155,4 @@ automation/image-20261013-f77a792-kourou-spirou-bd88762|bd887627546fd6ad7864f2eb
 automation/image-20261013-f77a792-kourou-spirou-bd88762|8797a6cda5da7ebe24c64f2a14e62967dfdba4af
 automation/image-20261013-f1fd803-trabuc-peaugres-57946e7|57946e7b4b103421ccf3ea14b3c1e70c8bc5a3fb
 automation/image-20261013-f1fd803-trabuc-peaugres-57946e7|f540fc35d7c789db8be6743f0155bfcca2612f9b
+automation/image-20261013-0fde12e-terra-denis-charlieu-07f85fc|07f85fca1da153821d7c0880a7cb295e31f37107
