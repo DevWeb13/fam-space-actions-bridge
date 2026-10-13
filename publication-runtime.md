@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,83 +14,137 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Gironde
 - Région: Nouvelle-Aquitaine
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Composteur gratuit, borne ou compostage partagé: quelle solution pour une famille à Bordeaux Métropole en 2026?** Guide local pour les 28 communes de la métropole en Gironde. Les dispositifs gratuits diffèrent selon que la famille dispose d'un jardin ou habite en appartement, dans ou hors de la rocade. La mise en place de 1 600 bornes à déchets alimentaires en 2026 rend le sujet actuel.
-
-## Besoin du lecteur
-Identifier la solution correspondant à son logement, savoir comment demander un composteur, trouver une borne ou un site collectif, comprendre les déchets acceptés et les consignes différentes selon le dispositif. Montrer comment commencer sans acheter de matériel et sans confondre Bordeaux Métropole avec toute la Gironde.
-
-## Valeur éditoriale
-- Jardin d'au moins 30 m² dans l'une des 28 communes: composteur individuel gratuit de 400 L, retrait sur inscription ou livraison à domicile, matériel livré en kit.
-- Sans jardin: composteur collectif avec carte et contact du référent; possibilité de demander un nouveau site. En intra-rocade: bornes publiques gratuites sans inscription, carte officielle, et bornes mobiles à certains horaires dans le centre de Bordeaux.
-- Différence essentielle: les bornes acceptent notamment les restes de viande et de poisson, mais refusent sacs plastiques, emballages et déchets verts; le compostage de jardin demande de mélanger matières humides et sèches et de suivre ses propres consignes.
-- Kit bioseau et sacs kraft gratuits lors de permanences, formations gratuites et broyat disponible pour équilibrer le compost.
-- Valeur ajoutée: guide de décision par logement, accès, démarche et erreurs fréquentes, non une copie de la documentation officielle. Autres candidats comparés: rénovation énergétique (aides évolutives), broyage des branches (public restreint), dons et réemploi de meubles (offres dispersées). Aucun doublon avec les articles récents fournis.
-
-## Affiliation
-Aucune offre pertinente et disponible vérifiée pour cette démarche domestique. Les solutions et formations officielles sont gratuites. Les recherches sur GetYourGuide, Tiqets, Klook, WeGoTrip et KKday n'ont pas révélé d'atelier de compostage adapté. L'atelier de rénovation de meubles KKday https://www.kkday.com/fr/product/838246 est épuisé et hors sujet. Aucun hébergement ni service de transport n'a de lien naturel avec le besoin.
-
-## Sources de départ
-- Bordeaux Métropole, compostage individuel et partagé, conditions, démarches et cartes: https://www.bordeaux-metropole.fr/a-votre-service/services-aux-particuliers/dechets/je-reduis-je-reutilise/je-composte
-- Bordeaux Métropole, bornes, déchets acceptés, bioseaux et contact: https://www.bordeaux-metropole.fr/a-votre-service/services-aux-particuliers/dechets/je-trie-je-valorise/dechets-alimentaires
-- Bordeaux Métropole, déploiement des bornes en septembre 2026: https://www.bordeaux-metropole.fr/actualites/dechets-alimentaires-tous-chemins-menent-a-borne
-- Bordeaux Métropole, broyage et broyat: https://www.bordeaux-metropole.fr/a-votre-service/services-aux-particuliers/dechets/je-reduis-je-reutilise/je-broie
-- Ville d'Eysines, exemple des solutions intra et extra-rocade: https://www.eysines.fr/infos-pratiques/dechets/le-compostage/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "maison"
+title: "Composteur gratuit à Bordeaux Métropole: que choisir selon son logement?"
+subtitle: "Jardin, appartement, borne ou compostage partagé: les solutions gratuites et les démarches en 2026"
+summary: "Bordeaux Métropole propose composteurs gratuits, sites partagés et bornes alimentaires. Voici comment choisir, s'équiper et trier sans erreur."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "composteur gratuit Bordeaux Métropole"
+  - "borne déchets alimentaires Bordeaux"
+  - "compostage partagé Bordeaux Métropole"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Bordeaux"
+  department: "Gironde"
+  region: "Nouvelle-Aquitaine"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Bordeaux Métropole - Je composte mes biodéchets"
+    url: "https://www.bordeaux-metropole.fr/a-votre-service/services-aux-particuliers/dechets/je-reduis-je-reutilise/je-composte"
+  - title: "Bordeaux Métropole - Déchets alimentaires"
+    url: "https://www.bordeaux-metropole.fr/a-votre-service/services-aux-particuliers/dechets/je-trie-je-valorise/dechets-alimentaires"
+  - title: "Bordeaux Métropole - Déchets alimentaires: tous les chemins mènent à la borne"
+    url: "https://www.bordeaux-metropole.fr/actualites/dechets-alimentaires-tous-chemins-menent-a-borne"
+  - title: "Bordeaux Métropole - Je broie"
+    url: "https://www.bordeaux-metropole.fr/a-votre-service/services-aux-particuliers/dechets/je-reduis-je-reutilise/je-broie"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Que faire des épluchures, du marc de café et des restes de repas quand on vit à Bordeaux ou dans l'une des 27 autres communes de Bordeaux Métropole? En 2026, il n'est pas nécessaire d'acheter un composteur: la collectivité propose plusieurs solutions gratuites, mais elles ne s'utilisent pas toutes de la même façon. Le bon choix dépend surtout de la présence d'un jardin et de l'emplacement du logement par rapport à la rocade.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Un jardin d'au moins 30 m²? Demander un composteur gratuit de 400 litres
+
+Si vous habitez l'une des **28 communes de Bordeaux Métropole** et possédez un **jardin d'au moins 30 m²**, vous pouvez bénéficier d'un composteur individuel gratuit en plastique recyclé. Le modèle fourni a une capacité de **400 litres** et arrive **en kit, à monter sans outil**.
+
+La [page officielle consacrée au compostage](https://www.bordeaux-metropole.fr/a-votre-service/services-aux-particuliers/dechets/je-reduis-je-reutilise/je-composte) propose plusieurs façons de l'obtenir:
+
+- **Une distribution ponctuelle** organisée près de chez vous, selon le calendrier disponible.
+- **Un retrait sur réservation** au point relais situé **7 rue Alfred-de-Musset à Talence**, habituellement le deuxième mercredi du mois, de **14h à 17h**.
+- **Une livraison à domicile**, à demander en ligne. Après l'inscription, un créneau de deux heures est proposé et peut être modifié s'il ne convient pas.
+
+Les formulaires de réservation et de livraison se trouvent directement sur la page de Bordeaux Métropole. Avant de choisir le retrait, vérifiez le calendrier et la disponibilité du matériel.
+
+Dans le jardin, le composteur permet de valoriser les épluchures et d'autres matières organiques, puis d'utiliser le compost obtenu pour les plantations. Il faut cependant mélanger les apports humides, comme les déchets de cuisine, avec des matières sèches, comme des feuilles ou du broyat de branches. Les consignes d'un composteur individuel ne sont pas exactement celles d'une borne publique.
+
+## En appartement: composteur partagé ou borne publique?
+
+Sans jardin personnel, deux options sont particulièrement intéressantes. Elles sont toutes deux gratuites, mais leur fonctionnement diffère.
+
+**Le composteur partagé** convient aux habitants qui souhaitent déposer leurs déchets organiques dans un espace commun de leur résidence, de leur quartier ou d'un jardin partagé. Bordeaux Métropole en compte plusieurs centaines. Pour participer, ouvrez la [carte des sites de compostage collectif](https://www.bordeaux-metropole.fr/a-votre-service/services-aux-particuliers/dechets/je-reduis-je-reutilise/je-composte) et contactez le référent du site choisi: certains collectifs ont leurs propres modalités d'accueil. S'il n'existe aucun site proche, la Métropole propose un formulaire pour demander la création d'un nouveau composteur partagé, notamment dans une résidence.
+
+**La borne à déchets alimentaires** est plus simple pour les familles qui vivent **à l'intérieur de la rocade**: elle se trouve sur l'espace public et ne demande **ni inscription ni réservation**. Dans son [point du 9 octobre 2026](https://www.bordeaux-metropole.fr/actualites/dechets-alimentaires-tous-chemins-menent-a-borne), Bordeaux Métropole indique que **1 600 bornes sont déployées dans l'intra-rocade**, avec un objectif de proximité d'environ 150 mètres. Consultez la [carte officielle des bornes](https://www.bordeaux-metropole.fr/a-votre-service/services-aux-particuliers/dechets/je-trie-je-valorise/dechets-alimentaires) pour localiser celle qui vous convient, plutôt que de vous fier seulement à cette distance indicative.
+
+Dans l'hypercentre de Bordeaux, des **bornes mobiles** sont aussi proposées à des horaires déterminés, notamment rue Paul-Bert, square Jean-Bureau et rue Arnaud-Miqueu. Les lieux et créneaux précis figurent sur la même page officielle: vérifiez-les avant de vous déplacer.
+
+À l'extérieur de la rocade, privilégiez la recherche d'un composteur partagé ou la demande de composteur individuel si vous disposez d'un jardin éligible. La situation peut varier d'une commune à l'autre.
+
+## Quels déchets déposer dans une borne?
+
+C'est le point à retenir pour éviter les erreurs: **la borne alimentaire n'est pas un composteur de jardin**. Les déchets déposés dans ces bornes sont collectés et traités dans une filière dédiée, notamment pour produire du biogaz et des matières fertilisantes.
+
+Selon les [consignes de Bordeaux Métropole pour les bornes alimentaires](https://www.bordeaux-metropole.fr/a-votre-service/services-aux-particuliers/dechets/je-trie-je-valorise/dechets-alimentaires), vous pouvez y jeter les épluchures, les restes de repas **y compris viande et poisson**, les coquilles d'œuf, le marc de café, le pain, ainsi que les serviettes et essuie-tout en papier. Déposez-les **en vrac ou dans un sac kraft**.
+
+En revanche, **les sacs plastiques, même présentés comme biodégradables, sont interdits**. Il faut aussi exclure les emballages, capsules de café, litières, coquilles de fruits de mer et déchets verts du jardin.
+
+Dans un **composteur individuel ou collectif**, suivez les règles propres à l'installation. Le compostage partagé peut notamment refuser les tontes de pelouse, tandis que le composteur du jardin nécessite un équilibre entre matières humides et sèches. Ne transposez donc pas automatiquement la liste des aliments admis dans les bornes à votre bac de compost.
+
+## Bioseau, sacs kraft et broyat: comment commencer sans rien acheter
+
+Pour transporter les épluchures depuis la cuisine, un petit contenant suffit. Si vous utilisez les bornes, Bordeaux Métropole distribue aussi gratuitement un **kit de démarrage comprenant un bioseau et 50 sacs kraft**, avec un guide pratique. Vous pouvez le récupérer lors de permanences annoncées sur son [calendrier de distribution](https://www.bordeaux-metropole.fr/a-votre-service/services-aux-particuliers/dechets/je-trie-je-valorise/dechets-alimentaires), ou à la permanence mensuelle du **deuxième mercredi, de 14h à 17h, au 7 rue Alfred-de-Musset à Talence**. Cette distribution de bioseaux ne doit pas être confondue avec le retrait d'un composteur individuel, qui nécessite une réservation.
+
+Pour les foyers qui compostent au jardin, la Métropole propose du **broyat gratuit** dans plusieurs déchetteries, dont Bassens, Gradignan, Pessac, Blanquefort, Mérignac et Le Taillan-Médoc. Le broyat aide à aérer le compost et à équilibrer les épluchures humides. Les [modalités de broyage et de distribution](https://www.bordeaux-metropole.fr/a-votre-service/services-aux-particuliers/dechets/je-reduis-je-reutilise/je-broie) peuvent évoluer selon les sites.
+
+Enfin, des **formations gratuites sur inscription** sont proposées pour apprendre les bons gestes et éviter un compost trop humide ou mal équilibré.
+
+## Quelle démarche faire aujourd'hui?
+
+Avec **un jardin d'au moins 30 m²**, rendez-vous sur la page « Je composte mes biodéchets » et choisissez une distribution, un retrait réservé ou la livraison du composteur.
+
+**En appartement avec un composteur collectif proche**, repérez le site sur la carte et prenez contact avec son référent. Si aucun n'est accessible, vous pouvez demander la création d'un site partagé.
+
+**En intra-rocade**, repérez une borne sur la carte, récupérez éventuellement un bioseau gratuit et commencez à déposer les déchets acceptés, sans inscription. Pour les bornes mobiles du centre-ville, respectez leurs horaires.
+
+Toutes ces démarches concernent **Bordeaux Métropole et ses 28 communes**, pas automatiquement l'ensemble de la Gironde. En cas de doute sur votre adresse ou un dispositif, le service de prévention des déchets de Bordeaux Métropole est joignable au **0 800 22 21 20** (appel gratuit), indiqué sur sa [page d'information dédiée](https://www.bordeaux-metropole.fr/a-votre-service/services-aux-particuliers/dechets/je-trie-je-valorise/dechets-alimentaires).
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même action payante, si une offre partenaire pertinente permet réellement l'achat ou la réservation, utilise-la comme chemin d'action dans le corps et évite de lui faire concurrence avec un lien officiel équivalent. Conserve la source officielle dans `sources` lorsqu'elle reste nécessaire à la vérification des faits. Sans équivalent partenaire pertinent, conserve le lien officiel utile.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -119,4 +173,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
