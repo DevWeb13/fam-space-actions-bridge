@@ -1041,6 +1041,12 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 
 ### Articles publiés
 
+- /articles/evenements/abracada-bouh-2026-a-montpellier-animations-et-billets-en-famille/ | Abracada BOUH 2026 à Montpellier: programme et tarifs au château de Flaugergues | evenements | Montpellier, Hérault, Occitanie
+- /articles/evenements/festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants/ | Les Petits Asticots 2026: spectacles, âges et réservations en famille | evenements | Chamonix-Mont-Blanc, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/activites/musee-automobile-reims-champagne-en-famille-que-voir-et-comment-preparer-sa-visite/ | Musée Automobile Reims-Champagne en famille: que voir et comment préparer sa visite? | activites | Reims, Marne, Grand Est
+- /articles/voyages/aeroport-d-orly-avec-des-enfants-metro-14-orlyval-ou-taxi/ | Rejoindre Orly en famille: métro 14, Orlyval ou taxi en 2026 | voyages | Orly, Val-de-Marne, Île-de-France
+- /articles/maison/composteur-gratuit-a-bordeaux-metropole-que-choisir-selon-son-logement/ | Composteur gratuit à Bordeaux Métropole: que choisir selon son logement? | maison | Bordeaux, Gironde, Nouvelle-Aquitaine
+- /articles/evenements/fete-de-l-automne-2026-a-terra-botanica-journee-ou-terra-nocta-en-famille/ | Fête de l'Automne 2026 à Terra Botanica: animations et tarifs | evenements | Angers, Maine-et-Loire, Pays de la Loire
 - /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | Monument jeu d'enfant 2026 à Saint-Denis: atelier Dagobert le 17 octobre | evenements | Saint-Denis, Seine-Saint-Denis, Île-de-France
 - /articles/voyages/charlieu-en-famille-abbaye-musees-et-balades-dans-la-loire/ | Charlieu en famille: abbaye, musées et balades dans la Loire | voyages | Charlieu, Loire, Auvergne-Rhône-Alpes
 - /articles/activites/grotte-de-trabuc-en-famille-les-100-000-soldats-tarifs-et-visites/ | Grotte de Trabuc en famille: les 100 000 soldats, tarifs et visites | activites | Mialet, Gard, Occitanie
@@ -1712,13 +1718,17 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 
 ### Historique Radar compact
 
+- opportunity | /articles/evenements/abracada-bouh-2026-a-montpellier-animations-et-billets-en-famille/ | 2026-10-13T20:41:25.500Z
+- opportunity | /articles/voyages/aeroport-d-orly-avec-des-enfants-metro-14-orlyval-ou-taxi/ | 2026-10-13T15:33:13.378Z
 - refresh | /articles/vie-pratique/carte-okay-savoie-2026-2027-comment-obtenir-et-utiliser-les-80-du-collegien/ | 2026-10-06T08:50:37.159Z
 - opportunity | /articles/activites/cite-du-chocolat-valrhona-a-la-toussaint-2026-quel-atelier-choisir-selon-l-age/ | 2026-10-05T14:27:51.219Z
 - opportunity | /articles/sorties/cosquer-mediterranee-avec-des-enfants-age-poussette-tarifs/ | 2026-10-03T11:22:17.769Z
 - opportunity | /articles/evenements/dia-de-los-muertos-2026-au-jardin-d-acclimatation-billets-et-animations-en-famille/ | 2026-10-08T14:56:52.034Z
 - refresh | /articles/maison/encombrants-a-bourges-quand-sortir-meubles-et-gros-objets/ | 2026-10-03T03:24:30.315Z
 - opportunity | /articles/evenements/famille-en-fete-2026-pres-de-bordeaux-ateliers-gratuits-pour-les-0-6-ans/ | 2026-10-12T08:10:30.674Z
+- opportunity | /articles/evenements/festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants/ | 2026-10-13T18:36:59.570Z
 - opportunity | /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | 2026-10-10T15:40:28.185Z
+- opportunity | /articles/evenements/fete-de-l-automne-2026-a-terra-botanica-journee-ou-terra-nocta-en-famille/ | 2026-10-13T12:37:05.098Z
 - refresh | /articles/evenements/fete-de-la-chataigne-a-collobrieres-quel-dimanche-choisir-avec-des-enfants/ | 2026-10-08T10:21:36.677Z
 - opportunity | /articles/evenements/fete-de-la-mer-2026-a-marseille-avec-des-enfants-quelle-escale-choisir-le-18-octobre/ | 2026-10-06T16:58:51.946Z
 - opportunity | /articles/evenements/fete-des-rues-aux-enfants-2026-a-paris-ou-aller-selon-l-arrondissement/ | 2026-10-03T14:16:09.016Z
@@ -1760,7 +1770,7 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 ### Publication en cours
 
 - Branche: automation/publication-20261013-2114-titre-de-travail-bus-et-tram-a-besancon-en-famille-en-2026-gratuite-de
-- HEAD: publication: phase 2 20261013-2114-titre-de-travail-bus-et-tram-a-besancon-en-famille-en-2026-gratuite-de
+- HEAD: publication: phase 3 20261013-2114-titre-de-travail-bus-et-tram-a-besancon-en-famille-en-2026-gratuite-de
 
 ---
 category: "vie-pratique"
@@ -1828,6 +1838,8 @@ Le **Besançon PASS Tourisme** n'est pas le même titre que le PASS 24h Tribu. I
 
 La formule 24h est affichée à **14,90 € au tarif plein**, **10,90 € au tarif réduit** et **29,90 € en formule Tribu** pour trois à cinq personnes, hors éventuel coût du support. Elle peut convenir à une famille qui a prévu des visites culturelles, mais elle est inutilement coûteuse pour de simples trajets. Avant de la choisir, regardez quelles visites vous comptez vraiment faire, notamment celles pour lesquelles vos enfants bénéficient déjà de tarifs réduits ou de gratuités. Ginko détaille les [sites inclus et les tarifs du PASS Tourisme](https://www.ginko.voyage/tarifs/titres-et-tarifs/besancon-pass-tourisme/).
 
+Si le séjour s'étend au-delà du centre de Besançon, notre guide [Week-end dans le Doubs en famille: quel budget pour trois grandes sorties?](https://www.fam-space.fr/articles/voyages/week-end-dans-le-doubs-en-famille-quel-budget-pour-3-grandes-sorties-en-2026/) permet de comparer une visite de la Citadelle, de Dino-Zoo et du Gouffre de Poudrey. Ces deux derniers sites demandent d'organiser un trajet distinct des déplacements urbains Ginko.
+
 ## Venir en voiture sans stationner dans le centre
 
 Ginko met à disposition **six parkings relais**, ou P+R, reliés aux transports en commun. Une famille arrivant en voiture peut y stationner puis rejoindre Besançon en bus ou en tram, plutôt que de chercher une place au centre-ville.
@@ -1841,6 +1853,15 @@ Les poussettes sont autorisées sur le réseau. Selon le [règlement d'usage de 
 Dans le tram, des espaces centraux sont prévus pour les fauteuils roulants, les poussettes et les vélos. Les bus sont à plancher bas; Ginko publie aussi des renseignements sur l'accessibilité des arrêts. La [page d'accessibilité du réseau](https://www.ginko.voyage/decouvrir-visiter/bien-voyager-avec-ginko/accessibilite/accessibilite-du-reseau-ginko-trams-bus-et-arrets) est particulièrement utile pour préparer un trajet en poussette ou avec une personne à mobilité réduite.
 
 Pour votre déplacement, vérifiez enfin **l'itinéraire, les horaires du jour et les perturbations** dans le calculateur de trajet ou l'application Ginko Mobilités. Le meilleur titre ne sert à rien si le retour prévu ne correspond pas aux horaires de la ligne.
+
+## Où dormir pour visiter Besançon en transports en commun?
+
+Pour une famille qui passe un week-end à Besançon, un logement proche du centre ou d'un arrêt de tram permet de laisser la voiture de côté une fois installée. Deux possibilités avec cuisine sont proposées sur Booking.com:
+
+- Le [Comfort Aparthotel Besancon La City](https://www.booking.com/hotel/fr/citea-besancon.fr.html) dispose de studios et d'appartements avec kitchenette, à environ dix minutes à pied du centre-ville et à moins de deux minutes de marche d'un arrêt de tram. Choisissez bien la catégorie adaptée au nombre de voyageurs.
+- L'[Appartement Climatisé / Centre-ville / 4 personnes](https://www.booking.com/hotel/fr/appartement-climatise-centre-ville-4-personnes.fr.html) est un logement entier avec une chambre, un canapé-lit et une cuisine, à environ 400 m de la gare Besançon-Viotte. Il peut être pratique pour un séjour en train avec des enfants.
+
+Les prix, disponibilités, conditions d'annulation et capacités dépendent des dates et de l'option choisie. Vérifiez-les avant de réserver.
 
 
 ### Destination en cours
