@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les faits utilisés sont liés naturellement dans le corps et présents dans `sources`. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Abracada BOUH 2026 à Montpellier: animations et billets en famille"
-subtitle: Halloween au château de Flaugergues les 24 et 25 octobre, entre jeux, ateliers et bal
-summary: "Abracada BOUH 2026: programme familial, âge conseillé, horaires à confirmer, prix des billets et réservation."
+title: "Abracada BOUH 2026 à Montpellier: programme et tarifs au château de Flaugergues"
+subtitle: Les 24 et 25 octobre, Halloween se fête en famille avec des ateliers, des jeux et une boum; deux pages officielles donnent des horaires différents.
+summary: "Abracada BOUH 2026 à Montpellier: activités d'Halloween pour enfants, prix des billets, horaires contradictoires et réservation au château de Flaugergues."
 category: evenements
 location:
   city: Montpellier
@@ -70,20 +75,23 @@ keywords:
   - Abracada BOUH Montpellier 2026
   - Halloween enfants château de Flaugergues
   - festival Abracadabra 24 25 octobre
+  - tarif Abracada BOUH enfant accompagnant
 sources:
-  - title: Festival Abracada BOUH - Site officiel
+  - title: Festival Abracada BOUH - Présentation officielle 2026
     url: https://festivalabracadabra.com/
-  - title: Festival Abracada BOUH - Informations de l'organisateur
+  - title: Festival Abracada BOUH - Informations pratiques et horaires
     url: https://festivalabracadabra.com/informations-2/
-  - title: Festival Abracada BOUH - Billetterie Weezevent
+  - title: Abracada BOUH - Billetterie officielle Weezevent
     url: https://my.weezevent.com/abracada-bouh
-  - title: Montpellier Métropole - Agenda Abracada BOUH
+  - title: Montpellier Métropole - Abracada BOUH les 24 et 25 octobre 2026
     url: https://agenda.montpellier.fr/event/98537/abracada-bouh-festival
-  - title: Château de Flaugergues
+  - title: Montpellier Métropole - Coups de cœur à hauteur d'enfants, octobre 2026
+    url: https://encommun.montpellier.fr/articles/2026-09-27-coups-de-coeur-hauteur-denfants-octobre-2026
+  - title: Château de Flaugergues - Site officiel
     url: https://www.flaugergues.com/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: abracada-bouh-2026-a-montpellier-animations-et-billets-en-famille
   decision: Savoir si la fête correspond à l'âge des enfants, combien coûtent les billets pour toute la famille et comment réserver sans se tromper de jour ou d'horaire.
@@ -93,32 +101,46 @@ radar:
     dataThrough: 2026-10-10
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Festival Abracada BOUH - Site officiel »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-10-25T23:59:00+01:00
 ---
 
-## Mission retenue
-Festival Halloween Abracada BOUH, au château de Flaugergues à Montpellier les 24 et 25 octobre 2026, inspiré du Día de los Muertos: ateliers créatifs, maquillages, jeux, chasse aux bonbons et bal familial.
+Les **samedi 24 et dimanche 25 octobre 2026**, Abracada BOUH investit le **château de Flaugergues à Montpellier**. Pour cette édition automnale, le festival Abracadabra propose un Halloween familial inspiré du *Día de los Muertos* mexicain: des couleurs, des maquillages, des jeux et une fête à partager, plutôt qu'un parcours destiné à effrayer les enfants. Le billet inclut les animations annoncées, mais **deux pages de l'organisateur ne donnent pas les mêmes horaires ni les mêmes tranches d'âge**. Voici les repères à vérifier avant d'acheter.
 
-## Pourquoi cette mission
-Opportunité locale imminente, sans doublon parmi les 668 articles. Le meilleur refresh GSC, Carte Tattoo Isère, est incertain et déjà complet. Les pages fortes GSC couvrent d'autres sujets, notamment Halloween à Villersexel, et l'expansion sur Orly a déjà été traitée. Les destinations en cours concernent Vincennes et le Haut-Rhin.
+## Des ateliers et des jeux, sans Halloween effrayant
 
-## Décision du lecteur
-Choisir la journée et confirmer les conditions d'entrée selon l'âge, puis réserver le bon nombre de billets.
+Selon la [présentation officielle du festival](https://festivalabracadabra.com/) et la [billetterie Abracada BOUH](https://my.weezevent.com/abracada-bouh), le château et son parc accueillent un programme pensé pour faire participer les enfants: ateliers créatifs, maquillage artistique, chasse aux bonbons, jeux et défis, escalade, lectures, activités gourmandes et rencontres avec des créatures fantastiques.
 
-## Faits à traiter
-- Billetterie et agenda municipal: 24-25 octobre, 11h-19h, public 4-13 ans. Mais la page Informations de l'organisateur indique 12h-20h et 5-12 ans: signaler la contradiction et inviter à confirmer avant de venir.
-- Site: 1744 avenue Albert Einstein, 34000 Montpellier. Restauration sur place et parking à proximité, sans garantir les places.
-- Prix: 20 € par enfant, 5 € par accompagnant. Pour deux adultes et deux enfants payants: 50 €. Ne pas présumer la gratuité des tout-petits.
-- Activités comprises dans l'entrée selon Weezevent, programme détaillé et horaires du bal à confirmer; réservation officielle recommandée.
-- Ne pas confondre ce festival avec la chasse au trésor distincte proposée au même château à d'autres dates.
+L'inspiration vient du *Día de los Muertos*, une fête mexicaine où fleurs, couleurs et souvenirs occupent une grande place. Le festival en reprend l'ambiance joyeuse, avec des décors de squelettes fleuris et de personnages costumés. La journée se termine par une **grande boum familiale**. L'organisateur annonce que les activités sont **comprises dans le prix d'entrée**: il n'est donc pas nécessaire de chiffrer séparément chaque atelier présenté dans la billetterie.
 
-## Sources de départ
-Festival, billetterie Weezevent, agenda municipal et château de Flaugergues, indiqués ci-dessus.
+Le programme détaillé n'est toutefois pas entièrement arrêté sur la [page d'informations de l'organisateur](https://festivalabracadabra.com/informations-2/). Il vaut mieux choisir cette sortie pour son ensemble d'animations que promettre aux enfants un atelier précis à une heure non publiée.
 
-## Affiliation
-Billetterie officielle pour l'événement. Booking.com Montpellier pour un séjour familial seulement si utile.
+## Horaires et âges: une contradiction à connaître
 
-## Continuations internes
-Aucun renvoi direct nécessaire. Les guides Montpellier ou Sète sans voiture et City Card Montpellier concernent d'autres décisions; leur contenu n'a pas à être répété. L'article Día de los Muertos du Jardin d'Acclimatation concerne Paris.
+Les deux journées sont annoncées les **24 et 25 octobre**, à la même adresse: **château de Flaugergues, 1744 avenue Albert-Einstein, 34000 Montpellier**.
+
+La [billetterie Weezevent](https://my.weezevent.com/abracada-bouh) et l'[agenda de Montpellier](https://agenda.montpellier.fr/event/98537/abracada-bouh-festival) indiquent une ouverture **de 11h à 19h**, avec des activités conçues pour les **4-13 ans**. C'est également le public annoncé sur la page d'accueil du festival.
+
+En revanche, la [page « Informations » du même organisateur](https://festivalabracadabra.com/informations-2/) affiche toujours **12h à 20h** et un public de **5-12 ans**. Elle situe même la boum entre 18h et 20h, alors que la communication municipale indique une fin de journée à 19h.
+
+**Pour organiser la sortie, privilégiez les heures affichées au moment de réserver**, tout en demandant confirmation directement à l'organisateur si vous comptez venir dès l'ouverture, rester pour la boum ou accompagner un enfant de 4 ou de 13 ans. Ne prévoyez pas un retour à 20h en supposant que la fête se prolonge jusque-là.
+
+## Quel budget prévoir pour toute la famille?
+
+Le [tarif affiché sur Weezevent](https://my.weezevent.com/abracada-bouh) est de **20 € par enfant** et de **5 € par adulte accompagnant**, avec les animations incluses.
+
+Pour une famille avec **deux enfants payants et deux adultes**, le total atteint donc **50 €** pour l'entrée. Avec un adulte et deux enfants, il est de **45 €**. À ce budget s'ajoutent éventuellement les achats auprès des points de restauration.
+
+Le festival présente ses activités pour les 4-13 ans, mais les sources officielles consultées ne précisent pas clairement toutes les conditions tarifaires des enfants plus jeunes. **Ne présumez pas qu'un enfant de moins de 4 ans entre gratuitement**: vérifiez directement les conditions disponibles au moment de la réservation.
+
+Les places étant limitées, la [réservation sur la billetterie officielle Abracada BOUH](https://my.weezevent.com/abracada-bouh) est préférable à une arrivée sans billet. Elle permet également de vérifier le tarif et la date retenus avant de payer.
+
+## Accès, repas et séjour à Montpellier
+
+Le [site de l'organisateur](https://festivalabracadabra.com/informations-2/) indique un accès en voiture et un **parking à proximité** du château, sans garantie de disponibilité d'une place. Il annonce aussi des food trucks pour se restaurer pendant la journée. Si vous venez avec une poussette ou avez besoin d'un accès adapté, vérifiez les conditions des zones occupées par le festival: l'accessibilité habituelle d'une partie du domaine ne garantit pas à elle seule celle de toutes les animations.
+
+Les **billets Abracada BOUH sont distincts des visites et des autres activités du château de Flaugergues**. La [billetterie du château](https://www.flaugergues.com/) présente ses propres visites et jeux: une réservation pour une activité habituelle du domaine ne remplace pas l'entrée au festival.
+
+Pour les familles venues d'une autre région qui souhaitent transformer la sortie en week-end, il est possible de [comparer les hébergements familiaux à Montpellier](https://www.booking.com/family/city/fr/montpellier.fr.html). Vérifiez surtout la distance réelle jusqu'au château et le trajet de retour avec les enfants plutôt que de choisir uniquement un logement dans le centre-ville.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -127,16 +149,17 @@ Aucun renvoi direct nécessaire. Les guides Montpellier ou Sète sans voiture et
 - /articles/voyages/montpellier-ou-sete-sans-voiture-avec-des-enfants-ou-poser-ses-valises/ | Montpellier ou Sète sans voiture avec des enfants: où poser ses valises ? | voyages | Montpellier, Hérault, Occitanie
 - /articles/bons-plans/city-card-montpellier-en-famille-quand-est-elle-vraiment-rentable/ | City Card Montpellier en famille: quand est-elle vraiment rentable? | bons-plans | Montpellier, Hérault, Occitanie
 - /articles/evenements/coeur-de-ville-en-lumieres-2026-avec-des-enfants-comment-preparer-la-soiree-sans-voiture/ | Cœur de Ville en Lumières 2026 avec des enfants: comment préparer la soirée sans voiture? | evenements | Montpellier, Hérault, Occitanie
-- /articles/evenements/equidays-2026-en-famille-dans-le-calvados-villages-gratuits-parade-et-animations/ | Équidays 2026 en famille dans le Calvados: villages gratuits, parade et animations | evenements | Caen, Calvados, Normandie
-- /articles/evenements/halloween-2026-au-safari-de-peaugres-animations-et-lumieres-sauvages/ | Halloween 2026 au Safari de Peaugres: animations, tarifs et Festival Lumières Sauvages | evenements | Peaugres, Ardèche, Auvergne-Rhône-Alpes
 - /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | Pierrefonds à la Toussaint 2026: atelier lanterne et soirée d'Halloween | evenements | Pierrefonds, Oise, Hauts-de-France
 - /articles/evenements/halloween-au-chateau-de-villersexel-2026-en-famille-quelle-experience-choisir/ | Halloween au Château de Villersexel 2026 en famille: quelle expérience choisir? | evenements | Villersexel, Haute-Saône, Bourgogne-Franche-Comté
+- /articles/voyages/futuroween-2026-futuroscope-billet-programme-enfants/ | Futuroween 2026 au Futuroscope: billet, programme et conseils avec des enfants | voyages | Chasseneuil-du-Poitou, Vienne, Nouvelle-Aquitaine
 - /articles/evenements/festival-du-cirque-du-val-d-oise-2026-en-famille-tarifs-horaires-et-conseils/ | Festival du Cirque du Val d'Oise 2026 en famille: tarifs, horaires et conseils | evenements | Domont, Val-d'Oise, Île-de-France
+- /articles/evenements/quai-des-bulles-2026-a-saint-malo-en-famille-tarifs-programme-et-conseils/ | Quai des Bulles 2026 à Saint-Malo en famille: tarifs, programme et conseils | evenements | Saint-Malo, Ille-et-Vilaine, Bretagne
 - /articles/parentalite/maisons-des-1000-jours-dans-l-herault-ou-trouver-un-accompagnement-gratuit/ | Maisons des 1000 jours dans l'Hérault: où trouver un accompagnement gratuit | parentalite | Montpellier, Hérault, Occitanie
 - /articles/bons-plans/cantine-au-college-dans-l-herault-jusqu-a-3-60-d-aide-par-repas/ | Cantine au collège dans l'Hérault: jusqu'à 3,60 € d'aide par repas | bons-plans | Montpellier, Hérault, Occitanie
 - /articles/activites/musee-parc-des-dinosaures-de-meze-en-famille-fossiles-visite-et-conseils/ | Musée-Parc des Dinosaures de Mèze en famille: fossiles, visite et conseils | activites | Mèze, Hérault, Occitanie
 - /articles/sorties/grotte-des-demoiselles-avec-des-enfants-visite-guidee-contee-ou-lanterne/ | Grotte des Demoiselles avec des enfants: visite guidée, contée ou lanterne? | sorties | Saint-Bauzille-de-Putois, Hérault, Occitanie
 - /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | Monument jeu d'enfant 2026 à Saint-Denis: atelier Dagobert le 17 octobre | evenements | Saint-Denis, Seine-Saint-Denis, Île-de-France
+- /articles/evenements/halloween-2026-au-safari-de-peaugres-animations-et-lumieres-sauvages/ | Halloween 2026 au Safari de Peaugres: animations, tarifs et Festival Lumières Sauvages | evenements | Peaugres, Ardèche, Auvergne-Rhône-Alpes
 - /articles/evenements/halloween-2026-au-parc-spirou-nocturnes-naruto-reservation-et-maison-hantee/ | Halloween 2026 au Parc Spirou: billets, nocturnes Naruto et maison hantée | evenements | Monteux, Vaucluse, Provence-Alpes-Côte d'Azur
 - /articles/evenements/halloween-2026-au-chateau-de-couches-atelier-citrouille-ou-jeu-geant-en-famille/ | Halloween 2026 au château de Couches: atelier citrouille et jeu Mystères & Sortilèges | evenements | Couches, Saône-et-Loire, Bourgogne-Franche-Comté
 - /articles/evenements/halloween-2026-a-la-tour-de-l-horloge-de-guines-musee-hante-contes-et-nocturne/ | Halloween 2026 à la Tour de l'Horloge de Guînes: visites, contes et nocturne | evenements | Guînes, Pas-de-Calais, Hauts-de-France
@@ -145,12 +168,10 @@ Aucun renvoi direct nécessaire. Les guides Montpellier ou Sète sans voiture et
 - /articles/evenements/toussaint-2026-a-vaux-le-vicomte-lampe-torche-ou-carnaval-des-animaux-avec-les-enfants/ | Toussaint 2026 à Vaux-le-Vicomte: les animations pour les enfants | evenements | Maincy, Seine-et-Marne, Île-de-France
 - /articles/evenements/nuit-des-chateaux-2026-a-tanlay-visite-aux-bougies-avec-des-enfants-les-16-et-17-octobre/ | Nuit des Châteaux 2026 à Tanlay: visites aux bougies les 16 et 17 octobre | evenements | Tanlay, Yonne, Bourgogne-Franche-Comté
 - /articles/evenements/monument-jeu-d-enfant-2026-a-aigues-mortes-mini-sacre-ou-escape-game-avec-les-enfants/ | Monument jeu d’enfant à Aigues-Mortes: mini-sacre et escape game les 17 et 18 octobre 2026 | evenements | Aigues-Mortes, Gard, Occitanie
-- /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | Festival Lumière 2026: Laurel & Hardy en famille le 17 octobre à Lyon | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 
 ### Historique Radar lié
 
 - opportunity | /articles/evenements/famille-en-fete-2026-pres-de-bordeaux-ateliers-gratuits-pour-les-0-6-ans/ | 2026-10-12T08:10:30.674Z
-- opportunity | /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | 2026-10-10T15:40:28.185Z
 - opportunity | /articles/evenements/halloween-2026-a-la-tour-de-l-horloge-de-guines-musee-hante-contes-et-nocturne/ | 2026-10-12T10:40:26.563Z
 - opportunity | /articles/evenements/halloween-2026-au-chateau-de-couches-atelier-citrouille-ou-jeu-geant-en-famille/ | 2026-10-12T14:00:32.202Z
 - opportunity | /articles/evenements/halloween-2026-au-parc-spirou-nocturnes-naruto-reservation-et-maison-hantee/ | 2026-10-12T17:34:53.933Z
@@ -159,6 +180,7 @@ Aucun renvoi direct nécessaire. Les guides Montpellier ou Sète sans voiture et
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-azay-le-rideau-animaux-caches-atelier-et-contes/ | 2026-10-11T16:33:21.125Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | 2026-10-13T09:50:29.435Z
 - opportunity | /articles/evenements/nuit-des-chateaux-2026-a-tanlay-visite-aux-bougies-avec-des-enfants-les-16-et-17-octobre/ | 2026-10-11T09:17:01.561Z
+- opportunity | /articles/evenements/toussaint-2026-a-vaux-le-vicomte-lampe-torche-ou-carnaval-des-animaux-avec-les-enfants/ | 2026-10-11T11:27:54.175Z
 
 ### Phases 2 et 3
 
