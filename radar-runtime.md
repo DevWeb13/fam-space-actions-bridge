@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les faits utilisés sont liés naturellement dans le corps et présents dans `sources`. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Festival Les Petits Asticots 2026: quel spectacle choisir avec les enfants?"
-subtitle: Du 17 au 23 octobre, de Chamonix à Sallanches, spectacles et ateliers selon l'âge et deux billetteries à connaître
-summary: "Les Petits Asticots 2026 en Haute-Savoie: spectacles de 6 mois à 8 ans et plus, ateliers, communes, dates, tarifs de 5 à 8 € et réservation."
+title: "Les Petits Asticots 2026: spectacles, âges et réservations en famille"
+subtitle: Du 17 au 23 octobre, dix communes du pays du Mont-Blanc accueillent des spectacles pour les tout-petits et les plus grands.
+summary: "Festival Les Petits Asticots 2026 en Haute-Savoie: quel spectacle selon l'âge, où voir les ateliers, combien coûtent les places et quelle billetterie utiliser?"
 category: evenements
 location:
   city: Chamonix-Mont-Blanc
@@ -70,22 +75,26 @@ keywords:
   - festival Les Petits Asticots 2026
   - spectacles enfants Chamonix Sallanches octobre 2026
   - festival jeune public Pays du Mont-Blanc 2026
-  - ateliers enfants festival Petits Asticots
+  - ateliers enfants Les Petits Asticots
   - billetterie Les Petits Asticots Chamonix Sallanches
 sources:
-  - title: Festival Les Petits Asticots - Programmation officielle 2026, âges et communes
+  - title: Les Petits Asticots - Programme officiel des spectacles et âges 2026
     url: https://www.les-petits-asticots.com/programme/
-  - title: Festival Les Petits Asticots - Billetterie, tarifs et réservation
+  - title: Les Petits Asticots - Billetteries, tarifs et recommandations
     url: https://www.les-petits-asticots.com/infos-pratiques/
-  - title: Festival Les Petits Asticots - Ateliers et salon des auteurs
+  - title: Les Petits Asticots - Ateliers et salon des auteurs
     url: https://www.les-petits-asticots.com/ateliers/
-  - title: Festival Les Petits Asticots - Accès et transports entre communes
+  - title: Les Petits Asticots - Accès et transports
     url: https://www.les-petits-asticots.com/transports-et-acces/
-  - title: Ville de Chamonix - Festival Les Petits Asticots 2026
+  - title: Chamonix-Mont-Blanc - Festival Les Petits Asticots 2026
     url: https://www.chamonix.fr/agenda/festival-les-petits-asticots-2026/
+  - title: Billetterie officielle Vallée de Chamonix - Programmation 2026
+    url: https://billetterie-chamonix.mapado.com/
+  - title: Billetterie officielle Cultur(r)al Sallanches
+    url: https://billetterie.culturral-sallanches.fr/content
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants
   decision: Trouver une représentation ou un atelier réellement adapté à l'âge des enfants entre le 17 et le 23 octobre, choisir une commune accessible et acheter les billets dans la bonne billetterie avant que les petites jauges soient complètes.
@@ -95,34 +104,56 @@ radar:
     dataThrough: 2026-10-10
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Festival Les Petits Asticots - Programmation officielle 2026, âges et communes »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-10-23T23:59:00+02:00
 ---
 
-## Mission retenue
-La 25e édition du festival jeune public Les Petits Asticots, du 17 au 23 octobre 2026, dans les deux vallées du Mont-Blanc. Il s'agit d'une programmation itinérante de spectacles, d'ateliers et de rencontres autour des livres jeunesse, et non d'un événement réuni dans une seule salle à Chamonix.
+Du **17 au 23 octobre 2026**, le festival jeune public **Les Petits Asticots** propose spectacles et ateliers dans **dix communes du pays du Mont-Blanc**, de Chamonix à Sallanches, en passant notamment par Servoz, Megève et Vallorcine. Pour organiser une sortie avec les enfants, ne vous fiez pas seulement au nom du spectacle: **l'âge conseillé, la commune et la billetterie changent d'une représentation à l'autre**.
 
-## Pourquoi cette mission
-Le meilleur candidat refresh GSC, la carte Tattoo Isère, reste un signal `uncertain`: aucune perte de classement prouvée, et l'article existant répond déjà aux montants, au bonus Caf, à l'éligibilité, aux démarches et aux dates d'utilisation. Les pages fortes GSC, notamment celle sur Halloween à Villersexel, ont déjà un sujet complet sans sous-question autonome aussi évidente; l'expansion Orly issue de la page forte « Transports à Paris » a déjà été prise en charge par Radar. L'opportunité saisonnière Les Petits Asticots est imminente, documentée sur le site du festival et absente des 668 articles du catalogue. Les articles proches sur les spectacles d'Annecy ou le festival Au Bonheur des Mômes concernent d'autres événements.
+## Quels spectacles choisir selon l'âge de votre enfant?
 
-## Décision du lecteur
-Comparer les séances selon l'âge réellement admis, l'horaire et la commune, ajouter éventuellement un atelier et réserver le bon spectacle dans l'une des deux billetteries officielles.
+Le [programme officiel 2026](https://www.les-petits-asticots.com/programme/) couvre aussi bien les bébés que les enfants plus grands. Voici quelques repères concrets pour choisir:
 
-## Faits à traiter
-- Du samedi 17 au vendredi 23 octobre 2026, dans dix communes entre la vallée de Chamonix et le Pays du Mont-Blanc. Ne pas faire croire que tout se déroule à Chamonix.
-- Exemples d'âges tirés de la programmation officielle: La Toute Petite Boîte de Nuits (Chamonix, 17 octobre) de 0 à 3 ans; Variations pour un Parapluie (Combloux, 17 octobre) dès 2 ans; Au Fond des Mers (Cordon, 18 octobre) dès 6 mois; Là-haut sur ma montagne (Sallanches, 19 octobre) de 1 à 6 ans; Le Petit Prince (Sallanches, 21 octobre) dès 7 ans; F.A.I.L (Saint-Gervais, 20 octobre) dès 8 ans. Vérifier les âges des autres séances sur le programme, et ne pas présenter tous les spectacles comme adaptés à tous les enfants.
-- Séances réparties par journée et commune, avec des créneaux parfois le matin; préserver la nécessité de choisir le trajet entre communes avant de multiplier les réservations.
-- Ateliers annoncés: cirque à Servoz le 19 octobre, ombre et lumière parent-enfant à Megève le 21, marionnette et hip-hop à Vallorcine le 22, généralement 5 € par participant; certaines petites jauges affichent déjà complet en ligne, donc ne jamais promettre de place. Salon Les Petits Astic' Auteurs à Sallanches les 19 et 20 octobre, 14h30 à 18h, activités sur inscription suivant l'offre.
-- Billets affichés à 5 € par personne pour la plupart des spectacles, certains à 8 € notamment les concerts; confirmer le montant de chaque séance au moment de réserver. Vente possible sur place sous réserve de disponibilité, mais réservation préalable conseillée.
-- Deux systèmes indépendants: Chamonix/Les Houches/Servoz/Vallorcine via la billetterie culturelle de Chamonix; Passy/Saint-Gervais/Sallanches/Combloux/Megève/Cordon via Cultur(r)al Sallanches. Selon le choix de spectacles, deux transactions sont nécessaires. Prévoir arrivée environ 15 minutes avant et accompagnement d'un adulte selon l'organisateur.
-- Pour les transports, consulter la page officielle d'accès et vérifier les horaires de train/bus des communes choisies. Ne pas supposer un transport direct entre tous les lieux.
+- **Avec un bébé ou un enfant de moins de 3 ans:** *Au Fond des Mers*, le **18 octobre à Cordon**, est annoncé dès **6 mois**. *La Toute Petite Boîte de Nuits*, à **Chamonix le 17 octobre**, s'adresse aux **0-3 ans**: ce spectacle musical de 30 minutes, consacré au sommeil, est programmé à 9h30 et 11h. À **Sallanches le 19 octobre**, *Là-haut sur ma montagne* convient aux **1-6 ans**.
+- **À partir de 2 ou 3 ans:** *Variations pour un Parapluie* se joue le **17 octobre à Combloux** (dès 2 ans). *Ça a l'air facile*, mélange de cirque et de danse, est proposé le **19 octobre à Servoz** dès 3 ans. *Comment attraper une étoile*, le **21 octobre à Megève**, s'adresse également aux 3 ans et plus.
+- **Avec des enfants d'âge scolaire:** *Les intempéries de Sami*, le **20 octobre aux Houches**, est annoncé dès 4 ans; *Versant Vivant*, le **23 octobre à Passy**, dès 6 ans; *Le Petit Prince*, le **21 octobre à Sallanches**, dès 7 ans; et *F.A.I.L (Fonce. Avance. Invincible. Loser)*, le **20 octobre à Saint-Gervais**, dès 8 ans.
 
-## Sources de départ
-Programme, billetteries, infos pratiques, ateliers et page accès publiés par l'organisation du festival; agenda de la Ville de Chamonix pour les dates.
+Le **22 octobre à Vallorcine**, *Jeu* et *Monte et souris* sont tous deux annoncés à partir de 3 ans. Il est possible de comparer les horaires de ces deux spectacles pour organiser une sortie au même endroit, sans présumer qu'il reste des places pour les deux. Les seuils d'âge indiqués par les organisateurs doivent guider le choix: un spectacle destiné aux 0-3 ans ne vise pas le même public qu'une proposition dès 8 ans.
 
-## Affiliation
-L'achat du spectacle passe prioritairement par les deux billetteries officielles, sans lien affilié adapté confirmé. Pour des visiteurs venant de loin ou visitant plusieurs communes, suggérer discrètement un hébergement familial à Chamonix ou Sallanches sur Booking.com en cohérence avec leurs spectacles; ne pas surcharger ce sujet de tourisme général.
+Pour connaître **l'heure exacte, la salle et les places encore disponibles**, ouvrez la fiche de la représentation choisie dans le [programme du festival](https://www.les-petits-asticots.com/programme/), puis sa billetterie. Plusieurs séances ont lieu dès le matin.
 
-## Continuations internes
-Aucun doublon direct sur le festival. Les pages Fam Space relatives à la Mer de Glace à Chamonix ou au festival Au Bonheur des Mômes au Grand-Bornand parlent d'autres sorties: ne pas les intégrer artificiellement au guide. Le suivi du festival reste autonome sur dates, âges, communes et modalités de réservation.
+## Ajouter un atelier ou rencontrer des auteurs
+
+Les spectacles ne sont pas les seules activités proposées. La [programmation des ateliers](https://www.les-petits-asticots.com/ateliers/) annonce notamment:
+
+- **Cirque à Servoz:** lundi **19 octobre à 15h**, salle Jean Morel.
+- **Ombre et lumière parent-enfant à Megève:** mercredi **21 octobre à 10h15 ou 14h45**, auditorium du Palais des Sports.
+- **Construction de marionnettes parent-enfant à Vallorcine:** jeudi **22 octobre à 15h15**, pôle culturel.
+- **Danse hip-hop à Vallorcine:** jeudi **22 octobre à 15h15**, à La Ruche.
+
+Ces ateliers sont annoncés à **5 € par participant**. Certains affichent déjà complet sur la billetterie: vérifiez la disponibilité avant d'organiser la journée autour d'un atelier, surtout avec une jauge réduite.
+
+À **Sallanches**, le salon **Les Petits Astic' Auteurs** se tient à la médiathèque les **19 et 20 octobre, de 14h30 à 18h**. Les activités sont proposées avec un nombre limité de places; les réservations se font au **04 50 93 95 49** selon le programme du salon. Il peut compléter une sortie à Sallanches, sans nécessiter de changer de commune.
+
+## Combien coûte l'entrée et où réserver?
+
+Les [informations pratiques du festival](https://www.les-petits-asticots.com/infos-pratiques/) annoncent en général **5 € par personne**, adulte comme enfant, et **8 € pour certains spectacles, notamment des concerts**. Vérifiez le tarif de chaque représentation sur sa fiche avant paiement: le festival ne propose pas un prix unique applicable à toutes les séances.
+
+**Il existe deux billetteries distinctes**, en fonction de la commune du spectacle:
+
+- **Chamonix, Les Houches, Servoz et Vallorcine:** [billetterie culturelle de la Vallée de Chamonix](https://billetterie-chamonix.mapado.com/), renseignements au **04 50 53 75 17**.
+- **Passy, Saint-Gervais, Sallanches, Combloux, Megève et Cordon:** [billetterie Cultur(r)al Sallanches](https://billetterie.culturral-sallanches.fr/content), renseignements au **04 50 91 56 46**.
+
+Si vous assistez à un spectacle dans chaque secteur, il peut donc falloir **effectuer deux commandes séparées**. Des ventes sont aussi prévues à l'entrée des salles, mais uniquement **dans la limite des places restantes**. Pour une petite jauge ou un atelier, réserver à l'avance est plus sûr.
+
+Les organisateurs demandent de venir **15 minutes avant le début**, avec **au moins un adulte accompagnant**. Pensez également à tenir compte des billets de toutes les personnes qui assistent à la séance: le prix indiqué est un tarif **par personne**, pas par famille.
+
+## Éviter les trajets inutiles entre les communes
+
+Le festival ne se déroule pas dans un seul lieu. Il rassemble cette année **Chamonix, Les Houches, Servoz, Vallorcine, Passy, Saint-Gervais, Sallanches, Combloux, Megève et Cordon**. Avant de réserver deux séances le même jour, vérifiez leurs **horaires et adresses précises**: deux spectacles organisés dans des communes différentes ne sont pas forcément faciles à enchaîner avec des enfants.
+
+La [page officielle Accès & Transports](https://www.les-petits-asticots.com/transports-et-acces/) oriente vers le train et les bus du secteur. Dans la vallée de Chamonix, elle mentionne notamment les lignes de bus vers **Les Houches et Servoz** et recommande **le train pour Vallorcine**. Les horaires réels et les correspondances doivent être vérifiés pour le jour choisi; une desserte du village ne signifie pas nécessairement un arrêt à côté de la salle.
+
+Pour les familles venant de loin et souhaitant profiter de plusieurs représentations, [comparer les hébergements familiaux à Sallanches](https://www.booking.com/family/city/fr/sallanches.fr.html) peut être utile si la majorité des spectacles choisis se trouve du côté du Pays du Mont-Blanc. Vérifiez la distance jusqu'aux salles et les trajets prévus avant de réserver une nuit.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -130,14 +161,16 @@ Aucun doublon direct sur le festival. Les pages Fam Space relatives à la Mer de
 
 - /articles/evenements/festival-au-bonheur-des-momes-2026-en-famille/ | Au Bonheur des Mômes 2026: pass, spectacles et journée au Grand-Bornand | evenements | Le Grand-Bornand, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/evenements/court-circuit-2026-a-annecy-en-famille-spectacles-tarifs-et-conseils/ | Court Circuit 2026 à Annecy en famille: spectacles, tarifs et conseils | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
-- /articles/evenements/rue-enfants-montcuq-2026-famille/ | La Rue des Enfants 2026 à Montcuq: deux jours d’arts de rue en famille | evenements | Montcuq-en-Quercy-Blanc, Lot, Occitanie
-- /articles/vie-pratique/bus-a-annecy-avec-des-enfants-quel-ticket-choisir-et-comment-eviter-les-galeres/ | Bus à Annecy avec des enfants: quel ticket choisir et comment éviter les galères | vie-pratique | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
-- /articles/cuisine/ferme-du-petit-mont-a-bellevaux-en-famille-quelle-formule-choisir/ | Ferme du Petit Mont à Bellevaux en famille: quelle formule choisir ? | cuisine | Bellevaux, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/evenements/les-expressifs-2026-a-poitiers-trois-jours-de-spectacles-gratuits/ | Les Expressifs 2026 à Poitiers: trois jours de spectacles gratuits | evenements | Poitiers, Vienne, Nouvelle-Aquitaine
 - /articles/evenements/famille-en-fete-2026-pres-de-bordeaux-ateliers-gratuits-pour-les-0-6-ans/ | Famille en fête 2026 en Gironde: ateliers gratuits pour les 0-6 ans | evenements | Saint-Loubès, Gironde, Nouvelle-Aquitaine
+- /articles/evenements/rue-enfants-montcuq-2026-famille/ | La Rue des Enfants 2026 à Montcuq: deux jours d’arts de rue en famille | evenements | Montcuq-en-Quercy-Blanc, Lot, Occitanie
+- /articles/evenements/lire-en-poche-2026-a-gradignan-avec-des-enfants-organiser-une-journee-sans-perdre-les-ateliers/ | Lire en Poche 2026 à Gradignan avec des enfants: organiser une journée sans perdre les ateliers | evenements | Gradignan, Gironde, Nouvelle-Aquitaine
+- /articles/sorties/vacances-de-la-toussaint-2026-a-la-cite-des-sciences-quels-ateliers-choisir-selon-l-age/ | Vacances de la Toussaint 2026 à la Cité des sciences: les ateliers numériques gratuits avec des enfants | sorties | Paris, Paris, Île-de-France
 - /articles/evenements/nancy-jazz-pulsations-2026-en-famille-spectacles-enfants-tarifs-et-conseils/ | Nancy Jazz Pulsations 2026 en famille: spectacles enfants, tarifs et conseils | evenements | Nancy, Meurthe-et-Moselle, Grand Est
 - /articles/activites/mer-de-glace-avec-des-enfants-faut-il-descendre-jusqu-a-la-grotte/ | Mer de Glace avec des enfants: faut-il descendre jusqu'à la grotte? | activites | Chamonix-Mont-Blanc, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/cuisine/ferme-du-petit-mont-a-bellevaux-en-famille-quelle-formule-choisir/ | Ferme du Petit Mont à Bellevaux en famille: quelle formule choisir ? | cuisine | Bellevaux, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/maison/renovation-energetique-en-haute-savoie-jusqu-a-3-000-d-aide-departementale/ | Rénovation énergétique en Haute-Savoie: jusqu'à 3 000 € d'aide départementale | maison | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/vie-pratique/bus-a-annecy-avec-des-enfants-quel-ticket-choisir-et-comment-eviter-les-galeres/ | Bus à Annecy avec des enfants: quel ticket choisir et comment éviter les galères | vie-pratique | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/voyages/evian-les-bains-en-famille-pendant-3-jours-lac-balades-et-activites-faciles/ | Évian-les-Bains en famille pendant 3 jours: lac, balades et activités faciles | voyages | Évian-les-Bains, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/evenements/fete-du-lac-annecy-2026-en-famille/ | Fête du lac d’Annecy 2026: préparer la soirée avec des enfants | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | Monument jeu d'enfant 2026 à Saint-Denis: atelier Dagobert le 17 octobre | evenements | Saint-Denis, Seine-Saint-Denis, Île-de-France
@@ -148,8 +181,6 @@ Aucun doublon direct sur le festival. Les pages Fam Space relatives à la Mer de
 - /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | Pierrefonds à la Toussaint 2026: atelier lanterne et soirée d'Halloween | evenements | Pierrefonds, Oise, Hauts-de-France
 - /articles/evenements/monument-jeu-d-enfant-2026-a-azay-le-rideau-animaux-caches-atelier-et-contes/ | Monument Jeu d'enfant 2026 à Azay-le-Rideau: animaux cachés et contes en famille | evenements | Azay-le-Rideau, Indre-et-Loire, Centre-Val de Loire
 - /articles/evenements/toussaint-2026-a-vaux-le-vicomte-lampe-torche-ou-carnaval-des-animaux-avec-les-enfants/ | Toussaint 2026 à Vaux-le-Vicomte: les animations pour les enfants | evenements | Maincy, Seine-et-Marne, Île-de-France
-- /articles/evenements/nuit-des-chateaux-2026-a-tanlay-visite-aux-bougies-avec-des-enfants-les-16-et-17-octobre/ | Nuit des Châteaux 2026 à Tanlay: visites aux bougies les 16 et 17 octobre | evenements | Tanlay, Yonne, Bourgogne-Franche-Comté
-- /articles/evenements/monument-jeu-d-enfant-2026-a-aigues-mortes-mini-sacre-ou-escape-game-avec-les-enfants/ | Monument jeu d’enfant à Aigues-Mortes: mini-sacre et escape game les 17 et 18 octobre 2026 | evenements | Aigues-Mortes, Gard, Occitanie
 
 ### Historique Radar lié
 
@@ -158,11 +189,11 @@ Aucun doublon direct sur le festival. Les pages Fam Space relatives à la Mer de
 - opportunity | /articles/evenements/halloween-2026-au-chateau-de-couches-atelier-citrouille-ou-jeu-geant-en-famille/ | 2026-10-12T14:00:32.202Z
 - opportunity | /articles/evenements/halloween-2026-au-parc-spirou-nocturnes-naruto-reservation-et-maison-hantee/ | 2026-10-12T17:34:53.933Z
 - opportunity | /articles/evenements/halloween-2026-au-safari-de-peaugres-animations-et-lumieres-sauvages/ | 2026-10-13T05:01:12.150Z
-- opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-aigues-mortes-mini-sacre-ou-escape-game-avec-les-enfants/ | 2026-10-10T17:38:43.806Z
+- refresh | /articles/evenements/lire-en-poche-2026-a-gradignan-avec-des-enfants-organiser-une-journee-sans-perdre-les-ateliers/ | 2026-10-06T12:23:52.449Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-azay-le-rideau-animaux-caches-atelier-et-contes/ | 2026-10-11T16:33:21.125Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | 2026-10-13T09:50:29.435Z
-- opportunity | /articles/evenements/nuit-des-chateaux-2026-a-tanlay-visite-aux-bougies-avec-des-enfants-les-16-et-17-octobre/ | 2026-10-11T09:17:01.561Z
 - opportunity | /articles/evenements/toussaint-2026-a-vaux-le-vicomte-lampe-torche-ou-carnaval-des-animaux-avec-les-enfants/ | 2026-10-11T11:27:54.175Z
+- opportunity | /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | 2026-10-11T19:35:57.703Z
 
 ### Phases 2 et 3
 
