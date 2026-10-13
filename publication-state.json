@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261013-1201-composteur-gratuit-borne-ou-compostage-partage-quelle-solution-pour-un",
+  "lastProcessedCommit": "b877e83ef067d3b2f155c51fc042efbbcf11e26a"
 }
