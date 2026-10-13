@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261013-1708-titre-de-travail-musee-automobile-reims-champagne-en-famille-voitures-",
+  "lastProcessedCommit": "9898d508cb65ee8411d6bac70126732603705710"
 }
