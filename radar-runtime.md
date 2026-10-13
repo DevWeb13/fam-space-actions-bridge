@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les faits utilisés sont liés naturellement dans le corps et présents dans `sources`. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Aéroport d'Orly avec des enfants: métro 14, Orlyval ou taxi?"
-subtitle: Comparer les trajets depuis Paris, le coût réel en 2026 et les contraintes avec poussette et bagages
-summary: "Pour rejoindre Orly en famille, comparez métro 14, RER B + Orlyval et taxi: tarifs enfants 2026, correspondances, accessibilité et bagages."
+subtitle: Depuis Paris, comparez prix 2026, correspondances et bagages pour choisir le trajet adapté à votre famille.
+summary: "Orly en famille: métro 14, RER B et Orlyval ou taxi? Prix 2026, tarifs enfants, poussette, siège auto et itinéraires."
 category: voyages
 location:
   city: Orly
@@ -73,19 +78,25 @@ keywords:
   - taxi Paris Orly forfait 2026 famille
   - Orly poussette bagages transports
 sources:
-  - title: Île-de-France Mobilités - Accéder aux aéroports par la ligne 14 ou le RER B et Orlyval
+  - title: Île-de-France Mobilités - Accéder aux aéroports
     url: https://www.iledefrance-mobilites.fr/acceder-aux-aeroports
-  - title: Île-de-France Mobilités - Ticket Paris Région Aéroports, prix et validité 2026
+  - title: Île-de-France Mobilités - Ligne 14 et Orly
+    url: https://www.iledefrance-mobilites.fr/actualites/fermeture-orlybus
+  - title: Île-de-France Mobilités - RER B et Orlyval
+    url: https://www.iledefrance-mobilites.fr/acceder-aux-aeroports-franciliens-
+  - title: Île-de-France Mobilités - Ticket Paris Région Aéroports
     url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/ticket-paris-region-aeroports
-  - title: Île-de-France Mobilités - Tarif réduit pour les enfants de 4 à moins de 10 ans
+  - title: Île-de-France Mobilités - Tarifs enfants
     url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/tarifs-reduits/enfants-4-10-ans
-  - title: Service-Public - Tarifs 2026 et forfaits taxi Paris-Orly
-    url: https://www.service-public.gouv.fr/particuliers/actualites/A15396?lang=fr
-  - title: DGCCRF - Suppléments et forfaits réglementés des taxis
+  - title: Service-Public - Tarifs taxis 2026
+    url: https://www.service-public.gouv.fr/particuliers/actualites/A15396
+  - title: DGCCRF - Tarifs réglementés des taxis
     url: https://www.economie.gouv.fr/dgccrf/les-fiches-pratiques/taxi-comprendre-les-tarifs-reglementes
+  - title: Service-Public - Sièges auto
+    url: https://www.service-public.gouv.fr/particuliers/vosdroits/F628
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: aeroport-d-orly-avec-des-enfants-metro-14-orlyval-ou-taxi
   decision: Choisir pour son propre trajet entre Paris et Orly la solution la plus praticable et son coût pour tous les membres de la famille, sans découvrir sur place une correspondance pénible ou un billet aéroport manquant.
@@ -98,30 +109,47 @@ radar:
     basis: "La page « Transports à Paris avec des enfants: quel titre choisir pour payer juste? » conserve 882 impressions sur la semaine récente, avec une position moyenne de 8.769 et 92.1 % de son pic."
 ---
 
-## Mission retenue
-Guide pratique du trajet Paris–aéroport d'Orly avec des enfants: ligne 14 directe, RER B jusqu'à Antony puis Orlyval, ou taxi. Le sujet est la décision de transport porte à porte, pas une nouvelle liste de titres Navigo.
+Pour aller à l'aéroport d'Orly avec des enfants, **la ligne 14 évite le changement d'Antony**, mais un taxi peut revenir moins cher que quatre billets aéroport. Le meilleur choix dépend de votre quartier parisien, de l'âge des enfants et du volume de bagages. Voici les trois options à comparer avant de partir.
 
-## Pourquoi cette mission
-Le meilleur refresh GSC, Carte Tattoo Isère, a un signal `uncertain` et son article traite déjà montants, bonus Caf, conditions, démarches et délais; les sources officielles ne révèlent pas de lacune éditoriale vérifiée. L'expansion de la page forte « Transports à Paris avec des enfants » répond à une vraie question encore peu traitée: quelles contraintes concrètes fait peser chaque itinéraire vers Orly? Plusieurs opportunités saisonnières parisiennes proches (Mon Premier Festival, Salon du Chocolat) sont déjà couvertes dans le catalogue; les reprendre ferait doublon. Aucun article publié du catalogue n'est dédié au trajet familial vers Orly, et le candidat Publication en cours traite le compostage à Bordeaux.
+## Ligne 14: un trajet direct depuis plusieurs gares parisiennes
 
-## Décision du lecteur
-Évaluer depuis son point de départ parisien le trajet le plus simple avec enfants, valises ou poussette et choisir avant le départ un titre valide ou une voiture adaptée.
+La ligne 14 dessert directement le terminus **Aéroport d'Orly**. Elle passe notamment par Saint-Lazare, Châtelet, Gare de Lyon et Bercy. [Île-de-France Mobilités annonce 25 minutes entre Châtelet et Orly](https://www.iledefrance-mobilites.fr/actualites/fermeture-orlybus), sans compter le trajet jusqu'à la station, la marche dans l'aéroport ni les formalités avant le vol.
 
-## Faits à traiter
-- Métro 14 jusqu'au terminus Aéroport d'Orly, ligne intégralement accessible selon Île-de-France Mobilités; horaire de fonctionnement, accès aux terminaux et éventuelles correspondances selon le départ.
-- RER B puis Orlyval à Antony: une correspondance, navette courte; ne pas présenter Orlyval comme desservi directement par la ligne 14.
-- Ticket Paris Région <> Aéroports 2026: 14 € adulte, 7 € de 4 à moins de 10 ans, gratuit avant 4 ans. Il couvre ligne 14 vers Orly et RER B + Orlyval, sous conditions de correspondance. Préciser supports, vérification des forfaits déjà détenus et limites des tickets urbains ordinaires.
-- Taxi parisien direct Orly–Paris intra-muros en 2026: forfait 36 € rive gauche, 45 € rive droite pour la voiture, pas par personne; distinguer les suppléments réglementés de réservation et à partir du cinquième passager, sans inventer de temps de route. Comparer le coût pour une famille de deux adultes et deux enfants de 4 à 9 ans: 42 € en transport ferré, contre 36 ou 45 € de forfait taxi hors supplément.
-- Choisir selon proximité de la ligne 14 ou du RER B, nombre de correspondances, ascenseurs disponibles, poussette, bagages, horaires de vol et besoin de siège enfant. Confirmer les équipements et perturbations juste avant le départ.
+**Toute la ligne 14 est accessible aux personnes à mobilité réduite.** C'est un avantage avec une poussette, surtout si vous la rejoignez sans autre correspondance. Vérifiez néanmoins les ascenseurs des stations empruntées avant d'y aller. Le métro ne circule pas toute la nuit: pour un départ très matinal ou une arrivée tardive, contrôlez le premier ou le dernier passage du jour.
 
-## Sources de départ
-Île-de-France Mobilités pour réseau, accessibilité, tarifs enfants et titre aéroport; Service-Public et DGCCRF pour taxis et suppléments. Les offres partenaires servent seulement à contrôler la prestation, pas à établir les tarifs publics.
+## RER B et Orlyval: une correspondance à Antony
 
-## Affiliation
-Transfert familial Welcome Pickups si les conditions et le devis conviennent; hébergement familial à Orly sur Booking.com seulement en cas de départ très tôt ou d'arrivée tardive. Ne pas confondre ce service privé avec un taxi parisien au forfait réglementé.
+Si votre logement est proche du **RER B**, vous pouvez descendre à **Antony**, puis prendre la navette automatique **Orlyval** vers les terminaux. [Le trajet Orlyval dure environ six minutes](https://www.iledefrance-mobilites.fr/acceder-aux-aeroports-franciliens-), avec des passages annoncés toutes les cinq à sept minutes en service normal.
 
-## Continuations internes
-La page [Transports à Paris avec des enfants](/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/) prend le relais pour les comparaisons Navigo Jour, Navigo Semaine, Paris Visite et tickets urbains; ne pas les répéter ici. Pour une attente prolongée en ville avec les valises, renvoyer si utile vers [Consigne à bagages à Paris en famille](/articles/vie-pratique/consigne-a-bagages-a-paris-en-famille-gare-ou-depot-en-ville/).
+La correspondance à Antony reste le principal inconvénient avec enfants et valises. La gare dispose d'une assistance par rampe amovible: signalez-vous au guichet si nécessaire. Orlyval a ses propres horaires; ne présumez pas qu'il fonctionne aussi tard que le métro 14. Si vous devez déjà changer de ligne pour rejoindre le RER B, comparez le trajet porte à porte avec celui par la 14.
+
+## Quel ticket aéroport acheter en 2026?
+
+Le [Ticket Paris Région <> Aéroports](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/ticket-paris-region-aeroports) coûte **14 € au plein tarif**, **7 € pour les enfants de 4 à moins de 10 ans**; les **moins de 4 ans voyagent gratuitement**. Il couvre la ligne 14 vers Orly et le trajet RER B puis Orlyval. Les correspondances en métro, train et RER sont autorisées pendant deux heures, sans sortir du réseau.
+
+Pour **deux adultes et deux enfants de 4 et 8 ans**, un aller simple revient donc à **42 €**. Si les enfants ont 10 ans ou plus, le total atteint **56 €**. Le ticket Métro-Train-RER ordinaire ne permet pas d'emprunter ces dessertes aéroportuaires.
+
+Le titre s'achète sur **smartphone compatible** ou **passe Navigo Easy**, avec un support par voyageur payant. Attention: un Navigo Easy contenant déjà un ticket Métro-Train-RER ne peut pas recevoir un ticket aéroport. Si vous possédez un **Navigo Semaine toutes zones** valide, la **ligne 14 vers Orly est couverte, mais pas Orlyval**. Vérifiez votre forfait avant d'acheter.
+
+Pour comparer les tickets urbains et les forfaits sur tout le séjour, notre guide [Transports à Paris avec des enfants](/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/) détaille Navigo Jour, Navigo Semaine et Paris Visite.
+
+## Taxi: le prix se calcule pour la voiture
+
+Pour un trajet direct **entre Paris intra-muros et Orly**, les [forfaits taxi 2026](https://www.service-public.gouv.fr/particuliers/actualites/A15396) sont de **36 € depuis ou vers la rive gauche** et **45 € depuis ou vers la rive droite**. Ces montants concernent la voiture entière, pas chaque passager.
+
+Avec les deux adultes et les deux enfants de 4 et 8 ans de notre exemple, le taxi revient donc à **36 ou 45 €**, contre **42 € en métro ou RER**, hors suppléments. La réservation d'un taxi parisien entraîne **4 € de supplément si elle est immédiate**, ou **7 € si elle est faite à l'avance**. Un supplément de **5,50 €** peut s'appliquer à partir du cinquième passager. En revanche, [aucun supplément bagages n'est autorisé pour les taxis parisiens](https://www.economie.gouv.fr/dgccrf/les-fiches-pratiques/taxi-comprendre-les-tarifs-reglementes). Hors Paris intra-muros, ces forfaits ne sont pas automatiquement applicables.
+
+Le taxi évite de porter les valises dans les couloirs du métro, mais son temps de parcours dépend de la circulation. **Réservez un siège enfant adapté si vous en avez besoin**: [la réglementation prévoit une exception à l'obligation de siège auto dans les taxis](https://www.service-public.gouv.fr/particuliers/vosdroits/F628), ce qui ne garantit pas qu'un véhicule en dispose spontanément.
+
+Pour organiser à l'avance un transfert avec siège enfant et espace pour la poussette, vous pouvez aussi [demander un devis à Welcome Pickups](https://www.welcomepickups.com/paris/airport-transfer-for-families/). Le service propose des véhicules familiaux et la réservation de sièges adaptés. Comparez son devis final au forfait du taxi réglementé: ce sont deux prestations distinctes.
+
+## Avant de partir avec les enfants
+
+**Près de la ligne 14**, privilégiez le trajet direct si les horaires conviennent. **Près du RER B**, comparez la correspondance à Antony. **Avec plusieurs valises et quatre voyageurs**, vérifiez le prix du taxi: l'écart avec les billets ferrés peut être faible.
+
+Repérez le terminal de votre vol, contrôlez l'état du trafic et les ascenseurs, puis ajoutez une marge pour la marche dans l'aéroport et les contrôles. Les temps annoncés pour le métro ou Orlyval ne sont jamais des durées porte à porte.
+
+Pour un vol très tôt ou une arrivée tardive, [un hébergement familial à Orly](https://www.booking.com/family/city/fr/orly.html) peut éviter un déplacement de nuit depuis Paris. Si vous passez une journée en ville entre deux voyages, notre guide [Consigne à bagages à Paris en famille](/articles/vie-pratique/consigne-a-bagages-a-paris-en-famille-gare-ou-depot-en-ville/) aide à ne pas transporter les valises pendant les visites.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
