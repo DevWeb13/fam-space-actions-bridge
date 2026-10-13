@@ -23,6 +23,7 @@ permissions:
 concurrency:
   group: fam-space-master-write
   cancel-in-progress: false
+  queue: max
 
 jobs:
   process:

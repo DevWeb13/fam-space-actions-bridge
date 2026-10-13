@@ -1,5 +1,6 @@
 ---
 action: advance
+
 title: "Halloween 2026 au Safari de Peaugres: animations, tarifs et Festival Lumières Sauvages"
 subtitle: "Du 17 octobre au 1er novembre en Ardèche, une visite avec les animaux et les lanternes, ou une promenade lumineuse seulement."
 summary: "Animations d'Halloween au Safari de Peaugres, billets journée ou Festival seul, horaires d'entrée, parcours lumineux de 2,5 km et conseils concrets pour les familles."
