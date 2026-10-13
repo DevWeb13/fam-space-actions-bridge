@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les faits utilisés sont liés naturellement dans le corps et présents dans `sources`. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,41 +60,34 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Monument jeu d'enfant 2026 à la basilique Saint-Denis: atelier Dagobert en famille"
-subtitle: Le samedi 17 octobre, visite historique et fabrication d'une marionnette, avec des départs par âge et une billetterie dédiée.
-summary: "Monument jeu d'enfant à Saint-Denis le 17 octobre 2026: atelier du roi Dagobert, groupes d'âge, réservation, gratuités et accès à la nécropole royale."
+title: "Monument jeu d'enfant 2026 à Saint-Denis: l'atelier Dagobert du 17 octobre"
+subtitle: "Une visite autour du tombeau royal suivie d'une marionnette à fabriquer: âges, billets et horaires pour les familles."
+summary: Samedi 17 octobre 2026, la basilique de Saint-Denis propose une visite-atelier autour du roi Dagobert. Groupes 4-7 ans et 8-12 ans annoncés, tarifs, réservation et fermeture exceptionnelle à connaître.
 category: evenements
 location:
   city: Saint-Denis
   department: Seine-Saint-Denis
   region: Île-de-France
 keywords:
-  - Monument jeu d'enfant 2026 basilique Saint-Denis
-  - atelier roi Dagobert 17 octobre 2026
-  - visite atelier enfants Saint-Denis réservation
-  - marionnette Dagobert basilique Saint-Denis
+  - Monument jeu d'enfant basilique Saint-Denis 2026
+  - atelier Dagobert Saint-Denis 17 octobre
+  - marionnette roi Dagobert enfant
+  - réserver Monument jeu d'enfant Saint-Denis
 sources:
-  - title: Basilique cathédrale Saint-Denis - Monument jeu d'enfant
+  - title: Basilique cathédrale Saint-Denis - Monument jeu d'enfant et réservations
     url: https://www.saint-denis-basilique.fr/agenda/monument-jeu-d-enfant
   - title: Basilique cathédrale Saint-Denis - Informations pratiques et fermetures exceptionnelles
     url: https://www.saint-denis-basilique.fr/visiter/informations-pratiques
-  - title: Basilique cathédrale Saint-Denis - En famille
+  - title: Basilique cathédrale Saint-Denis - Visites et services aux familles
     url: https://www.saint-denis-basilique.fr/visiter/en-famille
-  - title: Basilique cathédrale Saint-Denis - Accessibilité
+  - title: Basilique cathédrale Saint-Denis - Offre adaptée aux visiteurs en mobilité réduite
     url: https://www.saint-denis-basilique.fr/visiter/visiteurs-en-situation-de-handicap/offre-adaptee-aux-visiteurs-en-mobilite-reduite
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille
   decision: Choisir le départ adapté à l'âge de son enfant et réserver la visite-atelier du 17 octobre, en sachant ce que couvre le billet et comment organiser une éventuelle visite libre avant l'activité.
@@ -92,34 +97,44 @@ radar:
     dataThrough: 2026-10-10
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Basilique cathédrale Saint-Denis - Monument jeu d'enfant »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-10-17
 ---
 
-## Mission retenue
-Présenter la visite-atelier « Le fabuleux roi Dagobert ! » à la basilique cathédrale Saint-Denis, samedi 17 octobre 2026, dans le cadre de Monument jeu d'enfant: découverte du tombeau et des légendes puis confection d'une marionnette à gaine. Une seule date à traiter, pas le week-end national entier.
+Le **samedi 17 octobre 2026**, la basilique cathédrale Saint-Denis accueille les familles pour « Le fabuleux roi Dagobert ! », une visite-atelier organisée dans le cadre de **Monument jeu d'enfant**. Les enfants découvrent l'histoire et les légendes du roi devant son tombeau, puis fabriquent une **marionnette à gaine** qu'ils imaginent eux-mêmes. Le rendez-vous est annoncé à **14h45**, pour une durée d'environ **deux heures**.
 
-## Pourquoi cette mission
-Opportunité locale imminente et officiellement documentée, avec une décision concrète de réservation. Le premier refresh GSC, la carte Tattoo Isère, est classé « uncertain » sans perte de position démontrée; l'article couvre déjà montant, bonus Caf, éligibilité, demande et utilisation. L'expansion issue d'une page forte comme Halloween au château de Villersexel ne fait pas apparaître de sous-sujet autonome mieux documenté. La page nationale Fam Space sur Monument jeu d'enfant explique la méthode générale mais pas cette séance précise.
+L'activité s'adresse aux enfants à partir de 4 ans. Mais avant de réserver, une différence entre les tranches d'âge affichées dans le programme et la billetterie mérite d'être éclaircie.
 
-## Décision du lecteur
-Déterminer si l'atelier convient à ses enfants, dans quel groupe les inscrire et comment réserver le bon créneau sans confondre le billet événement avec une entrée classique.
+## Quel groupe choisir selon l'âge de l'enfant?
 
-## Faits à traiter
-- Samedi 17 octobre à 14h45, durée annoncée de 2 h selon le programme; visite de la basilique centrée sur Dagobert puis création d'une marionnette à gaine.
-- Programme: départs 4-7 ans (parents sollicités pour aider) et 8-12 ans. Attention: le libellé de réservation affiche actuellement « 8 à 10 ans » pour le second groupe; signaler ce décalage et faire vérifier par l'organisateur l'éligibilité des 11-12 ans, plutôt que l'inventer.
-- Billetterie spécifique ouverte pour le groupe 4-7 ans sur la page officielle, tarif de l'événement 17 € par adulte, gratuité annoncée pour les moins de 26 ans. Pour le groupe plus âgé, vérifier le lien ou l'accès à la réservation sur la page officielle à jour et éviter de promettre des places.
-- Le billet événement donne aussi accès à la nécropole royale et à la Fabrique de la flèche; le monument conseille de visiter ces espaces AVANT l'atelier. Vérifier les contraintes horaires: fermeture exceptionnelle des visites ordinaires annoncée à 15h30 le samedi 17 malgré l'atelier prévu jusqu'à environ 16h45; ne pas confondre les deux accès.
-- Accès ligne 13 (station Basilique de Saint-Denis), limites pour les poussettes/bagages, absence de vestiaire, table à langer, éventuelles aides d'accessibilité. Restituer seulement les détails utiles et les réserves officialisées.
-- Événement ponctuel: date de fin 2026-10-17 en phase de rédaction.
+La [présentation officielle de l'atelier Dagobert](https://www.saint-denis-basilique.fr/agenda/monument-jeu-d-enfant) annonce **deux départs distincts**: l'un pour les **4-7 ans**, l'autre pour les **8-12 ans**. Les parents des plus petits sont sollicités pour les aider pendant la création de la marionnette. La visite mêle récit historique et activité manuelle, plutôt qu'une conférence ou un simple atelier de bricolage.
 
-## Sources de départ
-Fiche événement et agenda, informations pratiques et fermetures exceptionnelles, pages famille et accessibilité du monument; toutes sources directement responsables mentionnées dans le frontmatter. Pour trancher le décalage d'âge, l'organisateur donne 06 15 59 06 84 et sylvie.koch@monuments-nationaux.fr.
+Attention toutefois: sur cette même page, la ligne de réservation du second départ indique **« 8 à 10 ans »**, tandis que le programme dit **« 8-12 ans »**. Pour un enfant de 11 ou 12 ans, ne présumez donc pas que l'inscription est possible dans le groupe affiché. Le service des publics peut clarifier ce point au **06 15 59 06 84** ou à **sylvie.koch@monuments-nationaux.fr**. La page ne permet pas non plus de garantir la disponibilité des places pour les deux groupes.
 
-## Affiliation
-Action principale: réservation officielle de l'atelier. La fiche Tiqets existante permet une visite classique mais ne confirme pas la participation à l'atelier; ne pas la faire passer pour un billet événement. Hébergement possible uniquement pour un séjour parisien plus large, déjà traité dans l'article interne dédié.
+## Réserver la visite-atelier: quel billet faut-il prendre?
 
-## Continuations internes
-- [Monument jeu d'enfant 2026: choisir une visite selon l'âge](/articles/evenements/monument-jeu-d-enfant-2026-comment-choisir-une-visite-adaptee-a-l-age-des-enfants/) pour la comparaison nationale des monuments; ne pas recopier les conseils généraux.
-- [Dormir à Saint-Denis en famille: Pleyel ou Basilique?](/articles/voyages/dormir-a-saint-denis-pour-visiter-paris-avec-des-enfants-pleyel-ou-basilique/) si la famille prolonge la sortie en séjour; ne pas refaire la comparaison des quartiers ou hôtels.
+L'organisateur annonce **17 € pour un adulte** et **la gratuité pour les moins de 26 ans** dans le cadre de cet événement. La réservation du groupe 4-7 ans est accessible depuis la [page officielle Monument jeu d'enfant](https://www.saint-denis-basilique.fr/agenda/monument-jeu-d-enfant). La ligne du groupe plus âgé est également affichée, mais son accès à la vente doit être vérifié directement sur cette page, ainsi que le nombre de places et le créneau retenu.
+
+**N'achetez pas à la place un simple billet d'entrée à la basilique** en pensant qu'il comprend automatiquement la visite-atelier: ce sont deux offres différentes. Le billet spécifique à Monument jeu d'enfant comprend, en plus de l'activité, **l'accès à la nécropole royale et à la Fabrique de la flèche**. Inutile de payer une seconde entrée pour ces espaces si vous avez déjà ce billet.
+
+## Peut-on visiter la nécropole avant l'atelier?
+
+Oui, et c'est même ce que recommande la basilique. Le samedi 17 octobre, l'accès ordinaire à la nécropole royale est exceptionnellement ouvert **de 10h à 15h30**, alors que l'atelier commence à 14h45 et doit durer environ deux heures. Cette fermeture anticipée concerne les visites libres: elle ne signifie pas, à elle seule, que l'atelier prévu au-delà de 15h30 est annulé.
+
+Si vous souhaitez voir les tombeaux des rois et reines à votre rythme, arrivez **avant 14h45** et gardez suffisamment de temps pour cette visite. Les horaires spéciaux et les éventuels changements figurent dans les [informations pratiques officielles](https://www.saint-denis-basilique.fr/visiter/informations-pratiques). Le dimanche 18 octobre, la nécropole est annoncée fermée toute la journée.
+
+## Venir avec une poussette ou un enfant à mobilité réduite
+
+La basilique se trouve au **1, rue de la Légion-d'Honneur, 93200 Saint-Denis**, à environ 100 mètres du métro **ligne 13, station Basilique de Saint-Denis**. Cette station n'a **pas d'ascenseur**, un point important avec une poussette lourde ou un fauteuil.
+
+Sur place, les familles disposent de **toilettes et d'une table à langer**, mais il n'y a **ni consigne ni vestiaire**. Les bagages autorisés ne doivent pas dépasser **40 × 20 × 20 cm** et il n'est pas permis de manger dans le monument. Pour une pause, le [site de la basilique présente ses services aux familles](https://www.saint-denis-basilique.fr/visiter/en-famille), dont le Café de la Flèche.
+
+Pour les personnes à mobilité réduite, la [fiche d'accessibilité](https://www.saint-denis-basilique.fr/visiter/visiteurs-en-situation-de-handicap/offre-adaptee-aux-visiteurs-en-mobilite-reduite) décrit une **rampe d'entrée non normée**, une assistance possible dans certains espaces et un élévateur pour la crypte. Les adaptations mentionnées pour les visites et ateliers ne garantissent pas automatiquement les mêmes conditions pour ce rendez-vous: contactez le monument si votre famille a des besoins précis.
+
+## Et pour prolonger la sortie?
+
+La basilique constitue une sortie particulière parmi les animations du week-end national. Si vous hésitez avec d'autres sites, notre guide [Monument jeu d'enfant 2026: choisir une visite selon l'âge](/articles/evenements/monument-jeu-d-enfant-2026-comment-choisir-une-visite-adaptee-a-l-age-des-enfants/) permet de comparer les formats sans confondre les réservations.
+
+Pour les familles qui viennent de loin et souhaitent passer un week-end près de Paris, le choix d'un hébergement dépend surtout des déplacements prévus: notre article [Dormir à Saint-Denis avec des enfants: Pleyel ou Basilique?](/articles/voyages/dormir-a-saint-denis-pour-visiter-paris-avec-des-enfants-pleyel-ou-basilique/) explique les différences entre les quartiers et propose une piste d'hébergement. Le séjour reste indépendant de la réservation de l'atelier.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -127,17 +142,18 @@ Action principale: réservation officielle de l'atelier. La fiche Tiqets existan
 
 - /articles/voyages/dormir-a-saint-denis-pour-visiter-paris-avec-des-enfants-pleyel-ou-basilique/ | Dormir à Saint-Denis pour visiter Paris avec des enfants: Pleyel ou Basilique? | voyages | Saint-Denis, Seine-Saint-Denis, Île-de-France
 - /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/ | Monument jeu d'enfant 2026 au château de Vincennes: quel atelier choisir ? | evenements | Vincennes, Val-de-Marne, Île-de-France
-- /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | Monument Jeu d’Enfant au château d’Angers: dragons et ateliers le 17 octobre 2026 | evenements | Angers, Maine-et-Loire, Pays de la Loire
 - /articles/evenements/monument-jeu-d-enfant-2026-a-azay-le-rideau-animaux-caches-atelier-et-contes/ | Monument Jeu d'enfant 2026 à Azay-le-Rideau: animaux cachés et contes en famille | evenements | Azay-le-Rideau, Indre-et-Loire, Centre-Val de Loire
 - /articles/evenements/monument-jeu-d-enfant-2026-comment-choisir-une-visite-adaptee-a-l-age-des-enfants/ | Monument jeu d'enfant 2026: comment choisir une visite adaptée à l'âge des enfants | evenements
 - /articles/evenements/monument-jeu-d-enfant-2026-a-aigues-mortes-mini-sacre-ou-escape-game-avec-les-enfants/ | Monument jeu d’enfant à Aigues-Mortes: mini-sacre et escape game les 17 et 18 octobre 2026 | evenements | Aigues-Mortes, Gard, Occitanie
-- /articles/evenements/halloween-2026-au-chateau-de-couches-atelier-citrouille-ou-jeu-geant-en-famille/ | Halloween 2026 au château de Couches: atelier citrouille et jeu Mystères & Sortilèges | evenements | Couches, Saône-et-Loire, Bourgogne-Franche-Comté
-- /articles/evenements/monument-jeu-d-enfant-2026-a-la-villa-cavrois-quelle-activite-choisir-selon-l-age/ | Monument jeu d'enfant 2026 à la Villa Cavrois: énigme, mosaïque ou linogravure? | evenements | Croix, Nord, Hauts-de-France
+- /articles/cuisine/maison-du-coco-a-saint-leu-faut-il-reserver-l-atelier-ou-visiter-seulement-le-domaine/ | Maison du Coco à Saint-Leu: faut-il réserver l'atelier ou visiter seulement le domaine? | cuisine | Saint-Leu, La Réunion, La Réunion
+- /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | Monument Jeu d’Enfant au château d’Angers: dragons et ateliers le 17 octobre 2026 | evenements | Angers, Maine-et-Loire, Pays de la Loire
+- /articles/evenements/sortie-champignons-a-versigny-faut-il-reserver-avec-des-enfants/ | Sortie champignons à Versigny: faut-il réserver avec des enfants? | evenements | Versigny, Aisne, Hauts-de-France
 - /articles/maison/ameliorer-son-logement-a-la-reunion-qui-peut-demander-l-aide-departementale/ | Améliorer son logement à La Réunion: qui peut demander l'aide départementale? | maison | Saint-Denis, La Réunion, La Réunion
 - /articles/sorties/musee-de-l-air-et-de-l-espace-a-la-toussaint-2026-quelle-activite-choisir-selon-l-age/ | Toussaint 2026 au Musée de l'Air et de l'Espace: quelle activité choisir avec un enfant? | sorties | Le Bourget, Seine-Saint-Denis, Île-de-France
 - /articles/evenements/ateliers-au-jardin-de-la-pmi-a-bobigny-quelles-dates-choisir-cet-automne/ | Ateliers au jardin de la PMI à Bobigny: quelles dates choisir cet automne? | evenements | Bobigny, Seine-Saint-Denis, Île-de-France
 - /articles/sorties/musee-de-l-air-et-de-l-espace-du-bourget-en-famille-tarifs-avions-et-activites/ | Musée de l'Air et de l'Espace du Bourget en famille: tarifs, avions et activités | sorties | Le Bourget, Seine-Saint-Denis, Île-de-France
 - /articles/evenements/halloween-2026-au-parc-spirou-nocturnes-naruto-reservation-et-maison-hantee/ | Halloween 2026 au Parc Spirou: billets, nocturnes Naruto et maison hantée | evenements | Monteux, Vaucluse, Provence-Alpes-Côte d'Azur
+- /articles/evenements/halloween-2026-au-chateau-de-couches-atelier-citrouille-ou-jeu-geant-en-famille/ | Halloween 2026 au château de Couches: atelier citrouille et jeu Mystères & Sortilèges | evenements | Couches, Saône-et-Loire, Bourgogne-Franche-Comté
 - /articles/evenements/halloween-2026-a-la-tour-de-l-horloge-de-guines-musee-hante-contes-et-nocturne/ | Halloween 2026 à la Tour de l'Horloge de Guînes: visites, contes et nocturne | evenements | Guînes, Pas-de-Calais, Hauts-de-France
 - /articles/evenements/famille-en-fete-2026-pres-de-bordeaux-ateliers-gratuits-pour-les-0-6-ans/ | Famille en fête 2026 en Gironde: ateliers gratuits pour les 0-6 ans | evenements | Saint-Loubès, Gironde, Nouvelle-Aquitaine
 - /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | Pierrefonds à la Toussaint 2026: atelier lanterne et soirée d'Halloween | evenements | Pierrefonds, Oise, Hauts-de-France
@@ -146,11 +162,9 @@ Action principale: réservation officielle de l'atelier. La fiche Tiqets existan
 - /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | Festival Lumière 2026: Laurel & Hardy en famille le 17 octobre à Lyon | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/noel-2026-au-chateau-de-grignan-dates-tarifs-et-visite-en-famille/ | Noël 2026 au château de Grignan: dates, tarifs et visite en famille | evenements | Grignan, Drôme, Auvergne-Rhône-Alpes
-- /articles/evenements/dia-de-los-muertos-2026-au-jardin-d-acclimatation-billets-et-animations-en-famille/ | Día de los Muertos 2026 au Jardin d’Acclimatation: programme, billets et tailles | evenements | Paris, Paris, Île-de-France
 
 ### Historique Radar lié
 
-- opportunity | /articles/evenements/dia-de-los-muertos-2026-au-jardin-d-acclimatation-billets-et-animations-en-famille/ | 2026-10-08T14:56:52.034Z
 - opportunity | /articles/evenements/famille-en-fete-2026-pres-de-bordeaux-ateliers-gratuits-pour-les-0-6-ans/ | 2026-10-12T08:10:30.674Z
 - opportunity | /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | 2026-10-10T15:40:28.185Z
 - opportunity | /articles/evenements/halloween-2026-a-la-tour-de-l-horloge-de-guines-musee-hante-contes-et-nocturne/ | 2026-10-12T10:40:26.563Z
@@ -158,8 +172,9 @@ Action principale: réservation officielle de l'atelier. La fiche Tiqets existan
 - opportunity | /articles/evenements/halloween-2026-au-parc-spirou-nocturnes-naruto-reservation-et-maison-hantee/ | 2026-10-12T17:34:53.933Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-aigues-mortes-mini-sacre-ou-escape-game-avec-les-enfants/ | 2026-10-10T17:38:43.806Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-azay-le-rideau-animaux-caches-atelier-et-contes/ | 2026-10-11T16:33:21.125Z
-- opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-la-villa-cavrois-quelle-activite-choisir-selon-l-age/ | 2026-10-04T19:31:30.376Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | 2026-10-10T08:38:56.921Z
+- opportunity | /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/ | 2026-10-09T18:35:04.031Z
+- opportunity | /articles/sorties/musee-de-l-air-et-de-l-espace-a-la-toussaint-2026-quelle-activite-choisir-selon-l-age/ | 2026-10-05T20:22:10.692Z
 
 ### Phases 2 et 3
 
