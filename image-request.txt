@@ -157,3 +157,4 @@ automation/image-20261013-f1fd803-trabuc-peaugres-57946e7|57946e7b4b103421ccf3ea
 automation/image-20261013-f1fd803-trabuc-peaugres-57946e7|f540fc35d7c789db8be6743f0155bfcca2612f9b
 automation/image-20261013-0fde12e-terra-denis-charlieu-07f85fc|07f85fca1da153821d7c0880a7cb295e31f37107
 automation/image-20261013-0fde12e-terra-denis-charlieu-07f85fc|b8c41a887259eec84fdeca4096689328df68f7ed
+automation/image-20261013-fa79bfa-reims-asticots-bordeaux-orly-94299ad|94299ad92b5373b3e386f5e28083ed1472f76277
