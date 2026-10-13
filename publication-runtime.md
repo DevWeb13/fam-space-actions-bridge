@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,92 +14,137 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Doubs
 - Région: Bourgogne-Franche-Comté
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Titre de travail: « Bus et tram à Besançon en famille en 2026: gratuité des enfants, samedi et bons titres Ginko ».** À Besançon, dans le Doubs, Ginko est le réseau de bus, cars et tramways de Grand Besançon Métropole. Angle: aider une famille résidente ou de passage à organiser réellement ses déplacements, selon l'âge des enfants, le jour, la durée du séjour et la présence éventuelle d'une voiture. Il ne s'agit pas seulement d'annoncer un tarif gratuit.
-
-## Besoin du lecteur
-Savoir qui monte gratuitement, quelles démarches sont nécessaires pour un enfant, quand le réseau est gratuit pour tous et quel titre reste utile les autres jours. Choisir entre voyage à l'unité, 24h, 24h Tribu et Besançon PASS Tourisme selon le programme; comprendre les validations, le fonctionnement des parkings relais et l'intérêt du tram ou du bus pour visiter Besançon avec des enfants. Distinguer l'usage du réseau au quotidien et un week-end touristique. Vérifier horaires, itinéraires et éventuelles perturbations avant de partir.
-
-## Valeur éditoriale
-- **Gratuité non automatique à tous les âges:** les moins de 4 ans circulent gratuitement sans titre. Pour les 4-14 ans (ainsi que les collégiens plus âgés sous conditions), le PASS annuel coûte 0 €, mais nécessite une carte Ginko Mobilités à 4 €, une souscription/renouvellement annuel, une pièce d'identité ou un livret de famille, une photo, et une validation à chaque montée, correspondance comprise. Cette différence est cruciale pour une famille qui ne réside pas sur place.
-- **Samedi gratuit pour tous:** bus, trams, cars et parkings relais Ginko, sans billet nécessaire, de 04h30 le samedi à 02h30 le dimanche selon Ginko. Ne pas étendre automatiquement cette gratuité à d'autres réseaux ou titres touristiques.
-- **Autres jours et alternatives:** tarif actuel affiché de 1,40 € pour un PASS 1h, 4,50 € pour un PASS 24h et 7,50 € pour un PASS 24h Tribu de 3 à 5 voyageurs, valable 24 heures sur les bus et trams et à valider à chaque montée. Attention: pour des enfants déjà titulaires du PASS 4/14 ans, le forfait Tribu n'est pas automatiquement le meilleur choix; ne pas faire de calculs artificiels et rappeler le coût du support rechargeable si pertinent.
-- **Tourisme versus transports seuls:** le Besançon PASS Tourisme propose 24, 48 ou 72 heures de transports et des entrées dans quatre lieux culturels (Citadelle, musées des Beaux-Arts et du Temps, maison Victor-Hugo), avec formule Tribu spécifique. Le distinguer nettement du PASS 24h Tribu Ginko classique et l'évoquer seulement pour les familles prévoyant réellement les visites incluses.
-- **Venir en voiture:** six parkings relais annoncés, gratuits le samedi; les autres jours, une validation d'un titre Ginko dans la journée est normalement nécessaire pour ressortir (exception signalée pour le P+R Vesoul). Donner une explication accessible sans transformer l'article en guide de stationnement. L'offre est pérenne à la date des vérifications et le tram a repris sa circulation normale après les travaux de l'été 2026.
-- **Comparaison des candidats:** le Besançon PASS Tourisme seul dispose déjà d'une fiche officielle détaillée et relève davantage d'un guide de visites; la nouvelle gratuité du stationnement en centre-ville à midi depuis septembre 2026 est utile mais plus étroite, notamment limitée aux parkings à barrières en semaine. Les sujets récents du Doubs (Gouffre de Poudrey, Lumières de Noël, Vital'Été, musée Beurnier-Rossel, budget de trois sorties) ne portent pas sur les transports urbains: pas de doublon direct. Le sujet Ginko offre davantage de décisions familiales réelles à traiter, sans répéter la même micro-question.
-- **Vigilance rédactionnelle:** actualiser les prix au moment de rédiger; ne pas présenter les anciennes mesures de juillet 2025 comme une nouveauté lancée en 2026; vérifier les conseils éventuels sur poussettes et accessibilité auprès de Ginko avant de les affirmer.
-
-## Affiliation
-- **Action principale, billets et abonnements Ginko:** aucun vendeur partenaire pertinent parmi GetYourGuide, Tiqets, Klook, KKday et WeGoTrip n'a été identifié pour acheter le PASS 4/14, le PASS 24h Tribu ou les titres Ginko eux-mêmes. Conserver Ginko comme chemin officiel. Les visites guidées ou billets de la Citadelle ne sont pas des substituts à des titres de transport et ne doivent pas être insérés artificiellement.
-- **Hébergement naturel pour des familles venant passer un week-end à Besançon, offres vérifiées sur Booking.com en français:**
-  - **Comfort Aparthotel Besancon La City:** hébergements avec cuisine, chambres familiales annoncées, quartier La City à proximité du centre; https://www.booking.com/hotel/fr/citea-besancon.fr.html
-  - **Appartement Climatisé / Centre-ville / 4 personnes:** logement entier avec une chambre, séjour et cuisine équipée, proche de la gare Viotte; https://www.booking.com/hotel/fr/appartement-climatise-centre-ville-4-personnes.fr.html
-  Une ou deux offres au maximum si une section consacrée au séjour se justifie. Ne promettre ni disponibilité, ni prix, ni capacité précise autre que celle effectivement retenue pour les dates des lecteurs. Pour une simple démarche quotidienne de résident, l'hébergement n'est pas pertinent.
-- Aucun lien partenaire précis de transport n'a été retenu; priorité à l'utilité du lecteur plutôt qu'à l'affiliation forcée.
-
-## Sources de départ
-- Ginko, tous les titres et tarifs en vigueur (gratuités, coût de la carte, PASS 24h, Tribu, validation): https://www.ginko.voyage/tarifs/titres-et-tarifs/tous-les-titres/
-- Ginko, parkings relais et modalités du samedi: https://www.ginko.voyage/les-mobilites-ginko/parkings-relais-p-r
-- Ginko, Besançon PASS Tourisme, sites inclus et formules: https://www.ginko.voyage/tarifs/titres-et-tarifs/besancon-pass-tourisme/
-- Grand Besançon Métropole, mesures de gratuité entrées en vigueur en 2025: https://www.grandbesancon.fr/actualite/ginko-nouveaux-tarifs-a-partir-du-1er-juillet/
-- Office de tourisme de Besançon, mobilités et conseils visiteurs: https://www.besancon-tourisme.com/fr/planifier-votre-voyage/se-deplacer-mobilite/
-- Grand Besançon Métropole, stationnement (pour distinguer les nouveaux parkings gratuits à midi): https://www.grandbesancon.fr/actualite/stationnement-gratuite-le-midi-en-centre-ville-et-30-minutes-offertes-dans-le-quartier-chaprais/
-- Grand Besançon Métropole, retour à la circulation normale du tram le 17 août 2026: https://www.grandbesancon.fr/actualite/remise-en-circulation-du-tram-a-compter-du-lundi-17-aout-reprenons-nos-bonnes-habitudes/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "vie-pratique"
+title: "Bus et tram à Besançon en famille: gratuités et titres Ginko en 2026"
+subtitle: "Enfants, samedi, PASS Tribu et parkings relais: comment choisir selon ses déplacements"
+summary: "À Besançon, enfants et adultes ne paient pas toujours le même trajet. Les règles Ginko pour voyager en famille, sans mauvaise surprise."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Ginko Besançon famille"
+  - "bus tram Besançon enfants gratuit"
+  - "PASS 24h Tribu Ginko"
+  - "transport Besançon samedi gratuit"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Besançon"
+  department: "Doubs"
+  region: "Bourgogne-Franche-Comté"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Ginko - Tous les titres et tarifs"
+    url: "https://www.ginko.voyage/tarifs/titres-et-tarifs/tous-les-titres/"
+  - title: "Ginko - Valider avec sa carte bancaire"
+    url: "https://www.ginko.voyage/tarifs/cartes/valider-avec-sa-carte-bancaire"
+  - title: "Ginko - Besançon PASS Tourisme"
+    url: "https://www.ginko.voyage/tarifs/titres-et-tarifs/besancon-pass-tourisme/"
+  - title: "Ginko - Parkings Relais (P+R)"
+    url: "https://www.ginko.voyage/les-mobilites-ginko/parkings-relais-p-r"
+  - title: "Ginko - Règlement d'usage des services"
+    url: "https://www.ginko.voyage/reglement-dusage-des-services-ginko"
+  - title: "Ginko - Accessibilité des trams, bus et arrêts"
+    url: "https://www.ginko.voyage/decouvrir-visiter/bien-voyager-avec-ginko/accessibilite/accessibilite-du-reseau-ginko-trams-bus-et-arrets"
 ---
-```
+ 
+À Besançon, dans le Doubs, les bus, trams et cars Ginko permettent de se déplacer dans la ville et les communes de Grand Besançon Métropole. Pour une famille, le bon titre dépend surtout de trois choses: l'âge des enfants, le jour du trajet et le nombre de déplacements prévus. Certains voyages ne coûtent rien; d'autres nécessitent une carte à préparer à l'avance.
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+## Les enfants voyagent-ils gratuitement?
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+**Avant 4 ans**, un enfant voyage gratuitement sur le réseau Ginko, sans titre de transport.
+
+**De 4 à 14 ans**, le PASS annuel 4/14 ans est lui aussi **gratuit**, mais il ne suffit pas de déclarer l'âge de l'enfant au conducteur. Il faut disposer d'une **carte Ginko Mobilités à 4 €**, y charger le PASS et le renouveler chaque année. Ginko demande une pièce d'identité ou un livret de famille et une photo d'identité; la photo peut être prise sur place. Les collégiens de plus de 14 ans peuvent également y avoir droit, avec un certificat de scolarité.
+
+Une fois le PASS chargé, l'enfant doit **valider sa carte à chaque montée**, y compris lors d'une correspondance. Le PASS couvre notamment les lignes Ginko du territoire de Grand Besançon Métropole, ainsi que certains trajets TER à l'intérieur de ce territoire. Les modalités complètes figurent dans les [titres et tarifs officiels de Ginko](https://www.ginko.voyage/tarifs/titres-et-tarifs/tous-les-titres/).
+
+Pour les familles habitant l'agglomération, cette carte annuelle peut simplifier les trajets du quotidien. Pour une famille en visite une seule journée, mieux vaut vérifier si l'enfant possède déjà la carte ou si un titre occasionnel sera plus pratique: la gratuité du PASS ne signifie pas qu'il soit délivré sans démarche.
+
+## Le samedi, tout le monde peut voyager sans billet
+
+Chaque samedi, **le réseau Ginko est gratuit pour tous**, adultes compris. La mesure couvre les bus, les trams, les cars et les parkings relais. Aucun titre ni validation n'est nécessaire pour bénéficier de cette gratuité.
+
+Ginko précise que cette journée tarifaire s'étend **du samedi à 4h30 au dimanche à 2h30**, et non à toute la journée du dimanche. C'est une option particulièrement simple pour une sortie familiale à Besançon, que l'on vienne du secteur ou de plus loin. Les [conditions de gratuité du samedi](https://www.ginko.voyage/tarifs/titres-et-tarifs/tous-les-titres/) sont précisées par le réseau.
+
+## Les autres jours, quel titre choisir?
+
+Pour un déplacement ponctuel, le **PASS 1h à 1,40 €** permet de prendre les bus et trams et de faire des correspondances pendant une heure à compter de la première validation. Avec le paiement sans contact, une carte bancaire ou un smartphone compatible peut servir directement de titre, sans achat préalable d'une carte rechargeable. Il faut néanmoins valider à chaque montée avec le **même moyen de paiement** afin que la correspondance soit bien reconnue. Ginko permet aussi de régler avec le même support pour plusieurs accompagnants; le [mode d'emploi de la validation bancaire](https://www.ginko.voyage/tarifs/cartes/valider-avec-sa-carte-bancaire) explique cette fonction.
+
+Pour multiplier les trajets au cours d'une journée, deux formules sont plus adaptées:
+
+- **PASS 24h à 4,50 €**: un titre individuel pour voyager autant que nécessaire pendant 24 heures à partir de sa première validation.
+- **PASS 24h Tribu à 7,50 €**: un titre collectif pour **3 à 5 personnes** voyageant ensemble, valable lui aussi 24 heures.
+
+Ces titres doivent être validés à chaque montée, même en correspondance. Ils peuvent être chargés sur une carte Voyages rechargeable à **0,20 €** ou sur une carte Ginko Mobilités. Le PASS 24h Tribu peut notamment s'acheter aux distributeurs automatiques et aux points de vente Ginko.
+
+Le forfait Tribu peut être avantageux pour une famille de trois à cinq personnes qui prévoit plusieurs trajets. En revanche, si les enfants disposent déjà de leur PASS annuel gratuit, il faut regarder combien d'adultes ont réellement besoin de payer: le titre collectif n'est pas forcément le plus pertinent. Les [conditions des PASS 1h, 24h et Tribu](https://www.ginko.voyage/tarifs/titres-et-tarifs/tous-les-titres/) permettent de choisir selon la composition du groupe.
+
+## Et pour visiter plusieurs monuments?
+
+Le **Besançon PASS Tourisme** n'est pas le même titre que le PASS 24h Tribu. Il combine des déplacements illimités sur le réseau pendant **24, 48 ou 72 heures** avec une entrée dans quatre lieux: **la Citadelle, le musée des Beaux-Arts et d'Archéologie, le musée du Temps et la maison natale de Victor Hugo**. Il comprend également certains tarifs réduits dans d'autres sites.
+
+La formule 24h est affichée à **14,90 € au tarif plein**, **10,90 € au tarif réduit** et **29,90 € en formule Tribu** pour trois à cinq personnes, hors éventuel coût du support. Elle peut convenir à une famille qui a prévu des visites culturelles, mais elle est inutilement coûteuse pour de simples trajets. Avant de la choisir, regardez quelles visites vous comptez vraiment faire, notamment celles pour lesquelles vos enfants bénéficient déjà de tarifs réduits ou de gratuités. Ginko détaille les [sites inclus et les tarifs du PASS Tourisme](https://www.ginko.voyage/tarifs/titres-et-tarifs/besancon-pass-tourisme/).
+
+## Venir en voiture sans stationner dans le centre
+
+Ginko met à disposition **six parkings relais**, ou P+R, reliés aux transports en commun. Une famille arrivant en voiture peut y stationner puis rejoindre Besançon en bus ou en tram, plutôt que de chercher une place au centre-ville.
+
+**Le samedi**, ces parkings sont gratuits et les barrières s'ouvrent librement à l'entrée comme à la sortie. **Les autres jours**, la sortie nécessite normalement un titre Ginko utilisé et validé au cours de la journée de transport. Le **P+R Vesoul** constitue une exception: son entrée et sa sortie sont libres. Le stationnement est limité à 24 heures. Retrouvez les emplacements et les [règles exactes des parkings relais](https://www.ginko.voyage/les-mobilites-ginko/parkings-relais-p-r) avant d'arriver.
+
+## Prendre le tram avec une poussette
+
+Les poussettes sont autorisées sur le réseau. Selon le [règlement d'usage de Ginko](https://www.ginko.voyage/reglement-dusage-des-services-ginko), elles doivent être tenues et freinées pendant le trajet; le réseau recommande d'éviter les périodes d'affluence quand c'est possible.
+
+Dans le tram, des espaces centraux sont prévus pour les fauteuils roulants, les poussettes et les vélos. Les bus sont à plancher bas; Ginko publie aussi des renseignements sur l'accessibilité des arrêts. La [page d'accessibilité du réseau](https://www.ginko.voyage/decouvrir-visiter/bien-voyager-avec-ginko/accessibilite/accessibilite-du-reseau-ginko-trams-bus-et-arrets) est particulièrement utile pour préparer un trajet en poussette ou avec une personne à mobilité réduite.
+
+Pour votre déplacement, vérifiez enfin **l'itinéraire, les horaires du jour et les perturbations** dans le calculateur de trajet ou l'application Ginko Mobilités. Le meilleur titre ne sert à rien si le retour prévu ne correspond pas aux horaires de la ligne.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même action payante, si une offre partenaire pertinente permet réellement l'achat ou la réservation, utilise-la comme chemin d'action dans le corps et évite de lui faire concurrence avec un lien officiel équivalent. Conserve la source officielle dans `sources` lorsqu'elle reste nécessaire à la vérification des faits. Sans équivalent partenaire pertinent, conserve le lien officiel utile.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -128,4 +173,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
