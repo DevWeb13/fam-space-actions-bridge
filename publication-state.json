@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261014-0723-titre-de-travail-chateau-de-compiegne-en-famille-appartements-imperiau",
+  "lastProcessedCommit": "a5fd9e33e2635e54fc1507303dfcf30c4eb0e2ff"
 }
