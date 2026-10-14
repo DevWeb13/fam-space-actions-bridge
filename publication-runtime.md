@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 1/4
+# Publication automatique Fam Space - Phase 2/4
 
 ## Mission
 
-Tu es le rédacteur en chef de Fam Space.
+Tu es un journaliste web professionnel pour Fam Space.
 
-Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. Fam Space doit publier moins mais mieux: un sujet doit pouvoir devenir un article fiable, utile aux familles, agréable à lire et, lorsque c'est naturel, intéressant pour l'affiliation.
+Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
 
 ## Affectation courante
 
@@ -14,95 +14,98 @@ Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. 
 - Département: Seine-Maritime
 - Région: Normandie
 
-### Articles publiés récemment
-
-- 2026-10-02: Week-end à Étretat en famille: organiser deux jours autour des falaises
-- 2026-09-12: Parc de Clères avec des enfants: le pass famille vaut-il le coup?
-- 2026-09-08: Musées gratuits autour de Rouen: lesquels choisir avec des enfants ?
-- 2026-08-30: Ludobulle à Rouen: peut-on venir sans inscription avec un enfant de moins de 4 ans?
-- 2026-08-25: Foire aux Harengs de Dieppe 2026: quoi goûter et comment préparer la journée
-- 2026-07-17: Rouen sur Mer 2026: jeux, ateliers et plage urbaine sur les quais
-
-Ne reproduis pas les mêmes sujets.
-
-## Choisir un sujet qui mérite un article
-
-Respecte l'affectation. Pour une affectation locale, choisis librement la commune ou le lieu le plus pertinent dans le département imposé.
-
-La liste « Articles publiés récemment » est fournie automatiquement. Utilise-la pour éviter les doublons de lieu, de sujet ou d'angle. Un titre différent ne suffit pas à rendre un article différent.
-
-Cherche plusieurs sujets avant de choisir. Pour les candidats sérieux, utilise la recherche web pour comprendre ce qui existe déjà, vérifier les faits essentiels, voir ce que les résultats Google répondent déjà et t'assurer que le sujet est réellement utile à publier maintenant. Si l'élément principal est fermé, hors saison, en maintenance ou temporairement indisponible au point de vider l'article de son intérêt, écarte ce candidat et choisis-en un autre.
-
-Choisis un sujet qui a une vraie matière éditoriale. Un lecteur qui ne connaît pas le sujet doit pouvoir comprendre ce que c'est, pourquoi cela peut l'intéresser et obtenir plusieurs informations utiles sans que l'article répète la même idée.
-
-L'angle sert à donner une direction et un titre intéressant. Il ne doit jamais enfermer tout l'article dans une micro-question comme un tarif, un pass, une poussette ou un calcul simple.
-
-Écarte un sujet si Fam Space ne ferait que réécrire une page officielle ou s'il n'y a pas assez de matière pour produire un bon article. Si aucun candidat ne reste suffisamment utile et actuel après une recherche sérieuse, ne force pas un sujet.
-
-## Penser aussi au potentiel d'affiliation
-
-La monétisation est un objectif important de Fam Space. Avant de choisir le sujet final, vérifie sérieusement les offres disponibles chez les partenaires suivants:
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-Applique la logique d'usage ci-dessus à chaque candidat sérieux et vérifie les offres avant de les retenir dans le brief.
-
-À qualité éditoriale comparable, privilégie clairement le sujet qui possède une piste d'affiliation naturelle et vérifiée. Ne choisis toutefois jamais un sujet médiocre uniquement parce qu'il est affiliable et n'invente jamais une offre sans rapport avec le lecteur.
-
-Si un excellent sujet n'a réellement aucune offre partenaire pertinente après vérification, il peut rester publiable. Le brief doit alors le dire clairement. L'absence d'affiliation ne doit jamais résulter d'une recherche superficielle.
-
-## Sujets à écarter
-
-Écarte les sujets politiques ou militants, les guerres et conflits armés, les contenus haineux, violents, sexuellement explicites, dangereux ou trompeurs, ainsi que les conseils médicaux, juridiques ou financiers personnalisés à risque élevé.
-
-Ne choisis pas comme sujet principal une maladie, un diagnostic, un traitement, une vaccination ou une urgence médicale ou psychiatrique.
-
-Pour un événement ponctuel, ne le retiens pas s'il commence dans moins de 30 jours. S'il a déjà commencé, il doit rester au moins 30 jours d'utilité réelle. Cette règle ne concerne pas les attractions permanentes, destinations durables ou activités disponibles sur une longue période.
-
-## Résultat attendu
-
-Prépare un brief court. Le fichier doit contenir exactement ces sections:
+## Brief du rédacteur en chef
 
 ## Sujet retenu
-Le sujet, un titre de travail et l'angle principal. Décris aussi en une ou deux phrases ce qu'est réellement le sujet afin que le journaliste parte avec le bon contexte.
+
+**Titre de travail:** Rouen Givrée 2026 en famille: marché de Noël, Refuge Givré et parcours avec les enfants
+
+**Angle:** préparer une sortie de Noël à Rouen en distinguant ce qui est déjà confirmé pour 2026 des animations dont la programmation détaillée reste à publier. Proposer un parcours familial entre le marché installé sur le parvis de la cathédrale, dans le centre historique, et le Refuge Givré place Saint-Sever, sur l'autre rive.
+
+**Contexte:** Rouen Givrée est le rendez-vous festif de fin d'année dans la ville de Rouen, en Seine-Maritime. Son marché de Noël, organisé du **25 novembre au 27 décembre 2026** devant la cathédrale, réunit une cinquantaine de chalets. La Ville confirme la tenue du **Refuge Givré du 5 au 27 décembre 2026, de 10h à 19h place Saint-Sever**, avec des projets de spectacles et d'activités créatives pour les enfants. À ce stade, l'appel à projets municipal n'est pas le programme final des séances. Ne pas reprendre le calendrier 2025 comme celui de 2026.
 
 ## Besoin du lecteur
-Ce que le lecteur doit comprendre, apprendre ou pouvoir faire après avoir lu l'article. Ne réduis pas ce besoin à une seule micro-question si le sujet mérite un traitement plus large.
+
+Une famille doit comprendre où se déroulent les différentes propositions de Rouen Givrée, quelles dates sont confirmées, ce que les enfants peuvent trouver au marché et au Refuge Givré, comment rejoindre les deux sites sans multiplier les trajets, et ce qu'il faut vérifier avant de se déplacer: horaires du jour, animations réellement programmées, éventuelles conditions d'accès, météo, déplacements et stationnement. Distinguer une courte balade au marché d'une sortie plus longue avec des enfants d'âges différents. Indiquer à quel moment un séjour d'une nuit à Rouen est intéressant, sans le présenter comme nécessaire.
 
 ## Valeur éditoriale
-Les quelques informations ou distinctions qui justifient l'article et ce que Fam Space peut apporter de mieux qu'une simple reprise des sources.
+
+- **Deux lieux, deux usages:** marché de Noël sur le parvis de la cathédrale (chalets, décoration, flânerie) et Refuge Givré place Saint-Sever (projet d'animations familiales). Expliquer clairement que le Refuge n'est pas un chalet du marché: il faut passer d'une rive à l'autre. Ne pas annoncer un atelier précis avant publication officielle du programme 2026.
+- **Dates solides:** le marché est annoncé du mercredi 25 novembre au dimanche 27 décembre 2026. Horaires de l'organisateur: lundi 14h-20h, mardi à jeudi 11h-20h, vendredi 11h-21h, samedi 10h-21h, dimanche 11h-20h; exceptions annoncées le lundi 21 décembre 11h-20h et jeudi 24 décembre 11h-18h. Le site d'informations pratiques comporte une erreur sur le jour de la semaine du 27 décembre (« vendredi »), tandis que la page d'accueil indique correctement dimanche: utiliser la date et le jour corrects et revérifier avant rédaction. Le Refuge Givré est confirmé du 5 au 27 décembre 2026, de 10h à 19h, dans l'appel municipal à projets.
+- **Pas d'invention sur les animations:** le site municipal Rouen Givrée et la page détaillée du Refuge affichent encore une programmation datée **2025**; s'en servir uniquement pour comprendre le principe du dispositif, jamais pour attribuer à 2026 les parades, tarifs, ateliers, gratuités, inscriptions, personnages ou horaires de spectacles de 2025. Le programme 2026 et les éventuelles autres activités doivent être revérifiés pendant la rédaction.
+- **Préparer le déplacement:** accès en transport en commun conseillé par l'organisateur, notamment lignes TEOR vers « République », puis trajet vers Saint-Sever à expliquer d'après les informations actualisées du réseau. Éviter de promettre qu'un même créneau convient à toutes les animations. Conseils utiles pour limiter les attentes avec de jeunes enfants, selon la météo et la fréquentation réelle.
+- **Intérêt distinct:** événement saisonnier précis, dans une autre période que « Rouen sur Mer », sans recouvrir les sujets déjà publiés sur les musées gratuits, Ludobulle ou la Foire aux Harengs. Le retour familial sur **deux sites** et la différence entre programme confirmé et informations à venir donnent un article de service plus utile qu'une simple transcription d'agenda.
+- **Autres pistes examinées et écartées:** la Foire Saint-Romain 2026 est prévue du 21 octobre au 22 novembre, mais son début intervient à moins de 30 jours et la règle éditoriale l'exclut; Noël au Havre n'offre pas, à ce stade, de programme 2026 familial aussi précisément confirmé par une source responsable; les articles récents à Étretat, Clères et sur les musées de Rouen seraient des doublons de sujet ou d'angle.
 
 ## Affiliation
-Les pistes partenaires réellement vérifiées, avec partenaire, offre et URL exacte, y compris les besoins secondaires naturels. Si aucune offre pertinente n'existe réellement, indique-le clairement.
+
+- **Action principale:** l'accès au marché et les animations du Refuge relèvent d'organisateurs locaux. Aucun billet **correspondant précisément à Rouen Givrée 2026** trouvé et confirmé chez GetYourGuide, Tiqets ou Klook. Ne pas substituer une visite touristique générique de Rouen à l'événement. Utiliser les informations officielles pour l'accès et le programme.
+- **Booking.com, appartement jusqu'à six personnes:** [Rouen centre - 6 pers - vue Cathédrale](https://www.booking.com/hotel/fr/rouen-centre-historique-au-coeur-de-la-cathedrale-rouen1.fr.html), 60 rue Saint-Romain, à environ 200 m de la cathédrale selon la fiche. Appartement entier, deux chambres et cuisine équipée. Pertinent pour une famille qui passe une nuit en centre-ville; selon les conditions de réservation, le canapé-lit peut nécessiter un supplément de linge et le lit bébé est payant. Vérifier prix, capacité, disponibilités et frais pour les dates choisies.
+- **Booking.com, alternative jusqu'à quatre personnes:** [Vue exceptionnelle cathédrale - hypercentre - 4 personnes](https://www.booking.com/hotel/fr/le-cinquieme-ciel-charme-au-coeur-de-rouen.fr.html), 43 rue de la République, à environ 400 m de la cathédrale. Appartement avec chambre, canapé-lit, cuisine équipée et possibilité de lit bébé sur demande. La fiche mentionne un dépôt de garantie et des conditions spécifiques: à consulter avant réservation.
+- **Placement recommandé:** réserver une courte partie « Dormir au centre pour profiter des illuminations » vers la fin de l'article, sans mettre l'hébergement avant les informations sur l'événement. Les disponibilités des deux offres ne sont **pas confirmées** pour toute la période de Noël; ne jamais promettre un tarif ou une place.
+- Pas de besoin secondaire vérifié pour vol, voiture, transfert, consigne ou vélo: ne pas introduire des liens artificiels.
 
 ## Sources de départ
-Les meilleures sources officielles ou directement responsables pour lancer la rédaction, avec l'URL exacte de chaque page utile.
 
-Ne rédige pas le corps final de l'article pendant cette phase.
+- Organisateur du marché de Noël, page d'accueil avec dates 2026 et présentation des chalets: https://marchedenoelrouen.com/
+- Organisateur du marché de Noël, horaires 2026, exceptions et transports: https://marchedenoelrouen.com/le-marche-de-noel-de-rouen/infos-pratiques/
+- Ville de Rouen, appel à projets Refuge Givré 2026, lieu, dates et horaires: https://www.rouen.fr/apc
+- Office de tourisme de Rouen, agenda des grands événements 2026 mentionnant Rouen Givrée et ses composantes: https://www.visiterouen.com/actualites/au-rythme-des-temps-forts/
+- Ville de Rouen, page programme Rouen Givrée actuellement datée 2025, à surveiller uniquement pour une mise à jour 2026: https://rouen.fr/rouen-givree
+- Ville de Rouen, page du Refuge Givré actuellement datée 2025, ne pas prendre ses séances pour 2026: https://rouen.fr/refuge-givre
+
+## Écrire l'article
+
+Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
+
+Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
+
+Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
+
+Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
+
+Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
+
+Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+
+N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
+
+Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
+
+Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
+
+À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
+
+## Format du candidat
+
+Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
+
+```yaml
+---
+category: "<catégorie assignée>"
+title: "Titre direct et informatif"
+subtitle: "Précision différente du titre"
+summary: "Résumé de 90 à 180 caractères"
+keywords:
+  - "mot-clé principal"
+  - "mot-clé secondaire"
+location:
+  city: "Ville"
+  department: "Département assigné"
+  region: "Région assignée"
+sources:
+  - title: "Page officielle utilisée"
+    url: "https://..."
+---
+```
+
+Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+
+Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 1/4
+- Phase préparée mécaniquement: 2/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -115,30 +118,20 @@ Toute la plomberie technique est gérée mécaniquement. Ne cherche aucune branc
 
 Écris uniquement publication-request.md sur la branche main de DevWeb13/fam-space-actions-bridge avec le résultat éditorial demandé dans ce runtime. Le pipeline mécanique se charge de la phase, de la branche de travail, des commits, de la validation et de la suite du cycle.
 
-Si tu retiens un sujet, utilise:
+Utilise:
 
 ~~~yaml
 ---
-action: start
+action: advance
 ---
 
-<brief complet demandé ci-dessus>
+<article complet demandé ci-dessus, frontmatter compris>
 ~~~
 
-Si, après une recherche sérieuse, aucun sujet suffisamment utile et actuel ne mérite un article, utilise:
-
-~~~yaml
----
-action: skip
----
-
-<raison factuelle et courte>
-~~~
-
-Un échec technique n'est jamais une raison de skip. Une fois publication-request.md écrit, termine le passage.
+Rends toujours l'article complet, même si cette phase ne nécessite que peu de corrections. Une fois publication-request.md écrit, termine le passage.
 
 ## Rapport final
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les principaux sujets envisagés, les doublons écartés, le sujet retenu, pourquoi il mérite un article, les pistes d'affiliation réellement vérifiées et les principales sources. En cas de skip, explique simplement pourquoi aucun sujet suffisamment bon n'a été retenu.
+Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
