@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,92 +14,145 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Oise
 - Région: Hauts-de-France
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Titre de travail: « Château de Compiègne en famille: appartements impériaux, musée de la Voiture et parc, comment organiser la visite? »**
-
-À Compiègne (Oise), l'ancien palais royal et impérial abrite des appartements historiques, plusieurs musées dont le Musée national de la Voiture, et un grand parc accessible gratuitement. Angle: aider les familles à sélectionner les espaces qui plairont aux enfants et à construire un parcours cohérent, car tous les musées ne sont pas accessibles aux mêmes heures.
-
-## Besoin du lecteur
-Comprendre ce qu'on voit dans les appartements de Napoléon III et d'Eugénie, au Musée national de la Voiture et dans le parc; savoir ce qui intéressera les enfants selon leur âge; choisir un créneau permettant réellement de voir les collections souhaitées; anticiper billets, gratuités, livrets-jeux, audioguides, poussettes et accès. Distinguer une découverte courte, essentiellement en intérieur, d'une journée combinant patrimoine et promenade.
-
-## Valeur éditoriale
-- **Trois expériences distinctes:** dans les appartements impériaux, les enfants découvrent la vie au palais à travers les pièces meublées; au Musée national de la Voiture, véhicules hippomobiles, traîneaux, cycles et premières automobiles racontent le passage des attelages aux moteurs; dans le parc, allées, statues et perspective des Beaux-Monts invitent à la promenade. Les autres espaces (musée du Second Empire, musée de l'Impératrice) complètent la visite mais ne doivent pas être présentés comme ouverts en permanence.
-- **Horaires déterminants:** le château ferme le mardi, les 1er janvier, 1er mai et 25 décembre. Selon la page officielle d'informations pratiques, les appartements ouvrent généralement de 10h à 18h; **le Musée national de la Voiture est accessible en visite libre les mercredis, jeudis, samedis et dimanches de 14h à 18h**, tandis que les musées du Second Empire et de l'Impératrice sont affichés ces mêmes jours de 10h à 12h. Des pages secondaires du château donnent des plages différentes; privilégier la page d'information actuelle et recommander une dernière vérification pour la date choisie. Pour une journée combinée, commencer par les appartements et garder le musée de la Voiture pour l'après-midi. Le parc ferme à 18h du 16 septembre au 31 octobre puis à 17h en hiver, avec dernier accès 15 minutes avant fermeture.
-- **Public familial:** audioguide enfant **6-12 ans** consacré à la vie de la famille impériale (environ 45 minutes); livret-jeux pour les **8-12 ans** sur les appartements et livret gratuit du parc disponible à l'entrée. Les ressources ne sont pas toutes adaptées aux tout-petits: faire choisir le parcours selon l'âge plutôt que promettre des animations permanentes.
-- **Tarifs:** la page d'accueil officielle affiche **10 € pour un adulte**, **8 € au tarif réduit**, gratuité pour les **moins de 26 ans** et pour tous le **premier dimanche du mois**, avec majoration possible en cas d'exposition. L'entrée au parc est gratuite. Préciser que le billet du château donne accès aux espaces inclus selon leurs jours et horaires d'ouverture; vérifier les suppléments pour visites guidées et expositions.
-- **Contraintes concrètes:** adresse **place du Général-de-Gaulle, 60200 Compiègne**; château indiqué à environ dix minutes à pied de la gare et desservi par des bus locaux gratuits. Contrôle Vigipirate, interdiction des valises et grands sacs; les poussettes pliables doivent être déposées à la consigne. Enfants de moins de 12 ans accompagnés d'un adulte. Préciser l'accessibilité des différents espaces uniquement après vérification, car le palais n'est pas un bâtiment moderne.
-- **Choix éditorial et doublons:** le Musée de la Nacre et de la Tabletterie à Méru constitue une autre sortie durable (visites et ateliers), mais le château propose davantage de parcours complémentaires et de décisions familiales à expliquer. Le Parc Saint-Paul, parc saisonnier, présente moins d'intérêt pour un article durable à la mi-octobre. Écarter également les angles Pierrefonds, Chantilly et Parc Astérix déjà couverts récemment; le Château de Compiègne n'est pas le Château de Pierrefonds et son parcours impérial/voitures/parc est distinct.
-
-## Affiliation
-- **Billetterie du château:** pas d'offre directement équivalente confirmée chez **GetYourGuide, Tiqets ou Klook** (ni d'offre pertinente identifiée chez les autres partenaires d'activités). Le chemin utile reste la billetterie officielle accessible depuis https://chateaudecompiegne.fr/ ; ne pas remplacer par des visites de Paris ou des châteaux voisins.
-- **Hébergement pour une famille transformant la sortie en week-end, offres Booking.com en français vérifiées:**
-  - **Appartement entier en plein coeur du centre ville**, logement entier de **deux chambres**, cuisine et chambres familiales annoncées dans Compiègne: https://www.booking.com/hotel/fr/appartement-entier-en-plein-coeur-du-centre-ville.fr.html
-  - **Hôtel de Flandre Compiègne Centre-Ville**, hôtel avec chambres familiales, à **environ dix minutes à pied du château** selon sa fiche: https://www.booking.com/hotel/fr/ha-tel-de-flandres.fr.html
-  Ne retenir qu'une ou deux adresses si cela s'intègre naturellement au récit du séjour; vérifier capacité, prix, disponibilités et conditions aux dates sélectionnées. Ces pages permettent de confirmer une offre de logement, pas de documenter l'histoire ou les règles du château.
-- Autres services payants (transfert, voiture, vols, consigne): aucune nécessité propre à cette visite ne justifie de les ajouter artificiellement.
-
-## Sources de départ
-- Château de Compiègne, informations pratiques, horaires par musée, parc, adresse, transports et consigne des poussettes: https://chateaudecompiegne.fr/informations-pratiques
-- Château de Compiègne, accueil, tarifs actualisés et gratuités: https://chateaudecompiegne.fr/
-- Château de Compiègne, présentation du Musée national de la Voiture: https://chateaudecompiegne.fr/le-musee-national-de-la-voiture
-- Château de Compiègne, audioguides pour enfants et livret du parc: https://chateaudecompiegne.fr/application-audioguides-et-livrets-de-visite
-- Château de Compiègne, outils pédagogiques et livrets-jeux selon les âges: https://chateaudecompiegne.fr/outils-pedagogiques
-- Château de Compiègne, parcours des musées et du parc (à confronter aux horaires pratiques actuels): https://chateaudecompiegne.fr/visiter-les-musees
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "sorties"
+title: "Château de Compiègne en famille: que visiter et comment organiser la journée?"
+subtitle: "Appartements impériaux, musée de la Voiture et parc: trois découvertes qui ne se visitent pas aux mêmes horaires"
+summary: "Au château de Compiègne, découvrez les appartements impériaux, les voitures anciennes et le parc. Horaires, gratuités et idées de parcours en famille."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "château de Compiègne en famille"
+  - "musée de la Voiture Compiègne horaires"
+  - "château de Compiègne avec des enfants"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Compiègne"
+  department: "Oise"
+  region: "Hauts-de-France"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Château de Compiègne - Les appartements royaux et impériaux"
+    url: "https://chateaudecompiegne.fr/les-appartements-royaux-et-imperiaux"
+  - title: "Château de Compiègne - Le Musée national de la Voiture"
+    url: "https://chateaudecompiegne.fr/le-musee-national-de-la-voiture"
+  - title: "Château de Compiègne - Application, audioguides et livrets de visite"
+    url: "https://chateaudecompiegne.fr/application-audioguides-et-livrets-de-visite"
+  - title: "Château de Compiègne - Outils pédagogiques"
+    url: "https://chateaudecompiegne.fr/outils-pedagogiques"
+  - title: "Château de Compiègne - Informations pratiques"
+    url: "https://chateaudecompiegne.fr/informations-pratiques"
+  - title: "Château de Compiègne - Horaires et tarifs à partir de septembre 2026"
+    url: "https://chateaudecompiegne.fr/media/document/infos-pratiques"
+  - title: "Château de Compiègne - Accueil et tarifs"
+    url: "https://chateaudecompiegne.fr/"
+  - title: "Château de Compiègne - Accessibilité"
+    url: "https://chateaudecompiegne.fr/accessibilite"
+  - title: "Château de Compiègne - Foire aux questions"
+    url: "https://chateaudecompiegne.fr/foire-aux-questions"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Compiègne, dans l'Oise, le château est un ancien palais royal et impérial où l'on peut découvrir des pièces meublées, une collection de carrosses et d'automobiles anciennes, puis se promener dans un grand parc. Pour une sortie avec des enfants, l'intérêt est de passer d'un univers à l'autre, à condition de ne pas supposer que tous les musées ouvrent en même temps.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Que découvre-t-on dans les appartements impériaux?
+
+Les appartements montrent comment vivaient et recevaient les souverains. Salons, chambres et pièces de cérémonie permettent d'imaginer la vie quotidienne dans une résidence fréquentée par Napoléon Ier, puis par Napoléon III et l'impératrice Eugénie. Le mobilier, les tissus, les lustres et les décors racontent autant l'histoire que les portraits.
+
+La [présentation officielle des appartements royaux et impériaux](https://chateaudecompiegne.fr/les-appartements-royaux-et-imperiaux) explique que certaines pièces ont été reconstituées pour restituer différentes époques. Avec des enfants, on peut s'intéresser aux objets et aux usages des salles sans chercher à commenter chaque œuvre. Ce parcours conviendra particulièrement à ceux qui aiment les châteaux, les histoires de souverains ou les décors spectaculaires.
+
+## Le musée de la Voiture: des carrosses aux premières automobiles
+
+Le Musée national de la Voiture n'est pas un garage de voitures modernes. Il raconte l'évolution des transports, depuis les véhicules tirés par des chevaux jusqu'aux débuts de l'automobile. On y rencontre des carrosses, des traîneaux, des cycles et des voitures anciennes.
+
+Le [musée présente sa collection](https://chateaudecompiegne.fr/le-musee-national-de-la-voiture), qui comprend notamment une centaine de véhicules hippomobiles et une trentaine d'automobiles. C'est l'espace le plus facile à choisir pour des enfants curieux de véhicules: ils peuvent comparer les roues, les cabines et les moyens de propulsion. Ceux qui préfèrent les moteurs récents doivent toutefois savoir que le propos est surtout historique.
+
+## Des ressources adaptées aux enfants, sans promettre une animation permanente
+
+Le château propose un **audioguide pour les 6-12 ans**, d'environ **45 minutes**, qui fait découvrir les appartements en compagnie d'un jeune personnage, Léo, et du Prince impérial. Selon les [modalités officielles des audioguides](https://chateaudecompiegne.fr/application-audioguides-et-livrets-de-visite), il est compris dans le billet d'entrée; pour les visiteurs bénéficiant de la gratuité, il coûte **1 €**.
+
+Les familles avec des enfants de **8 à 12 ans** peuvent également s'appuyer sur un **livret-jeux consacré aux grands appartements**, présenté parmi les [outils pédagogiques du château](https://chateaudecompiegne.fr/outils-pedagogiques). Il aide à regarder les décors sous forme d'énigmes. Son utilisation ou sa disponibilité à l'accueil est à vérifier pour une visite individuelle.
+
+Le parc propose aussi un **livret gratuit à retirer à l'entrée**, qui invite à observer les statues et les arbres. Avec des tout-petits, mieux vaut privilégier une découverte courte des salles, suivie d'une promenade: les ressources décrites ne correspondent pas à une aire de jeux ni à une activité où l'on touche les objets des collections.
+
+## Quel jour et dans quel ordre visiter?
+
+C'est le point décisif pour éviter de manquer un espace. D'après les [horaires officiels](https://chateaudecompiegne.fr/informations-pratiques), les **appartements de l'Empereur et de l'Impératrice** ouvrent habituellement **de 10h à 18h**, tous les jours sauf le mardi. Le **Musée national de la Voiture** n'est accessible en visite libre que **les mercredis, jeudis, samedis et dimanches de 14h à 18h**. Les musées du Second Empire et de l'Impératrice ouvrent ces mêmes jours, mais **de 10h à 12h**.
+
+Pour combiner les appartements et les véhicules anciens, un mercredi, jeudi, samedi ou dimanche est donc plus adapté qu'un lundi ou un vendredi. Une famille peut visiter les appartements en matinée, faire une pause puis rejoindre le musée de la Voiture après 14h. Si l'on veut aussi voir les deux autres musées, il faut tenir compte de leur créneau du matin et sélectionner ses priorités plutôt que de vouloir tout parcourir.
+
+La [fiche horaire publiée pour septembre 2026](https://chateaudecompiegne.fr/media/document/infos-pratiques) confirme ces créneaux et précise un **dernier accès au château à 17h15** (à 11h30 pour les musées ouverts seulement le matin). Certaines autres pages du site conservent des horaires plus anciens ou différents: mieux vaut donc regarder la page « Informations pratiques » et les éventuelles annonces du jour avant de partir.
+
+## Et le parc?
+
+Le parc constitue une sortie à part entière, même sans visiter l'intérieur. Ses allées, ses statues et la grande perspective vers les Beaux-Monts prolongent la découverte du palais dans un cadre plus ouvert. L'**entrée est gratuite**.
+
+Les heures de fermeture évoluent avec la saison: **17h en hiver**, **18h du 16 septembre au 31 octobre et du 1er mars au 15 avril**, puis **19h du 16 avril au 15 septembre**. Le dernier accès a lieu quinze minutes avant la fermeture. Les [horaires du parc](https://chateaudecompiegne.fr/informations-pratiques) permettent d'ajuster l'ordre des visites, notamment en automne lorsque la nuit arrive plus tôt.
+
+Un pique-nique est possible **dans les espaces prévus à cet effet**, mais le domaine ne fournit pas de tables: la [foire aux questions du château](https://chateaudecompiegne.fr/foire-aux-questions) apporte ces précisions. Le parc est donc une bonne pause pour laisser les enfants marcher et souffler entre deux visites, sans transformer une journée déjà chargée en course contre la montre.
+
+## Billets et gratuités: ce qu'il faut savoir
+
+La [page d'accueil officielle](https://chateaudecompiegne.fr/) annonce **10 € au tarif adulte** et la **gratuité pour les moins de 26 ans**, ainsi que **pour tous le premier dimanche du mois**. Elle mentionne aussi des majorations possibles en période d'exposition.
+
+**Attention au tarif réduit:** cette même page affiche **8 €**, tandis que la [fiche pratique datée de septembre 2026](https://chateaudecompiegne.fr/media/document/infos-pratiques) mentionne **9 €**. Comme les deux documents officiels diffèrent, il vaut mieux confirmer le montant appliqué au moment d'acheter. Le billet donne accès aux musées et expositions **ouverts le jour de la visite**, pas à des salles fermées ce jour-là. Les visites accompagnées et les ateliers peuvent entraîner un supplément.
+
+## Venir avec une poussette ou des besoins d'accessibilité
+
+Le château se trouve **place du Général-de-Gaulle, 60200 Compiègne**, à environ **dix minutes à pied de la gare**. Des bus urbains gratuits desservent aussi le secteur du lundi au samedi, selon la [page d'accès officielle](https://chateaudecompiegne.fr/informations-pratiques). Pour ceux qui viennent en voiture, des parkings gratuits sont signalés autour du domaine, mais ils sont souvent fréquentés.
+
+À l'entrée du palais, les **valises et grands sacs sont interdits**. Les poussettes pliables, comme les autres bagages admis après contrôle, doivent être **déposées à la consigne**. Le château indique cependant disposer de quelques poussettes-cannes de prêt, selon les disponibilités et sans réservation préalable. Pour les familles qui ont besoin d'un équipement particulier, il est préférable de se renseigner avant la visite.
+
+La [page d'accessibilité](https://chateaudecompiegne.fr/accessibilite) mentionne un ascenseur desservant les appartements et plusieurs musées ainsi que des aides à la mobilité. Elle ne garantit pas pour autant l'accessibilité de tous les espaces, notamment du musée de la Voiture: mieux vaut demander confirmation pour le parcours envisagé. Les enfants de moins de **12 ans** doivent être accompagnés d'un adulte.
+
+Pour une première visite, l'essentiel est donc de choisir les collections qui intéressent réellement les enfants et de caler la journée sur les ouvertures du musée de la Voiture, plutôt que d'essayer de tout voir.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même action payante, si une offre partenaire pertinente permet réellement l'achat ou la réservation, utilise-la comme chemin d'action dans le corps et évite de lui faire concurrence avec un lien officiel équivalent. Conserve la source officielle dans `sources` lorsqu'elle reste nécessaire à la vérification des faits. Sans équivalent partenaire pertinent, conserve le lien officiel utile.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -128,4 +181,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
