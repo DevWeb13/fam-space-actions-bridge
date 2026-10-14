@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261014-1150-musee-de-pont-aven-en-famille-decouvrir-les-peintres-bretons-jouer-dev",
+  "lastProcessedCommit": "52ece6cf0f81c1126ca337d9b7676a1c87fc3a44"
 }
