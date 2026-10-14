@@ -159,3 +159,4 @@ automation/image-20261013-0fde12e-terra-denis-charlieu-07f85fc|07f85fca1da153821
 automation/image-20261013-0fde12e-terra-denis-charlieu-07f85fc|b8c41a887259eec84fdeca4096689328df68f7ed
 automation/image-20261013-fa79bfa-reims-asticots-bordeaux-orly-94299ad|94299ad92b5373b3e386f5e28083ed1472f76277
 automation/image-20261013-fa79bfa-reims-asticots-bordeaux-orly-94299ad|096747bf4e712dbde04adaf16336000af6b05432
+automation/image-20261014-2ac8dfe-abracada-ginko-2e99ce6|2e99ce641ae0a32c444fe64b0c31ee06777d55cc
