@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les faits utilisés sont liés naturellement dans le corps et présents dans `sources`. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Grands Zyeux P'tites Zoreilles 2026: quelles séances gratuites avec les tout-petits?"
-subtitle: "Du 17 au 31 octobre dans les médiathèques de Béziers Méditerranée: choisir selon l'âge, la commune et les inscriptions"
-summary: "Festival Grands Zyeux P'tites Zoreilles 2026: spectacles, lectures et ateliers gratuits pour les 6 mois-6 ans autour de Béziers, avec les réservations à prévoir."
+title: "Grands Zyeux P'tites Zoreilles 2026: quelles séances gratuites choisir avec un tout-petit?"
+subtitle: Du 17 au 31 octobre autour de Béziers, les spectacles et ateliers à repérer selon l'âge, la commune et la réservation
+summary: "Grands Zyeux P'tites Zoreilles 2026: six rendez-vous gratuits à Sérignan, Sauvian, Coulobres et Béziers, avec les âges, horaires, lieux et inscriptions à vérifier."
 category: evenements
 location:
   city: Béziers
@@ -75,15 +80,19 @@ sources:
     url: https://www.ville-beziers.fr/a-la-une/une/grands-zyeux-ptites-zoreilles
   - title: Office de tourisme - 4 saisons et puis s'en vont à Sérignan
     url: https://www.beziers-mediterranee.com/fete-manifestation/spectacle-4-saisons-et-puis-sen-vont-festival-grands-zyeux-ptites-zoreilles-3/
-  - title: Office de tourisme - Séance de détente musicale à Béziers
-    url: https://www.beziers-mediterranee.com/fete-manifestation/atelier-seance-de-detente-musicale-festival-grands-zyeux-ptites-zoreilles/occ/2/
+  - title: Office de tourisme - T ki toi à Coulobres
+    url: https://www.beziers-mediterranee.com/fete-manifestation/spectacle-t-ki-toi-festival-grands-zyeux-ptites-zoreilles-2/
   - title: Office de tourisme - Bébé lecteur à Sauvian
     url: https://www.beziers-mediterranee.com/fete-manifestation/bebe-lecteur-festival-grands-zyeux-ptites-zoreilles/
-  - title: Office de tourisme - La bulle enchantée à Béziers le 24 octobre
+  - title: Office de tourisme - Détente musicale à Béziers
+    url: https://www.beziers-mediterranee.com/fete-manifestation/atelier-seance-de-detente-musicale-festival-grands-zyeux-ptites-zoreilles/occ/2/
+  - title: Office de tourisme - La bulle enchantée le 24 octobre à Béziers
     url: https://www.beziers-mediterranee.com/fete-manifestation/spectacle-la-bulle-enchantee-festival-grands-zyeux-ptites-zoreilles/
+  - title: Office de tourisme - La bulle enchantée le 29 octobre à Béziers
+    url: https://www.beziers-mediterranee.com/fete-manifestation/spectacle-la-bulle-enchantee-festival-grands-zyeux-ptites-zoreilles-4/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: grands-zyeux-p-tites-zoreilles-2026-quelles-seances-gratuites-avec-les-tout-petits
   decision: Trouver une animation gratuite adaptée à l'âge de son enfant entre le 17 et le 31 octobre, repérer la bonne médiathèque et savoir si une inscription est nécessaire avant de se déplacer.
@@ -93,44 +102,53 @@ radar:
     dataThrough: 2026-10-11
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Ville de Béziers - Grands Zyeux P'tites Zoreilles 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-10-31
 ---
 
-## Mission retenue
-14e édition du festival gratuit Grands Zyeux P'tites Zoreilles, du 17 au 31 octobre 2026, dans les médiathèques de l'agglomération Béziers Méditerranée. Spectacles, marionnettes, ateliers et lectures pour les tout-petits, principalement de 6 mois à 6 ans; ce n'est pas une manifestation concentrée dans une seule salle.
+Un spectacle pour un bébé de 6 mois, une première séance de lecture ou un atelier musical avec un enfant de 5 ans? Le festival **Grands Zyeux P'tites Zoreilles** revient du **17 au 31 octobre 2026** dans l'agglomération Béziers Méditerranée. Cette 14e édition propose des spectacles, marionnettes, lectures et ateliers **gratuits**, principalement pour les enfants de 6 mois à 6 ans. Attention toutefois: plusieurs rendez-vous nécessitent une inscription, et les animations se déroulent dans différentes communes, pas dans une salle unique. Le [programme annoncé par la Ville de Béziers](https://www.ville-beziers.fr/a-la-une/une/grands-zyeux-ptites-zoreilles) permet de retrouver l'ensemble du festival.
 
-## Pourquoi cette mission
-L'événement commence dans trois jours, dispose d'un programme détaillé publié et n'a aucun doublon direct parmi les 674 articles. Le premier refresh GSC (Carte Tattoo Isère) reste incertain, sans perte de classement démontrée. Les pages fortes (Halloween à Villersexel notamment) couvrent déjà leur propre expérience; aucune expansion distincte plus urgente n'en ressort. Les destinations actives Vincennes et Haut-Rhin sont étrangères au sujet.
+## Pour un bébé: un spectacle à Sérignan ou une lecture à Sauvian
 
-## Décision du lecteur
-Choisir une séance réellement adaptée à l'âge de son enfant, à une date accessible et dans la bonne commune, puis s'inscrire quand c'est demandé.
+**Samedi 17 octobre à 10h30, à Sérignan**, «4 saisons et puis s'en vont» associe marionnettes, musique et images autour du cycle des saisons. Ce spectacle est annoncé **dès 6 mois, sur inscription**, à la médiathèque Samuel Beckett, 146 avenue de la Plage. C'est une piste pour une première découverte du spectacle vivant avec un bébé: [voir la fiche et les coordonnées du lieu](https://www.beziers-mediterranee.com/fete-manifestation/spectacle-4-saisons-et-puis-sen-vont-festival-grands-zyeux-ptites-zoreilles-3/).
 
-## Faits à traiter
-- Festival gratuit du 17 au 31 octobre, dans plusieurs communes de Béziers Méditerranée. Certaines activités sont limitées en places et sur inscription; la gratuité n'équivaut pas à une entrée libre.
-- Repères officiels: «4 saisons et puis s'en vont», Sérignan le 17 octobre à 10h30, dès 6 mois, sur inscription; «La bulle enchantée», Béziers le 24 octobre à 10h30, et autre séance à Béziers le 29 dans un lieu distinct; atelier détente musicale à Béziers le 23 octobre, séances 10h/11h pour 5 mois-2 ans et 14h/16h10 pour 3-6 ans; «T ki toi?» à Coulobres le 21 octobre, dès 3 ans, sur inscription.
-- «Bébé lecteur» à Sauvian le 21 octobre à 10h30: sa fiche annonce à la fois «dès 1 an» et «dès 6 mois», vérifier auprès de la médiathèque avant d'affirmer un âge minimum. Ne pas confondre dates ni lieux des séances de «La bulle enchantée».
-- Les fiches de l'office de tourisme détaillent la salle, l'adresse et le contact; inviter à contacter directement chaque médiathèque pour réserver et confirmer les places. Éviter de lister tout le programme sans guider le choix.
+**Mercredi 21 octobre à 10h30, à Sauvian**, la séance «Bébé lecteur» propose un moment autour des histoires à la médiathèque Simone Veil, 17 avenue Paul Vidal. **L'inscription est demandée**, mais il existe une contradiction sur l'âge minimum: la [fiche de la séance](https://www.beziers-mediterranee.com/fete-manifestation/bebe-lecteur-festival-grands-zyeux-ptites-zoreilles/) indique à la fois «dès 1 an» et «dès 6 mois». Avec un enfant de moins d'un an, mieux vaut appeler la médiathèque avant de réserver ou de se déplacer.
 
-## Sources de départ
-Ville de Béziers et fiches de l'office de tourisme Béziers Méditerranée référencées ci-dessus.
+## Pour les 3-6 ans: théâtre à Coulobres ou atelier musical à Béziers
 
-## Affiliation
-Pas de billet payant; hébergement familial ibis Styles Béziers Centre seulement pour un séjour venu de loin, sans prix ni disponibilité supposés.
+**Mercredi 21 octobre à 10h30, à Coulobres**, «T ki toi?» met en scène la découverte d'un être inconnu pour parler de différences et de rencontres, avec musique et jeu. Le spectacle est prévu **à partir de 3 ans et sur inscription** à la médiathèque de Coulobres, 32 Grand'Rue. [La fiche de l'office de tourisme](https://www.beziers-mediterranee.com/fete-manifestation/spectacle-t-ki-toi-festival-grands-zyeux-ptites-zoreilles-2/) donne le lieu et les renseignements.
 
-## Continuations internes
-Pas de doublon direct. Les articles sur d'autres festivals pour enfants concernent d'autres territoires et ne doivent pas servir de remplissage; conserver la décision âge + commune + inscription au centre de cette page.
+**Vendredi 23 octobre, à Béziers**, l'atelier de détente musicale avec Laurie Perrin convient à deux tranches d'âge distinctes, à la médiathèque André Malraux, place du 14 juillet:
+- **De 5 mois à 2 ans:** séances à **10h et 11h**.
+- **De 3 à 6 ans:** séances à **14h et 16h10**.
+
+Cette formule fait davantage participer l'enfant par les gestes, les mouvements et les sons. Les créneaux étant précisément répartis par âge, choisissez celui de votre enfant et contactez la médiathèque pour connaître les modalités d'accès et les places restantes. [Détails de l'atelier musical](https://www.beziers-mediterranee.com/fete-manifestation/atelier-seance-de-detente-musicale-festival-grands-zyeux-ptites-zoreilles/occ/2/).
+
+## «La bulle enchantée»: deux dates à Béziers, mais pas le même lieu
+
+Le spectacle musical «La bulle enchantée», avec chansons et instruments insolites, est proposé deux fois à Béziers:
+- **Samedi 24 octobre à 10h30:** médiathèque André Malraux, **place du 14 juillet**. [Fiche du 24 octobre](https://www.beziers-mediterranee.com/fete-manifestation/spectacle-la-bulle-enchantee-festival-grands-zyeux-ptites-zoreilles/).
+- **Jeudi 29 octobre à 10h30:** maison de quartier Albert Camus, **esplanade Rosa Parks**. Cette séance est indiquée pour les **6 mois-5 ans, sur inscription**. [Fiche du 29 octobre](https://www.beziers-mediterranee.com/fete-manifestation/spectacle-la-bulle-enchantee-festival-grands-zyeux-ptites-zoreilles-4/).
+
+Ne partez donc pas automatiquement à la médiathèque André Malraux pour la séance du 29. Pour celle du 24, demandez confirmation de l'âge conseillé et des conditions d'inscription, que sa fiche ne précise pas clairement.
+
+## Comment réserver sans se tromper de médiathèque?
+
+**La gratuité ne garantit pas une entrée sans réservation.** Avant de prévoir la sortie, vérifiez trois points: l'âge accepté pour **la séance choisie**, son **adresse exacte** et la **nécessité de s'inscrire**. Les fiches liées ci-dessus donnent les coordonnées des lieux; contactez directement la structure concernée pour réserver et demander s'il reste des places. Avec un bébé, profitez de cet échange pour vérifier la possibilité d'entrer avec une poussette et les conditions d'accueil, plutôt que de les supposer.
+
+Pour les familles qui viennent de plus loin et souhaitent passer la nuit à Béziers, l'[ibis Styles Béziers Centre](https://www.booking.com/hotel/fr/beziers.fr.html) propose des chambres familiales. Vérifiez la configuration adaptée à vos enfants et les disponibilités pour votre date de visite. Le festival se tenant dans plusieurs communes, choisissez d'abord votre séance avant de décider où dormir.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
-- /articles/evenements/les-expressifs-2026-a-poitiers-trois-jours-de-spectacles-gratuits/ | Les Expressifs 2026 à Poitiers: trois jours de spectacles gratuits | evenements | Poitiers, Vienne, Nouvelle-Aquitaine
 - /articles/evenements/abracada-bouh-2026-a-montpellier-animations-et-billets-en-famille/ | Abracada BOUH 2026 à Montpellier: programme et tarifs au château de Flaugergues | evenements | Montpellier, Hérault, Occitanie
+- /articles/evenements/les-expressifs-2026-a-poitiers-trois-jours-de-spectacles-gratuits/ | Les Expressifs 2026 à Poitiers: trois jours de spectacles gratuits | evenements | Poitiers, Vienne, Nouvelle-Aquitaine
 - /articles/evenements/festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants/ | Les Petits Asticots 2026: spectacles, âges et réservations en famille | evenements | Chamonix-Mont-Blanc, Haute-Savoie, Auvergne-Rhône-Alpes
-- /articles/evenements/famille-en-fete-2026-pres-de-bordeaux-ateliers-gratuits-pour-les-0-6-ans/ | Famille en fête 2026 en Gironde: ateliers gratuits pour les 0-6 ans | evenements | Saint-Loubès, Gironde, Nouvelle-Aquitaine
-- /articles/parentalite/laep-a-bastia-et-en-balagne-deux-lieux-gratuits-pour-les-tout-petits/ | LAEP à Bastia et en Balagne: deux lieux gratuits pour les tout-petits | parentalite | Bastia, Haute-Corse, Corse
 - /articles/evenements/equidays-2026-en-famille-dans-le-calvados-villages-gratuits-parade-et-animations/ | Équidays 2026 en famille dans le Calvados: villages gratuits, parade et animations | evenements | Caen, Calvados, Normandie
-- /articles/evenements/festival-les-martinelles-2026-en-famille/ | Les Martinelles à Saint-Martin-de-Ré: deux journées gratuites pour les enfants | evenements | Saint-Martin-de-Ré, Charente-Maritime, Nouvelle-Aquitaine
-- /articles/sorties/vacances-de-la-toussaint-2026-a-la-cite-des-sciences-quels-ateliers-choisir-selon-l-age/ | Vacances de la Toussaint 2026 à la Cité des sciences: les ateliers numériques gratuits avec des enfants | sorties | Paris, Paris, Île-de-France
+- /articles/evenements/mon-premier-festival-2026-paris-film-age/ | Mon Premier Festival 2026 à Paris: quel film choisir selon l'âge? | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/festival-place-aux-momes-roscoff-2026-famille/ | Festival Place aux Mômes 2026 à Roscoff: quatre spectacles gratuits en famille en août | evenements | Roscoff, Finistère, Bretagne
+- /articles/evenements/fete-de-la-science-2026-en-famille/ | Fête de la science 2026: choisir une expérience adaptée à l’âge des enfants | evenements
+- /articles/evenements/rues-barrees-auxerre-2026-famille/ | Rues Barrées 2026 à Auxerre: 53 spectacles gratuits en famille | evenements | Auxerre, Yonne, Bourgogne-Franche-Comté
 - /articles/activites/musee-parc-des-dinosaures-de-meze-en-famille-fossiles-visite-et-conseils/ | Musée-Parc des Dinosaures de Mèze en famille: fossiles, visite et conseils | activites | Mèze, Hérault, Occitanie
 - /articles/evenements/coeur-de-ville-en-lumieres-2026-avec-des-enfants-comment-preparer-la-soiree-sans-voiture/ | Cœur de Ville en Lumières 2026 avec des enfants: comment préparer la soirée sans voiture? | evenements | Montpellier, Hérault, Occitanie
 - /articles/voyages/montpellier-ou-sete-sans-voiture-avec-des-enfants-ou-poser-ses-valises/ | Montpellier ou Sète sans voiture avec des enfants: où poser ses valises ? | voyages | Montpellier, Hérault, Occitanie
@@ -144,7 +162,7 @@ Pas de doublon direct. Les articles sur d'autres festivals pour enfants concerne
 - /articles/evenements/halloween-2026-au-parc-spirou-nocturnes-naruto-reservation-et-maison-hantee/ | Halloween 2026 au Parc Spirou: billets, nocturnes Naruto et maison hantée | evenements | Monteux, Vaucluse, Provence-Alpes-Côte d'Azur
 - /articles/evenements/halloween-2026-au-chateau-de-couches-atelier-citrouille-ou-jeu-geant-en-famille/ | Halloween 2026 au château de Couches: atelier citrouille et jeu Mystères & Sortilèges | evenements | Couches, Saône-et-Loire, Bourgogne-Franche-Comté
 - /articles/evenements/halloween-2026-a-la-tour-de-l-horloge-de-guines-musee-hante-contes-et-nocturne/ | Halloween 2026 à la Tour de l'Horloge de Guînes: visites, contes et nocturne | evenements | Guînes, Pas-de-Calais, Hauts-de-France
-- /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | Pierrefonds à la Toussaint 2026: atelier lanterne et soirée d'Halloween | evenements | Pierrefonds, Oise, Hauts-de-France
+- /articles/evenements/famille-en-fete-2026-pres-de-bordeaux-ateliers-gratuits-pour-les-0-6-ans/ | Famille en fête 2026 en Gironde: ateliers gratuits pour les 0-6 ans | evenements | Saint-Loubès, Gironde, Nouvelle-Aquitaine
 
 ### Historique Radar lié
 
@@ -156,8 +174,8 @@ Pas de doublon direct. Les articles sur d'autres festivals pour enfants concerne
 - opportunity | /articles/evenements/halloween-2026-au-chateau-de-couches-atelier-citrouille-ou-jeu-geant-en-famille/ | 2026-10-12T14:00:32.202Z
 - opportunity | /articles/evenements/halloween-2026-au-parc-spirou-nocturnes-naruto-reservation-et-maison-hantee/ | 2026-10-12T17:34:53.933Z
 - opportunity | /articles/evenements/halloween-2026-au-safari-de-peaugres-animations-et-lumieres-sauvages/ | 2026-10-13T05:01:12.150Z
+- opportunity | /articles/evenements/mon-premier-festival-2026-paris-film-age/ | 2026-10-03T06:21:55.257Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | 2026-10-13T09:50:29.435Z
-- opportunity | /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | 2026-10-11T19:35:57.703Z
 
 ### Phases 2 et 3
 
