@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les faits utilisés sont liés naturellement dans le corps et présents dans `sources`. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Au Creux de l'Oreille 2026 à Noirlac: quels spectacles et ateliers choisir avec les enfants?"
-subtitle: "Du 17 au 22 octobre dans le Cher: concerts dès 6 mois, contes, visites et ateliers selon l'âge et le budget"
-summary: "Au Creux de l'Oreille 2026 à l'abbaye de Noirlac: spectacles et ateliers pour les enfants du 17 au 22 octobre, avec âges, tarifs et réservations."
+title: "Au Creux de l'Oreille 2026 à Noirlac: spectacles et ateliers en famille du 17 au 22 octobre"
+subtitle: "Concert dès 6 mois, contes, jeux et découvertes de l'abbaye: dates, âges, tarifs et réservations"
+summary: "Au Creux de l'Oreille 2026 à l'abbaye de Noirlac: quels spectacles ou ateliers choisir selon l'âge des enfants du 17 au 22 octobre, et à quel prix?"
 category: evenements
 location:
   city: Bruère-Allichamps
@@ -71,23 +76,33 @@ keywords:
   - festival famille abbaye de Noirlac octobre 2026
   - spectacles ateliers enfants Noirlac Toussaint
 sources:
-  - title: Abbaye de Noirlac - Au Creux de l'Oreille 2026, programme et réservations
+  - title: Abbaye de Noirlac - Programme Au Creux de l'Oreille 2026
     url: https://www.abbayedenoirlac.fr/fr/au-creux-de-l-oreille
-  - title: Abbaye de Noirlac - Concert pour mon tout-petit, La danse de la pluie
+  - title: Abbaye de Noirlac - La danse de la pluie
     url: https://www.abbayedenoirlac.fr/agenda/programmation-artistique/concert-pour-mon-tout-petit-la-danse-de-la-pluie
   - title: Abbaye de Noirlac - L'Affaire méchant loup
     url: https://www.abbayedenoirlac.fr/agenda/programmation-artistique/l-affaire-mechant-loup
+  - title: Abbaye de Noirlac - Atelier Rejoue L'affaire méchant loup
+    url: https://www.abbayedenoirlac.fr/agenda/programmation-artistique/atelier-l-affaire-mechant-loup
   - title: Abbaye de Noirlac - Les Histoires manquantes
     url: https://www.abbayedenoirlac.fr/agenda/programmation-artistique/les-histoires-manquantes
+  - title: Abbaye de Noirlac - Ludothèque Micado
+    url: https://www.abbayedenoirlac.fr/agenda/programmation-artistique/ludotheque-micado
+  - title: Abbaye de Noirlac - Sur la piste des animaux sauvages
+    url: https://www.abbayedenoirlac.fr/fr/sur-la-piste-des-animaux-sauvages
+  - title: Abbaye de Noirlac - Jeu de la Sagesse
+    url: https://www.abbayedenoirlac.fr/agenda/programmation-artistique/au-creux-de-l-oreille-festival-famille/jeu-de-la-sagesse
   - title: Abbaye de Noirlac - Visite Bout d'Choux
     url: https://www.abbayedenoirlac.fr/agenda/activites-patrimoine/visite-bout-d-choux-copie
-  - title: Abbaye de Noirlac - Atelier Moulage d'empreinte animale
+  - title: Abbaye de Noirlac - Moulage d'empreinte animale
     url: https://www.abbayedenoirlac.fr/agenda/programmation-artistique/au-creux-de-l-oreille-festival-famille/atelier-moulage-d-empreinte-animale
-  - title: Destination Sud Berry - Festival famille à Noirlac
-    url: https://www.destination-sud-berry.com/temps-fort/au-creux-de-loreille-festival-famille-a-noirlac/
+  - title: Abbaye de Noirlac - Atelier Bout d'choux landart
+    url: https://www.abbayedenoirlac.fr/agenda/programmation-artistique/au-creux-de-l-oreille-festival-famille/atelier-bout-d-choux-landart-d399b741
+  - title: Abbaye de Noirlac - Jouons avec les Grisailles
+    url: https://www.abbayedenoirlac.fr/agenda/programmation-artistique/au-creux-de-l-oreille-festival-famille/jouons-avec-les-grisailles
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: au-creux-de-l-oreille-2026-a-noirlac-quels-spectacles-et-ateliers-choisir-avec-les-enfants
   decision: Choisir un spectacle, une visite ou un atelier réellement adapté à l'âge de chaque enfant entre le 17 et le 22 octobre, comprendre le prix de chaque activité et réserver le bon créneau auprès de l'abbaye.
@@ -97,33 +112,47 @@ radar:
     dataThrough: 2026-10-11
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Abbaye de Noirlac - Au Creux de l'Oreille 2026, programme et réservations »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-10-22
 ---
 
-## Mission retenue
-Festival familial «Au Creux de l'Oreille» à l'abbaye de Noirlac, à Bruère-Allichamps (Cher), du 17 au 22 octobre 2026. Le week-end des 17-18 est consacré aux concerts, contes et jeux; du 19 au 22, le programme propose notamment des visites et ateliers de découverte de l'abbaye et de son bocage. Ce n'est ni un événement gratuit dans son ensemble ni une sortie uniforme pour tous les âges.
+**Du 17 au 22 octobre 2026**, l'abbaye de Noirlac, à Bruère-Allichamps dans le Cher, accueille **Au Creux de l'Oreille**, un festival familial qui commence par un week-end de concerts et de contes, puis se poursuit avec des visites et des ateliers. Certaines propositions sont accessibles **dès 6 mois**, d'autres commencent à 3, 5, 6, 8 ou 9 ans. Les séances ne sont pas toutes au même tarif: mieux vaut choisir selon l'âge de l'enfant avant de réserver.
 
-## Pourquoi cette mission
-Opportunité imminente (dans trois jours), calendrier officiel et fiches d'activités déjà détaillés. Aucun doublon direct dans le catalogue compact ni dans l'historique Radar; les travaux Publication à Compiègne et Destination à Vincennes/Haut-Rhin ne chevauchent pas cette décision. Le premier refresh GSC, Carte Tattoo Isère, reste «uncertain», sans perte de classement ni raison éditoriale indépendante confirmée. La meilleure page forte (Halloween à Villersexel) traite déjà son propre événement et n'offre pas ici d'expansion distincte suffisamment prioritaire.
+## Du 17 au 18 octobre: quel spectacle choisir?
 
-## Décision du lecteur
-Comparer les âges admis, la durée, le créneau et le coût, puis réserver une activité adaptée à l'enfant, sans confondre les offres du week-end et celles des jours suivants.
+Pour une première expérience musicale avec un bébé ou un enfant de moins de 5 ans, le [concert «La danse de la pluie»](https://www.abbayedenoirlac.fr/agenda/programmation-artistique/concert-pour-mon-tout-petit-la-danse-de-la-pluie) est le plus adapté. Quatre voix de l'ensemble Mikrokosmos, accompagnées d'objets sonores, évoquent les éléments naturels. Le concert dure **30 minutes**, accueille les **6 mois-7 ans accompagnés de leurs parents** et coûte **6 €**. Trois séances sont annoncées: **samedi 17 à 17h30**, **dimanche 18 à 11h et 17h30**.
 
-## Faits à traiter
-- Festival à Noirlac les 17-22 octobre: samedi/dimanche 11h-18h30; lundi-jeudi 10h30-17h selon l'organisateur. Réservation des spectacles et activités via resa@noirlac.fr ou 02 48 96 17 16; vérifier chaque fiche.
-- «La danse de la pluie» (Mikrokosmos): 17 octobre à 17h30, 18 octobre à 11h et 17h30; 6 mois-7 ans, 30 min, 6 €.
-- «L'Affaire méchant loup»: les 17-18 à 16h, dès 5 ans, 45 min, 6 €; atelier associé à 17h, dès 5 ans, 6 €. «Les Histoires manquantes»: mêmes jours à 15h et 17h, dès 6 ans, 50 min, 6 €.
-- Après le week-end: visite Bout d'Choux le 21 à 10h30, 3-5 ans, 1h30, 6 €; moulage d'empreinte animale le 21 à 14h30, dès 6 ans, 8 € par participant; landart le 22 à 10h30, 3-5 ans, 6 € par participant; «Jouons avec les Grisailles» le 22 à 10h30, dès 8 ans, 8 €. Les activités nature ont leurs propres contraintes, notamment rendez-vous anticipé, chaussures adaptées et adulte accompagnant.
-- Ne pas généraliser un tarif unique à tout le festival: la visite «Sur la piste des animaux sauvages» le 19, accessible à partir de 9 ans, annonce 5 € adulte, 3,50 € réduit, gratuit moins de 12 ans. Ludothèque Micado et goûter offerts aux enfants à distinguer des spectacles payants. Vérifier la coexistence des séances et les places avant de proposer un parcours.
-- L'abbaye annonce parfois des règles tarifaires de visite libre particulières pendant le festival: ne pas extrapoler les prix habituels de visite du monument.
+Pour les enfants qui suivent déjà une histoire plus longue, deux spectacles sont proposés les **samedi 17 et dimanche 18 octobre**, chacun à **6 €**:
 
-## Sources de départ
-Page officielle du festival et fiches de spectacles/ateliers de l'abbaye, complétées par l'office de tourisme Destination Sud Berry; les URL exactes sont dans le frontmatter.
+- **Dès 5 ans:** [«L'Affaire méchant loup»](https://www.abbayedenoirlac.fr/agenda/programmation-artistique/l-affaire-mechant-loup), à **16h**, dure **45 minutes**. Théâtre d'ombres et musique revisitent *La Chèvre de monsieur Seguin* en donnant une autre place au loup. Ceux qui souhaitent manipuler sons et objets peuvent prolonger avec l'[atelier «Rejoue L'affaire méchant loup»](https://www.abbayedenoirlac.fr/agenda/programmation-artistique/atelier-l-affaire-mechant-loup), à **17h**, **dès 5 ans**, **1 heure**, **6 € supplémentaires**.
+- **Dès 6 ans:** [«Les Histoires manquantes»](https://www.abbayedenoirlac.fr/agenda/programmation-artistique/les-histoires-manquantes), à **15h et 17h**, dure **50 minutes**. Contes illustrés et musique prennent vie dans un *kamishibaï*, théâtre de papier d'origine japonaise. Les récits évoquent différentes histoires et formes de familles.
 
-## Affiliation
-Action principale: réserver directement auprès de l'abbaye, sans partenaire de billetterie crédible trouvé. Hébergement secondaire utile à une famille qui transforme le festival en séjour: Le Noirlac à Saint-Amand-Montrond sur Booking.com, chambres familiales listées; contrôler les besoins réels avant intégration.
+Les horaires se chevauchent: un enfant ne peut pas suivre simultanément «Les Histoires manquantes» à 17h et l'atelier du loup à 17h. Avec un plus jeune, privilégier un seul spectacle peut laisser davantage de temps pour jouer sur place.
 
-## Continuations internes
-Aucune page ne traite ce festival ni ses réservations. Ne pas recycler les articles consacrés à d'autres festivals ou abbayes. Une éventuelle référence à Bourges en famille ne serait utile que si la rédaction documente un véritable séjour à Bourges; sinon, aucun lien interne à forcer.
+### La ludothèque est-elle gratuite?
+
+La [ludothèque Micado](https://www.abbayedenoirlac.fr/agenda/programmation-artistique/ludotheque-micado) accueille petits et grands les **17 et 18 octobre de 12h à 17h30**: espace bébé, jeux de construction, plateaux et jeux géants en bois. **Elle est accessible avec un billet de spectacle ou un billet d'entrée à l'abbaye**: ce n'est pas une animation en accès libre sans billet. Le programme annonce également un goûter offert aux enfants. <https://www.abbayedenoirlac.fr/fr/au-creux-de-l-oreille> donne la vue d'ensemble du week-end.
+
+## Du 19 au 22 octobre: visites de l'abbaye ou ateliers nature?
+
+Après le week-end, les animations invitent les enfants à découvrir les salles du monument ou la faune du bocage. Les choix les plus nets selon l'âge sont les suivants.
+
+**Pour les 3-5 ans**, deux propositions à **6 €**:
+- **Mercredi 21 octobre à 10h30:** [visite «Bout d'Choux»](https://www.abbayedenoirlac.fr/agenda/activites-patrimoine/visite-bout-d-choux-copie), **1h30**. Puzzles, jeux d'observation et expériences sonores font découvrir la vie des moines aux enfants accompagnés d'un parent.
+- **Jeudi 22 octobre à 10h30:** [atelier «Bout d'choux landart»](https://www.abbayedenoirlac.fr/agenda/programmation-artistique/au-creux-de-l-oreille-festival-famille/atelier-bout-d-choux-landart-d399b741), **2 heures**, **6 € par participant, adulte compris**. Les enfants accompagnés créent avec des éléments récoltés dans le bocage. L'activité est réservée à cette tranche d'âge.
+
+**Dès 6 ans**, le [moulage d'empreinte animale](https://www.abbayedenoirlac.fr/agenda/programmation-artistique/au-creux-de-l-oreille-festival-famille/atelier-moulage-d-empreinte-animale) a lieu **mercredi 21 octobre à 14h30**. La famille prépare des moulages en salle, puis cherche des traces de la faune à l'extérieur. Comptez **2 heures et 8 € par participant, adultes compris**. Les enfants plus jeunes ne sont pas admis à cet atelier.
+
+**Dès 8 ans**, le [«Jeu de la Sagesse»](https://www.abbayedenoirlac.fr/agenda/programmation-artistique/au-creux-de-l-oreille-festival-famille/jeu-de-la-sagesse) a lieu **mardi 20 à 10h30**: une épreuve collective pour élire un nouvel abbé, **2 heures, 8 €**. Le [jeu de création «Jouons avec les Grisailles»](https://www.abbayedenoirlac.fr/agenda/programmation-artistique/au-creux-de-l-oreille-festival-famille/jouons-avec-les-grisailles), **jeudi 22 à 10h30**, fait réaliser un vitrail en peinture, **1h30, 8 €**.
+
+**Dès 9 ans**, la sortie [«Sur la piste des animaux sauvages»](https://www.abbayedenoirlac.fr/fr/sur-la-piste-des-animaux-sauvages) du **lundi 19 à 14h30** explore le bocage à la recherche d'indices laissés par les animaux. Prévoyez **2h30, jusqu'à 5 km de marche tout terrain**. Tarif annoncé: **5 € plein tarif**, **3,50 € tarif réduit**, **gratuit pour les moins de 12 ans**. Les enfants de moins de 9 ans ne sont pas admis et les mineurs concernés doivent être accompagnés.
+
+Pour les ateliers et sorties nature, arrivez **10 minutes avant le départ**, avec chaussures fermées ou bottes, eau et vêtements adaptés à la météo. Les chiens ne sont pas admis dans ces activités. Ces conditions comptent particulièrement pour la marche du 19 octobre et les ateliers en extérieur.
+
+## Réserver et préparer la venue à Noirlac
+
+Le [programme officiel du festival](https://www.abbayedenoirlac.fr/fr/au-creux-de-l-oreille) annonce l'ouverture de **11h à 18h30 les samedi 17 et dimanche 18**, puis de **10h30 à 17h du lundi 19 au jeudi 22**. Pour connaître les disponibilités d'une séance et les modalités exactes d'entrée, réservez auprès de l'abbaye via les boutons de billetterie de chaque fiche ou contactez **resa@noirlac.fr** ou **02 48 96 17 16**. Les tarifs des spectacles, ateliers et visites ne sont pas interchangeables: vérifiez le billet correspondant à l'activité et le nombre de participants payants, parents inclus lorsqu'il est indiqué.
+
+Pour les familles qui transforment cette sortie en séjour dans le sud du Cher, l'[hôtel Le Noirlac, à Saint-Amand-Montrond](https://www.booking.com/hotel/fr/le-noirlac.fr.html) propose des chambres familiales. Vérifiez la configuration adaptée à votre groupe, les équipements pour bébé et les disponibilités aux dates retenues avant de réserver.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -134,9 +163,9 @@ Aucune page ne traite ce festival ni ses réservations. Ne pas recycler les arti
 - /articles/evenements/festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants/ | Les Petits Asticots 2026: spectacles, âges et réservations en famille | evenements | Chamonix-Mont-Blanc, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/evenements/mon-premier-festival-2026-paris-film-age/ | Mon Premier Festival 2026 à Paris: quel film choisir selon l'âge? | evenements | Paris, Paris, Île-de-France
 - /articles/sorties/vacances-de-la-toussaint-2026-a-la-cite-des-sciences-quels-ateliers-choisir-selon-l-age/ | Vacances de la Toussaint 2026 à la Cité des sciences: les ateliers numériques gratuits avec des enfants | sorties | Paris, Paris, Île-de-France
+- /articles/evenements/court-circuit-2026-a-annecy-en-famille-spectacles-tarifs-et-conseils/ | Court Circuit 2026 à Annecy en famille: spectacles, tarifs et conseils | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/evenements/nancy-jazz-pulsations-2026-en-famille-spectacles-enfants-tarifs-et-conseils/ | Nancy Jazz Pulsations 2026 en famille: spectacles enfants, tarifs et conseils | evenements | Nancy, Meurthe-et-Moselle, Grand Est
 - /articles/evenements/grands-zyeux-p-tites-zoreilles-2026-quelles-seances-gratuites-avec-les-tout-petits/ | Grands Zyeux P'tites Zoreilles 2026: spectacles gratuits avec les tout-petits autour de Béziers | evenements | Béziers, Hérault, Occitanie
-- /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/ | Monument jeu d'enfant 2026 au château de Vincennes: quel atelier choisir ? | evenements | Vincennes, Val-de-Marne, Île-de-France
-- /articles/sorties/toussaint-2026-au-louvre-lens-quelle-activite-choisir-selon-l-age/ | Toussaint 2026 au Louvre-Lens: quelle activité choisir selon l'âge? | sorties | Lens, Pas-de-Calais, Hauts-de-France
 - /articles/cuisine/galette-aux-pommes-de-terre-du-berry-une-recette-a-faire-en-famille/ | Galette aux pommes de terre du Berry: une recette à faire en famille | cuisine | Bourges, Cher, Centre-Val de Loire
 - /articles/maison/encombrants-a-bourges-quand-sortir-meubles-et-gros-objets/ | Encombrants à Bourges: quand sortir meubles et gros objets | maison | Bourges, Cher, Centre-Val de Loire
 - /articles/vie-pratique/carte-famille-de-bourges-qui-peut-l-obtenir-et-a-quoi-sert-elle/ | Carte famille de Bourges: qui peut l'obtenir et à quoi sert-elle? | vie-pratique | Bourges, Cher, Centre-Val de Loire
