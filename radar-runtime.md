@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les faits utilisés sont liés naturellement dans le corps et présents dans `sources`. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Vacances royales 2026 à Versailles: animations Napoléon, dates et billets en famille"
-subtitle: "Du 17 octobre au 1er novembre: trois animations sans réservation, mais entrée au Château à prévoir"
-summary: "Vacances royales 2026 au château de Versailles: programme Napoléon pour les familles, dates et horaires, animations sans réservation, billets et gratuités."
+title: "Vacances royales 2026 à Versailles: animations Napoléon, dates et billets"
+subtitle: "Du 17 octobre au 1er novembre: trois activités familiales dans les salles de l'Empire, sans réservation supplémentaire"
+summary: "Vacances royales 2026 au château de Versailles: dates, horaires et contenu des trois animations autour de Napoléon, accès au Château, tarifs et gratuités."
 category: evenements
 location:
   city: Versailles
@@ -71,17 +76,27 @@ keywords:
   - animations Napoléon château Versailles Toussaint
   - Vacances royales 2026 billets familles
 sources:
-  - title: Château de Versailles - Vacances royales, programme familial d'automne 2026
+  - title: Château de Versailles - Vacances royales, programme familial 2026
     url: https://www.chateauversailles.fr/actualites/vie-domaine/Evenement-famille-a-Versailles
-  - title: Château de Versailles - Gratuités et tarifs réduits
+  - title: Château de Versailles - Tarification officielle 2026
+    url: https://www.chateauversailles.fr/tarification-2026
+  - title: Château de Versailles - Billets et tarifs
+    url: https://www.chateauversailles.fr/preparer-ma-visite/billets-tarifs
+  - title: Château de Versailles - Conditions de gratuité et de tarif réduit
     url: https://www.chateauversailles.fr/preparer-ma-visite/conditions-gratuite
-  - title: Château de Versailles - FAQ et accès aux activités famille
+  - title: Château de Versailles - Foire aux questions
     url: https://www.chateauversailles.fr/preparer-ma-visite/faq
-  - title: Château de Versailles - Préparer sa visite en famille
+  - title: Château de Versailles - Préparer une visite en famille
     url: https://www.chateauversailles.fr/preparer-ma-visite/visiter-versailles-famille
+  - title: Château de Versailles - Grandes Eaux et Jardins Musicaux
+    url: https://www.chateauversailles.fr/actualites/spectacles/grandes-eaux-jardins-musicaux
+  - title: Tiqets - Billet Château, Jardins et domaine de Trianon
+    url: https://www.tiqets.com/fr/activites-attractions-versailles-c66594/billets-pour-chateau-de-versailles-billet-d-entree-acces-aux-jardins-domaine-de-trianon-p974127/
+  - title: Booking.com - Hôtel Le Versailles
+    url: https://www.booking.com/hotel/fr/versailles.fr.html
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: vacances-royales-2026-a-versailles-animations-napoleon-dates-et-billets-en-famille
   decision: Identifier les jours et horaires des animations Vacances royales, rejoindre les salles de l'Empire, comprendre qu'elles ne nécessitent pas de réservation propre mais que l'accès au Château demande un billet et parfois un créneau gratuit, puis choisir le billet adapté à sa famille.
@@ -91,34 +106,56 @@ radar:
     dataThrough: 2026-10-11
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Château de Versailles - Vacances royales, programme familial d'automne 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-11-01
 ---
 
-## Mission retenue
-Les «Vacances royales» au château de Versailles pendant les vacances de la Toussaint 2026: trois médiations familiales autour de l'épopée napoléonienne, dans les salles de l'Empire. Il s'agit d'animations comprises dans l'accès au Château, et non d'un billet de spectacle indépendant ni d'une visite générale de Versailles.
+Pendant les vacances de la Toussaint, le château de Versailles propose **Vacances royales**, trois animations familiales consacrées à Napoléon et au Premier Empire. Elles se déroulent **du 17 octobre au 1er novembre 2026**, uniquement certains mercredis et week-ends. **Aucune réservation spécifique n'est demandée pour participer aux animations**, mais il faut tout de même **un billet d'entrée au Château, y compris un billet horodaté gratuit pour les visiteurs qui y ont droit**. C'est la distinction essentielle pour organiser cette sortie.
 
-## Pourquoi cette mission
-Événement imminent, annoncé et détaillé par l'organisateur pour les 17 octobre-1er novembre. Aucun article du catalogue compact ni de l'historique Radar ne traite «Vacances royales»; le candidat proche «Visiter Versailles avec un bébé» porte sur les équipements, les billets et les parcours généraux, pas sur ce programme temporaire. Les travaux Publication (Rouen Givrée) et Destination (Vincennes et Haut-Rhin) sont sans chevauchement. Le meilleur refresh GSC (Carte Tattoo Isère) est classé «uncertain», sans requêtes communes permettant de conclure à une perte de position; l'article lu sur master explique déjà montants, bonus Caf, démarches, dépenses et échéances, sans lacune indépendante prioritaire établie. L'expansion d'une page forte, notamment Futuroween, reproduirait largement l'article saisonnier déjà complet et actualisé; l'opportunité Versailles apporte une décision nouvelle et datée.
+## Quels jours venir et où trouver les animations?
 
-## Décision du lecteur
-Préparer la visite du programme napoléonien en choisissant un jour où les animations existent, sans confondre absence de réservation pour les animations et nécessité de réserver l'entrée du Château, notamment le créneau gratuit des enfants éligibles.
+Selon le [programme officiel des Vacances royales](https://www.chateauversailles.fr/actualites/vie-domaine/Evenement-famille-a-Versailles), les rendez-vous sont proposés à huit dates:
 
-## Faits à traiter
-- Dates exactes selon l'organisateur: samedi 17 et dimanche 18, mercredi 21, samedi 24 et dimanche 25, mercredi 28, samedi 31 octobre et dimanche 1er novembre 2026. Activités de 10h30 à 17h45, dernière activité débutant à 17h15.
-- Lieu: salles de l'Empire, galerie de pierre basse sud; accès par entrée A, Pavillon Dufour.
-- Trois animations distinctes: «Une épopée dans un musée», rencontre avec André Estienne, ancien soldat de Bonaparte; «La geste de l'empereur», médiation flash et poésie gestuelle; «Crée ton décor impérial», atelier de création miniature inspiré des motifs du Premier Empire. Espace détente avec podcasts, coin lecture et carte postale. Ne pas inventer d'âge minimum, de durée ou d'horaires propres à chaque activité si non indiqués.
-- Aucune réservation spécifique pour ces animations; elles sont incluses dans le billet du Château. Ne pas les présenter comme accessibles gratuitement depuis l'extérieur. Les moins de 18 ans bénéficient de la gratuité du Château; jusqu'à 25 ans inclus pour les ressortissants ou résidents de l'EEE. Les bénéficiaires de la gratuité doivent néanmoins réserver un créneau horaire gratuit pour entrer au Château et présenter les justificatifs. Éviter de généraliser la gratuité à tous les moins de 26 ans sans condition.
-- Billet Passeport officiel haute saison 35 € normal, 32 € tarif EEE réduit selon conditions, couvrant aussi Jardins et Trianon. La famille venue seulement pour les animations doit comparer avec une formule Château seul; l'entrée aux Jardins peut être payante lors des Grandes Eaux/Jardins Musicaux, même pour des visiteurs bénéficiant de la gratuité au Château.
-- Les horaires de l'événement ne sont pas ceux de l'ensemble du domaine. Contrôler l'horaire d'entrée choisi, l'affluence et les conditions de visite du jour.
+- **Samedi 17 et dimanche 18 octobre**
+- **Mercredi 21 octobre**
+- **Samedi 24 et dimanche 25 octobre**
+- **Mercredi 28 octobre**
+- **Samedi 31 octobre et dimanche 1er novembre**
 
-## Sources de départ
-Page événementielle officielle du Château pour programme, dates, lieu et absence de réservation; pages officielles de gratuités et FAQ pour créneaux, justificatifs et périmètre des billets. Liens exacts dans le frontmatter.
+Les animations ont lieu de **10h30 à 17h45**, la dernière commençant à **17h15**. Ce créneau correspond au programme familial, pas à la durée d'ouverture de tout le domaine; le Château ne publie pas ici de durée précise ni d'horaires individuels pour chacune des trois propositions.
 
-## Affiliation
-Le besoin principal est l'accès au Château: billet Passeport Tiqets identifié, mais à ne conseiller que si la famille veut réellement inclure Jardins et Trianon, en rappelant la gratuité et les billets officiels. Pour une nuit à Versailles, Hôtel Le Versailles dispose d'une chambre familiale (2 adultes et 2 enfants) sur Booking.com, sans présumer du prix ni de la disponibilité aux dates choisies. Ne pas vendre un billet séparé pour les animations.
+Rendez-vous dans les **salles de l'Empire, galerie de pierre basse sud**, en passant par **l'entrée A, au pavillon Dufour**. Réservez votre créneau d'entrée au Château en gardant le temps de rejoindre ces salles.
 
-## Continuations internes
-- L'article existant «Visiter le château de Versailles avec un bébé: poussette, billets et parcours» (/articles/parentalite/visiter-le-chateau-de-versailles-avec-un-bebe-poussette-billets-et-parcours/) traite déjà le matériel bébé, les distances, les services et le choix des espaces; y renvoyer brièvement seulement si pertinent, sans recopier ses conseils.
-- Les articles de la Toussaint sur d'autres châteaux (Vaux-le-Vicomte, Pierrefonds, Vincennes) concernent d'autres événements et ne constituent ni doublons ni liens internes indispensables.
+## Trois façons de découvrir l'épopée napoléonienne
+
+**«Une épopée dans un musée»** est une rencontre avec un comédien interprétant **André Estienne**, ancien soldat de Bonaparte surnommé le tambour d'Arcole. Il entraîne les visiteurs dans les récits de l'épopée impériale au milieu des collections. C'est la proposition à privilégier si les enfants aiment écouter des personnages raconter l'Histoire.
+
+**«La geste de l'empereur»** associe une médiation courte autour de tableaux, des anecdotes historiques et de la **poésie gestuelle**. Les enfants observent des scènes de l'Empire puis participent par le mouvement: une alternative au seul récit historique.
+
+**«Crée ton décor impérial»** est la proposition manuelle. Dans une salle d'atelier, chacun s'inspire des motifs du Premier Empire pour réaliser un **décor miniature personnalisé** à rapporter. C'est le rendez-vous le plus évident pour les enfants qui aiment fabriquer quelque chose.
+
+Un **espace détente** complète les animations, avec des **podcasts**, un coin lecture et la possibilité de créer une **carte postale Vacances royales**. Le programme ne fixe pas d'âge minimum pour ces activités: évitez de supposer qu'elles conviennent toutes de la même façon à un bébé ou à un très jeune enfant.
+
+## Quel billet faut-il réserver pour toute la famille?
+
+Les trois animations **sont comprises dans l'accès au Château**: il n'y a pas de billet de spectacle ou d'atelier supplémentaire à acheter. En revanche, **la réservation d'un créneau d'entrée au Château reste obligatoire pour tous**, même lorsque la visite est gratuite, comme le rappellent les [conditions de gratuité](https://www.chateauversailles.fr/preparer-ma-visite/conditions-gratuite).
+
+- **Moins de 18 ans:** accès gratuit au Château, quel que soit le pays de résidence, sur présentation du justificatif demandé.
+- **18 à 25 ans inclus:** gratuité au Château pour les ressortissants ou résidents de l'**Espace économique européen (EEE)**, sur justificatif. Elle ne s'applique pas automatiquement à tous les visiteurs de moins de 26 ans.
+- **Adultes payants:** la [tarification officielle 2026](https://www.chateauversailles.fr/tarification-2026) présente le **Passeport** comme le billet permettant d'entrer au Château. Il comprend aussi les Jardins et le domaine de Trianon. **Du 17 au 31 octobre**, son tarif est de **35 €** en plein tarif, ou **32 €** pour les personnes éligibles à la réduction France/EEE. **Le 1er novembre**, à l'entrée en basse saison, les tarifs annoncés sont de **25 € et 22 €** respectivement.
+
+Les bénéficiaires de la gratuité doivent [réserver leur créneau gratuit sur la billetterie officielle](https://www.chateauversailles.fr/preparer-ma-visite/billets-tarifs). Les justificatifs d'âge et, lorsque nécessaire, de résidence ou de nationalité seront demandés à l'entrée. Le fait qu'une animation soit «sans réservation» ne dispense donc jamais de ce billet d'accès.
+
+Si vous comptez également explorer les Jardins et les Trianons, vous pouvez consulter le [billet Château, Jardins et domaine de Trianon sur Tiqets](https://www.tiqets.com/fr/activites-attractions-versailles-c66594/billets-pour-chateau-de-versailles-billet-d-entree-acces-aux-jardins-domaine-de-trianon-p974127/) et comparer son prix et ses conditions au Passeport officiel. **Ne prenez pas un billet payant pour un enfant bénéficiant de la gratuité du Château par simple automatisme.** Le programme «Vacances royales» ne nécessite aucun achat distinct.
+
+### Et les Jardins avec des enfants?
+
+Les règles de gratuité du **Château** ne sont pas celles des **Jardins**. Les [Grandes Eaux Musicales](https://www.chateauversailles.fr/actualites/spectacles/grandes-eaux-jardins-musicaux) sont annoncées les samedis et dimanches jusqu'au **1er novembre 2026 inclus**: les Jardins peuvent alors demander un billet spécifique, même aux enfants bénéficiant d'une entrée gratuite au Château, **sauf aux moins de 6 ans**. Le Passeport couvre cet accès. Pour le 1er novembre, où s'entrecroisent début de basse saison et dernière date des Grandes Eaux, vérifiez les conditions affichées pour cette journée au moment de réserver.
+
+## Venir avec un bébé ou prolonger la sortie
+
+Avec un nourrisson, l'essentiel est de repérer les salles de l'Empire et de garder une visite courte, sans prévoir systématiquement tout le domaine. Pour les poussettes, porte-bébés, changes, repas et distances jusqu'aux Jardins ou à Trianon, consultez notre guide [Visiter le château de Versailles avec un bébé](https://www.fam-space.fr/articles/parentalite/visiter-le-chateau-de-versailles-avec-un-bebe-poussette-billets-et-parcours/), qui détaille déjà ces questions pratiques.
+
+Pour les familles qui souhaitent passer la nuit à Versailles, l'[Hôtel Le Versailles](https://www.booking.com/hotel/fr/versailles.fr.html), près du Château, propose notamment une **chambre familiale pour deux adultes et deux enfants**. Vérifiez sa composition et les disponibilités réelles pour votre date avant de réserver.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
