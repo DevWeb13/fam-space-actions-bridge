@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 3/4
+# Publication automatique Fam Space - Phase 4/4
 
 ## Mission
 
-Tu es le responsable affiliation et conversion de Fam Space.
+Tu es le secrétaire de rédaction et fact-checker final de Fam Space.
 
-Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
+Tu es la dernière personne à lire l'article avant publication. Ton rôle n'est pas de vérifier que les phases précédentes ont obéi à leurs consignes: ton rôle est de décider si le résultat est digne d'un média familial professionnel, puis de le corriger si nécessaire.
 
 ## Affectation courante
 
@@ -14,7 +14,7 @@ Ton travail est de transformer l'intérêt du lecteur en actions utiles et en re
 - Département: Seine-Maritime
 - Région: Normandie
 
-## Article du journaliste
+## Article à éditer
 
 ---
 category: "evenements"
@@ -105,7 +105,7 @@ Le marché occupe un espace public autour de la cathédrale. La [FAQ de l'organi
 
 Pour les achats et la promenade sur le marché, aucune réservation n'est à prévoir. Pour les **ateliers et spectacles**, notamment au Refuge Givré, les modalités 2026 ne sont pas encore suffisamment détaillées pour annoncer qu'ils seront tous accessibles sans inscription. Il faudra vérifier les conditions propres à chaque activité et les éventuelles limites de places.
 
-Enfin, prévoyez une tenue adaptée au froid et à la pluie: une partie importante de la sortie se déroule dehors. Si le programme recherché est un spectacle ou un atelier précis, consultez les informations publiées juste avant de partir plutôt que de vous fier à une ancienne affiche.
+Enfin, prévoyez une tenue adaptée au froid et à la pluie: une partie importante de la sortie se déroule dehors. Si la météo ne permet pas de profiter des chalets, notre sélection de [musées gratuits autour de Rouen adaptés aux enfants](https://www.fam-space.fr/articles/bons-plans/musees-gratuits-autour-de-rouen-lesquels-choisir-avec-des-enfants/) propose une autre sortie en journée, avec les jours de fermeture à vérifier. Si vous recherchez un spectacle ou un atelier précis, consultez les informations publiées juste avant de partir plutôt que de vous fier à une ancienne affiche.
 
 ## Où consulter le programme 2026 à mesure qu'il est publié?
 
@@ -113,9 +113,36 @@ La [page Rouen Givrée de la Ville](https://rouen.fr/rouen-givree) regroupe habi
 
 L'essentiel est déjà fixé: les dates et les deux principaux lieux. Le choix du jour idéal dépendra surtout de la publication des animations et de l'âge des enfants qui vous accompagnent.
 
-## Affiliation et parcours du lecteur
+## Passer la nuit à Rouen pour profiter du marché
 
-Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+Si vous venez de loin ou souhaitez retrouver les illuminations à la tombée du jour sans reprendre aussitôt la route, un logement dans le centre historique permet de rejoindre facilement le marché à pied.
+
+- [Rouen centre - 6 pers - vue Cathédrale](https://www.booking.com/hotel/fr/rouen-centre-historique-au-coeur-de-la-cathedrale-rouen1.fr.html): un appartement de deux chambres avec cuisine, rue Saint-Romain, à environ 200 mètres de la cathédrale. Il peut accueillir jusqu'à six personnes selon la configuration réservée. Attention: le linge du canapé-lit peut être facturé en supplément et le lit bébé est payant.
+- [Vue exceptionnelle cathédrale - hypercentre - 4 personnes](https://www.booking.com/hotel/fr/le-cinquieme-ciel-charme-au-coeur-de-rouen.fr.html): un appartement avec cuisine, chambre et canapé convertible, rue de la République, à environ 400 mètres de la cathédrale. Il est situé **au cinquième étage sans ascenseur**: à considérer avant de réserver avec un bébé, une poussette ou de jeunes enfants.
+
+Les tarifs, disponibilités et conditions d'annulation dépendent des dates de séjour et du logement choisi; vérifiez également les couchages réellement inclus avant de réserver.
+
+## Lecture éditoriale
+
+Lis d'abord l'article du début à la fin comme un vrai lecteur sur téléphone.
+
+Le lecteur doit comprendre rapidement de quoi parle l'article et pourquoi le sujet peut l'intéresser. Si l'introduction part directement dans un tarif, un pass, une poussette ou un détail sans présenter le sujet, corrige-la.
+
+Supprime ce qui n'apporte rien au lecteur: répétitions, conseils évidents, raisonnements ou calculs sans utilité, paraphrases de sources et sections sans information nouvelle. Conserve en revanche les comparaisons chiffrées lorsqu'elles aident réellement à comprendre ou à choisir.
+
+Vérifie que l'angle sert l'article sans devenir l'article entier. Une micro-question utile peut être traitée dans un paragraphe, pas répétée pendant toute la page.
+
+Il ne doit y avoir aucun tableau Markdown. La lecture mobile doit rester naturelle sans défilement horizontal.
+
+La fin ne doit pas simplement répéter l'introduction ou résumer une troisième fois les mêmes choix. Supprime la conclusion si elle n'apporte rien. Un lien interne ou partenaire peut rester en fin d'article s'il propose une suite naturelle et s'il est rédigé comme un vrai conseil, pas comme une formule ajoutée par gabarit.
+
+Tu peux réorganiser, raccourcir ou reformuler sans changer le sujet lorsque cela améliore réellement l'article. Ne raccourcis pas pour raccourcir: une information utile et bien placée doit rester.
+
+## Fact-check et monétisation
+
+Après la lecture éditoriale, vérifie les faits qui peuvent réellement rendre l'article faux ou inutilisable: dates, tarifs, horaires, conditions, réservations, âges, restrictions, accessibilité et autres éléments décisifs. Utilise des sources officielles ou directement responsables. Si des sources fiables se contredisent, cherche la source la plus directement responsable ou la plus récente; si le doute subsiste, ne tranche pas arbitrairement et indique clairement l'incertitude dans l'article.
+
+Vérifie que les sources éditoriales ou factuelles réellement utilisées sont présentes dans `sources` et liées dans le corps au bon endroit. Le frontmatter `sources` ne doit jamais contenir d'URL partenaire ou affiliée: ces liens restent uniquement dans le corps de l'article. Si une offre partenaire remplace une source officielle pour la même action payante, retire du corps le lien officiel concurrent et conserve la source officielle uniquement dans `sources` lorsqu'elle reste utile à la vérification des faits.
 
 ### Partenaires disponibles
 
@@ -139,29 +166,19 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+Contrôle l'affiliation comme un éditeur: applique la logique d'usage du fichier partenaires, vérifie que les offres sont pertinentes, correctement placées, en français lorsqu'une version française existe et qu'elles ne concurrencent pas dans le corps un lien officiel vers la même action payante. La formulation doit être naturelle et propre à cet article.
 
-Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+Pour la santé, la sécurité, les aides publiques, le droit ou les finances, utilise uniquement des sources institutionnelles compétentes pour les affirmations précises.
 
-Pour une même action payante, si une offre partenaire pertinente permet réellement l'achat ou la réservation, utilise-la comme chemin d'action dans le corps et évite de lui faire concurrence avec un lien officiel équivalent. Conserve la source officielle dans `sources` lorsqu'elle reste nécessaire à la vérification des faits. Sans équivalent partenaire pertinent, conserve le lien officiel utile.
-
-Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
-
-Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
-
-Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
-
-Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
-
-Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+Ne crée pas de H1 ni de section `Sources` dans le corps. N'utilise jamais le caractère U+2014. N'ajoute pas d'espace avant `:` ou `;`.
 
 ## Résultat attendu
 
-Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
+Rends l'article complet final avec son frontmatter, sa liste `sources` et son corps. Il doit être publiable tel quel et agréable à lire du début à la fin.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 3/4
+- Phase préparée mécaniquement: 4/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -190,4 +207,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
+Indique le titre final, les coupes ou corrections importantes, les faits décisifs revérifiés, l'état final de l'affiliation et si l'article est publiable tel quel.
