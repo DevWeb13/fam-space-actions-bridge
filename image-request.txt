@@ -162,3 +162,4 @@ automation/image-20261013-fa79bfa-reims-asticots-bordeaux-orly-94299ad|096747bf4
 automation/image-20261014-2ac8dfe-abracada-ginko-2e99ce6|2e99ce641ae0a32c444fe64b0c31ee06777d55cc
 automation/image-20261014-2ac8dfe-abracada-ginko-2e99ce6|2f1482801d2056c623dac98142c4ceefcaabebe6
 automation/image-20261014-b9b9503-zyeux-compiegne-989fccc|989fccc39fb01213c8d65b34b4cdc8c7e5122e98
+automation/image-20261014-b9b9503-zyeux-compiegne-989fccc|96be8c433630227c1abb86852e09ebe164e514f6
