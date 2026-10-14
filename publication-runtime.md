@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,98 +14,154 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Seine-Maritime
 - Région: Normandie
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Titre de travail:** Rouen Givrée 2026 en famille: marché de Noël, Refuge Givré et parcours avec les enfants
-
-**Angle:** préparer une sortie de Noël à Rouen en distinguant ce qui est déjà confirmé pour 2026 des animations dont la programmation détaillée reste à publier. Proposer un parcours familial entre le marché installé sur le parvis de la cathédrale, dans le centre historique, et le Refuge Givré place Saint-Sever, sur l'autre rive.
-
-**Contexte:** Rouen Givrée est le rendez-vous festif de fin d'année dans la ville de Rouen, en Seine-Maritime. Son marché de Noël, organisé du **25 novembre au 27 décembre 2026** devant la cathédrale, réunit une cinquantaine de chalets. La Ville confirme la tenue du **Refuge Givré du 5 au 27 décembre 2026, de 10h à 19h place Saint-Sever**, avec des projets de spectacles et d'activités créatives pour les enfants. À ce stade, l'appel à projets municipal n'est pas le programme final des séances. Ne pas reprendre le calendrier 2025 comme celui de 2026.
-
-## Besoin du lecteur
-
-Une famille doit comprendre où se déroulent les différentes propositions de Rouen Givrée, quelles dates sont confirmées, ce que les enfants peuvent trouver au marché et au Refuge Givré, comment rejoindre les deux sites sans multiplier les trajets, et ce qu'il faut vérifier avant de se déplacer: horaires du jour, animations réellement programmées, éventuelles conditions d'accès, météo, déplacements et stationnement. Distinguer une courte balade au marché d'une sortie plus longue avec des enfants d'âges différents. Indiquer à quel moment un séjour d'une nuit à Rouen est intéressant, sans le présenter comme nécessaire.
-
-## Valeur éditoriale
-
-- **Deux lieux, deux usages:** marché de Noël sur le parvis de la cathédrale (chalets, décoration, flânerie) et Refuge Givré place Saint-Sever (projet d'animations familiales). Expliquer clairement que le Refuge n'est pas un chalet du marché: il faut passer d'une rive à l'autre. Ne pas annoncer un atelier précis avant publication officielle du programme 2026.
-- **Dates solides:** le marché est annoncé du mercredi 25 novembre au dimanche 27 décembre 2026. Horaires de l'organisateur: lundi 14h-20h, mardi à jeudi 11h-20h, vendredi 11h-21h, samedi 10h-21h, dimanche 11h-20h; exceptions annoncées le lundi 21 décembre 11h-20h et jeudi 24 décembre 11h-18h. Le site d'informations pratiques comporte une erreur sur le jour de la semaine du 27 décembre (« vendredi »), tandis que la page d'accueil indique correctement dimanche: utiliser la date et le jour corrects et revérifier avant rédaction. Le Refuge Givré est confirmé du 5 au 27 décembre 2026, de 10h à 19h, dans l'appel municipal à projets.
-- **Pas d'invention sur les animations:** le site municipal Rouen Givrée et la page détaillée du Refuge affichent encore une programmation datée **2025**; s'en servir uniquement pour comprendre le principe du dispositif, jamais pour attribuer à 2026 les parades, tarifs, ateliers, gratuités, inscriptions, personnages ou horaires de spectacles de 2025. Le programme 2026 et les éventuelles autres activités doivent être revérifiés pendant la rédaction.
-- **Préparer le déplacement:** accès en transport en commun conseillé par l'organisateur, notamment lignes TEOR vers « République », puis trajet vers Saint-Sever à expliquer d'après les informations actualisées du réseau. Éviter de promettre qu'un même créneau convient à toutes les animations. Conseils utiles pour limiter les attentes avec de jeunes enfants, selon la météo et la fréquentation réelle.
-- **Intérêt distinct:** événement saisonnier précis, dans une autre période que « Rouen sur Mer », sans recouvrir les sujets déjà publiés sur les musées gratuits, Ludobulle ou la Foire aux Harengs. Le retour familial sur **deux sites** et la différence entre programme confirmé et informations à venir donnent un article de service plus utile qu'une simple transcription d'agenda.
-- **Autres pistes examinées et écartées:** la Foire Saint-Romain 2026 est prévue du 21 octobre au 22 novembre, mais son début intervient à moins de 30 jours et la règle éditoriale l'exclut; Noël au Havre n'offre pas, à ce stade, de programme 2026 familial aussi précisément confirmé par une source responsable; les articles récents à Étretat, Clères et sur les musées de Rouen seraient des doublons de sujet ou d'angle.
-
-## Affiliation
-
-- **Action principale:** l'accès au marché et les animations du Refuge relèvent d'organisateurs locaux. Aucun billet **correspondant précisément à Rouen Givrée 2026** trouvé et confirmé chez GetYourGuide, Tiqets ou Klook. Ne pas substituer une visite touristique générique de Rouen à l'événement. Utiliser les informations officielles pour l'accès et le programme.
-- **Booking.com, appartement jusqu'à six personnes:** [Rouen centre - 6 pers - vue Cathédrale](https://www.booking.com/hotel/fr/rouen-centre-historique-au-coeur-de-la-cathedrale-rouen1.fr.html), 60 rue Saint-Romain, à environ 200 m de la cathédrale selon la fiche. Appartement entier, deux chambres et cuisine équipée. Pertinent pour une famille qui passe une nuit en centre-ville; selon les conditions de réservation, le canapé-lit peut nécessiter un supplément de linge et le lit bébé est payant. Vérifier prix, capacité, disponibilités et frais pour les dates choisies.
-- **Booking.com, alternative jusqu'à quatre personnes:** [Vue exceptionnelle cathédrale - hypercentre - 4 personnes](https://www.booking.com/hotel/fr/le-cinquieme-ciel-charme-au-coeur-de-rouen.fr.html), 43 rue de la République, à environ 400 m de la cathédrale. Appartement avec chambre, canapé-lit, cuisine équipée et possibilité de lit bébé sur demande. La fiche mentionne un dépôt de garantie et des conditions spécifiques: à consulter avant réservation.
-- **Placement recommandé:** réserver une courte partie « Dormir au centre pour profiter des illuminations » vers la fin de l'article, sans mettre l'hébergement avant les informations sur l'événement. Les disponibilités des deux offres ne sont **pas confirmées** pour toute la période de Noël; ne jamais promettre un tarif ou une place.
-- Pas de besoin secondaire vérifié pour vol, voiture, transfert, consigne ou vélo: ne pas introduire des liens artificiels.
-
-## Sources de départ
-
-- Organisateur du marché de Noël, page d'accueil avec dates 2026 et présentation des chalets: https://marchedenoelrouen.com/
-- Organisateur du marché de Noël, horaires 2026, exceptions et transports: https://marchedenoelrouen.com/le-marche-de-noel-de-rouen/infos-pratiques/
-- Ville de Rouen, appel à projets Refuge Givré 2026, lieu, dates et horaires: https://www.rouen.fr/apc
-- Office de tourisme de Rouen, agenda des grands événements 2026 mentionnant Rouen Givrée et ses composantes: https://www.visiterouen.com/actualites/au-rythme-des-temps-forts/
-- Ville de Rouen, page programme Rouen Givrée actuellement datée 2025, à surveiller uniquement pour une mise à jour 2026: https://rouen.fr/rouen-givree
-- Ville de Rouen, page du Refuge Givré actuellement datée 2025, ne pas prendre ses séances pour 2026: https://rouen.fr/refuge-givre
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "evenements"
+title: "Rouen Givrée 2026 en famille: marché de Noël et Refuge Givré"
+subtitle: "Dates, horaires et idées de parcours entre la cathédrale et la place Saint-Sever"
+summary: "Marché de Noël, Refuge Givré, horaires et trajets: préparez une sortie en famille à Rouen en distinguant les animations confirmées de celles encore à annoncer."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Rouen Givrée 2026"
+  - "marché de Noël Rouen 2026"
+  - "Refuge Givré Rouen"
+  - "Noël à Rouen en famille"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Rouen"
+  department: "Seine-Maritime"
+  region: "Normandie"
+eventEndsAt: "2026-12-27"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Marché de Noël de Rouen - présentation officielle"
+    url: "https://marchedenoelrouen.com/"
+  - title: "Marché de Noël de Rouen - horaires et accès"
+    url: "https://marchedenoelrouen.com/le-marche-de-noel-de-rouen/infos-pratiques/"
+  - title: "Marché de Noël de Rouen - foire aux questions"
+    url: "https://marchedenoelrouen.com/le-marche-de-noel-de-rouen/faq/"
+  - title: "Ville de Rouen - appel à projets Refuge Givré 2026"
+    url: "https://www.rouen.fr/apc"
+  - title: "Ville de Rouen - Rouen Givrée, programmation à actualiser"
+    url: "https://rouen.fr/rouen-givree"
+  - title: "Ville de Rouen - Refuge Givré, programmation à actualiser"
+    url: "https://rouen.fr/refuge-givre"
+  - title: "Office de tourisme de Rouen - grands événements de 2026"
+    url: "https://www.visiterouen.com/actualites/au-rythme-des-temps-forts/"
+  - title: "Métropole Rouen Normandie - transports en commun"
+    url: "https://www.metropole-rouen-normandie.fr/transport-en-commun/le-reseau-de-transports-en-commun"
 ---
-```
+À Rouen, en Seine-Maritime, les fêtes de fin d'année se vivent autant devant la cathédrale que sur la rive gauche de la Seine. Pour **Rouen Givrée 2026**, les familles pourront retrouver le marché de Noël au cœur du centre historique à partir du 25 novembre, puis le Refuge Givré, place Saint-Sever, à partir du 5 décembre. Voici ce qui est déjà annoncé et comment profiter des deux lieux avec des enfants sans confondre les animations passées et celles à venir.
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+## Le marché de Noël devant la cathédrale, dès le 25 novembre
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+Le [marché de Noël de Rouen](https://marchedenoelrouen.com/) doit se tenir **du mercredi 25 novembre au dimanche 27 décembre 2026**, sur le parvis de la cathédrale Notre-Dame. Une cinquantaine de chalets y composent un parcours de flânerie, entre cadeaux, artisanat et spécialités gourmandes. La cathédrale et les rues anciennes apportent au rendez-vous un cadre particulièrement agréable à découvrir en fin de journée, lorsque les décorations prennent le relais de la lumière naturelle.
+
+Avec des enfants, ce premier lieu convient à une sortie courte: regarder les chalets, choisir une gourmandise, s'arrêter sur les décorations qui attirent leur attention. Il n'est pas nécessaire d'avoir un programme d'atelier pour en profiter. En revanche, les achats et consommations restent payants.
+
+L'organisateur évoque, dans sa [foire aux questions](https://marchedenoelrouen.com/le-marche-de-noel-de-rouen/faq/), des animations gratuites et des temps de rencontre avec le Père Noël. Les dates des interventions et les animations propres à **l'édition 2026** doivent toutefois être confirmées par le calendrier à jour: mieux vaut ne pas promettre aux enfants une rencontre à une heure précise sans l'avoir vérifiée.
+
+## Le Refuge Givré, une autre halte sur la rive gauche
+
+Le **Refuge Givré** n'est pas un chalet du marché. Il se situe **place Saint-Sever, sur la rive gauche**, de l'autre côté de la Seine par rapport à la cathédrale. C'est le volet de Rouen Givrée davantage tourné vers les activités, ateliers et spectacles pour les enfants.
+
+La [Ville de Rouen annonce pour 2026](https://www.rouen.fr/apc) une ouverture **du 5 au 27 décembre, de 10h à 19h**, et a lancé un appel à projets pour accueillir des propositions ludiques, créatives, manuelles et culturelles, notamment autour de la transition écologique. Ces thèmes décrivent les activités recherchées par la Ville: ils ne constituent pas encore un programme définitif d'ateliers.
+
+Cette distinction compte pour les familles. La [page municipale du Refuge Givré](https://rouen.fr/refuge-givre) affiche encore des horaires, des spectacles et des conditions d'accès correspondant à **2025**. Il ne faut pas transposer automatiquement à 2026 les âges requis, les inscriptions, les éventuelles gratuités ou les fermetures des jours de fête. Pour choisir une séance adaptée à un tout-petit ou à un enfant plus grand, attendez les fiches du programme 2026 et vérifiez les places disponibles.
+
+## Quelles dates et quels horaires retenir?
+
+Les [horaires annoncés par l'organisateur du marché](https://marchedenoelrouen.com/le-marche-de-noel-de-rouen/infos-pratiques/) varient selon les jours:
+
+- **Lundi:** 14h à 20h, sauf le 21 décembre.
+- **Mardi, mercredi et jeudi:** 11h à 20h.
+- **Vendredi:** 11h à 21h.
+- **Samedi:** 10h à 21h.
+- **Dimanche:** 11h à 20h.
+
+Deux exceptions sont déjà indiquées: **lundi 21 décembre, 11h à 20h**, et **jeudi 24 décembre, 11h à 18h**. Le marché ferme le **dimanche 27 décembre 2026**. Cette date est bien un dimanche, malgré une erreur de jour de semaine dans une phrase de la page pratique de l'organisateur.
+
+Pour le Refuge Givré, le créneau général annoncé est **10h à 19h du 5 au 27 décembre**. Ce n'est pas une garantie qu'un atelier ou un spectacle soit proposé en continu, ni que chaque activité accueille tous les âges. Les horaires particuliers et les conditions d'accès devront être consultés sur le programme définitif.
+
+L'[office de tourisme](https://www.visiterouen.com/actualites/au-rythme-des-temps-forts/) présente également Rouen Givrée comme un ensemble de rendez-vous: marché de Noël, marché des créateurs, illuminations et animations. Pour éviter une déception, ne confondez pas les dates générales de l'événement avec celles d'une animation ponctuelle.
+
+## Un parcours adapté à l'âge des enfants
+
+**Pour une promenade d'une heure environ**, le marché sur le parvis de la cathédrale suffit comme destination principale. C'est la formule la plus souple avec un bébé ou un jeune enfant qui se fatigue vite: la famille peut circuler entre les chalets, faire une pause et repartir à sa convenance. Cette durée est une suggestion d'organisation, pas celle d'une visite imposée.
+
+**Pour une demi-journée**, une visite du marché peut se prolonger jusqu'au Refuge Givré si une animation adaptée est confirmée à la date choisie. Il faut alors prévoir le temps nécessaire pour rejoindre Saint-Sever et garder une marge avant un éventuel spectacle. Rien ne garantit que les deux lieux proposeront une activité encadrée au même moment.
+
+**Avec des enfants plus grands**, le déplacement entre les deux rives peut aussi faire partie de la sortie: on découvre le centre historique près de la cathédrale, puis un autre quartier de Rouen autour de la place Saint-Sever. Les illuminations offrent une autre ambiance à la tombée du jour, mais les animations du Refuge peuvent se terminer plus tôt que le marché.
+
+## Comment passer de la cathédrale à Saint-Sever?
+
+Le marché se trouve sur la **rive droite** de Rouen, tandis que la place Saint-Sever est sur la **rive gauche**. On peut rejoindre le second site à pied en traversant la Seine, mais il s'agit bien de deux étapes distinctes, à anticiper lorsqu'on accompagne de jeunes enfants.
+
+Les transports en commun sont une autre possibilité. Pour le marché, l'organisateur indique les lignes **TEOR T1, T2 et T3**, notamment à l'arrêt **République**. Pour rejoindre la rive gauche, le métro dessert la station **Saint-Sever**; depuis le centre, la station **Théâtre des Arts** permet de le prendre. Vérifiez l'itinéraire et les interruptions éventuelles sur le [site du réseau Astuce, référencé par la Métropole](https://www.metropole-rouen-normandie.fr/transport-en-commun/le-reseau-de-transports-en-commun), avant de partir.
+
+Si vous venez en voiture, l'[organisateur du marché](https://marchedenoelrouen.com/le-marche-de-noel-de-rouen/faq/) recommande notamment les parkings-relais, puis les transports en commun. Des parkings couverts payants existent également près de la cathédrale. Pendant les week-ends de décembre, mieux vaut éviter de compter sur une place libre juste au pied du marché.
+
+## Peut-on venir avec une poussette? Et faut-il réserver?
+
+Le marché occupe un espace public autour de la cathédrale. La [FAQ de l'organisateur](https://marchedenoelrouen.com/le-marche-de-noel-de-rouen/faq/) indique que son accès est aménagé pour les personnes en situation de handicap. Avec une poussette, les principales contraintes peuvent venir de la fréquentation, des files d'attente et de l'encombrement des allées, particulièrement aux heures les plus recherchées.
+
+Pour les achats et la promenade sur le marché, aucune réservation n'est à prévoir. Pour les **ateliers et spectacles**, notamment au Refuge Givré, les modalités 2026 ne sont pas encore suffisamment détaillées pour annoncer qu'ils seront tous accessibles sans inscription. Il faudra vérifier les conditions propres à chaque activité et les éventuelles limites de places.
+
+Enfin, prévoyez une tenue adaptée au froid et à la pluie: une partie importante de la sortie se déroule dehors. Si le programme recherché est un spectacle ou un atelier précis, consultez les informations publiées juste avant de partir plutôt que de vous fier à une ancienne affiche.
+
+## Où consulter le programme 2026 à mesure qu'il est publié?
+
+La [page Rouen Givrée de la Ville](https://rouen.fr/rouen-givree) regroupe habituellement les événements municipaux, mais contient encore à ce stade des mentions explicites de **2025**. Le [site du marché de Noël](https://marchedenoelrouen.com/) reste la référence pour les horaires et informations relatives aux chalets. Pour le Refuge, consultez la page municipale dès qu'elle sera actualisée avec les activités de 2026.
+
+L'essentiel est déjà fixé: les dates et les deux principaux lieux. Le choix du jour idéal dépendra surtout de la publication des animations et de l'âge des enfants qui vous accompagnent.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même action payante, si une offre partenaire pertinente permet réellement l'achat ou la réservation, utilise-la comme chemin d'action dans le corps et évite de lui faire concurrence avec un lien officiel équivalent. Conserve la source officielle dans `sources` lorsqu'elle reste nécessaire à la vérification des faits. Sans équivalent partenaire pertinent, conserve le lien officiel utile.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -134,4 +190,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
