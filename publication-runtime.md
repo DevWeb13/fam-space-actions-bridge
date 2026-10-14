@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,102 +14,188 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Isère
 - Région: Auvergne-Rhône-Alpes
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Titre de travail:** Chamrousse en famille, hiver 2026-2027: où loger entre 1650, 1700 et 1750, et que faire avec les enfants?
-
-**Angle:** aider les familles à choisir leur secteur de séjour et leurs activités à Chamrousse, station de montagne de l'Isère située au-dessus de Grenoble, plutôt que proposer un simple catalogue d'activités ou de logements. Trois pôles principaux se partagent les hébergements et les départs vers les pistes: **Chamrousse 1650 - Le Recoin**, **Chamrousse 1700 - Bachat Bouloud** et **Chamrousse 1750 - Roche Béranger**. Le **plateau de l'Arselle à 1600** constitue un quatrième lieu utile pour les activités nordiques et certaines sorties dans la neige. Les remontées mécaniques annoncent une saison **du 5 décembre 2026 au 11 avril 2027**, sous réserve des conditions d'ouverture.
-
-## Besoin du lecteur
-
-Permettre à une famille, skieuse ou non, de savoir où réserver un logement selon l'âge des enfants, la proximité des cours de ski, des espaces de luge, des commerces et des services, puis de construire un séjour qui ne se résume pas aux pistes. Expliquer les déplacements entre les quartiers, l'arrivée depuis Grenoble sans voiture, les réservations indispensables et les vrais points à vérifier avant de payer: configuration des couchages, distance réelle aux équipements, fourniture du linge, horaires des navettes pour **2026-2027**, météo, enneigement et ouverture des activités.
-
-## Valeur éditoriale
-
-- **1650 / Le Recoin:** secteur du front de neige, de la télécabine de la Croix, des commerces, de l'ESF et d'une offre de loisirs comprenant la luge, dont le Luge Park avec conditions d'âge spécifiques. Intéressant pour alterner ski et activités accessibles à pied; distinguer les espaces de luge pour enfants du Luge Park payant.
-- **1750 / Roche Béranger:** front de neige et commerces avec clubs et cours de ski, ludothèque/bibliothèque, cinéma, patinoire ou autres activités selon ouverture; secteur à examiner de près pour des enfants débutants ou un séjour où tout le monde ne skie pas.
-- **1700 / Bachat Bouloud:** village de résidences et appartements, accès aux départs d'activités, espaces ludiques pour enfants et cours selon les périodes. Examiner les distances entre chaque immeuble, les pentes et la desserte plutôt que présenter toutes les résidences comme « skis aux pieds ».
-- **1600 / plateau de l'Arselle:** domaine nordique, balades et espaces de glisse plus doux, à évoquer comme excursion depuis les trois quartiers principaux.
-- **Apprendre ou ne pas skier:** l'ESF indique des séances encadrées pour les 3-5 ans dans plusieurs secteurs; les cours sont à réserver et les tarifs de l'hiver **2025-2026** figurant sur certaines pages ne doivent pas être présentés comme les tarifs 2026-2027. Les espaces de luge pour enfants sont annoncés en accès libre, selon l'enneigement; les activités commerciales ont leurs propres conditions d'âge, de réservation et d'ouverture.
-- **Mobilité:** la ligne régulière **N93** relie Grenoble/Gières à la station et dessert plusieurs secteurs selon l'horaire. Une navette intérieure relie aussi les pôles en hiver, mais le calendrier détaillé actuellement en ligne est celui de **2025-2026** et certaines utilisations requièrent un justificatif: vérifier celui de 2026-2027 avant de le promettre. Comparer les options d'arrivée avec et sans voiture.
-- **Données temporelles:** dates d'ouverture prévues du **5 décembre 2026 au 11 avril 2027** pour la station et les remontées; les pistes et activités peuvent ouvrir plus tard ou fermer plus tôt selon la neige. Le sujet est utile maintenant pour préparer les vacances d'hiver et possède assez de matière durable pour ne pas être réduit à une annonce saisonnière.
-- **Sujets alternatifs examinés:** la grotte de Choranche, ouverte à la visite avec réservation conseillée et visite guidée d'environ une heure, fournit plutôt une sortie ponctuelle qu'un dossier de voyage familial aussi varié; le téléphérique de la Bastille à Grenoble s'apparente davantage à une visite urbaine à la journée. **Lans-en-Vercors** est écarté pour éviter un nouveau contenu centré sur le choix d'une maison de vacances, déjà traité en septembre.
-
-## Affiliation
-
-- **Action principale, séjour/hébergement: Booking.com.** [Duplex 6 personnes les Balcons de Recoin - Chamrousse 1650](https://www.booking.com/hotel/fr/duplex-6-personnes-les-balcons-de-recoin.fr.html). Appartement de 58 m² sur deux niveaux, deux chambres, cuisine équipée, jusqu'à **six couchages** annoncés, résidence avec ascenseur et casier à skis, face à la télécabine de la Croix. Pertinent pour une famille recherchant les commodités du Recoin. Parking public voisin sous réserve de places; ne pas promettre parking privé ni disponibilité pour toute la saison.
-- **Alternative de secteur: Booking.com.** [Chamrousse 1700 - Les Domaines de l'Arselle - Arolles D21, classé 3 étoiles](https://www.booking.com/hotel/fr/arolles-d21-a-chamrousse-1700.fr.html). Appartement d'environ 35 m² avec **deux chambres**, cuisine équipée, balcon et parking privé gratuit selon la fiche, à Bachat Bouloud. La fiche signale des suppléments possibles pour draps et serviettes. Vérifier capacité exacte, couchages, conditions, prix et disponibilités aux dates choisies.
-- Ces deux hébergements permettent une vraie comparaison **1650 versus 1700**, plutôt qu'une sélection artificielle de nombreux hôtels. Les fiches Booking.com servent à vérifier leurs caractéristiques commerciales, **pas** les faits sur la station. Tarifs, services inclus et annulations à actualiser selon les dates.
-- **Ski, cours, luge, forfaits:** offres officielles identifiées chez les opérateurs locaux, mais aucun billet exactement équivalent et réservable pour ces activités précises n'a été confirmé chez GetYourGuide, Tiqets ou Klook. Ne pas les remplacer par des excursions à Grenoble sans lien avec l'action visée. Les réservations officielles restent utiles faute d'équivalent partenaire vérifié.
-- Pas de justification naturelle établie pour vol, consigne ou transfert privé. La ligne N93 est l'option d'accès à documenter d'abord, sans affiliation artificielle.
-
-## Sources de départ
-
-- Office de tourisme de Chamrousse, régie des remontées mécaniques et dates de saison hiver 2026-2027: https://www.chamrousse.com/remontees-mecaniques-1.html
-- Office de tourisme, activités d'hiver en famille: https://www.chamrousse.com/activite-hiver-famille.html
-- Office de tourisme, activités autour de Chamrousse 1650 - Le Recoin: https://www.chamrousse.com/1650-centre-station-activite-hiver.html
-- Office de tourisme, activités autour de Chamrousse 1700 - Bachat Bouloud: https://www.chamrousse.com/1700-activite-hiver.html
-- Office de tourisme, activités autour de Chamrousse 1750 - Roche Béranger: https://www.chamrousse.com/1750-centre-station-activite-hiver.html
-- Office de tourisme, cours enfants ESF et âge minimal: https://www.chamrousse.com/cours-enfants-esf.html
-- Office de tourisme, espaces de luge pour les enfants: https://www.chamrousse.com/espaces-luge-enfants-chamrousse.html
-- Office de tourisme, ligne N93 depuis Grenoble, itinéraires et réservations: https://www.chamrousse.com/bus-n93-grenoble-chamrousse-fusion-ancien-t87-et-transaltitude.html
-- Office de tourisme, navette intérieure saisonnière, horaires 2025-2026 à ne pas extrapoler: https://www.chamrousse.com/navette-station-gratuite-hiver.html
-- Office de tourisme, commerces du secteur 1750: https://www.chamrousse.com/commerce-1750.html
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "voyages"
+title: "Chamrousse en famille: quel secteur choisir pour l'hiver 2026-2027?"
+subtitle: "Le Recoin à 1650, Bachat Bouloud à 1700 ou Roche Béranger à 1750: les différences qui comptent avec des enfants"
+summary: "À Chamrousse, comparez les trois quartiers où loger, les cours de ski, les luges et les sorties sans ski pour préparer un séjour en famille."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Chamrousse en famille"
+  - "Chamrousse 1650 1700 1750"
+  - "Chamrousse hiver 2026-2027"
+  - "ski enfants Chamrousse"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Chamrousse"
+  department: "Isère"
+  region: "Auvergne-Rhône-Alpes"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Chamrousse - Régie des remontées mécaniques, saison hiver et activités"
+    url: "https://www.chamrousse.com/remontees-mecaniques-1.html"
+  - title: "Chamrousse - Activités d'hiver en famille"
+    url: "https://www.chamrousse.com/activite-hiver-famille.html"
+  - title: "Chamrousse - Activités à 1650, Le Recoin"
+    url: "https://www.chamrousse.com/1650-centre-station-activite-hiver.html"
+  - title: "Chamrousse - Activités à 1700, Bachat Bouloud"
+    url: "https://www.chamrousse.com/1700-activite-hiver.html"
+  - title: "Chamrousse - Activités à 1750, Roche Béranger"
+    url: "https://www.chamrousse.com/1750-centre-station-activite-hiver.html"
+  - title: "Chamrousse - Cours ESF pour les enfants"
+    url: "https://www.chamrousse.com/cours-enfants-esf.html"
+  - title: "Chamrousse - Espaces de luge pour enfants"
+    url: "https://www.chamrousse.com/espaces-luge-enfants-chamrousse.html"
+  - title: "Chamrousse - Bus N93 depuis Grenoble et Gières"
+    url: "https://www.chamrousse.com/bus-n93-grenoble-chamrousse-fusion-ancien-t87-et-transaltitude.html"
+  - title: "Chamrousse - Navettes entre les secteurs en hiver"
+    url: "https://www.chamrousse.com/navette-station-gratuite-hiver.html"
+  - title: "Chamrousse - Commerces à 1750, Roche Béranger"
+    url: "https://www.chamrousse.com/commerce-1750.html"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Chamrousse, dans le massif de Belledonne en Isère, on peut passer quelques jours à la neige en famille sans consacrer toutes ses journées au ski. La station, au-dessus de Grenoble, est répartie entre plusieurs quartiers qui n'offrent pas exactement le même accès aux pistes, aux commerces et aux activités pour enfants. **Le choix du logement dépend donc autant de son emplacement que de son prix.**
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+Les trois secteurs où l'on trouve de nombreux hébergements sont **Chamrousse 1650 - Le Recoin**, **Chamrousse 1700 - Bachat Bouloud** et **Chamrousse 1750 - Roche Béranger**. Le plateau de l'Arselle, à 1600 mètres, complète le séjour avec le ski nordique et des sorties dans la neige.
+
+## Chamrousse 1650, Le Recoin: pour rester près des remontées et des loisirs
+
+Le Recoin est l'un des centres de la station. On y trouve le départ de la télécabine de la Croix, des commerces, des cours de ski et des activités qui permettent de varier les plaisirs. La [liste des loisirs à Chamrousse 1650](https://www.chamrousse.com/1650-centre-station-activite-hiver.html) mentionne notamment une patinoire extérieure, le Luge Park, ainsi que des activités encadrées selon les périodes.
+
+C'est un secteur intéressant pour une famille qui veut alterner une matinée de ski et un après-midi différent, sans dépendre systématiquement de la voiture. À condition, bien sûr, de réserver un hébergement à une distance raisonnable **à pied** des départs et des commerces: l'appellation « Chamrousse 1650 » ne garantit pas à elle seule que tout soit immédiatement devant l'immeuble.
+
+Le **Luge Park** mérite une distinction. Ses descentes organisées sur neige et sa luge sur rail sont des activités commerciales dont les conditions et périodes d'ouverture diffèrent des simples espaces de glisse. La fiche officielle indique notamment **6 ans minimum** pour les activités de snow luge. Une famille avec des enfants plus jeunes aura plutôt intérêt à choisir les zones de luge en accès libre.
+
+## Chamrousse 1750, Roche Béranger: pour les enfants qui débutent
+
+Roche Béranger est un autre front de neige important, avec des écoles de ski, des magasins de location et des commerces. Les [activités répertoriées à Chamrousse 1750](https://www.chamrousse.com/1750-centre-station-activite-hiver.html) comprennent aussi la bibliothèque-ludothèque municipale, le cinéma Le Schuss, un espace luge pour enfants et une formule ski avec garderie, annoncée à partir de 3 ans selon les disponibilités.
+
+Cette diversité rend le quartier pratique quand les membres d'une famille n'ont pas les mêmes envies: certains peuvent prendre un cours, tandis que d'autres privilégient la luge ou une activité à l'intérieur. Les [commerces de Roche Béranger](https://www.chamrousse.com/commerce-1750.html) comprennent des supérettes et plusieurs boutiques de location de matériel.
+
+Pour un premier séjour avec de jeunes skieurs, cherchez surtout où se trouve **le rassemblement du cours réservé**, et pas seulement la distance affichée entre l'appartement et une remontée mécanique. Traverser le quartier avec des chaussures de ski, des casques et plusieurs enfants peut peser sur l'organisation quotidienne.
+
+## Chamrousse 1700, Bachat Bouloud: pour séjourner en appartement
+
+Bachat Bouloud est un secteur composé notamment de résidences et d'appartements, avec des départs vers les pistes et des activités de montagne. La [sélection des activités à Chamrousse 1700](https://www.chamrousse.com/1700-activite-hiver.html) comprend des cours, des itinéraires de raquettes et des propositions destinées aux enfants.
+
+Ce quartier peut convenir aux familles qui privilégient un logement avec cuisine et souhaitent préparer une partie de leurs repas. Il offre aussi un **petit espace de luge adapté aux tout-petits**, distinct des pistes de luge plus rapides d'autres secteurs.
+
+Attention à ne pas considérer automatiquement tous les appartements de Bachat Bouloud comme « skis aux pieds ». Un logement peut être proche d'une piste tout en étant moins pratique pour rejoindre le lieu de rendez-vous d'un moniteur, les commerces ou l'arrêt de navette. Regardez le positionnement précis de la résidence et l'itinéraire réel jusqu'au point qui compte le plus pour votre séjour.
+
+## Le plateau de l'Arselle, à 1600 mètres: une journée différente
+
+Le plateau de l'Arselle n'est pas un quatrième quartier équivalent aux trois centres d'hébergement. C'est avant tout un secteur naturel et nordique, où l'on peut découvrir le **ski de fond**, des itinéraires de raquettes et des activités adaptées à un séjour moins centré sur les pistes alpines.
+
+La station y recense également un espace de luge à pente douce pour les très jeunes enfants. Parmi les [activités familiales proposées en hiver](https://www.chamrousse.com/activite-hiver-famille.html), figurent des cours de ski nordique et, selon les prestataires et les périodes, des sorties encadrées ou des baptêmes en chiens de traîneau.
+
+Ces activités ne sont pas toutes disponibles chaque jour et certaines demandent une réservation. Pour les balades, respectez les itinéraires ouverts, sans traverser les pistes de fond réservées aux pratiquants. La météo et l'enneigement peuvent modifier les possibilités sur place.
+
+## Premiers skis: que réserver pour un enfant?
+
+L'[École du ski français de Chamrousse](https://www.chamrousse.com/cours-enfants-esf.html) propose des séances encadrées pour les débutants de **3 à 5 ans**, notamment dans les espaces Piou-Piou de **1650, 1700 et 1750** pour le ski alpin. Des cours de ski nordique sont également proposés à 1600.
+
+La réservation est obligatoire et les séances dépendent des moniteurs disponibles. Avant de réserver votre logement, identifiez le secteur du cours, son horaire et l'équipement à fournir. La page officielle indique que le matériel n'est pas inclus dans ces séances; le tarif total peut donc comprendre le cours et la location, avec d'autres conditions propres à la formule choisie.
+
+Les prix affichés actuellement sur certaines pages correspondent encore à des saisons précédentes. Ne les considérez pas comme des tarifs garantis pour **l'hiver 2026-2027**: consultez la formule choisie directement auprès de l'ESF et vérifiez si un forfait de remontées est nécessaire.
+
+Avec un enfant qui n'a jamais chaussé de skis, réserver une activité à son âge ne signifie pas qu'il pourra enchaîner une journée entière sur les pistes. Mieux vaut prévoir aussi une possibilité de jeu ou de repos à proximité du cours.
+
+## Faire de la luge sans payer le Luge Park
+
+Les [espaces de luge pour enfants](https://www.chamrousse.com/espaces-luge-enfants-chamrousse.html) sont annoncés **en accès libre**, sous réserve d'enneigement, dans les quatre secteurs. Ils n'ont pas tous le même profil:
+
+- **1600, Arselle, et 1700, Bachat Bouloud:** pentes douces davantage adaptées aux tout-petits.
+- **1650, Le Recoin, et 1750, Roche Béranger:** espaces avec des pentes plus marquées, pour les enfants recherchant davantage de glisse.
+
+L'accès libre concerne l'espace, pas nécessairement l'équipement: il faut apporter ou louer sa luge. Les enfants restent sous la surveillance des parents.
+
+Pour une expérience différente, le Luge Park de 1650 propose des descentes sur neige ainsi qu'une luge sur rail. Les âges minimaux, horaires et tarifs sont spécifiques à chaque activité. La [régie des remontées mécaniques](https://www.chamrousse.com/remontees-mecaniques-1.html) précise que ces équipements n'ouvrent pas tous aux mêmes dates ni aux mêmes horaires.
+
+## Peut-on profiter de Chamrousse sans skier?
+
+Oui, et c'est une raison de bien choisir son quartier. À **1650**, la patinoire et la luge peuvent compléter la journée. À **1750**, le cinéma et la bibliothèque-ludothèque offrent des solutions lorsque le froid, la fatigue ou le mauvais temps rendent une longue sortie moins agréable. À **1700** et **1600**, les familles peuvent davantage se tourner vers la découverte de la neige et les espaces naturels.
+
+Des promenades en raquettes accompagnées, des jeux de piste et d'autres loisirs sont également proposés dans la [sélection officielle d'activités familiales](https://www.chamrousse.com/activite-hiver-famille.html). Chaque prestataire fixe ses propres conditions d'âge et de réservation: une activité classée « famille » n'est pas nécessairement ouverte à un enfant de 3 ans.
+
+Pour les plus jeunes, une sortie dans la neige à proximité du logement peut être aussi agréable qu'une activité payante. En revanche, les poussettes ordinaires ne sont pas adaptées à tous les cheminements enneigés: renseignez-vous sur l'état du sol et les accès aux équipements avant de prévoir un déplacement à pied.
+
+## Se déplacer depuis Grenoble et entre les quartiers
+
+Il est possible de rejoindre Chamrousse sans voiture grâce à la **ligne N93**, qui dessert la station depuis Grenoble ou Gières selon le jour et la période de l'année. La [fiche officielle du bus N93](https://www.chamrousse.com/bus-n93-grenoble-chamrousse-fusion-ancien-t87-et-transaltitude.html) indique des départs de Gières Gare Universités en semaine hors vacances scolaires, et depuis Grenoble ou Gières selon les périodes; elle recommande fortement de réserver sa place.
+
+Les tarifs actuellement mentionnés sur cette fiche sont ceux de **2025-2026**. Pour l'hiver **2026-2027**, vérifiez les tarifs, horaires, points de départ et conditions d'achat avant de réserver un trajet, surtout avec des bagages et du matériel.
+
+Une [navette de station](https://www.chamrousse.com/navette-station-gratuite-hiver.html) relie en saison hivernale **1650, 1700, 1750 et le plateau de l'Arselle**. Mais le planning encore publié est celui de **2025-2026**. Il prévoit des justificatifs liés à une activité ou à un forfait de remontées mécaniques, avec des exceptions pour certains enfants et accompagnants: il serait donc trompeur de garantir dès maintenant une navette gratuite et sans condition pour tous en 2026-2027.
+
+Ce point est décisif si vous logez dans un secteur et avez réservé le cours de ski des enfants dans un autre. Attendez la fiche de navette de la nouvelle saison avant de compter sur une liaison précise, notamment tôt le matin ou le soir.
+
+## Quand ouvre la station pour l'hiver 2026-2027?
+
+Chamrousse annonce une saison d'hiver **du 5 décembre 2026 au 11 avril 2027**. Ces dates concernent l'ouverture prévue de la station et des remontées mécaniques, et ne garantissent pas que toutes les pistes, la luge ou le domaine nordique fonctionnent dès le premier jour.
+
+Les [périodes indicatives d'exploitation](https://www.chamrousse.com/remontees-mecaniques-1.html) diffèrent selon les équipements: le domaine alpin doit fonctionner globalement de décembre à début avril, le Luge Park sur neige plutôt de mi-décembre à fin mars, et les activités restent dépendantes de la météo et de l'enneigement.
+
+Pour un séjour en début de décembre ou en toute fin de saison, vérifiez les ouvertures effectives avant de réserver des activités non remboursables. Le fait que Chamrousse soit une station de montagne accessible toute l'année ne signifie pas que son domaine skiable reste ouvert douze mois sur douze.
+
+## Avant de réserver le logement: les critères qui changent le séjour
+
+Un appartement avec cuisine est utile pour les repas en famille, mais son descriptif commercial ne suffit pas à prévoir l'organisation des journées. Regardez surtout:
+
+- **La distance au vrai point de rendez-vous** du cours de ski ou à l'activité qui compte pour vos enfants, et pas seulement au « centre station ».
+- **Les couchages inclus:** lits dans des chambres séparées ou canapé-lit dans le séjour, capacité réelle et présence éventuelle d'un lit bébé.
+- **Les équipements et suppléments:** linge, ménage, local à skis, ascenseur, stationnement, arrivée tardive et conditions d'annulation.
+- **Les déplacements:** arrêt de bus, fréquence de la navette réellement applicable à vos dates, et relief entre l'immeuble et les commerces.
+
+Pour une famille avec des enfants en apprentissage, un hébergement près de leur école de ski peut faire davantage gagner en confort qu'une vue sur les pistes. Pour une famille dont personne ne skie, être proche des commerces, d'une piste de luge libre et de loisirs accessibles peut compter davantage que l'accès direct à une remontée.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même action payante, si une offre partenaire pertinente permet réellement l'achat ou la réservation, utilise-la comme chemin d'action dans le corps et évite de lui faire concurrence avec un lien officiel équivalent. Conserve la source officielle dans `sources` lorsqu'elle reste nécessaire à la vérification des faits. Sans équivalent partenaire pertinent, conserve le lien officiel utile.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -138,4 +224,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
