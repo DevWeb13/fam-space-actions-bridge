@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les faits utilisés sont liés naturellement dans le corps et présents dans `sources`. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Salon du livre jeunesse de Montreuil 2026: billet gratuit et visite en famille"
-subtitle: "Du 25 au 30 novembre: jours, horaires, accès et activités pour préparer la sortie"
-summary: "Salon du livre et de la presse jeunesse 2026 à Montreuil: entrée gratuite avec billet individuel obligatoire, horaires par jour, rencontres et accès en famille."
+title: "Salon du livre jeunesse de Montreuil 2026: billets gratuits, horaires et visite en famille"
+subtitle: Du 25 au 30 novembre, choisissez votre jour et préparez une visite à Paris Montreuil Expo avec les enfants
+summary: "Billet gratuit obligatoire pour chaque enfant et adulte, horaires des six journées, activités, métro, accessibilité et services: l'essentiel pour organiser le Salon du livre jeunesse de Montreuil 2026."
 category: evenements
 location:
   city: Montreuil
@@ -72,19 +77,21 @@ keywords:
   - Montreuil salon du livre avec enfants novembre
 eventEndsAt: 2026-11-30
 sources:
-  - title: SLPJ - Salon 2026, calendrier officiel et programmation
+  - title: SLPJ - Salon 2026 et thème de la 42e édition
     url: https://slpj.fr/salon/
-  - title: SLPJ - Billetterie officielle 2026
+  - title: SLPJ - Billetterie gratuite 2026
     url: https://slpj.fr/billetterie/
-  - title: Ville de Montreuil - Salon du livre et de la presse jeunesse 2026
-    url: https://www.montreuil.fr/slpj
-  - title: SLPJ - Accessibilité et accueil des visiteurs
-    url: https://slpj.fr/salon/accessibilite/
-  - title: SLPJ - Exposition de la 42e édition
+  - title: SLPJ - Préparer sa venue, horaires et informations pratiques 2026
+    url: https://slpj.fr/salon/preparer-sa-venue/
+  - title: SLPJ - Exposition À la croisée des images
     url: https://slpj.fr/salon/exposition/
+  - title: Ville de Montreuil - Salon du livre et de la presse jeunesse
+    url: https://www.montreuil.fr/slpj
+  - title: SLPJ - Accessibilité (informations partiellement datées de 2025)
+    url: https://slpj.fr/salon/accessibilite/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: salon-du-livre-jeunesse-de-montreuil-2026-billet-gratuit-et-visite-en-famille
   decision: Choisir le jour et les horaires adaptés à la visite avec des enfants, réserver un billet gratuit pour chaque membre de la famille et organiser les activités et l'accès à Paris Montreuil Expo sans confondre gratuité et entrée sans billet.
@@ -96,44 +103,71 @@ radar:
     basis: Opportunité saisonnière vérifiée via « SLPJ - Salon 2026, calendrier officiel et programmation »; aucune page forte GSC n'est requise.
 ---
 
-## Mission retenue
-Préparer une visite familiale du 42e Salon du livre et de la presse jeunesse en Seine-Saint-Denis, «Aux frontières du réel», du mercredi 25 au lundi 30 novembre 2026 à Paris Montreuil Expo, 128 rue de Paris à Montreuil. L'article aide à choisir son jour et à obtenir les billets gratuits, pas à résumer toute l'actualité de l'édition jeunesse.
+Du mercredi 25 au lundi 30 novembre 2026, le **Salon du livre et de la presse jeunesse** revient à Paris Montreuil Expo, en Seine-Saint-Denis. Cette 42e édition, intitulée «Aux frontières du réel», propose aux familles de découvrir des livres, des illustrations, des rencontres et des créations. **L'entrée est gratuite, mais chaque visiteur, même un enfant, doit avoir son propre billet.** C'est la première chose à prévoir avant de choisir vos animations.
 
-## Pourquoi cette mission
-Le meilleur refresh GSC, Carte Tattoo Isère, est classé «uncertain»: zéro requête comparable, aucune perte de position démontrée; l'article sur master couvre déjà montant de 60 à 120 €, bonus Caf, partenaires, demande et échéances, sans lacune indépendante prioritaire. Une expansion de la page forte «Transports à Paris avec des enfants» répéterait une comparaison déjà approfondie, avec plusieurs prolongements existants. L'opportunité Montreuil est datée, officiellement confirmée et son billet gratuit est disponible depuis le 5 octobre. Parmi 681 articles du catalogue et l'historique Radar, aucun ne couvre ce Salon; «Partir en Livre 2026» relève d'un autre événement estival. Publication traite Chamrousse, Destination Vincennes et Haut-Rhin: aucun conflit éditorial direct.
+## Réserver les billets gratuits pour toute la famille
 
-## Décision du lecteur
-Réserver gratuitement autant de billets que de visiteurs, enfants compris, puis choisir un jour et une plage horaire pour découvrir avec eux livres, rencontres et créations, en tenant compte de l'affluence, de l'accès et des besoins particuliers.
+Le [site officiel de la billetterie](https://slpj.fr/billetterie/) permet de réserver les entrées. Prenez **un billet pour chaque adulte et chaque enfant** et gardez-les sur votre téléphone ou imprimez-les pour les présenter à l'arrivée. Gratuit ne veut donc pas dire entrée libre sans réservation.
 
-## Faits à traiter
-- Dates: 25-30 novembre 2026; 42e édition, thème «Aux frontières du réel». Lieu: Paris Montreuil Expo, 128 rue de Paris, 93100 Montreuil.
-- Horaires publiés par la Ville: mercredi 25 et jeudi 26, 9h-18h; vendredi 27, 9h-21h; samedi 28, 9h-20h; dimanche 29, 10h-19h; lundi 30, 9h-18h (journée professionnelle également ouverte à tous les publics). Vérifier toute évolution du programme avant rédaction.
-- Entrée 100 % gratuite, mais réservation d'un billet personnel obligatoire pour chaque enfant et adulte, à présenter sur smartphone ou papier. Distinguer la réservation individuelle et les inscriptions spécifiques des groupes scolaires/associatifs.
-- Contenu annoncé: rencontres, dédicaces, lectures, expositions, ateliers, bande dessinée et presse jeunesse. Exposition 2026 «À la croisée des images». Ne pas inventer d'âge minimum, de créneaux ou de gratuité séparée pour les ateliers non détaillés; mentionner que la programmation peut évoluer.
-- Transports: métro 9 Robespierre à proximité; confronter le trajet aux informations officielles d'accessibilité et éviter d'appliquer sans vérification les horaires «heures creuses» de 2025 figurant encore sur certaines pages. Accueil de personnes en situation de handicap, entrée dédiée et dispositifs sensoriels à préciser avec prudence.
-- Choix selon la famille: différencier vendredi nocturne, samedi/dimanche et jours de semaine sans affirmer qu'un créneau sera calme en l'absence de données 2026. Ne pas confondre accès gratuit et achats de livres éventuels.
+Vous venez avec une école, un centre de loisirs, une association ou une autre structure? Les groupes disposent de [formulaires d'inscription spécifiques](https://slpj.fr/salon/preparer-sa-venue/), différents de la billetterie individuelle. Leurs visites sont également gratuites, mais les modalités d'organisation ne sont pas celles d'une famille venant librement.
 
-## Sources de départ
-Programme 2026 du SLPJ, billetterie officielle, page de la Ville de Montreuil pour les horaires, pages officielles de l'exposition et de l'accessibilité. Recouper spécifiquement les informations datées de 2025 dans la page accessibilité avant de les attribuer à 2026.
+## Quel jour choisir du 25 au 30 novembre?
 
-## Affiliation
-Aucun billet payant pour l'événement: placer l'accès à la billetterie gratuite officielle au premier plan et éviter toute offre concurrente. Pour un séjour avec nuitée, l'ibis Styles Paris Mairie de Montreuil figure sur Booking.com avec des chambres familiales; c'est une option secondaire, sans prix, disponibilité ni capacité supposés. L'établissement est vers Mairie de Montreuil, pas à l'entrée du Salon: inviter à vérifier le trajet.
+Voici les [horaires annoncés pour 2026](https://www.montreuil.fr/slpj), à prendre en compte selon l'école, les temps de trajet et la fatigue des plus jeunes:
 
-## Continuations internes
-Un lien contextuel vers «Transports à Paris avec des enfants: quel titre choisir pour payer juste?» (/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/) peut aider les familles venant de Paris, sans répéter le comparatif des tickets. «Partir en Livre 2026» concerne un autre événement déjà passé; ne pas le présenter comme la programmation du Salon.
+- **Mercredi 25 novembre, 9h-18h:** une visite en journée, notamment pour les enfants qui n'ont pas classe.
+- **Jeudi 26 novembre, 9h-18h:** possible pour les familles disponibles en semaine.
+- **Vendredi 27 novembre, 9h-21h:** la nocturne permet de venir en fin de journée, mais une sortie tardive ne convient pas forcément aux plus petits.
+- **Samedi 28 novembre, 9h-20h:** une grande plage de visite pour les familles qui travaillent la semaine.
+- **Dimanche 29 novembre, 10h-19h:** une autre possibilité le week-end, avec une ouverture plus tardive le matin.
+- **Lundi 30 novembre, 9h-18h:** la journée professionnelle **reste ouverte à tous les publics**.
+
+Pour une première visite avec un jeune enfant, mieux vaut prévoir un parcours court et une marge pour les pauses plutôt que chercher à tout voir. Si vous venez pour rencontrer un auteur ou participer à un atelier précis, choisissez votre jour **après avoir vérifié son horaire**. Aucun de ces jours ne peut être présenté comme garanti «calme»: les conseils d'heures creuses encore visibles sur certaines pages du Salon concernent l'édition 2025.
+
+## Que faire avec les enfants?
+
+Le Salon rassemble littérature jeunesse, bande dessinée et presse jeunesse. Au programme annoncé par [l'organisateur](https://slpj.fr/salon/): lectures, rencontres, dédicaces, ateliers, performances et expositions. Cela permet aussi bien de feuilleter des livres que de découvrir les personnes qui les écrivent et les dessinent.
+
+Parmi les découvertes de l'édition 2026, l'exposition [«À la croisée des images»](https://slpj.fr/salon/exposition/) joue avec les passages entre réel et fiction, les images en grand format et les installations. C'est une piste intéressante si les enfants aiment observer et explorer, même sans viser une dédicace particulière.
+
+Avant de partir, consultez le programme du jour et les conditions des activités qui vous intéressent: la présence d'un auteur, les horaires et les modalités d'accès aux ateliers peuvent évoluer. Ne supposez pas qu'un atelier accueille tous les âges ou qu'il est accessible sans inscription tant que cela n'est pas précisé. L'entrée au Salon est gratuite, **pas les livres que vous choisiriez d'acheter** sur les stands.
+
+## Rejoindre Paris Montreuil Expo
+
+Le Salon se déroule au **128, rue de Paris, 93100 Montreuil**, et non aux bureaux de l'association organisatrice. La [page officielle pour préparer sa venue](https://slpj.fr/salon/preparer-sa-venue/) indique:
+
+- **Métro ligne 9:** station **Robespierre**, sortie 2 «Rue Barbès».
+- **Bus:** lignes **102 et 318**, arrêt Robespierre.
+- **À vélo:** des stations Vélib' sont disponibles à proximité.
+
+Si vous arrivez de Paris avec plusieurs enfants, notre guide [Transports à Paris avec des enfants: quel titre choisir pour payer juste?](/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/) aide à comparer les titres de transport sans multiplier les dépenses.
+
+### Accessibilité et visite avec des besoins particuliers
+
+L'organisateur annonce pour 2026 une **entrée dédiée Porte C, rue Marcel Dufriche**, des ascenseurs, des kits sensoriels et des boucles magnétiques. Des fauteuils roulants sont également annoncés à cette entrée. Les [informations pratiques actualisées](https://slpj.fr/salon/preparer-sa-venue/) permettent de préparer l'accueil; pour les activités adaptées, vérifiez les créneaux publiés avant votre visite.
+
+Attention au trajet si vous utilisez un fauteuil roulant ou une poussette difficile à porter: **Robespierre n'est pas une station de métro équipée d'ascenseurs**, d'après les [indications d'accessibilité du Salon](https://slpj.fr/salon/accessibilite/). Vérifiez un itinéraire accessible adapté à votre point de départ plutôt que de retenir automatiquement la station la plus proche.
+
+## Repas, vestiaire et bagages: ce qu'il faut savoir
+
+Selon la [FAQ de l'organisateur](https://slpj.fr/salon/preparer-sa-venue/), des cafétérias se trouvent sur les mezzanines, accessibles par ascenseur ou escalier. **Il n'y a pas d'espace dédié au pique-nique** dans le Salon. Prévoyez donc une pause repas adaptée au rythme des enfants et à votre budget.
+
+Le **vestiaire** est situé sur une mezzanine: **2 € par vêtement, deux articles maximum** selon la tarification publiée. Une **consigne à bagages** se trouve à l'entrée rue Marcel Dufriche, à **2 € par bagage**. Les valises et sacs de grande contenance ne sont pas autorisés dans l'enceinte du Salon: mieux vaut éviter de venir chargé, notamment avec des achats et des affaires d'enfants à porter toute la journée.
+
+Pour les familles venant de loin, le [ibis Styles Paris Mairie de Montreuil sur Booking.com](https://www.booking.com/hotel/fr/ibis-styles-mairie-de-montreuil.fr.html) est une piste pour chercher une chambre adaptée à une nuit sur place. Vérifiez la capacité, la disponibilité, le prix aux dates du Salon **et le trajet jusqu'à Paris Montreuil Expo**: l'hôtel se situe du côté de Mairie de Montreuil, pas à l'entrée de l'événement.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
+- /articles/evenements/les-expressifs-2026-a-poitiers-trois-jours-de-spectacles-gratuits/ | Les Expressifs 2026 à Poitiers: trois jours de spectacles gratuits | evenements | Poitiers, Vienne, Nouvelle-Aquitaine
+- /articles/bons-plans/avignonnais-palais-des-papes-et-pont-gratuits-le-week-end/ | Avignonnais: Palais des Papes et Pont gratuits le week-end | bons-plans | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
 - /articles/evenements/partir-en-livre-2026-en-famille/ | Partir en Livre 2026: trouver une animation jeunesse avant le 19 juillet | evenements
-- /articles/parentalite/laep-a-colmar-ou-aller-gratuitement-avec-un-enfant-de-0-a-6-ans/ | LAEP à Colmar: où aller gratuitement avec un enfant de 0 à 6 ans | parentalite | Colmar, Haut-Rhin, Grand Est
-- /articles/sorties/vacances-de-la-toussaint-2026-au-louvre-quelles-activites-choisir-avec-des-enfants/ | Vacances de la Toussaint 2026 au Louvre: le programme famille du 17 octobre au 1er novembre | sorties | Paris, Paris, Île-de-France
-- /articles/bons-plans/la-roche-jagu-en-famille-a-l-automne-hiver-2026-parc-gratuit-tarifs-et-jours-d-ouverture/ | La Roche-Jagu en famille à l'automne-hiver 2026: parc gratuit, tarifs et jours d'ouverture | bons-plans | Ploëzal, Côtes-d'Armor, Bretagne
-- /articles/evenements/concert-routes-provence-cassis-2026/ | Concert gratuit à Cassis le 13 août 2026 | evenements | Cassis, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur
-- /articles/maison/composteur-gratuit-a-orleans-metropole-comment-en-profiter-en-2026/ | Composteur gratuit à Orléans Métropole: comment en profiter en 2026 | maison | Orléans, Loiret, Centre-Val de Loire
-- /articles/voyages/auberge-de-jeunesse-avec-des-enfants-faut-il-reserver-une-chambre-privee/ | Auberge de jeunesse avec des enfants: faut-il réserver une chambre privée? | voyages
-- /articles/evenements/coeur-de-ville-en-lumieres-2026-avec-des-enfants-comment-preparer-la-soiree-sans-voiture/ | Cœur de Ville en Lumières 2026 avec des enfants: comment préparer la soirée sans voiture? | evenements | Montpellier, Hérault, Occitanie
+- /articles/parentalite/ateliers-parents-malins-dans-l-oise-quels-rendez-vous-gratuits-choisir-avant-fin-2026/ | Ateliers Parents Malins dans l'Oise: quels rendez-vous gratuits choisir avant fin 2026 ? | parentalite | Plusieurs communes, Oise, Hauts-de-France
+- /articles/evenements/rues-barrees-auxerre-2026-famille/ | Rues Barrées 2026 à Auxerre: 53 spectacles gratuits en famille | evenements | Auxerre, Yonne, Bourgogne-Franche-Comté
+- /articles/activites/parc-de-courzieu-en-famille-tarifs-horaires-et-conseils-pour-la-visite/ | Parc de Courzieu en famille: tarifs, horaires et conseils pour la visite | activites | Courzieu, Rhône, Auvergne-Rhône-Alpes
+- /articles/sorties/musee-de-la-bd-a-angouleme-en-famille-tarifs-horaires-et-conseils-de-visite/ | Musée de la BD à Angoulême en famille: tarifs, horaires et conseils de visite | sorties | Angoulême, Charente, Nouvelle-Aquitaine
+- /articles/activites/parc-animalier-d-ecouves-en-famille-tarifs-horaires-et-conseils-pour-la-visite/ | Parc animalier d'Ecouves en famille: tarifs, horaires et conseils pour la visite | activites | Le Bouillon, Orne, Normandie
 - /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | Monument jeu d'enfant 2026 à Saint-Denis: atelier Dagobert le 17 octobre | evenements | Saint-Denis, Seine-Saint-Denis, Île-de-France
 - /articles/sorties/musee-de-l-air-et-de-l-espace-a-la-toussaint-2026-quelle-activite-choisir-selon-l-age/ | Toussaint 2026 au Musée de l'Air et de l'Espace: quelle activité choisir avec un enfant? | sorties | Le Bourget, Seine-Saint-Denis, Île-de-France
 - /articles/evenements/ateliers-au-jardin-de-la-pmi-a-bobigny-quelles-dates-choisir-cet-automne/ | Ateliers au jardin de la PMI à Bobigny: quelles dates choisir cet automne? | evenements | Bobigny, Seine-Saint-Denis, Île-de-France
@@ -160,7 +194,7 @@ Un lien contextuel vers «Transports à Paris avec des enfants: quel titre chois
 - opportunity | /articles/evenements/halloween-2026-au-safari-de-peaugres-animations-et-lumieres-sauvages/ | 2026-10-13T05:01:12.150Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | 2026-10-13T09:50:29.435Z
 - opportunity | /articles/sorties/musee-de-l-air-et-de-l-espace-a-la-toussaint-2026-quelle-activite-choisir-selon-l-age/ | 2026-10-05T20:22:10.692Z
-- opportunity | /articles/sorties/vacances-de-la-toussaint-2026-au-louvre-quelles-activites-choisir-avec-des-enfants/ | 2026-10-03T17:26:28.881Z
+- opportunity | /articles/evenements/vacances-royales-2026-a-versailles-animations-napoleon-dates-et-billets-en-famille/ | 2026-10-14T18:43:15.620Z
 
 ### Phases 2 et 3
 
