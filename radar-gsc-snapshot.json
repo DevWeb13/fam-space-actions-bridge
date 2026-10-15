@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-14T04:26:13.937Z",
-  "dataThrough": "2026-10-11",
-  "from": "2026-09-14",
+  "generatedAt": "2026-10-15T06:53:46.851Z",
+  "dataThrough": "2026-10-12",
+  "from": "2026-09-15",
   "refresh": [
     {
       "url": "/articles/bons-plans/carte-tattoo-isere-2026-2027-comment-obtenir-60-a-120-pour-les-activites-d-un-collegien/",
@@ -14,22 +14,22 @@
         "region": "Auvergne-Rhône-Alpes"
       },
       "publishedAt": "2026-09-12T18:04:35+02:00",
-      "ageDays": 32,
-      "peakStart": "2026-09-14",
-      "peakEnd": "2026-09-20",
-      "recentStart": "2026-10-05",
-      "recentEnd": "2026-10-11",
-      "peakImpressions": 195,
-      "recentImpressions": 13,
-      "score": 182,
+      "ageDays": 33,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 186,
+      "recentImpressions": 15,
+      "score": 171,
       "signal": "uncertain",
       "commonQueries": 0,
       "positionDelta": null,
       "impressionRatio": 0,
       "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
       "focusQueries": [
-        "carte tatoo",
         "carte tattoo isère montant",
+        "carte tatoo",
         "carte tattoo",
         "carte tattoo montant",
         "montant carte tatoo"
@@ -40,14 +40,14 @@
       "title": "EduConnect pour les parents: activer son compte et retrouver les démarches scolaires",
       "category": "parentalite",
       "publishedAt": "2026-09-12T20:02:41+02:00",
-      "ageDays": 32,
+      "ageDays": 33,
       "peakStart": "2026-09-15",
       "peakEnd": "2026-09-21",
-      "recentStart": "2026-10-05",
-      "recentEnd": "2026-10-11",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
       "peakImpressions": 209,
-      "recentImpressions": 47,
-      "score": 162,
+      "recentImpressions": 42,
+      "score": 167,
       "signal": "uncertain",
       "commonQueries": 0,
       "positionDelta": null,
@@ -71,14 +71,14 @@
         "region": "Île-de-France"
       },
       "publishedAt": "2026-09-13T16:03:15+02:00",
-      "ageDays": 31,
+      "ageDays": 32,
       "peakStart": "2026-09-16",
       "peakEnd": "2026-09-22",
-      "recentStart": "2026-10-05",
-      "recentEnd": "2026-10-11",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
       "peakImpressions": 182,
-      "recentImpressions": 22,
-      "score": 160,
+      "recentImpressions": 21,
+      "score": 161,
       "signal": "uncertain",
       "commonQueries": 0,
       "positionDelta": null,
@@ -93,60 +93,33 @@
       ]
     },
     {
-      "url": "/articles/vie-pratique/rennes-avec-des-enfants-les-transports-sont-gratuits-avant-12-ans-mais-pas-sans-carte/",
-      "title": "Rennes avec des enfants: transports gratuits avant 12 ans, comment ça marche?",
-      "category": "vie-pratique",
+      "url": "/articles/evenements/arbora-lumina-a-harcourt-ce-qu-il-faut-prevoir-avec-des-enfants/",
+      "title": "Arbora Lumina à Harcourt: ce qu'il faut prévoir avec des enfants",
+      "category": "evenements",
       "location": {
-        "city": "Rennes",
-        "department": "Ille-et-Vilaine",
-        "region": "Bretagne"
+        "city": "Harcourt",
+        "department": "Eure",
+        "region": "Normandie"
       },
-      "publishedAt": "2026-09-07T00:02:33+02:00",
-      "ageDays": 37,
-      "peakStart": "2026-09-14",
-      "peakEnd": "2026-09-20",
-      "recentStart": "2026-10-05",
-      "recentEnd": "2026-10-11",
-      "peakImpressions": 165,
-      "recentImpressions": 40,
-      "score": 125,
+      "publishedAt": "2026-09-15T19:00:19+02:00",
+      "ageDays": 30,
+      "peakStart": "2026-09-18",
+      "peakEnd": "2026-09-24",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 143,
+      "recentImpressions": 20,
+      "score": 123,
       "signal": "uncertain",
       "commonQueries": 0,
       "positionDelta": null,
       "impressionRatio": 0,
       "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
       "focusQueries": [
-        "pass pluriel",
-        "metro gratuit enfant",
-        "pass pluriel rennes",
-        "transport gratuit rennes samedi"
-      ]
-    },
-    {
-      "url": "/articles/sorties/aquarium-reunion-fermeture-2026-visite-famille/",
-      "title": "Aquarium de La Réunion fermé depuis le 17 août 2026: quand pourra-t-on revenir en famille ?",
-      "category": "sorties",
-      "location": {
-        "city": "Saint-Gilles-les-Bains",
-        "department": "La Réunion",
-        "region": "La Réunion"
-      },
-      "publishedAt": "2026-07-22T11:57:00+02:00",
-      "ageDays": 84,
-      "peakStart": "2026-09-14",
-      "peakEnd": "2026-09-20",
-      "recentStart": "2026-10-05",
-      "recentEnd": "2026-10-11",
-      "peakImpressions": 156,
-      "recentImpressions": 32,
-      "score": 124,
-      "signal": "uncertain",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
-      "focusQueries": [
-        "aquarium de la réunion tarifs 2026"
+        "arbora lumina",
+        "arbora lumina horaire",
+        "arbora lumina harcourt tarif",
+        "arbora lumina harcourt"
       ]
     },
     {
@@ -154,18 +127,18 @@
       "title": "Petite section: peut-on alléger les après-midis à l'école maternelle?",
       "category": "parentalite",
       "publishedAt": "2026-08-28T12:03:36+02:00",
-      "ageDays": 47,
+      "ageDays": 48,
       "peakStart": "2026-09-15",
       "peakEnd": "2026-09-21",
-      "recentStart": "2026-10-05",
-      "recentEnd": "2026-10-11",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
       "peakImpressions": 211,
-      "recentImpressions": 88,
-      "score": 123,
+      "recentImpressions": 90,
+      "score": 121,
       "signal": "uncertain",
       "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": 1.222,
+      "impressionRatio": 1.111,
       "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
       "focusQueries": [
         "amenagement ecole maternelle",
@@ -173,6 +146,35 @@
         "dérogation école après-midi petite section",
         "aménagement temps scolaire",
         "dérogation sieste petite section 2025"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/tarification-solidaire-naolib-a-nantes-combien-paie-une-famille-et-comment-faire-la-demande/",
+      "title": "Tarification solidaire Naolib à Nantes: combien paie une famille et comment faire la demande?",
+      "category": "vie-pratique",
+      "location": {
+        "city": "Nantes",
+        "department": "Loire-Atlantique",
+        "region": "Pays de la Loire"
+      },
+      "publishedAt": "2026-09-05T04:00:05+02:00",
+      "ageDays": 40,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 141,
+      "recentImpressions": 24,
+      "score": 117,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "tarification solidaire",
+        "tarif solidaire naolib nantes",
+        "tarification solidaire tan"
       ]
     },
     {
@@ -185,14 +187,14 @@
         "region": "Auvergne-Rhône-Alpes"
       },
       "publishedAt": "2026-09-05T09:59:12+02:00",
-      "ageDays": 39,
-      "peakStart": "2026-09-14",
-      "peakEnd": "2026-09-20",
-      "recentStart": "2026-10-05",
-      "recentEnd": "2026-10-11",
-      "peakImpressions": 142,
-      "recentImpressions": 22,
-      "score": 120,
+      "ageDays": 40,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 141,
+      "recentImpressions": 28,
+      "score": 113,
       "signal": "uncertain",
       "commonQueries": 0,
       "positionDelta": null,
@@ -207,6 +209,94 @@
       ]
     },
     {
+      "url": "/articles/sorties/aquarium-reunion-fermeture-2026-visite-famille/",
+      "title": "Aquarium de La Réunion fermé depuis le 17 août 2026: quand pourra-t-on revenir en famille ?",
+      "category": "sorties",
+      "location": {
+        "city": "Saint-Gilles-les-Bains",
+        "department": "La Réunion",
+        "region": "La Réunion"
+      },
+      "publishedAt": "2026-07-22T11:57:00+02:00",
+      "ageDays": 85,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 145,
+      "recentImpressions": 34,
+      "score": 111,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "aquarium de la réunion tarifs 2026"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/rennes-avec-des-enfants-les-transports-sont-gratuits-avant-12-ans-mais-pas-sans-carte/",
+      "title": "Rennes avec des enfants: transports gratuits avant 12 ans, comment ça marche?",
+      "category": "vie-pratique",
+      "location": {
+        "city": "Rennes",
+        "department": "Ille-et-Vilaine",
+        "region": "Bretagne"
+      },
+      "publishedAt": "2026-09-07T00:02:33+02:00",
+      "ageDays": 38,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 147,
+      "recentImpressions": 41,
+      "score": 106,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "pass pluriel",
+        "metro gratuit enfant",
+        "pass pluriel rennes",
+        "transport gratuit rennes samedi"
+      ]
+    },
+    {
+      "url": "/articles/cuisine/cueillir-pommes-et-poires-a-mezieres-lez-clery-ce-qu-il-faut-verifier-avant-de-partir/",
+      "title": "Cueillir pommes et poires à Mézières-lez-Cléry: ce qu'il faut vérifier avant de partir",
+      "category": "cuisine",
+      "location": {
+        "city": "Mézières-lez-Cléry",
+        "department": "Loiret",
+        "region": "Centre-Val de Loire"
+      },
+      "publishedAt": "2026-09-04T16:04:39+02:00",
+      "ageDays": 41,
+      "peakStart": "2026-09-16",
+      "peakEnd": "2026-09-22",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 107,
+      "recentImpressions": 8,
+      "score": 99,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "cueillette pommes mezieres lez clery",
+        "cueillette de pomme clery st andre",
+        "cueillette pommes et poires",
+        "cueillette pommes loiret",
+        "quelle prix"
+      ]
+    },
+    {
       "url": "/articles/bons-plans/carte-top-dep-art-comment-utiliser-les-45-et-les-4-sorties-offertes-dans-la-drome/",
       "title": "Carte Top Dép'Art: comment utiliser les 45 € et les 4 sorties offertes dans la Drôme",
       "category": "bons-plans",
@@ -216,14 +306,14 @@
         "region": "Auvergne-Rhône-Alpes"
       },
       "publishedAt": "2026-09-04T18:01:50+02:00",
-      "ageDays": 40,
-      "peakStart": "2026-09-14",
-      "peakEnd": "2026-09-20",
-      "recentStart": "2026-10-05",
-      "recentEnd": "2026-10-11",
-      "peakImpressions": 118,
+      "ageDays": 41,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 98,
       "recentImpressions": 1,
-      "score": 117,
+      "score": 97,
       "signal": "uncertain",
       "commonQueries": 0,
       "positionDelta": null,
@@ -238,169 +328,18 @@
       ]
     },
     {
-      "url": "/articles/vie-pratique/tarification-solidaire-naolib-a-nantes-combien-paie-une-famille-et-comment-faire-la-demande/",
-      "title": "Tarification solidaire Naolib à Nantes: combien paie une famille et comment faire la demande?",
-      "category": "vie-pratique",
-      "location": {
-        "city": "Nantes",
-        "department": "Loire-Atlantique",
-        "region": "Pays de la Loire"
-      },
-      "publishedAt": "2026-09-05T04:00:05+02:00",
-      "ageDays": 39,
-      "peakStart": "2026-09-15",
-      "peakEnd": "2026-09-21",
-      "recentStart": "2026-10-05",
-      "recentEnd": "2026-10-11",
-      "peakImpressions": 141,
-      "recentImpressions": 27,
-      "score": 114,
-      "signal": "uncertain",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
-      "focusQueries": [
-        "tarification solidaire",
-        "tarif solidaire naolib nantes",
-        "tarification solidaire tan"
-      ]
-    },
-    {
-      "url": "/articles/evenements/arbora-lumina-a-harcourt-ce-qu-il-faut-prevoir-avec-des-enfants/",
-      "title": "Arbora Lumina à Harcourt: ce qu'il faut prévoir avec des enfants",
-      "category": "evenements",
-      "location": {
-        "city": "Harcourt",
-        "department": "Eure",
-        "region": "Normandie"
-      },
-      "publishedAt": "2026-09-15T19:00:19+02:00",
-      "ageDays": 29,
-      "peakStart": "2026-09-18",
-      "peakEnd": "2026-09-24",
-      "recentStart": "2026-10-05",
-      "recentEnd": "2026-10-11",
-      "peakImpressions": 143,
-      "recentImpressions": 28,
-      "score": 111.167,
-      "signal": "uncertain",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
-      "focusQueries": [
-        "arbora lumina",
-        "arbora lumina horaire",
-        "arbora lumina harcourt tarif",
-        "arbora lumina harcourt"
-      ]
-    },
-    {
-      "url": "/articles/vie-pratique/quel-ticket-twisto-choisir-a-caen-avec-des-enfants/",
-      "title": "Quel ticket Twisto choisir à Caen avec des enfants?",
-      "category": "vie-pratique",
-      "location": {
-        "city": "Caen",
-        "department": "Calvados",
-        "region": "Normandie"
-      },
-      "publishedAt": "2026-09-07T11:04:46+02:00",
-      "ageDays": 37,
-      "peakStart": "2026-09-14",
-      "peakEnd": "2026-09-20",
-      "recentStart": "2026-10-05",
-      "recentEnd": "2026-10-11",
-      "peakImpressions": 148,
-      "recentImpressions": 40,
-      "score": 108,
-      "signal": "uncertain",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
-      "focusQueries": [
-        "prix ticket twisto caen",
-        "ticket famille twisto",
-        "ticket tram caen",
-        "ticket twisto prix",
-        "prix ticket twisto"
-      ]
-    },
-    {
-      "url": "/articles/cuisine/cueillir-pommes-et-poires-a-mezieres-lez-clery-ce-qu-il-faut-verifier-avant-de-partir/",
-      "title": "Cueillir pommes et poires à Mézières-lez-Cléry: ce qu'il faut vérifier avant de partir",
-      "category": "cuisine",
-      "location": {
-        "city": "Mézières-lez-Cléry",
-        "department": "Loiret",
-        "region": "Centre-Val de Loire"
-      },
-      "publishedAt": "2026-09-04T16:04:39+02:00",
-      "ageDays": 40,
-      "peakStart": "2026-09-14",
-      "peakEnd": "2026-09-20",
-      "recentStart": "2026-10-05",
-      "recentEnd": "2026-10-11",
-      "peakImpressions": 108,
-      "recentImpressions": 5,
-      "score": 103,
-      "signal": "uncertain",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
-      "focusQueries": [
-        "cueillette pommes mezieres lez clery",
-        "cueillette pommes et poires",
-        "cueillette pommes loiret",
-        "quelle prix"
-      ]
-    },
-    {
-      "url": "/articles/bons-plans/musees-gratuits-autour-de-rouen-lesquels-choisir-avec-des-enfants/",
-      "title": "Musées gratuits autour de Rouen: lesquels choisir avec des enfants ?",
-      "category": "bons-plans",
-      "location": {
-        "city": "Rouen",
-        "department": "Seine-Maritime",
-        "region": "Normandie"
-      },
-      "publishedAt": "2026-09-08T22:03:31+02:00",
-      "ageDays": 36,
-      "peakStart": "2026-09-14",
-      "peakEnd": "2026-09-20",
-      "recentStart": "2026-10-05",
-      "recentEnd": "2026-10-11",
-      "peakImpressions": 110,
-      "recentImpressions": 10,
-      "score": 100,
-      "signal": "uncertain",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
-      "focusQueries": [
-        "musée gratuit rouen",
-        "ludobulle rouen",
-        "musée rouen gratuit",
-        "musee gratuit rouen",
-        "musee gratuit"
-      ]
-    },
-    {
       "url": "/articles/vie-pratique/demenagement-comment-changer-d-ecole-maternelle-ou-elementaire-sans-rater-une-etape/",
       "title": "Déménagement: comment changer d'école maternelle ou élémentaire sans rater une étape",
       "category": "vie-pratique",
       "publishedAt": "2026-09-03T08:02:20+02:00",
-      "ageDays": 41,
+      "ageDays": 42,
       "peakStart": "2026-09-15",
       "peakEnd": "2026-09-21",
-      "recentStart": "2026-10-05",
-      "recentEnd": "2026-10-11",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
       "peakImpressions": 112,
-      "recentImpressions": 12,
-      "score": 100,
+      "recentImpressions": 17,
+      "score": 95,
       "signal": "uncertain",
       "commonQueries": 0,
       "positionDelta": null,
@@ -415,24 +354,86 @@
       ]
     },
     {
+      "url": "/articles/vie-pratique/quel-ticket-twisto-choisir-a-caen-avec-des-enfants/",
+      "title": "Quel ticket Twisto choisir à Caen avec des enfants?",
+      "category": "vie-pratique",
+      "location": {
+        "city": "Caen",
+        "department": "Calvados",
+        "region": "Normandie"
+      },
+      "publishedAt": "2026-09-07T11:04:46+02:00",
+      "ageDays": 38,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 125,
+      "recentImpressions": 31,
+      "score": 94,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "prix ticket twisto caen",
+        "ticket tram caen",
+        "ticket twisto prix",
+        "prix ticket twisto",
+        "ticket 24h twisto prix"
+      ]
+    },
+    {
       "url": "/articles/bons-plans/carte-avantage-adulte-sncf-quand-est-elle-interessante-avec-des-enfants/",
       "title": "Carte Avantage Adulte SNCF: quand est-elle intéressante avec des enfants?",
       "category": "bons-plans",
       "publishedAt": "2026-08-29T16:41:39+02:00",
-      "ageDays": 46,
+      "ageDays": 47,
       "peakStart": "2026-09-28",
       "peakEnd": "2026-10-04",
-      "recentStart": "2026-10-05",
-      "recentEnd": "2026-10-11",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
       "peakImpressions": 238,
-      "recentImpressions": 152,
-      "score": 86,
+      "recentImpressions": 149,
+      "score": 89,
       "signal": "uncertain",
       "commonQueries": 0,
       "positionDelta": null,
       "impressionRatio": null,
       "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
       "focusQueries": []
+    },
+    {
+      "url": "/articles/activites/la-cite-de-la-mer-a-cherbourg-en-famille-tarifs-duree-et-conseils-de-visite/",
+      "title": "La Cité de la Mer à Cherbourg en famille: billets, tarifs et durée",
+      "category": "activites",
+      "location": {
+        "city": "Cherbourg-en-Cotentin",
+        "department": "Manche",
+        "region": "Normandie"
+      },
+      "publishedAt": "2026-08-18T15:06:21+02:00",
+      "ageDays": 58,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 132,
+      "recentImpressions": 48,
+      "score": 84,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0.067,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "cité de la mer cherbourg tarif",
+        "cité de la mer cherbourg horaires",
+        "prix entree cite de la mer cherbourg",
+        "le redoutable sous-marin prix",
+        "aquarium cherbourg"
+      ]
     }
   ],
   "strongPages": [
@@ -445,24 +446,10 @@
         "department": "Haute-Saône",
         "region": "Bourgogne-Franche-Comté"
       },
-      "recentImpressions": 229,
-      "recentClicks": 6,
-      "recentPosition": 7.345,
-      "retention": 0.884
-    },
-    {
-      "url": "/articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/",
-      "title": "Gastronomades 2026 à Angoulême en famille: faut-il prévoir le week-end ?",
-      "category": "evenements",
-      "location": {
-        "city": "Angoulême",
-        "department": "Charente",
-        "region": "Nouvelle-Aquitaine"
-      },
-      "recentImpressions": 60,
-      "recentClicks": 4,
-      "recentPosition": 6.833,
-      "retention": 1.2
+      "recentImpressions": 221,
+      "recentClicks": 8,
+      "recentPosition": 7.439,
+      "retention": 0.686
     },
     {
       "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
@@ -473,33 +460,33 @@
         "department": "Haute-Garonne",
         "region": "Occitanie"
       },
-      "recentImpressions": 80,
-      "recentClicks": 3,
-      "recentPosition": 5.338,
-      "retention": 0.721
+      "recentImpressions": 82,
+      "recentClicks": 4,
+      "recentPosition": 5.098,
+      "retention": 0.641
+    },
+    {
+      "url": "/articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/",
+      "title": "Gastronomades 2026 à Angoulême en famille: faut-il prévoir le week-end ?",
+      "category": "evenements",
+      "location": {
+        "city": "Angoulême",
+        "department": "Charente",
+        "region": "Nouvelle-Aquitaine"
+      },
+      "recentImpressions": 67,
+      "recentClicks": 4,
+      "recentPosition": 7.149,
+      "retention": 1.34
     },
     {
       "url": "/articles/bons-plans/pass-culture-en-duo-comment-un-jeune-peut-inviter-un-parent-ou-un-proche/",
       "title": "Pass Culture en duo: comment un jeune peut inviter un parent ou un proche",
       "category": "bons-plans",
-      "recentImpressions": 64,
+      "recentImpressions": 73,
       "recentClicks": 3,
-      "recentPosition": 5.297,
-      "retention": 0.711
-    },
-    {
-      "url": "/articles/maison/decheteries-de-caen-la-mer-qr-code-ou-plaque-obligatoires-depuis-septembre-2026/",
-      "title": "Déchèteries de Caen la mer: QR code ou plaque obligatoires depuis septembre 2026",
-      "category": "maison",
-      "location": {
-        "city": "Caen",
-        "department": "Calvados",
-        "region": "Normandie"
-      },
-      "recentImpressions": 53,
-      "recentClicks": 3,
-      "recentPosition": 9.245,
-      "retention": 0.791
+      "recentPosition": 5.411,
+      "retention": 0.811
     },
     {
       "url": "/articles/voyages/futuroween-2026-futuroscope-billet-programme-enfants/",
@@ -510,24 +497,24 @@
         "department": "Vienne",
         "region": "Nouvelle-Aquitaine"
       },
-      "recentImpressions": 307,
+      "recentImpressions": 382,
       "recentClicks": 2,
-      "recentPosition": 8.59,
-      "retention": 0.832
+      "recentPosition": 8.809,
+      "retention": 0.997
     },
     {
-      "url": "/articles/evenements/ci-t-as-la-trouille-2026-a-saint-jean-de-monts-que-faire-et-que-reserver/",
-      "title": "Ci t’as la trouille 2026 à Saint-Jean-de-Monts: que faire et que réserver ?",
-      "category": "evenements",
+      "url": "/articles/maison/decheteries-de-caen-la-mer-qr-code-ou-plaque-obligatoires-depuis-septembre-2026/",
+      "title": "Déchèteries de Caen la mer: QR code ou plaque obligatoires depuis septembre 2026",
+      "category": "maison",
       "location": {
-        "city": "Saint-Jean-de-Monts",
-        "department": "Vendée",
-        "region": "Pays de la Loire"
+        "city": "Caen",
+        "department": "Calvados",
+        "region": "Normandie"
       },
-      "recentImpressions": 42,
+      "recentImpressions": 49,
       "recentClicks": 2,
-      "recentPosition": 5.19,
-      "retention": 0.955
+      "recentPosition": 9.653,
+      "retention": 0.731
     },
     {
       "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
@@ -538,10 +525,10 @@
         "department": "Paris",
         "region": "Île-de-France"
       },
-      "recentImpressions": 905,
+      "recentImpressions": 926,
       "recentClicks": 1,
-      "recentPosition": 8.747,
-      "retention": 0.945
+      "recentPosition": 8.733,
+      "retention": 0.967
     },
     {
       "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
@@ -552,10 +539,10 @@
         "department": "Paris",
         "region": "Île-de-France"
       },
-      "recentImpressions": 140,
+      "recentImpressions": 141,
       "recentClicks": 1,
-      "recentPosition": 7.7,
-      "retention": 1.129
+      "recentPosition": 7.723,
+      "retention": 1.076
     },
     {
       "url": "/articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/",
@@ -566,14 +553,28 @@
         "department": "Gironde",
         "region": "Nouvelle-Aquitaine"
       },
-      "recentImpressions": 75,
+      "recentImpressions": 56,
       "recentClicks": 1,
-      "recentPosition": 5.813,
-      "retention": 0.815
+      "recentPosition": 5.5,
+      "retention": 0.505
+    },
+    {
+      "url": "/articles/evenements/ci-t-as-la-trouille-2026-a-saint-jean-de-monts-que-faire-et-que-reserver/",
+      "title": "Ci t’as la trouille 2026 à Saint-Jean-de-Monts: que faire et que réserver ?",
+      "category": "evenements",
+      "location": {
+        "city": "Saint-Jean-de-Monts",
+        "department": "Vendée",
+        "region": "Pays de la Loire"
+      },
+      "recentImpressions": 39,
+      "recentClicks": 1,
+      "recentPosition": 5.359,
+      "retention": 0.848
     }
   ],
   "excluded": {
-    "expired": 79,
+    "expired": 80,
     "cooling": 7
   },
   "warnings": [
