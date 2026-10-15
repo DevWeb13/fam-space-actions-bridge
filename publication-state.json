@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261015-1405-titre-de-travail-dechets-verts-a-toulouse-metropole-en-2027-collecte-g",
+  "lastProcessedCommit": "cbb5ed46385f111e30705b9ae45ef3d6fe6f58d5"
 }
