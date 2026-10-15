@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261015-2035-titre-de-travail-musee-de-la-biere-a-stenay-en-famille-parcours-enfant",
+  "lastProcessedCommit": "3884aca257fca4e52bb47953bfb41fbfb9da0c1f"
 }
