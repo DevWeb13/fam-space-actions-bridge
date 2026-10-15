@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "EduConnect pour les parents: activer son compte et retrouver les démarches scolaires"
-subtitle: Un seul accès pour les enfants du foyer, l'ENT, le livret scolaire et les services proposés par l'établissement
-summary: "Première connexion, enfant absent, numéro non reconnu: les étapes utiles pour accéder à EduConnect et Scolarité Services sans tourner en rond."
+title: "ÉduConnect parents: activer son compte et retrouver tous ses enfants"
+subtitle: SMS ou courriel, rattachement d'un enfant absent et accès aux démarches scolaires
+summary: Comment activer ÉduConnect par SMS ou courriel, retrouver un enfant absent et accéder aux services scolaires avec un compte parent.
 slug: educonnect-pour-les-parents-activer-son-compte-et-retrouver-les-demarches-scolaires
 status: published
 publishedAt: 2026-09-12T20:02:41+02:00
@@ -77,7 +82,7 @@ image:
   alt: Enfants utilisant un ordinateur portable, illustration des services numériques liés à la scolarité
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/parentalite/(2026)/(09)/educonnect-pour-les-parents-activer-son-compte-et-retrouver-les-demarches-scolaires/index.md
   targetSha: 23219f53f3d3bbd07e3a9a08c51588e1ae790de5
@@ -104,36 +109,57 @@ radar:
       - educonnect espace parent
       - educonnect parent
       - il me manque un enfant sur educonnect
+sources:
+  - title: ÉduConnect - Activation du compte
+    url: https://moncompte.educonnect.education.gouv.fr/educt-self-service/activation/nouveauParcoursUtilisateur
+  - title: Éducation nationale - Assistance Scolarité Services
+    url: https://assistanceteleservices.education.gouv.fr/
+  - title: ÉduConnect - Identifiant oublié
+    url: https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliLogin/recupererLoginResponsable
+  - title: ÉduConnect - Mot de passe oublié
+    url: https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliMdp/recupererMotDePasseResponsable
+  - title: Ministère - Présentation ÉduConnect
+    url: https://www.education.gouv.fr/educonnect-un-compte-unique-pour-suivre-et-accompagner-la-scolarite-de-mon-enfant-455196
 ---
 
-## Mission retenue
-Actualiser l'article ÉduConnect pour les parents. Corriger l'affirmation selon laquelle le téléphone portable est indispensable à toute activation: le parcours officiel actuel propose **SMS ou courriel**, à condition que le numéro ou l'adresse aient déjà été communiqués à l'établissement. Expliquer concrètement le rattachement d'un enfant absent.
+<!-- article-image-credit -->
+*Photo: [Wikipresence](https://commons.wikimedia.org/wiki/File:Kids_with_laptop.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC au 12 octobre classe ÉduConnect parmi les refreshs prioritaires (209 impressions en semaine haute contre 42 récemment, signal **uncertain**, aucune requête comparable: ne pas attribuer cette baisse à une perte de classement). Les recherches «educonnect parent» et «il me manque un enfant sur educonnect» correspondent à deux corrections indépendamment vérifiées. La Carte Tattoo Isère, mieux classée dans le snapshot, couvre déjà les montants et démarches essentiels sans défaut confirmé. Une expansion autour des pages fortes sur les transports parisiens ou Futuroween risquerait de redoubler leurs guides existants; l'opportunité saisonnière Chambord à la Toussaint dispose déjà d'un guide complet sur le château, tandis que la Publication active traite le Musée de la Bière à Stenay. Le refresh ÉduConnect corrige une information pratique erronée, utile toute l'année.
+**ÉduConnect** permet aux parents d'accéder aux services scolaires de leurs enfants avec un compte unique, de l'école au lycée. Pour une première activation, le parcours actuel propose **SMS ou courriel**, si ces coordonnées ont déjà été communiquées à l'établissement. Le portail [Scolarité Services](https://teleservices.education.gouv.fr/) est accessible avec ÉduConnect ou FranceConnect.
 
-## Décision du lecteur
-Identifier la voie d'activation ou de récupération réellement possible avec les coordonnées déjà enregistrées, puis faire apparaître tous ses enfants dans le compte représentant légal.
+## Première connexion: téléphone ou adresse mail?
 
-## Faits à traiter
-- **Activation:** la page d'activation officielle actuelle propose «Par SMS» et «Par mail»; l'un des deux contacts doit déjà être connu de l'école ou de l'établissement. L'ancienne page générale du ministère indique encore «numéro indispensable»: signaler le décalage documentaire, sans prétendre que le courriel est toujours possible si non enregistré.
-- **Enfant manquant:** l'assistance officielle recommande de demander à l'établissement les identifiants provisoires de l'autre compte, puis dans le compte actif: **«Mon Compte» > «Mes enfants» > «Ajouter des enfants depuis un autre compte»**. Pour une erreur d'état civil ou de coordonnées, demander correction à l'établissement; délai indiqué de 24 à 48 heures pour certaines modifications.
-- **Récupération:** identifiant et mot de passe oubliés peuvent être récupérés par SMS ou courriel lorsque les coordonnées du compte le permettent; sinon contacter l'établissement.
-- **Anti-régression:** conserver les informations toujours utiles de l'article: un compte responsable pour plusieurs enfants, accès Scolarité Services et FranceConnect, différence avec l'ENT, démarches variables selon établissement et période, «Mes services», assistance en ligne, numéro national **0 809 54 06 06** et horaires **lundi-vendredi 8h-20h, samedi 8h-12h**. Ne pas multiplier les répétitions de ces conseils ni retirer les cas particuliers.
-- Le lien de l'article existant vers le portail officiel est une démarche gratuite sans concurrence commerciale.
+Le [formulaire officiel d'activation](https://moncompte.educonnect.education.gouv.fr/educt-self-service/activation/nouveauParcoursUtilisateur) propose **«Par SMS»** et **«Par mail»**. Choisissez le contact enregistré dans le dossier scolaire, puis suivez les instructions affichées.
 
-## Sources de départ
-- Activation actuelle, choix SMS/courriel: https://moncompte.educonnect.education.gouv.fr/educt-self-service/activation/nouveauParcoursUtilisateur
-- Assistance officielle, enfant absent, téléphone non reconnu, délai de correction: https://assistanceteleservices.education.gouv.fr/
-- Récupération identifiant: https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliLogin/recupererLoginResponsable
-- Récupération mot de passe: https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliMdp/recupererMotDePasseResponsable
-- Présentation générale du ministère (texte plus ancien sur le téléphone): https://www.education.gouv.fr/educonnect-un-compte-unique-pour-suivre-et-accompagner-la-scolarite-de-mon-enfant-455196
+Si votre numéro ou votre adresse ne sont pas reconnus, demandez à l'établissement de vérifier vos coordonnées et votre qualité de représentant légal. Contrairement à une ancienne page générale du ministère qui présente le téléphone comme indispensable, le formulaire d'activation actuel propose explicitement les deux moyens. Une adresse non enregistrée auprès de l'établissement ne suffit toutefois pas.
 
-## Affiliation
-Aucune offre partenaire adaptée à cette démarche publique et gratuite; ne pas ajouter d'hébergement ni de liens commerciaux.
+## Un enfant manque dans votre compte: comment le rattacher?
 
-## Continuations internes
-Aucun article Fam Space voisin ne traite précisément du rattachement ÉduConnect. Préserver les liens officiels utiles et éviter de développer ici les procédures détaillées de bourse, d'inscription ou d'orientation: expliquer où les retrouver dans Scolarité Services.
+Un parent n'a pas besoin d'un compte différent pour chaque enfant. L'[assistance officielle](https://assistanceteleservices.education.gouv.fr/) indique comment regrouper les enfants déjà associés à des comptes distincts:
+
+1. Demandez à l'établissement de l'enfant absent les accès provisoires nécessaires au regroupement.
+2. Connectez-vous à votre compte parent actif.
+3. Ouvrez **«Mon Compte»**, puis **«Mes enfants»**.
+4. Sélectionnez **«Ajouter des enfants depuis un autre compte»** et suivez les étapes.
+
+Si la date de naissance d'un enfant est incorrecte, l'établissement doit rectifier son dossier. La prise en compte de la correction peut demander **24 à 48 heures**. Le même délai est indiqué pour certaines corrections de numéro de téléphone.
+
+## Identifiant ou mot de passe oublié
+
+Les pages officielles permettent de [retrouver son identifiant](https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliLogin/recupererLoginResponsable) ou de [réinitialiser son mot de passe](https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliMdp/recupererMotDePasseResponsable) par **SMS ou courriel**, avec les coordonnées déjà liées au compte. Si vous n'y avez plus accès, contactez l'école ou l'établissement.
+
+## Scolarité Services, livret scolaire et ENT
+
+Après connexion, la rubrique **«Mes services»** du portail Scolarité Services présente les démarches ouvertes pour l'enfant sélectionné: fiche de renseignements, livret scolaire, inscriptions, bourses et orientation selon l'établissement. Le portail est accessible **24 heures sur 24, 7 jours sur 7**, sur ordinateur, smartphone ou tablette.
+
+L'affichage varie selon les établissements et les périodes. Si un service n'apparaît pas, vérifiez **l'enfant sélectionné**, puis les dates d'ouverture auprès de l'établissement. Une démarche clôturée peut ne plus être proposée.
+
+**ÉduConnect** est le compte national d'authentification; **l'ENT** est l'espace numérique de travail de l'établissement ou de la collectivité. Selon le dispositif local, ÉduConnect permet aussi d'accéder à l'ENT sans autre compte parent. Utilisez le lien communiqué par l'établissement.
+
+## Qui contacter en cas de blocage?
+
+Pour corriger une information du dossier scolaire ou un rattachement, adressez-vous à l'établissement. Pour les difficultés de connexion et les démarches en ligne, l'Éducation nationale propose une [assistance Scolarité Services](https://assistanceteleservices.education.gouv.fr/) et le **0 809 54 06 06** (prix d'un appel local), annoncé du **lundi au vendredi de 8h à 20h** et le **samedi de 8h à 12h**, heures de métropole, pendant les périodes d'ouverture des démarches en ligne. Les modalités d'assistance peuvent aussi dépendre de l'académie.
 
 ## Article source exact à préserver et améliorer
 
@@ -234,28 +260,28 @@ Pour retrouver les informations officielles sur le fonctionnement du compte, le 
 
 ### Articles proches préparés mécaniquement
 
-- /articles/parentalite/futurs-parents-dans-les-ardennes-quelles-demarches-preparer-avec-la-caf/ | Futurs parents dans les Ardennes: quelles démarches préparer avec la Caf? | parentalite | Charleville-Mézières, Ardennes, Grand Est
-- /articles/vie-pratique/cantine-et-periscolaire-a-roanne-les-demarches-avant-la-rentree-2026/ | Cantine et périscolaire à Roanne: les démarches avant la rentrée 2026 | vie-pratique | Roanne, Loire, Auvergne-Rhône-Alpes
-- /articles/maison/termites-en-corse-du-sud-les-demarches-a-connaitre-pour-une-maison/ | Termites en Corse-du-Sud: les démarches à connaître pour une maison | maison | Ajaccio, Corse-du-Sud, Corse
+- /articles/parentalite/la-maison-des-petits-pas-a-troyes-un-lieu-pour-souffler-avec-son-jeune-enfant/ | La Maison des Petits Pas à Troyes: un lieu pour souffler avec son jeune enfant | parentalite | Troyes, Aube, Grand Est
+- /articles/vie-pratique/projet-accueil-individualise-enfant-ecole-pai/ | Projet d’accueil individualisé à l’école: comment préparer le PAI de son enfant | vie-pratique
+- /articles/parentalite/cafe-papote-a-lyon-4e-ou-echanger-gratuitement-avec-d-autres-parents/ | Café Papote à Lyon 4e: où échanger gratuitement avec d'autres parents | parentalite | Lyon, Rhône, Auvergne-Rhône-Alpes
+- /articles/parentalite/laep-a-caen-4-lieux-pour-venir-avec-un-enfant-sans-inscription/ | LAEP à Caen: 4 lieux pour venir avec un enfant sans inscription | parentalite | Caen, Calvados, Normandie
+- /articles/parentalite/laep-a-nantes-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | LAEP à Nantes: où aller avec un enfant de moins de 6 ans? | parentalite | Nantes, Loire-Atlantique, Pays de la Loire
+- /articles/parentalite/laep-a-grenoble-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | LAEP à Grenoble: où aller avec un enfant de moins de 6 ans? | parentalite | Grenoble, Isère, Auvergne-Rhône-Alpes
+- /articles/parentalite/maisons-des-1000-jours-dans-l-herault-ou-trouver-un-accompagnement-gratuit/ | Maisons des 1000 jours dans l'Hérault: où trouver un accompagnement gratuit | parentalite | Montpellier, Hérault, Occitanie
 - /articles/evenements/premiere-rentree-en-6e-a-dole-un-atelier-gratuit-pour-les-familles/ | Première rentrée en 6e à Dole: un atelier gratuit pour les familles | evenements | Dole, Jura, Bourgogne-Franche-Comté
-- /articles/parentalite/bulles-girondines-a-villenave-d-ornon-un-espace-pour-les-parents-et-les-jeunes-enfants/ | Bulles Girondines à Villenave-d'Ornon: un espace pour les parents et les jeunes enfants | parentalite | Villenave-d'Ornon, Gironde, Nouvelle-Aquitaine
-- /articles/vie-pratique/frais-scolaires-en-cote-d-or-quelles-aides-demander-au-departement/ | Frais scolaires en Côte-d'Or: quelles aides demander au Département? | vie-pratique | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/evenements/biblis-en-folie-2026-en-famille/ | Biblis en folie 2026: trois jours pour découvrir la médiathèque avec les enfants | evenements
-- /articles/parentalite/l-ilot-des-familles-a-tarbes-quels-ateliers-pour-les-parents-d-enfants-de-0-a-6-ans/ | L'îlot des Familles à Tarbes: quels ateliers pour les parents d'enfants de 0 à 6 ans? | parentalite | Tarbes, Hautes-Pyrénées, Occitanie
 - /articles/parentalite/laep-a-bastia-et-en-balagne-deux-lieux-gratuits-pour-les-tout-petits/ | LAEP à Bastia et en Balagne: deux lieux gratuits pour les tout-petits | parentalite | Bastia, Haute-Corse, Corse
 - /articles/parentalite/kaz-1000-jours-au-port-ateliers-gratuits-pour-les-futurs-et-jeunes-parents/ | Kaz’1000 jours au Port: ateliers gratuits pour les futurs et jeunes parents | parentalite | Le Port, La Réunion, La Réunion
 - /articles/parentalite/laep-dans-le-cantal-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | LAEP dans le Cantal: où aller avec un enfant de moins de 6 ans | parentalite | Aurillac, Cantal, Auvergne-Rhône-Alpes
-- /articles/parentalite/laep-a-caen-4-lieux-pour-venir-avec-un-enfant-sans-inscription/ | LAEP à Caen: 4 lieux pour venir avec un enfant sans inscription | parentalite | Caen, Calvados, Normandie
 - /articles/parentalite/cercles-de-parents-en-cote-d-or-trois-seances-gratuites-pour-echanger-pendant-les-premieres-annees/ | Cercles de Parents en Côte-d'Or: trois séances gratuites pour échanger pendant les premières années | parentalite | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
 - /articles/parentalite/laep-en-seine-et-marne-ou-aller-et-comment-se-passe-une-premiere-visite/ | LAEP en Seine-et-Marne: où aller et comment se passe une première visite? | parentalite | Meaux, Seine-et-Marne, Île-de-France
-- /articles/parentalite/laep-a-nantes-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | LAEP à Nantes: où aller avec un enfant de moins de 6 ans? | parentalite | Nantes, Loire-Atlantique, Pays de la Loire
 - /articles/parentalite/montchavin-les-coches-avec-un-bebe-garderie-horaires-et-sejour-d-hiver/ | Montchavin-Les Coches avec un bébé: garderie, horaires et séjour d'hiver | parentalite | Montchavin-Les Coches, Savoie, Auvergne-Rhône-Alpes
 - /articles/parentalite/maison-des-parents-a-guingamp-quand-y-aller-et-quel-service-choisir/ | Maison des Parents à Guingamp: quand y aller et quel service choisir ? | parentalite | Guingamp, Côtes-d'Armor, Bretagne
 - /articles/parentalite/chateau-de-chamerolles-en-famille-visite-libre-ou-guidee-en-2026/ | Château de Chamerolles en famille: visite libre ou guidée en 2026 ? | parentalite | Chilleurs-aux-Bois, Loiret, Centre-Val de Loire
 - /articles/parentalite/visiter-le-chateau-de-versailles-avec-un-bebe-poussette-billets-et-parcours/ | Visiter le château de Versailles avec un bébé: poussette, billets et parcours | parentalite | Versailles, Yvelines, Île-de-France
-- /articles/parentalite/la-maison-des-petits-pas-a-troyes-un-lieu-pour-souffler-avec-son-jeune-enfant/ | La Maison des Petits Pas à Troyes: un lieu pour souffler avec son jeune enfant | parentalite | Troyes, Aube, Grand Est
-- /articles/parentalite/cafe-papote-a-lyon-4e-ou-echanger-gratuitement-avec-d-autres-parents/ | Café Papote à Lyon 4e: où échanger gratuitement avec d'autres parents | parentalite | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/parentalite/creche-a-clermont-ferrand-quand-deposer-la-pre-inscription-et-comment-la-faire/ | Crèche à Clermont-Ferrand: quand déposer la pré-inscription et comment la faire | parentalite | Clermont-Ferrand, Puy-de-Dôme, Auvergne-Rhône-Alpes
+- /articles/parentalite/educonnect-pour-les-parents-activer-son-compte-et-retrouver-les-demarches-scolaires/ | EduConnect pour les parents: activer son compte et retrouver les démarches scolaires | parentalite
+- /articles/parentalite/ateliers-parents-malins-dans-l-oise-quels-rendez-vous-gratuits-choisir-avant-fin-2026/ | Ateliers Parents Malins dans l'Oise: quels rendez-vous gratuits choisir avant fin 2026 ? | parentalite | Plusieurs communes, Oise, Hauts-de-France
+- /articles/parentalite/aide-a-domicile-caf-en-guyane-qui-peut-la-demander-et-combien-reste-t-il-a-payer/ | Aide à domicile Caf en Guyane: qui peut la demander et combien reste-t-il à payer? | parentalite | Cayenne, Guyane, Guyane
+- /articles/parentalite/maison-des-1-000-premiers-jours-a-grasse-peut-on-venir-sans-rendez-vous/ | Maison des 1 000 premiers jours à Grasse: peut-on venir sans rendez-vous? | parentalite | Grasse, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
 
 ### Historique Radar lié
 
