@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Toussaint 2026 au musée des Confluences à Lyon: spectacles et ateliers par âge"
-subtitle: "Du 17 au 31 octobre: marionnettes, ciné-science et animations, gratuites ou payantes selon la séance"
-summary: "Vacances de Toussaint 2026 au musée des Confluences de Lyon: dates, âges, réservations et prix des spectacles et ateliers pour les familles."
+title: "Toussaint 2026 au musée des Confluences: cinq rendez-vous pour les enfants"
+subtitle: "Kamishibaï, Kirikou, marionnettes et atelier à Lyon: les dates, les âges et les réservations du 21 au 29 octobre"
+summary: Au musée des Confluences de Lyon, le cycle Toussaint 2026 propose cinq rendez-vous pour les 3-8 ans et plus. Dates, séances, gratuités, prix et accès en famille.
 category: evenements
 location:
   city: Lyon
@@ -69,25 +74,29 @@ location:
 keywords:
   - musée des Confluences Toussaint 2026 enfants
   - Quand les animaux s'animent Lyon 2026
-  - Confluences marionnettes Kirikou Puppet party octobre 2026
+  - Kirikou Puppet party Confluences octobre 2026
 sources:
-  - title: Musée des Confluences - Vacances d'octobre, cycle Quand les animaux s'animent
+  - title: "Musée des Confluences - Vacances d'octobre 2026: Quand les animaux s'animent"
     url: https://museedesconfluences.fr/fr/le-musee/actualites/vacances-doctobre-cycle-quand-les-animaux-saniment
-  - title: Musée des Confluences - Théâtre kamishibaï Bama et l'antilope cheval
+  - title: Musée des Confluences - Bama et l'antilope cheval
     url: https://museedesconfluences.fr/fr/agenda/theatre-kamishibai-bama-et-lantilope-cheval
   - title: Musée des Confluences - Ciné-Science Kirikou et les bêtes sauvages
     url: https://museedesconfluences.fr/fr/agenda/cine-science-kirikou-et-les-betes-sauvages
-  - title: Musée des Confluences - Déambulation et Bal poussière
+  - title: Musée des Confluences - Le Bal poussière de Congo Massa
     url: https://museedesconfluences.fr/fr/agenda/deambulation-spectacle-le-bal-poussiere-de-congo-massa
-  - title: Musée des Confluences - Conférence Animaux en mouvements
+  - title: Musée des Confluences - Animaux en mouvements
     url: https://museedesconfluences.fr/fr/agenda/conference-hauteur-denfant-animaux-en-mouvements-le-pouvoir-des-marionnettes
-  - title: Musée des Confluences - Atelier-spectacle Puppet party
+  - title: Musée des Confluences - Puppet party
     url: https://museedesconfluences.fr/fr/agenda/atelier-spectacle-puppet-party
-  - title: Musée des Confluences - Billetterie, gratuités et conditions d'accès
+  - title: Musée des Confluences - Tarifs et billetterie
     url: https://museedesconfluences.fr/fr/preparer-ma-visite/tarifs-et-billetterie
+  - title: Musée des Confluences - Venir au musée
+    url: https://museedesconfluences.fr/fr/preparer-ma-visite/comment-venir
+  - title: Musée des Confluences - Confort de visite
+    url: https://museedesconfluences.fr/fr/preparer-ma-visite/confort-de-visite
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: toussaint-2026-au-musee-des-confluences-a-lyon-spectacles-et-ateliers-par-age
   decision: Choisir la séance réellement accessible à l'âge des enfants et à la date de visite, savoir ce qui est gratuit mais à réserver, ce qui est payant, et distinguer le billet d'activité du billet des expositions.
@@ -97,34 +106,44 @@ radar:
     dataThrough: 2026-10-12
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Musée des Confluences - Vacances d'octobre, cycle Quand les animaux s'animent »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-10-31
 ---
 
-## Mission retenue
-Un article événementiel sur le cycle «Quand les animaux s'animent» du musée des Confluences, du 17 au 31 octobre 2026. L'enjeu est de choisir parmi cinq rendez-vous ponctuels de marionnettes, cinéma, spectacle et atelier selon l'âge, la date et les modalités de réservation.
+Pendant les vacances de la Toussaint, le musée des Confluences à Lyon propose le cycle **«Quand les animaux s'animent» du 17 au 31 octobre 2026**. Cinq rendez-vous sont annoncés entre le **21 et le 29 octobre**, des contes pour les 3-6 ans à un atelier de fabrication de marionnettes dès 8 ans. Attention: une séance gratuite peut nécessiter une réservation, et l'entrée aux expositions ne couvre pas automatiquement les activités payantes.
 
-## Pourquoi cette mission
-Le meilleur refresh GSC, Carte Tattoo Isère, est classé uncertain: l'article complet sur master explique déjà montants, bonus Caf, éligibilité, démarches, usages et échéances, concordant avec le Département; aucune amélioration déterminante indépendante n'est établie. Une expansion générique d'une page forte comme Futuroween ou transports à Paris ferait largement doublon avec ses contenus existants. En revanche, le programme officiel imminent du musée apporte des décisions datées et vérifiables, plusieurs séances gratuites ou payantes et des âges différents. Le module probableDuplicates appliqué au catalogue de 683 articles ne révèle aucun contenu consacré au musée des Confluences; les pages Festival Lumière à Lyon et musées de Toussaint d'autres villes traitent d'autres événements. Aucun chevauchement avec la publication en cours sur les déchets verts de Toulouse ni les destinations Vincennes et Haut-Rhin.
+## Les animations de Toussaint, date par date
 
-## Décision du lecteur
-Avec l'âge des enfants et les jours disponibles, identifier la bonne activité, réserver quand c'est nécessaire et établir le coût réel pour la famille avant de venir.
+Le [programme du musée](https://museedesconfluences.fr/fr/le-musee/actualites/vacances-doctobre-cycle-quand-les-animaux-saniment) distingue cinq propositions:
 
-## Faits à traiter
-- Cycle officiel du 17 au 31 octobre, sans présenter tous les ateliers annuels comme des animations inédites de ce cycle.
-- 21 octobre: «Bama et l'antilope cheval», 3 à 6 ans, séances à 10h30, 14h, 15h15 et 16h30, 45 minutes, gratuit SUR réservation.
-- 23 octobre: ciné-science «Kirikou et les bêtes sauvages», dès 6 ans à 14h, 1h45 avec rencontre, 5 € plein / 3 € réduit; «Bal poussière de Congo Massa», dès 3 ans, déambulation à partir de 16h puis bal gratuit en accès libre de 17h30 à 18h15. Certains espaces de la déambulation nécessitent cependant un billet d'exposition: ne pas annoncer toute la déambulation comme gratuite.
-- 27 octobre: conférence «Animaux en mouvements», dès 7 ans, à 15h, 50 minutes, gratuite, réservations à contrôler.
-- 29 octobre: «Puppet party», dès 8 ans, à 10h30 et 15h, 2h, 6 € plein / 4 € réduit / 5 € abonnés; billet d'activité distinct des autres accès.
-- Distinction majeure: expositions permanentes et temporaires gratuites pour les moins de 18 ans, tarif adulte plein 12 € (réduit 7 €); une animation gratuite peut nécessiter sa réservation, et une activité payante ne donne pas automatiquement le même droit d'accès aux expositions. Moins de 13 ans accompagnés d'un adulte pour les expositions. Exposition «Animal culte» ouverte à partir du 16 octobre, âge conseillé dès 8 ans, uniquement en contexte.
-- Adresse 86 quai Perrache, Lyon 2e, ouverture de 10h30 à 18h30 tous les jours pendant les vacances scolaires zone A; contrôler modalités d'arrivée et accueil en famille dans les sources pratiques.
+- **Mercredi 21 octobre, «Bama et l'antilope cheval» (3-6 ans).** Un conte présenté en kamishibaï, théâtre d'images d'origine japonaise, autour des marionnettes d'Afrique de l'Ouest. Quatre séances de **45 minutes**, à **10h30, 14h, 15h15 et 16h30**, en galerie Émile Guimet. **Gratuit, sur réservation**, depuis la [fiche du spectacle](https://museedesconfluences.fr/fr/agenda/theatre-kamishibai-bama-et-lantilope-cheval).
+- **Vendredi 23 octobre à 14h, «Kirikou et les bêtes sauvages» (dès 6 ans).** Projection suivie d'une rencontre avec un chercheur sur les animaux dans l'art rupestre. **1h45 au total**, grand auditorium. **5 € plein tarif, 3 € réduit, 4 € abonné**. Réservation depuis la [fiche Ciné-Science](https://museedesconfluences.fr/fr/agenda/cine-science-kirikou-et-les-betes-sauvages).
+- **Vendredi 23 octobre à partir de 16h, «Le Bal poussière de Congo Massa» (dès 3 ans).** Les marionnettes géantes déambulent dans le musée de **16h à 17h30**. Le spectacle et le bal final, de **17h30 à 18h15**, sont **gratuits en accès libre**. Attention: **certains espaces traversés pendant la déambulation nécessitent un billet d'entrée aux expositions**. La [fiche officielle](https://museedesconfluences.fr/fr/agenda/deambulation-spectacle-le-bal-poussiere-de-congo-massa) précise cette distinction.
+- **Mardi 27 octobre à 15h, «Animaux en mouvements» (dès 7 ans).** Conférence accessible aux enfants sur l'art des marionnettes, au petit auditorium. **50 minutes, gratuit**. La [page de la conférence](https://museedesconfluences.fr/fr/agenda/conference-hauteur-denfant-animaux-en-mouvements-le-pouvoir-des-marionnettes) propose un lien de réservation: vérifiez les places disponibles.
+- **Jeudi 29 octobre, «Puppet party» (dès 8 ans).** Atelier-spectacle pour découvrir, fabriquer et manipuler une marionnette. Séances à **10h30 et 15h**, d'une durée de **2 heures**, en galerie Émile Guimet. **6 € plein tarif, 4 € réduit, 5 € abonné**. Réservation depuis la [fiche Puppet party](https://museedesconfluences.fr/fr/agenda/atelier-spectacle-puppet-party).
 
-## Sources de départ
-Programme officiel «Quand les animaux s'animent», fiches détaillées de chaque séance et page tarifs/billetterie du musée. Vérifier la disponibilité effective des réservations pour chaque activité plutôt que déduire une place disponible de l'existence d'un lien.
+Le 23 octobre permet de combiner deux rendez-vous, mais **le film et la déambulation n'ont pas le même âge minimum**, ni les mêmes conditions d'accès. Pour les tout-petits de 3 à 6 ans, le kamishibaï du 21 octobre ou le bal du 23 octobre sont les propositions annoncées pour leur âge. La disponibilité effective des séances est à vérifier au moment de réserver.
 
-## Affiliation
-Action principale: réservation des activités via billetterie du musée, sans substitut partenaire fiable pour ces séances. Le billet d'entrée Tiqets est actuellement indisponible. Lyon City Card via Tiqets seulement si la famille prévoit plusieurs attractions pendant un séjour, en comparant au billet musée adulte de 12 € et à la gratuité des mineurs; ne pas affirmer que le pass inclut les activités payantes. Pour un séjour de plusieurs jours, hôtel ibis Styles Lyon Centre Confluence sur Booking.com avec chambres familiales, sans garantie de prix ni de disponibilité.
+## Billet d'activité ou entrée aux expositions: quel budget?
 
-## Continuations internes
-Pas d'article Confluences équivalent dans le catalogue. Ne pas développer ici un guide général de Lyon ni de Festival Lumière 2026; ce festival dispose de sa propre page, distincte du musée. Pour les sorties lyonnaises hors musée, se limiter au contexte utile et à des liens internes réellement pertinents plutôt que forcer le maillage.
+Les [expositions permanentes et temporaires](https://museedesconfluences.fr/fr/preparer-ma-visite/tarifs-et-billetterie) coûtent **12 € par adulte au plein tarif** ou **7 € au tarif réduit**. Elles sont **gratuites pour les moins de 18 ans**. Les moins de **13 ans doivent être accompagnés d'un adulte** dans les espaces d'exposition.
+
+Ces prix concernent les **expositions**, et non automatiquement les cinq rendez-vous ci-dessus. Un spectacle gratuit peut avoir sa propre réservation; un film ou un atelier payant a sa propre tarification. Le musée précise également que, **pour une visite organisée avec médiation**, un billet d'entrée aux expositions peut être nécessaire **en plus** du billet d'activité. Vérifiez ce qui est inclus pour la séance choisie avant de payer.
+
+Si votre famille reste plusieurs jours à Lyon et prévoit d'autres visites, la [Lyon City Card proposée sur Tiqets](https://www.tiqets.com/fr/activites-attractions-lyon-c66838/billets-pour-lyon-city-card-p976069/) donne notamment accès aux expositions du musée et à différents transports et sites lyonnais. Elle **ne garantit pas l'entrée aux cinq animations du cycle**: les spectacles et ateliers doivent être vérifiés séparément. Pour la seule visite des Confluences, comparez ce pass au billet d'exposition adulte de 12 €, sachant que les mineurs bénéficient déjà de la gratuité.
+
+En complément du programme, l'exposition **«Animal culte»**, annoncée dès **8 ans** et ouverte à partir du **16 octobre**, peut intéresser les familles qui souhaitent aussi explorer les salles. Elle relève des conditions habituelles du billet d'exposition.
+
+## Se rendre au musée avec de jeunes enfants
+
+Le musée se trouve au **86 quai Perrache, Lyon 2e** et ouvre **tous les jours de 10h30 à 18h30 pendant ces vacances**. Le **tramway T1** dessert l'arrêt «musée des Confluences»; depuis **Perrache**, le musée annonce environ **10 minutes de tramway**. Certains arrêts de bus proches sont temporairement déplacés: contrôlez votre trajet sur la [page officielle d'accès](https://museedesconfluences.fr/fr/preparer-ma-visite/comment-venir).
+
+Avec une poussette, utilisez l'**entrée Groupes, à droite de l'escalier principal**. Les spectacles et conférences peuvent aussi utiliser l'entrée Auditorium, côté Rhône. Le musée met à disposition gratuitement, sur demande, **poussettes, casques anti-bruit et autres aides au confort**; des **tables à langer** se trouvent aux niveaux -1, 1 et 2. Un vestiaire gratuit accueille les sacs dans la limite du format cabine indiqué par le musée. Détails sur sa [page de confort de visite](https://museedesconfluences.fr/fr/preparer-ma-visite/confort-de-visite).
+
+## Prolonger le séjour à Lyon
+
+Pour une autre sortie familiale autour de Lyon, notre guide [Mini World Lyon en famille](/articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/) aide à préparer une visite des mondes miniatures à Vaulx-en-Velin, sans confondre ses billets avec ceux des Confluences.
+
+Si vous restez une nuit ou davantage, l'[ibis Styles Lyon Centre Confluence sur Booking.com](https://www.booking.com/hotel/fr/ibis-styles-lyon-confluence.fr.html), au **24 quai Perrache**, affiche notamment des **chambres familiales**. Indiquez l'âge des enfants avant de réserver pour connaître la capacité et le tarif correspondant aux dates souhaitées; ne présumez pas de la disponibilité pendant les vacances.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -132,12 +151,12 @@ Pas d'article Confluences équivalent dans le catalogue. Ne pas développer ici 
 
 - /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | Festival Lumière 2026: Laurel & Hardy en famille le 17 octobre à Lyon | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/vie-pratique/location-de-voiture-a-lyon-avec-des-enfants-ce-qu-il-faut-verifier-avant-de-reserver/ | Location de voiture à Lyon avec des enfants: ce qu'il faut vérifier avant de réserver | vie-pratique | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/sorties/vacances-de-la-toussaint-2026-a-la-cite-des-sciences-quels-ateliers-choisir-selon-l-age/ | Vacances de la Toussaint 2026 à la Cité des sciences: les ateliers numériques gratuits avec des enfants | sorties | Paris, Paris, Île-de-France
 - /articles/sorties/vacances-de-la-toussaint-2026-au-musee-carnavalet-quelle-activite-choisir-selon-l-age/ | Vacances de la Toussaint 2026 au musée Carnavalet: activités en famille dès 4 ans | sorties | Paris, Paris, Île-de-France
-- /articles/evenements/au-creux-de-l-oreille-2026-a-noirlac-quels-spectacles-et-ateliers-choisir-avec-les-enfants/ | Au Creux de l'Oreille 2026 à Noirlac: spectacles et ateliers en famille du 17 au 22 octobre | evenements | Bruère-Allichamps, Cher, Centre-Val de Loire
-- /articles/evenements/famille-en-fete-2026-pres-de-bordeaux-ateliers-gratuits-pour-les-0-6-ans/ | Famille en fête 2026 en Gironde: ateliers gratuits pour les 0-6 ans | evenements | Saint-Loubès, Gironde, Nouvelle-Aquitaine
+- /articles/sorties/vacances-de-la-toussaint-2026-a-la-cite-des-sciences-quels-ateliers-choisir-selon-l-age/ | Vacances de la Toussaint 2026 à la Cité des sciences: les ateliers numériques gratuits avec des enfants | sorties | Paris, Paris, Île-de-France
 - /articles/evenements/toussaint-2026-a-vaux-le-vicomte-lampe-torche-ou-carnaval-des-animaux-avec-les-enfants/ | Toussaint 2026 à Vaux-le-Vicomte: les animations pour les enfants | evenements | Maincy, Seine-et-Marne, Île-de-France
-- /articles/evenements/monument-jeu-d-enfant-2026-comment-choisir-une-visite-adaptee-a-l-age-des-enfants/ | Monument jeu d'enfant 2026: comment choisir une visite adaptée à l'âge des enfants | evenements
+- /articles/evenements/guinguette-familles-rians-2026/ | Guinguette des familles 2026 à Rians: les rendez-vous à ne pas manquer jusqu’au 12 août | evenements | Rians, Cher, Centre-Val de Loire
+- /articles/sorties/palais-roure-avignon-famille-2026/ | Palais du Roure à Avignon en famille: retour sur les rendez-vous gratuits d'août 2026 | sorties | Avignon, Vaucluse, Provence-Alpes-Côte d'Azur
+- /articles/vie-pratique/premiere-carte-d-identite-d-un-enfant-les-etapes-pour-eviter-un-rendez-vous-inutile/ | Première carte d'identité d'un enfant: les étapes pour éviter un rendez-vous inutile | vie-pratique
 - /articles/parentalite/cafe-papote-a-lyon-4e-ou-echanger-gratuitement-avec-d-autres-parents/ | Café Papote à Lyon 4e: où échanger gratuitement avec d'autres parents | parentalite | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/maison/decheteries-mobiles-a-lyon-que-peut-on-deposer-et-quand-preferer-une-decheterie-fixe/ | Déchèteries mobiles à Lyon: que peut-on déposer et quand préférer une déchèterie fixe? | maison | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/ | Mini World Lyon en famille: tarifs, durée et conseils pour la visite | bons-plans | Vaulx-en-Velin, Rhône, Auvergne-Rhône-Alpes
@@ -147,24 +166,24 @@ Pas d'article Confluences équivalent dans le catalogue. Ne pas développer ici 
 - /articles/evenements/salon-du-livre-jeunesse-de-montreuil-2026-billet-gratuit-et-visite-en-famille/ | Salon du livre jeunesse de Montreuil 2026: billets gratuits, horaires et visite en famille | evenements | Montreuil, Seine-Saint-Denis, Île-de-France
 - /articles/evenements/vacances-royales-2026-a-versailles-animations-napoleon-dates-et-billets-en-famille/ | Vacances royales 2026 à Versailles: animations Napoléon, dates et billets | evenements | Versailles, Yvelines, Île-de-France
 - /articles/evenements/rouen-givree-2026-en-famille-marche-de-noel-et-refuge-givre/ | Rouen Givrée 2026 en famille: marché de Noël et Refuge Givré | evenements | Rouen, Seine-Maritime, Normandie
+- /articles/evenements/au-creux-de-l-oreille-2026-a-noirlac-quels-spectacles-et-ateliers-choisir-avec-les-enfants/ | Au Creux de l'Oreille 2026 à Noirlac: spectacles et ateliers en famille du 17 au 22 octobre | evenements | Bruère-Allichamps, Cher, Centre-Val de Loire
 - /articles/evenements/grands-zyeux-p-tites-zoreilles-2026-quelles-seances-gratuites-avec-les-tout-petits/ | Grands Zyeux P'tites Zoreilles 2026: spectacles gratuits avec les tout-petits autour de Béziers | evenements | Béziers, Hérault, Occitanie
 - /articles/evenements/abracada-bouh-2026-a-montpellier-animations-et-billets-en-famille/ | Abracada BOUH 2026 à Montpellier: programme et tarifs au château de Flaugergues | evenements | Montpellier, Hérault, Occitanie
 - /articles/evenements/festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants/ | Les Petits Asticots 2026: spectacles, âges et réservations en famille | evenements | Chamonix-Mont-Blanc, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/evenements/fete-de-l-automne-2026-a-terra-botanica-journee-ou-terra-nocta-en-famille/ | Fête de l'Automne 2026 à Terra Botanica: animations et tarifs | evenements | Angers, Maine-et-Loire, Pays de la Loire
-- /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | Monument jeu d'enfant 2026 à Saint-Denis: atelier Dagobert le 17 octobre | evenements | Saint-Denis, Seine-Saint-Denis, Île-de-France
 
 ### Historique Radar lié
 
 - opportunity | /articles/evenements/abracada-bouh-2026-a-montpellier-animations-et-billets-en-famille/ | 2026-10-13T20:41:25.500Z
 - opportunity | /articles/evenements/au-creux-de-l-oreille-2026-a-noirlac-quels-spectacles-et-ateliers-choisir-avec-les-enfants/ | 2026-10-14T13:49:08.708Z
-- opportunity | /articles/evenements/famille-en-fete-2026-pres-de-bordeaux-ateliers-gratuits-pour-les-0-6-ans/ | 2026-10-12T08:10:30.674Z
 - opportunity | /articles/evenements/festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants/ | 2026-10-13T18:36:59.570Z
 - opportunity | /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | 2026-10-10T15:40:28.185Z
 - opportunity | /articles/evenements/fete-de-l-automne-2026-a-terra-botanica-journee-ou-terra-nocta-en-famille/ | 2026-10-13T12:37:05.098Z
 - opportunity | /articles/evenements/grands-zyeux-p-tites-zoreilles-2026-quelles-seances-gratuites-avec-les-tout-petits/ | 2026-10-14T07:31:28.976Z
-- opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | 2026-10-13T09:50:29.435Z
 - opportunity | /articles/evenements/salon-du-livre-jeunesse-de-montreuil-2026-billet-gratuit-et-visite-en-famille/ | 2026-10-15T05:30:56.094Z
 - opportunity | /articles/evenements/toussaint-2026-a-vaux-le-vicomte-lampe-torche-ou-carnaval-des-animaux-avec-les-enfants/ | 2026-10-11T11:27:54.175Z
+- opportunity | /articles/evenements/toussaint-2026-au-seaquarium-du-grau-du-roi-quel-jeu-choisir/ | 2026-10-15T12:38:21.556Z
+- opportunity | /articles/sorties/vacances-de-la-toussaint-2026-a-la-cite-des-sciences-quels-ateliers-choisir-selon-l-age/ | 2026-10-05T11:24:52.310Z
 
 ### Phases 2 et 3
 
