@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,97 +14,135 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Lot-et-Garonne
 - Région: Nouvelle-Aquitaine
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Titre de travail:** Agen en famille: pont-canal, chasse au trésor et idées pour un week-end.
-
-**Angle:** Construire une journée ou un court séjour à Agen autour de la découverte du pont-canal et du parcours gratuit Tèrra Aventura, sans confondre promenade libre et chasse au trésor de 5 km. Agen, en Lot-et-Garonne, associe un centre historique, un ouvrage d'art traversant la Garonne et des visites culturelles; l'article doit aider les familles à choisir un programme réaliste selon l'âge des enfants, la météo et la durée du séjour.
-
-## Besoin du lecteur
-
-Comprendre ce que l'on peut réellement faire avec des enfants à Agen, organiser une balade au pont-canal et/ou le circuit « Du rififi au pont-canal », prévoir une solution culturelle en cas de pluie et choisir un hébergement central si l'on reste une nuit. Distinguer la découverte libre du pont-canal du circuit de jeu complet, et signaler les distances et les éventuelles limites d'accessibilité plutôt que de présenter toutes les activités comme équivalentes.
-
-## Valeur éditoriale
-
-- **Deux expériences différentes autour du canal:** pont-canal du XIXe siècle, 23 arches, traversée libre et gratuite; circuit Tèrra Aventura « Du rififi au pont-canal » gratuit, **5 km et 2 à 3 h**, avec énigmes et application. Le circuit est signalé comme **non accessible aux personnes à mobilité réduite** par l'office de tourisme; ne pas extrapoler cette restriction à la simple visite du pont-canal.
-- **Un programme adaptable:** proposer des idées de séquençage sans promettre que le circuit de 5 km convient à tous les âges, ni additionner artificiellement des temps de visite. Penser aux pauses, à l'eau, à la marche et à un plan B intérieur.
-- **Point de vigilance majeur:** le **musée des Beaux-Arts d'Agen est fermé pour rénovation**. À compter du **29 octobre 2026**, une sélection de ses œuvres doit être présentée à **l'église des Jacobins** (« Musée en mouvement »). Ne pas suggérer la visite du musée permanent comme s'il était ouvert et vérifier les jours, tarifs, activités pour enfants et éventuelles modifications d'ouverture.
-- **Pratique familiale:** centre-ville, arrivée en train, accès au pont-canal, parcours pédestre, choix d'un pied-à-terre avec ou sans cuisine et frais de stationnement. L'article doit apporter des conseils concrets et non répéter le seul descriptif officiel du jeu.
-
-## Affiliation
-
-**Action principale:** le pont-canal est en accès libre et le Tèrra Aventura d'Agen est gratuit. Aucune offre partenaire pertinente et directement équivalente n'a été confirmée chez GetYourGuide, Tiqets ou Klook; garder les liens officiels utiles vers le parcours et le tourisme.
-
-**Besoin secondaire vérifié, hébergement au centre d'Agen:**
-
-- **Booking.com, Appart'City Confort Agen Centre:** studios et appartements avec kitchenette, option familiale, à proximité de la gare et du centre historique; parking privé payant. Intéressant pour préparer les repas en famille. Offre exacte: https://www.booking.com/hotel/fr/appart-city-agen.fr.html
-- **Booking.com, Hôtel Château des Jacobins:** hôtel du centre historique avec chambres familiales, dont une chambre familiale supérieure à deux grands lits doubles. Aucun lit bébé ou lit d'appoint annoncé: le signaler si retenu. Offre exacte: https://www.booking.com/hotel/fr/chateau-des-jacobins.fr.html
-
-Les deux établissements sont référencés à la réservation; **prix, disponibilité et capacité selon l'âge des enfants restent à vérifier aux dates choisies**. Ne pas présenter de prix observé sur une recherche datée comme un tarif garanti. Une seule offre peut suffire si le journaliste juge que deux alourdissent l'article.
-
-## Sources de départ
-
-- **Office de tourisme Destination Agen, pont-canal, accès libre, caractéristiques et accessibilité:** https://destination-agen.com/le-pont-canal/
-- **Office de tourisme Destination Agen, circuit « Du rififi au pont-canal », 5 km, 2 à 3 h, gratuit et non accessible PMR:** https://destination-agen.com/circuit-terra-aventura-du-rififi-au-pont-canal/
-- **Tèrra Aventura, liste officielle des parcours et caractéristiques du parcours d'Agen:** https://www.terra-aventura.fr/parcours?langcode=fr
-- **Musée des Beaux-Arts d'Agen, informations pratiques, travaux, lieu de repli et horaires:** https://www.musee-agen.fr/musee-pratique/informations-pratiques
-- **Musée des Beaux-Arts d'Agen, annonce « Musée en mouvement » à partir du 29 octobre 2026:** https://www.musee-agen.fr/lagenda-du-musee-dagen/evenement/musee-en-mouvement-le-musee-sexpose-hors-les-murs-1
-- **Ville d'Agen, confirmation de la fermeture temporaire du musée:** https://www.agen.fr/nous-connaitre/nos-services-1/service/musee-et-expositions
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "voyages"
+title: "Agen en famille: pont-canal, Tèrra Aventura et idées pour un week-end"
+subtitle: "Balade au-dessus de la Garonne, chasse au trésor de 5 km et découvertes du centre historique."
+summary: "Que faire à Agen avec des enfants? Du pont-canal au jeu Tèrra Aventura, voici comment organiser une journée ou un week-end sans mauvaises surprises."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Agen en famille"
+  - "pont-canal d'Agen"
+  - "Tèrra Aventura Agen"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Agen"
+  department: "Lot-et-Garonne"
+  region: "Nouvelle-Aquitaine"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Destination Agen - Le Pont Canal"
+    url: "https://destination-agen.com/le-pont-canal/"
+  - title: "Destination Agen - Circuit Tèrra Aventura Du rififi au Pont Canal"
+    url: "https://destination-agen.com/circuit-terra-aventura-du-rififi-au-pont-canal/"
+  - title: "Destination Agen - Cathédrale Saint-Caprais"
+    url: "https://www.destination-agen.com/cathedrale-saint-caprais/"
+  - title: "Musée des Beaux-Arts d'Agen - Informations pratiques"
+    url: "https://www.musee-agen.fr/musee-pratique/informations-pratiques"
+  - title: "Musée des Beaux-Arts d'Agen - Musée en mouvement"
+    url: "https://www.musee-agen.fr/lagenda-du-musee-dagen/evenement/musee-en-mouvement-le-musee-sexpose-hors-les-murs-1"
+  - title: "SNCF Connect - Gare d'Agen"
+    url: "https://www.sncf-connect.com/gares/agen"
+  - title: "Ville d'Agen - Stationnement sur voirie"
+    url: "https://www.agen.fr/vie-quotidienne/se-deplacer-et-stationner/stationnement-sur-voirie"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Agen, dans le Lot-et-Garonne, on peut regarder les bateaux passer au-dessus de la Garonne, résoudre des énigmes en famille puis flâner dans les rues du centre historique. Pour découvrir cette ville de Nouvelle-Aquitaine avec des enfants, deux façons d'aborder le pont-canal s'offrent à vous: une promenade libre, à votre rythme, ou une vraie chasse au trésor de plusieurs kilomètres. Le bon choix dépend surtout de l'envie de marcher.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Le pont-canal: une promenade gratuite qui sort de l'ordinaire
+
+Un canal qui franchit un fleuve sur un pont de pierre: c'est le spectacle du pont-canal d'Agen. Construit au XIXe siècle, cet ouvrage de **23 arches** permet au canal de Garonne de passer au-dessus de la Garonne. On peut s'y promener et observer les bateaux, sans inscription ni billet.
+
+L'[office de tourisme Destination Agen](https://destination-agen.com/le-pont-canal/) confirme que **l'accès libre est gratuit** et indique le site comme accessible aux personnes à mobilité réduite. Cette information concerne le pont-canal lui-même, pas tous les itinéraires qui peuvent y mener. Les visites guidées, lorsqu'elles sont proposées, sont payantes.
+
+Avec de jeunes enfants, inutile d'imposer une longue randonnée: la traversée et quelques arrêts pour regarder l'ouvrage suffisent à faire de cette balade un moment marquant. Prévoyez néanmoins de quoi boire et tenez les plus petits près de vous au bord de la voie d'eau.
+
+## Tèrra Aventura: 5 km d'énigmes, pas une simple traversée
+
+Pour les familles qui aiment marcher, le jeu gratuit **« Du rififi au Pont Canal »** propose une découverte d'Agen sous forme de chasse au trésor. On suit des indices et on résout des énigmes avec l'application Tèrra Aventura, dans un univers peuplé de petits personnages à collectionner, les Poï'z.
+
+Attention à la différence: le [circuit annoncé par Destination Agen](https://destination-agen.com/circuit-terra-aventura-du-rififi-au-pont-canal/) mesure **5 km** et prend **environ 2 à 3 heures**. Ce n'est pas la durée d'une simple visite du pont-canal. Le parcours complet est signalé comme **non accessible aux personnes à mobilité réduite**; ne partez pas du principe qu'il se fait sans difficulté avec une poussette.
+
+Si les enfants aiment chercher des indices et sont à l'aise avec cette distance, le jeu peut devenir l'activité principale de la journée. Sinon, choisissez la promenade libre plutôt que de vous engager dans un circuit trop long. Avant le départ, retrouvez les indications du parcours et préparez l'application.
+
+## Dans le centre historique, une autre facette d'Agen
+
+Après les berges, le centre-ville change d'ambiance: rues anciennes, places animées et **cathédrale Saint-Caprais** permettent de découvrir Agen sans enchaîner les attractions payantes.
+
+La [cathédrale Saint-Caprais](https://www.destination-agen.com/cathedrale-saint-caprais/) se visite librement et gratuitement selon l'office de tourisme, sous réserve des horaires et des célébrations. Son décor peint mérite qu'on prenne quelques minutes pour lever les yeux. Le site est toutefois signalé comme non accessible aux personnes à mobilité réduite: ce n'est donc pas une solution de remplacement universelle.
+
+## Quand il pleut: attention à la fermeture du musée
+
+Le **musée des Beaux-Arts d'Agen est fermé pour travaux**: il ne faut pas compter sur la visite de ses salles permanentes pour occuper une après-midi pluvieuse.
+
+Une partie de ses collections doit être présentée à **l'église des Jacobins, rue Richard-Cœur-de-Lion, à partir du 29 octobre 2026**, dans le cadre de [« Musée en mouvement »](https://www.musee-agen.fr/lagenda-du-musee-dagen/evenement/musee-en-mouvement-le-musee-sexpose-hors-les-murs-1). Avant cette date, ne programmez pas cette exposition comme si elle était déjà ouverte.
+
+D'après les [informations pratiques du musée](https://www.musee-agen.fr/musee-pratique/informations-pratiques), l'entrée est de **6 € au plein tarif**, et **gratuite pour les moins de 18 ans** sur justificatif. De novembre à mars, les horaires annoncés sont de 11h à 17h en semaine sauf le mardi, et de 14h à 18h le week-end; des horaires particuliers s'appliquent pendant certaines vacances scolaires et les jours fériés. Des visites-ateliers pour les familles sont prévues pendant les vacances, selon l'agenda. Vérifiez les ouvertures et les séances avant de vous déplacer.
+
+## Une journée ou un week-end: quel programme choisir?
+
+**Avec de jeunes enfants ou pour une escale courte**, commencez par le pont-canal, puis revenez vers le centre historique pour déjeuner et, si tout le monde en a envie, découvrir la cathédrale. Vous garderez du temps pour les pauses sans transformer la visite en course.
+
+**Avec des enfants marcheurs et amateurs d'énigmes**, réservez plutôt une bonne partie de la journée au circuit Tèrra Aventura. Le centre historique peut attendre la fin du parcours, ou le lendemain si vous restez une nuit.
+
+**Pour deux jours**, alternez la grande balade avec une découverte tranquille du centre-ville et, après son ouverture annoncée, l'exposition aux Jacobins. En cas de météo défavorable, inversez les activités au lieu de maintenir coûte que coûte les 5 km de jeu.
+
+## Venir à Agen et choisir où dormir
+
+Agen se rejoint en train. La [SNCF](https://www.sncf-connect.com/gares/agen) indique que la cathédrale et le cœur historique se trouvent à quelques minutes à pied de la gare: un logement central permet donc de profiter d'une partie du séjour sans voiture. Le pont-canal demande une sortie spécifique, à prévoir selon la fatigue des enfants.
+
+Pour une nuit en famille, comparez surtout la disposition des couchages, la possibilité de préparer un repas, la distance depuis la gare et les conditions de stationnement. Un appartement avec kitchenette peut être pratique avec de jeunes enfants; un hôtel central évite de multiplier les déplacements. Vérifiez la capacité réelle du logement selon l'âge des enfants plutôt que de vous fier au seul intitulé « chambre familiale ».
+
+En voiture, ne présumez pas que toutes les places du centre sont gratuites. La [ville d'Agen détaille les zones et périodes payantes](https://www.agen.fr/vie-quotidienne/se-deplacer-et-stationner/stationnement-sur-voirie), ainsi que les plages de gratuité. Pour un week-end, le coût du stationnement mérite d'entrer dans le choix de l'hébergement.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même action payante, si une offre partenaire pertinente permet réellement l'achat ou la réservation, utilise-la comme chemin d'action dans le corps et évite de lui faire concurrence avec un lien officiel équivalent. Conserve la source officielle dans `sources` lorsqu'elle reste nécessaire à la vérification des faits. Sans équivalent partenaire pertinent, conserve le lien officiel utile.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -133,4 +171,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
