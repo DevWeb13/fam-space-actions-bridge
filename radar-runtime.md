@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 3/3
+# Radar Fam Space - actualisation GSC
 
 ## Mission
 
@@ -8,204 +8,965 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 3/3
+## Snapshot GSC quotidien
 
-Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
+Le cache compact est `radar-gsc-snapshot.json` sur `main` de `DevWeb13/fam-space-actions-bridge`. Il ne contient jamais les lignes GSC brutes.
 
-Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
+Cette tâche est séparée de la sélection éditoriale. **S'il n'existe aucune branche Radar active et que le snapshot doit être renouvelé, actualise uniquement le snapshot puis termine le passage. Ne choisis pas de mission dans la même exécution.** Le passage horaire suivant effectuera la phase 1 avec le snapshot prêt.
 
-Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
+Le snapshot est réutilisable lorsqu'il a `schemaVersion: 1`, a été généré le jour courant en Europe/Paris et que `dataThrough` n'a pas plus de sept jours de retard.
 
-Ensuite:
-- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
-- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
-- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
-- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
-- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
-- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
-- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
-- ne force ni longueur ni affiliation.
+Lorsqu'un nouveau snapshot est nécessaire, utilise Windsor.ai avec le compte `sc-domain:fam-space.fr`, connector `searchconsole`, `include_fresh_data: false`. **Chaque appel `get_data` Search Analytics doit filtrer explicitement `search_type = web` avec `filters: [["search_type","eq","web"]]`.** Récupère 28 jours jusqu'à la dernière journée consolidée:
 
-Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
+- une lecture `date, clicks, impressions` pour déterminer la fin réelle;
+- quatre lectures consécutives de sept jours `date, page, clicks, impressions, position`;
+- pour les meilleurs refresh examinables, les requêtes de l'URL exacte sur `peakStart..peakEnd` et `recentStart..recentEnd`.
 
-Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
-- `summary`: contrôles et corrections réellement effectués;
-- `sources`: URLs factuelles revérifiées;
-- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
-- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+Utilise la logique de le module Radar embarqué plus bas: `unwrapRows`, `buildRadarShortlist`, `diagnoseQueries` et `probableDuplicates`. Une réponse Windsor est considérée complète lorsque `status: done`, que `data` est un tableau et que `total_rows` correspond à `data.length`, sans indicateur explicite de troncature. **Un nombre rond de lignes, notamment 1 500, n'est jamais à lui seul une preuve de plafonnement et ne doit pas arrêter Radar.** Découpe seulement la période si Windsor signale réellement une réponse incomplète/tronquée, si `total_rows` ne correspond pas au nombre de lignes reçues, ou si `unwrapRows` refuse la réponse, notamment à son seuil conservateur de 5 000 lignes par réponse. Un 429, un refus d'accès ou un plafond réellement non résolu termine le passage. Maximum 50 appels `get_data`. Les réponses brutes restent temporaires.
 
-**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlist `refresh` avec ses diagnostics compacts, `strongPages`, `excluded` et les avertissements utiles.
 
-## Règles partenaires
+## Snapshot actuellement disponible
 
-### Partenaires disponibles
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-14T04:26:13.937Z",
+  "dataThrough": "2026-10-11",
+  "from": "2026-09-14",
+  "refresh": [
+    {
+      "url": "/articles/bons-plans/carte-tattoo-isere-2026-2027-comment-obtenir-60-a-120-pour-les-activites-d-un-collegien/",
+      "title": "Carte Tattoo Isère 2026-2027: comment obtenir 60 à 120 € pour les activités d'un collégien",
+      "category": "bons-plans",
+      "location": {
+        "city": "Grenoble",
+        "department": "Isère",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "publishedAt": "2026-09-12T18:04:35+02:00",
+      "ageDays": 32,
+      "peakStart": "2026-09-14",
+      "peakEnd": "2026-09-20",
+      "recentStart": "2026-10-05",
+      "recentEnd": "2026-10-11",
+      "peakImpressions": 195,
+      "recentImpressions": 13,
+      "score": 182,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "carte tatoo",
+        "carte tattoo isère montant",
+        "carte tattoo",
+        "carte tattoo montant",
+        "montant carte tatoo"
+      ]
+    },
+    {
+      "url": "/articles/parentalite/educonnect-pour-les-parents-activer-son-compte-et-retrouver-les-demarches-scolaires/",
+      "title": "EduConnect pour les parents: activer son compte et retrouver les démarches scolaires",
+      "category": "parentalite",
+      "publishedAt": "2026-09-12T20:02:41+02:00",
+      "ageDays": 32,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-05",
+      "recentEnd": "2026-10-11",
+      "peakImpressions": 209,
+      "recentImpressions": 47,
+      "score": 162,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "educonnect parents",
+        "est ce que educonnect fonctionne",
+        "educonnect espace parent",
+        "educonnect parent",
+        "il me manque un enfant sur educonnect"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/cantine-au-college-en-essonne-obtenir-son-tarif-2026-2027-sans-refaire-la-mauvaise-demarche/",
+      "title": "Cantine au collège en Essonne: obtenir son tarif 2026-2027 sans refaire la mauvaise démarche",
+      "category": "vie-pratique",
+      "location": {
+        "city": "Évry-Courcouronnes",
+        "department": "Essonne",
+        "region": "Île-de-France"
+      },
+      "publishedAt": "2026-09-13T16:03:15+02:00",
+      "ageDays": 31,
+      "peakStart": "2026-09-16",
+      "peakEnd": "2026-09-22",
+      "recentStart": "2026-10-05",
+      "recentEnd": "2026-10-11",
+      "peakImpressions": 182,
+      "recentImpressions": 22,
+      "score": 160,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "coupon restauration scolaire collège essonne 2026 2027",
+        "coupon restauration scolaire essonne",
+        "coupon restauration essonne",
+        "coupon restauration scolaire collège 2026 2027",
+        "coupon restauration college essonne"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/rennes-avec-des-enfants-les-transports-sont-gratuits-avant-12-ans-mais-pas-sans-carte/",
+      "title": "Rennes avec des enfants: transports gratuits avant 12 ans, comment ça marche?",
+      "category": "vie-pratique",
+      "location": {
+        "city": "Rennes",
+        "department": "Ille-et-Vilaine",
+        "region": "Bretagne"
+      },
+      "publishedAt": "2026-09-07T00:02:33+02:00",
+      "ageDays": 37,
+      "peakStart": "2026-09-14",
+      "peakEnd": "2026-09-20",
+      "recentStart": "2026-10-05",
+      "recentEnd": "2026-10-11",
+      "peakImpressions": 165,
+      "recentImpressions": 40,
+      "score": 125,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "pass pluriel",
+        "metro gratuit enfant",
+        "pass pluriel rennes",
+        "transport gratuit rennes samedi"
+      ]
+    },
+    {
+      "url": "/articles/sorties/aquarium-reunion-fermeture-2026-visite-famille/",
+      "title": "Aquarium de La Réunion fermé depuis le 17 août 2026: quand pourra-t-on revenir en famille ?",
+      "category": "sorties",
+      "location": {
+        "city": "Saint-Gilles-les-Bains",
+        "department": "La Réunion",
+        "region": "La Réunion"
+      },
+      "publishedAt": "2026-07-22T11:57:00+02:00",
+      "ageDays": 84,
+      "peakStart": "2026-09-14",
+      "peakEnd": "2026-09-20",
+      "recentStart": "2026-10-05",
+      "recentEnd": "2026-10-11",
+      "peakImpressions": 156,
+      "recentImpressions": 32,
+      "score": 124,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "aquarium de la réunion tarifs 2026"
+      ]
+    },
+    {
+      "url": "/articles/parentalite/petite-section-peut-on-alleger-les-apres-midis-a-l-ecole-maternelle/",
+      "title": "Petite section: peut-on alléger les après-midis à l'école maternelle?",
+      "category": "parentalite",
+      "publishedAt": "2026-08-28T12:03:36+02:00",
+      "ageDays": 47,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-05",
+      "recentEnd": "2026-10-11",
+      "peakImpressions": 211,
+      "recentImpressions": 88,
+      "score": 123,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 1.222,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "amenagement ecole maternelle",
+        "aménagement du temps scolaire maternelle moyenne section",
+        "dérogation école après-midi petite section",
+        "aménagement temps scolaire",
+        "dérogation sieste petite section 2025"
+      ]
+    },
+    {
+      "url": "/articles/parentalite/laep-a-grenoble-ou-aller-avec-un-enfant-de-moins-de-6-ans/",
+      "title": "LAEP à Grenoble: où aller avec un enfant de moins de 6 ans?",
+      "category": "parentalite",
+      "location": {
+        "city": "Grenoble",
+        "department": "Isère",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "publishedAt": "2026-09-05T09:59:12+02:00",
+      "ageDays": 39,
+      "peakStart": "2026-09-14",
+      "peakEnd": "2026-09-20",
+      "recentStart": "2026-10-05",
+      "recentEnd": "2026-10-11",
+      "peakImpressions": 142,
+      "recentImpressions": 22,
+      "score": 120,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "laep grenoble",
+        "pirouette grenoble",
+        "laep a petit pas",
+        "laep la marelle",
+        "espace famille"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/carte-top-dep-art-comment-utiliser-les-45-et-les-4-sorties-offertes-dans-la-drome/",
+      "title": "Carte Top Dép'Art: comment utiliser les 45 € et les 4 sorties offertes dans la Drôme",
+      "category": "bons-plans",
+      "location": {
+        "city": "Valence",
+        "department": "Drôme",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "publishedAt": "2026-09-04T18:01:50+02:00",
+      "ageDays": 40,
+      "peakStart": "2026-09-14",
+      "peakEnd": "2026-09-20",
+      "recentStart": "2026-10-05",
+      "recentEnd": "2026-10-11",
+      "peakImpressions": 118,
+      "recentImpressions": 1,
+      "score": 117,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "solde carte top dép'art",
+        "liste partenaires carte top dép'art",
+        "carte top dép'art",
+        "comment utiliser la carte top dép'art",
+        "carte top depart"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/tarification-solidaire-naolib-a-nantes-combien-paie-une-famille-et-comment-faire-la-demande/",
+      "title": "Tarification solidaire Naolib à Nantes: combien paie une famille et comment faire la demande?",
+      "category": "vie-pratique",
+      "location": {
+        "city": "Nantes",
+        "department": "Loire-Atlantique",
+        "region": "Pays de la Loire"
+      },
+      "publishedAt": "2026-09-05T04:00:05+02:00",
+      "ageDays": 39,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-05",
+      "recentEnd": "2026-10-11",
+      "peakImpressions": 141,
+      "recentImpressions": 27,
+      "score": 114,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "tarification solidaire",
+        "tarif solidaire naolib nantes",
+        "tarification solidaire tan"
+      ]
+    },
+    {
+      "url": "/articles/evenements/arbora-lumina-a-harcourt-ce-qu-il-faut-prevoir-avec-des-enfants/",
+      "title": "Arbora Lumina à Harcourt: ce qu'il faut prévoir avec des enfants",
+      "category": "evenements",
+      "location": {
+        "city": "Harcourt",
+        "department": "Eure",
+        "region": "Normandie"
+      },
+      "publishedAt": "2026-09-15T19:00:19+02:00",
+      "ageDays": 29,
+      "peakStart": "2026-09-18",
+      "peakEnd": "2026-09-24",
+      "recentStart": "2026-10-05",
+      "recentEnd": "2026-10-11",
+      "peakImpressions": 143,
+      "recentImpressions": 28,
+      "score": 111.167,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "arbora lumina",
+        "arbora lumina horaire",
+        "arbora lumina harcourt tarif",
+        "arbora lumina harcourt"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/quel-ticket-twisto-choisir-a-caen-avec-des-enfants/",
+      "title": "Quel ticket Twisto choisir à Caen avec des enfants?",
+      "category": "vie-pratique",
+      "location": {
+        "city": "Caen",
+        "department": "Calvados",
+        "region": "Normandie"
+      },
+      "publishedAt": "2026-09-07T11:04:46+02:00",
+      "ageDays": 37,
+      "peakStart": "2026-09-14",
+      "peakEnd": "2026-09-20",
+      "recentStart": "2026-10-05",
+      "recentEnd": "2026-10-11",
+      "peakImpressions": 148,
+      "recentImpressions": 40,
+      "score": 108,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "prix ticket twisto caen",
+        "ticket famille twisto",
+        "ticket tram caen",
+        "ticket twisto prix",
+        "prix ticket twisto"
+      ]
+    },
+    {
+      "url": "/articles/cuisine/cueillir-pommes-et-poires-a-mezieres-lez-clery-ce-qu-il-faut-verifier-avant-de-partir/",
+      "title": "Cueillir pommes et poires à Mézières-lez-Cléry: ce qu'il faut vérifier avant de partir",
+      "category": "cuisine",
+      "location": {
+        "city": "Mézières-lez-Cléry",
+        "department": "Loiret",
+        "region": "Centre-Val de Loire"
+      },
+      "publishedAt": "2026-09-04T16:04:39+02:00",
+      "ageDays": 40,
+      "peakStart": "2026-09-14",
+      "peakEnd": "2026-09-20",
+      "recentStart": "2026-10-05",
+      "recentEnd": "2026-10-11",
+      "peakImpressions": 108,
+      "recentImpressions": 5,
+      "score": 103,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "cueillette pommes mezieres lez clery",
+        "cueillette pommes et poires",
+        "cueillette pommes loiret",
+        "quelle prix"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/musees-gratuits-autour-de-rouen-lesquels-choisir-avec-des-enfants/",
+      "title": "Musées gratuits autour de Rouen: lesquels choisir avec des enfants ?",
+      "category": "bons-plans",
+      "location": {
+        "city": "Rouen",
+        "department": "Seine-Maritime",
+        "region": "Normandie"
+      },
+      "publishedAt": "2026-09-08T22:03:31+02:00",
+      "ageDays": 36,
+      "peakStart": "2026-09-14",
+      "peakEnd": "2026-09-20",
+      "recentStart": "2026-10-05",
+      "recentEnd": "2026-10-11",
+      "peakImpressions": 110,
+      "recentImpressions": 10,
+      "score": 100,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "musée gratuit rouen",
+        "ludobulle rouen",
+        "musée rouen gratuit",
+        "musee gratuit rouen",
+        "musee gratuit"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/demenagement-comment-changer-d-ecole-maternelle-ou-elementaire-sans-rater-une-etape/",
+      "title": "Déménagement: comment changer d'école maternelle ou élémentaire sans rater une étape",
+      "category": "vie-pratique",
+      "publishedAt": "2026-09-03T08:02:20+02:00",
+      "ageDays": 41,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-05",
+      "recentEnd": "2026-10-11",
+      "peakImpressions": 112,
+      "recentImpressions": 12,
+      "score": 100,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "comment changer d'école primaire",
+        "déménagement ecole",
+        "comment changer d'école",
+        "changement d école",
+        "changement d ecole"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/carte-avantage-adulte-sncf-quand-est-elle-interessante-avec-des-enfants/",
+      "title": "Carte Avantage Adulte SNCF: quand est-elle intéressante avec des enfants?",
+      "category": "bons-plans",
+      "publishedAt": "2026-08-29T16:41:39+02:00",
+      "ageDays": 46,
+      "peakStart": "2026-09-28",
+      "peakEnd": "2026-10-04",
+      "recentStart": "2026-10-05",
+      "recentEnd": "2026-10-11",
+      "peakImpressions": 238,
+      "recentImpressions": 152,
+      "score": 86,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": []
+    }
+  ],
+  "strongPages": [
+    {
+      "url": "/articles/evenements/halloween-au-chateau-de-villersexel-2026-en-famille-quelle-experience-choisir/",
+      "title": "Halloween au Château de Villersexel 2026 en famille: quelle expérience choisir?",
+      "category": "evenements",
+      "location": {
+        "city": "Villersexel",
+        "department": "Haute-Saône",
+        "region": "Bourgogne-Franche-Comté"
+      },
+      "recentImpressions": 229,
+      "recentClicks": 6,
+      "recentPosition": 7.345,
+      "retention": 0.884
+    },
+    {
+      "url": "/articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/",
+      "title": "Gastronomades 2026 à Angoulême en famille: faut-il prévoir le week-end ?",
+      "category": "evenements",
+      "location": {
+        "city": "Angoulême",
+        "department": "Charente",
+        "region": "Nouvelle-Aquitaine"
+      },
+      "recentImpressions": 60,
+      "recentClicks": 4,
+      "recentPosition": 6.833,
+      "retention": 1.2
+    },
+    {
+      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
+      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
+      "category": "vie-pratique",
+      "location": {
+        "city": "Toulouse",
+        "department": "Haute-Garonne",
+        "region": "Occitanie"
+      },
+      "recentImpressions": 80,
+      "recentClicks": 3,
+      "recentPosition": 5.338,
+      "retention": 0.721
+    },
+    {
+      "url": "/articles/bons-plans/pass-culture-en-duo-comment-un-jeune-peut-inviter-un-parent-ou-un-proche/",
+      "title": "Pass Culture en duo: comment un jeune peut inviter un parent ou un proche",
+      "category": "bons-plans",
+      "recentImpressions": 64,
+      "recentClicks": 3,
+      "recentPosition": 5.297,
+      "retention": 0.711
+    },
+    {
+      "url": "/articles/maison/decheteries-de-caen-la-mer-qr-code-ou-plaque-obligatoires-depuis-septembre-2026/",
+      "title": "Déchèteries de Caen la mer: QR code ou plaque obligatoires depuis septembre 2026",
+      "category": "maison",
+      "location": {
+        "city": "Caen",
+        "department": "Calvados",
+        "region": "Normandie"
+      },
+      "recentImpressions": 53,
+      "recentClicks": 3,
+      "recentPosition": 9.245,
+      "retention": 0.791
+    },
+    {
+      "url": "/articles/voyages/futuroween-2026-futuroscope-billet-programme-enfants/",
+      "title": "Futuroween 2026 au Futuroscope: billet, programme et conseils avec des enfants",
+      "category": "voyages",
+      "location": {
+        "city": "Chasseneuil-du-Poitou",
+        "department": "Vienne",
+        "region": "Nouvelle-Aquitaine"
+      },
+      "recentImpressions": 307,
+      "recentClicks": 2,
+      "recentPosition": 8.59,
+      "retention": 0.832
+    },
+    {
+      "url": "/articles/evenements/ci-t-as-la-trouille-2026-a-saint-jean-de-monts-que-faire-et-que-reserver/",
+      "title": "Ci t’as la trouille 2026 à Saint-Jean-de-Monts: que faire et que réserver ?",
+      "category": "evenements",
+      "location": {
+        "city": "Saint-Jean-de-Monts",
+        "department": "Vendée",
+        "region": "Pays de la Loire"
+      },
+      "recentImpressions": 42,
+      "recentClicks": 2,
+      "recentPosition": 5.19,
+      "retention": 0.955
+    },
+    {
+      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
+      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
+      "category": "voyages",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "recentImpressions": 905,
+      "recentClicks": 1,
+      "recentPosition": 8.747,
+      "retention": 0.945
+    },
+    {
+      "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
+      "title": "Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite",
+      "category": "sorties",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "recentImpressions": 140,
+      "recentClicks": 1,
+      "recentPosition": 7.7,
+      "retention": 1.129
+    },
+    {
+      "url": "/articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/",
+      "title": "Planète Préhistorique à Bordeaux avec des enfants: âge, durée et tarifs",
+      "category": "sorties",
+      "location": {
+        "city": "Bordeaux",
+        "department": "Gironde",
+        "region": "Nouvelle-Aquitaine"
+      },
+      "recentImpressions": 75,
+      "recentClicks": 1,
+      "recentPosition": 5.813,
+      "retention": 0.815
+    }
+  ],
+  "excluded": {
+    "expired": 79,
+    "cooling": 7
+  },
+  "warnings": [
+    "Recherche web uniquement. Certaines requêtes GSC sont masquées; les lignes absentes valent zéro dans les données retournées.",
+    "Les 15 refresh ont été diagnostiqués par requête sur deux périodes distinctes.",
+    "uncertain ne prouve ni désindexation ni perte de classement."
+  ]
+}
 
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
+## Module Radar embarqué
 
-### Logique d'usage
+Le code ci-dessous est fourni directement pour les calculs Radar nécessaires à ce passage. Ne va pas le relire dans un autre fichier.
 
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+```javascript
+// Pure JavaScript: usable in Node or a connector orchestration runtime.
+const DAY = 86400000;
+const dayNumber = (date) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date ?? ""))
+    throw new Error("Date GSC invalide.");
+  const value = Date.parse(`${date}T00:00:00Z`);
+  if (
+    !Number.isFinite(value) ||
+    new Date(value).toISOString().slice(0, 10) !== date
+  )
+    throw new Error("Date GSC invalide.");
+  return value / DAY;
+};
+const isoDay = (value) => new Date(value * DAY).toISOString().slice(0, 10);
+const round = (value) => Math.round(value * 1000) / 1000;
+export function unwrapRows(response) {
+  const value = response?.structuredContent ?? response;
+  if (response?.isError || (value.status && value.status !== "done"))
+    throw new Error("GSC indisponible ou traitement incomplet.");
+  const rows = Array.isArray(value) ? value : value.data;
+  if (
+    !Array.isArray(rows) ||
+    value.truncated === true ||
+    value.has_more === true ||
+    (value.total_rows !== undefined && value.total_rows !== rows.length)
+  )
+    throw new Error("Réponse GSC absente ou tronquée.");
+  // Conservative per-response threshold, not a claimed Windsor plan limit.
+  // Concatenated arrays are allowed after each response has been checked.
+  if (!Array.isArray(value) && rows.length >= 5000)
+    throw new Error(
+      "Réponse GSC potentiellement plafonnée; découper la période.",
+    );
+  if (rows.some((row) => row.search_type && row.search_type !== "web"))
+    throw new Error(
+      "Le périmètre Radar doit contenir seulement la recherche web.",
+    );
+  return rows;
+}
+export function canonicalPage(value) {
+  // Some connector runtimes do not expose the URL global.
+  if (typeof value !== "string") return undefined;
+  const path = value.replace(/^https?:\/\/(?:www\.)?fam-space\.fr(?=\/)/i, "");
+  if (!/^\/articles\/[^/?#]+\/[^/?#]+\/$/.test(path)) return undefined;
+  if (path.split("/").some((part) => part === "." || part === ".."))
+    return undefined;
+  return path;
+}
+const metric = (row, name) => {
+  const value = Number(row[name]);
+  if (
+    row[name] === null ||
+    row[name] === undefined ||
+    !Number.isFinite(value) ||
+    value < 0
+  )
+    throw new Error(`Métrique GSC invalide: ${name}.`);
+  return value;
+};
+function addMetric(target, row) {
+  const impressions = metric(row, "impressions");
+  target.impressions += impressions;
+  target.clicks += metric(row, "clicks");
+  target.positionSum += impressions ? metric(row, "position") * impressions : 0;
+}
+const empty = () => ({ impressions: 0, clicks: 0, positionSum: 0 });
+const view = (sum) => ({
+  impressions: round(sum.impressions),
+  clicks: round(sum.clicks),
+  impressionsPerDay: round(sum.impressions / 7),
+  position: sum.impressions ? round(sum.positionSum / sum.impressions) : null,
+});
+function windowSum(days, start, end) {
+  const result = empty();
+  for (let date = start; date <= end; date++) {
+    const row = days.get(date);
+    if (row) for (const key of Object.keys(result)) result[key] += row[key];
+  }
+  return result;
+}
+export function buildRadarShortlist(
+  response,
+  catalog,
+  {
+    now = new Date().toISOString(),
+    siteRows,
+    from,
+    limit = 15,
+    history = [],
+  } = {},
+) {
+  const rows = unwrapRows(response);
+  const site = siteRows ? unwrapRows(siteRows) : rows;
+  if (!site.length)
+    throw new Error("GSC ne retourne aucune journée consolidée.");
+  const siteDays = site.map((row) => dayNumber(row.date));
+  const end = siteDays.reduce((max, date) => Math.max(max, date), -Infinity);
+  const observedStart = siteDays.reduce(
+    (min, date) => Math.min(min, date),
+    Infinity,
+  );
+  const today = dayNumber(now.slice(0, 10));
+  if (end > today || today - end > 7)
+    throw new Error(
+      "Données GSC trop anciennes ou datées dans le futur; aucun export historique de secours.",
+    );
+  // Never create comparison weeks before the first observed site day.
+  const start = from ? Math.max(dayNumber(from), observedStart) : observedStart;
+  if (!Number.isFinite(start) || end - start < 13)
+    throw new Error("Au moins 14 jours GSC sont nécessaires.");
+  const byPage = new Map();
+  for (const row of rows) {
+    const page = canonicalPage(row.page),
+      date = dayNumber(row.date);
+    if (!page || date < start || date > end) continue;
+    if (!byPage.has(page)) byPage.set(page, new Map());
+    const days = byPage.get(page);
+    if (!days.has(date)) days.set(date, empty());
+    addMetric(days.get(date), row);
+  }
+  const entries = [];
+  for (const article of catalog) {
+    const page = canonicalPage(article.url);
+    if (
+      !page ||
+      article.status === "draft" ||
+      Date.parse(article.publishedAt) > Date.parse(now)
+    )
+      continue;
+    const days = byPage.get(page) ?? new Map();
+    const publishedDay = dayNumber(article.publishedAt.slice(0, 10));
+    const firstDay = Math.max(start, publishedDay);
+    if (end - firstDay < 13) continue;
+    const recent = windowSum(days, end - 6, end);
+    let peak = empty(),
+      peakStart = firstDay;
+    // The reference week ends before the recent week: no overlapping comparison.
+    for (let first = firstDay; first + 6 < end - 6; first++) {
+      const sum = windowSum(days, first, first + 6);
+      if (sum.impressions > peak.impressions) {
+        peak = sum;
+        peakStart = first;
+      }
+    }
+    const total = windowSum(days, firstDay, end);
+    const expired = Boolean(
+      article.eventEndsAt && article.eventEndsAt < now.slice(0, 10),
+    );
+    const reviewDue = Boolean(
+      article.reviewAt && article.reviewAt <= now.slice(0, 10),
+    );
+    const lastRefresh = history
+      .filter((item) => item.url === page && item.mode === "refresh")
+      .map((item) => item.publishedAt)
+      .sort()
+      .at(-1);
+    const cooling = Boolean(
+      lastRefresh && Date.parse(now) - Date.parse(lastRefresh) < 14 * DAY,
+    );
+    const ageDays = today - publishedDay;
+    const retention = peak.impressions
+      ? recent.impressions / peak.impressions
+      : 1;
+    const maturity = reviewDue ? 1 : Math.min(1, Math.max(0, ageDays) / 30);
+    const evidence =
+      Math.min(1, peak.impressions / 35) * Math.min(1, total.impressions / 50);
+    const score =
+      expired || cooling
+        ? 0
+        : Math.max(0, peak.impressions - recent.impressions) *
+            evidence *
+            maturity +
+          (reviewDue ? 35 : 0);
+    entries.push({
+      url: page,
+      title: article.title,
+      category: article.category,
+      location: article.location,
+      keywords: article.keywords ?? article.topic?.keywords ?? [],
+      publishedAt: article.publishedAt,
+      eventEndsAt: article.eventEndsAt,
+      reviewAt: article.reviewAt,
+      expired,
+      cooling,
+      reviewDue,
+      ageDays,
+      peakStart: isoDay(peakStart),
+      peakEnd: isoDay(peakStart + 6),
+      recentStart: isoDay(end - 6),
+      recentEnd: isoDay(end),
+      peak: view(peak),
+      recent: view(recent),
+      retention: round(retention),
+      score: round(score),
+      signal: "needs_query_check",
+    });
+  }
+  return {
+    schemaVersion: 1,
+    retrievedAt: now,
+    dataThrough: isoDay(end),
+    from: isoDay(start),
+    caveat:
+      "Les lignes absentes valent zéro dans les données retournées. GSC peut masquer des requêtes; les signaux ne prouvent ni désindexation ni causalité.",
+    refresh: entries
+      .filter((item) => item.score > 0)
+      .sort((a, b) => b.score - a.score || a.url.localeCompare(b.url))
+      .slice(0, limit),
+    strongPages: entries
+      .filter(
+        (item) =>
+          !item.expired &&
+          item.recent.impressions >= 35 &&
+          item.retention >= 0.5,
+      )
+      .sort(
+        (a, b) =>
+          b.recent.clicks - a.recent.clicks ||
+          b.recent.impressions - a.recent.impressions ||
+          a.url.localeCompare(b.url),
+      )
+      .slice(0, 10),
+    excluded: {
+      expired: entries.filter((item) => item.expired).length,
+      cooling: entries.filter((item) => item.cooling).length,
+    },
+  };
+}
+export function diagnoseQueries(peakResponse, recentResponse) {
+  const aggregate = (response) => {
+    const result = new Map();
+    for (const row of unwrapRows(response)) {
+      if (typeof row.query !== "string")
+        throw new Error("Requête GSC manquante.");
+      if (!result.has(row.query)) result.set(row.query, empty());
+      addMetric(result.get(row.query), row);
+    }
+    return result;
+  };
+  const peak = aggregate(peakResponse),
+    recent = aggregate(recentResponse);
+  const common = [...peak.keys()].filter(
+    (query) =>
+      peak.get(query).impressions >= 10 &&
+      (recent.get(query)?.impressions ?? 0) >= 3,
+  );
+  let weight = 0,
+    change = 0;
+  for (const query of common) {
+    const first = peak.get(query),
+      last = recent.get(query);
+    const w = Math.min(first.impressions, last.impressions);
+    weight += w;
+    change +=
+      w *
+      (last.positionSum / last.impressions -
+        first.positionSum / first.impressions);
+  }
+  const delta = weight ? change / weight : null;
+  const total = (values) =>
+    [...values.values()].reduce((sum, item) => sum + item.impressions, 0);
+  const ratio = total(peak) ? total(recent) / total(peak) : null;
+  return {
+    signal:
+      delta !== null && delta >= 3
+        ? "rank_loss"
+        : delta !== null &&
+            Math.abs(delta) <= 2 &&
+            ratio !== null &&
+            ratio <= 0.25
+          ? "coverage_loss"
+          : "uncertain",
+    commonQueries: common.length,
+    positionDelta: delta === null ? null : round(delta),
+    impressionRatio: ratio === null ? null : round(ratio),
+    queries: [...new Set([...peak.keys(), ...recent.keys()])]
+      .map((query) => ({
+        query,
+        peak: view(peak.get(query) ?? empty()),
+        recent: view(recent.get(query) ?? empty()),
+      }))
+      .sort((a, b) => b.peak.impressions - a.peak.impressions)
+      .slice(0, 20),
+    caveat:
+      "coverage_loss désigne une baisse d'exposition observée, pas une preuve de désindexation. Les requêtes masquées et la saisonnalité limitent le diagnostic.",
+  };
+}
+const STOP = new Set(
+  "avec pour dans sans famille familles enfant enfants tarif tarifs duree conseil conseils visite visiter billet billets activite activites sortie sorties evenement evenements preparation pratique pratiques autour leur leurs aussi quoi comment quel quelle quelles quels quand faire partir 2026 2027".split(
+    " ",
+  ),
+);
+const words = (value) =>
+  new Set(
+    String(value)
+      .replace(/œ/g, "oe")
+      .normalize("NFD")
+      .replace(/\p{Diacritic}/gu, "")
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((word) => word.length >= 3 && !STOP.has(word)),
+  );
+export function probableDuplicates(subject, catalog, limit = 5) {
+  const terms = words(
+    [
+      subject.title,
+      ...(subject.keywords ?? subject.topic?.keywords ?? []),
+    ].join(" "),
+  );
+  return catalog
+    .filter(
+      (article) => canonicalPage(article.url) !== canonicalPage(subject.url),
+    )
+    .map((article) => {
+      const candidate = words(
+        [
+          article.title,
+          ...(article.keywords ?? article.topic?.keywords ?? []),
+        ].join(" "),
+      );
+      const shared = [...terms].filter((word) => candidate.has(word));
+      const sameCity = Boolean(
+        subject.location?.city &&
+          subject.location.city === article.location?.city,
+      );
+      const sameDepartment = Boolean(
+        subject.location?.department &&
+          subject.location.department === article.location?.department,
+      );
+      return {
+        url: article.url,
+        title: article.title,
+        location: article.location,
+        sharedTerms: shared,
+        score:
+          shared.length / Math.max(1, new Set([...terms, ...candidate]).size) +
+          (sameCity ? 0.2 : sameDepartment ? 0.1 : 0),
+      };
+    })
+    .filter(
+      (item) =>
+        item.sharedTerms.length >= 2 ||
+        (item.sharedTerms.length === 1 && item.sharedTerms[0].length >= 6),
+    )
+    .sort((a, b) => b.score - a.score || a.url.localeCompare(b.url))
+    .slice(0, limit);
+}
+```
 
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+## Résultat attendu
 
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-## Candidat validé de la phase précédente
-
----
-title: "Salon du livre jeunesse de Montreuil 2026: billets gratuits, horaires et visite en famille"
-subtitle: Du 25 au 30 novembre, choisissez votre jour et préparez une visite à Paris Montreuil Expo avec les enfants
-summary: "Billet gratuit obligatoire pour chaque enfant et adulte, horaires des six journées, activités, métro, accessibilité et services: l'essentiel pour organiser le Salon du livre jeunesse de Montreuil 2026."
-category: evenements
-location:
-  city: Montreuil
-  department: Seine-Saint-Denis
-  region: Île-de-France
-keywords:
-  - salon du livre jeunesse Montreuil 2026
-  - salon livre presse jeunesse 2026 billet gratuit
-  - Montreuil salon du livre avec enfants novembre
-eventEndsAt: 2026-11-30
-sources:
-  - title: SLPJ - Salon 2026 et thème de la 42e édition
-    url: https://slpj.fr/salon/
-  - title: SLPJ - Billetterie gratuite 2026
-    url: https://slpj.fr/billetterie/
-  - title: SLPJ - Préparer sa venue, horaires et informations pratiques 2026
-    url: https://slpj.fr/salon/preparer-sa-venue/
-  - title: SLPJ - Exposition À la croisée des images
-    url: https://slpj.fr/salon/exposition/
-  - title: Ville de Montreuil - Salon du livre et de la presse jeunesse
-    url: https://www.montreuil.fr/slpj
-  - title: SLPJ - Accessibilité (informations partiellement datées de 2025)
-    url: https://slpj.fr/salon/accessibilite/
-radar:
-  schemaVersion: 1
-  phase: 2
-  mode: opportunity
-  slug: salon-du-livre-jeunesse-de-montreuil-2026-billet-gratuit-et-visite-en-famille
-  decision: Choisir le jour et les horaires adaptés à la visite avec des enfants, réserver un billet gratuit pour chaque membre de la famille et organiser les activités et l'accès à Paris Montreuil Expo sans confondre gratuité et entrée sans billet.
-  affiliationPotential: "L'accès principal au Salon est entièrement gratuit et uniquement via sa billetterie officielle, sans offre de billetterie partenaire pertinente. Hébergement secondaire pour les familles venant de loin: ibis Styles Paris Mairie de Montreuil, à Montreuil, proposé sur Booking.com avec chambres familiales (https://www.booking.com/hotel/fr/ibis-styles-mairie-de-montreuil.fr.html); vérifier capacité, trajet, tarifs et disponibilité selon dates. Ne pas créer de concurrence à la billetterie gratuite."
-  gsc:
-    retrievedAt: 2026-10-14T04:26:13.937Z
-    dataThrough: 2026-10-11
-    signal: seasonal_opportunity
-    basis: Opportunité saisonnière vérifiée via « SLPJ - Salon 2026, calendrier officiel et programmation »; aucune page forte GSC n'est requise.
----
-
-Du mercredi 25 au lundi 30 novembre 2026, le **Salon du livre et de la presse jeunesse** revient à Paris Montreuil Expo, en Seine-Saint-Denis. Cette 42e édition, intitulée «Aux frontières du réel», propose aux familles de découvrir des livres, des illustrations, des rencontres et des créations. **L'entrée est gratuite, mais chaque visiteur, même un enfant, doit avoir son propre billet.** C'est la première chose à prévoir avant de choisir vos animations.
-
-## Réserver les billets gratuits pour toute la famille
-
-Le [site officiel de la billetterie](https://slpj.fr/billetterie/) permet de réserver les entrées. Prenez **un billet pour chaque adulte et chaque enfant** et gardez-les sur votre téléphone ou imprimez-les pour les présenter à l'arrivée. Gratuit ne veut donc pas dire entrée libre sans réservation.
-
-Vous venez avec une école, un centre de loisirs, une association ou une autre structure? Les groupes disposent de [formulaires d'inscription spécifiques](https://slpj.fr/salon/preparer-sa-venue/), différents de la billetterie individuelle. Leurs visites sont également gratuites, mais les modalités d'organisation ne sont pas celles d'une famille venant librement.
-
-## Quel jour choisir du 25 au 30 novembre?
-
-Voici les [horaires annoncés pour 2026](https://www.montreuil.fr/slpj), à prendre en compte selon l'école, les temps de trajet et la fatigue des plus jeunes:
-
-- **Mercredi 25 novembre, 9h-18h:** une visite en journée, notamment pour les enfants qui n'ont pas classe.
-- **Jeudi 26 novembre, 9h-18h:** possible pour les familles disponibles en semaine.
-- **Vendredi 27 novembre, 9h-21h:** la nocturne permet de venir en fin de journée, mais une sortie tardive ne convient pas forcément aux plus petits.
-- **Samedi 28 novembre, 9h-20h:** une grande plage de visite pour les familles qui travaillent la semaine.
-- **Dimanche 29 novembre, 10h-19h:** une autre possibilité le week-end, avec une ouverture plus tardive le matin.
-- **Lundi 30 novembre, 9h-18h:** la journée professionnelle **reste ouverte à tous les publics**.
-
-Pour une première visite avec un jeune enfant, mieux vaut prévoir un parcours court et une marge pour les pauses plutôt que chercher à tout voir. Si vous venez pour rencontrer un auteur ou participer à un atelier précis, choisissez votre jour **après avoir vérifié son horaire**. Aucun de ces jours ne peut être présenté comme garanti «calme»: les conseils d'heures creuses encore visibles sur certaines pages du Salon concernent l'édition 2025.
-
-## Que faire avec les enfants?
-
-Le Salon rassemble littérature jeunesse, bande dessinée et presse jeunesse. Au programme annoncé par [l'organisateur](https://slpj.fr/salon/): lectures, rencontres, dédicaces, ateliers, performances et expositions. Cela permet aussi bien de feuilleter des livres que de découvrir les personnes qui les écrivent et les dessinent.
-
-Parmi les découvertes de l'édition 2026, l'exposition [«À la croisée des images»](https://slpj.fr/salon/exposition/) joue avec les passages entre réel et fiction, les images en grand format et les installations. C'est une piste intéressante si les enfants aiment observer et explorer, même sans viser une dédicace particulière.
-
-Avant de partir, consultez le programme du jour et les conditions des activités qui vous intéressent: la présence d'un auteur, les horaires et les modalités d'accès aux ateliers peuvent évoluer. Ne supposez pas qu'un atelier accueille tous les âges ou qu'il est accessible sans inscription tant que cela n'est pas précisé. L'entrée au Salon est gratuite, **pas les livres que vous choisiriez d'acheter** sur les stands.
-
-## Rejoindre Paris Montreuil Expo
-
-Le Salon se déroule au **128, rue de Paris, 93100 Montreuil**, et non aux bureaux de l'association organisatrice. La [page officielle pour préparer sa venue](https://slpj.fr/salon/preparer-sa-venue/) indique:
-
-- **Métro ligne 9:** station **Robespierre**, sortie 2 «Rue Barbès».
-- **Bus:** lignes **102 et 318**, arrêt Robespierre.
-- **À vélo:** des stations Vélib' sont disponibles à proximité.
-
-Si vous arrivez de Paris avec plusieurs enfants, notre guide [Transports à Paris avec des enfants: quel titre choisir pour payer juste?](/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/) aide à comparer les titres de transport sans multiplier les dépenses.
-
-### Accessibilité et visite avec des besoins particuliers
-
-L'organisateur annonce pour 2026 une **entrée dédiée Porte C, rue Marcel Dufriche**, des ascenseurs, des kits sensoriels et des boucles magnétiques. Des fauteuils roulants sont également annoncés à cette entrée. Les [informations pratiques actualisées](https://slpj.fr/salon/preparer-sa-venue/) permettent de préparer l'accueil; pour les activités adaptées, vérifiez les créneaux publiés avant votre visite.
-
-Attention au trajet si vous utilisez un fauteuil roulant ou une poussette difficile à porter: **Robespierre n'est pas une station de métro équipée d'ascenseurs**, d'après les [indications d'accessibilité du Salon](https://slpj.fr/salon/accessibilite/). Vérifiez un itinéraire accessible adapté à votre point de départ plutôt que de retenir automatiquement la station la plus proche.
-
-## Repas, vestiaire et bagages: ce qu'il faut savoir
-
-Selon la [FAQ de l'organisateur](https://slpj.fr/salon/preparer-sa-venue/), des cafétérias se trouvent sur les mezzanines, accessibles par ascenseur ou escalier. **Il n'y a pas d'espace dédié au pique-nique** dans le Salon. Prévoyez donc une pause repas adaptée au rythme des enfants et à votre budget.
-
-Le **vestiaire** est situé sur une mezzanine: **2 € par vêtement, deux articles maximum** selon la tarification publiée. Une **consigne à bagages** se trouve à l'entrée rue Marcel Dufriche, à **2 € par bagage**. Les valises et sacs de grande contenance ne sont pas autorisés dans l'enceinte du Salon: mieux vaut éviter de venir chargé, notamment avec des achats et des affaires d'enfants à porter toute la journée.
-
-Pour les familles venant de loin, le [ibis Styles Paris Mairie de Montreuil sur Booking.com](https://www.booking.com/hotel/fr/ibis-styles-mairie-de-montreuil.fr.html) est une piste pour chercher une chambre adaptée à une nuit sur place. Vérifiez la capacité, la disponibilité, le prix aux dates du Salon **et le trajet jusqu'à Paris Montreuil Expo**: l'hôtel se situe du côté de Mairie de Montreuil, pas à l'entrée de l'événement.
-
-## Contexte éditorial ciblé pour le maillage et les doublons
-
-### Articles proches préparés mécaniquement
-
-- /articles/evenements/les-expressifs-2026-a-poitiers-trois-jours-de-spectacles-gratuits/ | Les Expressifs 2026 à Poitiers: trois jours de spectacles gratuits | evenements | Poitiers, Vienne, Nouvelle-Aquitaine
-- /articles/bons-plans/avignonnais-palais-des-papes-et-pont-gratuits-le-week-end/ | Avignonnais: Palais des Papes et Pont gratuits le week-end | bons-plans | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
-- /articles/evenements/partir-en-livre-2026-en-famille/ | Partir en Livre 2026: trouver une animation jeunesse avant le 19 juillet | evenements
-- /articles/parentalite/ateliers-parents-malins-dans-l-oise-quels-rendez-vous-gratuits-choisir-avant-fin-2026/ | Ateliers Parents Malins dans l'Oise: quels rendez-vous gratuits choisir avant fin 2026 ? | parentalite | Plusieurs communes, Oise, Hauts-de-France
-- /articles/evenements/rues-barrees-auxerre-2026-famille/ | Rues Barrées 2026 à Auxerre: 53 spectacles gratuits en famille | evenements | Auxerre, Yonne, Bourgogne-Franche-Comté
-- /articles/activites/parc-de-courzieu-en-famille-tarifs-horaires-et-conseils-pour-la-visite/ | Parc de Courzieu en famille: tarifs, horaires et conseils pour la visite | activites | Courzieu, Rhône, Auvergne-Rhône-Alpes
-- /articles/sorties/musee-de-la-bd-a-angouleme-en-famille-tarifs-horaires-et-conseils-de-visite/ | Musée de la BD à Angoulême en famille: tarifs, horaires et conseils de visite | sorties | Angoulême, Charente, Nouvelle-Aquitaine
-- /articles/activites/parc-animalier-d-ecouves-en-famille-tarifs-horaires-et-conseils-pour-la-visite/ | Parc animalier d'Ecouves en famille: tarifs, horaires et conseils pour la visite | activites | Le Bouillon, Orne, Normandie
-- /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | Monument jeu d'enfant 2026 à Saint-Denis: atelier Dagobert le 17 octobre | evenements | Saint-Denis, Seine-Saint-Denis, Île-de-France
-- /articles/sorties/musee-de-l-air-et-de-l-espace-a-la-toussaint-2026-quelle-activite-choisir-selon-l-age/ | Toussaint 2026 au Musée de l'Air et de l'Espace: quelle activité choisir avec un enfant? | sorties | Le Bourget, Seine-Saint-Denis, Île-de-France
-- /articles/evenements/ateliers-au-jardin-de-la-pmi-a-bobigny-quelles-dates-choisir-cet-automne/ | Ateliers au jardin de la PMI à Bobigny: quelles dates choisir cet automne? | evenements | Bobigny, Seine-Saint-Denis, Île-de-France
-- /articles/voyages/dormir-a-saint-denis-pour-visiter-paris-avec-des-enfants-pleyel-ou-basilique/ | Dormir à Saint-Denis pour visiter Paris avec des enfants: Pleyel ou Basilique? | voyages | Saint-Denis, Seine-Saint-Denis, Île-de-France
-- /articles/sorties/musee-de-l-air-et-de-l-espace-du-bourget-en-famille-tarifs-avions-et-activites/ | Musée de l'Air et de l'Espace du Bourget en famille: tarifs, avions et activités | sorties | Le Bourget, Seine-Saint-Denis, Île-de-France
-- /articles/evenements/vacances-royales-2026-a-versailles-animations-napoleon-dates-et-billets-en-famille/ | Vacances royales 2026 à Versailles: animations Napoléon, dates et billets | evenements | Versailles, Yvelines, Île-de-France
-- /articles/evenements/rouen-givree-2026-en-famille-marche-de-noel-et-refuge-givre/ | Rouen Givrée 2026 en famille: marché de Noël et Refuge Givré | evenements | Rouen, Seine-Maritime, Normandie
-- /articles/evenements/au-creux-de-l-oreille-2026-a-noirlac-quels-spectacles-et-ateliers-choisir-avec-les-enfants/ | Au Creux de l'Oreille 2026 à Noirlac: spectacles et ateliers en famille du 17 au 22 octobre | evenements | Bruère-Allichamps, Cher, Centre-Val de Loire
-- /articles/evenements/grands-zyeux-p-tites-zoreilles-2026-quelles-seances-gratuites-avec-les-tout-petits/ | Grands Zyeux P'tites Zoreilles 2026: spectacles gratuits avec les tout-petits autour de Béziers | evenements | Béziers, Hérault, Occitanie
-- /articles/evenements/abracada-bouh-2026-a-montpellier-animations-et-billets-en-famille/ | Abracada BOUH 2026 à Montpellier: programme et tarifs au château de Flaugergues | evenements | Montpellier, Hérault, Occitanie
-- /articles/evenements/festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants/ | Les Petits Asticots 2026: spectacles, âges et réservations en famille | evenements | Chamonix-Mont-Blanc, Haute-Savoie, Auvergne-Rhône-Alpes
-- /articles/evenements/fete-de-l-automne-2026-a-terra-botanica-journee-ou-terra-nocta-en-famille/ | Fête de l'Automne 2026 à Terra Botanica: animations et tarifs | evenements | Angers, Maine-et-Loire, Pays de la Loire
-- /articles/evenements/halloween-2026-au-safari-de-peaugres-animations-et-lumieres-sauvages/ | Halloween 2026 au Safari de Peaugres: animations, tarifs et Festival Lumières Sauvages | evenements | Peaugres, Ardèche, Auvergne-Rhône-Alpes
-- /articles/evenements/halloween-2026-au-parc-spirou-nocturnes-naruto-reservation-et-maison-hantee/ | Halloween 2026 au Parc Spirou: billets, nocturnes Naruto et maison hantée | evenements | Monteux, Vaucluse, Provence-Alpes-Côte d'Azur
-
-### Historique Radar lié
-
-- opportunity | /articles/evenements/abracada-bouh-2026-a-montpellier-animations-et-billets-en-famille/ | 2026-10-13T20:41:25.500Z
-- opportunity | /articles/evenements/au-creux-de-l-oreille-2026-a-noirlac-quels-spectacles-et-ateliers-choisir-avec-les-enfants/ | 2026-10-14T13:49:08.708Z
-- opportunity | /articles/evenements/festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants/ | 2026-10-13T18:36:59.570Z
-- opportunity | /articles/evenements/fete-de-l-automne-2026-a-terra-botanica-journee-ou-terra-nocta-en-famille/ | 2026-10-13T12:37:05.098Z
-- opportunity | /articles/evenements/grands-zyeux-p-tites-zoreilles-2026-quelles-seances-gratuites-avec-les-tout-petits/ | 2026-10-14T07:31:28.976Z
-- opportunity | /articles/evenements/halloween-2026-au-parc-spirou-nocturnes-naruto-reservation-et-maison-hantee/ | 2026-10-12T17:34:53.933Z
-- opportunity | /articles/evenements/halloween-2026-au-safari-de-peaugres-animations-et-lumieres-sauvages/ | 2026-10-13T05:01:12.150Z
-- opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | 2026-10-13T09:50:29.435Z
-- opportunity | /articles/sorties/musee-de-l-air-et-de-l-espace-a-la-toussaint-2026-quelle-activite-choisir-selon-l-age/ | 2026-10-05T20:22:10.692Z
-- opportunity | /articles/evenements/vacances-royales-2026-a-versailles-animations-napoleon-dates-et-billets-en-famille/ | 2026-10-14T18:43:15.620Z
-
-### Phases 2 et 3
-
-Écris `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet de l'article. **N'ajoute aucun bloc `radar`.** Le script reprend mécaniquement le bloc Radar de la phase précédente et incrémente la phase.
-
-Pour un refresh, le script conserve de lui-même les champs protégés de l'article source. Pour une opportunity, il conserve la catégorie, le territoire et le slug choisis en phase 1.
-
-En phase 3 seulement, ajoute `radarReview` dans la requête avec `summary`, `sources` et, pour un refresh, `substantialChanges` et `regressionCheck`.
-
-## Écriture autorisée
-
-N'effectue aucune plomberie Git. Ne crée, ne nomme et ne supprime aucune branche Radar; ne choisis aucun SHA; ne modifie aucun fichier de DevWeb13/fam-space-qwik.
-
-Écris uniquement radar-request.md sur la branche main de DevWeb13/fam-space-actions-bridge selon le format fourni dans ce runtime. Le workflow GitHub se charge du reste. Une fois cette requête écrite, termine le passage.
+Actualise uniquement radar-gsc-snapshot.json sur la branche main de DevWeb13/fam-space-actions-bridge avec le snapshot compact décrit ci-dessus, puis termine ce passage. Ne choisis aucune mission Radar dans la même exécution et ne modifie aucun autre fichier interne.
