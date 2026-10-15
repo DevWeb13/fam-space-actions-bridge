@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les faits utilisés sont liés naturellement dans le corps et présents dans `sources`. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Rejoindre l'aéroport Paris-CDG en famille: RER B, bus 9517 ou taxi?"
-subtitle: En 2026, comparez les trajets et les coûts réels avec enfants, poussette et valises
-summary: "Comment rejoindre Roissy-Charles-de-Gaulle avec des enfants depuis Paris: RER B, nouveau bus express 9517, taxi, billets 2026 et accès aux terminaux."
+title: "Aéroport CDG en famille: RER B, bus 9517 ou taxi en 2026?"
+subtitle: Prix des trajets, correspondances et conseils avec enfants et valises
+summary: Pour rejoindre Roissy-CDG avec des enfants, comparez le RER B, le bus 9517 et le taxi selon le terminal, les tarifs et les bagages.
 category: voyages
 location:
   city: Roissy-en-France
@@ -72,23 +77,27 @@ keywords:
   - RoissyBus supprimé alternatives 2026
   - CDG terminaux avec poussette bagages
 sources:
-  - title: Île-de-France Mobilités - Fin du RoissyBus et alternatives
+  - title: Île-de-France Mobilités - Fin du RoissyBus
     url: https://www.iledefrance-mobilites.fr/actualites/fin-roissy-bus
   - title: Île-de-France Mobilités - Ligne express 9517
     url: https://www.iledefrance-mobilites.fr/actualites/locales/detail/lancement9517
-  - title: Île-de-France Mobilités - Nouveaux horaires 9517 depuis le 24 août 2026
+  - title: Île-de-France Mobilités - Horaires 9517 révisés en août 2026
     url: https://www.iledefrance-mobilites.fr/actualites/locales/detail/ligne-express-9517-nouveaux-horaires-rentree
-  - title: Île-de-France Mobilités - Ticket Paris Région Aéroports
+  - title: Île-de-France Mobilités - Ticket aéroport
     url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/ticket-paris-region-aeroports
-  - title: Île-de-France Mobilités - Tarifs réduits enfants
+  - title: Île-de-France Mobilités - Ticket Bus-Tram
+    url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/ticket-bus-tram
+  - title: Île-de-France Mobilités - Tarifs enfants
     url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/tarifs-reduits/enfants-4-10-ans
-  - title: Transilien - Accès aux terminaux des aéroports de Paris
+  - title: Transilien - Accès aux terminaux
     url: https://www.transilien.com/fr/page-deplacements/les-aeroports-de-paris
-  - title: Service-Public - Tarifs réglementés des taxis 2026
+  - title: Service-Public - Taxis 2026
     url: https://www.service-public.gouv.fr/particuliers/actualites/A15396
+  - title: Service-Public - Sièges auto
+    url: https://www.service-public.gouv.fr/particuliers/vosdroits/F628
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: rejoindre-l-aeroport-paris-cdg-en-famille-rer-b-bus-9517-ou-taxi
   decision: Choisir entre RER B, car express 9517 depuis Saint-Denis Pleyel et taxi selon le point de départ, le terminal du vol, le coût pour toute la famille, les horaires et les contraintes de bagages ou poussette.
@@ -99,35 +108,42 @@ radar:
     signal: strong_page
     sourceUrl: /articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/
     basis: "La page « Transports à Paris avec des enfants: quel titre choisir pour payer juste? » conserve 926 impressions sur la semaine récente, avec une position moyenne de 8.733 et 96.7 % de son pic."
+reviewAt: 2027-01-01
 ---
 
-## Mission retenue
-Un guide pratique pour rejoindre ou quitter l'aéroport Paris-Charles-de-Gaulle avec des enfants en 2026. Comparer les solutions de déplacement depuis Paris ou Saint-Denis Pleyel, sans refaire un guide général des transports franciliens.
+Depuis la suppression du **RoissyBus le 1er mars 2026**, il n'existe plus de liaison directe entre Opéra et l'aéroport Paris-Charles-de-Gaulle. Avec des enfants, le choix se fait entre le **RER B**, le **car express 9517** depuis Saint-Denis Pleyel et le **taxi**. Pour éviter une correspondance inutile avec poussette et valises, commencez par vérifier le terminal indiqué sur votre billet d'avion.
 
-## Pourquoi cette mission
-Le meilleur refresh du snapshot, la carte Tattoo Isère (signal uncertain, aucune requête comparable), est déjà documenté sur master: 60 à 120 €, bonus Caf, admissibilité, demande, partenaires, dépenses et échéances. Aucune lacune éditoriale indépendante décisive n'est vérifiée. Une simple expansion des tarifs de la page forte Transports à Paris répéterait un comparatif complet. En revanche, l'accès spécifique à CDG a changé avec la suppression du RoissyBus au 1er mars 2026 et l'arrivée du car 9517, dont les horaires ont encore été révisés le 24 août. Les sources officielles documentent maintenant les choix. Parmi les 681 articles du catalogue, aucun guide CDG autonome; l'article Orly du 13 octobre concerne un autre aéroport. Une opportunité saisonnière à quelques jours de la Toussaint serait plus vite périmée; ce besoin de trajet reste valable au-delà des vacances. Aucun chevauchement avec les destinations en cours Vincennes et Haut-Rhin.
+## RER B: pratique si vous êtes près d'une gare
 
-## Décision du lecteur
-Selon son lieu de départ, l'âge des enfants, le nombre de bagages, l'horaire du vol et le terminal, choisir l'option raisonnable en coût et en effort, puis identifier précisément où descendre et quelle correspondance prévoir.
+Prenez un RER B en direction d'**Aéroport Charles-de-Gaulle 2-TGV** et non de Mitry-Claye. Deux gares desservent l'aéroport:
+- **Aéroport Charles-de-Gaulle 1**, à Roissypôle: pour le terminal 3 à pied ou le terminal 1 par la navette CDGVAL.
+- **Aéroport Charles-de-Gaulle 2-TGV**: pour le terminal 2, en vérifiant le hall exact et les éventuelles navettes internes.
 
-## Faits à traiter
-- RoissyBus depuis Opéra supprimé le 1er mars 2026: ne pas présenter le 9517 comme un départ d'Opéra.
-- RER B vers les gares Aéroport CDG 1 et CDG 2-TGV: identifier correctement les terminaux et la correspondance CDGVAL vers le terminal concerné, sans confondre gare, Roissypôle et porte d'embarquement.
-- Ticket Paris Région Aéroports pour RER B: 14 € adulte, 7 € au tarif réduit des 4 à moins de 10 ans, gratuité des moins de 4 ans; comparer le coût global familial sans recopier tous les forfaits parisiens.
-- Car express 9517 via Saint-Denis Pleyel vers Roissypôle (terminal 3): tarif Bus-Tram différent du billet RER aéroport, bagages prévus dans les cars; vérifier les horaires révisés le 24 août, les derniers départs et les correspondances avec les autres terminaux. Ne pas prétendre que le car dessert toutes les portes des terminaux.
-- Taxi Paris intra-muros-CDG: forfait 2026 de 56 € rive droite ou 65 € rive gauche, hors frais réglementaires éventuels de réservation; comparer par voiture et prévoir sièges enfants adaptés et place pour poussette.
-- Distinguer la durée du transport du temps nécessaire pour atteindre le terminal et enregistrer les bagages. Contrôler accessibilité et travaux du trajet réel.
+Le [CDGVAL](https://www.transilien.com/fr/page-deplacements/les-aeroports-de-paris) relie les principaux terminaux gratuitement. Il fonctionne normalement de 4 h à 1 h avec des passages rapprochés. Ajoutez les couloirs et la marche jusqu'à l'enregistrement à votre temps de trajet.
 
-## Sources de départ
-Île-de-France Mobilités (fin du RoissyBus, express 9517 et mise à jour d'août, tickets 2026 et réductions enfants), Transilien (terminaux, Roissypôle et CDGVAL), Service-Public (forfaits taxi 2026).
+Le [Ticket Paris Région Aéroports](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/ticket-paris-region-aeroports) coûte **14 € par adulte** et **7 € pour un enfant de 4 à moins de 10 ans**; les moins de 4 ans voyagent gratuitement. Pour deux adultes et deux enfants de 4 et 8 ans, l'aller simple coûte donc **42 €**, contre **56 €** si les enfants ont au moins 10 ans. Un simple ticket Métro-Train-RER ne suffit pas pour cette liaison. Avant d'acheter, vérifiez votre éventuel forfait; notre guide [Transports à Paris avec des enfants](/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/) compare les solutions pour l'ensemble du séjour.
 
-## Affiliation
-Action principale: titres de transport publics ou taxi réglementé, sans partenaire à substituer artificiellement. Option de transfert familial avec siège enfant à vérifier sur Welcome Pickups; comparer son devis réel au forfait taxi. Hébergement familial Booking.com autour de CDG en cas de vol très tôt, avec contrôle du trajet et de la capacité; ne pas donner de prix inventé.
+## Bus 9517: moins cher, mais une correspondance possible
 
-## Continuations internes
-- [Transports à Paris avec des enfants](/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/): laisser à cette page les comparaisons Navigo Semaine, Paris Visite et tickets urbains.
-- [Rejoindre Orly en famille](/articles/voyages/aeroport-d-orly-avec-des-enfants-metro-14-orlyval-ou-taxi/): seulement pour les familles qui hésitent entre les deux aéroports, sans reproduire l'article Orly.
-- [Prendre l'avion avec un bébé](/articles/voyages/prendre-l-avion-avec-un-bebe-poussette-siege-auto-et-bagages-a-verifier-avant-de-reserver/): renvoyer aux règles des compagnies pour poussette, siège auto et bagages au lieu de les répéter.
+Le [car express 9517](https://www.iledefrance-mobilites.fr/actualites/locales/detail/lancement9517) relie Argenteuil à **Roissypôle**, en passant par **Saint-Denis Pleyel**, accessible notamment par le métro 14. Il possède des compartiments et soutes à bagages. Il ne part **pas d'Opéra** et ne dépose pas devant chaque terminal: depuis Roissypôle, rejoignez le terminal 3 à pied ou les autres terminaux avec le CDGVAL.
+
+Le [Ticket Bus-Tram](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/ticket-bus-tram) coûte **2,05 € par adulte** et **1,05 € pour les 4 à moins de 10 ans**. L'aller en car revient à **6,20 € pour deux adultes et deux enfants de 4 et 8 ans**, sans compter le métro ou le RER nécessaire pour gagner Saint-Denis Pleyel. Un ticket Bus-Tram ne couvre pas ce premier trajet. Les horaires du 9517 ont changé **le 24 août 2026**: consultez les [horaires actualisés](https://www.iledefrance-mobilites.fr/actualites/locales/detail/ligne-express-9517-nouveaux-horaires-rentree), surtout pour un vol tôt le matin.
+
+Les bus **350** depuis Porte de la Chapelle et **351** depuis Nation desservent également CDG, mais leurs trajets sont plus longs, autour de 60 à 90 minutes selon la ligne et l'arrêt.
+
+## Taxi: un forfait pour toute la voiture
+
+En 2026, le [forfait réglementé](https://www.service-public.gouv.fr/particuliers/actualites/A15396) pour un taxi parisien entre **Paris intra-muros et CDG** est de **56 € depuis ou vers la rive droite**, **65 € depuis ou vers la rive gauche**. Il s'agit du prix pour la voiture, pas par personne. Une réservation immédiate peut ajouter **4 €**, une réservation à l'avance **7 €**; un supplément de **5,50 €** peut s'appliquer à partir du cinquième passager. Ces forfaits ne valent pas automatiquement pour une adresse hors de Paris.
+
+Pour une famille de quatre personnes dont deux enfants de 4 et 8 ans, le taxi rive droite coûte donc **14 € de plus que le RER B**, hors frais éventuels. Cette différence peut être intéressante à payer pour éviter les escaliers, les correspondances et le transport des valises; le taxi reste toutefois soumis à la circulation.
+
+Précisez **les sièges enfants et la place nécessaire pour la poussette** avant de réserver. La [réglementation](https://www.service-public.gouv.fr/particuliers/vosdroits/F628) prévoit une exception pour les sièges auto dans les taxis, sans garantir qu'un siège adapté sera disponible. Vous pouvez aussi [demander un devis de transfert familial à Welcome Pickups](https://www.welcomepickups.com/paris/airport-transfer-for-families/), qui propose des véhicules adaptés et des sièges sur demande. Comparez le prix total avec celui du taxi réglementé.
+
+## Vol matinal: calculez le trajet jusqu'au bon hall
+
+La durée du RER ou du car ne comprend ni le trajet pour rejoindre le départ, ni l'attente, ni le CDGVAL, ni les contrôles de l'aéroport. Vérifiez les horaires du jour et les travaux: les premiers et derniers passages ne couvrent pas tous les vols. [Transilien](https://www.transilien.com/fr/page-deplacements/les-aeroports-de-paris) mentionne aussi les bus nocturnes N140 et N143 depuis le secteur de la gare de l'Est, à contrôler avant de partir.
+
+Si le départ de Paris serait trop matinal, vous pouvez [chercher un hébergement familial près de Roissy-CDG](https://www.booking.com/family/city/fr/roissy-en-france.fr.html). Vérifiez la capacité de la chambre, la navette de l'hôtel, son premier départ et le terminal réellement desservi. Pour les règles des compagnies concernant poussettes, sièges auto et bagages, consultez notre guide [Prendre l'avion avec un bébé](/articles/voyages/prendre-l-avion-avec-un-bebe-poussette-siege-auto-et-bagages-a-verifier-avant-de-reserver/).
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -135,12 +151,12 @@ Action principale: titres de transport publics ou taxi réglementé, sans parten
 
 - /articles/voyages/aeroport-d-orly-avec-des-enfants-metro-14-orlyval-ou-taxi/ | Rejoindre Orly en famille: métro 14, Orlyval ou taxi en 2026 | voyages | Orly, Val-de-Marne, Île-de-France
 - /articles/vie-pratique/consigne-a-marseille-saint-charles-avec-des-enfants-ou-laisser-valises-et-poussette/ | Consigne à Marseille Saint-Charles avec des enfants: où laisser valises et poussette? | vie-pratique | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d’Azur
-- /articles/vie-pratique/consigne-a-bagages-a-paris-en-famille-gare-ou-depot-en-ville/ | Consigne à bagages à Paris en famille: gare ou dépôt en ville? | vie-pratique | Paris, Paris, Île-de-France
 - /articles/voyages/prendre-l-avion-avec-un-bebe-poussette-siege-auto-et-bagages-a-verifier-avant-de-reserver/ | Prendre l'avion avec un bébé: poussette, siège auto et bagages à vérifier avant de réserver | voyages
 - /articles/voyages/voyager-train-enfants-ete-2026-conseils/ | Voyager en train avec des enfants à l’été 2026: billets, poussette et organisation | voyages
 - /articles/sorties/bambouseraie-avec-de-jeunes-enfants-poussette-ou-balade-aerienne/ | Bambouseraie avec de jeunes enfants: poussette ou balade aérienne? | sorties | Générargues, Gard, Occitanie
 - /articles/activites/zoo-de-martinique-en-famille-tarifs-poussette-et-visite-de-l-habitation-latouche/ | Zoo de Martinique en famille: tarifs, poussette et visite de l'Habitation Latouche | activites | Le Carbet, Martinique, Martinique
 - /articles/sorties/gouffre-de-padirac-en-famille-tarifs-poussette-et-conseils-pour-la-visite/ | Gouffre de Padirac avec des enfants: à partir de quel âge et tarifs 2026 | sorties | Padirac, Lot, Occitanie
+- /articles/sorties/safari-de-peaugres-avec-enfants-quel-billet-choisir-et-comment-organiser-la-journee/ | Safari de Peaugres avec enfants: quel billet choisir et comment organiser la journée | sorties | Peaugres, Ardèche, Auvergne-Rhône-Alpes
 - /articles/vie-pratique/transports-scolaires-dans-le-val-d-oise-imagine-r-csb-ou-scol-r-en-2026-2027/ | Transports scolaires dans le Val-d’Oise: Imagine R, CSB ou Scol’R en 2026-2027 ? | vie-pratique | Cergy, Val-d'Oise, Île-de-France
 - /articles/activites/sherwood-parc-avec-des-enfants-quel-billet-choisir-avant-de-reserver/ | Sherwood Parc avec des enfants: quel billet choisir avant de réserver? | activites | Viarmes, Val-d'Oise, Île-de-France
 - /articles/evenements/festival-du-cirque-du-val-d-oise-2026-en-famille-tarifs-horaires-et-conseils/ | Festival du Cirque du Val d'Oise 2026 en famille: tarifs, horaires et conseils | evenements | Domont, Val-d'Oise, Île-de-France
