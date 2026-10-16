@@ -13,7 +13,7 @@
         "department": "Essonne",
         "region": "Île-de-France"
       },
-      "publishedAt": "2026-09-13T00:00:00+02:00",
+      "publishedAt": "2026-09-13T16:03:15+02:00",
       "ageDays": 33,
       "peakStart": "2026-09-16",
       "peakEnd": "2026-09-22",
@@ -44,7 +44,7 @@
         "department": "Isère",
         "region": "Auvergne-Rhône-Alpes"
       },
-      "publishedAt": "2026-09-12T00:00:00+02:00",
+      "publishedAt": "2026-09-12T18:04:35+02:00",
       "ageDays": 34,
       "peakStart": "2026-09-16",
       "peakEnd": "2026-09-22",
@@ -75,7 +75,7 @@
         "department": "Eure",
         "region": "Normandie"
       },
-      "publishedAt": "2026-09-15T00:00:00+02:00",
+      "publishedAt": "2026-09-15T19:00:19+02:00",
       "ageDays": 31,
       "peakStart": "2026-09-18",
       "peakEnd": "2026-09-24",
@@ -100,7 +100,7 @@
       "url": "/articles/parentalite/petite-section-peut-on-alleger-les-apres-midis-a-l-ecole-maternelle/",
       "title": "Petite section: peut-on alléger les après-midis à l'école maternelle?",
       "category": "parentalite",
-      "publishedAt": "2026-08-28T00:00:00+02:00",
+      "publishedAt": "2026-08-28T12:03:36+02:00",
       "ageDays": 49,
       "peakStart": "2026-09-16",
       "peakEnd": "2026-09-22",
@@ -129,7 +129,7 @@
         "department": "Loiret",
         "region": "Centre-Val de Loire"
       },
-      "publishedAt": "2026-09-04T00:00:00+02:00",
+      "publishedAt": "2026-09-04T16:04:39+02:00",
       "ageDays": 42,
       "peakStart": "2026-09-16",
       "peakEnd": "2026-09-22",
@@ -155,7 +155,7 @@
       "url": "/articles/bons-plans/carte-avantage-adulte-sncf-quand-est-elle-interessante-avec-des-enfants/",
       "title": "Carte Avantage Adulte SNCF: quand est-elle intéressante avec des enfants?",
       "category": "bons-plans",
-      "publishedAt": "2026-08-29T00:00:00+02:00",
+      "publishedAt": "2026-08-29T16:41:39+02:00",
       "ageDays": 48,
       "peakStart": "2026-09-28",
       "peakEnd": "2026-10-04",
@@ -180,7 +180,7 @@
         "department": "Manche",
         "region": "Normandie"
       },
-      "publishedAt": "2026-08-18T00:00:00+02:00",
+      "publishedAt": "2026-08-18T15:06:21+02:00",
       "ageDays": 59,
       "peakStart": "2026-09-16",
       "peakEnd": "2026-09-22",
@@ -206,7 +206,7 @@
       "url": "/articles/vie-pratique/demenagement-comment-changer-d-ecole-maternelle-ou-elementaire-sans-rater-une-etape/",
       "title": "Déménagement: comment changer d'école maternelle ou élémentaire sans rater une étape",
       "category": "vie-pratique",
-      "publishedAt": "2026-09-03T00:00:00+02:00",
+      "publishedAt": "2026-09-03T08:02:20+02:00",
       "ageDays": 43,
       "peakStart": "2026-09-16",
       "peakEnd": "2026-09-22",
@@ -237,7 +237,7 @@
         "department": "Isère",
         "region": "Auvergne-Rhône-Alpes"
       },
-      "publishedAt": "2026-09-05T00:00:00+02:00",
+      "publishedAt": "2026-09-05T09:59:12+02:00",
       "ageDays": 41,
       "peakStart": "2026-09-16",
       "peakEnd": "2026-09-22",
@@ -268,7 +268,7 @@
         "department": "Ille-et-Vilaine",
         "region": "Bretagne"
       },
-      "publishedAt": "2026-09-07T00:00:00+02:00",
+      "publishedAt": "2026-09-07T00:02:33+02:00",
       "ageDays": 39,
       "peakStart": "2026-09-16",
       "peakEnd": "2026-09-22",
@@ -297,7 +297,7 @@
         "department": "Loire-Atlantique",
         "region": "Pays de la Loire"
       },
-      "publishedAt": "2026-09-05T00:00:00+02:00",
+      "publishedAt": "2026-09-05T04:00:05+02:00",
       "ageDays": 41,
       "peakStart": "2026-09-16",
       "peakEnd": "2026-09-22",
@@ -326,7 +326,7 @@
         "department": "Calvados",
         "region": "Normandie"
       },
-      "publishedAt": "2026-09-07T00:00:00+02:00",
+      "publishedAt": "2026-09-07T11:04:46+02:00",
       "ageDays": 39,
       "peakStart": "2026-09-16",
       "peakEnd": "2026-09-22",
@@ -357,7 +357,7 @@
         "department": "Haute-Saône",
         "region": "Bourgogne-Franche-Comté"
       },
-      "publishedAt": "2026-09-27T00:00:00+02:00",
+      "publishedAt": "2026-09-27T20:24:24+02:00",
       "ageDays": 19,
       "peakStart": "2026-09-30",
       "peakEnd": "2026-10-06",
@@ -387,7 +387,7 @@
         "department": "Drôme",
         "region": "Auvergne-Rhône-Alpes"
       },
-      "publishedAt": "2026-09-04T00:00:00+02:00",
+      "publishedAt": "2026-09-04T18:01:50+02:00",
       "ageDays": 42,
       "peakStart": "2026-09-16",
       "peakEnd": "2026-09-22",
@@ -418,7 +418,7 @@
         "department": "Gironde",
         "region": "Nouvelle-Aquitaine"
       },
-      "publishedAt": "2026-09-27T00:00:00+02:00",
+      "publishedAt": "2026-09-27T14:41:35+02:00",
       "ageDays": 19,
       "peakStart": "2026-09-30",
       "peakEnd": "2026-10-06",
