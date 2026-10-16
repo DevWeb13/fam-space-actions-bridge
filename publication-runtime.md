@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,93 +14,113 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Essonne
 - Région: Île-de-France
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Titre de travail:** Ressourcerie du Plateau de Saclay: équiper la maison à petit prix et donner ses objets sans se tromper.
-
-**Angle:** Montrer comment une famille peut utiliser ce lieu de seconde main pour acheter meubles, jeux, jouets, livres ou équipements du quotidien, et comment préparer un don utile plutôt qu'un dépôt refusé. Distinguer clairement la boutique de réemploi de la déchèterie située sur le même site.
-
-**Contexte:** Ouverte depuis le 26 mars 2025 à Saclay (Essonne), impasse de la Poudrette, cette ressourcerie de 900 m² a été créée par le SIOM et est exploitée par l'entreprise d'insertion Re-Saclay. Les objets réutilisables sont triés, nettoyés ou remis en état puis proposés à la vente à prix raisonnés. Il s'agit d'un service durable, pas d'un événement ponctuel.
-
-## Besoin du lecteur
-
-Comprendre ce que l'on peut réellement chiner pour la maison ou les enfants, quels objets donner et lesquels ne pas apporter, où se rendre, quand la boutique ouvre et pourquoi les horaires et règles de la déchèterie voisine ne doivent pas être confondus avec ceux de la ressourcerie. Savoir qu'il n'existe pas de catalogue ni de prix garantis: les trouvailles dépendent des arrivages. Avant un trajet avec un objet encombrant, pouvoir joindre l'équipe pour confirmer les conditions de dépôt.
-
-## Valeur éditoriale
-
-- **Un usage familial concret:** mobilier, électroménager, vaisselle, décoration, livres, jeux, jouets, petit bricolage et loisirs. Expliquer ce que la seconde main peut apporter à l'équipement d'une maison sans annoncer des prix ou stocks non vérifiés.
-- **Donner sans déplacement inutile:** Re-Saclay accepte les objets encore réemployables, mais refuse ceux qui sont cassés, abîmés ou souillés, ainsi que les textiles, la literie, les VHS et les équipements de sécurité. Ne pas assimiler dépôt en ressourcerie et élimination de déchets.
-- **Un même site, deux usages distincts:** la ressourcerie se trouve au sein de la déchèterie de Saclay, impasse de la Poudrette (91400). La boutique annonce **mercredi et samedi 10h-17h30**, **jeudi et vendredi 12h-17h30** sur le site de l'exploitant et sur la page récente du SIOM. D'autres pages plus anciennes du SIOM affichent encore **14h** les jeudis et vendredis: privilégier la source de l'exploitant et conseiller de vérifier avant déplacement.
-- **Attention aux règles d'accès:** le badge, les justificatifs de domicile et les quotas de passage publiés par le SIOM concernent explicitement les dépôts de **déchets en déchèterie**. Ne pas les appliquer automatiquement aux achats en boutique ou aux dons à la ressourcerie sans confirmation de l'exploitant. Contact direct: **01 85 41 03 44**, **contact@laressourcerie.eco**.
-- **Dimension sociale:** le lieu soutient aussi l'insertion professionnelle et peut proposer des actions de sensibilisation ou de réparation, sans promettre un atelier à une date non vérifiée. Expliquer cette fonction en quelques lignes, sans transformer l'article en présentation institutionnelle.
-- **Pertinence et différenciation:** la page du SIOM décrit surtout l'équipement; Fam Space peut en faire un guide de décision pour les familles, centré sur acheter, donner et préparer sa visite. Ne pas reprendre la Fête de la Récup' du 11 octobre 2026, déjà passée. Autres pistes examinées: Repair Café des Molières (séances ponctuelles de réparation), Répare Café de Ballancourt (adhésion annuelle et calendriers de séances), recyclerie des Portes de l'Essonne (modalités pratiques moins complètes dans la source consultée). Aucun doublon avec les trois derniers sujets Fam Space fournis pour l'Essonne.
-
-## Affiliation
-
-**Aucune offre partenaire réellement adaptée confirmée.** L'action principale est l'achat sur place d'objets d'occasion ou le dépôt d'objets en bon état; elle n'est pas proposée par les partenaires disponibles. Recherches ciblées sans offre équivalente chez **GetYourGuide, Tiqets et Klook** (activités et visites) ni service de réservation pertinent chez **Booking.com**. Les autres partenaires listés concernent l'hébergement, les transports ou des services de voyage sans lien avec la démarche locale d'équipement du foyer. **Ne pas ajouter d'hôtel**, de billet touristique ou de transport artificiel. La rédaction peut renvoyer vers les contacts et modalités de la ressourcerie.
-
-## Sources de départ
-
-- **Exploitant Re-Saclay, horaires actuels, familles d'objets acceptées et refusées, coordonnées:** https://laressourcerie.eco/
-- **SIOM, présentation de la ressourcerie, surface et accès:** https://www.siom.fr/la-ressourcerie-du-plateau-de-saclay/
-- **SIOM, déchèterie de Saclay, horaires distincts, badge d'accès et conditions de dépôt des déchets:** https://www.siom.fr/decheterie-ressourcerie-du-siom-a-saclay/
-- **SIOM, communiqué officiel d'ouverture et rôle de Re-Saclay:** https://www.siom.fr/2025/04/28/communique-de-presse-reemploi-insertion-et-innovation-une-nouvelle-ressourcerie-pour-le-territoire-paris-saclay/
-- **Re-Saclay, actualités de l'exploitant, pour vérifier les fermetures et opérations temporaires avant rédaction:** https://laressourcerie.eco/actualites/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "maison"
+title: "Ressourcerie de Saclay: acheter et donner pour la maison"
+subtitle: "Meubles et jouets d'occasion, conditions des dons et horaires de la boutique"
+summary: "À Saclay, la ressourcerie propose meubles, jeux et objets d'occasion. Ce qu'on peut acheter ou donner, et les informations à vérifier avant de venir."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "ressourcerie du Plateau de Saclay"
+  - "ressourcerie Saclay horaires"
+  - "dons de meubles et jouets Essonne"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Saclay"
+  department: "Essonne"
+  region: "Île-de-France"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Re-Saclay - La Ressourcerie"
+    url: "https://laressourcerie.eco/"
+  - title: "SIOM - Ressourcerie du Plateau de Saclay"
+    url: "https://www.siom.fr/la-ressourcerie-du-plateau-de-saclay/"
+  - title: "SIOM - Déchèterie-ressourcerie de Saclay"
+    url: "https://www.siom.fr/decheterie-ressourcerie-du-siom-a-saclay/"
+  - title: "SIOM - Communiqué d'ouverture et insertion"
+    url: "https://www.siom.fr/2025/04/28/communique-de-presse-reemploi-insertion-et-innovation-une-nouvelle-ressourcerie-pour-le-territoire-paris-saclay/"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Pour équiper une chambre d'enfant, trouver des jeux ou remplacer de la vaisselle sans tout acheter neuf, la Ressourcerie du Plateau de Saclay est une piste à connaître. Installée impasse de la Poudrette, dans l'Essonne, cette boutique solidaire de 900 m² vend des objets d'occasion et récupère ceux qui peuvent encore servir. Elle partage son site avec une déchèterie, mais les deux espaces n'ont pas le même rôle.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Meubles, jouets et objets du quotidien
+
+La [présentation du SIOM](https://www.siom.fr/la-ressourcerie-du-plateau-de-saclay/) cite notamment le mobilier, l'électroménager, la décoration, les jeux, les jouets et le bricolage. L'[exploitant Re-Saclay](https://laressourcerie.eco/) mentionne également les livres, la vaisselle, les articles de cuisine et de loisirs.
+
+Ces objets sont collectés puis triés, contrôlés et, lorsque c'est nécessaire, remis en état pour être revendus à prix raisonnés. Les familles peuvent ainsi chercher un bureau, des livres pour enfants ou de quoi équiper la cuisine. En revanche, les arrivages changent: **aucun modèle ni tarif précis n'est garanti**. Il vaut mieux examiner sur place l'état et les dimensions d'un article avant de l'acheter.
+
+## Que peut-on donner?
+
+La ressourcerie accepte les objets en état d'être réemployés: mobilier, livres, jeux et jouets, électroménager, électronique, décoration, vaisselle, matériel de sport ou de bricolage.
+
+Selon les [consignes de Re-Saclay](https://laressourcerie.eco/), **les objets cassés, abîmés ou souillés sont refusés**. Il en va de même pour les textiles, la literie, les VHS et les équipements de sécurité. Ce qui n'est plus utilisable relève d'une autre filière de traitement, pas d'un don à la boutique.
+
+Pour un meuble encombrant ou un don inhabituel, mieux vaut téléphoner avant de le transporter. L'équipe pourra préciser les modalités de dépôt et confirmer qu'elle reçoit des apports ce jour-là.
+
+## Ne pas confondre la boutique et la déchèterie
+
+La ressourcerie est implantée sur le site de la déchèterie du SIOM, mais **donner un objet réutilisable et déposer des déchets sont deux démarches distinctes**. La [fiche de la déchèterie](https://www.siom.fr/decheterie-ressourcerie-du-siom-a-saclay/) prévoit notamment un badge ou QR code, des justificatifs de domicile et une limite de passages pour les dépôts de déchets. Il ne faut pas en déduire que toutes ces obligations s'appliquent automatiquement aux achats ou aux dons à la ressourcerie; en cas de doute sur l'accès au site, demandez confirmation à Re-Saclay.
+
+La déchèterie ouvre du lundi au samedi de 9h à 17h45 et les dimanches et jours fériés de 9h à 12h45, hors fermetures annoncées. **La boutique a ses propres horaires**, plus restreints.
+
+## Préparer sa visite
+
+**Adresse:** impasse de la Poudrette, 91400 Saclay.
+
+Les horaires affichés sur le [site de Re-Saclay](https://laressourcerie.eco/) sont **mercredi et samedi de 10h à 17h30**, **jeudi et vendredi de 12h à 17h30**. Certaines anciennes pages du SIOM indiquent encore 14h le jeudi et le vendredi. La [fiche détaillée du SIOM](https://www.siom.fr/decheterie-ressourcerie-du-siom-a-saclay/) reprend toutefois les horaires de l'exploitant. Avant un trajet important ou pendant les vacances, vérifiez l'ouverture.
+
+**Téléphone:** 01 85 41 03 44. **E-mail:** contact@laressourcerie.eco.
+
+Ouverte en mars 2025, la structure a également une mission sociale. Gérée par l'entreprise d'insertion Re-Saclay, elle accompagne des personnes vers l'emploi et dispose d'espaces destinés à la sensibilisation et à la réparation. Cela ne signifie pas qu'un atelier est organisé chaque jour: les dates doivent être consultées séparément. Le [communiqué du SIOM](https://www.siom.fr/2025/04/28/communique-de-presse-reemploi-insertion-et-innovation-une-nouvelle-ressourcerie-pour-le-territoire-paris-saclay/) décrit ce fonctionnement.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -129,4 +149,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
