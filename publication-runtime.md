@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 1/4
+# Publication automatique Fam Space - Phase 2/4
 
 ## Mission
 
-Tu es le rédacteur en chef de Fam Space.
+Tu es un journaliste web professionnel pour Fam Space.
 
-Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. Fam Space doit publier moins mais mieux: un sujet doit pouvoir devenir un article fiable, utile aux familles, agréable à lire et, lorsque c'est naturel, intéressant pour l'affiliation.
+Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
 
 ## Affectation courante
 
@@ -14,103 +14,96 @@ Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. 
 - Département: Bouches-du-Rhône
 - Région: Provence-Alpes-Côte d’Azur
 
-### Articles publiés récemment
-
-- 2026-10-06: Fête de la mer 2026 à Marseille avec des enfants: quelle escale choisir?
-- 2026-10-04: Mucem à la Toussaint 2026: le programme En Ribambelle avec des enfants
-- 2026-10-03: Cosquer Méditerranée avec des enfants: que peut-on visiter selon leur âge?
-- 2026-09-26: Food tour à Aix-en-Provence avec des enfants: lequel choisir en 2026?
-- 2026-09-13: Déchets’tri mobile à Marseille: quoi apporter sans aller à la déchèterie?
-- 2026-09-11: Escale Borély avec des enfants: du David au Bowl à pied
-- 2026-09-06: Consigne à Marseille Saint-Charles avec des enfants: où laisser valises et poussette?
-- 2026-08-31: Préau des Accoules à Marseille: faut-il réserver avant de venir avec des enfants?
-- 2026-08-23: HeroFestival Marseille 2026 en famille: billets, gratuité enfants et conseils
-- 2026-08-13: Marseille en famille pendant 3 jours: itinéraire simple autour du Vieux-Port
-- 2026-08-08: Mucem Marseille en famille: tarifs 2026, billets et gratuités
-- 2026-07-26: Concert gratuit à Cassis le 13 août 2026
-- 2026-07-23: Musée du Calisson à Aix-en-Provence: une enquête gourmande pour les enfants en 2026
-- 2026-07-16: Que faire avec les enfants pendant l’Été Marseillais 2026 ?
-
-Ne reproduis pas les mêmes sujets.
-
-## Choisir un sujet qui mérite un article
-
-Respecte l'affectation. Pour une affectation locale, choisis librement la commune ou le lieu le plus pertinent dans le département imposé.
-
-La liste « Articles publiés récemment » est fournie automatiquement. Utilise-la pour éviter les doublons de lieu, de sujet ou d'angle. Un titre différent ne suffit pas à rendre un article différent.
-
-Cherche plusieurs sujets avant de choisir. Pour les candidats sérieux, utilise la recherche web pour comprendre ce qui existe déjà, vérifier les faits essentiels, voir ce que les résultats Google répondent déjà et t'assurer que le sujet est réellement utile à publier maintenant. Si l'élément principal est fermé, hors saison, en maintenance ou temporairement indisponible au point de vider l'article de son intérêt, écarte ce candidat et choisis-en un autre.
-
-Choisis un sujet qui a une vraie matière éditoriale. Un lecteur qui ne connaît pas le sujet doit pouvoir comprendre ce que c'est, pourquoi cela peut l'intéresser et obtenir plusieurs informations utiles sans que l'article répète la même idée.
-
-L'angle sert à donner une direction et un titre intéressant. Il ne doit jamais enfermer tout l'article dans une micro-question comme un tarif, un pass, une poussette ou un calcul simple.
-
-Écarte un sujet si Fam Space ne ferait que réécrire une page officielle ou s'il n'y a pas assez de matière pour produire un bon article. Si aucun candidat ne reste suffisamment utile et actuel après une recherche sérieuse, ne force pas un sujet.
-
-## Penser aussi au potentiel d'affiliation
-
-La monétisation est un objectif important de Fam Space. Avant de choisir le sujet final, vérifie sérieusement les offres disponibles chez les partenaires suivants:
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-Applique la logique d'usage ci-dessus à chaque candidat sérieux et vérifie les offres avant de les retenir dans le brief.
-
-À qualité éditoriale comparable, privilégie clairement le sujet qui possède une piste d'affiliation naturelle et vérifiée. Ne choisis toutefois jamais un sujet médiocre uniquement parce qu'il est affiliable et n'invente jamais une offre sans rapport avec le lecteur.
-
-Si un excellent sujet n'a réellement aucune offre partenaire pertinente après vérification, il peut rester publiable. Le brief doit alors le dire clairement. L'absence d'affiliation ne doit jamais résulter d'une recherche superficielle.
-
-## Sujets à écarter
-
-Écarte les sujets politiques ou militants, les guerres et conflits armés, les contenus haineux, violents, sexuellement explicites, dangereux ou trompeurs, ainsi que les conseils médicaux, juridiques ou financiers personnalisés à risque élevé.
-
-Ne choisis pas comme sujet principal une maladie, un diagnostic, un traitement, une vaccination ou une urgence médicale ou psychiatrique.
-
-Pour un événement ponctuel, ne le retiens pas s'il commence dans moins de 30 jours. S'il a déjà commencé, il doit rester au moins 30 jours d'utilité réelle. Cette règle ne concerne pas les attractions permanentes, destinations durables ou activités disponibles sur une longue période.
-
-## Résultat attendu
-
-Prépare un brief court. Le fichier doit contenir exactement ces sections:
+## Brief du rédacteur en chef
 
 ## Sujet retenu
-Le sujet, un titre de travail et l'angle principal. Décris aussi en une ou deux phrases ce qu'est réellement le sujet afin que le journaliste parte avec le bon contexte.
+
+**Titre de travail:** Maison des Parents aux Pennes-Mirabeau: ateliers gratuits, accueil des familles et Maison Câlins.
+
+**Angle:** Présenter le fonctionnement de ce lieu municipal de soutien à la parentalité, dans le quartier de La Gavotte, et distinguer trois usages concrets: venir s'informer ou échanger, réserver un atelier parent-enfant ou pour futurs parents, et profiter avec un tout-petit de l'accueil libre de la Maison Câlins. Mettre en perspective le programme d'automne 2026 sans enfermer l'article dans une seule animation ni laisser croire que tous les accueils nécessitent une réservation.
+
+**Contexte:** Installée au parc Saint-Georges, impasse Merlusse, aux Pennes-Mirabeau (Bouches-du-Rhône), la Maison des Parents a été créée par la Ville avec la CAF. C'est un lieu d'information, d'écoute et de rencontres pour les familles, qui abrite aussi des dispositifs distincts destinés à la petite enfance.
 
 ## Besoin du lecteur
-Ce que le lecteur doit comprendre, apprendre ou pouvoir faire après avoir lu l'article. Ne réduis pas ce besoin à une seule micro-question si le sujet mérite un traitement plus large.
+
+Savoir ce que les parents peuvent trouver sur place selon l'âge de leurs enfants, si une visite spontanée est possible, quelles activités sont gratuites, comment s'inscrire aux ateliers et à qui téléphoner avant de venir. Comprendre que **Maison des Parents et Maison Câlins ne désignent pas le même accueil**: la première organise notamment des rendez-vous sur réservation, tandis que la seconde est un lieu d'accueil enfants-parents (LAEP) libre, anonyme, sans inscription et gratuit pour les 0-5 ans accompagnés. Pouvoir préparer une première visite sans confondre accueil familial, atelier programmé et mode de garde.
 
 ## Valeur éditoriale
-Les quelques informations ou distinctions qui justifient l'article et ce que Fam Space peut apporter de mieux qu'une simple reprise des sources.
+
+- **Plusieurs services réellement complémentaires:** accueil, échanges et documentation pour les parents; ateliers ponctuels parent-enfant, bien-être et éveil; rencontres destinées aux futurs parents. Expliquer les usages concrets plutôt que reformuler seulement la présentation municipale.
+- **Programme récent et vérifié, sans promettre des places:** goûter familial d'Halloween le **20 octobre 2026 à 16h**; atelier duo bien-être **3-8 ans le 21 octobre à 14h**; éveil musical **0-6 ans le 28 octobre à 10h**; « Team Parents » pour futurs parents le **17 novembre à 18h**. **Ateliers gratuits, inscription en ligne obligatoire, places limitées** selon la programmation municipale. Les événements d'octobre servent d'exemples à un article sur une structure permanente, non de sujet principal ponctuel.
+- **Maison Câlins, autre logique:** pour les enfants de la naissance à 5 ans accompagnés d'un parent ou adulte référent, espaces motricité, livres et jeux, écoute et sociabilisation; **pas d'inscription, anonymat et confidentialité**. Le site municipal en version « www » et sa convention 2024-2026 indiquent **lundi et jeudi de 9h à 12h**, tandis qu'une autre version du site affiche **mercredi et jeudi**. Signaler la contradiction et conseiller de vérifier au **06 27 41 15 19** avant déplacement; ne pas présenter un horaire incertain comme garanti. Le parent reste avec l'enfant: ce n'est pas une crèche.
+- **Horaires contradictoires de la Maison des Parents:** la page municipale `/index.php/mdp` indique **lundi, mardi, jeudi 14h-18h et mercredi 13h-18h**, tandis que `/index.php/accueil-mdp` et un guide municipal donnent **lundi, mardi, jeudi 13h-17h30 et mercredi 9h-12h puis 13h-17h30**. Ne pas choisir arbitrairement un de ces jeux d'horaires. Fournir l'adresse **parc Saint-Georges, impasse Merlusse, La Gavotte, 13170 Les Pennes-Mirabeau**, l'e-mail **maisondesparents@vlpm.com** et les numéros affichés **04 91 67 17 31** (programmation récente) et **06 84 20 53 69** (présentation municipale); recommander confirmation préalable.
+- **Nuance sur le public:** les annonces d'ateliers mentionnent les parents d'enfants de **0 à 17 ans**, tandis qu'un guide municipal 2025-2026 évoque jusqu'à 21 ans. Préférer « parents d'enfants de différents âges, y compris adolescents, et futurs parents pour certains rendez-vous » plutôt que fixer un âge plafond incertain.
+- **Intérêt durable et absence de doublon:** la Maison des Parents fonctionne au-delà de l'automne 2026 et répond aux questions quotidiennes de parentalité. Les publications récentes des Bouches-du-Rhône concernent principalement des loisirs, sorties ou services logistiques, et non cet accompagnement de proximité. Autres pistes examinées: les LAEP marseillais, recensés collectivement dans un annuaire déjà pratique mais sans angle local suffisamment distinctif ici; l'École des parents à Aix-en-Provence, utile mais dont les séances et permanences demandent davantage de vérifications précises. Le sujet des Pennes-Mirabeau propose une distinction éditoriale immédiatement utile entre plusieurs formes d'accueil.
 
 ## Affiliation
-Les pistes partenaires réellement vérifiées, avec partenaire, offre et URL exacte, y compris les besoins secondaires naturels. Si aucune offre pertinente n'existe réellement, indique-le clairement.
+
+**Aucune offre partenaire pertinente confirmée.** L'action principale est un service municipal gratuit de soutien à la parentalité et l'inscription à ses ateliers. Les recherches ciblées sur **GetYourGuide, Tiqets et Klook** n'ont identifié aucune réservation équivalente pour la Maison des Parents ou la Maison Câlins. Aucun partenaire d'hébergement, transports, billetterie ou location de vacances ne répond naturellement à ce besoin de proximité. Ne pas inventer de prestation ni ajouter d'hébergement. Orienter vers le formulaire et les coordonnées municipaux; la phase suivante pourra réévaluer uniquement si une offre réellement correspondante apparaît.
 
 ## Sources de départ
-Les meilleures sources officielles ou directement responsables pour lancer la rédaction, avec l'URL exacte de chaque page utile.
 
-Ne rédige pas le corps final de l'article pendant cette phase.
+- **Ville des Pennes-Mirabeau, présentation et mission de la Maison des Parents:** https://pennes-mirabeau.org/index.php/def-mdp
+- **Ville des Pennes-Mirabeau, ateliers gratuits et agenda octobre-novembre 2026:** https://www.pennes-mirabeau.org/index.php/actu-mdp/314-parentalite
+- **Ville des Pennes-Mirabeau, Maison Câlins (accueil libre et jeux, version www):** https://www.pennes-mirabeau.org/index.php/infos-mdp/134-calins
+- **Ville des Pennes-Mirabeau, Maison Câlins (version sans www, horaires divergents):** https://pennes-mirabeau.org/index.php/infos-mdp/134-calins
+- **Ville des Pennes-Mirabeau, page Maison des Parents (horaires version 1):** https://www.pennes-mirabeau.org/index.php/mdp
+- **Ville des Pennes-Mirabeau, page accueil Maison des Parents (horaires version 2):** https://pennes-mirabeau.org/index.php/accueil-mdp
+- **Ville des Pennes-Mirabeau, rendez-vous Team Parents du 17 novembre et modalités de réservation:** https://www.pennes-mirabeau.org/index.php/agenda/219-bebe17nov
+- **Ville des Pennes-Mirabeau, convention Maison Câlins 2024-2026 (gratuité et horaires):** https://www.pennes-mirabeau.org/images/pdf/ville/delib2023/12/266x23.pdf
+
+## Écrire l'article
+
+Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
+
+Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
+
+Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
+
+Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
+
+Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
+
+Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+
+N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
+
+Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
+
+Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
+
+À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
+
+## Format du candidat
+
+Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
+
+```yaml
+---
+category: "<catégorie assignée>"
+title: "Titre direct et informatif"
+subtitle: "Précision différente du titre"
+summary: "Résumé de 90 à 180 caractères"
+keywords:
+  - "mot-clé principal"
+  - "mot-clé secondaire"
+location:
+  city: "Ville"
+  department: "Département assigné"
+  region: "Région assignée"
+sources:
+  - title: "Page officielle utilisée"
+    url: "https://..."
+---
+```
+
+Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+
+Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 1/4
+- Phase préparée mécaniquement: 2/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -123,30 +116,20 @@ Toute la plomberie technique est gérée mécaniquement. Ne cherche aucune branc
 
 Écris uniquement publication-request.md sur la branche main de DevWeb13/fam-space-actions-bridge avec le résultat éditorial demandé dans ce runtime. Le pipeline mécanique se charge de la phase, de la branche de travail, des commits, de la validation et de la suite du cycle.
 
-Si tu retiens un sujet, utilise:
+Utilise:
 
 ~~~yaml
 ---
-action: start
+action: advance
 ---
 
-<brief complet demandé ci-dessus>
+<article complet demandé ci-dessus, frontmatter compris>
 ~~~
 
-Si, après une recherche sérieuse, aucun sujet suffisamment utile et actuel ne mérite un article, utilise:
-
-~~~yaml
----
-action: skip
----
-
-<raison factuelle et courte>
-~~~
-
-Un échec technique n'est jamais une raison de skip. Une fois publication-request.md écrit, termine le passage.
+Rends toujours l'article complet, même si cette phase ne nécessite que peu de corrections. Une fois publication-request.md écrit, termine le passage.
 
 ## Rapport final
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les principaux sujets envisagés, les doublons écartés, le sujet retenu, pourquoi il mérite un article, les pistes d'affiliation réellement vérifiées et les principales sources. En cas de skip, explique simplement pourquoi aucun sujet suffisamment bon n'a été retenu.
+Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
