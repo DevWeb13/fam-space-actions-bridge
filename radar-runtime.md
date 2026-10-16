@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Automnales d'Harcourt 2026 en famille: jeux nature, visites et tarifs"
-subtitle: "Les 17 et 18 octobre: choisir les animations avec des enfants et prévoir le budget"
-summary: Pour les 20 ans des Automnales d'Harcourt, repérez les animations jeunes publics, les visites et les tarifs du week-end des 17 et 18 octobre 2026.
+title: "Automnales d'Harcourt 2026: jeux, visites et tarifs en famille"
+subtitle: Les 17 et 18 octobre, un week-end autour des arbres avec des activités pour les enfants
+summary: Les Automnales d'Harcourt 2026 se tiennent les 17 et 18 octobre. Horaires des jeux, visites et projections, tarifs et accès pour une sortie en famille.
 category: evenements
 location:
   city: Harcourt
@@ -71,17 +76,21 @@ keywords:
   - Automnales Harcourt 17 18 octobre
   - fête des plantes Domaine Harcourt famille
 sources:
-  - title: Domaine d'Harcourt - Automnales 2026, programme et accès
+  - title: Domaine d'Harcourt - Programme des Automnales 2026
     url: https://www.harcourt-normandie.fr/les-incontournables/les-automnales/
-  - title: Domaine d'Harcourt - Francis Hallé et les animations enfants
+  - title: Domaine d'Harcourt - Hommage à Francis Hallé
     url: https://www.harcourt-normandie.fr/actualites/francis-halle-un-hommage-au-coeur-des-automnales-dharcourt/
-  - title: Office de tourisme de Bernay - Automnales 2026, tarifs
+  - title: Office de tourisme de Bernay - Automnales, tarifs et adresse
     url: https://tourisme.bernaynormandie.fr/agenda/les-automnales-dharcourt/
+  - title: Domaine d'Harcourt - Foire aux questions
+    url: https://www.harcourt-normandie.fr/faq/
+  - title: Domaine d'Harcourt - Préparer sa visite
+    url: https://www.harcourt-normandie.fr/preparez-votre-experience/
   - title: Domaine d'Harcourt - Rendez-vous d'automne
     url: https://www.harcourt-normandie.fr/nos-rendez-vous/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: automnales-d-harcourt-2026-en-famille-jeux-nature-visites-et-tarifs
   decision: Décider si la fête des plantes des 17-18 octobre convient à l'âge des enfants, choisir le meilleur créneau familial et calculer le budget d'une visite sans réserver une expérience nocturne différente.
@@ -91,33 +100,46 @@ radar:
     dataThrough: 2026-10-13
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Domaine d'Harcourt - Automnales 2026, programme et accès »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-10-18
 ---
 
-## Mission retenue
-Préparer une vraie sortie familiale aux **Automnales du Domaine d'Harcourt**, 20e édition, les samedi 17 et dimanche 18 octobre 2026 de 10h à 18h. Ce salon de plantes en plein air n'est pas Arbora Lumina, parcours nocturne qui n'ouvre que le 13 novembre.
+Les **Automnales d'Harcourt** reviennent **samedi 17 et dimanche 18 octobre 2026, de 10h à 18h**, dans l'Eure. Pour leur 20e édition, cette fête des plantes réunit plus de 50 exposants et propose aussi des jeux autour des arbres, de courtes visites de l'arboretum et des projections. Une famille peut donc y passer quelques heures même si les enfants ne s'intéressent pas encore au jardinage.
 
-## Pourquoi cette mission
-Une opportunité locale datée dès demain et documentée par l'organisateur: visites accessibles aux enfants, jeux libre-service, documentaire, sculpture et plus de 50 exposants. Aucun article Automnales dans le catalogue compact; seul Arbora Lumina traite le même lieu avec une expérience et des dates différentes. Le meilleur refresh GSC, la cantine en Essonne (182 à 29 impressions), et le suivant, Tattoo Isère (166 à 15), ont des signaux `uncertain` sans requête comparable et des articles existants déjà utiles et exacts sur leurs décisions principales. Une expansion depuis les pages fortes, notamment les transports parisiens ou Futuroween, empiéterait davantage sur les articles voisins déjà publiés. Les événements en cours Publication (musée de la Bière à Stenay) et Destinations (Vincennes, Haut-Rhin) n'empiètent pas sur cette fête.
+## Quels rendez-vous choisir avec des enfants?
 
-## Décision du lecteur
-Choisir une plage horaire adaptée à son enfant, savoir ce qu'il peut faire pendant que les adultes découvrent la fête des plantes, puis décider s'il faut acheter un billet en avance et combien prévoir.
+Le [programme officiel](https://www.harcourt-normandie.fr/les-incontournables/les-automnales/) distingue plusieurs activités. Elles sont annoncées les deux jours, sauf indication contraire:
 
-## Faits à traiter
-- Dates **17-18 octobre 2026**, **10h-18h**, Domaine d'Harcourt, 5 rue de la Gare. Prévoir `eventEndsAt: 2026-10-18` pour retirer la pertinence temporelle après le week-end.
-- Jeux et animations pédagogiques **en libre-service 10h-18h** au point-info Médiation; visite «20 arbres pour les 20 ans» à **11h, 15h et 17h** samedi/dimanche, **45 min**, tous publics; film «Il était une forêt» **10h30, 14h, 16h**, **1h18**; sculpture en direct. Rencontre «Jurassic Plantes» le dimanche uniquement.
-- Tarifs affichés par l'office de tourisme: **3,50 € base, 3 € réduit, 2,50 € enfant**. La page de l'organisateur évoque un tarif anniversaire exceptionnel sans montant: revérifier les catégories d'âge, gratuité moins de 6 ans, éventuels tarifs réellement affichés au moment de l'achat et préciser la divergence plutôt que la masquer.
-- **Billetterie en ligne OU sur place**, à distinguer d'Arbora Lumina (en ligne uniquement). Vérifier si une réservation est requise pour une animation particulière; ne pas inventer de garantie de place.
-- Parking, toilettes, pique-nique, restauration et portage gratuit des plants annoncés. Clarifier poussettes, accès PMR et retour de bus NOMAD 214 uniquement selon les données confirmées. Ne pas promettre la visite intérieure du château en travaux.
+- **De 10h à 18h:** jeux et animations pédagogiques **en libre-service** au point-info Médiation. Le Domaine évoque aussi des dessins botaniques à colorier. C'est le choix le plus souple pour les petits, sans horaire à respecter.
+- **À 11h, 15h et 17h:** visite accompagnée **«20 arbres pour les 20 ans»**, ouverte à tous, pour **45 minutes**. Rendez-vous au point-info Médiation. Elle permet d'explorer l'arboretum avec un guide sans monopoliser toute la journée.
+- **À 10h30, 14h et 16h:** projection du documentaire **«Il était une forêt»**, de Luc Jacquet, d'une durée de **1h18**. Elle se déroule dans l'espace de médiation, à l'intérieur: un format plutôt adapté à des enfants capables de suivre un film complet.
+- **Tout le week-end:** sculpture sur bois en direct par Esther Seguin et espace librairie consacré aux arbres et à la botanique.
+- **Le dimanche seulement:** rencontre autour du livre **«Jurassic Plantes»** avec ses auteurs Romain Maire et Corentin Pfeiffer, annoncée sur la plage de 10h à 18h.
 
-## Sources de départ
-Pages de l'organisateur et office de tourisme répertoriées dans le frontmatter ci-dessus.
+Pour une première sortie avec de jeunes enfants, associer les jeux en libre-service à une visite guidée de 45 minutes paraît plus réaliste que d'enchaîner visite, documentaire et animations. Les horaires indiqués sont ceux annoncés par le Domaine; renseignez-vous à l'accueil sur les places et les modalités de chaque activité.
 
-## Affiliation
-Aucune billetterie partenaire pour l'événement. Des hébergements à **Bernay ou Brionne** existent sur Booking.com pour un week-end régional, mais aucune disponibilité aux dates du 17-18 octobre n'est établie. Réserver cette piste aux familles combinant plusieurs visites; ne pas concurrencer la billetterie officielle.
+## Combien coûte l'entrée? Peut-on acheter sur place?
 
-## Continuations internes
-- Liens utiles, sans répéter la visite nocturne: [Arbora Lumina à Harcourt](/articles/evenements/arbora-lumina-a-harcourt-ce-qu-il-faut-prevoir-avec-des-enfants/) pour les familles qui souhaitent revenir dès le 13 novembre.
-- Le thème automnal et les jeux nature doivent rester spécifiques aux Automnales; éviter une liste générale d'activités normandes ou une description générale du château déjà abordée dans l'article Arbora Lumina.
+L'[office de tourisme de Bernay](https://tourisme.bernaynormandie.fr/agenda/les-automnales-dharcourt/) publie **3,50 € au tarif de base**, **3 € au tarif réduit** et **2,50 € au tarif enfant**. À ces montants, deux adultes et deux enfants payants représenteraient **12 €**, hors achats sur les stands et restauration.
+
+Une précision importante: le Domaine annonce, pour les 20 ans, un **tarif réduit exceptionnel pour tous** sans publier sur sa page événement la grille correspondante. Les catégories d'âge du tarif enfant et l'application de la gratuité des moins de 6 ans, mentionnée dans la FAQ pour la visite ordinaire, ne sont pas précisées pour cette édition. **Confirmez le prix effectivement proposé avant de compter sur un montant ou une gratuité.**
+
+Les billets peuvent être achetés **en ligne ou directement sur place** pour les Automnales, selon l'organisateur. La [billetterie du Domaine](https://www.harcourt-normandie.fr/billetterie/) permet de vérifier les offres affichées. L'office de tourisme mentionne une entrée sans réservation préalable, ce qui ne garantit pas une place dans chaque visite ou projection si une jauge s'applique.
+
+## Accès, poussette et repas: les détails utiles
+
+La fête a lieu au **Domaine d'Harcourt, 5 rue de la Gare, 27800 Harcourt**. Un **parking gratuit** est prévu à l'entrée. Sur place, l'organisateur annonce **toilettes, restauration, possibilité de pique-niquer** et **portage gratuit des plantes achetées**: pratique pour ne pas transporter des pots pendant toute la promenade.
+
+Le [Domaine précise](https://www.harcourt-normandie.fr/faq/) que la visite de jour est globalement accessible aux personnes à mobilité réduite, mais que certains chemins sont irréguliers, pentus ou non pavés. Les poussettes sont autorisées, sans garantie de confort sur tous les sentiers; pour un bébé, prévoyez une solution de portage si nécessaire. Les aménagements exacts et les éventuels changements de circulation durant la fête peuvent être demandés à l'accueil au **02 32 46 29 70**.
+
+Sans voiture, le Domaine mentionne la **ligne NOMAD 214** et la gare de Brionne, située à environ 7 km: vérifiez impérativement un aller **et surtout un retour** le samedi ou le dimanche avant de compter sur cette solution.
+
+Enfin, **l'intérieur du château reste fermé au public pour travaux**; la visite se concentre sur les extérieurs, l'arboretum et les espaces ouverts pour l'événement.
+
+## Prolonger la sortie dans l'Eure
+
+Une visite aux Automnales peut suffire pour une demi-journée. Si vous prévoyez aussi Brionne, le Bec-Hellouin ou d'autres étapes dans l'Eure, [regardez les hébergements à Bernay](https://www.booking.com/city/fr/bernay-fr.fr.html) pour organiser un week-end; la disponibilité et le tarif réel aux dates souhaitées sont à vérifier avant de réserver.
+
+Ne confondez pas cette fête **en journée** avec **[Arbora Lumina, le parcours nocturne d'Harcourt](/articles/evenements/arbora-lumina-a-harcourt-ce-qu-il-faut-prevoir-avec-des-enfants/)**, dont la nouvelle saison commence le **13 novembre 2026** et dont la billetterie suit des règles différentes.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -129,8 +151,8 @@ Aucune billetterie partenaire pour l'événement. Des hébergements à **Bernay 
 - /articles/evenements/fete-des-rues-aux-enfants-2026-a-paris-ou-aller-selon-l-arrondissement/ | Fête des rues aux enfants 2026 à Paris: où aller selon l'arrondissement? | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/nuit-des-chateaux-2026-a-tanlay-visite-aux-bougies-avec-des-enfants-les-16-et-17-octobre/ | Nuit des Châteaux 2026 à Tanlay: visites aux bougies les 16 et 17 octobre | evenements | Tanlay, Yonne, Bourgogne-Franche-Comté
 - /articles/bons-plans/musee-fermat-en-famille-jeux-tarifs-et-visite-avec-des-enfants/ | Musée Fermat en famille: jeux, tarifs et visite avec des enfants | bons-plans | Beaumont-de-Lomagne, Tarn-et-Garonne, Occitanie
-- /articles/evenements/fete-de-la-science-2026-en-famille/ | Fête de la science 2026: choisir une expérience adaptée à l’âge des enfants | evenements
 - /articles/evenements/festival-cite-en-jeux-2026-a-colomiers-quel-jour-choisir-avec-des-enfants/ | Festival Cité en Jeux 2026 à Colomiers: quel jour choisir avec des enfants | evenements | Colomiers, Haute-Garonne, Occitanie
+- /articles/evenements/fete-de-la-science-2026-en-famille/ | Fête de la science 2026: choisir une expérience adaptée à l’âge des enfants | evenements
 - /articles/voyages/lyons-la-foret-avec-des-enfants-journee-ou-week-end-dans-le-village-et-la-foret/ | Lyons-la-Forêt avec des enfants: journée ou week-end dans le village et la forêt? | voyages | Lyons-la-Forêt, Eure, Normandie
 - /articles/sorties/giverny-en-famille-visiter-la-maison-de-monet-et-le-musee-des-impressionnismes/ | Giverny en famille: visiter la maison de Monet et le musée des impressionnismes | sorties | Giverny, Eure, Normandie
 - /articles/evenements/toussaint-2026-au-musee-des-confluences-a-lyon-spectacles-et-ateliers-par-age/ | Toussaint 2026 au musée des Confluences: cinq rendez-vous pour les enfants | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
