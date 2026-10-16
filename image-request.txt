@@ -174,3 +174,4 @@ automation/image-20261015-0a4fdbb-seaquarium-agen-cdg-672fc1e|99198f7de5400e4dbb
 automation/image-20261015-0a4fdbb-seaquarium-agen-cdg-672fc1e|e2a668a9539701f7e89ea9cdde4d4212e1b7ea8c
 automation/image-20261016-d592c28-lyon-toulouse-0040|4d7c92ec9813d0748057c6cd6ca3830411d7b302
 automation/image-20261016-d592c28-lyon-toulouse-0040|c6c1986b4ed380181cb7da019b7d5b0dc6eac453
+automation/image-20261016-bced667-stenay-harcourt-0942|8951f28235dd11826e1c39853603e8dc812fdc7c
