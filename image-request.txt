@@ -172,3 +172,4 @@ automation/image-20261015-b2424e8-montreuil-chamrousse-8381f6f|99a0e285b176fe20d
 automation/image-20261015-0a4fdbb-seaquarium-agen-cdg-672fc1e|672fc1e317f2d76ba77fe4f92c5482337b97edc1
 automation/image-20261015-0a4fdbb-seaquarium-agen-cdg-672fc1e|99198f7de5400e4dbb6bdd21685bdfc4c962d454
 automation/image-20261015-0a4fdbb-seaquarium-agen-cdg-672fc1e|e2a668a9539701f7e89ea9cdde4d4212e1b7ea8c
+automation/image-20261016-d592c28-lyon-toulouse-0040|4d7c92ec9813d0748057c6cd6ca3830411d7b302
