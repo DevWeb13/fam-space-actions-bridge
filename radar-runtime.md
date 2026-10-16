@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,25 +60,18 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Arbora Lumina à Harcourt: ce qu'il faut prévoir avec des enfants"
-subtitle: Une promenade nocturne d'environ une heure dans l'arboretum, avec réservation en ligne obligatoire
-summary: Arbora Lumina revient à Harcourt le 13 novembre 2026. Durée, réservation, parking et conseils pratiques pour préparer cette sortie nocturne.
+title: "Arbora Lumina 2026-2027 à Harcourt en famille: billets, tarifs et parcours"
+subtitle: Du 13 novembre au 28 février, une promenade nocturne de neuf zones à préparer avant de réserver
+summary: "Arbora Lumina revient à Harcourt du 13 novembre 2026 au 28 février 2027: prix des billets, durée, âge, poussette, arrivée 15 minutes avant et accès en famille."
 slug: arbora-lumina-a-harcourt-ce-qu-il-faut-prevoir-avec-des-enfants
 status: published
 publishedAt: 2026-09-15T19:00:19+02:00
 updatedAt: 2026-09-15T22:31:18+02:00
 category: evenements
-readingTime: 3
+readingTime: 4
 location:
   city: Harcourt
   department: Eure
@@ -81,7 +86,7 @@ image:
   alt: Château d'Harcourt dans l'Eure en Normandie
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(09)/arbora-lumina-a-harcourt-ce-qu-il-faut-prevoir-avec-des-enfants/index.md
   targetSha: d1f0d0e1b408e241b67efd1a8b232c4d15bd3e26
@@ -107,35 +112,71 @@ radar:
       - arbora lumina horaire
       - arbora lumina harcourt tarif
       - arbora lumina harcourt
+eventEndsAt: 2027-02-28
+sources:
+  - title: Département de l'Eure - Arbora Lumina 2026-2027 et dates de la saison
+    url: https://eureennormandie.fr/actualite/arbora-lumina-2026-2027/
+  - title: Arbora Lumina - Site officiel du parcours
+    url: https://arboralumina.harcourt-normandie.fr/
+  - title: Domaine d'Harcourt - Arbora Lumina, informations pratiques
+    url: https://www.harcourt-normandie.fr/les-incontournables/arbora-lumina/
+  - title: Domaine d'Harcourt - FAQ, billets et accessibilité
+    url: https://www.harcourt-normandie.fr/faq/
+affiliate:
+  enabled: true
+  type: travel
+  destination: Harcourt
 ---
 
-## Mission retenue
-Actualiser l'article existant consacré à **Arbora Lumina**, parcours nocturne lumineux du Domaine d'Harcourt (Eure), dont la nouvelle saison commence le **13 novembre 2026**.
+<!-- article-image-credit -->
+*Photo: [Jacky Delville](https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Harcourt.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC indique **143 puis 17 impressions** sur les périodes comparées, mais le signal est **uncertain** et aucune requête comparable ne permet d'attribuer la baisse au classement. La justification principale est éditoriale: l'article de septembre ne présente pas encore les informations de la billetterie ouverte et de la nouvelle page dédiée, indispensables pour une réservation familiale. Ce refresh apporte une décision concrète avant le début de saison. L'expansion envisagée autour de la page forte Futuroween serait proche du guide Halloween déjà publié; l'opportunité des Automnales d'Harcourt des 17 et 18 octobre est déjà couverte par une page récente, distincte de la visite nocturne. Pas de nouvelle page redondante.
+**Arbora Lumina** revient au **Domaine d'Harcourt, dans l'Eure, du 13 novembre 2026 au 28 février 2027**. Le château et l'arboretum accueillent une promenade nocturne de lumières, de projections vidéo et de musique, imaginée par Moment Factory. Ce parcours familial est ouvert à tous les âges, mais se déroule **dehors, dans la forêt, sur des chemins parfois irréguliers**. Les billets sont déjà en vente **uniquement en ligne**.
 
-## Décision du lecteur
-Savoir si la sortie convient à sa famille, à ses contraintes de déplacement et à son budget, puis sélectionner et préparer une séance sans erreur de réservation.
+## Billets et tarifs: choisir le bon créneau
 
-## Faits à traiter
-- Billetterie de la saison ouverte, **uniquement en ligne**; horaires et disponibilités à vérifier sur les créneaux réellement proposés. Arriver **15 minutes avant** l'heure du billet; admission non garantie en cas de retard. Billets non échangeables et non remboursables selon la FAQ.
-- La nouvelle page Arbora Lumina annonce **9 zones**, **1,2 km** et environ **45 minutes**; la page classique/FAQ indique encore environ **1 km** et **45 à 60 minutes**. Signaler cette différence sobrement plutôt que promettre une longueur ou une durée exacte.
-- Vérifier les **prix affichés pour chaque date**, car la page classique distingue haute saison (décembre et vacances) et basse saison (janvier); la FAQ affiche encore 16 € adulte, 12 € adulte réduit, 8 € de 6 à 17 ans, gratuit avant 6 ans et pass famille à 40 €. Ne pas supposer que tous les prix sont identiques à tous les créneaux.
-- Parcours extérieur adapté à tous les âges, mais effets stroboscopiques et brouillard; chemins irréguliers et étroits. Pour le parcours nocturne, l'organisateur **conseille un porte-bébé ou une écharpe** plutôt qu'une poussette, sans annoncer d'interdiction générale. Accessibilité PMR difficile, sans promettre une impossibilité absolue.
-- Conserver les informations encore pertinentes: parking gratuit rue de la Gare, toilettes et restauration, vêtements chauds et chaussures adaptées, interdiction des chiens sauf chiens d'assistance, prudence sur le retour en bus NOMAD 214 et fermeture de l'intérieur du château. Préserver intégralement la photographie et son crédit, ainsi que les liens pratiques non commerciaux utiles.
+La FAQ du Domaine affiche les tarifs suivants pour Arbora Lumina:
 
-## Sources de départ
-- https://arboralumina.harcourt-normandie.fr/
-- https://www.harcourt-normandie.fr/les-incontournables/arbora-lumina/
-- https://www.harcourt-normandie.fr/faq/
+- **16 € par adulte**;
+- **12 € au tarif adulte réduit**, avec justificatif (notamment étudiants, demandeurs d'emploi, familles nombreuses, personnes en situation de handicap et tarif bas carbone);
+- **8 € de 6 à 17 ans**;
+- **gratuit pour les moins de 6 ans**;
+- **40 € le pass famille pour deux adultes et deux enfants**.
 
-## Affiliation
-Vérifier une piste d'hébergement secondaire cohérente à **Bernay**, particulièrement l'**Hotel The Originals Bernay Acropole** (https://www.booking.com/hotel/fr/acropole-bernay.fr.html), dont la fiche mentionne des chambres familiales et un parking gratuit. Ne pas présenter le tarif ou la disponibilité comme acquis et éviter tout lien officiel d'achat ou de réservation de la même prestation dans le corps; les URLs officielles peuvent rester dans les Sources.
+À titre d'exemple, deux adultes et deux enfants de 6 à 17 ans représentent **48 € en billets individuels**, contre **40 € avec le pass famille**, sous réserve de son application au créneau choisi. Le Domaine distingue une **haute saison en décembre et pendant les vacances scolaires de décembre et février**, et une **basse saison en janvier**. Vérifiez donc **le prix final, la formule familiale et les places disponibles pour la date précise** avant de payer; la grille de FAQ ne garantit pas un prix identique à toutes les séances.
 
-## Continuations internes
-- Lier, si utile, **[les Automnales d'Harcourt 2026](/articles/evenements/automnales-d-harcourt-2026-en-famille-jeux-nature-visites-et-tarifs/)** pour distinguer la fête diurne des **17-18 octobre** et la promenade nocturne **à partir du 13 novembre**; ne pas recopier le programme des Automnales.
-- Garder l'angle pratique centré sur l'expérience Arbora Lumina, sans redévelopper l'histoire générale du Domaine.
+La **réservation en ligne est obligatoire**: il n'est pas possible d'acheter des billets à l'entrée. La date d'un billet acheté n'est pas modifiable et les billets ne sont, selon les conditions annoncées, **ni annulables ni remboursables**. Les créneaux sont fixés par la billetterie et peuvent se remplir; ne partez pas sans réservation confirmée. Le **QR code reçu par e-mail peut être présenté sur un téléphone**, sans impression obligatoire.
+
+**Présentez-vous 15 minutes avant l'heure inscrite sur le billet**, comme le demande l'organisateur, pour l'enregistrement. En cas de retard, l'entrée n'est pas garantie et il peut être nécessaire d'attendre un créneau ultérieur.
+
+## Neuf zones lumineuses: combien de temps prévoir?
+
+Le nouveau site Arbora Lumina annonce **neuf zones narratives sur environ 1,2 km**, avec une expérience d'environ **45 minutes**. La page pratique du Domaine mentionne encore **environ 1 km et une heure**; sa FAQ indique **45 à 60 minutes** selon le rythme de marche. Pour une famille, comptez donc **45 minutes à une heure pour le parcours**, en plus du stationnement et de l'enregistrement.
+
+Les visiteurs traversent l'arboretum et les abords du château à leur rythme, entre projections sur les arbres et les pierres, sons et décors lumineux. Les effets lumineux **peuvent clignoter ou être stroboscopiques**, et des effets de **brouillard** sont prévus. Ce point mérite d'être pris en compte avant de réserver pour un enfant ou un adulte sensible à ces effets.
+
+## Jeunes enfants, poussettes et mobilité réduite
+
+Il n'y a **pas d'âge minimum annoncé**: l'organisateur présente Arbora Lumina comme une sortie familiale accessible même aux plus jeunes. En revanche, une grande partie de la promenade se déroule sur des **sentiers forestiers étroits, irréguliers, parfois en pente et couverts de copeaux**.
+
+La FAQ ne prononce pas d'interdiction générale des poussettes, mais **conseille de privilégier un porte-bébé ou une écharpe de portage**, plus adaptés à ces chemins. Pour les personnes à mobilité réduite, l'organisateur indique que le parcours nocturne est **difficilement accessible**, sans itinéraire alternatif intégralement praticable. Certaines pentes dépassent 5 %, et un accompagnant peut être nécessaire sans garantir l'accès à toute l'expérience. En cas de besoin spécifique, mieux vaut contacter directement le Domaine **avant l'achat** au **02 32 46 29 70**.
+
+Pour le confort des enfants, prévoyez des **chaussures adaptées à la terre et aux chemins naturels**, ainsi que des vêtements chauds et imperméables selon la météo. Des **sièges permettant une pause** sont annoncés sur le parcours, qui reste toutefois une promenade en extérieur.
+
+## Se rendre à Harcourt et préparer la soirée
+
+Le Domaine d'Harcourt se trouve **5 rue de la Gare, 27800 Harcourt**, avec un **parking visiteurs gratuit** accessible par la rue de la Gare. Le site indique environ **30 minutes de route depuis Évreux** et **moins de deux heures depuis Paris**, selon la circulation.
+
+Sans voiture, la **ligne NOMAD 214** dessert notamment Harcourt depuis l'axe Évreux-Honfleur; la gare de **Brionne** est à environ **7 km** du Domaine. Pour un parcours nocturne, vérifiez surtout **le trajet du retour** avant de réserver, les dessertes du soir pouvant être limitées.
+
+Des **toilettes gratuites**, des **boissons et gourmandises à acheter sur place** sont annoncées. La FAQ interdit d'apporter de la nourriture ou de l'alcool extérieurs sur le parcours, et il n'y a **pas de vestiaire**. Les chiens sont interdits pendant l'expérience nocturne, **à l'exception des chiens d'assistance**. En cas d'annulation par l'organisateur pour cause de météo, une information est prévue par e-mail et SMS.
+
+L'**intérieur du château demeure fermé au public en raison de travaux de conservation**: Arbora Lumina est une sortie en extérieur, pas une visite des salles historiques.
+
+## Prolonger la sortie par une nuit dans l'Eure
+
+Pour une famille venant de loin, **[l'Hotel The Originals Bernay Acropole à Bernay](https://www.booking.com/hotel/fr/acropole-bernay.fr.html)** propose des **chambres familiales** et un **parking gratuit**. Il peut servir de point de chute plutôt que de reprendre la route tard après le parcours. Comparez les disponibilités, la capacité de la chambre et le prix correspondant à l'âge des enfants **pour la date réelle de votre visite**: aucune chambre ni aucun tarif n'est garanti à l'avance.
 
 ## Article source exact à préserver et améliorer
 
@@ -213,14 +254,15 @@ Pour vérifier une modification pratique avant le départ, la [page officielle d
 ### Articles proches préparés mécaniquement
 
 - /articles/evenements/automnales-d-harcourt-2026-en-famille-jeux-nature-visites-et-tarifs/ | Automnales d'Harcourt 2026: animations, visites et tarifs en famille | evenements | Harcourt, Eure, Normandie
-- /articles/activites/chateau-de-maintenon-avec-de-jeunes-enfants-ce-qu-il-faut-prevoir/ | Château de Maintenon avec de jeunes enfants: ce qu'il faut prévoir | activites | Maintenon, Eure-et-Loir, Centre-Val de Loire
-- /articles/voyages/lyons-la-foret-avec-des-enfants-journee-ou-week-end-dans-le-village-et-la-foret/ | Lyons-la-Forêt avec des enfants: journée ou week-end dans le village et la forêt? | voyages | Lyons-la-Forêt, Eure, Normandie
-- /articles/activites/samara-avec-des-enfants-faut-il-prevoir-la-journee-complete/ | Samara avec des enfants: faut-il prévoir la journée complète? | activites | La Chaussée-Tirancourt, Somme, Hauts-de-France
-- /articles/cuisine/fabrique-de-pain-d-epices-a-dijon-faut-il-reserver-et-combien-prevoir-avec-des-enfants/ | Fabrique de pain d'épices à Dijon: faut-il réserver et combien prévoir avec des enfants? | cuisine | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/ | Gastronomades 2026 à Angoulême en famille: faut-il prévoir le week-end ? | evenements | Angoulême, Charente, Nouvelle-Aquitaine
-- /articles/evenements/noel-a-chambord-2026-avec-des-enfants-quand-venir-et-que-prevoir/ | Noël à Chambord 2026 avec des enfants: quand venir et que prévoir | evenements | Chambord, Loir-et-Cher, Centre-Val de Loire
-- /articles/sorties/zoo-de-labenne-avec-des-enfants-quelle-duree-prevoir-et-quel-billet-choisir/ | Zoo de Labenne avec des enfants: quelle durée prévoir et quel billet choisir ? | sorties | Labenne, Landes, Nouvelle-Aquitaine
+- /articles/activites/musee-de-la-biere-a-stenay-en-famille-parcours-enfants-et-exposition-2026/ | Musée de la Bière à Stenay en famille: parcours enfants et exposition 2026 | activites | Stenay, Meuse, Grand Est
+- /articles/sorties/chateau-de-vincennes-en-famille-tarifs-parcours-et-conseils-de-visite/ | Château de Vincennes en famille: tarifs, parcours et conseils de visite | sorties | Vincennes, Val-de-Marne, Île-de-France
+- /articles/sorties/cite-des-climats-a-beaune-en-famille-tarifs-parcours-enfants-et-billets/ | Cité des Climats à Beaune en famille: tarifs, parcours enfants et billets | sorties | Beaune, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/sorties/reserve-de-la-haute-touche-en-famille-tarifs-parcours-et-conseils-pour-la-visite/ | Réserve de la Haute-Touche en famille: tarifs, parcours et conseils pour la visite | sorties | Azay-le-Ferron, Indre, Centre-Val de Loire
+- /articles/activites/balade-a-velo-autour-de-rennes-quel-parcours-choisir-avec-des-enfants/ | Balade à vélo autour de Rennes: quel parcours choisir avec des enfants? | activites | Rennes, Ille-et-Vilaine, Bretagne
+- /articles/sorties/forteresse-de-salses-en-famille-ce-que-change-le-nouveau-parcours/ | Forteresse de Salses en famille: ce que change le nouveau parcours | sorties | Salses-le-Château, Pyrénées-Orientales, Occitanie
+- /articles/parentalite/visiter-le-chateau-de-versailles-avec-un-bebe-poussette-billets-et-parcours/ | Visiter le château de Versailles avec un bébé: poussette, billets et parcours | parentalite | Versailles, Yvelines, Île-de-France
 - /articles/evenements/arbora-lumina-a-harcourt-ce-qu-il-faut-prevoir-avec-des-enfants/ | Arbora Lumina à Harcourt: ce qu'il faut prévoir avec des enfants | evenements | Harcourt, Eure, Normandie
+- /articles/voyages/lyons-la-foret-avec-des-enfants-journee-ou-week-end-dans-le-village-et-la-foret/ | Lyons-la-Forêt avec des enfants: journée ou week-end dans le village et la forêt? | voyages | Lyons-la-Forêt, Eure, Normandie
 - /articles/sorties/giverny-en-famille-visiter-la-maison-de-monet-et-le-musee-des-impressionnismes/ | Giverny en famille: visiter la maison de Monet et le musée des impressionnismes | sorties | Giverny, Eure, Normandie
 - /articles/evenements/toussaint-2026-au-musee-des-confluences-a-lyon-spectacles-et-ateliers-par-age/ | Toussaint 2026 au musée des Confluences: cinq rendez-vous pour les enfants | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/evenements/toussaint-2026-au-seaquarium-du-grau-du-roi-quel-jeu-choisir/ | Toussaint 2026 au Seaquarium: dates des jeux, âges et billets en famille | evenements | Le Grau-du-Roi, Gard, Occitanie
@@ -233,7 +275,6 @@ Pour vérifier une modification pratique avant le départ, la [page officielle d
 - /articles/evenements/festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants/ | Les Petits Asticots 2026: spectacles, âges et réservations en famille | evenements | Chamonix-Mont-Blanc, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/evenements/fete-de-l-automne-2026-a-terra-botanica-journee-ou-terra-nocta-en-famille/ | Fête de l'Automne 2026 à Terra Botanica: animations et tarifs | evenements | Angers, Maine-et-Loire, Pays de la Loire
 - /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | Monument jeu d'enfant 2026 à Saint-Denis: atelier Dagobert le 17 octobre | evenements | Saint-Denis, Seine-Saint-Denis, Île-de-France
-- /articles/evenements/halloween-2026-au-safari-de-peaugres-animations-et-lumieres-sauvages/ | Halloween 2026 au Safari de Peaugres: animations, tarifs et Festival Lumières Sauvages | evenements | Peaugres, Ardèche, Auvergne-Rhône-Alpes
 
 ### Historique Radar lié
 
@@ -243,10 +284,10 @@ Pour vérifier une modification pratique avant le départ, la [page officielle d
 - opportunity | /articles/evenements/festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants/ | 2026-10-13T18:36:59.570Z
 - opportunity | /articles/evenements/fete-de-l-automne-2026-a-terra-botanica-journee-ou-terra-nocta-en-famille/ | 2026-10-13T12:37:05.098Z
 - opportunity | /articles/evenements/grands-zyeux-p-tites-zoreilles-2026-quelles-seances-gratuites-avec-les-tout-petits/ | 2026-10-14T07:31:28.976Z
-- opportunity | /articles/evenements/halloween-2026-au-safari-de-peaugres-animations-et-lumieres-sauvages/ | 2026-10-13T05:01:12.150Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | 2026-10-13T09:50:29.435Z
 - opportunity | /articles/evenements/salon-du-livre-jeunesse-de-montreuil-2026-billet-gratuit-et-visite-en-famille/ | 2026-10-15T05:30:56.094Z
 - opportunity | /articles/evenements/toussaint-2026-au-musee-des-confluences-a-lyon-spectacles-et-ateliers-par-age/ | 2026-10-15T17:42:32.693Z
+- opportunity | /articles/evenements/toussaint-2026-au-seaquarium-du-grau-du-roi-quel-jeu-choisir/ | 2026-10-15T12:38:21.556Z
 
 ### Phases 2 et 3
 
