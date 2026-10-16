@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,96 +14,132 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Bouches-du-Rhône
 - Région: Provence-Alpes-Côte d’Azur
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Titre de travail:** Maison des Parents aux Pennes-Mirabeau: ateliers gratuits, accueil des familles et Maison Câlins.
-
-**Angle:** Présenter le fonctionnement de ce lieu municipal de soutien à la parentalité, dans le quartier de La Gavotte, et distinguer trois usages concrets: venir s'informer ou échanger, réserver un atelier parent-enfant ou pour futurs parents, et profiter avec un tout-petit de l'accueil libre de la Maison Câlins. Mettre en perspective le programme d'automne 2026 sans enfermer l'article dans une seule animation ni laisser croire que tous les accueils nécessitent une réservation.
-
-**Contexte:** Installée au parc Saint-Georges, impasse Merlusse, aux Pennes-Mirabeau (Bouches-du-Rhône), la Maison des Parents a été créée par la Ville avec la CAF. C'est un lieu d'information, d'écoute et de rencontres pour les familles, qui abrite aussi des dispositifs distincts destinés à la petite enfance.
-
-## Besoin du lecteur
-
-Savoir ce que les parents peuvent trouver sur place selon l'âge de leurs enfants, si une visite spontanée est possible, quelles activités sont gratuites, comment s'inscrire aux ateliers et à qui téléphoner avant de venir. Comprendre que **Maison des Parents et Maison Câlins ne désignent pas le même accueil**: la première organise notamment des rendez-vous sur réservation, tandis que la seconde est un lieu d'accueil enfants-parents (LAEP) libre, anonyme, sans inscription et gratuit pour les 0-5 ans accompagnés. Pouvoir préparer une première visite sans confondre accueil familial, atelier programmé et mode de garde.
-
-## Valeur éditoriale
-
-- **Plusieurs services réellement complémentaires:** accueil, échanges et documentation pour les parents; ateliers ponctuels parent-enfant, bien-être et éveil; rencontres destinées aux futurs parents. Expliquer les usages concrets plutôt que reformuler seulement la présentation municipale.
-- **Programme récent et vérifié, sans promettre des places:** goûter familial d'Halloween le **20 octobre 2026 à 16h**; atelier duo bien-être **3-8 ans le 21 octobre à 14h**; éveil musical **0-6 ans le 28 octobre à 10h**; « Team Parents » pour futurs parents le **17 novembre à 18h**. **Ateliers gratuits, inscription en ligne obligatoire, places limitées** selon la programmation municipale. Les événements d'octobre servent d'exemples à un article sur une structure permanente, non de sujet principal ponctuel.
-- **Maison Câlins, autre logique:** pour les enfants de la naissance à 5 ans accompagnés d'un parent ou adulte référent, espaces motricité, livres et jeux, écoute et sociabilisation; **pas d'inscription, anonymat et confidentialité**. Le site municipal en version « www » et sa convention 2024-2026 indiquent **lundi et jeudi de 9h à 12h**, tandis qu'une autre version du site affiche **mercredi et jeudi**. Signaler la contradiction et conseiller de vérifier au **06 27 41 15 19** avant déplacement; ne pas présenter un horaire incertain comme garanti. Le parent reste avec l'enfant: ce n'est pas une crèche.
-- **Horaires contradictoires de la Maison des Parents:** la page municipale `/index.php/mdp` indique **lundi, mardi, jeudi 14h-18h et mercredi 13h-18h**, tandis que `/index.php/accueil-mdp` et un guide municipal donnent **lundi, mardi, jeudi 13h-17h30 et mercredi 9h-12h puis 13h-17h30**. Ne pas choisir arbitrairement un de ces jeux d'horaires. Fournir l'adresse **parc Saint-Georges, impasse Merlusse, La Gavotte, 13170 Les Pennes-Mirabeau**, l'e-mail **maisondesparents@vlpm.com** et les numéros affichés **04 91 67 17 31** (programmation récente) et **06 84 20 53 69** (présentation municipale); recommander confirmation préalable.
-- **Nuance sur le public:** les annonces d'ateliers mentionnent les parents d'enfants de **0 à 17 ans**, tandis qu'un guide municipal 2025-2026 évoque jusqu'à 21 ans. Préférer « parents d'enfants de différents âges, y compris adolescents, et futurs parents pour certains rendez-vous » plutôt que fixer un âge plafond incertain.
-- **Intérêt durable et absence de doublon:** la Maison des Parents fonctionne au-delà de l'automne 2026 et répond aux questions quotidiennes de parentalité. Les publications récentes des Bouches-du-Rhône concernent principalement des loisirs, sorties ou services logistiques, et non cet accompagnement de proximité. Autres pistes examinées: les LAEP marseillais, recensés collectivement dans un annuaire déjà pratique mais sans angle local suffisamment distinctif ici; l'École des parents à Aix-en-Provence, utile mais dont les séances et permanences demandent davantage de vérifications précises. Le sujet des Pennes-Mirabeau propose une distinction éditoriale immédiatement utile entre plusieurs formes d'accueil.
-
-## Affiliation
-
-**Aucune offre partenaire pertinente confirmée.** L'action principale est un service municipal gratuit de soutien à la parentalité et l'inscription à ses ateliers. Les recherches ciblées sur **GetYourGuide, Tiqets et Klook** n'ont identifié aucune réservation équivalente pour la Maison des Parents ou la Maison Câlins. Aucun partenaire d'hébergement, transports, billetterie ou location de vacances ne répond naturellement à ce besoin de proximité. Ne pas inventer de prestation ni ajouter d'hébergement. Orienter vers le formulaire et les coordonnées municipaux; la phase suivante pourra réévaluer uniquement si une offre réellement correspondante apparaît.
-
-## Sources de départ
-
-- **Ville des Pennes-Mirabeau, présentation et mission de la Maison des Parents:** https://pennes-mirabeau.org/index.php/def-mdp
-- **Ville des Pennes-Mirabeau, ateliers gratuits et agenda octobre-novembre 2026:** https://www.pennes-mirabeau.org/index.php/actu-mdp/314-parentalite
-- **Ville des Pennes-Mirabeau, Maison Câlins (accueil libre et jeux, version www):** https://www.pennes-mirabeau.org/index.php/infos-mdp/134-calins
-- **Ville des Pennes-Mirabeau, Maison Câlins (version sans www, horaires divergents):** https://pennes-mirabeau.org/index.php/infos-mdp/134-calins
-- **Ville des Pennes-Mirabeau, page Maison des Parents (horaires version 1):** https://www.pennes-mirabeau.org/index.php/mdp
-- **Ville des Pennes-Mirabeau, page accueil Maison des Parents (horaires version 2):** https://pennes-mirabeau.org/index.php/accueil-mdp
-- **Ville des Pennes-Mirabeau, rendez-vous Team Parents du 17 novembre et modalités de réservation:** https://www.pennes-mirabeau.org/index.php/agenda/219-bebe17nov
-- **Ville des Pennes-Mirabeau, convention Maison Câlins 2024-2026 (gratuité et horaires):** https://www.pennes-mirabeau.org/images/pdf/ville/delib2023/12/266x23.pdf
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "parentalite"
+title: "Aux Pennes-Mirabeau, la Maison des Parents accompagne les familles et propose des ateliers gratuits"
+subtitle: "Ateliers sur inscription, accueil libre à la Maison Câlins et contacts utiles pour préparer sa visite"
+summary: "Aux Pennes-Mirabeau, découvrez les ateliers gratuits de la Maison des Parents, l'accueil libre de Maison Câlins et les précautions avant de venir."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Maison des Parents Les Pennes-Mirabeau"
+  - "Maison Câlins accueil enfants parents"
+  - "ateliers parentalité gratuits Bouches-du-Rhône"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Les Pennes-Mirabeau"
+  department: "Bouches-du-Rhône"
+  region: "Provence-Alpes-Côte d’Azur"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Ville des Pennes-Mirabeau - Présentation de la Maison des Parents"
+    url: "https://pennes-mirabeau.org/index.php/def-mdp"
+  - title: "Ville des Pennes-Mirabeau - Ateliers parentalité"
+    url: "https://www.pennes-mirabeau.org/index.php/actu-mdp/314-parentalite"
+  - title: "Ville des Pennes-Mirabeau - Goûter partagé du 20 octobre"
+    url: "https://www.pennes-mirabeau.org/index.php/agenda/200-gouter20oct"
+  - title: "Ville des Pennes-Mirabeau - Atelier bien-être du 21 octobre"
+    url: "https://www.pennes-mirabeau.org/index.php/agenda/108-bien-etre21oct"
+  - title: "Ville des Pennes-Mirabeau - Éveil musical du 28 octobre"
+    url: "https://www.pennes-mirabeau.org/index.php/agenda/262-eveil28oct"
+  - title: "Ville des Pennes-Mirabeau - Team Parents du 17 novembre"
+    url: "https://www.pennes-mirabeau.org/index.php/agenda/219-bebe17nov"
+  - title: "Ville des Pennes-Mirabeau - Maison Câlins"
+    url: "https://www.pennes-mirabeau.org/index.php/infos-mdp/134-calins"
+  - title: "Ville des Pennes-Mirabeau - Convention Maison Câlins 2024-2026"
+    url: "https://www.pennes-mirabeau.org/images/pdf/ville/delib2023/12/266x23.pdf"
+  - title: "Ville des Pennes-Mirabeau - Horaires de la Maison des Parents"
+    url: "https://www.pennes-mirabeau.org/index.php/mdp"
+  - title: "Ville des Pennes-Mirabeau - Guide municipal 2025-2026"
+    url: "https://pennes-mirabeau.org/images/pdf/actu/25-26guide.pdf"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Aux Pennes-Mirabeau, dans le quartier de La Gavotte, la Maison des Parents aide les familles à trouver des informations, à échanger autour de l'éducation des enfants et à partager des activités. Ce lieu municipal installé au parc Saint-Georges, impasse Merlusse, a été créé avec la CAF des Bouches-du-Rhône. Il accueille des parents d'enfants de différents âges, y compris des adolescents, ainsi que de futurs parents lors de certains rendez-vous.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+Sur place, il faut distinguer les **ateliers programmés**, qui se réservent, de **Maison Câlins**, un espace d'accueil libre pour les tout-petits. Les deux services répondent à des besoins différents.
+
+## Un lieu pour poser des questions et rencontrer d'autres parents
+
+La [Maison des Parents](https://pennes-mirabeau.org/index.php/def-mdp) propose de la documentation, des échanges et des temps collectifs autour du développement de l'enfant et des relations familiales. On peut notamment s'y renseigner sur l'accompagnement des tout-petits, les questions de santé ou les difficultés rencontrées au fil de la vie familiale. Pour une visite sans atelier réservé, mieux vaut appeler au préalable afin de vérifier les conditions et les horaires d'accueil.
+
+La programmation permet aussi de partager un moment avec son enfant ou de rencontrer d'autres parents, sans avoir à payer une activité.
+
+## Quatre rendez-vous gratuits à l'automne 2026
+
+Le [programme municipal de parentalité](https://www.pennes-mirabeau.org/index.php/actu-mdp/314-parentalite) annonce notamment:
+
+- **Mardi 20 octobre, de 16h à 18h:** un [goûter familial sur le thème d'Halloween](https://www.pennes-mirabeau.org/index.php/agenda/200-gouter20oct), ouvert aux familles.
+- **Mercredi 21 octobre, de 14h à 16h:** un [atelier bien-être en duo](https://www.pennes-mirabeau.org/index.php/agenda/108-bien-etre21oct) pour les parents et les enfants de 3 à 8 ans, mêlant notamment respiration, mouvement et créativité.
+- **Mercredi 28 octobre:** un [éveil musical pour les 0-6 ans](https://www.pennes-mirabeau.org/index.php/agenda/262-eveil28oct), avec des créneaux annoncés à 10h et à 10h45.
+- **Mardi 17 novembre, à 18h:** une rencontre [« Team Parents »](https://www.pennes-mirabeau.org/index.php/agenda/219-bebe17nov) consacrée aux futurs parents, pour échanger autour de l'arrivée d'un enfant.
+
+**Les activités sont gratuites, mais l'inscription en ligne est obligatoire et les places sont limitées.** Le formulaire figure sur la fiche municipale de chaque rendez-vous. Un atelier annoncé ne signifie pas qu'il reste des places disponibles; pour toute question, la Ville indique le **04 91 67 17 31**.
+
+Ces dates donnent un aperçu des activités proposées, mais la Maison des Parents est une structure d'accompagnement permanente, et non un programme limité aux vacances d'automne.
+
+## Maison Câlins: venir librement avec un enfant de 0 à 5 ans
+
+Dans les mêmes locaux, **Maison Câlins** fonctionne autrement. Ce lieu d'accueil enfants-parents (LAEP) reçoit gratuitement les enfants de la naissance à 5 ans avec un parent ou un adulte référent, **sans inscription**, dans le respect de l'anonymat et de la confidentialité.
+
+Des jeux, des livres et des espaces de motricité permettent aux enfants de découvrir un autre environnement et de rencontrer d'autres petits. Les adultes peuvent discuter avec l'équipe ou simplement partager ce temps avec leur enfant. On peut y rester brièvement ou profiter d'une plus longue visite, selon ses besoins. Ce n'est **pas un mode de garde**: l'adulte accompagnateur reste sur place avec l'enfant. Ces modalités sont précisées sur la [présentation municipale de Maison Câlins](https://www.pennes-mirabeau.org/index.php/infos-mdp/134-calins).
+
+**Attention aux jours d'ouverture:** cette page indique le **mercredi et le jeudi de 9h à 12h**, mais la [convention municipale 2024-2026](https://www.pennes-mirabeau.org/images/pdf/ville/delib2023/12/266x23.pdf) mentionne le **lundi et le jeudi de 9h à 12h**. Il serait trompeur de présenter l'un de ces horaires comme certain. Avant de se déplacer, il faut contacter Maison Câlins au **06 27 41 15 19**.
+
+## Adresse et horaires: ce qu'il faut vérifier avant de venir
+
+La Maison des Parents se trouve **parc Saint-Georges, impasse Merlusse, quartier de La Gavotte, 13170 Les Pennes-Mirabeau**. On peut la joindre à **maisondesparents@vlpm.com**. Deux numéros apparaissent dans les documents municipaux: **04 91 67 17 31** pour les ateliers récents et **06 84 20 53 69** dans la présentation générale.
+
+Les horaires d'accueil ne concordent pas non plus entièrement. La [page municipale de la Maison des Parents](https://www.pennes-mirabeau.org/index.php/mdp) annonce le lundi, mardi et jeudi de 14h à 18h, ainsi que le mercredi de 13h à 18h, avec fermeture le vendredi. Le [guide municipal 2025-2026](https://pennes-mirabeau.org/images/pdf/actu/25-26guide.pdf) indique quant à lui le lundi, mardi et jeudi de 13h à 17h30, et le mercredi de 9h à 12h puis de 13h à 17h30.
+
+**Pour éviter un déplacement inutile, mieux vaut confirmer les horaires par téléphone avant une première visite**, en précisant si l'on souhaite un renseignement, participer à un atelier ou venir à Maison Câlins: ces accueils n'obéissent pas aux mêmes modalités.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -132,4 +168,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
