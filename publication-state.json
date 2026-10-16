@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261016-1505-titre-de-travail-ressourcerie-du-plateau-de-saclay-equiper-la-maison-a",
+  "lastProcessedCommit": "956a86a241174d0c3c6bf8f5f480ff3917b3319c"
 }
