@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Halloween au Château de Villersexel 2026 en famille: quelle expérience choisir?"
-subtitle: "Parc gratuit, visite familiale ou parcours horrifique: trois ambiances très différentes les 30 et 31 octobre"
-summary: "Parc gratuit, Château des Oubliés ou Cave des Clowns Maudits: les différences à connaître avant Halloween 2026 à Villersexel."
+title: "Halloween 2026 au Château de Villersexel: parc gratuit, visites et âge minimum"
+subtitle: Les 30 et 31 octobre, choisissez entre le Château des Oubliés et la Cave des Clowns Maudits, réservée aux 12 ans et plus
+summary: "Halloween à Villersexel les 30 et 31 octobre 2026: parc gratuit, visite familiale à 5 €, cave horrifique dès 12 ans à 10 € et billets prioritaires facultatifs."
 slug: halloween-au-chateau-de-villersexel-2026-en-famille-quelle-experience-choisir
 status: published
 publishedAt: 2026-09-27T20:24:24+02:00
@@ -81,7 +86,7 @@ image:
   src: /images/articles/2026/09/halloween-au-chateau-de-villersexel-2026-en-famille-quelle-experience-choisir.webp
   alt: Façade du Château de Villersexel
 sources:
-  - title: Château de Villersexel - Halloween 2026
+  - title: Château de Villersexel - Le Cirque des Squelettes, Halloween 2026
     url: https://www.villersexel.com/halloween2026.html
   - title: Haute-Saône Tourisme - Festival de l'horreur
     url: https://hautesaonetourisme.com/offres/festival-de-lhorreur-villersexel-fr-4913213/
@@ -93,7 +98,7 @@ affiliate:
   destination: Villersexel
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(09)/halloween-au-chateau-de-villersexel-2026-en-famille-quelle-experience-choisir/index.md
   targetSha: 861d00d625592568f8342fcc6495d15f89a35816
@@ -121,40 +126,49 @@ radar:
       - en famille avec des enfants
 ---
 
-## Mission retenue
+Les **vendredi 30 et samedi 31 octobre 2026**, de **18 h à 23 h**, le Château de Villersexel (Haute-Saône) organise **« Le Cirque des Squelettes »**. On peut y venir pour l'ambiance du **parc gratuit**, visiter les salons du château en famille pour **5 €** ou choisir la **Cave des Clowns Maudits à 10 €**, un parcours d'horreur **strictement interdit aux moins de 12 ans**. Ces expériences sont indépendantes : il n'est pas nécessaire d'acheter un billet pour les sous-sols afin de profiter du château.
 
-Actualiser l'article déjà publié sur **Halloween au Château de Villersexel**, les **30 et 31 octobre 2026**, sans le remplacer ni en allonger inutilement le texte. Les trois expériences existantes restent distinctes: parc gratuit, **Château des Oubliés** familial à 5 € et **Cave des Clowns Maudits** horrifique à 10 €.
+## Le parc : gratuit, sans réservation et pour tous
 
-## Pourquoi cette mission
+Le parc extérieur, éclairé et décoré pour Halloween, accueille quelques exposants et des **food trucks**. Son accès est **gratuit et sans billet**. C'est le choix le plus simple avec de jeunes enfants ou pour les familles qui préfèrent profiter des décors et de l'ambiance sans entrer dans les parcours payants.
 
-Le snapshot GSC indique une baisse d'exposition avec signal `coverage_loss`, sans preuve de désindexation ni de perte de rang. Surtout, la page actuelle contient **deux erreurs pratiques indépendamment vérifiées**: elle affirme qu'aucun âge minimum chiffré n'est annoncé pour la cave et que la billetterie est encore « bientôt disponible ». Le site de l'organisateur indique au contraire **accès strictement interdit aux moins de 12 ans** et **réservation Billetto déjà ouverte**, facultative mais prioritaire. Corriger ces points avant le 30 octobre protège la décision des familles. Les autres refresh GSC, notamment cantine Essonne et carte Tattoo Isère, ont un signal incertain et des articles déjà exploitables; une expansion depuis les pages fortes risquerait de redoubler les guides Halloween et sorties déjà publiés. Une nouvelle opportunité saisonnière locale se heurterait à de nombreuses pages d'octobre existantes et à Publication/Destination déjà en cours.
+## Le Château des Oubliés : 5 € pour une visite familiale
 
-## Décision du lecteur
+<!-- article-image-body:01 -->
 
-Savoir **quelle expérience est permise et adaptée à l'âge de l'enfant**, quel billet correspond à chaque partie de la soirée et **s'il faut réserver pour réduire l'attente**, sans croire qu'un billet comprend toutes les activités.
+![Grand salon à l'intérieur du Château de Villersexel](/images/articles/2026/09/halloween-au-chateau-de-villersexel-2026-en-famille-quelle-experience-choisir-body-01.webp)
 
-## Faits à traiter
+*Photo: [corinne potet](https://commons.wikimedia.org/wiki/File:Grand_salon,_Chateau_de_Villersexel_-_panoramio.jpg) - [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) via Wikimedia Commons (image redimensionnée).*
 
-- Corriger impérativement la limite **12 ans minimum pour les sous-sols**; elle ne concerne ni le parc gratuit ni le Château des Oubliés.
-- Remplacer « billetterie bientôt disponible » par **Billetto ouverte**, réservations **facultatives mais prioritaires**; une attente reste possible à cause de la capacité de chaque boucle, même avec priorité. Chaque parcours intérieur demande son propre billet.
-- Distinguer **Billetto** pour les deux parcours Halloween de la billetterie **Godin Events** pour les soirées dansantes; l'accueil des soirées Godin est annoncé dès 21 h 30, la partie dansante à partir de 23 h. Pas d'inclusion croisée.
-- Préserver les données encore utiles: les **30-31 octobre**, parc et visites **18 h-23 h** selon l'organisateur (une fiche tourisme moins précise annonçait 17 h), prix **0/5/10 €**, exposition extérieure et restauration, ambiance familiale vs horrifique, masques intégraux à retirer en intérieur, adresse **63 place de l'Hôtel-de-Ville, 70110 Villersexel**, photos et crédits, hébergement facultatif. Garder `eventEndsAt: 2026-10-31`.
-- Raccourcir les répétitions sur les trois options plutôt que supprimer des informations familiales utiles. Éviter tout lien officiel direct ou indirect menant à l'achat dans le corps lorsqu'il concurrence la logique partenaire; les URLs de vérification restent dans le frontmatter `sources`.
+<!-- /article-image-body:01 -->
 
-## Sources de départ
+Au **rez-de-chaussée**, le **Château des Oubliés** propose une visite des salons historiques avec décors, histoires et petites surprises d'Halloween. L'organisateur la présente comme une **visite familiale, non conçue comme un parcours d'horreur**. Elle coûte **5 € par personne** et peut être choisie seule, sans passer par la cave. Les enfants sensibles à l'ambiance mystérieuse peuvent néanmoins préférer rester dans le parc.
 
-- Château de Villersexel, programmation et modalités de priorité: https://www.villersexel.com/halloween2026.html
-- Haute-Saône Tourisme, fiche événement et éventuelle divergence horaire: https://hautesaonetourisme.com/offres/festival-de-lhorreur-villersexel-fr-4913213/
-- Booking.com, existence de l'hébergement familial déjà cité: https://www.booking.com/hotel/fr/auberge-de-la-terrasse.fr.html
+## La Cave des Clowns Maudits : 10 €, à partir de 12 ans uniquement
 
-## Affiliation
+Dans les sous-sols, la **Cave des Clowns Maudits** met en scène un parcours horrifique avec obscurité, comédiens et animations destinées à faire peur. L'entrée coûte **10 € par personne**.
 
-La réservation des parcours se fait chez l'organisateur via **Billetto**, sans partenaire alternatif confirmé: ne pas inventer d'offre équivalente. Maintenir seulement, si sa pertinence est confirmée, l'hébergement Booking.com à Villersexel pour les familles venant de loin, sans promettre de chambre disponible.
+**L'accès est strictement interdit aux moins de 12 ans**, même accompagnés. À partir de 12 ans, il faut encore tenir compte de la sensibilité de l'adolescent : l'organisateur avertit que l'expérience peut ne pas convenir aux personnes sensibles. Il ne s'agit pas d'une suite obligatoire du parcours familial.
 
-## Continuations internes
+## Réservation : facultative, mais prioritaire
 
-- Conserver cette page centrée sur les **trois expériences du Château de Villersexel et leurs deux billetteries**, sans développer un guide Halloween régional.
-- Conserver les liens internes seulement lorsqu'ils apportent une information complémentaire réelle; aucun nouveau doublon ne justifie un détour.
+La billetterie **Billetto est désormais ouverte** pour les deux parcours intérieurs. **Réserver n'est pas obligatoire** : il est également possible de se présenter directement sur place. En revanche, les personnes ayant réservé bénéficient d'un **accès prioritaire** à la visite choisie.
+
+Chaque parcours fonctionne sous forme de **boucle à capacité limitée**. Sans réservation, l'attente peut être plus longue en cas d'affluence; avec un billet prioritaire, un court délai reste possible si la boucle est momentanément complète. **Pour faire les deux parcours, il faut deux billets distincts.** Le parc, lui, reste accessible sans billet.
+
+Les **soirées dansantes de Godin Events** sont un autre événement et possèdent **leur propre billetterie**, indépendante de Billetto. L'accueil indiqué pour ces soirées commence à **21 h 30**, tandis que la partie dansante est annoncée **à partir de 23 h**, dans la Cuverie. Le 30 octobre, la soirée s'intitule « Ladies Night 100% Women »; le 31, « The Dark Castle ». Un billet de soirée ne donne pas accès aux parcours Halloween, et inversement.
+
+## Horaires, déguisements et accès au château
+
+L'organisateur annonce le parc et les parcours Halloween **de 18 h à 23 h**, les **30 et 31 octobre**. Une fiche de Haute-Saône Tourisme affiche encore **17 h** comme heure de début, mais précise que ses horaires ne sont pas garantis. Pour éviter une arrivée prématurée, retenez **18 h** selon le programme directement publié par le château et vérifiez toute évolution avant de partir.
+
+Les **déguisements sont autorisés**. Pour des raisons de sécurité, les **masques couvrant entièrement le visage doivent être retirés** avant d'entrer dans les espaces intérieurs.
+
+Le château se situe au **63, place de l'Hôtel-de-Ville, 70110 Villersexel**. Cette demeure du XIXe siècle est toujours habitée; les salons historiques sont ouverts à la visite lors de certaines occasions, dont ce parcours familial d'Halloween.
+
+## Où dormir après une soirée à Villersexel ?
+
+Si vous venez de loin avec des enfants et préférez éviter un retour tardif, **[l'Auberge de la Terrasse à Villersexel](https://www.booking.com/hotel/fr/auberge-de-la-terrasse.fr.html)** propose notamment des **chambres familiales** et un **parking gratuit**. Vérifiez les disponibilités réelles les 30 et 31 octobre ainsi que le prix correspondant aux âges des enfants avant de réserver : aucune chambre n'est garantie pour ces dates.
 
 ## Article source exact à préserver et améliorer
 
@@ -269,14 +283,14 @@ Pour une famille qui préfère éviter de reprendre la route après une soirée 
 
 ### Articles proches préparés mécaniquement
 
+- /articles/sorties/chateau-de-boutheon-avec-des-enfants-chateau-parc-ou-billet-couple/ | Château de Bouthéon avec des enfants: château, parc ou billet couplé? | sorties | Andrézieux-Bouthéon, Loire, Auvergne-Rhône-Alpes
+- /articles/sorties/gouffre-de-padirac-en-famille-tarifs-poussette-et-conseils-pour-la-visite/ | Gouffre de Padirac avec des enfants: à partir de quel âge et tarifs 2026 | sorties | Padirac, Lot, Occitanie
+- /articles/bons-plans/la-roche-jagu-en-famille-a-l-automne-hiver-2026-parc-gratuit-tarifs-et-jours-d-ouverture/ | La Roche-Jagu en famille à l'automne-hiver 2026: parc gratuit, tarifs et jours d'ouverture | bons-plans | Ploëzal, Côtes-d'Armor, Bretagne
 - /articles/evenements/halloween-2026-au-chateau-de-couches-atelier-citrouille-ou-jeu-geant-en-famille/ | Halloween 2026 au château de Couches: atelier citrouille et jeu Mystères & Sortilèges | evenements | Couches, Saône-et-Loire, Bourgogne-Franche-Comté
-- /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/ | Monument jeu d'enfant 2026 au château de Vincennes: quel atelier choisir ? | evenements | Vincennes, Val-de-Marne, Île-de-France
-- /articles/sorties/chateau-de-kerjean-avec-des-enfants-combien-de-temps-prevoir-et-quel-billet-choisir/ | Château de Kerjean avec des enfants: combien de temps prévoir et quel billet choisir? | sorties | Saint-Vougay, Finistère, Bretagne
 - /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | Halloween 2026 au Château de Chantilly avec des enfants: ateliers, nocturnes et spectacle | sorties | Chantilly, Oise, Hauts-de-France
-- /articles/sorties/chateau-de-chambord-en-famille-tarifs-2026-activites-et-conseils-de-visite/ | Château de Chambord en famille: tarifs 2026, activités et conseils de visite | sorties | Chambord, Loir-et-Cher, Centre-Val de Loire
-- /articles/activites/chateau-de-biron-avec-des-enfants-tarifs-et-conseils-pour-la-visite/ | Château de Biron avec des enfants: tarifs et conseils pour la visite | activites | Biron, Dordogne, Nouvelle-Aquitaine
-- /articles/evenements/abracada-bouh-2026-a-montpellier-animations-et-billets-en-famille/ | Abracada BOUH 2026 à Montpellier: programme et tarifs au château de Flaugergues | evenements | Montpellier, Hérault, Occitanie
-- /articles/sorties/chateau-de-chenonceau-en-famille-billets-duree-et-conseils-avec-des-enfants/ | Château de Chenonceau en famille: billets, durée et conseils avec des enfants | sorties | Chenonceaux, Indre-et-Loire, Centre-Val de Loire
+- /articles/sorties/chateau-de-castelnaud-avec-des-enfants-est-ce-une-bonne-sortie-selon-leur-age/ | Château de Castelnaud avec des enfants: est-ce une bonne sortie selon leur âge? | sorties | Castelnaud-la-Chapelle, Dordogne, Nouvelle-Aquitaine
+- /articles/bons-plans/parc-animalier-de-charleville-mezieres-une-sortie-gratuite-toute-l-annee/ | Parc animalier de Charleville-Mézières: une sortie gratuite toute l'année | bons-plans | Charleville-Mézières, Ardennes, Grand Est
+- /articles/voyages/peur-sur-le-parc-2026-en-famille-journee-nocturne-billets-et-hebergement/ | Peur sur le Parc 2026 en famille: journée, nocturne, billets et hébergement | voyages | Plailly, Oise, Hauts-de-France
 - /articles/evenements/halloween-au-chateau-de-villersexel-2026-en-famille-quelle-experience-choisir/ | Halloween au Château de Villersexel 2026 en famille: quelle expérience choisir? | evenements | Villersexel, Haute-Saône, Bourgogne-Franche-Comté
 - /articles/voyages/week-end-aux-1000-etangs-avec-des-enfants-ou-se-poser-et-quoi-faire-sans-grosse-randonnee/ | Week-end aux 1000 Étangs avec des enfants: où se poser et quoi faire sans grosse randonnée | voyages | Mélisey, Haute-Saône, Bourgogne-Franche-Comté
 - /articles/sorties/chapelle-de-ronchamp-en-famille-tarifs-2026-et-conseils-de-visite/ | Chapelle de Ronchamp en famille: tarifs 2026 et conseils de visite | sorties | Ronchamp, Haute-Saône, Bourgogne-Franche-Comté
@@ -288,9 +302,9 @@ Pour une famille qui préfère éviter de reprendre la route après une soirée 
 - /articles/evenements/rouen-givree-2026-en-famille-marche-de-noel-et-refuge-givre/ | Rouen Givrée 2026 en famille: marché de Noël et Refuge Givré | evenements | Rouen, Seine-Maritime, Normandie
 - /articles/evenements/au-creux-de-l-oreille-2026-a-noirlac-quels-spectacles-et-ateliers-choisir-avec-les-enfants/ | Au Creux de l'Oreille 2026 à Noirlac: spectacles et ateliers en famille du 17 au 22 octobre | evenements | Bruère-Allichamps, Cher, Centre-Val de Loire
 - /articles/evenements/grands-zyeux-p-tites-zoreilles-2026-quelles-seances-gratuites-avec-les-tout-petits/ | Grands Zyeux P'tites Zoreilles 2026: spectacles gratuits avec les tout-petits autour de Béziers | evenements | Béziers, Hérault, Occitanie
+- /articles/evenements/abracada-bouh-2026-a-montpellier-animations-et-billets-en-famille/ | Abracada BOUH 2026 à Montpellier: programme et tarifs au château de Flaugergues | evenements | Montpellier, Hérault, Occitanie
 - /articles/evenements/festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants/ | Les Petits Asticots 2026: spectacles, âges et réservations en famille | evenements | Chamonix-Mont-Blanc, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/evenements/fete-de-l-automne-2026-a-terra-botanica-journee-ou-terra-nocta-en-famille/ | Fête de l'Automne 2026 à Terra Botanica: animations et tarifs | evenements | Angers, Maine-et-Loire, Pays de la Loire
-- /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | Monument jeu d'enfant 2026 à Saint-Denis: atelier Dagobert le 17 octobre | evenements | Saint-Denis, Seine-Saint-Denis, Île-de-France
 
 ### Historique Radar lié
 
@@ -302,8 +316,8 @@ Pour une famille qui préfère éviter de reprendre la route après une soirée 
 - opportunity | /articles/evenements/grands-zyeux-p-tites-zoreilles-2026-quelles-seances-gratuites-avec-les-tout-petits/ | 2026-10-14T07:31:28.976Z
 - opportunity | /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | 2026-10-08T02:18:12.427Z
 - opportunity | /articles/evenements/halloween-2026-au-chateau-de-couches-atelier-citrouille-ou-jeu-geant-en-famille/ | 2026-10-12T14:00:32.202Z
-- opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | 2026-10-13T09:50:29.435Z
-- opportunity | /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/ | 2026-10-09T18:35:04.031Z
+- opportunity | /articles/evenements/salon-du-livre-jeunesse-de-montreuil-2026-billet-gratuit-et-visite-en-famille/ | 2026-10-15T05:30:56.094Z
+- opportunity | /articles/evenements/toussaint-2026-au-musee-des-confluences-a-lyon-spectacles-et-ateliers-par-age/ | 2026-10-15T17:42:32.693Z
 
 ### Phases 2 et 3
 
