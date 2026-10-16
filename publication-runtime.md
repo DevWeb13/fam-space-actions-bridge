@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,98 +14,134 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Pas-de-Calais
 - Région: Hauts-de-France
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Titre de travail:** Maison du Marais près de Saint-Omer: choisir entre balade en bateau, expositions et découverte en famille.
-
-**Angle:** Préparer une véritable visite familiale, pas seulement décrire une promenade en barque: distinguer la navigation commentée dans le marais audomarois, l'exposition gratuite « Chez Capiau », l'expérience payante « L'aventure Sous-Marais » et les espaces extérieurs, puis expliquer ce qui reste possible lorsque les bateaux ne partent pas.
-
-**Contexte:** La Maison du Marais est un site de découverte du marais audomarois situé 36 avenue du Maréchal-Joffre, 62500 Saint-Martin-lez-Tatinghem, à proximité de Saint-Omer (Pas-de-Calais). La visite associe patrimoine maraîcher, nature, expositions et balades commentées à bord d'un bacôve, bateau traditionnel local. C'est un équipement permanent, ouvert également hors saison des navigations.
-
-## Besoin du lecteur
-
-Une famille doit pouvoir choisir ce qu'elle souhaite réellement faire selon l'âge et l'intérêt des enfants, distinguer entrée gratuite et prestations payantes, évaluer le budget individuel ou familial, savoir si le bateau circule à la date souhaitée, réserver le bon billet et organiser sa venue (adresse, stationnement, accès avec poussette ou mobilité réduite). Pour un séjour, elle doit aussi pouvoir identifier une possibilité d'hébergement proche, sans confondre réservation de la balade et réservation de l'hôtel.
-
-## Valeur éditoriale
-
-- **Trois expériences différentes, pas trois noms pour une même visite:** promenade commentée en bacôve sur l'histoire et la biodiversité du marais; « Chez Capiau », exposition gratuite renouvelée en 2025 sur la vie d'un maraîcher; « L'aventure Sous-Marais », exposition immersive payante qui met en scène un sous-marin imaginaire. Mentionner aussi le parc, le potager conservatoire et la possibilité d'une pause sur place, si leurs conditions d'accès sont confirmées.
-- **Repères budgétaires donnés par l'exploitant (à revérifier à la rédaction):** bateau 12 € adulte, 8 € enfants de 4 à 15 ans, formule famille 2 adultes + 1 enfant 30 €, famille monoparentale 1 adulte + 2 enfants 25 €; Sous-Marais 6,50 € adulte, 5,50 € enfant, formules famille 16 € ou 15 €; billet jumelé bateau + exposition 16 € adulte et 10,50 € enfant, formule famille 39 € ou monoparentale 33,50 €. « Chez Capiau » gratuit. Le site affiche aussi « 0-4 ans gratuit » à côté de « 4-15 ans payant »: vérifier le traitement de l'âge de quatre ans, au lieu d'affirmer un seuil incohérent.
-- **Réservation et sécurité:** la fiche agenda de la balade demande une réservation obligatoire, y compris un billet gratuit par petit enfant, avec 12 passagers maximum par barque et une arrivée 10-15 minutes avant le départ; l'autre page parle de réservation fortement recommandée. Privilégier la règle de réservation la plus prudente. Gilets enfants annoncés; embarquement comportant des marches: contacter le site pour PMR et poussettes, sans promettre d'accès universel.
-- **Contradictions officielles majeures à résoudre ou signaler:** page balade évoquant tantôt 1 heure, tantôt environ 45 minutes; son FAQ indique navigation d'avril à fin octobre alors que les horaires du site et une fiche touristique mentionnent aussi novembre. Une fiche agenda affichait même « fermé » sur certaines plages de dates. Distinguer **horaires d'ouverture du bâtiment** et **départs effectivement réservable**. Ne pas garantir une balade à une date non vérifiée sur la billetterie. Le site général annonce ouverture 7j/7 de 10h à 18h du 15 mars au 15 novembre, puis en basse saison du mardi au dimanche 14h-18h et des fermetures hivernales; des fiches individuelles affichent d'autres jours. Inviter à vérifier la date exacte au 03 21 11 96 10.
-- **Intérêt durable:** même sans bateau, les expositions permettent une visite, dont une gratuite, et la proximité de Saint-Omer peut justifier une journée ou un court séjour. Aller au-delà des descriptifs de l'office de tourisme en construisant un parcours concret selon la météo, le temps disponible et le budget, sans chiffres inventés.
-- **Alternatives et doublons écartés:** Nausicaá, Parc Bagatelle et Louvre-Lens déjà traités récemment par Fam Space; activités ponctuelles d'automne risquant d'être trop proches de leur date de début. Le sujet ici relève de la découverte durable du territoire, sans doublon de lieu ou d'angle.
-
-## Affiliation
-
-- **Action principale, balade et expositions:** aucune offre **exactement équivalente et confirmée** pour la Maison du Marais chez GetYourGuide, Tiqets ou Klook lors de la recherche ciblée. Ne pas remplacer la prestation par une visite touristique différente. Les billets de l'exploitant sont accessibles via https://lamaisondumarais.com/fr/infos-pratiques/horaires-et-tarifs et sa billetterie; ces liens officiels restent utiles faute de partenaire équivalent.
-- **Séjour familial proche, Booking.com, offre vérifiée:** « Le Jardin Secret », maison de vacances à Saint-Omer, 2 chambres, capacité affichée jusqu'à 6 personnes, cuisine et équipement bébé, près du marais et de la Maison du Marais selon la présentation de l'hôte: https://www.booking.com/hotel/fr/le-jardin-secret-saint-omer.fr.html . Proposition pertinente pour une famille prolongeant la découverte sur plusieurs jours; confirmer disponibilité, conditions et prix pour les dates choisies.
-- **Autre format de séjour, Booking.com, offre vérifiée:** « Tiny house au cœur du marais », Route de Clairmarais à Saint-Omer, chalet avec cuisine, espace extérieur et capacité affichée jusqu'à 4 personnes: https://www.booking.com/hotel/fr/tiny-house-au-coeur-du-marais.fr.html . Pertinent pour un séjour nature de petite famille, sans prétendre que ce logement est à côté de l'embarcadère ni garantir le prix ou la disponibilité.
-- Vérifications complémentaires chez Expedia pour des hébergements à Saint-Omer: offres existantes, sans avantage établi sur les deux hébergements identifiés. Les city pass, transports et locations de véhicule n'ont pas été retenus faute de besoin secondaire suffisamment précis. La phase affiliation devra sélectionner au plus un ou deux liens d'hébergement naturellement placés dans un passage consacré au séjour, avec URL française propre, et sans présenter une simple page partenaire comme source éditoriale.
-
-## Sources de départ
-
-- **Exploitant, présentation des balades, réservations, durée et accès:** https://www.lamaisondumarais.com/fr/explorer/la-balade-en-bateau-traditionnel-dans-marais-audomarois
-- **Exploitant, horaires d'ouverture, prix individuels, formules familles et billets jumelés:** https://lamaisondumarais.com/fr/infos-pratiques/horaires-et-tarifs
-- **Exploitant, exposition gratuite Chez Capiau:** https://lamaisondumarais.com/fr/explorer/chez-capiau
-- **Exploitant, exposition immersive L'aventure Sous-Marais:** https://lamaisondumarais.com/fr/explorer/aventure-sous-marais
-- **Exploitant, liste des expériences et espaces du site:** https://lamaisondumarais.com/fr/explorer
-- **Exploitant, fiche agenda balade et réservations, à confronter aux indications saisonnières:** https://lamaisondumarais.com/fr/agenda/visite-or-balade-en-bateau-traditionnel-dans-le-marais-audomarois-fmastomerv501nzd
-- **Office de tourisme du Pays de Saint-Omer, présentation du site, adresse et prestations:** https://www.tourisme-saintomer.com/offres/la-maison-du-marais-saint-martin-au-laert-fr-3588255/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "voyages"
+title: "Maison du Marais près de Saint-Omer: bateau, expositions et visite en famille"
+subtitle: "Que voir avec les enfants, quels billets choisir et comment vérifier les départs en bacôve"
+summary: "Près de Saint-Omer, découvrez les balades en bateau, les deux expositions de la Maison du Marais, les tarifs famille et les conseils pour préparer la visite."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Maison du Marais Saint-Omer en famille"
+  - "balade en bacôve marais audomarois"
+  - "Maison du Marais tarifs expositions"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Saint-Martin-lez-Tatinghem"
+  department: "Pas-de-Calais"
+  region: "Hauts-de-France"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Maison du Marais - Balade en bateau traditionnel"
+    url: "https://www.lamaisondumarais.com/fr/explorer/la-balade-en-bateau-traditionnel-dans-marais-audomarois"
+  - title: "Maison du Marais - Horaires et tarifs"
+    url: "https://lamaisondumarais.com/fr/infos-pratiques/horaires-et-tarifs"
+  - title: "Maison du Marais - Chez Capiau, la vie d'un maraîcher"
+    url: "https://lamaisondumarais.com/fr/explorer/chez-capiau"
+  - title: "Maison du Marais - L'aventure Sous-Marais"
+    url: "https://lamaisondumarais.com/fr/explorer/aventure-sous-marais"
+  - title: "Maison du Marais - Parc et potager conservatoire"
+    url: "https://lamaisondumarais.com/fr/explorer/la-deconnexion-dans-les-jardins-marais-audomarois"
+  - title: "Maison du Marais - Agenda et conditions des balades"
+    url: "https://lamaisondumarais.com/fr/agenda/visite-or-balade-en-bateau-traditionnel-dans-le-marais-audomarois-fmastomerv501nzd"
+  - title: "Maison du Marais - Accès et localisation"
+    url: "https://www.lamaisondumarais.com/fr/infos-pratiques/localisation"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À quelques minutes de Saint-Omer, dans le Pas-de-Calais, la Maison du Marais invite les familles à découvrir le marais audomarois, un paysage de canaux, de jardins et de cultures maraîchères. Le site, installé à Saint-Martin-lez-Tatinghem, réunit des balades guidées en bateau traditionnel, deux expositions très différentes et un parc avec potager conservatoire. On peut donc y organiser une sortie autour de la navigation ou profiter des espaces de découverte même sans embarquer.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Le bacôve, pour voir le marais depuis l'eau
+
+La [balade commentée en bacôve](https://www.lamaisondumarais.com/fr/explorer/la-balade-en-bateau-traditionnel-dans-marais-audomarois) est l'expérience la plus directement liée au paysage. Ce bateau en bois traditionnel emmène les visiteurs sur les voies d'eau du marais avec un guide éco-interprète. Au fil du parcours, il raconte la vie des maraîchers, l'histoire de ces terres façonnées par les habitants et la faune qui les peuple. Avec des enfants curieux de nature, c'est l'occasion de découvrir le marais autrement qu'à pied.
+
+Chaque embarcation accueille **au maximum 12 personnes**. Les jeunes enfants peuvent participer et des gilets de sauvetage sont fournis. La [fiche de réservation](https://lamaisondumarais.com/fr/agenda/visite-or-balade-en-bateau-traditionnel-dans-le-marais-audomarois-fmastomerv501nzd) demande un billet pour chaque passager, y compris un billet gratuit pour les tout-petits, et une arrivée **10 à 15 minutes avant le départ**. Elle précise également que les sorties peuvent être annulées en cas de vigilance météo orange.
+
+**Attention aux départs et à la durée:** la présentation de la balade annonce tantôt une heure, tantôt environ 45 minutes. Elle évoque aussi une saison allant d'avril à fin octobre, alors que d'autres calendriers s'étendent plus loin dans l'année. L'agenda affiche même « fermé » sur des périodes pourtant présentes dans les pages d'information. Pour éviter de prévoir une promenade indisponible, vérifiez **le créneau effectivement réservable dans la billetterie**, et faites confirmer la durée en cas de besoin. L'ouverture du bâtiment ne garantit pas un départ en bateau.
+
+## Deux expositions, dont une gratuite
+
+**« [Chez Capiau, la vie d'un maraîcher](https://lamaisondumarais.com/fr/explorer/chez-capiau) »** est accessible gratuitement, sans réservation, pendant les heures d'ouverture. Renouvelée en 2025, cette exposition fait découvrir le quotidien d'un maraîcher au fil de photographies, d'outils, de films et de récits. C'est une bonne introduction au territoire avant la navigation, mais elle se visite aussi seule si l'on souhaite découvrir la vie du marais sans acheter de billet.
+
+**« [L'aventure Sous-Marais](https://lamaisondumarais.com/fr/explorer/aventure-sous-marais) »** est une exposition payante conçue comme un voyage imaginaire à bord d'un sous-marin. Ses hublots, ses personnages et ses décors entraînent petits et grands dans une exploration ludique des paysages, des métiers et de la biodiversité du marais. Le sous-marin est un dispositif scénographique, pas une véritable sortie sous l'eau.
+
+La différence est simple: « Chez Capiau » privilégie le témoignage et la vie maraîchère; « Sous-Marais » utilise la fiction et la mise en scène. Si la météo ne permet pas de sortir sur l'eau, ces deux propositions donnent une autre raison de venir.
+
+## Quel budget prévoir pour une famille?
+
+Selon les [tarifs publiés par la Maison du Marais](https://lamaisondumarais.com/fr/infos-pratiques/horaires-et-tarifs):
+
+- **Balade en bateau:** 12 € par adulte et 8 € pour les enfants de 4 à 15 ans; formule famille **30 € pour deux adultes et un enfant**, ou **25 € pour un adulte et deux enfants**.
+- **L'aventure Sous-Marais:** 6,50 € par adulte, 5,50 € par enfant de 4 à 15 ans; formules famille à **16 €** ou **15 €** pour un parent accompagné de deux enfants.
+- **Billet jumelé bateau + Sous-Marais:** 16 € par adulte et 10,50 € par enfant; formules famille à **39 €** ou **33,50 €** pour un parent et deux enfants.
+- **Chez Capiau:** gratuit.
+
+Les tarifs des enfants supplémentaires figurent également sur le site officiel. L'âge de **4 ans mérite une vérification**: la grille générale affiche à la fois « 0-4 ans gratuit » et « 4-15 ans payant », tandis que la fiche agenda indique une gratuité jusqu'à 3 ans inclus. Avant de réserver pour un enfant ayant quatre ans, contrôlez le tarif proposé par la billetterie ou demandez confirmation à l'accueil.
+
+Le billet jumelé peut intéresser une famille souhaitant combiner sortie en bateau et exposition immersive. Il ne faut toutefois le choisir qu'après avoir vérifié qu'une balade est réellement disponible à la date voulue.
+
+## Le parc et le potager pour prolonger la découverte
+
+La [promenade dans le parc et le potager conservatoire](https://lamaisondumarais.com/fr/explorer/la-deconnexion-dans-les-jardins-marais-audomarois) offre une troisième façon d'aborder le lieu. Le potager présente des variétés de légumes cultivés dans la région; le parc abrite également un ancien moulin lié à la gestion de l'eau, des espaces de détente et une activité de découverte avec l'application Adventure Lab. On peut y faire une pause ou pique-niquer aux beaux jours. Un espace de restauration, les Bols du Marais, existe aussi sur le site, avec des modalités d'ouverture à vérifier.
+
+Cette partie en extérieur complète naturellement les expositions. Elle permet également d'adapter la visite au temps disponible et à la météo, sans promettre une activité encadrée ni un départ de bateau.
+
+## Horaires, accès et précautions avant la visite
+
+La Maison du Marais se trouve au **36 avenue du Maréchal-Joffre, 62500 Saint-Martin-lez-Tatinghem**, près du centre de Saint-Omer. D'après les [informations d'accès officielles](https://www.lamaisondumarais.com/fr/infos-pratiques/localisation), un **parking gratuit** se situe en face du bâtiment. La gare de Saint-Omer est annoncée à environ dix minutes à pied; les bus Mouvéo des lignes 4 et 5 desservent l'arrêt « Port au lait battu », à proximité.
+
+Le [calendrier général de la Maison du Marais](https://lamaisondumarais.com/fr/infos-pratiques/horaires-et-tarifs) affiche une ouverture quotidienne de **10h à 18h du 15 mars au 15 novembre**, hors horaires prolongés des vacances d'été. En basse saison, il annonce normalement **du mardi au dimanche de 14h à 18h**, avec des fermetures hivernales. Certaines fiches d'activités présentent toutefois des calendriers différents: vérifiez les horaires de l'espace que vous souhaitez visiter et les dates de fermeture exceptionnelles.
+
+Le **bâtiment est accessible aux personnes à mobilité réduite**, mais les bateaux traditionnels ne sont pas adaptés à leur embarquement; celui-ci nécessite des marches. En cas de mobilité réduite ou pour venir avec une poussette, mieux vaut demander directement comment se déroule la visite et où laisser le matériel avant de réserver.
+
+**Contact:** **03 21 11 96 10**, **accueil@lamaisondumarais.com**. Pour une journée en famille, c'est surtout la disponibilité de la balade, et non la seule ouverture du site, qu'il faut confirmer à l'avance.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -134,4 +170,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
