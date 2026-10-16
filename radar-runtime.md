@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 3/3
+# Radar Fam Space - actualisation GSC
 
 ## Mission
 
@@ -8,295 +8,966 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 3/3
-
-Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
-
-Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
-
-Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
-
-Ensuite:
-- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
-- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
-- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
-- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
-- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
-- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
-- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
-- ne force ni longueur ni affiliation.
-
-Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
-
-Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
-- `summary`: contrôles et corrections réellement effectués;
-- `sources`: URLs factuelles revérifiées;
-- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
-- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
-
-**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
-
-## Règles partenaires
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-## Candidat validé de la phase précédente
-
----
-title: "ÉduConnect parents: activer son compte et retrouver tous ses enfants"
-subtitle: SMS ou courriel, rattachement d'un enfant absent et accès aux démarches scolaires
-summary: Comment activer ÉduConnect par SMS ou courriel, retrouver un enfant absent et accéder aux services scolaires avec un compte parent.
-slug: educonnect-pour-les-parents-activer-son-compte-et-retrouver-les-demarches-scolaires
-status: published
-publishedAt: 2026-09-12T20:02:41+02:00
-updatedAt: 2026-09-13T13:24:24+02:00
-category: parentalite
-readingTime: 4
-topic:
-  key: parentalite|france|educonnect-pour-les-parents-activer-son-compte-et-retrouver-les-demarches-scolaires|2026
-  keywords:
-    - EduConnect parents
-    - Scolarité Services
-image:
-  src: /images/articles/2026/09/educonnect-pour-les-parents-activer-son-compte-et-retrouver-les-demarches-scolaires.webp
-  alt: Enfants utilisant un ordinateur portable, illustration des services numériques liés à la scolarité
-radar:
-  schemaVersion: 1
-  phase: 2
-  mode: refresh
-  targetPath: src/routes/articles/parentalite/(2026)/(09)/educonnect-pour-les-parents-activer-son-compte-et-retrouver-les-demarches-scolaires/index.md
-  targetSha: 23219f53f3d3bbd07e3a9a08c51588e1ae790de5
-  targetUrl: /articles/parentalite/educonnect-pour-les-parents-activer-son-compte-et-retrouver-les-demarches-scolaires/
-  decision: Activer ou récupérer l'accès parent ÉduConnect avec la bonne méthode, puis rattacher un enfant absent sans créer de comptes inutiles.
-  affiliationPotential: "Aucune affiliation naturelle: accès public gratuit, activation et assistance officielles."
-  gsc:
-    retrievedAt: 2026-10-15T06:53:46.851Z
-    dataThrough: 2026-10-12
-    signal: uncertain
-    basis: Baisse non attribuable au classement; 0 requêtes comparables.
-    peakStart: 2026-09-15
-    peakEnd: 2026-09-21
-    recentStart: 2026-10-06
-    recentEnd: 2026-10-12
-    peakImpressions: 209
-    recentImpressions: 42
-    commonQueries: 0
-    positionDelta: null
-    impressionRatio: 0
-    focusQueries:
-      - educonnect parents
-      - est ce que educonnect fonctionne
-      - educonnect espace parent
-      - educonnect parent
-      - il me manque un enfant sur educonnect
-sources:
-  - title: ÉduConnect - Activation du compte
-    url: https://moncompte.educonnect.education.gouv.fr/educt-self-service/activation/nouveauParcoursUtilisateur
-  - title: Éducation nationale - Assistance Scolarité Services
-    url: https://assistanceteleservices.education.gouv.fr/
-  - title: ÉduConnect - Identifiant oublié
-    url: https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliLogin/recupererLoginResponsable
-  - title: ÉduConnect - Mot de passe oublié
-    url: https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliMdp/recupererMotDePasseResponsable
-  - title: Ministère - Présentation ÉduConnect
-    url: https://www.education.gouv.fr/educonnect-un-compte-unique-pour-suivre-et-accompagner-la-scolarite-de-mon-enfant-455196
----
-
-<!-- article-image-credit -->
-*Photo: [Wikipresence](https://commons.wikimedia.org/wiki/File:Kids_with_laptop.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
-<!-- /article-image-credit -->
-
-**ÉduConnect** permet aux parents d'accéder aux services scolaires de leurs enfants avec un compte unique, de l'école au lycée. Pour une première activation, le parcours actuel propose **SMS ou courriel**, si ces coordonnées ont déjà été communiquées à l'établissement. Le portail [Scolarité Services](https://teleservices.education.gouv.fr/) est accessible avec ÉduConnect ou FranceConnect.
-
-## Première connexion: téléphone ou adresse mail?
-
-Le [formulaire officiel d'activation](https://moncompte.educonnect.education.gouv.fr/educt-self-service/activation/nouveauParcoursUtilisateur) propose **«Par SMS»** et **«Par mail»**. Choisissez le contact enregistré dans le dossier scolaire, puis suivez les instructions affichées.
-
-Si votre numéro ou votre adresse ne sont pas reconnus, demandez à l'établissement de vérifier vos coordonnées et votre qualité de représentant légal. Contrairement à une ancienne page générale du ministère qui présente le téléphone comme indispensable, le formulaire d'activation actuel propose explicitement les deux moyens. Une adresse non enregistrée auprès de l'établissement ne suffit toutefois pas.
-
-## Un enfant manque dans votre compte: comment le rattacher?
-
-Un parent n'a pas besoin d'un compte différent pour chaque enfant. L'[assistance officielle](https://assistanceteleservices.education.gouv.fr/) indique comment regrouper les enfants déjà associés à des comptes distincts:
-
-1. Demandez à l'établissement de l'enfant absent les accès provisoires nécessaires au regroupement.
-2. Connectez-vous à votre compte parent actif.
-3. Ouvrez **«Mon Compte»**, puis **«Mes enfants»**.
-4. Sélectionnez **«Ajouter des enfants depuis un autre compte»** et suivez les étapes.
-
-Si la date de naissance d'un enfant est incorrecte, l'établissement doit rectifier son dossier. La prise en compte de la correction peut demander **24 à 48 heures**. Le même délai est indiqué pour certaines corrections de numéro de téléphone.
-
-## Identifiant ou mot de passe oublié
-
-Les pages officielles permettent de [retrouver son identifiant](https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliLogin/recupererLoginResponsable) ou de [réinitialiser son mot de passe](https://moncompte.educonnect.education.gouv.fr/educt-self-service/oubliMdp/recupererMotDePasseResponsable) par **SMS ou courriel**, avec les coordonnées déjà liées au compte. Si vous n'y avez plus accès, contactez l'école ou l'établissement.
-
-## Scolarité Services, livret scolaire et ENT
-
-Après connexion, la rubrique **«Mes services»** du portail Scolarité Services présente les démarches ouvertes pour l'enfant sélectionné: fiche de renseignements, livret scolaire, inscriptions, bourses et orientation selon l'établissement. Le portail est accessible **24 heures sur 24, 7 jours sur 7**, sur ordinateur, smartphone ou tablette.
-
-L'affichage varie selon les établissements et les périodes. Si un service n'apparaît pas, vérifiez **l'enfant sélectionné**, puis les dates d'ouverture auprès de l'établissement. Une démarche clôturée peut ne plus être proposée.
-
-**ÉduConnect** est le compte national d'authentification; **l'ENT** est l'espace numérique de travail de l'établissement ou de la collectivité. Selon le dispositif local, ÉduConnect permet aussi d'accéder à l'ENT sans autre compte parent. Utilisez le lien communiqué par l'établissement.
-
-## Qui contacter en cas de blocage?
-
-Pour corriger une information du dossier scolaire ou un rattachement, adressez-vous à l'établissement. Pour les difficultés de connexion et les démarches en ligne, l'Éducation nationale propose une [assistance Scolarité Services](https://assistanceteleservices.education.gouv.fr/) et le **0 809 54 06 06** (prix d'un appel local), annoncé du **lundi au vendredi de 8h à 20h** et le **samedi de 8h à 12h**, heures de métropole, pendant les périodes d'ouverture des démarches en ligne. Les modalités d'assistance peuvent aussi dépendre de l'académie.
-
-## Article source exact à préserver et améliorer
-
-Chemin: src/routes/articles/parentalite/(2026)/(09)/educonnect-pour-les-parents-activer-son-compte-et-retrouver-les-demarches-scolaires/index.md
-
----
-title: "EduConnect pour les parents: activer son compte et retrouver les démarches scolaires"
-subtitle: Un seul accès pour les enfants du foyer, l'ENT, le livret scolaire et les services proposés par l'établissement
-summary: "Première connexion, enfant absent, numéro non reconnu: les étapes utiles pour accéder à EduConnect et Scolarité Services sans tourner en rond."
-slug: educonnect-pour-les-parents-activer-son-compte-et-retrouver-les-demarches-scolaires
-status: published
-publishedAt: 2026-09-12T20:02:41+02:00
-updatedAt: 2026-09-13T13:24:24+02:00
-category: parentalite
-readingTime: 4
-topic:
-  key: parentalite|france|educonnect-pour-les-parents-activer-son-compte-et-retrouver-les-demarches-scolaires|2026
-  keywords:
-    - EduConnect parents
-    - Scolarité Services
-image:
-  src: "/images/articles/2026/09/educonnect-pour-les-parents-activer-son-compte-et-retrouver-les-demarches-scolaires.webp"
-  alt: "Enfants utilisant un ordinateur portable, illustration des services numériques liés à la scolarité"
----
-<!-- article-image-credit -->
-*Photo: [Wikipresence](https://commons.wikimedia.org/wiki/File:Kids_with_laptop.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
-<!-- /article-image-credit -->
-
-Entre l'ENT, le livret scolaire et les démarches administratives, les accès numériques de l'école peuvent vite devenir confus. Pour les familles concernées, EduConnect sert justement de compte unique: un même identifiant permet de retrouver les services associés à tous ses enfants, de l'école au lycée.
-
-Le plus simple est de commencer par le portail officiel [Scolarité Services](https://teleservices.education.gouv.fr/). Les parents peuvent s'y connecter avec leur compte EduConnect ou avec FranceConnect.
-
-## Faut-il créer un compte différent pour chaque enfant?
-
-Non. Un représentant légal utilise un seul compte EduConnect pour l'ensemble de ses enfants rattachés à son dossier. Le ministère précise que ce compte suit la famille tout au long de la scolarité, de l'école au lycée.
-
-Une fois connecté, il peut donner accès, selon l'établissement et la période, à plusieurs services:
-
-- l'ENT de l'établissement;
-- le livret scolaire;
-- la fiche de renseignements;
-- certaines inscriptions en ligne;
-- les démarches de bourse;
-- les démarches d'orientation;
-- d'autres services activés par l'école, le collège ou le lycée.
-
-Tous les établissements ne proposent donc pas exactement les mêmes écrans. Si une démarche attendue n'apparaît pas, cela ne signifie pas forcément que le compte fonctionne mal: certains services ne sont ouverts qu'à certaines périodes ou seulement lorsque l'établissement les a activés.
-
-## Première connexion: le numéro de téléphone est le point à vérifier
-
-Pour activer un compte EduConnect directement, le numéro de téléphone portable communiqué lors de l'inscription de l'enfant ou dans sa fiche de renseignements est indispensable.
-
-Il faut donc utiliser le numéro déjà connu de l'établissement. Si ce numéro a changé, ou s'il n'est pas reconnu, mieux vaut éviter de multiplier les tentatives avec d'autres numéros: l'établissement peut vérifier et corriger les coordonnées enregistrées.
-
-L'autre possibilité est de se connecter avec FranceConnect depuis [Scolarité Services](https://teleservices.education.gouv.fr/). Cela évite d'avoir à mémoriser un identifiant EduConnect supplémentaire lorsque le parent utilise déjà un compte compatible avec FranceConnect.
-
-## Un enfant n'apparaît pas dans le compte: que faire?
-
-Avant de créer un second compte, il faut vérifier le rattachement. Le compte EduConnect est justement prévu pour regrouper les enfants d'un même représentant légal.
-
-Le ministère propose une [assistance dédiée aux démarches en ligne](https://assistanceteleservices.education.gouv.fr/) pour les principaux blocages. Elle traite notamment les cas où le numéro de téléphone n'est pas reconnu ou lorsqu'un enfant n'apparaît pas dans le compte.
-
-Si la date de naissance de l'enfant est refusée, l'assistance indique de contacter l'établissement afin qu'il la rectifie dans son dossier. Après modification, la prise en compte peut demander 24 à 48 heures.
-
-## Où retrouver les démarches scolaires une fois connecté?
-
-Après connexion, le portail Scolarité Services regroupe les services disponibles pour chaque enfant. Le ministère indique que le portail est accessible 7 jours sur 7 et 24 heures sur 24, depuis un ordinateur, un smartphone ou une tablette.
-
-La rubrique « Mes services » permet de voir ce qui est actuellement proposé. Au collège et au lycée, cela peut notamment concerner l'orientation, les inscriptions, les bourses ou la consultation du livret scolaire. À l'école élémentaire, l'offre est plus limitée.
-
-Il faut garder en tête qu'une démarche peut disparaître une fois sa période terminée. Pour une inscription ou une orientation, le calendrier et les modalités restent ceux communiqués par l'établissement.
-
-## EduConnect et ENT: ce n'est pas forcément deux comptes différents
-
-EduConnect est le compte d'authentification national. L'ENT est l'espace numérique utilisé localement par l'établissement ou la collectivité. Selon l'organisation mise en place, EduConnect peut servir à ouvrir l'ENT sans créer un accès parent séparé.
-
-Le bon réflexe est donc de suivre le lien fourni par l'école, le collège ou le lycée lorsqu'il renvoie vers l'ENT, puis de choisir l'accès EduConnect si celui-ci est proposé.
-
-## En cas de blocage, qui contacter?
-
-Pour un problème lié aux informations de l'enfant, au rattachement du dossier ou à une donnée erronée, l'établissement reste l'interlocuteur utile.
-
-Pour un problème de connexion ou de démarche en ligne, l'Éducation nationale met aussi à disposition son [assistance Scolarité Services](https://assistanceteleservices.education.gouv.fr/). Une plateforme téléphonique nationale est annoncée au **0 809 54 06 06**, au prix d'un appel local, du lundi au vendredi de 8h à 20h et le samedi de 8h à 12h, horaires de métropole.
-
-## Les vérifications à faire avant de conclure que le service ne fonctionne pas
-
-Trois contrôles règlent une bonne partie des problèmes courants:
-
-1. vérifier que le parent utilise bien son compte représentant légal et non celui de l'enfant;
-2. vérifier que le numéro de téléphone correspond à celui enregistré par l'établissement;
-3. regarder dans « Mes services » si la démarche recherchée est réellement ouverte à cette période.
-
-Si l'enfant manque dans le compte ou qu'une information d'état civil est incorrecte, il vaut mieux faire corriger le dossier à la source plutôt que de recréer plusieurs comptes.
-
-Pour retrouver les informations officielles sur le fonctionnement du compte, le ministère détaille [EduConnect pour les parents](https://www.education.gouv.fr/educonnect-un-compte-unique-pour-suivre-et-accompagner-la-scolarite-de-mon-enfant-455196) et [Scolarité Services](https://www.education.gouv.fr/scolarite-services-un-acces-unique-pour-toutes-les-demarches-scolaires-326158).
-
-## Contexte éditorial ciblé pour le maillage et les doublons
-
-### Articles proches préparés mécaniquement
-
-- /articles/parentalite/la-maison-des-petits-pas-a-troyes-un-lieu-pour-souffler-avec-son-jeune-enfant/ | La Maison des Petits Pas à Troyes: un lieu pour souffler avec son jeune enfant | parentalite | Troyes, Aube, Grand Est
-- /articles/vie-pratique/projet-accueil-individualise-enfant-ecole-pai/ | Projet d’accueil individualisé à l’école: comment préparer le PAI de son enfant | vie-pratique
-- /articles/parentalite/cafe-papote-a-lyon-4e-ou-echanger-gratuitement-avec-d-autres-parents/ | Café Papote à Lyon 4e: où échanger gratuitement avec d'autres parents | parentalite | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/parentalite/laep-a-caen-4-lieux-pour-venir-avec-un-enfant-sans-inscription/ | LAEP à Caen: 4 lieux pour venir avec un enfant sans inscription | parentalite | Caen, Calvados, Normandie
-- /articles/parentalite/laep-a-nantes-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | LAEP à Nantes: où aller avec un enfant de moins de 6 ans? | parentalite | Nantes, Loire-Atlantique, Pays de la Loire
-- /articles/parentalite/laep-a-grenoble-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | LAEP à Grenoble: où aller avec un enfant de moins de 6 ans? | parentalite | Grenoble, Isère, Auvergne-Rhône-Alpes
-- /articles/parentalite/maisons-des-1000-jours-dans-l-herault-ou-trouver-un-accompagnement-gratuit/ | Maisons des 1000 jours dans l'Hérault: où trouver un accompagnement gratuit | parentalite | Montpellier, Hérault, Occitanie
-- /articles/evenements/premiere-rentree-en-6e-a-dole-un-atelier-gratuit-pour-les-familles/ | Première rentrée en 6e à Dole: un atelier gratuit pour les familles | evenements | Dole, Jura, Bourgogne-Franche-Comté
-- /articles/parentalite/laep-a-bastia-et-en-balagne-deux-lieux-gratuits-pour-les-tout-petits/ | LAEP à Bastia et en Balagne: deux lieux gratuits pour les tout-petits | parentalite | Bastia, Haute-Corse, Corse
-- /articles/parentalite/kaz-1000-jours-au-port-ateliers-gratuits-pour-les-futurs-et-jeunes-parents/ | Kaz’1000 jours au Port: ateliers gratuits pour les futurs et jeunes parents | parentalite | Le Port, La Réunion, La Réunion
-- /articles/parentalite/laep-dans-le-cantal-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | LAEP dans le Cantal: où aller avec un enfant de moins de 6 ans | parentalite | Aurillac, Cantal, Auvergne-Rhône-Alpes
-- /articles/parentalite/cercles-de-parents-en-cote-d-or-trois-seances-gratuites-pour-echanger-pendant-les-premieres-annees/ | Cercles de Parents en Côte-d'Or: trois séances gratuites pour échanger pendant les premières années | parentalite | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/parentalite/laep-en-seine-et-marne-ou-aller-et-comment-se-passe-une-premiere-visite/ | LAEP en Seine-et-Marne: où aller et comment se passe une première visite? | parentalite | Meaux, Seine-et-Marne, Île-de-France
-- /articles/parentalite/montchavin-les-coches-avec-un-bebe-garderie-horaires-et-sejour-d-hiver/ | Montchavin-Les Coches avec un bébé: garderie, horaires et séjour d'hiver | parentalite | Montchavin-Les Coches, Savoie, Auvergne-Rhône-Alpes
-- /articles/parentalite/maison-des-parents-a-guingamp-quand-y-aller-et-quel-service-choisir/ | Maison des Parents à Guingamp: quand y aller et quel service choisir ? | parentalite | Guingamp, Côtes-d'Armor, Bretagne
-- /articles/parentalite/chateau-de-chamerolles-en-famille-visite-libre-ou-guidee-en-2026/ | Château de Chamerolles en famille: visite libre ou guidée en 2026 ? | parentalite | Chilleurs-aux-Bois, Loiret, Centre-Val de Loire
-- /articles/parentalite/visiter-le-chateau-de-versailles-avec-un-bebe-poussette-billets-et-parcours/ | Visiter le château de Versailles avec un bébé: poussette, billets et parcours | parentalite | Versailles, Yvelines, Île-de-France
-- /articles/parentalite/creche-a-clermont-ferrand-quand-deposer-la-pre-inscription-et-comment-la-faire/ | Crèche à Clermont-Ferrand: quand déposer la pré-inscription et comment la faire | parentalite | Clermont-Ferrand, Puy-de-Dôme, Auvergne-Rhône-Alpes
-- /articles/parentalite/educonnect-pour-les-parents-activer-son-compte-et-retrouver-les-demarches-scolaires/ | EduConnect pour les parents: activer son compte et retrouver les démarches scolaires | parentalite
-- /articles/parentalite/ateliers-parents-malins-dans-l-oise-quels-rendez-vous-gratuits-choisir-avant-fin-2026/ | Ateliers Parents Malins dans l'Oise: quels rendez-vous gratuits choisir avant fin 2026 ? | parentalite | Plusieurs communes, Oise, Hauts-de-France
-- /articles/parentalite/aide-a-domicile-caf-en-guyane-qui-peut-la-demander-et-combien-reste-t-il-a-payer/ | Aide à domicile Caf en Guyane: qui peut la demander et combien reste-t-il à payer? | parentalite | Cayenne, Guyane, Guyane
-- /articles/parentalite/maison-des-1-000-premiers-jours-a-grasse-peut-on-venir-sans-rendez-vous/ | Maison des 1 000 premiers jours à Grasse: peut-on venir sans rendez-vous? | parentalite | Grasse, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
-
-### Historique Radar lié
-
-- Aucun historique lié.
-
-### Phases 2 et 3
-
-Écris `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet de l'article. **N'ajoute aucun bloc `radar`.** Le script reprend mécaniquement le bloc Radar de la phase précédente et incrémente la phase.
-
-Pour un refresh, le script conserve de lui-même les champs protégés de l'article source. Pour une opportunity, il conserve la catégorie, le territoire et le slug choisis en phase 1.
-
-En phase 3 seulement, ajoute `radarReview` dans la requête avec `summary`, `sources` et, pour un refresh, `substantialChanges` et `regressionCheck`.
-
-## Écriture autorisée
-
-N'effectue aucune plomberie Git. Ne crée, ne nomme et ne supprime aucune branche Radar; ne choisis aucun SHA; ne modifie aucun fichier de DevWeb13/fam-space-qwik.
-
-Écris uniquement radar-request.md sur la branche main de DevWeb13/fam-space-actions-bridge selon le format fourni dans ce runtime. Le workflow GitHub se charge du reste. Une fois cette requête écrite, termine le passage.
+## Snapshot GSC quotidien
+
+Le cache compact est `radar-gsc-snapshot.json` sur `main` de `DevWeb13/fam-space-actions-bridge`. Il ne contient jamais les lignes GSC brutes.
+
+Cette tâche est séparée de la sélection éditoriale. **S'il n'existe aucune branche Radar active et que le snapshot doit être renouvelé, actualise uniquement le snapshot puis termine le passage. Ne choisis pas de mission dans la même exécution.** Le passage horaire suivant effectuera la phase 1 avec le snapshot prêt.
+
+Le snapshot est réutilisable lorsqu'il a `schemaVersion: 1`, a été généré le jour courant en Europe/Paris et que `dataThrough` n'a pas plus de sept jours de retard.
+
+Lorsqu'un nouveau snapshot est nécessaire, utilise Windsor.ai avec le compte `sc-domain:fam-space.fr`, connector `searchconsole`, `include_fresh_data: false`. **Chaque appel `get_data` Search Analytics doit filtrer explicitement `search_type = web` avec `filters: [["search_type","eq","web"]]`.** Récupère 28 jours jusqu'à la dernière journée consolidée:
+
+- une lecture `date, clicks, impressions` pour déterminer la fin réelle;
+- quatre lectures consécutives de sept jours `date, page, clicks, impressions, position`;
+- pour les meilleurs refresh examinables, les requêtes de l'URL exacte sur `peakStart..peakEnd` et `recentStart..recentEnd`.
+
+Utilise la logique de le module Radar embarqué plus bas: `unwrapRows`, `buildRadarShortlist`, `diagnoseQueries` et `probableDuplicates`. Une réponse Windsor est considérée complète lorsque `status: done`, que `data` est un tableau et que `total_rows` correspond à `data.length`, sans indicateur explicite de troncature. **Un nombre rond de lignes, notamment 1 500, n'est jamais à lui seul une preuve de plafonnement et ne doit pas arrêter Radar.** Découpe seulement la période si Windsor signale réellement une réponse incomplète/tronquée, si `total_rows` ne correspond pas au nombre de lignes reçues, ou si `unwrapRows` refuse la réponse, notamment à son seuil conservateur de 5 000 lignes par réponse. Un 429, un refus d'accès ou un plafond réellement non résolu termine le passage. Maximum 50 appels `get_data`. Les réponses brutes restent temporaires.
+
+Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlist `refresh` avec ses diagnostics compacts, `strongPages`, `excluded` et les avertissements utiles.
+
+## Snapshot actuellement disponible
+
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-15T06:53:46.851Z",
+  "dataThrough": "2026-10-12",
+  "from": "2026-09-15",
+  "refresh": [
+    {
+      "url": "/articles/bons-plans/carte-tattoo-isere-2026-2027-comment-obtenir-60-a-120-pour-les-activites-d-un-collegien/",
+      "title": "Carte Tattoo Isère 2026-2027: comment obtenir 60 à 120 € pour les activités d'un collégien",
+      "category": "bons-plans",
+      "location": {
+        "city": "Grenoble",
+        "department": "Isère",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "publishedAt": "2026-09-12T18:04:35+02:00",
+      "ageDays": 33,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 186,
+      "recentImpressions": 15,
+      "score": 171,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "carte tattoo isère montant",
+        "carte tatoo",
+        "carte tattoo",
+        "carte tattoo montant",
+        "montant carte tatoo"
+      ]
+    },
+    {
+      "url": "/articles/parentalite/educonnect-pour-les-parents-activer-son-compte-et-retrouver-les-demarches-scolaires/",
+      "title": "EduConnect pour les parents: activer son compte et retrouver les démarches scolaires",
+      "category": "parentalite",
+      "publishedAt": "2026-09-12T20:02:41+02:00",
+      "ageDays": 33,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 209,
+      "recentImpressions": 42,
+      "score": 167,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "educonnect parents",
+        "est ce que educonnect fonctionne",
+        "educonnect espace parent",
+        "educonnect parent",
+        "il me manque un enfant sur educonnect"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/cantine-au-college-en-essonne-obtenir-son-tarif-2026-2027-sans-refaire-la-mauvaise-demarche/",
+      "title": "Cantine au collège en Essonne: obtenir son tarif 2026-2027 sans refaire la mauvaise démarche",
+      "category": "vie-pratique",
+      "location": {
+        "city": "Évry-Courcouronnes",
+        "department": "Essonne",
+        "region": "Île-de-France"
+      },
+      "publishedAt": "2026-09-13T16:03:15+02:00",
+      "ageDays": 32,
+      "peakStart": "2026-09-16",
+      "peakEnd": "2026-09-22",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 182,
+      "recentImpressions": 21,
+      "score": 161,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "coupon restauration scolaire collège essonne 2026 2027",
+        "coupon restauration scolaire essonne",
+        "coupon restauration essonne",
+        "coupon restauration scolaire collège 2026 2027",
+        "coupon restauration college essonne"
+      ]
+    },
+    {
+      "url": "/articles/evenements/arbora-lumina-a-harcourt-ce-qu-il-faut-prevoir-avec-des-enfants/",
+      "title": "Arbora Lumina à Harcourt: ce qu'il faut prévoir avec des enfants",
+      "category": "evenements",
+      "location": {
+        "city": "Harcourt",
+        "department": "Eure",
+        "region": "Normandie"
+      },
+      "publishedAt": "2026-09-15T19:00:19+02:00",
+      "ageDays": 30,
+      "peakStart": "2026-09-18",
+      "peakEnd": "2026-09-24",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 143,
+      "recentImpressions": 20,
+      "score": 123,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "arbora lumina",
+        "arbora lumina horaire",
+        "arbora lumina harcourt tarif",
+        "arbora lumina harcourt"
+      ]
+    },
+    {
+      "url": "/articles/parentalite/petite-section-peut-on-alleger-les-apres-midis-a-l-ecole-maternelle/",
+      "title": "Petite section: peut-on alléger les après-midis à l'école maternelle?",
+      "category": "parentalite",
+      "publishedAt": "2026-08-28T12:03:36+02:00",
+      "ageDays": 48,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 211,
+      "recentImpressions": 90,
+      "score": 121,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 1.111,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "amenagement ecole maternelle",
+        "aménagement du temps scolaire maternelle moyenne section",
+        "dérogation école après-midi petite section",
+        "aménagement temps scolaire",
+        "dérogation sieste petite section 2025"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/tarification-solidaire-naolib-a-nantes-combien-paie-une-famille-et-comment-faire-la-demande/",
+      "title": "Tarification solidaire Naolib à Nantes: combien paie une famille et comment faire la demande?",
+      "category": "vie-pratique",
+      "location": {
+        "city": "Nantes",
+        "department": "Loire-Atlantique",
+        "region": "Pays de la Loire"
+      },
+      "publishedAt": "2026-09-05T04:00:05+02:00",
+      "ageDays": 40,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 141,
+      "recentImpressions": 24,
+      "score": 117,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "tarification solidaire",
+        "tarif solidaire naolib nantes",
+        "tarification solidaire tan"
+      ]
+    },
+    {
+      "url": "/articles/parentalite/laep-a-grenoble-ou-aller-avec-un-enfant-de-moins-de-6-ans/",
+      "title": "LAEP à Grenoble: où aller avec un enfant de moins de 6 ans?",
+      "category": "parentalite",
+      "location": {
+        "city": "Grenoble",
+        "department": "Isère",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "publishedAt": "2026-09-05T09:59:12+02:00",
+      "ageDays": 40,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 141,
+      "recentImpressions": 28,
+      "score": 113,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "laep grenoble",
+        "pirouette grenoble",
+        "laep a petit pas",
+        "laep la marelle",
+        "espace famille"
+      ]
+    },
+    {
+      "url": "/articles/sorties/aquarium-reunion-fermeture-2026-visite-famille/",
+      "title": "Aquarium de La Réunion fermé depuis le 17 août 2026: quand pourra-t-on revenir en famille ?",
+      "category": "sorties",
+      "location": {
+        "city": "Saint-Gilles-les-Bains",
+        "department": "La Réunion",
+        "region": "La Réunion"
+      },
+      "publishedAt": "2026-07-22T11:57:00+02:00",
+      "ageDays": 85,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 145,
+      "recentImpressions": 34,
+      "score": 111,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "aquarium de la réunion tarifs 2026"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/rennes-avec-des-enfants-les-transports-sont-gratuits-avant-12-ans-mais-pas-sans-carte/",
+      "title": "Rennes avec des enfants: transports gratuits avant 12 ans, comment ça marche?",
+      "category": "vie-pratique",
+      "location": {
+        "city": "Rennes",
+        "department": "Ille-et-Vilaine",
+        "region": "Bretagne"
+      },
+      "publishedAt": "2026-09-07T00:02:33+02:00",
+      "ageDays": 38,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 147,
+      "recentImpressions": 41,
+      "score": 106,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "pass pluriel",
+        "metro gratuit enfant",
+        "pass pluriel rennes",
+        "transport gratuit rennes samedi"
+      ]
+    },
+    {
+      "url": "/articles/cuisine/cueillir-pommes-et-poires-a-mezieres-lez-clery-ce-qu-il-faut-verifier-avant-de-partir/",
+      "title": "Cueillir pommes et poires à Mézières-lez-Cléry: ce qu'il faut vérifier avant de partir",
+      "category": "cuisine",
+      "location": {
+        "city": "Mézières-lez-Cléry",
+        "department": "Loiret",
+        "region": "Centre-Val de Loire"
+      },
+      "publishedAt": "2026-09-04T16:04:39+02:00",
+      "ageDays": 41,
+      "peakStart": "2026-09-16",
+      "peakEnd": "2026-09-22",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 107,
+      "recentImpressions": 8,
+      "score": 99,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "cueillette pommes mezieres lez clery",
+        "cueillette de pomme clery st andre",
+        "cueillette pommes et poires",
+        "cueillette pommes loiret",
+        "quelle prix"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/carte-top-dep-art-comment-utiliser-les-45-et-les-4-sorties-offertes-dans-la-drome/",
+      "title": "Carte Top Dép'Art: comment utiliser les 45 € et les 4 sorties offertes dans la Drôme",
+      "category": "bons-plans",
+      "location": {
+        "city": "Valence",
+        "department": "Drôme",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "publishedAt": "2026-09-04T18:01:50+02:00",
+      "ageDays": 41,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 98,
+      "recentImpressions": 1,
+      "score": 97,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "solde carte top dép'art",
+        "liste partenaires carte top dép'art",
+        "carte top dép'art",
+        "comment utiliser la carte top dép'art",
+        "carte top depart"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/demenagement-comment-changer-d-ecole-maternelle-ou-elementaire-sans-rater-une-etape/",
+      "title": "Déménagement: comment changer d'école maternelle ou élémentaire sans rater une étape",
+      "category": "vie-pratique",
+      "publishedAt": "2026-09-03T08:02:20+02:00",
+      "ageDays": 42,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 112,
+      "recentImpressions": 17,
+      "score": 95,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "comment changer d'école primaire",
+        "déménagement ecole",
+        "comment changer d'école",
+        "changement d école",
+        "changement d ecole"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/quel-ticket-twisto-choisir-a-caen-avec-des-enfants/",
+      "title": "Quel ticket Twisto choisir à Caen avec des enfants?",
+      "category": "vie-pratique",
+      "location": {
+        "city": "Caen",
+        "department": "Calvados",
+        "region": "Normandie"
+      },
+      "publishedAt": "2026-09-07T11:04:46+02:00",
+      "ageDays": 38,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 125,
+      "recentImpressions": 31,
+      "score": 94,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "prix ticket twisto caen",
+        "ticket tram caen",
+        "ticket twisto prix",
+        "prix ticket twisto",
+        "ticket 24h twisto prix"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/carte-avantage-adulte-sncf-quand-est-elle-interessante-avec-des-enfants/",
+      "title": "Carte Avantage Adulte SNCF: quand est-elle intéressante avec des enfants?",
+      "category": "bons-plans",
+      "publishedAt": "2026-08-29T16:41:39+02:00",
+      "ageDays": 47,
+      "peakStart": "2026-09-28",
+      "peakEnd": "2026-10-04",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 238,
+      "recentImpressions": 149,
+      "score": 89,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": []
+    },
+    {
+      "url": "/articles/activites/la-cite-de-la-mer-a-cherbourg-en-famille-tarifs-duree-et-conseils-de-visite/",
+      "title": "La Cité de la Mer à Cherbourg en famille: billets, tarifs et durée",
+      "category": "activites",
+      "location": {
+        "city": "Cherbourg-en-Cotentin",
+        "department": "Manche",
+        "region": "Normandie"
+      },
+      "publishedAt": "2026-08-18T15:06:21+02:00",
+      "ageDays": 58,
+      "peakStart": "2026-09-15",
+      "peakEnd": "2026-09-21",
+      "recentStart": "2026-10-06",
+      "recentEnd": "2026-10-12",
+      "peakImpressions": 132,
+      "recentImpressions": 48,
+      "score": 84,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0.067,
+      "basis": "Baisse non attribuable au classement; 0 requêtes comparables.",
+      "focusQueries": [
+        "cité de la mer cherbourg tarif",
+        "cité de la mer cherbourg horaires",
+        "prix entree cite de la mer cherbourg",
+        "le redoutable sous-marin prix",
+        "aquarium cherbourg"
+      ]
+    }
+  ],
+  "strongPages": [
+    {
+      "url": "/articles/evenements/halloween-au-chateau-de-villersexel-2026-en-famille-quelle-experience-choisir/",
+      "title": "Halloween au Château de Villersexel 2026 en famille: quelle expérience choisir?",
+      "category": "evenements",
+      "location": {
+        "city": "Villersexel",
+        "department": "Haute-Saône",
+        "region": "Bourgogne-Franche-Comté"
+      },
+      "recentImpressions": 221,
+      "recentClicks": 8,
+      "recentPosition": 7.439,
+      "retention": 0.686
+    },
+    {
+      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
+      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
+      "category": "vie-pratique",
+      "location": {
+        "city": "Toulouse",
+        "department": "Haute-Garonne",
+        "region": "Occitanie"
+      },
+      "recentImpressions": 82,
+      "recentClicks": 4,
+      "recentPosition": 5.098,
+      "retention": 0.641
+    },
+    {
+      "url": "/articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/",
+      "title": "Gastronomades 2026 à Angoulême en famille: faut-il prévoir le week-end ?",
+      "category": "evenements",
+      "location": {
+        "city": "Angoulême",
+        "department": "Charente",
+        "region": "Nouvelle-Aquitaine"
+      },
+      "recentImpressions": 67,
+      "recentClicks": 4,
+      "recentPosition": 7.149,
+      "retention": 1.34
+    },
+    {
+      "url": "/articles/bons-plans/pass-culture-en-duo-comment-un-jeune-peut-inviter-un-parent-ou-un-proche/",
+      "title": "Pass Culture en duo: comment un jeune peut inviter un parent ou un proche",
+      "category": "bons-plans",
+      "recentImpressions": 73,
+      "recentClicks": 3,
+      "recentPosition": 5.411,
+      "retention": 0.811
+    },
+    {
+      "url": "/articles/voyages/futuroween-2026-futuroscope-billet-programme-enfants/",
+      "title": "Futuroween 2026 au Futuroscope: billet, programme et conseils avec des enfants",
+      "category": "voyages",
+      "location": {
+        "city": "Chasseneuil-du-Poitou",
+        "department": "Vienne",
+        "region": "Nouvelle-Aquitaine"
+      },
+      "recentImpressions": 382,
+      "recentClicks": 2,
+      "recentPosition": 8.809,
+      "retention": 0.997
+    },
+    {
+      "url": "/articles/maison/decheteries-de-caen-la-mer-qr-code-ou-plaque-obligatoires-depuis-septembre-2026/",
+      "title": "Déchèteries de Caen la mer: QR code ou plaque obligatoires depuis septembre 2026",
+      "category": "maison",
+      "location": {
+        "city": "Caen",
+        "department": "Calvados",
+        "region": "Normandie"
+      },
+      "recentImpressions": 49,
+      "recentClicks": 2,
+      "recentPosition": 9.653,
+      "retention": 0.731
+    },
+    {
+      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
+      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
+      "category": "voyages",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "recentImpressions": 926,
+      "recentClicks": 1,
+      "recentPosition": 8.733,
+      "retention": 0.967
+    },
+    {
+      "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
+      "title": "Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite",
+      "category": "sorties",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "recentImpressions": 141,
+      "recentClicks": 1,
+      "recentPosition": 7.723,
+      "retention": 1.076
+    },
+    {
+      "url": "/articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/",
+      "title": "Planète Préhistorique à Bordeaux avec des enfants: âge, durée et tarifs",
+      "category": "sorties",
+      "location": {
+        "city": "Bordeaux",
+        "department": "Gironde",
+        "region": "Nouvelle-Aquitaine"
+      },
+      "recentImpressions": 56,
+      "recentClicks": 1,
+      "recentPosition": 5.5,
+      "retention": 0.505
+    },
+    {
+      "url": "/articles/evenements/ci-t-as-la-trouille-2026-a-saint-jean-de-monts-que-faire-et-que-reserver/",
+      "title": "Ci t’as la trouille 2026 à Saint-Jean-de-Monts: que faire et que réserver ?",
+      "category": "evenements",
+      "location": {
+        "city": "Saint-Jean-de-Monts",
+        "department": "Vendée",
+        "region": "Pays de la Loire"
+      },
+      "recentImpressions": 39,
+      "recentClicks": 1,
+      "recentPosition": 5.359,
+      "retention": 0.848
+    }
+  ],
+  "excluded": {
+    "expired": 80,
+    "cooling": 7
+  },
+  "warnings": [
+    "Recherche web uniquement. Certaines requêtes GSC sont masquées; les lignes absentes valent zéro dans les données retournées.",
+    "Les 15 refresh ont été diagnostiqués par requête sur deux périodes distinctes.",
+    "uncertain ne prouve ni désindexation ni perte de classement."
+  ]
+}
+
+## Module Radar embarqué
+
+Le code ci-dessous est fourni directement pour les calculs Radar nécessaires à ce passage. Ne va pas le relire dans un autre fichier.
+
+```javascript
+// Pure JavaScript: usable in Node or a connector orchestration runtime.
+const DAY = 86400000;
+const dayNumber = (date) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date ?? ""))
+    throw new Error("Date GSC invalide.");
+  const value = Date.parse(`${date}T00:00:00Z`);
+  if (
+    !Number.isFinite(value) ||
+    new Date(value).toISOString().slice(0, 10) !== date
+  )
+    throw new Error("Date GSC invalide.");
+  return value / DAY;
+};
+const isoDay = (value) => new Date(value * DAY).toISOString().slice(0, 10);
+const round = (value) => Math.round(value * 1000) / 1000;
+export function unwrapRows(response) {
+  const value = response?.structuredContent ?? response;
+  if (response?.isError || (value.status && value.status !== "done"))
+    throw new Error("GSC indisponible ou traitement incomplet.");
+  const rows = Array.isArray(value) ? value : value.data;
+  if (
+    !Array.isArray(rows) ||
+    value.truncated === true ||
+    value.has_more === true ||
+    (value.total_rows !== undefined && value.total_rows !== rows.length)
+  )
+    throw new Error("Réponse GSC absente ou tronquée.");
+  // Conservative per-response threshold, not a claimed Windsor plan limit.
+  // Concatenated arrays are allowed after each response has been checked.
+  if (!Array.isArray(value) && rows.length >= 5000)
+    throw new Error(
+      "Réponse GSC potentiellement plafonnée; découper la période.",
+    );
+  if (rows.some((row) => row.search_type && row.search_type !== "web"))
+    throw new Error(
+      "Le périmètre Radar doit contenir seulement la recherche web.",
+    );
+  return rows;
+}
+export function canonicalPage(value) {
+  // Some connector runtimes do not expose the URL global.
+  if (typeof value !== "string") return undefined;
+  const path = value.replace(/^https?:\/\/(?:www\.)?fam-space\.fr(?=\/)/i, "");
+  if (!/^\/articles\/[^/?#]+\/[^/?#]+\/$/.test(path)) return undefined;
+  if (path.split("/").some((part) => part === "." || part === ".."))
+    return undefined;
+  return path;
+}
+const metric = (row, name) => {
+  const value = Number(row[name]);
+  if (
+    row[name] === null ||
+    row[name] === undefined ||
+    !Number.isFinite(value) ||
+    value < 0
+  )
+    throw new Error(`Métrique GSC invalide: ${name}.`);
+  return value;
+};
+function addMetric(target, row) {
+  const impressions = metric(row, "impressions");
+  target.impressions += impressions;
+  target.clicks += metric(row, "clicks");
+  target.positionSum += impressions ? metric(row, "position") * impressions : 0;
+}
+const empty = () => ({ impressions: 0, clicks: 0, positionSum: 0 });
+const view = (sum) => ({
+  impressions: round(sum.impressions),
+  clicks: round(sum.clicks),
+  impressionsPerDay: round(sum.impressions / 7),
+  position: sum.impressions ? round(sum.positionSum / sum.impressions) : null,
+});
+function windowSum(days, start, end) {
+  const result = empty();
+  for (let date = start; date <= end; date++) {
+    const row = days.get(date);
+    if (row) for (const key of Object.keys(result)) result[key] += row[key];
+  }
+  return result;
+}
+export function buildRadarShortlist(
+  response,
+  catalog,
+  {
+    now = new Date().toISOString(),
+    siteRows,
+    from,
+    limit = 15,
+    history = [],
+  } = {},
+) {
+  const rows = unwrapRows(response);
+  const site = siteRows ? unwrapRows(siteRows) : rows;
+  if (!site.length)
+    throw new Error("GSC ne retourne aucune journée consolidée.");
+  const siteDays = site.map((row) => dayNumber(row.date));
+  const end = siteDays.reduce((max, date) => Math.max(max, date), -Infinity);
+  const observedStart = siteDays.reduce(
+    (min, date) => Math.min(min, date),
+    Infinity,
+  );
+  const today = dayNumber(now.slice(0, 10));
+  if (end > today || today - end > 7)
+    throw new Error(
+      "Données GSC trop anciennes ou datées dans le futur; aucun export historique de secours.",
+    );
+  // Never create comparison weeks before the first observed site day.
+  const start = from ? Math.max(dayNumber(from), observedStart) : observedStart;
+  if (!Number.isFinite(start) || end - start < 13)
+    throw new Error("Au moins 14 jours GSC sont nécessaires.");
+  const byPage = new Map();
+  for (const row of rows) {
+    const page = canonicalPage(row.page),
+      date = dayNumber(row.date);
+    if (!page || date < start || date > end) continue;
+    if (!byPage.has(page)) byPage.set(page, new Map());
+    const days = byPage.get(page);
+    if (!days.has(date)) days.set(date, empty());
+    addMetric(days.get(date), row);
+  }
+  const entries = [];
+  for (const article of catalog) {
+    const page = canonicalPage(article.url);
+    if (
+      !page ||
+      article.status === "draft" ||
+      Date.parse(article.publishedAt) > Date.parse(now)
+    )
+      continue;
+    const days = byPage.get(page) ?? new Map();
+    const publishedDay = dayNumber(article.publishedAt.slice(0, 10));
+    const firstDay = Math.max(start, publishedDay);
+    if (end - firstDay < 13) continue;
+    const recent = windowSum(days, end - 6, end);
+    let peak = empty(),
+      peakStart = firstDay;
+    // The reference week ends before the recent week: no overlapping comparison.
+    for (let first = firstDay; first + 6 < end - 6; first++) {
+      const sum = windowSum(days, first, first + 6);
+      if (sum.impressions > peak.impressions) {
+        peak = sum;
+        peakStart = first;
+      }
+    }
+    const total = windowSum(days, firstDay, end);
+    const expired = Boolean(
+      article.eventEndsAt && article.eventEndsAt < now.slice(0, 10),
+    );
+    const reviewDue = Boolean(
+      article.reviewAt && article.reviewAt <= now.slice(0, 10),
+    );
+    const lastRefresh = history
+      .filter((item) => item.url === page && item.mode === "refresh")
+      .map((item) => item.publishedAt)
+      .sort()
+      .at(-1);
+    const cooling = Boolean(
+      lastRefresh && Date.parse(now) - Date.parse(lastRefresh) < 14 * DAY,
+    );
+    const ageDays = today - publishedDay;
+    const retention = peak.impressions
+      ? recent.impressions / peak.impressions
+      : 1;
+    const maturity = reviewDue ? 1 : Math.min(1, Math.max(0, ageDays) / 30);
+    const evidence =
+      Math.min(1, peak.impressions / 35) * Math.min(1, total.impressions / 50);
+    const score =
+      expired || cooling
+        ? 0
+        : Math.max(0, peak.impressions - recent.impressions) *
+            evidence *
+            maturity +
+          (reviewDue ? 35 : 0);
+    entries.push({
+      url: page,
+      title: article.title,
+      category: article.category,
+      location: article.location,
+      keywords: article.keywords ?? article.topic?.keywords ?? [],
+      publishedAt: article.publishedAt,
+      eventEndsAt: article.eventEndsAt,
+      reviewAt: article.reviewAt,
+      expired,
+      cooling,
+      reviewDue,
+      ageDays,
+      peakStart: isoDay(peakStart),
+      peakEnd: isoDay(peakStart + 6),
+      recentStart: isoDay(end - 6),
+      recentEnd: isoDay(end),
+      peak: view(peak),
+      recent: view(recent),
+      retention: round(retention),
+      score: round(score),
+      signal: "needs_query_check",
+    });
+  }
+  return {
+    schemaVersion: 1,
+    retrievedAt: now,
+    dataThrough: isoDay(end),
+    from: isoDay(start),
+    caveat:
+      "Les lignes absentes valent zéro dans les données retournées. GSC peut masquer des requêtes; les signaux ne prouvent ni désindexation ni causalité.",
+    refresh: entries
+      .filter((item) => item.score > 0)
+      .sort((a, b) => b.score - a.score || a.url.localeCompare(b.url))
+      .slice(0, limit),
+    strongPages: entries
+      .filter(
+        (item) =>
+          !item.expired &&
+          item.recent.impressions >= 35 &&
+          item.retention >= 0.5,
+      )
+      .sort(
+        (a, b) =>
+          b.recent.clicks - a.recent.clicks ||
+          b.recent.impressions - a.recent.impressions ||
+          a.url.localeCompare(b.url),
+      )
+      .slice(0, 10),
+    excluded: {
+      expired: entries.filter((item) => item.expired).length,
+      cooling: entries.filter((item) => item.cooling).length,
+    },
+  };
+}
+export function diagnoseQueries(peakResponse, recentResponse) {
+  const aggregate = (response) => {
+    const result = new Map();
+    for (const row of unwrapRows(response)) {
+      if (typeof row.query !== "string")
+        throw new Error("Requête GSC manquante.");
+      if (!result.has(row.query)) result.set(row.query, empty());
+      addMetric(result.get(row.query), row);
+    }
+    return result;
+  };
+  const peak = aggregate(peakResponse),
+    recent = aggregate(recentResponse);
+  const common = [...peak.keys()].filter(
+    (query) =>
+      peak.get(query).impressions >= 10 &&
+      (recent.get(query)?.impressions ?? 0) >= 3,
+  );
+  let weight = 0,
+    change = 0;
+  for (const query of common) {
+    const first = peak.get(query),
+      last = recent.get(query);
+    const w = Math.min(first.impressions, last.impressions);
+    weight += w;
+    change +=
+      w *
+      (last.positionSum / last.impressions -
+        first.positionSum / first.impressions);
+  }
+  const delta = weight ? change / weight : null;
+  const total = (values) =>
+    [...values.values()].reduce((sum, item) => sum + item.impressions, 0);
+  const ratio = total(peak) ? total(recent) / total(peak) : null;
+  return {
+    signal:
+      delta !== null && delta >= 3
+        ? "rank_loss"
+        : delta !== null &&
+            Math.abs(delta) <= 2 &&
+            ratio !== null &&
+            ratio <= 0.25
+          ? "coverage_loss"
+          : "uncertain",
+    commonQueries: common.length,
+    positionDelta: delta === null ? null : round(delta),
+    impressionRatio: ratio === null ? null : round(ratio),
+    queries: [...new Set([...peak.keys(), ...recent.keys()])]
+      .map((query) => ({
+        query,
+        peak: view(peak.get(query) ?? empty()),
+        recent: view(recent.get(query) ?? empty()),
+      }))
+      .sort((a, b) => b.peak.impressions - a.peak.impressions)
+      .slice(0, 20),
+    caveat:
+      "coverage_loss désigne une baisse d'exposition observée, pas une preuve de désindexation. Les requêtes masquées et la saisonnalité limitent le diagnostic.",
+  };
+}
+const STOP = new Set(
+  "avec pour dans sans famille familles enfant enfants tarif tarifs duree conseil conseils visite visiter billet billets activite activites sortie sorties evenement evenements preparation pratique pratiques autour leur leurs aussi quoi comment quel quelle quelles quels quand faire partir 2026 2027".split(
+    " ",
+  ),
+);
+const words = (value) =>
+  new Set(
+    String(value)
+      .replace(/œ/g, "oe")
+      .normalize("NFD")
+      .replace(/\p{Diacritic}/gu, "")
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((word) => word.length >= 3 && !STOP.has(word)),
+  );
+export function probableDuplicates(subject, catalog, limit = 5) {
+  const terms = words(
+    [
+      subject.title,
+      ...(subject.keywords ?? subject.topic?.keywords ?? []),
+    ].join(" "),
+  );
+  return catalog
+    .filter(
+      (article) => canonicalPage(article.url) !== canonicalPage(subject.url),
+    )
+    .map((article) => {
+      const candidate = words(
+        [
+          article.title,
+          ...(article.keywords ?? article.topic?.keywords ?? []),
+        ].join(" "),
+      );
+      const shared = [...terms].filter((word) => candidate.has(word));
+      const sameCity = Boolean(
+        subject.location?.city &&
+          subject.location.city === article.location?.city,
+      );
+      const sameDepartment = Boolean(
+        subject.location?.department &&
+          subject.location.department === article.location?.department,
+      );
+      return {
+        url: article.url,
+        title: article.title,
+        location: article.location,
+        sharedTerms: shared,
+        score:
+          shared.length / Math.max(1, new Set([...terms, ...candidate]).size) +
+          (sameCity ? 0.2 : sameDepartment ? 0.1 : 0),
+      };
+    })
+    .filter(
+      (item) =>
+        item.sharedTerms.length >= 2 ||
+        (item.sharedTerms.length === 1 && item.sharedTerms[0].length >= 6),
+    )
+    .sort((a, b) => b.score - a.score || a.url.localeCompare(b.url))
+    .slice(0, limit);
+}
+```
+
+## Résultat attendu
+
+Actualise uniquement radar-gsc-snapshot.json sur la branche main de DevWeb13/fam-space-actions-bridge avec le snapshot compact décrit ci-dessus, puis termine ce passage. Ne choisis aucune mission Radar dans la même exécution et ne modifie aucun autre fichier interne.
