@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261017-1708-titre-de-travail-cars-lio-dans-l-herault-en-famille-billets-tarifs-red",
+  "lastProcessedCommit": "5da1cca95dbce3d58a7cc3915ebfca6e1df32bcd"
 }
