@@ -1,1 +1,40 @@
-# Ready
+---
+action: start
+---
+
+## Sujet retenu
+
+**Titre de travail:** Puy de Dôme en famille: monter en train, découvrir le sommet ou choisir la randonnée.
+
+**Angle:** Aider les parents à organiser une sortie complète au sommet du puy de Dôme, à Orcines (Puy-de-Dôme), en distinguant trois décisions concrètes: monter et redescendre en Panoramique des Dômes, emprunter à pied le chemin des Muletiers, ou combiner randonnée et trajet simple en train. Montrer aussi ce que la famille découvre sur place sans billet d'activité supplémentaire, et comment adapter la visite à l'âge des enfants et à la météo.
+
+**Contexte:** Le Panoramique des Dômes est un train électrique à crémaillère qui rejoint en environ 15 minutes le sommet du volcan culminant à 1 465 m. Le site comprend les panoramas de la Chaîne des Puys-faille de Limagne, le temple de Mercure et des espaces de découverte. C'est une attraction permanente, distincte de Vulcania et des sorties déjà publiées sur le Mont-Dore.
+
+## Besoin du lecteur
+
+Savoir si le train ou l'ascension pédestre convient mieux à sa famille, ce que coûtent un aller-retour et un trajet simple, ce que l'on peut visiter gratuitement au sommet, combien de temps et d'effort prévoir, quelles sont les limites de l'accessibilité, comment rejoindre la gare de départ et quelles dates de fermeture éviter. Pour un séjour, identifier un hébergement concret près du site sans confondre réservation de logement et billet de train.
+
+## Valeur éditoriale
+
+- **Trois façons de visiter:** train aller-retour pour limiter l'effort; montée et descente à pied pour des marcheurs équipés; ou aller simple en train et randonnée sur un itinéraire autorisé. Depuis le col de Ceyssat, le chemin des Muletiers représente environ 350 m de dénivelé et 45 à 60 minutes de montée selon le Département. Depuis la Maison de site, compter environ 6 km et 1h30 à 2h de montée via le col. La voie parallèle aux rails est interdite aux piétons. Bien distinguer les points de départ et ne pas présenter la marche comme adaptée à tous les jeunes enfants.
+- **Budget officiel 2026 à recontrôler pendant la rédaction:** en période du 1er octobre au 31 mars, adulte 14,40 € le trajet simple et 17,20 € aller-retour; jeune 8,60 € et 10,10 €; forfait famille pour deux adultes et deux jeunes 41,60 € en simple et 49,90 € aller-retour toute l'année; moins de 4 ans gratuit. En saison haute d'avril à septembre, adulte 15,50 € en simple et 18,60 € aller-retour, jeune 9,90 € et 11,70 €. Éviter de présenter les prix de basse saison comme universels et faire préciser la tranche d'âge du billet jeune. Les billets ordinaires peuvent être achetés en ligne ou sur place, sans réserver un horaire précis, et sont valables un an.
+- **Une vraie visite au sommet:** vues sur les volcans et la Limagne, vestiges et espace muséographique du temple de Mercure, espace Grand Site de France, panneaux de lecture du paysage, promenades autorisées, ainsi que Maison de site au pied du volcan. L'accès piéton aux panoramas et plusieurs espaces de découverte sont gratuits; le train est une prestation payante. Ne pas promettre un accès sans marches aux vestiges du temple.
+- **Contraintes familiales utiles:** trains et gares accessibles aux poussettes et aux personnes à mobilité réduite, mais l'ensemble des sentiers et les vestiges du temple ne le sont pas. Gare de départ chemin du Couleyras, 63870 Orcines; stationnement gratuit et desserte en transports en commun par la ligne P36, horaires à contrôler sur T2C. Prévoir vêtements adaptés au sommet, vent et visibilité changeante; restauration et salle de pique-nique annoncées.
+- **Actualité décisive:** fermeture de maintenance du train **du 16 au 20 novembre 2026 inclus**. Après celle-ci, départs annoncés du mercredi au dimanche toutes les heures entre 10h et 17h, dernière descente 17h30, fermé lundi et mardi. La marche et l'ouverture des espaces peuvent obéir à d'autres conditions: vérifier les accès effectivement autorisés avant de suggérer une alternative pendant la maintenance.
+- **Différenciation:** contrairement aux pages officielles séparant tarifs, itinéraires, sommet et accès, l'article doit guider le choix familial selon effort, budget, météo et durée. Le Volcan de Lemptégy, autre piste sérieuse examinée, propose une visite géologique guidée de 2h30, mais termine sa saison grand public le 1er novembre 2026. Les autres pistes déjà étudiées (Grotte de Volvic, Aventure Michelin) ne présentent pas ici le même ensemble randonnée/train/panorama. Écarter les doublons explicites Vulcania et Mont-Dore et ne pas faire de la courte animation d'Halloween un sujet principal.
+
+## Affiliation
+
+- **Prestation principale: train Panoramique des Dômes.** Aucune offre vendant exactement ce billet n'a été confirmée lors des recherches ciblées sur **GetYourGuide, Tiqets et Klook**. L'achat se fait auprès de l'exploitant: https://www.panoramiquedesdomes.fr/horaires-tarifs/ . Conserver l'orientation vers cette billetterie officielle tant qu'aucune offre partenaire équivalente n'est établie.
+- **Hébergement pertinent confirmé, Booking.com:** « Le Moulin des Puys », au **3B rue de la Cascade à Orcines**, à proximité du puy de Dôme; hébergement avec cuisine, parking gratuit, chambres familiales et un gîte indiqué pour cinq personnes (autre formule studio). URL française exacte: https://www.booking.com/hotel/fr/le-moulin-des-puys.fr.html . Convient aux familles qui prolongent la sortie pour visiter la Chaîne des Puys. Les prix et disponibilités dépendent de la période et de la composition du groupe: ne pas promettre une réservation possible à toutes les dates.
+- **Besoins secondaires:** les partenaires de city pass, bagages, transferts et location de véhicule n'apportent aucune offre suffisamment liée à cette sortie. Une seule suggestion d'hébergement en bas d'article sera plus naturelle qu'une collection de prestations. L'offre Booking.com est une page commerciale, pas une source de faits éditoriaux sur le volcan.
+
+## Sources de départ
+
+- **Exploitant, tarifs et fréquences du Panoramique des Dômes:** https://www.panoramiquedesdomes.fr/horaires-tarifs/
+- **Exploitant, maintenance du 16 au 20 novembre 2026 et reprise du service:** https://www.panoramiquedesdomes.fr/fermeture-maintenance-annuelle/
+- **Département du Puy-de-Dôme, parcours piétons, dénivelé, temps de marche, interdiction de longer les rails:** https://volcan.puy-de-dome.fr/infos-pratiques/acces-au-sommet.html
+- **Exploitant, espaces de découverte et patrimoine au sommet:** https://www.panoramiquedesdomes.fr/les-espaces-de-visite/
+- **Exploitant, trajets, gare de départ, ligne P36, billets et contact:** https://www.panoramiquedesdomes.fr/comment-venir-au-puy-de-dome/
+- **Exploitant, poussettes, PMR, visite, pique-nique et équipements:** https://www.panoramiquedesdomes.fr/faq/
+- **Département du Puy-de-Dôme, stationnement et accès au site:** https://volcan.puy-de-dome.fr/infos-pratiques/acces-au-site.html
