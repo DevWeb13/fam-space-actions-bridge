@@ -187,3 +187,4 @@ automation/image-20261017-addaf6f-maison-marais-0940|0631334a8594b5224b38b383ee5
 automation/image-20261017-df6864d-puy-dome-1249|a6be746a001d39998718f638ea1107a7cc18b0b7
 automation/image-20261017-df6864d-puy-dome-1249|4fced15dae8da3ee04fdb797b346c63788f2f242
 automation/image-20261017-f39eab1-chalosse-festimomes-isere-1842|d5ed64e04c9a5be77aec10e5eae1c90f319b9e04
+automation/image-20261017-f39eab1-chalosse-festimomes-isere-1842|f4e6319f35ae6c50e9db2357c4a7ae64ec5757af
