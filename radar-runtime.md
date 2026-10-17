@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Festival du Film pour Enfants 2026 en Isère: séances, ateliers et tarifs"
-subtitle: "Du 19 au 28 octobre à Vizille et Villard-Bonnot: choisir selon l'âge et réserver"
-summary: "Festival du Film pour Enfants 2026 en Isère: lieux, séances dès 3 ans, animations, réservations et tarif unique de 5 € du 19 au 28 octobre."
+title: "Festival du Film pour Enfants 2026 en Isère: films, ateliers et tarifs"
+subtitle: "Du 19 au 28 octobre à Vizille et Villard-Bonnot: repérer une séance selon l'âge et réserver"
+summary: "Festival du Film pour Enfants en Isère du 19 au 28 octobre 2026: films dès 3 ans, séances vérifiées à Vizille et Villard-Bonnot, ateliers et billets à 5 €."
 category: evenements
 location:
   city: Vizille
@@ -68,20 +73,26 @@ location:
   region: Auvergne-Rhône-Alpes
 keywords:
   - festival du film pour enfants 2026
-  - festival cinéma enfants Vizille Villard-Bonnot
-  - festival film enfants octobre 2026 tarifs ateliers
+  - cinéma enfants Vizille Villard-Bonnot
+  - festival film enfants 2026 séances ateliers
 sources:
-  - title: Festival du Film pour Enfants - programme 2026
-    url: https://www.festivaldufilmpourenfants.fr/
-  - title: Festival du Film pour Enfants - informations et tarifs
+  - title: Festival du Film pour Enfants - programmation et séances à Vizille
+    url: https://www.festivaldufilmpourenfants.fr/agenda-ffe-vizille/
+  - title: Festival du Film pour Enfants - séances à Villard-Bonnot
+    url: https://www.festivaldufilmpourenfants.fr/agenda-villard-bonnot/
+  - title: Festival du Film pour Enfants - infos, tarifs et accès
     url: https://www.festivaldufilmpourenfants.fr/infos-et-tarifs/
-  - title: Ville de Vizille - 28e édition du festival
+  - title: Festival du Film pour Enfants - questions pratiques et réservations
+    url: https://www.festivaldufilmpourenfants.fr/questions-frequemment-posees/
+  - title: Festival du Film pour Enfants - animations à Vizille
+    url: https://www.festivaldufilmpourenfants.fr/les-animations-du-festival/
+  - title: Festival du Film pour Enfants - animations à Villard-Bonnot
+    url: https://www.festivaldufilmpourenfants.fr/les-animations-du-festival-a-villard-bonnot/
+  - title: Ville de Vizille - édition 2026 du festival
     url: https://www.ville-vizille.fr/agenda/39650/12876-festival-du-film-pour-enfants.htm
-  - title: Le Grésivaudan - Festival du Film pour Enfants 2026
-    url: https://www.le-gresivaudan.fr/agenda/11875/162-festival-du-film-pour-enfants-2026-28eme-edition.htm?periode=97971
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: festival-du-film-pour-enfants-2026-en-isere-seances-ateliers-et-tarifs
   decision: Choisir une séance réellement adaptée à l'âge entre les deux cinémas, repérer les ateliers et savoir comment réserver au prix annoncé sans se tromper de lieu ou de date.
@@ -91,53 +102,63 @@ radar:
     dataThrough: 2026-10-14
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Festival du Film pour Enfants - programme 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-10-28
 ---
 
-## Mission retenue
+Du **lundi 19 au mercredi 28 octobre 2026**, la **28e édition du Festival du Film pour Enfants** réunit deux cinémas de l'Isère: **Le Jeu de Paume à Vizille** et **l'Espace Aragon à Villard-Bonnot**. Le thème « De la page à l'image » met à l'honneur les adaptations de livres. Une séance courte pour un enfant de 3 ans, un film d'aventure pour un écolier et un atelier pratique ne se choisissent pas de la même façon: **le lieu, l'âge indiqué et la durée** comptent autant que le titre.
 
-Guide pratique pour la **28e édition du Festival du Film pour Enfants**, du **19 au 28 octobre 2026**, au **Jeu de Paume de Vizille** et à **l'Espace Aragon de Villard-Bonnot**. Thème 2026: « De la page à l'image », autour des adaptations de livres jeunesse.
+## Quel film choisir selon l'âge?
 
-## Pourquoi cette mission
+La programmation est organisée en cinq sections. **Le Coin des tout-petits** propose des films pour les **3-6 ans**. Les films du **Thème** visent globalement les **8-12 ans**, même si certains titres ont un âge conseillé plus bas. **Les Animés** s'adressent surtout aux **12 ans et plus**; les sections **À l'affiche** et **La Malle aux trésors** couvrent des âges variés. Il faut donc vérifier chaque séance individuellement.
 
-Le meilleur refresh GSC (cantine collégiens en Essonne) est en signal incertain, sans requêtes comparables: l'article traite déjà coupon, calcul, inscription, cas particuliers. Le LAEP Nantes, en perte de couverture et non de classement avérée, donne déjà quartiers, âges et horaires; aucune raison éditoriale indépendante de le réécrire maintenant. Une expansion d'une page forte telle que Quai des Bulles recouperait une intention couverte, pour un festival terminé le 11 octobre. Cette opportunité est imminente, documentée officiellement, distincte des articles du catalogue Radar et des sujets Publication/Destination en cours.
+Quelques exemples concrets dans les agendas 2026:
 
-## Décision du lecteur
+- **Dès 3 ans, à Vizille:** *Les Toutes Petites Créatures 2* (**38 min**) le **mercredi 21 octobre à 10h**, salle 2. Cette projection donne accès, juste après le film, à un **atelier créatif gratuit de 30 min**, sans réservation supplémentaire. Le même film est programmé à **Villard-Bonnot le 21 octobre à 10h30**, sans présumer que l'atelier de Vizille s'y déroule aussi.
+- **Dès 3 ans, dans les deux villes:** *Un amour d'épouvantail* (**44 min**), à **Villard-Bonnot mardi 20 octobre à 10h30**, puis à **Vizille jeudi 22 octobre à 10h30**. Un format plus facile à envisager pour une première sortie que les longs métrages de plus d'une heure et demie.
+- **Dès 6 ans, à Vizille:** *Le Robot sauvage* (**1h42**) le **lundi 19 octobre à 11h45**, salle 1. L'âge conseillé est bien de 6 ans, mais la durée peut peser pour un enfant peu habitué au cinéma.
+- **Dès 7 ans, à Vizille:** *Fantastic Mr Fox* (**1h28**) le **mercredi 21 octobre à 14h**, salle 2, adaptation du roman de Roald Dahl.
+- **Une autre formule à Villard-Bonnot:** *Contes et silhouettes*, **ciné-concert dès 4 ans** le **mardi 27 octobre à 10h30**, salle 1, mêlant courts métrages d'ombres animées et guitare en direct, au tarif de **5 €**.
 
-Choisir **le bon film ou atelier selon l'âge**, vérifier la salle et l'horaire, puis réserver sans confondre les séances et activités des deux sites.
+Il s'agit d'une **sélection de repères**, pas de la totalité des séances: un même film peut être projeté plusieurs fois et dans les deux cinémas. La programmation du jour et la salle exacte restent à vérifier avant l'achat.
 
-## Faits à traiter
+## Ateliers: lesquels réserver, lesquels sont en accès libre?
 
-- **19-28 octobre 2026**; Jeu de Paume, square de la Révolution, 38220 Vizille; Espace Aragon, 19 bis boulevard Jules Ferry, 38190 Villard-Bonnot.
-- Sections: **Coin des tout-petits 3-6 ans**, thème 2026 pour les **8-12 ans**, animation asiatique plutôt à partir de **12 ans**. Vérifier titre, durée, âge conseillé, jour, heure et lieu **film par film**, sans généralisation.
-- Séparer films, avant-premières, ateliers, rencontres; contrôler réservation ou inscription spécifique, gratuité éventuelle et horaires.
-- **5 € la séance** dans les deux cinémas. Coupons de réservation disponibles en ligne; sur place, modes de paiement indiqués par l'organisateur, notamment **Carte Tattoo Isère**. Vérifier les modalités de celle-ci.
-- Accès, accueil des familles, salles temporaires supplémentaires à Vizille, accessibilité et contacts; éviter d'inventer les temps de trajet.
-- Ajouter **eventEndsAt: 2026-10-28** à l'article final.
+Les activités ne suivent pas toutes la même règle. À **Villard-Bonnot**, l'**atelier Table Mash-Up**, pour les **6 ans et plus**, est annoncé le **mardi 20 octobre à 10h et 10h45**. Il permet de découvrir le montage d'un petit film et nécessite une **inscription par mail** à **animation.espacearagon@le-gresivaudan.fr**.
 
-## Sources de départ
+À **Vizille**, l'**atelier doublage**, dès **8 ans**, est proposé le **vendredi 23 octobre de 14h à 17h**, en **accès libre sans réservation**. Pour *Les Toutes Petites Créatures 2*, l'atelier créatif du 21 octobre suit directement la projection de 10h: **l'achat du billet de cette séance donne accès à l'activité**.
 
-Programme du festival, page officielle des tarifs et réservations, Ville de Vizille et Grésivaudan, références dans le frontmatter.
+D'autres ateliers et rencontres sont prévus tout au long des dix jours, notamment dessin manga, stop motion et échanges avec des professionnels. Les animations annoncées comme gratuites ne dispensent pas d'une éventuelle **inscription préalable** lorsqu'elle est précisée. À Vizille, l'organisateur annonce également un **goûter quotidien entre 16h et 17h**, dans la cabane de Totoro.
 
-## Affiliation
+## Billets: 5 € pour chaque séance, avec quelques modalités à connaître
 
-Aucun partenaire de billetterie validé pour ces séances. Un hébergement à Vizille via Booking.com n'est utile que si une famille vient plusieurs jours; vérifier l'offre avant de la recommander, sans créer de besoin artificiel.
+Le tarif est **5 € par personne et par projection dans les deux cinémas**, quelle que soit la durée du film. Pour **deux adultes et deux enfants**, une séance à quatre revient donc à **20 €**.
 
-## Continuations internes
+La réservation en ligne passe par l'achat de **coupons de séance**. Après paiement par carte bancaire et création d'un compte, vous recevez les billets avec **QR code par courriel**; vous pouvez les présenter sur smartphone ou les imprimer. En cas de difficulté, contrôlez les courriels indésirables et conservez les coupons avant de partir. Un achat au guichet reste possible **dans la limite des places disponibles**.
 
-Le guide [Carte Tattoo Isère 2026-2027](/articles/bons-plans/carte-tattoo-isere-2026-2027-comment-obtenir-60-a-120-pour-les-activites-d-un-collegien/) détaille l'aide départementale: renvoyer vers lui sans reproduire la démarche. Aucun doublon direct du festival dans le catalogue publié.
+Sur place sont acceptés notamment **espèces, chèques et carte bancaire**, ainsi que la **Carte Tattoo Isère**, les CinéChèques et les chèques vacances selon les modalités indiquées. La **carte Pass'Région** fonctionne différemment: **une place débitée par carte et par séance, avec 1 € supplémentaire**. Pour les conditions de l'aide départementale, notre guide [Carte Tattoo Isère 2026-2027](/articles/bons-plans/carte-tattoo-isere-2026-2027-comment-obtenir-60-a-120-pour-les-activites-d-un-collegien/) détaille son fonctionnement.
+
+Les projections **commencent à l'heure, sans publicité**. Le festival peut refuser l'entrée au-delà de quelques minutes de retard; mieux vaut arriver avant l'horaire inscrit sur le coupon.
+
+## Deux cinémas: adresse, salles et accessibilité
+
+**À Vizille**, Le Jeu de Paume se trouve **square de la Révolution, 38220 Vizille**. Les salles **1 et 2** sont dans le cinéma; les salles **3 et 4**, temporaires pendant le festival, sont installées à proximité, à environ **30 mètres**. Leur accès implique de traverser une route: les jeunes enfants doivent rester accompagnés. Le festival indique un **accès pour les personnes à mobilité réduite**. Le guichet ouvre de **9h30 à 12h**, puis de **13h à 17h30**. Renseignements: **06 72 03 83 04**.
+
+**À Villard-Bonnot**, l'Espace Aragon est au **19 bis boulevard Jules Ferry, 38190 Villard-Bonnot**. Ses **deux salles** et son espace d'exposition sont annoncés accessibles aux personnes à mobilité réduite. Pendant le festival, le cinéma ouvre à **9h30** et reste ouvert jusqu'à **20h30**. Renseignements: **04 76 71 22 51**.
+
+Si vous venez en voiture, le festival recommande de prévoir environ **15 minutes pour stationner et rejoindre la salle**. Pour un séjour de plusieurs jours consacré aux deux sites, choisir un hébergement dans le secteur de Vizille ou de la vallée du Grésivaudan peut éviter de longs allers-retours; vérifiez surtout le trajet réel jusqu'à **chaque** cinéma avant de réserver.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
 - /articles/evenements/mon-premier-festival-2026-paris-film-age/ | Mon Premier Festival 2026 à Paris: quel film choisir selon l'âge? | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/festival-film-lama-2026-famille/ | Festival du Film de Lama 2026 en Corse: préparer une soirée cinéma en famille | evenements | Lama, Haute-Corse, Corse
 - /articles/evenements/au-creux-de-l-oreille-2026-a-noirlac-quels-spectacles-et-ateliers-choisir-avec-les-enfants/ | Au Creux de l'Oreille 2026 à Noirlac: spectacles et ateliers en famille du 17 au 22 octobre | evenements | Bruère-Allichamps, Cher, Centre-Val de Loire
 - /articles/evenements/festi-momes-2026-a-nantes-quelle-seance-choisir-selon-l-age-des-enfants/ | Festi'Mômes 2026 à Nantes: séances, spectacles et tarifs en famille | evenements | Nantes, Loire-Atlantique, Pays de la Loire
-- /articles/evenements/festival-film-lama-2026-famille/ | Festival du Film de Lama 2026 en Corse: préparer une soirée cinéma en famille | evenements | Lama, Haute-Corse, Corse
-- /articles/evenements/festival-du-cirque-du-val-d-oise-2026-en-famille-tarifs-horaires-et-conseils/ | Festival du Cirque du Val d'Oise 2026 en famille: tarifs, horaires et conseils | evenements | Domont, Val-d'Oise, Île-de-France
+- /articles/evenements/lire-en-poche-2026-a-gradignan-avec-des-enfants-organiser-une-journee-sans-perdre-les-ateliers/ | Lire en Poche 2026 à Gradignan avec des enfants: organiser une journée sans perdre les ateliers | evenements | Gradignan, Gironde, Nouvelle-Aquitaine
 - /articles/evenements/festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants/ | Les Petits Asticots 2026: spectacles, âges et réservations en famille | evenements | Chamonix-Mont-Blanc, Haute-Savoie, Auvergne-Rhône-Alpes
-- /articles/evenements/grand-bivouac-2026-a-albertville-en-famille-preparer-sa-journee-au-festival/ | Grand Bivouac 2026 à Albertville en famille: préparer sa journée au festival | evenements | Albertville, Savoie, Auvergne-Rhône-Alpes
-- /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/ | Monument jeu d'enfant 2026 au château de Vincennes: quel atelier choisir ? | evenements | Vincennes, Val-de-Marne, Île-de-France
+- /articles/evenements/cine-plage-saint-cyprien-lecci-2026/ | Ciné-Plage Lecci 2026: trois films gratuits à Saint-Cyprien | evenements | Lecci, Corse-du-Sud, Corse
+- /articles/evenements/hop-hop-hop-festival-2026-en-famille-quel-jour-choisir/ | Hop Hop Hop Festival 2026 en famille: quel jour choisir? | evenements | Saint-Cirgues, Lot, Occitanie
 - /articles/voyages/chamrousse-en-famille-quel-secteur-choisir-pour-l-hiver-2026-2027/ | Chamrousse en famille: quel secteur choisir pour l'hiver 2026-2027? | voyages | Chamrousse, Isère, Auvergne-Rhône-Alpes
 - /articles/sorties/walibi-rhone-alpes-en-famille-quel-billet-choisir-selon-la-taille-des-enfants/ | Walibi Rhône-Alpes en famille: attractions, tailles et billets en 2026 | sorties | Les Avenières Veyrins-Thuellin, Isère, Auvergne-Rhône-Alpes
 - /articles/bons-plans/carte-tattoo-isere-2026-2027-comment-obtenir-60-a-120-pour-les-activites-d-un-collegien/ | Carte Tattoo Isère 2026-2027: comment obtenir 60 à 120 € pour les activités d'un collégien | bons-plans | Grenoble, Isère, Auvergne-Rhône-Alpes
@@ -159,9 +180,9 @@ Le guide [Carte Tattoo Isère 2026-2027](/articles/bons-plans/carte-tattoo-isere
 - opportunity | /articles/evenements/automnales-d-harcourt-2026-en-famille-jeux-nature-visites-et-tarifs/ | 2026-10-16T06:56:21.314Z
 - opportunity | /articles/evenements/festi-momes-2026-a-nantes-quelle-seance-choisir-selon-l-age-des-enfants/ | 2026-10-17T11:48:00.184Z
 - opportunity | /articles/evenements/festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants/ | 2026-10-13T18:36:59.570Z
+- refresh | /articles/evenements/lire-en-poche-2026-a-gradignan-avec-des-enfants-organiser-une-journee-sans-perdre-les-ateliers/ | 2026-10-06T12:23:52.449Z
 - opportunity | /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | 2026-10-16T17:46:42.470Z
 - opportunity | /articles/evenements/mon-premier-festival-2026-paris-film-age/ | 2026-10-03T06:21:55.257Z
-- opportunity | /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/ | 2026-10-09T18:35:04.031Z
 - opportunity | /articles/evenements/salon-du-livre-jeunesse-de-montreuil-2026-billet-gratuit-et-visite-en-famille/ | 2026-10-15T05:30:56.094Z
 - opportunity | /articles/evenements/toussaint-2026-au-musee-des-confluences-a-lyon-spectacles-et-ateliers-par-age/ | 2026-10-15T17:42:32.693Z
 - opportunity | /articles/evenements/toussaint-2026-au-seaquarium-du-grau-du-roi-quel-jeu-choisir/ | 2026-10-15T12:38:21.556Z
