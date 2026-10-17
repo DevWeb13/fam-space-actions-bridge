@@ -184,3 +184,4 @@ automation/image-20261016-44b3787-lumigny-saclay-2147|031a13db4049f96c49145c2bd4
 automation/image-20261016-44b3787-lumigny-saclay-2147|5217ec23db88b2e1dd4104a00bc14048dcf1c4a4
 automation/image-20261017-addaf6f-maison-marais-0940|93393fc283deaf3987975e0cdf1af56798df5bc1
 automation/image-20261017-addaf6f-maison-marais-0940|0631334a8594b5224b38b383ee574ea686bcfddf
+automation/image-20261017-df6864d-puy-dome-1249|a6be746a001d39998718f638ea1107a7cc18b0b7
