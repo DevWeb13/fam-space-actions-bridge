@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,25 +60,18 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "La Cité de la Mer à Cherbourg en famille: billets, tarifs et durée"
-subtitle: "Sous-marin, aquariums et Titanic: ce qu'il faut savoir avant de venir avec des enfants"
-summary: "Billets, tarifs 2026, durée de visite et règles pour les jeunes enfants: préparez votre journée à La Cité de la Mer à Cherbourg."
+subtitle: "Visite classique, Le Redoutable et Cherbourg Transatlantique: choisir selon l'âge des enfants"
+summary: "La Cité de la Mer à Cherbourg en famille: tarifs 2026, billets combinés, visites guidées en octobre, durée, restrictions d'âge et accès."
 slug: la-cite-de-la-mer-a-cherbourg-en-famille-tarifs-duree-et-conseils-de-visite
 status: published
 publishedAt: 2026-08-18T15:06:21+02:00
 updatedAt: 2026-08-30T11:25:54+02:00
 category: activites
-readingTime: 6
+readingTime: 7
 image:
   src: /images/articles/2026/08/la-cite-de-la-mer-a-cherbourg-en-famille-tarifs-duree-et-conseils-de-visite.webp
   alt: Le sous-marin Le Redoutable à la Cité de la Mer de Cherbourg
@@ -85,7 +90,7 @@ affiliate:
   destination: Cherbourg-en-Cotentin
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/activites/(2026)/(08)/la-cite-de-la-mer-a-cherbourg-en-famille-tarifs-duree-et-conseils-de-visite/index.md
   targetSha: 6976c27d9ca3ee1a459c576021ce28d1d404bd9f
@@ -112,47 +117,103 @@ radar:
       - prix entree cite de la mer cherbourg
       - le redoutable sous-marin prix
       - prix cite de la mer
+reviewAt: 2026-11-02
+sources:
+  - title: La Cité de la Mer - Horaires et tarifs 2026, billets couplés
+    url: https://www.citedelamer.com/informations-pratiques/tarifs-horaires/
+  - title: La Cité de la Mer - Cherbourg Transatlantique, conditions et âges
+    url: https://www.citedelamer.com/espaces/cherbourg-transatlantique/
+  - title: La Cité de la Mer - Visites guidées et rencontres d'octobre
+    url: https://www.citedelamer.com/experience/nos-visites-guidees/
+  - title: La Cité de la Mer - Visite guidée des aquariums en octobre
+    url: https://www.citedelamer.com/visite-guidee-aquariums/
+  - title: La Cité de la Mer - Offre Early Bird
+    url: https://www.citedelamer.com/evenement/early-bird/
+  - title: La Cité de la Mer - Accès et Tarif Bas Carbone
+    url: https://www.citedelamer.com/informations-pratiques/plan-acces/
+  - title: La Cité de la Mer - Préparer la visite et accessibilité
+    url: https://www.citedelamer.com/informations-pratiques/preparer-ma-visite-brochure/
 ---
 
-## Mission retenue
+<!-- article-image-credit -->
+*Photo: [Raimond Spekking](https://commons.wikimedia.org/wiki/File:Le_Redoutable_(S_611),_Cit%C3%A9_de_la_Mer,_Cherbourg,_France-7927.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-**Actualisation de La Cité de la Mer à Cherbourg**, visite familiale permanente associant aquariums, Le Redoutable et Titanic, avec des options supplémentaires désormais tarifées et programmées: l'expérience en réalité mixte **Cherbourg Transatlantique** et des visites guidées d'octobre.
+À Cherbourg-en-Cotentin, **La Cité de la Mer** réunit les **17 aquariums de L'Océan du Futur**, l'histoire du **Titanic**, des espaces sur l'exploration sous-marine et la visite du sous-marin **Le Redoutable**. Pour découvrir l'ensemble avec des enfants, prévoyez **4 à 5 heures**. Le billet classique suffit à profiter du site; la nouvelle expérience **Cherbourg Transatlantique**, avec casque de réalité mixte, et certaines rencontres guidées demandent des billets spécifiques.
 
-## Pourquoi cette mission
+Le premier critère à vérifier est l'âge: **les enfants de moins de 5 ans ne peuvent pas visiter Le Redoutable**, tandis que Cherbourg Transatlantique est **recommandé à partir de 8 ans**.
 
-Le snapshot GSC affiche **130 impressions sur la période de référence contre 41 récemment**, mais un signal **uncertain** sans requêtes réellement comparables: aucune conclusion de perte de position. Ce refresh a une **raison éditoriale indépendante**, visible dans l'article publié: il présente encore des horaires estivaux terminés et omet les choix payants qui modifient le prix et le déroulement de la visite familiale. L'article sur la cantine en Essonne, malgré un score GSC plus élevé, répond déjà à la démarche attendue sans changement substantiel confirmé. L'expansion autour de la page forte Futuroween risquerait un chevauchement avec les guides Futuroscope déjà en ligne; une opportunité saisonnière autonome doit être suffisamment distincte des événements de Toussaint déjà couverts. La publication en cours sur la Maison du Marais à Saint-Omer ne recoupe pas Cherbourg.
+## Billet classique, tarifs réduits ou formule combinée?
 
-## Décision du lecteur
+Le **billet classique 2026** coûte **21 € par adulte** et **15 € pour les enfants de 5 à 17 ans**. L'entrée est **gratuite pour les moins de 5 ans accompagnés d'un adulte payant**. Deux adultes et deux enfants de 5 à 17 ans paient donc **72 €** au plein tarif. L'entrée comprend les aquariums, Le Redoutable pour les visiteurs âgés d'au moins 5 ans, « Titanic, retour à Cherbourg » et « Océan sur écoute ».
 
-Savoir **quelle formule vaut la peine selon l'âge des enfants et le temps disponible**, quel montant prévoir selon les billets individuels, offres combinées et réductions, puis organiser l'arrivée aux horaires réels sans réserver un supplément inaccessible à son enfant.
+Vous pouvez [consulter le billet La Cité de la Mer proposé sur Booking.com](https://www.booking.com/attractions/fr/prztomon0sgj-la-cite-de-la-mer-ticket.fr.html), puis comparer son **prix final et ses conditions** avec les formules ci-dessous. La fiche partenaire affiche une règle de gratuité différente de la grille officielle pour les tout-petits: **pour un enfant de 4 ans, confirmez impérativement les modalités de réservation**. La règle d'accès publiée par l'exploitant reste la gratuité **avant 5 ans**.
 
-## Faits à traiter
+Deux réductions existent pour la visite classique, selon leurs conditions:
 
-- **Actualiser les horaires d'automne 2026**: la page officielle indique selon les dates **9h30-18h ou 10h-18h en octobre**, et d'autres jours fermés en novembre; caisses fermées **1h30 avant** le site. Ne plus mettre en avant les horaires de juillet-août ni le renfort estival de bus valable seulement jusqu'au 31 août.
-- **Billet de base 2026**: **21 € adulte**, **15 € de 5 à 17 ans**, gratuit **avant 5 ans** avec adulte payant, donc **72 € pour deux adultes et deux enfants de 5 à 17 ans**. Préserver **Early Bird -1,50 € par billet** si réservation en ligne au moins 48 h à l'avance (conditions à vérifier) et **Bas Carbone 18,90 € adulte / 13,50 € enfant** sur justificatif; ne pas présumer leur cumul ou leur application aux formules couplées.
-- **Cherbourg Transatlantique**, expérience supplémentaire avec casque de réalité mixte dans la gare Art déco: **11 € seule**, ou **30 € adulte / 24 € enfant** pour le combiné avec la visite ordinaire; recommandée **à partir de 8 ans**, calendrier distinct et réservation nécessaire. La page de présentation la **déconseille aux personnes épileptiques et aux femmes enceintes**; restituer cette précaution exactement. Pour deux adultes et deux enfants d'âge adapté: **108 € en combiné**, si les conditions s'appliquent.
-- **Rencontre avec un ancien sous-marinier**: option couplée à la visite les **samedis 17 et 24 octobre** encore à venir, **28 € adulte / 19 € enfant** selon grille officielle; **à partir de 5 ans**, durée **1h15**, **non accessible en fauteuil** pour cette animation à cause des escaliers, réservation en ligne. **Visites guidées de l'Océan du Futur** des **20, 21, 22, 27, 28, 29 octobre**, environ **1h15**, accueil **15 minutes avant**; contrôler prix et créneaux à la rédaction.
-- Préserver le socle utile sans raccourcir abusivement: **4 à 5 heures** de visite recommandées, billet valide toute la journée avec sortie-retour, **Le Redoutable interdit aux moins de 5 ans** et visite d'environ **35 minutes** (alternance des adultes), aquariums et Titanic, **Poisson-pilote à 5 €** avec pièce d'identité, pauses repas/pique-nique, parking gratuit non surveillé, gare à 15 minutes à pied, accès poussettes/PMR et alternative film au sous-marin, téléphone et **trois photos avec leurs crédits et licences Wikimedia Commons**. Conserver les prix exacts et les réductions.
-- Distinguer **billet classique** d'une entrée à **Cherbourg Transatlantique**: l'expérience immersive est un **supplément** et n'est pas incluse automatiquement. Une escale de paquebot peut fermer la Salle des Bagages sans fermer Titanic.
-- Conserver l'intérêt du séjour à Cherbourg, mais **revérifier Le Hublot**: fiche Booking indiquant **aucun lit bébé ni lit d'appoint**, et capacité incertaine entre annonce/hôte/tourisme. Ne pas reconduire la promesse de lit bébé ni affirmer une occupation maximale sans confirmation.
+- **Early Bird:** **1,50 € de réduction par billet** si la réservation est faite en ligne au moins **48 heures** à l'avance. Pour quatre billets payants, cela ferait **66 €** au lieu de 72 €. Cette offre dépend des billets éligibles et ne doit pas être supposée cumulable avec une autre réduction.
+- **Tarif Bas Carbone:** **18,90 € par adulte** et **13,50 € par enfant de 5 à 17 ans**, soit **64,80 €** pour la famille de référence. Il nécessite un justificatif de trajet en **train, bus ou vélo**: billet de bus du jour, billet de train vers Cherbourg ou Valognes datant de moins de sept jours, ou photo du cycliste avec son vélo devant le site.
 
-## Sources de départ
+Les **étudiants et adultes en situation de handicap** disposent également d'un tarif de **16 €**, et les **enfants en situation de handicap** de **12,50 €**, sur présentation des justificatifs demandés. Comparez les offres **avant l'achat**: leurs conditions ne sont pas automatiquement compatibles.
 
-- Site officiel, calendrier octobre-novembre 2026, tarifs ordinaires et combinés: https://www.citedelamer.com/informations-pratiques/tarifs-horaires/
-- Cherbourg Transatlantique, âge, contre-indications et billets: https://www.citedelamer.com/espaces/cherbourg-transatlantique/
-- Visites guidées et calendrier des rencontres 2026: https://www.citedelamer.com/experience/nos-visites-guidees/
-- Offre Early Bird encore affichée: https://www.citedelamer.com/evenement/early-bird/
-- Conditions d'accès: https://www.citedelamer.com/informations-pratiques/plan-acces/
+## Cherbourg Transatlantique: pour quel âge et à quel prix?
 
-## Affiliation
+Cette **expérience de réalité mixte**, proposée dans l'ancienne Gare Maritime Transatlantique Art déco, s'ajoute à la visite classique. Elle coûte **11 € seule**, ou peut être achetée avec le musée pour **30 € par adulte** et **24 € par enfant**. Pour deux adultes et deux enfants, la formule combinée représente **108 €** si chaque enfant est éligible.
 
-L'offre d'entrée classique **Booking.com Attractions** existe toujours: conserver une action principale partenaire si prix et conditions conviennent, sans concurrent officiel de réservation dans le corps. Attention à la divergence d'âge pour la gratuité (**moins de 4 ans chez Booking, moins de 5 ans sur le site du lieu**): ne pas présenter la fiche partenaire comme source éditoriale ou garantie de gratuité. La réservation distincte de Cherbourg Transatlantique ou des visites guidées n'a pas d'équivalent partenaire vérifié. Hébergement **Le Hublot** maintenu comme piste à contrôler, avec vérification expresse du couchage, de la capacité et des équipements bébé, sans garantie de disponibilité.
+Le parcours est **recommandé à partir de 8 ans** et suit **son propre calendrier de réservation**. L'organisateur le **déconseille aux personnes épileptiques et aux femmes enceintes**. Avec un enfant plus jeune ou sans intérêt pour la réalité mixte, le billet classique est donc un choix complet, sans devoir ajouter cette option.
 
-## Continuations internes
+## Une rencontre avec un sous-marinier ou une visite des aquariums?
 
-- Traiter **Cherbourg Transatlantique comme un choix supplémentaire**, pas comme une obligation pour profiter du musée; garder l'article centré sur une journée familiale à La Cité de la Mer.
-- Supprimer les **horaires de transport et d'ouverture de l'été 2026** désormais périmés; préserver toutes les modalités permanentes encore utiles.
-- Éviter la duplication avec les pages voisines du catalogue Fam Space et ne pas créer de nouvel article isolé pour un simple supplément au même lieu.
+Pendant les vacances d'automne, deux expériences guidées peuvent compléter la visite:
+
+- **Rencontre avec un ancien sous-marinier:** billets couplés à **28 € par adulte** et **19 € par enfant**, proposés les **samedis 17 et 24 octobre 2026**. Rendez-vous à **15h30**, pour environ **1h15 d'échange**; activité **à partir de 5 ans** et **non accessible aux personnes en fauteuil roulant** en raison des escaliers. La réservation se fait **en ligne**.
+- **« Les trésors de L'Océan du Futur »:** parcours guidé d'environ **1h15** parmi les aquariums, annoncé les **20, 21, 22, 27, 28 et 29 octobre 2026**. L'organisateur demande d'arriver **15 minutes avant le départ**. Vérifiez les places et le prix de cette formule à la date souhaitée.
+
+Ces animations sont **facultatives** et n'ont pas la même jauge ni les mêmes conditions d'accès que la visite libre. Pour une journée avec de jeunes enfants, le parcours classique reste le plus simple à organiser.
+
+## Le Redoutable avec un enfant de moins de 5 ans
+
+<!-- article-image-body:01 -->
+
+![Le sous-marin Le Redoutable à la Cité de la Mer de Cherbourg](/images/articles/2026/08/la-cite-de-la-mer-a-cherbourg-en-famille-tarifs-duree-et-conseils-de-visite-body-01.webp)
+
+*Photo: [Raimond Spekking](https://commons.wikimedia.org/wiki/File:Le_Redoutable_(S_611),_Cit%C3%A9_de_la_Mer,_Cherbourg,_France-7922.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+La visite de l'intérieur du sous-marin dure environ **35 minutes**. L'accès est **interdit aux moins de 5 ans pour des raisons de sécurité**, mais un audioguide adapté aux **5-12 ans** permet aux enfants plus âgés de mieux comprendre la vie à bord.
+
+Avec un plus jeune enfant, l'organisateur propose **d'alterner entre adultes**: l'un visite Le Redoutable pendant que l'autre reste avec l'enfant, puis inversement. Cela n'empêche pas toute la famille de profiter des aquariums et des espaces « Océan sur écoute » ou Titanic.
+
+## Aquariums, Titanic et pauses pendant la visite
+
+<!-- article-image-body:02 -->
+
+![Vue générale de la Cité de la Mer et du Redoutable à Cherbourg](/images/articles/2026/08/la-cite-de-la-mer-a-cherbourg-en-famille-tarifs-duree-et-conseils-de-visite-body-02.webp)
+
+*Photo: [La Cité de la Mer - Sylvain Guichard](https://commons.wikimedia.org/wiki/File:Cit%C3%A9merCherbourg.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Dans **L'Océan du Futur**, les **17 aquariums** alternent avec des découvertes scientifiques. Le parcours **« Titanic, retour à Cherbourg »** retrace l'escale du paquebot et présente notamment des objets remontés du site de l'épave. L'espace **« Océan sur écoute »** complète la visite avec des dispositifs sonores et des manipulations.
+
+Le guide numérique **Poisson-pilote**, disponible en version familiale, coûte **5 € supplémentaires**; une **pièce d'identité** est demandée comme caution pour sa location. Il n'est pas nécessaire pour accéder aux espaces compris dans le billet.
+
+Le **billet reste valable toute la journée**: vous pouvez sortir déjeuner puis revenir. Le site dispose du restaurant **Le Quai des Mers**, d'un snack selon la saison et de **deux aires de pique-nique**, dont une couverte. Une pause entre le sous-marin et les aquariums est donc possible sans perdre le reste de la visite.
+
+## Horaires d'automne, accès et poussettes
+
+En **octobre 2026**, le calendrier officiel prévoit selon les dates une ouverture de **9h30 à 18h** ou de **10h à 18h**. En **novembre**, certaines journées sont **fermées**. Les **caisses ferment 1h30 avant le site**: consultez les horaires du jour avant de venir et, pour profiter des 4 à 5 heures de visite, privilégiez une arrivée dans la matinée. Les horaires renforcés de juillet-août ne s'appliquent plus.
+
+La Cité de la Mer se trouve dans l'ancienne Gare Maritime Transatlantique, **allée du Président-Menut, 50100 Cherbourg-en-Cotentin**. Le **parking gratuit mais non surveillé** possède des emplacements réservés et une borne de recharge pour véhicules électriques. Depuis la **gare SNCF de Cherbourg**, comptez environ **15 minutes à pied**. Les dessertes de bus varient selon la période: vérifiez les lignes et horaires Cap Cotentin pour la date voulue plutôt que de vous fier aux renforts estivaux terminés.
+
+Le site détient la marque **Tourisme et Handicap** pour les quatre familles de handicap, avec **rampes, ascenseurs** et possibilité de **prêt gratuit d'un fauteuil roulant**, à confirmer à l'accueil. Les principaux espaces conviennent mieux à la poussette que les coursives du sous-marin. **L'intérieur du Redoutable n'est pas accessible en fauteuil roulant**, mais une salle accessible propose un film sur sa visite. Pour une situation particulière, appelez le **02 33 20 26 69**.
+
+Lors d'une **escale de paquebot**, la **Salle des Bagages** peut être inaccessible, sans que cela signifie une fermeture de l'ensemble de la Cité de la Mer.
+
+## Où dormir à Cherbourg après la visite?
+
+Si vous prévoyez un séjour dans le Cotentin plutôt qu'un simple aller-retour, **[Le Hublot à Cherbourg-en-Cotentin](https://www.booking.com/hotel/fr/le-hublot-cherbourg-en-cotentin.fr.html)** est un appartement de centre-ville avec **une chambre et un canapé-lit**. Sa capacité exacte doit être confirmée selon le **nombre d'adultes, d'enfants et leurs âges**: ne déduisez pas automatiquement le nombre maximal d'occupants de la présence du canapé-lit. La fiche Booking.com indique **qu'aucun lit bébé ni lit d'appoint n'est disponible**, contrairement à certaines descriptions touristiques plus anciennes. Comparez le prix, les couchages et les conditions d'annulation pour vos dates avant de réserver.
 
 ## Article source exact à préserver et améliorer
 
