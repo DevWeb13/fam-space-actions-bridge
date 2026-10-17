@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,94 +14,129 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Hérault
 - Région: Occitanie
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Titre de travail: « Cars liO dans l'Hérault en famille: billets, tarifs réduits et correspondances avec le tram »**
-
-Angle: un guide concret pour les familles qui empruntent les cars interurbains liO Hérault Transport, avec ou sans passage par Montpellier, et souhaitent éviter un mauvais billet ou une mauvaise surprise avec leurs enfants.
-
-Le réseau liO Hérault Transport relie des communes de l'Hérault et donne accès à plusieurs réseaux urbains, notamment TaM à Montpellier. Il ne faut pas le confondre avec les bus et tramways TaM ni avec les circuits de transport scolaire. Sujet distinct de l'article déjà publié sur le choix d'un hébergement à Montpellier ou Sète sans voiture: ici, il s'agit des règles pratiques et des titres pour les trajets en car.
-
-## Besoin du lecteur
-
-Savoir quel billet acheter pour un trajet ponctuel ou une journée, combien paient les adultes et les enfants, comment fonctionnent les correspondances entre cars liO et tramways TaM, où acheter et valider les titres, et dans quelles conditions monter avec une poussette ou un jeune enfant. Comprendre aussi que les règles et tarifs du réseau départemental peuvent différer de ceux annoncés pour l'ensemble de la région.
-
-## Valeur éditoriale
-
-- **Expliquer les titres utiles selon le trajet, plutôt qu'aligner des prix**: billet liO Hérault/Olé à 2 € (réduit 1,50 €), billet unitaire avec correspondance TaM à 3 € (réduit 2 €), carnet de 10 voyages liO à 15 € et intermodal TaM à 25 €, pass journée liO à 5 € (réduit 3 €) et avec TaM à 6 € (réduit 4 €). Bien distinguer les périmètres, la validité et les canaux de vente; indiquer que le billet intermodal unitaire est vendu à bord et que le carnet intermodal est vendu dans l'application.
-- **Gratuité et réductions familiales**: moins de 5 ans accompagnés gratuits sur liO Hérault Transport, hors transport scolaire; réduction pour les familles de trois enfants ou plus sur justificatif. Attention à ne pas recopier le seuil régional générique des moins de 4 ans à la place de la règle locale des moins de 5 ans.
-- **Correspondances et achats**: délai de 2 h pour la correspondance sur les titres concernés, aller-retour non autorisé avec le même billet; achat à bord ou via l'application selon le titre, validation à chaque montée. Le billet liO simple ne vaut pas billet de tram TaM: il faut le titre avec option TaM pour ce parcours.
-- **Voyager avec des enfants**: moins de 11 ans non admis seuls sur une ligne régulière sans adulte ou membre de leur famille de plus de 15 ans; bébé sur les genoux de l'adulte, poussette pliée à placer en soute lorsqu'elle existe, sans siège-auto ni rehausseur utilisé dans le car. Expliquer les limites pratiques d'un autocar plutôt que présenter le réseau comme un bus urbain.
-- **Préparer un trajet réel**: rechercher la ligne, le sens, les arrêts, les horaires et les perturbations, notamment lors des correspondances à Montpellier. Ne pas proposer d'itinéraire figé sans vérifier sa desserte actuelle. La page tarifaire Hérault Transport comporte aussi des abonnements et des différences locales (Béziers, Sète, Lunel) à mentionner avec mesure.
-
-## Affiliation
-
-- **Billets de car et de tram:** aucune prestation équivalente vérifiée chez GetYourGuide, Tiqets, Klook ou les autres partenaires de billetterie. Le lecteur achète les titres auprès de liO/Hérault Transport ou des réseaux de transport concernés. Ne pas créer de lien commercial artificiel pour l'action principale.
-- **Hébergement secondaire vérifié:** **Booking.com, Appart'hôtel Odalys City - Montpellier Centre Gare Saint Roch**, 20 rue de la République, Montpellier, face à la gare Saint-Roch, avec kitchenettes et logements familiaux. URL exacte en français: https://www.booking.com/hotel/fr/les-occitanes.fr.html . Pertinent uniquement pour une famille de passage qui loge à Montpellier et rayonne sans voiture en combinant tram et car liO. Capacité et disponibilité à contrôler pour les dates choisies. Un simple paragraphe optionnel peut suffire; ne pas transformer le guide de transport en publicité hôtelière.
-
-## Sources de départ
-
-- Hérault Transport, tarifs détaillés par titre, tarif réduit, intermodalité et gratuité des enfants: https://www.herault-transport.fr/lignes-regulieres/tarifs
-- Hérault Transport, questions fréquentes sur achat, tarifs, correspondances et titres scolaires: https://www.herault-transport.fr/questions-frequentes
-- Hérault Transport, règlement officiel d'accès à bord, délibération du 11 février 2026, notamment enfants et poussettes (PDF): https://www.herault-transport.fr/sites/default/files/fichiers/Reglement-acces-a-bord-des-v%C3%A9hicules.pdf
-- Région Occitanie, FAQ sur titres régionaux, achat et correspondances: https://www.lio-occitanie.fr/faq-lio-car
-- Région Occitanie, tarification régionale à distinguer des spécificités départementales: https://www.lio-occitanie.fr/titres-et-tarifs/titres-et-tarifs-lio-car/
-- Planificateur d'itinéraires multimodaux liO: https://plan.lio-occitanie.fr/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "vie-pratique"
+title: "Cars liO dans l'Hérault en famille: billets, tram et poussettes"
+subtitle: "Tarifs, gratuité des jeunes enfants et correspondances à Montpellier"
+summary: "Quel billet prendre sur les cars liO de l'Hérault avec des enfants? Tarifs, réductions, liaison avec le tram TaM et règles pour les poussettes."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "car liO Hérault en famille"
+  - "Hérault Transport tarifs enfants"
+  - "billet liO TaM correspondance"
+  - "poussette car liO"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Montpellier"
+  department: "Hérault"
+  region: "Occitanie"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Hérault Transport: tarifs des lignes régulières"
+    url: "https://www.herault-transport.fr/lignes-regulieres/tarifs"
+  - title: "Hérault Transport: questions fréquentes sur les billets et correspondances"
+    url: "https://www.herault-transport.fr/questions-frequentes"
+  - title: "Hérault Transport: règlement d'accès à bord des véhicules"
+    url: "https://www.herault-transport.fr/sites/default/files/fichiers/Reglement-acces-a-bord-des-v%C3%A9hicules.pdf"
+  - title: "liO Occitanie: tarifs des cars régionaux"
+    url: "https://www.lio-occitanie.fr/titres-et-tarifs/titres-et-tarifs-lio-car/"
+  - title: "liO Occitanie: calculateur d'itinéraires"
+    url: "https://plan.lio-occitanie.fr/"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Pour circuler dans l'Hérault sans voiture, les cars **liO Hérault Transport** relient des communes du département et peuvent compléter les bus et tramways urbains, notamment ceux du réseau TaM à Montpellier. Avec des enfants, le choix du titre dépend surtout d'une question: prendrez-vous uniquement un car liO, ou aussi le tramway? Les tarifs et les règles ne sont pas toujours les mêmes que sur les autres cars liO d'Occitanie.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Quel billet choisir pour un trajet en famille?
+
+**Un trajet uniquement en car liO Hérault Transport.** Le billet unitaire coûte **2 €**, ou **1,50 € au tarif réduit**. Il permet un voyage sur les réseaux liO Hérault Transport et Olé, avec une correspondance entre cars liO dans les deux heures suivant la première validation. Il ne permet pas de faire l'aller-retour avec le même billet.
+
+**Un car liO puis un tramway ou un bus TaM.** Le billet unitaire **liO + TaM coûte 3 €**, ou **2 € au tarif réduit**. Il évite d'acheter séparément un deuxième titre pour la correspondance sur le réseau de Montpellier. Sa durée de validité est de **trois heures**. Il est vendu à bord des cars et, au tarif public, dans l'application liO. Attention: un billet liO classique à 2 € ne donne pas accès au tramway TaM.
+
+**Plusieurs trajets le même jour.** Le pass journée liO coûte **5 €**, ou **3 € au tarif réduit**; il est valable le jour calendaire de sa validation sur liO Hérault et Olé, sans accès à TaM. Le pass journée **liO + TaM coûte 6 €**, ou **4 € au tarif réduit**; celui-ci est valable **24 heures** à compter de la validation. Le pass avec TaM est vendu à bord ou dans l'application liO, mais le tarif réduit n'est pas proposé dans l'application.
+
+Pour les déplacements répétés, le carnet de **10 voyages liO** coûte **15 €** (10 € au tarif réduit avec une carte nominative). Le carnet **10 voyages liO + TaM** coûte **25 €**, exclusivement dans l'application liO et sans tarif réduit dans celle-ci. Les titres et leurs conditions de vente sont détaillés sur la [grille officielle d'Hérault Transport](https://www.herault-transport.fr/lignes-regulieres/tarifs).
+
+## Quels enfants voyagent gratuitement?
+
+Sur les lignes régulières de **liO Hérault Transport**, les **moins de 5 ans accompagnés d'un adulte muni d'un titre** voyagent gratuitement. Cette règle ne concerne pas le transport scolaire.
+
+Les familles de **trois enfants ou plus** peuvent bénéficier d'un tarif réduit, sur présentation d'un justificatif. Il ne s'agit pas d'un tarif réduit automatique pour tous les enfants: l'éligibilité porte sur la situation familiale. Pour un carnet de 10 voyages à tarif réduit, une carte nominative d'Hérault Transport est nécessaire.
+
+Ne vous fiez pas sans vérification aux tarifs généraux affichés pour l'ensemble de l'Occitanie: la [tarification régionale liO](https://www.lio-occitanie.fr/titres-et-tarifs/titres-et-tarifs-lio-car/) et celle du réseau départemental Hérault Transport ne sont pas identiques.
+
+## Comment fonctionnent les correspondances avec Montpellier?
+
+Il faut distinguer deux durées: **deux heures entre cars liO** avec un billet unitaire ou un titre 10 voyages ordinaire, mais **trois heures pour un titre unitaire liO + TaM**. L'aller-retour avec un même billet unitaire reste interdit.
+
+Avec un e-ticket liO + TaM acheté dans l'application, validez dans le car en scannant son QR code, y compris en correspondance. Dans le tramway ou le bus TaM, l'application demande de saisir le code **200+34999**, avec le signe « + », comme l'explique la [FAQ d'Hérault Transport](https://www.herault-transport.fr/questions-frequentes).
+
+Il existe une particularité utile: un titre TaM valide peut être accepté à bord d'un car liO qui dessert la métropole, **si tout le trajet reste dans les 31 communes de Montpellier Méditerranée Métropole**, hors Navette des plages. Pour sortir de ce périmètre, un titre liO adapté devient nécessaire. Sur les trajets vers Béziers, Sète ou Lunel, d'autres règles de correspondance peuvent s'appliquer selon le réseau urbain concerné.
+
+## Monter avec un bébé ou une poussette: ce qu'il faut savoir
+
+Les cars interurbains ne sont pas aménagés comme les tramways. Le [règlement officiel d'accès à bord](https://www.herault-transport.fr/sites/default/files/fichiers/Reglement-acces-a-bord-des-v%C3%A9hicules.pdf) précise plusieurs contraintes qui comptent pour les familles:
+
+- Un **bébé doit être maintenu sur les genoux d'un adulte**, ceinture bouclée. Les sièges-auto et rehausseurs ne peuvent pas être utilisés dans ces cars.
+- La **poussette doit être repliée** et placée en soute lorsque le véhicule en dispose. Le chargement est soumis aux possibilités du véhicule; si votre poussette est volumineuse, renseignez-vous avant le trajet.
+- Un **enfant de moins de 11 ans** ne peut pas emprunter seul une ligne régulière. Il doit être accompagné d'un adulte ou d'un membre de sa famille de plus de 15 ans.
+- Le port de la ceinture est obligatoire lorsqu'une place en est équipée. Pour un trajet avec une personne en fauteuil roulant, vérifiez également l'accessibilité des arrêts et du véhicule.
+
+Pour le transport scolaire, les règles et démarches d'inscription sont différentes: un titre commercial pour une sortie familiale ne remplace pas une inscription scolaire.
+
+## Préparer un trajet sans mauvaise surprise
+
+Vérifiez d'abord le **point de départ, l'arrêt d'arrivée et le sens de circulation**. Consultez ensuite les fiches horaires de la ligne, les jours de fonctionnement et les éventuelles perturbations. Si vous changez de réseau à Montpellier, contrôlez la durée de la correspondance et le type de titre nécessaire avant l'achat.
+
+Le [calculateur d'itinéraires liO](https://plan.lio-occitanie.fr/) permet de préparer un déplacement multimodal. Les [questions fréquentes d'Hérault Transport](https://www.herault-transport.fr/questions-frequentes) détaillent les validations et les cas particuliers des réseaux partenaires. Sur une longue journée avec des enfants, le bon choix n'est pas forcément le billet le moins cher à l'unité: vérifiez si votre parcours comporte un retour, plusieurs cars ou un passage sur TaM.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -130,4 +165,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
