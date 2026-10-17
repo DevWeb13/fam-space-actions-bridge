@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 1/4
+# Publication automatique Fam Space - Phase 2/4
 
 ## Mission
 
-Tu es le rédacteur en chef de Fam Space.
+Tu es un journaliste web professionnel pour Fam Space.
 
-Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. Fam Space doit publier moins mais mieux: un sujet doit pouvoir devenir un article fiable, utile aux familles, agréable à lire et, lorsque c'est naturel, intéressant pour l'affiliation.
+Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
 
 ## Affectation courante
 
@@ -14,97 +14,97 @@ Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. 
 - Département: Puy-de-Dôme
 - Région: Auvergne-Rhône-Alpes
 
-### Articles publiés récemment
-
-- 2026-09-23: Mont-Dore en famille fin septembre 2026: funiculaire ouvert, téléphérique fermé
-- 2026-09-13: Crèche à Clermont-Ferrand: quand déposer la pré-inscription et comment la faire
-- 2026-09-06: Maison de la Fourme d'Ambert: visite libre ou guidée avec des enfants?
-- 2026-08-31: Encombrants à Clermont-Ferrand: collecte à domicile ou déchetterie?
-- 2026-08-21: Location de voiture à Clermont-Ferrand avec des enfants: quoi vérifier avant de réserver
-- 2026-08-14: Radon à Clermont-Ferrand: comment réduire l'exposition dans son logement
-- 2026-08-07: Vulcania à la Toussaint 2026: 1 ou 2 jours, billets et où dormir
-- 2026-08-03: Vulcania en famille: 1 ou 2 jours, tarifs et hébergements 2026
-
-Ne reproduis pas les mêmes sujets.
-
-## Choisir un sujet qui mérite un article
-
-Respecte l'affectation. Pour une affectation locale, choisis librement la commune ou le lieu le plus pertinent dans le département imposé.
-
-La liste « Articles publiés récemment » est fournie automatiquement. Utilise-la pour éviter les doublons de lieu, de sujet ou d'angle. Un titre différent ne suffit pas à rendre un article différent.
-
-Cherche plusieurs sujets avant de choisir. Pour les candidats sérieux, utilise la recherche web pour comprendre ce qui existe déjà, vérifier les faits essentiels, voir ce que les résultats Google répondent déjà et t'assurer que le sujet est réellement utile à publier maintenant. Si l'élément principal est fermé, hors saison, en maintenance ou temporairement indisponible au point de vider l'article de son intérêt, écarte ce candidat et choisis-en un autre.
-
-Choisis un sujet qui a une vraie matière éditoriale. Un lecteur qui ne connaît pas le sujet doit pouvoir comprendre ce que c'est, pourquoi cela peut l'intéresser et obtenir plusieurs informations utiles sans que l'article répète la même idée.
-
-L'angle sert à donner une direction et un titre intéressant. Il ne doit jamais enfermer tout l'article dans une micro-question comme un tarif, un pass, une poussette ou un calcul simple.
-
-Écarte un sujet si Fam Space ne ferait que réécrire une page officielle ou s'il n'y a pas assez de matière pour produire un bon article. Si aucun candidat ne reste suffisamment utile et actuel après une recherche sérieuse, ne force pas un sujet.
-
-## Penser aussi au potentiel d'affiliation
-
-La monétisation est un objectif important de Fam Space. Avant de choisir le sujet final, vérifie sérieusement les offres disponibles chez les partenaires suivants:
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-Applique la logique d'usage ci-dessus à chaque candidat sérieux et vérifie les offres avant de les retenir dans le brief.
-
-À qualité éditoriale comparable, privilégie clairement le sujet qui possède une piste d'affiliation naturelle et vérifiée. Ne choisis toutefois jamais un sujet médiocre uniquement parce qu'il est affiliable et n'invente jamais une offre sans rapport avec le lecteur.
-
-Si un excellent sujet n'a réellement aucune offre partenaire pertinente après vérification, il peut rester publiable. Le brief doit alors le dire clairement. L'absence d'affiliation ne doit jamais résulter d'une recherche superficielle.
-
-## Sujets à écarter
-
-Écarte les sujets politiques ou militants, les guerres et conflits armés, les contenus haineux, violents, sexuellement explicites, dangereux ou trompeurs, ainsi que les conseils médicaux, juridiques ou financiers personnalisés à risque élevé.
-
-Ne choisis pas comme sujet principal une maladie, un diagnostic, un traitement, une vaccination ou une urgence médicale ou psychiatrique.
-
-Pour un événement ponctuel, ne le retiens pas s'il commence dans moins de 30 jours. S'il a déjà commencé, il doit rester au moins 30 jours d'utilité réelle. Cette règle ne concerne pas les attractions permanentes, destinations durables ou activités disponibles sur une longue période.
-
-## Résultat attendu
-
-Prépare un brief court. Le fichier doit contenir exactement ces sections:
+## Brief du rédacteur en chef
 
 ## Sujet retenu
-Le sujet, un titre de travail et l'angle principal. Décris aussi en une ou deux phrases ce qu'est réellement le sujet afin que le journaliste parte avec le bon contexte.
+
+**Titre de travail:** Puy de Dôme en famille: monter en train, découvrir le sommet ou choisir la randonnée.
+
+**Angle:** Aider les parents à organiser une sortie complète au sommet du puy de Dôme, à Orcines (Puy-de-Dôme), en distinguant trois décisions concrètes: monter et redescendre en Panoramique des Dômes, emprunter à pied le chemin des Muletiers, ou combiner randonnée et trajet simple en train. Montrer aussi ce que la famille découvre sur place sans billet d'activité supplémentaire, et comment adapter la visite à l'âge des enfants et à la météo.
+
+**Contexte:** Le Panoramique des Dômes est un train électrique à crémaillère qui rejoint en environ 15 minutes le sommet du volcan culminant à 1 465 m. Le site comprend les panoramas de la Chaîne des Puys-faille de Limagne, le temple de Mercure et des espaces de découverte. C'est une attraction permanente, distincte de Vulcania et des sorties déjà publiées sur le Mont-Dore.
 
 ## Besoin du lecteur
-Ce que le lecteur doit comprendre, apprendre ou pouvoir faire après avoir lu l'article. Ne réduis pas ce besoin à une seule micro-question si le sujet mérite un traitement plus large.
+
+Savoir si le train ou l'ascension pédestre convient mieux à sa famille, ce que coûtent un aller-retour et un trajet simple, ce que l'on peut visiter gratuitement au sommet, combien de temps et d'effort prévoir, quelles sont les limites de l'accessibilité, comment rejoindre la gare de départ et quelles dates de fermeture éviter. Pour un séjour, identifier un hébergement concret près du site sans confondre réservation de logement et billet de train.
 
 ## Valeur éditoriale
-Les quelques informations ou distinctions qui justifient l'article et ce que Fam Space peut apporter de mieux qu'une simple reprise des sources.
+
+- **Trois façons de visiter:** train aller-retour pour limiter l'effort; montée et descente à pied pour des marcheurs équipés; ou aller simple en train et randonnée sur un itinéraire autorisé. Depuis le col de Ceyssat, le chemin des Muletiers représente environ 350 m de dénivelé et 45 à 60 minutes de montée selon le Département. Depuis la Maison de site, compter environ 6 km et 1h30 à 2h de montée via le col. La voie parallèle aux rails est interdite aux piétons. Bien distinguer les points de départ et ne pas présenter la marche comme adaptée à tous les jeunes enfants.
+- **Budget officiel 2026 à recontrôler pendant la rédaction:** en période du 1er octobre au 31 mars, adulte 14,40 € le trajet simple et 17,20 € aller-retour; jeune 8,60 € et 10,10 €; forfait famille pour deux adultes et deux jeunes 41,60 € en simple et 49,90 € aller-retour toute l'année; moins de 4 ans gratuit. En saison haute d'avril à septembre, adulte 15,50 € en simple et 18,60 € aller-retour, jeune 9,90 € et 11,70 €. Éviter de présenter les prix de basse saison comme universels et faire préciser la tranche d'âge du billet jeune. Les billets ordinaires peuvent être achetés en ligne ou sur place, sans réserver un horaire précis, et sont valables un an.
+- **Une vraie visite au sommet:** vues sur les volcans et la Limagne, vestiges et espace muséographique du temple de Mercure, espace Grand Site de France, panneaux de lecture du paysage, promenades autorisées, ainsi que Maison de site au pied du volcan. L'accès piéton aux panoramas et plusieurs espaces de découverte sont gratuits; le train est une prestation payante. Ne pas promettre un accès sans marches aux vestiges du temple.
+- **Contraintes familiales utiles:** trains et gares accessibles aux poussettes et aux personnes à mobilité réduite, mais l'ensemble des sentiers et les vestiges du temple ne le sont pas. Gare de départ chemin du Couleyras, 63870 Orcines; stationnement gratuit et desserte en transports en commun par la ligne P36, horaires à contrôler sur T2C. Prévoir vêtements adaptés au sommet, vent et visibilité changeante; restauration et salle de pique-nique annoncées.
+- **Actualité décisive:** fermeture de maintenance du train **du 16 au 20 novembre 2026 inclus**. Après celle-ci, départs annoncés du mercredi au dimanche toutes les heures entre 10h et 17h, dernière descente 17h30, fermé lundi et mardi. La marche et l'ouverture des espaces peuvent obéir à d'autres conditions: vérifier les accès effectivement autorisés avant de suggérer une alternative pendant la maintenance.
+- **Différenciation:** contrairement aux pages officielles séparant tarifs, itinéraires, sommet et accès, l'article doit guider le choix familial selon effort, budget, météo et durée. Le Volcan de Lemptégy, autre piste sérieuse examinée, propose une visite géologique guidée de 2h30, mais termine sa saison grand public le 1er novembre 2026. Les autres pistes déjà étudiées (Grotte de Volvic, Aventure Michelin) ne présentent pas ici le même ensemble randonnée/train/panorama. Écarter les doublons explicites Vulcania et Mont-Dore et ne pas faire de la courte animation d'Halloween un sujet principal.
 
 ## Affiliation
-Les pistes partenaires réellement vérifiées, avec partenaire, offre et URL exacte, y compris les besoins secondaires naturels. Si aucune offre pertinente n'existe réellement, indique-le clairement.
+
+- **Prestation principale: train Panoramique des Dômes.** Aucune offre vendant exactement ce billet n'a été confirmée lors des recherches ciblées sur **GetYourGuide, Tiqets et Klook**. L'achat se fait auprès de l'exploitant: https://www.panoramiquedesdomes.fr/horaires-tarifs/ . Conserver l'orientation vers cette billetterie officielle tant qu'aucune offre partenaire équivalente n'est établie.
+- **Hébergement pertinent confirmé, Booking.com:** « Le Moulin des Puys », au **3B rue de la Cascade à Orcines**, à proximité du puy de Dôme; hébergement avec cuisine, parking gratuit, chambres familiales et un gîte indiqué pour cinq personnes (autre formule studio). URL française exacte: https://www.booking.com/hotel/fr/le-moulin-des-puys.fr.html . Convient aux familles qui prolongent la sortie pour visiter la Chaîne des Puys. Les prix et disponibilités dépendent de la période et de la composition du groupe: ne pas promettre une réservation possible à toutes les dates.
+- **Besoins secondaires:** les partenaires de city pass, bagages, transferts et location de véhicule n'apportent aucune offre suffisamment liée à cette sortie. Une seule suggestion d'hébergement en bas d'article sera plus naturelle qu'une collection de prestations. L'offre Booking.com est une page commerciale, pas une source de faits éditoriaux sur le volcan.
 
 ## Sources de départ
-Les meilleures sources officielles ou directement responsables pour lancer la rédaction, avec l'URL exacte de chaque page utile.
 
-Ne rédige pas le corps final de l'article pendant cette phase.
+- **Exploitant, tarifs et fréquences du Panoramique des Dômes:** https://www.panoramiquedesdomes.fr/horaires-tarifs/
+- **Exploitant, maintenance du 16 au 20 novembre 2026 et reprise du service:** https://www.panoramiquedesdomes.fr/fermeture-maintenance-annuelle/
+- **Département du Puy-de-Dôme, parcours piétons, dénivelé, temps de marche, interdiction de longer les rails:** https://volcan.puy-de-dome.fr/infos-pratiques/acces-au-sommet.html
+- **Exploitant, espaces de découverte et patrimoine au sommet:** https://www.panoramiquedesdomes.fr/les-espaces-de-visite/
+- **Exploitant, trajets, gare de départ, ligne P36, billets et contact:** https://www.panoramiquedesdomes.fr/comment-venir-au-puy-de-dome/
+- **Exploitant, poussettes, PMR, visite, pique-nique et équipements:** https://www.panoramiquedesdomes.fr/faq/
+- **Département du Puy-de-Dôme, stationnement et accès au site:** https://volcan.puy-de-dome.fr/infos-pratiques/acces-au-site.html
+
+## Écrire l'article
+
+Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
+
+Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
+
+Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
+
+Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
+
+Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
+
+Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+
+N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
+
+Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
+
+Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
+
+À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
+
+## Format du candidat
+
+Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
+
+```yaml
+---
+category: "<catégorie assignée>"
+title: "Titre direct et informatif"
+subtitle: "Précision différente du titre"
+summary: "Résumé de 90 à 180 caractères"
+keywords:
+  - "mot-clé principal"
+  - "mot-clé secondaire"
+location:
+  city: "Ville"
+  department: "Département assigné"
+  region: "Région assignée"
+sources:
+  - title: "Page officielle utilisée"
+    url: "https://..."
+---
+```
+
+Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+
+Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 1/4
+- Phase préparée mécaniquement: 2/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -117,30 +117,20 @@ Toute la plomberie technique est gérée mécaniquement. Ne cherche aucune branc
 
 Écris uniquement publication-request.md sur la branche main de DevWeb13/fam-space-actions-bridge avec le résultat éditorial demandé dans ce runtime. Le pipeline mécanique se charge de la phase, de la branche de travail, des commits, de la validation et de la suite du cycle.
 
-Si tu retiens un sujet, utilise:
+Utilise:
 
 ~~~yaml
 ---
-action: start
+action: advance
 ---
 
-<brief complet demandé ci-dessus>
+<article complet demandé ci-dessus, frontmatter compris>
 ~~~
 
-Si, après une recherche sérieuse, aucun sujet suffisamment utile et actuel ne mérite un article, utilise:
-
-~~~yaml
----
-action: skip
----
-
-<raison factuelle et courte>
-~~~
-
-Un échec technique n'est jamais une raison de skip. Une fois publication-request.md écrit, termine le passage.
+Rends toujours l'article complet, même si cette phase ne nécessite que peu de corrections. Une fois publication-request.md écrit, termine le passage.
 
 ## Rapport final
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les principaux sujets envisagés, les doublons écartés, le sujet retenu, pourquoi il mérite un article, les pistes d'affiliation réellement vérifiées et les principales sources. En cas de skip, explique simplement pourquoi aucun sujet suffisamment bon n'a été retenu.
+Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
