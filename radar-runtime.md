@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Métamorphoses 2026 au quai Branly: quels films choisir avec des enfants?"
-subtitle: Un festival de cinéma gratuit sur réservation, du 17 au 25 octobre à Paris
-summary: Films, âges, versions et horaires du festival Métamorphoses 2026 au musée du quai Branly, pour choisir une séance gratuite avec des enfants.
+title: "Métamorphoses 2026 au quai Branly: séances gratuites et films par âge"
+subtitle: "Du 17 au 25 octobre à Paris: courts métrages, films d'animation, VF ou VOSTF"
+summary: "Métamorphoses 2026 au musée du quai Branly: 17 séances gratuites sur réservation, films dès 3 ans, horaires, durées et versions pour choisir en famille."
 category: evenements
 location:
   city: Paris
@@ -68,18 +73,30 @@ location:
   region: Île-de-France
 keywords:
   - festival Métamorphoses 2026 quai Branly
-  - cinéma jeune public gratuit Paris octobre 2026
-  - film enfants musée du quai Branly réservation
+  - cinéma gratuit enfants musée du quai Branly
+  - festival cinéma jeune public Paris octobre 2026
 sources:
-  - title: Musée du quai Branly - Métamorphoses, festival de cinéma jeune public 2026
+  - title: Musée du quai Branly - Métamorphoses, programme complet 2026
     url: https://www.quaibranly.fr/fr/expositions-evenements/au-musee/cinema/details-de-levenement/e/metamorphoses-41165
-  - title: Musée du quai Branly - programme du cinéma et séances individuelles
-    url: https://www.quaibranly.fr/fr/expositions-evenements/au-musee/cinema
-  - title: Ville de Paris - Métamorphose, festival de cinéma jeune public
-    url: https://www.paris.fr/evenements/metamorphose-festival-cinema-jeune-public-au-musee-branly-125489
+  - title: Musée du quai Branly - Les Contes de la mère poule
+    url: https://www.quaibranly.fr/fr/expositions-evenements/au-musee/cinema/details-de-levenement/e/les-contes-de-la-mere-poule-41167
+  - title: Musée du quai Branly - Louise et la légende du serpent à plumes
+    url: https://www.quaibranly.fr/fr/expositions-evenements/au-musee/cinema/details-de-levenement/e/louise-et-la-legende-du-serpent-a-plumes-41173
+  - title: Musée du quai Branly - Les enfants loups, Ame et Yuki
+    url: https://www.quaibranly.fr/fr/expositions-evenements/au-musee/cinema/details-de-levenement/e/les-enfants-loups-ame-et-yuki-41177
+  - title: Musée du quai Branly - Ponyo sur la falaise
+    url: https://www.quaibranly.fr/fr/expositions-evenements/au-musee/cinema/details-de-levenement/e/ponyo-sur-la-falaise-41179
+  - title: Musée du quai Branly - Le Prince Serpent
+    url: https://www.quaibranly.fr/fr/expositions-evenements/au-musee/cinema/details-de-levenement/e/le-prince-serpent-41180
+  - title: Musée du quai Branly - Le Garçon et le Héron
+    url: https://www.quaibranly.fr/fr/expositions-evenements/au-musee/cinema/details-de-levenement/e/le-garcon-et-le-heron-41184
+  - title: Musée du quai Branly - accès au musée
+    url: https://www.quaibranly.fr/fr/informations-pratiques/venir/horaires-acces-et-tarifs/plans/acces-au-musee
+  - title: Musée du quai Branly - handicap moteur et accessibilité
+    url: https://www.quaibranly.fr/fr/handicap-moteur
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: metamorphoses-2026-au-quai-branly-quels-films-choisir-avec-des-enfants
   decision: Repérer un film adapté à l'âge, à la sensibilité et à la capacité de lecture des sous-titres de ses enfants, puis choisir l'heure de projection et réserver une place gratuite au bon créneau.
@@ -89,66 +106,75 @@ radar:
     dataThrough: 2026-10-14
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Musée du quai Branly - Métamorphoses, festival de cinéma jeune public 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-10-25
 ---
 
-## Mission retenue
+Au **musée du quai Branly – Jacques Chirac, à Paris**, le festival **Métamorphoses** propose **17 séances de cinéma du 17 au 25 octobre 2026**, pendant les vacances de la Toussaint. Les films abordent les transformations imaginaires, les contes et les créatures fantastiques. **Toutes les projections sont gratuites sur réservation**, mais les durées, les langues et les âges conseillés varient considérablement.
 
-Guide du festival de cinéma jeune public **Métamorphoses**, organisé au **musée du quai Branly – Jacques Chirac**, **37 quai Branly, Paris 7e**, du **17 au 25 octobre 2026**. Le cycle comprend **17 séances gratuites sur réservation** et des films de cultures et d'âges différents. Ne pas confondre ce festival avec Mon Premier Festival 2026, événement distinct également couvert par Fam Space.
+## Quel film choisir pour les plus jeunes?
 
-## Pourquoi cette mission
+Pour un enfant qui découvre le cinéma, le premier critère est moins la célébrité du titre que la combinaison **âge conseillé, durée et ambiance**.
 
-Le meilleur candidat GSC de refresh, la cantine des collèges en Essonne, a un signal **uncertain** sans requêtes comparables et son guide explique déjà les démarches; les autres reculs ne justifient pas à eux seuls une réécriture. Une expansion à partir d'une page forte de festival risquerait un chevauchement éditorial avec les guides déjà présents. Ce festival commence maintenant, dispose de fiches officielles film par film et n'a pas de doublon direct dans le catalogue ni l'historique Radar. L'utilité spécifique réside dans le choix **âge + durée + langue + créneau + réservation gratuite**, non dans une liste générale de sorties parisiennes.
+- **Dès 3 ans — Les Contes de la mère poule**, le **dimanche 18 octobre à 11h**: **46 min**, **sans dialogues**. Trois courts métrages iraniens font vivre des animaux et des personnages à partir de tissus, de papier découpé ou de laine. C'est la séance la plus courte de cette sélection et elle n'exige aucune lecture.
+- **Dès 4 ans — Ponyo sur la falaise**, le **vendredi 23 octobre à 11h**: **1h41**, **VF**. Cette aventure animée autour d'une petite créature marine est accessible à un âge plus jeune, mais dure nettement plus longtemps.
+- **Dès 6 ans — Louise et la légende du serpent à plumes**, le **mardi 20 octobre à 11h**: **44 min**, **VF** pour le film principal. Attention: la séance est précédée du court métrage **Lion Bleu (15 min)**. Prévoyez donc davantage que 44 minutes pour l'ensemble.
 
-## Décision du lecteur
+Les âges indiqués correspondent aux recommandations publiées par le musée, et non à une garantie qu'un film conviendra à tous les enfants du même âge.
 
-Sélectionner, selon les enfants, **un film approprié et un horaire encore réservable**, en sachant si la séance est en **VF ou VOSTF**, combien de temps elle dure et si une réservation est nécessaire malgré la gratuité.
+## Pour les écoliers et les plus grands: durée et sous-titres
 
-## Faits à traiter
+- **Dès 7 ans — Les enfants loups, Ame et Yuki**, le **jeudi 22 octobre à 11h**: **1h57**, **VF**. Ce récit familial évoque notamment l'absence d'un parent et la façon dont deux enfants grandissent. **Retenez bien 11h**, l'horaire du programme général et de la fiche française du film.
+- **Dès 10 ans — Le Prince Serpent**, le **vendredi 23 octobre à 15h**: **59 min**. Une formule plus courte que les longs métrages proposés aux grands enfants; confirmez la version linguistique sur la fiche au moment de réserver.
+- **Dès 10 ans — Le Garçon et le Héron**, le **dimanche 25 octobre à 15h**: **2h04**, **VOSTF**. Les sous-titres demandent une lecture suivie pendant un film long, parfois impressionnant, où la disparition de la mère fait partie du récit.
 
-- Dates **17-25 octobre 2026**, cinéma du musée; **gratuit uniquement sur réservation**. Réservations annoncées ouvertes depuis le **5 octobre**; vérifier le stock actuel et les modalités sur les fiches des films.
-- Comparer des exemples vérifiés: **Louise et la légende du serpent à plumes**, **20 octobre à 11h**, **44 min**, **VF**, dès **6 ans**; **Les Enfants loups, Ame et Yuki**, **22 octobre à 15h**, **1h57**, **VF**, dès **7 ans**; **Le Garçon et le Héron**, **25 octobre à 15h**, **2h04**, **VOSTF**, dès **10 ans**. Ne pas assimiler l'âge conseillé à l'aptitude à lire des sous-titres; ce dernier point est un choix familial.
-- Pour les plus jeunes, rechercher dans le programme les films les plus courts et les âges inférieurs à ceux des exemples; éviter toute affirmation non confirmée film par film.
-- Mentionner l'accessibilité, le point d'entrée et les transports seulement à partir d'informations vérifiées du musée. Ne pas présenter les projections comme incluant l'entrée aux collections si ce n'est pas confirmé.
-- Cycle temporaire: demander **eventEndsAt: 2026-10-25** lors de la rédaction.
+Un âge minimum conseillé ne signifie pas que l'enfant pourra suivre aisément une **version originale sous-titrée**. Pour une première séance ou avec plusieurs enfants d'âges différents, privilégiez un film court ou en français plutôt qu'un titre dont le récit impose à la fois des sous-titres et une attention soutenue.
 
-## Sources de départ
+Ce sont des **repères parmi les 17 séances**, pas une liste exhaustive: le festival propose aussi *L'enfant qui voulait être un ours*, *Lou et l'île aux sirènes*, *Tito et les oiseaux*, *Ivan Tsarévitch et la princesse changeante* et plusieurs films pour des publics plus âgés. Le choix final dépend de la date et des places encore disponibles.
 
-Agenda officiel Métamorphoses et fiches individuelles du cinéma du musée, plus l'agenda municipal de Paris; références en frontmatter. Les fiches officielles donnent dates, horaires, âges, durées, versions et règles de réservation.
+## Réserver une séance gratuite: ce qu'il faut vérifier
 
-## Affiliation
+Les réservations ont ouvert le **5 octobre 2026**. Sur le site du musée, ouvrez **la fiche de la séance choisie**, puis contrôlez la date, l'heure, la version du film et la disponibilité avant de finaliser la réservation gratuite. Le bouton de billetterie peut être libellé « Acheter un billet » même lorsque **le tarif de cette projection est de 0 €**.
 
-Pas de lien vers une billetterie partenaire inventée pour ces projections **gratuites**. Pour les visiteurs venus plusieurs jours de loin, vérifier s'il est naturel d'évoquer un hébergement de type appart'hôtel familial dans le 15e, sans affirmer disponibilité ni proximité immédiate du musée.
+Toutes les séances se déroulent dans la **salle de cinéma du musée**. Ne confondez pas **l'accès gratuit à une projection** avec un billet d'entrée aux collections ou aux expositions: la gratuité annoncée concerne ces séances du festival. Si vous prévoyez de visiter le musée le même jour, renseignez-vous séparément sur les conditions d'accès aux autres espaces.
 
-## Continuations internes
+## Venir au musée en famille
 
-Le guide existant **Mon Premier Festival 2026 à Paris** doit rester consacré à cet autre événement: au plus un renvoi contextuel pour comparer deux festivals, sans dupliquer ses informations. Les articles généraux sur les activités de la Toussaint à Paris ne doivent pas être réécrits; cette page traite uniquement du choix de séances **Métamorphoses**.
+Le musée du quai Branly – Jacques Chirac se trouve **37 quai Branly, dans le 7e arrondissement de Paris**. Les accès comprennent le quai Jacques-Chirac et la rue de l'Université. En transports, les arrêts **Alma-Marceau (métro 9)** et **Pont de l'Alma (RER C)** figurent parmi les options indiquées par le musée; le **bus 42** dessert aussi le secteur de la tour Eiffel.
+
+Les personnes à mobilité réduite peuvent utiliser l'**entrée conseillée du 222 rue de l'Université**, équipée d'un ascenseur. Le musée indique que ses espaces et événements sont accessibles aux utilisateurs de fauteuils roulants. Pour un besoin particulier, le service accessibilité peut être joint au **01 56 61 53 50**.
+
+Si vous prolongez les vacances à Paris, notre guide [Mon Premier Festival 2026 à Paris](/articles/evenements/mon-premier-festival-2026-paris-film-age/) présente un **autre festival**, avec ses propres cinémas et son propre programme. Les deux événements ne partagent pas une réservation commune.
+
+## Pour un séjour de plusieurs jours à Paris
+
+Pour une famille venue de loin qui souhaite combiner cette séance et d'autres sorties, l'[Aparthotel Adagio Paris Centre Tour Eiffel sur Booking.com](https://www.booking.com/hotel/fr/pierre-vacacnces-city-paris-tour-eiffel.fr.html), **14 rue du Théâtre dans le 15e**, propose des studios et appartements avec **cuisine**, dont certaines configurations pour **quatre à six personnes**. Comparez la disponibilité, les couchages et le trajet réel jusqu'au musée avant de réserver: ce n'est pas un hébergement situé dans le musée ni une condition pour profiter des séances gratuites.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
 - /articles/evenements/mon-premier-festival-2026-paris-film-age/ | Mon Premier Festival 2026 à Paris: quel film choisir selon l'âge? | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/salon-du-chocolat-paris-2026-avec-des-enfants-quel-billet-choisir-et-quels-ateliers-reserver/ | Salon du Chocolat Paris 2026 avec des enfants: quel billet choisir et quels ateliers réserver | evenements | Paris, Paris, Île-de-France
 - /articles/sorties/vacances-de-la-toussaint-2026-au-musee-carnavalet-quelle-activite-choisir-selon-l-age/ | Vacances de la Toussaint 2026 au musée Carnavalet: activités en famille dès 4 ans | sorties | Paris, Paris, Île-de-France
-- /articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/ | Transports à Paris avec des enfants: quel titre choisir pour payer juste? | voyages | Paris, Paris, Île-de-France
 - /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
+- /articles/activites/paris-sport-vacances-automne-2026-demi-journee-gratuite-ou-stage-a-la-journee/ | Paris Sport Vacances automne 2026: demi-journée gratuite ou stage à la journée? | activites | Paris, Paris, Île-de-France
 - /articles/evenements/fete-des-rues-aux-enfants-2026-a-paris-ou-aller-selon-l-arrondissement/ | Fête des rues aux enfants 2026 à Paris: où aller selon l'arrondissement? | evenements | Paris, Paris, Île-de-France
 - /articles/sorties/vacances-de-la-toussaint-2026-a-la-cite-des-sciences-quels-ateliers-choisir-selon-l-age/ | Vacances de la Toussaint 2026 à la Cité des sciences: les ateliers numériques gratuits avec des enfants | sorties | Paris, Paris, Île-de-France
-- /articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/ | Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite | sorties | Paris, Paris, Île-de-France
+- /articles/sorties/vacances-de-la-toussaint-2026-au-louvre-quelles-activites-choisir-avec-des-enfants/ | Vacances de la Toussaint 2026 au Louvre: le programme famille du 17 octobre au 1er novembre | sorties | Paris, Paris, Île-de-France
+- /articles/evenements/festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants/ | Les Petits Asticots 2026: spectacles, âges et réservations en famille | evenements | Chamonix-Mont-Blanc, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/maison/a-paris-ou-donner-ou-deposer-meubles-jouets-et-electromenager/ | À Paris, où donner ou déposer meubles, jouets et électroménager ? | maison | Paris, Paris, Île-de-France
 - /articles/evenements/dia-de-los-muertos-2026-au-jardin-d-acclimatation-billets-et-animations-en-famille/ | Día de los Muertos 2026 au Jardin d’Acclimatation: programme, billets et tailles | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | Mondial de l’Auto 2026 avec des enfants: billets, horaires et créneaux | evenements | Paris, Paris, Île-de-France
 - /articles/activites/stages-de-science-a-la-cite-des-sciences-pendant-la-toussaint-2026-lequel-choisir-selon-l-age/ | Stages de science à la Cité des sciences à la Toussaint 2026: durées, âges et tarifs | activites | Paris, Paris, Île-de-France
-- /articles/activites/paris-sport-vacances-automne-2026-demi-journee-gratuite-ou-stage-a-la-journee/ | Paris Sport Vacances automne 2026: demi-journée gratuite ou stage à la journée? | activites | Paris, Paris, Île-de-France
-- /articles/sorties/vacances-de-la-toussaint-2026-au-louvre-quelles-activites-choisir-avec-des-enfants/ | Vacances de la Toussaint 2026 au Louvre: le programme famille du 17 octobre au 1er novembre | sorties | Paris, Paris, Île-de-France
 - /articles/vie-pratique/consigne-a-bagages-a-paris-en-famille-gare-ou-depot-en-ville/ | Consigne à bagages à Paris en famille: gare ou dépôt en ville? | vie-pratique | Paris, Paris, Île-de-France
 - /articles/activites/atelier-des-lumieres-avec-un-enfant-quel-programme-choisir-et-peut-on-venir-avec-une-poussette/ | Atelier des Lumières avec un enfant: quel programme choisir et peut-on venir avec une poussette ? | activites | Paris, Paris, Île-de-France
+- /articles/evenements/salon-du-chocolat-paris-2026-avec-des-enfants-quel-billet-choisir-et-quels-ateliers-reserver/ | Salon du Chocolat Paris 2026 avec des enfants: quel billet choisir et quels ateliers réserver | evenements | Paris, Paris, Île-de-France
+- /articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/ | Transports à Paris avec des enfants: quel titre choisir pour payer juste? | voyages | Paris, Paris, Île-de-France
+- /articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/ | Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite | sorties | Paris, Paris, Île-de-France
 - /articles/evenements/paris-plages-2026-en-famille/ | Paris Plages 2026: où se baigner et jouer avec des enfants | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/festival-du-film-pour-enfants-2026-en-isere-seances-ateliers-et-tarifs/ | Festival du Film pour Enfants 2026 en Isère: séances, ateliers et tarifs | evenements | Vizille, Isère, Auvergne-Rhône-Alpes
 - /articles/evenements/festi-momes-2026-a-nantes-quelle-seance-choisir-selon-l-age-des-enfants/ | Festi'Mômes 2026 à Nantes: séances, spectacles et tarifs en famille | evenements | Nantes, Loire-Atlantique, Pays de la Loire
 - /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille | evenements | Lumigny-Nesles-Ormeaux, Seine-et-Marne, Île-de-France
 - /articles/evenements/automnales-d-harcourt-2026-en-famille-jeux-nature-visites-et-tarifs/ | Automnales d'Harcourt 2026: animations, visites et tarifs en famille | evenements | Harcourt, Eure, Normandie
-- /articles/evenements/toussaint-2026-au-musee-des-confluences-a-lyon-spectacles-et-ateliers-par-age/ | Toussaint 2026 au musée des Confluences: cinq rendez-vous pour les enfants | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 
 ### Historique Radar lié
 
@@ -156,12 +182,12 @@ Le guide existant **Mon Premier Festival 2026 à Paris** doit rester consacré �
 - opportunity | /articles/evenements/dia-de-los-muertos-2026-au-jardin-d-acclimatation-billets-et-animations-en-famille/ | 2026-10-08T14:56:52.034Z
 - opportunity | /articles/evenements/festi-momes-2026-a-nantes-quelle-seance-choisir-selon-l-age-des-enfants/ | 2026-10-17T11:48:00.184Z
 - opportunity | /articles/evenements/festival-du-film-pour-enfants-2026-en-isere-seances-ateliers-et-tarifs/ | 2026-10-17T15:41:33.883Z
+- opportunity | /articles/evenements/festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants/ | 2026-10-13T18:36:59.570Z
 - opportunity | /articles/evenements/fete-des-rues-aux-enfants-2026-a-paris-ou-aller-selon-l-arrondissement/ | 2026-10-03T14:16:09.016Z
 - opportunity | /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | 2026-10-16T17:46:42.470Z
 - opportunity | /articles/evenements/mon-premier-festival-2026-paris-film-age/ | 2026-10-03T06:21:55.257Z
 - opportunity | /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | 2026-10-06T19:20:39.093Z
 - opportunity | /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | 2026-10-09T14:37:47.734Z
-- opportunity | /articles/activites/paris-sport-vacances-automne-2026-demi-journee-gratuite-ou-stage-a-la-journee/ | 2026-10-03T20:20:25.508Z
 
 ### Phases 2 et 3
 
