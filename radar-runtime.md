@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "LAEP à Nantes: où aller avec un enfant de moins de 6 ans?"
-subtitle: Des lieux pour jouer, rencontrer d'autres familles et échanger, souvent sans inscription
-summary: Comment fonctionnent les LAEP à Nantes, à quels âges ils s'adressent et comment choisir un lieu proche de chez vous.
+subtitle: Adresses, âges, horaires et ouvertures pendant les vacances d'automne 2026
+summary: Quels lieux d'accueil enfants-parents sont ouverts à Nantes pendant les vacances d'automne? Quartiers, âges, horaires, gratuité et accès à vérifier avant de venir.
 slug: laep-a-nantes-ou-aller-avec-un-enfant-de-moins-de-6-ans
 status: published
 publishedAt: 2026-09-30T11:04:48+02:00
@@ -80,21 +85,27 @@ image:
   src: /images/articles/2026/09/laep-a-nantes-ou-aller-avec-un-enfant-de-moins-de-6-ans.webp
   alt: Vue aérienne du centre-ville de Nantes
 sources:
-  - title: "Les lieux d'accueil enfants-parents: pour le bien-être de vos enfants"
+  - title: Ville de Nantes - les LAEP quartier par quartier, actualisation du 16 octobre 2026
     url: https://metropole.nantes.fr/mes-services-mon-quotidien/les-lieux-d-accueil-enfants-parents-pour-le-bien-etre-de-vos-enfants
-  - title: "Parents: des solutions face aux défis du quotidien"
-    url: https://metropole.nantes.fr/dossier-parents-des-solutions-face-aux-defis-du-quotidien
-  - title: LAEP Le Square (Nantes)
+  - title: Ville de Nantes - fiche du Square
+    url: https://metropole.nantes.fr/lieu/laep-le-square
+  - title: Ville de Nantes - fiche de La Perdriole
+    url: https://metropole.nantes.fr/lieu/laep-la-perdriole
+  - title: Ville de Nantes - fiche de La Marouette
+    url: https://metropole.nantes.fr/lieu/laep-la-marouette
+  - title: Questions de parents - Le Square
     url: https://parents.loire-atlantique.fr/44/laep-le-square-nantes/parents_10658
-  - title: LAEP municipal L'Oasis (Nantes)
+  - title: Questions de parents - L'Oasis
     url: https://parents.loire-atlantique.fr/44/laep-municipal-l-oasis-nantes/parents_10690
-  - title: LAEP La Perdriole (Nantes)
+  - title: Questions de parents - La Perdriole
     url: https://parents.loire-atlantique.fr/44/laep-la-perdriole-nantes/parents_10688
-  - title: Lieux d'accueil enfants-parents (LAEP) de l'Accoord
+  - title: Questions de parents - LAEP de l'Accoord
     url: https://parents.loire-atlantique.fr/44/lieux-d-accueil-enfants-parents-laep-de-l-accoord/parents_10701
+  - title: Nantes Métropole - solutions pour les parents
+    url: https://metropole.nantes.fr/dossier-parents-des-solutions-face-aux-defis-du-quotidien
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/parentalite/(2026)/(09)/laep-a-nantes-ou-aller-avec-un-enfant-de-moins-de-6-ans/index.md
   targetSha: 16e480635bf47ee7f304df778830bb4c8c419fa0
@@ -121,43 +132,64 @@ radar:
       - centre d'accueil enfant
       - laep autour de moi
       - lieu accueil parent enfant
+reviewAt: 2026-11-02
 ---
 
-## Mission retenue
+Un **lieu d'accueil enfants-parents (LAEP)** permet aux jeunes enfants de jouer, de rencontrer d'autres enfants et aux adultes d'échanger avec d'autres familles ou des accueillants. Le parent, grand-parent ou autre adulte référent **reste avec l'enfant**: ce n'est ni une crèche ni un mode de garde. Nantes en compte dans plusieurs quartiers, mais **les âges admis, horaires et ouvertures pendant les vacances varient**.
 
-**Rafraîchir le guide LAEP à Nantes**, en préservant ses fiches, horaires, âges, adresses, gratuité et modalités sans inscription encore exacts, mais en rendant opérationnelle la distinction entre les accueils ouverts et fermés pendant les vacances **du 19 octobre au 1er novembre 2026**. La liste de la Ville a été **actualisée le 16 octobre 2026**.
+## Vacances d'automne 2026: quels LAEP accueillent les familles?
 
-## Pourquoi cette mission
+Pour les vacances **du 19 octobre au 1er novembre**, la [liste actualisée le 16 octobre par la Ville de Nantes](https://metropole.nantes.fr/mes-services-mon-quotidien/les-lieux-d-accueil-enfants-parents-pour-le-bien-etre-de-vos-enfants) annonce les accueils suivants à leurs horaires habituels:
 
-Le diagnostic GSC est **coverage_loss** (131 impressions en meilleure semaine contre 27 récemment, classement comparable), et non une preuve de perte de position. Surtout, une raison éditoriale indépendante est maintenant vérifiée: la Ville précise les ouvertures des vacances, absentes du guide actuel, et sa fiche du **Square** signale « Accessible PMR: Non », alors que l'article renvoie vers une fiche le présentant comme accessible; cette contradiction doit être résolue prudemment. La cantine des collèges en Essonne reste **uncertain** et son article répond déjà aux démarches. L'expansion d'une page forte de festival risque de répéter un guide existant; l'opportunité saisonnière de festival de cinéma en Isère est déjà prise par Radar. Ce refresh sert une décision immédiate distincte.
+- **La Perdriole**, quartier est: mardi de **9h à 12h et 15h à 18h**, vendredi de **15h à 18h**; enfants jusqu'à **5 ans**.
+- **Le Nid de Jordan**, quartier est: mardi de **9h à 12h et 14h à 17h**; enfants jusqu'à **3 ans**.
+- **Le Sablier**, quartier ouest: mardi et jeudi de **15h à 18h**, mercredi de **9h30 à 12h et 15h à 18h**; enfants jusqu'à **4 ans**.
+- **L'Oasis**, quartier ouest: lundi de **9h à 12h et 15h à 18h**, jeudi de **15h à 18h**; enfants jusqu'à **5 ans**.
+- **Le Square**, quartier nord: la liste générale annonce ses horaires habituels, mardi de **15h à 18h** et jeudi de **9h à 12h et 15h à 18h**. **Attention: sa fiche individuelle affiche au contraire des fermetures du 19 au 23 octobre**, tandis que d'autres fiches annoncent des séances. **Téléphonez au 06 75 09 22 30 avant de vous déplacer**, surtout pendant la première semaine.
 
-## Décision du lecteur
+Deux autres options se distinguent. **La Marouette**, au centre, ouvre normalement le **mardi et le jeudi de 15h30 à 18h30 uniquement la première semaine, du 19 au 24 octobre**, puis ferme la seconde. **À l'Abord'âge**, café associatif du quartier sud, accueille les familles le **mercredi, vendredi et samedi de 10h à 18h30**, avec un **jeudi supplémentaire pendant les vacances**, et demande une participation annuelle de **7 à 60 € par famille**.
 
-Identifier **où venir réellement avec son enfant pendant les vacances**, le jour, l'horaire, le tarif éventuel et l'accessibilité pratique, plutôt que choisir un lieu fermé au calendrier scolaire.
+À l'inverse, les cinq LAEP **Accoord** de **Port-Boyer, Bottière, Halvêque-Beaujoire, Beaulieu et Malakoff** indiquent des créneaux **hors vacances scolaires**. C'est aussi le cas d'**Au 104** et de **La Laetitia**: leurs créneaux habituels ne doivent pas être considérés comme ouverts pendant ces vacances.
 
-## Faits à traiter
+## Gratuit, sans inscription: quelles règles?
 
-- **Ouverts aux horaires habituels selon la Ville**: **La Perdriole**, **Le Nid de Jordan**, **Le Square**, **Le Sablier** et **L'Oasis**. Les conserver avec leurs âges, quartiers, adresses et créneaux, en confirmant les conditions du jour.
-- **La Marouette**: horaires habituels **uniquement la première semaine, du 19 au 24 octobre**, puis fermeture la seconde semaine. Ajouter ce lieu utile du centre, absent du guide actuel.
-- **À l'Abord'âge**: ouverture supplémentaire le **jeudi pendant les vacances**, participation annuelle **7 à 60 € par famille**; distinguer le café associatif des LAEP municipaux gratuits.
-- Les LAEP **Accoord** de Malakoff, Beaulieu, Halvêque, Port Boyer et Bottière, ainsi que **Au 104** et **La Laetitia**, affichent des créneaux **hors vacances scolaires**: ne pas les conseiller pour un jour de vacances.
-- **Accessibilité à vérifier**: la fiche municipale du **Square** indique « Accessible PMR: Non » contrairement à la mention du guide existant; la fiche de **La Perdriole** combine « lieu accessible » et « escalier sans ascenseur ». Ne pas conclure arbitrairement: signaler les limites et inviter à confirmer l'accès directement avant déplacement.
-- Conserver la distinction LAEP / crèche, la présence obligatoire d'un adulte, les âges maximaux et les informations encore utiles. Placer les dates de vacances dans un passage court; si ajout à cet evergreen, utiliser **reviewAt: 2026-11-02** pour retirer ou réviser les mentions périmées, sans supprimer les informations permanentes.
+Les trois LAEP municipaux **Le Square, La Perdriole et L'Oasis** sont présentés comme **gratuits, anonymes, confidentiels et sans inscription**. Beaucoup d'autres lieux fonctionnent aussi en accès libre. Certains accueils associatifs demandent toutefois une contribution: **Au 104**, par exemple, prévoit une participation libre et confidentielle, et **À l'Abord'âge** une cotisation annuelle.
 
-## Sources de départ
+L'accueil n'est pas une activité à réserver comme un atelier. L'enfant peut jouer ou observer à son rythme tandis que l'adulte reste sur place. Plusieurs structures accueillent aussi les futurs parents. Nantes présente ces espaces comme des lieux de socialisation et d'échange, utiles notamment avant l'entrée en collectivité.
 
-- Ville de Nantes, liste des LAEP, mise à jour du **16 octobre 2026**: https://metropole.nantes.fr/mes-services-mon-quotidien/les-lieux-d-accueil-enfants-parents-pour-le-bien-etre-de-vos-enfants
-- Ville de Nantes, fiche Le Square (accessibilité): https://metropole.nantes.fr/lieu/laep-le-square
-- Ville de Nantes, fiche La Perdriole (escalier): https://metropole.nantes.fr/lieu/laep-la-perdriole
-- Ville de Nantes, fiche La Marouette: https://metropole.nantes.fr/lieu/laep-la-marouette
+## Trois LAEP municipaux à repérer selon le quartier
 
-## Affiliation
+<!-- article-image-body:01 -->
 
-Sans objet: les LAEP ne correspondent à aucune prestation partenaire.
+![Rue des Platanes à Nantes, où se situe le LAEP La Perdriole](/images/articles/2026/09/laep-a-nantes-ou-aller-avec-un-enfant-de-moins-de-6-ans-body-01.webp)
 
-## Continuations internes
+*Photo: [Kalepom](https://commons.wikimedia.org/wiki/File:Rue_des_Platanes.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
 
-Conserver le lien vers la liste municipale complète pour les changements de dernière minute; ne pas recopier toutes les fiches. Le guide actuel couvre déjà le fonctionnement d'un LAEP et les options par quartier: l'enrichir sans dégrader ses informations permanentes.
+<!-- /article-image-body:01 -->
+
+**La Perdriole**, **29 rue des Platanes**, reçoit les enfants de **0 à 5 ans** et les futurs parents. Le **C1, arrêt Platanes**, permet de rejoindre le secteur. La [fiche municipale](https://metropole.nantes.fr/lieu/laep-la-perdriole) affiche « lieu accessible » mais mentionne également un **escalier sans ascenseur**. Si vous utilisez un fauteuil roulant ou une poussette difficile à porter, demandez confirmation du cheminement au **02 40 49 48 00**.
+
+**Le Square**, **6 rue Samuel-de-Champlain**, accueille les **0-5 ans** et les futurs parents. Il est proche de l'arrêt **Chêne des Anglais**. Pour l'accessibilité, les sources divergent: la [fiche municipale](https://metropole.nantes.fr/lieu/laep-le-square) indique **« Accessible PMR: Non »**, alors que [Questions de parents](https://parents.loire-atlantique.fr/44/laep-le-square-nantes/parents_10658) annonce un accès PMR. Une confirmation téléphonique est indispensable en cas de besoin particulier.
+
+**L'Oasis**, **31 rue du Plessis-Gautron**, reçoit les **0-5 ans** et les futurs parents. Accès par le **tram 1, arrêt Lauriers**, ou le **bus 11, arrêt Jean-Moulin**. La [fiche de L'Oasis](https://parents.loire-atlantique.fr/44/laep-municipal-l-oasis-nantes/parents_10690) détaille son accueil gratuit sans inscription.
+
+## D'autres adresses, selon l'âge et le jour
+
+<!-- article-image-body:02 -->
+
+![Rue du Port-Boyer à Nantes, quartier où fonctionne un LAEP de l'Accoord](/images/articles/2026/09/laep-a-nantes-ou-aller-avec-un-enfant-de-moins-de-6-ans-body-02.webp)
+
+<!-- /article-image-body:02 -->
+
+**Le Nid de Jordan**, **2 rue de la Petite-Noë**, reçoit les **0-3 ans** le mardi. **Le Sablier**, **16 rue Charles-Perron**, accueille les **0-4 ans**. **La Marouette**, **15 rue de l'Héronnière**, reçoit les **0-4 ans**; tram 1, arrêt **Médiathèque**. Pour l'automne 2026, son ouverture limitée à la première semaine mérite une attention particulière.
+
+Pendant les semaines scolaires, cinq structures de l'**Accoord** complètent l'offre à **Port-Boyer, Bottière, Halvêque-Beaujoire, Beaulieu et Malakoff**, généralement en accès libre et gratuit. La [liste Accoord](https://parents.loire-atlantique.fr/44/lieux-d-accueil-enfants-parents-laep-de-l-accoord/parents_10701) détaille leurs lieux et créneaux. **Au 104**, **104 rue Saint-Jacques**, accueille les **0-4 ans** le mercredi hors vacances; **La Laetitia**, **49 rue Chanoine-Larose**, propose des matinées **lundi et vendredi** pour les **0-3 ans**, également hors vacances.
+
+## Comment choisir sans déplacement inutile?
+
+Vérifiez d'abord **l'âge maximum**, puis le quartier, le jour d'accueil et le **fonctionnement pendant les vacances**. Un lieu qui reçoit uniquement les moins de 3 ans ne convient pas à un enfant de 4 ans, même s'il est tout près. L'accès avec une poussette ou en fauteuil mérite aussi une vérification spécifique pour les lieux dont les fiches se contredisent.
+
+Les horaires pouvant évoluer, la [liste officielle des LAEP de Nantes](https://metropole.nantes.fr/mes-services-mon-quotidien/les-lieux-d-accueil-enfants-parents-pour-le-bien-etre-de-vos-enfants) et les coordonnées de chaque structure sont à consulter avant le départ. Après les vacances d'automne, les horaires de période scolaire reprennent leur importance.
 
 ## Article source exact à préserver et améliorer
 
