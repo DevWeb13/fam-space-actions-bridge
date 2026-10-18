@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,40 +60,40 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Foire du livre de Brive 2026 en famille: quel jour venir avec les enfants?"
-subtitle: Du 6 au 8 novembre, choisir sa visite entre auteurs jeunesse, BD et dédicaces gratuites
-summary: La Foire du livre de Brive 2026 réunit auteurs jeunesse, BD et rencontres gratuites. Dates, lieux, accès et repères pour organiser une visite familiale sans confondre entrée libre et éventuelles activités sur réservation.
+title: "Foire du livre de Brive 2026: quelle visite choisir avec les enfants?"
+subtitle: Du 6 au 8 novembre, jeunesse et BD aux Trois Provinces, dédicaces gratuites et astuces pour éviter la foule
+summary: "Dates, horaires, espaces jeunesse et BD, auteurs, accès gratuit et conseils avec poussette: préparez la Foire du livre de Brive 2026 en famille."
 category: evenements
 location:
   city: Brive-la-Gaillarde
   department: Corrèze
   region: Nouvelle-Aquitaine
 keywords:
-  - foire du livre Brive 2026 enfants
-  - Foire du livre de Brive jeunesse BD novembre 2026
-  - Foire du livre Brive 2026 entrée gratuite horaires
+  - Foire du livre Brive 2026 enfants
+  - Foire du livre Brive jeunesse BD
+  - Foire du livre Brive 6 7 8 novembre 2026
+  - Foire du livre Brive entrée gratuite horaires
 sources:
-  - title: "Ville de Brive: 44e Foire du livre, dates et espaces"
+  - title: "Ville de Brive: 44e Foire du livre, dates et implantation"
     url: https://www.brive.fr/44e-foire-livre-brive/
-  - title: "Brive Tourisme: informations pratiques 2026, horaires, gratuité et lieux"
-    url: https://www.brive-tourisme.com/fr/agenda/grands-rendez-vous/foire-du-livre-brive/infos-pratiques/
+  - title: "Foire du livre de Brive: FAQ 2026, entrée, navette, bébés, accès et restrictions"
+    url: https://www.foiredulivredebrive.net/faq/
+  - title: "Foire du livre de Brive: liste des auteurs 2026 par jour"
+    url: https://www.foiredulivredebrive.net/auteurs-foire-brive/
+  - title: "Brive Tourisme: programme 2026 et rencontres annoncées"
+    url: https://www.brive-tourisme.com/fr/agenda/grands-rendez-vous/foire-du-livre-brive/programme/
   - title: "Brive Tourisme: invités jeunesse et BD 2026"
     url: https://www.brive-tourisme.com/fr/agenda/grands-rendez-vous/foire-du-livre-brive/auteurs/
-  - title: "Brive Tourisme: programme 2026 et éléments encore en attente"
-    url: https://www.brive-tourisme.com/fr/agenda/grands-rendez-vous/foire-du-livre-brive/programme/
+  - title: "Brive Tourisme: informations pratiques, lieux et horaires"
+    url: https://www.brive-tourisme.com/fr/agenda/grands-rendez-vous/foire-du-livre-brive/infos-pratiques/
+  - title: "Tourisme Corrèze: ibis Brive Centre et chambres familiales"
+    url: https://www.tourismecorreze.com/fr/tourisme_detail/hotel_ibis_brive_centre.html
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: foire-du-livre-de-brive-2026-en-famille-quel-jour-venir-avec-les-enfants
   decision: Choisir le jour et le parcours les plus adaptés aux enfants pour profiter de la Foire du livre 2026, en distinguant accès gratuit, rencontres annoncées et horaires ou réservations restant à confirmer.
@@ -91,45 +103,65 @@ radar:
     dataThrough: 2026-10-15
     signal: seasonal_opportunity
     basis: "Opportunité saisonnière vérifiée via « Ville de Brive: 44e Foire du livre, dates et espaces »; aucune page forte GSC n'est requise."
+eventEndsAt: 2026-11-08
 ---
 
-## Mission retenue
-Préparer la visite familiale de la 44e Foire du livre de Brive (6-8 novembre 2026), principalement entre l'Espace des Trois Provinces (littérature jeunesse et BD) et la Halle Georges Brassens (littérature générale).
+Du **vendredi 6 au dimanche 8 novembre 2026**, la 44e Foire du livre de Brive accueille les familles gratuitement dans ses espaces de dédicaces. Pour les enfants, le bon point de départ est **l'Espace des Trois Provinces**, consacré à la littérature jeunesse, aux ados et à la BD. Inutile de prévoir trois journées: une matinée bien choisie peut suffire pour feuilleter, rencontrer un auteur et découvrir une animation.
 
-## Pourquoi cette mission
-Échéance proche et intérêt pratique distinct, avec dates, lieux, gratuité et invités déjà confirmés. Le refresh GSC prioritaire, Carte Tattoo Isère, répond déjà clairement aux questions de montant et de démarches: les informations ont été contrôlées sur la source du Département, sans nouvelle lacune avérée; sa baisse reste de signal «uncertain». Les expansions des pages fortes Mondial de l'auto et Quai des Bulles sont moins utiles maintenant, ces événements s'achevant respectivement ce week-end et le 11 octobre. Aucune page du catalogue Fam Space ne traite déjà la Foire du livre de Brive; les sujets voisins (Montreuil, Partir en Livre) concernent d'autres événements.
+Le choix du jour compte davantage que la quantité de stands visités. Voici comment organiser une sortie agréable, sans promettre une dédicace dont l'horaire n'est pas encore confirmé.
 
-## Décision du lecteur
-Savoir si venir le vendredi, le samedi ou le dimanche, où conduire les enfants en priorité et quelles rencontres ou animations nécessitent une vérification préalable.
+## Vendredi, samedi ou dimanche: quel jour privilégier?
 
-## Faits à traiter
-- Dates 6, 7, 8 novembre; vendredi 10h-20h, samedi 9h-20h, dimanche 9h-18h; entrée à la Foire gratuite. Ne pas reprendre les dates de stationnement anciennes encore affichées sur certaines pages.
-- Espace des Trois Provinces pour jeunesse et BD; Halle Georges Brassens pour littérature générale, à environ dix minutes à pied l'un de l'autre. Distinguer les temps forts hors de ces deux espaces.
-- Marie-Aude Murail, invitée jeunesse, et Joann Sfar, invité BD; ne pas inventer les jours, heures ou conditions d'accès de chaque rencontre.
-- Le programme complet, la répartition des dédicaces et certaines animations sont encore annoncés «en attente» sur les pages consultées: donner les ressources officielles à recontrôler avant de venir, et préciser les éventuelles réservations uniquement une fois confirmées.
-- Adapter parcours, durée et choix du jour à l'âge, à l'affluence et aux déplacements à pied. Le samedi est signalé comme le jour le plus fréquenté par l'office de tourisme.
+- **Vendredi 6 novembre, de 10 h à 20 h:** une possibilité pour les familles disponibles en journée, notamment si elles souhaitent profiter de l'ouverture de la Foire. Vérifiez d'abord la présence de l'auteur que votre enfant veut rencontrer.
+- **Samedi 7 novembre, de 9 h à 20 h:** pratique pour venir sans poser de congé, mais c'est **la journée la plus fréquentée**, selon l'office de tourisme. Prévoyez une visite courte, des pauses et de la souplesse pour les files d'attente.
+- **Dimanche 8 novembre, de 9 h à 18 h:** **le dimanche matin est recommandé par Brive Tourisme pour éviter la foule**. C'est un bon créneau avec de jeunes enfants, sous réserve que les rencontres recherchées aient bien lieu ce jour-là.
 
-## Sources de départ
-Ville organisatrice et office de tourisme de Brive, liens officiels ci-dessus. Privilégier leurs informations datées 2026 et relever leurs éventuelles incohérences avant publication.
+Si une signature précise motive le déplacement, ne choisissez pas uniquement d'après l'affluence: la [liste officielle des auteurs 2026](https://www.foiredulivredebrive.net/auteurs-foire-brive/) permet de filtrer les jours de présence et est actualisée régulièrement.
 
-## Affiliation
-Aucun lien marchand pour l'entrée libre de la Foire. Pour une famille venue en week-end, possibilité de conseiller sobrement un hébergement à Brive: l'ibis Brive Centre propose des chambres familiales sur Booking.com. Ne pas présumer de la disponibilité pour le 6-8 novembre; vérifier offre, capacité et prix à la rédaction.
+## Commencer aux Trois Provinces pour les livres jeunesse et la BD
 
-## Continuations internes
-- Pour les autres activités et un séjour avec un bébé à Brive, renvoyer à /articles/parentalite/premier-week-end-a-brive-avec-un-bebe-ou-dormir-et-quoi-faire/ au lieu de reproduire son programme touristique.
+L'**Espace des Trois Provinces**, avenue Jacques-et-Bernadette-Chirac, rassemble les auteurs et illustrateurs jeunesse, ado et BD. L'espace Professeur Jean-Paul Escande accueille des rendez-vous autour de la BD, de la poésie et de la jeunesse; la **Maison des Trois Provinces** est dédiée aux ateliers jeunesse et BD. Pour une première visite avec des enfants, concentrez-vous sur ce site plutôt que de traverser toute la Foire.
+
+La **Halle Georges Brassens**, place du 14-Juillet, est principalement consacrée à la littérature générale. Elle peut intéresser les ados et les parents qui suivent un écrivain particulier. Les deux pôles sont séparés d'**environ dix minutes à pied** par la voie verte longeant la Corrèze; une **navette électrique gratuite** circule aussi entre eux pendant les trois jours. Les rendez-vous annexes peuvent se tenir au théâtre, à la médiathèque, au musée Labenche ou au cinéma Rex: vérifiez leur lieu avant de partir.
+
+## Quels auteurs et animations regarder avec les enfants?
+
+**Marie-Aude Murail**, grande invitée jeunesse, est annoncée pour un entretien sur son parcours et une **lecture dessinée de Sauveur & Fils avec Quentin Zuttion**. Les lecteurs de BD pourront s'intéresser à **Joann Sfar**, invité d'honneur de ce domaine, avec notamment un **concert dessiné** annoncé. Les enfants qui préfèrent les albums illustrés, les romans ou les mangas trouveront également de nombreux auteurs dans les espaces jeunesse et BD.
+
+La [présentation des invités 2026](https://www.brive-tourisme.com/fr/agenda/grands-rendez-vous/foire-du-livre-brive/auteurs/) confirme ces temps forts, mais **ne suffit pas à garantir le jour, l'heure ou la possibilité d'assister à chaque rencontre**. Le [programme complet](https://www.brive-tourisme.com/fr/agenda/grands-rendez-vous/foire-du-livre-brive/programme/) est encore annoncé comme en attente sur la page touristique consultée. Recontrôlez-le peu avant votre venue, puis choisissez une rencontre principale et gardez le reste de la visite libre.
+
+## Entrée gratuite, mais attention aux activités annexes
+
+L'**entrée dans les espaces de dédicaces est libre, gratuite et sans réservation**. Cela ne signifie pas que toutes les propositions organisées autour de la Foire le sont: certaines rencontres à la médiathèque ou au musée demandent une inscription; les projections du **cinéma Rex** sont payantes et nécessitent une réservation. Les achats de livres restent évidemment à votre charge.
+
+Pour une dédicace, vous pouvez apporter jusqu'à **trois livres personnels**, à présenter à l'entrée pour identification. Un achat sur place n'est donc pas indispensable pour venir avec un livre déjà possédé, mais l'accès à un auteur reste soumis à sa présence et à l'attente. La [FAQ de l'organisateur](https://www.foiredulivredebrive.net/faq/) précise les règles et les modalités des animations.
+
+## Poussette, repas et déplacements: les détails utiles
+
+Les **poussettes sont autorisées**. L'organisateur annonce, sur les deux sites principaux, des espaces pour **changer ou allaiter un bébé**, ainsi que des toilettes et des zones de repos. Aux Trois Provinces, des foodtrucks sucrés et salés, des bancs et des espaces abrités permettent de faire une pause sans retourner en centre-ville.
+
+Pour entrer, prévoyez un **petit sac à dos de 30 litres maximum** et une **gourde d'un litre maximum**. Les grands bagages, contenants en verre et trottinettes ne sont pas autorisés. Les **enfants et adolescents jusqu'à 16 ans doivent être accompagnés d'un adulte**. Un tampon obtenu après une première entrée permet d'emprunter des accès plus rapides sur les autres sites de la Foire.
+
+Si vous venez en voiture, le **parking des Trois Provinces est annoncé gratuit**. Pour la Guierle, les indications de gratuité diffèrent selon les pages d'information: vérifiez les conditions actualisées plutôt que de compter sur une journée précise. Des places PMR et des entrées dédiées sont prévues sur les deux sites principaux. Train, bus et marche restent de bonnes solutions pour éviter les déplacements en voiture dans le centre.
+
+## Prolonger la Foire par un week-end à Brive
+
+Pour les familles venant de loin, l'[ibis Brive Centre sur Booking.com](https://www.booking.com/hotel/fr/ibis-brive-brive.fr.html), situé rue Marcelin-Roche à proximité du centre historique, dispose de quelques **chambres familiales**. Comparez leur capacité réelle avec l'âge et le nombre de vos enfants, puis vérifiez **prix, disponibilité et annulation** pour les nuits du 6 et du 7 novembre: aucune place n'est garantie à ces dates.
+
+Si vous voyagez avec un tout-petit et souhaitez prévoir autre chose que la Foire, notre [guide pour un week-end à Brive avec un bébé](/articles/parentalite/premier-week-end-a-brive-avec-un-bebe-ou-dormir-et-quoi-faire/) propose d'autres idées adaptées à un séjour familial.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
 - /articles/evenements/salon-du-livre-jeunesse-de-montreuil-2026-billet-gratuit-et-visite-en-famille/ | Salon du livre jeunesse de Montreuil 2026: billets gratuits, horaires et visite en famille | evenements | Montreuil, Seine-Saint-Denis, Île-de-France
-- /articles/bons-plans/pass-correzien-comment-profiter-d-une-entree-offerte-a-3/ | Pass Corrézien: comment profiter d'une entrée offerte à 3 | bons-plans | Tulle, Corrèze, Nouvelle-Aquitaine
+- /articles/evenements/p-tits-brunchs-anti-gaspi-a-bar-le-duc-quelles-dates-choisir-avec-les-enfants/ | P'tits brunchs anti-gaspi à Bar-le-Duc: quelles dates choisir avec les enfants? | evenements | Bar-le-Duc, Meuse, Grand Est
 - /articles/evenements/partir-en-livre-2026-en-famille/ | Partir en Livre 2026: trouver une animation jeunesse avant le 19 juillet | evenements
-- /articles/evenements/lumieres-de-noel-a-montbeliard-2026-quel-jour-venir-avec-des-enfants/ | Lumières de Noël à Montbéliard 2026: quel jour venir avec des enfants? | evenements | Montbéliard, Doubs, Bourgogne-Franche-Comté
+- /articles/bons-plans/pass-correzien-comment-profiter-d-une-entree-offerte-a-3/ | Pass Corrézien: comment profiter d'une entrée offerte à 3 | bons-plans | Tulle, Corrèze, Nouvelle-Aquitaine
+- /articles/bons-plans/musees-gratuits-autour-de-rouen-lesquels-choisir-avec-des-enfants/ | Musées gratuits autour de Rouen: lesquels choisir avec des enfants ? | bons-plans | Rouen, Seine-Maritime, Normandie
+- /articles/evenements/course-des-chateaux-d-ottrott-2026-quelles-epreuves-choisir-pour-les-enfants/ | Course des Châteaux d'Ottrott 2026: quelles épreuves choisir pour les enfants? | evenements | Ottrott, Bas-Rhin, Grand Est
 - /articles/sorties/parc-des-oiseaux-en-famille-billets-horaires-et-visite-avec-des-enfants/ | Parc des Oiseaux en famille: billets, horaires et visite avec des enfants | sorties | Villars-les-Dombes, Ain, Auvergne-Rhône-Alpes
-- /articles/parentalite/montchavin-les-coches-avec-un-bebe-garderie-horaires-et-sejour-d-hiver/ | Montchavin-Les Coches avec un bébé: garderie, horaires et séjour d'hiver | parentalite | Montchavin-Les Coches, Savoie, Auvergne-Rhône-Alpes
-- /articles/cuisine/biscuiterie-menou-a-plougonver-une-visite-gratuite-a-prevoir-avec-les-enfants/ | Biscuiterie Ménou à Plougonver: une visite gratuite à prévoir avec les enfants | cuisine | Plougonver, Côtes-d'Armor, Bretagne
-- /articles/evenements/nuits-des-etoiles-2026-en-famille/ | Nuits des étoiles 2026: réussir une première soirée d’astronomie avec les enfants | evenements
+- /articles/bons-plans/vira-vasa-a-hossegor-quelle-chasse-au-tresor-gratuite-choisir/ | Vira & Vasa à Hossegor: quelle chasse au trésor gratuite choisir? | bons-plans | Soorts-Hossegor, Landes, Nouvelle-Aquitaine
 - /articles/parentalite/premier-week-end-a-brive-avec-un-bebe-ou-dormir-et-quoi-faire/ | Brive avec un bébé: voie verte, musée Labenche et lac du Causse | parentalite | Brive-la-Gaillarde, Corrèze, Nouvelle-Aquitaine
 - /articles/sorties/tours-de-merle-en-famille-visite-libre-guidee-ou-theatralisee-en-2026/ | Tours de Merle en famille: visite libre, guidée ou théâtralisée en 2026 ? | sorties | Saint-Geniez-ô-Merle, Corrèze, Nouvelle-Aquitaine
 - /articles/evenements/halloween-2026-a-la-mer-de-sable-spectacles-parcours-effrayant-et-billets/ | Halloween 2026 à la Mer de Sable: spectacles, frissons et billets en famille | evenements | Ermenonville, Oise, Hauts-de-France
