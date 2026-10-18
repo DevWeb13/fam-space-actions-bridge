@@ -94,7 +94,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          # La finalisation Publication part directement par workflow_dispatch.
+          # Ne pas écraser bridge-request.txt, partagé avec les Destinations.
+
           for attempt in 1 2 3; do
+            # Les changements locaux ont été sauvegardés dans RUNNER_TEMP.
+            # Repartir d'un arbre propre avant le changement de branche Git.
+            git reset --hard HEAD
             git fetch origin main
             git checkout -B publication-request-state origin/main
             if [ -f "$RUNNER_TEMP/publication-state.json" ]; then
@@ -102,9 +108,6 @@ jobs:
             fi
             if [ -f "$RUNNER_TEMP/publication-runtime.md" ]; then
               cp "$RUNNER_TEMP/publication-runtime.md" publication-runtime.md
-            fi
-            if [ "$BRIDGE_REQUEST_CHANGED" = "true" ] && [ -f "$RUNNER_TEMP/bridge-request.txt" ]; then
-              cp "$RUNNER_TEMP/bridge-request.txt" bridge-request.txt
             fi
             printf '# Ready\n' > publication-request.md
 
@@ -114,9 +117,6 @@ jobs:
             fi
             if [ -f "$RUNNER_TEMP/publication-runtime.md" ]; then
               git add publication-runtime.md
-            fi
-            if [ "$BRIDGE_REQUEST_CHANGED" = "true" ] && [ -f "$RUNNER_TEMP/bridge-request.txt" ]; then
-              git add bridge-request.txt
             fi
             if git diff --cached --quiet; then
               echo "saved=true" >> "$GITHUB_OUTPUT"
