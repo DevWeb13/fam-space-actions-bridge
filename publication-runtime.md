@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,92 +14,138 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Indre
 - Région: Centre-Val de Loire
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Château de Bouges en famille: visiter le château, jouer dans les jardins et découvrir les écuries**
-
-Angle: comment construire une visite familiale agréable au château de Bouges, à Bouges-le-Château (Indre), selon l'âge des enfants, le temps disponible et la saison, en distinguant intérieur guidé et extérieurs libres. Ce domaine du XVIIIe siècle géré par le Centre des monuments nationaux réunit un château meublé, plusieurs jardins et un parc, ainsi que d'anciennes écuries et voitures hippomobiles. Il ne s'agit pas d'un article sur un événement ponctuel.
-
-## Besoin du lecteur
-
-Comprendre ce que les enfants découvriront réellement et choisir entre la visite commentée du château et une promenade dans le parc, les jardins et les communs. Savoir comment exploiter le livret-jeu gratuit dès 6 ans, combien de temps réserver (château environ 1 h, extérieurs au moins 1 h), quelles sont les contraintes d'horaires, de prix et de poussette, et quand une nuit sur place peut rendre un séjour dans le Berry plus confortable. Distinguer les activités permanentes des ateliers de vacances, qui dépendent de l'agenda.
-
-## Valeur éditoriale
-
-- Comparer deux expériences complémentaires et non interchangeables: château **uniquement en visite commentée**, contre jardins, parc, selleries et écuries en autonomie.
-- Construire deux parcours utiles: promenade et énigmes dans les jardins avec livret-jeu gratuit dès 6 ans (environ 1 h), ou demi-journée plus complète en ajoutant le château et les communs. Expliquer le thème des chevaux et des voitures hippomobiles pour motiver les enfants.
-- Donner les conditions réellement décisives: entrée château + extérieurs à 9 € par adulte ou extérieurs seuls à 4 €, gratuité des moins de 18 ans, conditions particulières pour les 18-25 ans; poussettes autorisées dans le parc mais pas dans le château; parc d'environ 80 hectares, pause méridienne hors été.
-- **Saisonnalité**: ouvert en octobre sauf le mardi; en novembre, uniquement les samedis, dimanches, 1er et 11 novembre; fermeture ordinaire de décembre à février, sauf événements. Inviter à recontrôler les créneaux précis avant le départ. Éviter de centrer l'article sur l'atelier d'octobre, qui est proche, ou sur des dates d'événements incertaines.
-- Apport par rapport aux pages officielles: réunir dans un seul chemin de lecture les différences de parcours, l'âge, la durée, les limites pratiques et la possibilité d'intégrer la visite à un court séjour, sans recopier simplement une fiche de monument.
-
-## Affiliation
-
-- **Billets/visite (action principale)**: aucune offre Château de Bouges confirmée chez GetYourGuide, Tiqets, Klook ou les plateformes de secours examinées. La billetterie directe du Centre des monuments nationaux reste la référence à consulter pour les réservations, sans prétendre qu'elle est affiliée: https://tickets.monuments-nationaux.fr/fr-FR/familles?site=2233662660010402045
-- **Hébergement pour prolonger la sortie**: Booking.com, **Chambres d'hôtes a l'Epoque**, à Bouges-le-Château, propose notamment une chambre familiale (un grand lit double et deux lits simples, jusqu'à 4 voyageurs) avec réservation sur la plateforme: https://www.booking.com/hotel/fr/chambres-et-table-d-hotes-a-l-epoque-bouges-le-chateau.fr.html
-- **Autre hébergement adapté**: Booking.com, **Château de Villechauvon**, à Vatan, affiche des chambres familiales et un hébergement réservable dans le secteur, pertinent pour organiser un week-end autour de Bouges: https://www.booking.com/hotel/fr/chateau-de-villechauvon.fr.html
-- Prévoir au plus une ou deux propositions d'hébergement en fin de futur article, uniquement pour les familles souhaitant rester dormir; ne pas les présenter comme nécessaires à une simple visite. Les disponibilités et tarifs effectifs dépendent des dates et de la composition familiale: aucune disponibilité à une date précise n'a été validée. Les URL ci-dessus sont des fiches marchandes directes, pas des liens affiliés traqués; la phase d'affiliation ultérieure devra appliquer le suivi de la plateforme.
-
-## Sources de départ
-
-- Centre des monuments nationaux, château de Bouges, **Informations pratiques**: horaires par saison, tarifs, gratuités, accès, restrictions poussettes: https://www.chateau-bouges.fr/visiter/informations-pratiques
-- Centre des monuments nationaux, château de Bouges, **En famille**: livret-jeu gratuit dès 6 ans, jardins, durée, parc, écuries, ateliers: https://www.chateau-bouges.fr/visiter/en-famille
-- Centre des monuments nationaux, **Visites et activités**: visite commentée et extérieurs libres, durées, documents et ateliers: https://www.chateau-bouges.fr/visiter/visites-et-activites
-- Centre des monuments nationaux, **Accueil du monument et agenda**: vérifier la programmation et d'éventuelles ouvertures exceptionnelles: https://www.chateau-bouges.fr/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "activites"
+title: "Château de Bouges en famille: jardins, livret-jeu et écuries"
+subtitle: "Une promenade à énigmes ou une visite plus complète de cette demeure de l’Indre"
+summary: "À Bouges-le-Château, explorez les jardins avec un livret-jeu gratuit, découvrez les écuries et préparez une visite familiale adaptée à la saison."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "château de Bouges en famille"
+  - "château de Bouges livret-jeu"
+  - "Bouges-le-Château avec enfants"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Bouges-le-Château"
+  department: "Indre"
+  region: "Centre-Val de Loire"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Château de Bouges: informations pratiques, horaires et tarifs"
+    url: "https://www.chateau-bouges.fr/visiter/informations-pratiques"
+  - title: "Château de Bouges: visites et activités"
+    url: "https://www.chateau-bouges.fr/visiter/visites-et-activites"
+  - title: "Château de Bouges: offres pour les familles"
+    url: "https://www.chateau-bouges.fr/visiter/en-famille"
+  - title: "Château de Bouges: une demeure confortable et harmonieuse"
+    url: "https://www.chateau-bouges.fr/decouvrir/une-demeure-confortable-et-harmonieuse"
+  - title: "Château de Bouges: le parc et les jardins"
+    url: "https://www.chateau-bouges.fr/decouvrir/le-parc-et-les-jardins"
+  - title: "Château de Bouges: Henry Viguier, passionné de chevaux"
+    url: "https://www.chateau-bouges.fr/decouvrir/henry-viguier-passionne-de-chevaux"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À **Bouges-le-Château, dans l’Indre**, le château de Bouges propose une sortie qui ne se résume pas à parcourir des pièces anciennes. Ce domaine du XVIIIe siècle réunit une demeure meublée, des jardins de styles différents, un grand parc et des écuries abritant des voitures hippomobiles. Les familles peuvent y venir pour une balade ponctuée d’énigmes ou consacrer davantage de temps à la découverte du château.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+La distinction à connaître avant de partir: **l’intérieur du château se visite avec un guide**, tandis que **les jardins, le parc et les communs se parcourent librement**. Ce choix change autant le rythme de la sortie que son prix.
+
+## Jardins et livret-jeu: la formule la plus souple avec des enfants
+
+À l’accueil, demandez le **livret-jeu gratuit destiné aux enfants dès 6 ans**. Avec Edgard le jardinier pour fil conducteur, il propose des énigmes dans le jardin de fleurs, le jardin à la française et le parc à l’anglaise. Le monument annonce environ **une heure** pour ce parcours. C’est une bonne manière de donner un objectif à la promenade sans transformer toute la sortie en leçon d’histoire.
+
+Les décors changent d’un espace à l’autre: tracés réguliers près du château, jardin de fleurs et longues allées paysagères plus naturelles. Le parc couvre environ **80 hectares**, avec un étang et un sentier de promenade d’environ **1 h 30**. Le jardin de fleurs présente surtout un intérêt entre juin et octobre, avec une floraison généralement plus généreuse au cœur de l’été. On n’a donc pas besoin de parcourir tout le domaine pour profiter de la visite.
+
+Les familles avec de jeunes enfants peuvent simplement suivre une partie des allées, tandis que celles dont les enfants aiment marcher peuvent prolonger la balade. Le fonctionnement du livret et les différents espaces sont décrits sur les pages officielles [En famille](https://www.chateau-bouges.fr/visiter/en-famille) et [Le parc et les jardins](https://www.chateau-bouges.fr/decouvrir/le-parc-et-les-jardins).
+
+## Une vraie demeure à découvrir, mais à un horaire précis
+
+Le château a conservé l’allure d’une maison de campagne élégante. À l’intérieur, les pièces aménagées par **Henry et Renée Viguier**, derniers propriétaires privés du domaine, permettent d’observer des salons, du mobilier des XVIIIe siècles et des décors très différents selon les pièces. La chambre aux perroquets, les espaces de réception ou encore les meubles à mécanisme fournissent des détails concrets auxquels les enfants curieux peuvent s’intéresser.
+
+La [visite commentée](https://www.chateau-bouges.fr/visiter/visites-et-activites) dure environ **une heure** et ne se fait pas en autonomie. Elle convient donc davantage aux enfants capables de suivre un groupe pendant ce temps. Mieux vaut choisir d’abord l’horaire du château, puis organiser la promenade autour, plutôt que de risquer d’arriver entre deux visites. Le site officiel présente aussi [l’histoire et les pièces de la demeure](https://www.chateau-bouges.fr/decouvrir/une-demeure-confortable-et-harmonieuse).
+
+## Les écuries et les voitures hippomobiles: une autre facette du domaine
+
+Dans les communs, le monde des chevaux occupe une place inattendue. Henry Viguier était passionné d’équitation et d’attelage. Les familles peuvent voir les anciennes écuries, les selleries, des harnais et une collection de **voitures hippomobiles** utilisées autrefois pour le voyage, la promenade ou la chasse.
+
+Ce sont des collections patrimoniales, **pas une activité de promenade à cheval**. Elles offrent toutefois un contraste intéressant avec les salons du château: après avoir vu comment vivaient les propriétaires, on découvre les équipements nécessaires à leurs déplacements et à leurs loisirs. La [présentation officielle des écuries et des attelages](https://www.chateau-bouges.fr/decouvrir/henry-viguier-passionne-de-chevaux) permet d’en avoir un aperçu avant la visite.
+
+## Combien de temps prévoir et quel billet choisir?
+
+Pour une **sortie courte**, consacrez au moins une heure aux jardins et aux communs, éventuellement davantage si les enfants veulent faire toutes les énigmes. Cette formule laisse de la liberté et ne dépend pas d’un départ de visite guidée.
+
+Pour une **visite plus complète**, prévoyez plutôt une demi-journée: une heure à l’intérieur du château, puis une promenade dans les jardins et un passage par les écuries. Si vous souhaitez aussi emprunter le long sentier du parc, gardez davantage de temps.
+
+Les [tarifs officiels](https://www.chateau-bouges.fr/visiter/informations-pratiques) distinguent deux billets individuels:
+
+- **9 €** pour le château, le parc, les jardins et les communs.
+- **4 €** pour le parc, les jardins et les communs uniquement.
+
+L’entrée est **gratuite pour les moins de 18 ans**. Les **18-25 ans** peuvent également bénéficier de la gratuité sous conditions de nationalité ou de résidence précisées par le monument. D’autres réductions existent: vérifiez les justificatifs requis avant de réserver.
+
+## Horaires: attention aux mardis et à la pause du midi
+
+En **octobre 2026**, le domaine est normalement ouvert **du mercredi au lundi**, avec fermeture le mardi. Le parc, les jardins et les communs se visitent de **10 h à 12 h**, puis de **14 h à 18 h**; les visites du château sont annoncées à **11 h, 15 h 15 et 16 h 30**.
+
+En **novembre**, l’ouverture se limite normalement aux **samedis, dimanches, 1er et 11 novembre**. Les extérieurs ouvrent de **10 h à 12 h**, puis de **14 h à 17 h**; le château propose des visites à **11 h, 15 h et 16 h**. Le dernier accès aux extérieurs intervient **45 minutes avant la fermeture**.
+
+Le monument ferme habituellement **de décembre à février**, sauf événements particuliers. Des modifications ponctuelles restent possibles: consultez toujours les [horaires mis à jour](https://www.chateau-bouges.fr/visiter/informations-pratiques) avant de partir. Les visites et ateliers familiaux organisés pendant certaines vacances scolaires, généralement destinés aux **6-12 ans**, relèvent d’une programmation distincte du livret-jeu accessible lors des visites ordinaires; leurs dates sont indiquées sur la [page Visites et activités](https://www.chateau-bouges.fr/visiter/visites-et-activites).
+
+## Poussette, pique-nique et accès: les détails utiles
+
+Le château se trouve au **15 rue du Château, 36110 Bouges-le-Château**. En voiture, l’accès est indiqué depuis Châteauroux par Levroux, depuis Vierzon par Vatan ou depuis Valençay. Pour un déplacement en train, le site mentionne la gare de **Neuvy-Pailloux**, mais il faut organiser séparément le trajet jusqu’au domaine.
+
+Les **poussettes sont autorisées dans le parc, mais pas dans le château**; elles peuvent être déposées à l’entrée. En cas de besoin d’aménagements liés à un handicap, il est préférable de contacter le monument avant la visite, car les modalités dépendent des espaces.
+
+Pour manger dehors, des tables de pique-nique sont mises à disposition **dans les jardins en juillet et août** et **aux abords immédiats du monument toute l’année**. Les chiens tenus en laisse sont admis **dans le parc uniquement**. Enfin, les jardins et le parc peuvent fermer en cas d’alerte météo. Ces précisions, ainsi que les coordonnées du site, figurent dans les [conditions de visite officielles](https://www.chateau-bouges.fr/visiter/informations-pratiques) et les [conseils aux familles](https://www.chateau-bouges.fr/visiter/en-famille).
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -128,4 +174,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
