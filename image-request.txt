@@ -194,3 +194,4 @@ automation/image-20261018-600c5b2-metamorphoses-branly-0644|54b7c62f0e2db63894aa
 automation/image-20261018-600c5b2-metamorphoses-branly-0644|f3bb19953017066502b8088bb0d931a8344d4872
 automation/image-20261018-eb0b7bf-bouges-nausicaa-strasbourg-1248|cbba5db797071cbd41a6b8354c60792554e484b8
 automation/image-20261018-eb0b7bf-bouges-nausicaa-strasbourg-1248|2c20095387c1a9a64b4efb5ac8056acb0efa3c94
+automation/image-20261018-6d2a748-halloween-hautes-alpes-1844|aef23904430bcf653945a6b4f61a956bebda4fd1
