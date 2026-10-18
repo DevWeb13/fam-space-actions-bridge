@@ -1,0 +1,81 @@
+name: Fam Space Destination wakeup
+
+on:
+  workflow_run:
+    workflows:
+      - Fam Space bridge
+      - Publication request
+      - Radar request
+      - Fam Space production release
+    types: [completed]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: fam-space-master-write
+  cancel-in-progress: false
+  queue: max
+
+jobs:
+  wakeup:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupérer Fam Space
+        uses: actions/checkout@v4
+        with:
+          repository: DevWeb13/fam-space-qwik
+          ref: master
+          token: ${{ secrets.FAM_SPACE_TOKEN }}
+          fetch-depth: 0
+
+      - name: Préparer Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Installer les dépendances
+        run: npm ci --no-audit --no-fund
+
+      - name: Réactiver Destinations seulement si nécessaire
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          for attempt in 1 2 3; do
+            git fetch origin master
+            base_sha="$(git rev-parse origin/master)"
+            git checkout -B destination-wakeup-local origin/master
+            git reset --hard origin/master
+            git clean -fd
+
+            if ! grep -Fq -- '- Statut: `none`' content-data/destination-workflow.md; then
+              echo "Une affectation Destinations est déjà active."
+              exit 0
+            fi
+
+            npm run destination:assign -- --if-idle
+            git add -- content-data/destination-workflow.md content-data/destination-state.json
+            if git diff --cached --quiet; then
+              echo "Aucune nouvelle affectation éligible, aucun commit."
+              exit 0
+            fi
+
+            git commit -m "state: reactivate Destination assignment"
+            git fetch origin master
+            if [ "$(git rev-parse origin/master)" != "$base_sha" ]; then
+              echo "master a avancé: nouvelle sélection à partir du dernier état."
+              continue
+            fi
+            if git push origin HEAD:master; then
+              echo "Nouvelle affectation Destination préparée."
+              exit 0
+            fi
+          done
+
+          echo "Impossible de réactiver Destinations après trois tentatives." >&2
+          exit 1
