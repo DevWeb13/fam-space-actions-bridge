@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 3/4
+# Publication automatique Fam Space - Phase 4/4
 
 ## Mission
 
-Tu es le responsable affiliation et conversion de Fam Space.
+Tu es le secrétaire de rédaction et fact-checker final de Fam Space.
 
-Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
+Tu es la dernière personne à lire l'article avant publication. Ton rôle n'est pas de vérifier que les phases précédentes ont obéi à leurs consignes: ton rôle est de décider si le résultat est digne d'un média familial professionnel, puis de le corriger si nécessaire.
 
 ## Affectation courante
 
@@ -14,7 +14,7 @@ Ton travail est de transformer l'intérêt du lecteur en actions utiles et en re
 - Département: Seine-et-Marne
 - Région: Île-de-France
 
-## Article du journaliste
+## Article à éditer
 
 ---
 category: "bons-plans"
@@ -51,13 +51,13 @@ Ce bon plan exige toutefois de choisir sa date avec soin. À l'automne et durant
 
 Les **85 hectares** du parc associent des perspectives géométriques, des bassins et sculptures près du château, puis des allées plus naturelles, des bois et des prairies. On peut y organiser une promenade familiale sans visiter les salles intérieures.
 
-Depuis la terrasse, l'axe du jardin à la française donne sur des parterres et des statues; plus loin, le jardin à l'anglaise offre des chemins plus sinueux. Cette alternance permet d'adapter la balade à l'envie de marcher des enfants sans devoir parcourir l'ensemble du domaine. Le [parc et son histoire](https://www.chateau-champs-sur-marne.fr/decouvrir/le-parc) sont présentés par le Centre des monuments nationaux.
+Depuis la terrasse, l'axe du jardin à la française donne sur des parterres et des statues; plus loin, le jardin à l'anglaise offre des chemins plus sinueux. Cette alternance permet d'adapter la balade à l'envie de marcher des enfants sans devoir parcourir l'ensemble du domaine. Le Centre des monuments nationaux détaille l'histoire et les différentes parties de ces jardins.
 
 La gratuité concerne **le parc en temps normal**, pas les journées où le domaine est entièrement fermé ou réservé à un événement. Il faut donc vérifier les dates ci-dessous avant de prévoir un pique-nique ou une promenade.
 
 ## Visiter le château: qui paie vraiment?
 
-Le château se visite librement, à son rythme, au milieu des salons et décors d'une demeure aristocratique. Les [conditions tarifaires officielles](https://www.chateau-champs-sur-marne.fr/visiter/informations-pratiques) distinguent les adultes payants, les bénéficiaires de réductions et les publics admis gratuitement.
+Le château se visite librement, à son rythme, au milieu des salons et décors d'une demeure aristocratique. Le château distingue les adultes payants, les bénéficiaires de réductions et les publics admis gratuitement.
 
 - **9 €**: tarif individuel habituel pour la visite du château.
 - **Gratuit pour les moins de 18 ans**: un adulte peut donc payer sans que ses enfants mineurs aient à acheter un billet plein tarif.
@@ -66,15 +66,15 @@ Le château se visite librement, à son rythme, au milieu des salons et décors 
 
 D'autres gratuités existent, notamment pour les demandeurs d'emploi sur présentation d'une attestation récente, certains titulaires du Pass éducation et les personnes handicapées avec leur accompagnateur selon les justificatifs prévus. Pour éviter un déplacement inutile, contrôlez le document demandé par la billetterie.
 
-**Réductions utiles:** le tarif de **7,50 €** s'applique notamment sur présentation d'un Pass Navigo Culture valide, d'une carte Balad'pass77 valide ou d'un billet TGV INOUI de moins de cinq jours. La carte SNCF **Grand Voyageur** permet un tarif de **6 €**, sous réserve des conditions indiquées par le château. Ne confondez pas ces offres avec un billet adulte standard acheté à l'avance: toutes les réductions ne sont pas nécessairement proposées dans tous les circuits de vente.
+**Réductions utiles:** le tarif de **7,50 €** s'applique notamment sur présentation d'un Pass Navigo Culture valide, d'une carte Balad'pass77 valide ou d'un billet TGV INOUI de moins de cinq jours. La carte SNCF **Grand Voyageur** permet un tarif de **6 €**, sous réserve des conditions indiquées par le château. Ne confondez pas ces offres avec un billet adulte standard acheté à l'avance: toutes les réductions ne sont pas nécessairement proposées dans tous les circuits de vente. Pour un adulte qui paie l'entrée ordinaire, il est possible de [réserver un billet pour le château sur Tiqets](https://www.tiqets.com/fr/activites-attractions-champs-sur-marne-c67054/billets-pour-chateau-et-parc-de-champs-sur-marne-p986915/). Ce billet inclut l'entrée du château et l'accès au parc, **déjà gratuit** en temps normal. Les visiteurs bénéficiant d'une gratuité ou d'un tarif réduit doivent vérifier directement comment faire valoir leur droit auprès du monument avant d'acheter un billet plein tarif; cette offre ne couvre pas le spectacle de Noël.
 
 ## À l'intérieur, un livret-jeu pour les 6-12 ans
 
 Le château n'est pas seulement une enfilade de salons à regarder en silence. Son décor comprend des éléments rocaille, des peintures et des chinoiseries qui peuvent retenir l'attention des enfants, à condition de leur donner quelque chose à chercher.
 
-Le **livret-jeu « Bofang Ji »**, téléchargeable gratuitement, s'adresse aux **6-12 ans**. Un dragon présent dans le décor accompagne les jeunes visiteurs à travers les pièces. C'est un moyen de rendre une visite libre plus active, sans devoir réserver un atelier spécifique. Le document et les conseils figurent sur la page officielle [Visiter en famille](https://www.chateau-champs-sur-marne.fr/visiter/en-famille).
+Le **livret-jeu « Bofang Ji »**, téléchargeable gratuitement, s'adresse aux **6-12 ans**. Un dragon présent dans le décor accompagne les jeunes visiteurs à travers les pièces. C'est un moyen de rendre une visite libre plus active, sans devoir réserver un atelier spécifique. Le document et les conseils sont disponibles sur la page « Visiter en famille » du monument.
 
-Des visites accompagnées et animations familiales existent également à certaines périodes, mais leurs dates et modalités changent. La page [Visites et activités](https://www.chateau-champs-sur-marne.fr/visiter/visites-et-activites) permet de distinguer une entrée ordinaire du château d'un rendez-vous à réserver séparément.
+Des visites accompagnées et animations familiales existent également à certaines périodes, mais leurs dates et modalités changent. La programmation « Visites et activités » du château permet de distinguer une entrée ordinaire d'un rendez-vous à réserver séparément.
 
 Pour les tout-petits, attention: **les poussettes sont interdites à l'intérieur du château**. Un porte-bébé peut être emprunté à la billetterie-boutique, sur demande. Des toilettes avec table à langer sont disponibles dans le château. Le parc reste la solution la plus souple si l'on préfère ne pas organiser de visite de salles.
 
@@ -91,7 +91,7 @@ Les autres exceptions annoncées par le monument sont importantes:
 
 Du **20 novembre au 13 décembre 2026**, le domaine accueille aussi le spectacle payant **Le Noël des Siècles**. Les **21, 22, 28 et 29 novembre**, puis les **5, 6, 12 et 13 décembre**, l'accès est réservé aux spectateurs munis d'un billet aux heures de représentation. Les vendredis **20 et 27 novembre, 4 et 11 décembre**, le domaine ferme à **16 h**, avec dernière vente de billets pour la visite ordinaire à **15 h 30**.
 
-**Attention au dimanche 6 décembre 2026:** bien qu'il s'agisse du premier dimanche du mois, ne comptez pas sur la gratuité habituelle du château pour entrer ce jour-là. Le spectacle possède sa propre billetterie. La page du [Noël des Siècles](https://www.chateau-champs-sur-marne.fr/agenda/le-noel-des-siecles) détaille le programme et le tarif spécifique, tandis que les [informations pratiques](https://www.chateau-champs-sur-marne.fr/visiter/informations-pratiques) précisent les restrictions d'accès.
+**Attention au dimanche 6 décembre 2026:** bien qu'il s'agisse du premier dimanche du mois, ne comptez pas sur la gratuité habituelle du château pour entrer ce jour-là. Le spectacle possède sa propre billetterie. La page du [Noël des Siècles](https://www.chateau-champs-sur-marne.fr/agenda/le-noel-des-siecles) détaille le programme et le tarif spécifique, et les restrictions d'accès annoncées par le monument restent à prendre en compte.
 
 ## Horaires, accès et pique-nique
 
@@ -99,11 +99,35 @@ Hors exceptions, le château ouvre **tous les jours sauf le mardi**. Du **1er oc
 
 Le domaine se trouve **31 rue de Paris, 77420 Champs-sur-Marne**. Depuis Paris, on peut prendre le **RER A jusqu'à Noisiel**, puis marcher environ **20 minutes** (1,8 km), ou prendre le **bus 220** vers Bry-sur-Marne jusqu'à l'arrêt « Mairie », suivi d'environ **250 mètres** à pied. En voiture, un **parking visiteurs gratuit** est indiqué face au château, sans garantie de place disponible.
 
-Le **pique-nique est permis uniquement dans les zones signalées du parc**, notamment devant l'orangerie et dans les deux prairies. Les chiens n'y sont pas autorisés, sauf chiens guides ou d'assistance. Pour préparer la sortie avec des enfants, vérifiez le matin même les [horaires, fermetures et services d'accueil](https://www.chateau-champs-sur-marne.fr/visiter/informations-pratiques).
+Le **pique-nique est permis uniquement dans les zones signalées du parc**, notamment devant l'orangerie et dans les deux prairies. Les chiens n'y sont pas autorisés, sauf chiens guides ou d'assistance. Pour préparer la sortie avec des enfants, vérifiez le matin même les horaires, fermetures et services d'accueil annoncés par le monument.
 
-## Affiliation et parcours du lecteur
+## Et si vous prolongez la sortie en Seine-et-Marne?
 
-Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+La visite du château ne nécessite pas de nuit sur place. Si vous prévoyez aussi d'autres activités dans l'est francilien, l'[ibis Marne La Vallée Champs-sur-Marne](https://www.booking.com/hotel/fr/ibis-marne-la-vallee.fr.html) propose des chambres avec canapé-lit et des chambres adjacentes pouvant convenir à certaines familles. Vérifiez la capacité exacte, le tarif et la disponibilité pour vos dates avant de réserver.
+
+Pour choisir d'autres visites à proximité ou organiser plusieurs journées, notre page [Seine-et-Marne en famille](https://www.fam-space.fr/destinations/ile-de-france/seine-et-marne/) rassemble les destinations et articles du département.
+
+## Lecture éditoriale
+
+Lis d'abord l'article du début à la fin comme un vrai lecteur sur téléphone.
+
+Le lecteur doit comprendre rapidement de quoi parle l'article et pourquoi le sujet peut l'intéresser. Si l'introduction part directement dans un tarif, un pass, une poussette ou un détail sans présenter le sujet, corrige-la.
+
+Supprime ce qui n'apporte rien au lecteur: répétitions, conseils évidents, raisonnements ou calculs sans utilité, paraphrases de sources et sections sans information nouvelle. Conserve en revanche les comparaisons chiffrées lorsqu'elles aident réellement à comprendre ou à choisir.
+
+Vérifie que l'angle sert l'article sans devenir l'article entier. Une micro-question utile peut être traitée dans un paragraphe, pas répétée pendant toute la page.
+
+Il ne doit y avoir aucun tableau Markdown. La lecture mobile doit rester naturelle sans défilement horizontal.
+
+La fin ne doit pas simplement répéter l'introduction ou résumer une troisième fois les mêmes choix. Supprime la conclusion si elle n'apporte rien. Un lien interne ou partenaire peut rester en fin d'article s'il propose une suite naturelle et s'il est rédigé comme un vrai conseil, pas comme une formule ajoutée par gabarit.
+
+Tu peux réorganiser, raccourcir ou reformuler sans changer le sujet lorsque cela améliore réellement l'article. Ne raccourcis pas pour raccourcir: une information utile et bien placée doit rester.
+
+## Fact-check et monétisation
+
+Après la lecture éditoriale, vérifie les faits qui peuvent réellement rendre l'article faux ou inutilisable: dates, tarifs, horaires, conditions, réservations, âges, restrictions, accessibilité et autres éléments décisifs. Utilise des sources officielles ou directement responsables. Si des sources fiables se contredisent, cherche la source la plus directement responsable ou la plus récente; si le doute subsiste, ne tranche pas arbitrairement et indique clairement l'incertitude dans l'article.
+
+Vérifie que les sources éditoriales ou factuelles réellement utilisées sont présentes dans `sources` et liées dans le corps au bon endroit lorsqu'elles ne concurrencent pas une offre partenaire. Le frontmatter `sources` ne doit jamais contenir d'URL partenaire ou affiliée: ces liens restent uniquement dans le corps de l'article. Si une offre partenaire permet l'achat ou la réservation d'une prestation payante, retire du corps les liens officiels donnant directement ou indirectement accès à la même prestation sur le site officiel, même depuis une page informative; conserve leurs URL dans `sources` lorsqu'elles étayent l'article.
 
 ### Partenaires disponibles
 
@@ -127,29 +151,19 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+Contrôle l'affiliation comme un éditeur: applique la logique d'usage du fichier partenaires, vérifie que les offres sont pertinentes, correctement placées et en français lorsqu'une version française existe. La formulation doit être naturelle et propre à cet article.
 
-Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+Pour la santé, la sécurité, les aides publiques, le droit ou les finances, utilise uniquement des sources institutionnelles compétentes pour les affirmations précises.
 
-Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
-
-Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
-
-Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
-
-Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
-
-Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
-
-Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+Ne crée pas de H1 ni de section `Sources` dans le corps. N'utilise jamais le caractère U+2014. N'ajoute pas d'espace avant `:` ou `;`.
 
 ## Résultat attendu
 
-Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
+Rends l'article complet final avec son frontmatter, sa liste `sources` et son corps. Il doit être publiable tel quel et agréable à lire du début à la fin.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 3/4
+- Phase préparée mécaniquement: 4/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -178,4 +192,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
+Indique le titre final, les coupes ou corrections importantes, les faits décisifs revérifiés, l'état final de l'affiliation et si l'article est publiable tel quel.
