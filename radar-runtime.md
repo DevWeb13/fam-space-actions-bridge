@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,44 +60,38 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "bd BOUM 2026 à Blois en famille: ateliers BD, expositions et cinéma selon l'âge"
-subtitle: Les 20, 21 et 22 novembre, choisir les rendez-vous pour les enfants et vérifier les inscriptions
-summary: "À Blois, bd BOUM 2026 accueille les familles du 20 au 22 novembre: salon de bande dessinée gratuit, ateliers dès 3 ou 6 ans, expositions et projections payantes selon les séances."
+title: "bd BOUM 2026 à Blois en famille: ateliers, expositions et cinéma"
+subtitle: Du 20 au 22 novembre, les rendez-vous par âge, horaires, inscriptions et tarifs
+summary: "Festival bd BOUM 2026 à Blois avec des enfants: salon gratuit, ateliers de BD dès 6 ans, spectacle dès 3 ans et séances jeune public à 5 €."
 category: evenements
 location:
   city: Blois
   department: Loir-et-Cher
   region: Centre-Val de Loire
 keywords:
-  - bd BOUM Blois 2026 enfants
-  - bd BOUM 2026 ateliers jeunesse âge inscription
-  - festival BD Blois 20 21 22 novembre 2026
+  - bd BOUM 2026 Blois enfants
+  - bd BOUM ateliers jeunesse 2026
+  - festival bd Blois 20 21 22 novembre 2026
+  - bd BOUM Blois cinéma spectacle prix
 sources:
-  - title: "Maison de la BD: salon du livre 2026, horaires et implantation"
+  - title: "Maison de la BD: salon du livre 2026, lieux et horaires"
     url: https://www.maisondelabd.com/sal-du-liv-2026
-  - title: "Maison de la BD: ateliers du week-end 2026 par âge et réservation"
+  - title: "Maison de la BD: ateliers du week-end, âges et inscriptions"
     url: https://www.maisondelabd.com/jeun-we-2026
   - title: "Maison de la BD: expositions du festival 2026"
     url: https://www.maisondelabd.com/expos-2026
-  - title: "Maison de la BD: cinéma 2026 et tarifs des séances famille"
+  - title: "Maison de la BD: séances de cinéma 2026, âges, durées et tarifs"
     url: https://maisondelabd.com/cine-2026
-  - title: "Maison de la BD: spectacles 2026, âges, horaires et prix"
+  - title: "Maison de la BD: concerts, spectacles et lectures 2026"
     url: https://www.maisondelabd.com/concerts-spectacles-2026-3
-  - title: "Office de tourisme Blois Chambord: festival de BD 2026, entrée gratuite"
+  - title: "Blois Chambord Tourisme: festival bd BOUM 2026 et programme chronologique"
     url: https://www.bloischambord.com/lactu/carnet-dambiances/festival-de-la-bd/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: bd-boum-2026-a-blois-en-famille-ateliers-bd-expositions-et-cinema-selon-l-age
   decision: Choisir pour chaque enfant les activités et séances accessibles selon son âge, leurs horaires, leur lieu et leur coût, en distinguant visite gratuite, inscription obligatoire et spectacle ou cinéma payant.
@@ -95,61 +101,93 @@ radar:
     dataThrough: 2026-10-15
     signal: seasonal_opportunity
     basis: "Opportunité saisonnière vérifiée via « Maison de la BD: salon du livre 2026, horaires et implantation »; aucune page forte GSC n'est requise."
+eventEndsAt: 2026-11-22
 ---
 
-## Mission retenue
-La 43e édition du festival de bande dessinée bd BOUM à Blois, du vendredi 20 au dimanche 22 novembre 2026. Salon et expositions, ateliers de création, rencontres et cinéma, dans plusieurs lieux du centre.
+La **43e édition de bd BOUM** se tient à **Blois du vendredi 20 au dimanche 22 novembre 2026**. Le salon de bande dessinée et les expositions permettent une sortie gratuite en famille; pour participer à un atelier ou voir un film, il faut regarder de plus près **l'âge conseillé, le lieu et les conditions d'accès**. Voici les rendez-vous qui comptent vraiment avec des enfants.
 
-## Pourquoi cette mission
-Événement à venir avec programme familial concret et arbitrages par âge, prix et réservation. Le meilleur refresh GSC (Carte Tattoo Isère) est déjà exact et opérationnel sur montants, bonus et échéances après contrôle de l'article entier et de la page du Département; le signal est «uncertain», sans amélioration indépendante avérée. Les principales pages fortes concernent des manifestations proches de leur fin ou déjà passées; développer un sujet satellite serait moins utile. Aucun article bd BOUM dans les 704 entrées du catalogue ni l'historique Radar, et aucun chevauchement avec les travaux Publication/Destination en cours.
+## Le salon de BD: une sortie gratuite même sans réservation d'atelier
 
-## Décision du lecteur
-Savoir quoi voir et réserver avec des enfants de différents âges, sans confondre les rendez-vous ouverts librement avec les ateliers à places limitées ou les projections payantes.
+À la **Halle aux grains et sous le chapiteau**, le salon accueille libraires, éditeurs, auteurs et séances de dédicaces sur environ 2 000 m². L'**entrée du salon est gratuite**; les livres, eux, sont payants si vous souhaitez en acheter. Les dédicaces dépendent de la présence des auteurs et de l'affluence.
 
-## Faits à traiter
-- 20 au 22 novembre; salon Halle aux grains et chapiteau: vendredi 9h-19h, samedi 10h-19h, dimanche 10h-18h; entrée au festival annoncée gratuite par Blois Chambord Tourisme.
-- Maison de la BD, 3 rue des Jacobins: atelier BD avec Ida, fresque super-héros dès 6 ans; illustration fantasy pour ados samedi 21 à 15h; atelier parent-enfant «Immobile et Rebondi» dès 3 ans dimanche 22 à 16h, sur réservation, jauge limitée; aquarelle dès 14 ans dimanche sur inscription.
-- Expositions: «La bande à Tébo !» à la Halle aux grains du 20 au 22 novembre; «Lina et le secret de la passerelle» à la bibliothèque Abbé-Grégoire. Distinguer expositions et ateliers.
-- Cinéma Les Lobis: «Le Mystère Lucy Lost» samedi 21 et dimanche 22 à 14h, conseillé dès 8-9 ans, 5 €; «Le Noël d'Ernest et Célestine» dimanche 22 à 11h, dès 4-5 ans, 5 €. Spectacle «Immobile & Rebondi #1» dès 3 ans à 5 €, vendredi 20 et samedi 21.
-- Certaines pages de l'organisateur contiennent des coquilles de jours (p. ex. «vendredi 22» pour une séance). Vérifier chaque correspondance jour/date avant rédaction et ne pas reprendre ces erreurs.
-- Préciser les modalités des dédicaces et des réservations seulement lorsqu'elles sont attestées.
+Les horaires du salon sont les suivants:
 
-## Sources de départ
-Pages 2026 de l'association bd BOUM/Maison de la BD et office de tourisme, ci-dessus.
+- **Vendredi 20 novembre:** 9 h à 19 h.
+- **Samedi 21 novembre:** 10 h à 19 h.
+- **Dimanche 22 novembre:** 10 h à 18 h.
 
-## Affiliation
-Achat de livres et billetterie propre à certaines séances sans lien partenaire vérifié. Hébergement secondaire naturel à Blois pour les familles venant de loin: piste ibis Blois Centre Château via Booking.com, sans garantir disponibilités ou capacité pour plusieurs enfants.
+Une visite du salon peut être associée à l'exposition **«Captain Biceps, Raowl, Mickey et les Schtroumpfs: la bande à Tébo!»**, visible à la Halle aux grains pendant les trois jours. Pour de jeunes lecteurs, c'est une façon de découvrir plusieurs personnages sans devoir assister à une rencontre programmée.
 
-## Continuations internes
-- Pour organiser d'autres journées ou des transports sans voiture autour de Blois, renvoyer à /articles/voyages/blois-sans-voiture-en-2026-3-jours-pour-chambord-cheverny-et-le-centre-ville/ au lieu de refaire un guide touristique.
-- Ne pas reprendre les conseils généraux de visite de salons déjà abordés dans la page du Salon du livre jeunesse de Montreuil: rester sur les choix propres au programme de Blois.
+## Dès 3 ans: spectacle ou atelier avec un adulte
+
+Le spectacle de danse et dessin **«Immobile & Rebondi #1»** est proposé au **théâtre Nicolas-Peskine**, dès **3 ans**, le **vendredi 20 à 18 h** et le **samedi 21 à 17 h**. Le tarif annoncé est de **5 €**. Ce rendez-vous convient aux enfants attirés par le mouvement et les images plutôt que par la lecture de BD.
+
+Le **dimanche 22 novembre à 16 h**, l'autrice Betty Bone propose à la **Maison de la BD**, 3 rue des Jacobins, un atelier plastique lié au spectacle, **en binôme adulte-enfant dès 3 ans**. Cette fois, **la réservation est obligatoire et les places sont limitées**: consultez les modalités indiquées sur la [page des ateliers de bd BOUM](https://www.maisondelabd.com/jeun-we-2026). Ne confondez pas le billet du spectacle avec l'inscription à l'atelier.
+
+Autre sortie à envisager dès **4–5 ans**: l'avant-première du film **«Le Noël d'Ernest et Célestine»** au **cinéma Les Lobis**, le **dimanche 22 à 11 h**. Durée annoncée: **1 h 11**; séance **Ciné-Marmot à 5 €**.
+
+## Dès 6 ans: fresque de super-héros et découverte du dessin
+
+La **Maison de la BD** accueille le samedi de **10 h à 18 h** et le dimanche de **10 h à 17 h 30** des propositions de création:
+
+- **Fresque super-héroïque avec Solène Appéré**, à partir de **6 ans**, pour participer à une grande réalisation collective.
+- **Atelier bande dessinée avec l'autrice Ida**, pour enfants et adolescents, afin de s'essayer au récit dessiné ou d'approfondir sa pratique.
+
+La page de l'organisateur ne fixe pas, pour ces deux ateliers, un créneau individuel ou une réservation obligatoire: **vérifiez les places et les modalités d'accueil sur place** avant de promettre une participation immédiate à l'enfant.
+
+Le **samedi 21**, des **lectures projetées dès 6 ans** ont aussi lieu à **10 h 30 et 11 h 30**, dans la salle de l'heure du conte de la **bibliothèque Abbé-Grégoire**. Vous pouvez y associer l'exposition jeunesse **«Lina et le secret de la passerelle»**, présentée à la bibliothèque du **17 octobre au 5 décembre 2026**. Elle reste donc visible au-delà du festival.
+
+## Dès 8–9 ans: un film d'animation à 5 €
+
+Le **cinéma Les Lobis**, **12 avenue du Maréchal-Maunoury**, projette **«Le Mystère Lucy Lost»** le **samedi 21 et le dimanche 22 novembre à 14 h**. La séance dure **1 h 25**, est conseillée à partir de **8–9 ans** et coûte **5 €** au tarif Ciné-Marmot.
+
+Si vous prévoyez le film, organisez la visite du salon avant ou après, plutôt que d'ajouter un atelier à horaire fixe qui risque de chevaucher la projection. Les détails des séances sont donnés sur la [présentation cinéma de la Maison de la BD](https://maisondelabd.com/cine-2026).
+
+## Pour les adolescents: fantasy et aquarelle
+
+Deux rendez-vous permettent aux plus grands de créer plutôt que de simplement regarder:
+
+- **Illustration fantasy**, le **samedi 21 novembre à 15 h** à la Maison de la BD, avec Mohamed Reda Diassem, atelier annoncé **pour les ados**.
+- **Aquarelle avec Pauchette**, le **dimanche 22 de 14 h 30 à 16 h 30** au cinéma Les Lobis, **à partir de 14 ans**. **Inscription nécessaire, places limitées**: utiliser la procédure indiquée par l'organisateur.
+
+Pour des adolescents déjà amateurs de BD ou de dessin, ces propositions sont plus ciblées qu'une visite rapide de tous les stands. Si votre groupe compte des enfants d'âges différents, prenez en compte les lieux séparés avant de répartir les activités.
+
+## Une dernière animation musicale gratuite le dimanche
+
+Le **dimanche 22 novembre à 17 h**, le cinéma Les Lobis accueille **«L'univers musical de Hisaishi»**, concert de piano par Aline Pelletier autour de la musique des films du Studio Ghibli. **L'entrée est gratuite, sans réservation, dans la limite des places disponibles**. C'est une option pour terminer le week-end avec des enfants qui apprécient cet univers, sans confondre ce concert avec les projections payantes.
+
+## Venir à Blois et dormir sur place
+
+Le festival se répartit entre la **Halle aux grains**, la **Maison de la BD**, la **bibliothèque Abbé-Grégoire**, **Les Lobis** et le **théâtre Nicolas-Peskine**. Avant de réserver une séance, vérifiez l'adresse de chaque rendez-vous et prévoyez le temps de déplacement entre les lieux. Pour organiser d'autres sorties et trajets dans la région sans voiture, notre [guide de Blois, Chambord et Cheverny sans voiture](/articles/voyages/blois-sans-voiture-en-2026-3-jours-pour-chambord-cheverny-et-le-centre-ville/) détaille les possibilités au-delà du festival.
+
+Pour une famille qui transforme la sortie en week-end, l'[ibis budget Blois Centre sur Booking.com](https://www.booking.com/hotel/fr/ibis-budget-blois-centre.fr.html) présente notamment une **catégorie de chambre familiale**. Vérifiez pour les nuits du **20 et du 21 novembre** la capacité admise avec le nombre et l'âge précis de vos enfants, le prix et les conditions d'annulation: **aucune disponibilité à ces dates n'est garantie**.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
-- /articles/evenements/mon-premier-festival-2026-paris-film-age/ | Mon Premier Festival 2026 à Paris: quel film choisir selon l'âge? | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/festival-du-film-pour-enfants-2026-en-isere-seances-ateliers-et-tarifs/ | Festival du Film pour Enfants 2026 en Isère: séances, ateliers et tarifs | evenements | Vizille, Isère, Auvergne-Rhône-Alpes
-- /articles/vie-pratique/transport-scolaire-remi-41-que-faire-apres-la-rentree/ | Transport scolaire Rémi 41: que faire après la rentrée ? | vie-pratique | Romorantin-Lanthenay, Loir-et-Cher, Centre-Val de Loire
-- /articles/evenements/metamorphoses-2026-au-quai-branly-quels-films-choisir-avec-des-enfants/ | Métamorphoses 2026 au quai Branly: séances gratuites et films par âge | evenements | Paris, Paris, Île-de-France
-- /articles/activites/port-aux-cerises-a-draveil-quelle-activite-choisir-selon-l-age-des-enfants/ | Port aux Cerises à Draveil: quelle activité choisir selon l'âge des enfants? | activites | Draveil, Essonne, Île-de-France
+- /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | Halloween 2026 au Château de Chantilly avec des enfants: ateliers, nocturnes et spectacle | sorties | Chantilly, Oise, Hauts-de-France
 - /articles/evenements/au-creux-de-l-oreille-2026-a-noirlac-quels-spectacles-et-ateliers-choisir-avec-les-enfants/ | Au Creux de l'Oreille 2026 à Noirlac: spectacles et ateliers en famille du 17 au 22 octobre | evenements | Bruère-Allichamps, Cher, Centre-Val de Loire
 - /articles/evenements/salon-du-livre-jeunesse-de-montreuil-2026-billet-gratuit-et-visite-en-famille/ | Salon du livre jeunesse de Montreuil 2026: billets gratuits, horaires et visite en famille | evenements | Montreuil, Seine-Saint-Denis, Île-de-France
-- /articles/sorties/chateau-de-castelnaud-avec-des-enfants-est-ce-une-bonne-sortie-selon-leur-age/ | Château de Castelnaud avec des enfants: est-ce une bonne sortie selon leur âge? | sorties | Castelnaud-la-Chapelle, Dordogne, Nouvelle-Aquitaine
+- /articles/evenements/foire-du-livre-de-brive-2026-en-famille-quel-jour-venir-avec-les-enfants/ | Foire du livre de Brive 2026 en famille: dates, auteurs jeunesse et conseils de visite | evenements | Brive-la-Gaillarde, Corrèze, Nouvelle-Aquitaine
+- /articles/evenements/lire-en-poche-2026-a-gradignan-avec-des-enfants-organiser-une-journee-sans-perdre-les-ateliers/ | Lire en Poche 2026 à Gradignan avec des enfants: organiser une journée sans perdre les ateliers | evenements | Gradignan, Gironde, Nouvelle-Aquitaine
+- /articles/evenements/mon-premier-festival-2026-paris-film-age/ | Mon Premier Festival 2026 à Paris: quel film choisir selon l'âge? | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/partir-en-livre-2026-en-famille/ | Partir en Livre 2026: trouver une animation jeunesse avant le 19 juillet | evenements
 - /articles/voyages/blois-sans-voiture-en-2026-3-jours-pour-chambord-cheverny-et-le-centre-ville/ | Blois sans voiture en 2026: 3 jours pour Chambord, Cheverny et le centre-ville | voyages | Blois, Loir-et-Cher, Centre-Val de Loire
 - /articles/voyages/center-parcs-les-hauts-de-bruyeres-en-famille-quel-cottage-choisir-apres-la-renovation/ | Center Parcs Les Hauts de Bruyères en famille: quel cottage choisir après la rénovation? | voyages | Chaumont-sur-Tharonne, Loir-et-Cher, Centre-Val de Loire
+- /articles/vie-pratique/transport-scolaire-remi-41-que-faire-apres-la-rentree/ | Transport scolaire Rémi 41: que faire après la rentrée ? | vie-pratique | Romorantin-Lanthenay, Loir-et-Cher, Centre-Val de Loire
 - /articles/activites/balade-en-bateau-a-saint-dye-sur-loire-journee-pique-nique-ou-crepuscule/ | Balade en bateau à Saint-Dyé-sur-Loire: journée, pique-nique ou crépuscule ? | activites | Saint-Dyé-sur-Loire, Loir-et-Cher, Centre-Val de Loire
 - /articles/evenements/noel-a-chambord-2026-avec-des-enfants-quand-venir-et-que-prevoir/ | Noël à Chambord 2026 avec des enfants: quand venir et que prévoir | evenements | Chambord, Loir-et-Cher, Centre-Val de Loire
 - /articles/sorties/chateau-de-chambord-en-famille-tarifs-2026-activites-et-conseils-de-visite/ | Château de Chambord en famille: tarifs 2026, activités et conseils de visite | sorties | Chambord, Loir-et-Cher, Centre-Val de Loire
 - /articles/voyages/beauval-a-la-toussaint-2026-billets-duree-de-visite-et-hebergement/ | Beauval à la Toussaint 2026: billets, durée de visite et hébergement | voyages | Saint-Aignan, Loir-et-Cher, Centre-Val de Loire
 - /articles/voyages/zooparc-de-beauval-en-famille-en-2026-un-ou-deux-jours-quel-hotel-et-quel-budget-prevoir/ | ZooParc de Beauval: billets, 1 ou 2 jours, hôtel et budget 2026 | voyages | Saint-Aignan, Loir-et-Cher, Centre-Val de Loire
-- /articles/evenements/foire-du-livre-de-brive-2026-en-famille-quel-jour-venir-avec-les-enfants/ | Foire du livre de Brive 2026 en famille: dates, auteurs jeunesse et conseils de visite | evenements | Brive-la-Gaillarde, Corrèze, Nouvelle-Aquitaine
 - /articles/evenements/halloween-2026-a-la-mer-de-sable-spectacles-parcours-effrayant-et-billets/ | Halloween 2026 à la Mer de Sable: spectacles, frissons et billets en famille | evenements | Ermenonville, Oise, Hauts-de-France
 - /articles/evenements/nausicaa-a-la-toussaint-2026-ateliers-en-journee-ou-nocturne-d-halloween/ | Toussaint 2026 à Nausicaá: ateliers en journée et nocturne d’Halloween | evenements | Boulogne-sur-Mer, Pas-de-Calais, Hauts-de-France
+- /articles/evenements/metamorphoses-2026-au-quai-branly-quels-films-choisir-avec-des-enfants/ | Métamorphoses 2026 au quai Branly: séances gratuites et films par âge | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/festi-momes-2026-a-nantes-quelle-seance-choisir-selon-l-age-des-enfants/ | Festi'Mômes 2026 à Nantes: séances, spectacles et tarifs en famille | evenements | Nantes, Loire-Atlantique, Pays de la Loire
 - /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille | evenements | Lumigny-Nesles-Ormeaux, Seine-et-Marne, Île-de-France
 - /articles/evenements/automnales-d-harcourt-2026-en-famille-jeux-nature-visites-et-tarifs/ | Automnales d'Harcourt 2026: animations, visites et tarifs en famille | evenements | Harcourt, Eure, Normandie
-- /articles/evenements/toussaint-2026-au-musee-des-confluences-a-lyon-spectacles-et-ateliers-par-age/ | Toussaint 2026 au musée des Confluences: cinq rendez-vous pour les enfants | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 
 ### Historique Radar lié
 
@@ -159,10 +197,10 @@ Achat de livres et billetterie propre à certaines séances sans lien partenaire
 - opportunity | /articles/evenements/festival-du-film-pour-enfants-2026-en-isere-seances-ateliers-et-tarifs/ | 2026-10-17T15:41:33.883Z
 - opportunity | /articles/evenements/foire-du-livre-de-brive-2026-en-famille-quel-jour-venir-avec-les-enfants/ | 2026-10-18T16:46:58.413Z
 - opportunity | /articles/evenements/halloween-2026-a-la-mer-de-sable-spectacles-parcours-effrayant-et-billets/ | 2026-10-18T12:12:00.071Z
+- opportunity | /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | 2026-10-08T02:18:12.427Z
+- refresh | /articles/evenements/lire-en-poche-2026-a-gradignan-avec-des-enfants-organiser-une-journee-sans-perdre-les-ateliers/ | 2026-10-06T12:23:52.449Z
 - opportunity | /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | 2026-10-16T17:46:42.470Z
 - opportunity | /articles/evenements/metamorphoses-2026-au-quai-branly-quels-films-choisir-avec-des-enfants/ | 2026-10-18T04:19:39.869Z
-- opportunity | /articles/evenements/mon-premier-festival-2026-paris-film-age/ | 2026-10-03T06:21:55.257Z
-- opportunity | /articles/evenements/nausicaa-a-la-toussaint-2026-ateliers-en-journee-ou-nocturne-d-halloween/ | 2026-10-18T08:44:05.495Z
 
 ### Phases 2 et 3
 
