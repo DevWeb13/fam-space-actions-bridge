@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261018-2111-titre-de-travail-aquarium-de-lyon-en-famille-nouveautes-ocean-360-tari",
+  "lastProcessedCommit": "30f8567ae80bd575dda4aa7c474b570dd128d809"
 }
