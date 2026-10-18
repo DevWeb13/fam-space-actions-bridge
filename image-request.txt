@@ -193,3 +193,4 @@ automation/image-20261018-1f492be-cars-lio-herault-0051|8a31d0d3b0bb011b872473d8
 automation/image-20261018-600c5b2-metamorphoses-branly-0644|54b7c62f0e2db63894aac9364b2f3feb4f7072d7
 automation/image-20261018-600c5b2-metamorphoses-branly-0644|f3bb19953017066502b8088bb0d931a8344d4872
 automation/image-20261018-eb0b7bf-bouges-nausicaa-strasbourg-1248|cbba5db797071cbd41a6b8354c60792554e484b8
+automation/image-20261018-eb0b7bf-bouges-nausicaa-strasbourg-1248|2c20095387c1a9a64b4efb5ac8056acb0efa3c94
