@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Halloween 2026 à la Mer de Sable: spectacles, parcours effrayant et billets"
-subtitle: "À Ermenonville jusqu'au 1er novembre: Chocottes ou Maxi Frousse, suppléments et tarifs pour une famille"
-summary: "L'Épouvantable Mer de Sable 2026: horaires des deux nouveaux spectacles, parcours Wild West Scream payant et billets adaptés aux familles."
+title: "Halloween 2026 à la Mer de Sable: spectacles, frissons et billets en famille"
+subtitle: "À Ermenonville jusqu'au 1er novembre: horaires, parcours à 2 € et prix selon la taille de la famille"
+summary: Comment choisir les spectacles, éviter les frayeurs inutiles et comparer les billets Citrouille, Tribu et Happy Hour à la Mer de Sable pour Halloween 2026.
 category: evenements
 location:
   city: Ermenonville
@@ -68,21 +73,29 @@ location:
   region: Hauts-de-France
 keywords:
   - Halloween Mer de Sable 2026
-  - Épouvantable Mer de Sable Ermenonville
-  - Wild West Scream supplément
-  - billet Citrouille billet Tribu Mer de Sable
+  - Épouvantable Mer de Sable
+  - Wild West Scream horaires tarifs
+  - billet Citrouille billet Tribu
 sources:
-  - title: La Mer de Sable - Épouvantable Mer de Sable 2026
+  - title: La Mer de Sable - Épouvantable Mer de Sable
     url: https://www.merdesable.fr/news-detail/actualite-epouvantable-mer-de-sable-1
-  - title: La Mer de Sable - Spectacles Halloween et parcours Wild West Scream
+  - title: La Mer de Sable - Spectacles Halloween
     url: https://www.merdesable.fr/le-parc/nos-spectacles
-  - title: La Mer de Sable - Attractions transformées pour Halloween
+  - title: La Mer de Sable - Attractions revisitées
     url: https://www.merdesable.fr/le-parc/spectacles-attractions
-  - title: La Mer de Sable - Billet Citrouille, Tribu et tarifs sur place
+  - title: La Mer de Sable - Tarifs et billets
     url: https://www.merdesable.fr/tarifs-reservations
+  - title: La Mer de Sable - Calendrier
+    url: https://www.merdesable.fr/ma-visite/calendrier-et-horaires
+  - title: La Mer de Sable - Conseils et pique-nique
+    url: https://www.merdesable.fr/astuces-de-visite
+  - title: La Mer de Sable - Services
+    url: https://www.merdesable.fr/infos-pratiques/services
+  - title: La Mer de Sable - Accès
+    url: https://www.merdesable.fr/infos-pratiques/venir-au-parc
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: halloween-2026-a-la-mer-de-sable-spectacles-parcours-effrayant-et-billets
   decision: Décider si l'Épouvantable Mer de Sable convient à la sensibilité des enfants, prévoir les spectacles et le parcours facultatif réellement adaptés, puis choisir le billet le plus économique selon la taille de la famille et la durée de visite.
@@ -92,42 +105,69 @@ radar:
     dataThrough: 2026-10-15
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « La Mer de Sable - Épouvantable Mer de Sable 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-11-01
 ---
 
-## Mission retenue
-Créer une page événementielle sur l'Épouvantable Mer de Sable, édition 2026, à Ermenonville, du 3 octobre au 1er novembre. Elle doit aider à choisir le niveau de frisson et à organiser la journée, plutôt que refaire un guide permanent du parc.
+Du **3 octobre au 1er novembre 2026**, la Mer de Sable, à Ermenonville (Oise), propose son Halloween baptisé **Épouvantable Mer de Sable**. Deux spectacles inédits sont au programme, ainsi qu'un parcours immersif payant. Pour venir avec des enfants, le plus important est de distinguer les frissons accessibles en famille des expériences plus inquiétantes, puis de choisir le billet en fonction de l'heure d'arrivée.
 
-## Pourquoi cette mission
-Le programme officiel actuel décrit deux spectacles nouveaux et un parcours immersif payant que les parents doivent distinguer avant de venir. La saison est déjà ouverte et s'achève le 1er novembre. Le premier refresh GSC, « Carte Tattoo Isère », affiche 125 impressions lors de sa meilleure semaine contre 10 récemment, mais son signal de classement reste incertain et l'article décrit déjà montants, éligibilité et échéances sans lacune concrète vérifiée. L'expansion depuis la page forte « Halloween au Château de Chantilly » répéterait ses animations, âges, suppléments et billets déjà bien détaillés.
+## Chocottes ou Maxi Frousse: quelle ambiance pour les enfants?
 
-## Décision du lecteur
-Choisir une visite sereine ou plus effrayante selon les enfants, intégrer les deux spectacles sans rater les horaires, distinguer l'activité à supplément, et payer le billet adapté au nombre de visiteurs et à l'heure d'arrivée.
+«Chocottes» et «Maxi Frousse» sont les mots employés par le parc pour évoquer différents niveaux de frisson, **pas deux catégories de billets ni des âges officiellement garantis**.
 
-## Faits à traiter
-La Malédiction de West City: 13 h à West City, 20 minutes, cascades. La Dernière Chance: 17 h 15 au Corral, 20 minutes, acrobaties équestres et effets enflammés. Wild West Scream: parcours de 20 minutes à l'ancienne gare, créneaux 10 h 45-12 h 45 et 14 h 15-17 h 15, supplément de 2 € par personne payé uniquement par carte bancaire. Ne pas inventer d'âge minimum pour le parcours: présenter loyalement son intensité et les alternatives moins effrayantes. Attractions Halloween et personnages ambulants: niveaux « Chocottes » et « Maxi Frousse ». Vérifier calendrier d'ouverture et changements d'horaires. Billet Citrouille web dès 26 € enfant (90 cm-11 ans) et 28 € adulte (12 ans et plus), tarif soumis à date et disponibilité; billet Tribu à partir de cinq personnes, dès 26 € par personne pour 5 à 7 billets et 25 € pour 8 à 15; demi-journée aux caisses dès 14 h 30 à 20 €; entrée gratuite sous 90 cm; vérifier que le créneau réduit permet bien le spectacle de 17 h 15.
+Pour commencer doucement, privilégiez les attractions habituelles avec leurs décors d'Halloween. Le parc annonce notamment **Buffalo'Ween, Monster Mountain, Mississi'Trouille, La Rivière des Sorcières, Shadow Express et Le Vol des Fantômes**. Même dans ces espaces, des personnages costumés et des échassiers peuvent surprendre les visiteurs.
 
-## Sources de départ
-Quatre pages officielles du parc listées dans le frontmatter. Vérifier sur le site organisateur les éventuelles variations du programme et les restrictions d'attractions.
+Avec un enfant sensible à l'obscurité ou aux personnages effrayants, mieux vaut éviter de programmer d'emblée le parcours Wild West Scream. Les spectacles comportent eux aussi des effets impressionnants. Vérifiez les **restrictions de taille propres à chaque attraction** sur les [fiches du parc](https://www.merdesable.fr/le-parc/spectacles-attractions), sans déduire l'accès aux manèges de la gratuité d'entrée des tout-petits.
 
-## Affiliation
-Pas de billet d'entrée équivalent vérifié chez les partenaires; ne pas fabriquer d'offre. Une nuit à Ermenonville peut être pratique si le séjour combine le parc et d'autres visites de l'Oise: Domaine de La Charmille sur Booking.com, sans promettre de tarif, de capacité ou de disponibilité.
+## Deux spectacles: 13 h ou 17 h 15?
 
-## Continuations internes
-Le guide « Halloween au Château de Chantilly » concerne les activités propres à ce château, ne pas recopier sa programmation. Même distinction pour « Toussaint au Château de Pierrefonds ». L'article doit rester centré sur La Mer de Sable et ses spectacles, parcours, intensités et choix de billets.
+- **La Malédiction de West City**, à **13 h à West City**: environ **20 minutes** de cascades, combats et humour autour de l'amulette «El Diablo», que Black Jack tente de voler.
+- **La Dernière Chance**, à **17 h 15 au Corral**: environ **20 minutes** d'acrobaties équestres, de combats et de tableaux enflammés. Les effets de feu peuvent impressionner les jeunes spectateurs.
+
+Les horaires sont publiés dans le [programme des spectacles](https://www.merdesable.fr/le-parc/nos-spectacles). Arriver l'après-midi fait manquer le premier spectacle, mais peut permettre de voir le second. Contrôlez les éventuels ajustements du jour avant de construire votre parcours.
+
+## Wild West Scream: un supplément facultatif de 2 €
+
+Ce parcours de **20 minutes**, installé **à l'ancienne gare**, plonge les visiteurs dans un cabinet de curiosités peuplé de créatures étranges. Les horaires annoncés sont **10 h 45-12 h 45** et **14 h 15-17 h 15**.
+
+L'accès coûte **2 € par personne en plus de l'entrée**, payables **uniquement par carte bancaire**. La page officielle ne fixe pas d'âge minimal général: ne supposez donc ni que l'activité est adaptée aux petits ni qu'elle leur est interdite. Demandez conseil au personnel selon la sensibilité de votre enfant. On peut profiter de l'événement sans ce supplément.
+
+## Billet Citrouille, Tribu ou Happy Hour: combien prévoir?
+
+Les prix affichés sont des **tarifs de départ** pour les billets datés en ligne, soumis aux disponibilités:
+
+- **Citrouille**: dès **28 € à partir de 12 ans** et **26 € de 90 cm à 11 ans**. Réservation en ligne **au plus tard la veille** de la date choisie.
+- **Tribu**: dès **26 € par billet pour 5 à 7 billets achetés**, ou **25 € pour 8 à 15 billets**, avec la même règle de réservation préalable.
+- **Aux caisses**: **34,90 € dès 12 ans**, **28,90 € de 90 cm à 11 ans**. **Gratuit en dessous de 90 cm**.
+- **Happy Hour aux caisses**: **20 € par personne**, entrée **à partir de 14 h 30**. Cette formule ne permet pas de voir le spectacle de 13 h, mais laisse la possibilité d'assister à celui de 17 h 15.
+
+Pour **deux adultes et deux enfants payants**, le Citrouille revient **au minimum à 108 €** pour la journée, contre **80 €** en Happy Hour, soit 28 € de différence au tarif d'appel. Si cinq personnes ont besoin d'un billet, la formule Tribu commence à **130 €**: comparez-la avec les tarifs Citrouille réellement proposés pour votre date. Un enfant de moins de 90 cm, qui entre gratuitement, ne constitue pas un billet acheté pour atteindre le seuil Tribu.
+
+Les tarifs spéciaux pour certaines situations, notamment handicap et famille nombreuse, sont proposés aux caisses avec justificatif. Ajoutez au budget **2 € par participant** si vous choisissez Wild West Scream. Les conditions complètes figurent sur la page officielle des tarifs, référencée parmi les sources de cet article.
+
+## Accès, pique-nique et services bébé
+
+Le parc se trouve **route nationale 330, 60950 Ermenonville**, avec **parking gratuit**. Consultez le [calendrier officiel](https://www.merdesable.fr/ma-visite/calendrier-et-horaires) pour confirmer le jour et les heures d'ouverture. Les files d'attente des attractions ferment **30 minutes avant le parc**.
+
+Un **espace couvert pour pique-niquer** est disponible, ainsi que des tables près de Cyclo'Vent et sur le parking. Les **glacières et ustensiles métalliques sont interdits dans le parc**, mais un sac isotherme est autorisé. Un **tampon à demander à l'entrée** permet de retourner à la voiture et de revenir dans la journée. Le **relais bébé** près de l'espace pique-nique dispose de tables à langer et de micro-ondes. Les visiteurs en situation de handicap peuvent demander à l'accueil les conditions d'accès facilité et les justificatifs nécessaires.
+
+## Dormir près de la Mer de Sable ou varier les sorties
+
+Pour les familles qui viennent de loin, le [Domaine de La Charmille à Ermenonville sur Booking.com](https://www.booking.com/hotel/fr/la-charmille-ermenonville.fr.html) est annoncé à environ **4,2 km du parc**. Vérifiez les logements réellement disponibles pour votre nombre de voyageurs, les couchages, le tarif et les conditions d'annulation.
+
+Pour une autre ambiance d'Halloween dans l'Oise, notre guide du [Château de Chantilly](/articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/) détaille ses ateliers et nocturnes. Pour comparer une grande sortie de parc et ses billets, consultez aussi [Peur sur le Parc 2026 au Parc Astérix](/articles/voyages/peur-sur-le-parc-2026-en-famille-journee-nocturne-billets-et-hebergement/).
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
 - /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | Halloween 2026 au Château de Chantilly avec des enfants: ateliers, nocturnes et spectacle | sorties | Chantilly, Oise, Hauts-de-France
+- /articles/sorties/chateau-de-compiegne-en-famille-que-visiter-et-comment-organiser-la-journee/ | Château de Compiègne en famille: que visiter et comment organiser la journée? | sorties | Compiègne, Oise, Hauts-de-France
 - /articles/voyages/peur-sur-le-parc-2026-en-famille-journee-nocturne-billets-et-hebergement/ | Peur sur le Parc 2026 en famille: journée, nocturne, billets et hébergement | voyages | Plailly, Oise, Hauts-de-France
 - /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | Pierrefonds à la Toussaint 2026: atelier lanterne et soirée d'Halloween | evenements | Pierrefonds, Oise, Hauts-de-France
 - /articles/evenements/halloween-2026-au-chateau-de-couches-atelier-citrouille-ou-jeu-geant-en-famille/ | Halloween 2026 au château de Couches: atelier citrouille et jeu Mystères & Sortilèges | evenements | Couches, Saône-et-Loire, Bourgogne-Franche-Comté
-- /articles/activites/musee-de-la-biere-a-stenay-en-famille-parcours-enfants-et-exposition-2026/ | Musée de la Bière à Stenay en famille: parcours enfants et exposition 2026 | activites | Stenay, Meuse, Grand Est
-- /articles/evenements/arbora-lumina-a-harcourt-ce-qu-il-faut-prevoir-avec-des-enfants/ | Arbora Lumina 2026-2027 à Harcourt en famille: billets, tarifs et parcours | evenements | Harcourt, Eure, Normandie
-- /articles/sorties/chateau-de-vincennes-en-famille-tarifs-parcours-et-conseils-de-visite/ | Château de Vincennes en famille: tarifs, parcours et conseils de visite | sorties | Vincennes, Val-de-Marne, Île-de-France
-- /articles/sorties/cite-des-climats-a-beaune-en-famille-tarifs-parcours-enfants-et-billets/ | Cité des Climats à Beaune en famille: tarifs, parcours enfants et billets | sorties | Beaune, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/sorties/chateau-de-compiegne-en-famille-que-visiter-et-comment-organiser-la-journee/ | Château de Compiègne en famille: que visiter et comment organiser la journée? | sorties | Compiègne, Oise, Hauts-de-France
+- /articles/evenements/festi-momes-2026-a-nantes-quelle-seance-choisir-selon-l-age-des-enfants/ | Festi'Mômes 2026 à Nantes: séances, spectacles et tarifs en famille | evenements | Nantes, Loire-Atlantique, Pays de la Loire
+- /articles/activites/parc-de-courzieu-en-famille-tarifs-horaires-et-conseils-pour-la-visite/ | Parc de Courzieu en famille: tarifs, horaires et conseils pour la visite | activites | Courzieu, Rhône, Auvergne-Rhône-Alpes
+- /articles/sorties/musee-de-la-bd-a-angouleme-en-famille-tarifs-horaires-et-conseils-de-visite/ | Musée de la BD à Angoulême en famille: tarifs, horaires et conseils de visite | sorties | Angoulême, Charente, Nouvelle-Aquitaine
 - /articles/bons-plans/pass-sports-citoyen-dans-l-oise-15-a-cumuler-avec-le-pass-sport-en-2026/ | Pass Sports Citoyen dans l'Oise: 15 € à cumuler avec le pass Sport en 2026 | bons-plans | Beauvais, Oise, Hauts-de-France
 - /articles/parentalite/ateliers-parents-malins-dans-l-oise-quels-rendez-vous-gratuits-choisir-avant-fin-2026/ | Ateliers Parents Malins dans l'Oise: quels rendez-vous gratuits choisir avant fin 2026 ? | parentalite | Plusieurs communes, Oise, Hauts-de-France
 - /articles/cuisine/atelier-de-creme-chantilly-avec-des-enfants-a-partir-de-quel-age-et-comment-reserver/ | Atelier de crème Chantilly avec des enfants: à partir de quel âge et comment réserver | cuisine | Chantilly, Oise, Hauts-de-France
@@ -136,15 +176,15 @@ Le guide « Halloween au Château de Chantilly » concerne les activités propre
 - /articles/voyages/parc-asterix-en-famille-en-2026-une-ou-deux-journees-quel-hotel-et-quel-budget-prevoir/ | Parc Astérix en famille en 2026: une ou deux journées, quel hôtel et quel budget prévoir | voyages | Plailly, Oise, Hauts-de-France
 - /articles/evenements/metamorphoses-2026-au-quai-branly-quels-films-choisir-avec-des-enfants/ | Métamorphoses 2026 au quai Branly: séances gratuites et films par âge | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/festival-du-film-pour-enfants-2026-en-isere-seances-ateliers-et-tarifs/ | Festival du Film pour Enfants 2026 en Isère: séances, ateliers et tarifs | evenements | Vizille, Isère, Auvergne-Rhône-Alpes
-- /articles/evenements/festi-momes-2026-a-nantes-quelle-seance-choisir-selon-l-age-des-enfants/ | Festi'Mômes 2026 à Nantes: séances, spectacles et tarifs en famille | evenements | Nantes, Loire-Atlantique, Pays de la Loire
 - /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille | evenements | Lumigny-Nesles-Ormeaux, Seine-et-Marne, Île-de-France
 - /articles/evenements/automnales-d-harcourt-2026-en-famille-jeux-nature-visites-et-tarifs/ | Automnales d'Harcourt 2026: animations, visites et tarifs en famille | evenements | Harcourt, Eure, Normandie
 - /articles/evenements/toussaint-2026-au-musee-des-confluences-a-lyon-spectacles-et-ateliers-par-age/ | Toussaint 2026 au musée des Confluences: cinq rendez-vous pour les enfants | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/evenements/toussaint-2026-au-seaquarium-du-grau-du-roi-quel-jeu-choisir/ | Toussaint 2026 au Seaquarium: dates des jeux, âges et billets en famille | evenements | Le Grau-du-Roi, Gard, Occitanie
+- /articles/evenements/salon-du-livre-jeunesse-de-montreuil-2026-billet-gratuit-et-visite-en-famille/ | Salon du livre jeunesse de Montreuil 2026: billets gratuits, horaires et visite en famille | evenements | Montreuil, Seine-Saint-Denis, Île-de-France
+- /articles/evenements/vacances-royales-2026-a-versailles-animations-napoleon-dates-et-billets-en-famille/ | Vacances royales 2026 à Versailles: animations Napoléon, dates et billets | evenements | Versailles, Yvelines, Île-de-France
 
 ### Historique Radar lié
 
-- refresh | /articles/evenements/arbora-lumina-a-harcourt-ce-qu-il-faut-prevoir-avec-des-enfants/ | 2026-10-16T13:36:28.294Z
 - opportunity | /articles/evenements/automnales-d-harcourt-2026-en-famille-jeux-nature-visites-et-tarifs/ | 2026-10-16T06:56:21.314Z
 - opportunity | /articles/evenements/festi-momes-2026-a-nantes-quelle-seance-choisir-selon-l-age-des-enfants/ | 2026-10-17T11:48:00.184Z
 - opportunity | /articles/evenements/festival-du-film-pour-enfants-2026-en-isere-seances-ateliers-et-tarifs/ | 2026-10-17T15:41:33.883Z
@@ -152,6 +192,7 @@ Le guide « Halloween au Château de Chantilly » concerne les activités propre
 - opportunity | /articles/evenements/halloween-2026-au-chateau-de-couches-atelier-citrouille-ou-jeu-geant-en-famille/ | 2026-10-12T14:00:32.202Z
 - opportunity | /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | 2026-10-16T17:46:42.470Z
 - opportunity | /articles/evenements/metamorphoses-2026-au-quai-branly-quels-films-choisir-avec-des-enfants/ | 2026-10-18T04:19:39.869Z
+- opportunity | /articles/evenements/salon-du-livre-jeunesse-de-montreuil-2026-billet-gratuit-et-visite-en-famille/ | 2026-10-15T05:30:56.094Z
 - opportunity | /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | 2026-10-11T19:35:57.703Z
 - opportunity | /articles/evenements/toussaint-2026-au-musee-des-confluences-a-lyon-spectacles-et-ateliers-par-age/ | 2026-10-15T17:42:32.693Z
 
