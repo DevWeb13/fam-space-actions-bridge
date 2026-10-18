@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,39 +60,38 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Nausicaá à la Toussaint 2026: ateliers en journée ou nocturne d’Halloween?"
-subtitle: "Du 17 octobre au 1er novembre à Boulogne-sur-Mer: activités incluses, billets et soirée du 31 octobre"
-summary: "Animations familiales de Toussaint à Nausicaá en 2026: dates, ateliers inclus, réduction famille et visite nocturne payante d’Halloween."
+title: "Toussaint 2026 à Nausicaá: ateliers en journée et nocturne d’Halloween"
+subtitle: "Du 17 octobre au 1er novembre à Boulogne-sur-Mer: horaires des activités, offre famille et billets du 31 octobre"
+summary: "À Nausicaá, les ateliers de Toussaint sont inclus dans la visite classique, mais Halloween se réserve séparément: dates, prix et horaires pour les familles."
 category: evenements
 location:
   city: Boulogne-sur-Mer
   department: Pas-de-Calais
   region: Hauts-de-France
 keywords:
-  - Nausicaá Toussaint 2026 activités famille
-  - Nausicaá Halloween nocturne 31 octobre 2026
-  - Blue Academy Nausicaá ateliers gratuits billet
-  - Nausicaá billets famille vacances 2026
+  - Nausicaá Toussaint 2026
+  - animations Nausicaá enfants octobre 2026
+  - soirée Halloween Nausicaá 31 octobre
+  - offre famille Nausicaá Toussaint
 sources:
-  - title: Nausicaá - Programme de la Toussaint 2026 et soirée du 31 octobre
+  - title: Nausicaá - Programme des vacances de la Toussaint 2026
     url: https://www.nausicaa.fr/fr/ma-visite/vos-vacances-de-la-toussaint-nausicaa
-  - title: Nausicaá - Tarifs des billets et offre famille saisonnière
+  - title: Nausicaá - Soirée nocturne théâtralisée du 31 octobre 2026
+    url: https://www.nausicaa.fr/fr/ma-visite/conferences-et-evenements/soiree-nocturne-theatralisee
+  - title: Nausicaá - Offre famille et conditions
+    url: https://www.nausicaa.fr/fr/les-offres-speciales
+  - title: Nausicaá - Tarifs des billets classiques
     url: https://www.nausicaa.fr/fr/ma-visite/tarifs
-  - title: Nausicaá - Communiqué officiel sur les vacances de Toussaint 2026
+  - title: Nausicaá - Événements et billetterie de la nocturne
+    url: https://www.nausicaa.fr/fr/billetterie/evenements
+  - title: Nausicaá - Communiqué sur la Toussaint 2026
     url: https://www.nausicaa.fr/fr/espace-presse/vacances-de-la-toussaint-nausicaa-invite-les-familles-entre-decouvertes-creativite-et-frissons
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: nausicaa-a-la-toussaint-2026-ateliers-en-journee-ou-nocturne-d-halloween
   decision: Choisir la date et la formule adaptées à sa famille entre une visite de jour avec animations incluses et la nocturne distincte du 31 octobre, puis réserver les billets adéquats au meilleur tarif réellement accessible.
@@ -90,39 +101,69 @@ radar:
     dataThrough: 2026-10-15
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Nausicaá - Programme de la Toussaint 2026 et soirée du 31 octobre »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-11-01
 ---
 
-## Mission retenue
-Présenter le programme temporaire de Toussaint 2026 à Nausicaá, avec une distinction nette entre la visite en journée et l'événement d'Halloween en soirée le 31 octobre.
+Pendant les vacances de la Toussaint, du **17 octobre au 1er novembre 2026**, Nausicaá propose à Boulogne-sur-Mer des ateliers créatifs, des contes et des jeux autour du monde marin. Ces rendez-vous sont **inclus dans la visite habituelle**. Le **samedi 31 octobre**, en revanche, la visite théâtralisée d'Halloween est une **soirée distincte, de 20 h à 23 h, avec son propre billet**. C'est la différence à connaître avant de réserver.
 
-## Pourquoi cette mission
-Le programme officiel se déroule déjà du 17 octobre au 1er novembre et permet de choisir immédiatement entre des animations incluses et une soirée à billet spécifique. Le refresh Carte Tattoo Isère (125 impressions au pic contre 10 récemment) a un signal GSC incertain: l'article actuel expose déjà les montants, dates, éligibilité et démarches, sans lacune décisive vérifiée. Une expansion des activités Halloween à partir de la page forte du Château de Chantilly dupliquerait ses ateliers, tarifs et nocturnes déjà détaillés.
+## Quelle journée choisir pour profiter des animations?
 
-## Décision du lecteur
-Savoir quelle date choisir, quelles activités sont comprises dans la visite classique, si la nocturne convient à ses enfants et quel billet réserver sans payer deux fois ou confondre les offres.
+Les activités de la programmation de Toussaint ne sont pas toutes proposées aux mêmes dates.
 
-## Faits à traiter
-Du 17 octobre au 1er novembre: atelier chapeau baudroie en accès libre de 14 h à 17 h; contes les 21 et 28 octobre à 14 h 30 (vérifier modalités); maquillage les 28 et 30 octobre de 11 h à 16 h 30; jeux de société les week-ends. Nocturne théâtralisée distincte le 31 octobre dès 20 h: 23,80 € adulte de plus de 12 ans, 16,90 € enfant de 3 à 12 ans, moins de 3 ans gratuit; option repas de 19 h à 20 h à 15,90 €. Contrôler l'accès et les conditions de la soirée, et les âges effectivement recommandés plutôt que d'en inventer. Visite classique: offre famille web de -15 % dès quatre billets dont un adulte pendant les vacances, tarifs variables selon saison et composition.
+- **Tous les jours du 17 octobre au 1er novembre, de 14 h à 17 h**: atelier créatif à la **Blue Academy** pour fabriquer un chapeau inspiré de la baudroie, le poisson des profondeurs. Le programme annonce un **accès libre** à l'atelier pendant ces horaires, dans le cadre de la visite.
+- **Mercredi 21 et mercredi 28 octobre à 14 h 30**: *Contes de Léon et Augustine* à la **Médiathèque de l'Océan**, avec lectures, activités autour des histoires, dédicace et goûter. Le programme indique le contact **documentation@nausicaa.fr**; renseignez-vous sur les modalités de participation avant de compter sur une place.
+- **Mercredi 28 et vendredi 30 octobre, de 11 h à 16 h 30**: maquillage sur le thème de l'Océan proposé par les élèves du lycée Saint-Pierre de Calais. Ces deux dates sont les plus riches pour une famille qui souhaite combiner plusieurs animations.
+- **Samedis et dimanches des vacances à 15 h 30**: jeux de société en famille à la Blue Academy.
+- **À 16 h, au forum des Rivages et des Hommes**: quiz sur les animaux marins étonnants, dont le requin-lutin. Vérifiez le programme affiché sur place pour le jour de votre visite.
 
-## Sources de départ
-Pages officielles Nausicaá listées dans le frontmatter. Les sites partenaires ne servent qu'à vérifier les offres, pas les faits éditoriaux.
+Nausicaá ne publie pas d'âge minimal unique pour l'ensemble de ces activités. Avec un petit enfant, choisissez en fonction de son intérêt pour l'atelier et de sa capacité à suivre une lecture; ne prenez pas les horaires des contes pour un engagement de disponibilité sans confirmation.
 
-## Affiliation
-Tiqets uniquement pour la visite classique si avantageux et disponible; ne pas l'assimiler à la nocturne. Hébergement optionnel Opal'Inn via Booking.com pour les familles qui prolongent le séjour, sous réserve de capacité et de disponibilité.
+## Le 31 octobre: une soirée spéciale, pas une animation gratuite
 
-## Continuations internes
-Relier au guide « Nausicaá à 8 € / 6 €: Dimanches Boulonnais » pour les résidents éligibles, sans recopier ses justificatifs et dates; ces journées promotionnelles excluent les vacances scolaires. Pour les questions générales de durée, poussettes et comparaison de la sortie, renvoyer à « Beauval ou Nausicaá en famille ». Ne pas répéter le programme d'autres événements Halloween ou les guides généraux du Pas-de-Calais.
+De **20 h à 23 h**, Nausicaá organise une **visite nocturne théâtralisée**. Des comédiens incarnent notamment un mérou géant, une anguille-loup ou un concombre de mer, au fil d'un parcours libre. Une carte est remise à l'entrée et les déguisements sont encouragés.
+
+L'établissement présente cette soirée comme familiale, sans publier de restriction d'âge particulière. Cela ne garantit pas qu'un jeune enfant appréciera le noir, les personnages costumés ou l'heure tardive. Pour une première sortie avec un enfant sensible à l'ambiance d'Halloween, les ateliers de jour restent une option moins engageante.
+
+Le **billet spécifique du 31 octobre** coûte:
+
+- **23,80 €** à partir de 13 ans;
+- **16,90 €** de 3 à 12 ans inclus;
+- **0 €** avant 3 ans.
+
+Pour **deux adultes et deux enfants de 3 à 12 ans**, le coût annoncé est donc de **81,40 €**, sans restauration ni éventuelle réduction locale. Les habitants de la Communauté d'Agglomération du Boulonnais (CAB) peuvent se renseigner sur un tarif préférentiel **aux caisses**: ne le confondez pas avec l'offre habituelle des Dimanches Boulonnais.
+
+Un repas facultatif est proposé au **restaurant Le Calypso de 19 h à 20 h**, avant la visite, pour **15,90 € par personne** (pizza thématique, dessert et boisson). La billetterie présente aussi une formule associant la nocturne et le repas; choisissez cette formule uniquement si vous souhaitez réellement dîner sur place.
+
+**Conditions d'annulation à vérifier avant paiement**: la fiche de la soirée prévoit un remboursement de 50 % du 11 au 19 octobre, puis aucun remboursement à compter du **20 octobre 2026**, sauf motif justifié et documenté. Le programme mentionne notamment maladie, hospitalisation et événement grave. Réservez les places de la soirée et, si besoin, le repas en tenant compte de cette règle.
+
+## Quel billet choisir pour la visite classique?
+
+Pour la journée, Nausicaá annonce les tarifs individuels suivants selon la saison: **30 € ou 31,50 € pour un adulte** et **23 € ou 24,50 € pour un enfant de 3 à 12 ans**. L'entrée est gratuite avant 3 ans sur justificatif éventuel. Le tarif réellement applicable dépend de la date sélectionnée.
+
+Du **17 octobre au 1er novembre 2026**, une **offre famille web de 15 %** est annoncée pour l'achat d'**au moins quatre billets dont au moins un billet adulte**. Elle est **non cumulable, non échangeable et non remboursable**. Comparez le total réel dans la billetterie avant de payer, surtout si vous voyagez à trois ou avec un enfant de moins de 3 ans: la condition de quatre billets achetés doit bien être remplie.
+
+Pour une visite classique, vous pouvez également consulter le [billet Nausicaá proposé par Tiqets](https://www.tiqets.com/fr/activites-attractions-boulogne-sur-mer-c67098/billets-pour-aquarium-nausicaa-billet-coupe-file-p979494/). Vérifiez son prix final, ses disponibilités et les conditions de remboursement face à l'offre famille. **Ce billet n'est pas un billet pour la nocturne du 31 octobre**: aucune formule partenaire équivalente n'a été identifiée pour cet événement spécial.
+
+## Et pour les habitants du Boulonnais?
+
+Les **Dimanches Boulonnais**, à **8 € par adulte et 6 € par enfant** pour les résidents éligibles, obéissent à un calendrier et à des justificatifs différents. Cette offre n'est **pas proposée pendant les vacances scolaires**: elle ne doit pas être utilisée pour calculer le prix de votre visite de Toussaint. Retrouvez les prochaines dates et les conditions exactes dans notre guide [des Dimanches Boulonnais à Nausicaá](/articles/bons-plans/nausicaa-a-8-pour-les-adultes-et-6-pour-les-enfants-qui-peut-profiter-des-dimanches-boulonnais/).
+
+Si vous cherchez plutôt une comparaison sur le rythme de visite, l'accès en poussette ou la durée d'une sortie au centre marin, notre article [Beauval ou Nausicaá en famille](/articles/sorties/beauval-ou-nausicaa-en-famille-quelle-grande-sortie-choisir-en-2026/) répond à ces questions générales.
+
+## Prévoir une nuit à Boulogne-sur-Mer
+
+Pour les familles venant de loin, notamment si la soirée se termine à **23 h**, l'[hôtel Opal'Inn sur Booking.com](https://www.booking.com/hotel/fr/de-la-plage-boulogne-s-mer.fr.html) est situé près du front de mer, à environ **quatre minutes à pied de Nausicaá**. L'établissement annonce des chambres familiales pouvant accueillir jusqu'à **quatre personnes**. Vérifiez la capacité exacte, les couchages disponibles et les conditions d'annulation aux dates souhaitées avant de réserver.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
 - /articles/evenements/halloween-2026-a-la-tour-de-l-horloge-de-guines-musee-hante-contes-et-nocturne/ | Halloween 2026 à la Tour de l'Horloge de Guînes: visites, contes et nocturne | evenements | Guînes, Pas-de-Calais, Hauts-de-France
-- /articles/sorties/vacances-de-la-toussaint-2026-a-la-cite-des-sciences-quels-ateliers-choisir-selon-l-age/ | Vacances de la Toussaint 2026 à la Cité des sciences: les ateliers numériques gratuits avec des enfants | sorties | Paris, Paris, Île-de-France
 - /articles/bons-plans/nausicaa-a-8-pour-les-adultes-et-6-pour-les-enfants-qui-peut-profiter-des-dimanches-boulonnais/ | Nausicaá à 8 € pour les adultes et 6 € pour les enfants: qui peut profiter des Dimanches Boulonnais? | bons-plans | Boulogne-sur-Mer, Pas-de-Calais, Hauts-de-France
+- /articles/activites/cite-du-chocolat-valrhona-a-la-toussaint-2026-quel-atelier-choisir-selon-l-age/ | Cité du Chocolat Valrhona à la Toussaint 2026: animations et ateliers avec des enfants | activites | Tain-l'Hermitage, Drôme, Auvergne-Rhône-Alpes
+- /articles/evenements/fete-de-l-automne-2026-a-terra-botanica-journee-ou-terra-nocta-en-famille/ | Fête de l'Automne 2026 à Terra Botanica: animations et tarifs | evenements | Angers, Maine-et-Loire, Pays de la Loire
+- /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | Pierrefonds à la Toussaint 2026: atelier lanterne et soirée d'Halloween | evenements | Pierrefonds, Oise, Hauts-de-France
 - /articles/sorties/toussaint-2026-au-louvre-lens-quelle-activite-choisir-selon-l-age/ | Toussaint 2026 au Louvre-Lens: quelle activité choisir selon l'âge? | sorties | Lens, Pas-de-Calais, Hauts-de-France
-- /articles/sorties/vacances-de-la-toussaint-2026-au-louvre-quelles-activites-choisir-avec-des-enfants/ | Vacances de la Toussaint 2026 au Louvre: le programme famille du 17 octobre au 1er novembre | sorties | Paris, Paris, Île-de-France
-- /articles/sorties/vacances-de-la-toussaint-2026-au-musee-carnavalet-quelle-activite-choisir-selon-l-age/ | Vacances de la Toussaint 2026 au musée Carnavalet: activités en famille dès 4 ans | sorties | Paris, Paris, Île-de-France
 - /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | Halloween 2026 au Château de Chantilly avec des enfants: ateliers, nocturnes et spectacle | sorties | Chantilly, Oise, Hauts-de-France
 - /articles/evenements/au-creux-de-l-oreille-2026-a-noirlac-quels-spectacles-et-ateliers-choisir-avec-les-enfants/ | Au Creux de l'Oreille 2026 à Noirlac: spectacles et ateliers en famille du 17 au 22 octobre | evenements | Bruère-Allichamps, Cher, Centre-Val de Loire
 - /articles/voyages/maison-du-marais-pres-de-saint-omer-bateau-et-expositions-en-famille/ | Maison du Marais près de Saint-Omer: bateau et expositions en famille | voyages | Saint-Martin-lez-Tatinghem, Pas-de-Calais, Hauts-de-France
@@ -144,14 +185,14 @@ Relier au guide « Nausicaá à 8 € / 6 €: Dimanches Boulonnais » pour les 
 
 - opportunity | /articles/evenements/au-creux-de-l-oreille-2026-a-noirlac-quels-spectacles-et-ateliers-choisir-avec-les-enfants/ | 2026-10-14T13:49:08.708Z
 - opportunity | /articles/evenements/automnales-d-harcourt-2026-en-famille-jeux-nature-visites-et-tarifs/ | 2026-10-16T06:56:21.314Z
+- opportunity | /articles/activites/cite-du-chocolat-valrhona-a-la-toussaint-2026-quel-atelier-choisir-selon-l-age/ | 2026-10-05T14:27:51.219Z
 - opportunity | /articles/evenements/festi-momes-2026-a-nantes-quelle-seance-choisir-selon-l-age-des-enfants/ | 2026-10-17T11:48:00.184Z
 - opportunity | /articles/evenements/festival-du-film-pour-enfants-2026-en-isere-seances-ateliers-et-tarifs/ | 2026-10-17T15:41:33.883Z
+- opportunity | /articles/evenements/fete-de-l-automne-2026-a-terra-botanica-journee-ou-terra-nocta-en-famille/ | 2026-10-13T12:37:05.098Z
 - opportunity | /articles/evenements/halloween-2026-a-la-tour-de-l-horloge-de-guines-musee-hante-contes-et-nocturne/ | 2026-10-12T10:40:26.563Z
 - opportunity | /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | 2026-10-08T02:18:12.427Z
 - opportunity | /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | 2026-10-16T17:46:42.470Z
 - opportunity | /articles/evenements/salon-du-livre-jeunesse-de-montreuil-2026-billet-gratuit-et-visite-en-famille/ | 2026-10-15T05:30:56.094Z
-- opportunity | /articles/sorties/toussaint-2026-au-louvre-lens-quelle-activite-choisir-selon-l-age/ | 2026-10-07T19:13:00.627Z
-- opportunity | /articles/evenements/toussaint-2026-au-musee-des-confluences-a-lyon-spectacles-et-ateliers-par-age/ | 2026-10-15T17:42:32.693Z
 
 ### Phases 2 et 3
 
