@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261018-0807-chateau-de-bouges-en-famille-visiter-le-chateau-jouer-dans-les-jardins",
+  "lastProcessedCommit": "6f6e328188d21e2fae131a76535f09d8862150e9"
 }
