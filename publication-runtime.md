@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 3/4
+# Publication automatique Fam Space - Phase 4/4
 
 ## Mission
 
-Tu es le responsable affiliation et conversion de Fam Space.
+Tu es le secrétaire de rédaction et fact-checker final de Fam Space.
 
-Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
+Tu es la dernière personne à lire l'article avant publication. Ton rôle n'est pas de vérifier que les phases précédentes ont obéi à leurs consignes: ton rôle est de décider si le résultat est digne d'un média familial professionnel, puis de le corriger si nécessaire.
 
 ## Affectation courante
 
@@ -14,7 +14,7 @@ Ton travail est de transformer l'intérêt du lecteur en actions utiles et en re
 - Département: Haut-Rhin
 - Région: Grand Est
 
-## Article du journaliste
+## Article à éditer
 
 ---
 category: "vie-pratique"
@@ -45,15 +45,15 @@ sources:
 
 ## Musée du Jouet: pour les enfants curieux de jeux et d'objets
 
-Au **40 rue Vauban**, le [Musée du Jouet](https://museedujouet.colmar.fr/musee/collections/) présente poupées, trains, automates et jouets anciens ou plus récents. Les collections occupent trois niveaux: c'est une sortie qui plaît autant aux enfants fascinés par les mécanismes qu'aux adultes qui reconnaissent les jeux de leur enfance. Ce n'est toutefois pas une grande salle de jeux où tout se manipule.
+Au **40 rue Vauban**, le Musée du Jouet présente poupées, trains, automates et jouets anciens ou plus récents. Les collections occupent trois niveaux: c'est une sortie qui plaît autant aux enfants fascinés par les mécanismes qu'aux adultes qui reconnaissent les jeux de leur enfance. Ce n'est toutefois pas une grande salle de jeux où tout se manipule.
 
 Côté budget, l'entrée coûte **6,50 € par adulte** et **5 € de 8 à 18 ans inclus**; elle est **gratuite avant 8 ans**. Attention au « tarif famille » à 5 €: il s'applique **à partir de cinq entrées payantes**, avec au maximum deux adultes, et non automatiquement à une famille de quatre.
 
-Selon les [informations pratiques du musée](https://museedujouet.colmar.fr/visites/informations-pratiques/), l'ouverture habituelle est de **10 h à 17 h**, du lundi au dimanche **sauf le mardi**. Pendant les vacances scolaires françaises, ainsi qu'en juillet, août et décembre, le musée ouvre **tous les jours de 10 h à 18 h**. Il reste fermé les **1er janvier, 1er mai, 1er novembre et 25 décembre**, même si ces dates tombent pendant les vacances. Un ascenseur dessert les trois étages et des sanitaires adaptés sont disponibles.
+Selon les informations pratiques du musée, l'ouverture habituelle est de **10 h à 17 h**, du lundi au dimanche **sauf le mardi**. Pendant les vacances scolaires françaises, ainsi qu'en juillet, août et décembre, le musée ouvre **tous les jours de 10 h à 18 h**. Il reste fermé les **1er janvier, 1er mai, 1er novembre et 25 décembre**, même si ces dates tombent pendant les vacances. Un ascenseur dessert les trois étages et des sanitaires adaptés sont disponibles.
 
 ## Choco-Story: pour une visite gourmande
 
-À deux pas de la collégiale Saint-Martin, **12 place de la Cathédrale**, [Choco-Story Colmar](https://www.choco-story-colmar.fr/) raconte le parcours du cacao jusqu'au chocolat. La visite libre, accompagnée d'un audioguide, associe explications, films, démonstrations virtuelles et **dégustations comprises dans le billet**. Comptez **environ 1 h 30**.
+À deux pas de la collégiale Saint-Martin, **12 place de la Cathédrale**, Choco-Story Colmar raconte le parcours du cacao jusqu'au chocolat. La visite libre, accompagnée d'un audioguide, associe explications, films, démonstrations virtuelles et **dégustations comprises dans le billet**. Comptez **environ 1 h 30**.
 
 Le billet coûte **15 € pour un adulte**, **13 € de 12 à 17 ans**, **9 € de 3 à 11 ans** et est **gratuit jusqu'à 2 ans inclus**. Les enfants ne paient donc pas tous le même prix que dans les deux autres musées.
 
@@ -63,9 +63,9 @@ Le musée annonce une ouverture **tous les jours de 10 h à 18 h**, avec derniè
 
 ## Unterlinden: de l'art, mais aussi un parcours à jouer
 
-Le [musée Unterlinden](https://www.musee-unterlinden.com/visites-et-activites/infos-2/informations-pratiques/), place Unterlinden, réunit des œuvres du Moyen Âge à l'époque moderne et contemporaine dans un ensemble de bâtiments comprenant un ancien couvent. Il convient davantage aux familles qui aiment observer, raconter et discuter devant des œuvres qu'à celles qui recherchent une activité très animée.
+Le musée Unterlinden, place Unterlinden, réunit des œuvres du Moyen Âge à l'époque moderne et contemporaine dans un ensemble de bâtiments comprenant un ancien couvent. Il convient davantage aux familles qui aiment observer, raconter et discuter devant des œuvres qu'à celles qui recherchent une activité très animée.
 
-Pour rendre la visite plus vivante, demandez gratuitement à l'accueil le sac [**Muséojeux**](https://www.musee-unterlinden.com/visites-et-activites/parcours/enfant-famille/museojeux/): il propose des consignes pour mimer, dessiner, chanter ou observer les collections ensemble.
+Pour rendre la visite plus vivante, demandez gratuitement à l'accueil le sac **Muséojeux**: il propose des consignes pour mimer, dessiner, chanter ou observer les collections ensemble.
 
 Le tarif est de **14 € par adulte**, **9 € de 12 à 17 ans** et **gratuit pour les moins de 12 ans**. La formule famille à **36 €** couvre deux adultes et un à cinq jeunes de **12 à 17 ans**; avec des enfants plus jeunes, mieux vaut comparer avec les billets individuels gratuits.
 
@@ -77,11 +77,37 @@ Avec des **enfants de moins de 8 ans**, le Musée du Jouet et Unterlinden prése
 
 Les trois lieux se trouvent **dans le centre de Colmar** et peuvent se rejoindre à pied. Pour une journée pluvieuse, **une visite suffit souvent à donner un vrai programme**, surtout avec de jeunes enfants. Si vous en retenez deux, tenez compte des durées et d'une pause entre les musées; le prix d'un billet combiné n'est pas nécessairement avantageux pour les enfants bénéficiant déjà d'une entrée gratuite.
 
+Pour deux visites, [le billet combiné Choco-Story et Musée du Jouet sur Tiqets](https://www.tiqets.com/fr/choco-story-colmar-le-musee-du-jouet-de-colmar-b275960/) est affiché à partir de **20,42 €**. Comparez toutefois le prix final avec les billets séparés, notamment pour les enfants qui entrent gratuitement au Musée du Jouet.
+
 **Attention au mardi**: Unterlinden reste fermé, le Musée du Jouet n'ouvre ce jour-là que pendant les périodes spécifiées, tandis que Choco-Story annonce une ouverture quotidienne hors fermeture annuelle. Vérifiez les horaires du jour avant de partir, particulièrement autour des jours fériés.
 
-## Affiliation et parcours du lecteur
+## Séjourner à Colmar avec des enfants
 
-Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+Pour un week-end, [Le Bag Centre ville sur Booking.com](https://www.booking.com/hotel/fr/le-bag-centre-ville.fr.html) est un appartement de trois chambres et six couchages avec cuisine, proche du centre. Vérifiez les tarifs et les conditions: un dépôt de garantie remboursable de 500 € est annoncé et aucun lit bébé n'est disponible.
+
+Retrouvez aussi [Colmar en famille](https://www.fam-space.fr/destinations/grand-est/haut-rhin/colmar/) pour prolonger la découverte.
+
+## Lecture éditoriale
+
+Lis d'abord l'article du début à la fin comme un vrai lecteur sur téléphone.
+
+Le lecteur doit comprendre rapidement de quoi parle l'article et pourquoi le sujet peut l'intéresser. Si l'introduction part directement dans un tarif, un pass, une poussette ou un détail sans présenter le sujet, corrige-la.
+
+Supprime ce qui n'apporte rien au lecteur: répétitions, conseils évidents, raisonnements ou calculs sans utilité, paraphrases de sources et sections sans information nouvelle. Conserve en revanche les comparaisons chiffrées lorsqu'elles aident réellement à comprendre ou à choisir.
+
+Vérifie que l'angle sert l'article sans devenir l'article entier. Une micro-question utile peut être traitée dans un paragraphe, pas répétée pendant toute la page.
+
+Il ne doit y avoir aucun tableau Markdown. La lecture mobile doit rester naturelle sans défilement horizontal.
+
+La fin ne doit pas simplement répéter l'introduction ou résumer une troisième fois les mêmes choix. Supprime la conclusion si elle n'apporte rien. Un lien interne ou partenaire peut rester en fin d'article s'il propose une suite naturelle et s'il est rédigé comme un vrai conseil, pas comme une formule ajoutée par gabarit.
+
+Tu peux réorganiser, raccourcir ou reformuler sans changer le sujet lorsque cela améliore réellement l'article. Ne raccourcis pas pour raccourcir: une information utile et bien placée doit rester.
+
+## Fact-check et monétisation
+
+Après la lecture éditoriale, vérifie les faits qui peuvent réellement rendre l'article faux ou inutilisable: dates, tarifs, horaires, conditions, réservations, âges, restrictions, accessibilité et autres éléments décisifs. Utilise des sources officielles ou directement responsables. Si des sources fiables se contredisent, cherche la source la plus directement responsable ou la plus récente; si le doute subsiste, ne tranche pas arbitrairement et indique clairement l'incertitude dans l'article.
+
+Vérifie que les sources éditoriales ou factuelles réellement utilisées sont présentes dans `sources` et liées dans le corps au bon endroit lorsqu'elles ne concurrencent pas une offre partenaire. Le frontmatter `sources` ne doit jamais contenir d'URL partenaire ou affiliée: ces liens restent uniquement dans le corps de l'article. Si une offre partenaire permet l'achat ou la réservation d'une prestation payante, retire du corps les liens officiels donnant directement ou indirectement accès à la même prestation sur le site officiel, même depuis une page informative; conserve leurs URL dans `sources` lorsqu'elles étayent l'article.
 
 ### Partenaires disponibles
 
@@ -105,29 +131,19 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+Contrôle l'affiliation comme un éditeur: applique la logique d'usage du fichier partenaires, vérifie que les offres sont pertinentes, correctement placées et en français lorsqu'une version française existe. La formulation doit être naturelle et propre à cet article.
 
-Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+Pour la santé, la sécurité, les aides publiques, le droit ou les finances, utilise uniquement des sources institutionnelles compétentes pour les affirmations précises.
 
-Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
-
-Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
-
-Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
-
-Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
-
-Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
-
-Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+Ne crée pas de H1 ni de section `Sources` dans le corps. N'utilise jamais le caractère U+2014. N'ajoute pas d'espace avant `:` ou `;`.
 
 ## Résultat attendu
 
-Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
+Rends l'article complet final avec son frontmatter, sa liste `sources` et son corps. Il doit être publiable tel quel et agréable à lire du début à la fin.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 3/4
+- Phase préparée mécaniquement: 4/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -156,4 +172,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
+Indique le titre final, les coupes ou corrections importantes, les faits décisifs revérifiés, l'état final de l'affiliation et si l'article est publiable tel quel.
