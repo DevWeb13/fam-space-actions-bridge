@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Marché de Noël d'Amiens 2026 en famille: village du Père Noël, patinoire et parades"
-subtitle: Du 20 novembre au 30 décembre, choisir les haltes adaptées aux enfants et organiser une balade dans le centre.
-summary: "Marché de Noël d'Amiens 2026: dates, horaires des chalets, village du Père Noël, patinoire, promenade des sorciers et spectacles en famille."
+title: "Marché de Noël d'Amiens 2026 en famille: horaires, Père Noël et patinoire"
+subtitle: Les bonnes dates pour les enfants, de la place René Goblet à l'Hôtel de Ville, avec les dépenses à prévoir.
+summary: "Du 20 novembre au 30 décembre 2026, préparez une visite familiale du marché de Noël d'Amiens: chalets, village du Père Noël, patinoire, parades, Chroma et accès."
 category: evenements
 location:
   city: Amiens
@@ -68,20 +73,23 @@ location:
   region: Hauts-de-France
 keywords:
   - marché de Noël Amiens 2026 famille
-  - Amiens Noël 2026 enfants
-  - village Père Noël Amiens patinoire
+  - marché de Noël Amiens enfants
+  - village Père Noël Amiens 2026
+  - patinoire Amiens Noël 2026
 sources:
-  - title: Ville d'Amiens - Marché de Noël 2026 et programme détaillé
+  - title: Ville d'Amiens - marché de Noël 2026, animations et horaires
     url: https://www.amiens.fr/Liens-utiles/Marche-de-Noel
-  - title: Amiens Métropole - marché de Noël 2026
+  - title: Amiens Métropole - édition 2026
     url: https://www.amiens.fr/Les-evenements/Marche-de-Noel-2026
-  - title: Organisateur du marché de Noël d'Amiens - horaires et implantation
+  - title: Organisateur - marché de Noël d'Amiens 2026
     url: https://fr.marchedenoel.fr/
-  - title: Organisateur du marché de Noël d'Amiens - venir en famille
+  - title: Organisateur - train, parking et bus
     url: https://fr.marchedenoel.fr/pages/se-rendre-au-marche-de-noel-d-amiens.html
+  - title: Amiens Métropole - Chroma, l'expérience monumentale 2026
+    url: https://www.amiens.fr/Les-evenements/Chroma-l-experience-monumentale2
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades
   decision: Choisir les lieux et les dates en fonction de l'âge des enfants, de leurs envies et des horaires réellement annoncés, puis décider du budget et d'une visite à la journée ou avec nuit sur place.
@@ -91,36 +99,73 @@ radar:
     dataThrough: 2026-10-16
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Ville d'Amiens - Marché de Noël 2026 et programme détaillé »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-30
 ---
 
-## Mission retenue
+Le **marché de Noël d'Amiens 2026** se tient **du 20 novembre au 30 décembre** entre la place René Goblet et l'Hôtel de Ville. Ses **plus de 100 chalets** sont accessibles gratuitement. Pour une sortie avec des enfants, la vraie question est de choisir entre les animations de journée, la rencontre avec le Père Noël, la patinoire et les spectacles du soir: ils n'ont pas tous les mêmes dates ni les mêmes horaires.
 
-Le marché de Noël d'Amiens 2026 dans le centre-ville, de la place René Goblet à l'Hôtel de Ville, avec plus de 100 chalets et plusieurs animations familiales à des emplacements et dates distincts. L'accès au marché est gratuit; certaines activités de la saison peuvent engager des dépenses.
+## Quel jour venir au marché de Noël d'Amiens?
 
-## Pourquoi cette mission
+Selon [la Ville d'Amiens](https://www.amiens.fr/Liens-utiles/Marche-de-Noel) et l'organisateur, les chalets ouvrent:
 
-L'édition du 20 novembre au 30 décembre 2026 dispose déjà d'un programme municipal suffisamment détaillé pour aider une famille à choisir son jour et son parcours. Aucun article publié du catalogue de 711 pages ne traite du marché de Noël d'Amiens; l'article est différent des guides des marchés d'autres villes. Le meilleur refresh GSC, « Carte OKAY Savoie », a été actualisé le 6 octobre, couvre déjà montants, échéances, activation, bonus et perte de carte, et présente un signal de baisse « uncertain », insuffisant sans problème éditorial indépendant. Une expansion depuis « Transports à Paris avec des enfants », page forte, risquerait de reprendre les comparaisons de titres et guides d'aéroports déjà publiés sans décision nouvelle assez autonome.
+- **Lundi à jeudi et dimanche:** de 11h à 19h30.
+- **Vendredi et samedi:** de 11h à 21h.
+- **Jeudi 24 décembre:** fermeture à 17h.
+- **Vendredi 25 décembre:** marché fermé.
+- **Mercredi 30 décembre:** fermeture à 17h, précisée par l'organisateur.
 
-## Décision du lecteur
+Le **lancement des illuminations** est prévu le **samedi 21 novembre à partir de 17h30**, dans la cour de l'Hôtel de Ville. Si vous venez pour les décorations illuminées ou une parade, choisissez le jour correspondant; pour une promenade plus calme avec une poussette, le début d'après-midi en semaine est généralement plus souple qu'un samedi soir.
 
-Choisir une sortie réaliste avec des enfants: voir les chalets et une ou deux animations pertinentes au bon horaire, distinguer ce qui finit avant le 30 décembre et calculer les frais utiles sans présumer de la gratuité des activités dont le tarif n'est pas affiché.
+## Trois haltes adaptées aux enfants
 
-## Faits à traiter
+**Le village du Père Noël, dans la cour de l'Hôtel de Ville**, accueille les familles **du 21 novembre au 24 décembre**. Les enfants peuvent y rencontrer le Père Noël et déposer leur lettre. En période scolaire, il est ouvert **de 16h à 19h les lundis, mardis, jeudis et vendredis**, et **de 11h à 13h30 puis de 14h30 à 19h les mercredis, samedis et dimanches**. Pendant les vacances de Noël, cette dernière plage horaire s'applique tous les jours d'ouverture, avec une fermeture à 17h le 24 décembre. La pause de 13h30 à 14h30 est donc à intégrer au parcours.
 
-Marché du 20 novembre au 30 décembre 2026, chalets généralement de 11h à 19h30 du dimanche au jeudi et de 11h à 21h les vendredis et samedis; 24 décembre fermeture à 17h, 25 décembre fermé, et fin anticipée du 30 décembre annoncée par l'organisateur. Village du Père Noël dans la cour de l'Hôtel de Ville du 21 novembre au 24 décembre, horaires adaptés aux jours d'école et aux vacances; patinoire square Saint-Denis du 21 novembre au 30 décembre avec horaires différents et gants recommandés; promenade des sorciers place Gambetta accessible de jour seulement. Parades datées de novembre et décembre; lancement des illuminations le 21 novembre, Chroma à la cathédrale du 27 novembre au 27 décembre selon le bloc 2026 de la Ville, en distinguant l'ancien bloc encore présent. Budget de la visite libre, Jules Verne Express payant si pertinent, tarifs des attractions non confirmés à ne pas inventer. Trajet depuis la gare à pied, parkings-relais, bus et pauses/toilettes pour les familles; différencier les lieux sans dresser un catalogue exhaustif.
+**La patinoire du square Saint-Denis, place René Goblet**, est annoncée **du 21 novembre au 30 décembre**. Avant les vacances, elle ouvre **de 16h30 à 19h30 les lundis, mardis, jeudis et vendredis**, et **de 11h à 19h30 les mercredis, samedis et dimanches**. À compter du **19 décembre**, la plage annoncée est **11h-19h30**, avec fermeture à 17h le 24 décembre. **Les gants sont recommandés**. La Ville ne précise pas encore de prix d'entrée ou de location de patins dans cette programmation: ne partez pas du principe que l'activité est gratuite comme les chalets. Le **12 décembre à partir de 15h**, les Gothiques d'Amiens doivent y proposer une rencontre avec leurs équipes.
 
-## Sources de départ
+**La Promenade des Sorciers, place Gambetta**, s'installe **du 21 novembre au 30 décembre** avec un décor de train magique, de forêt et d'école de sorcellerie. Particularité essentielle: **l'accès est interdit la nuit**. Prévoyez cette visite **de jour**, et non après le spectacle d'illuminations. Ces trois lieux permettent de construire une sortie à la carte plutôt que de traverser tous les chalets.
 
-La page municipale du programme 2026 et les pages de l'organisateur indiquées en frontmatter. Vérifier les éventuels horaires ou tarifs mis à jour à l'approche de l'ouverture, ainsi que les passages hérités des éditions précédentes.
+## Parades, cathédrale: les dates à ne pas manquer
 
-## Affiliation
+Si les enfants aiment les spectacles de rue, quatre **parades** sont programmées dans le centre-ville:
 
-Le marché ne nécessite aucun billet payant. Pour une famille venant de loin, l'ibis Styles Amiens Centre est proposé sur Booking.com avec chambres familiales près de la gare: https://www.booking.com/hotel/fr/ibis-styles-amiens-centre.fr.html . Conseiller un hébergement seulement si un trajet long ou deux journées le justifient; vérifier capacité et prix pour les dates exactes.
+- **Mercredi 25 novembre, à partir de 16h:** les Gnomikys.
+- **Vendredi 4 décembre, à partir de 18h:** Légendaires, avec renards blancs et créatures lumineuses.
+- **Vendredi 11 décembre, à partir de 18h:** Revue de Rue.
+- **Vendredi 18 décembre, à partir de 18h:** Le Bal, une déambulation inspirée de la Belle Époque.
 
-## Continuations internes
+Pour un temps fort en soirée, [**Chroma à la cathédrale Notre-Dame d'Amiens**](https://www.amiens.fr/Les-evenements/Chroma-l-experience-monumentale2) est annoncé **du 27 novembre au 27 décembre**, tous les soirs à partir de **19h** sur le parvis. La Métropole indique une **durée d'environ 50 minutes**. Attention, une autre partie de la page municipale sur le marché mentionne encore des dates différentes et un ancien tableau de spectacle: pour 2026, retenez le calendrier de la fiche Chroma dédiée, à recontrôler avant de partir.
 
-- Pour une autre idée de sortie de Noël dans la Somme, un lien vers « Train de Noël de la Haute Somme 2026 en famille » peut être pertinent, mais cette activité hors Amiens se réserve et s'organise séparément.
-- Ne pas reprendre le contenu « Un été à Amiens 2026 au parc Saint-Pierre », seul article amiénois apparenté géographiquement: sa saison et son intention sont différentes.
+Avec un jeune enfant, mieux vaut choisir **soit la parade, soit Chroma** plutôt que de multiplier les attentes à l'extérieur. Après le 24 décembre, le village du Père Noël est terminé; après le 27, Chroma ne fait plus partie du programme annoncé, même si les chalets continuent jusqu'au 30.
+
+## Un parcours simple depuis la gare
+
+Pour une **visite courte**, partez des premiers chalets proches de la gare, rejoignez le **square Saint-Denis et la place René Goblet**, puis avancez selon l'énergie des enfants vers la **place Gambetta** et la **cour de l'Hôtel de Ville**. Ce parcours permet de choisir la patinoire ou la Promenade des Sorciers en journée et de finir au village du Père Noël avant le 24 décembre, sans chercher à couvrir les quelque **2 km d'allées** du marché.
+
+Pour une **visite avec illuminations**, gardez les chalets en début de sortie, puis rejoignez la cathédrale pour Chroma à 19h entre le 27 novembre et le 27 décembre. Le quartier de la cathédrale est une étape supplémentaire: prévoyez une pause et de quoi tenir au chaud pendant le spectacle. Le parcours du marché est indiqué comme accessible aux personnes à mobilité réduite par l'organisateur.
+
+L'application gratuite du marché est annoncée avec **plan des chalets, toilettes, parkings et programme du jour**. La Ville recommande aussi l'application « ICI TOILETTES » pour repérer les sanitaires accessibles chez des commerçants partenaires.
+
+## Quel budget prévoir pour la sortie?
+
+**La promenade parmi les chalets est gratuite**. Le budget vient des achats, des consommations et des attractions payantes éventuellement choisies. Comme aucun tarif 2026 fiable de la patinoire n'est indiqué sur la page municipale consultée, vérifiez son prix et les conditions de location de patins avant de compter cette activité dans une sortie à petit budget.
+
+Autre possibilité pour des enfants qui veulent découvrir la ville assis: **le Jules Verne Express**, train touristique au départ du parvis de la cathédrale, est affiché par la Ville à **10 € par adulte et 6 € par enfant**, gratuit pour les moins de 4 ans. La page municipale juxtapose des visuels de 2025 et les informations de Noël 2026: confirmez la période de circulation et ces tarifs avant de compter sur ce trajet.
+
+## Train, voiture et bus: comment venir?
+
+**En train**, la gare d'Amiens se trouve à quelques minutes à pied des premiers chalets, via la rue de Noyon: c'est le plus simple pour un séjour sans voiture.
+
+**En voiture**, la Ville annonce **quatre parkings-relais gratuits** aux entrées d'Amiens, desservis par les lignes Némo **N1 (Grand A), N2 (IUT), N3 (Shopping Promenade) et N4 (Pôle Licorne)**. Le réseau Ametis est **gratuit le samedi**. Les autres jours, la Ville indique **1,65 € le ticket à l'unité**, **5,15 € le titre 24h individuel** et **7,60 € le titre 24h pour un groupe de deux à cinq personnes**. Avec plusieurs enfants, ce dernier titre peut éviter de multiplier les tickets, sous réserve des règles de validité au moment du départ.
+
+Des parkings souterrains payants existent aussi dans le centre. Vérifiez votre arrêt de bus et le retour avant de laisser la voiture en périphérie; les horaires des chalets ne correspondent pas nécessairement à ceux des transports.
+
+## Faut-il passer une nuit à Amiens?
+
+Une journée suffit pour les chalets, le Père Noël et une autre animation. Une nuit devient pertinente si vous venez de loin ou souhaitez combiner une promenade en journée et Chroma à **19h** sans reprendre immédiatement la route.
+
+Près de la gare, l'[**ibis Styles Amiens Centre sur Booking.com**](https://www.booking.com/hotel/fr/ibis-styles-amiens-centre.fr.html) se trouve **10 rue Lamartine**, à environ **300 m de la gare**. L'hôtel propose des **chambres familiales**; vérifiez la configuration exacte des lits pour vos enfants, le tarif et les disponibilités aux dates choisies. Sa fiche annonce également un **dépôt de garantie remboursable de 100 € à l'arrivée**: vérifiez cette condition pour votre réservation avant de prévoir votre budget.
+
+Pour une autre sortie de fêtes dans le département, notre guide du [**Train de Noël de la Haute Somme 2026 en famille**](/articles/evenements/train-de-noel-de-la-haute-somme-2026-en-famille-dates-tarifs-et-reservation/) présente une excursion différente, hors d'Amiens, avec sa propre organisation et ses réservations.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -128,12 +173,12 @@ Le marché ne nécessite aucun billet payant. Pour une famille venant de loin, l
 
 - /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
 - /articles/evenements/marche-de-noel-de-lille-2026-en-famille-village-grande-roue-et-infos-pratiques/ | Marché de Noël de Lille 2026 en famille: village, Grande Roue et infos pratiques | evenements | Lille, Nord, Hauts-de-France
+- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
 - /articles/sorties/ete-amiens-parc-saint-pierre-2026-famille/ | Un été à Amiens 2026 au parc Saint-Pierre: activités gratuites en famille | sorties | Amiens, Somme, Hauts-de-France
+- /articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/ | Noël à Trévarez 2026 en famille: dates, horaires et réservation | evenements | Saint-Goazec, Finistère, Bretagne
 - /articles/evenements/marche-de-noel-de-cusset-2026-en-famille-quel-jour-choisir/ | Marché de Noël de Cusset 2026 en famille: quel jour choisir? | evenements | Cusset, Allier, Auvergne-Rhône-Alpes
 - /articles/evenements/rouen-givree-2026-en-famille-marche-de-noel-et-refuge-givre/ | Rouen Givrée 2026 en famille: marché de Noël et Refuge Givré | evenements | Rouen, Seine-Maritime, Normandie
 - /articles/evenements/lumieres-de-noel-a-montbeliard-2026-quel-jour-venir-avec-des-enfants/ | Lumières de Noël à Montbéliard 2026: quel jour venir avec des enfants? | evenements | Montbéliard, Doubs, Bourgogne-Franche-Comté
-- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
-- /articles/evenements/noel-a-limoges-2026-en-famille-marche-animations-et-idees-pour-un-week-end/ | Noël à Limoges 2026 en famille: marché, animations et idées pour un week-end | evenements | Limoges, Haute-Vienne, Nouvelle-Aquitaine
 - /articles/sorties/parc-du-marquenterre-en-famille-en-automne-et-hiver-2026-bien-preparer-la-visite/ | Parc du Marquenterre en famille en automne et hiver 2026: bien préparer la visite | sorties | Saint-Quentin-en-Tourmont, Somme, Hauts-de-France
 - /articles/activites/samara-avec-des-enfants-faut-il-prevoir-la-journee-complete/ | Samara avec des enfants: faut-il prévoir la journée complète? | activites | La Chaussée-Tirancourt, Somme, Hauts-de-France
 - /articles/evenements/train-de-noel-de-la-haute-somme-2026-en-famille-dates-tarifs-et-reservation/ | Train de Noël de la Haute Somme 2026 en famille: dates, tarifs et réservation | evenements | La Neuville-les-Bray, Somme, Hauts-de-France
