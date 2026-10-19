@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 1/4
+# Publication automatique Fam Space - Phase 2/4
 
 ## Mission
 
-Tu es le rédacteur en chef de Fam Space.
+Tu es un journaliste web professionnel pour Fam Space.
 
-Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. Fam Space doit publier moins mais mieux: un sujet doit pouvoir devenir un article fiable, utile aux familles, agréable à lire et, lorsque c'est naturel, intéressant pour l'affiliation.
+Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
 
 ## Affectation courante
 
@@ -14,92 +14,95 @@ Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. 
 - Département: Hautes-Pyrénées
 - Région: Occitanie
 
-### Articles publiés récemment
-
-- 2026-09-15: Pic du Midi moins cher: quand choisir le billet daté plutôt que le Pass Liberté
-- 2026-09-01: L'îlot des Familles à Tarbes: quels ateliers pour les parents d'enfants de 0 à 6 ans?
-- 2026-08-15: Argelès-Gazost en famille: organiser un week-end gourmand dans les Hautes-Pyrénées
-
-Ne reproduis pas les mêmes sujets.
-
-## Choisir un sujet qui mérite un article
-
-Respecte l'affectation. Pour une affectation locale, choisis librement la commune ou le lieu le plus pertinent dans le département imposé.
-
-La liste « Articles publiés récemment » est fournie automatiquement. Utilise-la pour éviter les doublons de lieu, de sujet ou d'angle. Un titre différent ne suffit pas à rendre un article différent.
-
-Cherche plusieurs sujets avant de choisir. Pour les candidats sérieux, utilise la recherche web pour comprendre ce qui existe déjà, vérifier les faits essentiels, voir ce que les résultats Google répondent déjà et t'assurer que le sujet est réellement utile à publier maintenant. Si l'élément principal est fermé, hors saison, en maintenance ou temporairement indisponible au point de vider l'article de son intérêt, écarte ce candidat et choisis-en un autre.
-
-Choisis un sujet qui a une vraie matière éditoriale. Un lecteur qui ne connaît pas le sujet doit pouvoir comprendre ce que c'est, pourquoi cela peut l'intéresser et obtenir plusieurs informations utiles sans que l'article répète la même idée.
-
-L'angle sert à donner une direction et un titre intéressant. Il ne doit jamais enfermer tout l'article dans une micro-question comme un tarif, un pass, une poussette ou un calcul simple.
-
-Écarte un sujet si Fam Space ne ferait que réécrire une page officielle ou s'il n'y a pas assez de matière pour produire un bon article. Si aucun candidat ne reste suffisamment utile et actuel après une recherche sérieuse, ne force pas un sujet.
-
-## Penser aussi au potentiel d'affiliation
-
-La monétisation est un objectif important de Fam Space. Avant de choisir le sujet final, vérifie sérieusement les offres disponibles chez les partenaires suivants:
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-Applique la logique d'usage ci-dessus à chaque candidat sérieux et vérifie les offres avant de les retenir dans le brief.
-
-À qualité éditoriale comparable, privilégie clairement le sujet qui possède une piste d'affiliation naturelle et vérifiée. Ne choisis toutefois jamais un sujet médiocre uniquement parce qu'il est affiliable et n'invente jamais une offre sans rapport avec le lecteur.
-
-Si un excellent sujet n'a réellement aucune offre partenaire pertinente après vérification, il peut rester publiable. Le brief doit alors le dire clairement. L'absence d'affiliation ne doit jamais résulter d'une recherche superficielle.
-
-## Sujets à écarter
-
-Écarte les sujets politiques ou militants, les guerres et conflits armés, les contenus haineux, violents, sexuellement explicites, dangereux ou trompeurs, ainsi que les conseils médicaux, juridiques ou financiers personnalisés à risque élevé.
-
-Ne choisis pas comme sujet principal une maladie, un diagnostic, un traitement, une vaccination ou une urgence médicale ou psychiatrique.
-
-Pour un événement ponctuel, ne le retiens pas s'il commence dans moins de 30 jours. S'il a déjà commencé, il doit rester au moins 30 jours d'utilité réelle. Cette règle ne concerne pas les attractions permanentes, destinations durables ou activités disponibles sur une longue période.
-
-## Résultat attendu
-
-Prépare un brief court. Le fichier doit contenir exactement ces sections:
+## Brief du rédacteur en chef
 
 ## Sujet retenu
-Le sujet, un titre de travail et l'angle principal. Décris aussi en une ou deux phrases ce qu'est réellement le sujet afin que le journaliste parte avec le bon contexte.
+
+**Titre de travail: Grottes de Gargas en famille: mains préhistoriques, Nestploria et visite à préparer**
+
+**Angle:** expliquer comment découvrir avec des enfants de véritables peintures préhistoriques dans les grottes de Gargas à Aventignan (Hautes-Pyrénées), puis prolonger cette découverte au centre d'interprétation numérique Nestploria. Le site associe une visite souterraine guidée, limitée en places pour préserver les œuvres, des dispositifs interactifs et une exposition sur les métiers de l'archéologie. Il se visite pendant une grande partie de l'année, y compris hors saison estivale.
 
 ## Besoin du lecteur
-Ce que le lecteur doit comprendre, apprendre ou pouvoir faire après avoir lu l'article. Ne réduis pas ce besoin à une seule micro-question si le sujet mérite un traitement plus large.
+
+Comprendre ce qu'on voit réellement sur les parois (en particulier les empreintes de mains obtenues au pochoir), ce qu'apporte Nestploria et ce que comprend chaque billet. Savoir si la sortie convient à l'âge et aux capacités de déplacement des enfants, réserver un créneau avant de partir, prévoir assez de temps et des vêtements adaptés aux 11 °C de la grotte. Identifier les différences entre une visite des grottes et une entrée limitée au centre numérique. Pour les familles en séjour, déterminer si un hébergement proche peut servir de point de départ vers d'autres visites du secteur.
 
 ## Valeur éditoriale
-Les quelques informations ou distinctions qui justifient l'article et ce que Fam Space peut apporter de mieux qu'une simple reprise des sources.
+
+- **Un patrimoine original, pas une grotte à concrétions ordinaire:** Gargas se distingue par ses authentiques mains négatives préhistoriques et ses représentations animales. Expliquer la technique du pochoir et le rôle de la conservation, sans chercher à résoudre artificiellement la question des mains incomplètes.
+- **Trois découvertes complémentaires:** la grotte guidée (**50 min**), Nestploria et ses dispositifs numériques (**environ 30 min**), l'exposition enfant « Les explorateurs de la Préhistoire » (**environ 30 min**). Le billet grotte inclut les deux autres espaces; un billet Nestploria seul permet une sortie différente, notamment si la grotte n'est pas adaptée.
+- **Les décisions pratiques qui changent tout:** accueil à Nestploria **au moins 30 min avant** le départ guidé; quotas de visiteurs et réservation à privilégier au **05 62 98 81 50**; température constante **11 °C**; **poussettes exclues** de la grotte, porte-bébé possible; grottes non accessibles aux personnes à mobilité réduite, contrairement à Nestploria; photos interdites sous terre mais permises dans le centre numérique.
+- **Tarifs officiels 2026:** grottes + Nestploria + exposition **12,50 € adulte / 7,50 € enfant de 6 à 16 ans / pass famille deux adultes-deux enfants 33 €**. Nestploria + exposition sans grotte **8 € adulte / 5 € enfant / pass famille 22 €**. Vérifier le tarif applicable aux moins de six ans plutôt que présumer la gratuité. La « Tribu du Bison » est un jeu coopératif optionnel payant, pas une composante automatiquement comprise dans les billets.
+- **Ouverture actuelle et profondeur saisonnière:** centre annoncé hors saison du mardi au dimanche de **10 h 30 à 17 h 30**, fermé les lundis scolaires ainsi que les 25 décembre et 1er janvier; ouverture quotidienne annoncée pendant les vacances de Toussaint 2026. Des animations sur les pigments sont prévues **du 26 octobre au 1er novembre 2026**, mais ne doivent pas devenir l'angle principal de cet article durable. Les visites approfondies de 1 h 30 sont réservées à un autre public (**plus de 12 ans**) et demandent une réservation.
+- **Écart avec une simple fiche touristique:** construire une sortie familiale réaliste, depuis l'arrivée au centre jusqu'à la découverte des empreintes puis leur compréhension sur écran. Mentionner le gouffre d'Esparros comme candidat distinct davantage centré sur les cristallisations, et le château fort de Lourdes comme autre option familiale; ne pas faire un nouveau sujet sur le Pic du Midi, déjà traité récemment.
 
 ## Affiliation
-Les pistes partenaires réellement vérifiées, avec partenaire, offre et URL exacte, y compris les besoins secondaires naturels. Si aucune offre pertinente n'existe réellement, indique-le clairement.
+
+- **Billetterie principale:** aucune offre spécifique de billets d'entrée aux **grottes de Gargas / Nestploria** n'a pu être confirmée sur Tiqets, GetYourGuide ou les autres plateformes partenaires consultées. La réservation directement auprès de l'exploitant est nécessaire pour les créneaux de grotte: ne pas créer de faux lien payant ni substituer une activité touristique générique.
+- **Hébergement familial vérifié chez Booking.com:** **La retraite Pyrénéenne**, maison de vacances à **Saint-Laurent-de-Neste** avec **trois chambres, cuisine équipée et parking gratuit**, à proximité des grottes, pour des familles qui combinent Gargas et d'autres découvertes de la Neste-Barousse: https://www.booking.com/hotel/fr/gites-dans-les-bois-avec-belle-vue-sur-les-pyrenees.fr.html . Vérifier capacité, couchages, disponibilité et prix avec les dates et âges renseignés; piscine extérieure saisonnière et non surveillée, ne pas la promettre toute l'année. La fiche indique que des frais pour dommages pouvant atteindre 300 € pourraient être dus après le séjour selon conditions. Une nuit n'est pas nécessaire pour visiter uniquement Gargas.
+- Pas de besoin naturel confirmé en vol, transfert, location automobile, city pass ou consigne pour cette sortie.
 
 ## Sources de départ
-Les meilleures sources officielles ou directement responsables pour lancer la rédaction, avec l'URL exacte de chaque page utile.
 
-Ne rédige pas le corps final de l'article pendant cette phase.
+- **Grottes de Gargas, présentation du site et singularité des empreintes:** https://grottesdegargas.fr/
+- **Grottes de Gargas, tarifs 2026, durées, réservation, accessibilité et horaires:** https://grottesdegargas.fr/infos-pratiques/
+- **Nestploria, dispositif numérique et autonomie de visite:** https://grottesdegargas.fr/gargas-en-famille/nestploria-le-centre-numerique/
+- **Grottes de Gargas, programme Toussaint 2026 (animation saisonnière, non centrale):** https://grottesdegargas.fr/vacances-de-toussaint-aux-grottes-de-gargas-19-octobre-au-1er-novembre-2026/
+- **Grottes de Gargas, agenda des visites approfondies et animations:** https://grottesdegargas.fr/agenda-actualites-evenements/
+- **Gouffre d'Esparros, comparaison de candidat:** https://www.gouffre-esparros.fr/
+- **Ville de Lourdes, horaires d'hiver du château fort-musée pyrénéen (autre candidat):** https://www.lourdes.fr/horaires-basse-saison-du-chateau-fort-musee-pyreneen/
+
+## Écrire l'article
+
+Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
+
+Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
+
+Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
+
+Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
+
+Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
+
+Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+
+N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
+
+Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
+
+Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
+
+À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
+
+## Format du candidat
+
+Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
+
+```yaml
+---
+category: "<catégorie assignée>"
+title: "Titre direct et informatif"
+subtitle: "Précision différente du titre"
+summary: "Résumé de 90 à 180 caractères"
+keywords:
+  - "mot-clé principal"
+  - "mot-clé secondaire"
+location:
+  city: "Ville"
+  department: "Département assigné"
+  region: "Région assignée"
+sources:
+  - title: "Page officielle utilisée"
+    url: "https://..."
+---
+```
+
+Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+
+Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 1/4
+- Phase préparée mécaniquement: 2/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -112,30 +115,20 @@ Toute la plomberie technique est gérée mécaniquement. Ne cherche aucune branc
 
 Écris uniquement publication-request.md sur la branche main de DevWeb13/fam-space-actions-bridge avec le résultat éditorial demandé dans ce runtime. Le pipeline mécanique se charge de la phase, de la branche de travail, des commits, de la validation et de la suite du cycle.
 
-Si tu retiens un sujet, utilise:
+Utilise:
 
 ~~~yaml
 ---
-action: start
+action: advance
 ---
 
-<brief complet demandé ci-dessus>
+<article complet demandé ci-dessus, frontmatter compris>
 ~~~
 
-Si, après une recherche sérieuse, aucun sujet suffisamment utile et actuel ne mérite un article, utilise:
-
-~~~yaml
----
-action: skip
----
-
-<raison factuelle et courte>
-~~~
-
-Un échec technique n'est jamais une raison de skip. Une fois publication-request.md écrit, termine le passage.
+Rends toujours l'article complet, même si cette phase ne nécessite que peu de corrections. Une fois publication-request.md écrit, termine le passage.
 
 ## Rapport final
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les principaux sujets envisagés, les doublons écartés, le sujet retenu, pourquoi il mérite un article, les pistes d'affiliation réellement vérifiées et les principales sources. En cas de skip, explique simplement pourquoi aucun sujet suffisamment bon n'a été retenu.
+Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
