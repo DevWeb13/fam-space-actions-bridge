@@ -197,3 +197,4 @@ automation/image-20261018-eb0b7bf-bouges-nausicaa-strasbourg-1248|2c20095387c1a9
 automation/image-20261018-6d2a748-halloween-hautes-alpes-1844|aef23904430bcf653945a6b4f61a956bebda4fd1
 automation/image-20261018-6d2a748-halloween-hautes-alpes-1844|b095e1c7f8cdd4697388b9e034ec1ca1136faf2f
 automation/image-20261019-332161b-champs-bdboum-brive-0041|073a1aefcef44f48b97389f85675e3772a51bb3b
+automation/image-20261019-332161b-champs-bdboum-brive-0041|9b1bc72ed6c01a73ac1ff240542873731bdd7e74
