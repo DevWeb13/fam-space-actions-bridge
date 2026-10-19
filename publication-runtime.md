@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,95 +14,124 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Hautes-Pyrénées
 - Région: Occitanie
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Titre de travail: Grottes de Gargas en famille: mains préhistoriques, Nestploria et visite à préparer**
-
-**Angle:** expliquer comment découvrir avec des enfants de véritables peintures préhistoriques dans les grottes de Gargas à Aventignan (Hautes-Pyrénées), puis prolonger cette découverte au centre d'interprétation numérique Nestploria. Le site associe une visite souterraine guidée, limitée en places pour préserver les œuvres, des dispositifs interactifs et une exposition sur les métiers de l'archéologie. Il se visite pendant une grande partie de l'année, y compris hors saison estivale.
-
-## Besoin du lecteur
-
-Comprendre ce qu'on voit réellement sur les parois (en particulier les empreintes de mains obtenues au pochoir), ce qu'apporte Nestploria et ce que comprend chaque billet. Savoir si la sortie convient à l'âge et aux capacités de déplacement des enfants, réserver un créneau avant de partir, prévoir assez de temps et des vêtements adaptés aux 11 °C de la grotte. Identifier les différences entre une visite des grottes et une entrée limitée au centre numérique. Pour les familles en séjour, déterminer si un hébergement proche peut servir de point de départ vers d'autres visites du secteur.
-
-## Valeur éditoriale
-
-- **Un patrimoine original, pas une grotte à concrétions ordinaire:** Gargas se distingue par ses authentiques mains négatives préhistoriques et ses représentations animales. Expliquer la technique du pochoir et le rôle de la conservation, sans chercher à résoudre artificiellement la question des mains incomplètes.
-- **Trois découvertes complémentaires:** la grotte guidée (**50 min**), Nestploria et ses dispositifs numériques (**environ 30 min**), l'exposition enfant « Les explorateurs de la Préhistoire » (**environ 30 min**). Le billet grotte inclut les deux autres espaces; un billet Nestploria seul permet une sortie différente, notamment si la grotte n'est pas adaptée.
-- **Les décisions pratiques qui changent tout:** accueil à Nestploria **au moins 30 min avant** le départ guidé; quotas de visiteurs et réservation à privilégier au **05 62 98 81 50**; température constante **11 °C**; **poussettes exclues** de la grotte, porte-bébé possible; grottes non accessibles aux personnes à mobilité réduite, contrairement à Nestploria; photos interdites sous terre mais permises dans le centre numérique.
-- **Tarifs officiels 2026:** grottes + Nestploria + exposition **12,50 € adulte / 7,50 € enfant de 6 à 16 ans / pass famille deux adultes-deux enfants 33 €**. Nestploria + exposition sans grotte **8 € adulte / 5 € enfant / pass famille 22 €**. Vérifier le tarif applicable aux moins de six ans plutôt que présumer la gratuité. La « Tribu du Bison » est un jeu coopératif optionnel payant, pas une composante automatiquement comprise dans les billets.
-- **Ouverture actuelle et profondeur saisonnière:** centre annoncé hors saison du mardi au dimanche de **10 h 30 à 17 h 30**, fermé les lundis scolaires ainsi que les 25 décembre et 1er janvier; ouverture quotidienne annoncée pendant les vacances de Toussaint 2026. Des animations sur les pigments sont prévues **du 26 octobre au 1er novembre 2026**, mais ne doivent pas devenir l'angle principal de cet article durable. Les visites approfondies de 1 h 30 sont réservées à un autre public (**plus de 12 ans**) et demandent une réservation.
-- **Écart avec une simple fiche touristique:** construire une sortie familiale réaliste, depuis l'arrivée au centre jusqu'à la découverte des empreintes puis leur compréhension sur écran. Mentionner le gouffre d'Esparros comme candidat distinct davantage centré sur les cristallisations, et le château fort de Lourdes comme autre option familiale; ne pas faire un nouveau sujet sur le Pic du Midi, déjà traité récemment.
-
-## Affiliation
-
-- **Billetterie principale:** aucune offre spécifique de billets d'entrée aux **grottes de Gargas / Nestploria** n'a pu être confirmée sur Tiqets, GetYourGuide ou les autres plateformes partenaires consultées. La réservation directement auprès de l'exploitant est nécessaire pour les créneaux de grotte: ne pas créer de faux lien payant ni substituer une activité touristique générique.
-- **Hébergement familial vérifié chez Booking.com:** **La retraite Pyrénéenne**, maison de vacances à **Saint-Laurent-de-Neste** avec **trois chambres, cuisine équipée et parking gratuit**, à proximité des grottes, pour des familles qui combinent Gargas et d'autres découvertes de la Neste-Barousse: https://www.booking.com/hotel/fr/gites-dans-les-bois-avec-belle-vue-sur-les-pyrenees.fr.html . Vérifier capacité, couchages, disponibilité et prix avec les dates et âges renseignés; piscine extérieure saisonnière et non surveillée, ne pas la promettre toute l'année. La fiche indique que des frais pour dommages pouvant atteindre 300 € pourraient être dus après le séjour selon conditions. Une nuit n'est pas nécessaire pour visiter uniquement Gargas.
-- Pas de besoin naturel confirmé en vol, transfert, location automobile, city pass ou consigne pour cette sortie.
-
-## Sources de départ
-
-- **Grottes de Gargas, présentation du site et singularité des empreintes:** https://grottesdegargas.fr/
-- **Grottes de Gargas, tarifs 2026, durées, réservation, accessibilité et horaires:** https://grottesdegargas.fr/infos-pratiques/
-- **Nestploria, dispositif numérique et autonomie de visite:** https://grottesdegargas.fr/gargas-en-famille/nestploria-le-centre-numerique/
-- **Grottes de Gargas, programme Toussaint 2026 (animation saisonnière, non centrale):** https://grottesdegargas.fr/vacances-de-toussaint-aux-grottes-de-gargas-19-octobre-au-1er-novembre-2026/
-- **Grottes de Gargas, agenda des visites approfondies et animations:** https://grottesdegargas.fr/agenda-actualites-evenements/
-- **Gouffre d'Esparros, comparaison de candidat:** https://www.gouffre-esparros.fr/
-- **Ville de Lourdes, horaires d'hiver du château fort-musée pyrénéen (autre candidat):** https://www.lourdes.fr/horaires-basse-saison-du-chateau-fort-musee-pyreneen/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "sorties"
+title: "Grottes de Gargas en famille: voir les mains préhistoriques et découvrir Nestploria"
+subtitle: "À Aventignan, une visite guidée dans une grotte ornée se prolonge par des expériences numériques et une enquête d'archéologue."
+summary: "Mains peintes, visite guidée, Nestploria et activités pour enfants: découvrez les grottes de Gargas, les tarifs 2026 et les précautions avant de réserver."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "grottes de Gargas en famille"
+  - "Nestploria tarifs et visite"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Aventignan"
+  department: "Hautes-Pyrénées"
+  region: "Occitanie"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Grottes de Gargas - Présentation des grottes"
+    url: "https://grottesdegargas.fr/"
+  - title: "Grottes de Gargas - Informations pratiques et tarifs 2026"
+    url: "https://grottesdegargas.fr/infos-pratiques/"
+  - title: "Grottes de Gargas - Centre numérique Nestploria"
+    url: "https://grottesdegargas.fr/gargas-en-famille/nestploria-le-centre-numerique/"
+  - title: "Grottes de Gargas - Les explorateurs de la Préhistoire"
+    url: "https://grottesdegargas.fr/gargas-en-famille/les-explorateurs-de-la-prehistoire/"
+  - title: "Grottes de Gargas - Vacances de Toussaint 2026"
+    url: "https://grottesdegargas.fr/vacances-de-toussaint-aux-grottes-de-gargas-19-octobre-au-1er-novembre-2026/"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Aventignan, dans les Hautes-Pyrénées, les grottes de Gargas permettent aux familles d'observer de véritables peintures réalisées par des humains préhistoriques. Leur particularité n'est pas seulement le décor souterrain: les parois portent un ensemble remarquable d'empreintes de mains, dont beaucoup semblent incomplètes. La visite guidée se prolonge à **Nestploria**, un centre numérique qui aide les enfants à comprendre ce qu'ils viennent de voir.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Des mains vieilles de plusieurs millénaires, pas des reproductions
+
+Les [grottes de Gargas](https://grottesdegargas.fr/) abritent des représentations d'animaux peintes ou gravées, mais ce sont surtout leurs nombreuses mains négatives qui les distinguent. Cette technique consiste à poser une main contre la roche puis à projeter du pigment autour: lorsque la main est retirée, sa silhouette apparaît en réserve.
+
+Pourquoi tant de mains semblent-elles avoir des doigts manquants ? La question intrigue les chercheurs et les visiteurs. Il serait trompeur d'en donner une explication unique et certaine. Pour les enfants, c'est justement une occasion de découvrir que l'archéologie s'appuie sur des indices et que certaines énigmes restent ouvertes.
+
+La visite des grottes se fait **avec un guide pendant environ 50 minutes**. Le parcours aménagé traverse des espaces naturels protégés; le nombre d'entrées est limité pour préserver les œuvres. On observe donc un patrimoine authentique, pas un décor reconstitué pour les touristes.
+
+## Après la grotte, des écrans pour mieux comprendre
+
+Dans [Nestploria](https://grottesdegargas.fr/gargas-en-famille/nestploria-le-centre-numerique/), les familles explorent librement des écrans tactiles, des films et des jeux. On peut y examiner les empreintes, retrouver le tracé de gravures parfois difficiles à distinguer sur la roche et découvrir des parties des grottes inaccessibles au public. Comptez **environ 30 minutes**, davantage si les enfants s'attardent sur les manipulations.
+
+Autre espace compris dans la visite, l'exposition [« Les explorateurs de la Préhistoire »](https://grottesdegargas.fr/gargas-en-famille/les-explorateurs-de-la-prehistoire/) propose aux enfants de mener une fouille fictive. Une reconstitution de campement, des objets à manipuler et plusieurs postes de spécialistes les invitent à comprendre comment on interprète les vestiges découverts. Prévoyez là aussi **environ 30 minutes**.
+
+La visite complète occupe ainsi **près de deux heures**, auxquelles il faut ajouter votre avance à l'accueil. Nestploria peut se découvrir avant ou après la grotte, selon le créneau réservé.
+
+## Quel billet choisir en 2026 ?
+
+Le billet **grottes + Nestploria + exposition** coûte **12,50 € par adulte** et **7,50 € par enfant de 6 à 16 ans**. Le **pass famille à 33 €** couvre deux adultes et deux enfants; un enfant supplémentaire bénéficie d'un tarif de 5 € avec ce pass.
+
+Si la visite souterraine n'est pas possible, le billet **Nestploria + exposition**, sans les grottes, coûte **8 € par adulte**, **5 € par enfant** et **22 € pour deux adultes et deux enfants** en pass famille.
+
+Ces prix figurent dans les [tarifs officiels 2026](https://grottesdegargas.fr/infos-pratiques/). Le site ne précise pas clairement sur cette page le tarif des moins de 6 ans: demandez-le avant de réserver plutôt que de supposer leur entrée gratuite. Un jeu vidéo coopératif, « La Tribu du Bison », est proposé en supplément; il n'est pas compris automatiquement dans les billets.
+
+## Avec un bébé, une poussette ou des difficultés de mobilité ?
+
+La température dans les grottes reste à **11 °C toute l'année**: prévoyez un vêtement chaud, y compris en été. Les **poussettes ne sont pas admises sous terre**, mais un porte-bébé est autorisé. Les grottes ne sont pas accessibles aux personnes à mobilité réduite, contrairement au centre Nestploria, qui peut constituer une alternative intéressante pour partager l'expérience en famille.
+
+Les photos et vidéos sont interdites dans les grottes pour protéger le site; elles sont autorisées à Nestploria. Les animaux de compagnie ne sont admis dans aucun des deux espaces.
+
+## Réserver et organiser son arrivée
+
+Les grottes fonctionnent avec des départs guidés et un nombre limité de visiteurs. Il faut **réserver par téléphone au 05 62 98 81 50**, puis se présenter à l'accueil de Nestploria **au moins 30 minutes avant** le départ. Une arrivée trop tardive peut entraîner un refus d'accès.
+
+D'octobre à avril, Nestploria annonce une ouverture **du mardi au dimanche, de 10 h 30 à 17 h 30**, avec fermeture habituelle le lundi. Le site ferme également les **25 décembre et 1er janvier**. Les horaires des visites souterraines dépendent des créneaux disponibles; ils ne sont pas identiques aux horaires d'ouverture du centre.
+
+Pour les vacances de Toussaint **du 19 octobre au 1er novembre 2026**, l'établissement annonce une ouverture quotidienne de Nestploria de 10 h 30 à 17 h 30. Du **26 octobre au 1er novembre**, de courtes [animations autour des pigments préhistoriques](https://grottesdegargas.fr/vacances-de-toussaint-aux-grottes-de-gargas-19-octobre-au-1er-novembre-2026/) sont prévues à 14 h 15, 15 h 15 et 16 h 15, en accès libre au centre. Elles complètent la sortie sans remplacer la visite guidée, toujours sur réservation.
+
+Le site se trouve à **Aventignan**, entre les villages d'Aventignan et de Tibiran. Pour le GPS, indiquez **Aventignan** plutôt que « Gargas », qui peut mener ailleurs. Une aire de pique-nique ombragée est prévue sur place; le restaurant voisin constitue une autre possibilité, sous réserve de ses jours d'ouverture.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -131,4 +160,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
