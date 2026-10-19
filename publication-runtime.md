@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,95 +14,120 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Haut-Rhin
 - Région: Grand Est
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Titre de travail: Colmar en famille quand il pleut: trois musées à choisir selon l'âge et le budget**
-
-**Angle:** aider des parents à remplacer une promenade extérieure par une ou deux visites couvertes, pertinentes pour leurs enfants, sans payer inutilement un billet combiné. Dans le centre historique de Colmar (Haut-Rhin), le Musée du Jouet, Choco Story et le Musée Unterlinden proposent trois expériences différentes: jeux et jouets, chocolat et découverte des œuvres d'art. Sujet durable, particulièrement utile pendant les vacances et les journées pluvieuses, sans dépendre d'un événement ponctuel.
-
-## Besoin du lecteur
-
-Savoir **où aller selon l'âge, les envies et le temps disponible**: collection de jouets et espaces de jeux, dégustations et démonstrations de chocolat, parcours d'art à explorer avec les enfants. Comparer les **tarifs adultes, gratuits et réduits selon l'âge**, et vérifier si un combiné reste intéressant pour sa propre composition familiale. Éviter les fermetures et anticiper l'accueil des poussettes, les déplacements à pied entre les lieux et la différence entre une visite libre et un atelier payant.
-
-## Valeur éditoriale
-
-- **Musée du Jouet, 40 rue Vauban:** trains miniatures, collections sur trois niveaux et jeux accessibles aux familles. Tarifs officiels: **6,50 € plein**, **5 € de 8 à 18 ans**, **gratuit avant 8 ans**. **Tarif famille 5 € par entrée payante** seulement à partir de cinq entrées payantes, avec deux adultes maximum; ne pas l'appliquer à tort à une famille de quatre. Horaires de base **10 h-17 h**, généralement fermé le mardi hors vacances; **10 h-18 h tous les jours** en vacances scolaires, juillet-août et décembre, sauf jours fériés de fermeture. Ascenseur et toilettes accessibles.
-- **Choco Story, 12 place de la Cathédrale:** environ **1 h 30**, exposition sur le chocolat, audioguide et dégustations. Tarifs directs annoncés **15 € adulte**, **13 € de 12 à 17 ans**, **9 € de 3 à 11 ans**, **gratuit avant 3 ans**. Atelier distinct, dès **7 ans**, **45 € par personne**, avec visite incluse et accompagnateur adulte payant requis pour les moins de 10 ans. Habituellement **10 h-18 h**, dernière entrée 17 h; fermeture saisonnière en janvier après les vacances, à confirmer selon la date.
-- **Musée Unterlinden, place Unterlinden:** œuvres médiévales et modernes; **Muséojeux**, sac d'activités familiales gratuit à demander à l'accueil. Tarifs officiels **14 € adulte**, **9 € de 12 à 17 ans**, **gratuit avant 12 ans**; formule famille **36 €** pour deux adultes et un à cinq enfants de 12 à 17 ans: comparer soigneusement avec la gratuité et les billets individuels. Ouvert **9 h-18 h du mercredi au lundi**, fermé le mardi et plusieurs jours fériés; accessible aux poussettes, espace à langer.
-- **Le bon arbitrage plutôt qu'un catalogue:** avec de très jeunes enfants, le Musée du Jouet et l'Unterlinden peuvent coûter beaucoup moins qu'un combiné standard. Tiqets affiche un combiné **Choco Story + Musée du Jouet à partir de 20,42 €** et un autre **Musée du Jouet + Unterlinden à partir de 19,48 €**, mais ces prix affichés ne garantissent **aucune économie pour chaque famille**: vérifier catégorie d'âge, gratuités, dates et prix final au panier. L'article doit aider à choisir *une* visite ou *deux* selon l'énergie des enfants, et non inciter à faire les trois.
-- **Différenciation éditoriale:** les pages officielles détaillent séparément les musées; Fam Space peut réunir sur une même page les véritables décisions familiales (coût réel avec enfants, mardi de vacances ou hors vacances, âge minimum d'un atelier, niveau d'intérêt selon les enfants), sans reproduire les listes touristiques générales. Ne pas confondre ce sujet avec les articles existants sur les marchés de Noël de Colmar ni avec les musées gratuits de Mulhouse.
-
-## Affiliation
-
-- **Action principale, Tiqets, offre vérifiée:** combiné **Choco Story Colmar + Musée du Jouet de Colmar**, billets numériques pour les deux entrées, à partir de **20,42 €** sur la fiche consultée: https://www.tiqets.com/fr/choco-story-colmar-le-musee-du-jouet-de-colmar-b275960/ . Offre pertinente si la famille veut vraiment faire les deux visites; comparer les tarifs enfants et gratuités avant de la conseiller.
-- **Autre choix vérifié, Tiqets:** combiné **Musée du Jouet de Colmar + Musée Unterlinden**, affiché à partir de **19,48 €**: https://www.tiqets.com/fr/le-musee-du-jouet-de-colmar-musee-unterlinden-b253693/ . Les moins de 8 ans et moins de 12 ans peuvent entrer gratuitement dans les musées respectifs: le combiné peut être désavantageux pour eux. Les billets Tiqets individuels existent aussi, notamment https://www.tiqets.com/fr/activites-attractions-colmar-c67027/billets-pour-choco-story-colmar-p999587/ .
-- **Séjour en famille, Booking.com, offre vérifiée:** **Le Bag Centre ville**, appartement de trois chambres avec cuisine équipée et chambres familiales, dans le centre de Colmar: https://www.booking.com/hotel/fr/le-bag-centre-ville.fr.html . Piste utile uniquement aux visiteurs qui prolongent la sortie en week-end; vérifier les lits, prix, conditions et disponibilités aux dates exactes.
-- Pas de besoin naturel justifiant transfert, voiture de location ou city pass pour ces trois visites accessibles au centre de Colmar.
-
-## Sources de départ
-
-- **Ville de Colmar, Musée du Jouet, description des collections et jeux:** https://www.colmar.fr/musee-jouet
-- **Musée du Jouet, horaires, âges, tarifs, accès et accessibilité:** https://museedujouet.colmar.fr/visites/informations-pratiques/
-- **Choco Story Colmar, tarifs, durée, ateliers et horaires:** https://www.choco-story-colmar.fr/
-- **Choco Story, conditions des ateliers:** https://www.choco-story-colmar.fr/billetterie-accueil/
-- **Musée Unterlinden, tarifs, gratuités, horaires et accès:** https://www.musee-unterlinden.com/visites-et-activites/infos-2/informations-pratiques/
-- **Musée Unterlinden, Muséojeux pour les familles:** https://www.musee-unterlinden.com/visites-et-activites/parcours/enfant-famille/museojeux/
-- **Office de tourisme de Colmar, autres idées familiales (contexte, ne pas recopier la liste):** https://www.tourisme-colmar.com/fr/visiter/nos-conseils/en-famille
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "vie-pratique"
+title: "Colmar avec des enfants quand il pleut: quel musée choisir ?"
+subtitle: "Jouets, chocolat ou beaux-arts: trois visites au centre-ville, avec les vrais tarifs selon l'âge et les jours d'ouverture."
+summary: "Musée du Jouet, Choco-Story ou Unterlinden: comparez les expériences, les gratuités pour les enfants et les horaires pour organiser une journée pluvieuse à Colmar."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Colmar en famille quand il pleut"
+  - "musées Colmar enfants tarifs"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Colmar"
+  department: "Haut-Rhin"
+  region: "Grand Est"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Musée du Jouet de Colmar - Informations pratiques"
+    url: "https://museedujouet.colmar.fr/visites/informations-pratiques/"
+  - title: "Musée du Jouet de Colmar - Collections"
+    url: "https://museedujouet.colmar.fr/musee/collections/"
+  - title: "Choco-Story Colmar - Visites, tarifs, ateliers et horaires"
+    url: "https://www.choco-story-colmar.fr/"
+  - title: "Musée Unterlinden - Billets et tarifs"
+    url: "https://www.musee-unterlinden.com/visites-et-activites/infos-2/informations-pratiques/"
+  - title: "Musée Unterlinden - Muséojeux"
+    url: "https://www.musee-unterlinden.com/visites-et-activites/parcours/enfant-famille/museojeux/"
 ---
-```
+ 
+À Colmar, dans le Haut-Rhin, la pluie ne condamne pas la journée en famille. Trois musées du centre historique permettent de changer de programme sans quitter la ville: le Musée du Jouet pour retrouver les jeux de plusieurs générations, Choco-Story pour découvrir le chocolat en le dégustant et le musée Unterlinden pour explorer des œuvres avec les enfants. Le bon choix dépend surtout de leur âge, du temps disponible et du prix réel des entrées.
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+## Musée du Jouet: pour les enfants curieux de jeux et d'objets
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+Au **40 rue Vauban**, le [Musée du Jouet](https://museedujouet.colmar.fr/musee/collections/) présente poupées, trains, automates et jouets anciens ou plus récents. Les collections occupent trois niveaux: c'est une sortie qui plaît autant aux enfants fascinés par les mécanismes qu'aux adultes qui reconnaissent les jeux de leur enfance. Ce n'est toutefois pas une grande salle de jeux où tout se manipule.
+
+Côté budget, l'entrée coûte **6,50 € par adulte** et **5 € de 8 à 18 ans inclus**; elle est **gratuite avant 8 ans**. Attention au « tarif famille » à 5 €: il s'applique **à partir de cinq entrées payantes**, avec au maximum deux adultes, et non automatiquement à une famille de quatre.
+
+Selon les [informations pratiques du musée](https://museedujouet.colmar.fr/visites/informations-pratiques/), l'ouverture habituelle est de **10 h à 17 h**, du lundi au dimanche **sauf le mardi**. Pendant les vacances scolaires françaises, ainsi qu'en juillet, août et décembre, le musée ouvre **tous les jours de 10 h à 18 h**. Il reste fermé les **1er janvier, 1er mai, 1er novembre et 25 décembre**, même si ces dates tombent pendant les vacances. Un ascenseur dessert les trois étages et des sanitaires adaptés sont disponibles.
+
+## Choco-Story: pour une visite gourmande
+
+À deux pas de la collégiale Saint-Martin, **12 place de la Cathédrale**, [Choco-Story Colmar](https://www.choco-story-colmar.fr/) raconte le parcours du cacao jusqu'au chocolat. La visite libre, accompagnée d'un audioguide, associe explications, films, démonstrations virtuelles et **dégustations comprises dans le billet**. Comptez **environ 1 h 30**.
+
+Le billet coûte **15 € pour un adulte**, **13 € de 12 à 17 ans**, **9 € de 3 à 11 ans** et est **gratuit jusqu'à 2 ans inclus**. Les enfants ne paient donc pas tous le même prix que dans les deux autres musées.
+
+Fabriquer ses propres chocolats relève d'une **activité distincte**: l'atelier est proposé **à partir de 7 ans**, à **45 € par personne**, avec la visite incluse. Il ajoute environ 45 minutes à la sortie; les places sont limitées. Ne confondez pas cette formule avec le billet de visite ordinaire.
+
+Le musée annonce une ouverture **tous les jours de 10 h à 18 h**, avec dernière entrée à **17 h**. Une **fermeture annuelle intervient en janvier après les vacances scolaires**: mieux vaut vérifier les dates exactes avant un séjour hivernal.
+
+## Unterlinden: de l'art, mais aussi un parcours à jouer
+
+Le [musée Unterlinden](https://www.musee-unterlinden.com/visites-et-activites/infos-2/informations-pratiques/), place Unterlinden, réunit des œuvres du Moyen Âge à l'époque moderne et contemporaine dans un ensemble de bâtiments comprenant un ancien couvent. Il convient davantage aux familles qui aiment observer, raconter et discuter devant des œuvres qu'à celles qui recherchent une activité très animée.
+
+Pour rendre la visite plus vivante, demandez gratuitement à l'accueil le sac [**Muséojeux**](https://www.musee-unterlinden.com/visites-et-activites/parcours/enfant-famille/museojeux/): il propose des consignes pour mimer, dessiner, chanter ou observer les collections ensemble.
+
+Le tarif est de **14 € par adulte**, **9 € de 12 à 17 ans** et **gratuit pour les moins de 12 ans**. La formule famille à **36 €** couvre deux adultes et un à cinq jeunes de **12 à 17 ans**; avec des enfants plus jeunes, mieux vaut comparer avec les billets individuels gratuits.
+
+Le musée ouvre **du mercredi au lundi, de 9 h à 18 h**, avec dernière entrée à **17 h 30**. Il ferme le **mardi**, ainsi que les **1er janvier, 1er mai, 1er novembre et 25 décembre**. Les poussettes sont acceptées, un espace à langer est disponible et les salles sont accessibles aux personnes à mobilité réduite.
+
+## Un musée ou deux: le choix le plus simple
+
+Avec des **enfants de moins de 8 ans**, le Musée du Jouet et Unterlinden présentent un avantage budgétaire important grâce à leurs gratuités. Pour des enfants qui préfèrent goûter et découvrir une fabrication, Choco-Story offre une expérience différente, mais plus chère. Avec des adolescents, les trois visites sont possibles: choisissez plutôt selon leur intérêt pour les jouets, la gourmandise ou l'art.
+
+Les trois lieux se trouvent **dans le centre de Colmar** et peuvent se rejoindre à pied. Pour une journée pluvieuse, **une visite suffit souvent à donner un vrai programme**, surtout avec de jeunes enfants. Si vous en retenez deux, tenez compte des durées et d'une pause entre les musées; le prix d'un billet combiné n'est pas nécessairement avantageux pour les enfants bénéficiant déjà d'une entrée gratuite.
+
+**Attention au mardi**: Unterlinden reste fermé, le Musée du Jouet n'ouvre ce jour-là que pendant les périodes spécifiées, tandis que Choco-Story annonce une ouverture quotidienne hors fermeture annuelle. Vérifiez les horaires du jour avant de partir, particulièrement autour des jours fériés.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -131,4 +156,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
