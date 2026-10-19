@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,96 +14,109 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Nièvre
 - Région: Bourgogne-Franche-Comté
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Nevers en fête 2026 : illuminations, marché de Noël et idées de sortie avec les enfants.**
-
-Angle : aider les familles à organiser une visite réussie à Nevers en distinguant le lancement des illuminations (samedi 28 novembre), les trois jours du marché de Noël (4, 5 et 6 décembre, parc Roger-Salengro) et les promenades festives possibles ensuite. « Nevers en fête » désigne les festivités de fin d'année organisées dans le centre-ville, annoncées du 28 novembre 2026 au 1er janvier 2027 ; les animations détaillées de l'édition 2026 ne sont pas encore toutes publiées.
-
-## Besoin du lecteur
-
-Savoir à quelles dates venir avec des enfants, ce qui est déjà confirmé et ce qui reste à annoncer, où se trouvent les illuminations et le marché, comment adapter une sortie de quelques heures ou un week-end, et quelles informations pratiques vérifier avant le départ (horaires définitifs, éventuelles animations, accès, météo, pauses et hébergement).
-
-## Valeur éditoriale
-
-- Séparer clairement les **dates 2026 confirmées** des animations encore inconnues : ne jamais reprendre comme acquises les parades, horaires ou activités de 2025.
-- Expliquer la différence entre la période générale de fêtes, l'allumage du 28 novembre et le marché concentré sur le week-end du 4 au 6 décembre ; éviter de laisser croire que le marché est ouvert pendant toute la période.
-- Proposer un parcours familial concret et souple dans le centre-ville, avec le parc Roger-Salengro et la place Carnot (sapin de 13 m annoncé par la Ville), selon que l'on vient pour les illuminations ou les stands.
-- Mettre en avant le caractère gratuit de l'événement annoncé par l'office de tourisme, tout en distinguant d'éventuels achats ou prestations payants ; signaler les horaires détaillés à reconfirmer.
-- Sujet distinct de « Nevers en famille à petit budget » (15 août 2026) : ici, une actualité saisonnière datée et un guide de préparation des fêtes, et non une sélection générale de sorties gratuites.
-
-## Affiliation
-
-L'événement est annoncé gratuit : pas de billetterie principale à vendre. Aucune visite ou activité directement liée à « Nevers en fête 2026 » n'a été vérifiée sur les plateformes de billets partenaires ; ne pas suggérer de billet payant pour une animation gratuite.
-
-Pour les familles qui restent une nuit à Nevers, deux offres d'hébergement identifiées sur **Booking.com**, à utiliser de façon ciblée (disponibilité et tarif aux dates de séjour à vérifier) :
-
-- **BRIT HOTEL CONFORT NEVERS Centre Gare** — hôtel proche de la gare et du parc Roger-Salengro, avec chambres familiales mentionnées sur Booking.com : https://www.booking.com/hotel/fr/comfort-nevers-centre.html
-- **Au Noeud Vert Chambres d'hôtes** — chambres familiales avec coin cuisine, près du centre et du palais ducal : https://www.booking.com/hotel/fr/au-noeud-vert-chambres-d-hotes.html
-
-Offres partenaires vérifiées comme fiches de réservation, **sans garantie de disponibilité pour le 28 novembre ou le 4-6 décembre**. Les URLs indiquées sont les fiches partenaires de référence, pas des liens de suivi d'affiliation.
-
-## Sources de départ
-
-- **Ville de Nevers (30 septembre 2026)** — annonce officielle des illuminations du 28 novembre et du marché des 4, 5 et 6 décembre au parc Roger-Salengro ; précisions sur les décors et le sapin place Carnot : https://www.nevers.fr/actualites/nevers-met-ses-habits-de-lumiere
-- **Office de tourisme Cap Grand Nevers via son annonce institutionnelle (mise à jour 16 octobre 2026)** — période du 28 novembre au 1er janvier, gratuité et état « programme en préparation » : https://www.jds.fr/nevers/manifestations/nevers-en-fete-1804856_A
-- **Office de tourisme de Nevers — agenda** pour les nouvelles animations et précisions à vérifier avant rédaction : https://www.nevers-tourisme.com/preparer/agenda/
-- **Ville de Nevers — édition 2025 à ne pas confondre avec 2026** : https://www.nevers.fr/actualites/nevers-en-fete-0
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "evenements"
+title: "Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille"
+subtitle: "Deux rendez-vous à distinguer pour préparer une balade dans le centre-ville avec les enfants"
+summary: "À Nevers, les illuminations commencent le 28 novembre et le marché de Noël se tient du 4 au 6 décembre 2026. Les repères utiles pour une sortie en famille."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Nevers en fête 2026"
+  - "marché de Noël Nevers 2026"
+  - "illuminations Nevers"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Nevers"
+  department: "Nièvre"
+  region: "Bourgogne-Franche-Comté"
+eventEndsAt: "2027-01-01"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Ville de Nevers - Nevers met ses habits de lumière (30 septembre 2026)"
+    url: "https://www.nevers.fr/actualites/nevers-met-ses-habits-de-lumiere"
+  - title: "Nevers en fête 2026 - annonce renseignée par l'office de tourisme Cap Grand Nevers (16 octobre 2026)"
+    url: "https://www.jds.fr/nevers/manifestations/nevers-en-fete-1804856_A"
+  - title: "Ville de Nevers - Le parc Roger-Salengro"
+    url: "https://www.nevers.fr/vivre-a-nevers/environnement/les-parcs-et-jardins/le-parc-roger-salengro"
+  - title: "Office de tourisme de Nevers - Agenda des sorties"
+    url: "https://www.nevers-tourisme.com/preparer/agenda/"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Chaque fin d'année, Nevers, dans la Nièvre, revêt ses décors lumineux et invite les familles à flâner dans son centre-ville. **Nevers en fête** associe illuminations, ambiance de Noël et marché installé au parc Roger-Salengro. C'est une sortie à envisager aussi bien pour quelques heures que pour une escapade pendant les fêtes, à condition de choisir les bonnes dates: le marché ne dure pas toute la période.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Illuminations et marché de Noël: les dates à retenir
+
+La [Ville de Nevers a confirmé deux temps forts pour l'édition 2026](https://www.nevers.fr/actualites/nevers-met-ses-habits-de-lumiere):
+
+- **Samedi 28 novembre:** lancement des illuminations. C'est le rendez-vous à choisir pour découvrir la ville éclairée dès le début des festivités.
+- **Du vendredi 4 au dimanche 6 décembre:** marché de Noël au **parc Roger-Salengro**, en centre-ville. C'est la période la plus adaptée aux familles qui souhaitent parcourir les stands en plus de voir les décorations.
+
+L'[annonce diffusée par l'office de tourisme Cap Grand Nevers](https://www.jds.fr/nevers/manifestations/nevers-en-fete-1804856_A) indique une période de festivités allant jusqu'au **1er janvier 2027**. Cela ne signifie pas que le marché reste ouvert jusque-là. À la date de publication de ces informations, le programme détaillé de l'édition 2026 est encore en préparation: mieux vaut ne pas compter sur une parade, un spectacle ou la présence du Père Noël à un horaire précis tant que la Ville ne les a pas annoncés.
+
+## Une promenade de Noël qui plaît aussi aux enfants
+
+Pour profiter du marché sans transformer la sortie en marathon, le parc Roger-Salengro constitue un point de départ simple. Ce [parc situé au cœur de Nevers](https://www.nevers.fr/vivre-a-nevers/environnement/les-parcs-et-jardins/le-parc-roger-salengro), habituellement fréquenté pour ses promenades et son aire de jeux, accueille le marché pendant les trois jours annoncés. On peut y prendre le temps de regarder les stands, puis prolonger la sortie dans les rues du centre.
+
+La **place Carnot** mérite notamment un détour: la Ville y annonce un **sapin de 13 mètres**, décoré de quelque deux kilomètres de guirlandes. Et la promenade ne se limite pas à une seule place. Selon les préparatifs municipaux, **58 sites** - rues, places, espaces verts et bâtiments - doivent être décorés dans les différents quartiers de Nevers. Inutile de vouloir tout voir avec de jeunes enfants: quelques arrêts bien choisis suffisent à apprécier les lumières.
+
+Si votre priorité est l'ambiance des illuminations plutôt que les achats au marché, vous pouvez également envisager une sortie un autre soir, après leur lancement. Le programme des animations ponctuelles devra toutefois être consulté séparément.
+
+## Gratuité, horaires et dernières vérifications
+
+**L'événement est annoncé gratuit** par l'office de tourisme. Se promener parmi les décorations ne nécessite donc pas de billet pour « Nevers en fête »; les achats auprès des exposants et les éventuelles prestations payantes restent naturellement à votre charge.
+
+Attention aux horaires: les **heures d'ouverture précises du marché** et le déroulé des animations 2026 ne sont pas encore confirmés dans les informations consultées. Les horaires de l'édition précédente ne doivent pas être repris pour organiser votre journée. Pour une famille venant de loin, ce point peut déterminer l'heure d'arrivée, le choix d'une visite en soirée ou la nécessité de rester une nuit.
+
+Avant de partir, vérifiez les dernières précisions auprès de la [Ville de Nevers](https://www.nevers.fr/actualites/nevers-met-ses-habits-de-lumiere) et dans l'[agenda de l'office de tourisme](https://www.nevers-tourisme.com/preparer/agenda/), notamment si vous comptez sur une animation particulière, venez avec une poussette ou devez organiser le stationnement.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -132,4 +145,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
