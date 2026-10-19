@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Fête des Lumières 2026 à Lyon en famille: dates, horaires et parcours"
-subtitle: "Quatre soirées gratuites du 5 au 8 décembre: choisir un itinéraire réaliste avec des enfants en attendant le programme des œuvres."
-summary: "Préparer la Fête des Lumières 2026 à Lyon en famille: dates, horaires, accès, foule, poussettes et choix des illuminations une fois le programme publié."
+title: "Fête des Lumières 2026 à Lyon en famille: quel soir venir et comment s'organiser?"
+subtitle: "Du 5 au 8 décembre, quatre soirées gratuites: horaires, visite courte avec les enfants et précautions avant le programme."
+summary: "Fête des Lumières 2026 à Lyon en famille: choisissez entre les soirées du 5 au 8 décembre, préparez une visite gratuite adaptée aux enfants et anticipez les transports et la foule."
 category: evenements
 location:
   city: Lyon
@@ -71,17 +76,21 @@ keywords:
   - Fête des Lumières Lyon 2026 horaires enfants
   - Fête des Lumières Lyon poussette parcours
 sources:
-  - title: Fête des Lumières - horaires et dates officielles 2026
+  - title: Fête des Lumières - dates et horaires 2026
     url: https://www.fetedeslumieres.lyon.fr/fr/page/horaires-et-dates-fete-des-lumieres-2026
-  - title: Fête des Lumières - questions pratiques et programme
+  - title: Fête des Lumières - foire aux questions
     url: https://www.fetedeslumieres.lyon.fr/fr/faq/foire-aux-questions
-  - title: Ville de Lyon - présentation des Fêtes des Lumières
-    url: https://www.lyon.fr/sortir-et-decouvrir/se-cultiver-se-divertir/fete-des-lumieres
+  - title: Fête des Lumières - handi-accueil
+    url: https://www.fetedeslumieres.lyon.fr/fr/page/handi-accueil
+  - title: Fête des Lumières - se déplacer dans Lyon
+    url: https://www.fetedeslumieres.lyon.fr/fr/page/se-deplacer-dans-lyon
   - title: Office de tourisme de Lyon - Fête des Lumières
     url: https://www.visiterlyon.com/sortir/l-agenda/fetes/fete-des-lumieres
+  - title: ibis Styles Lyon Centre Gare Part Dieu - chambres et localisation
+    url: https://all.accor.com/hotel/7373/index.fr.shtml
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours
   decision: Décider laquelle des quatre soirées choisir avec ses enfants, à quelle heure venir, et comment organiser une courte découverte gratuite et praticable plutôt qu'un circuit épuisant, puis sélectionner les installations réelles lorsque le programme officiel 2026 sera publié.
@@ -91,39 +100,59 @@ radar:
     dataThrough: 2026-10-16
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Fête des Lumières - horaires et dates officielles 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-08
 ---
 
-## Mission retenue
+La **Fête des Lumières 2026 à Lyon** se déroule **du samedi 5 au mardi 8 décembre**. Pendant quatre soirées, des projections et installations lumineuses transforment des espaces publics de la ville. **La visite des œuvres est gratuite**, mais, avec des enfants, il vaut mieux prévoir une sortie courte que chercher à tout voir.
 
-Un guide pratique pour profiter en famille de la **Fête des Lumières de Lyon 2026**, événement gratuit de projections et d'installations artistiques dans l'espace public, du **samedi 5 au mardi 8 décembre**. Ce n'est pas le Festival Lumière consacré au cinéma, déjà couvert par Fam Space.
+La première décision est la date: **le dimanche 6 décembre commence une heure plus tôt** que les trois autres soirées. C'est une option intéressante si vos enfants se couchent tôt. Le programme précis des œuvres 2026 est annoncé pour début novembre: les lieux et circuits des années précédentes ne doivent pas servir de parcours définitif.
 
-## Pourquoi cette mission
+## Dates et horaires: quel soir choisir?
 
-L'opportunité saisonnière est importante, proche, confirmée officiellement et absente des **714 articles du catalogue compact**: la comparaison des titres proches et de l'historique Radar ne révèle pas de doublon direct. Aucun sujet Publication ou Destination actif ne la concurrence. La carte OKAY Savoie, premier refresh du snapshot GSC, a déjà été révisée le 6 octobre et sa baisse de visibilité reste de cause incertaine, sans défaut éditorial déterminant identifié. Une expansion depuis une page GSC forte sur les transports parisiens est moins urgente et croiserait plusieurs sujets déjà publiés.
+Les [horaires officiels 2026](https://www.fetedeslumieres.lyon.fr/fr/page/horaires-et-dates-fete-des-lumieres-2026) sont les suivants, sauf indication particulière sur la fiche d'une œuvre:
 
-## Décision du lecteur
+- **Samedi 5 décembre:** 19h à 23h.
+- **Dimanche 6 décembre:** 18h à 22h.
+- **Lundi 7 décembre:** 19h à 23h.
+- **Mardi 8 décembre:** 19h à 23h.
 
-Choisir le bon soir et une amplitude de visite adaptée à l'âge et à la fatigue des enfants, puis établir un parcours court après publication du programme 2026, sans confondre les installations actuelles et celles de l'année précédente.
+**Avec de jeunes enfants, le dimanche permet de commencer à 18h** et de rentrer sans attendre la fin de la soirée. Le samedi convient davantage à une famille disponible le week-end, mais il faut anticiper une forte fréquentation possible: la fête attire habituellement une foule considérable. Les lundis et mardis peuvent convenir aux familles déjà sur place; **ne supposez pas qu'ils seront peu fréquentés**, surtout le 8 décembre, date traditionnelle des lumignons.
 
-## Faits à traiter
+## Un parcours familial: une ou deux œuvres plutôt que toute la ville
 
-- **Samedi 5, lundi 7 et mardi 8 décembre:** **19h-23h**; **dimanche 6 décembre:** **18h-22h**, sauf horaires spécifiques annoncés pour certaines œuvres.
-- **Entrée gratuite** aux œuvres de la Fête, sans billeterie générale. Le programme numérique est annoncé **début novembre**: ne pas inventer dès octobre des œuvres, lieux, files d'attente, circuits enfants ou horaires d'accès 2026.
-- Comparer le début plus tôt le dimanche, la durée réaliste pour de jeunes enfants, les déplacements nocturnes, la météo, les pauses et l'intérêt d'une ou deux œuvres plutôt que du parcours intégral.
-- Dès publication, vérifier précisément les installations adaptées aux enfants, secteurs piétons, entrées et sorties, fermetures de stations, accessibilité et dispositifs PMR/poussettes, sécurité et derniers transports; les informations opérationnelles encore affichées pour 2025 ne doivent pas être réattribuées à 2026.
-- Mentionner la différence entre gratuité de la Fête, consommation et transport, et éventuelle nuit sur place. Ne pas affirmer de service spécifique non confirmé.
+Le bon parcours dépendra des **installations réellement programmées en 2026**. Le [site officiel de la Fête des Lumières](https://www.fetedeslumieres.lyon.fr/fr/faq/foire-aux-questions) annonce son programme numérique **début novembre** et une version papier à partir de **fin novembre**. À cette date, repérez deux œuvres proches l'une de l'autre, un accès en transports et un trajet de retour simple.
 
-## Sources de départ
+Pour une première visite avec des enfants, prévoyez **environ une heure à une heure et demie sur place** comme objectif souple, et non comme durée officielle du parcours. Les temps de marche, les attentes et la densité de la foule peuvent allonger nettement cette sortie. Mieux vaut voir une seule installation dans de bonnes conditions que traverser plusieurs quartiers avec des enfants fatigués.
 
-Le site officiel de la Fête des Lumières (dates, horaires et FAQ); la présentation de la Ville de Lyon et l'office de tourisme, notamment pour la mise en ligne du programme 2026.
+Privilégiez, une fois la carte publiée, les œuvres accessibles depuis un même secteur et évitez les détours imposant de nombreux franchissements de ponts ou de longues correspondances. Certaines projections sont accompagnées de sons puissants ou d'effets visuels intenses: vérifiez la description de chaque œuvre si un enfant y est sensible.
 
-## Affiliation
+## Poussette, handicap et foule: les précautions utiles
 
-Pas de billetterie: la sortie est gratuite. Une nuit peut aider les familles venues de loin. **Ibis Styles Lyon Centre - Gare Part Dieu** est référencé sur Booking.com, tout près de la gare, avec des chambres familiales: vérifier l'occupation exacte, les prix et les conditions avant tout conseil de réservation. Ne pas présenter son emplacement comme étant au cœur des œuvres, dont le programme reste à paraître.
+Une poussette peut être pratique pour un petit enfant, mais plus difficile à manœuvrer dans les rues très fréquentées. Pour un bébé, un porte-bébé peut être une solution plus souple, selon vos habitudes et votre confort. Habillez les enfants chaudement et prévoyez une protection contre la pluie, des chaussures adaptées, ainsi qu'un point de rendez-vous simple si le groupe se sépare.
 
-## Continuations internes
+L'organisateur prévoit des **aménagements pour les visiteurs en situation de handicap**, notamment des dispositifs d'accès et des parcours adaptés sur présentation de la carte mobilité inclusion. Les informations détaillées pour 2026 doivent être publiées **à partir du 4 novembre** sur la [page officielle handi-accueil](https://www.fetedeslumieres.lyon.fr/fr/page/handi-accueil). Consultez-la pour vérifier les accès réellement disponibles et ne déduisez pas qu'un chemin adapté à une personne à mobilité réduite convient automatiquement à toutes les poussettes.
 
-Le **Festival Lumière de Lyon 2026** déjà publié sur Fam Space porte sur le cinéma et non sur cet événement nocturne: éviter la confusion et tout doublon. Aucun lien interne de transport spécifique à la Fête n'a été identifié dans le catalogue: ne pas forcer un maillage sans valeur.
+## Venir en train ou en voiture: attention au périmètre piéton
+
+Les gares **Lyon Part-Dieu** et **Lyon-Perrache** permettent de venir sans voiture. Pour rejoindre les œuvres, utilisez le réseau TCL puis marchez sur un trajet compatible avec l'âge des enfants.
+
+Pendant la fête, un **périmètre piéton** est habituellement instauré dans l'hypercentre, avec des restrictions de circulation et d'accès à certains parkings. La [page officielle des déplacements](https://www.fetedeslumieres.lyon.fr/fr/page/se-deplacer-dans-lyon) détaille ces dispositifs, mais certains horaires, itinéraires et tarifs qui y figurent peuvent encore correspondre à une édition précédente: **vérifiez les informations spécifiquement confirmées pour décembre 2026** avant de choisir un parking, une station de métro ou un dernier train.
+
+Si vous venez en voiture, évitez de compter sur une place au cœur du périmètre de fête. Si vous venez en train, gardez une marge avant le départ: les temps de marche et d'accès aux stations peuvent augmenter avec l'affluence.
+
+## Gratuité de la fête: quelles dépenses prévoir?
+
+**Aucun billet général n'est nécessaire pour admirer les œuvres de la Fête des Lumières.** Le budget familial peut donc se limiter aux transports et à une collation, si vous habitez près de Lyon. Pour une famille venue de plus loin, ajoutez les billets de train, le stationnement éventuel ou l'hébergement.
+
+La traditionnelle opération solidaire des **Lumignons du Cœur** est distincte de l'accès gratuit aux installations: y participer est un choix, pas une condition pour assister à la fête.
+
+## Dormir près de la gare pour éviter un retour tardif
+
+Si vous venez en train avec des enfants, passer une nuit sur place peut éviter un long trajet après les illuminations. L'[**ibis Styles Lyon Centre - Gare Part Dieu sur Booking.com**](https://www.booking.com/hotel/fr/all-seasons-lyon-part-dieu.fr.html), au **54 rue de la Villette**, se trouve près de la gare Part-Dieu. L'hôtel présente notamment une **junior suite pouvant accueillir jusqu'à quatre personnes**, avec un lit double et un canapé-lit double; une chambre supérieure est prévue pour trois personnes. Cela ne garantit ni leur disponibilité ni leur prix aux dates de la fête.
+
+Avant de réserver, indiquez **l'âge de chaque enfant**, vérifiez la capacité réelle de la chambre, les conditions d'annulation, les éventuels frais ou garanties à l'arrivée et le prix final. L'hôtel est pratique pour la gare, **pas nécessairement à proximité immédiate des œuvres**: leur emplacement 2026 reste à consulter sur la carte officielle.
+
+Pour arrêter votre programme, revenez au [calendrier et aux informations de l'organisateur](https://www.fetedeslumieres.lyon.fr/fr/faq/foire-aux-questions) dès la publication des œuvres en novembre. Le choix du secteur, des accès et de l'heure de retour sera alors plus fiable qu'un itinéraire préparé à partir de l'édition 2025.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -132,11 +161,11 @@ Le **Festival Lumière de Lyon 2026** déjà publié sur Fam Space porte sur le 
 - /articles/vie-pratique/location-de-voiture-a-lyon-avec-des-enfants-ce-qu-il-faut-verifier-avant-de-reserver/ | Location de voiture à Lyon avec des enfants: ce qu'il faut vérifier avant de réserver | vie-pratique | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/evenements/toussaint-2026-au-musee-des-confluences-a-lyon-spectacles-et-ateliers-par-age/ | Toussaint 2026 au musée des Confluences: cinq rendez-vous pour les enfants | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/activites/atelier-des-lumieres-avec-un-enfant-quel-programme-choisir-et-peut-on-venir-avec-une-poussette/ | Atelier des Lumières avec un enfant: quel programme choisir et peut-on venir avec une poussette ? | activites | Paris, Paris, Île-de-France
+- /articles/evenements/lumieres-de-noel-a-montbeliard-2026-quel-jour-venir-avec-des-enfants/ | Lumières de Noël à Montbéliard 2026: quel jour venir avec des enfants? | evenements | Montbéliard, Doubs, Bourgogne-Franche-Comté
+- /articles/evenements/castagnade-de-joyeuse-2026-avec-des-enfants-venir-samedi-ou-dimanche/ | Castagnade de Joyeuse 2026 avec des enfants: venir samedi ou dimanche? | evenements | Joyeuse, Ardèche, Auvergne-Rhône-Alpes
+- /articles/sorties/chateau-de-compiegne-en-famille-que-visiter-et-comment-organiser-la-journee/ | Château de Compiègne en famille: que visiter et comment organiser la journée? | sorties | Compiègne, Oise, Hauts-de-France
 - /articles/activites/parc-de-courzieu-en-famille-tarifs-horaires-et-conseils-pour-la-visite/ | Parc de Courzieu en famille: tarifs, horaires et conseils pour la visite | activites | Courzieu, Rhône, Auvergne-Rhône-Alpes
 - /articles/sorties/parc-family-aventure-en-haute-loire-tarifs-parcours-et-conseils-en-famille/ | Parc Family Aventure La Séauve: tarifs 2026 et parcours dès 3 ans | sorties | La Séauve-sur-Semène, Haute-Loire, Auvergne-Rhône-Alpes
-- /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille | evenements | Lumigny-Nesles-Ormeaux, Seine-et-Marne, Île-de-France
-- /articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/ | Noël à Trévarez 2026 en famille: dates, horaires et réservation | evenements | Saint-Goazec, Finistère, Bretagne
-- /articles/sorties/cite-des-climats-a-beaune-en-famille-tarifs-parcours-enfants-et-billets/ | Cité des Climats à Beaune en famille: tarifs, parcours enfants et billets | sorties | Beaune, Côte-d'Or, Bourgogne-Franche-Comté
 - /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | Festival Lumière 2026: Laurel & Hardy en famille le 17 octobre à Lyon | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/parentalite/cafe-papote-a-lyon-4e-ou-echanger-gratuitement-avec-d-autres-parents/ | Café Papote à Lyon 4e: où échanger gratuitement avec d'autres parents | parentalite | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/maison/decheteries-mobiles-a-lyon-que-peut-on-deposer-et-quand-preferer-une-decheterie-fixe/ | Déchèteries mobiles à Lyon: que peut-on déposer et quand préférer une déchèterie fixe? | maison | Lyon, Rhône, Auvergne-Rhône-Alpes
@@ -158,7 +187,6 @@ Le **Festival Lumière de Lyon 2026** déjà publié sur Fam Space porte sur le 
 - opportunity | /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | 2026-10-10T15:40:28.185Z
 - opportunity | /articles/evenements/foire-du-livre-de-brive-2026-en-famille-quel-jour-venir-avec-les-enfants/ | 2026-10-18T16:46:58.413Z
 - opportunity | /articles/evenements/halloween-2026-a-la-mer-de-sable-spectacles-parcours-effrayant-et-billets/ | 2026-10-18T12:12:00.071Z
-- opportunity | /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | 2026-10-16T17:46:42.470Z
 - opportunity | /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | 2026-10-19T13:54:07.745Z
 - opportunity | /articles/evenements/marche-de-noel-de-mulhouse-2026-en-famille-dates-etoffe-et-parcours-avec-les-enfants/ | 2026-10-19T09:37:22.517Z
 - opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
