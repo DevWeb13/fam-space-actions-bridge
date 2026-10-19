@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,40 +60,42 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Marché de Noël de Mulhouse 2026 en famille: dates, étoffe et parcours avec les enfants"
-subtitle: Choisir entre les chalets de la place de la Réunion, les ateliers et une sortie plus longue.
-summary: "Du 20 novembre au 27 décembre 2026, préparer le marché de Noël de Mulhouse avec des enfants: horaires, étoffe de Noël, animations, accès et budget."
+title: "Marché de Noël de Mulhouse 2026 en famille: horaires, étoffe et animations"
+subtitle: Le bon parcours autour de la place de la Réunion, les activités selon l'âge et les dépenses à anticiper.
+summary: "Du 20 novembre au 27 décembre 2026, préparez une sortie en famille au marché de Noël de Mulhouse: horaires, étoffe Jardin d'hiver, animations, stationnement et hébergement."
 category: evenements
 location:
   city: Mulhouse
   department: Haut-Rhin
   region: Grand Est
 keywords:
-  - marché de Noël Mulhouse 2026 en famille
+  - marché de Noël Mulhouse 2026 famille
   - Noël Mulhouse 2026 enfants
-  - étoffe de Noël Mulhouse 2026
+  - étoffe Jardin d'hiver Mulhouse
+  - marché de Noël Mulhouse horaires
 sources:
-  - title: Mulhouse Alsace Agglomération - Marché de Noël à Mulhouse 2026
+  - title: Mulhouse Alsace Agglomération - marché de Noël 2026, étoffe, P+Tram
     url: https://mag.mulhouse-alsace.fr/evenement/marche-de-noel-a-mulhouse-2026/
-  - title: Mulhouse Tourisme - Marché de Noël de Mulhouse
-    url: https://www.tourisme-mulhouse.com/a-faire-sur-place/agenda-et-grand-evenements/tout-lagenda/marche-de-noel-de-mulhouse-mulhouse-fr-3839632/
+  - title: Noël à Mulhouse - informations pratiques 2026
+    url: https://www.noel-mulhouse.fr/infos-pratiques-marche-de-noel-de-mulhouse/
   - title: Noël à Mulhouse - programme officiel 2026
     url: https://www.noel-mulhouse.fr/programme/
-  - title: Mulhouse Tourisme - Marché de Noël du Musée de l'Impression sur Étoffes
+  - title: Mulhouse Tourisme - marché de Noël principal
+    url: https://www.tourisme-mulhouse.com/a-faire-sur-place/agenda-et-grand-evenements/tout-lagenda/marche-de-noel-de-mulhouse-mulhouse-fr-3839632/
+  - title: Noël à Mulhouse - Jeux de Noël à la Maison du Patrimoine
+    url: https://www.noel-mulhouse.fr/%C3%A9v%C3%A8nements/jeux-de-noel/?occurrence=2026-11-25&time=1795611600
+  - title: Noël à Mulhouse - visites découvertes La magie de Noël
+    url: https://www.noel-mulhouse.fr/%C3%A9v%C3%A8nements/visites-decouvertes-la-magie-de-noel/?occurrence=2026-11-21&time=1795280400
+  - title: Noël à Mulhouse - Marché Secret
+    url: https://www.noel-mulhouse.fr/%C3%A9v%C3%A8nements/le-marche-secret/?occurrence=2026-11-20
+  - title: Mulhouse Tourisme - marché du Musée de l'Impression sur Étoffes
     url: https://www.tourisme-mulhouse.com/a-faire-sur-place/agenda-et-grand-evenements/tout-lagenda/marche-de-noel-du-musee-de-limpression-sur-etoffes-mulhouse-fr-3893649/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: marche-de-noel-de-mulhouse-2026-en-famille-dates-etoffe-et-parcours-avec-les-enfants
   decision: Choisir la bonne date, les haltes et les animations adaptées à l'âge des enfants, organiser un parcours court autour de la place de la Réunion et prévoir le coût réel d'une journée ou d'un séjour.
@@ -91,37 +105,68 @@ radar:
     dataThrough: 2026-10-16
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Mulhouse Alsace Agglomération - Marché de Noël à Mulhouse 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-27
 ---
 
-## Mission retenue
+Du **20 novembre au 27 décembre 2026**, le marché de Noël de Mulhouse s'installe dans le centre historique, autour de la place de la Réunion. On peut y découvrir les chalets, les illuminations et l'étoffe spécialement créée pour l'édition 2026 sans acheter de billet: **l'accès au marché principal est gratuit**. Avec des enfants, le choix important est plutôt de prévoir une balade courte ou d'ajouter une animation adaptée à leur âge, certaines activités se déroulant ailleurs et étant payantes.
 
-Le marché de Noël 2026 de Mulhouse, dans le centre historique autour de la place de la Réunion, avec son étoffe textile annuelle « Jardin d'hiver », les chalets, les lumières et les animations familiales à sélectionner dans le programme 2026. Ne pas confondre le marché municipal et celui du Musée de l'Impression sur Étoffes, distinct.
+## Quand venir, et jusqu'à quelle heure?
 
-## Pourquoi cette mission
+Le marché principal est annoncé **du vendredi 20 novembre au dimanche 27 décembre**, avec fermeture le **25 décembre**. Le site de l'événement [Noël à Mulhouse](https://www.noel-mulhouse.fr/infos-pratiques-marche-de-noel-de-mulhouse/) affiche les horaires suivants:
 
-Le marché du 20 novembre au 27 décembre 2026 est confirmé par l'agglomération et l'office de tourisme, avec dates, accès libre, horaires et programme officiel désormais consultable: un choix concret pour les familles qui préparent novembre et décembre. Le meilleur refresh GSC, « Carte OKAY Savoie », a déjà été substantiellement actualisé le 6 octobre et son recul reste « uncertain »: aucune amélioration indépendante majeure établie. Une expansion depuis « Transports à Paris avec des enfants », page forte GSC, risque de reprendre les guides déjà publiés sur les trajets franciliens et Disneyland sans une décision assez distincte. Aucun article publié sur le marché de Noël de Mulhouse n'est présent dans le catalogue compact.
+- **Du lundi au jeudi:** 11h-20h.
+- **Du vendredi au dimanche:** 10h-21h.
+- **Jeudi 24 décembre:** fermeture à 18h.
+- **Samedi 26 décembre:** ouverture à 12h, fermeture à 21h.
+- **Dimanche 27 décembre:** fermeture à 18h.
 
-## Décision du lecteur
+Il existe une différence entre les sources institutionnelles: [Mulhouse Alsace Agglomération](https://mag.mulhouse-alsace.fr/evenement/marche-de-noel-a-mulhouse-2026/) annonce le vendredi à partir de 11h et le dimanche jusqu'à 20h, contre 10h et 21h sur le site dédié. Pour éviter une arrivée trop tôt ou trop tard ces deux jours, contrôlez les horaires publiés peu avant votre visite.
 
-Savoir quel jour venir, quoi montrer aux enfants sans chercher à faire toutes les animations, comment rejoindre le centre et distinguer les expériences gratuites des dépenses et réservations éventuelles.
+Le site de Noël à Mulhouse précise également qu'un **marché situé place de la Concorde reste ouvert jusqu'au 29 décembre**. Cette prolongation ne concerne pas l'ensemble du marché de la place de la Réunion.
 
-## Faits à traiter
+Pour une première sortie avec de jeunes enfants, arriver à l'ouverture laisse le temps de regarder les stands et de prendre une pause avant l'affluence de fin de journée. Les illuminations ont davantage d'intérêt à la tombée du jour, mais une visite uniquement en soirée sera moins souple si les enfants se fatiguent.
 
-Marché principal du 20 novembre au 27 décembre 2026, place de la Réunion, entrée libre; fermeture le 25 décembre et horaires spéciaux des 24, 26 et 27 décembre à vérifier dans les fiches officielles. Attention: les deux sources institutionnelles consultées ne donnent pas exactement les mêmes horaires ordinaires pour le vendredi et le dimanche; privilégier l'horaire mis à jour par l'organisateur, signaler l'incertitude si elle persiste. Étoffe 2026 « Jardin d'hiver » et Boutique aux Étoffes à l'Hôtel de Ville; choisir parmi les activités 2026 effectivement programmées selon âge, lieu, heure et éventuelle réservation. Distinguer le marché du Musée de l'Impression sur Étoffes (accès au marché gratuit, visite du musée payante). Pour l'accès, vérifier le ticket P+Tram familial, les arrêts du tram et la marche depuis la gare; ne pas confondre marchés du centre et événements dans d'autres communes ou les prolongations non confirmées officiellement.
+## Ce qu'il faut voir autour de la place de la Réunion
 
-## Sources de départ
+La place de la Réunion concentre les chalets, les décorations et l'un des signes distinctifs de Noël à Mulhouse: **l'étoffe de Noël**. Le motif 2026, baptisé **« Jardin d'hiver »**, a été conçu par Manon During et Julie Fouilland. Ses couleurs habillent les décors et certains objets artisanaux du marché.
 
-Pages organisatrices et touristiques indiquées dans le frontmatter; ne pas utiliser les fiches partenaires pour établir les faits de l'événement.
+Dans l'Hôtel de Ville, au rez-de-chaussée du Musée Historique, la **Boutique aux Étoffes** présente des créations réalisées avec ce tissu, ainsi que des objets de producteurs locaux. Elle est annoncée du 20 novembre au 27 décembre. C'est une halte concrète pour expliquer aux enfants pourquoi le textile occupe une place importante dans l'identité de Mulhouse; acheter un souvenir n'est pas obligatoire.
 
-## Affiliation
+Pour une balade simple, commencez sur la place, regardez les chalets et la façade de l'Hôtel de Ville, puis rejoignez la Maison du Patrimoine, située **5 place Lambert**, si une activité du programme vous intéresse. Ce circuit reste concentré dans le centre ancien, sans imposer les grands musées de la ville.
 
-L'accès au marché ne justifie aucun lien de billetterie. Pour un séjour depuis une autre ville, La Maison Hôtel Mulhouse Centre dispose de chambres familiales et quadruples à proximité du marché, selon sa fiche Booking.com: https://www.booking.com/hotel/fr/mulhousecentre.fr.html . Les prix, la disponibilité réelle et le dépôt de garantie dépendent de l'offre choisie; ne pas annoncer de montant sans date.
+## Quelles activités choisir selon l'âge?
 
-## Continuations internes
+Pour **les enfants à partir de 5 ans**, les **Jeux de Noël** de la Maison du Patrimoine permettent de découvrir les traditions locales au moyen d'un parcours familial. Le calendrier 2026 mentionne notamment les **25 novembre et 2 décembre**, de **13h à 18h30**. L'établissement indique une ouverture habituelle de 13h à 18h30 durant le marché, sauf les 25 et 26 décembre. Vérifiez les occurrences exactes avant de venir spécialement pour le jeu.
 
-- Pour organiser deux journées, les musées et le tram, renvoyer à « Mulhouse sans voiture avec des enfants: comment organiser 2 jours », sans recopier son itinéraire.
-- Si le lecteur veut des sorties culturelles sans frais, renvoyer à « Mulhouse: trois musées gratuits pour une journée culturelle avec des enfants », sans détailler à nouveau chaque musée.
-- Pour combiner des marchés de Noël à Colmar, orienter vers « Marchés de Noël de Colmar avec des enfants en 2026 »: destination et organisation distinctes.
+Autre possibilité sans billet de spectacle: la [chasse au trésor familiale](https://www.noel-mulhouse.fr/infos-pratiques-marche-de-noel-de-mulhouse/) consacrée aux artistes de Mulhouse. Son livret est annoncé **gratuit**, à retirer à l'office de tourisme ou à la Boutique aux Étoffes. C'est un bon fil conducteur pour des enfants qui préfèrent chercher des indices plutôt que parcourir les stands.
+
+Pour **les enfants un peu plus grands qui aiment les histoires**, les visites découvertes **« La magie de Noël »** partent de la Maison du Patrimoine. Des créneaux sont annoncés à **17h-18h**, notamment les **21 et 28 novembre**. Le tarif communiqué est de **5 € au plein tarif**, **3 € au tarif réduit**, **12 € pour la formule famille** et **gratuit pour les moins de 12 ans**. Il s'agit d'une visite guidée, distincte de la promenade libre au marché.
+
+Pour une **expérience immersive payante**, **Le Marché Secret** se tient au **Parc Jaquet** les vendredis et samedis de **17h à 21h**, les dimanches de **16h à 20h**. Le parcours dure environ **50 minutes** et l'organisateur le conseille **à partir de 4 ans**, avec des groupes de **25 personnes au maximum**. Les tarifs individuels affichés sont de **13,99 € dès 16 ans** et **9,99 € de 4 à 15 ans**; les moins de 4 ans sont annoncés gratuits, bien que l'expérience ne leur soit pas spécialement recommandée. Une formule famille est aussi mentionnée, mais son affichage ne permet pas d'en déduire clairement le total: comparez le prix réellement proposé pour votre groupe avant toute réservation.
+
+Ces animations ne sont pas interchangeables: la chasse au trésor convient à une promenade autonome, la visite guidée demande de suivre un départ précis et l'expérience immersive occupe un créneau réservé. Le [programme officiel 2026](https://www.noel-mulhouse.fr/programme/) permet de vérifier les jours proposés.
+
+## Et le marché de Noël du musée?
+
+Le **Musée de l'Impression sur Étoffes**, au **14 rue Jean-Jacques Henner**, organise un autre marché intitulé **« Les Jardins de l'Art nouveau »**. Il est annoncé **du 14 novembre au 31 décembre 2026**, en général de **13h à 18h du mercredi au dimanche**, avec des ouvertures exceptionnelles les mardis de décembre. L'accès à ce **marché du musée est gratuit**, mais la **visite des collections est payante**: une fiche touristique annonce **9 € pour visiter le musée**. Contrôlez le tarif du musée avant d'acheter un billet, car ses autres pages peuvent présenter une tarification différente.
+
+Ce lieu vaut le détour si la famille s'intéresse aux motifs textiles, mais il faut le prévoir comme une étape distincte et non comme un simple chalet supplémentaire de la place de la Réunion.
+
+## Venir en train, en tram ou en voiture
+
+La **gare centrale** permet de rejoindre le centre à pied ou en tram. Pour une sortie centrée sur les chalets, vous n'avez pas besoin de multiplier les trajets une fois arrivé dans le centre historique.
+
+En voiture, la solution [**P+Tram annoncée par Mulhouse Alsace Agglomération**](https://mag.mulhouse-alsace.fr/evenement/marche-de-noel-a-mulhouse-2026/) peut être plus intéressante que le stationnement central: **2 € pour la journée** aux P+Tram **Nouveau Bassin** et **Université**, avec **un aller-retour en transports pour tous les occupants du véhicule, jusqu'à sept personnes**, à condition de voyager ensemble à l'aller et au retour. Les horaires d'accès aux parkings diffèrent, notamment le dimanche: vérifiez celui que vous choisissez.
+
+Les parkings Centre, Porte Jeune, Réunion, Maréchaux et Porte Haute sont annoncés à **3 € pour quatre heures** sur la page de l'agglomération. Celle du site de Noël présente quelques autres montants: fiez-vous aux tarifs en vigueur à l'entrée du parking.
+
+## Une journée suffit-elle ou faut-il dormir à Mulhouse?
+
+Pour découvrir les chalets, l'étoffe et faire une animation, **une journée suffit**. Passer une nuit est surtout utile si vous venez de loin, souhaitez profiter des lumières en soirée sans trajet retour ou prévoyez une seconde journée de visites.
+
+À proximité de la place de la Réunion, **[La Maison Hôtel Mulhouse Centre sur Booking.com](https://www.booking.com/hotel/fr/mulhousecentre.fr.html)**, au 15 rue Lambert, propose notamment des chambres triples et quadruples. Vérifiez la capacité autorisée avec l'âge des enfants, les conditions d'annulation et les prix pour vos dates exactes; la configuration d'une chambre ne garantit pas automatiquement l'accueil de toute composition familiale.
+
+Si vous ajoutez la Cité du Train ou le Musée de l'Automobile, notre guide [**Mulhouse sans voiture avec des enfants: organiser deux jours**](/articles/voyages/mulhouse-sans-voiture-avec-des-enfants-comment-organiser-2-jours/) explique déjà comment répartir les musées et les trajets en tram. Pour une sortie complémentaire à petit budget, consultez aussi les [**trois musées gratuits à Mulhouse**](/articles/bons-plans/mulhouse-trois-musees-gratuits-pour-une-journee-culturelle-avec-des-enfants/). Et si votre séjour privilégie les marchés du Haut-Rhin au-delà de Mulhouse, le guide des [**marchés de Noël de Colmar avec des enfants**](/articles/voyages/marches-de-noel-de-colmar-avec-des-enfants-en-2026-1-ou-2-jours-et-ou-dormir/) prépare cette destination distincte.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -129,11 +174,11 @@ L'accès au marché ne justifie aucun lien de billetterie. Pour un séjour depui
 
 - /articles/voyages/mulhouse-sans-voiture-avec-des-enfants-comment-organiser-2-jours/ | Mulhouse sans voiture avec des enfants: comment organiser 2 jours | voyages | Mulhouse, Haut-Rhin, Grand Est
 - /articles/bons-plans/mulhouse-trois-musees-gratuits-pour-une-journee-culturelle-avec-des-enfants/ | Mulhouse: trois musées gratuits pour une journée culturelle avec des enfants | bons-plans | Mulhouse, Haut-Rhin, Grand Est
+- /articles/evenements/noel-a-limoges-2026-en-famille-marche-animations-et-idees-pour-un-week-end/ | Noël à Limoges 2026 en famille: marché, animations et idées pour un week-end | evenements | Limoges, Haute-Vienne, Nouvelle-Aquitaine
 - /articles/voyages/marches-de-noel-de-colmar-avec-des-enfants-en-2026-1-ou-2-jours-et-ou-dormir/ | Marchés de Noël de Colmar avec des enfants en 2026: 1 ou 2 jours et où dormir | voyages | Colmar, Haut-Rhin, Grand Est
 - /articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/ | Noël à Trévarez 2026 en famille: dates, horaires et réservation | evenements | Saint-Goazec, Finistère, Bretagne
 - /articles/evenements/marche-de-noel-de-cusset-2026-en-famille-quel-jour-choisir/ | Marché de Noël de Cusset 2026 en famille: quel jour choisir? | evenements | Cusset, Allier, Auvergne-Rhône-Alpes
 - /articles/evenements/rouen-givree-2026-en-famille-marche-de-noel-et-refuge-givre/ | Rouen Givrée 2026 en famille: marché de Noël et Refuge Givré | evenements | Rouen, Seine-Maritime, Normandie
-- /articles/evenements/train-de-noel-de-la-haute-somme-2026-en-famille-dates-tarifs-et-reservation/ | Train de Noël de la Haute Somme 2026 en famille: dates, tarifs et réservation | evenements | La Neuville-les-Bray, Somme, Hauts-de-France
 - /articles/evenements/lumieres-de-noel-a-montbeliard-2026-quel-jour-venir-avec-des-enfants/ | Lumières de Noël à Montbéliard 2026: quel jour venir avec des enfants? | evenements | Montbéliard, Doubs, Bourgogne-Franche-Comté
 - /articles/activites/noel-2026-a-l-ecomusee-d-alsace-en-famille-quand-venir-et-que-prevoir/ | Noël 2026 à l'Écomusée d'Alsace en famille: quand venir et que prévoir? | activites | Ungersheim, Haut-Rhin, Grand Est
 - /articles/evenements/repto-terra-expo-a-colmar-faut-il-y-aller-avec-des-enfants/ | Repto Terra Expo à Colmar: faut-il y aller avec des enfants? | evenements | Colmar, Haut-Rhin, Grand Est
