@@ -203,3 +203,4 @@ automation/image-20261019-94a6128-strasbourg-aquarium-1040|8830855cc113d67e03b35
 automation/image-20261019-e0d3e78-amiens-mulhouse-pau-1617|c93696e1cc0fcdf5c7f3fffa00a622c5efdd5823
 automation/image-20261019-e0d3e78-amiens-mulhouse-pau-1617|e5d26964f89c37b9b58ac5b92c10141c41595500
 automation/image-20261019-ce2a835-lyon-nancy-gargas-colmar-2148|2f2a0a27d4e69aa2695468d6b1950aeefb0a1948
+automation/image-20261019-ce2a835-lyon-nancy-gargas-colmar-2148|467c3608352e5d514b6ea00b3b0734ced7f875ac
