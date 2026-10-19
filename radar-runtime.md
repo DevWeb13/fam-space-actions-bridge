@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Marché de Noël de Strasbourg 2026 en famille: quels marchés choisir et quand venir?"
-subtitle: Préparer une visite adaptée aux enfants entre les places historiques, les pauses et l'affluence.
-summary: Les repères confirmés pour organiser une balade familiale au marché de Noël de Strasbourg 2026, sans reprendre comme acquis le programme 2025.
+title: "Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants?"
+subtitle: Ouverture, itinéraires courts, heures moins chargées et pauses pratiques dans le centre historique.
+summary: Le marché de Noël de Strasbourg ouvre le 27 novembre 2026. Choisissez un parcours familial entre Kléber, Broglie, la cathédrale et la Petite France, avec des repères sur l'affluence et les services.
 category: evenements
 location:
   city: Strasbourg
@@ -68,19 +73,22 @@ location:
   region: Grand Est
 keywords:
   - marché de Noël Strasbourg 2026 famille
-  - Strasbourg Noël 2026 enfants
+  - marchés de Noël Strasbourg enfants
+  - Strasbourg Noël 2026 horaires et accès
 sources:
-  - title: Strasbourg Capitale de Noël - édition 2026
+  - title: Strasbourg Capitale de Noël - annonce de l'édition 2026
     url: https://noel.strasbourg.eu/fr/
-  - title: Strasbourg Capitale de Noël - les marchés
+  - title: Strasbourg Capitale de Noël - les marchés et leurs emplacements
     url: https://noel.strasbourg.eu/les-marches
-  - title: Strasbourg Capitale de Noël - foire aux questions
+  - title: Strasbourg Capitale de Noël - questions pratiques, horaires et familles
     url: https://noel.strasbourg.eu/foire-aux-questions
   - title: Strasbourg Capitale de Noël - informations pratiques
     url: https://noel.strasbourg.eu/fr/infos-pratiques
+  - title: Strasbourg Capitale de Noël - plan des lieux et services
+    url: https://noel.strasbourg.eu/fr/carte
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir
   decision: Choisir les marchés et les moments les mieux adaptés aux enfants, préparer une balade réaliste avec pauses et décider si une journée ou un séjour est préférable.
@@ -90,50 +98,69 @@ radar:
     dataThrough: 2026-10-16
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Strasbourg Capitale de Noël - édition 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-24
 ---
 
-## Mission retenue
+Le marché de Noël de Strasbourg ouvrira **vendredi 27 novembre 2026**, annonce [Strasbourg Capitale de Noël](https://noel.strasbourg.eu/fr/). Pour une visite avec des enfants, le défi n'est pas de voir tous les chalets: c'est de choisir quelques places proches, de garder du temps pour les pauses et de profiter des illuminations sans prolonger la sortie jusqu'à l'épuisement.
 
-Marché de Noël de Strasbourg 2026 en famille: préparer une visite des marchés du centre historique avec des enfants, sans le confondre avec les marchés de Noël d'autres villes alsaciennes.
+Le site officiel présente actuellement **huit marchés** au cœur de la ville. Le programme détaillé de l'édition 2026 est encore en préparation: les emplacements et services indiqués ci-dessous donnent des repères concrets, mais les animations, les horaires définitifs et la fermeture de chaque espace devront être revérifiés avant le départ.
 
-## Pourquoi cette mission
+## Quels marchés choisir selon les envies des enfants?
 
-L'ouverture du 27 novembre 2026 est annoncée officiellement et la préparation du séjour est pertinente maintenant. Le refresh concurrent « Carte Avantage Adulte SNCF » a un signal GSC incertain et son contenu répond déjà aux principales décisions familiales, sans correction substantielle établie. L'expansion possible depuis la page forte « Transports à Paris avec des enfants » (RER A vers Disneyland) recoupe déjà les guides Disneyland; son autonomie éditoriale est moins convaincante.
+Pour une première découverte, **la place Kléber** est un bon point de départ: on y retrouve le Grand Sapin et le Village du Partage. C'est une halte visuelle qui fonctionne même sans programme d'animation. Le **Christkindelsmärik, place Broglie**, permet ensuite de retrouver l'ambiance d'un marché traditionnel, entre chalets et décorations.
 
-## Décision du lecteur
+Si les enfants souhaitent surtout admirer le décor ancien, poursuivez vers les **places de la Cathédrale et du Château**. Ce secteur est spectaculaire mais peut devenir difficile à parcourir avec une poussette lorsque la foule se resserre: mieux vaut pouvoir repartir sans chercher à visiter tous les stands.
 
-Savoir quels marchés privilégier selon l'âge et l'endurance des enfants, quand venir pour limiter la foule, où faire des pauses et s'il est préférable de dormir sur place.
+Pour une promenade plus gourmande, le **Quai des Délices**, autour de la terrasse Rohan et de la place du Marché-aux-Poissons, complète naturellement une sortie vers la cathédrale. Les familles intéressées par des achats différents peuvent préférer le **marché OFF, place Grimmeissen**, orienté vers l'économie sociale et solidaire. La liste et les emplacements des huit marchés figurent sur la [page officielle des marchés](https://noel.strasbourg.eu/les-marches).
 
-## Faits à traiter
+Du côté de **la Petite France et du square Louise Weiss**, le site présente les petits producteurs d'Alsace et mentionne un Village de l'Avent à vocation familiale. Ne programmez toutefois pas votre journée autour d'un atelier ou d'un spectacle précis tant que sa présence et ses horaires pour 2026 ne sont pas publiés dans l'agenda.
 
-Ouverture officiellement fixée au vendredi 27 novembre 2026. Contrôler la fin de l'édition, les horaires du jour d'ouverture et de chaque marché, les emplacements effectivement reconduits et les animations familiales dès publication du programme 2026: ne pas présenter les activités de 2025 comme confirmées. Comparer une balade courte et un parcours plus long, l'affluence en semaine et le week-end, les sanitaires, les possibilités de pause, les équipements bébé, l'accessibilité et les arrivées à pied ou en tram.
+## Une balade courte ou une grande boucle?
 
-## Sources de départ
+**Avec des petits ou une poussette**, choisissez deux ou trois arrêts plutôt qu'un circuit exhaustif: place Kléber, puis place Broglie ou secteur de la cathédrale selon l'énergie du moment. Une pause au chaud ou un goûter peut suffire avant de revenir voir les lumières. Ce parcours reste adaptable si une place est trop encombrée.
 
-Site officiel Strasbourg Capitale de Noël 2026, liste des marchés, foire aux questions et informations pratiques (URL dans le frontmatter). Les fiches générales peuvent contenir des renseignements hérités de 2025: vérifier l'année de chaque annonce.
+**Avec des enfants qui aiment marcher**, associez Kléber, Broglie et la cathédrale, puis continuez vers les quais et la Petite France si tout le monde en a encore envie. Le marché OFF peut devenir une autre étape, sans obligation de tout parcourir. Les huit lieux étant répartis entre plusieurs places, passer de l'un à l'autre à pied fait partie de la visite; consultez le [plan officiel](https://noel.strasbourg.eu/fr/carte) plutôt que de prévoir des horaires de passage serrés.
 
-## Affiliation
+L'accès aux marchés se fait librement: les dépenses concernent ce que vous choisissez d'acheter ou de consommer. Pour un petit budget, privilégiez les illuminations, le Grand Sapin et quelques stands choisis plutôt que des achats répétés sur tout le parcours.
 
-Pour une famille venant de loin, le Novotel Strasbourg Centre Halles est listé sur Booking.com avec des chambres familiales près de la Grande Île. Proposer cette option seulement si utile au séjour, sans promettre de tarif ni de disponibilité; l'accès au marché lui-même ne nécessite pas de réservation payante.
+## Quel jour et à quelle heure venir pour éviter la foule?
 
-## Continuations internes
+La [foire aux questions officielle](https://noel.strasbourg.eu/foire-aux-questions) conseille les **lundis, mardis et débuts de journée** pour une visite plus tranquille; les mercredis après-midi, vendredis soir et week-ends sont habituellement beaucoup plus chargés. Avec de jeunes enfants, privilégiez donc un créneau en semaine et gardez la possibilité d'écourter la sortie.
 
-- Pour le choix précis du P+R et du forfait, renvoyer à l'article Fam Space « Parking-relais à Strasbourg en famille » plutôt que réexpliquer les tarifs.
-- Pour la rentabilité d'un pass touristique, renvoyer à « Pass Strasbourg et Nord Alsace en famille » sans reproduire sa comparaison.
-- Pour un séjour consacré aux marchés de Colmar, renvoyer à « Marchés de Noël de Colmar avec des enfants en 2026 »: c'est une destination distincte.
+La FAQ affiche actuellement une ouverture habituelle des chalets **de 11 h 30 à 21 h**, avec **14 h le jour d'ouverture** et une **fermeture à 18 h le 24 décembre**. Attention: certaines pages du même site présentent encore explicitement le calendrier 2025. L'ouverture du **27 novembre 2026** est bien annoncée pour cette année, mais les horaires complets et la date de clôture de 2026 restent à confirmer avant de réserver un déplacement. Venir vers l'ouverture des chalets est généralement plus confortable que d'arriver pendant le pic du soir; on peut garder les illuminations pour la fin de visite.
+
+## Toilettes, bébé et mobilité réduite: préparer les pauses
+
+Les [informations officielles](https://noel.strasbourg.eu/foire-aux-questions) signalent des **toilettes publiques gratuites**, dont certaines accessibles aux personnes à mobilité réduite, et renvoient au plan pour les localiser. Elles mentionnent également un **espace bébé chauffé** pour changer ou nourrir un enfant, ainsi qu'un prêt de fauteuils roulants ou déambulateurs au chalet d'information de la place Kléber. Vérifiez la présence et l'emplacement exact de ces services dans le dispositif 2026 avant d'en dépendre.
+
+Avec une poussette, privilégiez un itinéraire court et restez prêt à contourner une place trop fréquentée. Prévoyez vêtements chauds, chaussures confortables et quelques pauses à l'intérieur: le fait que les chalets soient proches ne signifie pas qu'un tout-petit peut passer des heures dehors.
+
+## Train, tram ou voiture: où commencer?
+
+Depuis la **gare centrale de Strasbourg**, le site officiel indique environ **dix minutes à pied** jusqu'aux premiers chalets. Plusieurs lignes de tram desservent également les abords du centre. Les accès à la Grande Île sont réglementés pendant les festivités: vérifiez les éventuels changements de desserte et les restrictions de circulation à l'approche de votre visite.
+
+Si vous arrivez en voiture, un **parking-relais avec le tram** évite de chercher une place au plus près des marchés. Notre guide [Parking-relais à Strasbourg en famille: choisir son P+R et son forfait](/articles/vie-pratique/parking-relais-a-strasbourg-en-famille-comment-choisir-son-p-r-et-son-forfait/) détaille les parkings, le fonctionnement du ticket et les formules pour une journée ou un week-end.
+
+## Faut-il prévoir une nuit sur place?
+
+Une journée suffit pour découvrir quelques marchés si Strasbourg est facilement accessible depuis chez vous. Une nuit devient intéressante si le trajet est long, si vous souhaitez voir les illuminations sans reprendre immédiatement la route ou si les enfants ont besoin de souffler entre deux promenades.
+
+Le [Novotel Strasbourg Centre Halles sur Booking.com](https://www.booking.com/hotel/fr/novotel-strasbourg-centre-halles.fr.html) se trouve quai Kléber, face à la Grande Île. Des chambres familiales sont proposées, notamment des configurations avec canapé-lit. Vérifiez la capacité réelle selon l'âge des enfants, les conditions d'annulation et les disponibilités aux dates choisies avant de réserver.
+
+Si vous ajoutez des musées ou d'autres visites payantes au séjour, notre comparaison du [Pass Strasbourg et Nord Alsace en famille](/articles/bons-plans/pass-strasbourg-et-nord-alsace-en-famille-quand-est-il-vraiment-rentable/) aide à déterminer si une carte touristique vaut son prix. Pour une escapade consacrée plutôt aux villages et aux marchés du Haut-Rhin, le guide des [marchés de Noël de Colmar avec des enfants](/articles/voyages/marches-de-noel-de-colmar-avec-des-enfants-en-2026-1-ou-2-jours-et-ou-dormir/) répond à une autre organisation de séjour.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
 - /articles/activites/le-vaisseau-a-strasbourg-quel-billet-choisir-pour-une-sortie-avec-des-enfants/ | Le Vaisseau à Strasbourg: quel billet choisir pour une sortie avec des enfants | activites | Strasbourg, Bas-Rhin, Grand Est
+- /articles/evenements/noel-a-metz-2026-en-famille-marches-et-sentier-des-lanternes/ | Noël à Metz 2026 en famille: marchés et Sentier des Lanternes | evenements | Metz, Moselle, Grand Est
+- /articles/voyages/marches-de-noel-de-colmar-avec-des-enfants-en-2026-1-ou-2-jours-et-ou-dormir/ | Marchés de Noël de Colmar avec des enfants en 2026: 1 ou 2 jours et où dormir | voyages | Colmar, Haut-Rhin, Grand Est
 - /articles/vie-pratique/parking-relais-a-strasbourg-en-famille-comment-choisir-son-p-r-et-son-forfait/ | Parking-relais à Strasbourg en famille: comment choisir son P+R et son forfait | vie-pratique | Strasbourg, Bas-Rhin, Grand Est
-- /articles/evenements/marche-de-noel-de-cusset-2026-en-famille-quel-jour-choisir/ | Marché de Noël de Cusset 2026 en famille: quel jour choisir? | evenements | Cusset, Allier, Auvergne-Rhône-Alpes
 - /articles/evenements/lumieres-de-noel-a-montbeliard-2026-quel-jour-venir-avec-des-enfants/ | Lumières de Noël à Montbéliard 2026: quel jour venir avec des enfants? | evenements | Montbéliard, Doubs, Bourgogne-Franche-Comté
 - /articles/bons-plans/pass-strasbourg-et-nord-alsace-en-famille-quand-est-il-vraiment-rentable/ | Pass Strasbourg et Nord Alsace en famille: quand est-il vraiment rentable? | bons-plans | Strasbourg, Bas-Rhin, Grand Est
 - /articles/maison/renover-sa-maison-dans-l-eurometropole-de-strasbourg-aides-et-demarches-2026/ | Rénover sa maison dans l’Eurométropole de Strasbourg: aides et démarches 2026 | maison | Strasbourg, Bas-Rhin, Grand Est
 - /articles/activites/arachnima-strasbourg-famille-2026/ | Arachnima 2026 à Strasbourg: dernier week-end gratuit au square Hasek | activites | Strasbourg, Bas-Rhin, Grand Est
-- /articles/voyages/marches-de-noel-de-colmar-avec-des-enfants-en-2026-1-ou-2-jours-et-ou-dormir/ | Marchés de Noël de Colmar avec des enfants en 2026: 1 ou 2 jours et où dormir | voyages | Colmar, Haut-Rhin, Grand Est
 - /articles/evenements/course-des-chateaux-d-ottrott-2026-quelles-epreuves-choisir-pour-les-enfants/ | Course des Châteaux d'Ottrott 2026: quelles épreuves choisir pour les enfants? | evenements | Ottrott, Bas-Rhin, Grand Est
 - /articles/voyages/wissembourg-sans-voiture-avec-des-enfants-que-faire-a-pied-sur-une-journee/ | Wissembourg sans voiture avec des enfants: que faire à pied sur une journée? | voyages | Wissembourg, Bas-Rhin, Grand Est
 - /articles/sorties/chateau-du-haut-koenigsbourg-en-famille-tarifs-2026-et-conseils-de-visite/ | Château du Haut-Koenigsbourg en famille: tarifs 2026 et conseils de visite | sorties | Orschwiller, Bas-Rhin, Grand Est
