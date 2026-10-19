@@ -198,3 +198,4 @@ automation/image-20261018-6d2a748-halloween-hautes-alpes-1844|aef23904430bcf6539
 automation/image-20261018-6d2a748-halloween-hautes-alpes-1844|b095e1c7f8cdd4697388b9e034ec1ca1136faf2f
 automation/image-20261019-332161b-champs-bdboum-brive-0041|073a1aefcef44f48b97389f85675e3772a51bb3b
 automation/image-20261019-332161b-champs-bdboum-brive-0041|9b1bc72ed6c01a73ac1ff240542873731bdd7e74
+automation/image-20261019-94a6128-strasbourg-aquarium-1040|73c7b15b589035cf5b073db84d6111978273dc9b
