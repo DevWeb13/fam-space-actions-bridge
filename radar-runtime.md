@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Festival du Livre de Colmar 2026 en famille: dates, ateliers et accès"
-subtitle: Les 21 et 22 novembre, une sortie littéraire gratuite au Parc des expositions, avec animations jeunesse et programme détaillé à venir.
-summary: "Préparer le Festival du Livre de Colmar 2026 avec des enfants: horaires, entrée gratuite, stands, spectacles et ateliers jeunesse, accès au Parc des expositions et séjour éventuel."
+title: "Festival du Livre de Colmar 2026 en famille: horaires et animations jeunesse"
+subtitle: "Entrée gratuite les 21 et 22 novembre au Parc des expositions: quand venir et que vérifier avant de choisir un atelier."
+summary: "Festival du Livre de Colmar 2026 en famille: samedi 21 et dimanche 22 novembre, horaires, cabane aux histoires, ateliers à confirmer, accès et hébergement proche."
 category: evenements
 location:
   city: Colmar
@@ -71,15 +76,25 @@ keywords:
   - festival livre Colmar 21 22 novembre 2026
   - festival livre Colmar ateliers jeunesse gratuits
 sources:
-  - title: Ville de Colmar - Festival du livre 2026
+  - title: Ville de Colmar - Festival du Livre de Colmar 2026
     url: https://www.colmar.fr/festival-livre-colmar
-  - title: Office de tourisme de Colmar - Festival du livre 2026
+  - title: Office de tourisme de Colmar - Festival du Livre 2026, horaires et accès
     url: https://www.tourisme-colmar.com/fr/toutes-les-fiches/F235013393_festival-du-livre-colmar
   - title: Bibliothèques de Colmar - Programme officiel du Festival du Livre
     url: https://bibliotheque.colmar.fr/festivaldulivredecolmar
+  - title: Parc des expositions de Colmar - Accès
+    url: https://www.colmar-expo.fr/professionnels/infos-pratiques/venir-au-parc-des-expositions/
+  - title: Parc des expositions de Colmar - Accessibilité et stationnement
+    url: https://www.colmar-expo.fr/faq/
+  - title: TRACE Colmar - Déviation de la ligne D
+    url: https://www.trace-colmar.fr/se-deplacer/infos-trafic/?id=00000000-0000-0000-0000-000001614071
+  - title: Best Western Colmar Expo - Hôtel et chambres
+    url: https://www.bwcolmarexpo.com/
+  - title: Best Western Colmar Expo - Conditions générales de vente
+    url: https://www.bwcolmarexpo.com/conditions-generales-de-ventes
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: festival-du-livre-de-colmar-2026-en-famille-dates-ateliers-et-acces
   decision: Choisir le samedi ou le dimanche et quelques rendez-vous jeunesse réellement adaptés à l'âge des enfants, avec un horaire et un accès pratiques, sans supposer que les ateliers, spectacles ou dédicaces annoncés globalement sont tous libres d'accès ou sans réservation.
@@ -89,38 +104,59 @@ radar:
     dataThrough: 2026-10-17
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Ville de Colmar - Festival du livre 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-11-22
 ---
 
-## Mission retenue
+Le **Festival du Livre de Colmar 2026** accueille les familles **samedi 21 et dimanche 22 novembre**, au **Parc des expositions**, sur le thème **« Passeurs d'histoires »**. L'entrée est **gratuite**: on peut venir découvrir des livres et des auteurs sans acheter de billet pour le festival.
 
-Préparer un article familial sur la **37e édition du Festival du Livre de Colmar**, samedi 21 et dimanche 22 novembre 2026, au Parc des expositions, thème « Passeurs d'histoires ». L'entrée est gratuite, avec plus de 200 stands et des propositions jeunesse annoncées par la Ville.
+Pour les enfants, la Ville annonce notamment une **cabane aux histoires**, des spectacles jeunesse et des ateliers. Mais le choix précis d'une séance selon l'âge devra attendre la présentation du programme 2026, annoncée pour le **22 octobre**.
 
-## Pourquoi cette mission
+## Samedi ou dimanche: quel jour venir?
 
-Opportunité locale prochaine, sourcée et encore absente des 717 articles du catalogue. La recherche de doublons remonte surtout d'autres sorties à Colmar et des salons du livre d'autres villes, sans page traitant ce festival. Publication prépare un événement à Nevers et les deux sujets Destination concernent d'autres territoires. Le meilleur refresh GSC, **Quai des Bulles à Saint-Malo**, porte sur un événement achevé le 11 octobre: sa baisse d'impressions est compatible avec la fin du festival et le signal de classement reste incertain. Une expansion depuis la page forte sur les transports parisiens paraît moins urgente et recoupe des sujets déjà couverts.
+D'après la [fiche 2026 de l'office de tourisme de Colmar](https://www.tourisme-colmar.com/fr/toutes-les-fiches/F235013393_festival-du-livre-colmar), les horaires sont:
 
-## Décision du lecteur
+- **Samedi 21 novembre:** de **10h à 19h**.
+- **Dimanche 22 novembre:** de **10h à 18h**.
 
-Savoir **quel jour venir et quels rendez-vous retenir en fonction de l'âge des enfants**, plutôt que parcourir tous les stands sans programme ni réservation adaptée.
+Le samedi laisse une heure supplémentaire pour découvrir les stands. Le dimanche peut convenir à une visite plus courte, à condition de vérifier l'horaire du rendez-vous jeunesse qui vous intéresse. Ces deux journées proposent le même accès libre au festival, **pas nécessairement les mêmes spectacles, ateliers ou auteurs présents**.
 
-## Faits à traiter
+Avec un enfant qui ne tient pas longtemps dans la foule, mieux vaut prévoir une ou deux animations ciblées et du temps pour feuilleter des livres plutôt qu'une journée entière sur place. Le festival accueille habituellement de nombreux visiteurs: arriver pour l'ouverture peut laisser plus de souplesse, sans garantir l'absence d'attente.
 
-- **Samedi 21 novembre: 10h-19h; dimanche 22 novembre: 10h-18h**, selon la fiche 2026 actuelle de l'office de tourisme. Surveiller toute mise à jour: une ancienne version de cette fiche contient encore le thème et les horaires d'une édition précédente.
-- Entrée gratuite, Parc des expositions de Colmar, avenue de la Foire aux Vins; 37e édition et thème « Passeurs d'histoires » confirmés par la Ville.
-- Scènes, cabane aux histoires, spectacles jeunesse, ateliers, dédicaces et rencontres annoncés, mais **pas de sélection par âge ni de créneaux individuels inventés**. La conférence de présentation est prévue **jeudi 22 octobre**: recontrôler alors le programme, les âges, la gratuité effective des ateliers, leur capacité et les éventuelles inscriptions.
-- Vérifier accès depuis la gare, transports du week-end, stationnement, poussettes et aménagements PMR avant de conseiller un itinéraire précis; ne pas supposer une navette ou un service non confirmé.
+## Que trouveront les enfants au festival?
 
-## Sources de départ
+La [Ville de Colmar](https://www.colmar.fr/festival-livre-colmar) présente une **37e édition**, réunissant **plus de 200 stands** d'éditeurs, libraires, auteurs, illustrateurs, associations et institutions culturelles. Les bibliothèques municipales prévoient des espaces de lecture et de rencontre autour des histoires, dont une **cabane aux histoires**, des scènes et des propositions pour le jeune public.
 
-Ville de Colmar, fiche événement de l'office de tourisme et programme des bibliothèques municipales à consulter après son annonce du 22 octobre.
+Le programme annoncé comprend également **dédicaces, rencontres, expositions, spectacles et ateliers**. Le thème « Passeurs d'histoires » met l'accent sur les récits transmis entre générations: une famille peut donc aussi profiter des stands et des livres ensemble, sans assister à un spectacle.
 
-## Affiliation
+**Attention:** la présentation générale ne donne pas encore les âges conseillés, les heures de passage ni les capacités d'accueil de chaque atelier ou spectacle 2026. Une entrée gratuite au festival ne signifie pas que tous les ateliers sont accessibles sans inscription. Pour choisir une activité, consultez le [programme des bibliothèques de Colmar](https://bibliotheque.colmar.fr/festivaldulivredecolmar) après sa présentation annoncée **jeudi 22 octobre**, puis vérifiez les modalités de la séance retenue.
 
-Pas de billet partenaire pour l'accès libre. Pour une nuit avec les enfants, **Best Western Colmar Expo**, proposé sur Booking.com en face du Parc des expositions: chambres familiales avec canapé-lit, capacité exacte et conditions à confirmer pour la famille et la date.
+## Entrée gratuite: faut-il réserver ou prévoir un budget?
 
-## Continuations internes
+L'[office de tourisme indique explicitement « entrée libre »](https://www.tourisme-colmar.com/fr/toutes-les-fiches/F235013393_festival-du-livre-colmar): aucun billet général n'est requis pour entrer au Festival du Livre.
 
-L'article Fam Space **« Colmar avec des enfants quand il pleut: quel musée choisir? »** peut prolonger un week-end en cas de visite supplémentaire, mais ne pas reproduire ses comparatifs de musées. Ne pas assimiler le Festival du Livre aux **marchés de Noël de Colmar**, traités dans une autre page et à une autre période.
+Prévoyez seulement les dépenses que vous choisissez, comme **l'achat de livres**, un repas ou le transport. Pour les éventuelles activités sur inscription, le programme détaillé devra confirmer les conditions d'accès et les places disponibles. Il serait prématuré d'annoncer une gratuité individuelle ou un tarif pour chaque atelier.
+
+## Comment rejoindre le Parc des expositions?
+
+Le festival se tient **avenue de la Foire aux Vins**, au Parc des expositions de Colmar, **et non au Pôle Média-Culture du centre-ville**.
+
+Si vous arrivez en train, la [page d'accès du Parc des expositions](https://www.colmar-expo.fr/professionnels/infos-pratiques/venir-au-parc-des-expositions/) indique la **ligne D du réseau TRACE**, avec l'arrêt **Parc des Expositions**. Vérifiez toutefois l'itinéraire et les services du samedi ou du dimanche: TRACE signale une [déviation de la ligne D en direction d'Europe jusqu'au 20 novembre 2026](https://www.trace-colmar.fr/se-deplacer/infos-trafic/?id=00000000-0000-0000-0000-000001614071), la veille du festival. **Ne présumez pas que l'arrêt ou le trajet habituel seront rétablis sans autre modification le 21 novembre.** Contrôlez aussi l'horaire du dernier trajet de retour.
+
+Si vous venez en voiture, suivez la signalisation **Parc des expositions**. Le site dispose de parkings, mais leur **gratuité dépend des événements**; elle n'est pas garantie pour ce week-end tant qu'une consigne spécifique n'est pas publiée.
+
+## Accessibilité avec une poussette ou un handicap
+
+La [FAQ du Parc des expositions](https://www.colmar-expo.fr/faq/) indique que les bâtiments sont adaptés aux personnes à mobilité réduite et que des places de stationnement réservées sont prévues au **parking P1**, dans la limite des disponibilités. La fiche du Festival porte également un pictogramme d'accessibilité PMR.
+
+Cela ne suffit pas à garantir un cheminement sans contrainte dans **chaque zone de stands**, ni un service de prêt de poussettes ou un espace bébé spécifique. Avec une poussette ou un besoin particulier, faites confirmer l'accès à la salle ou à l'animation visée auprès de l'organisation: **festivaldulivre@colmar.fr**.
+
+## Dormir à proximité pour profiter du week-end
+
+Pour une famille venant de loin, une nuit près du Parc des expositions évite un aller-retour supplémentaire. Le [**Best Western Colmar Expo sur Booking.com**](https://www.booking.com/hotel/fr/comfort-expo-colmar.fr.html), au **2C rue Timken**, se trouve **en face du Parc des expositions**.
+
+L'établissement propose des **chambres triples** avec lit double et canapé-lit simple et, selon la catégorie, des **chambres familiales** ou des chambres communicantes. Ses conditions indiquent qu'une chambre familiale peut héberger **jusqu'à quatre personnes** dans le cas prévu pour les familles avec enfants mineurs. Vérifiez la **catégorie réellement proposée**, le nombre de lits, l'âge de chaque enfant, la disponibilité du **21 au 22 novembre**, le prix final et les conditions d'annulation avant de réserver.
+
+Si vous restez une journée de plus à Colmar et cherchez une visite en intérieur, notre article [**Colmar avec des enfants quand il pleut: quel musée choisir?**](/articles/vie-pratique/colmar-avec-des-enfants-quand-il-pleut-quel-musee-choisir/) aide à comparer les musées selon l'âge et le budget, sans confondre ces visites avec le Festival du Livre.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
