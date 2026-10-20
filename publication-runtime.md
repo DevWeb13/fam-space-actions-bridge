@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,97 +14,133 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Eure
 - Région: Normandie
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Biotropica à Val-de-Reuil en famille: serre tropicale, animaux et conseils pour une visite toute l'année.**
-
-Angle: aider les parents à choisir et organiser une visite de ce parc animalier de l'Eure, particulièrement pertinent en automne et en hiver grâce à sa vaste serre tropicale, sans faire croire que tout le parcours est couvert. Installé sur la base de loisirs de Léry-Poses, Biotropica combine une serre intérieure abritant des espèces tropicales et de nombreux espaces animaliers extérieurs (manchots, pandas roux, animaux de la ferme, etc.).
-
-## Besoin du lecteur
-
-Comprendre ce que les enfants peuvent réellement découvrir dans la serre et dehors, combien de temps consacrer à chaque partie selon la météo et l'âge, à quel moment venir, et quel budget prévoir au-delà du prix des billets. Savoir comment s'y rendre, gérer les repas, les pauses et une éventuelle nuit sur place.
-
-## Valeur éditoriale
-
-- **Une visite à deux ambiances:** expliquer la différence entre la serre tropicale (plantes, oiseaux, reptiles, mammifères) et les univers extérieurs, et proposer un parcours familial adaptable au temps disponible et aux conditions météorologiques. La visite complète demande environ **3 à 4 heures** d'après le parc.
-- **Informations vérifiées pour l'automne-hiver 2026:** ouverture quotidienne sauf les **25 décembre et 1er janvier**; d'octobre à mars, **10h à 17h30** (caisses fermées 1h30 avant, extérieur 1h avant). Tarifs affichés: **18,50 € à partir de 12 ans**, **13,50 € de 3 à 11 ans**, **gratuit avant 3 ans**. Les billets en ligne sont annoncés 0,50 € moins chers que sur place; réservation non obligatoire pour les individuels.
-- **Budget et détails qui changent la visite:** stationnement de la base payant (**6 € par voiture** selon la grille publiée), restauration sur place, retour possible après une sortie avec tampon. Vérifier avant rédaction la règle du pique-nique: la page tarifs l'interdit dans l'enceinte, tandis que la FAQ mentionne certaines zones extérieures donnant priorité aux groupes.
-- **Avec de jeunes enfants:** tables à langer et micro-ondes annoncés; parc accessible avec aide possible dans la remontée vers la serre; pas de prêt de poussette. Les horaires de nourrissage et animations ne sont pas fixes à présumer: consulter le programme du jour.
-- **Plus-value Fam Space:** éviter un simple inventaire d'espèces ou une reprise des tarifs; construire une aide au choix concrète, notamment « visite par temps froid/pluvieux ou journée complète », tout en exposant franchement les frais annexes et la partie extérieure.
-
-## Affiliation
-
-**Action principale, billets d'entrée:** vente directe confirmée sur la billetterie Biotropica (https://biotropica.tickeasy.com/fr-FR/accueil). Aucune offre de billet d'entrée Biotropica correspondante n'a été trouvée après recherche ciblée chez **Tiqets, GetYourGuide, Klook, WeGoTrip et KKday**. Ne pas inventer de billet affilié, ni présenter la billetterie officielle comme une offre partenaire.
-
-**Hébergements secondaires réellement référencés sur Booking.com** pour les familles qui prolongent la sortie autour de Val-de-Reuil (capacités exactes, tarifs et disponibilités à confirmer pour les dates choisies):
-
-- **Kyriad Rouen Sud - Val de Reuil**: établissement à Val-de-Reuil avec chambres familiales, dont une catégorie « chambre quadruple » présentée dans sa fiche. https://www.booking.com/hotel/fr/premiere-classe-rouen-sud-val-de-reuil-xml.fr.html
-- **Brit Hotel Rouen Sud Val De Reuil**: hôtel à Val-de-Reuil proposant des chambres familiales et un parking gratuit selon sa fiche. https://www.booking.com/hotel/fr/best-rouen-est-val-de-reuil.fr.html
-
-Une ou deux offres seulement, comme solution pratique pour un week-end et non comme prérequis à la visite. Ces URL sont des pages de réservation partenaires, pas des liens d'affiliation déjà traqués.
-
-## Sources de départ
-
-- **Biotropica, horaires, tarifs et conditions:** https://www.biotropica.fr/tarifs-et-horaires/
-- **Biotropica, FAQ officielle (accès, enfants, restauration, visite):** https://www.biotropica.fr/faq/
-- **Biotropica, présentation des univers animaliers:** https://www.biotropica.fr/nos-univers/
-- **Biotropica, serre tropicale et espèces présentées:** https://www.biotropica.fr/univers/la-serre-tropicale/
-- **Office de tourisme Seine-Eure, fiche du parc et description des espaces:** https://www.tourisme-seine-eure.com/offres/les-jardins-animaliers-biotropica-val-de-reuil-fr-2582220/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "activites"
+title: "Biotropica en famille à Val-de-Reuil: animaux, tarifs et visite par temps de pluie"
+subtitle: "Une serre tropicale et un vaste parc extérieur à découvrir dans l'Eure, toute l'année"
+summary: "Biotropica, à Val-de-Reuil dans l'Eure, associe serre tropicale et espaces animaliers dehors. Tarifs, horaires et conseils pour une visite en famille."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Biotropica en famille"
+  - "Biotropica Val-de-Reuil tarifs"
+  - "parc animalier Eure"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Val-de-Reuil"
+  department: "Eure"
+  region: "Normandie"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Biotropica - Le parc de Biotropica"
+    url: "https://www.biotropica.fr/le-parc-de-biotropica/"
+  - title: "Biotropica - Nos univers"
+    url: "https://www.biotropica.fr/nos-univers/"
+  - title: "Biotropica - Tarifs et horaires"
+    url: "https://www.biotropica.fr/tarifs-et-horaires/"
+  - title: "Biotropica - Foire aux questions"
+    url: "https://www.biotropica.fr/faq/"
+  - title: "Biotropica - Accès au parc"
+    url: "https://www.biotropica.fr/acces-au-parc/"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Val-de-Reuil, dans l'Eure, **Biotropica** permet de découvrir des animaux tropicaux sous une grande serre, puis d'observer d'autres espèces dans des espaces extérieurs. Installé sur la base de loisirs de Léry-Poses, ce parc animalier est une idée de sortie en famille même en automne ou en hiver. Mais attention: seule une partie de la visite est à l'abri des intempéries.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Une serre tropicale et des animaux en plein air
+
+La [serre tropicale de 5 000 m²](https://www.biotropica.fr/le-parc-de-biotropica/) abrite une végétation dense et des animaux parfois difficiles à voir ailleurs: paresseux, tamarins, loriquets, grenouilles colorées ou encore dragon de Komodo. C'est la partie la plus dépaysante lorsque le temps est frais dehors. Les enfants peuvent passer d'un bassin à un espace d'observation sans quitter l'univers tropical.
+
+Le reste du parc s'étend sur environ **10 hectares à l'extérieur**, avec notamment des pandas roux dans le Jardin d'Asie, des manchots de Humboldt, des suricates, des kangourous et une ferme des enfants. Le [détail des différents univers](https://www.biotropica.fr/nos-univers/) permet de repérer les animaux qui intéressent le plus votre famille avant d'arriver.
+
+Cette différence entre intérieur et extérieur est essentielle pour choisir sa journée: par temps de pluie, la serre conserve tout son intérêt, mais une visite limitée à celle-ci ne permet pas de voir l'ensemble du parc. Pour profiter des manchots, des pandas roux ou des grands espaces, prévoyez des vêtements adaptés.
+
+## Combien de temps prévoir avec des enfants?
+
+Biotropica conseille **3 à 4 heures au minimum** pour découvrir l'ensemble des espaces. Mieux vaut prévoir davantage si vos enfants aiment observer longtemps les animaux ou si vous voulez assister à un nourrissage commenté.
+
+Avec de jeunes enfants, commencez par l'univers qui les attire le plus, puis alternez les parties extérieures et la serre selon leur fatigue et la météo. Le lac des pélicans offre, par exemple, une promenade plus longue; la ferme des enfants se prête à un arrêt plus court. Il n'est pas indispensable de suivre les neuf univers dans un ordre rigide.
+
+Le parc organise des présentations autour de l'alimentation des animaux. Leurs horaires peuvent varier: consultez le programme du jour plutôt que d'organiser tout le déplacement autour d'un nourrissage supposé.
+
+## Tarifs et horaires: le budget à prévoir
+
+Selon les [tarifs affichés par Biotropica](https://www.biotropica.fr/tarifs-et-horaires/), l'entrée individuelle coûte:
+
+- **18,50 €** à partir de 12 ans;
+- **13,50 €** pour les enfants de 3 à 11 ans;
+- **gratuit** pour les moins de 3 ans.
+
+La réservation n'est **pas obligatoire pour une visite individuelle**: la [FAQ du parc](https://www.biotropica.fr/faq/) précise que les billets peuvent aussi être achetés à l'entrée. En revanche, la réservation est obligatoire pour les groupes.
+
+**D'octobre à mars, le parc ouvre de 10h à 17h30**, en semaine comme le week-end. Les caisses ferment **1h30 avant la fermeture**, et les espaces extérieurs **une heure avant**. Il est donc préférable d'arriver en début d'après-midi au plus tard pour ne pas devoir écourter la visite. Biotropica annonce une ouverture toute l'année, sauf **le 25 décembre et le 1er janvier**.
+
+À ce budget s'ajoute le **parking de la base de loisirs: 6 € par voiture** (véhicule léger). Ce coût est distinct du billet d'entrée, un détail à anticiper pour une sortie familiale.
+
+## Déjeuner sur place ou apporter son pique-nique?
+
+Le parc dispose d'un restaurant dans la serre, ouvert à partir de 11h30. Le snack extérieur, lui, fonctionne sur des périodes plus limitées: ne comptez pas systématiquement dessus lors d'une visite d'automne ou d'hiver.
+
+Pour le pique-nique, les informations officielles ne sont pas parfaitement concordantes. La [page des conditions d'accès](https://www.biotropica.fr/tarifs-et-horaires/) indique qu'il n'est pas autorisé dans l'enceinte du parc, tandis que la [FAQ](https://www.biotropica.fr/faq/) évoque des espaces extérieurs soumis à disponibilité, avec priorité aux groupes. La solution la plus claire pour une famille est de **demander un tampon à l'accueil**, sortir déjeuner sur la base de loisirs puis revenir. Il faut impérativement rentrer avant la fermeture des caisses.
+
+Avec un bébé, des tables à langer sont présentes dans les blocs sanitaires et des micro-ondes sont annoncés au restaurant et au snack. Le parc **ne prête pas de poussettes**: apportez la vôtre si nécessaire.
+
+## Accès, mobilité et derniers repères
+
+Biotropica se situe à la **Butte de la Capoulade, 27100 Val-de-Reuil**, sur la base de loisirs de Léry-Poses. En voiture, l'[itinéraire officiel](https://www.biotropica.fr/acces-au-parc/) conseille la sortie 20 de l'A13; pour le GPS, l'adresse « La Coudrette, Val-de-Reuil » peut être plus pratique.
+
+Il est aussi possible d'arriver en train à la **gare de Val-de-Reuil**, sur la ligne Paris-Rouen, puis de prendre une navette Semo vers Biotropica. Vérifiez ses jours et heures de circulation avant de partir: elle ne doit pas être considérée comme disponible à toute heure.
+
+Pour les personnes à mobilité réduite, le parc annonce un parcours accessible en fauteuil ou avec un déambulateur. La remontée vers la serre peut néanmoins être difficile; une aide en voiturette électrique est proposée sur demande. Un fauteuil roulant peut être prêté gratuitement sur réservation et sous réserve de disponibilité.
+
+Si votre visite repose sur une animation précise, un équipement ou un besoin d'accessibilité, un dernier coup d'œil aux [informations pratiques du parc](https://www.biotropica.fr/faq/) évitera une mauvaise surprise.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -133,4 +169,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
