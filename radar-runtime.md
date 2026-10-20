@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "ALFest 2026 à Annecy en famille: horaires, jeux et braderie"
-subtitle: "Festival gratuit les 14 et 15 novembre à la MJC des Romains: quel moment choisir avec les enfants?"
-summary: "ALFest 2026 à Annecy: deux journées de jeux de société, figurines, jeux de rôle et braderie, avec les horaires de chaque espace, l'accès et les conditions à connaître en famille."
+subtitle: "Les 14 et 15 novembre à la MJC des Romains: des jeux accessibles gratuitement, des initiations et une braderie à horaires distincts."
+summary: "ALFest 2026 à Annecy: samedi ou dimanche avec des enfants, horaires des jeux et de la braderie, soirées dès 6 ans, conditions du jeu de rôle et accès à la MJC."
 category: evenements
 location:
   city: Annecy
@@ -81,7 +86,7 @@ sources:
     url: https://www.lemanexpress.com/events/alfest-festival-de-jeux/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: alfest-2026-a-annecy-en-famille-horaires-jeux-et-braderie
   decision: Choisir samedi ou dimanche et les espaces de jeu réellement adaptés aux enfants, en distinguant l'entrée libre, les horaires propres à la braderie et les éventuelles conditions d'accès aux sessions de jeu de rôle.
@@ -91,45 +96,54 @@ radar:
     dataThrough: 2026-10-17
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Annecy Ludique - ALFest 2026, programme et informations pratiques »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-11-15
 ---
 
-## Mission retenue
+**ALFest 2026**, le festival de jeux de l'association Annecy Ludique, se tient **samedi 14 et dimanche 15 novembre** à la **MJC des Romains**, à Annecy. L'entrée est **gratuite**: on peut venir découvrir des jeux de société, rencontrer des joueurs de figurines ou parcourir la braderie sans acheter de billet général.
 
-Préparer une page locale sur **ALFest 2026**, festival de jeux organisé par Annecy Ludique les **14 et 15 novembre** à la **MJC des Romains**, 28 avenue du Parc des Sports, Annecy. L'angle familial porte sur le choix du jour et de l'espace de jeu, et non sur une simple annonce de dates.
+Pour une sortie avec des enfants, le choix dépend surtout des horaires: les tables de jeux sont accessibles pendant le festival, mais **la braderie, la soirée de la ludothèque et les parties de jeu de rôle ont leurs propres modalités**.
 
-## Pourquoi cette mission
+## Samedi ou dimanche: quand venir?
 
-Trois possibilités comparées à partir du snapshot GSC du 20 octobre (données jusqu'au 17 octobre):
+D'après le [programme de l'organisateur Annecy Ludique](https://www.annecyludique.fr/les-evenements/alfest/), les horaires du festival sont:
 
-- **Refresh:** Quai des Bulles à Saint-Malo et Foire de la Barguillère à Foix sont les premiers reculs d'impressions, mais leurs éditions 2026 se sont terminées les 11 octobre; la chute ne prouve pas un défaut SEO. La carte OKAY Savoie est un autre candidat encore valable, mais son article complet, mis à jour le 6 octobre, traite déjà les 80 €, les échéances, la demande, les partenaires, le bonus CAF et le remplacement; aucune amélioration décisive vérifiée ne justifie de le réécrire maintenant.
-- **Expansion depuis une page forte:** l'article sur les titres de transport à Paris a une forte exposition, mais les trajets Orly et CDG disposent déjà de deux guides dédiés reliés depuis cette page. Un nouvel article voisin risquerait de répéter des décisions déjà couvertes.
-- **Opportunity:** ALFest est annoncé sur le site de l'organisateur avec une programmation exploitable, avant les 14-15 novembre. Le catalogue compact de 719 pages, les proximités thématiques et l'historique Radar ne montrent aucun article sur ce même festival. Les pages sur Annecy traitent plutôt les bus, le spectacle Court Circuit ou la Fête du lac. Les sujets Publication et Destination en cours (Biotropica, Vincennes, Haut-Rhin) ne se chevauchent pas.
+- **Samedi 14 novembre: 14h à 1h du matin** (dans la nuit de samedi à dimanche).
+- **Dimanche 15 novembre: 9h à 18h**.
 
-## Décision du lecteur
+Le samedi convient notamment à une sortie l'après-midi, avec possibilité de rester plus tard pour jouer. La ludothèque de la MJC propose en parallèle une **soirée jeux de 17h à 23h**. Selon l'[office de tourisme du lac d'Annecy](https://www.lac-annecy.com/fete-et-manifestation/soiree-jeux-de-societe-annecy-2/), cette soirée est **gratuite, sans inscription et accessible aux enfants à partir de 6 ans**. Cette limite d'âge concerne **la soirée annoncée par la ludothèque**, pas nécessairement l'ensemble d'ALFest.
 
-Déterminer si sa famille vient **samedi ou dimanche**, privilégie les **tables de jeux libres**, les **figurines**, le **jeu de rôle** ou la **braderie**, puis préparer une visite sans confondre entrée gratuite et accès garanti à chaque animation.
+Le dimanche permet de venir dès le matin. En revanche, les jeux ne sont pas tous programmés à heure fixe et l'annonce générale ne garantit pas une partie ou un animateur précis au moment souhaité. Si vous venez pour un tournoi ou une initiation particulière, vérifiez son déroulement auprès d'Annecy Ludique avant de vous déplacer.
 
-## Faits à traiter
+## Jeux de société, figurines et jeu de rôle: quelle formule choisir?
 
-- **Festival:** samedi **14 novembre de 14h à 1h du matin**, dimanche **15 novembre de 9h à 18h**. Entrée gratuite; accès **par l'arrière du bâtiment**; bus **ligne 5, arrêt MJC des Romains**.
-- **Braderie:** horaires spécifiques, **samedi 14h-20h**, **dimanche 10h-16h**; jeux d'occasion proposés par les membres, ne pas la confondre avec le festival entier ni avec une vente de jouets générale.
-- **Animations:** jeux de société en libre accès, bénévoles expliquant les règles, figurines, tournois, initiation à la peinture sur figurine en 2026, jeu de rôle. Vérifier âges et plages horaires activité par activité; **aucun âge minimum général pour ALFest n'est établi**.
-- **Jeu de rôle:** le site annonce une **pré-réservation payante de 5 €** accompagnée d'un **bon de 5 € pour la buvette**, tout en indiquant des réservations sur place. Signaler cette formulation ambiguë et faire vérifier auprès de l'organisateur les modalités exactes, plutôt que promettre une place ou une inscription en ligne.
-- **Soirée ludothèque du samedi:** la MJC annonce parallèlement une soirée **17h-23h**, **gratuite et sans inscription**, accueillant les enfants **à partir de 6 ans**; ne jamais étendre cette limite d'âge au festival entier.
-- **Pratique familiale:** buvette et restauration, accès en bus, disponibilité des tables, conditions d'accessibilité et d'accueil des tout-petits à confirmer. Aucune billetterie générale.
+Pour découvrir plusieurs jeux en famille, commencez par les **tables de jeux de société en libre accès**. L'association et la ludothèque mettent des jeux à disposition; des bénévoles présents sur place peuvent expliquer les règles. Annecy Ludique précise toutefois que **tous les jeux de son catalogue ne seront pas forcément disponibles**. Si les enfants souhaitent essayer un titre précis, mieux vaut contacter l'association en amont.
 
-## Sources de départ
+Les amateurs de figurines trouveront une **salle dédiée**. Nouveauté annoncée pour 2026: une **initiation à la peinture sur figurines** tout au long du week-end, avec la possibilité de repartir avec sa création. Le programme mentionne aussi des tournois et des animations, sans donner pour chacun un âge minimum ou un horaire garanti.
 
-Site de **l'organisateur Annecy Ludique** pour les deux journées, leurs horaires, leurs espaces et l'entrée; **agenda de la MJC** et **office de tourisme d'Annecy** pour la soirée à partir de 6 ans; **Léman Express** comme confirmation indépendante des dates et activités.
+Pour une première partie de **jeu de rôle**, une table d'initiation est prévue. Attention aux conditions: l'[organisateur annonce une pré-réservation de 5 €](https://www.annecyludique.fr/les-evenements/alfest/), compensée sur place par **un bon de 5 € à utiliser à la buvette**, mais précise également que les réservations des séances se feront **sur place**, dans la limite des places. Ces deux indications ne définissent pas clairement comment sécuriser une place avant de venir: demandez confirmation à l'association, ainsi que l'âge et la durée de la séance visée. **Ces 5 € ne sont pas le prix d'entrée du festival.**
 
-## Affiliation
+## Braderie: attention aux horaires différents
 
-L'accès au festival est gratuit, donc pas de billet partenaire à promouvoir. Pour un séjour, vérifier le **Campanile Annecy Centre - Gare sur Booking.com**, avec catégories familiales affichées mais tarifs, occupation et disponibilité non confirmés aux dates du festival. N'intégrer qu'un hébergement justifié, en indiquant honnêtement le trajet jusqu'à la MJC.
+La braderie rassemble des **jeux d'occasion proposés à la vente par les membres de l'association**, distinctement des tables où l'on joue gratuitement.
 
-## Continuations internes
+Selon les **horaires actuellement affichés par Annecy Ludique**, elle ouvre:
 
-- Pour le détail des tickets et l'organisation des déplacements en ville, orienter vers [Bus à Annecy avec des enfants](/articles/vie-pratique/bus-a-annecy-avec-des-enfants-quel-ticket-choisir-et-comment-eviter-les-galeres/) plutôt que reproduire les tarifs et règles SIBRA.
-- Les autres événements d'Annecy (Court Circuit, Fête du lac) n'apportent pas de réponse supplémentaire sur ALFest: ne pas les utiliser comme remplissage.
+- **Samedi: 14h à 20h**.
+- **Dimanche: 10h à 16h**.
+
+Le festival ouvre donc **une heure avant la braderie le dimanche** et ferme **deux heures après elle**. Si vous venez surtout pour acheter un jeu, ne prévoyez pas d'arriver à la toute fin du festival. Les achats à la braderie restent bien sûr payants.
+
+## Adresse, bus et services avec des enfants
+
+ALFest se déroule à la **MJC des Romains, 28 avenue du Parc des Sports, 74000 Annecy**. L'organisateur précise que **l'entrée du festival se fait par l'arrière du bâtiment**, un détail utile lorsqu'on arrive pour la première fois.
+
+En transports en commun, Annecy Ludique indique la **ligne 5, arrêt MJC des Romains**. Vérifiez les passages du week-end et le retour, en particulier si vous restez le samedi soir. Notre guide [**Bus à Annecy avec des enfants: quel ticket choisir?**](/articles/vie-pratique/bus-a-annecy-avec-des-enfants-quel-ticket-choisir-et-comment-eviter-les-galeres/) détaille les titres et les solutions pour circuler en famille.
+
+Une **buvette** et de quoi se restaurer sont annoncés. En revanche, les informations publiées ne confirment pas l'accessibilité précise de chaque salle, les conditions de circulation avec une poussette ou les équipements pour bébés. Si l'un de ces points détermine votre visite, contactez l'organisation ou la MJC **avant** le week-end.
+
+## Dormir à Annecy pour le week-end du festival
+
+Si vous venez de loin et voulez prolonger la sortie, le [**Campanile Annecy Centre - Gare sur Booking.com**](https://www.booking.com/hotel/fr/campanile-annecy-centre-gare.fr.html) est une option près de la gare, **pas à côté de la MJC des Romains**. Des **chambres triples et quadruples** figurent parmi les catégories proposées. Vérifiez leur capacité selon l'âge et le nombre d'enfants, le trajet entre l'hôtel et le festival et, avant de réserver, **le prix, la disponibilité du 14 au 15 novembre et les conditions d'annulation**. La disponibilité pour ces dates n'est pas confirmée.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
