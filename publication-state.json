@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261020-1709-sujet-preparer-un-sejour-de-ski-a-petit-budget-en-famille-a-aussois-sa",
+  "lastProcessedCommit": "a3c5ff99e24c994ad7b2301d869f105978c4f1da"
 }
