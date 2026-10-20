@@ -208,3 +208,4 @@ automation/image-20261020-2678b56-reims-0344|d348c08d757dfed8066b30e2372a3018259
 automation/image-20261020-2678b56-reims-0344|bfdd82775deeeaefb37861863c0e7a20946131a2
 automation/image-20261020-a847578-nevers-kiosque-0943|88aa8680f6d5471a6eca0529c1b10459ef9dccc0
 automation/image-20261020-a847578-nevers-kiosque-0943|200d22dc7c3e36c458cfd0dbe452907b6994eebf
+automation/image-20261020-e28e872-biotropica-colmar-1544|0ecef7a03ef2e2f38e7101eb6dc53808bd2a193f
