@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261021-0905-sujet-decouvrir-la-fabrication-et-les-saveurs-des-fromages-de-chevre-a",
+  "lastProcessedCommit": "803cabb01aa45b047d7caa73d604980863aeb472"
 }
