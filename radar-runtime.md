@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Marché de Noël de Bordeaux 2026 en famille: dates, animations et accès"
-subtitle: Place des Quinconces, activités pour enfants, tram et budget d'une sortie
-summary: "Du 27 novembre au 27 décembre 2026, préparer une visite familiale du marché des Quinconces: animations annoncées, accès facile et dépenses à anticiper."
+title: "Marché de Noël de Bordeaux 2026 en famille: horaires, animations et budget"
+subtitle: Comment choisir son moment, profiter des ateliers et venir aux Quinconces sans mauvaise surprise
+summary: Le marché de Noël de Bordeaux revient aux Quinconces du 27 novembre au 27 décembre 2026. Horaires, activités pour enfants, tram et dépenses à prévoir.
 category: evenements
 location:
   city: Bordeaux
@@ -71,15 +76,15 @@ keywords:
   - marché de Noël Quinconces enfants
   - animations de Noël Bordeaux en famille
 sources:
-  - title: Bordeaux Mon Commerce - Marché de Noël 2026, site de l'organisateur
+  - title: Bordeaux Mon Commerce - Site officiel du marché de Noël
     url: https://www.marche-de-noel-bordeaux.com/
   - title: Office de tourisme de Bordeaux - Marché de Noël 2026
     url: https://www.bordeaux-tourisme.com/noel/marche
-  - title: Bordeaux Métropole - Marché de Noël, agenda
+  - title: Bordeaux Métropole - Agenda du marché de Noël
     url: https://www.bordeaux-metropole.fr/agenda/20724859_mercado-de-navidad-en-burdeos
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces
   decision: Choisir quand venir avec des enfants, quelles animations viser sans les présumer gratuites, comment rejoindre les Quinconces en tram et quelles dépenses prévoir.
@@ -89,41 +94,59 @@ radar:
     dataThrough: 2026-10-18
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Bordeaux Mon Commerce - Marché de Noël 2026, site de l'organisateur »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-27
 ---
 
-## Mission retenue
-Préparer une visite familiale du marché de Noël 2026 de Bordeaux, place des Quinconces, du 27 novembre au 27 décembre: sortie gratuite à l'entrée, mais animations et consommations à budgéter séparément.
+Du **27 novembre au 27 décembre 2026**, le marché de Noël de Bordeaux retrouve la **place des Quinconces**, avec plus d'une centaine de chalets, des gourmandises et des animations pour les enfants. L'entrée est libre: une famille peut venir simplement regarder les illuminations et flâner, sans acheter de billet. En revanche, les manèges, les ateliers éventuels et les achats sur place ne doivent pas être supposés gratuits.
 
-## Pourquoi cette mission
-Saison à venir et informations officielles déjà exploitables; aucun article dédié dans le catalogue. Le meilleur refresh GSC (carte OKAY Savoie) a été actualisé le 6 octobre et reste utile et cohérent avec les sources, sans amélioration indépendante établie malgré une baisse de visibilité de cause incertaine. La page forte sur les transports à Paris a déjà des prolongements distincts sur Orly et CDG; aucune nouvelle décision aussi pertinente n'est établie ici.
+## Quel jour et à quelle heure venir avec des enfants?
 
-## Décision du lecteur
-Savoir si, quand et comment visiter le marché avec ses enfants sans confondre accès libre, activités proposées et coût réel d'une sortie.
+Le [site de l'organisateur, Bordeaux Mon Commerce](https://www.marche-de-noel-bordeaux.com/), confirme une ouverture **tous les jours de 11h à 21h30**, y compris les **24 et 25 décembre**. L'[office de tourisme](https://www.bordeaux-tourisme.com/noel/marche) annonce les mêmes dates et horaires.
 
-## Faits à traiter
-Confirmer les 27 novembre-27 décembre 2026, place des Quinconces; l'organisateur et l'office annoncent 11h-21h30 tous les jours, dont les 24 et 25 décembre, tandis que la fiche Bordeaux Métropole indique 21h: signaler la divergence et privilégier la vérification avant départ. Plus de cent chalets annoncés, animations et ateliers (carrousel, maquillage, décorations, père Noël) sans inventer de calendrier ni de prix non publiés. Entrée libre; distinguer budget restauration, manèges et ateliers. Tram B/C/D à Quinconces; accessibilité annoncée, horaires et foule à vérifier selon le jour.
+Attention toutefois à une divergence: la [fiche de Bordeaux Métropole](https://www.bordeaux-metropole.fr/agenda/20724859_mercado-de-navidad-en-burdeos) indique **21h** comme heure de fermeture. Pour une visite tardive, fiez-vous aux dernières informations de l'organisateur avant de partir plutôt que de compter sur les trente dernières minutes.
 
-## Sources de départ
-Bordeaux Mon Commerce, organisateur (calendrier et horaires); Bordeaux Tourisme (animations et accès); Bordeaux Métropole (entrée libre et horaire divergent).
+Avec de jeunes enfants, une visite en journée ou en fin d'après-midi permet de profiter des chalets avant une soirée trop longue. Si les lumières de Noël sont la priorité, choisissez plutôt un passage après la tombée de la nuit, en acceptant la possibilité de davantage d'attente autour des animations. Aucun créneau précis n'est garanti calme: adaptez votre horaire à l'affluence réelle.
 
-## Affiliation
-Aucune billetterie naturelle pour l'entrée gratuite. Pour les familles qui prolongent en séjour, Booking.com référence l'Hôtel Majestic (chambres familiales et appartements près des Quinconces) et le Quality Hotel Bordeaux Centre (chambres familiales à environ 350 m); contrôler prix et disponibilités avant toute recommandation.
+## Quelles animations choisir en famille?
 
-## Continuations internes
-- Pour une visite intérieure complémentaire dans Bordeaux, renvoyer au guide « Cité du Vin à Bordeaux en famille » plutôt que redévelopper cette visite.
-- Pour une autre activité familiale à Bordeaux par mauvais temps, renvoyer au guide « Planète Préhistorique à Bordeaux ».
+L'[office de tourisme de Bordeaux](https://www.bordeaux-tourisme.com/noel/marche) annonce notamment un **chalet de cerfs animés**, du **maquillage pour enfants**, des **ateliers de décorations écoresponsables**, des **cours d'emballage de cadeaux** et des **photos avec le père Noël**. Des choristes, acrobates, échassiers et personnages costumés sont également évoqués. Un **carrousel illuminé en face du Grand Théâtre** peut compléter la promenade.
+
+Cette liste ne vaut pas programme quotidien. Les jours, heures, conditions d'accès et éventuels tarifs de chaque animation ne sont pas tous précisés à ce stade. Si votre enfant veut absolument rencontrer le père Noël ou participer à un atelier, vérifiez d'abord le programme annoncé par l'organisateur. Sinon, construisez la sortie autour de la promenade entre les chalets: c'est la partie la plus souple à organiser avec des enfants.
+
+## Combien prévoir pour la sortie?
+
+**L'accès au marché est gratuit**, comme le confirme [Bordeaux Métropole](https://www.bordeaux-metropole.fr/agenda/20724859_mercado-de-navidad-en-burdeos). Une simple balade n'impose donc aucune dépense sur place. Pour fixer un budget réaliste, distinguez plutôt trois envies:
+
+- **Goûter ou repas:** chocolat chaud, marrons, bretzels, aligot et autres spécialités sont annoncés parmi les stands.
+- **Animation choisie:** ne promettez pas une gratuité non publiée pour le carrousel, le maquillage ou les ateliers; renseignez-vous sur place ou dans le programme à venir.
+- **Cadeaux:** bougies, décorations et produits du terroir figurent parmi les articles proposés par les exposants.
+
+Pour éviter l'accumulation de petites dépenses, choisissez avant de partir ce que les enfants pourront faire ou acheter. Il est tout à fait possible de venir seulement pour l'ambiance et les lumières.
+
+## Comment rejoindre les Quinconces?
+
+Le marché se tient **place des Quinconces, 33000 Bordeaux**. L'[office de tourisme](https://www.bordeaux-tourisme.com/noel/marche) indique les **tramways B, C et D**, arrêt **Quinconces**. C'est un accès pratique pour éviter de chercher une place de stationnement dans le centre pendant les fêtes. Depuis la gare Saint-Jean, la ligne C permet notamment de rejoindre cet arrêt sans correspondance, sous réserve de l'exploitation du jour.
+
+Le marché est annoncé **accessible aux personnes en situation de handicap**. Avec une poussette, prévoyez toutefois des déplacements plus lents dans les allées lorsque la fréquentation augmente; l'accessibilité annoncée ne garantit pas l'absence de foule. Avant le trajet retour, vérifiez les horaires et perturbations éventuelles des tramways, particulièrement les soirs de fêtes.
+
+## Et si vous restez un week-end à Bordeaux?
+
+Pour une famille qui prolonge la visite, dormir près des Quinconces peut éviter un trajet supplémentaire avec des enfants fatigués. L'[Hôtel Majestic](https://www.booking.com/hotel/fr/majestic-bordeaux.fr.html), rue de Condé, propose notamment des chambres familiales et des appartements à quelques pas de l'esplanade. Le [Quality Hotel Bordeaux Centre](https://www.booking.com/hotel/fr/qualitybordeaux.fr.html), rue du Parlement Sainte-Catherine, propose aussi des chambres familiales, à environ 350 mètres de la place. Comparez l'occupation réelle de chaque chambre, les tarifs et les conditions d'annulation pour vos dates.
+
+Pour ajouter une visite en intérieur, notre guide de la [Cité du Vin à Bordeaux en famille](/articles/sorties/cite-du-vin-a-bordeaux-en-famille-tarifs-duree-et-conseils-de-visite/) aide à évaluer durée et budget. Avec des enfants attirés par les dinosaures, consultez plutôt [Planète Préhistorique à Bordeaux](/articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/) pour juger si cette sortie convient à leur âge et aux dates du séjour.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
-- /articles/sorties/cite-du-vin-a-bordeaux-en-famille-tarifs-duree-et-conseils-de-visite/ | Cité du Vin à Bordeaux en famille: tarifs, durée et conseils de visite | sorties | Bordeaux, Gironde, Nouvelle-Aquitaine
 - /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | Marché de Noël de Reims 2026 en famille: horaires, grande roue et animations | evenements | Reims, Marne, Grand Est
+- /articles/evenements/marche-de-noel-de-mulhouse-2026-en-famille-dates-etoffe-et-parcours-avec-les-enfants/ | Marché de Noël de Mulhouse 2026 en famille: horaires, étoffe et animations | evenements | Mulhouse, Haut-Rhin, Grand Est
+- /articles/sorties/cite-du-vin-a-bordeaux-en-famille-tarifs-duree-et-conseils-de-visite/ | Cité du Vin à Bordeaux en famille: tarifs, durée et conseils de visite | sorties | Bordeaux, Gironde, Nouvelle-Aquitaine
+- /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | Marché de Noël d'Amiens 2026 en famille: horaires, Père Noël et patinoire | evenements | Amiens, Somme, Hauts-de-France
 - /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
 - /articles/evenements/noel-a-limoges-2026-en-famille-marche-animations-et-idees-pour-un-week-end/ | Noël à Limoges 2026 en famille: marché, animations et idées pour un week-end | evenements | Limoges, Haute-Vienne, Nouvelle-Aquitaine
 - /articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/ | Planète Préhistorique à Bordeaux avec des enfants: âge, durée et tarifs | sorties | Bordeaux, Gironde, Nouvelle-Aquitaine
 - /articles/activites/anatomik-park-a-cap-sciences-a-partir-de-quel-age-et-combien-de-temps-prevoir/ | Anatomik Park à Cap Sciences: à partir de quel âge et combien de temps prévoir? | activites | Bordeaux, Gironde, Nouvelle-Aquitaine
-- /articles/evenements/marche-de-noel-de-mulhouse-2026-en-famille-dates-etoffe-et-parcours-avec-les-enfants/ | Marché de Noël de Mulhouse 2026 en famille: horaires, étoffe et animations | evenements | Mulhouse, Haut-Rhin, Grand Est
 - /articles/maison/composteur-gratuit-a-bordeaux-metropole-que-choisir-selon-son-logement/ | Composteur gratuit à Bordeaux Métropole: que choisir selon son logement? | maison | Bordeaux, Gironde, Nouvelle-Aquitaine
 - /articles/sorties/visites-famille-art-deco-bordeaux-2026/ | Art déco à Bordeaux: deux visites en famille au MusBA en 2026 | sorties | Bordeaux, Gironde, Nouvelle-Aquitaine
 - /articles/evenements/famille-en-fete-2026-pres-de-bordeaux-ateliers-gratuits-pour-les-0-6-ans/ | Famille en fête 2026 en Gironde: ateliers gratuits pour les 0-6 ans | evenements | Saint-Loubès, Gironde, Nouvelle-Aquitaine
@@ -136,7 +159,6 @@ Aucune billetterie naturelle pour l'entrée gratuite. Pour les familles qui prol
 - /articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/ | Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille | evenements | Nevers, Nièvre, Bourgogne-Franche-Comté
 - /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/evenements/fetes-de-saint-nicolas-2026-a-nancy-en-famille-defile-dates-et-visite/ | Fêtes de Saint-Nicolas 2026 à Nancy en famille: défilé, villages et animations | evenements | Nancy, Meurthe-et-Moselle, Grand Est
-- /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | Marché de Noël d'Amiens 2026 en famille: horaires, Père Noël et patinoire | evenements | Amiens, Somme, Hauts-de-France
 - /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
 - /articles/evenements/bd-boum-2026-a-blois-en-famille-ateliers-bd-expositions-et-cinema-selon-l-age/ | bd BOUM 2026 à Blois en famille: ateliers, expositions et cinéma | evenements | Blois, Loir-et-Cher, Centre-Val de Loire
 
