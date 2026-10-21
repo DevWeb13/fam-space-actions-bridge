@@ -36,7 +36,7 @@ Sur la Côte Vermeille, près de la frontière espagnole, Banyuls-sur-Mer se dé
 
 ## Un aquarium qui raconte la Méditerranée
 
-Rattaché à l'Observatoire océanologique de Banyuls-sur-Mer, l'aquarium du Biodiversarium présente la vie marine à travers le regard des scientifiques. Environ 300 espèces méditerranéennes y sont présentées dans des décors évoquant les fonds sableux, les herbiers de posidonie et les milieux rocheux.
+Rattaché à l'Observatoire océanologique de Banyuls-sur-Mer, l'aquarium du Biodiversarium montre la vie marine à travers le regard des scientifiques. Ses bassins abritent environ 300 espèces méditerranéennes et évoquent les fonds sableux, les herbiers de posidonie et les milieux rocheux.
 
 Avec les enfants, on peut comparer les animaux des fonds sableux et ceux des rochers, puis découvrir l'utilité des herbiers sous-marins. Le circuit évoque aussi les recherches menées à l'observatoire; certains laboratoires sont visibles depuis le parcours. Le [Biodiversarium présente les différents espaces de l'aquarium](https://www.biodiversarium.fr/fr/biodiversarium/aquarium.html).
 
@@ -44,7 +44,7 @@ Avec les enfants, on peut comparer les animaux des fonds sableux et ceux des roc
 
 Avec de jeunes enfants, associez l'aquarium à une courte balade près du port. Avec des plus grands, une animation scientifique ou un parcours à pied plus long peuvent enrichir la journée, si la météo le permet.
 
-**Pour les vacances de Toussaint 2026, du 17 octobre au 1er novembre inclus**, le Biodiversarium annonce un nourrissage commenté des animaux du bassin « La côte sableuse » et le jeu d'enquête « Opération Gobetout », conseillé dès 8 ans avec un adulte accompagnateur. Ces animations sont comprises dans le billet d'entrée, dans la limite des places disponibles; elles peuvent être annulées. Consultez le [programme officiel de Toussaint 2026](https://www.biodiversarium.fr/fr/plan-acces/print_article/5.html?flag=1&tmpl=component) pour les créneaux. Il ne s'agit pas d'activités garanties toute l'année.
+**Pendant les vacances de Toussaint 2026, du 17 octobre au 1er novembre inclus**, le Biodiversarium programme deux animations à l'aquarium: le nourrissage commenté du bassin « La côte sableuse », tous les jours à **11h et 15h30**, et le jeu d'enquête « Opération Gobetout », à **14h15 et 16h30**. Ce dernier est conseillé dès 8 ans avec un adulte accompagnateur; les places sont limitées, mais aucune réservation préalable n'est nécessaire. Les animations ne coûtent pas de supplément au billet d'entrée et peuvent être annulées. Vérifiez le [programme officiel de Toussaint 2026](https://www.biodiversarium.fr/fr/plan-acces/print_article/5.html?flag=1&tmpl=component) avant votre visite: ces créneaux ne sont pas valables toute l'année.
 
 ## Horaires et billets: éviter une mauvaise surprise
 
