@@ -211,3 +211,4 @@ automation/image-20261020-a847578-nevers-kiosque-0943|200d22dc7c3e36c458cfd0dbe4
 automation/image-20261020-e28e872-biotropica-colmar-1544|0ecef7a03ef2e2f38e7101eb6dc53808bd2a193f
 automation/image-20261020-e28e872-biotropica-colmar-1544|87ee67567af443070269a4a8834b60635a067916
 automation/image-20261021-29b794b-annecy-vaux-rennes-0640|96e471bd2ec4b8ec7bdd37aad41fbd75c6e42dc1
+automation/image-20261021-29b794b-annecy-vaux-rennes-0640|81c5d37de6079611e47cbf8f0e3ea8281a7c965c
