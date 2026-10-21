@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,106 +14,127 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Pyrénées-Orientales
 - Région: Occitanie
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Sujet:** Préparer une escapade familiale à Banyuls-sur-Mer, sur la Côte Vermeille (Pyrénées-Orientales), autour de l'aquarium scientifique du Biodiversarium et d'une promenade sur le littoral, y compris en automne et en hiver.
-
-**Titre de travail:** « Banyuls-sur-Mer en famille hors saison: aquarium, promenade et séjour sur la Côte Vermeille »
-
-**Angle:** Proposer un programme réellement praticable hors des vacances d'été, avec des conseils de durée, d'âge, de budget et de transports. Distinguer nettement l'aquarium ouvert une grande partie de l'année, le Jardin méditerranéen saisonnier sur un **autre site**, et les portions de sentier littoral qui constituent une randonnée plutôt qu'une promenade facile.
-
-À Banyuls-sur-Mer, au bord de la Méditerranée près de la frontière espagnole, le Biodiversarium est le service de médiation scientifique de l'Observatoire océanologique. Son aquarium présente environ 300 espèces méditerranéennes dans des bassins illustrant les milieux du littoral catalan; le jardin botanique du Mas de la Serre est une visite guidée distincte sur les hauteurs.
-
-## Besoin du lecteur
-
-Savoir si Banyuls convient à un week-end familial ou à une sortie hors saison; comprendre ce qu'on voit à l'aquarium et ce qui plaît aux enfants; choisir un créneau en tenant compte des fermetures, des animations et des âges; comparer billet aquarium seul et billet couplé sans payer pour un jardin fermé; préparer une promenade raisonnable près du port, de la plage et éventuellement d'une courte portion du sentier littoral sans présenter l'intégralité du sentier comme accessible aux jeunes enfants ou aux poussettes; organiser trajet et hébergement selon la composition familiale.
-
-## Valeur éditoriale
-
-- **Deux visites à ne pas confondre:** l'aquarium scientifique au **1 avenue Pierre Fabre** s'intéresse à la faune et aux habitats méditerranéens, avec des espaces de médiation et des vues sur l'activité de recherche; le Jardin méditerranéen du Mas de la Serre se visite **uniquement avec un guide, sur réservation**, sur un site distinct (Mas Reig, route des Crêtes).
-- **Ouverture hors saison:** l'aquarium annonce, de septembre à juin, une ouverture du mardi au dimanche **10h-12h30 et 14h-18h30**, avec exception d'ouverture les lundis pendant les vacances scolaires de la zone C; fermeture les **25 décembre et 1er janvier** et **fermeture annuelle du 4 au 29 janvier 2027 inclus**. Dernier accès en billetterie 30 minutes avant la fermeture. Le jardin est habituellement fermé **de novembre à mars**: ne pas le promettre pour une escapade hivernale.
-- **Budget familial vérifiable:** entrée aquarium **12 € adulte, 8,50 € adolescent 13-17 ans, 6 € enfant 3-12 ans et gratuite avant 3 ans**. Billet couplé aquarium + jardin à **14,50 € adulte, 11 € adolescent, 7,50 € enfant 3-12 ans** seulement si une visite du jardin est effectivement possible et réservée. Donner un exemple familial uniquement s'il éclaire le choix, sans multiplier les calculs.
-- **Animations et vie marine:** médiation autour des animaux, observations des milieux sableux, herbiers et fonds rocheux. Pour les vacances de Toussaint 2026, l'organisateur annonce un nourrissage commenté des raies et un jeu d'enquête conseillé dès 8 ans. Ces horaires d'animation sont **ponctuels** et ne doivent pas être annoncés comme valables toute l'année. Ils peuvent évoluer ou être annulés.
-- **Après la visite:** proposer une balade modulable sur le front de mer, autour du port et des Allées Maillol, puis éventuellement un court tronçon du sentier en fonction de l'âge, de la météo et du terrain; l'office de tourisme rappelle que le sentier côtier complet est une randonnée, pas une simple promenade.
-- **Accès:** gare de Banyuls-sur-Mer à environ **15 minutes à pied** de l'aquarium; ligne de bus **400**; parking à proximité payant du **1er avril au 30 octobre** d'après l'organisateur. Mentionner que la météo et la saison changent la pertinence d'une journée en extérieur.
-
-**Différenciation:** les pages officielles exposent séparément tarifs, horaires et sites. L'article doit aider à construire **un vrai programme familial** et à éviter les deux erreurs majeures: acheter un billet couplé quand le jardin est fermé, et sous-estimer le sentier littoral.
-
-## Affiliation
-
-**Action principale, billet aquarium:** recherche ciblée chez **GetYourGuide, Tiqets et Klook**: aucune offre identifiable et vérifiée donnant accès à l'aquarium du Biodiversarium. Conserver les informations et liens officiels utiles, sans inventer un billet partenaire. L'achat éventuel directement auprès de l'organisateur ne constitue pas une offre partenaire.
-
-**Séjour familial, offres d'hébergement réellement référencées sur Booking.com:**
-
-- **Le Catalan**, hôtel à Banyuls-sur-Mer, chambres triples disponibles à la réservation selon dates, restaurant, parking et piscines extérieures (dont l'ouverture et l'usage sont à vérifier hors saison). À environ 10 minutes de marche du centre, dans les hauteurs. **Partenaire: Booking.com. Offre:** hébergement à l'hôtel Le Catalan. **URL exacte:** https://www.booking.com/hotel/fr/le-catalan.fr.html
-- **BANYULS-SUR-MER: Appartement T3 climatisé, proche plage - FR-1-309-281**, appartement familial avec deux chambres, cuisine, proche de la plage des Elmes, pour quatre voyageurs selon la fiche; conditions de caution et de ménage à vérifier avant réservation. **Partenaire: Booking.com. Offre:** appartement entier deux chambres. **URL exacte:** https://www.booking.com/hotel/fr/appartement-banyuls-sur-mer-2-pieces-4-personnes-fr-1-309-281.fr.html
-
-Les URLs sont les pages d'offres françaises du partenaire, non des URL d'affiliation déjà traquées. **Aucune disponibilité ni aucun tarif à des dates précises n'ont été garantis**. Une ou deux suggestions suffisent, placées lorsque l'article traite d'un séjour prolongé et de la différence hôtel/appartement. Les pages Booking.com vérifient l'existence des offres, jamais les faits touristiques.
-
-## Sources de départ
-
-- Biodiversarium, présentation officielle de l'aquarium, espèces et circuit scientifique: https://www.biodiversarium.fr/fr/biodiversarium/aquarium.html
-- Biodiversarium, horaires 2026-2027, fermetures annuelles, calendrier du Jardin méditerranéen: https://www.biodiversarium.fr/fr/preparez-votre-visite/horaires-d-ouvertures.html
-- Biodiversarium, tarifs aquarium, jardin, billet couplé et gratuité avant 3 ans: https://www.biodiversarium.fr/fr/preparez-votre-visite/tarifs-individuels.html
-- Biodiversarium, accès gare, bus, parking, distinction des deux adresses: https://www.biodiversarium.fr/fr/preparez-votre-visite/acces2.html
-- Biodiversarium, présentation des deux composantes du lieu: https://www.biodiversarium.fr/fr/biodiversarium.html
-- Biodiversarium, animations scientifiques grand public de la Toussaint 2026, à ne pas extrapoler: https://www.biodiversarium.fr/fr/plan-acces/print_article/5.html?flag=1&tmpl=component
-- Office de tourisme de Banyuls-sur-Mer, sentier littoral et caractère parfois exigeant de la randonnée: https://www.banyuls-sur-mer.com/tourisme/decouvrir/banyuls-la-mer-et-ses-tresors/incontournables-de-la-mediterranee/le-sentier-littoral/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "voyages"
+title: "Banyuls-sur-Mer en famille: aquarium et balade hors saison"
+subtitle: "Un programme sur la Côte Vermeille, avec les bons horaires, le bon billet et une promenade adaptée aux enfants"
+summary: "Aquarium du Biodiversarium, balade au bord de mer et conseils pratiques pour découvrir Banyuls-sur-Mer en famille en automne ou en hiver."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Banyuls-sur-Mer en famille"
+  - "aquarium Biodiversarium"
+  - "Côte Vermeille hors saison"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Banyuls-sur-Mer"
+  department: "Pyrénées-Orientales"
+  region: "Occitanie"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Biodiversarium - Aquarium scientifique méditerranéen"
+    url: "https://www.biodiversarium.fr/fr/biodiversarium/aquarium.html"
+  - title: "Biodiversarium - Horaires d'ouverture"
+    url: "https://www.biodiversarium.fr/fr/preparez-votre-visite/horaires-d-ouvertures.html"
+  - title: "Biodiversarium - Tarifs individuels"
+    url: "https://www.biodiversarium.fr/fr/preparez-votre-visite/tarifs-individuels.html"
+  - title: "Biodiversarium - Accès aux deux sites"
+    url: "https://www.biodiversarium.fr/fr/preparez-votre-visite/acces2.html"
+  - title: "Biodiversarium - Animations grand public"
+    url: "https://www.biodiversarium.fr/fr/pedagogie/animations-grand-public.html"
+  - title: "Biodiversarium - Aquarium et jardin, deux sites complémentaires"
+    url: "https://www.biodiversarium.fr/fr/biodiversarium.html"
+  - title: "Office de tourisme de Banyuls-sur-Mer - Le sentier littoral"
+    url: "https://www.banyuls-sur-mer.com/tourisme/decouvrir/banyuls-la-mer-et-ses-tresors/incontournables-de-la-mediterranee/le-sentier-littoral/"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Banyuls-sur-Mer, dans les Pyrénées-Orientales, la Côte Vermeille se découvre aussi loin des baignades estivales. Pour une sortie avec des enfants, cette ville du littoral catalan, près de la frontière espagnole, permet d'associer une visite à l'abri à l'aquarium du Biodiversarium et une promenade face à la Méditerranée. Le programme fonctionne sur une journée, à condition de regarder le calendrier de l'aquarium et de ne pas confondre balade en ville et randonnée côtière.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Un aquarium qui raconte la Méditerranée
+
+L'aquarium du Biodiversarium n'est pas seulement un alignement de bassins. Rattaché à l'Observatoire océanologique de Banyuls-sur-Mer, il montre comment les scientifiques étudient le milieu marin. Environ 300 espèces méditerranéennes y sont présentées dans des décors évoquant les fonds sableux, les herbiers de posidonie et les milieux rocheux.
+
+Pour les enfants, la visite devient plus parlante en cherchant ce qui change d'un habitat à l'autre: quels animaux se cachent dans le sable, lesquels évoluent près des rochers, à quoi sert un herbier sous-marin? L'espace consacré à la recherche donne une autre dimension à cette découverte de la mer. L'[aquarium présente son parcours scientifique](https://www.biodiversarium.fr/fr/biodiversarium/aquarium.html) sur le site du Biodiversarium.
+
+Aucun âge minimum général n'est annoncé pour la visite de l'aquarium. En revanche, certaines animations demandent davantage d'attention ou s'adressent à des enfants plus grands.
+
+## Une sortie d'une demi-journée, ou une journée complète
+
+Pour garder un rythme agréable, prévoyez l'aquarium comme activité principale et réservez la promenade au moment où la météo est la plus clémente. Une famille avec de jeunes enfants peut ainsi consacrer la matinée ou l'après-midi à la visite, puis marcher tranquillement près du front de mer. Avec des enfants plus grands, une animation scientifique et un parcours à pied un peu plus long peuvent compléter la sortie.
+
+Les animations ne sont pas identiques toute l'année. **Pendant les vacances de Toussaint 2026, du 17 octobre au 1er novembre**, le Biodiversarium annonce notamment un nourrissage commenté dans le bassin de la côte sableuse et le jeu d'enquête « Opération Gobetout », conseillé à partir de 8 ans avec un adulte accompagnateur. Ces rendez-vous sont proposés sans supplément au billet d'entrée, mais peuvent évoluer ou être annulés: consultez le [programme des animations](https://www.biodiversarium.fr/fr/pedagogie/animations-grand-public.html) pour votre date précise. Hors de cette période, ne comptez pas sur les mêmes activités.
+
+## Horaires et billets: les deux vérifications indispensables
+
+**De septembre à juin**, l'aquarium ouvre normalement du mardi au dimanche, de **10h à 12h30** et de **14h à 18h30**. Le lundi est fermé, sauf pendant les vacances scolaires de la zone C. Les 25 décembre et 1er janvier sont également des jours de fermeture. Surtout, une **fermeture annuelle est annoncée du 4 au 29 janvier 2027 inclus**. La billetterie ferme 30 minutes avant le site. Vérifiez les [horaires officiels](https://www.biodiversarium.fr/fr/preparez-votre-visite/horaires-d-ouvertures.html) avant de partir, particulièrement pour un séjour hivernal.
+
+Pour l'aquarium seul, les [tarifs affichés](https://www.biodiversarium.fr/fr/preparez-votre-visite/tarifs-individuels.html) sont de **12 € par adulte**, **8,50 € de 13 à 17 ans** et **6 € de 3 à 12 ans**; l'entrée est gratuite avant 3 ans. Pour deux adultes et deux enfants de 3 à 12 ans, cela représente 36 €, hors autres dépenses.
+
+Le Biodiversarium possède aussi un **Jardin méditerranéen du Mas de la Serre**, mais ce n'est pas une annexe attenante à l'aquarium: il se trouve sur un autre site, sur les hauteurs, et se visite **uniquement avec un guide, sur réservation**. Le jardin est habituellement fermé de novembre à mars. Il faut donc vérifier qu'une visite est effectivement proposée avant de choisir un billet couplé aquarium + jardin, facturé **14,50 € par adulte**, **11 € par adolescent** et **7,50 € par enfant de 3 à 12 ans**. Pour une sortie hivernale limitée à l'aquarium, ce supplément n'a pas d'intérêt. L'organisateur explique la [distinction entre ses deux sites](https://www.biodiversarium.fr/fr/biodiversarium.html).
+
+## Après l'aquarium, marcher sans surestimer le sentier côtier
+
+Le plus simple avec de jeunes enfants est de rester à proximité du front de mer, du port et des Allées Maillol, en adaptant la distance au vent et à l'énergie du groupe. La promenade permet de profiter du paysage sans transformer la journée en expédition.
+
+Le **sentier littoral** demande une autre préparation. Au départ de Banyuls, il longe notamment le port et les Allées Maillol avant de poursuivre dans la garrigue vers Cerbère, avec des portions plus sportives. L'[office de tourisme](https://www.banyuls-sur-mer.com/tourisme/decouvrir/banyuls-la-mer-et-ses-tresors/incontournables-de-la-mediterranee/le-sentier-littoral/) rappelle que le parcours côtier complet est une randonnée. Il répertorie aussi une traversée de Banyuls de 4 km, annoncée praticable avec poussette ou fauteuil roulant: cette indication concerne **cet itinéraire identifié**, pas l'ensemble des sentiers en bord de falaise.
+
+Avec une poussette ou de jeunes marcheurs, privilégiez les espaces aménagés en ville. Si vous envisagez un tronçon de randonnée, examinez le tracé, le dénivelé et l'état du terrain, et renoncez en cas de vent fort ou de pluie.
+
+## Venir et choisir entre une journée et une nuit sur place
+
+L'aquarium est situé au **1 avenue Pierre Fabre**. Selon les [indications d'accès du Biodiversarium](https://www.biodiversarium.fr/fr/preparez-votre-visite/acces2.html), la gare de Banyuls-sur-Mer se trouve à environ **15 minutes à pied**, avec des liaisons TER; la **ligne de bus 400** dessert également le secteur Perpignan-Cerbère. En voiture, l'accès se fait par la D914. Le parking voisin est indiqué comme payant du **1er avril au 30 octobre**. Le Jardin méditerranéen, si vous avez réservé une visite, se rejoint séparément au Mas Reig, route des Crêtes.
+
+Une seule journée suffit pour associer l'aquarium et le front de mer. Pour un week-end, le choix de l'hébergement dépend surtout du rythme familial: une chambre d'hôtel convient pour une nuit et peu de logistique, tandis qu'un appartement avec cuisine peut simplifier les repas et le coucher de jeunes enfants. Comparez surtout la distance réelle à pied jusqu'au centre, la capacité du logement, le stationnement éventuel et les conditions de réservation. Une piscine extérieure ou un équipement saisonnier ne doit pas être considéré comme disponible en automne ou en hiver sans confirmation.
+
+Banyuls a ainsi un avantage hors saison: une visite scientifique suffisamment riche pour justifier le déplacement, et la mer juste à côté lorsque le temps permet de prolonger la sortie.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -142,4 +163,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
