@@ -214,3 +214,4 @@ automation/image-20261021-29b794b-annecy-vaux-rennes-0640|96e471bd2ec4b8ec7bdd37
 automation/image-20261021-29b794b-annecy-vaux-rennes-0640|81c5d37de6079611e47cbf8f0e3ea8281a7c965c
 automation/image-20261021-97c9414-aussois-celles-equita-bordeaux-chauvet-1249|10b112c885e2be77ac379ef4f6dc0dd9234e537a
 automation/image-20261021-97c9414-aussois-celles-equita-bordeaux-chauvet-1249|5ff78f21ecf8712d40be64765584be42e3abfebd
+automation/image-20261021-ef3db99-dijon-grenoble-banyuls-saline-1841|3163991e5f06d1e38bea0540e8108cbb99be12a1
