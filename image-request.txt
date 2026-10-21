@@ -212,3 +212,4 @@ automation/image-20261020-e28e872-biotropica-colmar-1544|0ecef7a03ef2e2f38e7101e
 automation/image-20261020-e28e872-biotropica-colmar-1544|87ee67567af443070269a4a8834b60635a067916
 automation/image-20261021-29b794b-annecy-vaux-rennes-0640|96e471bd2ec4b8ec7bdd37aad41fbd75c6e42dc1
 automation/image-20261021-29b794b-annecy-vaux-rennes-0640|81c5d37de6079611e47cbf8f0e3ea8281a7c965c
+automation/image-20261021-97c9414-aussois-celles-equita-bordeaux-chauvet-1249|addc64eddc8341571a93852456bb1689f874ff3f
