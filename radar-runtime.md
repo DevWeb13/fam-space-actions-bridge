@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Foire de Grenoble 2026 en famille: jours gratuits, animations et budget"
-subtitle: "Du 30 octobre au 8 novembre à Alpexpo: choisir le bon jour avec les enfants"
-summary: Dates, jours gratuits, programme des Celtes, train fantôme, animations et accès à la Foire de Grenoble 2026 en famille.
+title: "Foire de Grenoble 2026 en famille: jours gratuits, programme et tarifs"
+subtitle: "Halloween ou week-end des jeux: choisir quand visiter Alpexpo du 30 octobre au 8 novembre"
+summary: Quelles journées choisir pour la Foire de Grenoble 2026 avec des enfants? Gratuités, univers celte, train fantôme, jeux, horaires et accès à Alpexpo.
 category: evenements
 location:
   city: Grenoble
@@ -68,18 +73,18 @@ location:
   region: Auvergne-Rhône-Alpes
 keywords:
   - Foire de Grenoble 2026 enfants
-  - Foire de Grenoble 2026 gratuité
-  - animations Alpexpo 2026
+  - Foire de Grenoble 2026 entrée gratuite
+  - animations Alpexpo Toussaint 2026
 sources:
   - title: Foire de Grenoble - Infos pratiques 2026
     url: https://foiredegrenoble.com/infos-pratiques/
-  - title: Foire de Grenoble - Programme 2026
+  - title: Foire de Grenoble - Programme des animations 2026
     url: https://foiredegrenoble.com/animations-temps-forts/programme/
   - title: Foire de Grenoble - FAQ
     url: https://foiredegrenoble.com/visitez/faq/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: foire-de-grenoble-2026-en-famille-jours-gratuits-animations-et-budget
   decision: Choisir le jour adapté aux enfants et le moins cher selon les animations et les gratuités.
@@ -89,28 +94,55 @@ radar:
     dataThrough: 2026-10-18
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Foire de Grenoble - Infos pratiques 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-11-08
 ---
 
-## Mission retenue
-La Foire de Grenoble 2026 se tient à Alpexpo du 30 octobre au 8 novembre. Au-delà des exposants commerciaux, les animations familiales varient selon les jours: Celtes, train fantôme, Halloween, jeux de plateau et de rôle.
+Du **30 octobre au 8 novembre 2026**, la **Foire de Grenoble** s'installe à **Alpexpo** avec des stands, un univers consacré aux Celtes et des animations qui changent au fil des jours. Avec des enfants, deux questions comptent avant tout: souhaitez-vous profiter de l'ambiance d'Halloween ou plutôt découvrir les jeux de rôle et de plateau? Et pouvez-vous choisir un jour où **les adultes entrent gratuitement**?
 
-## Pourquoi cette mission
-Opportunité locale proche, documentée officiellement et sans doublon thématique dans le catalogue ni l'historique Radar. Le refresh prioritaire Carte OKAY Savoie (signal GSC uncertain) est déjà complet et récemment actualisé. L'expansion de la page forte Transports à Paris chevaucherait ses guides existants sur Orly et CDG.
+L'**entrée est gratuite pour les moins de 16 ans pendant toute la foire**. Une sortie avec des enfants peut donc coûter très peu si vous venez sans achats ni activités payantes, surtout les 30 octobre et 4 novembre.
 
-## Décision du lecteur
-Choisir une date en fonction de l'âge des enfants, des animations et du coût réel des billets adultes.
+## Quel jour choisir pour les enfants?
 
-## Faits à traiter
-Moins de 16 ans gratuits chaque jour; entrée gratuite pour tous les 30 octobre et 4 novembre. Prévente adulte 5 € jusqu'au 29 octobre, puis 7 €. Celtes du 30 octobre au 5 novembre; train fantôme toute la foire; bal des sorcières du 30 octobre au 1er novembre; village de jeux du 6 au 8 novembre. Ouverture 10h-19h, nocturnes les 30 octobre et 6 novembre, nocturne gastronomique limitée au hall concerné le 7. Tram A arrêt Polesud-Alpexpo, parking gratuit, restauration sur place. Vérifier les conditions propres aux animations, sans promettre une gratuité non confirmée pour chaque activité.
+Le [programme officiel 2026](https://foiredegrenoble.com/animations-temps-forts/programme/) distingue plusieurs périodes:
 
-## Sources de départ
-Informations pratiques, programme daté et FAQ officiels listés en frontmatter.
+- **Du 30 octobre au 1er novembre**, les amateurs d'Halloween trouveront le **Grand bal des sorcières**, des décors fantastiques et des animations sportives annoncées. Le **laser game ambiance Halloween** figure également dans les journées de ce premier week-end. Le **30 octobre** a un double avantage: entrée gratuite pour tous et ouverture en nocturne.
+- **Du 30 octobre au 5 novembre**, l'espace **« Les Celtes, terres de légendes »** propose **1 000 m²** autour de l'imaginaire celtique et des sorcières. Cette période convient aux familles qui veulent visiter le décor thématique sans réserver nécessairement une animation précise.
+- **Du 6 au 8 novembre**, le **Village des Jeux de Rôles et de plateaux / Festival IsèRPG!** est consacré aux jeux de société, aux initiations et aux parties proposées avec Lasso Meuh Jeux table. C'est la période à privilégier si les enfants préfèrent jouer plutôt que découvrir les décors d'Halloween.
+- **Pendant les dix jours**, le **Train Fantôme**, présenté comme adapté aux petits et aux grands, et le **Village Italie** complètent la promenade. Le thème du train reste frissonnant: à évaluer selon la sensibilité des plus jeunes.
 
-## Affiliation
-Billets officiels sans offre partenaire identifiée. Pour les visiteurs de passage, B&B HOTEL Grenoble Centre Alpexpo (quadruple) et Appartéa Grenoble Alpexpo (suite familiale) sont référencés sur Booking.com; tarifs et disponibilités à confirmer.
+Des activités ponctuelles apparaissent dans le programme jour par jour. Par exemple, l'animation **Learn-O**, associant mouvement et course d'orientation, est annoncée dès 3 ans sur plusieurs journées du premier week-end. Les horaires précis et les conditions de chaque atelier, jeu ou attraction doivent être revérifiés dans le calendrier à la date choisie; **la gratuité de l'entrée ne signifie pas que chaque prestation sur place est gratuite**.
 
-## Continuations internes
-Une autre sortie pendant les vacances est déjà traitée dans /articles/evenements/festival-du-film-pour-enfants-2026-en-isere-seances-ateliers-et-tarifs/ (jusqu'au 28 octobre); ne pas recopier ses séances ni ateliers.
+## Quels jours permettent d'entrer gratuitement?
+
+Les [informations pratiques de la foire](https://foiredegrenoble.com/infos-pratiques/) fixent le tarif général à **5 € par adulte en prévente jusqu'au 29 octobre inclus**, puis **7 € à partir du 30 octobre**, en ligne ou sur place. Les moins de 16 ans entrent gratuitement tous les jours.
+
+Pour les adultes, voici les possibilités qui changent vraiment le budget:
+
+- **Vendredi 30 octobre et mercredi 4 novembre:** **entrée gratuite toute la journée, pour tous**. Le 30 tombe pendant le programme d'Halloween; le 4 pendant les derniers jours de l'univers celte.
+- **Lundi 2, mardi 3, jeudi 5 et vendredi 6 novembre:** **gratuité pour tous entre 12h et 14h**, et pas seulement pour les enfants. Le 2 et le 5, les plus de 60 ans bénéficient également d'une entrée gratuite; le 3, cette gratuité concerne aussi les femmes.
+- **Samedi 7 novembre à partir de 18h:** tarif réduit à **4 €** pour la nocturne gourmande, limitée au hall Gastronomie.
+- D'autres gratuités conditionnelles sont annoncées, notamment pour les personnes à mobilité réduite ou titulaires d'une carte d'invalidité, ainsi qu'une offre exceptionnelle pour les visiteurs prénommés Patrick sur présentation d'un justificatif, uniquement sur place.
+
+À titre de comparaison, **deux adultes et deux enfants de moins de 16 ans** paient **10 €** en prévente sur une journée ordinaire, ou **14 €** au tarif général à partir du 30 octobre, contre **0 €** le 30 octobre ou le 4 novembre, avant toute dépense personnelle. Les billets achetés ne sont ni échangeables ni remboursables selon la FAQ.
+
+## À quelle heure venir et quel budget prévoir?
+
+La foire est ouverte **de 10h à 19h**, avec trois soirées particulières selon l'organisateur:
+
+- **Vendredi 30 octobre et vendredi 6 novembre:** nocturnes jusqu'à **22h**, pour profiter plus longtemps des stands.
+- **Samedi 7 novembre:** nocturne jusqu'à **22h dans le hall Gastronomie uniquement**. Elle ne signifie pas que toutes les animations ou tous les espaces du salon restent ouverts le soir.
+
+Pour prévoir le coût réel d'une sortie, ajoutez à l'entrée les consommations et les éventuelles animations tarifées, sans leur attribuer un prix non publié. La [FAQ](https://foiredegrenoble.com/visitez/faq/) confirme la présence de restauration rapide, de sandwichs et de restaurants. Le **vestiaire coûte 2 € par article**; un distributeur de billets est disponible et chaque exposant choisit les moyens de paiement acceptés. Les animaux ne sont pas autorisés, sauf chiens d'assistance.
+
+## Venir à Alpexpo en tram ou en voiture
+
+La foire a lieu à **Alpexpo, avenue d'Innsbruck à Grenoble**. L'accès le plus simple sans voiture est le **tram A**, à l'arrêt **Polesud-Alpexpo**, également desservi par les bus **C3, 65 et 67**. L'arrêt **Grand'place** est une autre possibilité sur le tram A, avec plusieurs lignes de bus.
+
+En voiture, l'organisateur indique la **sortie 6 Alpexpo sur la rocade Sud** et un **parking gratuit**. Pendant les nocturnes, contrôlez les derniers départs du réseau de transports avant de partir avec les enfants.
+
+## Et pour un week-end à Grenoble?
+
+Une nuit sur place peut avoir du sens si vous associez la foire à une autre découverte de Grenoble. À environ **800 mètres d'Alpexpo**, le [B&B HOTEL Grenoble Centre Alpexpo](https://www.booking.com/hotel/fr/b-amp-b-grenoble-centre-alpexpo.fr.html) propose notamment des **chambres pour quatre personnes**, utiles pour deux adultes avec deux enfants. Plus près encore, à environ **400 mètres du parc des expositions**, l'[Appartéa Grenoble Alpexpo](https://www.booking.com/hotel/fr/adagio-access-grenoble.fr.html) dispose de **suites familiales avec kitchenette**, pratiques pour préparer un repas simple avec les enfants. Vérifiez la capacité exacte de l'hébergement choisi, les dates disponibles, le prix et les conditions d'annulation avant de réserver.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -119,11 +151,11 @@ Une autre sortie pendant les vacances est déjà traitée dans /articles/eveneme
 - /articles/sorties/ete-oh-parcs-grenoble-2026-famille/ | L’Été Oh! Parcs Grenoble 2026: horaires et activités gratuites | sorties | Grenoble, Isère, Auvergne-Rhône-Alpes
 - /articles/cuisine/3-recettes-de-l-isere-faciles-a-preparer-en-famille/ | 3 recettes de l'Isère faciles à préparer en famille | cuisine | Grenoble, Isère, Auvergne-Rhône-Alpes
 - /articles/parentalite/laep-a-grenoble-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | LAEP à Grenoble: où aller avec un enfant de moins de 6 ans? | parentalite | Grenoble, Isère, Auvergne-Rhône-Alpes
-- /articles/voyages/carcassonne-en-famille-1-ou-2-jours-billets-et-budget-a-prevoir/ | Carcassonne en famille: 1 ou 2 jours, billets et budget à prévoir | voyages | Carcassonne, Aude, Occitanie
+- /articles/evenements/foire-du-livre-de-brive-2026-en-famille-quel-jour-venir-avec-les-enfants/ | Foire du livre de Brive 2026 en famille: dates, auteurs jeunesse et conseils de visite | evenements | Brive-la-Gaillarde, Corrèze, Nouvelle-Aquitaine
 - /articles/cuisine/noix-de-grenoble-fraiche-ou-seche-laquelle-choisir-pour-cuisiner/ | Noix de Grenoble fraîche ou sèche: laquelle choisir pour cuisiner? | cuisine | Vinay, Isère, Auvergne-Rhône-Alpes
-- /articles/evenements/foire-d-automne-de-saint-jean-du-gard-2026-en-famille-animations-et-conseils/ | Foire d'Automne de Saint-Jean-du-Gard 2026 en famille: animations et conseils | evenements | Saint-Jean-du-Gard, Gard, Occitanie
-- /articles/evenements/festival-ete-continue-carquefou-2026-famille/ | Festival L’Été Continue 2026 à Carquefou: six jours gratuits en famille | evenements | Carquefou, Loire-Atlantique, Pays de la Loire
-- /articles/evenements/week-end-joyeux-caen-2026-famille/ | Week-end joyeux 2026 à Caen: deux jours gratuits au château en famille | evenements | Caen, Calvados, Normandie
+- /articles/sorties/musees-nationaux-gratuits-avec-des-enfants-qui-paie-vraiment-l-entree/ | Musées nationaux gratuits avec des enfants: qui paie vraiment l'entrée? | sorties
+- /articles/evenements/mucem-a-la-toussaint-2026-quelle-activite-en-ribambelle-choisir-selon-l-age/ | Mucem à la Toussaint 2026: le programme En Ribambelle avec des enfants | evenements | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur
+- /articles/voyages/vulcania-a-la-toussaint-2026-1-ou-2-jours-billets-et-ou-dormir/ | Vulcania à la Toussaint 2026: 1 ou 2 jours, billets et où dormir | voyages | Saint-Ours-les-Roches, Puy-de-Dôme, Auvergne-Rhône-Alpes
 - /articles/bons-plans/carte-tattoo-isere-2026-2027-comment-obtenir-60-a-120-pour-les-activites-d-un-collegien/ | Carte Tattoo Isère 2026-2027: comment obtenir 60 à 120 € pour les activités d'un collégien | bons-plans | Grenoble, Isère, Auvergne-Rhône-Alpes
 - /articles/evenements/festival-du-film-pour-enfants-2026-en-isere-seances-ateliers-et-tarifs/ | Festival du Film pour Enfants 2026 en Isère: séances, ateliers et tarifs | evenements | Vizille, Isère, Auvergne-Rhône-Alpes
 - /articles/voyages/chamrousse-en-famille-quel-secteur-choisir-pour-l-hiver-2026-2027/ | Chamrousse en famille: quel secteur choisir pour l'hiver 2026-2027? | voyages | Chamrousse, Isère, Auvergne-Rhône-Alpes
@@ -146,6 +178,7 @@ Une autre sortie pendant les vacances est déjà traitée dans /articles/eveneme
 - opportunity | /articles/evenements/festival-du-livre-de-colmar-2026-en-famille-dates-ateliers-et-acces/ | 2026-10-20T08:52:25.825Z
 - opportunity | /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | 2026-10-19T19:48:02.164Z
 - opportunity | /articles/evenements/fetes-de-saint-nicolas-2026-a-nancy-en-famille-defile-dates-et-visite/ | 2026-10-19T16:47:56.278Z
+- opportunity | /articles/evenements/foire-du-livre-de-brive-2026-en-famille-quel-jour-venir-avec-les-enfants/ | 2026-10-18T16:46:58.413Z
 - opportunity | /articles/evenements/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget/ | 2026-10-20T22:29:05.422Z
 - opportunity | /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | 2026-10-19T13:54:07.745Z
 - opportunity | /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | 2026-10-21T07:36:18.372Z
