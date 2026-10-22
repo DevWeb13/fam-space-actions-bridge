@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261022-1800-sujet-la-visite-guidee-des-coulisses-du-stade-de-france-a-saint-denis-",
+  "lastProcessedCommit": "d0ce7e728a40e067e9f672fe291de8942832ed9d"
 }
