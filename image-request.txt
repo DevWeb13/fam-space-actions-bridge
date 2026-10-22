@@ -218,3 +218,4 @@ automation/image-20261021-ef3db99-dijon-grenoble-banyuls-saline-1841|3163991e5f0
 automation/image-20261021-ef3db99-dijon-grenoble-banyuls-saline-1841|e3ed47c67c1029d6fbf02577bc0c7ef954bad0dc
 automation/image-20261022-ce73058-mobe-rochefort-0347|bba4c488a2648b43c602413f5a82dc419cabfc2e
 automation/image-20261022-ce73058-mobe-rochefort-0347|d5bd4a3fa4b0efc54a696ecc3af6f8a6c10d2115
+automation/image-20261022-949e531-luminescences-cheval-sedan-porto-tournus-1246|062b842652e387d09dd2507b87c2c8ed68542839
