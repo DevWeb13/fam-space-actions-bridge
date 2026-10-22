@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "MonstroZoo 2026-2027 à Beauval : enquête libre ou visite guidée en famille ?"
-subtitle: "Du 17 octobre au 8 mars : carnet gratuit, mission accompagnée dès 6 ans et supplément à prévoir"
-summary: MonstroZoo revient au ZooParc de Beauval jusqu'au 8 mars 2027. Comparez le parcours d'enquête inclus dans l'entrée et la visite guidée payante dès 6 ans.
+title: "MonstroZoo 2026-2027 à Beauval en famille : enquête libre ou visite guidée ?"
+subtitle: "Carnet d'enquête inclus dans l'entrée, mission payante dès 6 ans : comment choisir jusqu'au 8 mars 2027"
+summary: "MonstroZoo à Beauval du 17 octobre 2026 au 8 mars 2027 : parcours libre gratuit avec billet du zoo ou visite guidée dès 6 ans à 12 ou 14 € en supplément."
 category: evenements
 location:
   city: Saint-Aignan
@@ -74,15 +79,17 @@ keywords:
 sources:
   - title: ZooParc de Beauval - Découvrez MonstroZoo 2026-2027
     url: https://www.zoobeauval.com/spectacles-et-activites/decouvrir-monstrozoo
-  - title: "ZooParc de Beauval - MonstroZoo : sur la piste des monstres, réservation et conditions"
+  - title: ZooParc de Beauval - Visite guidée MonstroZoo et conditions de réservation
     url: https://reservations.zoobeauval.com/visite-guidee-monstrozoo
-  - title: ZooParc de Beauval - Tarifs des visites guidées
+  - title: ZooParc de Beauval - Prix des activités et visites guidées
     url: https://www.zoobeauval.com/billetterie/activites
-  - title: ZooParc de Beauval - Programme Toussaint et Halloween 2026
+  - title: ZooParc de Beauval - Horaires du jour
+    url: https://www.zoobeauval.com/preparez-votre-visite/horaires
+  - title: ZooParc de Beauval - MonstroZoo à la Toussaint et Halloween 2026
     url: https://actus.zoobeauval.com/toussaint-monstrozoo-beauval-2026/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: monstrozoo-2026-2027-a-beauval-enquete-libre-ou-visite-guidee-en-famille
   decision: Permettre aux familles de choisir entre le jeu de piste gratuit inclus dans l'entrée du zoo et la visite guidée MonstroZoo payante, selon l'âge des enfants (dès 6 ans pour la visite), le budget, la durée de 1 h 30 et les places disponibles, sans confondre réservation de l'activité et billet d'accès au parc.
@@ -92,28 +99,55 @@ radar:
     dataThrough: 2026-10-19
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « ZooParc de Beauval - Découvrez MonstroZoo 2026-2027 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2027-03-08
 ---
 
-## Mission retenue
-Publier un guide événementiel ciblé sur **MonstroZoo**, deuxième édition au ZooParc de Beauval **du 17 octobre 2026 au 8 mars 2027**. Six créatures fantastiques et leurs familles sont dispersées dans plusieurs territoires du parc. Les enfants suivent une enquête avec un carnet remis gratuitement, ou choisissent une mission guidée à effectif limité.
+Du **17 octobre 2026 au 8 mars 2027**, **MonstroZoo** installe six créatures fantastiques et leurs familles dans plusieurs territoires du **ZooParc de Beauval**, à Saint-Aignan. Leurs noms : **Bloop, Pyrak, Vrix, Grundo, Böm et Octavia**. Les visiteurs suivent des indices, observent des sculptures géantes et découvrent des jeux interactifs au milieu des animaux.
 
-## Pourquoi cette mission
-Le meilleur refresh GSC, la carte OKAY Savoie, affiche un recul d'impressions mais un signal **uncertain** ; sa dernière version traite déjà les dates de crédit, l'activation, les usages, le bonus CAF et la perte de carte. Aucune modification substantielle supplémentaire n'est démontrée. Une expansion des pages fortes consacrées aux transports parisiens recouperait des guides de tarifs et de trajets déjà publiés. MonstroZoo offre une **décision nouvelle et actuelle**, vérifiée directement auprès du ZooParc. Le catalogue de 739 articles ne présente aucun article MonstroZoo; trois articles Beauval existants couvrent surtout les billets généraux, la durée et l'hébergement. Les travaux Publication (mobilier d'occasion dans le Var) et Destinations (Vincennes, Haut-Rhin) ne se chevauchent pas.
+Pour participer, deux possibilités très différentes : **mener l'enquête librement sans supplément au billet du zoo**, ou **réserver une visite guidée de 1 h 30, payante et présentée dès 6 ans**. Le choix dépend surtout de l'âge des enfants et de leur envie de suivre une mission en groupe.
 
-## Décision du lecteur
-Choisir **une enquête autonome comprise dans l'entrée**, adaptée aux enfants de différents âges, ou **une mission guidée de 1 h 30 dès 6 ans**, en comprenant les tarifs, l'obligation de réservation de l'activité et le fait que l'entrée du zoo est vendue séparément.
+## L'enquête libre : le carnet est gratuit avec l'entrée
 
-## Faits à traiter
-Confirmer les six monstres nommés Bloop, Pyrak, Vrix, Grundo, Böm et Octavia; carnet d'enquête gratuit à récupérer à l'arrivée et indices, jeux et installations dans six territoires. Le parcours libre fait partie de la visite ordinaire; ne pas le présenter comme une entrée gratuite au zoo. Pour la visite guidée « Sur la piste des monstres », préciser **6 ans minimum**, **1 h 30**, **15 participants maximum**, **14 € à partir de 11 ans et 12 € de 6 à 10 ans**, **en plus du billet ZooParc**; les mineurs sont accompagnés d'un adulte. La réservation est obligatoire, mais possible le jour même sur place selon disponibilités; les conditions sont non remboursables. La fiche annonce un rendez-vous à **17 h 30 au Campement d'Alva, kiosque Grand Koudou près du Dôme Équatorial**, tous les jours pendant les vacances scolaires et les samedis hors vacances : revérifier la disponibilité à la date choisie. Mentionner la sensibilité éventuelle aux effets sonores et aux grandes silhouettes, sans prétendre que les personnages sont dangereux. Durant la Toussaint, distinguer les rencontres de mascottes et **le 31 octobre seulement** les bonbons proposés aux enfants déguisés en boutique, sans les promettre sur toute la saison. Le déroulement de nuit dépend des heures de fermeture réelles du zoo.
+À l'arrivée, récupérez le **carnet d'enquête MonstroZoo**, remis gratuitement. Il sert à retrouver les six monstres et leurs familles, à résoudre des énigmes et à participer aux jeux proposés dans les différentes zones. Le parcours traverse notamment des secteurs proches du **Dôme Équatorial**, de la **Terre des Lions** et de l'espace des **singes dorés**.
 
-## Sources de départ
-Pages officielles MonstroZoo, réservation de « Sur la piste des monstres », tarifs des activités et actualité du 14 octobre 2026 sur la Toussaint et Halloween. Priorité aux conditions actuelles de réservation pour arbitrer une formulation générale moins précise.
+Cette expérience est **comprise dans l'entrée ordinaire du ZooParc** : le carnet et le parcours n'exigent ni billet supplémentaire ni réservation d'une visite guidée. En revanche, **l'accès au zoo reste payant** selon les conditions habituelles.
 
-## Affiliation
-Pour l'accès au zoo, **Tiqets propose bien le billet d'entrée ordinaire**, qui donne accès au parcours libre. Vérifier date, prix final et conditions du billet; **ne pas promettre** que la visite guidée est incluse. Aucun partenaire confirmé pour le supplément guidé. Pour un séjour de deux jours, les **Pagodes de Beauval** sur Booking.com proposent des chambres familiales à Saint-Aignan : disponibilité, capacité réelle et conditions de réservation à contrôler.
+C'est la formule la plus souple avec de jeunes enfants : chacun avance à son rythme, fait une pause devant les animaux ou abandonne une énigme sans contrainte d'horaire. L'enquête libre n'a pas de limite d'âge spécifique publiée.
 
-## Continuations internes
-Renvoyer naturellement au guide Fam-Space [Beauval à la Toussaint 2026](/articles/voyages/beauval-a-la-toussaint-2026-billets-duree-de-visite-et-hebergement/) pour les billets généraux, la durée du séjour et l'organisation des vacances; ne pas reproduire ses explications. Le guide [ZooParc de Beauval : une ou deux journées, hôtel et budget](/articles/voyages/zooparc-de-beauval-en-famille-en-2026-un-ou-deux-jours-quel-hotel-et-quel-budget-prevoir/) couvre déjà les hôtels, transports, poussettes et budgets familiaux. Conserver ici les **conditions propres à MonstroZoo** et la comparaison des deux manières de participer.
+Pour l'entrée générale, [Tiqets propose un billet pour le ZooParc de Beauval](https://www.tiqets.com/fr/activites-attractions-saint-aignan-c178194/billets-pour-zooparc-de-beauval-billet-d-entree-p974727/). Cette offre permet l'accès au parc et donc au parcours MonstroZoo libre, **pas à la visite guidée payante**. Vérifiez les dates, les catégories d'âge et le prix final avant l'achat ; la fiche Tiqets indique que le billet n'est ni remboursable ni reprogrammable.
+
+## La visite guidée « Sur la piste des monstres » : dès 6 ans
+
+Pour les enfants qui aiment les jeux de rôle et les enquêtes collectives, un animateur accompagne un groupe de **15 participants maximum** pendant **1 h 30**. Cette mission approfondit l'univers des monstres et les indices à recueillir.
+
+La visite guidée est présentée **dès 6 ans**. La billetterie officielle précise qu'elle est **déconseillée aux moins de 6 ans**, sans formuler cela comme une interdiction générale. **Tout mineur doit être accompagné d'un adulte**.
+
+Les suppléments affichés pour l'activité sont :
+
+- **12 € pour un enfant de 6 à 10 ans** ;
+- **14 € pour un participant à partir de 11 ans**, adultes compris.
+
+Pour **un adulte et un enfant de 6 à 10 ans**, la visite guidée ajoute donc **26 €** ; pour **deux adultes et deux enfants de 6 à 10 ans**, **52 €**, **en plus des entrées au ZooParc**. Un ZooPass valide peut déjà couvrir l'entrée au parc, mais pas automatiquement ce supplément.
+
+**La réservation de la visite guidée est obligatoire.** Elle reste possible le jour même si des places sont disponibles, ce qui ne garantit pas d'en trouver. L'activité est annoncée **non remboursable**. La fiche précise un **rendez-vous à 17 h 30 au Campement d'Alva**, kiosque **Grand Koudou**, près du Dôme Équatorial. Les sessions sont annoncées chaque jour pendant les vacances scolaires et le samedi hors vacances : contrôlez la date et le créneau réellement disponibles avant de réserver.
+
+## Ambiance, nuit tombante et rendez-vous d'Halloween
+
+MonstroZoo utilise de **grandes silhouettes, des effets sonores, de la lumière et des projections**. Les créatures sont présentées comme attachantes, mais un enfant sensible aux sons soudains ou aux décors imposants peut préférer la visite libre, avec la possibilité de contourner une installation.
+
+La promenade peut changer d'ambiance **à la tombée du jour**, lorsque les éclairages deviennent plus visibles. Cela **ne signifie pas que le ZooParc propose une nocturne indépendante** : MonstroZoo reste accessible pendant les **horaires d'ouverture du parc**, variables au fil de la saison. Vérifiez l'heure du dernier accès et les horaires des territoires pour votre journée, particulièrement si la visite guidée commence en fin d'après-midi.
+
+Pendant les vacances de la Toussaint, Beauval annonce des rencontres avec les mascottes **Böm et Bloop**, ainsi qu'avec les mascottes panda et singe doré. Ces rencontres sont ensuite programmées les **mercredis et week-ends hors vacances**, selon les annonces du parc : elles ne sont pas promises quotidiennement jusqu'en mars.
+
+Le **31 octobre uniquement**, les **enfants déguisés** peuvent demander un sachet de bonbons HARIBO dans les boutiques participantes **pendant leurs horaires d'ouverture**. Il ne faut pas confondre cette animation ponctuelle avec les activités proposées pendant toute la période MonstroZoo.
+
+## Organiser la visite sans dédoubler le programme du zoo
+
+Si vous venez surtout découvrir MonstroZoo avec de jeunes enfants, le **parcours libre** permet de combiner les monstres et les animaux sans imposer une mission de 90 minutes à toute la famille. Avec des enfants de **6 ans ou plus** très motivés par l'enquête, comparez l'intérêt du guide au supplément total, et réservez d'abord le créneau disponible avant de fixer le reste de la journée.
+
+Pour les **billets habituels du ZooParc**, les vacances scolaires et le choix entre une ou deux journées, notre guide [Beauval à la Toussaint 2026 en famille](/articles/voyages/beauval-a-la-toussaint-2026-billets-duree-de-visite-et-hebergement/) rassemble les repères de séjour. Les questions de **poussette, de budget et de déplacements** sont aussi détaillées dans [ZooParc de Beauval : billets, une ou deux journées et hôtel](/articles/voyages/zooparc-de-beauval-en-famille-en-2026-un-ou-deux-jours-quel-hotel-et-quel-budget-prevoir/).
+
+Si vous transformez la sortie en week-end, les [Pagodes de Beauval à Saint-Aignan sur Booking.com](https://www.booking.com/hotel/fr/les-pagodes-de-beauval-st-aignan.fr.html) proposent notamment des **chambres familiales**, à proximité du zoo. Vérifiez les couchages selon l'âge de chaque enfant, le prix total, la disponibilité et les conditions d'annulation : aucun tarif ni créneau d'hôtel n'est garanti ici.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
