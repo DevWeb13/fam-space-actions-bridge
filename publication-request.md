@@ -14,7 +14,7 @@ keywords:
 location:
   city: "Toulon"
   department: "Var"
-  region: "Provence-Alpes-Côte d'Azur"
+  region: "Provence-Alpes-Côte d’Azur"
 sources:
   - title: "Union Diaconale du Var - La Ressourcerie de la Rade"
     url: "https://www.udv-asso.fr/la-ressourcerie-de-la-rade-udv/"
