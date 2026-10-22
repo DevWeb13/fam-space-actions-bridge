@@ -222,3 +222,4 @@ automation/image-20261022-949e531-luminescences-cheval-sedan-porto-tournus-1246|
 automation/image-20261022-949e531-luminescences-cheval-sedan-porto-tournus-1246|1beb0c22882dd1db2fa19f4fb4c58df0385ffa82
 automation/image-20261022-e6bc76c-mini-beauval-var-chaumont-2201|b0c0c45446a1eff42d6f2e495ab96e9629e2e2a2
 automation/image-20261022-e6bc76c-mini-beauval-var-chaumont-2201|4badf9d97579f1f09259911a85927fbf423ed006
+automation/image-20261023-9e74bae-stade-saintfrancois-eadcdff7|eadcdff7b03d62a3a0220b404bcf85b8e55a5f15
