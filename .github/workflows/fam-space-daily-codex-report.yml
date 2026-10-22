@@ -1,0 +1,34 @@
+name: Fam Space - Bilan quotidien Codex
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "Simuler sans email"
+        type: boolean
+        default: true
+  schedule:
+    - cron: "27 9 * * *"
+      timezone: "Europe/Paris"
+permissions:
+  contents: read
+concurrency:
+  group: fam-space-daily-codex-report
+  cancel-in-progress: false
+jobs:
+  bilan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Compiler et envoyer le bilan privé
+        env:
+          FAM_SPACE_REPORT_TOKEN: ${{ secrets.FAM_SPACE_REPORT_TOKEN }}
+          RESEND_REPORT_API_KEY: ${{ secrets.RESEND_REPORT_API_KEY }}
+          CODEX_REPORT_TO_EMAIL: ${{ secrets.CODEX_REPORT_TO_EMAIL }}
+          REPORT_DRY_RUN: ${{ inputs.dry_run || false }}
+        run: node scripts/daily-codex-report.mjs
