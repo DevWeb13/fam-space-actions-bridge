@@ -216,3 +216,4 @@ automation/image-20261021-97c9414-aussois-celles-equita-bordeaux-chauvet-1249|10
 automation/image-20261021-97c9414-aussois-celles-equita-bordeaux-chauvet-1249|5ff78f21ecf8712d40be64765584be42e3abfebd
 automation/image-20261021-ef3db99-dijon-grenoble-banyuls-saline-1841|3163991e5f06d1e38bea0540e8108cbb99be12a1
 automation/image-20261021-ef3db99-dijon-grenoble-banyuls-saline-1841|e3ed47c67c1029d6fbf02577bc0c7ef954bad0dc
+automation/image-20261022-ce73058-mobe-rochefort-0347|bba4c488a2648b43c602413f5a82dc419cabfc2e
