@@ -5,6 +5,7 @@ import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const REPO = "DevWeb13/fam-space-qwik";
+const REPORT_TO = "contact@fam-space.fr";
 const FLOWS = [
   ["publication-region-codex.yml", "Publication Région", 4],
   ["jeux-cadeaux-codex.yml", "Jeux & Cadeaux", 3],
@@ -154,8 +155,7 @@ export function render(report) {
 export async function main() {
   const dry=process.env.REPORT_DRY_RUN==="true";
   const needed=[["FAM_SPACE_REPORT_TOKEN",process.env.FAM_SPACE_REPORT_TOKEN]];
-  if(!dry) needed.push(["RESEND_REPORT_API_KEY",process.env.RESEND_REPORT_API_KEY],
-    ["CODEX_REPORT_TO_EMAIL",process.env.CODEX_REPORT_TO_EMAIL]);
+  if(!dry) needed.push(["RESEND_REPORT_API_KEY",process.env.RESEND_REPORT_API_KEY]);
   const missing=needed.filter(i=>!i[1]).map(i=>i[0]);
   if(missing.length){
     console.log("::notice::Bilan inactif : secrets manquants "+missing.join(", "));
@@ -170,13 +170,10 @@ export async function main() {
       report.groups.reduce((n,g)=>n+g.runs.length,0)+" passage(s). Aucun email.");
     return;
   }
-  const to=process.env.CODEX_REPORT_TO_EMAIL.trim();
-  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(to)||to.includes(","))
-    throw Error("CODEX_REPORT_TO_EMAIL doit être une seule adresse valide");
   const response=await fetch("https://api.resend.com/emails",{
     method:"POST",headers:{Authorization:"Bearer "+process.env.RESEND_REPORT_API_KEY,
       "Content-Type":"application/json"},
-    body:JSON.stringify({from:"Fam Space <newsletter@fam-space.fr>",to:[to],...render(report)}),
+    body:JSON.stringify({from:"Fam Space <newsletter@fam-space.fr>",to:[REPORT_TO],...render(report)}),
     signal:AbortSignal.timeout(20000),
   });
   if(!response.ok) throw Error("Resend HTTP "+response.status+" : envoi non confirmé");

@@ -29,6 +29,5 @@ jobs:
         env:
           FAM_SPACE_REPORT_TOKEN: ${{ secrets.FAM_SPACE_TOKEN }}
           RESEND_REPORT_API_KEY: ${{ secrets.RESEND_REPORT_API_KEY }}
-          CODEX_REPORT_TO_EMAIL: ${{ secrets.CODEX_REPORT_TO_EMAIL }}
           REPORT_DRY_RUN: ${{ inputs.dry_run || false }}
         run: node scripts/daily-codex-report.mjs
