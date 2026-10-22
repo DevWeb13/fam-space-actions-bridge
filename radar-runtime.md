@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Planète Préhistorique à Bordeaux avec des enfants: âge, durée et tarifs"
-subtitle: Ce que montre l'expérience des Bassins des Lumières et ce qu'il faut prévoir avant de réserver
-summary: "Durée, âge conseillé, tarifs, poussette et bruit: les points utiles pour préparer Planète Préhistorique aux Bassins des Lumières."
+title: "Planète Préhistorique à Bordeaux : dates, durée et tarifs en famille"
+subtitle: Aux Bassins des Lumières, vérifiez le jour de projection des dinosaures et les conditions du billet avant de réserver
+summary: "Planète Préhistorique à Bordeaux : l'exposition de dinosaures n'est pas programmée chaque jour. Durée de 1 h à 1 h 30, billets, âge conseillé et visite avec enfants."
 slug: planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs
 status: published
 publishedAt: 2026-09-27T14:41:35+02:00
@@ -80,27 +85,29 @@ image:
   src: /images/articles/2026/09/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs.webp
   alt: Intérieur de la base sous-marine de Bordeaux
 sources:
-  - title: Bassins des Lumières - Prehistoric Planet
-    url: https://www.bassins-lumieres.com/en/prehistoric-planet
-  - title: Bassins des Lumières - Billetterie Prehistoric Planet
-    url: https://www.bassins-lumieres.com/en/tickets/6a451d25c7196d575468026b
-  - title: Bassins des Lumières - Quels sont les tarifs ?
-    url: https://www.bassins-lumieres.com/faq/fr/2-horaires-et-tarifs/quels-sont-les-tarifs
-  - title: Bassins des Lumières - Les Bassins sont-ils accessibles à tout âge ?
-    url: https://www.bassins-lumieres.com/faq/fr/3-votre-visite/les-bassins-des-lumieres-sont-ils-accessibles-a-tout-age
+  - title: "Bassins des Lumières - Planète Préhistorique : Dinosaures"
+    url: https://www.bassins-lumieres.com/fr/programmation/planete-prehistorique-dinosaures
+  - title: Bassins des Lumières - Horaires et expositions programmées
+    url: https://www.bassins-lumieres.com/fr/visiter/informations-pratiques/horaires
+  - title: Bassins des Lumières - Tarifs officiels
+    url: https://www.bassins-lumieres.com/fr/faq/fr/quels-sont-les-tarifs
+  - title: Bassins des Lumières - Échange et remboursement des billets
+    url: https://www.bassins-lumieres.com/fr/faq/1-ticket-office/mes-billets-peuvent-ils-etre-echanges-modifies-ou-rembourses
+  - title: Bassins des Lumières - Âge recommandé et volume sonore
+    url: https://www.bassins-lumieres.com/fr/faq/3-votre-visite/les-bassins-des-lumieres-sont-ils-accessibles-a-tout-age
   - title: Bassins des Lumières - Casques anti-bruit
     url: https://www.bassins-lumieres.com/faq/fr/3-votre-visite/est-ce-que-vous-pretez-des-casques-anti-bruit
-  - title: Bassins des Lumières - Épilepsie, photosensibilité et vertige
+  - title: Bassins des Lumières - Sensibilités à la lumière et vertige
     url: https://www.bassins-lumieres.com/faq/fr/3-votre-visite/les-expositions-sont-elles-convenables-pour-les-personnes-souffrant-depilepsie-etou-de-vertige
-  - title: Bassins des Lumières - Accès et accessibilité
-    url: https://www.bassins-lumieres.com/fr/acces
+  - title: Bassins des Lumières - Accès et stationnement
+    url: https://www.bassins-lumieres.com/fr/visiter/informations-pratiques/acces
   - title: Bassins des Lumières - Table à langer
-    url: https://www.bassins-lumieres.com/faq/fr/4-accessibilite/y-a-t-il-une-table-a-langer-a-linterieur
+    url: https://www.bassins-lumieres.com/fr/faq/4-accessibilite/y-a-t-il-une-table-a-langer-a-linterieur
   - title: Bassins des Lumières - Température intérieure
-    url: https://www.bassins-lumieres.com/faq/fr/3-votre-visite/quelle-est-la-temperature-a-linterieur-des-bassins-des-lumieres
-  - title: Bassins des Lumières - Retard ou avance sur un créneau réservé
-    url: https://www.bassins-lumieres.com/faq/fr/3-votre-visite/ja-une-reservation-pour-un-horaire-mais-je-serais-en-retard-ou-en-avance
-  - title: Claudine Colin Communication - Planète Préhistorique
+    url: https://www.bassins-lumieres.com/fr/faq/3-votre-visite/quelle-est-la-temperature-a-linterieur-des-bassins-des-lumieres
+  - title: Bassins des Lumières - Arrivée en avance ou en retard
+    url: https://www.bassins-lumieres.com/fr/faq/3-votre-visite/ja-une-reservation-pour-un-horaire-mais-je-serais-en-retard-ou-en-avance
+  - title: Claudine Colin Communication - Dates de Planète Préhistorique
     url: https://www.claudinecolin.com/fr/3216-planete-prehistorique-dinosaures-l-experience-immersive
 affiliate:
   enabled: true
@@ -108,7 +115,7 @@ affiliate:
   destination: Bordeaux
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/sorties/(2026)/(09)/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/index.md
   targetSha: 1c4de46cd47f75c51b1fee046bfe85397e88befe
@@ -132,43 +139,89 @@ radar:
     focusQueries:
       - base sous-marine bordeaux tarif
       - space explorer bordeaux
+reviewAt: 2026-12-15
 ---
 
-## Mission retenue
+Depuis le **3 octobre 2026**, **Planète Préhistorique : Dinosaures** plonge les visiteurs dans des projections à 360° aux **Bassins des Lumières de Bordeaux**, à l'intérieur de l'ancienne base sous-marine. Avec des enfants, l'essentiel est de **choisir une date où les dinosaures sont réellement à l'affiche** : d'autres expériences prennent leur place certains jours.
 
-Actualiser « Planète Préhistorique à Bordeaux avec des enfants » : une expérience immersive de dinosaures aux Bassins des Lumières, proposée depuis le 3 octobre 2026, dont la programmation et les modalités pratiques doivent être vérifiées pour le jour retenu.
+Pour la sortie, prévoyez **environ 1 h à 1 h 30** sur place. Le site recommande cette expérience **à partir de 2 ans**, sans interdire l'accès aux plus petits.
 
-## Pourquoi cette mission
+## Dinosaures : quelles dates choisir aux Bassins des Lumières ?
 
-Dans le snapshot GSC préparé, les impressions passent de 149 à 26 entre les semaines comparées, avec un signal `uncertain` : ne pas attribuer cette baisse à un recul de classement. Ce refresh dispose surtout d'une raison éditoriale indépendante et vérifiée : l'article actuel réduit la visite à une heure, alors que la page officielle annonce environ 1 h à 1 h 30 ; il ne met pas assez en garde contre la variation du programme suivant les dates. Une expansion autour de la page forte « Transports à Paris avec des enfants » risquerait de redire les choix généraux déjà couverts sans décision nouvelle suffisamment établie. Une opportunité saisonnière comme le marché de Noël de Bordeaux 2026 a déjà sa propre page Fam Space : ne pas créer de doublon.
+Le lieu est ouvert tout au long de la semaine, mais cela ne signifie pas que l'exposition **Planète Préhistorique** est projetée tous les jours. Son calendrier officiel affiche explicitement des journées **« Dinosaures »** et d'autres consacrées à **Matisse / Frida Kahlo** ou à une autre expérience. Selon la période, notamment en novembre, les programmes alternent.
 
-## Décision du lecteur
+Avant d'acheter, consultez donc le **calendrier du jour sur la page « Planète Préhistorique : Dinosaures » ou dans la rubrique Horaires des Bassins des Lumières**. Le simple fait que le centre soit ouvert à la date souhaitée ne suffit pas. Vérifiez aussi le nom de l'exposition sur le billet : les offres ne donnent pas nécessairement accès aux autres programmes.
 
-Avant de réserver, savoir quel jour l'exposition de dinosaures est réellement proposée, quelle durée réserver à la sortie avec des enfants, et quelles conditions de billet sont applicables à la famille.
+La communication presse consacrée à l'événement annonce une période du **3 octobre 2026 au 3 janvier 2027**. La page officielle de l'exposition n'affiche toutefois pas partout une date de fin ferme : **les créneaux proposés pour votre date restent la référence**.
 
-## Faits à traiter
+## Une visite immersive, pas un musée de fossiles
 
-- Corriger la durée : environ **1 h à 1 h 30** selon la présentation officielle actuelle, et non une heure fixe. Contrôler le programme « Dinosaures » du jour dans les horaires officiels et ne pas promettre cette exposition chaque jour ni la programmation des autres expositions avec le même billet ; ne pas inventer de date de fin officielle ferme. La communication presse et la fiche Tiqets évoquent le 3 janvier 2027, à présenter avec leur attribution si utile.
-- Distinguer la politique de billets : la fiche officielle annonce un échange possible jusqu'à 24 h avant la venue contre 2 € par billet ; l'offre Tiqets consultée est indiquée ni remboursable ni reprogrammable. Vérifier les conditions exactes au moment de la rédaction et ne pas présenter les offres comme interchangeables.
-- Préserver les informations pratiques encore utiles : recommandé à partir de 2 ans sans âge minimum strict ; attention au bruit, casques anti-bruit sous conditions et précautions pour photosensibilité/vertige ; 16 € plein tarif, 9 € de 6 à 25 ans, 43 € pour 2 adultes et 2 jeunes de 6 à 25 ans, gratuité des moins de 6 ans avec réservation ; poussettes possibles, porte-bébé conseillé, table à langer, fraîcheur du bâtiment ; créneau réservé, tolérance d'arrivée sous réserve et dernier accès, parking, transports et accès.
-- Conserver les détails de l'expérience (dinosaures projetés, bande-son, narration) sans répéter les mêmes arguments. Vérifier les informations évolutives à la source ; ne pas transformer les réserves de sécurité en interdictions.
+<!-- article-image-body:01 -->
 
-## Sources de départ
+![Projections lumineuses dans les Bassins des Lumières à Bordeaux](/images/articles/2026/09/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs-body-01.webp)
 
-- Bassins des Lumières, exposition : https://www.bassins-lumieres.com/fr/programmation/planete-prehistorique-dinosaures
-- Bassins des Lumières, horaires et expositions du jour : https://www.bassins-lumieres.com/fr/visiter/informations-pratiques/horaires
-- Bassins des Lumières, tarifs : https://www.bassins-lumieres.com/fr/visiter/informations-pratiques/tarifs
-- Bassins des Lumières, billetterie : https://www.bassins-lumieres.com/fr/billetterie
-- Bassins des Lumières, accessibilité et FAQ déjà référencées dans l'article source : https://www.bassins-lumieres.com/fr/acces
+*Photo: [\[1\]](https://commons.wikimedia.org/wiki/File:Bassins_des_Lumi%C3%A8res_dans_la_Base_Sous-Marine_(54952344718).jpg) - [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) via Wikimedia Commons (image redimensionnée).*
 
-## Affiliation
+<!-- /article-image-body:01 -->
 
-Le billet Tiqets existant correspond à l'exposition, mais le lecteur doit comprendre sa politique de modification distincte de la billetterie officielle. L'hébergement familial B&B HOTEL Bordeaux Bassins à flot sur Booking.com est une seconde piste naturelle pour les visiteurs venus de loin. Garder un conseil pratique discret ; éviter dans le corps tout lien officiel de réservation concurrent de la même prestation.
+L'expérience s'inspire de la série documentaire *Prehistoric Planet*. Elle montre notamment des **T. rex, vélociraptors, ptérosaures, mosasaures et Dreadnoughtus** dans des scènes de vie, de chasse et de découverte des mondes préhistoriques. La narration française est assurée par **Gérard Lanvin**, sur des musiques de **Hans Zimmer, Anže Rozman et Kara Talve**.
 
-## Continuations internes
+Les enfants ne viennent pas observer des squelettes dans des vitrines : ils découvrent des dinosaures monumentaux projetés sur les parois et les surfaces de l'ancienne base sous-marine. La durée communiquée par les Bassins est **d'environ 1 h à 1 h 30** ; gardez cette plage en tête pour organiser le reste de la journée, plutôt que de compter sur une heure fixe.
 
-- Conserver le lien pertinent vers la Cité du Vin en famille si la visite s'inscrit dans un séjour à Bordeaux : /articles/sorties/cite-du-vin-a-bordeaux-en-famille-tarifs-duree-et-conseils-de-visite/.
-- Ne pas transformer le refresh en guide général de Bordeaux ni en panorama des autres expositions des Bassins ; celles-ci servent seulement à expliquer pourquoi le calendrier exact importe.
+## À partir de quel âge et pour quels enfants ?
+
+Les Bassins des Lumières accueillent les plus petits, mais **recommandent la visite à partir de 2 ans**. La salle est sombre, les images occupent de grandes surfaces et certaines créatures peuvent impressionner. Un enfant passionné de dinosaures n'appréciera pas nécessairement les mêmes effets qu'un autre du même âge.
+
+Selon la FAQ du lieu, le **volume sonore n'excède pas 80 décibels**. Des **casques anti-bruit** sont proposés aux plus petits à l'accueil, **sans réservation et sous réserve de disponibilité**, contre une pièce d'identité.
+
+Les effets lumineux peuvent présenter **des risques pour les personnes épileptiques, photosensibles ou souffrant de vertige**, d'après les avertissements des Bassins. Ce n'est pas une interdiction générale, mais une précaution à prendre en compte avant de réserver si une personne de la famille est concernée.
+
+## Tarifs de Planète Préhistorique : quel billet choisir ?
+
+Les tarifs généraux annoncés par les Bassins des Lumières sont les suivants :
+
+- **16 €** au plein tarif ;
+- **9 €** pour les jeunes de **6 à 25 ans inclus** ;
+- **43 €** pour le **tarif famille**, correspondant à **deux adultes et deux jeunes de 6 à 25 ans** ;
+- **gratuit pour les moins de 6 ans**, avec **réservation du billet gratuit obligatoire** et justificatif susceptible d'être demandé.
+
+Pour deux adultes et deux enfants de plus de 6 ans, vérifiez en priorité le tarif famille plutôt que d'acheter quatre billets individuels. D'autres tarifs réduits ou gratuités existent selon les justificatifs ; le prix dépend donc de la composition réelle du groupe.
+
+[Tiqets propose un billet spécifiquement consacré à Planète Préhistorique aux Bassins des Lumières](https://www.tiqets.com/fr/activites-attractions-bordeaux-c67101/billets-pour-bassins-des-lumieres-prehistoric-planet-exposition-a-la-decouverte-des-dinosaures-p1137322/). La fiche consultée indique que ce billet **n'est ni remboursable ni reprogrammable** et qu'il ne comprend pas l'accès aux autres expositions. Vérifiez son prix final et la date sélectionnée avant de régler.
+
+Une différence importante existe avec la billetterie officielle des Bassins : **certains billets achetés sur leur propre plateforme peuvent être échangés une seule fois, jusqu'à la veille de la visite, pour 2 € par billet**, sans remboursement ordinaire. Cette possibilité **ne doit pas être supposée applicable à un billet Tiqets**. Si la date de votre sortie est incertaine, comparez particulièrement les conditions avant l'achat.
+
+## Créneaux, dernière entrée et arrivée en retard
+
+Les billets sont liés à une date et à un créneau. La FAQ officielle indique une tolérance de **30 minutes avant ou après l'horaire prévu**, **sauf pour le dernier créneau** ; en cas de forte affluence, l'entrée à un horaire différent peut être refusée si les créneaux suivants sont complets.
+
+La **dernière entrée se fait une heure avant la fermeture** du site. Comme la visite peut durer jusqu'à **1 h 30**, mieux vaut ne pas choisir le dernier accès si vous souhaitez découvrir les projections sans précipitation. Les heures de fermeture changent selon les jours et les saisons : contrôlez celles de la date réservée.
+
+## Poussette, table à langer et température intérieure
+
+Les **poussettes sont autorisées** et les Bassins sont **accessibles aux personnes à mobilité réduite**. Le site recommande néanmoins un **porte-bébé** pour circuler plus aisément avec un très jeune enfant.
+
+Une **table à langer** se trouve dans les **toilettes des femmes entre les alvéoles 3 et 4**. La température de l'ancienne base sous-marine suit les saisons : il y fait **frais en hiver**, tandis que l'été peut être chaud et humide, et le bâtiment **n'est pas climatisé**. Pour une visite à l'automne ou en hiver, gardez un vêtement chaud à portée de main.
+
+## Se rendre aux Bassins des Lumières à Bordeaux
+
+<!-- article-image-body:02 -->
+
+![Vue extérieure de la base sous-marine de Bordeaux](/images/articles/2026/09/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs-body-02.webp)
+
+*Photo: [Zairon](https://commons.wikimedia.org/wiki/File:Bordeaux_Base_Sous-Marine_Ext%C3%A9rieure_01.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Le site se situe **impasse Brown de Colstoun, 33300 Bordeaux**, dans le quartier de la base sous-marine. Un **parking sécurisé** peut être réservé pour la durée de l'exposition ; le centre signale que son terrain comporte des zones dégradées. Un **parking municipal gratuit** se trouve également devant le bâtiment, sous réserve de places libres.
+
+En transports en commun, depuis **Quinconces**, prenez le **tram C jusqu'à Ravezies**, puis le **bus 9 vers Base sous-marine** : comptez ensuite environ **500 mètres à pied**. Depuis **Tourny**, le **bus 5 vers Bassins à Flot** laisse environ **700 mètres de marche**. Vérifiez les horaires de circulation avant de partir.
+
+Si vous profitez du déplacement pour une deuxième sortie, la [Cité du Vin en famille](/articles/sorties/cite-du-vin-a-bordeaux-en-famille-tarifs-duree-et-conseils-de-visite/) constitue une visite distincte à organiser dans le même secteur.
+
+## Prolonger la sortie par une nuit à Bordeaux
+
+Pour les familles venant de loin, le [B&B HOTEL Bordeaux Bassins à flot sur Booking.com](https://www.booking.com/hotel/fr/b-amp-b-bordeaux-bassins-a-flot.fr.html) propose notamment des **chambres triples et quadruples**, dans le quartier. Vérifiez les couchages adaptés à l'âge des enfants, la disponibilité, le prix total et les conditions d'annulation pour les dates de votre séjour.
 
 ## Article source exact à préserver et améliorer
 
@@ -299,14 +352,14 @@ Pour une famille qui transforme la sortie en séjour à Bordeaux, [B&B HOTEL Bor
 
 ### Articles proches préparés mécaniquement
 
-- /articles/activites/anatomik-park-a-cap-sciences-a-partir-de-quel-age-et-combien-de-temps-prevoir/ | Anatomik Park à Cap Sciences: à partir de quel âge et combien de temps prévoir? | activites | Bordeaux, Gironde, Nouvelle-Aquitaine
 - /articles/sorties/cite-du-vin-a-bordeaux-en-famille-tarifs-duree-et-conseils-de-visite/ | Cité du Vin à Bordeaux en famille: tarifs, durée et conseils de visite | sorties | Bordeaux, Gironde, Nouvelle-Aquitaine
 - /articles/sorties/visites-famille-art-deco-bordeaux-2026/ | Art déco à Bordeaux: deux visites en famille au MusBA en 2026 | sorties | Bordeaux, Gironde, Nouvelle-Aquitaine
 - /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | Marché de Noël de Bordeaux 2026 en famille: horaires, animations et budget | evenements | Bordeaux, Gironde, Nouvelle-Aquitaine
+- /articles/activites/anatomik-park-a-cap-sciences-a-partir-de-quel-age-et-combien-de-temps-prevoir/ | Anatomik Park à Cap Sciences: à partir de quel âge et combien de temps prévoir? | activites | Bordeaux, Gironde, Nouvelle-Aquitaine
 - /articles/maison/composteur-gratuit-a-bordeaux-metropole-que-choisir-selon-son-logement/ | Composteur gratuit à Bordeaux Métropole: que choisir selon son logement? | maison | Bordeaux, Gironde, Nouvelle-Aquitaine
-- /articles/sorties/gouffre-de-padirac-en-famille-tarifs-poussette-et-conseils-pour-la-visite/ | Gouffre de Padirac avec des enfants: à partir de quel âge et tarifs 2026 | sorties | Padirac, Lot, Occitanie
+- /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
+- /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille | evenements | Lumigny-Nesles-Ormeaux, Seine-et-Marne, Île-de-France
 - /articles/activites/musee-parc-des-dinosaures-de-meze-en-famille-fossiles-visite-et-conseils/ | Musée-Parc des Dinosaures de Mèze en famille: fossiles, visite et conseils | activites | Mèze, Hérault, Occitanie
-- /articles/evenements/lumieres-de-noel-a-montbeliard-2026-quel-jour-venir-avec-des-enfants/ | Lumières de Noël à Montbéliard 2026: quel jour venir avec des enfants? | evenements | Montbéliard, Doubs, Bourgogne-Franche-Comté
 - /articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/ | Planète Préhistorique à Bordeaux avec des enfants: âge, durée et tarifs | sorties | Bordeaux, Gironde, Nouvelle-Aquitaine
 - /articles/evenements/famille-en-fete-2026-pres-de-bordeaux-ateliers-gratuits-pour-les-0-6-ans/ | Famille en fête 2026 en Gironde: ateliers gratuits pour les 0-6 ans | evenements | Saint-Loubès, Gironde, Nouvelle-Aquitaine
 - /articles/evenements/lire-en-poche-2026-a-gradignan-avec-des-enfants-organiser-une-journee-sans-perdre-les-ateliers/ | Lire en Poche 2026 à Gradignan avec des enfants: organiser une journée sans perdre les ateliers | evenements | Gradignan, Gironde, Nouvelle-Aquitaine
@@ -325,9 +378,11 @@ Pour une famille qui transforme la sortie en séjour à Bordeaux, [B&B HOTEL Bor
 ### Historique Radar lié
 
 - opportunity | /articles/evenements/famille-en-fete-2026-pres-de-bordeaux-ateliers-gratuits-pour-les-0-6-ans/ | 2026-10-12T08:10:30.674Z
+- opportunity | /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | 2026-10-19T19:48:02.164Z
 - opportunity | /articles/sorties/halloween-2026-a-france-miniature-en-famille/ | 2026-10-08T18:25:52.752Z
 - opportunity | /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | 2026-10-08T02:18:12.427Z
 - refresh | /articles/evenements/lire-en-poche-2026-a-gradignan-avec-des-enfants-organiser-une-journee-sans-perdre-les-ateliers/ | 2026-10-06T12:23:52.449Z
+- opportunity | /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | 2026-10-16T17:46:42.470Z
 - opportunity | /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | 2026-10-21T07:36:18.372Z
 
 ### Phases 2 et 3
