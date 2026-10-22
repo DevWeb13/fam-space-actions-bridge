@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Halloween 2026 à Mini World Lyon : la Chasse aux 31 Méchants en famille"
-subtitle: "Jusqu'au 1er novembre à Vaulx-en-Velin : jeu de piste, personnages cachés et visite avec les enfants"
-summary: "Mini World Lyon propose une chasse à 31 méchants pour Halloween 2026 : dates, jeu inclus dans l'entrée, ambiance à anticiper avec les petits et conseils pour choisir son créneau."
+title: "Halloween 2026 à Mini World Lyon : retrouver les 31 méchants avec les enfants"
+subtitle: "Jusqu'au 1er novembre à Vaulx-en-Velin : jeu de recherche, décors frissonnants et billet à choisir"
+summary: La Chasse aux 31 Méchants de Mini World Lyon est incluse dans l'entrée jusqu'au 1er novembre 2026. Personnages, ambiance pour les petits, tarifs et horaires à vérifier.
 category: evenements
 location:
   city: Vaulx-en-Velin
@@ -78,11 +83,15 @@ sources:
     url: https://miniworldlyon.com/tarifs/
   - title: Mini World Lyon - Horaires et calendrier
     url: https://miniworldlyon.com/horaires/
+  - title: Mini World Lyon - Questions fréquentes
+    url: https://miniworldlyon.com/questions-frequentes/
+  - title: Mini World Lyon - Lyon City Card et accès au parc
+    url: https://miniworldlyon.com/helpie_faq/lentree-au-parc-est-elle-incluse-dans-la-lyon-city-card/
   - title: Office de tourisme de Lyon - Chasse aux Méchants 2026
     url: https://www.visiterlyon.com/sortir/l-agenda/expositions/chasse-aux-mechants
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: halloween-2026-a-mini-world-lyon-la-chasse-aux-31-mechants-en-famille
   decision: Permettre aux parents de savoir si la Chasse aux 31 Méchants convient à l'âge et à la sensibilité de leurs enfants, quand venir avant sa fin le 1er novembre et comment en profiter sans acheter un supplément inutile.
@@ -93,28 +102,38 @@ radar:
     signal: strong_page
     sourceUrl: /articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/
     basis: "La page « Mini World Lyon: tarifs, billets famille et durée de visite » conserve 342 impressions sur la semaine récente, avec une position moyenne de 9.421 et 239.2 % de son pic."
+eventEndsAt: 2026-11-01
 ---
 
-## Mission retenue
-Rédiger une courte page événementielle dédiée à **la Chasse aux 31 Méchants** de Mini World Lyon, du 10 octobre au 1er novembre 2026. Ce jeu de recherche, intégré aux mondes miniatures et compris dans le billet d'entrée, propose de retrouver des méchants de films, séries et dessins animés à l'aide d'un plan distribué à l'arrivée. Les décors d'Halloween peuvent impressionner les plus jeunes.
+Du **10 octobre au 1er novembre 2026**, Mini World Lyon organise sa **Chasse aux Méchants** à Vaulx-en-Velin. **31 personnages** issus du cinéma, des séries et des dessins animés se dissimulent dans les décors miniatures. Les familles doivent les retrouver à l'aide d'un plan. Le jeu est **compris dans le billet d'entrée** : pas besoin d'acheter une activité supplémentaire.
 
-## Pourquoi cette mission
-L'article Mini World Lyon est une page forte GSC (342 impressions et 3 clics sur la semaine récente du snapshot, rétention 2,392) mais ne traite pas de cette animation temporaire. Le meilleur refresh, la carte OKAY Savoie, présente une baisse de visibilité au signal « uncertain », insuffisante à elle seule pour justifier une nouvelle intervention. Les autres opportunités saisonnières proches examinées chevauchent des articles déjà publiés. La Chasse aux Méchants a une décision familiale autonome, documentée par l'organisateur, et aucun doublon direct dans le catalogue compact. Les travaux Publication sur Tournus et Destination sur Vincennes/Haut-Rhin ne portent pas sur cet événement.
+## Comment se déroule la Chasse aux 31 Méchants ?
 
-## Décision du lecteur
-Déterminer si les personnages et décors d'Halloween conviennent à leurs enfants, réserver le bon jour avant le 1er novembre et comprendre que le jeu ne demande pas de billet supplémentaire.
+À l'arrivée, les visiteurs récupèrent un **plan spécial Halloween** pour chercher les personnages parmi les univers miniatures du parc. **Dark Vador, Cruella, Maléfique, le Grinch, Voldemort, Chucky et le Démogorgon** figurent parmi les invités annoncés. L'organisateur prévoit une **petite surprise HARIBO** pour les explorateurs qui relèvent le défi, sans préciser la nature exacte du cadeau.
 
-## Faits à traiter
-Vérifier le calendrier exact du 10 octobre au 1er novembre, les 31 personnages et le plan remis à l'entrée, la récompense HARIBO annoncée sans promettre un lot précis, l'ambiance maison hantée et les décors potentiellement effrayants. Confirmer que la chasse est incluse dans l'entrée, la gratuité jusqu'à 3 ans inclus avec retrait du billet en caisse, les tarifs enfants 4-17 ans et le pack famille 54 €. Les horaires divergent entre la fiche de l'office (11h-18h pendant les vacances) et le calendrier du parc qui indique certains jours 10h-19h : se référer à la date choisie sur le calendrier de Mini World, sans généralisation. Préciser que le lieu est couvert et que le jeu consiste à observer les miniatures, non à participer à un parcours d'horreur avec acteurs.
+Le principe consiste à **observer les scènes et repérer les personnages cachés**, plutôt qu'à suivre un parcours d'horreur avec des acteurs. Il n'est pas nécessaire de trouver les 31 personnages pour profiter des mini-mondes : avec un jeune enfant, cherchez-en quelques-uns à son rythme.
 
-## Sources de départ
-Page Halloween, tarifs et calendrier de Mini World Lyon; fiche datée du 15 octobre 2026 de l'office de tourisme de Lyon. Les sources de prix et de programme doivent rester celles de l'organisateur.
+## Est-ce adapté aux plus petits ?
 
-## Affiliation
-Le billet ordinaire inclut la chasse. Aucun ticket partenaire direct identique identifié; vérifier si la Lyon City Card sur Tiqets a un sens seulement pour des familles visitant aussi d'autres sites lyonnais. Pour les visiteurs venant de loin, l'ibis Lyon Carré de Soie sur Booking.com propose des chambres familiales près du métro et du parc; vérifier nombre de couchages, prix et disponibilité, sans imposer un hôtel à une simple sortie locale.
+Mini World Lyon est un **parc couvert de miniatures animées** ouvert aux enfants, y compris aux tout-petits. Mais la décoration temporaire d'Halloween change l'atmosphère habituelle : l'organisateur annonce **maison hantée, citrouilles, cimetières et scènes inquiétantes**. Certains personnages, notamment **Chucky** ou le **Démogorgon**, peuvent aussi impressionner les enfants qui les reconnaissent.
 
-## Continuations internes
-Orienter vers l'article existant [Mini World Lyon : tarifs, billets famille et durée de visite](/articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/) pour les prix détaillés, la durée générale, les transports et la City Card, sans recopier ces sections. Conserver ici seulement les éléments d'Halloween et les avertissements spécifiques à la période. Ne pas réécrire les autres guides de sorties d'Halloween sans lien direct avec cette animation.
+Un enfant qui aime chercher des détails dans les maquettes devrait apprécier le jeu, même s'il ne connaît pas les références de tous les personnages. Pour un enfant sensible aux monstres et aux décors sombres, mieux vaut présenter la chasse comme une activité **facultative** au sein de la visite, sans insister pour tout trouver. L'organisateur ne publie pas d'âge minimum propre à cette animation.
+
+## Quel billet et quel créneau choisir avant le 1er novembre ?
+
+La chasse ne coûte **rien de plus que la visite ordinaire**. Les prix web datés sont annoncés **à partir de 16,90 € pour les adultes** et **11,90 € pour les enfants de 4 à 17 ans**. Les **0 à 3 ans inclus entrent gratuitement**, avec un billet gratuit à retirer en caisse. Le **pack famille daté à 54 €** comprend **deux adultes et deux enfants**. Ces billets datés sont **non modifiables et non remboursables**.
+
+Les horaires méritent une vérification particulière : l'office de tourisme de Lyon indique **11 h à 18 h** pendant les vacances, mais le calendrier de Mini World affiche aussi des journées **de 10 h à 19 h**. Consultez donc **l'horaire du jour choisi**, ainsi que l'heure de fermeture de la billetterie, avant de partir. Le parc recommande **au moins deux heures** pour découvrir les mondes miniatures : ne prévoyez pas une arrivée à la dernière minute si les enfants veulent participer à la chasse.
+
+Pour retrouver le détail des **billets, des durées de visite et de l'accès au Carré de Soie**, consultez notre guide [Mini World Lyon en famille](/articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/).
+
+Si la visite s'inscrit dans un **séjour avec plusieurs activités à Lyon**, la [Lyon City Card disponible sur Tiqets](https://www.tiqets.com/fr/les-choses-a-faire-a-lyon-c66838/billets-pour-lyon-city-card-p976069/) peut être une alternative : Mini World figure parmi les activités incluses et le parc demande de présenter une carte active à sa billetterie. **Pour Mini World seul**, un billet d'entrée classique sera généralement plus pertinent ; comparez le coût global du pass uniquement si vous comptez profiter aussi des transports et d'autres visites.
+
+## Venir à Vaulx-en-Velin et dormir à proximité
+
+Mini World Lyon se situe au **3 avenue de Bohlen, 69120 Vaulx-en-Velin**, dans le centre commercial **Carré de Soie**. La station **Vaulx-en-Velin La Soie** est desservie par le **métro A** et le **tramway T3** ; le parc se trouve à environ **cinq minutes à pied**. Un parking est également disponible au centre commercial. Sur place, le **Mini World Café** propose de la restauration rapide pendant l'animation.
+
+Pour les familles qui viennent de loin et prolongent la sortie par un week-end lyonnais, l'[ibis Lyon Carré de Soie](https://www.booking.com/hotel/fr/ibis-lyon-carre-de-soie.fr.html) propose des **chambres adaptées à certaines compositions familiales** près de la station La Soie. Vérifiez précisément **le nombre de couchages**, l'âge des enfants, le prix total et les conditions d'annulation : la présence d'un canapé-lit dans une catégorie de chambre ne garantit pas l'accueil de quatre personnes.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -122,12 +141,12 @@ Orienter vers l'article existant [Mini World Lyon : tarifs, billets famille et d
 
 - /articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/ | Mini World Lyon: tarifs, billets famille et durée de visite | bons-plans | Vaulx-en-Velin, Rhône, Auvergne-Rhône-Alpes
 - /articles/evenements/toussaint-2026-au-musee-des-confluences-a-lyon-spectacles-et-ateliers-par-age/ | Toussaint 2026 au musée des Confluences: cinq rendez-vous pour les enfants | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
+- /articles/sorties/chasse-motifs-loire-orleans-famille-2026/ | Chasse aux motifs de Loire à Orléans: une balade gratuite pour les 6 à 12 ans | sorties | Orléans, Loiret, Centre-Val de Loire
 - /articles/voyages/vulcania-a-la-toussaint-2026-1-ou-2-jours-billets-et-ou-dormir/ | Vulcania à la Toussaint 2026: 1 ou 2 jours, billets et où dormir | voyages | Saint-Ours-les-Roches, Puy-de-Dôme, Auvergne-Rhône-Alpes
 - /articles/evenements/halloween-2026-a-la-tour-de-l-horloge-de-guines-musee-hante-contes-et-nocturne/ | Halloween 2026 à la Tour de l'Horloge de Guînes: visites, contes et nocturne | evenements | Guînes, Pas-de-Calais, Hauts-de-France
 - /articles/voyages/futuroween-2026-futuroscope-billet-programme-enfants/ | Futuroween 2026 au Futuroscope: billet, programme et conseils avec des enfants | voyages | Chasseneuil-du-Poitou, Vienne, Nouvelle-Aquitaine
 - /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | Halloween 2026 au Château de Chantilly avec des enfants: ateliers, nocturnes et spectacle | sorties | Chantilly, Oise, Hauts-de-France
 - /articles/evenements/nausicaa-a-la-toussaint-2026-ateliers-en-journee-ou-nocturne-d-halloween/ | Toussaint 2026 à Nausicaá: ateliers en journée et nocturne d’Halloween | evenements | Boulogne-sur-Mer, Pas-de-Calais, Hauts-de-France
-- /articles/evenements/toussaint-2026-au-seaquarium-du-grau-du-roi-quel-jeu-choisir/ | Toussaint 2026 au Seaquarium: dates des jeux, âges et billets en famille | evenements | Le Grau-du-Roi, Gard, Occitanie
 - /articles/evenements/equita-lyon-2026-en-famille-village-enfants-billets-et-spectacles/ | Equita Lyon 2026 avec des enfants: billets, Village Enfants et spectacles | evenements | Chassieu, Rhône, Auvergne-Rhône-Alpes
 - /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/sorties/aquarium-de-lyon-en-famille-nouveautes-ocean-360-tarifs-et-visite/ | Aquarium de Lyon en famille: nouveautés Océan 360°, tarifs et visite | sorties | La Mulatière, Rhône, Auvergne-Rhône-Alpes
