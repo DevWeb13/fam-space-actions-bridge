@@ -221,3 +221,4 @@ automation/image-20261022-ce73058-mobe-rochefort-0347|d5bd4a3fa4b0efc54a696ecc3a
 automation/image-20261022-949e531-luminescences-cheval-sedan-porto-tournus-1246|062b842652e387d09dd2507b87c2c8ed68542839
 automation/image-20261022-949e531-luminescences-cheval-sedan-porto-tournus-1246|1beb0c22882dd1db2fa19f4fb4c58df0385ffa82
 automation/image-20261022-e6bc76c-mini-beauval-var-chaumont-2201|b0c0c45446a1eff42d6f2e495ab96e9629e2e2a2
+automation/image-20261022-e6bc76c-mini-beauval-var-chaumont-2201|4badf9d97579f1f09259911a85927fbf423ed006
