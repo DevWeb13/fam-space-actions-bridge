@@ -224,3 +224,4 @@ automation/image-20261022-e6bc76c-mini-beauval-var-chaumont-2201|b0c0c45446a1eff
 automation/image-20261022-e6bc76c-mini-beauval-var-chaumont-2201|4badf9d97579f1f09259911a85927fbf423ed006
 automation/image-20261023-9e74bae-stade-saintfrancois-eadcdff7|eadcdff7b03d62a3a0220b404bcf85b8e55a5f15
 automation/image-20261023-9e74bae-stade-saintfrancois-eadcdff7|68ff6837e16f5218d4a213c39d55c540a108b557
+automation/image-20261023-ae2bca4-macouria-iguane-3014c72|ad99cc84c5acf8f126022f9ed1092966245ac192
