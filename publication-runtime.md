@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,85 +14,141 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Aube
 - Région: Grand Est
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Musée Camille Claudel à Nogent-sur-Seine en famille : sculptures, ateliers et bons plans pour la visite.** Angle : construire une sortie culturelle réellement adaptée aux enfants, entre découverte des œuvres, pratique du modelage et possibilités de visite gratuite ou à petit prix, sans réduire le sujet à une grille tarifaire. Ouvert toute l'année selon des horaires saisonniers, le musée abrite la plus riche collection publique consacrée à Camille Claudel (45 œuvres), au sein d'un parcours de quelque 200 sculptures. Il propose aussi des ateliers créatifs pour différents âges.
-
-## Besoin du lecteur
-Comprendre ce que les enfants vont découvrir, choisir entre visite libre et atelier selon leur âge, organiser une demi-journée ou une sortie plus longue, savoir quand réserver et comment profiter des gratuités sans se déplacer un jour de fermeture. Distinguer le coût de l'entrée de celui des activités, et préparer l'accès à Nogent-sur-Seine.
-
-## Valeur éditoriale
-- Expliquer ce que l'on peut regarder et faire avec les enfants : sculptures et gestes des artistes, observation des formes et expressions, modelage et dessin. Proposer une découverte familiale adaptée aux plus jeunes plutôt qu'un simple catalogue des œuvres.
-- Comparer les formules : ateliers tout-petits dès 3 ans avec adulte accompagnateur, ateliers jeune public dès 7 ans réservés aux enfants, ateliers à 5 € et forfait de quatre à 15 € selon la programmation. Les dates et places sont à revérifier lors de la rédaction ; ne pas confondre les ateliers et l'entrée générale.
-- Mettre en perspective les économies : entrée gratuite pour les moins de 26 ans, les habitants de Nogent-sur-Seine et, pour les individuels, le premier dimanche du mois ; tarif adulte de 8 € hors exposition temporaire et 10 € en période d'exposition. **Attention : dimanche 1er novembre 2026, pourtant premier dimanche du mois, le musée est fermé.** Le dimanche 6 décembre est le prochain premier dimanche normalement ouvert, sous réserve de modification.
-- Tenir compte de la saison : du 2 novembre au 31 mars, ouverture du mercredi au dimanche, de 10 h à 17 h ; exposition « Camille Claudel & Bernhard Hoetger : l'exposition de 1905 » annoncée jusqu'au 10 janvier 2027. Accès depuis la gare à environ dix minutes à pied ; parking Fournier gratuit à environ trois minutes à pied. Ne pas faire dépendre l'article d'une animation ponctuelle à moins de 30 jours.
-
-## Affiliation
-- **Billet du musée / atelier (action principale)** : aucune offre de réservation équivalente et pertinente confirmée chez GetYourGuide, Tiqets ou Klook ; renvoyer aux modalités officielles du musée, sans inventer de billet partenaire.
-- **Booking.com — Meublé de la Tour, Nogent-sur-Seine** : maison de vacances avec trois chambres, capacité affichée jusqu'à sept personnes, à environ 400 m du musée ; piste pour une famille nombreuse transformant la visite en séjour. https://www.booking.com/hotel/fr/meuble-de-la-tour.fr.html
-- **Abritel — Appartement à 2 min de la Seine !, Nogent-sur-Seine** : appartement avec cuisine, capacité annoncée de quatre personnes, à environ six minutes à pied du musée ; autre option pour une famille de quatre. https://www.abritel.fr/location-vacances/p2308900
-Ces pages attestent l'existence des hébergements, pas une disponibilité à des dates non précisées : vérifier prix, conditions et capacité réelle avant de les conseiller dans l'article. Ne pas suggérer qu'une nuitée est nécessaire à la visite.
-
-## Sources de départ
-- Musée Camille Claudel, présentation et accès : https://www.museecamilleclaudel.fr/
-- Musée Camille Claudel, horaires, tarifs, gratuités, billet jumelé : https://www.museecamilleclaudel.fr/fr/infos-pratiques/horaires-et-tarifs
-- Musée Camille Claudel, ateliers enfants et familles, âges, tarifs et programmation : https://museecamilleclaudel.fr/fr/jeune-public
-- Musée Camille Claudel, exposition 2026-2027 et informations d'accès : https://www.museecamilleclaudel.fr/fr/1905
-- Musée Camille Claudel, programmation famille : https://www.museecamilleclaudel.fr/fr/type-de-public/famille
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "bons-plans"
+title: "Musée Camille Claudel à Nogent-sur-Seine: visite et ateliers avec les enfants"
+subtitle: "Enquêtes gratuites, modelage dès 3 ans et tarifs pour organiser une sortie en famille"
+summary: "Dans l'Aube, découvrez le musée Camille Claudel avec les enfants: jeux d'enquête gratuits, ateliers de création et astuces pour payer moins cher."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "musée Camille Claudel en famille"
+  - "ateliers enfants Nogent-sur-Seine"
+  - "musée gratuit Aube"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Nogent-sur-Seine"
+  department: "Aube"
+  region: "Grand Est"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Musée Camille Claudel - présentation et exposition Claudel & Hoetger"
+    url: "https://www.museecamilleclaudel.fr/fr/1905"
+  - title: "Musée Camille Claudel - Enquêtes de Mouseîon"
+    url: "https://museecamilleclaudel.fr/fr/enquetes"
+  - title: "Musée Camille Claudel - programme des ateliers de pratique artistique"
+    url: "https://museecamilleclaudel.fr/fr/jeune-public"
+  - title: "Musée Camille Claudel - horaires, tarifs et gratuités"
+    url: "https://www.museecamilleclaudel.fr/fr/infos-pratiques/horaires-et-tarifs"
+  - title: "Musée Camille Claudel - programmation 2026 et audioguide famille"
+    url: "https://www.museecamilleclaudel.fr/sites/default/files/livret_15_bat_web-compresse.pdf"
+  - title: "Musée Camille Claudel - poussettes et porte-bébés"
+    url: "https://www.museecamilleclaudel.fr/fr/infos-pratiques/accessibilite/poussette-et-porte-bebe"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Nogent-sur-Seine, dans l'Aube, le musée Camille Claudel permet de découvrir la sculpture autrement qu'en regardant des statues derrière une vitre. On y observe des visages, des gestes, des personnages en mouvement, puis on peut prolonger la visite par un jeu d'enquête ou un atelier de modelage. Une sortie culturelle accessible même aux enfants qui ne connaissent pas l'artiste.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+Le musée réunit **45 œuvres de Camille Claudel**, au sein d'un parcours d'environ **200 sculptures** consacré notamment à la création française de la fin du XIXe siècle et du début du XXe. L'artiste a grandi en partie à Nogent-sur-Seine, où le sculpteur Alfred Boucher a encouragé ses débuts. [Le musée présente ce lien avec la ville et ses collections](https://www.museecamilleclaudel.fr/fr/1905).
+
+## Une visite qui parle aux enfants
+
+Inutile de vouloir tout voir. Pour une première découverte, choisissez quelques sculptures et attardez-vous sur ce qu'elles racontent: une expression, un mouvement, un vêtement qui semble flotter, une main qui traduit une émotion. Les enfants peuvent comparer la pierre, le bronze et les modelages, ou imaginer ce qui s'est passé juste avant la scène représentée.
+
+Une bonne porte d'entrée est **La Valse**, dont les personnages semblent emportés par la danse. Devant une sculpture, demandez par exemple: « Comment l'artiste a-t-il donné l'impression que ce personnage bouge ? » Cette façon d'observer transforme la visite en conversation, sans cours d'histoire de l'art.
+
+Pour les enfants qui aiment chercher des indices, les **[Enquêtes de Mouseîon](https://museecamilleclaudel.fr/fr/enquetes)** sont proposées gratuitement. Sept livrets invitent les familles à retrouver des personnages dans les œuvres avec l'aide de la mascotte du musée. Le jeu est gratuit, mais ne remplace pas le billet d'entrée lorsqu'il est payant.
+
+À partir de **7 ans**, un **audioguide famille**, en français et inclus dans le billet d'entrée, permet aussi de parcourir les salles à travers une histoire racontée par deux jeunes personnages. Il est présenté dans la [programmation officielle du musée](https://www.museecamilleclaudel.fr/sites/default/files/livret_15_bat_web-compresse.pdf). Pour une première visite avec de jeunes enfants, prévoir environ une heure à une heure et demie est un repère raisonnable, à adapter à leur curiosité.
+
+## Ateliers: que choisir selon l'âge ?
+
+Les ateliers partent généralement d'une ou plusieurs œuvres observées dans les salles avant de passer à la pratique: **modelage d'argile, dessin ou aquarelle**. Leur intérêt est de faire essayer aux enfants les gestes qu'ils viennent de découvrir.
+
+- **Dès 3 ans:** les ateliers « tout-petits » durent généralement une heure. Un adulte doit accompagner l'enfant et participe gratuitement.
+- **Dès 7 ans:** les ateliers « jeune public » durent habituellement deux heures et sont réservés aux enfants. L'adulte accompagnateur peut profiter de ce temps pour visiter le musée.
+- **En famille:** certaines séances accueillent plusieurs générations ou mêlent la création à une autre activité, comme un conte. Les âges et tarifs peuvent alors être différents.
+
+Pour les ateliers de pratique artistique classiques, le tarif affiché est de **5 € par participant**, avec un **forfait de quatre ateliers à 15 €**. Ce prix concerne l'activité: ne le confondez pas avec le droit d'entrée au musée, dont les conditions sont distinctes. Certaines animations spéciales ont leur propre tarif.
+
+Les séances ne se tiennent pas chaque jour et peuvent être complètes. Consultez le [programme des ateliers et les conditions propres à chaque séance](https://museecamilleclaudel.fr/fr/jeune-public) avant de partir. La réservation est conseillée, en ligne ou auprès du musée au **03 25 24 76 34**.
+
+## Entrée gratuite: les bons plans à connaître
+
+**Les moins de 26 ans entrent gratuitement**, tout comme les habitants de Nogent-sur-Seine. D'autres gratuités existent, notamment pour les demandeurs d'emploi et les visiteurs en situation de handicap avec leur accompagnateur, sur justificatif selon la situation.
+
+Pour les adultes qui ne bénéficient pas d'une exonération, le plein tarif est de **8 € hors exposition temporaire** et de **10 € pendant une exposition**. Le tarif réduit, notamment pour les titulaires de la carte famille nombreuse et les plus de 60 ans, est respectivement de **4,50 € ou 6 €**. Pendant l'exposition en cours à l'automne 2026, c'est donc le tarif de **10 €** qui s'applique à un adulte au plein tarif.
+
+Autre possibilité: **l'entrée est gratuite pour les visiteurs individuels le premier dimanche du mois**. Mais attention à une exception importante: **le dimanche 1er novembre 2026, le musée est fermé**, même s'il s'agit du premier dimanche. Le prochain premier dimanche normalement ouvert est le **6 décembre 2026**, sous réserve de changement. Les [horaires et tarifs officiels](https://www.museecamilleclaudel.fr/fr/infos-pratiques/horaires-et-tarifs) précisent également les justificatifs et les autres catégories bénéficiant de la gratuité.
+
+Si vous envisagez aussi le château de la Motte-Tilly, le musée affiche un **billet jumelé à 12 €**, valable six mois à compter de l'achat: une option à comparer avec les tarifs individuels des deux sites, plutôt qu'une dépense utile à tous.
+
+## Une exposition à voir jusqu'en janvier 2027
+
+Du **12 septembre 2026 au 10 janvier 2027**, l'exposition **« Camille Claudel & Bernhard Hoetger: l'exposition de 1905 »** rapproche deux artistes dont les œuvres avaient été présentées ensemble à Paris en 1905. Elle réunit près de 90 œuvres, dont des sculptures, dessins, peintures et photographies.
+
+Avec des enfants, on peut y comparer deux façons de représenter le corps ou le mouvement, sans chercher à parcourir chaque cartel. L'exposition temporaire enrichit la sortie, mais le musée et ses collections permanentes restent intéressants après sa fermeture. [Dates et contenu de l'exposition](https://www.museecamilleclaudel.fr/fr/1905).
+
+## Préparer la sortie sans mauvaise surprise
+
+Le musée se trouve **10, rue Gustave-Flaubert, à Nogent-sur-Seine**.
+
+- **Du 1er avril au 31 octobre:** du mardi au dimanche, de 10 h à 18 h.
+- **Du 2 novembre au 31 mars:** du mercredi au dimanche, de 10 h à 17 h.
+- **Fermetures exceptionnelles récurrentes:** les 1er janvier, 1er mai, 1er novembre et 25 décembre. Les 24 et 31 décembre, fermeture à 16 h.
+
+En train, comptez environ **dix minutes de marche depuis la gare de Nogent-sur-Seine**; des liaisons existent depuis Paris-Est. En voiture, le **parking Fournier est gratuit**, à quelques minutes à pied du musée. Ces informations figurent dans la [présentation pratique du musée](https://www.museecamilleclaudel.fr/fr/1905).
+
+Avec un bébé, la visite reste envisageable: **poussettes et porte-bébés sont autorisés dans toutes les salles**, des ascenseurs desservent les étages et des tables à langer sont disponibles. Le musée peut aussi prêter une poussette-canne à l'accueil, sur demande. [Détails sur l'accueil des familles avec tout-petits](https://www.museecamilleclaudel.fr/fr/infos-pratiques/accessibilite/poussette-et-porte-bebe).
+
+**Le choix le plus simple:** une visite libre avec les enquêtes gratuites pour les enfants qui aiment explorer; un atelier réservé à l'avance pour ceux qui veulent surtout créer. Dans les deux cas, vérifiez les horaires du jour et la programmation avant le déplacement.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -121,4 +177,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
