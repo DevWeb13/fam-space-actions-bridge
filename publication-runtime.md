@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 1/4
+# Publication automatique Fam Space - Phase 2/4
 
 ## Mission
 
-Tu es le rédacteur en chef de Fam Space.
+Tu es un journaliste web professionnel pour Fam Space.
 
-Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. Fam Space doit publier moins mais mieux: un sujet doit pouvoir devenir un article fiable, utile aux familles, agréable à lire et, lorsque c'est naturel, intéressant pour l'affiliation.
+Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
 
 ## Affectation courante
 
@@ -14,97 +14,92 @@ Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. 
 - Département: Morbihan
 - Région: Bretagne
 
-### Articles publiés récemment
-
-- 2026-10-22: Noël 2026 à Rochefort-en-Terre avec des enfants: village et illuminations
-- 2026-10-03: Cité de la Voile Éric Tabarly en famille: quel parcours selon l'âge?
-- 2026-09-17: Les Terres de Nataé: les réductions famille à connaître avant de réserver
-- 2026-09-09: Mode de garde à Vannes: quand contacter le Relais Petite Enfance ?
-- 2026-09-02: Goûter breton aux Halles des Lices à Vannes: quoi acheter et quand venir?
-- 2026-08-26: FSL dans le Morbihan: jusqu'à 1 200 € pour entrer dans un logement
-- 2026-07-17: Festival Interceltique de Lorient 2026: quels rendez-vous choisir avec des enfants ?
-- 2026-07-16: Festival Photo La Gacilly 2026: un parcours gratuit à hauteur d’enfant
-
-Ne reproduis pas les mêmes sujets.
-
-## Choisir un sujet qui mérite un article
-
-Respecte l'affectation. Pour une affectation locale, choisis librement la commune ou le lieu le plus pertinent dans le département imposé.
-
-La liste « Articles publiés récemment » est fournie automatiquement. Utilise-la pour éviter les doublons de lieu, de sujet ou d'angle. Un titre différent ne suffit pas à rendre un article différent.
-
-Cherche plusieurs sujets avant de choisir. Pour les candidats sérieux, utilise la recherche web pour comprendre ce qui existe déjà, vérifier les faits essentiels, voir ce que les résultats Google répondent déjà et t'assurer que le sujet est réellement utile à publier maintenant. Si l'élément principal est fermé, hors saison, en maintenance ou temporairement indisponible au point de vider l'article de son intérêt, écarte ce candidat et choisis-en un autre.
-
-Choisis un sujet qui a une vraie matière éditoriale. Un lecteur qui ne connaît pas le sujet doit pouvoir comprendre ce que c'est, pourquoi cela peut l'intéresser et obtenir plusieurs informations utiles sans que l'article répète la même idée.
-
-L'angle sert à donner une direction et un titre intéressant. Il ne doit jamais enfermer tout l'article dans une micro-question comme un tarif, un pass, une poussette ou un calcul simple.
-
-Écarte un sujet si Fam Space ne ferait que réécrire une page officielle ou s'il n'y a pas assez de matière pour produire un bon article. Si aucun candidat ne reste suffisamment utile et actuel après une recherche sérieuse, ne force pas un sujet.
-
-## Penser aussi au potentiel d'affiliation
-
-La monétisation est un objectif important de Fam Space. Avant de choisir le sujet final, vérifie sérieusement les offres disponibles chez les partenaires suivants:
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-Applique la logique d'usage ci-dessus à chaque candidat sérieux et vérifie les offres avant de les retenir dans le brief.
-
-À qualité éditoriale comparable, privilégie clairement le sujet qui possède une piste d'affiliation naturelle et vérifiée. Ne choisis toutefois jamais un sujet médiocre uniquement parce qu'il est affiliable et n'invente jamais une offre sans rapport avec le lecteur.
-
-Si un excellent sujet n'a réellement aucune offre partenaire pertinente après vérification, il peut rester publiable. Le brief doit alors le dire clairement. L'absence d'affiliation ne doit jamais résulter d'une recherche superficielle.
-
-## Sujets à écarter
-
-Écarte les sujets politiques ou militants, les guerres et conflits armés, les contenus haineux, violents, sexuellement explicites, dangereux ou trompeurs, ainsi que les conseils médicaux, juridiques ou financiers personnalisés à risque élevé.
-
-Ne choisis pas comme sujet principal une maladie, un diagnostic, un traitement, une vaccination ou une urgence médicale ou psychiatrique.
-
-Pour un événement ponctuel, ne le retiens pas s'il commence dans moins de 30 jours. S'il a déjà commencé, il doit rester au moins 30 jours d'utilité réelle. Cette règle ne concerne pas les attractions permanentes, destinations durables ou activités disponibles sur une longue période.
-
-## Résultat attendu
-
-Prépare un brief court. Le fichier doit contenir exactement ces sections:
+## Brief du rédacteur en chef
 
 ## Sujet retenu
-Le sujet, un titre de travail et l'angle principal. Décris aussi en une ou deux phrases ce qu'est réellement le sujet afin que le journaliste parte avec le bon contexte.
+
+**Belle-Île-en-Mer en famille sans embarquer sa voiture : ferry, balades et déplacements selon la saison.** Angle : construire une escapade réaliste avec des enfants, d'une journée autour du Palais à un séjour de plusieurs nuits, sans laisser croire que tous les sites de l'île sont accessibles facilement à pied ou en bus. Belle-Île est une île du Morbihan reliée toute l'année à Quiberon par bateau (environ 50 minutes jusqu'au Palais), avec des solutions de déplacement très différentes selon les saisons.
 
 ## Besoin du lecteur
-Ce que le lecteur doit comprendre, apprendre ou pouvoir faire après avoir lu l'article. Ne réduis pas ce besoin à une seule micro-question si le sujet mérite un traitement plus large.
+
+Comprendre comment réserver et préparer la traversée avec des enfants, où débarquer et dormir, ce qui se visite simplement depuis Le Palais, comment rejoindre les autres sites, et quand préférer bus, vélo, taxi ou voiture louée sur l'île. Pouvoir adapter le séjour à l'âge des enfants, à la météo et surtout à la période de l'année, sans mauvaises surprises de transport.
 
 ## Valeur éditoriale
-Les quelques informations ou distinctions qui justifient l'article et ce que Fam Space peut apporter de mieux qu'une simple reprise des sources.
+
+- Distinguer **une journée sans véhicule** (port et ruelles du Palais, plage de Ramonette accessible à pied) d'un séjour visant Sauzon, la côte sauvage ou plusieurs plages, qui demande davantage de mobilité.
+- Expliquer le point décisif d'actualité : en **2026, Belle-Ile-Bus fonctionne du 4 avril au 1er novembre** ; en dehors de cette période, le transport à la demande sur réservation est limité et ne remplace pas un réseau touristique pour parcourir toute l'île. Éviter donc de promettre des itinéraires en bus l'hiver.
+- Comparer les solutions selon l'âge : relief marqué et routes partagées pour le vélo, équipement enfant et prudence sur les sentiers côtiers, hébergement au Palais pour limiter les trajets, éventuelle location locale plutôt que transport de la voiture familiale.
+- Vérifier les horaires de ferry juste avant le départ : BreizhGo Océane signale des **adaptations en 2026 liées au chenal du Palais** et recommande de réserver, notamment pendant les vacances. Ne pas figer d'horaires ou de prix dans l'article.
+- Donner deux scénarios concrets et différents (journée courte à pied ; deux nuits avec exploration plus large), plutôt qu'une liste générique des « incontournables ».
 
 ## Affiliation
-Les pistes partenaires réellement vérifiées, avec partenaire, offre et URL exacte, y compris les besoins secondaires naturels. Si aucune offre pertinente n'existe réellement, indique-le clairement.
+
+- **Booking.com — hébergements au Palais**, point d'arrivée du bateau et base pratique pour une famille sans voiture : https://www.booking.com/city/fr/le-palais.fr.html (offres d'hôtels et d'autres hébergements effectivement affichées ; disponibilités et tarifs à vérifier aux dates choisies).
+- **KAYAK — location de voiture au Palais**, option ponctuelle pour visiter les sites éloignés sans embarquer son propre véhicule, notamment hors saison de bus : https://www.kayak.fr/location-voiture-Le-Palais.96909.cars.ksp (offres et agences affichées ; vérifier l'adresse exacte de prise en charge sur l'île, sièges enfants, assurance et disponibilité).
+- **Abritel**, également vérifié pour les maisons familiales et séjours plus longs à Belle-Île, comme alternative non prioritaire : https://www.abritel.fr/d/35688/belle-ile-en-mer
+- Les billets de bateau se réservent auprès de BreizhGo Océane : **aucune offre de traversée chez les partenaires listés n'a été identifiée** ; ne pas inventer de lien affilié pour le ferry. Les pages partenaires servent uniquement à vérifier les offres, pas les faits pratiques.
 
 ## Sources de départ
-Les meilleures sources officielles ou directement responsables pour lancer la rédaction, avec l'URL exacte de chaque page utile.
 
-Ne rédige pas le corps final de l'article pendant cette phase.
+- BreizhGo Océane, traversée Quiberon–Le Palais, durée, réservations et conditions : https://oceane.breizhgo.bzh/line/belle-ile-en-mer/
+- BreizhGo Océane, communiqué du 28 août 2026 sur les modifications d'horaires : https://oceane.breizhgo.bzh/horaires-des-traversees-vers-belle-ile-en-mer-comprendre-les-adaptations-en-cours/
+- Office de tourisme de Belle-Île, bus et calendrier 2026, transport hivernal sur réservation : https://www.belle-ile.com/organiser/se-deplacer-belle-ile-sans-ma-voiture/belle-ile-en-bus/
+- Office de tourisme, comparaison des modes de déplacement sans voiture : https://www.belle-ile.com/organiser/se-deplacer-belle-ile-sans-ma-voiture/
+- Office de tourisme, plage de Ramonette près du Palais : https://www.belle-ile.com/offres/plage-de-ramonette-le-palais-fr-517809/
+- Office de tourisme, location de vélo, relief et absence de pistes cyclables dédiées : https://www.belle-ile.com/organiser/se-deplacer-belle-ile-sans-ma-voiture/location-de-velo/
+
+## Écrire l'article
+
+Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
+
+Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
+
+Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
+
+Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
+
+Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
+
+Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+
+N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
+
+Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
+
+Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
+
+À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
+
+## Format du candidat
+
+Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
+
+```yaml
+---
+category: "<catégorie assignée>"
+title: "Titre direct et informatif"
+subtitle: "Précision différente du titre"
+summary: "Résumé de 90 à 180 caractères"
+keywords:
+  - "mot-clé principal"
+  - "mot-clé secondaire"
+location:
+  city: "Ville"
+  department: "Département assigné"
+  region: "Région assignée"
+sources:
+  - title: "Page officielle utilisée"
+    url: "https://..."
+---
+```
+
+Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+
+Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 1/4
+- Phase préparée mécaniquement: 2/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -117,30 +112,20 @@ Toute la plomberie technique est gérée mécaniquement. Ne cherche aucune branc
 
 Écris uniquement publication-request.md sur la branche main de DevWeb13/fam-space-actions-bridge avec le résultat éditorial demandé dans ce runtime. Le pipeline mécanique se charge de la phase, de la branche de travail, des commits, de la validation et de la suite du cycle.
 
-Si tu retiens un sujet, utilise:
+Utilise:
 
 ~~~yaml
 ---
-action: start
+action: advance
 ---
 
-<brief complet demandé ci-dessus>
+<article complet demandé ci-dessus, frontmatter compris>
 ~~~
 
-Si, après une recherche sérieuse, aucun sujet suffisamment utile et actuel ne mérite un article, utilise:
-
-~~~yaml
----
-action: skip
----
-
-<raison factuelle et courte>
-~~~
-
-Un échec technique n'est jamais une raison de skip. Une fois publication-request.md écrit, termine le passage.
+Rends toujours l'article complet, même si cette phase ne nécessite que peu de corrections. Une fois publication-request.md écrit, termine le passage.
 
 ## Rapport final
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les principaux sujets envisagés, les doublons écartés, le sujet retenu, pourquoi il mérite un article, les pistes d'affiliation réellement vérifiées et les principales sources. En cas de skip, explique simplement pourquoi aucun sujet suffisamment bon n'a été retenu.
+Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
