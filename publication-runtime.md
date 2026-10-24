@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,99 +14,132 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Yvelines
 - Région: Île-de-France
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Château de Breteuil à Choisel (Yvelines) — « Château de Breteuil en famille : contes de Perrault, jardins et visite du château »**.
-
-Angle : aider les parents à organiser une vraie demi-journée ou journée, entre les scènes de contes, la conteuse, le labyrinthe, les jeux et l'intérieur historique, plutôt que de simplement énumérer les attractions. À Choisel, le domaine associe un château meublé et visité avec un guide, un parc de 75 hectares et des scènes sonorisées inspirées des contes de Charles Perrault. Il est ouvert toute l'année : le sujet reste utile après la Toussaint, sans dépendre d'un événement ponctuel.
-
-## Besoin du lecteur
-
-Comprendre ce que les enfants vont réellement voir et faire, comment répartir la visite selon leur âge et leur endurance, et choisir entre le billet jardins/contes et le billet complet. Pouvoir préparer les horaires de la visite guidée et de la conteuse, la pause repas, les déplacements et les éventuelles contraintes avec une poussette.
-
-## Valeur éditoriale
-
-- Proposer un parcours familial concret, avec un ordre de visite souple : scènes de contes et jeux dans le parc, pause pique-nique, château guidé si les enfants peuvent suivre, puis conteuse à 16 h 30 les jours où elle est programmée.
-- Distinguer les expériences : huit scènes de contes annoncées (4 à 8 minutes chacune), récit vivant par la conteuse, visite guidée des pièces historiques et personnages de cire, labyrinthe et promenade dans les jardins. Ne pas présenter les ateliers scolaires comme des animations individuelles garanties.
-- Expliquer sans micro-angle tarifaire les deux billets : jardins et scènes à 13,50 € en plein tarif ; château, jardins et scènes à 19,50 € ; gratuité annoncée pour les moins de 5 ans, réductions selon profil. Horaires variables pour le château, mais domaine ouvert toute l'année ; revérifier à la rédaction.
-- Préciser les limites : poussettes interdites dans le château (dépôt à l'entrée) ; escaliers et graviers limitant l'accessibilité de certaines parties. La page officielle des groupes signale la scène du Petit Chaperon rouge temporairement inaccessible : contrôler sa réouverture avant d'affirmer que les huit scènes sont visitables.
-- Traiter l'accès sans voiture avec prudence : transport à la demande depuis le secteur de Saint-Rémy-lès-Chevreuse, sur réservation et selon les jours ; parking gratuit et pique-nique autorisé. Les guides de sorties existants décrivent surtout le lieu ; Fam Space doit aider à arbitrer et à organiser la journée, pas répéter leur inventaire.
-
-## Affiliation
-
-**Billetterie principale :** recherches effectuées chez Tiqets, GetYourGuide et Klook ; aucune fiche réservable du château de Breteuil confirmée chez ces partenaires. Ne pas substituer une attraction voisine. Billetterie de l'organisateur uniquement comme source pratique.
-
-**Hébergements utiles pour prolonger la sortie en séjour dans la vallée de Chevreuse (fiches partenaires vérifiées, disponibilités à confirmer selon les dates) :**
-
-- **Booking.com — Résidence Hôtel Les Ducs de Chevreuse**, 7 route de Choisel, Chevreuse : appartements d'une chambre pour quatre personnes et de deux chambres pour six, solution familiale avec autonomie pour un week-end. https://www.booking.com/hotel/fr/residence-hoteliere-les-ducs-de-chevreuse.fr.html
-- **Abritel — Chez Sibylle Parc Naturel Chevreuse Versailles Saclay Orly**, Saint-Rémy-lès-Chevreuse : appartement de deux chambres, six couchages annoncés, cuisine et lit bébé ; pertinent pour une famille séjournant dans la vallée. https://www.abritel.fr/location-vacances/p2467884
-
-Ces offres sont des possibilités d'hébergement, pas des partenaires de la billetterie du château. Ne pas annoncer de prix ni de disponibilité non vérifiés.
-
-## Sources de départ
-
-- Château de Breteuil — visite en famille, expériences, durée des scènes, poussettes et restauration : https://www.breteuil.fr/fr/sortie-en-famille-chateau-de-breteuil-yvelines/
-- Château de Breteuil — tarifs, horaires, conteuse, accès et transport à la demande : https://www.breteuil.fr/fr/horaires-tarifs-acces-chateau-breteuil/
-- Château de Breteuil — accessibilité du château, des jardins et des scènes : https://www.breteuil.fr/fr/personnes-a-mobilite-reduite/
-- Château de Breteuil — présentation des scènes de contes : https://www.breteuil.fr/fr/les-contes-chateau-breteuil/
-- Château de Breteuil — jardins et parc : https://www.breteuil.fr/fr/les-jardins-du-chateau-de-breteuil/
-- Château de Breteuil — page groupes d'enfants signalant la fermeture temporaire de la scène du Petit Chaperon rouge (information à revérifier) : https://www.breteuil.fr/fr/visiter-breteuil-pour-des-sorties-scolaires/
-- Destination Yvelines — présentation touristique et informations sur le Pass Destination, sans refaire un article sur ce pass : https://www.destination-yvelines.fr/chateaux/chateau-de-breteuil/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "sorties"
+title: "Château de Breteuil en famille: contes de Perrault, jardins et visite du château"
+subtitle: "Quel billet choisir et comment organiser la sortie avec des enfants dans les Yvelines ?"
+summary: "À Choisel, préparez une sortie entre scènes de contes, labyrinthe et château guidé: parcours selon l'âge, billets, horaires et accès."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "château de Breteuil en famille"
+  - "château de Breteuil enfants"
+  - "contes de Perrault Yvelines"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Choisel"
+  department: "Yvelines"
+  region: "Île-de-France"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Château de Breteuil - Visiter Breteuil en famille"
+    url: "https://www.breteuil.fr/fr/sortie-en-famille-chateau-de-breteuil-yvelines/"
+  - title: "Château de Breteuil - Horaires, tarifs et accès"
+    url: "https://www.breteuil.fr/fr/horaires-tarifs-acces-chateau-breteuil/"
+  - title: "Château de Breteuil - Les contes"
+    url: "https://www.breteuil.fr/fr/les-contes-chateau-breteuil/"
+  - title: "Château de Breteuil - Jardins et parc"
+    url: "https://www.breteuil.fr/fr/les-jardins-du-chateau-de-breteuil/"
+  - title: "Château de Breteuil - Visiter avec un handicap"
+    url: "https://www.breteuil.fr/fr/personnes-a-mobilite-reduite/"
+  - title: "Château de Breteuil - Visiter avec un groupe d'enfants"
+    url: "https://www.breteuil.fr/fr/visiter-breteuil-pour-des-sorties-scolaires/"
+  - title: "Île-de-France Mobilités - TàD Vallée de Chevreuse"
+    url: "https://tad.iledefrance-mobilites.fr/vallee-de-chevreuse/"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Choisel, dans les Yvelines, le château de Breteuil ne se résume pas à une demeure historique. Dans son parc de 75 hectares, les enfants retrouvent les personnages des contes de Charles Perrault, traversent un labyrinthe et profitent d'une aire de jeux. À l'intérieur, une visite guidée raconte la vie du château à travers des pièces meublées et des personnages de cire. L'intérêt de la sortie est justement de pouvoir choisir son rythme: tout le monde n'a pas besoin de tout visiter.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Commencer par les contes, sans courir d'une scène à l'autre
+
+Les histoires du Petit Poucet, de Peau d'Âne et d'autres personnages de Perrault prennent place dans les dépendances du domaine. Le château annonce **huit scènes sonorisées**, à découvrir librement, chacune durant **quatre à huit minutes**. Ce format convient bien aux enfants qui préfèrent passer d'une découverte à une autre plutôt que rester longtemps assis. Le parcours entre les scènes, lui, demande davantage de temps que la seule durée des récits. [Le château détaille le fonctionnement des scènes de contes](https://www.breteuil.fr/fr/les-contes-chateau-breteuil/).
+
+**Attention à une possible indisponibilité:** une mention publiée sur la [page officielle destinée aux groupes d'enfants](https://www.breteuil.fr/fr/visiter-breteuil-pour-des-sorties-scolaires/) a signalé la scène du Petit Chaperon rouge comme temporairement inaccessible. Sa réouverture n'a pas pu être confirmée: mieux vaut se renseigner auprès du château plutôt que compter sur huit scènes effectivement visitables le jour venu.
+
+Le parc apporte une respiration entre les histoires: jardins à la française, jardin des Princes, **labyrinthe de buis** et jeux pour enfants. Inutile de chercher à parcourir les 75 hectares avec de jeunes enfants; choisissez quelques espaces proches des contes et gardez le reste pour une prochaine visite. Le [plan des jardins et leurs principaux espaces](https://www.breteuil.fr/fr/les-jardins-du-chateau-de-breteuil/) permet de préparer ce choix.
+
+## Faut-il ajouter la visite guidée du château ?
+
+C'est la vraie décision à prendre avant d'acheter les billets. À l'intérieur, on découvre notamment les chambres, les cuisines et les salons d'une demeure habitée au fil des siècles. Les personnages de cire du musée Grévin et les automates du Chat botté rendent le parcours plus concret pour les enfants, mais **il s'agit d'une visite accompagnée**, avec un horaire d'entrée attribué sur place, et non d'une déambulation libre. [Le château présente cette partie de la visite](https://www.breteuil.fr/fr/sortie-en-famille-chateau-de-breteuil-yvelines/).
+
+Avec des petits qui ont surtout envie de bouger, les jardins et les contes peuvent suffire pour une belle demi-journée. Avec des enfants capables de suivre les explications d'un guide, l'intérieur ajoute une dimension historique intéressante. Dans les deux cas, mieux vaut éviter de promettre le château en fin de journée à des enfants déjà fatigués: demandez l'horaire de visite dès l'arrivée si vous avez choisi le billet complet.
+
+Autre expérience, **la conteuse raconte les histoires en direct à 16 h 30** les samedis, dimanches, jours fériés et chaque jour des vacances scolaires de la région parisienne. L'animation est incluse dans l'entrée, sans réservation supplémentaire. Les récits de Perrault peuvent comporter des passages impressionnants: pour les plus jeunes ou les enfants sensibles, mieux vaut ne pas en faire une étape obligatoire. [Conditions et jours de présence de la conteuse](https://www.breteuil.fr/fr/les-contes-chateau-breteuil/).
+
+## Un parcours familial qui laisse de la place aux pauses
+
+Pour une **demi-journée**, arrivez plutôt en fin de matinée ou en début d'après-midi, découvrez quelques scènes, passez par le labyrinthe puis laissez du temps aux jeux. C'est une formule plus détendue avec des enfants d'âge maternel, surtout si vous ne prévoyez pas l'intérieur du château.
+
+Pour une **journée**, vous pouvez commencer par les contes et les jardins, déjeuner dans le parc, puis suivre la visite guidée à l'horaire communiqué à l'accueil. Si vous êtes sur place un jour de présence de la conteuse et que les enfants ont encore de l'énergie, gardez son rendez-vous de 16 h 30 comme dernière étape. L'ordre reste à ajuster selon l'heure attribuée pour le château.
+
+Le **pique-nique est autorisé**, avec des espaces abrités, notamment près de l'aire de jeux. Le Café d'Achille annonce une ouverture de 12 h à 18 h les week-ends, jours fériés et vacances scolaires franciliennes; ne comptez pas sur cette restauration tous les jours de l'année. [Informations officielles pour les familles](https://www.breteuil.fr/fr/sortie-en-famille-chateau-de-breteuil-yvelines/).
+
+## Jardins seuls ou billet complet: combien coûte la visite ?
+
+Deux formules individuelles sont affichées sur la [page officielle des tarifs](https://www.breteuil.fr/fr/horaires-tarifs-acces-chateau-breteuil/):
+
+- **Jardins et scènes de contes: 13,50 €** au plein tarif. C'est l'option cohérente si la priorité est de jouer, marcher et découvrir les histoires.
+- **Château, jardins et scènes de contes: 19,50 €** au plein tarif. Elle donne aussi accès à la visite intérieure guidée.
+
+L'entrée est annoncée **gratuite pour les moins de 5 ans** dans les deux formules. Des tarifs réduits existent notamment pour les enfants plus âgés et les familles nombreuses; leurs conditions et montants diffèrent selon le billet. Vérifiez le tarif applicable à chacun avant de payer. Les billets individuels sont proposés sur la billetterie de l'organisateur.
+
+Le domaine est **ouvert tous les jours de l'année**, avec accès au parc dès **10 h** et dernière vente de billets à **17 h 30**. Le parc ferme à **19 h en hiver** et **20 h en été**. Les créneaux du château varient selon les jours et les vacances: en semaine hors vacances franciliennes, les visites intérieures commencent généralement l'après-midi. Consultez les [horaires détaillés](https://www.breteuil.fr/fr/horaires-tarifs-acces-chateau-breteuil/) avant de partir, surtout si vous souhaitez visiter l'intérieur.
+
+## Poussette, mobilité et accès sans voiture: les points à anticiper
+
+**La poussette ne peut pas entrer dans le château**: un emplacement de dépôt est prévu à l'entrée. Dans les jardins, les graviers et les pavés peuvent compliquer les déplacements. L'intérieur comporte des escaliers sans ascenseur; plusieurs scènes de contes ont aussi des marches, notamment celles du Petit Poucet et de La Belle au bois dormant. Le domaine n'est donc pas intégralement accessible en fauteuil roulant. Les [précisions officielles sur l'accessibilité](https://www.breteuil.fr/fr/personnes-a-mobilite-reduite/) permettent d'évaluer le parcours avant la visite.
+
+Le château se trouve à Choisel, dans la vallée de Chevreuse, à environ 35 km au sud-ouest de Paris. **Le parking est gratuit.** Sans voiture, ne partez pas du principe qu'un bus régulier vous déposera à l'entrée: le secteur dispose d'un **transport à la demande sur réservation**, dont les arrêts et les trajets possibles dépendent du service et du créneau. Vérifiez l'aller **et le retour** dans le [service TàD Vallée de Chevreuse d'Île-de-France Mobilités](https://tad.iledefrance-mobilites.fr/vallee-de-chevreuse/) avant de réserver les billets. Le service est annoncé du lundi au samedi, pas le dimanche; un déplacement dominical exige donc une autre solution.
+
+Pour une question précise sur une scène fermée, une difficulté d'accès ou les visites guidées, le château indique le **01 30 52 05 11** sur sa [page pratique](https://www.breteuil.fr/fr/horaires-tarifs-acces-chateau-breteuil/).
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -135,4 +168,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
