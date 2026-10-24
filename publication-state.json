@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261025-0005-chateau-de-breteuil-a-choisel-yvelines-chateau-de-breteuil-en-famille-",
+  "lastProcessedCommit": "3649155c8777e2e21e1e46b39a0ecac11cf78966"
 }
