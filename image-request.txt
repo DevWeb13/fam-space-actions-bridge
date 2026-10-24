@@ -232,3 +232,4 @@ automation/image-20261023-dc767df-bedecine-santons-limoges-aquarium-hero-8342|83
 automation/image-20261023-dc767df-bedecine-santons-limoges-aquarium-hero-8342|b9e448a1790748dd111939a6cfc4734d255697ad
 automation/image-20261024-5e91986-tarn-cheverny-belleile-volcan-0041|2953b9b858685927d51becf7ab56cbe39a551232
 automation/image-20261024-5e91986-tarn-cheverny-belleile-volcan-0041|74a4231f1c9e20d73c0485feb7a182848e49a3bf
+automation/image-20261024-5202cca-claudel-ducos-provins-hero-0647|e849466518f3d83c32075c3f2d4929d41a620d81
