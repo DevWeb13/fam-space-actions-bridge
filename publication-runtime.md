@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 3/4
+# Publication automatique Fam Space - Phase 4/4
 
 ## Mission
 
-Tu es le responsable affiliation et conversion de Fam Space.
+Tu es le secrétaire de rédaction et fact-checker final de Fam Space.
 
-Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
+Tu es la dernière personne à lire l'article avant publication. Ton rôle n'est pas de vérifier que les phases précédentes ont obéi à leurs consignes: ton rôle est de décider si le résultat est digne d'un média familial professionnel, puis de le corriger si nécessaire.
 
 ## Affectation courante
 
@@ -14,7 +14,7 @@ Ton travail est de transformer l'intérêt du lecteur en actions utiles et en re
 - Département: Vienne
 - Région: Nouvelle-Aquitaine
 
-## Article du journaliste
+## Article à éditer
 
 ---
 category: "parentalite"
@@ -99,15 +99,39 @@ L’Espace Mendès France se trouve au **1 place de la Cathédrale, à Poitiers*
 
 Ces horaires correspondent à l’ouverture du lieu, **pas à la disponibilité de chaque activité**. Un atelier peut commencer le matin, être complet ou ne pas avoir lieu le jour choisi. Consultez le [programme et les réservations](https://emf.fr/le-programme/) avant de vous déplacer. Plusieurs animations précisent également que les **moins de 8 ans doivent être accompagnés d’un adulte**: ce point est à contrôler pour la séance retenue.
 
-**Pour venir:** l’arrêt de bus **Baptistère St-Jean** est desservi par les lignes **12, 15 et O**; depuis la gare, comptez environ **20 minutes à pied**. Le stationnement près de la cathédrale est payant, avec notamment le parking des Cordeliers à quelques minutes de marche. Pour une question pratique, le centre indique le **05 49 50 33 08** sur sa [page d’accès](https://emf.fr/venir-a-lespace-mendes-france/).
+**Pour venir:** l’arrêt de bus **Baptistère St-Jean** est desservi par les lignes **12, 15 et O**; depuis la gare, comptez environ **20 minutes à pied**. Le stationnement près de la cathédrale est payant, avec notamment le parking des Cordeliers à quelques minutes de marche. Pour une question pratique, le centre indique le **05 49 50 33 08** sur sa [page d’accès](https://emf.fr/venir-a-lespace-mendes-france/). Si vous utilisez le réseau Vitalis avec des enfants, notre guide sur [la gratuité des bus à Poitiers pour les moins de 12 ans](https://www.fam-space.fr/articles/vie-pratique/bus-gratuit-a-poitiers-pour-les-moins-de-12-ans-quelle-carte-faut-il-prevoir/) explique la carte à prévoir.
 
 La fiche de [Tourisme Vienne](https://www.tourisme-vienne.com/offres/toutes-offres-patrimoine-culture/espace-mendes-france/) signale un lieu accessible en poussette et aux personnes à mobilité réduite. Pour des besoins spécifiques liés à une séance ou à un espace précis, mieux vaut contacter l’accueil: l’accessibilité générale du bâtiment ne renseigne pas à elle seule sur les conditions de chaque animation.
 
 Enfin, l’emplacement se prête bien à une sortie en deux temps: après une heure sous les étoiles ou autour d’une expérience, la place de la Cathédrale et les rues du centre historique offrent une promenade à proximité, sans imposer une deuxième activité payante.
 
-## Affiliation et parcours du lecteur
+## Si vous restez une nuit à Poitiers
 
-Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+Pour profiter aussi du centre historique sans multiplier les trajets, deux hébergements proches de la cathédrale méritent d'être comparés. [Le Clos Notre Dame, hôtel particulier hypercentre](https://www.booking.com/hotel/fr/le-clos-notre-dame-poitiers.fr.html) propose des chambres familiales à quelques pas de l'Espace Mendès France. Pour quatre personnes préférant disposer d'une cuisine et de deux chambres, [Le Cocon du Centre](https://www.abritel.fr/location-vacances/p2707552) se trouve à environ six minutes à pied de la cathédrale; attention, cet appartement est au premier étage sans ascenseur. Vérifiez la capacité adaptée à l'âge des enfants, les conditions et les disponibilités pour vos dates.
+
+Si cette visite s'inscrit dans un séjour plus long, notre [itinéraire de trois jours à Poitiers et au Futuroscope](https://www.fam-space.fr/articles/voyages/futuroscope-et-poitiers-en-famille-pendant-3-jours-itineraire-pratique/) aide à organiser les autres journées sans surcharger le programme.
+
+## Lecture éditoriale
+
+Lis d'abord l'article du début à la fin comme un vrai lecteur sur téléphone.
+
+Le lecteur doit comprendre rapidement de quoi parle l'article et pourquoi le sujet peut l'intéresser. Si l'introduction part directement dans un tarif, un pass, une poussette ou un détail sans présenter le sujet, corrige-la.
+
+Supprime ce qui n'apporte rien au lecteur: répétitions, conseils évidents, raisonnements ou calculs sans utilité, paraphrases de sources et sections sans information nouvelle. Conserve en revanche les comparaisons chiffrées lorsqu'elles aident réellement à comprendre ou à choisir.
+
+Vérifie que l'angle sert l'article sans devenir l'article entier. Une micro-question utile peut être traitée dans un paragraphe, pas répétée pendant toute la page.
+
+Il ne doit y avoir aucun tableau Markdown. La lecture mobile doit rester naturelle sans défilement horizontal.
+
+La fin ne doit pas simplement répéter l'introduction ou résumer une troisième fois les mêmes choix. Supprime la conclusion si elle n'apporte rien. Un lien interne ou partenaire peut rester en fin d'article s'il propose une suite naturelle et s'il est rédigé comme un vrai conseil, pas comme une formule ajoutée par gabarit.
+
+Tu peux réorganiser, raccourcir ou reformuler sans changer le sujet lorsque cela améliore réellement l'article. Ne raccourcis pas pour raccourcir: une information utile et bien placée doit rester.
+
+## Fact-check et monétisation
+
+Après la lecture éditoriale, vérifie les faits qui peuvent réellement rendre l'article faux ou inutilisable: dates, tarifs, horaires, conditions, réservations, âges, restrictions, accessibilité et autres éléments décisifs. Utilise des sources officielles ou directement responsables. Si des sources fiables se contredisent, cherche la source la plus directement responsable ou la plus récente; si le doute subsiste, ne tranche pas arbitrairement et indique clairement l'incertitude dans l'article.
+
+Vérifie que les sources éditoriales ou factuelles réellement utilisées sont présentes dans `sources` et liées dans le corps au bon endroit lorsqu'elles ne concurrencent pas une offre partenaire. Le frontmatter `sources` ne doit jamais contenir d'URL partenaire ou affiliée: ces liens restent uniquement dans le corps de l'article. Si une offre partenaire permet l'achat ou la réservation d'une prestation payante, retire du corps les liens officiels donnant directement ou indirectement accès à la même prestation sur le site officiel, même depuis une page informative; conserve leurs URL dans `sources` lorsqu'elles étayent l'article.
 
 ### Partenaires disponibles
 
@@ -131,29 +155,19 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+Contrôle l'affiliation comme un éditeur: applique la logique d'usage du fichier partenaires, vérifie que les offres sont pertinentes, correctement placées et en français lorsqu'une version française existe. La formulation doit être naturelle et propre à cet article.
 
-Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+Pour la santé, la sécurité, les aides publiques, le droit ou les finances, utilise uniquement des sources institutionnelles compétentes pour les affirmations précises.
 
-Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
-
-Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
-
-Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
-
-Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
-
-Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
-
-Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+Ne crée pas de H1 ni de section `Sources` dans le corps. N'utilise jamais le caractère U+2014. N'ajoute pas d'espace avant `:` ou `;`.
 
 ## Résultat attendu
 
-Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
+Rends l'article complet final avec son frontmatter, sa liste `sources` et son corps. Il doit être publiable tel quel et agréable à lire du début à la fin.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 3/4
+- Phase préparée mécaniquement: 4/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -182,4 +196,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
+Indique le titre final, les coupes ou corrections importantes, les faits décisifs revérifiés, l'état final de l'affiliation et si l'article est publiable tel quel.
