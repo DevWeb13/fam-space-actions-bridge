@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,92 +14,131 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Yonne
 - Région: Bourgogne-Franche-Comté
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Sujet :** le Train du Père Noël 2026 au départ de Toucy-Ville (Yonne, Bourgogne-Franche-Comté), le dimanche 20 décembre 2026.
-
-**Titre de travail :** « Train du Père Noël à Toucy 2026 : préparer le voyage en famille à bord du Transpoyaudin »
-
-**Angle :** une sortie de Noël à vivre avec les enfants dans un train touristique ancien, avec un guide concret pour réserver, organiser l'après-midi et, éventuellement, passer un week-end en Puisaye.
-
-Il s'agit d'une circulation spéciale du Train touristique du Pays de Puisaye-Forterre, exploité par l'association AATY, et non d'une liaison ferroviaire ordinaire. L'office de tourisme annonce un départ de Toucy-Ville à 15 h, un retour à 17 h 30 et une présentation en gare 20 minutes avant le départ, le 20 décembre 2026.
-
-## Besoin du lecteur
-Comprendre ce qu'est réellement ce train de Noël, à quels enfants cette sortie peut plaire, comment réserver une place pour chaque voyageur et organiser le trajet depuis la gare de Toucy-Ville. Pouvoir anticiper le budget familial, la durée de l'après-midi, le froid de décembre, les contraintes d'un train ancien et les possibilités de compléter la sortie par une découverte de Toucy ou une nuit dans les environs, sans promettre d'animations ou de services non confirmés.
-
-## Valeur éditoriale
-- **Données propres à l'édition 2026 :** dimanche 20 décembre, départ à 15 h, retour annoncé à 17 h 30, arrivée conseillée à 14 h 40 ; tarifs annoncés par l'office de tourisme : 7,50 € par adulte et 6 € par enfant jusqu'à 14 ans. Vérifier au moment de la rédaction les éventuelles conditions pour les moins de 5 ans : les gratuités des trains réguliers ne doivent pas être appliquées automatiquement à ce train spécial.
-- **Réservation :** l'AATY indique « un voyageur = un billet » et une réservation obligatoire. Expliquer les étapes sans prétendre connaître le nombre de places restantes.
-- **Point de vigilance majeur à résoudre :** la fiche événement de l'office de tourisme annonce Toucy–Villiers-Saint-Benoît, mais la page de réservation actuelle de l'AATY indique que les circulations sont limitées jusqu'à nouvel ordre à Dracy-sur-Ouanne en raison de travaux. Faire confirmer par l'organisateur le parcours réellement prévu pour ce train spécial avant de publier un itinéraire ou des activités à l'arrêt ; à défaut, présenter le parcours comme non confirmé.
-- **Une vraie sortie familiale, pas une simple fiche agenda :** raconter le patrimoine du Transpoyaudin et les paysages de Puisaye, distinguer train spécial et trains touristiques ordinaires, donner une checklist utile (billets, arrivée en avance, vêtements chauds, contraintes des jeunes enfants) et proposer un programme de week-end raisonnable. Le marché de Toucy se tient le samedi matin : il peut compléter une nuit sur place le samedi 19 décembre, mais pas être présenté comme une animation du dimanche.
-- Ne pas affirmer qu'un cadeau, un goûter, une rencontre individuelle avec le Père Noël, une accessibilité poussette ou la visite des musées ferroviaires sont inclus sans confirmation spécifique pour le 20 décembre. Les résultats de recherche donnent déjà les horaires et les tarifs ; la valeur Fam Space réside dans les choix pratiques, les précautions et l'organisation avec enfants.
-
-## Affiliation
-- **Billet principal :** aucune billetterie équivalente du Train du Père Noël de Toucy vérifiée chez GetYourGuide, Tiqets, Klook ou les partenaires de secours. Réservation directement auprès de l'AATY : https://www.aaty.org/reservation/ ; ne pas inventer de lien partenaire pour l'événement.
-- **Booking.com — La Maison d'hôtes de Toucy :** chambres familiales annoncées, maison d'hôtes située 4 avenue Aristide-Briand à Toucy ; option pour les familles souhaitant dormir dans la commune. Offre identifiée, disponibilité et prix pour la nuit du 19 au 20 ou du 20 au 21 décembre non confirmés : https://www.booking.com/hotel/fr/la-maison-d-39-hotes-de-toucy.html
-- **Abritel — Maison 5 couchages cœur de Toucy :** logement entier pour cinq personnes, deux chambres, cuisine, cour fermée et parking, au centre de Toucy ; pertinent pour une famille ou un séjour prolongé. Vérifier le coût total et les conditions (linge et ménage en supplément) avant toute recommandation chiffrée ; disponibilité aux dates de l'événement non confirmée : https://www.abritel.fr/location-vacances/p2204532
-- Ces hébergements sont des **options secondaires** pour un week-end, non une nécessité pour prendre le train. Préférer une ou deux recommandations précises et discrètes dans le futur article.
-
-## Sources de départ
-- Office de tourisme de Puisaye-Forterre, fiche de l'événement du 20 décembre 2026 (date, horaire, tarif, adresse, consigne d'arrivée et parcours annoncé) : https://www.puisaye-tourisme.fr/agenda/train-du-pere-noel/
-- AATY, réservation officielle (obligation de réserver, un billet par voyageur, information actuelle sur la limitation du parcours à Dracy-sur-Ouanne) : https://www.aaty.org/reservation/
-- Office de tourisme de Puisaye-Forterre, présentation du train touristique, de l'association et du patrimoine ferroviaire ; attention, les tarifs des trains réguliers ne sont pas ceux du train de Noël : https://www.puisaye-tourisme.fr/nature-activites/velos-et-train-touristique/train-touristique-de-puisaye/
-- Office de tourisme de l'Auxerrois, confirmation de la limitation de circulation à Dracy-sur-Ouanne : https://www.ot-auxerre.fr/offres/train-touristique-du-pays-de-puisaye-forterre-toucy-fr-2583959/
-- Office de tourisme de Puisaye-Forterre, marché hebdomadaire du samedi à Toucy pour une éventuelle idée de week-end : https://www.puisaye-tourisme.fr/destination/incontournables/marche-de-toucy/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "evenements"
+title: "Train du Père Noël à Toucy 2026: horaires, tarifs et réservation"
+subtitle: "Le 20 décembre, une balade de Noël à bord du Transpoyaudin, avec les précautions utiles pour les familles."
+summary: "Le Train du Père Noël revient à Toucy le 20 décembre 2026. Billets, horaires, animations annoncées et parcours à vérifier avant de partir en famille."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "train du Père Noël Toucy 2026"
+  - "Transpoyaudin Noël"
+  - "train touristique Puisaye en famille"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Toucy"
+  department: "Yonne"
+  region: "Bourgogne-Franche-Comté"
+eventEndsAt: "2026-12-20"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Office de tourisme de Puisaye-Forterre - Train du Père Noël 2026"
+    url: "https://www.puisaye-tourisme.fr/agenda/train-du-pere-noel/"
+  - title: "AATY - Annonces des trains événementiels"
+    url: "https://www.aaty.org/evenementiels/"
+  - title: "AATY - Réservation et état de la ligne"
+    url: "https://www.aaty.org/reservation/"
+  - title: "Office de tourisme de Puisaye-Forterre - Train touristique"
+    url: "https://www.puisaye-tourisme.fr/nature-activites/velos-et-train-touristique/train-touristique-de-puisaye/"
+  - title: "Office de tourisme de Puisaye-Forterre - Marché de Toucy"
+    url: "https://www.puisaye-tourisme.fr/destination/incontournables/marche-de-toucy/"
+  - title: "AATY - Contact"
+    url: "https://www.aaty.org/contact/"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Le dimanche 20 décembre 2026, le Père Noël prend place dans le **Transpoyaudin**, le train touristique de Puisaye-Forterre, au départ de **Toucy, dans l'Yonne**. L'occasion de vivre Noël autrement: monter à bord d'un train ancien, traverser la campagne bourguignonne et partager un voyage festif avec les enfants.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+Ce n'est pas un train de transport quotidien, mais une circulation spéciale organisée par l'Association des Autorails Touristiques de l'Yonne (AATY). Ses bénévoles font vivre ce patrimoine ferroviaire, que l'[office de tourisme présente avec ses différents matériels historiques](https://www.puisaye-tourisme.fr/nature-activites/velos-et-train-touristique/train-touristique-de-puisaye/).
+
+## Le Père Noël voyage-t-il vraiment avec les enfants ?
+
+Oui. Dans son [annonce consacrée au train du 20 décembre](https://www.aaty.org/evenementiels/), l'AATY précise que le Père Noël accueillera les voyageurs en gare et sera présent dans le train pendant le trajet. L'association annonce également **un sachet de bonbons et une brique de lait chocolaté offerts aux enfants**.
+
+Pour les plus jeunes, l'attrait tient autant à la rencontre avec le personnage qu'au train lui-même: regarder défiler les paysages de bocage et de forêt depuis un véhicule d'un autre temps fait partie de l'expérience. En revanche, aucune remise de cadeau individuel, séance photo organisée ou animation supplémentaire ne doit être considérée comme acquise.
+
+## Date, horaires et budget familial
+
+La [fiche de l'office de tourisme de Puisaye-Forterre](https://www.puisaye-tourisme.fr/agenda/train-du-pere-noel/) annonce les informations suivantes pour l'édition 2026:
+
+- **Dimanche 20 décembre 2026**, départ à **15 h** et retour prévu à **17 h 30**.
+- **Rendez-vous dès 14 h 40**, soit vingt minutes avant le départ.
+- **Départ: gare de Toucy-Ville**, avenue de la Gare, 89130 Toucy.
+- **Tarif annoncé: 7,50 € par adulte et 6 € par enfant jusqu'à 14 ans.**
+
+Attention aux tout-petits: contrairement à certaines circulations régulières, **le train spécial de Noël n'est pas gratuit pour les moins de 5 ans**, comme le précise l'AATY. Prévoyez donc un billet pour chaque membre de la famille, même le plus jeune.
+
+## Comment réserver ses places ?
+
+La [réservation auprès de l'AATY](https://www.aaty.org/reservation/) est **obligatoire**. Sur la page de l'association, sélectionnez la date du train concerné, ouvrez le détail de la circulation puis suivez les indications pour réserver. La règle est explicite: **un voyageur = un billet**.
+
+Si la circulation du 20 décembre n'apparaît pas encore, ou si une condition de réservation vous semble ambiguë, demandez confirmation à l'organisateur plutôt que de supposer que les places sont disponibles ou épuisées. Le [contact officiel de l'AATY](https://www.aaty.org/contact/) indique le **03 86 44 05 58** pour les renseignements sur le train touristique. Son formulaire de contact ne permet pas de réserver directement.
+
+## Le parcours annoncé reste à confirmer
+
+C'est le point à vérifier avant d'organiser l'après-midi autour d'une étape précise. La fiche de l'office de tourisme évoque un trajet **Toucy-Villiers-Saint-Benoît**. Or, sur sa [page de réservation](https://www.aaty.org/reservation/), l'AATY indique que les circulations sont **limitées jusqu'à nouvel ordre à Dracy-sur-Ouanne**, en raison de travaux sur la ligne.
+
+Ces informations ne permettent pas d'établir avec certitude le terminus du **train spécial du 20 décembre 2026**. Il vaut donc mieux demander directement à l'AATY quel trajet sera assuré et s'il y aura un arrêt permettant de descendre. Ne prévoyez pas une visite à Villiers-Saint-Benoît sur la seule foi du programme habituel du train touristique.
+
+## Avec de jeunes enfants: ce qui mérite d'être anticipé
+
+L'horaire couvre environ deux heures et demie, de l'embarquement au retour annoncé. Pour un enfant qui supporte mal de rester longtemps assis, la durée peut compter davantage que le thème de Noël. Une tenue chaude et facile à ajuster est judicieuse pour l'attente en gare en décembre; pensez aussi aux besoins habituels de votre enfant avant de monter.
+
+Les conditions précises d'accueil des **poussettes**, d'**accessibilité** et les équipements à bord de cette circulation spéciale ne sont pas confirmés dans les annonces consultées. Si vous voyagez avec un bébé ou une personne à mobilité réduite, contactez l'AATY avant d'acheter les billets. En cas d'allergie alimentaire, vérifiez également la composition des friandises annoncées.
+
+## Et si vous passiez le week-end à Toucy ?
+
+Pour les familles qui viennent de plus loin, une nuit sur place permet de profiter du village sans courir entre deux activités. Le **samedi 19 décembre**, vous pouvez découvrir le [marché hebdomadaire de Toucy](https://www.puisaye-tourisme.fr/destination/incontournables/marche-de-toucy/), organisé le samedi matin dans le centre-ville, puis prendre le temps de vous promener dans les rues anciennes. Le train du Père Noël constitue alors le rendez-vous du dimanche après-midi.
+
+Il s'agit d'une idée de séjour, pas d'un programme d'animations de Noël garanti: vérifiez séparément les horaires d'ouverture des lieux que vous souhaitez visiter. Une famille habitant à proximité peut tout aussi bien profiter du train en simple sortie à la journée.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -128,4 +167,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
