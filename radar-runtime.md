@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Noël 2026 au château royal d'Amboise : visite de jour ou nocturne aux chandelles ?"
-subtitle: "Le Noël royal des animaux, la soirée du 11 décembre et les nocturnes des 26 et 29 décembre : quel billet choisir avec des enfants ?"
-summary: À Amboise, le parcours de Noël est inclus dans la visite ordinaire, mais les soirées ne proposent pas la même expérience. Dates, âges, réservations et budget pour choisir sans confondre les formules.
+title: "Noël au château d'Amboise 2026 : visite, nocturnes et tarifs en famille"
+subtitle: "Parcours des animaux, soirée du 11 décembre ou chandelles les 26 et 29 décembre : choisissez la bonne formule."
+summary: "Du 28 novembre 2026 au 3 janvier 2027, le château royal d'Amboise fête Noël avec un parcours décoré et deux types de soirées. Tarifs, horaires, réservation et accès : ce qui change vraiment avec des enfants."
 category: evenements
 location:
   city: Amboise
@@ -70,6 +75,7 @@ keywords:
   - Noël château royal Amboise 2026
   - Noël royal des animaux Amboise
   - nocturne chandelles Amboise décembre 2026
+  - château Amboise Noël tarifs enfants
 sources:
   - title: Château royal d'Amboise - Noël au Pays des Châteaux 2026
     url: https://www.chateau-amboise.com/noel-au-pays-des-chateaux/
@@ -81,9 +87,13 @@ sources:
     url: https://www.chateau-amboise.com/visite-guidee-le-noel-royal-des-animaux/
   - title: Château royal d'Amboise - Tarifs 2026
     url: https://www.chateau-amboise.com/tarifs/
+  - title: Château royal d'Amboise - Horaires
+    url: https://www.chateau-amboise.com/horaires/
+  - title: Château royal d'Amboise - Accès et accessibilité
+    url: https://www.chateau-amboise.com/acces-au-chateau-royal-damboise/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: noel-2026-au-chateau-royal-d-amboise-visite-de-jour-ou-nocturne-aux-chandelles
   decision: Choisir la visite décorée en journée, la prolongation du 11 décembre ou une nocturne aux chandelles des 26 et 29 décembre selon l'âge des enfants, le budget, l'accessibilité et les réservations nécessaires.
@@ -93,34 +103,58 @@ radar:
     dataThrough: 2026-10-21
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Château royal d'Amboise - Noël au Pays des Châteaux 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2027-01-03T17:45:00+01:00
 ---
 
-## Mission retenue
-Préparer un guide de décision sur **Le Noël royal des animaux**, au château royal d'Amboise, du **28 novembre 2026 au 3 janvier 2027**. Il distingue le parcours décoré ordinaire des expériences nocturnes réellement différentes.
+Au château royal d'Amboise, **« Le Noël royal des animaux »** se découvre du **28 novembre 2026 au 3 janvier 2027**, sauf les **25 décembre et 1er janvier**, jours de fermeture. Les animaux de la cour imaginaire ont investi les décors du logis royal : oiseaux, cerfs, fauves et petits rongeurs composent une visite de Noël pensée pour les familles. Mais une visite classique, l'ouverture tardive du 11 décembre et les deux soirées aux chandelles ne donnent pas droit à la même expérience.
 
-## Pourquoi cette mission
-L'opportunité saisonnière est documentée dès maintenant par l'organisateur, avec trois choix de visite et une vraie différence de billets. Le refresh SNCF (signal GSC « uncertain ») a été écarté : l'article complet couvre déjà correctement prix, réductions, conditions de semaine et plafonds, sans lacune décisive démontrée. L'expansion depuis la page forte sur les transports parisiens risquerait de reprendre les tarifs déjà traités et les guides Orly/CDG existants. Le contrôle `probableDuplicates` sur les **759 articles** ne trouve aucun Noël 2026 au château royal d'Amboise ; les pages Amboise existantes concernent le city pass, l'hébergement et le marché, sans traiter cette décision. Aucun recouvrement avec les candidats Publication (véloroute du Calavon) ou Destination (Vincennes, Haut-Rhin).
+## Quel créneau choisir avec des enfants ?
 
-## Décision du lecteur
-Savoir s'il vaut mieux réserver une entrée de jour, profiter de l'ouverture prolongée du 11 décembre sans chandelles, ou choisir une soirée aux chandelles les 26 ou 29 décembre, en connaissant le coût et les contraintes pour les enfants.
+- **Pour découvrir les décors à son rythme :** prenez une entrée ordinaire de jour. Le parcours de Noël est inclus, sans supplément spécifique.
+- **Pour voir le château décoré à la nuit tombée sans payer une soirée spéciale :** venez le **vendredi 11 décembre**. Le parcours reste celui de la journée, **sans chandelles**, et le tarif habituel s'applique.
+- **Pour les salles éclairées à la bougie :** choisissez le **26 ou le 29 décembre**, avec **un billet nocturne distinct et une réservation obligatoire**. Le parc n'est alors pas ouvert.
 
-## Faits à traiter
-- Parcours « Noël royal des animaux » inclus dans l'entrée du château du 28/11/2026 au 03/01/2027 ; fermeture les 25/12 et 01/01. Tarifs 2026 de jour : 17,30 € adulte, 11 € de 7 à 18 ans, gratuit avant 7 ans.
-- **11 décembre** : fermeture de la billetterie à 19 h, château à 20 h ; tarif normal, sans réservation, **sans chandelles**. Ne pas confondre avec les soirées spéciales.
-- **26 et 29 décembre** : nocturnes aux chandelles, créneaux d'entrée 18 h 30, 19 h, 19 h 30, 20 h, réservation obligatoire ; 16,50 € adulte, 11,50 € enfant ; parc fermé, accès difficile en fauteuil. Vérifier les conditions exactes pour les tout-petits et ne pas supposer que le billet de jour suffit.
-- Visite guidée « Le Noël royal des animaux » à 11 h 30 du 19 décembre au 3 janvier, hors fermetures : 1 h, comprise dans l'entrée mais **sur réservation**. Vérifier ouverture effective des réservations ; mentionner seulement si utile le conte du 23 décembre.
-- Distinguer billets de jour, nocturnes et éventuel pass multi-châteaux ; vérifier les horaires, la capacité et les accès avant toute recommandation.
+La journée convient davantage aux familles avec de jeunes enfants qui veulent garder de la souplesse. Les chandelles offrent une ambiance différente, mais imposent une heure d'arrivée précise et une sortie tardive.
 
-## Sources de départ
-Les cinq pages officielles du frontmatter : événement 2026, prolongation du 11 décembre, nocturnes de Noël, visite guidée et grille tarifaire 2026. Ne pas reprendre les horaires d'une ancienne édition.
+## Visite de jour : prix, horaires et parcours de Noël
 
-## Affiliation
-Proposer le billet de **jour** Tiqets seulement si la date et l'inclusion du parcours de Noël sont vérifiées au moment de rédiger ; ne jamais le présenter comme un billet pour la nocturne. Pour un week-end, **Le Clos d'Amboise** sur Booking.com propose des chambres/suites familiales, sans disponibilité garantie pour décembre. Une offre précise de chaque type suffit.
+En 2026, l'entrée ordinaire coûte **17,30 € par adulte**, **11 € de 7 à 18 ans** et reste **gratuite avant 7 ans**. Pour deux adultes et deux enfants payants, comptez donc **56,60 €** au tarif public, avant réductions éventuelles. Le billet comprend aussi l'HistoPad du château. Une réduction de 2 € par enfant payant est annoncée pour les familles nombreuses, sous conditions.
 
-## Continuations internes
-- Renvoyer au guide **Amboise City Pass 2026** pour les arbitrages entre plusieurs monuments, sans reproduire tout le calcul des pass.
-- Renvoyer à **Maison de vacances à Amboise avec des enfants** pour les critères généraux d'hébergement ; rester ici sur la seule utilité d'une nuit après une nocturne.
-- Si comparaison géographique utile, signaler **Noël à Chambord 2026** comme autre sortie distincte, sans répéter son programme.
+Le château affiche généralement une billetterie ouverte jusqu'à **17 h** sur la période de Noël, avec une **pause de 12 h 30 à 14 h** sur une partie de novembre et de décembre ; à l'approche des fêtes, l'ouverture devient continue. Le domaine ferme normalement **45 minutes après la billetterie**. Consultez les [horaires officiels selon votre date](https://www.chateau-amboise.com/horaires/) : arriver à 16 h 30 laisse peu de temps pour profiter des salles et des décors.
+
+Le parcours thématique est bien **inclus dans l'entrée ordinaire**, comme le confirme le [programme de Noël du château](https://www.chateau-amboise.com/noel-au-pays-des-chateaux/). Si vous réservez auprès d'un revendeur, vérifiez que le billet proposé est utilisable à la date choisie : les offres générales consultées ne confirment pas explicitement l'accès au parcours pour les dates de Noël 2026.
+
+## Le 11 décembre : une soirée plus longue, pas une visite aux chandelles
+
+Le **vendredi 11 décembre 2026**, la **billetterie ferme à 19 h** et le **château à 20 h**. Il n'y a **pas de réservation nécessaire** pour cette prolongation et le billet ordinaire suffit. En revanche, le château précise qu'aucune installation de chandelles ou de bougies n'est prévue ce soir-là : il s'agit de parcourir les décors habituels plus tard, et non de vivre la soirée spéciale de fin décembre.
+
+C'est un bon compromis si les enfants veulent voir l'ambiance de Noël à la nuit tombée sans réserver de créneau. Prévoyez toutefois vêtements chauds et dîner après la visite, ou avant d'entrer.
+
+## Les 26 et 29 décembre : une réservation spécifique pour les chandelles
+
+Ces deux soirées transforment l'atmosphère des **salles du logis royal** avec des centaines de bougies. Les entrées sont réparties à **18 h 30, 19 h, 19 h 30 et 20 h**. On ne peut accéder au château **qu'au créneau sélectionné lors de la réservation**.
+
+Les tarifs annoncés sont **16,50 € par adulte**, **13,50 € par étudiant**, **11,50 € par enfant** et **7,50 € par abonné**. Le château ne précise pas sur cette page la tranche d'âge du tarif enfant ni les éventuelles conditions pour les moins de 7 ans : vérifiez-les avant de payer. **La gratuité des moins de 7 ans valable en journée ne doit pas être supposée pour cette formule.** De même, n'utilisez pas un billet ordinaire de jour en pensant qu'il ouvre l'accès à cette soirée.
+
+Autres différences importantes : **le parc est fermé**, les **animaux ne sont pas admis** et le château signale un **accès difficile en fauteuil roulant**. Pour les modalités et créneaux encore proposés, consultez la [présentation officielle des nocturnes aux chandelles](https://www.chateau-amboise.com/balades-nocturnes-aux-chandelles-speciale-noel/). Si vous venez avec un bébé ou une poussette, renseignez-vous directement sur la circulation dans les salles pendant la soirée avant de réserver.
+
+## Une visite guidée incluse, mais à réserver
+
+Du **19 décembre 2026 au 3 janvier 2027**, sauf les deux jours de fermeture, une visite guidée **« Le Noël royal des animaux »** est annoncée **chaque jour à 11 h 30**, pour **une heure**. Elle présente les traditions de Noël et les animaux associés à la cour. **Elle est comprise dans le billet d'entrée, mais nécessite une réservation.**
+
+Au moment de cette vérification, le château indiquait que **l'ouverture des réservations en ligne était encore à venir**. Ne considérez donc pas la place acquise avec le seul billet d'entrée ; surveillez la [fiche de la visite guidée](https://www.chateau-amboise.com/visite-guidee-le-noel-royal-des-animaux/) si ce rendez-vous compte dans votre programme.
+
+## Venir au château et anticiper l'accessibilité
+
+L'entrée publique se trouve **montée de l'Émir Abd El Kader**, depuis la **place Michel Debré**. La gare d'Amboise est annoncée à environ **10 minutes à pied** de l'entrée ; vérifiez les horaires de retour, particulièrement après une nocturne. Pour la voiture, repérez votre stationnement en centre-ville avant d'arriver. Une **bagagerie payante** se trouve dans la rampe d'accès, avant la billetterie.
+
+En journée, une entrée adaptée existe à la **porte des Lions, rue Augustin Thierry**, mais le château précise qu'elle **n'est pas accessible à pied en fauteuil** : il faut y venir en véhicule et être accompagné pour certaines pentes. Les visiteurs avec poussette, sans situation de handicap, utilisent l'entrée publique principale. Ces dispositions ordinaires ne garantissent pas l'accessibilité des soirées aux chandelles, pour lesquelles l'organisateur signale des difficultés particulières.
+
+## Plusieurs châteaux ou une nuit sur place ?
+
+Si vous prévoyez d'autres monuments, distinguez le **pass « Noël au Pays des Châteaux »** évoqué par l'organisateur des billets propres aux nocturnes : vérifiez précisément les sites et visites inclus avant achat. Le [guide Amboise City Pass 2026](/articles/bons-plans/amboise-city-pass-2026-quand-devient-il-vraiment-rentable/) explique comment comparer un pass et des billets séparés, mais **ce City Pass 2026 s'arrête au 31 octobre** : il ne faut pas le prendre pour un pass valable pendant les fêtes.
+
+Pour éviter un retour long après les chandelles, **Le Clos d'Amboise**, au centre-ville, propose notamment des chambres et suites familiales. Vous pouvez [examiner ses catégories de chambres et les disponibilités sur Booking.com](https://www.booking.com/hotel/fr/le-clos-damboise.fr.html) pour la nuit souhaitée ; aucune disponibilité en décembre n'est garantie. Si vous hésitez entre hôtel et location pour plusieurs jours, le guide [maison de vacances à Amboise avec des enfants](/articles/maison/maison-de-vacances-a-amboise-avec-des-enfants-7-criteres-pour-bien-choisir/) détaille les critères pratiques. Pour une autre expérience de Noël dans la région, le [château de Cheverny et son mapping](/articles/evenements/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/) proposent une sortie différente.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -131,8 +165,8 @@ Proposer le billet de **jour** Tiqets seulement si la date et l'inclusion du par
 - /articles/sorties/chateau-de-chenonceau-en-famille-billets-duree-et-conseils-avec-des-enfants/ | Château de Chenonceau en famille: billets, durée et conseils avec des enfants | sorties | Chenonceaux, Indre-et-Loire, Centre-Val de Loire
 - /articles/bons-plans/amboise-city-pass-2026-quand-devient-il-vraiment-rentable/ | Amboise City Pass 2026: quand devient-il vraiment rentable? | bons-plans | Amboise, Indre-et-Loire, Centre-Val de Loire
 - /articles/evenements/monument-jeu-d-enfant-2026-a-azay-le-rideau-animaux-caches-atelier-et-contes/ | Monument Jeu d'enfant 2026 à Azay-le-Rideau: animaux cachés et contes en famille | evenements | Azay-le-Rideau, Indre-et-Loire, Centre-Val de Loire
-- /articles/evenements/habits-de-lumiere-a-epernay-avec-des-enfants-quel-jour-choisir-en-2026/ | Habits de Lumière à Épernay avec des enfants: quel jour choisir en 2026? | evenements | Épernay, Marne, Grand Est
-- /articles/evenements/lumieres-de-noel-a-montbeliard-2026-quel-jour-venir-avec-des-enfants/ | Lumières de Noël à Montbéliard 2026: quel jour venir avec des enfants? | evenements | Montbéliard, Doubs, Bourgogne-Franche-Comté
+- /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | Halloween 2026 au Château de Chantilly avec des enfants: ateliers, nocturnes et spectacle | sorties | Chantilly, Oise, Hauts-de-France
+- /articles/activites/chateau-de-biron-avec-des-enfants-tarifs-et-conseils-pour-la-visite/ | Château de Biron avec des enfants: tarifs et conseils pour la visite | activites | Biron, Dordogne, Nouvelle-Aquitaine
 - /articles/sorties/camp-batisseurs-chinon-famille-2026/ | Camp des bâtisseurs à Chinon: une immersion médiévale en famille jusqu’au 28 août | sorties | Chinon, Indre-et-Loire, Centre-Val de Loire
 - /articles/voyages/azay-le-rideau-en-famille-une-journee-entre-chateau-et-troglodytes/ | Azay-le-Rideau en famille: une journée entre château et troglodytes | voyages | Azay-le-Rideau, Indre-et-Loire, Centre-Val de Loire
 - /articles/sorties/villandry-en-famille-jardins-seuls-ou-chateau-et-jardins/ | Villandry en famille: jardins seuls ou château et jardins ? | sorties | Villandry, Indre-et-Loire, Centre-Val de Loire
@@ -156,11 +190,11 @@ Proposer le billet de **jour** Tiqets seulement si la date et l'inclusion du par
 - opportunity | /articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/ | 2026-10-23T06:21:12.326Z
 - opportunity | /articles/evenements/foire-aux-santons-de-marseille-2026-en-famille-quand-venir-et-que-voir/ | 2026-10-23T15:29:55.218Z
 - opportunity | /articles/evenements/halloween-2026-a-mini-world-lyon-la-chasse-aux-31-mechants-en-famille/ | 2026-10-22T12:58:21.691Z
+- opportunity | /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | 2026-10-08T02:18:12.427Z
 - opportunity | /articles/evenements/luminescences-2026-2027-a-amneville-en-famille-soiree-seule-ou-zoo-et-lanternes/ | 2026-10-22T09:37:18.560Z
 - opportunity | /articles/evenements/monstrozoo-2026-2027-a-beauval-enquete-libre-ou-visite-guidee-en-famille/ | 2026-10-22T15:49:20.816Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-azay-le-rideau-animaux-caches-atelier-et-contes/ | 2026-10-11T16:33:21.125Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/ | 2026-10-23T19:58:30.214Z
-- opportunity | /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | 2026-10-22T04:59:04.773Z
 
 ### Phases 2 et 3
 
