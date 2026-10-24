@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Noël Gaulois 2026 au Parc Astérix : billet Malin, Noël ou Flex en famille ?"
-subtitle: "Du 19 décembre au 3 janvier : tarifs, animations hivernales et choix d'une journée avec enfants"
-summary: Comparer les billets de Noël Gaulois 2026 au Parc Astérix et organiser une journée adaptée à l'âge des enfants, entre glisse, spectacles et attractions.
+title: "Noël Gaulois 2026 au Parc Astérix : quel billet choisir en famille ?"
+subtitle: "Du 19 décembre au 3 janvier : prix réels, glissades, spectacles et conseils pour une journée d'hiver"
+summary: "Billet Malin à 49 €, Noël à 57 € ou Liberté Flex : comparez les conditions et préparez une journée au Parc Astérix avec des enfants, sans manquer les animations hivernales."
 category: evenements
 location:
   city: Plailly
@@ -68,16 +73,29 @@ location:
   region: Hauts-de-France
 keywords:
   - Noël Gaulois 2026 Parc Astérix
-  - billet Noël Parc Astérix
-  - patinoire Viking et spectacles Noël Gaulois
+  - billet Noël Parc Astérix 2026
+  - billet Malin Liberté Flex Parc Astérix
+  - Parc Astérix Noël avec enfants
 sources:
   - title: Parc Astérix — Noël Gaulois 2026, programme et billets
     url: https://www.parcasterix.fr/evenements/noel-gaulois
-  - title: Oise Tourisme — Noël Gaulois au Parc Astérix
+  - title: Parc Astérix — Horaires de Noël Gaulois 2026
+    url: https://www.parcasterix.fr/faq?question=quels-sont-les-horaires-d-ouverture-du-parc-a-noel-gaulois
+  - title: Parc Astérix — Tarifs au guichet et parking 2026
+    url: https://www.parcasterix.fr/tarifs-au-guichet
+  - title: Parc Astérix — La Glissade d'Obélix
+    url: https://www.parcasterix.fr/attractions/famille/glissade-dobelix
+  - title: Parc Astérix — Patinoire Viking
+    url: https://www.parcasterix.fr/attractions/famille/patinoire-viking
+  - title: Parc Astérix — Quel Cirque !
+    url: https://www.parcasterix.fr/spectacles/quel-cirque
+  - title: Parc Astérix — Chantons Noël
+    url: https://www.parcasterix.fr/spectacles/chantons-noel
+  - title: Oise Tourisme — Noël Gaulois 2026
     url: https://www.oisetourisme.com/agenda/noel-gaulois-au-parc-asterix/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: noel-gaulois-2026-au-parc-asterix-billet-malin-noel-ou-flex-en-famille
   decision: Choisir le billet adapté à une date fixe ou flexible et préparer une vraie journée de Noël au parc selon l'âge et la taille des enfants, sans confondre cette expérience payante avec un marché de Noël gratuit.
@@ -87,33 +105,50 @@ radar:
     dataThrough: 2026-10-21
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Parc Astérix — Noël Gaulois 2026, programme et billets »; aucune page forte GSC n'est requise.
+eventEndsAt: 2027-01-03T20:00:00+01:00
 ---
 
-## Mission retenue
-Noël Gaulois au Parc Astérix, à Plailly, du 19 décembre 2026 au 3 janvier 2027 : une journée de parc d'attractions avec animations de Noël, distincte de la visite ordinaire et du seul marché de Noël.
+Du **19 décembre 2026 au 3 janvier 2027**, le Parc Astérix, à Plailly dans l'Oise, se transforme pour Noël Gaulois. On y vient pour les attractions, mais aussi pour patiner, glisser, rencontrer les personnages et voir des spectacles de Noël. Ce n'est pas un marché de Noël en accès libre : **l'entrée au parc est payante**, même si les animations de Noël annoncées sont comprises dans le billet.
 
-## Pourquoi cette mission
-Le refresh le mieux placé et durable, la Carte Avantage Adulte SNCF, explique déjà correctement les règles et la rentabilité : son signal GSC reste incertain, sans défaut éditorial décisif vérifié. L'expansion depuis la page forte « Transports à Paris avec des enfants » risque de répéter les guides existants sur Orly et CDG. Ici, le programme et trois billets 2026 sont documentés par l'organisateur, pour une décision saisonnière précise encore absente du catalogue.
+Le vrai choix avant de partir porte sur la date : certaine, encore à décider ou susceptible de changer. C'est ce qui détermine le billet le plus intéressant.
 
-## Décision du lecteur
-Savoir si la famille doit privilégier le billet daté moins cher, le billet Noël non daté ou la souplesse du Flex, puis choisir les animations de Noël réellement adaptées aux enfants et à la durée d'une journée.
+## Billet Malin, Noël ou Liberté Flex : lequel prendre ?
 
-## Faits à traiter
-- Billet Malin à 49 € : daté, contingenté, non échangeable ; vérifier les dates proposées. Billet Noël 2026 à 57 € : non daté dans la période, non échangeable. Liberté Flex à 68 € adulte / 59 € enfant : daté et modifiable jusqu'à une heure avant l'ouverture sous conditions. Gratuit avant 3 ans.
-- Patinoire Viking, Glissade d'Obélix, Jardins merveilleux du Père Noël, défilé, marché et spectacles annoncés ; vérifier les restrictions propres à chaque activité, les séances et les horaires du jour, sans promettre l'ouverture de toutes les attractions par temps froid.
-- Billet d'entrée et animations incluses selon la page officielle ; parking en supplément. La page officielle comporte une incohérence sur une date limite d'achat (« 3 janvier 2026 ») : ne pas reprendre cette mention sans clarification.
+**Le Billet Malin à 49 €** est le moins cher des trois, au même prix pour un adulte et un enfant de 3 ans ou plus. Il impose de choisir une date parmi un nombre limité de jours et de places. Il est non remboursable, non échangeable et proposé jusqu'à la veille de la visite. C'est le premier tarif à vérifier si votre journée est fixée ; **ne présumez pas qu'il sera disponible à 49 € pour votre date de Noël**.
 
-## Sources de départ
-- Parc Astérix, page officielle de Noël Gaulois 2026 : https://www.parcasterix.fr/evenements/noel-gaulois
-- Oise Tourisme, événement du 19 décembre 2026 au 3 janvier 2027 : https://www.oisetourisme.com/agenda/noel-gaulois-au-parc-asterix/
+**Le Billet Noël 2026 à 57 €** est non daté : vous choisissez votre jour de venue entre le 19 décembre et le 3 janvier. Le tarif est identique pour adultes et enfants de 3 ans ou plus. Il n'est ni remboursable ni échangeable. Il convient à une famille qui sait qu'elle viendra pendant les vacances, mais veut décider du jour en fonction de la météo ou de son organisation. Attention : non daté ne veut pas dire utilisable hors de cette période.
 
-## Affiliation
-- Billetterie générale Tiqets identifiée : https://www.tiqets.com/fr/activites-attractions-plailly-c178892/billets-pour-parc-asterix-billet-d-entree-p974657/ ; l'éligibilité aux dates de Noël n'est pas établie, donc ne pas l'affirmer.
-- Hébergement secondaire pour un séjour : B&B HOTEL Saint-Witz Roissy, chambres familiales identifiées sur Booking.com : https://www.booking.com/hotel/fr/hotel-saint-witz.pl.html ; prix et disponibilité du séjour à vérifier.
+**Le Billet Liberté Flex** coûte **68 € à partir de 12 ans** et **59 € de 3 à 11 ans**. Vous choisissez une date lors de l'achat, mais pouvez la modifier jusqu'à **une heure avant l'ouverture** du parc, sous réserve de places disponibles à la nouvelle date. Si la date est dépassée sans utilisation, le billet est perdu. C'est la formule à envisager si un changement de programme est plausible ; elle n'offre pas une annulation gratuite.
 
-## Continuations internes
-- La page Fam Space « Parc Astérix en famille en 2026 : une ou deux journées, quel hôtel et quel budget prévoir » traite déjà hébergement, navette, budget global et attractions par taille : y renvoyer sans réécrire ces sous-sujets.
-- La page « Peur sur le Parc 2026 » concerne Halloween et ses nocturnes : ne pas confondre ses billets et son programme avec Noël Gaulois.
+L'entrée est **gratuite avant 3 ans** pour les trois formules. Les tarifs affichés peuvent évoluer : comparez toujours les conditions et les dates réellement proposées au moment de payer. La page officielle comporte une date limite d'achat manifestement incohérente pour le billet Noël ; mieux vaut se fier au calendrier de réservation effectif plutôt qu'à cette mention.
+
+Pour **deux adultes et deux enfants de 3 à 11 ans**, les entrées représentent **196 € en Malin**, **228 € en Noël** ou **254 € en Flex**, si les billets correspondants sont disponibles. En voiture, ajoutez le **parking affiché à 25 € par jour** dans les tarifs 2026 du parc, puis les repas et achats éventuels. Les jeux d'adresse ne sont pas compris dans l'entrée.
+
+## Que privilégier avec des enfants ?
+
+La **Patinoire Viking** est annoncée pour toute la famille. Le prêt des patins est gratuit et le parc conseille de porter des gants. La **Glissade d'Obélix** propose une descente en bouée : le parc indique **1,20 m minimum pour y accéder seul**. Pour un enfant plus petit, vérifiez les conditions d'accompagnement affichées sur place avant de lui promettre cette activité.
+
+Les **Jardins merveilleux du Père Noël** offrent une promenade dans des décors lumineux, du bois enchanté au village du Père Noël, dans l'environnement de Romus et Rapidus. Avec de jeunes enfants ou des enfants qui ne souhaitent pas faire de grandes attractions, les jardins, les rencontres avec les personnages et le défilé gaulois de Noël peuvent constituer le fil conducteur de la visite.
+
+Trois spectacles permettent aussi de construire la journée sans courir d'une attraction à l'autre :
+
+- **Quel Cirque !**, 20 minutes d'acrobaties, se regarde **assis et à l'intérieur**.
+- **Chantons Noël**, 30 minutes de chants, se déroule **à l'intérieur, debout**.
+- **Qui veut la peau du Père Noël ?**, 25 minutes, est un **spectacle sur glace en extérieur, avec places assises**.
+
+Le marché de Noël fait partie des animations proposées *dans* le parc ; il ne remplace pas un marché municipal gratuit. Les horaires précis des séances et du défilé sont à consulter pour le jour choisi. Par temps froid, privilégiez un spectacle intérieur comme pause, sans supposer que toutes les attractions habituelles seront ouvertes : certaines peuvent être fermées ou adaptées aux conditions météorologiques.
+
+## Une journée réaliste, sans manquer les illuminations
+
+Le parc annonce une ouverture de **11 h à 20 h** pendant Noël Gaulois, sauf les **24 et 31 décembre (11 h à 19 h)**. Une arrivée proche de l'ouverture laisse le temps de faire quelques attractions choisies le matin, de déjeuner sans précipitation, puis de réserver l'après-midi aux activités hivernales et à un ou deux spectacles. Gardez la fin de journée pour les décors illuminés et les animations dont les horaires le permettent.
+
+Avant de partir, mesurez les enfants si certaines attractions sont essentielles pour eux et prévoyez vêtements chauds, gants et chaussures adaptées à une journée mêlant extérieur et intérieur. Les restrictions de taille varient selon les attractions ; un billet d'entrée ne garantit pas l'accès à chacune. Vérifiez aussi les conditions d'accessibilité des activités souhaitées, notamment celles qui demandent de quitter un fauteuil roulant.
+
+Pour le trajet, la navette, les attractions par taille et le choix entre une ou deux journées, le guide [Parc Astérix en famille : hôtel, durée et budget](/articles/voyages/parc-asterix-en-famille-en-2026-une-ou-deux-journees-quel-hotel-et-quel-budget-prevoir/) détaille les points utiles sans confondre la visite classique avec le programme de Noël.
+
+## Dormir près du parc pour éviter le retour tardif
+
+Si le trajet est long ou si vous souhaitez prolonger la sortie, le **[B&B HOTEL Saint-Witz Roissy sur Booking.com](https://www.booking.com/hotel/fr/hotel-saint-witz.html)** propose notamment des chambres familiales. Vérifiez la capacité exacte pour votre groupe, les dates de décembre ou janvier, le petit déjeuner et les conditions d'annulation : **aucun prix ni aucune disponibilité pour Noël 2026 n'est garanti ici**. Une chambre réservée séparément n'inclut pas les entrées au parc ; comparez le coût total avant de choisir.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -121,17 +156,17 @@ Savoir si la famille doit privilégier le billet daté moins cher, le billet No�
 
 - /articles/voyages/parc-asterix-en-famille-en-2026-une-ou-deux-journees-quel-hotel-et-quel-budget-prevoir/ | Parc Astérix en famille en 2026: une ou deux journées, quel hôtel et quel budget prévoir | voyages | Plailly, Oise, Hauts-de-France
 - /articles/voyages/peur-sur-le-parc-2026-en-famille-journee-nocturne-billets-et-hebergement/ | Peur sur le Parc 2026 en famille: journée, nocturne, billets et hébergement | voyages | Plailly, Oise, Hauts-de-France
+- /articles/evenements/marche-de-noel-de-cusset-2026-en-famille-quel-jour-choisir/ | Marché de Noël de Cusset 2026 en famille: quel jour choisir? | evenements | Cusset, Allier, Auvergne-Rhône-Alpes
+- /articles/voyages/lascaux-en-famille-quel-billet-choisir-et-quel-budget-prevoir-en-2026/ | Lascaux en famille: quel billet choisir et quel budget prévoir en 2026 | voyages | Montignac-Lascaux, Dordogne, Nouvelle-Aquitaine
+- /articles/activites/le-pal-ou-touroparc-en-famille-quel-parc-choisir-en-2026/ | Le PAL ou Touroparc en famille: quel parc choisir en 2026? | activites
+- /articles/parentalite/ateliers-parents-malins-dans-l-oise-quels-rendez-vous-gratuits-choisir-avant-fin-2026/ | Ateliers Parents Malins dans l'Oise: quels rendez-vous gratuits choisir avant fin 2026 ? | parentalite | Plusieurs communes, Oise, Hauts-de-France
+- /articles/activites/sherwood-parc-avec-des-enfants-quel-billet-choisir-avant-de-reserver/ | Sherwood Parc avec des enfants: quel billet choisir avant de réserver? | activites | Viarmes, Val-d'Oise, Île-de-France
+- /articles/evenements/contes-et-histoires-2026-comment-choisir-un-monument-a-visiter-avec-les-enfants/ | Contes et Histoires 2026: comment choisir un monument à visiter avec les enfants | evenements
 - /articles/evenements/halloween-2026-a-la-mer-de-sable-spectacles-parcours-effrayant-et-billets/ | Halloween 2026 à la Mer de Sable: spectacles, frissons et billets en famille | evenements | Ermenonville, Oise, Hauts-de-France
-- /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | Marché de Noël d'Amiens 2026 en famille: horaires, Père Noël et patinoire | evenements | Amiens, Somme, Hauts-de-France
-- /articles/evenements/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget/ | Grand Noël 2026 à Vaux-le-Vicomte en famille: billets, offre enfant et animations | evenements | Maincy, Seine-et-Marne, Île-de-France
-- /articles/evenements/bedecine-2026-a-illzach-en-famille-ateliers-et-spectacles-selon-l-age/ | Bédéciné 2026 à Illzach en famille: ateliers, spectacles et billets | evenements | Illzach, Haut-Rhin, Grand Est
-- /articles/evenements/court-circuit-2026-a-annecy-en-famille-spectacles-tarifs-et-conseils/ | Court Circuit 2026 à Annecy en famille: spectacles, tarifs et conseils | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
-- /articles/evenements/equita-lyon-2026-en-famille-village-enfants-billets-et-spectacles/ | Equita Lyon 2026 avec des enfants: billets, Village Enfants et spectacles | evenements | Chassieu, Rhône, Auvergne-Rhône-Alpes
 - /articles/sorties/chateau-de-compiegne-en-famille-que-visiter-et-comment-organiser-la-journee/ | Château de Compiègne en famille: que visiter et comment organiser la journée? | sorties | Compiègne, Oise, Hauts-de-France
 - /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | Pierrefonds à la Toussaint 2026: atelier lanterne et soirée d'Halloween | evenements | Pierrefonds, Oise, Hauts-de-France
 - /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | Halloween 2026 au Château de Chantilly avec des enfants: ateliers, nocturnes et spectacle | sorties | Chantilly, Oise, Hauts-de-France
 - /articles/bons-plans/pass-sports-citoyen-dans-l-oise-15-a-cumuler-avec-le-pass-sport-en-2026/ | Pass Sports Citoyen dans l'Oise: 15 € à cumuler avec le pass Sport en 2026 | bons-plans | Beauvais, Oise, Hauts-de-France
-- /articles/parentalite/ateliers-parents-malins-dans-l-oise-quels-rendez-vous-gratuits-choisir-avant-fin-2026/ | Ateliers Parents Malins dans l'Oise: quels rendez-vous gratuits choisir avant fin 2026 ? | parentalite | Plusieurs communes, Oise, Hauts-de-France
 - /articles/cuisine/atelier-de-creme-chantilly-avec-des-enfants-a-partir-de-quel-age-et-comment-reserver/ | Atelier de crème Chantilly avec des enfants: à partir de quel âge et comment réserver | cuisine | Chantilly, Oise, Hauts-de-France
 - /articles/maison/meubles-et-encombrants-a-compiegne-recyclerie-dechetterie-ou-collecte-a-domicile/ | Meubles et encombrants à Compiègne: recyclerie, déchetterie ou collecte à domicile? | maison | Compiègne, Oise, Hauts-de-France
 - /articles/vie-pratique/location-de-voiture-a-beauvais-avec-des-enfants-les-verifications-utiles-avant-de-reserver/ | Location de voiture à Beauvais avec des enfants: les vérifications utiles avant de réserver | vie-pratique | Beauvais, Oise, Hauts-de-France
@@ -140,20 +175,18 @@ Savoir si la famille doit privilégier le billet daté moins cher, le billet No�
 - /articles/evenements/chante-nwel-a-ducos-le-28-novembre-2026-une-soiree-de-noel-creole-en-famille/ | Chanté Nwel à Ducos le 28 novembre 2026: une soirée de Noël créole en famille | evenements | Ducos, Martinique, Martinique
 - /articles/evenements/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/ | Noël au château de Cheverny 2026: billets, mapping et visite en famille | evenements | Cheverny, Loir-et-Cher, Centre-Val de Loire
 - /articles/evenements/foire-aux-santons-de-marseille-2026-en-famille-quand-venir-et-que-voir/ | Foire aux santons de Marseille 2026: dates, inauguration et visite en famille | evenements | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur
-- /articles/evenements/automne-des-gones-2026-a-lyon-quels-ateliers-gratuits-choisir-avec-les-enfants/ | Automne des gones 2026 à Lyon: ateliers et sorties gratuites en famille | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
+- /articles/evenements/bedecine-2026-a-illzach-en-famille-ateliers-et-spectacles-selon-l-age/ | Bédéciné 2026 à Illzach en famille: ateliers, spectacles et billets | evenements | Illzach, Haut-Rhin, Grand Est
 
 ### Historique Radar lié
 
-- opportunity | /articles/evenements/automne-des-gones-2026-a-lyon-quels-ateliers-gratuits-choisir-avec-les-enfants/ | 2026-10-23T09:31:27.871Z
 - opportunity | /articles/evenements/bedecine-2026-a-illzach-en-famille-ateliers-et-spectacles-selon-l-age/ | 2026-10-23T12:33:36.649Z
-- opportunity | /articles/evenements/equita-lyon-2026-en-famille-village-enfants-billets-et-spectacles/ | 2026-10-21T10:43:46.144Z
 - opportunity | /articles/evenements/foire-aux-santons-de-marseille-2026-en-famille-quand-venir-et-que-voir/ | 2026-10-23T15:29:55.218Z
-- opportunity | /articles/evenements/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget/ | 2026-10-20T22:29:05.422Z
 - opportunity | /articles/evenements/halloween-2026-a-la-mer-de-sable-spectacles-parcours-effrayant-et-billets/ | 2026-10-18T12:12:00.071Z
 - opportunity | /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | 2026-10-08T02:18:12.427Z
-- opportunity | /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | 2026-10-19T13:54:07.745Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/ | 2026-10-23T19:58:30.214Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-royal-d-amboise-visite-de-jour-ou-nocturne-aux-chandelles/ | 2026-10-24T06:28:53.730Z
+- opportunity | /articles/evenements/noel-a-provins-2026-en-famille-marche-medieval-ou-visite-guidee/ | 2026-10-24T03:31:56.628Z
+- opportunity | /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | 2026-10-11T19:35:57.703Z
 
 ### Phases 2 et 3
 
