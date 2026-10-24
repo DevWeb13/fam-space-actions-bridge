@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,91 +14,158 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Aveyron
 - Région: Occitanie
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Titre de travail : « Déchets de cuisine à Rodez : sacs orange, composteur ou lombricomposteur pour une famille ? »**
-
-**Angle :** aider les familles de Rodez Agglomération (Aveyron, Occitanie) à choisir et à combiner les solutions locales de tri des restes alimentaires selon leur logement, puis à installer une routine simple avec les enfants. L'agglomération propose des sacs orange gratuits, des composteurs pour les jardins, des lombricomposteurs d'intérieur et des sites de compostage partagé : ces dispositifs ne recueillent pas exactement les mêmes déchets.
-
-## Besoin du lecteur
-
-Comprendre ce qui va dans chaque solution, laquelle convient à une maison avec jardin ou à un appartement, où récupérer le matériel et comment l'utiliser au quotidien sans odeurs ni erreurs de tri. Savoir aussi comment faire participer les enfants de façon simple et adaptée à leur âge, sans transformer le tri en corvée.
-
-## Valeur éditoriale
-
-- **Un choix selon le logement, pas un simple rappel des règles :** composteur individuel de 400 L à 15 € avec contact direct avec la terre ; lombricomposteur à 35 € après sensibilisation, à maintenir à l'intérieur entre 15 et 25 °C ; compostage collectif en pied d'immeuble (composteur de 600 L annoncé à 35 €) ou de quartier ; sacs orange gratuits pour tous les foyers concernés par le service de Rodez Agglomération. Vérifier les modalités pratiques et disponibilités lors de la rédaction.
-- **Expliquer la complémentarité :** les sacs orange acceptent notamment restes de repas, viande, poisson et os, contrairement aux recommandations de compostage domestique. Les sacs fermés à double nœud vont dans le conteneur d'ordures ménagères avec les sacs noirs, ou à côté en collecte porte à porte, et sont ensuite séparés mécaniquement.
-- **Un mode d'emploi familial :** installer un récipient de collecte adapté à la cuisine, attribuer de petites tâches aux enfants, éviter les erreurs fréquentes, équilibrer les matières sèches et humides du compost et réagir en cas d'odeurs ou de moucherons.
-- **Une information locale réellement actionnable :** Point Info-Tri, 39 impasse Abel-Lafleur à Rodez (vendredi 13 h 30–17 h 30 hors distribution itinérante), et accueil de l'Hôtel d'Agglomération, 17 rue Aristide-Briand, pour les habitants de Rodez ; mentionner les points de compostage de quartier sans promettre leur disponibilité sans contrôle. Ne pas généraliser les dispositifs de cette agglomération à tout l'Aveyron.
-- **Différenciation :** les résultats de recherche donnent surtout des pages séparées sur le compostage et les sacs orange. Construire un guide de décision concret, comparatif et orienté vie de famille plutôt qu'une reprise des pages administratives. Sujet durable et utile en octobre 2026, sans dépendance à un événement ponctuel.
-
-## Affiliation
-
-**Aucune offre partenaire pertinente confirmée.** Vérifications ciblées des catalogues/index accessibles de GetYourGuide, Tiqets, Klook, WeGoTrip et KKday pour un atelier ou une prestation de compostage à Rodez : aucune offre locale correspondant au besoin. Les offres touristiques ou hôtelières visibles à Rodez ne sont pas pertinentes pour une démarche domestique ; ne pas ajouter de réservation d'hébergement, de transport ou d'activité sans lien. Les composteurs et sacs distribués par la collectivité ne sont pas des offres des partenaires affiliés listés.
-
-## Sources de départ
-
-- Rodez Agglomération — tri des biodéchets avec les sacs orange, modalités de retrait et de collecte : https://www.rodezagglo.fr/informations-pratiques/dechets/trier-jetter/biodechets/
-- Rodez Agglomération — compostage individuel, collectif et lombricompostage, tarifs, sites et conseils d'entretien : https://www.rodezagglo.fr/informations-pratiques/dechets/reduire-dechets/composter-ses-dechets/
-- Rodez Agglomération — distribution de sacs et conteneurs, contact Point Info-Tri : https://www.rodezagglo.fr/informations-pratiques/dechets/trier-jetter/distribution-sacs-et-conteneurs/
-- Rodez Agglomération — calendrier 2026 de distribution : https://www.rodezagglo.fr/uploads/2026/04/DISTRIBUTION_SACS_2026-web.pdf
-- Service-Public — règles générales du tri des biodéchets, fiche vérifiée le 13 août 2026 : https://www.service-public.gouv.fr/particuliers/vosdroits/F16217
-- ADEME — « Le tri des déchets alimentaires, à la portée de tous » : https://librairie.ademe.fr/economie-circulaire-et-dechets/6565-le-tri-des-dechets-alimentaires-a-la-portee-de-tous.html
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "maison"
+title: "Déchets de cuisine à Rodez: sacs orange ou composteur, que choisir ?"
+subtitle: "Jardin, appartement, immeuble: les solutions de Rodez Agglomération et les bons gestes avec les enfants"
+summary: "À Rodez et dans son agglomération, comparez sacs orange, composteur et lombricomposteur pour trier les restes alimentaires selon votre logement."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "déchets alimentaires Rodez"
+  - "sacs orange Rodez Agglomération"
+  - "composteur Rodez"
+  - "lombricomposteur appartement"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Rodez"
+  department: "Aveyron"
+  region: "Occitanie"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Rodez Agglomération - Le tri des biodéchets avec les sacs orange"
+    url: "https://www.rodezagglo.fr/informations-pratiques/dechets/trier-jetter/biodechets/"
+  - title: "Rodez Agglomération - Composter ses déchets"
+    url: "https://www.rodezagglo.fr/informations-pratiques/dechets/reduire-dechets/composter-ses-dechets/"
+  - title: "Rodez Agglomération - Guide du tri des biodéchets"
+    url: "https://www.rodezagglo.fr/uploads/2025/05/LIVRET-BIODECHETS-2025-Rodez-Agglomeration_web.pdf"
+  - title: "Rodez Agglomération - Calendrier de distribution des sacs 2026"
+    url: "https://www.rodezagglo.fr/uploads/2026/04/DISTRIBUTION_SACS_2026-web.pdf"
+  - title: "Service-Public - Ordures ménagères"
+    url: "https://www.service-public.gouv.fr/particuliers/vosdroits/F16217"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Rodez, dans l'Aveyron, une famille peut trier ses déchets de cuisine sans forcément avoir un jardin ni entretenir un composteur. **Rodez Agglomération propose plusieurs solutions**: sacs orange gratuits, composteur de jardin, lombricomposteur d'intérieur ou compostage partagé. Le bon choix dépend surtout du logement - et de ce que vous jetez après les repas.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+Depuis le 1er janvier 2024, les déchets alimentaires doivent être triés à la source. Les modalités sont organisées localement: celles présentées ici concernent **les habitants desservis par Rodez Agglomération**, et non l'ensemble du département de l'Aveyron. Le cadre général est expliqué sur [Service-Public](https://www.service-public.gouv.fr/particuliers/vosdroits/F16217).
+
+## Quelle solution choisir selon votre logement ?
+
+### Une maison avec un jardin: le composteur à 15 €
+
+Si vous disposez d'un coin de terre, c'est la solution la plus directe pour transformer épluchures, marc de café et petits déchets végétaux en compost utilisable au jardin.
+
+Rodez Agglomération propose des **composteurs en bois ou en plastique de 400 litres à 15 €**. Il faut les poser directement sur la terre, de préférence à l'abri du soleil et du vent: le modèle distribué n'est pas conçu pour fonctionner sur un sol bétonné ou sur un balcon.
+
+Pour bien démarrer, prévoyez à côté du composteur une réserve de feuilles mortes, de broyat ou de carton non plastifié à déchirer. Ces matières sèches seront utiles à chaque apport de déchets humides. Les caractéristiques du matériel et les conseils d'installation figurent dans le [guide de compostage de Rodez Agglomération](https://www.rodezagglo.fr/informations-pratiques/dechets/reduire-dechets/composter-ses-dechets/).
+
+### Un appartement: le lombricomposteur à 35 €, si vous souhaitez vous en occuper
+
+Sans jardin, un lombricomposteur permet de transformer une partie des déchets végétaux de cuisine grâce à des vers spécialisés. L'agglomération en propose **à 35 €, après une sensibilisation au lombricompostage**.
+
+Il faut pouvoir lui réserver un endroit à l'intérieur, entre **15 et 25 °C**: buanderie, cuisine ou autre pièce adaptée. Un balcon exposé au froid ou à la chaleur n'est donc pas un bon emplacement. Cette solution convient à une famille prête à surveiller les apports et l'humidité; elle est moins simple qu'un sac orange pour ceux qui veulent seulement trier sans gérer un petit écosystème.
+
+Le lombricomposteur n'est pas une poubelle pour tous les restes de repas: mieux vaut suivre les consignes données lors de la sensibilisation, en particulier pour les aliments d'origine animale et les quantités apportées. Voir les [conditions de lombricompostage indiquées par la collectivité](https://www.rodezagglo.fr/informations-pratiques/dechets/reduire-dechets/composter-ses-dechets/).
+
+### Un immeuble avec jardin ou un quartier équipé: le compostage partagé
+
+Dans un immeuble disposant d'un espace vert, les habitants peuvent monter un projet commun. Rodez Agglomération annonce un accompagnement par son service déchets et la fourniture de **composteurs collectifs en bois de 600 litres à 35 €**. Ce tarif concerne le dispositif collectif, pas un composteur à acheter par chaque appartement.
+
+Il existe aussi des emplacements de compostage de quartier, notamment au **square Subervie**, au **square Frédéric-Mistral** et **rue de Berlin à Bourran**, à Rodez. D'autres sites sont répertoriés dans [la liste de l'agglomération](https://www.rodezagglo.fr/informations-pratiques/dechets/reduire-dechets/composter-ses-dechets/). Avant d'y apporter vos déchets, demandez au service déchets si le site est toujours en fonctionnement et quelles sont ses modalités d'accès et de dépôt: une adresse publiée ne garantit pas, à elle seule, que le composteur est accessible à tout moment.
+
+### Pas de place, pas de jardin ou pas envie de composter: les sacs orange gratuits
+
+C'est l'option la plus facile à adopter. Les **sacs orange sont fournis gratuitement** aux habitants concernés par le service, y compris à ceux qui possèdent déjà un composteur. Ils accueillent les déchets de cuisine et de table, puis sont séparés des sacs noirs lors du traitement.
+
+Vous pouvez ainsi commencer le tri sans acheter de matériel de compostage ni disposer d'un espace extérieur. Les [consignes locales sur les sacs orange](https://www.rodezagglo.fr/informations-pratiques/dechets/trier-jetter/biodechets/) détaillent leur utilisation.
+
+## Ce qui va au compost et ce qui va dans le sac orange
+
+La différence la plus utile apparaît après un repas: **les restes de viande, de poisson et les os vont dans le sac orange**, alors que la collectivité recommande de les éviter dans un composteur domestique classique, notamment parce qu'ils peuvent attirer les nuisibles. Elle déconseille également d'y mettre le fromage. Les personnes expérimentées peuvent parfois composter certains de ces restes avec des précautions, mais ce n'est pas la règle à retenir pour débuter.
+
+Pour une famille qui composte déjà, la combinaison est donc pratique:
+
+- **Au composteur de jardin:** épluchures, restes de fruits et légumes, marc de café, coquilles d'œufs écrasées, feuilles mortes et petits végétaux, en alternant les matières.
+- **Dans le sac orange:** restes d'assiette, viande, poisson, os, pain, épluchures et autres déchets alimentaires acceptés; le guide local y autorise également les mouchoirs et essuie-tout.
+- **Jamais dans le sac orange:** emballages, capsules de café ou litière minérale. Ne confondez pas déchet alimentaire et emballage ayant contenu un aliment.
+
+Pour les consignes détaillées, consultez le [Guide du tri des biodéchets de Rodez Agglomération](https://www.rodezagglo.fr/uploads/2025/05/LIVRET-BIODECHETS-2025-Rodez-Agglomeration_web.pdf). Sur un composteur partagé ou un lombricomposteur, respectez les règles propres à l'installation plutôt que d'y transposer automatiquement celles du composteur de jardin.
+
+## Une routine qui fonctionne avec des enfants
+
+Le plus efficace est de placer un petit récipient lavable, ou le bioseau équipé d'un sac orange, près de l'endroit où l'on prépare les repas. L'objectif n'est pas de demander aux enfants de mémoriser toutes les consignes: **deux destinations clairement identifiées** suffisent pour commencer.
+
+Un jeune enfant peut apporter les épluchures de fruits et légumes sous la surveillance d'un adulte. Un plus grand peut vérifier si un reste d'assiette relève du sac orange plutôt que du compost. Réservez aux adultes les manipulations des restes de viande, le brassage du composteur et la fermeture des sacs. Après le tri, on se lave les mains.
+
+Pour les sacs orange, le geste important est simple: **faire un double nœud**, puis placer le sac fermé **dans le même conteneur d'ordures ménagères que les sacs noirs**, sans mélanger leur contenu. Lorsque la collecte se fait en porte-à-porte, l'agglomération indique de déposer le sac orange à côté du sac noir. Son [livret pratique](https://www.rodezagglo.fr/uploads/2025/05/LIVRET-BIODECHETS-2025-Rodez-Agglomeration_web.pdf) recommande de sortir le sac orange **une fois par semaine, même s'il n'est pas plein**, afin de limiter les nuisances.
+
+### Odeurs, moucherons: les réflexes utiles
+
+Un composteur de jardin qui sent mauvais manque souvent d'air ou de matières sèches. Ajoutez du carton déchiré, des feuilles mortes ou du broyat, puis mélangez. Si des moucherons apparaissent, enfouissez les restes de fruits et recouvrez-les d'une couche de matière sèche. À l'inverse, si le compost est très sec, humidifiez-le légèrement.
+
+Dans la cuisine, un récipient facile à nettoyer et vidé régulièrement évite que les restes s'accumulent. Pour un lombricomposteur, ne corrigez pas un problème en ajoutant de grandes quantités de nourriture: revenez d'abord aux consignes de la sensibilisation et contrôlez les conditions d'installation. Les [conseils de dépannage de l'agglomération](https://www.rodezagglo.fr/informations-pratiques/dechets/reduire-dechets/composter-ses-dechets/) expliquent notamment comment réagir aux odeurs et aux petites mouches.
+
+## Où récupérer les sacs et demander un composteur à Rodez ?
+
+La distribution itinérante **2026 a eu lieu du 18 mai au 15 juin**: ces dates sont passées. Il reste des points de retrait permanents indiqués par la collectivité:
+
+- **Point Info-Tri**, centre technique communautaire, **39 impasse Abel-Lafleur, 12000 Rodez**: **vendredi de 13 h 30 à 17 h 30**, sauf pendant les périodes de distribution itinérante.
+- **Accueil de l'Hôtel d'Agglomération**, **17 rue Aristide-Briand à Rodez**: retrait de sacs pour les **habitants de la commune de Rodez**, du lundi au vendredi. Le calendrier 2026 précise **8 h 30-12 h et 13 h 30-17 h 30**, avec fermeture à **17 h le vendredi**.
+- **Accueil de la mairie de Luc-la-Primaube**: le calendrier mentionne également une distribution toute l'année.
+
+Le [calendrier officiel 2026](https://www.rodezagglo.fr/uploads/2026/04/DISTRIBUTION_SACS_2026-web.pdf) distingue les conditions de retrait des sacs jaunes et noirs de celles des **sacs orange, accessibles à tous les habitants concernés**. Les nouveaux habitants peuvent avoir à présenter un justificatif de domicile; vérifiez votre situation avant de vous déplacer.
+
+Pour obtenir un composteur, organiser un projet collectif ou confirmer un lieu de retrait et la disponibilité du matériel, contactez le **service Prévention et Gestion des Déchets au 05 65 73 83 23**. Les [coordonnées du Point Info-Tri](https://www.rodezagglo.fr/informations-pratiques/dechets/trier-jetter/distribution-sacs-et-conteneurs/) sont également publiées sur le site de Rodez Agglomération.
+
+Inutile de choisir une solution unique pour toute la famille: un composteur peut recevoir les épluchures, tandis que le sac orange prend en charge les restes qui ne lui conviennent pas. Et sans jardin, les sacs orange permettent déjà de trier les déchets alimentaires au quotidien.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -127,4 +194,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
