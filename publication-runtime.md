@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,94 +14,146 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Vienne
 - Région: Nouvelle-Aquitaine
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Titre de travail :** « Espace Mendès France à Poitiers en famille : planétarium, expériences et ateliers selon l’âge ».
-
-**Angle :** aider les parents à composer une sortie scientifique qui convient vraiment à leurs enfants, plutôt qu’à réserver indistinctement une séance, une exposition ou un atelier. Situé place de la Cathédrale à Poitiers (Vienne), l’Espace Mendès France est un centre de culture scientifique proposant toute l’année des expositions interactives, des animations, des ateliers et des séances de planétarium, avec des formats dès 3 ans.
-
-## Besoin du lecteur
-Comprendre ce que l’on fait concrètement sur place ; choisir entre planétarium, exposition et manipulation selon l’âge (3–6 ans, enfants plus grands, préados) et les centres d’intérêt ; distinguer accès libre, activités payantes et séances sur réservation ; organiser une visite sans mauvaise surprise (durées, accompagnement des moins de 8 ans selon les ateliers, horaires, accès, budget et programme qui change). Donner des pistes pour prolonger la sortie dans le centre historique de Poitiers sans transformer l’article en guide général de la ville.
-
-## Valeur éditoriale
-- **Un lieu, plusieurs expériences :** la visite n’est pas un musée unique à parcourir avec un billet global. Certaines expositions se visitent librement, d’autres sont payantes et/ou guidées ; les ateliers et le planétarium ont leurs propres créneaux, âges et tarifs. Proposer une méthode simple pour assembler une sortie cohérente.
-- **Par âge, avec des exemples réellement programmés :** séances de planétarium « La famille Stellaires » pour 3–6 ans (notamment 23 et 30 décembre 2026), « Noisettes » dès 5 ans (plusieurs dates jusqu’au 2 janvier 2027), « GranPa & Zoé » dès 8 ans ; ateliers scientifiques et numériques selon les séances. Ne pas promettre ces titres toute l’année.
-- **Choix et budget :** « Le petit labo de Mme Lupin » est annoncé en accès libre jusqu’au 30 décembre 2026 ; « Le bazar des illusions » est annoncé à 4 € et à partir de 6 ans jusqu’au 30 décembre. Les séances de planétarium citées affichent 7 € plein tarif, 5 € enfant et d’autres réductions ; prix à contrôler lors de la rédaction. Des séances et expositions sont accessibles sans payer.
-- **Pratique :** centre-ville, accès bus « Baptistère St-Jean », environ 20 min à pied depuis la gare, stationnement payant proche ; horaires généraux mardi–vendredi 9 h–18 h, week-end 14 h–18 h, fermeture lundi et jours fériés, avec exceptions. Préciser que l’horaire d’ouverture du bâtiment ne garantit pas un atelier sans réservation.
-- **Intérêt durable :** programmation renouvelée en automne, hiver et pendant les vacances, donc article utile au-delà d’un événement ponctuel ; ne pas recopier le calendrier exhaustif. La catégorie parentalité est justifiée par le choix d’activités d’éveil à partager entre parents et enfants.
-
-## Affiliation
-**Billetterie de l’activité principale :** aucune offre spécifique à l’Espace Mendès France confirmée chez GetYourGuide, Tiqets ou Klook après recherche ; ne pas présenter un billet d’un autre lieu comme équivalent. Les réservations de l’Espace passent par sa propre programmation (voir Sources de départ).
-
-**Hébergements, uniquement pour les familles de passage qui prolongent la sortie en séjour à Poitiers :**
-- **Booking.com — Le Clos Notre Dame hôtel particulier hypercentre**, 8 rue Saint-Maixent à Poitiers, chambres familiales annoncées, tout près de la cathédrale et du centre historique : https://www.booking.com/hotel/fr/le-clos-notre-dame-poitiers.fr.html
-- **Abritel — Le Cocon du Centre**, appartement entier avec deux chambres pour quatre personnes, dans le centre de Poitiers, cathédrale annoncée à environ six minutes à pied : https://www.abritel.fr/location-vacances/p2707552
-
-Ces fiches sont vérifiées comme offres existantes, sans disponibilité ni prix garantis pour des dates de séjour non précisées. Une seule proposition peut suffire dans l’article si la seconde alourdit le propos.
-
-## Sources de départ
-- **Organisateur — présentation des activités familiales et des âges :** https://emf.fr/emf-en-famille/
-- **Organisateur — programmation actualisée (expositions, ateliers, planétarium) :** https://emf.fr/le-programme/
-- **Organisateur — horaires, accès, tarifs, accessibilité :** https://emf.fr/venir-a-lespace-mendes-france/
-- **Organisateur — vacances de la Toussaint 2026, exemples de formats :** https://emf.fr/102168/les-vacances-de-la-toussaint-2026/
-- **Organisateur — « La famille Stellaires » (3–6 ans) :** https://emf.fr/event/la-famille-stellaires/
-- **Organisateur — « Noisettes » (dès 5 ans) :** https://emf.fr/event/noisettes-a-la-recherche-de-la-planete-ideale/
-- **Organisateur — « GranPa & Zoé » (dès 8 ans) :** https://emf.fr/event/granpa-zoe-mission-lumiere-2/
-- **Tourisme Vienne — fiche du centre et services aux familles :** https://www.tourisme-vienne.com/offres/toutes-offres-patrimoine-culture/espace-mendes-france/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "parentalite"
+title: "Espace Mendès France à Poitiers en famille: que faire selon l’âge ?"
+subtitle: "Planétarium, expositions et ateliers scientifiques: les bons choix pour une sortie avec des enfants"
+summary: "À Poitiers, découvrez comment choisir une séance de planétarium, une exposition ou un atelier à l’Espace Mendès France selon l’âge et le budget."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Espace Mendès France Poitiers en famille"
+  - "planétarium Poitiers enfants"
+  - "ateliers scientifiques Poitiers"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Poitiers"
+  department: "Vienne"
+  region: "Nouvelle-Aquitaine"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Espace Mendès France - En famille"
+    url: "https://emf.fr/emf-en-famille/"
+  - title: "Espace Mendès France - Le programme"
+    url: "https://emf.fr/le-programme/"
+  - title: "Espace Mendès France - Venir, horaires et tarifs"
+    url: "https://emf.fr/venir-a-lespace-mendes-france/"
+  - title: "Espace Mendès France - La famille Stellaires"
+    url: "https://emf.fr/event/la-famille-stellaires/"
+  - title: "Espace Mendès France - Noisettes, à la recherche de la planète idéale"
+    url: "https://emf.fr/event/noisettes-a-la-recherche-de-la-planete-ideale/"
+  - title: "Espace Mendès France - GranPa & Zoé. Mission: Lumière"
+    url: "https://emf.fr/event/granpa-zoe-mission-lumiere-2/"
+  - title: "Espace Mendès France - Le petit labo de Mme Lupin"
+    url: "https://emf.fr/event/le-petit-labo-de-mme-lupin-espace-interactif-et-immersif/"
+  - title: "Espace Mendès France - Le bazar des illusions"
+    url: "https://emf.fr/event/le-bazar-des-illusions/"
+  - title: "Tourisme Vienne - Espace Mendès France"
+    url: "https://www.tourisme-vienne.com/offres/toutes-offres-patrimoine-culture/espace-mendes-france/"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À deux pas de la cathédrale de Poitiers, dans la Vienne, l’Espace Mendès France fait découvrir les sciences aux familles par le jeu, les expériences et les images du ciel. Ce centre de culture scientifique n’est pas un musée où l’on achète un billet pour tout voir: on peut y découvrir une exposition en autonomie, assister à une séance de planétarium ou participer à un atelier, chacun avec ses propres horaires et conditions.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+Le bon réflexe consiste à choisir **une activité principale adaptée à l’âge des enfants**, puis à regarder si une exposition peut compléter la visite. Le centre propose des formats dès 3 ans, mais tous ne conviennent pas aux mêmes âges, comme le montre sa [présentation des activités en famille](https://emf.fr/emf-en-famille/).
+
+## Quel programme choisir selon l’âge des enfants ?
+
+### De 3 à 6 ans: une première découverte du ciel
+
+Pour un jeune enfant, mieux vaut privilégier une séance conçue pour son âge plutôt qu’une projection destinée aux plus grands. **[La famille Stellaires](https://emf.fr/event/la-famille-stellaires/)**, annoncée pour les 3-6 ans, raconte l’aventure de trois voyageurs venus d’un autre système solaire. Les enfants sont invités à les aider à prendre soin de plantes après leur arrivée sur Terre. La projection est précédée d’une découverte du ciel étoilé.
+
+La séance dure **une heure**. Des représentations sont annoncées les **30 octobre, 23 et 30 décembre 2026**; ce sont des dates de programmation, pas un rendez-vous permanent. Pour les enfants qui préfèrent toucher et expérimenter, certaines animations scientifiques proposent aussi des formats adaptés aux 3-6 ans: il faut vérifier l’âge indiqué sur chaque fiche.
+
+### Dès 5 ans: des histoires et des expériences à manipuler
+
+Dans **[Noisettes, à la recherche de la planète idéale](https://emf.fr/event/noisettes-a-la-recherche-de-la-planete-ideale/)**, deux écureuils parcourent les planètes à la recherche de noisettes. L’histoire permet d’aborder ce qui rend la Terre habitable sans commencer par une leçon d’astronomie. Cette séance de planétarium dure une heure et figure à plusieurs dates de l’automne 2026, puis jusqu’au **2 janvier 2027**.
+
+Autre option, sans billet d’entrée: **[Le petit labo de Mme Lupin](https://emf.fr/event/le-petit-labo-de-mme-lupin-espace-interactif-et-immersif/)**. Dans ce bureau de chercheuse rempli d’objets étonnants, les enfants **à partir de 5 ans** explorent des illusions et des phénomènes scientifiques à leur rythme. L’exposition est annoncée en **accès gratuit et visite autonome jusqu’au 30 décembre 2026**. Un livret d’énigmes à **4 €** est proposé à l’accueil, mais il n’est pas obligatoire pour entrer.
+
+### À partir de 8 ans: aller plus loin, ou fabriquer soi-même
+
+Le planétarium propose aussi **[GranPa & Zoé. Mission: Lumière](https://emf.fr/event/granpa-zoe-mission-lumiere-2/)**, pour les adultes et les enfants **dès 8 ans**. L’histoire suit deux personnages qui cherchent à comprendre pourquoi la lumière du Soleil disparaît. Elle est précédée d’une découverte du ciel étoilé; comptez une heure. Plusieurs séances sont annoncées jusqu’au **3 janvier 2027**.
+
+Pour un enfant qui aime surtout agir, les ateliers scientifiques ou numériques peuvent être plus stimulants qu’une projection. On trouve, selon les dates, des expériences de chimie, des enquêtes autour de l’ADN ou des ateliers de création de jeux vidéo pour les **8-12 ans**. Ces derniers durent parfois **deux heures**: un bon choix pour un enfant motivé, moins pour celui qui souhaite simplement passer voir une exposition. Les thèmes, âges et places disponibles changent avec la [programmation officielle](https://emf.fr/le-programme/).
+
+## Peut-on visiter sans réserver ni payer ?
+
+**Oui, pour certaines expositions seulement.** Le centre propose des espaces en accès gratuit pendant les heures d’ouverture. En revanche, une séance de planétarium, un atelier ou une exposition payante ne sont pas compris dans cette visite libre.
+
+Attention à une nuance qui peut prêter à confusion: **[Le bazar des illusions](https://emf.fr/event/le-bazar-des-illusions/)**, exposition interactive à partir de **6 ans**, est présenté comme accessible librement aux horaires d’ouverture, mais son **entrée coûte 4 €**. On y teste notamment des effets d’optique et des dispositifs qui trompent la perception. L’accès n’est plus possible après **17 h** et l’exposition est annoncée jusqu’au **30 décembre 2026**. « Visite libre » ne signifie donc pas toujours « gratuite ».
+
+Pour une première découverte à petit budget, l’exposition gratuite de Mme Lupin peut suffire. Pour une sortie centrée sur l’astronomie, mieux vaut réserver le planétarium et considérer l’exposition comme un complément éventuel.
+
+## Quel budget prévoir pour la sortie ?
+
+Les [tarifs affichés par l’Espace Mendès France](https://emf.fr/venir-a-lespace-mendes-france/) varient selon l’activité:
+
+- **Planétarium:** les séances familiales citées annoncent **7 € au plein tarif**, **5 € au tarif enfant**, **4 € au tarif réduit ou adhérent** et **3,50 € avec Le Joker**, sous conditions.
+- **Animation scientifique d’une heure:** généralement **6 € au plein tarif** et **4 € au tarif réduit**.
+- **Atelier numérique:** généralement **15 € au plein tarif** et **12 € pour les adhérents**, avec des conditions particulières selon l’activité.
+- **Expositions:** certaines sont gratuites; d’autres sont payantes, à un tarif indiqué sur leur fiche.
+
+Le budget dépend donc davantage de la combinaison choisie que du temps passé sur place. Les tarifs spéciaux et les ateliers organisés par des partenaires peuvent différer: vérifiez toujours la fiche de l’activité avant de payer.
+
+## Préparer sa visite sans mauvaise surprise
+
+L’Espace Mendès France se trouve au **1 place de la Cathédrale, à Poitiers**. De **septembre à juin**, les horaires généraux indiqués sont **9 h-18 h du mardi au vendredi**, puis **14 h-18 h le samedi et le dimanche**. Le lundi et les jours fériés, le centre est fermé; des exceptions existent notamment l’été. Le dernier départ pour les expositions payantes est fixé à **17 h**.
+
+Ces horaires correspondent à l’ouverture du lieu, **pas à la disponibilité de chaque activité**. Un atelier peut commencer le matin, être complet ou ne pas avoir lieu le jour choisi. Consultez le [programme et les réservations](https://emf.fr/le-programme/) avant de vous déplacer. Plusieurs animations précisent également que les **moins de 8 ans doivent être accompagnés d’un adulte**: ce point est à contrôler pour la séance retenue.
+
+**Pour venir:** l’arrêt de bus **Baptistère St-Jean** est desservi par les lignes **12, 15 et O**; depuis la gare, comptez environ **20 minutes à pied**. Le stationnement près de la cathédrale est payant, avec notamment le parking des Cordeliers à quelques minutes de marche. Pour une question pratique, le centre indique le **05 49 50 33 08** sur sa [page d’accès](https://emf.fr/venir-a-lespace-mendes-france/).
+
+La fiche de [Tourisme Vienne](https://www.tourisme-vienne.com/offres/toutes-offres-patrimoine-culture/espace-mendes-france/) signale un lieu accessible en poussette et aux personnes à mobilité réduite. Pour des besoins spécifiques liés à une séance ou à un espace précis, mieux vaut contacter l’accueil: l’accessibilité générale du bâtiment ne renseigne pas à elle seule sur les conditions de chaque animation.
+
+Enfin, l’emplacement se prête bien à une sortie en deux temps: après une heure sous les étoiles ou autour d’une expérience, la place de la Cathédrale et les rues du centre historique offrent une promenade à proximité, sans imposer une deuxième activité payante.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -130,4 +182,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
