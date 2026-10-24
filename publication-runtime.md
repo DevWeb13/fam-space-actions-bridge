@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,89 +14,128 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Haute-Loire
 - Région: Auvergne-Rhône-Alpes
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Lac du Bouchet en famille (Haute-Loire) : tour du lac, pauses et activités selon la saison.** Angle : organiser une vraie demi-journée autour du lac, en distinguant la promenade possible toute l'année des loisirs d'été et des conditions hivernales. Situé près de Cayres et du Bouchet-Saint-Nicolas, ce lac volcanique de type maar est entouré de forêt ; son sentier de rive forme une boucle d'environ 3 km, gratuite et accessible toute l'année.
-
-## Besoin du lecteur
-Comprendre où se garer, comment organiser le tour du lac avec des enfants de différents âges, où faire une pause ou pique-niquer, quelles parties sont adaptées à une poussette, quoi observer (paysage volcanique, panneaux, légendes) et quelles activités sont réellement proposées selon la saison. Savoir anticiper le froid à environ 1 200 m d'altitude, la météo et les services fermés hors saison, sans confondre « site ouvert » et « baignade surveillée ».
-
-## Valeur éditoriale
-- **Parcours familial concret :** boucle d'environ 3 km, plage, aire de jeux, bancs et pauses possibles ; accès routier par la D312 entre Cayres et Le Bouchet-Saint-Nicolas. Proposer aussi une courte sortie sans boucle complète pour les plus petits.
-- **Accessibilité à traiter avec prudence :** les fiches touristiques divergent : l'« Aire Respirando » présente un tour aménagé praticable en poussette/fauteuil, tandis que la fiche précise du sentier garantit seulement une **portion accessible entre le restaurant et la plage**. Ne pas promettre une boucle intégralement accessible ; conseiller de vérifier le revêtement et les conditions sur place.
-- **Saisons réellement distinctes :** promenade et découverte géologique toute l'année ; baignade surveillée seulement pendant une période estivale définie (la fiche 2026 annonce du 16 juin au 13 septembre, horaires précis à revérifier) ; pédalos/paddles et restauration soumis à leur propre calendrier. En automne et en hiver, prévoir des chaussures adaptées et ne pas garantir le passage du sentier en cas de neige ou de gel.
-- **Au-delà d'une fiche touristique :** combiner un déroulé de sortie, des alternatives selon l'âge, des repères d'accessibilité, le contexte du cratère volcanique et les informations saisonnières. Aucun doublon avec les quatre articles récents fournis (Mazet-Saint-Voy, Le Puy, La Séauve, France Rénov').
-
-## Affiliation
-**Action principale :** tour du lac et accès gratuits, donc aucune billetterie à proposer. Recherches de visites/billets partenaires (GetYourGuide, Tiqets, Klook) : aucune offre précisément liée à cette promenade n'a été confirmée.
-
-**Hébergements proches, pertinents si la famille prolonge la sortie :**
-- **Abritel — Gîte paisible près du Puy-en-Velay, proche lac du Bouchet**, maison entière à Cayres, annoncée pour 4 personnes, avec cuisine ; lac indiqué à environ 5 minutes en voiture. URL exacte : https://www.abritel.fr/location-vacances/p2110660
-- **Booking.com — Gîte paisible près du Puy-en-Velay, 2 chambres, proche lac du Bouchet (FR-1-582-341)**, logement à Cayres présenté pour jusqu'à 7 personnes dans une autre unité du Domaine des Volcans, à environ 3 km du lac. URL exacte : https://www.booking.com/hotel/fr/gite-cayres-3-pieces-7-personnes-fr-1-582-341.html
-
-Ces annonces sont des pistes de réservation et non des sources pour les faits touristiques. Disponibilités, composition exacte des couchages et conditions à vérifier pour les dates de séjour ; ne pas recommander les deux comme s'il s'agissait de prestations indépendantes sans le préciser (même ensemble de gîtes).
-
-## Sources de départ
-- Office de tourisme Sud Haute-Loire, présentation du site et activités selon la saison : https://www.sudhauteloire-tourisme.fr/les-incontournables/le-lac-du-bouchet/
-- My Haute-Loire, fiche officielle du sentier, 3 km, ouverture annuelle et portion PMR : https://www.myhauteloire.fr/activite-auvergne/sentier-le-tour-du-lac-du-bouchet/
-- My Haute-Loire, Aire Respirando, activités, aire de jeux et indication différente sur l'accessibilité : https://www.myhauteloire.fr/nature-sauvage/aires-et-stations-respirando/aire-respirando-du-lac-du-bouchet/
-- Auvergne-Rhône-Alpes Tourisme, accès, parking et équipements : https://www.auvergnerhonealpes-tourisme.com/fiches/lac-du-bouchet/
-- Auvergne-Rhône-Alpes Tourisme, calendrier 2026 de baignade surveillée : https://www.auvergnerhonealpes-tourisme.com/fiches/baignade-au-lac-du-bouchet/
-- Exploitant du chalet du lac, activités et restauration (horaires saisonniers à confirmer) : https://www.lacdubouchet.fr/activites-lac-bouchet-cayres-43_fr.html
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "activites"
+title: "Lac du Bouchet en famille: tour du lac, baignade et activités"
+subtitle: "Une balade facile en Haute-Loire, avec des pauses à adapter à l’âge des enfants et à la saison"
+summary: "Au lac du Bouchet, près de Cayres, organisez une sortie en famille: boucle de 3 km, jeux, pique-nique, accès en poussette et baignade estivale."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "lac du Bouchet en famille"
+  - "tour du lac du Bouchet"
+  - "lac du Bouchet poussette"
+  - "baignade lac du Bouchet"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Cayres"
+  department: "Haute-Loire"
+  region: "Auvergne-Rhône-Alpes"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "My Haute-Loire - Sentier le Tour du Lac du Bouchet"
+    url: "https://www.myhauteloire.fr/activite-auvergne/sentier-le-tour-du-lac-du-bouchet/"
+  - title: "My Haute-Loire - Lac du Bouchet: accès et équipements"
+    url: "https://www.myhauteloire.fr/site-naturel/lac-du-bouchet/"
+  - title: "My Haute-Loire - Aire Respirando du lac du Bouchet"
+    url: "https://www.myhauteloire.fr/nature-sauvage/aires-et-stations-respirando/aire-respirando-du-lac-du-bouchet/"
+  - title: "Sud Haute-Loire Tourisme - Le lac du Bouchet"
+    url: "https://www.sudhauteloire-tourisme.fr/les-incontournables/le-lac-du-bouchet/"
+  - title: "My Haute-Loire - Baignade au lac du Bouchet, calendrier 2026"
+    url: "https://www.myhauteloire.fr/nl/Auvergne-activiteit/zwemmen-in-het-meer-van-Bouchet/"
+  - title: "Chalet du lac du Bouchet - Activités et restauration"
+    url: "https://www.lacdubouchet.fr/activites-lac-bouchet-cayres-43_fr.html"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Au sud du Puy-en-Velay, près de Cayres, le lac du Bouchet occupe un ancien cratère volcanique entouré de forêt. On vient ici pour faire le tour de l’eau à pied, jouer, pique-niquer et, pendant la saison estivale, profiter de la plage et des loisirs nautiques. La promenade est gratuite: c’est une sortie qui peut tenir en une heure comme occuper une demi-journée, selon l’âge des enfants et les pauses choisies.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Faire le tour du lac ou simplement profiter des berges ?
+
+La boucle au bord de l’eau mesure **environ 3 km**. Le tracé est présenté comme facile et familial par [My Haute-Loire](https://www.myhauteloire.fr/activite-auvergne/sentier-le-tour-du-lac-du-bouchet/). Avec des enfants qui marchent volontiers, on peut prévoir une petite heure de marche, puis garder du temps pour regarder le paysage, jouer ou prendre un goûter. Ce n’est pas un parcours à terminer coûte que coûte: l’intérêt est autant dans les arrêts que dans la boucle.
+
+Pour des petits marcheurs, une autre formule fonctionne bien: rejoindre les abords de la plage, marcher sur une portion du sentier, puis revenir sur ses pas. Cela évite de se retrouver à mi-parcours avec un enfant fatigué. L’[aire de jeux et les espaces de pique-nique](https://www.myhauteloire.fr/site-naturel/lac-du-bouchet/) permettent de prolonger la sortie sans ajouter de kilomètres.
+
+Les bancs signalés autour du lac offrent des haltes appréciables. En revanche, ne comptez pas sur une fontaine ou un point de restauration ouvert à chaque saison: emportez de l’eau et de quoi grignoter.
+
+## Peut-on faire le tour avec une poussette ?
+
+**La boucle entière n’est pas garantie accessible.** Les informations touristiques ne concordent pas totalement. La présentation de l’[Aire Respirando](https://www.myhauteloire.fr/nature-sauvage/aires-et-stations-respirando/aire-respirando-du-lac-du-bouchet/) indique un sentier plat aménagé praticable en poussette et en fauteuil roulant. Mais la [fiche spécifique du tour du lac](https://www.myhauteloire.fr/activite-auvergne/sentier-le-tour-du-lac-du-bouchet/) confirme explicitement l’accessibilité d’une **portion entre l’hôtel-restaurant et la plage**, sans étendre cette garantie à toute la boucle.
+
+Avec une poussette citadine, ou si l’accessibilité en fauteuil est indispensable, mieux vaut privilégier ce secteur et se renseigner sur l’état du revêtement avant de tenter le tour complet. Après de fortes pluies, avec des feuilles mouillées ou du gel, un chemin habituellement facile peut aussi devenir moins confortable.
+
+## Un lac qui raconte l’histoire d’un volcan
+
+Le paysage est une bonne occasion de parler géologie aux enfants sans transformer la promenade en cours magistral. Le lac remplit un **maar**: un cratère creusé par une explosion provoquée lorsque du magma a rencontré de l’eau souterraine. Sa forme presque ronde se remarque particulièrement depuis les berges. Selon [Sud Haute-Loire Tourisme](https://www.sudhauteloire-tourisme.fr/les-incontournables/le-lac-du-bouchet/), cette formation remonte à environ 300 000 ans.
+
+Des pupitres d’interprétation géologique sont signalés sur le site. Pour les plus jeunes, un jeu d’observation suffit: chercher les reflets dans l’eau, comparer les arbres au fil du sentier ou repérer la courbe des rives. À l’automne, les couleurs de la forêt changent complètement l’ambiance de la balade.
+
+## Baignade, pédalos et paddle: uniquement à la bonne période
+
+La plage en herbe est l’un des attraits de l’été, mais **l’accès libre au lac ne signifie pas que la baignade est surveillée toute l’année**. La [fiche de baignade My Haute-Loire pour 2026](https://www.myhauteloire.fr/nl/Auvergne-activiteit/zwemmen-in-het-meer-van-Bouchet/) indique une surveillance du **16 juin au 13 septembre 2026**, du mardi au dimanche l’après-midi. D’autres pages de présentation, moins précises ou plus anciennes, mentionnent seulement juillet et août: pour une sortie baignade, fiez-vous aux dates et horaires affichés pour la saison concernée, ainsi qu’aux consignes sur place. **La saison de surveillance 2026 est terminée.** Les dates de 2027 ne sont pas encore à présumer.
+
+Le [Chalet du lac](https://www.lacdubouchet.fr/activites-lac-bouchet-cayres-43_fr.html) signale des locations de pédalos et de paddles, ainsi que des possibilités de pêche et de location de barques. Ce sont des prestations saisonnières ou dépendantes d’un exploitant, pas des activités garanties chaque jour. Pour les locations nautiques, le numéro indiqué est le **06 32 22 49 75**; vérifiez les conditions, les âges acceptés et les tarifs avant de vous déplacer.
+
+## Où manger et faire une pause ?
+
+L’aire de pique-nique est une solution simple, notamment avec de jeunes enfants. Des toilettes publiques et une aire de jeux figurent parmi les [équipements recensés par My Haute-Loire](https://www.myhauteloire.fr/site-naturel/lac-du-bouchet/), mais leur disponibilité effective peut varier hors saison.
+
+Pour un repas ou une glace avec vue sur l’eau, le Chalet du lac dispose d’un restaurant et d’un bar-glacier. Ses horaires dépendent de la période: consultez [l’exploitant](https://www.lacdubouchet.fr/activites-lac-bouchet-cayres-43_fr.html) avant de prévoir d’y déjeuner. Un pique-nique reste le choix le plus sûr lors d’une sortie en automne ou en hiver.
+
+## Accès et précautions selon la saison
+
+Le lac se rejoint par la **D312, entre Cayres et Le Bouchet-Saint-Nicolas**, avec un parking à proximité, comme le précise la [fiche d’accès touristique](https://www.myhauteloire.fr/site-naturel/lac-du-bouchet/). Le site et le sentier sont annoncés ouverts toute l’année et l’accès à la promenade est gratuit. Cela ne garantit toutefois ni la praticabilité du chemin par neige ou verglas, ni l’ouverture des services.
+
+À **environ 1 200 mètres d’altitude**, le temps peut être frais même lorsque la météo est agréable au Puy-en-Velay. En été, prévoyez de quoi vous couvrir après la baignade; à l’automne, des chaussures qui accrochent sur sol humide; en hiver, vérifiez les conditions routières et renoncez au tour si le sentier est gelé ou enneigé.
+
+Pour une première visite avec de petits enfants, la formule la plus souple reste de commencer près de la plage, d’avancer à leur rythme et de décider sur place si la boucle complète est raisonnable.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -125,4 +164,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
