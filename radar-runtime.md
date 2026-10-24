@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Noël 2026 à Chenonceau : quel jour découvrir les décors en famille ?"
-subtitle: "Noëls et traditions du monde : dates, horaires d'hiver et budget pour une visite avec enfants"
-summary: Du 28 novembre 2026 au 3 janvier 2027, Chenonceau propose un parcours de Noël consacré aux traditions du monde. Aider les familles à choisir leur date et leur horaire, sans confondre visite décorée et animations spéciales non annoncées.
+title: "Noël 2026 à Chenonceau : quand voir les décors en famille ?"
+subtitle: "Du 28 novembre au 3 janvier : salles décorées, horaires de visite, budget et animations réellement annoncées"
+summary: "Pour découvrir les décors de Noël 2026 du château de Chenonceau avec des enfants, choisissez votre jour selon les horaires de billetterie : la visite est plus courte début décembre et plus souple pendant les vacances. Tarifs, parcours et prestations à ne pas confondre."
 category: evenements
 location:
   city: Chenonceaux
@@ -70,18 +75,21 @@ keywords:
   - Noël Chenonceau 2026
   - Noëls et traditions du monde Chenonceau
   - château de Chenonceau décembre 2026 enfants
+  - horaires Noël château Chenonceau
 sources:
-  - title: Agenda communal de Chenonceaux - Noëls et traditions du monde 2026
+  - title: Agenda communal de Chenonceaux — Noëls et traditions du monde 2026
     url: https://www.intramuros.org/chenonceaux/agenda/819144
-  - title: Château de Chenonceau - horaires officiels
+  - title: Château de Chenonceau — horaires officiels 2026
     url: https://www.chenonceau.com/infos-pratiques/horaires/
-  - title: Château de Chenonceau - tarifs 2026
+  - title: Château de Chenonceau — tarifs officiels 2026
     url: https://www.chenonceau.com/infos-pratiques/tarifs/
-  - title: Sud Val de Loire Tourisme - Noël à Chenonceau
+  - title: Château de Chenonceau — billetterie des visites et masterclasses
+    url: https://chateaudechenonceau.tickeasy.com/fr-FR/accueil
+  - title: Sud Val de Loire Tourisme — Noël à Chenonceau
     url: https://www.sudvaldeloire.fr/offres/noel-a-chenonceau-noels-traditions-du-monde-chenonceaux-fr-4445807/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: noel-2026-a-chenonceau-quel-jour-decouvrir-les-decors-en-famille
   decision: Choisir une date et un créneau pour voir les décors de Noël avec les enfants, connaître le coût de la visite et éviter de réserver en supposant qu'un spectacle ou une nocturne non annoncés sont inclus.
@@ -91,40 +99,54 @@ radar:
     dataThrough: 2026-10-21
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Agenda communal de Chenonceaux - Noëls et traditions du monde 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2027-01-03T23:59:00+01:00
 ---
 
-## Mission retenue
+Du **28 novembre 2026 au 3 janvier 2027**, le château de Chenonceau se pare de décors floraux et de mises en scène inspirées des traditions de Noël du monde entier. Avec des enfants, la bonne décision n'est pas tant de chercher un spectacle que de **choisir un créneau laissant assez de temps pour parcourir les salles** : les horaires varient fortement entre le début de décembre et les vacances scolaires.
 
-Noël 2026 au château de Chenonceau, du 28 novembre au 3 janvier 2027 : scénographie « Noëls et traditions du monde » dans les salles, différente d'une visite ordinaire du château.
+## Que découvrira-t-on dans le château à Noël ?
 
-## Pourquoi cette mission
+Pour cette édition « Noëls & traditions du monde », Jean-François Boucher et l'Atelier Floral du château revisitent des coutumes de France, de Grande-Bretagne, d'Allemagne, des Amériques, du Japon et d'Islande. La grande galerie au-dessus du Cher doit prendre des airs de salle de bal viennoise. Dans les cuisines installées dans les piles du pont, les décors évoqueront notamment les épices de l'Inde, les treize desserts provençaux et l'Alsace.
 
-Le meilleur refresh réexaminé, la Carte Avantage Adulte SNCF (238 impressions au pic, 106 récemment), porte un signal GSC « uncertain » : l'article complet sur master explique déjà les réductions, la semaine avec enfant, la rentabilité et les limites des plafonds, toujours cohérents avec SNCF Voyageurs. Pas de correction décisive démontrée. La page forte « Transports à Paris avec des enfants » (2 180 impressions récentes) suggère des prolongements, mais CDG et Orly ont déjà leurs guides distincts : pas de nouvelle décision suffisamment nette ici. Chenonceau apporte une intention saisonnière documentée, absente du catalogue, avant les vacances de Noël.
+C'est donc **une visite des pièces historiques transformées par la scénographie**, pas un marché de Noël ni un parcours de manèges. Avec des enfants, on peut en faire un jeu d'observation : reconnaître un pays, retrouver une tradition ou choisir sa salle préférée. Les créations annoncées sont à découvrir en visitant le château ; aucun spectacle pour enfants n'est à présumer à partir de cette seule annonce.
 
-## Décision du lecteur
+## Quel jour et à quelle heure venir ?
 
-Savoir à quelle période et à quelle heure venir avec les enfants pour profiter de la scénographie, quel budget prévoir et quelles prestations sont effectivement annoncées, sans promettre de spectacle ou d'atelier non confirmé.
+Le calendrier officiel du château donne les **heures de dernier accès à la billetterie**, et non l'heure à laquelle il faut quitter les salles :
 
-## Faits à traiter
+- **Du 28 novembre au 4 décembre**, puis **du 7 au 11** et **du 14 au 18 décembre** : 9 h 30–16 h 30. Privilégiez une arrivée le matin ou en début d'après-midi.
+- **Les week-ends des 5–6 et 12–13 décembre** : 9 h 30–17 h. Une demi-heure supplémentaire pour entrer, mais un week-end potentiellement plus fréquenté.
+- **Du 19 au 25 décembre** : 9 h 30–18 h. Les vacances offrent une plage de visite plus large.
+- **Du 26 au 31 décembre** : 9 h 30–18 h 30. C'est l'amplitude la plus étendue publiée pour la fin de l'année.
+- **Du 1er au 3 janvier 2027** : l'événement se poursuit, mais il faut reconfirmer les heures applicables à janvier 2027 avant de fixer un trajet.
 
-- Dates du 28 novembre 2026 au 3 janvier 2027; thème des traditions de Noël de plusieurs pays et décor floral, selon l'agenda communal et le tourisme local.
-- Tarifs de référence 2026 du château : 19 € adulte, 15 € de 7 à 18 ans, gratuit avant 7 ans; vérifier les conditions famille et le tarif réellement applicable à la date.
-- Horaires de billetterie variables en décembre (week-ends et vacances plus étendus); distinguer dernier accès, fermeture du château et jardins. Recontrôler les horaires de janvier 2027.
-- Ne pas recycler le programme de Noël 2025 : animations ponctuelles, nocturnes, réservation spéciale et éventuels suppléments 2026 restent à vérifier auprès de l'organisateur.
-- L'angle doit rester sur l'expérience de Noël et le choix du jour, non refaire le guide général de Chenonceau.
+Le château ferme **30 minutes après le dernier accès**, puis les jardins **30 minutes après le château**. Ainsi, un dernier accès à 16 h 30 ne laisse pas le temps de faire tranquillement toute la visite intérieure. Pour profiter des décors avec des enfants sans courir, nous viserions plutôt une entrée en matinée ou au moins deux heures avant la fin d'accès affichée.
 
-## Sources de départ
+Attention : certaines fiches d'agenda indiquent 9 h 30–16 h 30 pour toute la période. Elles ne reprennent pas les amplitudes spécifiques de décembre publiées par le château. Pour organiser votre journée, retenez les horaires de l'exploitant et revérifiez-les peu avant le départ.
 
-Agenda communal de Chenonceaux pour l'édition 2026; horaires et tarifs publiés par le château; fiche de Sud Val de Loire Tourisme. Pour les prestations non listées, demander confirmation au château plutôt que déduire du programme 2025.
+## Quel budget prévoir pour la famille ?
 
-## Affiliation
+Les **tarifs individuels 2026 avec brochure** sont de **19 € par adulte**, **15 € de 7 à 18 ans**, et **gratuit pour les moins de 7 ans**. À titre de repère, deux adultes et deux enfants payants représentent **68 €**, contre **38 €** si les deux enfants ont moins de 7 ans.
 
-Tiqets présente un billet d'entrée classique à Chenonceau, sans preuve actuelle de validité pour chaque date de Noël : ne pas affirmer qu'il couvre une animation spéciale. Booking.com référence l'Auberge du Bon Laboureur, à environ 500 m du château, avec une suite familiale; disponibilité et conditions aux dates visées non vérifiées. Ne pas utiliser les pages partenaires pour justifier les faits éditoriaux.
+Il existe aussi une **offre famille à partir de trois enfants payants de 7 à 18 ans** : 15 € par personne de la même famille, adultes compris. Deux adultes et trois enfants concernés paieraient ainsi **75 € au lieu de 83 €** aux tarifs individuels. L'audioguide, disponible selon les modalités du château, coûte davantage que la formule avec brochure. Les personnes en situation de handicap bénéficient d'une gratuité sur présentation de la carte requise ; un tarif spécifique s'applique à l'accompagnant.
 
-## Continuations internes
+Ces montants sont les références officielles 2026, **pas la garantie du prix de chaque billet revendu ni d'une prestation spéciale**. Pour la visite classique, vous pouvez [examiner le billet d'entrée au château de Chenonceau sur Tiqets](https://www.tiqets.com/fr/activites-attractions-chenonceaux-c262292/billets-pour-chateau-de-chenonceau-billet-d-entree-p977880/) : vérifiez la date proposée, le prix final et les conditions. L'offre décrit l'accès au château, aux jardins et aux galeries, mais ne confirme pas à elle seule l'inclusion d'une animation de Noël distincte.
 
-- Le guide existant « Château de Chenonceau en famille : billets, durée et conseils » prend le relais pour poussette, accès TER, jardins, pique-nique et visite habituelle : /articles/sorties/chateau-de-chenonceau-en-famille-billets-duree-et-conseils-avec-des-enfants/
-- Le guide « Noël au château d'Amboise 2026 » sert uniquement à ceux qui veulent comparer une seconde sortie de Noël en Touraine : /articles/evenements/noel-2026-au-chateau-royal-d-amboise-visite-de-jour-ou-nocturne-aux-chandelles/
+## Y a-t-il une nocturne, un atelier ou une réservation spéciale ?
+
+**Au 24 octobre 2026, les annonces consultées ne permettent pas de promettre une nocturne de Noël ni un spectacle familial inclus.** Ne vous fiez pas aux dates des animations de 2025 pour préparer votre visite 2026.
+
+Une prestation distincte figure toutefois déjà à la billetterie du château : des **masterclasses d'art floral les 18, 23 et 30 décembre 2026**, d'environ deux heures, à **90 € par personne**, sur réservation et dans la limite des places. Ce n'est ni une activité gratuite incluse dans le billet ordinaire ni un atelier annoncé spécifiquement pour les enfants.
+
+Pour la visite des salles décorées, vérifiez lors de l'achat si un **créneau horaire** doit être choisi ou confirmé, notamment avec un billet obtenu auprès d'un revendeur. En cas de doute sur une animation, une nocturne ou son supplément éventuel, le château peut être contacté au **02 47 23 90 07**.
+
+## Une visite agréable avec de jeunes enfants
+
+Prévoyez un manteau pour les extérieurs et un rythme souple : les salles décorées sont le cœur de cette sortie, les jardins peuvent venir ensuite selon la météo et l'énergie des enfants. Avec un bébé, emportez un porte-bébé en complément de la poussette, dont l'accès à l'intérieur peut être limité en période d'affluence.
+
+Pour le trajet en TER, les parkings, le pique-nique, les équipements bébé, l'accessibilité et la durée habituelle de visite, consultez notre [guide complet du château de Chenonceau en famille](/articles/sorties/chateau-de-chenonceau-en-famille-billets-duree-et-conseils-avec-des-enfants/) : il permet de préparer les aspects pratiques sans les répéter ici.
+
+Si cette sortie devient un week-end en Touraine, l'[Auberge du Bon Laboureur à Chenonceaux sur Booking.com](https://www.booking.com/hotel/fr/hotellebonlaboureur.html) se trouve à environ 500 mètres du château et propose notamment des catégories de chambres adaptées à certaines compositions familiales. Vérifiez la capacité exacte, la présence de lits pour enfants, le prix et les disponibilités pour vos nuits de décembre ou de janvier avant de réserver.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -132,26 +154,26 @@ Tiqets présente un billet d'entrée classique à Chenonceau, sans preuve actuel
 
 - /articles/sorties/chateau-de-chenonceau-en-famille-billets-duree-et-conseils-avec-des-enfants/ | Château de Chenonceau en famille: billets, durée et conseils avec des enfants | sorties | Chenonceaux, Indre-et-Loire, Centre-Val de Loire
 - /articles/evenements/noel-2026-au-chateau-royal-d-amboise-visite-de-jour-ou-nocturne-aux-chandelles/ | Noël au château d'Amboise 2026: visite, nocturnes et tarifs en famille | evenements | Amboise, Indre-et-Loire, Centre-Val de Loire
+- /articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/ | Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille | evenements | Nevers, Nièvre, Bourgogne-Franche-Comté
 - /articles/sorties/villandry-en-famille-jardins-seuls-ou-chateau-et-jardins/ | Villandry en famille: jardins seuls ou château et jardins ? | sorties | Villandry, Indre-et-Loire, Centre-Val de Loire
 - /articles/voyages/azay-le-rideau-en-famille-une-journee-entre-chateau-et-troglodytes/ | Azay-le-Rideau en famille: une journée entre château et troglodytes | voyages | Azay-le-Rideau, Indre-et-Loire, Centre-Val de Loire
+- /articles/sorties/villa-ephrussi-de-rothschild-en-famille-que-voir-dans-la-villa-et-les-jardins/ | Villa Ephrussi de Rothschild en famille: que voir dans la villa et les jardins? | sorties | Saint-Jean-Cap-Ferrat, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
+- /articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/ | Noël à Trévarez 2026 en famille: dates, horaires et réservation | evenements | Saint-Goazec, Finistère, Bretagne
+- /articles/evenements/nuit-des-chateaux-2026-a-tanlay-visite-aux-bougies-avec-des-enfants-les-16-et-17-octobre/ | Nuit des Châteaux 2026 à Tanlay: visites aux bougies les 16 et 17 octobre | evenements | Tanlay, Yonne, Bourgogne-Franche-Comté
 - /articles/evenements/monument-jeu-d-enfant-2026-a-azay-le-rideau-animaux-caches-atelier-et-contes/ | Monument Jeu d'enfant 2026 à Azay-le-Rideau: animaux cachés et contes en famille | evenements | Azay-le-Rideau, Indre-et-Loire, Centre-Val de Loire
-- /articles/sorties/camp-batisseurs-chinon-famille-2026/ | Camp des bâtisseurs à Chinon: une immersion médiévale en famille jusqu’au 28 août | sorties | Chinon, Indre-et-Loire, Centre-Val de Loire
-- /articles/evenements/marche-de-noel-de-cusset-2026-en-famille-quel-jour-choisir/ | Marché de Noël de Cusset 2026 en famille: quel jour choisir? | evenements | Cusset, Allier, Auvergne-Rhône-Alpes
-- /articles/evenements/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/ | Noël au château de Cheverny 2026: billets, mapping et visite en famille | evenements | Cheverny, Loir-et-Cher, Centre-Val de Loire
 - /articles/bons-plans/amboise-city-pass-2026-quand-devient-il-vraiment-rentable/ | Amboise City Pass 2026: quand devient-il vraiment rentable? | bons-plans | Amboise, Indre-et-Loire, Centre-Val de Loire
 - /articles/parentalite/laep-en-indre-et-loire-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | LAEP en Indre-et-Loire: où aller avec un enfant de moins de 6 ans | parentalite | Tours, Indre-et-Loire, Centre-Val de Loire
 - /articles/cuisine/marche-d-amboise-composer-un-pique-nique-tourangeau-avec-des-enfants/ | Marché d'Amboise: composer un pique-nique tourangeau avec des enfants | cuisine | Amboise, Indre-et-Loire, Centre-Val de Loire
 - /articles/maison/maison-de-vacances-a-amboise-avec-des-enfants-7-criteres-pour-bien-choisir/ | Maison de vacances à Amboise avec des enfants: 7 critères pour bien choisir | maison | Amboise, Indre-et-Loire, Centre-Val de Loire
 - /articles/vie-pratique/transport-scolaire-remi-en-indre-et-loire-que-faire-apres-la-date-limite-2026/ | Transport scolaire Rémi en Indre-et-Loire: que faire après la date limite 2026 | vie-pratique | Tours, Indre-et-Loire, Centre-Val de Loire
+- /articles/sorties/camp-batisseurs-chinon-famille-2026/ | Camp des bâtisseurs à Chinon: une immersion médiévale en famille jusqu’au 28 août | sorties | Chinon, Indre-et-Loire, Centre-Val de Loire
 - /articles/evenements/noel-a-provins-2026-en-famille-marche-medieval-ou-visite-guidee/ | Noël à Provins 2026: marché médiéval, animations et visites en famille | evenements | Provins, Seine-et-Marne, Île-de-France
 - /articles/evenements/chante-nwel-a-ducos-le-28-novembre-2026-une-soiree-de-noel-creole-en-famille/ | Chanté Nwel à Ducos le 28 novembre 2026: une soirée de Noël créole en famille | evenements | Ducos, Martinique, Martinique
+- /articles/evenements/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/ | Noël au château de Cheverny 2026: billets, mapping et visite en famille | evenements | Cheverny, Loir-et-Cher, Centre-Val de Loire
 - /articles/evenements/foire-aux-santons-de-marseille-2026-en-famille-quand-venir-et-que-voir/ | Foire aux santons de Marseille 2026: dates, inauguration et visite en famille | evenements | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur
 - /articles/evenements/bedecine-2026-a-illzach-en-famille-ateliers-et-spectacles-selon-l-age/ | Bédéciné 2026 à Illzach en famille: ateliers, spectacles et billets | evenements | Illzach, Haut-Rhin, Grand Est
 - /articles/evenements/automne-des-gones-2026-a-lyon-quels-ateliers-gratuits-choisir-avec-les-enfants/ | Automne des gones 2026 à Lyon: ateliers et sorties gratuites en famille | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/ | Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/monstrozoo-2026-2027-a-beauval-enquete-libre-ou-visite-guidee-en-famille/ | MonstroZoo 2026-2027 à Beauval: parcours inclus, visite guidée et tarifs | evenements | Saint-Aignan, Loir-et-Cher, Centre-Val de Loire
-- /articles/evenements/halloween-2026-a-mini-world-lyon-la-chasse-aux-31-mechants-en-famille/ | Halloween 2026 à Mini World Lyon: la Chasse aux 31 Méchants en famille | evenements | Vaulx-en-Velin, Rhône, Auvergne-Rhône-Alpes
-- /articles/evenements/luminescences-2026-2027-a-amneville-en-famille-soiree-seule-ou-zoo-et-lanternes/ | Luminescences 2026-2027 au zoo d'Amnéville: billets, tarifs et visite en famille | evenements | Amnéville, Moselle, Grand Est
 
 ### Historique Radar lié
 
@@ -159,12 +181,11 @@ Tiqets présente un billet d'entrée classique à Chenonceau, sans preuve actuel
 - opportunity | /articles/evenements/bedecine-2026-a-illzach-en-famille-ateliers-et-spectacles-selon-l-age/ | 2026-10-23T12:33:36.649Z
 - opportunity | /articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/ | 2026-10-23T06:21:12.326Z
 - opportunity | /articles/evenements/foire-aux-santons-de-marseille-2026-en-famille-quand-venir-et-que-voir/ | 2026-10-23T15:29:55.218Z
-- opportunity | /articles/evenements/halloween-2026-a-mini-world-lyon-la-chasse-aux-31-mechants-en-famille/ | 2026-10-22T12:58:21.691Z
-- opportunity | /articles/evenements/luminescences-2026-2027-a-amneville-en-famille-soiree-seule-ou-zoo-et-lanternes/ | 2026-10-22T09:37:18.560Z
-- opportunity | /articles/evenements/monstrozoo-2026-2027-a-beauval-enquete-libre-ou-visite-guidee-en-famille/ | 2026-10-22T15:49:20.816Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-azay-le-rideau-animaux-caches-atelier-et-contes/ | 2026-10-11T16:33:21.125Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/ | 2026-10-23T19:58:30.214Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-royal-d-amboise-visite-de-jour-ou-nocturne-aux-chandelles/ | 2026-10-24T06:28:53.730Z
+- opportunity | /articles/evenements/noel-a-provins-2026-en-famille-marche-medieval-ou-visite-guidee/ | 2026-10-24T03:31:56.628Z
+- opportunity | /articles/evenements/nuit-des-chateaux-2026-a-tanlay-visite-aux-bougies-avec-des-enfants-les-16-et-17-octobre/ | 2026-10-11T09:17:01.561Z
 
 ### Phases 2 et 3
 
