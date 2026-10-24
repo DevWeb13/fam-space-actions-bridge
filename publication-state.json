@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261024-1159-lac-du-bouchet-en-famille-haute-loire-tour-du-lac-pauses-et-activites-",
+  "lastProcessedCommit": "ea32ecaad9f7b1bd6b2f9c919c3ad6303e69a3c6"
 }
