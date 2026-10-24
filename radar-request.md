@@ -1,6 +1,5 @@
-# action: advance
-
 ---
+action: advance
 title: "Noël à Toulouse 2026 en famille : marchés, Père Noël et patinoire"
 subtitle: "Dates, animations, accès et budget pour profiter des fêtes avec les enfants."
 summary: "Capitole, square Charles-de-Gaulle, Ramblas et Allées enchantées : où aller avec les enfants à Noël 2026, et ce que l'on sait du tarif de la patinoire."
