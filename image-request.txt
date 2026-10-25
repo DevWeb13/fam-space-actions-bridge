@@ -243,3 +243,4 @@ automation/image-20261025-33dbc8b-bessan-toulouse-rodez-cholet-breteuil-0345-f6c
 automation/image-20261025-0948-nice-orleans-parents52-c2b5228|c2b5228a434ae0d60568832ea2798530519d625e
 automation/image-20261025-0948-nice-orleans-parents52-c2b5228|a8030cb7971f754774379a7efb29f800904c0a0f
 automation/image-20261025-1542-arles-navigo-montbazon-salins-17d686-7a91|d295fe17fe44d0a4042d2bc9bfe568b2a032ca3e
+automation/image-20261025-1542-arles-navigo-montbazon-salins-17d686-7a91|2ab160989653c0ce4a50f8f24193f1c840a35c22
