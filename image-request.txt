@@ -238,3 +238,4 @@ automation/image-20261024-0d2188c-bouchet-dziani-chateaux-asterix-toucy-calavon-
 automation/image-20261024-0d2188c-bouchet-dziani-chateaux-asterix-toucy-calavon-72bd|9002f682323900de0b7baabfbd975c23b079e469
 automation/image-20261024-668a71f-nantes-thoiry-orthez-poitiers-ouistreham-2147|efb54ccb348b937e6cdcf3675638104b0928ea35
 automation/image-20261024-668a71f-nantes-thoiry-orthez-poitiers-ouistreham-2147|586af0b3cf8191adf2d4e291f64c7bafdf78e616
+automation/image-20261025-33dbc8b-bessan-toulouse-rodez-cholet-breteuil-0345-f6c2|2b4d65ca2c37582cf99a36c62444b43c9a69bccc
