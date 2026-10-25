@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261025-1959-chateau-de-la-rochefoucauld-en-famille-charente-titre-de-travail-visit",
+  "lastProcessedCommit": "4a95f4535a92d355ec1dc74c7f6dee55df2a721f"
 }
