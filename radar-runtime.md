@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Navigo Liberté+ en famille en 2026 : tarif enfant, passe ou téléphone ?"
-subtitle: Comparer les trajets occasionnels aux tickets classiques et éviter de perdre le tarif réduit d'un enfant.
-summary: En Île-de-France, découvrez quand Navigo Liberté+ est avantageux pour les déplacements irréguliers d'une famille, comment obtenir le tarif enfant et quand préférer Navigo Easy ou imagine R Junior.
+title: "Navigo Liberté+ en famille : quel tarif pour un enfant en 2026 ?"
+subtitle: "Passe Navigo, téléphone ou tickets Navigo Easy : le bon choix pour payer moins lors de trajets occasionnels en Île-de-France."
+summary: Navigo Liberté+ coûte 2,04 € par trajet en métro et 1,02 € pour un enfant éligible sur passe. Découvrez comment souscrire pour un mineur, comparer avec Navigo Easy et repérer les cas où imagine R Junior revient moins cher.
 category: bons-plans
 location:
   city: Paris
@@ -72,21 +77,31 @@ keywords:
   - Navigo Liberté+ ou Navigo Easy famille
   - Navigo Liberté+ téléphone enfant
 sources:
-  - title: "Île-de-France Mobilités — Navigo Liberté+ : tarifs 2026 et plafonnement"
+  - title: "Île-de-France Mobilités — Navigo Liberté+ : tarifs et plafonnement 2026"
     url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/liberte-plus
-  - title: Île-de-France Mobilités — Souscrire pour soi ou pour un mineur
+  - title: Île-de-France Mobilités — Souscrire un contrat Liberté+
     url: https://www.iledefrance-mobilites.fr/aide-et-contacts/navigo-liberte-plus/comment-souscrire-un-contrat-navigo-liberte-plus
-  - title: Île-de-France Mobilités — Tarif réduit et justificatifs
+  - title: Île-de-France Mobilités — Souscription en ligne pour un mineur
+    url: https://www.iledefrance-mobilites.fr/aide-et-contacts/navigo-liberte-plus/souscrire-sur-internet-pour-un-mineur
+  - title: Île-de-France Mobilités — Conditions du tarif réduit
     url: https://www.iledefrance-mobilites.fr/aide-et-contacts/navigo-liberte-plus/quelles-sont-les-conditions-pour-beneficier-dun-tarif-reduit
-  - title: Île-de-France Mobilités — Pas de tarif réduit sur téléphone
+  - title: Île-de-France Mobilités — Pas de tarif réduit Liberté+ sur téléphone
     url: https://www.iledefrance-mobilites.fr/aide-et-contacts/navigo-liberte-plus-sur-telephone/tarif-reduit-sur-telephone
-  - title: Île-de-France Mobilités — Navigo Easy
+  - title: Île-de-France Mobilités — Passe Navigo Easy
     url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/supports/passe-navigo-easy
+  - title: Île-de-France Mobilités — Tarifs officiels 2026
+    url: https://www.iledefrance-mobilites.fr/tarifs-titre-de-transport-en-commun-2026
   - title: Île-de-France Mobilités — Imagine R Junior 2026-2027
     url: https://www.iledefrance-mobilites.fr/actualites/forfait-navigo-imagine-r-souscription-en-ligne
+  - title: Île-de-France Mobilités — Conditions d'accès à Liberté+
+    url: https://www.iledefrance-mobilites.fr/aide-et-contacts/navigo-liberte-plus-sur-telephone/quelles-conditions-navigo-liberte
+  - title: Île-de-France Mobilités — Correspondances Liberté+
+    url: https://www.iledefrance-mobilites.fr/correspondances-navigo-liberte-plus
+  - title: Île-de-France Mobilités — Gratuité des moins de 4 ans
+    url: https://www.iledefrance-mobilites.fr/gratuite-pour-les-enfants-de-moins-de-4-ans
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: navigo-liberte-en-famille-en-2026-tarif-enfant-passe-ou-telephone
   decision: Pour des déplacements familiaux irréguliers en Île-de-France, décider qui doit souscrire Navigo Liberté+, avec quel support pour conserver le tarif enfant, et dans quels cas garder des tickets Navigo Easy ou choisir imagine R Junior.
@@ -99,31 +114,60 @@ radar:
     basis: "La page « Transports à Paris avec des enfants: quel titre choisir pour payer juste? » conserve 2281 impressions sur la semaine récente, avec une position moyenne de 8.722 et 197 % de son pic."
 ---
 
-## Mission retenue
-Créer un guide ciblé sur le contrat Navigo Liberté+ pour les familles qui utilisent occasionnellement les transports franciliens, particulièrement avec un enfant de 4 à moins de 10 ans.
+Pour une famille qui prend le métro ou le bus de temps en temps en Île-de-France, **Navigo Liberté+ permet de payer après les trajets, sans acheter de tickets à l'avance**. En 2026, il est moins cher que les tickets unitaires. Mais le piège concerne les enfants : **le tarif réduit Liberté+ fonctionne sur un passe Navigo personnel, pas sur téléphone**. Et pour un enfant francilien qui se déplace régulièrement, imagine R Junior peut coûter encore moins cher.
 
-## Pourquoi cette mission
-Expansion réellement distincte d'une page forte GSC : le guide Fam Space sur les transports à Paris compare déjà tickets, Navigo Jour/Semaine et Paris Visite, mais pas le contrat Liberté+ et sa souscription pour mineur. Le meilleur refresh disponible, la Carte Avantage Adulte SNCF, répond déjà aux décisions essentielles et sa baisse GSC reste incertaine. L'opportunité saisonnière « Soleils d'hiver à Angers » démarre officiellement le 25 novembre 2026, mais le programme municipal 2026 détaillé n'est pas encore publié : moins documentée pour l'instant.
+## Combien coûte Navigo Liberté+ en 2026 ?
 
-## Décision du lecteur
-Savoir si le paiement au trajet de Liberté+ est préférable aux tickets achetés d'avance pour les déplacements occasionnels de chaque membre du foyer, et comment obtenir le bon tarif sans choisir le mauvais support.
+Le contrat est gratuit à la souscription et les trajets sont facturés le mois suivant, sans abonnement mensuel fixe. Les [tarifs officiels Liberté+](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/liberte-plus), applicables depuis le 1er janvier 2026, sont les suivants :
 
-## Faits à traiter
-- Tarifs 2026 Liberté+ : métro/train/RER 2,04 € ou 1,02 € réduit; bus/tram/câble 1,64 € ou 0,82 € réduit; facturation le mois suivant, souscription gratuite, plafond journalier hors aéroports. Comparer avec tickets unitaires sur Navigo Easy sans recopier le guide touristique général.
-- Enfant de 4 à moins de 10 ans : réduction sur **passe Navigo** après justificatif, **pas sur téléphone**; moins de 4 ans gratuits. Expliquer la souscription par le parent pour un mineur, RIB, pièce d'identité et délais de réception/activation.
-- Ne pas présenter Liberté+ comme meilleur pour tous : distinguer usage irrégulier et trajets quotidiens; pour les moins de 11 ans résidant en Île-de-France, comparer aussi imagine R Junior 2026-2027 (25,20 €/an, conditions de résidence et d'âge).
-- Exemples de budget familial à calculer sur des trajets précis, en séparant les personnes et sans confondre le tarif réduit enfant avec le forfait Navigo Jour. Vérifier les conditions d'aéroport et de correspondance si évoquées.
+- **Métro, train et RER** : 2,04 € au plein tarif ; **1,02 € au tarif réduit**.
+- **Bus, tramway et câble C1** : 1,64 € au plein tarif ; **0,82 € au tarif réduit**.
 
-## Sources de départ
-Les six pages Île-de-France Mobilités ci-dessus, notamment la page Liberté+ mise à jour pour les tarifs 2026 et l'aide à la souscription actualisée le 10 septembre 2026.
+À comparer avec les tickets achetés séparément sur Navigo Easy ou téléphone : **2,55 €** (1,30 € réduit) pour un Ticket Métro-Train-RER et **2,05 €** (1,05 € réduit) pour un Ticket Bus-Tram. Liberté+ évite donc de recharger des tickets et réduit le prix de chaque trajet ordinaire.
 
-## Affiliation
-Aucune offre partenaire pertinente : il s'agit d'un contrat de transports publics pour des trajets du quotidien, non d'une réservation de séjour.
+Les correspondances sont comprises lorsqu'elles respectent les règles du réseau : notamment **1 h 30** après un départ en bus ou tramway et **2 h** après un départ en métro, train ou RER. Une correspondance métro-bus peut ainsi compter pour un seul trajet Liberté+ ; sortir d'une zone contrôlée puis y entrer à nouveau peut en revanche déclencher une nouvelle facturation. Le total quotidien est plafonné au prix du Navigo Jour, soit **12,30 € en 2026**, hors dessertes aéroportuaires spécifiques. Ce plafond ne signifie pas qu'il existe un Navigo Jour enfant à moitié prix.
 
-## Continuations internes
-- Renvoyer vers le guide existant « Transports à Paris avec des enfants : quel titre choisir pour payer juste ? » pour les visiteurs qui comparent Navigo Jour/Semaine, Paris Visite et billets d'aéroport; ne pas réécrire ces comparaisons.
-- Ne pas développer les trajets Orly/CDG : les deux guides Fam Space spécifiques existent déjà.
-- Ne pas confondre ce sujet avec les événements en cours à Montbazon ni les enrichissements Destination Vincennes et Haut-Rhin.
+## Quel support choisir pour un enfant de 4 à moins de 10 ans ?
+
+Pour bénéficier de **1,02 € en métro/RER** ou de **0,82 € en bus/tram**, l'enfant doit avoir son **propre passe Navigo nominatif**, avec un contrat Liberté+ et un justificatif de réduction validé. Le tarif réduit s'applique dès validation du justificatif lors d'une première souscription ; pour un enfant, il prend fin à la fin du mois de son dixième anniversaire. D'autres profils, comme les titulaires de la carte Familles nombreuses, peuvent également être éligibles.
+
+**Ne choisissez pas Liberté+ sur smartphone pour obtenir ce demi-tarif : aucune réduction n'y est applicable**, même si l'enfant y aurait droit sur passe. Et attention aux noms : **Navigo Easy n'est pas le passe Navigo nominatif** qui accueille un contrat Liberté+. Easy sert à charger des tickets à l'unité, y compris des tickets enfant à tarif réduit ; son support coûte 2 € et il peut être prêté, mais chaque voyageur doit avoir son propre support pendant le trajet.
+
+Les **moins de 4 ans** voyagent gratuitement sur les réseaux franciliens, sauf exception comme Filéo, sans titre de transport. Gardez un justificatif d'âge en cas de contrôle.
+
+## Comment souscrire Liberté+ pour son enfant ?
+
+Le parent ou représentant légal peut [souscrire pour un mineur](https://www.iledefrance-mobilites.fr/aide-et-contacts/navigo-liberte-plus/souscrire-sur-internet-pour-un-mineur) en ligne depuis son espace Île-de-France Mobilités ou se rendre en agence. Pour la démarche en ligne, préparez **un RIB**, les informations de l'enfant, une **photo** s'il n'a pas déjà de passe et un **justificatif ouvrant droit au tarif réduit**. Le parcours demande de sélectionner « Je souscris pour un mineur ou un majeur sous tutelle » ; il prévoit une adresse e-mail propre au titulaire mineur et des validations électroniques du titulaire et du payeur. En agence, venez avec l'enfant et le RIB : la photo peut être prise sur place et le passe remis directement.
+
+Si vous commandez un nouveau passe à domicile, prévoyez **jusqu'à 21 jours hors week-ends et jours fériés** après validation d'un dossier complet. Avec un passe Navigo valide déjà en main, le contrat peut être chargé **à partir de 48 heures** après la validation de la souscription. Vérifiez que le tarif réduit est bien actif **avant le premier trajet**.
+
+Liberté+ s'adresse aux personnes **résidant ou travaillant en Île-de-France** : ce n'est donc pas automatiquement le bon produit pour une famille venue simplement passer quelques jours à Paris. Le contrat sur téléphone n'est pas accessible aux résidents hors Île-de-France ; un travailleur francilien non résident peut se renseigner sur la souscription sur passe avec justificatif d'employeur.
+
+## Deux exemples de budget pour deux adultes et un enfant de 7 ans
+
+Supposons que les trois voyageurs soient éligibles à Liberté+, que le tarif réduit de l'enfant soit activé et qu'aucun plafond journalier n'intervienne.
+
+**Un aller-retour en métro par personne** (deux trajets chacun) :
+
+- **Liberté+** : 4 trajets adultes × 2,04 € + 2 trajets enfant × 1,02 € = **10,20 €**.
+- **Tickets à l'unité** : 4 × 2,55 € + 2 × 1,30 € = **12,80 €**.
+- **Économie : 2,60 €** pour cette sortie familiale.
+
+**Un aller-retour en bus ou tramway par personne** :
+
+- **Liberté+** : 4 × 1,64 € + 2 × 0,82 € = **8,20 €**.
+- **Tickets à l'unité** : 4 × 2,05 € + 2 × 1,05 € = **10,30 €**.
+- **Économie : 2,10 €**.
+
+Ces exemples comptent bien les trajets **de chaque membre de la famille**, et non un tarif unique pour le groupe. Les trajets vers **Orly par la ligne 14** ou **CDG par le RER B** relèvent d'une tarification particulière de **14 €** (7 € réduit) avec Liberté+ : ils ne sont pas inclus dans le plafond quotidien ordinaire.
+
+## Quand préférer Navigo Easy ou imagine R Junior ?
+
+**Navigo Easy** reste pratique si vous n'êtes pas éligible à Liberté+, si vous ne voulez pas ouvrir de contrat avec prélèvement bancaire ou si vous avez besoin de tickets immédiatement. Pour un séjour touristique et les comparaisons avec Navigo Jour, Semaine ou Paris Visite, consultez notre guide [des transports à Paris avec des enfants](/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/).
+
+**Imagine R Junior** mérite un calcul à part pour un enfant **résidant en Île-de-France et âgé de moins de 11 ans au 31 décembre de l'année de souscription**. Le forfait annuel 2026-2027 coûte **25,20 € frais de dossier compris** et permet de voyager en illimité dans le cadre de ses conditions. À titre de repère, **25 trajets de métro à 1,02 € coûtent déjà 25,50 €** avec Liberté+ : si l'enfant remplit les conditions et se déplace même assez modestement tout au long de l'année, le forfait Junior peut devenir plus économique. Vérifiez toutefois son éligibilité et ses dates de validité avant de souscrire.
+
+Pour les adultes qui se déplacent tous les jours, comparez plutôt avec Navigo Mois ou Annuel. **Le bon choix peut être différent pour chaque membre du foyer** : Liberté+ pour un parent occasionnel, imagine R Junior pour l'enfant francilien, et tickets Easy pour un proche en visite.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
