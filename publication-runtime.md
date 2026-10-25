@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,88 +14,126 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Haute-Marne
 - Région: Grand Est
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Sujet :** le dispositif local d'écoute et d'accompagnement individuel « Côté Parents 52 », porté par l'Udaf de Haute-Marne à Saint-Dizier et l'association La Margelle à Chaumont.
-
-**Titre de travail :** « Côté Parents 52 : où trouver une écoute gratuite quand la vie de famille se complique en Haute-Marne ? »
-
-**Angle :** expliquer à quels parents ce service s'adresse, dans quelles situations on peut le solliciter, ce qui se passe lors d'un rendez-vous, comment le contacter selon son secteur et quand un autre dispositif est plus adapté. Côté Parents 52 est un service d'entretiens individuels, gratuits et confidentiels, sur rendez-vous : ce n'est ni une garderie, ni une consultation médicale, ni une médiation familiale.
-
-## Besoin du lecteur
-Un parent ou futur parent de Haute-Marne doit pouvoir reconnaître des situations où demander une écoute (désaccords éducatifs, difficultés de communication, écrans, séparation, relations avec un adolescent), comprendre que le service ne se limite pas aux crises graves, connaître les modalités concrètes de contact et savoir vers qui se tourner si son besoin relève plutôt du jeu avec un tout-petit, d'un atelier pour enfant de parents séparés, de la médiation ou d'un accompagnement sur les écrans.
-
-## Valeur éditoriale
-- **Des informations locales réellement exploitables :** Udaf à Saint-Dizier (9 rue du Brigadier Albert) et La Margelle à Chaumont (2 boulevard Thiers), avec rendez-vous préalable. La page Udaf présente globalement les parents d'enfants de 0 à 21 ans, mais le support **Caf du 2 février 2026 distingue 0–21 ans à Saint-Dizier et 0–12 ans à Chaumont** : vérifier cette nuance auprès des responsables avant de présenter les âges comme une règle définitive.
-- **Un fonctionnement à expliquer sans promesse excessive :** la Caf indique qu'environ 60 entretiens ont été réalisés en 2025 et évoque jusqu'à cinq rendez-vous par famille dans son bilan publié en février 2026. Préciser qu'il s'agit d'un bilan, pas d'un droit automatique à cinq séances. Un support Caf mentionne une possibilité de rendez-vous le samedi matin à Saint-Dizier : faire confirmer la disponibilité actuelle.
-- **Un vrai guide d'orientation, pas la reprise de la page Udaf :** distinguer Côté Parents 52 (entretien individuel pour parent), LAEP (jeu libre parent–enfant de moins de six ans), ateliers Pep's (expression des enfants de parents séparés, de 6 à 16 ans), médiation familiale (désaccords entre membres de la famille) et soutien à la parentalité numérique (écrans, usages, contrôle parental).
-- **Conseils pratiques de lecture :** expliquer comment préparer un premier contact sans imposer de dossier ni inventer de procédure, et signaler que les coordonnées, âges d'accueil et créneaux sont à recontrôler avant déplacement. Ne pas médicaliser les difficultés ordinaires ni donner de conseils juridiques personnalisés.
-- **Pourquoi publier maintenant :** le dispositif est toujours présenté par l'Udaf ; la Caf a publié en février 2026 un bilan local apportant des éléments nouveaux et des précisions absentes de la simple fiche de présentation. Les résultats de recherche renvoient surtout aux fiches des organismes, sans comparaison pratique de ces solutions pour les familles.
-
-## Affiliation
-**Aucune offre partenaire pertinente confirmée.** L'action principale est un entretien gratuit d'accompagnement parental, sans achat ni réservation commerciale. Des recherches ciblées sur GetYourGuide, Tiqets et Klook n'ont trouvé aucune offre correspondant à Côté Parents 52 ou à un atelier de parentalité équivalent en Haute-Marne. Les recherches Booking.com et Abritel liées au dispositif n'ont pas révélé d'offre ayant un lien utile avec le besoin. Les autres partenaires de séjour, location, transport ou consigne n'ont pas de rôle naturel dans une démarche locale de soutien aux parents. Ne pas ajouter d'hébergement, de billetterie ou de transport artificiel.
-
-## Sources de départ
-- **Udaf 52, fiche officielle Côté Parents 52** (public, gratuité, confidentialité, rendez-vous, associations et adresses) : https://www.udaf52.fr/les-services-aux-familles/services-soutien-parental-haute-marne/
-- **Caf de la Haute-Marne, webinaire partenaires du 2 février 2026** (p. 12 : bilan 2025, motifs, nombre et durée de l'accompagnement ; visuel du dispositif à examiner pour les âges et contacts) : https://www.caf.fr/sites/default/files/medias/521/partenaires/supports%20webinaires/Webinaire%20Partenaires%2002%2002%202026.pdf
-- **Caf de la Haute-Marne, dispositifs de soutien à la parentalité** (LAEP, médiation, accompagnement scolaire et espaces de rencontre : ne pas les confondre) : https://www.caf.fr/allocataires/caf-de-la-haute-marne/offre-de-service/vie-personnelle/les-dispositifs-de-soutien-la-parentalite
-- **Udaf 52, ateliers Pep's** (6–16 ans, quatre ateliers d'expression et bilan collectif) : https://www.udaf52.fr/les-services-aux-familles/ateliers-enfants-parents-separes/
-- **Udaf 52, soutien à la parentalité numérique** (ateliers et orientation avec Familles Rurales) : https://www.udaf52.fr/les-services-aux-familles/parentalite-numerique/
-- **Caf, présentation nationale des LAEP** (accueil libre des moins de six ans avec un adulte, différence avec une consultation) : https://www.caf.fr/allocataires/aides-et-demarches/thematique-libre/lieu-d-accueil-enfants-parents-laep
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "parentalite"
+title: "Côté Parents 52: une écoute gratuite pour les parents en Haute-Marne"
+subtitle: "À Saint-Dizier et Chaumont, un accompagnement individuel pour parler des difficultés familiales et trouver des pistes adaptées"
+summary: "Conflits, écrans, séparation: comment fonctionne Côté Parents 52, qui peut en bénéficier et où demander un rendez-vous en Haute-Marne."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Côté Parents 52"
+  - "soutien parental Haute-Marne"
+  - "écoute parents Saint-Dizier Chaumont"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Saint-Dizier"
+  department: "Haute-Marne"
+  region: "Grand Est"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Udaf 52 - Côté Parents 52"
+    url: "https://www.udaf52.fr/les-services-aux-familles/services-soutien-parental-haute-marne/"
+  - title: "Caf de la Haute-Marne - Webinaire partenaires du 2 février 2026, bilan 2025 et présentation de Côté Parents 52"
+    url: "https://www.caf.fr/sites/default/files/medias/521/partenaires/supports%20webinaires/Webinaire%20Partenaires%2002%2002%202026.pdf"
+  - title: "Caf de la Haute-Marne - Les dispositifs de soutien à la parentalité"
+    url: "https://www.caf.fr/allocataires/caf-de-la-haute-marne/offre-de-service/vie-personnelle/les-dispositifs-de-soutien-la-parentalite"
+  - title: "Udaf 52 - Ateliers Pep’s"
+    url: "https://www.udaf52.fr/les-services-aux-familles/ateliers-enfants-parents-separes/"
+  - title: "Udaf 52 - Soutien à la parentalité numérique"
+    url: "https://www.udaf52.fr/les-services-aux-familles/parentalite-numerique/"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Quand les disputes se multiplient à la maison ou qu'une séparation bouscule les habitudes, il n'est pas toujours facile de savoir à qui en parler. En Haute-Marne, **Côté Parents 52** propose aux parents et futurs parents des entretiens individuels, gratuits et confidentiels. Le service est assuré par l'Udaf à Saint-Dizier et par l'association La Margelle à Chaumont, sur rendez-vous.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+L'objectif n'est pas de juger les choix éducatifs ni de fournir une recette universelle, mais d'offrir un temps d'échange avec un professionnel formé à la parentalité. C'est ainsi que l'[Udaf de Haute-Marne présente le dispositif](https://www.udaf52.fr/les-services-aux-familles/services-soutien-parental-haute-marne/).
+
+## Peut-on demander de l'aide sans traverser une crise ?
+
+Oui. Le service s'adresse aussi aux parents qui cherchent simplement à prendre du recul: un enfant qui s'oppose à toutes les consignes, des discussions qui tournent systématiquement au conflit, des règles sur les écrans devenues difficiles à tenir ou des relations compliquées avec un adolescent.
+
+Ces situations ne sont pas théoriques. Dans son [bilan présenté le 2 février 2026](https://www.caf.fr/sites/default/files/medias/521/partenaires/supports%20webinaires/Webinaire%20Partenaires%2002%2002%202026.pdf), la Caf de Haute-Marne évoque également les séparations, les deuils et le sentiment d'échec éprouvé par certains parents. Elle recense une soixantaine d'entretiens réalisés en 2025 auprès de familles d'enfants de 3 à 18 ans. Ce chiffre décrit l'activité passée, pas une limite d'âge pour accéder au service.
+
+## Comment se déroule l'accompagnement ?
+
+Le point de départ est un **entretien individuel** où le parent peut exposer ce qui le préoccupe. Il peut venir avec une question précise ou avoir surtout besoin de mettre des mots sur une situation. Le professionnel aide à réfléchir aux difficultés et aux pistes possibles, sans que cela remplace une consultation médicale ou une médiation entre deux personnes en conflit.
+
+La Caf mentionne, dans son bilan de février 2026, **un maximum de cinq rendez-vous par famille** dans le cadre de l'accompagnement proposé. Cela ne signifie pas que chaque famille obtient automatiquement cinq séances: le nombre et les modalités sont à préciser avec l'équipe lors du premier contact.
+
+Il n'est pas nécessaire d'arriver avec un diagnostic ou un récit parfaitement organisé. Pour faciliter l'échange, on peut simplement noter ce qui pose problème, depuis quand, et ce que l'on aimerait voir évoluer. Aucun dossier préalable obligatoire n'est indiqué sur la fiche publique du service.
+
+## Où prendre rendez-vous à Saint-Dizier ou Chaumont ?
+
+**Un contact commun est indiqué par la Caf: 07 45 22 98 05.** Les deux structures reçoivent uniquement sur rendez-vous.
+
+- **Saint-Dizier:** antenne de l'Udaf 52, **9 rue du Brigadier Albert**.
+- **Chaumont:** association La Margelle, **2 boulevard Thiers**.
+
+Attention à une différence entre les documents publics: la [fiche de l'Udaf](https://www.udaf52.fr/les-services-aux-familles/services-soutien-parental-haute-marne/) évoque globalement les futurs parents et les parents d'enfants de **0 à 21 ans**, tandis que le [support de la Caf daté du 2 février 2026](https://www.caf.fr/sites/default/files/medias/521/partenaires/supports%20webinaires/Webinaire%20Partenaires%2002%2002%202026.pdf) affiche **0 à 21 ans autour de Saint-Dizier** et **0 à 12 ans autour de Chaumont**. Si votre enfant est adolescent et que vous dépendez du secteur de Chaumont, mieux vaut appeler avant d'écarter cette possibilité.
+
+Le même support Caf annonce une **possibilité de rendez-vous le samedi matin à Saint-Dizier**, sans calendrier actualisé. Demandez si ce créneau existe toujours au moment de réserver. Dans tous les cas, confirmez l'adresse et les disponibilités avant de vous déplacer.
+
+## Et si l'on cherche plutôt une activité avec son enfant ou une médiation ?
+
+Côté Parents 52 n'est pas le bon interlocuteur pour toutes les situations. D'autres dispositifs du département répondent à des besoins différents.
+
+**Pour partager un moment de jeu avec un tout-petit:** un lieu d'accueil enfants-parents (LAEP) reçoit librement, sans inscription, les enfants de moins de six ans accompagnés d'un adulte. C'est un lieu de rencontre et de jeu, pas une séance individuelle de conseil. La [Caf de Haute-Marne présente notamment le LAEP La Mandarine à Chaumont](https://www.caf.fr/allocataires/caf-de-la-haute-marne/offre-de-service/vie-personnelle/les-dispositifs-de-soutien-la-parentalite).
+
+**Pour aider un enfant à exprimer ce qu'il vit après une séparation:** les [ateliers Pep's de l'Udaf](https://www.udaf52.fr/les-services-aux-familles/ateliers-enfants-parents-separes/) s'adressent aux **6-16 ans**. Ils comprennent un entretien d'information, quatre ateliers d'expression et un temps de bilan collectif. Ici, c'est la parole de l'enfant qui est au centre de la démarche.
+
+**Pour tenter de renouer le dialogue entre membres d'une famille en conflit:** la **médiation familiale** est un accompagnement distinct. La [Caf recense des services de médiation à Chaumont, Langres et Saint-Dizier](https://www.caf.fr/allocataires/caf-de-la-haute-marne/offre-de-service/vie-personnelle/les-dispositifs-de-soutien-la-parentalite), notamment pour les désaccords liés à une séparation ou aux relations familiales.
+
+**Pour travailler précisément sur les usages numériques:** l'[Udaf et Familles Rurales proposent des ressources et des actions de parentalité numérique](https://www.udaf52.fr/les-services-aux-familles/parentalite-numerique/): échanges entre parents, conférences, informations sur les écrans et outils de contrôle parental. C'est une piste complémentaire lorsqu'on cherche des repères pratiques sur ce sujet.
+
+Si vous hésitez entre plusieurs solutions, décrivez brièvement votre besoin lors du premier appel à Côté Parents 52: cela permettra de vérifier si un entretien individuel est adapté ou s'il vaut mieux contacter directement un autre service.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -124,4 +162,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
