@@ -245,3 +245,4 @@ automation/image-20261025-0948-nice-orleans-parents52-c2b5228|a8030cb7971f754774
 automation/image-20261025-1542-arles-navigo-montbazon-salins-17d686-7a91|d295fe17fe44d0a4042d2bc9bfe568b2a032ca3e
 automation/image-20261025-1542-arles-navigo-montbazon-salins-17d686-7a91|2ab160989653c0ce4a50f8f24193f1c840a35c22
 automation/image-20261025-2148-dijon-fleche-aix-moirans-ardeche-chambery-005e2e8|005e2e8b2ac0d2c7f01f6b833d0f12fb88aca5be
+automation/image-20261025-2148-dijon-fleche-aix-moirans-ardeche-chambery-005e2e8|ea2afe53869bb09043892461cb6c1b7028f7ff3e
