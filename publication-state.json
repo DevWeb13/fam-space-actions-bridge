@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261025-1603-sujet-le-compostage-domestique-en-ardeche-categorie-maison-departement",
+  "lastProcessedCommit": "77af0de12cfb7ca6680509d23d49e4b66e7b87bb"
 }
