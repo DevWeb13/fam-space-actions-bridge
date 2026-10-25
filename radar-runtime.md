@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Halloween 2026 au Zoo de La Flèche : entrée offerte aux enfants déguisés ?"
-subtitle: "Du 17 octobre au 1er novembre : comprendre l'offre pour une prochaine visite, les jeux et le billet à prévoir"
-summary: "Halloween au Zoo de La Flèche en 2026 : un enfant déguisé entre-t-il gratuitement ? Dates, billet à acheter, entrée offerte pour revenir, jeu de piste et concours."
+title: "Halloween 2026 au Zoo de La Flèche : l'entrée offerte est pour une prochaine visite"
+subtitle: Jusqu'au 1er novembre, billets à prévoir, déguisements et activités pour les enfants
+summary: Au Zoo de La Flèche, Halloween 2026 se déroule du 17 octobre au 1er novembre. Découvrez ce que gagne réellement un enfant déguisé, le prix de la visite et les jeux proposés.
 category: evenements
 location:
   city: La Flèche
@@ -73,13 +78,15 @@ keywords:
 sources:
   - title: Zoo de La Flèche — Halloween du 17 octobre au 1er novembre 2026
     url: https://www.zoo-la-fleche.com/news-detail/halloween-sinvite-au-zoo-de-la-fleche-pendant-les-vacances-de-la-toussaint
-  - title: Zoo de La Flèche — Billets, tarifs et jeu de piste
+  - title: Zoo de La Flèche — Billets et tarifs 2026
     url: https://www.zoo-la-fleche.com/preparez-votre-visite/billets-et-horaires
   - title: Zoo de La Flèche — Règlement du jeu-concours Halloween 2026
     url: https://www.zoo-la-fleche.com/le-parc/reglement-jeu-concours
+  - title: Zoo de La Flèche — Règlement détaillé du jeu-concours Halloween 2026 (PDF)
+    url: https://www.zoo-la-fleche.com/fileadmin/user_upload/zoo_de_la_fleche/Docs_pro/R%C3%A8glements/Reglement-Jeu-concours-Halloween-2026.pdf
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: halloween-2026-au-zoo-de-la-fleche-entree-offerte-aux-enfants-deguises
   decision: Savoir si venir avant le 1er novembre vaut le déplacement, ce que reçoit réellement un enfant déguisé et quelles activités Halloween sont incluses sans confondre billet d'entrée et bon de retour.
@@ -90,30 +97,42 @@ radar:
     signal: strong_page
     sourceUrl: /articles/sorties/zoo-de-la-fleche-en-famille-tarifs-2026-duree-et-conseils-de-visite/
     basis: "La page « Zoo de La Flèche en famille: tarifs 2026, durée et conseils de visite » conserve 55 impressions sur la semaine récente, avec une position moyenne de 8.673 et 103.8 % de son pic."
+eventEndsAt: 2026-11-01
 ---
 
-## Mission retenue
-Une page événementielle courte sur Halloween 2026 au Zoo de La Flèche, distincte du guide permanent du zoo.
+Au Zoo de La Flèche, les enfants déguisés ont bien droit à une entrée offerte pendant Halloween 2026, **mais pas pour la visite du jour**. L'avantage annoncé concerne **une prochaine visite**, à effectuer au plus tard le 31 décembre 2027. Voilà la distinction à connaître avant de prévoir une sortie pendant les vacances de la Toussaint.
 
-## Pourquoi cette mission
-Le refresh SNCF (238 à 107 impressions, signal incertain) reste utile et détaillé ; les sources SNCF divergent sur le délai d'activation de la carte (5 ou 6 mois), sans correction univoque. L'expansion transports parisiens est déjà couverte sur Navigo Liberté+. L'offre Halloween du zoo est documentée officiellement, se termine le 1er novembre et répond à une décision urgente. Le guide général du zoo est une page forte GSC (55 impressions et 2 clics sur sept jours). Contrôle du catalogue compact de 786 articles avec probableDuplicates : seul le guide général du zoo est proche ; aucune page Halloween sur ce zoo. Publication active : compostage en Ardèche ; Destinations actives : Vincennes et Haut-Rhin ; aucun conflit.
+## Enfant déguisé : qui reçoit l'entrée offerte ?
 
-## Décision du lecteur
-Comprendre qu'un enfant de 3 à 11 ans déguisé reçoit une entrée pour **une visite ultérieure** valable jusqu'au 31 décembre 2027, et **ne bénéficie pas de la gratuité de sa visite Halloween** ; décider de venir maintenant pour les animations ou de réserver une autre période.
+Du **17 octobre au 1er novembre 2026**, le zoo annonce qu'un enfant **de 3 à 11 ans** venu déguisé repart avec une entrée offerte pour revenir au parc. Le déguisement ne dispense donc pas d'acheter le billet nécessaire pour entrer lors de la journée Halloween. L'offre peut être intéressante si vous habitez à proximité ou comptez revenir en Sarthe d'ici fin 2027 ; elle l'est moins si vous ne prévoyez qu'un seul passage.
 
-## Faits à traiter
-Dates du 17 octobre au 1er novembre 2026, horaires annoncés 9 h 30–17 h 30 ; modalités exactes de remise/utilisation de l'entrée future à vérifier. Jeu de piste Baludik annoncé gratuit pendant Halloween alors que la billetterie générale affiche 5 € : préciser la portée de la gratuité, sans supposer un cumul. Livret et concours : question 6 puis QR code, conditions dans le règlement ; animations pédagogiques et quatre jeunes guépards. Billets datés dès 19,50 € (3–11 ans) et 26,50 € (12 ans et plus), prix variables. Ne pas recopier les sections permanentes sur poussette, repas, parking, durée et hébergements.
+Le [programme Halloween publié par le zoo](https://www.zoo-la-fleche.com/news-detail/halloween-sinvite-au-zoo-de-la-fleche-pendant-les-vacances-de-la-toussaint) ne détaille pas les modalités de remise du bon ni toutes ses conditions d'utilisation. **Demandez à l'accueil comment récupérer et utiliser cette entrée future avant de quitter le parc** : mieux vaut ne pas présumer qu'elle sera automatiquement envoyée par courriel ou qu'elle fonctionnera pour n'importe quelle date.
 
-## Sources de départ
-Actualité Halloween 2026 et pages officielles de billetterie et de règlement indiquées ci-dessus.
+## Quel budget prévoir pour la visite Halloween ?
 
-## Affiliation
-Pas de billetterie partenaire vérifiée pour l'entrée du zoo ; piste secondaire d'hébergement familial Booking.com déjà contrôlée. Ne pas présenter la page Booking comme preuve des conditions de l'événement.
+Les billets datés sont affichés **à partir de 19,50 € pour les 3–11 ans** et **26,50 € à partir de 12 ans**. Ces prix sont des minimums : le montant dépend de la date choisie. Pour deux adultes et deux enfants de 3 à 11 ans, le budget d'entrée commence ainsi à **92 €**, hors dépenses supplémentaires. Les moins de 3 ans entrent gratuitement selon la grille habituelle du zoo.
 
-## Continuations internes
-- Renvoyer vers /articles/sorties/zoo-de-la-fleche-en-famille-tarifs-2026-duree-et-conseils-de-visite/ pour les tarifs habituels, l'accès, les poussettes et les hébergements ; éviter tout doublon.
-- Mentionner le billet Halloween et le bon de retour en distinguant strictement achat immédiat et avantage futur.
-- Prévoir une révision ou dépublication événementielle après le 1er novembre 2026.
+Le parc annonce une ouverture **de 9 h 30 à 17 h 30** pendant cette période. L'accès des visiteurs sans pass annuel s'arrête normalement deux heures avant la fermeture : prévoyez donc d'arriver avant **15 h 30**, idéalement le matin pour profiter des activités.
+
+Pour préparer les aspects permanents de la sortie — poussette, pique-nique, parking, accessibilité et autres formules de billets — consultez notre [guide du Zoo de La Flèche en famille](/articles/sorties/zoo-de-la-fleche-en-famille-tarifs-2026-duree-et-conseils-de-visite/).
+
+## Quels jeux et animations sont prévus jusqu'au 1er novembre ?
+
+Le **jeu de piste Baludik** est annoncé **gratuit pendant Halloween**. Il se pratique sur smartphone, avec des énigmes et des défis à résoudre dans le parc. La billetterie générale affiche pourtant un jeu de piste à **5 € pour quatre personnes** : ce tarif correspond à l'offre habituelle présentée sur le site, tandis que l'actualité Halloween annonce une gratuité pendant l'événement. Si vous souhaitez faire plusieurs parcours, demandez sur place lesquels sont inclus plutôt que de supposer que toutes les offres se cumulent.
+
+Les familles reçoivent également à l'entrée un **livret-jeu Halloween gratuit**. Les décors de citrouilles accompagnent la visite, et le zoo met en avant ses **quatre jeunes guépards**, désormais visibles du public, ainsi que les rendez-vous pédagogiques animaliers. La visibilité des animaux et le programme précis peuvent varier : choisissez vos priorités en arrivant.
+
+## Le concours Halloween : les enfants jouent, un adulte participe
+
+Le livret sert aussi à participer à un tirage au sort. Il faut répondre correctement à la **question n° 6**, puis scanner le **QR code** du livret pour transmettre la réponse et une adresse e-mail. Attention : d'après le [règlement officiel du concours](https://www.zoo-la-fleche.com/le-parc/reglement-jeu-concours), **seules les personnes majeures présentes au parc peuvent participer**, avec **une seule participation par personne**.
+
+Dix lots sont annoncés, notamment une expérience de soigneur d'un jour, un pass annuel duo et des entrées pour revenir. Ce concours est **distinct de l'entrée future offerte aux enfants déguisés** : cette dernière n'est pas un prix à gagner au tirage au sort. Le règlement PDF comporte des dates contradictoires pour le tirage et la notification des gagnants ; ne vous fiez pas à une date précise sans confirmation de l'organisateur.
+
+## Et si la sortie devient un week-end ?
+
+Si vous venez de loin, une nuit sur place peut rendre la visite plus tranquille. À La Flèche, l'hébergement [« 2 chambres, 4 à 6 voyageurs en centre-ville, à 5 minutes du zoo » sur Booking.com](https://www.booking.com/hotel/fr/2-chambres-4-a-6-voyageurs-en-centre-ville-a-5-mins-du-zoo.fr.html) propose notamment une option de studio familial pouvant accueillir jusqu'à six personnes. Vérifiez la configuration réelle des couchages, les disponibilités et le prix pour vos dates avant de réserver.
+
+**À retenir pour décider :** venez avant le **1er novembre 2026** si les décors, le jeu de piste et les activités Halloween vous intéressent. Si votre seul objectif est une entrée gratuite immédiate pour un enfant déguisé, l'offre ne correspond pas à ce que vous cherchez.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -121,12 +140,12 @@ Pas de billetterie partenaire vérifiée pour l'entrée du zoo ; piste secondair
 
 - /articles/sorties/zoo-de-la-fleche-en-famille-tarifs-2026-duree-et-conseils-de-visite/ | Zoo de La Flèche en famille: tarifs 2026, durée et conseils de visite | sorties | La Flèche, Sarthe, Pays de la Loire
 - /articles/sorties/halloween-2026-a-france-miniature-en-famille/ | Halloween 2026 à France Miniature avec des enfants: billets et visite | sorties | Élancourt, Yvelines, Île-de-France
-- /articles/evenements/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/ | Noël au château de Cheverny 2026: billets, mapping et visite en famille | evenements | Cheverny, Loir-et-Cher, Centre-Val de Loire
-- /articles/sorties/petit-archeologue-puilaurens-famille-2026/ | Le petit archéologue à Puilaurens: un jeu de piste en famille | sorties | Puilaurens, Aude, Occitanie
-- /articles/evenements/halloween-2026-au-chateau-de-couches-atelier-citrouille-ou-jeu-geant-en-famille/ | Halloween 2026 au château de Couches: atelier citrouille et jeu Mystères & Sortilèges | evenements | Couches, Saône-et-Loire, Bourgogne-Franche-Comté
 - /articles/bons-plans/pass-correzien-comment-profiter-d-une-entree-offerte-a-3/ | Pass Corrézien: comment profiter d'une entrée offerte à 3 | bons-plans | Tulle, Corrèze, Nouvelle-Aquitaine
-- /articles/evenements/halloween-2026-a-mini-world-lyon-la-chasse-aux-31-mechants-en-famille/ | Halloween 2026 à Mini World Lyon: la Chasse aux 31 Méchants en famille | evenements | Vaulx-en-Velin, Rhône, Auvergne-Rhône-Alpes
-- /articles/evenements/foire-aux-santons-de-marseille-2026-en-famille-quand-venir-et-que-voir/ | Foire aux santons de Marseille 2026: dates, inauguration et visite en famille | evenements | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur
+- /articles/evenements/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/ | Noël au château de Cheverny 2026: billets, mapping et visite en famille | evenements | Cheverny, Loir-et-Cher, Centre-Val de Loire
+- /articles/parentalite/zoo-refuge-de-guyane-a-macouria-preparer-une-visite-en-famille/ | Zoo-refuge de Guyane à Macouria: préparer une visite en famille | parentalite | Macouria, Guyane, Guyane
+- /articles/sorties/petit-archeologue-puilaurens-famille-2026/ | Le petit archéologue à Puilaurens: un jeu de piste en famille | sorties | Puilaurens, Aude, Occitanie
+- /articles/bons-plans/pass-4-musees-a-saint-etienne-est-il-interessant-pour-une-famille/ | Pass 4 musées à Saint-Étienne: est-il intéressant pour une famille? | bons-plans | Saint-Étienne, Loire, Auvergne-Rhône-Alpes
+- /articles/evenements/halloween-2026-au-chateau-de-couches-atelier-citrouille-ou-jeu-geant-en-famille/ | Halloween 2026 au château de Couches: atelier citrouille et jeu Mystères & Sortilèges | evenements | Couches, Saône-et-Loire, Bourgogne-Franche-Comté
 - /articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/ | Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants | evenements | Le Mans, Sarthe, Pays de la Loire
 - /articles/voyages/le-mans-sans-voiture-avec-des-enfants-ou-dormir-et-comment-organiser-un-week-end/ | Le Mans sans voiture avec des enfants: où dormir et comment organiser un week-end | voyages | Le Mans, Sarthe, Pays de la Loire
 - /articles/evenements/le-mans-ete-bord-huisne-2026-famille/ | Le Mans l’été au bord de l’Huisne 2026: une sortie gratuite en famille | evenements | Le Mans, Sarthe, Pays de la Loire
@@ -145,15 +164,15 @@ Pas de billetterie partenaire vérifiée pour l'entrée du zoo ; piste secondair
 ### Historique Radar lié
 
 - opportunity | /articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/ | 2026-10-25T17:34:53.718Z
-- opportunity | /articles/evenements/foire-aux-santons-de-marseille-2026-en-famille-quand-venir-et-que-voir/ | 2026-10-23T15:29:55.218Z
 - opportunity | /articles/sorties/halloween-2026-a-france-miniature-en-famille/ | 2026-10-08T18:25:52.752Z
-- opportunity | /articles/evenements/halloween-2026-a-mini-world-lyon-la-chasse-aux-31-mechants-en-famille/ | 2026-10-22T12:58:21.691Z
 - opportunity | /articles/evenements/halloween-2026-au-chateau-de-couches-atelier-citrouille-ou-jeu-geant-en-famille/ | 2026-10-12T14:00:32.202Z
 - opportunity | /articles/evenements/noel-2026-a-chenonceau-quel-jour-decouvrir-les-decors-en-famille/ | 2026-10-24T12:31:27.784Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/ | 2026-10-23T19:58:30.214Z
 - opportunity | /articles/evenements/noel-a-aix-en-provence-2026-en-famille-marches-santons-ou-maneges/ | 2026-10-25T15:16:03.590Z
 - opportunity | /articles/evenements/noel-a-nantes-2026-marche-gratuit-ou-visite-guidee-du-voyage-en-hiver/ | 2026-10-24T15:27:41.430Z
 - opportunity | /articles/evenements/noel-a-nice-2026-en-famille-village-spectacles-gratuits-et-creche-que-choisir/ | 2026-10-25T04:31:33.540Z
+- opportunity | /articles/evenements/noel-a-orleans-2026-en-famille-marches-horaires-et-maneges-apres-noel/ | 2026-10-25T07:29:47.050Z
+- opportunity | /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | 2026-10-24T23:34:36.270Z
 
 ### Phases 2 et 3
 
