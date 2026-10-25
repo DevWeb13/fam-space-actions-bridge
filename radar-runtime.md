@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Noël à Orléans 2026 en famille : marchés, horaires et manèges après Noël"
-subtitle: "Quais de Loire, places de Loire et de la République : quand venir avec des enfants et ce qui reste ouvert après le 27 décembre"
-summary: Dates et horaires confirmés du marché de Noël d'Orléans 2026, lieux à parcourir en famille et distinction avec les manèges prolongés jusqu'au 3 janvier 2027.
+title: "Marché de Noël d’Orléans 2026 en famille : dates, manèges et accès"
+subtitle: "Les marchés ferment le 27 décembre, mais les manèges restent jusqu’au 3 janvier : quand venir avec les enfants ?"
+summary: Du 27 novembre au 27 décembre 2026, le marché de Noël d’Orléans occupe trois secteurs du centre-ville. Horaires, prolongation des manèges, accès en tram et points encore à confirmer pour organiser une sortie familiale.
 category: evenements
 location:
   city: Orléans
@@ -71,13 +76,15 @@ keywords:
   - Noël Orléans enfants
   - manèges Orléans janvier 2027
 sources:
-  - title: Ville d'Orléans - Marché de Noël 2026, lieux, dates et horaires
+  - title: "Ville d’Orléans — Marché de Noël 2026 : dates, lieux et horaires"
     url: https://www.orleans.fr/actualites/detail/marche-de-noel-2026-appel-a-candidature-des-exposants
-  - title: Réseau TAO - transports en commun à Orléans
+  - title: TAO — Réseau de transports d’Orléans Métropole
     url: https://tao-mobilites.fr/fr/
+  - title: Appart’City — Résidence Orléans, équipements et capacité des appartements
+    url: https://www.appartcity.com/en/destinations/france/center-loire-valley/orleans/orleans
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: noel-a-orleans-2026-en-famille-marches-horaires-et-maneges-apres-noel
   decision: Choisir quand et où venir avec des enfants, notamment entre le marché avant le 27 décembre et les seuls manèges prolongés après cette date.
@@ -87,48 +94,73 @@ radar:
     dataThrough: 2026-10-22
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Ville d'Orléans - Marché de Noël 2026, lieux, dates et horaires »; aucune page forte GSC n'est requise.
+eventEndsAt: 2027-01-03
 ---
 
-## Mission retenue
-Guide local du marché de Noël municipal d'Orléans 2026, distinct des autres marchés de Noël déjà publiés.
+Pour profiter des chalets de Noël à Orléans avec les enfants, prévoyez votre sortie **entre le vendredi 27 novembre et le dimanche 27 décembre 2026**. Les manèges sont annoncés **jusqu’au dimanche 3 janvier 2027**, mais cette prolongation ne signifie pas que les marchés restent ouverts après le 27 décembre. C’est la distinction essentielle pour choisir sa date, surtout si vous venez de loin.
 
-## Pourquoi cette mission
-L'annonce municipale confirme l'édition du 27 novembre au 27 décembre et les manèges jusqu'au 3 janvier : publication utile avant l'ouverture. Le refresh LAEP Nantes (signal GSC incertain) a déjà été enrichi le 17 octobre, sans lacune indépendante établie ; Villersexel approche de sa fin saisonnière. L'expansion de la page forte « Transports à Paris avec des enfants » est moins urgente, et ses principales décisions tarifaires ainsi que les accès Orly/CDG sont déjà traités.
+## Marché ou manèges : quel jour choisir ?
 
-## Décision du lecteur
-Savoir s'il faut venir pour les chalets ou pour les manèges, choisir un créneau adapté aux enfants et éviter de se déplacer après la fermeture des marchés.
+- **Pour flâner parmi les exposants et chercher des cadeaux :** venez au plus tard le 27 décembre. Le marché municipal accueille notamment artisans, créateurs et producteurs locaux.
+- **Pour une sortie après Noël, du 28 décembre au 3 janvier :** misez uniquement sur les manèges annoncés en prolongation. Ne comptez pas sur les chalets du marché.
+- **Avec de jeunes enfants :** un passage en journée, à partir de 11 h, sera souvent plus confortable qu’une nocturne. Si vous recherchez les illuminations, privilégiez la fin d’après-midi en anticipant l'affluence.
 
-## Faits à traiter
-Ville : quais de Loire, place de Loire, place de République ; marché du 27/11 au 27/12/2026, 11 h-20 h, vendredi jusqu'à 21 h, samedi jusqu'à 22 h ; manèges prolongés jusqu'au 03/01/2027. Vérifier programmation enfant, gratuité d'accès, tarifs des manèges, éventuelles exceptions les 24-25 décembre, itinéraire et accessibilité avant de les affirmer. Ne pas reprendre les animations et emplacements de l'édition 2025 comme faits de 2026.
+La [Ville d’Orléans confirme les dates et la prolongation des manèges](https://www.orleans.fr/actualites/detail/marche-de-noel-2026-appel-a-candidature-des-exposants) dans son annonce de l’édition 2026.
 
-## Sources de départ
-Annonce 2026 de la Ville d'Orléans ; réseau TAO pour les accès et perturbations.
+## Où se promener dans le centre d’Orléans ?
 
-## Affiliation
-Aucune billetterie partenaire naturelle pour un marché municipal. Pour les familles en séjour, Appart'City Confort Orléans (Booking.com, 4 rue de Lahire) propose des appartements avec kitchenette et des logements familiaux ; contrôler l'occupation réelle à la réservation.
+Trois secteurs sont annoncés pour le marché : **les quais de Loire, la place de Loire et la place de la République**. Ils permettent de construire une promenade dans le centre-ville plutôt que de prévoir plusieurs déplacements en voiture.
 
-## Continuations internes
-- Vérifier l'absence de doublon exact : `probableDuplicates` ne remonte à Orléans que des sujets distincts (MOBE, composteur, balade).
-- Lier le guide MOBE d'Orléans seulement comme solution de repli par mauvais temps, sans en répéter la visite.
-- Ne pas développer les marchés de Noël de Strasbourg, Mulhouse ou d'autres villes déjà couverts.
+Pour une visite avec poussette ou des enfants qui marchent peu, choisissez un point d’arrivée dans le centre et adaptez la longueur de la balade à leur fatigue. La mairie n’a pas encore détaillé la répartition des chalets, des manèges et des éventuelles animations entre ces lieux : impossible, à ce stade, de garantir qu’une attraction précise se trouvera sur une place donnée. N’utilisez pas un plan ou une liste d’animations de Noël 2025 comme programme de 2026.
+
+## Quels sont les horaires du marché de Noël 2026 ?
+
+L’ouverture annoncée est **tous les jours à 11 h** :
+
+- **Du dimanche au jeudi :** fermeture à 20 h.
+- **Le vendredi :** fermeture à 21 h.
+- **Le samedi :** fermeture à 22 h.
+
+Ces horaires concernent le marché tel qu’annoncé par la mairie. **Les éventuels horaires particuliers des 24 et 25 décembre, ainsi que ceux des manèges après le 27 décembre, ne sont pas encore confirmés** dans cette annonce. Si vous prévoyez de venir à l’une de ces dates, vérifiez le programme municipal actualisé avant de partir.
+
+## Animations, manèges et budget : ce qui reste à confirmer
+
+La programmation détaillée pour les enfants n’est pas encore publiée dans la source municipale 2026 consultée : ni présence du Père Noël, ni ateliers, ni spectacle précis ne doivent être considérés comme acquis. Les **tarifs des manèges** et leurs éventuelles conditions d’âge ou de taille ne sont pas davantage précisés. Aucun billet d’entrée général n’est annoncé pour la promenade dans les espaces du marché, mais prévoyez un budget distinct pour les attractions, les boissons et les achats.
+
+Avec plusieurs enfants, le plus simple est de fixer à l’avance le nombre de tours de manège autorisés, puis de vérifier les prix affichés sur place. Cela évite de construire un budget sur les tarifs de l’édition précédente.
+
+## Comment venir en tram et circuler avec les enfants ?
+
+Le **tram A du réseau TAO** dessert le centre d’Orléans, notamment les stations **République** et **Royale-Châtelet**. Depuis la gare d’Orléans, il permet de rejoindre le centre avant de poursuivre à pied vers les places et les quais. Consultez [TAO](https://tao-mobilites.fr/fr/) le jour de votre sortie pour l’itinéraire, les horaires du retour et les éventuelles perturbations.
+
+Les lieux annoncés sont des espaces publics du centre-ville, mais l’accessibilité exacte des installations temporaires n’est pas encore documentée pour 2026. En poussette ou en fauteuil, tenez compte des pavés éventuels, des files d’attente et de l’affluence ; pour un besoin d’accessibilité particulier, demandez confirmation à la mairie avant le déplacement.
+
+## Et si la météo ne permet pas une longue promenade ?
+
+Pour garder une idée de sortie à l’intérieur, le [MOBE d’Orléans en famille](https://www.fam-space.fr/articles/activites/mobe-d-orleans-en-famille-fossiles-jeux-et-biodiversite/) constitue une alternative autour des fossiles, des jeux et de la biodiversité. Vérifiez ses horaires propres au jour choisi : le musée ne suit pas nécessairement ceux du marché de Noël.
+
+## Rester une nuit à Orléans avec des enfants
+
+Si vous transformez la sortie en week-end, l’**Appart’City Confort Orléans**, au **4 rue de Lahire**, propose notamment un appartement de deux pièces pouvant accueillir **jusqu’à quatre personnes**, avec cuisine équipée. Cette formule peut être pratique pour préparer le petit déjeuner ou un repas simple avec les enfants. Vous pouvez [consulter les logements et les conditions pour votre famille sur Booking.com](https://www.booking.com/hotel/fr/appart-city-orla-c-ans.fr.html) : vérifiez la capacité réellement proposée pour l’âge de chaque enfant, le tarif et les disponibilités à vos dates.
+
+**À retenir avant de réserver votre déplacement :** le marché s’arrête le 27 décembre ; seuls les manèges sont annoncés jusqu’au 3 janvier. Pour une visite les jours fériés ou après Noël, attendez la confirmation des horaires particuliers et du programme définitif.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
-- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
-- /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
 - /articles/activites/mobe-d-orleans-en-famille-fossiles-jeux-et-biodiversite/ | MOBE d’Orléans en famille: fossiles, jeux et biodiversité | activites | Orléans, Loiret, Centre-Val de Loire
+- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
 - /articles/maison/composteur-gratuit-a-orleans-metropole-comment-en-profiter-en-2026/ | Composteur gratuit à Orléans Métropole: comment en profiter en 2026 | maison | Orléans, Loiret, Centre-Val de Loire
-- /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | Marché de Noël d'Amiens 2026 en famille: horaires, Père Noël et patinoire | evenements | Amiens, Somme, Hauts-de-France
-- /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | Marché de Noël de Bordeaux 2026 en famille: horaires, animations et budget | evenements | Bordeaux, Gironde, Nouvelle-Aquitaine
-- /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | Marché de Noël de Reims 2026 en famille: horaires, grande roue et animations | evenements | Reims, Marne, Grand Est
 - /articles/sorties/chasse-motifs-loire-orleans-famille-2026/ | Chasse aux motifs de Loire à Orléans: une balade gratuite pour les 6 à 12 ans | sorties | Orléans, Loiret, Centre-Val de Loire
+- /articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/ | Noël à Trévarez 2026 en famille: dates, horaires et réservation | evenements | Saint-Goazec, Finistère, Bretagne
+- /articles/evenements/marche-de-noel-de-cusset-2026-en-famille-quel-jour-choisir/ | Marché de Noël de Cusset 2026 en famille: quel jour choisir? | evenements | Cusset, Allier, Auvergne-Rhône-Alpes
+- /articles/evenements/noel-a-nantes-2026-marche-gratuit-ou-visite-guidee-du-voyage-en-hiver/ | Noël à Nantes 2026: marché de Noël et Voyage en hiver en famille | evenements | Nantes, Loire-Atlantique, Pays de la Loire
+- /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
 - /articles/maison/maison-de-vacances-dans-le-loiret-en-famille-les-criteres-a-verifier-avant-de-reserver/ | Maison de vacances dans le Loiret en famille: les critères à vérifier avant de réserver | maison | Orléans, Loiret, Centre-Val de Loire
 - /articles/parentalite/chateau-de-chamerolles-en-famille-visite-libre-ou-guidee-en-2026/ | Château de Chamerolles en famille: visite libre ou guidée en 2026 ? | parentalite | Chilleurs-aux-Bois, Loiret, Centre-Val de Loire
 - /articles/cuisine/cueillir-pommes-et-poires-a-mezieres-lez-clery-ce-qu-il-faut-verifier-avant-de-partir/ | Cueillir pommes et poires à Mézières-lez-Cléry: ce qu'il faut vérifier avant de partir | cuisine | Mézières-lez-Cléry, Loiret, Centre-Val de Loire
 - /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | Thoiry Lumières Sauvages 2026-2027: dates, billets et visite en famille | evenements | Thoiry, Yvelines, Île-de-France
-- /articles/evenements/noel-a-nantes-2026-marche-gratuit-ou-visite-guidee-du-voyage-en-hiver/ | Noël à Nantes 2026: marché de Noël et Voyage en hiver en famille | evenements | Nantes, Loire-Atlantique, Pays de la Loire
 - /articles/evenements/noel-2026-a-chenonceau-quel-jour-decouvrir-les-decors-en-famille/ | Noël à Chenonceau 2026: décors, nocturnes et tarifs en famille | evenements | Chenonceaux, Indre-et-Loire, Centre-Val de Loire
 - /articles/evenements/noel-gaulois-2026-au-parc-asterix-billet-malin-noel-ou-flex-en-famille/ | Noël Gaulois 2026 au Parc Astérix: billets, glissades et spectacles en famille | evenements | Plailly, Oise, Hauts-de-France
 - /articles/evenements/train-du-pere-noel-a-toucy-2026-horaires-tarifs-et-reservation/ | Train du Père Noël à Toucy 2026: horaires, tarifs et réservation | evenements | Toucy, Yonne, Bourgogne-Franche-Comté
@@ -138,19 +170,20 @@ Aucune billetterie partenaire naturelle pour un marché municipal. Pour les fami
 - /articles/evenements/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/ | Noël au château de Cheverny 2026: billets, mapping et visite en famille | evenements | Cheverny, Loir-et-Cher, Centre-Val de Loire
 - /articles/evenements/foire-aux-santons-de-marseille-2026-en-famille-quand-venir-et-que-voir/ | Foire aux santons de Marseille 2026: dates, inauguration et visite en famille | evenements | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur
 - /articles/evenements/bedecine-2026-a-illzach-en-famille-ateliers-et-spectacles-selon-l-age/ | Bédéciné 2026 à Illzach en famille: ateliers, spectacles et billets | evenements | Illzach, Haut-Rhin, Grand Est
+- /articles/evenements/automne-des-gones-2026-a-lyon-quels-ateliers-gratuits-choisir-avec-les-enfants/ | Automne des gones 2026 à Lyon: ateliers et sorties gratuites en famille | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 
 ### Historique Radar lié
 
+- opportunity | /articles/evenements/automne-des-gones-2026-a-lyon-quels-ateliers-gratuits-choisir-avec-les-enfants/ | 2026-10-23T09:31:27.871Z
 - opportunity | /articles/evenements/bedecine-2026-a-illzach-en-famille-ateliers-et-spectacles-selon-l-age/ | 2026-10-23T12:33:36.649Z
 - opportunity | /articles/evenements/foire-aux-santons-de-marseille-2026-en-famille-quand-venir-et-que-voir/ | 2026-10-23T15:29:55.218Z
-- opportunity | /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | 2026-10-19T13:54:07.745Z
-- opportunity | /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | 2026-10-21T07:36:18.372Z
-- opportunity | /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | 2026-10-20T00:30:38.975Z
 - opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
 - opportunity | /articles/evenements/noel-2026-a-chenonceau-quel-jour-decouvrir-les-decors-en-famille/ | 2026-10-24T12:31:27.784Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/ | 2026-10-23T19:58:30.214Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-royal-d-amboise-visite-de-jour-ou-nocturne-aux-chandelles/ | 2026-10-24T06:28:53.730Z
 - opportunity | /articles/evenements/noel-a-nantes-2026-marche-gratuit-ou-visite-guidee-du-voyage-en-hiver/ | 2026-10-24T15:27:41.430Z
+- opportunity | /articles/evenements/noel-a-provins-2026-en-famille-marche-medieval-ou-visite-guidee/ | 2026-10-24T03:31:56.628Z
+- opportunity | /articles/evenements/noel-gaulois-2026-au-parc-asterix-billet-malin-noel-ou-flex-en-famille/ | 2026-10-24T09:33:57.174Z
 
 ### Phases 2 et 3
 
