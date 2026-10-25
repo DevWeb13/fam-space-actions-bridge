@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261025-0801-village-du-pere-noel-a-la-forteresse-de-montbazon-2026-animations-atel",
+  "lastProcessedCommit": "c083f97285078cf15f92150b423134ca08a70dc7"
 }
