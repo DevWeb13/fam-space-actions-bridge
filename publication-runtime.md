@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,89 +14,131 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Charente
 - Région: Nouvelle-Aquitaine
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Château de La Rochefoucauld en famille (Charente)** — Titre de travail : « Visiter le château de La Rochefoucauld avec des enfants : que découvre-t-on et comment préparer la sortie ? »
-
-Angle : proposer une vraie visite familiale de ce château habité par une même lignée depuis des siècles, en distinguant les parties à parcourir librement des bibliothèques et archives présentées lors d'une visite guidée. À La Rochefoucauld-en-Angoumois, ce monument associe vestiges médiévaux, architecture Renaissance, pièces historiques et collections de livres et documents anciens.
-
-## Besoin du lecteur
-Savoir ce que les enfants peuvent voir et comprendre dans le château, quels espaces méritent qu'on s'y attarde selon leur âge, comment se déroule la visite libre et la partie guidée, et comment organiser une sortie sans mauvaise surprise : accès, escaliers et poussettes, durée à prévoir sans l'inventer, horaires, budget, fermetures et possibilités de prolonger la journée ou de dormir sur place.
-
-## Valeur éditoriale
-- Expliquer simplement ce qui distingue le donjon médiéval, les galeries de la cour Renaissance inspirées de l'Italie et les bibliothèques : plusieurs époques à repérer concrètement avec les enfants plutôt qu'un cours d'histoire.
-- Montrer que le billet annoncé inclut la visite libre et une présentation guidée des bibliothèques et de la salle des archives ; ne pas laisser croire que toutes les salles sont guidées en continu ni promettre des animations enfantines non confirmées.
-- Donner des repères pratiques : site ouvert habituellement de 10 h à 19 h sauf mardi (dernière entrée 18 h), poussettes à laisser à l'entrée, petits chiens uniquement portés ; préciser que l'accès à certaines parties peut comporter des escaliers, à confirmer auprès du site.
-- **Point à vérifier avant rédaction définitive :** la même page officielle affiche deux barèmes contradictoires (12 €/adulte et 6 €/enfant de 4 à 12 ans dans le bloc supérieur, mais 10 € et 5 € plus bas). Ne pas présenter un tarif comme certain sans vérification ; privilégier la version la plus récente si elle est confirmée par le gestionnaire. La page conserve aussi des mentions de fermetures datées de 2025/2026 : vérifier les exceptions de fin 2026.
-- Sujet durable et distinct des articles récents consacrés à Angoulême : il apporte des conseils d'usage et des éléments historiques à interpréter, pas seulement une fiche de tarifs.
-
-## Affiliation
-- **Billetterie principale :** recherches ciblées chez GetYourGuide, Tiqets et Klook ; aucune offre réservable spécifique au château confirmée. Ne pas inventer de billet partenaire ; la visite relève de l'accueil du château.
-- **Booking.com — Logis de Fornel**, chambres d'hôtes au centre de La Rochefoucauld, à environ 500 m du château selon la fiche, avec chambres familiales signalées. URL exacte : https://www.booking.com/hotel/fr/logis-de-fornel.fr.html . Capacité exacte selon composition familiale et disponibilité à vérifier pour les dates choisies.
-- **Abritel — Joli logement indépendant dans maison de campagne**, logement de 55 m² annoncé pour quatre personnes, une chambre et canapé-lit double, cuisine, jardin et parking ; la fiche situe le château à environ quatre minutes en voiture. URL exacte : https://www.abritel.fr/location-vacances/p2226572 . Disponibilité et tarifs à vérifier selon les dates.
-- Ces deux hébergements sont des pistes naturelles pour les familles transformant la visite en week-end ; ne pas suggérer qu'une nuitée est nécessaire pour visiter le château. Les pages partenaires n'établissent aucun fait historique ni tarif de visite.
-
-## Sources de départ
-- Site du château — informations pratiques, horaires, modalités, tarifs à départager et contact : https://www.chateau-la-rochefoucauld.com/informations-pratiques/
-- Site du château — histoire de la famille et des différentes campagnes de construction : https://www.chateau-la-rochefoucauld.com/histoire/
-- Site du château — architecture, galeries Renaissance et détails à observer : https://www.chateau-la-rochefoucauld.com/architecture/
-- Site du château — bibliothèques et collections : https://www.chateau-la-rochefoucauld.com/bibliotheques/
-- Site du château — salle des archives : https://www.chateau-la-rochefoucauld.com/bibliotheques/archives/
-- Ministère de la Culture — présentation patrimoniale du monument pour les Journées du patrimoine 2026 (événement passé, à ne pas annoncer comme à venir) : https://journeesdupatrimoine.culture.gouv.fr/w/391796/evenement/19652797/visite-du-chateau-de-la-rochefoucauld
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "activites"
+title: "Visiter le château de La Rochefoucauld en famille: parcours, tarifs et conseils"
+subtitle: "Du donjon médiéval aux galeries Renaissance, les détails à observer avec les enfants et les précautions avant de partir"
+summary: "En Charente, le château de La Rochefoucauld se découvre en famille. Que voir avec les enfants, comment se déroule la visite et quel budget prévoir en 2026 ?"
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "château de La Rochefoucauld en famille"
+  - "visite château La Rochefoucauld enfants"
+  - "tarifs château de La Rochefoucauld 2026"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "La Rochefoucauld-en-Angoumois"
+  department: "Charente"
+  region: "Nouvelle-Aquitaine"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Château de La Rochefoucauld - informations pratiques"
+    url: "https://www.chateau-la-rochefoucauld.com/informations-pratiques/"
+  - title: "Château de La Rochefoucauld - histoire de la famille"
+    url: "https://www.chateau-la-rochefoucauld.com/histoire/"
+  - title: "Château de La Rochefoucauld - architecture"
+    url: "https://www.chateau-la-rochefoucauld.com/architecture/"
+  - title: "Château de La Rochefoucauld - bibliothèques"
+    url: "https://www.chateau-la-rochefoucauld.com/bibliotheques/"
+  - title: "Château de La Rochefoucauld - archives"
+    url: "https://www.chateau-la-rochefoucauld.com/bibliotheques/archives/"
+  - title: "Charentes Tourisme - Château de La Rochefoucauld, fiche 2026"
+    url: "https://www.infiniment-charentes.com/fiche-sit/chateau-de-la-rochefoucauld-5666092/"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À La Rochefoucauld-en-Angoumois, en Charente, ce château toujours lié à la famille qui lui a donné son nom permet de traverser plusieurs siècles d'histoire en une seule sortie. On y découvre des tours de forteresse, une cour aux galeries Renaissance, des pièces meublées et des collections de livres anciens. Pour les enfants, l'intérêt est de comparer ce qu'ils voient: un château conçu pour se défendre n'a pas la même allure qu'une demeure destinée à impressionner ses visiteurs.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Trois époques à repérer avec les enfants
+
+**Les tours et le donjon: le château fort.** Les premières fortifications remontent aux environs de l'an 980, et le donjon carré au XIe siècle. Les tours ont ensuite été transformées et surélevées, notamment au XVe siècle. Depuis l'extérieur et les espaces accessibles, demandez aux enfants où ils auraient placé les gardes et comment on pouvait surveiller les alentours. L'[histoire racontée par le château](https://www.chateau-la-rochefoucauld.com/histoire/) permet de replacer ces constructions dans la longue histoire de la famille La Rochefoucauld.
+
+**La cour et ses galeries: la Renaissance.** Au XVIe siècle, le château change de visage. Des galeries à arcades sur trois niveaux, inspirées des palais italiens, bordent la cour. C'est l'endroit idéal pour chercher les formes qui se répètent, compter les étages ou comparer les grandes ouvertures avec les tours plus anciennes. Sur une porte de la chapelle figurent notamment les lettres « F » et « A », pour François de La Rochefoucauld et Anne de Polignac. La [présentation architecturale officielle](https://www.chateau-la-rochefoucauld.com/architecture/) décrit ces détails ainsi que le grand escalier Renaissance, qui compte 108 marches.
+
+**Les pièces meublées: la vie au château.** Les salles historiques permettent de quitter les batailles et les façades pour s'intéresser aux habitants: comment se chauffait-on, où préparait-on les repas, à quoi servaient les différentes pièces ? Les plus jeunes peuvent se concentrer sur quelques objets ou décors marquants; les plus grands pourront comparer les usages d'autrefois avec ceux d'aujourd'hui. Les pièces effectivement ouvertes peuvent varier: mieux vaut ne pas bâtir toute la sortie autour d'une salle précise.
+
+## Visite libre et présentation guidée: quelle différence ?
+
+Le [château annonce](https://www.chateau-la-rochefoucauld.com/informations-pratiques/) une **visite libre du château**, complétée par une **visite guidée des bibliothèques et de la salle des archives**, incluse dans le billet. Cela ne signifie pas qu'un guide accompagne les visiteurs dans toutes les pièces. Pour une famille, cette formule a un avantage: prendre son temps dans les espaces en visite libre, puis écouter les explications dans les parties réservées à la présentation guidée.
+
+Les [bibliothèques](https://www.chateau-la-rochefoucauld.com/bibliotheques/) abritent environ 18 000 volumes, principalement anciens, consacrés notamment à l'histoire, aux sciences et aux voyages. On peut y faire remarquer aux enfants les reliures, les armoiries et la différence entre un livre ancien et un livre actuel.
+
+Dans la [salle des archives](https://www.chateau-la-rochefoucauld.com/bibliotheques/archives/), des milliers de documents retracent plusieurs siècles: correspondances, actes et autres papiers conservés par la famille. Pour les plus grands, c'est une occasion concrète de comprendre comment les historiens retrouvent des traces du passé. Pour les plus petits, cette partie plus explicative peut demander davantage d'attention. **Les horaires et les modalités de la présentation guidée ne sont pas détaillés en ligne**: renseignez-vous à l'accueil, surtout si vous arrivez en fin de journée.
+
+## À quel âge la sortie est-elle intéressante ?
+
+Avec un enfant de maternelle, privilégiez les tours, les galeries et quelques pièces qui attirent son regard. Il n'est pas nécessaire de tout commenter: une petite chasse aux formes ou aux détails architecturaux suffit à donner un fil conducteur.
+
+À partir de l'école élémentaire, on peut proposer un jeu d'observation: trouver ce qui appartient au Moyen Âge, à la Renaissance ou à une époque plus récente. Les adolescents intéressés par l'histoire pourront approfondir le rôle de la famille et la conservation des livres et archives.
+
+La visite n'est toutefois pas présentée comme un parcours d'animations spécialement conçu pour les enfants. C'est avant tout une découverte patrimoniale à adapter à leur curiosité et à leur endurance.
+
+## Horaires, tarifs et précautions avant de partir
+
+D'après les [informations pratiques du château](https://www.chateau-la-rochefoucauld.com/informations-pratiques/), l'ouverture habituelle est de **10 h à 19 h, tous les jours sauf le mardi**, avec **dernière entrée à 18 h**. La fiche publiée par [Charentes Tourisme pour 2026](https://www.infiniment-charentes.com/fiche-sit/chateau-de-la-rochefoucauld-5666092/) confirme les tarifs suivants:
+
+- **Adulte: 12 €**.
+- **Enfant de 4 à 12 ans: 6 €**.
+- **Moins de 4 ans: gratuit**.
+
+Attention: une section plus ancienne du site du château affiche encore **10 € et 5 €**. Les montants de **12 € et 6 €** sont ceux repris dans la fiche touristique datée de 2026; il reste prudent de les confirmer avant le déplacement. Le tarif spécial des Journées du patrimoine ne s'applique pas à une visite ordinaire.
+
+**En hiver, vérifiez impérativement la date.** Les pages consultées mentionnent une fermeture annuelle entre début janvier et la mi-février, mais n'en donnent pas exactement les mêmes bornes; le site conserve aussi des annonces de jours fériés passés. Pour une visite autour de Noël, du Nouvel An ou pendant la fermeture hivernale, demandez confirmation au château plutôt que de vous fier au seul horaire hebdomadaire.
+
+Le château demande de **laisser les poussettes à l'entrée**. Son grand escalier compte 108 marches, sans que cela signifie que toutes doivent être empruntées pour chaque formule de visite. Si une personne marche difficilement, ou si vous venez avec un tout-petit, demandez quels espaces sont accessibles sans escalier et si un parcours partiel est possible. Aucune durée précise de visite individuelle n'est annoncée: prévoyez une marge, notamment pour la partie guidée.
+
+Le château se trouve à **La Rochefoucauld-en-Angoumois (16110)**. La [fiche de l'office de tourisme relayée par Charentes Tourisme](https://www.infiniment-charentes.com/fiche-sit/chateau-de-la-rochefoucauld-5666092/) signale du stationnement à proximité et des toilettes. Pour organiser votre arrivée, vérifiez l'emplacement du parking et l'accès à pied avant de partir avec de jeunes enfants.
+
+**Contact du château: 05 45 63 52 71** ou **amis-du-chateau@wanadoo.fr**, coordonnées publiées sur son [site officiel](https://www.chateau-la-rochefoucauld.com/informations-pratiques/). Un appel permet surtout de confirmer les ouvertures exceptionnelles, la présentation guidée des bibliothèques et les conditions d'accès adaptées à votre famille.
+
+Après la visite, une promenade dans le centre de La Rochefoucauld-en-Angoumois peut prolonger la sortie sans ajouter une seconde visite payante. Et si vous envisagez un week-end en Charente, le château peut constituer une étape parmi d'autres: il n'est pas nécessaire de dormir sur place pour en profiter.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -125,4 +167,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
