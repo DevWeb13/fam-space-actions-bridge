@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,38 +60,32 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Festival MARMOE 2026 à Montreuil : spectacles et ateliers selon l'âge des enfants"
-subtitle: Du 4 au 29 novembre, choisir une sortie gratuite ou payante et savoir quand réserver
-summary: À Montreuil, MARMOE 2026 réunit spectacles, cinéma, musique et ateliers pour les enfants. Quelles dates et activités choisir selon l'âge, le budget et les réservations ?
+title: "Festival MARMOE 2026 à Montreuil : quelles sorties choisir avec les enfants ?"
+subtitle: "Du 4 au 29 novembre : spectacles gratuits, ateliers à réserver et activités payantes selon l'âge"
+summary: MARMOE 2026 se déroule dans plusieurs lieux de Montreuil. Repérez les spectacles et ateliers adaptés aux enfants, les vrais tarifs et les réservations nécessaires, notamment les 4, 7, 8 et 22 novembre.
 category: evenements
 location:
   city: Montreuil
   department: Seine-Saint-Denis
   region: Île-de-France
 keywords:
-  - festival Marmoe Montreuil 2026
-  - Marmoe 2026 programme enfants
+  - festival MARMOE Montreuil 2026
+  - programme MARMOE 2026 enfants
   - spectacles enfants Montreuil novembre 2026
+  - ateliers gratuits MARMOE
 sources:
-  - title: Ville de Montreuil - MARMOE 2026
+  - title: Ville de Montreuil - Festival MARMOE 2026
     url: https://www.montreuil.fr/marmoe2026
-  - title: Ville de Montreuil - Programme officiel MARMOE 2026 (PDF, 60 pages)
+  - title: Ville de Montreuil - Programme officiel MARMOE 2026 (60 pages)
     url: https://www.montreuil.fr/sites/default/files/medias/document/2026/10/programme_marmoe_2026.pdf
-  - title: Ville de Montreuil - Toc-Toc et l'environnement, 8 novembre 2026
+  - title: Ville de Montreuil - Toc-Toc et l'environnement, 8 novembre
     url: https://www.montreuil.fr/agenda/toc-toc-et-lenvironnement-clown-spectacle-jeunesse
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: festival-marmoe-2026-a-montreuil-spectacles-et-ateliers-selon-l-age-des-enfants
   decision: Choisir une ou deux propositions MARMOE adaptées à l'âge de ses enfants, à la date disponible et au budget, en distinguant entrée libre, gratuit sur réservation et billet payant.
@@ -89,49 +95,70 @@ radar:
     dataThrough: 2026-10-22
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Ville de Montreuil - MARMOE 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-11-29
 ---
 
-## Mission retenue
-Présenter le festival jeune public MARMOE, réparti dans plusieurs lieux de Montreuil du 4 au 29 novembre 2026, avec une sélection réellement utile par âge, date et prix.
+Du **4 au 29 novembre 2026**, le festival MARMOE (Mois des Arts à Montreuil pour l'Enfance) propose spectacles, concerts, cinéma et ateliers dans plusieurs lieux de Montreuil. Il n'existe **ni entrée unique ni tarif commun** : certaines activités sont gratuites et accessibles librement, d'autres gratuites sur réservation, d'autres encore payantes. Pour organiser une sortie, le plus utile est de partir de l'âge de l'enfant et du créneau disponible, puis de vérifier les conditions de la séance dans le [programme municipal 2026](https://www.montreuil.fr/sites/default/files/medias/document/2026/10/programme_marmoe_2026.pdf).
 
-## Pourquoi cette mission
-Le refresh du guide P+R de Strasbourg (signal GSC incertain) a été relu sur master : les tarifs, durées et conditions correspondent encore aux quatre sources officielles, sans amélioration décisive établie. L'expansion de la page forte sur les transports parisiens (2 281 impressions récentes) passe après : Navigo Liberté+, Orly et CDG ont déjà des pages distinctes. MARMOE commence le 4 novembre, possède un programme officiel 2026 détaillé et n'a pas de page dédiée dans le catalogue de 791 articles.
+## Mercredi 4 novembre : deux propositions gratuites, mais pas les mêmes réservations
 
-## Décision du lecteur
-Pouvoir sélectionner une sortie réalisable avec ses enfants et savoir s'il faut réserver, plutôt que parcourir quarante propositions ou confondre les tarifs des différents lieux.
+**Jardins fantastiques**, à La Locale, convient dès **3 ans**. Cet atelier d'arts plastiques propose de composer un paysage imaginaire avec des jeux d'ombres et de transparence. Deux séances sont annoncées, à **10 h 30 et 14 h**, pour **1 h 30** chacune. C'est **gratuit, mais la réservation par courriel est nécessaire** à associationlescousines@gmail.com. Une bonne option pour un enfant qui aime fabriquer et expérimenter plutôt que rester assis devant une scène.
 
-## Faits à traiter
-- Dates : 4–29 novembre 2026, lieux multiples ; aucune entrée ou billetterie unique pour tout le festival.
-- Repères : 4 novembre, La Relève (dès 6 ans, gratuit) et ateliers Jardins fantastiques (dès 3 ans, gratuits) ; week-end familial du 7–8 novembre au Théâtre public de Montreuil ; 8 novembre, Toc-Toc et l'environnement (dès 3 ans, gratuit mais réservation obligatoire).
-- Comparer les propositions gratuites et payantes : Olalaland dès 8 ans, 9–27 € ; 22 novembre, Pierre et le Loup (entrée libre dans la limite des places) et boum familiale payante ; préciser les conditions de chaque séance.
-- Se fonder sur le PDF daté 2026 : une page municipale « Tout pour les Marmoe(s) » conserve des jours et dates de l'édition précédente (5–9 novembre), à ne pas recopier. Vérifier les âges dans les fiches détaillées quand le sommaire diverge.
+Pour les **6 ans et plus**, **La Relève** raconte la naissance d'un groupe de hip-hop et parle d'amitié, de musique et d'écologie. Le spectacle dure **50 minutes** au Café La Pêche, à **14 h ou 15 h 30**. L'entrée est **gratuite et libre**, sans réservation indiquée dans le programme. Attention à ne pas programmer l'atelier de 14 h et le spectacle de 14 h : leurs horaires se chevauchent.
 
-## Sources de départ
-La page municipale MARMOE 2026, son programme officiel PDF de 60 pages et les fiches municipales des spectacles retenus.
+## Les 7 et 8 novembre : un week-end familial à composer selon son budget
 
-## Affiliation
-Aucune offre partenaire de billetterie vérifiée. Si un séjour de plusieurs jours est pertinent, évoquer sobrement l'ibis Styles Paris Mairie de Montreuil sur Booking.com (suite familiale annoncée, capacité et dates à confirmer), sans inventer de prix.
+Le Théâtre public de Montreuil accueille **Tout pour les MARMOE(s)**, avec lectures jeunesse, animations et activités parents-enfants. La plupart des propositions de ce week-end sont gratuites, mais deux activités ont un tarif spécifique :
 
-## Continuations internes
-- Renvoyer vers le guide Fam Space du Salon du livre jeunesse de Montreuil (25–30 novembre) uniquement si utile : événement distinct, ne pas répéter ses billets et horaires.
-- Renvoyer vers le guide Fam Space « Transports à Paris avec des enfants » pour les titres de transport, sans redévelopper cette question.
+- **Fabrique ta machine à dessiner**, atelier parent-enfant dès **5 ans**, samedi 7 et dimanche 8 à **13 h 30** : **5 €**, sur réservation auprès du théâtre.
+- **Petits contes sous l'océan**, courts métrages au cinéma Le Méliès pour les **3-5 ans** : séances le samedi à **11 h et 16 h**, puis le dimanche à **16 h** ; **4 €**, réservation auprès du cinéma.
+
+Pour les enfants **dès 8 ans**, **Olalaland** est un spectacle visuel et musical d'une heure au Théâtre public de Montreuil, avec dessins projetés et univers fantaisiste. Les séances sont prévues le **mercredi 4 à 15 h**, le **samedi 7 à 11 h et 16 h** et le **dimanche 8 à 16 h**. Comptez **9 à 27 €** selon le tarif applicable ; la réservation se fait auprès du théâtre. C'est le choix à privilégier si la famille veut un véritable spectacle plutôt qu'une succession d'animations.
+
+Le **dimanche 8 novembre à 11 h**, autre option pour les plus jeunes : **Toc-Toc et l'environnement**, chez Comme Vous Émoi. Dès **3 ans**, ce spectacle participatif de **45 minutes** aborde la nature et le recyclage avec humour. Il est **gratuit, mais la réservation est obligatoire**. La [fiche municipale de Toc-Toc](https://www.montreuil.fr/agenda/toc-toc-et-lenvironnement-clown-spectacle-jeunesse) donne accès à la réservation et indique le **09 50 77 67 89** pour se renseigner. Ne confondez donc pas « gratuit » et « sans billet ».
+
+## Dimanche 22 novembre : Pierre et le Loup ou une boum avec les enfants ?
+
+Deux propositions intéressantes se tiennent presque en même temps, dans des lieux différents. Mieux vaut **en choisir une** plutôt que d'essayer de les enchaîner.
+
+**Pierre et le Loup, revu et pas corrigé !** commence à **16 h** dans la salle des fêtes de l'Hôtel de ville. Corinne Masiero raconte une version revisitée du conte, accompagnée par l'Ensemble Dénote. Le spectacle dure **50 minutes**, convient **dès 4 ans** et l'entrée est **libre dans la limite des places disponibles**. Les portes ouvrent à **15 h 30** : venir en avance est plus prudent, sans garantie de place.
+
+La **Boum familiale des Loupiotes** démarre à **15 h 30** à La Marbrerie pour **trois heures** de danse, avec DJ et animations. Les bébés en portage sont les bienvenus. Les tarifs annoncés diffèrent fortement selon le moment de l'achat :
+
+- **En prévente** : **8 € par adulte**, **4 € par enfant**, **gratuit de 0 à 18 mois**.
+- **Sur place, sous réserve des places restantes** : **12 € par adulte**, **6 € par enfant**, **2 € de 0 à 18 mois**.
+
+Pour deux adultes et deux enfants de plus de 18 mois, cela représente **24 € en prévente contre 36 € sur place**, hors dépenses annexes. La boum convient à une famille qui souhaite bouger ensemble ; le concert est le choix le plus économique pour découvrir un conte musical.
+
+## Et si vous venez plus tard en novembre ?
+
+Le **mercredi 25 novembre à 14 h 30**, **Le Livre des songes** propose un spectacle musical de **35 minutes** au Conservatoire Pina Bausch, **dès 5 ans**. L'entrée est **gratuite sur réservation**. C'est une solution pour les familles qui ne sont pas disponibles au début du mois. Les dernières dates du festival, jusqu'au 29 novembre, comprennent d'autres spectacles et ateliers : leurs âges, horaires et modalités figurent dans le [programme officiel complet](https://www.montreuil.fr/marmoe2026).
+
+## Réserver et se déplacer sans mauvaise surprise
+
+MARMOE ne se tient pas dans un seul bâtiment. Le Café La Pêche, La Locale, le Théâtre public de Montreuil, Comme Vous Émoi, La Marbrerie et l'Hôtel de ville sont des lieux distincts. Vérifiez **l'adresse de chaque activité**, la durée et le temps de trajet avant de combiner deux rendez-vous. Les tarifs indiqués ci-dessus sont ceux du programme 2026 ; consultez la fiche de la séance avant de partir pour confirmer les places restantes et les éventuelles évolutions.
+
+Pour rejoindre Montreuil depuis Paris et choisir des tickets adaptés à l'âge des enfants, notre guide [Transports à Paris avec des enfants : quel titre choisir ?](https://www.fam-space.fr/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/) détaille les options sans avoir à refaire le calcul ici.
+
+Si vous prévoyez plusieurs jours sur place, l'[ibis Styles Paris Mairie de Montreuil sur Booking.com](https://www.booking.com/hotel/fr/ibis-styles-mairie-de-montreuil.fr.html) présente notamment une suite familiale avec deux chambres communicantes. **Vérifiez le nombre de voyageurs réellement accepté, les couchages, les disponibilités et le prix pour vos dates** avant de réserver ; la présence d'une catégorie « familiale » ne garantit pas qu'elle convienne à toutes les compositions de famille.
+
+Enfin, du **25 au 30 novembre**, Montreuil accueille aussi le [Salon du livre et de la presse jeunesse](https://www.fam-space.fr/articles/evenements/salon-du-livre-jeunesse-de-montreuil-2026-billet-gratuit-et-visite-en-famille/). C'est **un autre événement**, avec ses propres billets et horaires : une possibilité de prolonger un séjour, pas une activité comprise dans MARMOE.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
 - /articles/evenements/salon-du-livre-jeunesse-de-montreuil-2026-billet-gratuit-et-visite-en-famille/ | Salon du livre jeunesse de Montreuil 2026: billets gratuits, horaires et visite en famille | evenements | Montreuil, Seine-Saint-Denis, Île-de-France
+- /articles/evenements/les-expressifs-2026-a-poitiers-trois-jours-de-spectacles-gratuits/ | Les Expressifs 2026 à Poitiers: trois jours de spectacles gratuits | evenements | Poitiers, Vienne, Nouvelle-Aquitaine
 - /articles/evenements/bedecine-2026-a-illzach-en-famille-ateliers-et-spectacles-selon-l-age/ | Bédéciné 2026 à Illzach en famille: ateliers, spectacles et billets | evenements | Illzach, Haut-Rhin, Grand Est
-- /articles/evenements/quai-des-bulles-2026-a-saint-malo-en-famille-tarifs-programme-et-conseils/ | Quai des Bulles 2026 à Saint-Malo en famille: tarifs, programme et conseils | evenements | Saint-Malo, Ille-et-Vilaine, Bretagne
-- /articles/activites/port-aux-cerises-a-draveil-quelle-activite-choisir-selon-l-age-des-enfants/ | Port aux Cerises à Draveil: quelle activité choisir selon l'âge des enfants? | activites | Draveil, Essonne, Île-de-France
+- /articles/evenements/ateliers-au-jardin-de-la-pmi-a-bobigny-quelles-dates-choisir-cet-automne/ | Ateliers au jardin de la PMI à Bobigny: quelles dates choisir cet automne? | evenements | Bobigny, Seine-Saint-Denis, Île-de-France
+- /articles/evenements/grands-zyeux-p-tites-zoreilles-2026-quelles-seances-gratuites-avec-les-tout-petits/ | Grands Zyeux P'tites Zoreilles 2026: spectacles gratuits avec les tout-petits autour de Béziers | evenements | Béziers, Hérault, Occitanie
 - /articles/evenements/au-creux-de-l-oreille-2026-a-noirlac-quels-spectacles-et-ateliers-choisir-avec-les-enfants/ | Au Creux de l'Oreille 2026 à Noirlac: spectacles et ateliers en famille du 17 au 22 octobre | evenements | Bruère-Allichamps, Cher, Centre-Val de Loire
-- /articles/sorties/chateau-de-castelnaud-avec-des-enfants-est-ce-une-bonne-sortie-selon-leur-age/ | Château de Castelnaud avec des enfants: est-ce une bonne sortie selon leur âge? | sorties | Castelnaud-la-Chapelle, Dordogne, Nouvelle-Aquitaine
 - /articles/evenements/bd-boum-2026-a-blois-en-famille-ateliers-bd-expositions-et-cinema-selon-l-age/ | bd BOUM 2026 à Blois en famille: ateliers, expositions et cinéma | evenements | Blois, Loir-et-Cher, Centre-Val de Loire
-- /articles/parentalite/espace-mendes-france-a-poitiers-en-famille-que-faire-selon-l-age/ | Espace Mendès France à Poitiers en famille: que faire selon l’âge ? | parentalite | Poitiers, Vienne, Nouvelle-Aquitaine
+- /articles/evenements/famille-en-fete-2026-pres-de-bordeaux-ateliers-gratuits-pour-les-0-6-ans/ | Famille en fête 2026 en Gironde: ateliers gratuits pour les 0-6 ans | evenements | Saint-Loubès, Gironde, Nouvelle-Aquitaine
 - /articles/activites/visiter-le-stade-de-france-en-famille-coulisses-musee-et-conseils-pratiques/ | Visiter le Stade de France en famille: coulisses, musée et conseils pratiques | activites | Saint-Denis, Seine-Saint-Denis, Île-de-France
 - /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | Monument jeu d'enfant 2026 à Saint-Denis: atelier Dagobert le 17 octobre | evenements | Saint-Denis, Seine-Saint-Denis, Île-de-France
 - /articles/sorties/musee-de-l-air-et-de-l-espace-a-la-toussaint-2026-quelle-activite-choisir-selon-l-age/ | Toussaint 2026 au Musée de l'Air et de l'Espace: quelle activité choisir avec un enfant? | sorties | Le Bourget, Seine-Saint-Denis, Île-de-France
-- /articles/evenements/ateliers-au-jardin-de-la-pmi-a-bobigny-quelles-dates-choisir-cet-automne/ | Ateliers au jardin de la PMI à Bobigny: quelles dates choisir cet automne? | evenements | Bobigny, Seine-Saint-Denis, Île-de-France
 - /articles/voyages/dormir-a-saint-denis-pour-visiter-paris-avec-des-enfants-pleyel-ou-basilique/ | Dormir à Saint-Denis pour visiter Paris avec des enfants: Pleyel ou Basilique? | voyages | Saint-Denis, Seine-Saint-Denis, Île-de-France
 - /articles/sorties/musee-de-l-air-et-de-l-espace-du-bourget-en-famille-tarifs-avions-et-activites/ | Musée de l'Air et de l'Espace du Bourget en famille: tarifs, avions et activités | sorties | Le Bourget, Seine-Saint-Denis, Île-de-France
 - /articles/evenements/noel-au-pays-du-jouet-2026-a-moirans-en-montagne-preparer-sa-sortie-en-famille/ | Noël au Pays du Jouet 2026 à Moirans-en-Montagne: préparer sa sortie en famille | evenements | Moirans-en-Montagne, Jura, Bourgogne-Franche-Comté
@@ -142,19 +169,20 @@ Aucune offre partenaire de billetterie vérifiée. Si un séjour de plusieurs jo
 - /articles/evenements/noel-a-nice-2026-en-famille-village-spectacles-gratuits-et-creche-que-choisir/ | Noël à Nice 2026 en famille: village, spectacles et crèche | evenements | Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur
 - /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | Noël à Toulouse 2026 en famille: marchés, Père Noël et patinoire | evenements | Toulouse, Haute-Garonne, Occitanie
 - /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | Thoiry Lumières Sauvages 2026-2027: dates, billets et visite en famille | evenements | Thoiry, Yvelines, Île-de-France
+- /articles/evenements/noel-a-nantes-2026-marche-gratuit-ou-visite-guidee-du-voyage-en-hiver/ | Noël à Nantes 2026: marché de Noël et Voyage en hiver en famille | evenements | Nantes, Loire-Atlantique, Pays de la Loire
 
 ### Historique Radar lié
 
 - opportunity | /articles/evenements/au-creux-de-l-oreille-2026-a-noirlac-quels-spectacles-et-ateliers-choisir-avec-les-enfants/ | 2026-10-14T13:49:08.708Z
 - opportunity | /articles/evenements/bd-boum-2026-a-blois-en-famille-ateliers-bd-expositions-et-cinema-selon-l-age/ | 2026-10-18T19:49:09.191Z
 - opportunity | /articles/evenements/bedecine-2026-a-illzach-en-famille-ateliers-et-spectacles-selon-l-age/ | 2026-10-23T12:33:36.649Z
+- opportunity | /articles/evenements/famille-en-fete-2026-pres-de-bordeaux-ateliers-gratuits-pour-les-0-6-ans/ | 2026-10-12T08:10:30.674Z
 - opportunity | /articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/ | 2026-10-25T17:34:53.718Z
+- opportunity | /articles/evenements/grands-zyeux-p-tites-zoreilles-2026-quelles-seances-gratuites-avec-les-tout-petits/ | 2026-10-14T07:31:28.976Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | 2026-10-13T09:50:29.435Z
 - opportunity | /articles/sorties/musee-de-l-air-et-de-l-espace-a-la-toussaint-2026-quelle-activite-choisir-selon-l-age/ | 2026-10-05T20:22:10.692Z
 - opportunity | /articles/evenements/noel-a-aix-en-provence-2026-en-famille-marches-santons-ou-maneges/ | 2026-10-25T15:16:03.590Z
-- opportunity | /articles/evenements/noel-a-nice-2026-en-famille-village-spectacles-gratuits-et-creche-que-choisir/ | 2026-10-25T04:31:33.540Z
-- opportunity | /articles/evenements/noel-a-orleans-2026-en-famille-marches-horaires-et-maneges-apres-noel/ | 2026-10-25T07:29:47.050Z
-- opportunity | /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | 2026-10-24T23:34:36.270Z
+- opportunity | /articles/evenements/noel-a-nantes-2026-marche-gratuit-ou-visite-guidee-du-voyage-en-hiver/ | 2026-10-24T15:27:41.430Z
 
 ### Phases 2 et 3
 
