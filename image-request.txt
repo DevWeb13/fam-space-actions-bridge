@@ -246,3 +246,4 @@ automation/image-20261025-1542-arles-navigo-montbazon-salins-17d686-7a91|d295fe1
 automation/image-20261025-1542-arles-navigo-montbazon-salins-17d686-7a91|2ab160989653c0ce4a50f8f24193f1c840a35c22
 automation/image-20261025-2148-dijon-fleche-aix-moirans-ardeche-chambery-005e2e8|005e2e8b2ac0d2c7f01f6b833d0f12fb88aca5be
 automation/image-20261025-2148-dijon-fleche-aix-moirans-ardeche-chambery-005e2e8|ea2afe53869bb09043892461cb6c1b7028f7ff3e
+automation/image-20261026-0343-morlaix-rochefoucauld-marmoe-tours-gers-8747073|874707349f8457859230ae8be8e1aea433d29690
