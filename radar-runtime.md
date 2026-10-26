@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Rétro Game Festival 2026 à Beauvais : quel jour choisir en famille ?"
-subtitle: "Les 6, 7 et 8 novembre : concerts, jeux vidéo et cosplay à l’Elispace"
-summary: Comparez les animations du samedi et du dimanche, la soirée musicale du vendredi et les billets famille pour préparer le Rétro Game Festival de Beauvais.
+title: "Rétro Game Festival 2026 à Beauvais : samedi ou dimanche avec les enfants ?"
+subtitle: "Jeux rétro, concerts Disney, cosplay : programme du 6 au 8 novembre et vrais coûts des billets famille"
+summary: "Samedi pour les animations enfants et la musique, dimanche pour le dessin et le cosplay, vendredi pour la soirée Disney : choisissez votre venue au Rétro Game Festival de Beauvais et calculez le budget."
 category: evenements
 location:
   city: Beauvais
@@ -68,18 +73,27 @@ location:
   region: Hauts-de-France
 keywords:
   - Rétro Game Festival Beauvais 2026
-  - Rétro Game Festival billet famille
-  - Elispace Beauvais jeux vidéo
+  - Rétro Game Festival Beauvais billet famille
+  - Elispace Beauvais novembre 2026 enfants
+  - Rétro Game Festival samedi dimanche
 sources:
-  - title: Programme officiel
+  - title: Rétro Game Festival 2026 - programme officiel
     url: https://retrogamefestival.beauvais.fr/programme
-  - title: Billetterie officielle Beauvais
+  - title: Ville de Beauvais - billetterie officielle 2026
     url: https://billetterie.beauvais.fr/beauvais/rgfb2026/
-  - title: Elispace - festival
+  - title: Elispace - Rétro Game Festival 2026
     url: https://elispace.fr/programmation/retro-game-festival
+  - title: Elispace - Soirée magique du 6 novembre 2026
+    url: https://elispace.fr/programmation/soiree-magique-2
+  - title: Elispace - informations pratiques, parking et accessibilité
+    url: https://elispace.fr/infos-pratiques
+  - title: Rétro Game Festival - restauration
+    url: https://retrogamefestival.beauvais.fr/restauration
+  - title: Rétro Game Festival - accès et transports
+    url: https://retrogamefestival.beauvais.fr/acces-transports
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: retro-game-festival-2026-a-beauvais-quel-jour-choisir-en-famille
   decision: Choisir la journée et la formule d'entrée les plus adaptées aux enfants, sans confondre la soirée musicale et le festival.
@@ -89,70 +103,110 @@ radar:
     dataThrough: 2026-10-23
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Programme officiel »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-11-08
 ---
 
-## Mission retenue
-Festival de jeux vidéo rétro et de pop culture à Beauvais : soirée musicale vendredi 6 novembre 2026, puis festival samedi 7 et dimanche 8 novembre.
+Le **Rétro Game Festival revient à l’Elispace de Beauvais du vendredi 6 au dimanche 8 novembre 2026**. Mais les trois dates ne proposent pas la même sortie : le vendredi est consacré à une soirée musicale avec son propre billet, tandis que le samedi et le dimanche réunissent jeux vidéo, bornes d’arcade, invités et animations pop culture. Pour une famille qui ne vient qu’une journée, **le samedi convient particulièrement aux enfants attirés par les jeux et les concerts ; le dimanche, à ceux qui veulent aussi dessiner et voir des costumes de cosplay**.
 
-## Pourquoi cette mission
-Refresh Chantilly déjà détaillé et sans correction vérifiée ; expansion des transports parisiens déjà couverte par les pages Navigo, Orly et CDG. Programme et billetterie officiels disponibles. Aucun doublon direct parmi les 795 articles, ni dans les travaux en cours.
+## Quel jour choisir selon les envies des enfants ?
 
-## Décision du lecteur
-Choisir vendredi pour le concert, samedi pour les animations et la musique, ou dimanche pour le dessin, les jeux et le cosplay, puis calculer le billet nécessaire.
+### Vendredi 6 novembre : une soirée musicale, pas une journée de jeux
 
-## Faits à traiter
-- Vendredi : soirée 20 h–23 h, solo 12 €, famille 30 €.
-- Samedi et dimanche : 10 h–19 h ; pass famille 8 € par jour (jusqu'à 2 adultes et 4 enfants), individuel adulte 4 €, moins de 3 ans sans billet.
-- Samedi : animations enfants, concert Disney, jeux et concert philharmonique ; siège carré or à 15 € en supplément.
-- Dimanche : concert Disney, quiz super-héros, dessin et concours cosplay.
-- Elispace, 3 avenue Paul-Henri-Spaak, Beauvais. Vérifier les horaires et frais de traitement avant publication.
+La **Soirée magique** commence à **20 h** (ouverture des portes à **19 h**). Le spectacle, en places assises à placement libre, réunit des chansons de films d’animation interprétées notamment par Mimifé, Tom Almodar, Maëva Méline, Emmanuel Dahl et Claire Guyot. Le [programme du festival](https://retrogamefestival.beauvais.fr/programme) indique une fin à **23 h** ; d’autres pages pratiques du festival affichent des horaires généraux différents pour le vendredi. Pour organiser le retour avec de jeunes enfants, confirmez l’heure de fin auprès de l’Elispace.
 
-## Sources de départ
-Programme officiel, billetterie municipale et Elispace.
+**Billets distincts : 12 € par personne ou 30 € le pass famille** (jusqu’à deux adultes et quatre enfants). Ce billet concerne la soirée du vendredi : il ne remplace pas une entrée pour le festival du week-end. Le billet solo prévoit la présence d’un enfant de moins de 3 ans sans supplément, à déclarer lors de la commande.
 
-## Affiliation
-Aucune billetterie partenaire vérifiée. Comparaison d'hébergements près de l'Elispace sur Booking.com pour les familles restant deux jours, sans promettre disponibilité ou prix.
+### Samedi 7 novembre : animations enfants, Disney, K-pop et jeux
 
-## Continuations internes
-Aucune page existante ne couvre ce festival ; éviter les liens artificiels vers des sujets différents.
+Le festival ouvre de **10 h à 19 h**. C’est la journée la plus facile à construire autour d’activités variées :
+
+- **10 h–19 h, hall 4 :** animations enfants annoncées toute la journée.
+- **10 h 45–11 h 30 :** concert Disney sur la scène principale.
+- **11 h–12 h :** show Just Dance ; **11 h 30–12 h 15 :** K-pop avec HYPE et Milestone Crew.
+- **14 h 30–15 h :** showcase Kpop Demon Hunters.
+- **17 h 30–18 h :** finale Mario Kart sur la scène gaming.
+
+Les familles de joueurs peuvent aussi profiter des consoles rétro, bornes d’arcade, défis et rencontres avec les invités. Les horaires de dédicaces de Marcus, Conkerax ou des comédiens de doublage sont détaillés dans le programme officiel : choisissez-en une ou deux plutôt que d’essayer de tout suivre.
+
+**À 19 h, le concert Comics de l’Orchestre Philharmonique de l’Oise** prolonge la journée jusqu’à **20 h** selon le programme. L’Elispace indique que le billet du samedi donne accès au concert. Une **place assise « carré or » coûte 15 € supplémentaires par personne** et nécessite aussi le billet d’entrée du samedi. Ne confondez pas ce supplément facultatif avec le prix du festival.
+
+### Dimanche 8 novembre : super-héros, dessin et cosplay
+
+Le dimanche, de **10 h à 19 h**, les jeux et les rencontres continuent, avec un programme particulièrement intéressant pour les enfants qui aiment les personnages et les costumes :
+
+- **10 h 45–11 h 30 :** concert Disney.
+- **11 h 30–12 h :** showcase Kpop Demon Hunters ; **12 h–13 h :** show K-pop et danse.
+- **13 h 15–13 h 30 :** quiz super-héros.
+- **13 h 30–14 h 30 :** « Dessinez votre super-héros » avec JL Mast et Goeffo.
+- **15 h 30–16 h 30 :** concours cosplay ; remise des prix **18 h–18 h 30**.
+
+Les déguisements sont bienvenus, même sans participation au concours. Si le dessin est la priorité, arrivez avant 13 h 30 ; pour le cosplay, prévoyez plutôt l’après-midi. Les horaires peuvent évoluer : consultez le [programme officiel détaillé](https://retrogamefestival.beauvais.fr/programme) avant de partir.
+
+## Combien coûte réellement la sortie ?
+
+Pour **le samedi ou le dimanche**, la billetterie municipale annonce :
+
+- **Pass famille : 8 € par jour**, pour un maximum de **deux adultes et quatre enfants de 3 à 18 ans**.
+- **Pass individuel : 4 € par jour**, prévu pour un adulte et, le cas échéant, un enfant de moins de 3 ans.
+- **Moins de 3 ans :** pas de billet nécessaire pour le festival du week-end ; les enfants doivent être accompagnés d’un adulte.
+
+Ainsi, **deux adultes avec deux enfants de 5 et 9 ans paient 8 € pour une journée**, ou **16 € pour les deux journées** avec deux pass famille distincts. En ajoutant la Soirée magique du vendredi pour cette même famille, le total des billets de base atteint **46 € pour les trois dates**. Ces calculs sont **hors frais de traitement**, signalés par la billetterie lors du paiement, hors repas et hors éventuelles places « carré or ».
+
+Attention : **le pass famille n’est pas un pass trois jours**. Il faut sélectionner séparément samedi et dimanche. La soirée du vendredi possède également sa propre formule. Pour les familles avec une composition inhabituelle ou des enfants tout juste âgés de 3 ans, vérifiez le billet proposé avant de payer.
+
+## Sur place : repas, poussette, parking et accès
+
+Le festival se tient à **l’Elispace, 3 avenue Paul-Henri-Spaak, 60000 Beauvais**. L’Elispace annonce plusieurs parkings gratuits et des places réservées aux personnes à mobilité réduite. En transports en commun, des lignes du réseau Corolis desservent les environs ; les indications de lignes et d’arrêt varient entre les pages du festival, donc vérifiez votre trajet et les horaires du week-end avant de partir.
+
+Des **food trucks salés et sucrés** sont annoncés le samedi et le dimanche, ainsi qu’une buvette. Un **espace pour pique-niquer avec son propre repas** est prévu **à l’extérieur, sous un barnum** : pensez à la météo de novembre. Le vendredi, la restauration annoncée se limite à la cafétéria.
+
+Le festival et l’Elispace annoncent un accès adapté aux personnes à mobilité réduite. Pour un besoin de placement particulier, notamment en fauteuil, l’Elispace recommande de prendre contact **au 03 44 10 01 01** en amont. **Attention aux poussettes :** le [règlement général de l’Elispace](https://elispace.fr/infos-pratiques) les classe parmi les objets roulants interdits à l’intérieur, comme les gros bagages. Aucune consigne pour poussettes ni espace de change spécifique au festival n’a été confirmé : contactez la salle avant de venir avec un bébé pour connaître les modalités exactes.
+
+## Venir de loin : dormir près de l’Elispace
+
+Si vous souhaitez profiter **des deux journées sans multiplier les trajets**, comparez les [hébergements autour de l’Elispace à Beauvais sur Booking.com](https://www.booking.com/landmark/fr/elispace.fr.html). Indiquez vos dates exactes et l’âge des enfants pour vérifier la capacité de la chambre, le trajet jusqu’à la salle et les conditions d’annulation. Les tarifs et disponibilités du week-end du 7–8 novembre ne sont pas garantis.
+
+Pour une seule journée, inutile de réserver une nuit par principe : choisissez d’abord les animations que vos enfants veulent vraiment voir, puis calculez le temps de trajet et le coût total de la sortie.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
-- /articles/evenements/festival-cite-en-jeux-2026-a-colomiers-quel-jour-choisir-avec-des-enfants/ | Festival Cité en Jeux 2026 à Colomiers: quel jour choisir avec des enfants | evenements | Colomiers, Haute-Garonne, Occitanie
-- /articles/evenements/hop-hop-hop-festival-2026-en-famille-quel-jour-choisir/ | Hop Hop Hop Festival 2026 en famille: quel jour choisir? | evenements | Saint-Cirgues, Lot, Occitanie
 - /articles/vie-pratique/location-de-voiture-a-beauvais-avec-des-enfants-les-verifications-utiles-avant-de-reserver/ | Location de voiture à Beauvais avec des enfants: les vérifications utiles avant de réserver | vie-pratique | Beauvais, Oise, Hauts-de-France
-- /articles/evenements/marche-de-noel-de-cusset-2026-en-famille-quel-jour-choisir/ | Marché de Noël de Cusset 2026 en famille: quel jour choisir? | evenements | Cusset, Allier, Auvergne-Rhône-Alpes
-- /articles/parentalite/ateliers-parents-malins-dans-l-oise-quels-rendez-vous-gratuits-choisir-avant-fin-2026/ | Ateliers Parents Malins dans l'Oise: quels rendez-vous gratuits choisir avant fin 2026 ? | parentalite | Plusieurs communes, Oise, Hauts-de-France
-- /articles/evenements/habits-de-lumiere-a-epernay-avec-des-enfants-quel-jour-choisir-en-2026/ | Habits de Lumière à Épernay avec des enfants: quel jour choisir en 2026? | evenements | Épernay, Marne, Grand Est
+- /articles/evenements/foire-de-la-barguillere-a-foix-samedi-ou-dimanche-avec-des-enfants/ | Foire de la Barguillère à Foix: samedi ou dimanche avec des enfants ? | evenements | Foix, Ariège, Occitanie
 - /articles/evenements/alfest-2026-a-annecy-en-famille-horaires-jeux-et-braderie/ | ALFest 2026 à Annecy en famille: horaires, jeux et braderie | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
-- /articles/parentalite/quel-laep-choisir-a-perpignan-selon-l-age-et-le-jour/ | Quel LAEP choisir à Perpignan selon l'âge et le jour ? | parentalite | Perpignan, Pyrénées-Orientales, Occitanie
+- /articles/evenements/festival-marmoe-2026-a-montreuil-spectacles-et-ateliers-selon-l-age-des-enfants/ | Festival MARMOE 2026 à Montreuil: spectacles, ateliers et tarifs en famille | evenements | Montreuil, Seine-Saint-Denis, Île-de-France
+- /articles/evenements/castagnade-de-joyeuse-2026-avec-des-enfants-venir-samedi-ou-dimanche/ | Castagnade de Joyeuse 2026 avec des enfants: venir samedi ou dimanche? | evenements | Joyeuse, Ardèche, Auvergne-Rhône-Alpes
+- /articles/evenements/festival-du-livre-de-colmar-2026-en-famille-dates-ateliers-et-acces/ | Festival du Livre de Colmar 2026 en famille: dates, horaires et animations jeunesse | evenements | Colmar, Haut-Rhin, Grand Est
+- /articles/evenements/bd-boum-2026-a-blois-en-famille-ateliers-bd-expositions-et-cinema-selon-l-age/ | bd BOUM 2026 à Blois en famille: ateliers, expositions et cinéma | evenements | Blois, Loir-et-Cher, Centre-Val de Loire
+- /articles/evenements/les-expressifs-2026-a-poitiers-trois-jours-de-spectacles-gratuits/ | Les Expressifs 2026 à Poitiers: trois jours de spectacles gratuits | evenements | Poitiers, Vienne, Nouvelle-Aquitaine
 - /articles/bons-plans/pass-sports-citoyen-dans-l-oise-15-a-cumuler-avec-le-pass-sport-en-2026/ | Pass Sports Citoyen dans l'Oise: 15 € à cumuler avec le pass Sport en 2026 | bons-plans | Beauvais, Oise, Hauts-de-France
 - /articles/evenements/noel-gaulois-2026-au-parc-asterix-billet-malin-noel-ou-flex-en-famille/ | Noël Gaulois 2026 au Parc Astérix: billets, glissades et spectacles en famille | evenements | Plailly, Oise, Hauts-de-France
 - /articles/evenements/halloween-2026-a-la-mer-de-sable-spectacles-parcours-effrayant-et-billets/ | Halloween 2026 à la Mer de Sable: spectacles, frissons et billets en famille | evenements | Ermenonville, Oise, Hauts-de-France
 - /articles/sorties/chateau-de-compiegne-en-famille-que-visiter-et-comment-organiser-la-journee/ | Château de Compiègne en famille: que visiter et comment organiser la journée? | sorties | Compiègne, Oise, Hauts-de-France
 - /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | Pierrefonds à la Toussaint 2026: atelier lanterne et soirée d'Halloween | evenements | Pierrefonds, Oise, Hauts-de-France
 - /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | Halloween 2026 au Château de Chantilly avec des enfants: ateliers, nocturnes et spectacle | sorties | Chantilly, Oise, Hauts-de-France
+- /articles/parentalite/ateliers-parents-malins-dans-l-oise-quels-rendez-vous-gratuits-choisir-avant-fin-2026/ | Ateliers Parents Malins dans l'Oise: quels rendez-vous gratuits choisir avant fin 2026 ? | parentalite | Plusieurs communes, Oise, Hauts-de-France
 - /articles/cuisine/atelier-de-creme-chantilly-avec-des-enfants-a-partir-de-quel-age-et-comment-reserver/ | Atelier de crème Chantilly avec des enfants: à partir de quel âge et comment réserver | cuisine | Chantilly, Oise, Hauts-de-France
 - /articles/maison/meubles-et-encombrants-a-compiegne-recyclerie-dechetterie-ou-collecte-a-domicile/ | Meubles et encombrants à Compiègne: recyclerie, déchetterie ou collecte à domicile? | maison | Compiègne, Oise, Hauts-de-France
 - /articles/voyages/peur-sur-le-parc-2026-en-famille-journee-nocturne-billets-et-hebergement/ | Peur sur le Parc 2026 en famille: journée, nocturne, billets et hébergement | voyages | Plailly, Oise, Hauts-de-France
-- /articles/voyages/parc-asterix-en-famille-en-2026-une-ou-deux-journees-quel-hotel-et-quel-budget-prevoir/ | Parc Astérix en famille en 2026: une ou deux journées, quel hôtel et quel budget prévoir | voyages | Plailly, Oise, Hauts-de-France
-- /articles/evenements/festival-marmoe-2026-a-montreuil-spectacles-et-ateliers-selon-l-age-des-enfants/ | Festival MARMOE 2026 à Montreuil: spectacles, ateliers et tarifs en famille | evenements | Montreuil, Seine-Saint-Denis, Île-de-France
 - /articles/evenements/halloween-2026-au-zoo-de-la-fleche-entree-offerte-aux-enfants-deguises/ | Halloween 2026 au Zoo de La Flèche: tarifs, jeux et entrée offerte aux enfants déguisés | evenements | La Flèche, Sarthe, Pays de la Loire
 - /articles/evenements/noel-au-pays-du-jouet-2026-a-moirans-en-montagne-preparer-sa-sortie-en-famille/ | Noël au Pays du Jouet 2026 à Moirans-en-Montagne: préparer sa sortie en famille | evenements | Moirans-en-Montagne, Jura, Bourgogne-Franche-Comté
 - /articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/ | Fête foraine de Dijon 2026: dates, horaires et budget avec les enfants | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/evenements/noel-a-aix-en-provence-2026-en-famille-marches-santons-ou-maneges/ | Noël à Aix-en-Provence 2026 en famille: marchés, santons et manèges | evenements | Aix-en-Provence, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur
 
 ### Historique Radar lié
 
 - opportunity | /articles/evenements/alfest-2026-a-annecy-en-famille-horaires-jeux-et-braderie/ | 2026-10-20T15:29:27.541Z
+- opportunity | /articles/evenements/bd-boum-2026-a-blois-en-famille-ateliers-bd-expositions-et-cinema-selon-l-age/ | 2026-10-18T19:49:09.191Z
+- opportunity | /articles/evenements/festival-du-livre-de-colmar-2026-en-famille-dates-ateliers-et-acces/ | 2026-10-20T08:52:25.825Z
 - opportunity | /articles/evenements/festival-marmoe-2026-a-montreuil-spectacles-et-ateliers-selon-l-age-des-enfants/ | 2026-10-25T23:35:17.860Z
 - opportunity | /articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/ | 2026-10-25T17:34:53.718Z
 - opportunity | /articles/evenements/halloween-2026-a-la-mer-de-sable-spectacles-parcours-effrayant-et-billets/ | 2026-10-18T12:12:00.071Z
 - opportunity | /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | 2026-10-08T02:18:12.427Z
 - opportunity | /articles/evenements/halloween-2026-au-zoo-de-la-fleche-entree-offerte-aux-enfants-deguises/ | 2026-10-25T20:27:07.814Z
+- opportunity | /articles/evenements/noel-a-aix-en-provence-2026-en-famille-marches-santons-ou-maneges/ | 2026-10-25T15:16:03.590Z
 - opportunity | /articles/evenements/noel-gaulois-2026-au-parc-asterix-billet-malin-noel-ou-flex-en-famille/ | 2026-10-24T09:33:57.174Z
-- opportunity | /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | 2026-10-11T19:35:57.703Z
 
 ### Phases 2 et 3
 
