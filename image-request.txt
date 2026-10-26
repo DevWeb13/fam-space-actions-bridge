@@ -250,3 +250,4 @@ automation/image-20261026-0343-morlaix-rochefoucauld-marmoe-tours-gers-8747073|8
 automation/image-20261026-0343-morlaix-rochefoucauld-marmoe-tours-gers-8747073|1a18e414671f8b2ab7ea930b3870fe1a2d4300db
 automation/image-20261026-1039-valbonne-playground-venaco-valdoise-d4b524a|d2fed602bd083a254e9284131dc78c5c1acf77e6
 automation/image-20261026-1039-valbonne-playground-venaco-valdoise-d4b524a|49b6f53deab3ab8a32da436a0ec3462753734c55
+automation/image-20261026-1557-granville-beauvais-00a07fc|00a07fc3f86a744af43bb10332401f676fbf9463
