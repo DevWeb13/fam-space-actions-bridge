@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 1/4
+# Publication automatique Fam Space - Phase 2/4
 
 ## Mission
 
-Tu es le rédacteur en chef de Fam Space.
+Tu es un journaliste web professionnel pour Fam Space.
 
-Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. Fam Space doit publier moins mais mieux: un sujet doit pouvoir devenir un article fiable, utile aux familles, agréable à lire et, lorsque c'est naturel, intéressant pour l'affiliation.
+Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
 
 ## Affectation courante
 
@@ -14,97 +14,94 @@ Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. 
 - Département: Drôme
 - Région: Auvergne-Rhône-Alpes
 
-### Articles publiés récemment
-
-- 2026-10-09: Noël 2026 au château de Grignan: dates, tarifs et visite en famille
-- 2026-10-05: Cité du Chocolat Valrhona à la Toussaint 2026: animations et ateliers avec des enfants
-- 2026-09-21: Canoë à Saillans en famille: 3, 6, 9 ou 14 km ?
-- 2026-09-11: Ferme aux Crocodiles à Pierrelatte: faut-il prévoir une demi-journée ?
-- 2026-09-04: Carte Top Dép'Art: comment utiliser les 45 € et les 4 sorties offertes dans la Drôme
-- 2026-08-28: Promeneurs du Net Parentalité dans la Drôme: à qui parler en ligne quand on est parent?
-- 2026-08-18: Week-end gourmand à Nyons en famille: marché, olives et bonnes adresses
-- 2026-08-10: Cité du Chocolat Valrhona en famille: tarifs, durée et conseils de visite
-
-Ne reproduis pas les mêmes sujets.
-
-## Choisir un sujet qui mérite un article
-
-Respecte l'affectation. Pour une affectation locale, choisis librement la commune ou le lieu le plus pertinent dans le département imposé.
-
-La liste « Articles publiés récemment » est fournie automatiquement. Utilise-la pour éviter les doublons de lieu, de sujet ou d'angle. Un titre différent ne suffit pas à rendre un article différent.
-
-Cherche plusieurs sujets avant de choisir. Pour les candidats sérieux, utilise la recherche web pour comprendre ce qui existe déjà, vérifier les faits essentiels, voir ce que les résultats Google répondent déjà et t'assurer que le sujet est réellement utile à publier maintenant. Si l'élément principal est fermé, hors saison, en maintenance ou temporairement indisponible au point de vider l'article de son intérêt, écarte ce candidat et choisis-en un autre.
-
-Choisis un sujet qui a une vraie matière éditoriale. Un lecteur qui ne connaît pas le sujet doit pouvoir comprendre ce que c'est, pourquoi cela peut l'intéresser et obtenir plusieurs informations utiles sans que l'article répète la même idée.
-
-L'angle sert à donner une direction et un titre intéressant. Il ne doit jamais enfermer tout l'article dans une micro-question comme un tarif, un pass, une poussette ou un calcul simple.
-
-Écarte un sujet si Fam Space ne ferait que réécrire une page officielle ou s'il n'y a pas assez de matière pour produire un bon article. Si aucun candidat ne reste suffisamment utile et actuel après une recherche sérieuse, ne force pas un sujet.
-
-## Penser aussi au potentiel d'affiliation
-
-La monétisation est un objectif important de Fam Space. Avant de choisir le sujet final, vérifie sérieusement les offres disponibles chez les partenaires suivants:
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-Applique la logique d'usage ci-dessus à chaque candidat sérieux et vérifie les offres avant de les retenir dans le brief.
-
-À qualité éditoriale comparable, privilégie clairement le sujet qui possède une piste d'affiliation naturelle et vérifiée. Ne choisis toutefois jamais un sujet médiocre uniquement parce qu'il est affiliable et n'invente jamais une offre sans rapport avec le lecteur.
-
-Si un excellent sujet n'a réellement aucune offre partenaire pertinente après vérification, il peut rester publiable. Le brief doit alors le dire clairement. L'absence d'affiliation ne doit jamais résulter d'une recherche superficielle.
-
-## Sujets à écarter
-
-Écarte les sujets politiques ou militants, les guerres et conflits armés, les contenus haineux, violents, sexuellement explicites, dangereux ou trompeurs, ainsi que les conseils médicaux, juridiques ou financiers personnalisés à risque élevé.
-
-Ne choisis pas comme sujet principal une maladie, un diagnostic, un traitement, une vaccination ou une urgence médicale ou psychiatrique.
-
-Pour un événement ponctuel, ne le retiens pas s'il commence dans moins de 30 jours. S'il a déjà commencé, il doit rester au moins 30 jours d'utilité réelle. Cette règle ne concerne pas les attractions permanentes, destinations durables ou activités disponibles sur une longue période.
-
-## Résultat attendu
-
-Prépare un brief court. Le fichier doit contenir exactement ces sections:
+## Brief du rédacteur en chef
 
 ## Sujet retenu
-Le sujet, un titre de travail et l'angle principal. Décris aussi en une ou deux phrases ce qu'est réellement le sujet afin que le journaliste parte avec le bon contexte.
+**Titre de travail :** « Palais idéal du facteur Cheval en famille : que découvrir à Hauterives et comment organiser la visite ? »
+
+**Angle :** transformer la découverte du monument en exploration familiale, sans se limiter aux tarifs : observer les animaux et les architectures sculptés, comprendre l'histoire de Ferdinand Cheval, choisir un parcours selon l'âge des enfants et préparer une demi-journée sur place.
+
+À Hauterives (Drôme), le Palais idéal est une construction imaginaire réalisée par le facteur Ferdinand Cheval entre 1879 et 1912, avec des pierres ramassées au fil de ses tournées. Monument historique visitable toute l'année sous réserve des fermetures annoncées, il comprend des façades très détaillées, une galerie et des espaces de découverte ; il ne s'agit ni d'un château habité ni d'un parc d'attractions.
 
 ## Besoin du lecteur
-Ce que le lecteur doit comprendre, apprendre ou pouvoir faire après avoir lu l'article. Ne réduis pas ce besoin à une seule micro-question si le sujet mérite un traitement plus large.
+Savoir ce que les enfants vont réellement voir et pouvoir observer, pourquoi ce lieu hors norme peut leur plaire, comment raconter simplement l'aventure du facteur Cheval et organiser la visite selon l'âge, le temps disponible et les contraintes de mobilité. Donner les informations pratiques fiables (durée, horaires, prix, réservation, sacs, poussette/accessibilité, stationnement et transports) et des idées raisonnables pour prolonger la sortie à Hauterives, sans présenter les animations ponctuelles comme permanentes.
 
 ## Valeur éditoriale
-Les quelques informations ou distinctions qui justifient l'article et ce que Fam Space peut apporter de mieux qu'une simple reprise des sources.
+- Proposer un fil de visite familial concret : chercher sur les façades et dans la galerie les animaux, géants, temples, inscriptions et détails étonnants ; il s'agit d'une **idée de jeu d'observation proposée par Fam Space**, pas d'une chasse au trésor officielle.
+- Raconter le cheminement du facteur Cheval en quelques repères compréhensibles par les enfants : la pierre trouvée en 1879, 33 ans de construction, la brouette, les façades et la différence entre le Palais idéal et le tombeau construit plus tard au cimetière.
+- Distinguer la visite courte avec jeunes enfants d'une découverte plus attentive avec les plus grands, sans inventer de tranche d'âge recommandée ; durée moyenne officielle indiquée par le tourisme régional : environ 1 h 30.
+- Informations vérifiées pour fin 2026 : ouverture annoncée de 9 h 30 à 17 h 30 en octobre-novembre, puis de 9 h 30 à 16 h 30 en décembre ; prix individuels sur place 10,50 € adulte, 6,50 € de 6 à 16 ans, gratuit avant 6 ans, avec réduction de 1 € par billet en ligne. Les billets restent à vérifier avant publication.
+- Expliquer les vraies contraintes : pas d'animaux hors chiens d'assistance, sacs à dos en consigne, restauration/pique-nique interdits dans l'enceinte ; accès adapté sur certaines parties mais ne pas garantir que tous les passages et escaliers sont accessibles aux poussettes et fauteuils.
+- Actualité durable : exposition Juliana Dorso « 140 ans et un jour » du 19 septembre 2026 au 18 avril 2027. La communication du site annonçait des travaux de restauration sur la façade sud et le sommet du tombeau égyptien jusqu'au 23 octobre 2026 : **vérifier la fin effective et les éventuelles restrictions avant rédaction définitive**.
+- Plusieurs guides web décrivent déjà l'histoire, les tarifs et la durée : la valeur propre de Fam Space sera le parcours familial d'observation, les distinctions utiles et les conseils de préparation, et non une reformulation de la page officielle.
 
 ## Affiliation
-Les pistes partenaires réellement vérifiées, avec partenaire, offre et URL exacte, y compris les besoins secondaires naturels. Si aucune offre pertinente n'existe réellement, indique-le clairement.
+**Hébergement de proximité vérifié pour les familles prolongeant la sortie en week-end :**
+- **Abritel — Maison / gîte rénové au centre d'Hauterives, à environ 150 m du Palais idéal.** Logement entier annoncé pour 6 personnes, 3 chambres, 2 salles de bain, cuisine équipée et terrasse. URL exacte : https://www.abritel.fr/location-vacances/p1823668
+- **Booking.com — « La parenthèse » maison de vacances à Hauterives.** Maison annoncée à environ 3 minutes à pied du Palais, 3 chambres, jusqu'à 7 personnes, cuisine et jardin. URL exacte : https://www.booking.com/hotel/fr/la-parenthese-a-hauterives.fr.html
+
+Les deux pages d'offres ont été identifiées et leurs caractéristiques contrôlées ; **prix et disponibilité à des dates futures non confirmés**. Une seule recommandation d'hébergement suffit dans l'article si elle s'intègre naturellement. Recherche de billetterie partenaire sur GetYourGuide, Tiqets et Klook : aucune offre précise pour l'entrée du Palais idéal n'a pu être confirmée ; ne pas fabriquer de lien partenaire ni présenter la billetterie officielle comme affiliée.
 
 ## Sources de départ
-Les meilleures sources officielles ou directement responsables pour lancer la rédaction, avec l'URL exacte de chaque page utile.
+- Palais idéal du facteur Cheval — histoire du monument, façades, galerie, terrasse et tombeau distinct : https://www.facteurcheval.com/histoire/
+- Palais idéal — informations pratiques, tarifs 2026, horaires, conditions de visite et accès : https://www.facteurcheval.com/infos-pratiques/?partner=no
+- Palais idéal — exposition Juliana Dorso du 19 septembre 2026 au 18 avril 2027 : https://www.facteurcheval.com/programmation/evenements/juliana-dorso/
+- Palais idéal — actualités, dont annonce des travaux et réservation conseillée : https://www.facteurcheval.com/actualites/
+- Office de tourisme Porte de DrômArdèche — fiche du monument, accessibilité et équipements : https://www.autour-du-palais-ideal.fr/sejourner/a-voir-a-faire/sites-de-visites-culturels/palais-ideal-du-facteur-cheval-hauterives-fr-3262139/
+- Auvergne-Rhône-Alpes Tourisme — fiche, durée indicative et horaires 2026 : https://www.auvergnerhonealpes-tourisme.com/fiches/palais-ideal-du-facteur-cheval/
 
-Ne rédige pas le corps final de l'article pendant cette phase.
+## Écrire l'article
+
+Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
+
+Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
+
+Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
+
+Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
+
+Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
+
+Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+
+N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
+
+Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
+
+Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
+
+À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
+
+## Format du candidat
+
+Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
+
+```yaml
+---
+category: "<catégorie assignée>"
+title: "Titre direct et informatif"
+subtitle: "Précision différente du titre"
+summary: "Résumé de 90 à 180 caractères"
+keywords:
+  - "mot-clé principal"
+  - "mot-clé secondaire"
+location:
+  city: "Ville"
+  department: "Département assigné"
+  region: "Région assignée"
+sources:
+  - title: "Page officielle utilisée"
+    url: "https://..."
+---
+```
+
+Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+
+Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 1/4
+- Phase préparée mécaniquement: 2/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -117,30 +114,20 @@ Toute la plomberie technique est gérée mécaniquement. Ne cherche aucune branc
 
 Écris uniquement publication-request.md sur la branche main de DevWeb13/fam-space-actions-bridge avec le résultat éditorial demandé dans ce runtime. Le pipeline mécanique se charge de la phase, de la branche de travail, des commits, de la validation et de la suite du cycle.
 
-Si tu retiens un sujet, utilise:
+Utilise:
 
 ~~~yaml
 ---
-action: start
+action: advance
 ---
 
-<brief complet demandé ci-dessus>
+<article complet demandé ci-dessus, frontmatter compris>
 ~~~
 
-Si, après une recherche sérieuse, aucun sujet suffisamment utile et actuel ne mérite un article, utilise:
-
-~~~yaml
----
-action: skip
----
-
-<raison factuelle et courte>
-~~~
-
-Un échec technique n'est jamais une raison de skip. Une fois publication-request.md écrit, termine le passage.
+Rends toujours l'article complet, même si cette phase ne nécessite que peu de corrections. Une fois publication-request.md écrit, termine le passage.
 
 ## Rapport final
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les principaux sujets envisagés, les doublons écartés, le sujet retenu, pourquoi il mérite un article, les pistes d'affiliation réellement vérifiées et les principales sources. En cas de skip, explique simplement pourquoi aucun sujet suffisamment bon n'a été retenu.
+Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
