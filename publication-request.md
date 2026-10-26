@@ -33,8 +33,10 @@ sources:
     url: "https://www.emmaus95.fr/infos-pratiques/infos_pratiques/"
   - title: "Emmaüs 95 — donner et acheter, objets acceptés"
     url: "https://www.emmaus95.fr/acheter-et-donner/"
-  - title: "Repair Café Val-d’Oise — atelier de Vauréal"
+  - title: "Repair Café Val-d’Oise — ancien descriptif de l’atelier de Vauréal"
     url: "https://repaircafe95.fr/atelier-hebdomadaire/"
+  - title: "Générations Solidaires Val-d’Oise — Repair Café et modalités actuelles"
+    url: "https://gsvo95.fr/repair-cafe"
   - title: "Fondation Repair Café — questions pratiques"
     url: "https://www.repaircafe.org/fr/faq/"
   - title: "ADEME — que faire de ses meubles ?"
@@ -52,7 +54,7 @@ Voici cinq adresses utiles, d’Eaubonne à Bernes-sur-Oise, avec leurs différe
 - **Acheter des jouets, des livres ou de la vaisselle :** regardez du côté des Pépites à Eaubonne, du Maillon à Cergy, d’IMAJ ou d’Emmaüs à Bernes-sur-Oise. Les arrivages changent : aucun article précis n’est garanti.
 - **Donner quelques sacs d’objets en bon état :** Les Pépites disposent de créneaux de dépôt, mais limitent les quantités. IMAJ et Le Maillon ont leurs propres horaires de réception.
 - **Faire enlever une armoire ou un meuble volumineux :** contactez d’abord IMAJ ou Emmaüs 95. L’enlèvement doit être demandé et accepté ; il n’est pas automatique.
-- **Essayer de sauver un petit appareil en panne ou un vélo :** le Mini Repair Café de Vauréal est conçu pour réparer avec des bénévoles, pas pour abandonner des objets.
+- **Essayer de sauver un petit appareil en panne ou un vélo :** l’association Générations Solidaires Val-d’Oise propose des ateliers de réparation accompagnée à Vauréal. Vérifiez le lieu et les modalités d’accueil avant de vous rendre sur place.
 - **Se séparer d’un objet irréparable :** il faut chercher la filière de collecte adaptée, plutôt que le déposer devant une association.
 
 ## Les Pépites à Eaubonne : pour les petits dons et les trouvailles d’occasion
@@ -69,7 +71,7 @@ La ressourcerie IMAJ dispose de points de vente à **Villiers-le-Bel, 12 avenue 
 
 Pour **déposer des objets**, en revanche, il faut aller à Villiers-le-Bel, **le mercredi de 11 h à 18 h ou le vendredi de 14 h à 18 h**. **Aucun dépôt n’est accepté à Bouffémont** : la distinction compte si vous venez avec plusieurs cartons.
 
-Autre restriction importante : IMAJ indique **suspendre temporairement les apports de vêtements et d’autres textiles**, en raison de la saturation de ses locaux. Vérifiez si cette suspension est toujours en vigueur avant de vous déplacer.
+**Pour les dons de vêtements et de textiles**, demandez confirmation à IMAJ avant le déplacement : la page des horaires consultée ne précise pas les conditions actuelles de reprise de ces articles.
 
 Pour les gros objets, IMAJ propose aussi une **collecte à domicile sur demande**. Elle est annoncée gratuite dans certaines communes de Roissy Pays de France situées à moins de 15 km de Villiers-le-Bel, ainsi qu’à Bouffémont, Moisselles et Attainville ; ailleurs, elle peut être payante. L’adresse de contact et le détail des zones figurent sur la [page officielle des horaires et de la collecte IMAJ](https://imaj95.fr/les-horaires/).
 
@@ -94,13 +96,15 @@ Pour un meuble trop lourd à transporter, Emmaüs peut organiser un **retrait gr
 
 La [liste publiée par Emmaüs 95](https://www.emmaus95.fr/acheter-et-donner/) mentionne notamment meubles, jouets, vaisselle et électroménager parmi les dons possibles, mais refuse entre autres les vieux matelas, les meubles dangereux, les pneus et les produits inflammables. Ne laissez rien devant le dépôt lorsqu’il est fermé : les objets risquent d’être abîmés et ne seront pas récupérés.
 
-## Mini Repair Café à Vauréal : réparer avec des bénévoles
+## Réparer à Vauréal : vérifier le lieu et l’accueil avant de venir
 
-Un grille-pain qui ne chauffe plus, un vélo à remettre en état ou un ordinateur capricieux ne sont pas forcément destinés à la poubelle. À **Vauréal**, le Mini Repair Café organisé par Générations Solidaires Val-d’Oise accueille les habitants à la **Maison des Cultures et Langues du Monde, boulevard de l’Oise**, près du Forum.
+Un grille-pain qui ne chauffe plus, un vélo à remettre en état ou un ordinateur capricieux peuvent parfois être sauvés. À Vauréal, l’association **Générations Solidaires Val-d’Oise (GSVO 95)** anime des activités où l’on apprend à réparer avec des bénévoles. Ce n’est pas un service de dépannage garanti ni un point de collecte d’objets à donner.
 
-L’[organisateur annonce des séances sans rendez-vous](https://repaircafe95.fr/atelier-hebdomadaire/) **le mercredi de 14 h à 17 h et le samedi de 9 h 30 à 12 h 30 puis de 14 h à 17 h**. Les bénévoles interviennent notamment sur les vélos, le petit électroménager, le matériel électrique et l’informatique ; la couture est signalée certains samedis.
+**Attention : les informations pratiques publiées par l’organisateur ne concordent pas.** La [page historique du Mini Repair Café](https://repaircafe95.fr/atelier-hebdomadaire/) situe l’atelier au **95 boulevard de l’Oise** et annonce un accueil sans rendez-vous **le mercredi de 14 h à 17 h et le samedi de 9 h 30 à 12 h 30 puis de 14 h à 17 h**. Le [site actuel de GSVO 95](https://gsvo95.fr/repair-cafe) affiche, lui, **L’Agora, 36 mail Mendès-France**, et indique que les ateliers de réparation accueillent **sur rendez-vous**. Il n’est donc pas possible de garantir que les anciens créneaux et l’ancienne adresse restent valables.
 
-Le principe est de **chercher la panne et d’essayer de réparer ensemble**, dans la limite des compétences et des personnes présentes. Ce n’est ni un atelier de réparation professionnel avec résultat garanti, ni une ressourcerie où déposer des objets dont on ne veut plus. Selon la [FAQ de la Fondation Repair Café](https://www.repaircafe.org/fr/faq/), l’aide des bénévoles est gratuite ; une contribution volontaire peut être proposée. Pour un objet particulier, mieux vaut demander à l’organisateur si la compétence nécessaire sera présente.
+**Avant de transporter un appareil**, contactez l’association à **contact@gsvo95.fr** ou au **06 88 06 85 18** pour connaître le lieu, le prochain créneau et les compétences disponibles. Les activités annoncées par l’ancien atelier comprennent notamment petit électroménager, vélos, informatique et couture.
+
+Dans un Repair Café, l’idée est de **chercher la panne et d’essayer de réparer ensemble**. La [Fondation Repair Café](https://www.repaircafe.org/fr/faq/) précise que l’aide bénévole est gratuite, avec possibilité de contribution volontaire. Une réparation peut néanmoins échouer, notamment faute de pièce ou de compétence disponible.
 
 ## Quand l’objet ne peut plus être donné : quelle solution ?
 
