@@ -252,3 +252,4 @@ automation/image-20261026-1039-valbonne-playground-venaco-valdoise-d4b524a|d2fed
 automation/image-20261026-1039-valbonne-playground-venaco-valdoise-d4b524a|49b6f53deab3ab8a32da436a0ec3462753734c55
 automation/image-20261026-1557-granville-beauvais-00a07fc|00a07fc3f86a744af43bb10332401f676fbf9463
 automation/image-20261026-1557-granville-beauvais-00a07fc|99c9b2a337b21085a5a3de40164cdcd10c699758
+automation/image-20261026-2142-selestat-champs-parcfloral-manosque-3f811b9|7c2217296f39303b2544a59e71e53e67cfef2a32
