@@ -4,112 +4,116 @@ action: advance
 
 ---
 category: "maison"
-title: "Où donner, acheter d’occasion et réparer dans le Val-d’Oise ?"
-subtitle: "Cinq adresses pour équiper la maison, faire circuler les objets et éviter de jeter"
-summary: "Meubles, jouets, vêtements ou appareil en panne : cinq structures du Val-d’Oise, leurs horaires, leurs conditions de dépôt et les bons réflexes avant de partir."
+title: "Donner, acheter d’occasion ou réparer dans le Val-d’Oise : cinq adresses utiles"
+subtitle: "Meubles, jouets, vêtements et appareils : les bons lieux selon ce que vous cherchez à faire"
+summary: "De Cergy à Eaubonne, cinq structures pour équiper la maison à petit prix, donner des objets en bon état ou tenter une réparation sans déplacement inutile."
 keywords:
-  - "recyclerie Val-d’Oise"
-  - "donner meubles Val-d’Oise"
-  - "ressourcerie 95"
-  - "réparer objets Vauréal"
+  - "recyclerie Val-d'Oise"
+  - "meubles occasion Val-d'Oise"
+  - "donner objets Val-d'Oise"
+  - "Repair Café Vauréal"
 location:
   city: "Cergy"
-  department: "Val-d’Oise"
+  department: "Val-d'Oise"
   region: "Île-de-France"
 sources:
-  - title: "Les Pépites — fonctionnement, dons et objets refusés"
+  - title: "Les Pépites — fonctionnement, dons et prix"
     url: "https://www.lespepites-recyclerie.fr/"
-  - title: "Les Pépites — contact et horaires"
+  - title: "Les Pépites — adresse et horaires"
     url: "https://www.lespepites-recyclerie.fr/contact.htm"
-  - title: "Ressourcerie IMAJ — lieux, horaires et collecte"
+  - title: "IMAJ — boutiques, dépôt et collecte"
     url: "https://imaj95.fr/les-horaires/"
-  - title: "Le Maillon — espaces de ventes solidaires et dons"
+  - title: "Le Maillon — espaces de ventes solidaires"
     url: "https://www.le-maillon-cergy.org/espacesventesolidaire.html"
-  - title: "Le Maillon — autre page d’horaires"
+  - title: "Le Maillon — ancienne présentation des espaces"
     url: "https://le-maillon-cergy.org/espaces-solidarite.html"
-  - title: "Le Maillon — adresse et contact"
+  - title: "Le Maillon — contact et adresse"
     url: "https://www.le-maillon-cergy.org/contact.html"
-  - title: "Emmaüs 95 — horaires et enlèvement à domicile"
+  - title: "Emmaüs 95 — horaires, dons et enlèvement à Bernes-sur-Oise"
     url: "https://www.emmaus95.fr/infos-pratiques/infos_pratiques/"
-  - title: "Emmaüs 95 — donner et acheter, objets acceptés"
-    url: "https://www.emmaus95.fr/acheter-et-donner/"
-  - title: "Repair Café Val-d’Oise — ancien descriptif de l’atelier de Vauréal"
+  - title: "Repair Café Val-d'Oise — annonce de l'atelier de Vauréal"
     url: "https://repaircafe95.fr/atelier-hebdomadaire/"
-  - title: "Générations Solidaires Val-d’Oise — Repair Café et modalités actuelles"
-    url: "https://gsvo95.fr/repair-cafe"
+  - title: "GSVO 95 — ateliers et conditions d'accueil"
+    url: "https://gsvo95.fr/nos-activites"
   - title: "Fondation Repair Café — questions pratiques"
     url: "https://www.repaircafe.org/fr/faq/"
-  - title: "ADEME — que faire de ses meubles ?"
+  - title: "ADEME — que faire de ses meubles"
     url: "https://quefairedemesdechets.ademe.fr/categories/meubles/"
   - title: "ADEME — bonus réparation"
     url: "https://quefairedemesdechets.ademe.fr/bonus-reparation/"
 ---
 
-Un bureau pour la chambre d’un enfant, des jouets à petit prix, de la vaisselle pour un premier logement ou un appareil qu’on préférerait réparer : dans le Val-d’Oise, plusieurs associations permettent d’acheter d’occasion, de donner ou de prolonger la vie des objets. Mais toutes ne rendent pas le même service. Certaines vendent et collectent sur place, d’autres peuvent récupérer un meuble encombrant, tandis qu’un Repair Café aide à tenter une réparation.
+Une étagère à trouver pour la chambre des enfants, des jouets devenus inutiles, une cafetière qui ne démarre plus : dans le Val-d’Oise, plusieurs associations permettent d’acheter d’occasion, de donner ou d’essayer de réparer. Mais leurs services ne sont pas les mêmes. Certaines vendent des objets récupérés, d’autres acceptent les dons sous conditions, tandis qu’un atelier de réparation aide à remettre en état ce que vous possédez déjà.
 
-Voici cinq adresses utiles, d’Eaubonne à Bernes-sur-Oise, avec leurs différences et les précautions qui évitent un déplacement inutile.
+Voici cinq pistes concrètes, d’Eaubonne à Vauréal, avec les horaires et les précautions qui évitent de repartir avec ses cartons.
 
-## Quelle adresse choisir selon votre besoin ?
+## Où aller selon votre besoin ?
 
-- **Acheter des jouets, des livres ou de la vaisselle :** regardez du côté des Pépites à Eaubonne, du Maillon à Cergy, d’IMAJ ou d’Emmaüs à Bernes-sur-Oise. Les arrivages changent : aucun article précis n’est garanti.
-- **Donner quelques sacs d’objets en bon état :** Les Pépites disposent de créneaux de dépôt, mais limitent les quantités. IMAJ et Le Maillon ont leurs propres horaires de réception.
-- **Faire enlever une armoire ou un meuble volumineux :** contactez d’abord IMAJ ou Emmaüs 95. L’enlèvement doit être demandé et accepté ; il n’est pas automatique.
-- **Essayer de sauver un petit appareil en panne ou un vélo :** l’association Générations Solidaires Val-d’Oise propose des ateliers de réparation accompagnée à Vauréal. Vérifiez le lieu et les modalités d’accueil avant de vous rendre sur place.
-- **Se séparer d’un objet irréparable :** il faut chercher la filière de collecte adaptée, plutôt que le déposer devant une association.
+- **Acheter de la vaisselle, des livres, des jouets ou des vêtements :** commencez par Les Pépites, IMAJ ou Le Maillon. Les stocks changent au fil des dons.
+- **Chercher des meubles ou de l’électroménager d’occasion :** regardez Le Maillon à Cergy ou Emmaüs à Bernes-sur-Oise. Rien ne garantit qu’un modèle précis soit disponible.
+- **Donner plusieurs cartons :** vérifiez les quantités autorisées. Les Pépites limite les apports ; IMAJ distingue strictement les lieux de dépôt et les boutiques.
+- **Faire enlever un meuble encombrant :** IMAJ et Emmaüs 95 proposent une demande de collecte, à organiser en amont.
+- **Tenter de réparer un appareil :** contactez l’association GSVO 95 à Vauréal avant de vous déplacer ; son accueil a évolué par rapport à une ancienne annonce de Repair Café.
 
-## Les Pépites à Eaubonne : pour les petits dons et les trouvailles d’occasion
+## Les Pépites à Eaubonne : pour les petits objets et les vêtements
 
-Au **7 rue Louis-Armand, à Eaubonne**, la recyclerie Les Pépites accueille les visiteurs pour acheter des objets de seconde main et apporter des dons réutilisables. Boutique et dépôt fonctionnent sur les mêmes créneaux : **mercredi de 14 h à 17 h ; samedi de 10 h à 13 h et de 14 h à 17 h**. Les horaires et l’adresse figurent sur la [page de contact de la recyclerie](https://www.lespepites-recyclerie.fr/contact.htm).
+Au **7 rue Louis-Armand à Eaubonne**, la recyclerie Les Pépites permet de déposer des objets réutilisables et d’en acheter d’autres à prix modérés. On peut notamment y chercher de la vaisselle, des livres ou des vêtements, selon les arrivages.
 
-C’est une bonne piste pour les vêtements, les livres, la vaisselle et les petits objets du quotidien. La structure donne des exemples de prix modestes, comme un tee-shirt enfant à 1 € ou un pantalon enfant à 2 €, sans que cela garantisse la présence de ces articles le jour de votre visite.
+La boutique et la réception des dons ouvrent **le mercredi de 14 h à 17 h** et **le samedi de 10 h à 13 h puis de 14 h à 17 h**, d’après la [page de contact de la recyclerie](https://www.lespepites-recyclerie.fr/contact.htm).
 
-**Attention aux limites de dépôt :** trois sacs de courses ou cartons équivalents au maximum, dont deux de textile. La literie, notamment matelas et sommiers, est refusée. Les Pépites ne proposent **aucun enlèvement à domicile**. Avant de charger la voiture, consultez la [liste des objets acceptés et les consignes de don](https://www.lespepites-recyclerie.fr/).
+Attention à la quantité : **trois sacs de courses ou cartons équivalents maximum**, dont **deux au plus pour les textiles**. La literie, notamment matelas, sommiers et oreillers, est refusée. L’association ne propose pas d’enlèvement à domicile. Sa [présentation des dons et des prix](https://www.lespepites-recyclerie.fr/) donne aussi des exemples de tarifs : 1 € pour un tee-shirt enfant ou 2 € pour un pull enfant. Ce sont des repères, pas une promesse de disponibilité.
 
-## IMAJ : acheter dans deux communes, donner uniquement à Villiers-le-Bel
+**À choisir si :** vous avez quelques sacs bien triés ou souhaitez chiner de petits équipements sans prévoir de transport volumineux.
 
-La ressourcerie IMAJ dispose de points de vente à **Villiers-le-Bel, 12 avenue des Entrepreneurs**, et à **Bouffémont, place Vauban**. Ses boutiques annoncent une ouverture **mercredi de 11 h à 18 h, vendredi de 14 h à 18 h et samedi de 11 h à 18 h**.
+## IMAJ à Villiers-le-Bel et Bouffémont : ne pas confondre boutique et dépôt
 
-Pour **déposer des objets**, en revanche, il faut aller à Villiers-le-Bel, **le mercredi de 11 h à 18 h ou le vendredi de 14 h à 18 h**. **Aucun dépôt n’est accepté à Bouffémont** : la distinction compte si vous venez avec plusieurs cartons.
+La ressourcerie IMAJ dispose d’un **point de dépôt au 12 avenue des Entrepreneurs, à Villiers-le-Bel**, et de boutiques à Villiers-le-Bel ainsi que **place Vauban, à Bouffémont**. Cette distinction est essentielle : **aucun don ne peut être déposé à Bouffémont**.
 
-**Pour les dons de vêtements et de textiles**, demandez confirmation à IMAJ avant le déplacement : la page des horaires consultée ne précise pas les conditions actuelles de reprise de ces articles.
+Selon la [page officielle des horaires d’IMAJ](https://imaj95.fr/les-horaires/), les boutiques accueillent le public le mercredi de 11 h à 18 h, le vendredi de 14 h à 18 h et le samedi de 11 h à 18 h. Le dépôt de Villiers-le-Bel, lui, n’ouvre que **le mercredi de 11 h à 18 h** et **le vendredi de 14 h à 18 h**.
 
-Pour les gros objets, IMAJ propose aussi une **collecte à domicile sur demande**. Elle est annoncée gratuite dans certaines communes de Roissy Pays de France situées à moins de 15 km de Villiers-le-Bel, ainsi qu’à Bouffémont, Moisselles et Attainville ; ailleurs, elle peut être payante. L’adresse de contact et le détail des zones figurent sur la [page officielle des horaires et de la collecte IMAJ](https://imaj95.fr/les-horaires/).
+**Point de vigilance pour les vêtements :** le site d’IMAJ affiche une suspension temporaire des apports de textiles pour cause de saturation. Comme cette consigne peut changer, vérifiez-la avant de préparer des sacs de vêtements.
 
-## Le Maillon à Cergy : trois espaces pour meubler et équiper la maison
+Pour les gros objets, IMAJ propose également une **collecte à domicile sur demande**. Elle peut être gratuite dans certaines communes proches de Villiers-le-Bel et payante ailleurs. L’association demande de la contacter à **laressourcerie@imaj95.fr** pour connaître les conditions applicables à votre adresse.
 
-Au **37 rue Francis-Combe à Cergy**, l’association Le Maillon organise ses ventes solidaires en trois espaces : **meubles et électroménager**, **livres et jouets**, **vêtements**. Les achats sont ouverts au public, et pas seulement aux bénéficiaires d’une aide sociale. Pour une famille qui cherche un bureau, quelques assiettes ou des jeux, ces rayons permettent de cibler sa visite.
+**À choisir si :** vous voulez acheter en boutique ou faire examiner une demande d’enlèvement de mobilier, en tenant compte de votre commune.
 
-La [page actuelle des espaces de vente](https://www.le-maillon-cergy.org/espacesventesolidaire.html) annonce **lundi, mardi, mercredi et vendredi de 14 h à 16 h 30**. Pour les dons, elle indique les mêmes jours **de 9 h à 12 h et de 14 h à 17 h**.
+## Le Maillon à Cergy : meubles, électroménager, livres et jouets
 
-**Il existe toutefois une divergence sur le site de l’association :** une [autre page consacrée aux espaces solidaires](https://le-maillon-cergy.org/espaces-solidarite.html) affiche encore une fermeture des ventes à 17 h et d’autres modalités de dépôt. Retenez donc les créneaux de la page des ventes, mais **confirmez-les avant de partir**, surtout pour un don volumineux. Le [contact du Maillon](https://www.le-maillon-cergy.org/contact.html) indique le **01 30 30 13 21**.
+Au **37 rue Francis-Combe à Cergy**, l’association Le Maillon organise ses ventes solidaires autour de plusieurs espaces : meubles et appareils électroménagers, livres et jouets, vêtements. Les articles proviennent de dons ; l’accès à l’achat est ouvert au public.
 
-## Emmaüs à Bernes-sur-Oise : une option pour les meubles et l’enlèvement
+La [page actuelle des espaces de vente](https://www.le-maillon-cergy.org/espacesventesolidaire.html) annonce une ouverture **le lundi, mardi, mercredi et vendredi de 14 h à 16 h 30**. Pour déposer, elle indique ces mêmes jours **de 9 h à 12 h et de 14 h à 17 h**, hors jours fériés.
 
-La communauté **Emmaüs 95, 9 chemin Pavé à Bernes-sur-Oise**, vend des objets de seconde main et reçoit des dons. Les horaires ne sont pas les mêmes selon votre démarche :
+Il existe toutefois une **contradiction sur le site de l’association** : [une autre page consacrée aux espaces solidaires](https://le-maillon-cergy.org/espaces-solidarite.html) annonce des ventes jusqu’à 17 h et évoque des dépôts en semaine, de préférence le matin. Pour éviter un déplacement raté, confirmez les créneaux au **01 30 30 13 21**, numéro indiqué sur la [page de contact du Maillon](https://www.le-maillon-cergy.org/contact.html).
 
-- **Pour acheter :** mercredi et samedi **10 h–12 h et 14 h–17 h 30** ; jeudi et vendredi **14 h–17 h 30**.
-- **Pour donner sur place :** du mardi au samedi **8 h 30–12 h et 14 h–17 h 30**.
+**À choisir si :** vous cherchez un meuble, un appareil révisé, un livre ou un jouet, en acceptant de faire votre choix parmi les objets présents ce jour-là.
 
-Ces créneaux sont publiés par [Emmaüs 95 dans ses informations pratiques](https://www.emmaus95.fr/infos-pratiques/infos_pratiques/). Les ouvertures exceptionnelles méritent une vérification auprès de la communauté.
+## Emmaüs à Bernes-sur-Oise : acheter, déposer ou demander un enlèvement
 
-Pour un meuble trop lourd à transporter, Emmaüs peut organiser un **retrait gratuit à domicile**, après examen de la demande. Il faut écrire à **standardemmaus95@laposte.net** en indiquant ses coordonnées, son adresse, la liste des objets et des photos. La demande ne vaut pas acceptation : l’association privilégie les biens en état d’être réutilisés.
+La communauté **Emmaüs 95**, au **9 chemin Pavé à Bernes-sur-Oise**, est une autre piste pour trouver du mobilier et des objets de seconde main ou donner des biens encore utilisables.
 
-La [liste publiée par Emmaüs 95](https://www.emmaus95.fr/acheter-et-donner/) mentionne notamment meubles, jouets, vaisselle et électroménager parmi les dons possibles, mais refuse entre autres les vieux matelas, les meubles dangereux, les pneus et les produits inflammables. Ne laissez rien devant le dépôt lorsqu’il est fermé : les objets risquent d’être abîmés et ne seront pas récupérés.
+Les horaires de vente et de dépôt sont différents. La [page pratique d’Emmaüs 95](https://www.emmaus95.fr/infos-pratiques/infos_pratiques/) indique :
 
-## Réparer à Vauréal : vérifier le lieu et l’accueil avant de venir
+- **Pour acheter :** mercredi et samedi de 10 h à 12 h et de 14 h à 17 h 30 ; jeudi et vendredi de 14 h à 17 h 30.
+- **Pour déposer :** du mardi au samedi de 8 h 30 à 12 h et de 14 h à 17 h 30.
 
-Un grille-pain qui ne chauffe plus, un vélo à remettre en état ou un ordinateur capricieux peuvent parfois être sauvés. À Vauréal, l’association **Générations Solidaires Val-d’Oise (GSVO 95)** anime des activités où l’on apprend à réparer avec des bénévoles. Ce n’est pas un service de dépannage garanti ni un point de collecte d’objets à donner.
+Vous ne pouvez pas transporter une armoire ou un canapé ? Emmaüs 95 permet de **demander un retrait gratuit à domicile** en écrivant à **standardemmaus95@laposte.net**, avec votre téléphone, votre adresse précise, une liste détaillée et des photos des objets. Il s’agit d’une demande à faire accepter, pas d’une collecte automatique. Les objets proposés doivent être en bon état.
 
-**Attention : les informations pratiques publiées par l’organisateur ne concordent pas.** La [page historique du Mini Repair Café](https://repaircafe95.fr/atelier-hebdomadaire/) situe l’atelier au **95 boulevard de l’Oise** et annonce un accueil sans rendez-vous **le mercredi de 14 h à 17 h et le samedi de 9 h 30 à 12 h 30 puis de 14 h à 17 h**. Le [site actuel de GSVO 95](https://gsvo95.fr/repair-cafe) affiche, lui, **L’Agora, 36 mail Mendès-France**, et indique que les ateliers de réparation accueillent **sur rendez-vous**. Il n’est donc pas possible de garantir que les anciens créneaux et l’ancienne adresse restent valables.
+**À choisir si :** vous cherchez du mobilier de seconde main ou souhaitez proposer un don volumineux sans disposer d’un véhicule adapté.
 
-**Avant de transporter un appareil**, contactez l’association à **contact@gsvo95.fr** ou au **06 88 06 85 18** pour connaître le lieu, le prochain créneau et les compétences disponibles. Les activités annoncées par l’ancien atelier comprennent notamment petit électroménager, vélos, informatique et couture.
+## À Vauréal, faire réparer plutôt que donner : attention aux informations anciennes
 
-Dans un Repair Café, l’idée est de **chercher la panne et d’essayer de réparer ensemble**. La [Fondation Repair Café](https://www.repaircafe.org/fr/faq/) précise que l’aide bénévole est gratuite, avec possibilité de contribution volontaire. Une réparation peut néanmoins échouer, notamment faute de pièce ou de compétence disponible.
+Un Repair Café n’est pas une boutique ni un point de dépôt : on y vient avec un objet défectueux pour essayer de le réparer avec l’aide de bénévoles. Selon la [Fondation Repair Café](https://www.repaircafe.org/fr/faq/), le résultat dépend de la panne et des compétences présentes ; aucune réparation n’est garantie.
 
-## Quand l’objet ne peut plus être donné : quelle solution ?
+À Vauréal, une [annonce de Repair Café Val-d’Oise](https://repaircafe95.fr/atelier-hebdomadaire/) mentionne un atelier les mercredis et samedis, **sans rendez-vous**, boulevard de l’Oise. Elle évoque notamment le petit électroménager, les vélos et l’informatique.
 
-Un objet propre, complet et utilisable peut intéresser une association ; un meuble cassé ou un appareil dangereux ne doit pas devenir une charge supplémentaire pour elle. Pour un meuble hors d’usage, l’[ADEME recommande](https://quefairedemesdechets.ademe.fr/categories/meubles/) un point de collecte dédié, une déchèterie ou, lorsqu’il existe, le service local des encombrants. Son outil permet de rechercher la bonne solution selon l’objet et le lieu.
+**Ne vous fiez pas à cette annonce seule.** Le [site de l’association organisatrice GSVO 95](https://gsvo95.fr/nos-activites) présente désormais ses ateliers de réparation **sur rendez-vous uniquement** et donne comme coordonnées **L’Agora, 36 mail Mendès-France, 95490 Vauréal**. Il ne confirme pas les anciens créneaux de l’atelier sans rendez-vous. Avant de vous déplacer avec un appareil, contactez **contact@gsvo95.fr** ou **06 88 06 85 18** pour connaître le lieu, le créneau et le type de panne pris en charge.
 
-Si une réparation professionnelle est nécessaire, pensez au [bonus réparation présenté par l’ADEME](https://quefairedemesdechets.ademe.fr/bonus-reparation/) : pour certains objets et sous conditions, une réduction est appliquée directement par un **réparateur labellisé**. Ce dispositif n’est **pas** une remise automatiquement applicable dans un Repair Café.
+**À choisir si :** votre objet est transportable et vous souhaitez tenter une réparation accompagnée, plutôt que le remplacer immédiatement.
 
-Enfin, pour acheter d’occasion, vérifiez les dimensions d’un meuble, son état et les modalités de transport avant de payer. Pour donner, triez les objets par catégorie et consultez les refus propres à chaque structure. Quelques minutes de vérification évitent de transporter un objet qui ne pourra pas être repris.
+## Un objet trop abîmé pour être donné : quelle solution ?
+
+Un meuble instable ou irrécupérable n’a pas sa place dans une ressourcerie simplement parce qu’on souhaite s’en débarrasser. L’[ADEME distingue trois possibilités](https://quefairedemesdechets.ademe.fr/categories/meubles/) : réparer si c’est possible, donner ou revendre si l’objet est encore utilisable, puis orienter les objets hors d’usage vers une collecte adaptée, une déchèterie ou un service d’encombrants lorsqu’il existe dans la commune.
+
+Pour un appareil, un vêtement, un vélo ou certains meubles réparables, pensez aussi au **bonus réparation**. Il s’agit d’une réduction sur la facture d’un **professionnel labellisé**, pour des produits et interventions éligibles. L’[ADEME détaille les conditions et les réparateurs concernés](https://quefairedemesdechets.ademe.fr/bonus-reparation/). Ce dispositif ne signifie pas qu’une séance bénévole en Repair Café ouvre droit à cette réduction.
+
+Avant tout dépôt, vérifiez l’état des objets, les restrictions de la structure et les horaires du jour. Pour un achat d’occasion, les stocks étant imprévisibles, un appel peut éviter un trajet pour rien.
