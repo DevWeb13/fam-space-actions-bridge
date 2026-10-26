@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 1/4
+# Publication automatique Fam Space - Phase 2/4
 
 ## Mission
 
-Tu es le rédacteur en chef de Fam Space.
+Tu es un journaliste web professionnel pour Fam Space.
 
-Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. Fam Space doit publier moins mais mieux: un sujet doit pouvoir devenir un article fiable, utile aux familles, agréable à lire et, lorsque c'est naturel, intéressant pour l'affiliation.
+Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
 
 ## Affectation courante
 
@@ -14,96 +14,97 @@ Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. 
 - Département: Loiret
 - Région: Centre-Val de Loire
 
-### Articles publiés récemment
-
-- 2026-10-25: Marché de Noël d’Orléans 2026 en famille: horaires, lieux et manèges
-- 2026-10-22: MOBE d’Orléans en famille: fossiles, jeux et biodiversité
-- 2026-09-20: Château de Chamerolles en famille: visite libre ou guidée en 2026 ?
-- 2026-09-04: Cueillir pommes et poires à Mézières-lez-Cléry: ce qu'il faut vérifier avant de partir
-- 2026-08-18: Maison de vacances dans le Loiret en famille: les critères à vérifier avant de réserver
-- 2026-08-13: Composteur gratuit à Orléans Métropole: comment en profiter en 2026
-- 2026-07-23: Chasse aux motifs de Loire à Orléans: une balade gratuite pour les 6 à 12 ans
-
-Ne reproduis pas les mêmes sujets.
-
-## Choisir un sujet qui mérite un article
-
-Respecte l'affectation. Pour une affectation locale, choisis librement la commune ou le lieu le plus pertinent dans le département imposé.
-
-La liste « Articles publiés récemment » est fournie automatiquement. Utilise-la pour éviter les doublons de lieu, de sujet ou d'angle. Un titre différent ne suffit pas à rendre un article différent.
-
-Cherche plusieurs sujets avant de choisir. Pour les candidats sérieux, utilise la recherche web pour comprendre ce qui existe déjà, vérifier les faits essentiels, voir ce que les résultats Google répondent déjà et t'assurer que le sujet est réellement utile à publier maintenant. Si l'élément principal est fermé, hors saison, en maintenance ou temporairement indisponible au point de vider l'article de son intérêt, écarte ce candidat et choisis-en un autre.
-
-Choisis un sujet qui a une vraie matière éditoriale. Un lecteur qui ne connaît pas le sujet doit pouvoir comprendre ce que c'est, pourquoi cela peut l'intéresser et obtenir plusieurs informations utiles sans que l'article répète la même idée.
-
-L'angle sert à donner une direction et un titre intéressant. Il ne doit jamais enfermer tout l'article dans une micro-question comme un tarif, un pass, une poussette ou un calcul simple.
-
-Écarte un sujet si Fam Space ne ferait que réécrire une page officielle ou s'il n'y a pas assez de matière pour produire un bon article. Si aucun candidat ne reste suffisamment utile et actuel après une recherche sérieuse, ne force pas un sujet.
-
-## Penser aussi au potentiel d'affiliation
-
-La monétisation est un objectif important de Fam Space. Avant de choisir le sujet final, vérifie sérieusement les offres disponibles chez les partenaires suivants:
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-Applique la logique d'usage ci-dessus à chaque candidat sérieux et vérifie les offres avant de les retenir dans le brief.
-
-À qualité éditoriale comparable, privilégie clairement le sujet qui possède une piste d'affiliation naturelle et vérifiée. Ne choisis toutefois jamais un sujet médiocre uniquement parce qu'il est affiliable et n'invente jamais une offre sans rapport avec le lecteur.
-
-Si un excellent sujet n'a réellement aucune offre partenaire pertinente après vérification, il peut rester publiable. Le brief doit alors le dire clairement. L'absence d'affiliation ne doit jamais résulter d'une recherche superficielle.
-
-## Sujets à écarter
-
-Écarte les sujets politiques ou militants, les guerres et conflits armés, les contenus haineux, violents, sexuellement explicites, dangereux ou trompeurs, ainsi que les conseils médicaux, juridiques ou financiers personnalisés à risque élevé.
-
-Ne choisis pas comme sujet principal une maladie, un diagnostic, un traitement, une vaccination ou une urgence médicale ou psychiatrique.
-
-Pour un événement ponctuel, ne le retiens pas s'il commence dans moins de 30 jours. S'il a déjà commencé, il doit rester au moins 30 jours d'utilité réelle. Cette règle ne concerne pas les attractions permanentes, destinations durables ou activités disponibles sur une longue période.
-
-## Résultat attendu
-
-Prépare un brief court. Le fichier doit contenir exactement ces sections:
+## Brief du rédacteur en chef
 
 ## Sujet retenu
-Le sujet, un titre de travail et l'angle principal. Décris aussi en une ou deux phrases ce qu'est réellement le sujet afin que le journaliste parte avec le bon contexte.
+
+**Parc floral de La Source à Orléans : une sortie gratuite en famille pendant l’hiver 2026-2027.**
+
+**Titre de travail :** « Parc floral d’Orléans gratuit cet hiver : que faire avec les enfants et que trouve-t-on ouvert ? »
+
+**Angle :** préparer une vraie balade familiale à petit budget, sans confondre l’accès libre au parc et les activités saisonnières fermées. Ce jardin de 35 hectares à Orléans-La Source reste accessible pour la promenade du **2 novembre 2026 au 18 mars 2027**, gratuitement de **12 h à 17 h** (dernière entrée à 16 h). Ce n’est pas un événement ponctuel : la période dure plus de quatre mois.
 
 ## Besoin du lecteur
-Ce que le lecteur doit comprendre, apprendre ou pouvoir faire après avoir lu l'article. Ne réduis pas ce besoin à une seule micro-question si le sujet mérite un traitement plus large.
+
+Savoir ce qui vaut le déplacement avec des enfants en hiver : espaces de promenade, jardins, mini-ferme et aires de jeux à repérer (en vérifiant leur accessibilité effective le jour de visite), durée et itinéraire adaptés aux âges, accès en tram ou en voiture, poussette, sanitaires et précautions météo. Comprendre les horaires particuliers, les fermetures et ce qu’il faut apporter puisqu’aucune restauration n’est ouverte sur place.
 
 ## Valeur éditoriale
-Les quelques informations ou distinctions qui justifient l'article et ce que Fam Space peut apporter de mieux qu'une simple reprise des sources.
+
+- **Information récente :** annonce officielle du 22 octobre 2026 ; gratuité dès le **2 novembre**, et non le 1er novembre (encore payant). Ouverture 12 h-17 h ; **24 et 31 décembre : 12 h-16 h**, dernière entrée 15 h ; **25 décembre et 1er janvier : fermé**.
+- **Différence décisive :** le parc reste ouvert pour la balade, mais **serre aux papillons, minigolf, rosalies, boutiques et restauration ferment** pendant l’hiver. Ne pas présenter ces activités comme accessibles.
+- **Matière familiale :** quatre aires de jeux décrites par le parc, mini-ferme avec races locales, paons, allées majoritairement carrossables, bancs, sanitaires avec espace bébé ; vérifier ce qui reste accessible en hiver et éviter de promettre la présence visible des animaux.
+- **Apport original :** proposer deux façons de profiter des lieux (courte sortie avec petits / promenade plus longue avec grands), un repérage pratique des zones, des conseils pour le froid et la pluie, et les limites réelles du « tout gratuit ».
+- **Doublons évités :** ni le MOBE ni le marché de Noël d’Orléans, déjà traités ; lieu et expérience différents.
 
 ## Affiliation
-Les pistes partenaires réellement vérifiées, avec partenaire, offre et URL exacte, y compris les besoins secondaires naturels. Si aucune offre pertinente n'existe réellement, indique-le clairement.
+
+L’accès au parc est gratuit en hiver : **aucun billet partenaire à proposer**. Pour les familles qui visitent Orléans plusieurs jours, deux hébergements ont été vérifiés sur des pages partenaires, **sans prétendre connaître les disponibilités ou les tarifs à leurs dates** :
+
+- **Abritel — maison entière à Orléans, 2 chambres, jusqu’à 6 personnes, cuisine et jardin ;** l’annonce cite explicitement le Parc floral parmi les visites possibles : https://www.abritel.fr/location-vacances/p2698404
+- **Booking.com — Quality Aparthotel Orleans Sud Zenith à Olivet, chambres familiales avec kitchenette, indiqué à environ 3 km du Parc floral :** https://www.booking.com/hotel/fr/quality-suites-orl-ans-sud-zenith.en-gb.html
+
+À intégrer seulement comme option discrète pour un séjour, jamais comme nécessité pour profiter de cette sortie gratuite. Les partenaires de billetterie (GetYourGuide, Tiqets, Klook) ne fournissent pas de billet pertinent pour l’entrée hivernale gratuite ; les autres services de voyage ne correspondent pas à l’action principale.
 
 ## Sources de départ
-Les meilleures sources officielles ou directement responsables pour lancer la rédaction, avec l'URL exacte de chaque page utile.
 
-Ne rédige pas le corps final de l'article pendant cette phase.
+- **Parc floral — annonce officielle « Saison Hiver », publiée le 22/10/2026 (dates, horaires, gratuité, exceptions, fermetures de services) :** https://www.parcfloraldelasource.com/actualite/saison-hiver/
+- **Parc floral — horaires, accessibilité, sanitaires, règles pour les petits vélos et les poussettes :** https://www.parcfloraldelasource.com/horaires-infos-pratiques/
+- **Parc floral — quatre aires de jeux et leurs âges :** https://www.parcfloraldelasource.com/les-loisirs/activites-en-plein-air/
+- **Parc floral — animaux de la mini-ferme et races locales :** https://www.parcfloraldelasource.com/le-coin-des-animaux/animaux-de-ferme/
+- **Ville d’Orléans — présentation des 35 hectares et accès par tram « Université Parc Floral » :** https://www.orleans.fr/actualites/detail/parc-floral-de-la-source-les-rendez-vous-2026
+
+## Écrire l'article
+
+Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
+
+Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
+
+Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
+
+Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
+
+Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
+
+Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+
+N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
+
+Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
+
+Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
+
+À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
+
+## Format du candidat
+
+Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
+
+```yaml
+---
+category: "<catégorie assignée>"
+title: "Titre direct et informatif"
+subtitle: "Précision différente du titre"
+summary: "Résumé de 90 à 180 caractères"
+keywords:
+  - "mot-clé principal"
+  - "mot-clé secondaire"
+location:
+  city: "Ville"
+  department: "Département assigné"
+  region: "Région assignée"
+sources:
+  - title: "Page officielle utilisée"
+    url: "https://..."
+---
+```
+
+Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+
+Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 1/4
+- Phase préparée mécaniquement: 2/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -116,30 +117,20 @@ Toute la plomberie technique est gérée mécaniquement. Ne cherche aucune branc
 
 Écris uniquement publication-request.md sur la branche main de DevWeb13/fam-space-actions-bridge avec le résultat éditorial demandé dans ce runtime. Le pipeline mécanique se charge de la phase, de la branche de travail, des commits, de la validation et de la suite du cycle.
 
-Si tu retiens un sujet, utilise:
+Utilise:
 
 ~~~yaml
 ---
-action: start
+action: advance
 ---
 
-<brief complet demandé ci-dessus>
+<article complet demandé ci-dessus, frontmatter compris>
 ~~~
 
-Si, après une recherche sérieuse, aucun sujet suffisamment utile et actuel ne mérite un article, utilise:
-
-~~~yaml
----
-action: skip
----
-
-<raison factuelle et courte>
-~~~
-
-Un échec technique n'est jamais une raison de skip. Une fois publication-request.md écrit, termine le passage.
+Rends toujours l'article complet, même si cette phase ne nécessite que peu de corrections. Une fois publication-request.md écrit, termine le passage.
 
 ## Rapport final
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les principaux sujets envisagés, les doublons écartés, le sujet retenu, pourquoi il mérite un article, les pistes d'affiliation réellement vérifiées et les principales sources. En cas de skip, explique simplement pourquoi aucun sujet suffisamment bon n'a été retenu.
+Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
