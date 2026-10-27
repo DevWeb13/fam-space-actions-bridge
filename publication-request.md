@@ -14,7 +14,7 @@ keywords:
   - "relais petite enfance Aisne"
   - "aide garde enfant CMG"
 location:
-  city: ""
+  city: "Aisne"
   department: "Aisne"
   region: "Hauts-de-France"
 sources:
