@@ -255,3 +255,4 @@ automation/image-20261026-1557-granville-beauvais-00a07fc|99c9b2a337b21085a5a3de
 automation/image-20261026-2142-selestat-champs-parcfloral-manosque-3f811b9|7c2217296f39303b2544a59e71e53e67cfef2a32
 automation/image-20261026-2142-selestat-champs-parcfloral-manosque-3f811b9|c2272beedbb9dfd22bcfb3f73a577872ce2de7d8
 automation/image-20261027-0346-6heros-cbe4b56a|df5e4e81ec0e0c973a6aa5e5c34989a283a08b20
+automation/image-20261027-0346-6heros-cbe4b56a|7a3c5f11b1bbe663fa7a86c011d2ed837c5b30cb
