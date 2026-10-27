@@ -30,7 +30,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: DevWeb13/fam-space-qwik
-          ref: master
+          ref: automation/attente-images
           token: ${{ secrets.FAM_SPACE_TOKEN }}
           fetch-depth: 0
           path: fam-space
