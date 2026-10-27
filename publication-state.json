@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261027-1401-sujet-le-pass-nantes-pour-une-visite-familiale-de-nantes-et-de-la-loir",
+  "lastProcessedCommit": "869af531ae227c36ec10b70e02a7c05244125595"
 }
