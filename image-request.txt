@@ -257,3 +257,4 @@ automation/image-20261026-2142-selestat-champs-parcfloral-manosque-3f811b9|c2272
 automation/image-20261027-0346-6heros-cbe4b56a|df5e4e81ec0e0c973a6aa5e5c34989a283a08b20
 automation/image-20261027-0346-6heros-cbe4b56a|7a3c5f11b1bbe663fa7a86c011d2ed837c5b30cb
 automation/image-20261027-0941-gramat-lens-pierrefonds-collonges-e1f1681|e1f1681622973bdab8d2e846ba5d7fc0c88eba8e
+automation/image-20261027-0941-gramat-lens-pierrefonds-collonges-e1f1681|1c146ce0f09970144cb708fc5efdd4bd95dba359
