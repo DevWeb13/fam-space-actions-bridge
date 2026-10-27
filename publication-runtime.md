@@ -14,6 +14,10 @@ Tu es la dernière personne à lire l'article avant publication. Ton rôle n'est
 - Département: Aisne
 - Région: Hauts-de-France
 
+## Précision géographique pour cet article
+
+Cet article traite de la garde d'enfants dans tout le département de l'Aisne : `Aisne` n'est pas une ville. Dans la version finale du frontmatter, supprime entièrement la ligne `city: "Aisne"` et conserve `department: "Aisne"` et `region: "Hauts-de-France"`. Ne remplace pas la ville par une autre ville. Cette correction n'altère ni le sujet ni les sources.
+
 ## Article à éditer
 
 ---
