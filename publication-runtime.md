@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,97 +14,147 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Corrèze
 - Région: Nouvelle-Aquitaine
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Titre de travail :** « Collonges-la-Rouge, Turenne et Curemonte en famille : un week-end entre villages et châteaux en Corrèze ».
-
-**Angle :** organiser un court séjour familial de un à deux jours dans trois villages médiévaux du sud de la Corrèze, sans transformer la découverte en marathon de monuments. Collonges-la-Rouge se distingue par ses maisons en grès rouge, Turenne par son village perché et les vestiges de sa vicomté, Curemonte par ses trois châteaux et ses ruelles. Ce sont des villages à découvrir à pied, même lorsque les visites intérieures saisonnières ne sont pas proposées.
-
-## Besoin du lecteur
-
-Savoir pourquoi ces trois étapes se complètent, comment les répartir sur une journée tranquille ou un week-end, quoi observer avec les enfants et quelles activités ludiques sont réellement proposées. Pouvoir anticiper les trajets entre villages, le stationnement, les montées et pavés avec de jeunes enfants, les pauses, la restauration hors saison et les différences entre accès libre aux villages et visites payantes ou saisonnières.
-
-## Valeur éditoriale
-
-- Proposer deux rythmes réalistes : **un jour** avec deux villages et une pause, ou **deux jours** pour les trois, sans imposer un programme chronométré. Collonges demande environ deux heures selon Brive Tourisme ; Curemonte environ 1 h 30 à 2 h selon Corrèze Tourisme. Ne pas confondre ces durées indicatives avec des horaires d'ouverture.
-- Donner aux enfants un fil conducteur différent à chaque étape : repérer tours et grès rouge à Collonges ; utiliser le **livret-jeu gratuit de Turenne** ; chercher les « trois » de Curemonte, avec l'option Tèrra Aventura « Le village des trois » sous réserve de vérifier que le parcours est actif le jour choisi.
-- Distinguer clairement les **villages accessibles à la promenade** des sites intérieurs. Au 27 octobre 2026, Brive Tourisme annonce le château de Turenne ouvert de 11 h à 17 h jusqu'au 11 novembre, puis des ouvertures ponctuelles fin décembre/début janvier : horaires à revérifier avant publication et avant départ. Les châteaux de Curemonte ne sont pas des visites libres permanentes.
-- Informations pratiques vérifiées : Collonges interdit la circulation automobile dans le bourg, dispose de deux parkings payants de mi-mars à mi-novembre et de toilettes publiques ; Curemonte a un parking payant à La Cabrolle. Turenne comporte une montée marquée. Ne pas promettre une accessibilité poussette intégrale. Entre villages, privilégier la voiture ; évoquer les bus depuis Brive uniquement après vérification des dessertes réelles, sans supposer une liaison facile entre les trois.
-- Le contenu doit aller au-delà des fiches touristiques déjà bien référencées : arbitrage familial entre les étapes, variantes selon l'âge, précautions hors saison, choix d'un point de chute. Aucun doublon avec les quatre articles récents de Corrèze fournis dans l'affectation.
-
-## Affiliation
-
-**Hébergements précis vérifiés pour prolonger la visite en week-end :**
-
-- **Abritel — Maison de la Fontaine, dans le bourg de Collonges-la-Rouge** : maison entière, 3 chambres, jusqu'à 7 personnes, cuisine, parking et équipement bébé annoncé ; accès à pied au village. URL : https://www.abritel.fr/location-vacances/p2588815
-- **Abritel — Location Turenne, un des plus beaux villages de France** : maison dans le village, 2 chambres, jusqu'à 4 personnes, kitchenette, Wi-Fi et parking annoncé ; base possible pour les trois étapes. URL : https://www.abritel.fr/location-vacances/p1722387a
-
-Les capacités et équipements proviennent uniquement des annonces partenaires ; disponibilités, prix et conditions dépendent des dates. Les recherches sur GetYourGuide, Tiqets et Klook n'ont pas confirmé de billet ou visite réservable spécifiquement pour ce circuit : ne pas en inventer. Les promenades dans les bourgs ne nécessitent pas de billetterie partenaire ; le château de Turenne est une option payante distincte, à vérifier sur la source responsable. Pas d'autre service secondaire ajouté artificiellement.
-
-## Sources de départ
-
-- **Brive Tourisme — Collonges-la-Rouge**, patrimoine, durée de découverte, parkings et toilettes : https://www.brive-tourisme.com/fr/visites/top-14/collonges-la-rouge/
-- **Brive Tourisme — Turenne**, histoire, accès et livret-jeu : https://www.brive-tourisme.com/fr/visites/top-14/turenne/
-- **Brive Tourisme — visiter Turenne**, château, horaires et tarifs 2026 : https://www.brive-tourisme.com/fr/visites/top-14/turenne/visite/
-- **Brive Tourisme — visiter avec les enfants**, téléchargement du livret-jeu de Turenne : https://www.brive-tourisme.com/fr/idees-sejours/en-famille/visiter-avec-enfants/
-- **Brive Tourisme — Curemonte**, trois châteaux, géocaching, stationnement et restrictions de visite : https://www.brive-tourisme.com/fr/visites/top-14/grands-sites-proches/curemonte/
-- **Tourisme Corrèze — Curemonte**, durée indicative et étapes : https://www.tourismecorreze.com/fr/le_mag/curemonte_village_medieval_d_exception_en_correze.html
-- **Tourisme Corrèze — Collonges-la-Rouge**, repères patrimoniaux et saisonnalité : https://www.tourismecorreze.com/fr/le_mag/collonges-la-rouge.html
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "voyages"
+title: "Collonges-la-Rouge, Turenne et Curemonte en famille: quel circuit choisir ?"
+subtitle: "Trois villages médiévaux de Corrèze, deux rythmes de visite et les précautions à connaître avec des enfants"
+summary: "Un jour ou un week-end dans le sud de la Corrèze: les villages à privilégier avec des enfants, les jeux possibles et les visites à anticiper."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Collonges-la-Rouge Turenne Curemonte en famille"
+  - "week-end villages Corrèze enfants"
+  - "visiter Turenne avec enfants"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Collonges-la-Rouge"
+  department: "Corrèze"
+  region: "Nouvelle-Aquitaine"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Brive Tourisme - Collonges-la-Rouge"
+    url: "https://www.brive-tourisme.com/fr/visites/top-14/collonges-la-rouge/"
+  - title: "Brive Tourisme - Turenne"
+    url: "https://www.brive-tourisme.com/fr/visites/top-14/turenne/"
+  - title: "Brive Tourisme - Visiter Turenne et son château"
+    url: "https://www.brive-tourisme.com/fr/visites/top-14/turenne/visite/"
+  - title: "Brive Tourisme - Visiter avec les enfants"
+    url: "https://www.brive-tourisme.com/fr/idees-sejours/en-famille/visiter-avec-enfants/"
+  - title: "Brive Tourisme - Curemonte"
+    url: "https://www.brive-tourisme.com/fr/visites/top-14/grands-sites-proches/curemonte/"
+  - title: "Tourisme Corrèze - Curemonte, village médiéval"
+    url: "https://www.tourismecorreze.com/fr/le_mag/curemonte_village_medieval_d_exception_en_correze.html"
+  - title: "Tèrra Aventura - Parcours de Curemonte"
+    url: "https://www.terra-aventura.fr/widget_partner/276%2C277%2C278%2C279%2C362%2C430%2C538%2C539"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Dans le sud de la Corrèze, près de Brive-la-Gaillarde et de la vallée de la Dordogne, trois villages médiévaux se prêtent particulièrement bien à une escapade avec des enfants. À **Collonges-la-Rouge**, les maisons et les tours sont construites dans une pierre rouge étonnante. **Turenne** grimpe vers les vestiges d'un château fort. **Curemonte**, posé sur une crête, aligne trois châteaux que l'on découvre depuis ses ruelles.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+Le bon programme n'est pas forcément de visiter les trois le même jour. Chacun a son caractère, et les enfants profiteront davantage d'une promenade avec un petit défi à relever que d'une succession de monuments.
+
+## Trois villages, trois façons de captiver les enfants
+
+### Collonges-la-Rouge: chercher les tours dans un village couleur brique
+
+C'est l'étape la plus spectaculaire dès les premières minutes. Les façades de grès rouge, les toits sombres et les petites rues composent un décor presque irréel. Proposez aux enfants de repérer les tours, de comparer leurs formes et de trouver les détails sculptés sur les maisons.
+
+L'église Saint-Pierre, la Maison de la Sirène et le château de Vassinhac sont quelques repères d'une promenade qui ne demande pas de suivre un parcours rigide. [Brive Tourisme](https://www.brive-tourisme.com/fr/visites/top-14/collonges-la-rouge/) indique environ **deux heures** pour découvrir le village et évoque ses nombreuses tours. Cette durée est une indication pour la balade, pas une obligation: avec de jeunes enfants, quelques ruelles et une pause peuvent suffire.
+
+C'est aussi le village à privilégier si l'on veut une première découverte marquante sans payer une visite intérieure.
+
+### Turenne: monter vers un château et résoudre des énigmes
+
+Turenne était le centre d'une puissante vicomté, un territoire autrefois gouverné par un vicomte. Les rues montent franchement vers les vestiges du château, dont les tours dominent la campagne. La récompense de l'ascension, ce sont les vues et la sensation d'avoir atteint le sommet d'une forteresse.
+
+Pour éviter que la montée ne devienne une corvée, récupérez avant de partir le **livret-jeu de Turenne**, téléchargeable sur la page [« Visiter avec les enfants » de Brive Tourisme](https://www.brive-tourisme.com/fr/idees-sejours/en-famille/visiter-avec-enfants/). Les énigmes donnent un but à chaque arrêt, sans imposer une visite guidée. Le [plan du village](https://www.brive-tourisme.com/fr/visites/top-14/turenne/) peut aussi aider à choisir un trajet plus court.
+
+La promenade dans les rues ne doit pas être confondue avec l'entrée dans le château, qui est payante et saisonnière. Selon les [horaires et tarifs publiés par Brive Tourisme](https://www.brive-tourisme.com/fr/visites/top-14/turenne/visite/), l'ouverture d'automne est annoncée **de 11 h à 17 h jusqu'au 11 novembre**. Les tarifs affichés lors de la vérification d'octobre 2026 sont de **8,40 € pour un adulte**, **6,90 € en tarif réduit**, la **gratuité pour les moins de 7 ans**, et un **pass famille à 25 €** pour deux adultes et deux enfants de 7 à 16 ans. Des ouvertures ponctuelles figurent aussi au calendrier de fin décembre et début janvier: vérifiez les dates exactes, les conditions et les tarifs avant de réserver ou de vous déplacer.
+
+Avec un enfant qui marche peu, Turenne est la visite la plus exigeante des trois. Mieux vaut décider dès le départ si l'objectif est d'atteindre le château ou simplement de profiter du bas du village.
+
+### Curemonte: le jeu des trois châteaux
+
+À Curemonte, le défi se trouve dans le nom que les habitants donnent volontiers au village: **« le village des trois »**. Les enfants peuvent chercher les trois châteaux, puis découvrir qu'il existe aussi trois églises et trois fontaines. La grande rue, la halle et les points de vue permettent de varier les observations.
+
+Les châteaux de Saint-Hilaire, des Plas et de la Johannie sont principalement à admirer **depuis l'extérieur**. [Brive Tourisme](https://www.brive-tourisme.com/fr/visites/top-14/grands-sites-proches/curemonte/) précise que des visites de certains châteaux peuvent avoir lieu lors de manifestations estivales, mais qu'il ne s'agit pas de monuments ouverts librement toute l'année. [Tourisme Corrèze](https://www.tourismecorreze.com/fr/le_mag/curemonte_village_medieval_d_exception_en_correze.html) conseille de prévoir **1 h 30 à 2 h** pour découvrir tranquillement le bourg.
+
+Pour des enfants qui aiment les jeux de piste, le parcours de géocaching **« Curemonte, le village des trois »** figure au catalogue officiel de [Tèrra Aventura](https://www.terra-aventura.fr/widget_partner/276%2C277%2C278%2C279%2C362%2C430%2C538%2C539). Il représente environ **3 km**: c'est une activité à part entière, à choisir plutôt qu'à ajouter automatiquement à une longue journée de visites. Vérifiez dans l'application son état d'ouverture et ses éventuelles consignes avant de partir.
+
+## Un jour ou deux: le circuit qui fonctionne vraiment en famille
+
+**Vous n'avez qu'une journée ?** Choisissez **Collonges-la-Rouge et Curemonte**. Commencez par les façades rouges et les tours de Collonges, faites une vraie pause pour déjeuner, puis rejoignez Curemonte pour une balade plus courte à la recherche de ses châteaux. Les deux villages sont séparés d'environ **12 à 13 km** selon les indications des offices de tourisme. Cette formule laisse davantage de souplesse aux familles avec de jeunes enfants.
+
+Si vos enfants sont surtout attirés par les chevaliers, remplacez Curemonte par **Turenne**: le livret-jeu et la montée vers le château donnent un objectif plus actif à l'après-midi. Ne comptez toutefois pas sur une visite approfondie du château en plus de tout le reste sans ajuster le rythme.
+
+**Vous disposez d'un week-end ?** Réservez une journée à **Collonges et Turenne**, avec une pause entre les deux, puis gardez **Curemonte pour le lendemain**. Ce second jour peut rester léger, ou se prolonger par le parcours Tèrra Aventura si les enfants ont encore envie de marcher. Il n'y a aucune nécessité d'entrer dans chaque monument pour apprécier ces villages.
+
+Avec un bébé ou un tout-petit, mieux vaut souvent un seul village par demi-journée. Avec des enfants plus grands qui aiment marcher, Turenne et le jeu de piste de Curemonte deviennent plus intéressants.
+
+## Stationnement, poussette et repas: ce qui change la visite
+
+**La voiture est le moyen le plus simple de relier les trois étapes.** Des accès en bus ou en train existent vers certains secteurs depuis Brive, mais cela ne garantit pas une correspondance pratique entre les villages. Sans voiture, choisissez d'abord une seule étape et vérifiez les horaires aller-retour du jour plutôt que de compter sur ce circuit complet en transports publics.
+
+À **Collonges-la-Rouge**, la circulation automobile est interdite dans le bourg. Les deux parkings visiteurs sont **payants de mi-mars à mi-novembre**. Des toilettes publiques sont signalées près de l'église Saint-Pierre et le long de la D38, à l'ancienne gare du tramway. [L'office de tourisme](https://www.brive-tourisme.com/fr/visites/top-14/collonges-la-rouge/) signale également l'absence de distributeur de billets dans le village et recommande de prévoir des espèces pour certaines boutiques.
+
+À **Curemonte**, les véhicules motorisés ne circulent pas dans le cœur du village; un **parking payant à La Cabrolle** est indiqué par [Brive Tourisme](https://www.brive-tourisme.com/fr/visites/top-14/grands-sites-proches/curemonte/). À **Turenne**, c'est surtout la forte pente qui peut fatiguer les petites jambes.
+
+Les rues anciennes, les revêtements irréguliers et les montées ne permettent pas de promettre un parcours entièrement confortable en poussette. Un porte-bébé peut être plus pratique pour Turenne; pour les autres villages, adaptez la distance aux roues de votre poussette et à la météo.
+
+Enfin, **hors saison**, ne partez pas du principe que tous les restaurants, boutiques ou visites intérieures seront ouverts. Vérifiez votre adresse de déjeuner et les horaires du château la veille; une promenade dans les bourgs reste possible même lorsque les animations estivales sont terminées.
+
+## Où poser ses valises pour éviter les allers-retours ?
+
+**Collonges-la-Rouge** convient si vous voulez sortir à pied dans le village dès le matin ou en fin de journée. **Turenne** peut servir de point de chute pour rayonner dans le secteur, mais vérifiez l'accès et le stationnement de l'hébergement choisi dans les rues en pente. **Brive-la-Gaillarde** est une solution à considérer si vous privilégiez les services et les repas plutôt que le charme d'une nuit au village.
+
+Pour une famille, le critère le plus utile n'est pas seulement la distance annoncée jusqu'aux sites: regardez aussi le parking, les escaliers, la possibilité de préparer un repas et les horaires d'arrivée. Cela compte particulièrement lors d'un week-end hors saison.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -133,4 +183,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
