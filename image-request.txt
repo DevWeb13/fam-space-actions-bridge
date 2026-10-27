@@ -261,3 +261,4 @@ automation/image-20261027-0941-gramat-lens-pierrefonds-collonges-e1f1681|1c146ce
 automation/image-20261027-0941-gramat-lens-pierrefonds-collonges-e1f1681|392679c733e9b816d8079ea2df7a1617376cefe7
 automation/image-20261027-1547-paris-villandry-arras-aisne-9288fc8|e25c6ebd375ef4c51ef6c033d3286b5d03254349
 automation/image-20261027-1547-paris-villandry-arras-aisne-9288fc8|67173c6b170ac42da0d126bf61a439b6593771fa
+automation/image-20261027-2146-nantes-fontainebleau-brehat-rambouillet-af3aa408|af3aa4089e1d836a3fd0ee6d49b62e78ef7ee637
