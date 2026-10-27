@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Festival de la Sainte-Barbe 2026 à Lens-Liévin : quelle soirée choisir avec les enfants ?"
-subtitle: "Spectacles de feu du 4 au 6 décembre : Lens, Loos-en-Gohelle, Oignies ou Louvre-Lens"
-summary: "Le festival des arts et du feu se déroule du 27 novembre au 6 décembre 2026 dans le bassin minier. Pour les familles, les temps forts des 4, 5 et 6 décembre se tiennent dans des communes et à des horaires différents : voici comment choisir une sortie réaliste plutôt que tenter de tout enchaîner."
+title: "Festival de la Sainte-Barbe 2026 : quelle sortie choisir en famille à Lens-Liévin ?"
+subtitle: "Du 4 au 6 décembre : spectacles de feu à Lens, fête foraine à Loos-en-Gohelle, pyrotechnie à Oignies et après-midi au Louvre-Lens"
+summary: Les grands rendez-vous de la Sainte-Barbe 2026 se répartissent sur trois jours et plusieurs sites. Avec de jeunes enfants, le Louvre-Lens le dimanche ou la Kermesse de Loos-en-Gohelle dès l'après-midi sont des choix plus souples ; pour les spectacles pyrotechniques du soir, anticipez le froid et le retour.
 category: evenements
 location:
   city: Lens
@@ -68,19 +73,44 @@ location:
   region: Hauts-de-France
 keywords:
   - festival Sainte-Barbe Lens 2026
-  - Sainte-Barbe Lens-Liévin enfants
-  - spectacles de feu 4 5 6 décembre 2026
-  - Sainte-Barbe Oignies Loos-en-Gohelle Louvre-Lens
+  - Sainte-Barbe Lens-Liévin en famille
+  - spectacle feu Lens 4 décembre 2026
+  - Sainte-Barbe Loos-en-Gohelle Oignies 5 décembre
+  - Louvre-Lens Sainte-Barbe 6 décembre enfants
 sources:
-  - title: Festival de la Sainte-Barbe - programmation officielle par date 2026
+  - title: Festival de la Sainte-Barbe 2026 - programmation officielle par date
     url: https://festivaldelasaintebarbe.com/la-programmation/par-date/
-  - title: Festival de la Sainte-Barbe - temps forts officiels 2026
-    url: https://festivaldelasaintebarbe.com/manifestation/type/les-temps-forts/
-  - title: Hauts-de-France Tourisme - festival de la Sainte-Barbe 2026
+  - title: Hauts-de-France Tourisme - dates du festival 2026
     url: https://www.tourisme-en-hautsdefrance.com/offres/le-festival-de-la-sainte-barbe-lens-fr-6857548/
+  - title: Organisateur - Tumulte à Lens
+    url: https://festivaldelasaintebarbe.com/manifestations/festival-de-la-sainte-barbe-tumulte/
+  - title: Organisateur - Les Semeurs de Temps et les orgues à Feu
+    url: https://festivaldelasaintebarbe.com/manifestations/festival-de-la-sainte-barbe-les-semeurs-de-temps-et-les-orgues-a-feu/
+  - title: Organisateur - La Kermesse à Loos-en-Gohelle
+    url: https://festivaldelasaintebarbe.com/manifestations/festival-de-la-sainte-barbe-la-kermesse/
+  - title: Organisateur - Montée aux terrils du 11/19
+    url: https://festivaldelasaintebarbe.com/manifestations/festival-de-la-sainte-barbe-montee-aux-terrils-du-11-19/
+  - title: Organisateur - Swing & Fire à Oignies
+    url: https://festivaldelasaintebarbe.com/manifestations/festival-de-la-sainte-barbe-swing-fire/
+  - title: Organisateur - Entre terre et ciel, Blast version
+    url: https://festivaldelasaintebarbe.com/manifestations/festival-de-la-sainte-barbe-entre-ciel-et-terre-blast-version/
+  - title: Organisateur - ToyToy au Louvre-Lens
+    url: https://festivaldelasaintebarbe.com/manifestations/festival-de-la-sainte-barbe-toytoy-les-colporteurs-pouetiques/
+  - title: Organisateur - La Frange au Louvre-Lens
+    url: https://festivaldelasaintebarbe.com/manifestations/festival-de-la-sainte-barbe-la-frange/
+  - title: Organisateur - Nouveau monde au Louvre-Lens
+    url: https://festivaldelasaintebarbe.com/manifestations/festival-de-la-sainte-barbe-nouveau-monde/
+  - title: Organisateur - journée familiale du 6 décembre au Louvre-Lens
+    url: https://festivaldelasaintebarbe.com/manifestations/une-journee-grandiose-et-petillante/
+  - title: Festival de la Sainte-Barbe - stationnements indiqués par site
+    url: https://festivaldelasaintebarbe.com/infos-pratiques/ou-se-garer/
+  - title: Tadao - itinéraires et horaires des transports du bassin minier
+    url: https://www.tadao.fr/index.php/fr/
+  - title: Booking.com - Le Cottage du Louvre à Lens
+    url: https://www.booking.com/hotel/fr/le-cottage-du-louvre.fr.html
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: festival-de-la-sainte-barbe-2026-a-lens-lievin-quelle-soiree-choisir-avec-les-enfants
   decision: Choisir une seule soirée ou un programme adapté aux enfants entre Lens le vendredi, Loos-en-Gohelle ou Oignies le samedi et le Louvre-Lens le dimanche, en tenant compte des horaires, des spectacles de feu, des trajets et de l'heure du retour.
@@ -90,33 +120,58 @@ radar:
     dataThrough: 2026-10-24
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Festival de la Sainte-Barbe - programmation officielle par date 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-06
 ---
 
-## Mission retenue
-Préparer le choix familial entre les temps forts du Festival de la Sainte-Barbe 2026, événement d'arts du feu et de mémoire minière sur plusieurs sites du bassin Lens-Liévin. Ne pas confondre la période générale du 27 novembre au 6 décembre avec les trois grandes journées du 4 au 6 décembre.
+Le **Festival de la Sainte-Barbe** anime le bassin minier de Lens-Liévin du **27 novembre au 6 décembre 2026**, avec des rendez-vous locaux dès la fin novembre. Ses grands spectacles de feu se concentrent les **vendredi 4, samedi 5 et dimanche 6 décembre**. Pour une sortie avec des enfants, mieux vaut choisir un site et un horaire de retour plutôt que chercher à tout voir : Lens, Loos-en-Gohelle, Oignies et le Louvre-Lens ne forment pas un parcours unique à pied.
 
-## Pourquoi cette mission
-Le refresh Futuroween (662 puis 376 impressions, signal GSC incertain) reste complet et conforme au programme officiel ; la baisse ne prouve pas une perte de classement et l'événement se termine le 1er novembre. L'expansion de la page forte « Transports à Paris avec des enfants » (2 235 impressions récentes) recouperait les guides déjà publiés sur Navigo Liberté+, Orly, CDG et les consignes. Ici, programme officiel détaillé, dates futures, vraie décision familiale multisite et aucun doublon direct dans le catalogue.
+## Quel jour convient le mieux à votre famille ?
 
-## Décision du lecteur
-Identifier la journée et le lieu les plus adaptés à l'âge et à l'endurance des enfants, sans supposer qu'on peut parcourir les différents sites à pied ou assister à tous les spectacles.
+- **Pour une sortie qui commence en journée :** samedi 5 à **Loos-en-Gohelle**, où *La Kermesse* ouvre dès **15 h 30**. On peut profiter de l'ambiance sans rester jusqu'à la fermeture à 21 h 30.
+- **Pour les plus jeunes et un programme modulable :** dimanche 6 au **Louvre-Lens**, avec *ToyToy* dès **15 h**, des propositions musicales et des animations avant le spectacle pyrotechnique du soir.
+- **Pour un grand spectacle de feu en soirée :** vendredi 4 à **Lens**, avec deux temps forts séparés, à 18 h et 20 h 45.
+- **Pour les familles qui aiment la pyrotechnie spectaculaire et peuvent rentrer tard :** samedi 5 au **9-9bis d'Oignies**, avec un final à **21 h**.
 
-## Faits à traiter
-- Festival du 27 novembre au 6 décembre 2026 ; temps forts les vendredi 4, samedi 5 et dimanche 6 décembre. Certaines « Étincelles » ont lieu en amont et peuvent avoir des conditions propres.
-- Vendredi 4, Lens : « Tumulte » à 18 h place Jean-Jaurès ; installations dès 18 h 30 dans les jardins de la faculté Jean-Perrin ; « Les Semeurs de temps et les orgues à feu » à 20 h 45.
-- Samedi 5 : à Loos-en-Gohelle, « La Kermesse » de 15 h 30 à 21 h 30 à la base 11/19 et montée aux terrils à 17 h 30 ; à Oignies, « Swing & Fire » à 17 h 15, 18 h 15 et 20 h au 9-9bis, puis spectacle « Entre terre et ciel » à 21 h. Éviter de présenter les deux sites comme un seul parcours.
-- Dimanche 6, Louvre-Lens : « ToyToy » à 15 h, « La Frange » à 16 h, « La Frontale » à 18 h 30 et « Nouveau monde » à 19 h ; atelier et maquillage annoncés dès 15 h. Vérifier les modalités précises de chaque proposition.
-- Distinguer la gratuité des grands spectacles des éventuels ateliers ou rendez-vous annexes payants ou sur réservation. Contrôler les éventuelles évolutions d'horaires, les accès et transports du soir, le stationnement, les foules, le froid, le bruit et les effets pyrotechniques pour les petits. Ne pas reprendre la navette du samedi 6 décembre affichée sur une page pratique ancienne : elle concerne 2025.
+Ces choix sont des conseils d'organisation, pas des classifications d'âge officielles : les spectacles mêlent parfois bruit, flammes, foule et effets lumineux.
 
-## Sources de départ
-Programme officiel par date et page des temps forts du festival ; fiche Hauts-de-France Tourisme 2026. Pour les accès, consulter les pages officielles « Comment venir ? » et « Où se garer ? » en vérifiant qu'elles correspondent bien à 2026.
+## Vendredi 4 décembre à Lens : un spectacle tôt ou une grande soirée
 
-## Affiliation
-Pas de billet commercial à recommander pour les spectacles principaux. Pour une famille qui reste dormir, Le Cottage du Louvre à Lens est listé sur Booking.com avec un T3 à deux chambres ; ne pas promettre de disponibilité ni de prix pour le festival.
+À **18 h**, *Tumulte* investit la **place Jean-Jaurès**. Ce spectacle de rue de la compagnie Karnavires, annoncé pour **45 minutes**, mêle machines, marionnettes mécaniques et pyrotechnie. C'est le rendez-vous le plus simple du vendredi si les enfants ne peuvent pas veiller longtemps.
 
-## Continuations internes
-- L'article Fam Space sur le Louvre-Lens à la Toussaint 2026 porte sur des ateliers du 17 octobre au 1er novembre : ne pas réutiliser son programme périmé ni en faire un doublon du festival.
-- Aucun article dédié à Sainte-Barbe n'a été trouvé dans le catalogue ni dans l'historique Radar ; n'ajouter un lien interne que s'il éclaire réellement une autre décision du lecteur.
+À partir de **18 h 30**, les **jardins de la faculté des sciences Jean-Perrin**, avenue Élie-Reumaux, accueillent notamment *Le Train fantôme*, *Radio cagette* et *Flamboyance passée*. À **20 h 45**, *Les Semeurs de Temps et les orgues à Feu* proposent un concert pyrotechnique d'environ **45 minutes**. Ce second spectacle suppose un retour plus tardif : il n'est pas nécessaire de faire les deux avec de jeunes enfants. Retrouvez les détails sur les [fiches officielles de Tumulte](https://festivaldelasaintebarbe.com/manifestations/festival-de-la-sainte-barbe-tumulte/) et des [orgues à feu](https://festivaldelasaintebarbe.com/manifestations/festival-de-la-sainte-barbe-les-semeurs-de-temps-et-les-orgues-a-feu/).
+
+## Samedi 5 décembre : choisir Loos-en-Gohelle **ou** Oignies
+
+**À Loos-en-Gohelle**, la **base 11/19**, rue de Bourgogne, accueille *La Kermesse* de **15 h 30 à 21 h 30**. La compagnie La Machine imagine une fête foraine insolite, avec jeux, gourmandises et effets de feu. Des **bars et foodtrucks** sont annoncés sur place. Une **montée aux terrils** est programmée à **17 h 30** : c'est une activité différente de la kermesse, à envisager seulement avec des enfants suffisamment à l'aise pour marcher dehors à la tombée de la nuit. Vérifiez les conditions de participation et l'état du terrain avant de vous engager. [Programme de La Kermesse](https://festivaldelasaintebarbe.com/manifestations/festival-de-la-sainte-barbe-la-kermesse/).
+
+**À Oignies**, rendez-vous au **9-9bis**. *Swing & Fire*, spectacle de cirque, danse, musique et feu, propose des séances à **17 h 15, 18 h 15 et 20 h**. À **21 h**, *Entre terre et ciel – Blast version* réunit danse et pyrotechnie pour environ **25 minutes**. Une famille qui souhaite rentrer plus tôt peut privilégier l'une des premières séances de *Swing & Fire* sans attendre le final. [Détail de Swing & Fire](https://festivaldelasaintebarbe.com/manifestations/festival-de-la-sainte-barbe-swing-fire/) et du [spectacle de 21 h](https://festivaldelasaintebarbe.com/manifestations/festival-de-la-sainte-barbe-entre-ciel-et-terre-blast-version/).
+
+Les deux sites sont dans des communes différentes : ne prévoyez pas de passer de l'un à l'autre entre deux spectacles sans avoir vérifié le trajet et le stationnement.
+
+## Dimanche 6 décembre au Louvre-Lens : commencer avec les enfants, décider ensuite
+
+Le **Louvre-Lens**, **99 rue Paul-Bert à Lens**, offre la progression la plus souple de ces trois journées :
+
+- **15 h :** *ToyToy*, un concerto pour jouets pensé pour un moment partagé entre enfants et parents, au **Pavillon de verre**.
+- **16 h :** *La Frange*, fanfare pop dans le hall du musée, annoncée pour **1 h 45**.
+- **18 h 30 :** *La Frontale*, fanfare étudiante.
+- **19 h :** *Nouveau monde*, spectacle de grandes marionnettes gonflables et de pyrotechnie des Plasticiens Volants.
+
+Un **atelier lié à l'exposition « Trop Mignon ! L'art du bonheur »** est annoncé dès **15 h**, ainsi qu'un **stand de maquillage de 15 h à 19 h**. Les conditions d'accès, les places et une éventuelle réservation pour l'atelier doivent être confirmées auprès du musée ; ne supposez pas que toute activité annexe est libre d'accès. Avec des petits, *ToyToy* et les animations de l'après-midi peuvent suffire. Le spectacle de **19 h**, visuellement impressionnant, s'adresse plutôt aux familles prêtes à rester dehors en soirée. [Programme de la journée au Louvre-Lens](https://festivaldelasaintebarbe.com/manifestations/une-journee-grandiose-et-petillante/) et [fiche de Nouveau monde](https://festivaldelasaintebarbe.com/manifestations/festival-de-la-sainte-barbe-nouveau-monde/).
+
+## Budget, accès et précautions avec des enfants
+
+Les **grands spectacles du festival sont annoncés gratuits** : il n'y a donc pas de billet de spectacle à acheter pour organiser ces trois soirées. En revanche, restauration, boissons, déplacements et certaines animations annexes peuvent représenter un coût. Les « Étincelles » organisées en amont, du 27 novembre au début décembre, ont chacune leurs modalités : consultez la [programmation officielle par date](https://festivaldelasaintebarbe.com/la-programmation/par-date/) si vous choisissez un autre jour.
+
+Pour venir en voiture, la [page de stationnement de l'organisateur](https://festivaldelasaintebarbe.com/infos-pratiques/ou-se-garer/) indique notamment **place du Cantin ou place de la République** pour la faculté Jean-Perrin, **Cité des Provinces à Lens** pour la base 11/19 et les **parkings du 9-9bis, rue du Tordoir**, pour Oignies. Ces indications ne garantissent ni une place libre ni l'absence de restrictions ponctuelles : contrôlez les consignes actualisées avant de partir. Pour le Louvre-Lens, vérifiez directement l'accès au musée et les éventuels aménagements du festival.
+
+Sans voiture, préparez surtout **le trajet retour** : recherchez les horaires du vendredi, du samedi ou du dimanche sur le [réseau Tadao](https://www.tadao.fr/index.php/fr/) et vérifiez les derniers départs depuis le lieu choisi. Ne comptez pas sur une navette spéciale tant qu'un dispositif **2026** n'est pas confirmé.
+
+En décembre, prévoyez chaussures fermées, vêtements chauds, protection contre la pluie et éventuellement protection auditive pour les enfants sensibles au bruit. Gardez les petits à distance des installations et respectez les périmètres de sécurité. Avec une poussette ou des difficultés de mobilité, renseignez-vous auprès de l'organisateur sur les cheminements du site choisi, particulièrement pour les terrils et les rassemblements nocturnes.
+
+## Rester dormir à Lens pour profiter du week-end
+
+Si vous venez de loin, un appartement permet de ne pas reprendre la route immédiatement après les spectacles. [Le Cottage du Louvre à Lens sur Booking.com](https://www.booking.com/hotel/fr/le-cottage-du-louvre.fr.html) propose notamment des **T3 avec deux chambres**, dont une configuration avec lit double et deux lits simples. Vérifiez la capacité exacte de l'appartement sélectionné, les conditions d'arrivée, le trajet jusqu'à votre spectacle ainsi que **les disponibilités et le prix pour les nuits du 4 au 6 décembre 2026** : ils ne sont pas garantis.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -124,12 +179,13 @@ Pas de billet commercial à recommander pour les spectacles principaux. Pour une
 
 - /articles/sorties/toussaint-2026-au-louvre-lens-quelle-activite-choisir-selon-l-age/ | Toussaint 2026 au Louvre-Lens: quelle activité choisir selon l'âge? | sorties | Lens, Pas-de-Calais, Hauts-de-France
 - /articles/maison/lens-lievin-jusqu-a-240-pour-recuperer-l-eau-de-pluie/ | Lens-Liévin: jusqu'à 240 € pour récupérer l'eau de pluie | maison | Lens, Pas-de-Calais, Hauts-de-France
-- /articles/evenements/nausicaa-a-la-toussaint-2026-ateliers-en-journee-ou-nocturne-d-halloween/ | Toussaint 2026 à Nausicaá: ateliers en journée et nocturne d’Halloween | evenements | Boulogne-sur-Mer, Pas-de-Calais, Hauts-de-France
 - /articles/parentalite/creche-a-l-abordage-a-etaples-accueil-ponctuel-ou-regulier-que-choisir/ | Crèche À l'abordage à Étaples: accueil ponctuel ou régulier, que choisir ? | parentalite | Étaples-sur-Mer, Pas-de-Calais, Hauts-de-France
 - /articles/cuisine/ratte-du-touquet-eau-vapeur-ou-four-quelle-cuisson-choisir/ | Ratte du Touquet: eau, vapeur ou four, quelle cuisson choisir? | cuisine | Le Touquet-Paris-Plage, Pas-de-Calais, Hauts-de-France
-- /articles/evenements/les-expressifs-2026-a-poitiers-trois-jours-de-spectacles-gratuits/ | Les Expressifs 2026 à Poitiers: trois jours de spectacles gratuits | evenements | Poitiers, Vienne, Nouvelle-Aquitaine
-- /articles/evenements/jardins-ouverts-2026-ile-de-france-en-famille/ | Jardins ouverts 2026: choisir une animation pour les enfants en Île-de-France | evenements
-- /articles/evenements/grands-zyeux-p-tites-zoreilles-2026-quelles-seances-gratuites-avec-les-tout-petits/ | Grands Zyeux P'tites Zoreilles 2026: spectacles gratuits avec les tout-petits autour de Béziers | evenements | Béziers, Hérault, Occitanie
+- /articles/evenements/hop-hop-hop-festival-2026-en-famille-quel-jour-choisir/ | Hop Hop Hop Festival 2026 en famille: quel jour choisir? | evenements | Saint-Cirgues, Lot, Occitanie
+- /articles/evenements/festival-cite-en-jeux-2026-a-colomiers-quel-jour-choisir-avec-des-enfants/ | Festival Cité en Jeux 2026 à Colomiers: quel jour choisir avec des enfants | evenements | Colomiers, Haute-Garonne, Occitanie
+- /articles/evenements/habits-de-lumiere-a-epernay-avec-des-enfants-quel-jour-choisir-en-2026/ | Habits de Lumière à Épernay avec des enfants: quel jour choisir en 2026? | evenements | Épernay, Marne, Grand Est
+- /articles/evenements/bd-boum-2026-a-blois-en-famille-ateliers-bd-expositions-et-cinema-selon-l-age/ | bd BOUM 2026 à Blois en famille: ateliers, expositions et cinéma | evenements | Blois, Loir-et-Cher, Centre-Val de Loire
+- /articles/evenements/nausicaa-a-la-toussaint-2026-ateliers-en-journee-ou-nocturne-d-halloween/ | Toussaint 2026 à Nausicaá: ateliers en journée et nocturne d’Halloween | evenements | Boulogne-sur-Mer, Pas-de-Calais, Hauts-de-France
 - /articles/voyages/maison-du-marais-pres-de-saint-omer-bateau-et-expositions-en-famille/ | Maison du Marais près de Saint-Omer: bateau et expositions en famille | voyages | Saint-Martin-lez-Tatinghem, Pas-de-Calais, Hauts-de-France
 - /articles/evenements/halloween-2026-a-la-tour-de-l-horloge-de-guines-musee-hante-contes-et-nocturne/ | Halloween 2026 à la Tour de l'Horloge de Guînes: visites, contes et nocturne | evenements | Guînes, Pas-de-Calais, Hauts-de-France
 - /articles/sorties/parc-bagatelle-en-famille-quelles-attractions-selon-la-taille-des-enfants/ | Parc Bagatelle en famille: quelles attractions selon la taille des enfants? | sorties | Merlimont, Pas-de-Calais, Hauts-de-France
@@ -143,20 +199,19 @@ Pas de billet commercial à recommander pour les spectacles principaux. Pour une
 - /articles/evenements/festival-playground-2026-en-ile-de-france-quels-spectacles-de-danse-choisir-avec-les-enfants/ | Festival Playground 2026: spectacles de danse en famille, dates et tarifs | evenements | Bagnolet, Seine-Saint-Denis, Île-de-France
 - /articles/evenements/festival-enfantillages-2026-a-valbonne-spectacles-gratuits-et-cinema-selon-l-age/ | Festival Enfantillages 2026 à Valbonne: spectacles gratuits et cinéma en famille | evenements | Valbonne, Alpes-Maritimes, Provence-Alpes-Côte d'Azur
 - /articles/evenements/festival-marmoe-2026-a-montreuil-spectacles-et-ateliers-selon-l-age-des-enfants/ | Festival MARMOE 2026 à Montreuil: spectacles, ateliers et tarifs en famille | evenements | Montreuil, Seine-Saint-Denis, Île-de-France
-- /articles/evenements/halloween-2026-au-zoo-de-la-fleche-entree-offerte-aux-enfants-deguises/ | Halloween 2026 au Zoo de La Flèche: tarifs, jeux et entrée offerte aux enfants déguisés | evenements | La Flèche, Sarthe, Pays de la Loire
 
 ### Historique Radar lié
 
+- opportunity | /articles/evenements/bd-boum-2026-a-blois-en-famille-ateliers-bd-expositions-et-cinema-selon-l-age/ | 2026-10-18T19:49:09.191Z
 - opportunity | /articles/evenements/festival-enfantillages-2026-a-valbonne-spectacles-gratuits-et-cinema-selon-l-age/ | 2026-10-26T03:35:31.605Z
 - opportunity | /articles/evenements/festival-marmoe-2026-a-montreuil-spectacles-et-ateliers-selon-l-age-des-enfants/ | 2026-10-25T23:35:17.860Z
 - opportunity | /articles/evenements/festival-playground-2026-en-ile-de-france-quels-spectacles-de-danse-choisir-avec-les-enfants/ | 2026-10-26T06:30:10.217Z
-- opportunity | /articles/evenements/grands-zyeux-p-tites-zoreilles-2026-quelles-seances-gratuites-avec-les-tout-petits/ | 2026-10-14T07:31:28.976Z
 - opportunity | /articles/evenements/halloween-2026-a-la-tour-de-l-horloge-de-guines-musee-hante-contes-et-nocturne/ | 2026-10-12T10:40:26.563Z
-- opportunity | /articles/evenements/halloween-2026-au-zoo-de-la-fleche-entree-offerte-aux-enfants-deguises/ | 2026-10-25T20:27:07.814Z
 - opportunity | /articles/evenements/nausicaa-a-la-toussaint-2026-ateliers-en-journee-ou-nocturne-d-halloween/ | 2026-10-18T08:44:05.495Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-10-26T21:31:06.119Z
 - opportunity | /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | 2026-10-26T18:32:56.730Z
 - opportunity | /articles/evenements/odyssee-lumineuse-2026-2027-au-parc-floral-de-paris-billet-date-ou-open-en-famille/ | 2026-10-26T15:30:14.299Z
+- opportunity | /articles/evenements/retro-game-festival-2026-a-beauvais-quel-jour-choisir-en-famille/ | 2026-10-26T10:34:36.317Z
 
 ### Phases 2 et 3
 
