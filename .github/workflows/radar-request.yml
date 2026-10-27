@@ -67,7 +67,7 @@ jobs:
         run: bash .github/scripts/process-radar-request.sh ../bridge/radar-request.md ../bridge/radar-gsc-snapshot.json
 
       - name: Préparer le prochain runtime Radar
-        if: steps.ready.outputs.skip != 'true' && steps.process.outcome == 'success'
+        if: always() && steps.ready.outputs.skip != 'true' && steps.process.outcome != 'skipped'
         working-directory: fam-space
         run: bash .github/scripts/render-radar-runtime.sh ../bridge/radar-gsc-snapshot.json ../bridge/radar-catalog.json "$RUNNER_TEMP/radar-runtime.md"
 
