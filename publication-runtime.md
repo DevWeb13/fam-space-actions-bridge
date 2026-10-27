@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,103 +14,146 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Côtes-d'Armor
 - Région: Bretagne
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Titre de travail :** « Île de Bréhat en famille hors saison : bateau, balades et conseils avec enfants »
-
-**Angle :** préparer une vraie journée sur Bréhat en automne ou en hiver, sans confondre la traversée de dix minutes avec le temps de marche nécessaire une fois débarqué. Le guide doit rester utile toute l'année et expliquer les différences de saison.
-
-Bréhat est une île habitée et sans voitures particulières, au large de Ploubazlanec et de Paimpol, dans les Côtes-d'Armor. Accessible par les Vedettes de Bréhat depuis la pointe de l'Arcouest toute l'année, elle se découvre à pied entre le bourg, les criques, le moulin du Birlot et les paysages plus sauvages du nord.
-
-## Besoin du lecteur
-
-Savoir si Bréhat convient à sa famille, à quelle saison et pour quel âge ; choisir une traversée, comprendre les tarifs et les horaires de retour ; prévoir une balade réaliste plutôt que vouloir parcourir toute l'île ; anticiper la marche supplémentaire imposée par les marées, les contraintes de poussette ou de mobilité, la météo, le pique-nique et les services saisonniers. Comprendre aussi comment venir et stationner à l'Arcouest, puis quand une nuit près de Paimpol simplifie la sortie.
-
-## Valeur éditoriale
-
-- La traversée directe dure environ **10 minutes**, mais le débarquement peut imposer **15 à 40 minutes de marche jusqu'à l'office de tourisme**, selon la marée. Ce point change concrètement l'organisation avec de jeunes enfants.
-- Les Vedettes publient des traversées du **1er octobre 2026 au 31 mars 2027** avec horaires variables selon le jour et les vacances ; tarifs aller-retour **2026 : 11,90 € adulte, 10,20 € de 4 à 11 ans, gratuit de 0 à 3 ans**. Vérifier les tarifs après 2026 et les éventuelles perturbations maritimes.
-- Distinguer une courte balade au sud, autour du bourg et du moulin du Birlot, d'une longue marche vers le phare du Paon au nord. L'office de tourisme situe le phare à environ **3,5 km de la pointe sud** ; il ne faut pas présenter le tour intégral comme une promenade adaptée à tous.
-- Expliquer que l'île est sans voitures particulières mais comporte des vélos et véhicules professionnels, des dénivelés et des cales parfois difficiles d'accès. Ne pas promettre une accessibilité totale aux poussettes ou fauteuils. L'office de tourisme prête un fauteuil sur réservation et décrit des solutions de transport adaptées à vérifier.
-- Distinguer le bateau direct de la formule avec tour commenté de l'île, proposée sous conditions (notamment un minimum de passagers). Préciser que le petit train touristique ne circule pas toute l'année.
-- Pour l'automne et l'hiver, conseiller de contrôler le dernier retour utile, les commerces ouverts et les conditions de navigation. Les restrictions estivales de fréquentation, appliquées du **27 juillet au 21 août 2026**, ne doivent pas être présentées comme une limitation hivernale.
-- Apport par rapport aux pages officielles : un itinéraire familial modulable, des décisions concrètes selon l'âge et la marée, et un budget compréhensible sans multiplier les calculs.
-
-## Affiliation
-
-**Traversée / action principale :** recherches effectuées sur GetYourGuide, Tiqets et Klook pour des billets ou excursions vers Bréhat. Aucune offre partenaire précise de traversée directe depuis l'Arcouest n'a pu être confirmée. Ne pas inventer de billetterie affiliée ; utiliser la compagnie maritime comme source factuelle et, en l'absence d'offre concurrente confirmée, comme lien pratique.
-
-**Hébergement : deux offres Booking.com vérifiées**, à placer discrètement vers la fin du futur article pour les familles qui prolongent la sortie en week-end :
-
-- **Booking.com, Best Western Plus Les Terrasses de Bréhat**, pointe de l'Arcouest, Ploubazlanec, au plus près de l'embarcadère ; chambres familiales, piscine intérieure, restaurant. Vérifier le type de chambre et les conditions selon les dates. URL : https://www.booking.com/hotel/fr/best-western-plus-les-terrasses-de-bra-c-hat.fr.html
-- **Booking.com, Gites du Port**, Paimpol, hébergements avec cuisine et chambres familiales ; possibilité de rejoindre l'Arcouest depuis Paimpol, sous réserve de vérifier les transports du jour. Vérifier la durée minimale de séjour et l'accessibilité de l'étage selon le logement. URL : https://www.booking.com/hotel/fr/gites-du-port.fr.html
-
-Les pages Booking.com servent seulement à confirmer les offres, jamais les faits sur l'île ou la traversée. Aucun autre partenaire ne justifie un ajout à ce stade.
-
-## Sources de départ
-
-- **Vedettes de Bréhat, traversée directe, horaires automne-hiver 2026-2027, tarifs 2026 et règles vélos :** https://www.vedettesdebrehat.com/-Traversee-directe-ile-de-Brehat-15-
-- **Vedettes de Bréhat, traversée avec tour de l'île, conditions et tarifs :** https://www.vedettesdebrehat.com/-Traversee-tour-de-l-ile-de-Brehat-
-- **Vedettes de Bréhat, questions pratiques :** https://www.vedettesdebrehat.com/Foire-aux-questions
-- **Office de tourisme de Bréhat, accès, stationnement, déplacements, sites et plan :** https://www.brehat-infos.fr/decouvrir/decouvrir
-- **Office de tourisme de Bréhat, accessibilité, marées, distances de marche, fauteuil et petit train :** https://www.brehat-infos.fr/laccessibilite-sur-lile
-- **Office de tourisme de Bréhat, ouverture annuelle et restrictions estivales 2026 :** https://www.brehat-infos.fr/
-- **Mairie de l'île de Bréhat, informations communales et tourisme :** https://www.iledebrehat.fr/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "sorties"
+title: "Île de Bréhat en famille hors saison: bateau, balades et marées"
+subtitle: "Comment organiser une journée depuis l’Arcouest avec des enfants, même en automne ou en hiver"
+summary: "Traversée, tarifs, marées, poussette et idées de balades: les repères utiles pour découvrir Bréhat avec des enfants hors saison."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "île de Bréhat en famille"
+  - "Bréhat hors saison"
+  - "bateau Bréhat tarifs"
+  - "balade Bréhat enfants"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Île-de-Bréhat"
+  department: "Côtes-d'Armor"
+  region: "Bretagne"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Vedettes de Bréhat - Traversée directe, horaires et tarifs"
+    url: "https://www.vedettesdebrehat.com/-Traversee-directe-ile-de-Brehat-15-"
+  - title: "Vedettes de Bréhat - Foire aux questions"
+    url: "https://www.vedettesdebrehat.com/Foire-aux-questions"
+  - title: "Vedettes de Bréhat - Préparez votre croisière"
+    url: "https://www.vedettesdebrehat.com/Preparez-votre-croisiere"
+  - title: "Vedettes de Bréhat - Traversée avec tour commenté de l'île"
+    url: "https://www.vedettesdebrehat.com/-Traversee-tour-de-l-ile-de-Brehat-"
+  - title: "Office de tourisme de Bréhat - Découvrir, venir et stationner"
+    url: "https://www.brehat-infos.fr/decouvrir/decouvrir"
+  - title: "Office de tourisme de Bréhat - Accessibilité et marées"
+    url: "https://www.brehat-infos.fr/laccessibilite-sur-lile"
+  - title: "Vedettes de Bréhat - Comment venir à l'Arcouest"
+    url: "https://www.vedettesdebrehat.com/Comment-venir"
+  - title: "Office de tourisme de Bréhat - Accueil et régulation estivale"
+    url: "https://www.brehat-infos.fr/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Au large de Paimpol, dans les Côtes-d’Armor, l’île de Bréhat se visite à pied, entre ruelles, jardins, rochers roses et vues sur la mer. En automne ou en hiver, elle offre une sortie familiale plus tranquille qu’en plein été, à condition de prévoir une balade adaptée aux enfants et de ne pas sous-estimer les distances après le bateau.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Le bateau: dix minutes de mer, mais pas forcément dix minutes jusqu’au bourg
+
+Le départ le plus simple se fait à la pointe de l’Arcouest, à Ploubazlanec. Les [Vedettes de Bréhat assurent la traversée directe toute l’année](https://www.vedettesdebrehat.com/-Traversee-directe-ile-de-Brehat-15-): environ **10 minutes en mer** jusqu’au Port-Clos, au sud de l’île.
+
+La difficulté avec de jeunes enfants vient plutôt du débarquement. Selon la marée, le bateau utilise une cale différente. L’[office de tourisme annonce de 15 à 40 minutes de marche entre le débarquement et son bureau, au bourg](https://www.brehat-infos.fr/laccessibilite-sur-lile). À marée basse, la différence entre les cales peut représenter environ 20 minutes supplémentaires. Ce n’est pas une marche à ajouter systématiquement aux 40 minutes: elle explique pourquoi le trajet varie autant.
+
+Pour une famille avec un enfant qui marche peu, mieux vaut donc choisir la journée et les horaires en regardant **les marées à l’aller comme au retour**, avant de fixer un itinéraire ambitieux.
+
+## Quelle balade choisir avec des enfants ?
+
+**Avec des petits ou pour une première visite: restez dans le sud.** Rejoignez le bourg à votre rythme, profitez des ruelles et poursuivez éventuellement vers le moulin du Birlot, sur la côte ouest. Gardez la possibilité de rebrousser chemin: le trajet entre le port et le bourg représente déjà une partie importante de la promenade.
+
+**Avec des enfants habitués à marcher: élargissez la boucle.** Selon la météo et l’énergie du groupe, vous pouvez ajouter la chapelle Saint-Michel ou un autre point de vue au sud. Prenez le [plan et les repères de l’office de tourisme](https://www.brehat-infos.fr/decouvrir/decouvrir) pour choisir les chemins, plutôt que de viser une distance théorique.
+
+**Avec de bons marcheurs et une journée complète: envisagez le nord.** Le phare du Paon domine un paysage plus sauvage, mais l’office de tourisme le situe à environ 3,5 km de la pointe sud de l’île. Il faut ensuite revenir à l’embarcadère. Ce n’est pas une extension à improviser avec un enfant fatigué ou un retour de bateau proche.
+
+Bréhat est constituée de deux îles principales reliées par un pont. Ses routes sont partagées avec les vélos et les véhicules professionnels: « sans voitures particulières » ne signifie pas « sans circulation ». Les enfants doivent rester attentifs, même dans les ruelles calmes.
+
+## Horaires et prix des traversées en 2026
+
+Pour l’aller-retour direct, les **tarifs affichés pour 2026** sont de **11,90 € par adulte**, **10,20 € par enfant de 4 à 11 ans** et **gratuit de 0 à 3 ans**. Pour deux adultes et deux enfants de 4 à 11 ans, cela représente **44,20 € de bateau**, hors stationnement et repas. Les tarifs des années suivantes sont à revérifier.
+
+Les [horaires publiés du 1er octobre 2026 au 31 mars 2027](https://www.vedettesdebrehat.com/-Traversee-directe-ile-de-Brehat-15-) comportent des départs et retours différents selon les jours, les jours fériés et les vacances scolaires. Certains retours de fin d’après-midi ne circulent que certains jours. **Choisissez d’abord le retour réellement assuré à votre date**, puis construisez la promenade à rebours, avec une marge pour rejoindre la cale.
+
+Les billets de la traversée directe sont dits « OPEN »: ils ne réservent pas un horaire précis. Hors période particulière de régulation estivale, la compagnie fonctionne sans réservation d’horaire pour les petits groupes. Elle conseille d’arriver **20 à 30 minutes avant le départ**; sa [FAQ explique les conditions des billets et de l’achat en ligne](https://www.vedettesdebrehat.com/Foire-aux-questions). Avant de partir, vérifiez aussi les éventuelles modifications liées au vent ou à l’état de la mer.
+
+### Et le tour commenté en bateau ?
+
+La [formule « traversée + tour de l’île »](https://www.vedettesdebrehat.com/-Traversee-tour-de-l-ile-de-Brehat-) comprend un circuit maritime commenté d’environ 45 minutes, suivi d’une visite libre de Bréhat. En 2026, elle coûte 17,90 € par adulte et 12,40 € par enfant de 4 à 11 ans. Son départ nécessite **au moins 15 passagers** et ses horaires sont plus limités hors saison. Elle convient surtout si la famille souhaite voir l’archipel depuis la mer; pour une simple balade à terre, la traversée directe suffit.
+
+## Poussette, mobilité et services: les vrais points de vigilance
+
+Les poussettes standards sont transportées gratuitement sur les Vedettes, mais celles de **plus de 70 cm de large ne sont pas acceptées**. Les [consignes de la compagnie](https://www.vedettesdebrehat.com/Preparez-votre-croisiere) invitent aussi les personnes à mobilité réduite à se renseigner sur l’accès aux quais selon la marée.
+
+Sur l’île, les cales, les pentes et certains chemins compliquent la circulation avec une poussette ou un fauteuil. Un porte-bébé peut être plus pratique pour les portions irrégulières. L’office de tourisme propose un fauteuil roulant en prêt à la journée, **sur réservation au 02 96 20 04 15**: mieux vaut vérifier sa disponibilité et les possibilités réelles de déplacement avant de venir.
+
+Le petit train touristique ne remplace pas systématiquement la marche: les tours annoncés par l’office de tourisme fonctionnent **d’avril à la Toussaint**, sur réservation et sous conditions. Ne comptez pas dessus pour une visite hivernale.
+
+En automne et en hiver, prévoyez un vêtement coupe-vent, des chaussures adaptées aux chemins humides, de l’eau et un pique-nique ou une solution de repas vérifiée à l’avance. Certains commerces et restaurants ont une activité saisonnière. L’île ne dispose pas de distributeur de billets, d’après l’office de tourisme.
+
+## Venir à l’Arcouest et prévoir le stationnement
+
+En voiture, rejoignez **la pointe de l’Arcouest à Ploubazlanec**, près de Paimpol. L’office de tourisme indique deux parkings: celui de l’embarcadère, annoncé ouvert **d’avril à octobre** (8 € par jour), et le **parking municipal Cornec**, ouvert toute l’année (9 € pour 24 heures). Le Cornec se trouve un peu plus haut: la compagnie estime à **5 à 10 minutes** la marche jusqu’à l’embarquement. Vérifiez les tarifs et l’ouverture avant le déplacement, surtout à la charnière des saisons.
+
+Sans voiture, la gare de Paimpol est reliée à Guingamp par le train. Pour rejoindre l’Arcouest, la [compagnie maritime indique la ligne de bus 24 depuis Paimpol](https://www.vedettesdebrehat.com/Comment-venir). Les appellations de lignes pouvant évoluer, vérifiez les horaires du jour et surtout la correspondance avec le bateau du retour.
+
+Une nuit à Paimpol ou près de l’Arcouest peut être utile si vous venez de loin: elle permet de prendre un bateau matinal sans cumuler une longue route et une journée de marche. Elle n’est pas nécessaire pour profiter de Bréhat en une journée.
+
+## Quelle saison privilégier ?
+
+L’automne convient bien à une promenade tranquille si la météo reste favorable; l’hiver offre des paysages plus dépouillés et moins de services ouverts. Au printemps et en été, les journées plus longues facilitent les grandes balades, mais la fréquentation augmente.
+
+La [régulation des visiteurs annoncée du 27 juillet au 21 août 2026](https://www.brehat-infos.fr/) concernait l’été: ce n’est pas une restriction applicable à une sortie d’automne ou d’hiver. Pour une visite hors saison, les trois vérifications décisives restent **la météo maritime, les marées et le dernier bateau réellement disponible**.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -139,4 +182,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
