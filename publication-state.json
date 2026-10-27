@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261027-2206-sujet-une-excursion-familiale-sur-les-iles-de-lerins-au-large-de-canne",
+  "lastProcessedCommit": "2f0b5ca970a4ce41d781137de628045137e11e53"
 }
