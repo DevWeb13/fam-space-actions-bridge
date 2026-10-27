@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,101 +14,144 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Lot
 - Région: Occitanie
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Parc animalier de Gramat en famille : animaux, parcours et conseils pour une visite en toute saison** — catégorie `activites`, Lot (46), Occitanie.
-
-Angle : organiser une vraie sortie nature avec des enfants, selon leur âge et la saison, sans se limiter aux tarifs. À Gramat, ce parc de vision consacré notamment à la faune européenne propose un parcours extérieur d'environ 4 km (en moyenne 3 h), des observatoires de loups, d'ours et d'élans, des animaux domestiques et des animations pédagogiques. Il reste ouvert en automne et en hiver, avec des horaires réduits.
-
-## Besoin du lecteur
-
-Comprendre ce que les enfants peuvent réellement observer et faire, choisir le bon moment pour venir, prévoir le temps de marche et les pauses, savoir comment gérer une poussette ou un bébé, organiser le repas et le trajet, puis décider si la sortie mérite une journée ou un week-end dans le Lot.
-
-## Valeur éditoriale
-
-- Distinguer l'expérience des tout-petits (petites chèvres, aire de jeux, pauses) de celle des plus grands (observatoires, comportements des animaux, nourrissages commentés et, à partir de 8 ans, option « Soigneur d'un jour » sur réservation).
-- Proposer un déroulé réaliste sur 4 km / environ 3 h, en tenant compte du relief : parcours annoncé adapté aux poussettes, mais seulement 80 % accessibles aux fauteuils roulants et plusieurs pentes plus marquées. Ne pas promettre une accessibilité intégrale.
-- Expliquer la différence entre les périodes : jusqu'au 1er novembre 2026, 10 h–18 h 30 ; du 2 novembre au 18 décembre 2026, 13 h 30–17 h 30. Parc ouvert toute l'année sauf le 25 décembre ; plusieurs espèces restent observables en hiver. Vérifier l'agenda du jour pour les nourrissages, sans garantir une animation précise.
-- Aider à anticiper le repas : self saisonnier jusqu'à la fin des vacances de Toussaint, buvette à horaires variables, pique-nique autorisé ; prêt de poussettes, espace de change et chaise haute annoncés.
-- Distinguer les billets officiels en ligne (2026 : 16 € adulte, 10 € enfant de 4 à 11 ans, gratuit moins de 4 ans) des tarifs guichet (17 € / 11 €). Les billets ne constituent pas une affiliation vérifiée. Expliquer l'accès en voiture et la limite des transports hors été.
-- Valeur ajoutée Fam Space : conseils concrets pour choisir son rythme, anticiper les contraintes de saison et combiner éventuellement la visite avec un séjour, plutôt qu'une reprise du catalogue du parc.
-
-## Affiliation
-
-Billetterie principale : aucune offre spécifique du parc confirmée chez GetYourGuide, Tiqets, Klook ni chez les partenaires de secours WeGoTrip et KKday lors de la recherche. Billets officiels disponibles sur le site du parc : https://www.gramat-parc-animalier.com/preparer-sa-visite/horaires-et-tarifs/ (lien éditorial, non affilié).
-
-Deux hébergements partenaires précis à envisager uniquement si le séjour prolonge naturellement la sortie :
-- **Booking.com — Résidence Lagrange Vacances Les Ségalières**, à Gramat, annoncée face au parc ; cottages familiaux climatisés, kitchenette et terrasse, dont formule 4 à 6 personnes. https://www.booking.com/hotel/fr/les-segalieres.fr.html
-- **Abritel — Petite maison de charme en pierre et colombage**, à Gramat, deux chambres pour quatre personnes, cuisine, lit bébé indiqué, à environ trois minutes en voiture du parc selon l'annonce. https://www.abritel.fr/location-vacances/p1582195a
-
-Offres repérées sur leurs pages partenaires ; prix et disponibilités à vérifier pour les dates du lecteur. Ne pas suggérer que les hébergements sont nécessaires pour une visite à la journée.
-
-## Sources de départ
-
-- Parc animalier de Gramat — horaires, tarifs 2026, ouverture hivernale : https://www.gramat-parc-animalier.com/preparer-sa-visite/horaires-et-tarifs/
-- Parc animalier — FAQ (4 km, durée moyenne 3 h, animaux en hiver, règles) : https://www.gramat-parc-animalier.com/preparer-sa-visite/faq/
-- Parc animalier — visite avec enfants et poussettes : https://www.gramat-parc-animalier.com/preparer-sa-visite/visiter-en-famille/
-- Parc animalier — accessibilité, pentes et cheminements : https://www.gramat-parc-animalier.com/preparer-sa-visite/accessibilite-handicap/
-- Parc animalier — restauration et pique-nique : https://www.gramat-parc-animalier.com/preparer-sa-visite/se-restaurer/
-- Parc animalier — services, change et prêt de poussettes : https://www.gramat-parc-animalier.com/preparer-sa-visite/services/
-- Parc animalier — accès et transports : https://www.gramat-parc-animalier.com/preparer-sa-visite/venir-au-parc/
-- Parc animalier — animations à vérifier selon la date : https://www.gramat-parc-animalier.com/agenda/
-- Parc animalier — observatoires des loups, ours et élans : https://www.gramat-parc-animalier.com/decouvrir-le-parc/notre-vision/les-observatoires/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "activites"
+title: "Parc animalier de Gramat en famille: animaux, durée et conseils de visite"
+subtitle: "Un parcours nature de 4 km dans le Lot, à adapter à l’âge des enfants et à la saison"
+summary: "Loups, ours, élans, pauses avec bébé, horaires d’hiver et tarifs: comment préparer une visite du parc animalier de Gramat avec des enfants."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "parc animalier de Gramat en famille"
+  - "visiter parc animalier Gramat avec enfants"
+  - "parc animalier Gramat horaires tarifs"
+  - "sortie famille Lot"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Gramat"
+  department: "Lot"
+  region: "Occitanie"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Parc animalier de Gramat - Les observatoires"
+    url: "https://www.gramat-parc-animalier.com/decouvrir-le-parc/notre-vision/les-observatoires/"
+  - title: "Parc animalier de Gramat - Visiter en famille"
+    url: "https://www.gramat-parc-animalier.com/preparer-sa-visite/visiter-en-famille/"
+  - title: "Parc animalier de Gramat - FAQ"
+    url: "https://www.gramat-parc-animalier.com/preparer-sa-visite/faq/"
+  - title: "Parc animalier de Gramat - Accessibilité et handicap"
+    url: "https://www.gramat-parc-animalier.com/preparer-sa-visite/accessibilite-handicap/"
+  - title: "Parc animalier de Gramat - Services"
+    url: "https://www.gramat-parc-animalier.com/preparer-sa-visite/services/"
+  - title: "Parc animalier de Gramat - Agenda des animations"
+    url: "https://www.gramat-parc-animalier.com/agenda/"
+  - title: "Parc animalier de Gramat - Soigneur d’un jour"
+    url: "https://www.gramat-parc-animalier.com/immersive-experience/soigneur-dun-jour/"
+  - title: "Parc animalier de Gramat - Horaires et tarifs"
+    url: "https://www.gramat-parc-animalier.com/preparer-sa-visite/horaires-et-tarifs/"
+  - title: "Parc animalier de Gramat - Se restaurer"
+    url: "https://www.gramat-parc-animalier.com/preparer-sa-visite/se-restaurer/"
+  - title: "Parc animalier de Gramat - Venir au parc"
+    url: "https://www.gramat-parc-animalier.com/preparer-sa-visite/venir-au-parc/"
 ---
-```
 
-Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Gramat, dans le Lot, près de Rocamadour, le parc animalier invite les familles à découvrir la faune européenne au fil d’une promenade en plein air. On y vient autant pour observer des loups, des ours et des élans que pour apprendre à regarder les animaux: leurs déplacements, leurs habitudes et leurs interactions. Mais la sortie ressemble davantage à une petite randonnée ponctuée de découvertes qu’à une visite rapide de zoo.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Loups, ours, élans: que voit-on vraiment ?
+
+Trois espaces méritent particulièrement qu’on prenne son temps. À la tanière des loups, une passerelle surélevée puis un espace vitré permettent d’observer les déplacements de la meute. L’observatoire des élans offre plusieurs angles de vue sur ces grands cervidés, tandis que la doline des ours dispose notamment d’une grotte vitrée. Ces aménagements sont décrits sur la page officielle des [observatoires du parc](https://www.gramat-parc-animalier.com/decouvrir-le-parc/notre-vision/les-observatoires/).
+
+Les animaux ne sont pas des acteurs tenus de se montrer au passage des visiteurs. Un loup peut rester à distance, un ours se reposer. Avec des enfants, le plus intéressant est parfois d’attendre quelques minutes et de chercher ensemble un détail: un animal qui mange, un autre qui joue, une trace de mouvement dans l’enclos. Mieux vaut trois observations réussies qu’une course d’un panneau au suivant.
+
+## À quel âge la sortie est-elle la plus intéressante ?
+
+Avec un tout-petit, les petites chèvres et l’aire de jeux offrent des moments plus immédiats que l’attente devant un grand enclos. Le parc présente aussi des panneaux pédagogiques et des animations autour des nourrissages: autant de points d’appui pour les enfants plus grands qui veulent comprendre les comportements des animaux. Ces activités sont évoquées dans la rubrique [visiter en famille](https://www.gramat-parc-animalier.com/preparer-sa-visite/visiter-en-famille/).
+
+Pour les enfants curieux, un nourrissage commenté peut enrichir la visite. Les animations publiques varient selon les jours et les périodes; consultez l’[agenda du parc](https://www.gramat-parc-animalier.com/agenda/) avant de promettre un rendez-vous précis. Il ne faut pas non plus confondre ces animations avec les expériences payantes: l’activité [« Soigneur d’un jour »](https://www.gramat-parc-animalier.com/immersive-experience/soigneur-dun-jour/), accessible dès 8 ans, se réserve exclusivement en ligne et correspond à une matinée spécifique, pas à une animation comprise dans la visite ordinaire.
+
+## Quatre kilomètres à parcourir: quel rythme prévoir ?
+
+Le [parcours annoncé](https://www.gramat-parc-animalier.com/preparer-sa-visite/faq/) mesure **4 km**, pour une durée moyenne d’environ **3 heures**. Cette moyenne est une bonne base, pas une obligation. Avec des enfants qui s’arrêtent longuement devant les animaux, une pause repas ou un bébé à changer, il est préférable de garder une marge. À l’inverse, un enfant fatigué n’aura pas forcément envie de voir tous les enclos.
+
+Une façon simple d’organiser la promenade consiste à choisir deux ou trois observations prioritaires, puis à laisser le reste de la visite se faire au rythme du groupe. Prévoyez des chaussures adaptées aux chemins, de l’eau et des vêtements en fonction de la météo. En période de pluie, certains espaces d’observation sont couverts, mais l’essentiel de la sortie reste dehors.
+
+### Poussette, fauteuil roulant et bébé: les limites à connaître
+
+Le parc annonce un parcours **adapté aux poussettes**, mais cela ne signifie pas que tous les chemins sont plats. Selon sa page [accessibilité](https://www.gramat-parc-animalier.com/preparer-sa-visite/accessibilite-handicap/), **80 % du parcours sont accessibles en fauteuil roulant**. Certaines portions, notamment vers la volière, les ours ou les chevaux de Przewalski, présentent des pentes plus marquées; les chemins peuvent aussi être creusés après de fortes pluies.
+
+Pour une poussette chargée ou une personne ayant des difficultés de déplacement, mieux vaut donc se renseigner auprès de l’accueil sur les portions à privilégier, plutôt que de compter sur une accessibilité intégrale. Les familles disposent, selon la liste des [services du parc](https://www.gramat-parc-animalier.com/preparer-sa-visite/services/), d’un prêt de poussettes, d’un espace de change et d’une chaise haute pour bébé. Le site mentionne également des sanitaires, des zones de repos et un parking gratuit.
+
+## Quelle saison choisir, notamment en automne ou en hiver ?
+
+Le parc est ouvert toute l’année **sauf le 25 décembre**, mais l’amplitude horaire change fortement. Selon les [horaires et tarifs officiels](https://www.gramat-parc-animalier.com/preparer-sa-visite/horaires-et-tarifs/) affichés pour 2026:
+
+- **Du 31 août au 1er novembre 2026**: 10 h à 18 h 30.
+- **Du 2 novembre au 18 décembre 2026**: 13 h 30 à 17 h 30.
+- **Du 19 décembre 2026 au 3 janvier 2027**: 13 h à 17 h 30, avec fermeture le 25 décembre.
+
+L’hiver n’est pas une saison sans animaux: le parc indique que la majorité restent visibles, notamment les rennes, les élans et les renards polaires; la marmotte, elle, hiberne. En revanche, une ouverture à 13 h 30 laisse moins de souplesse pour parcourir 4 km avec de jeunes enfants. Pour une sortie hivernale, il est judicieux d’arriver dès l’ouverture et de ne pas prévoir un long déjeuner au milieu du circuit. Les horaires des périodes suivantes sont à revérifier avant de partir.
+
+## Manger sur place sans mauvaise surprise
+
+Le [self du parc](https://www.gramat-parc-animalier.com/preparer-sa-visite/se-restaurer/) fonctionne du début des vacances de Pâques à la fin de celles de Toussaint: il ne faut donc pas compter dessus pour un déjeuner hivernal. La buvette ouvre tous les jours d’avril à octobre et pendant les vacances scolaires; en basse saison, ses jours d’ouverture annoncés sont le mercredi, le samedi et le dimanche.
+
+Le pique-nique est autorisé à l’intérieur, dans un espace aménagé près des ours. C’est la solution la plus souple avec de jeunes enfants, particulièrement hors saison. Si vous voyagez avec un bébé, apportez son repas habituel: aucun service de réchauffage des petits pots n’est confirmé dans les informations consultées.
+
+## Billets et accès: les informations utiles
+
+Pour **2026**, le billet de visite libre coûte **17 € par adulte** et **11 € pour les enfants de 4 à 11 ans inclus** au guichet. Le tarif affiché en ligne est de **16 € par adulte** et **10 € par enfant**; l’entrée est gratuite pour les moins de 4 ans. Il s’agit de la billetterie officielle du parc, non d’une offre partenaire. Les réductions et les tarifs d’une autre année sont à vérifier au moment de l’achat.
+
+Le parc se trouve au **1681 avenue André-Malraux, 46500 Gramat**. La page [venir au parc](https://www.gramat-parc-animalier.com/preparer-sa-visite/venir-au-parc/) indique un parking gratuit, des bornes de recharge, une gare à Gramat et environ **40 minutes à pied depuis le centre-ville**. Les bus liO mentionnés pour desservir le parc sont **estivaux**: hors été, ne présumez pas d’une correspondance en transport en commun jusqu’à l’entrée.
+
+Pour une famille logeant déjà dans le Lot, la visite suffit à remplir une bonne demi-journée, voire davantage à la belle saison. Une nuit sur place n’est pas nécessaire pour profiter du parc; elle peut simplement avoir du sens si Gramat sert d’étape à un séjour plus large autour de Rocamadour et de la vallée de la Dordogne.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -137,4 +180,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
