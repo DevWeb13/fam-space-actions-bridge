@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Noël à Fontevraud 2026 : quel jour choisir avec les enfants ?"
-subtitle: "Patinoire, illuminations, poneys, marché et spectacle : les dates et billets à distinguer."
-summary: À l'Abbaye royale de Fontevraud, les animations de Noël 2026 ne sont pas proposées aux mêmes dates. Un guide pour choisir sa sortie selon l'âge des enfants, les horaires et le budget.
+title: "Noël à Fontevraud 2026 : dates, patinoire et tarifs en famille"
+subtitle: "Marché, poneys, illuminations et spectacle : les bons jours pour profiter des animations avec les enfants."
+summary: À Fontevraud, le marché n'a lieu que les 28 et 29 novembre 2026, les poneys trois dimanches et la patinoire selon un calendrier spécifique. Voici comment choisir sa date, prévoir son budget et organiser la visite.
 category: evenements
 location:
   city: Fontevraud-l'Abbaye
@@ -68,16 +73,17 @@ location:
   region: Pays de la Loire
 keywords:
   - Noël à Fontevraud 2026
-  - Abbaye de Fontevraud patinoire illuminations enfants
-  - Fontevraud marché de Noël spectacle famille
+  - patinoire abbaye Fontevraud horaires
+  - marché de Noël Fontevraud 28 29 novembre
+  - Fontevraud illuminations poneys enfants tarifs
 sources:
-  - title: Fontevraud - Noël à Fontevraud 2026, programme officiel
+  - title: Fontevraud — Noël à Fontevraud 2026, programme officiel
     url: https://www.fontevraud.fr/evenement/noel-a-fontevraud/
-  - title: Fontevraud - Informations pratiques, tarifs et horaires
+  - title: Fontevraud — Informations pratiques, horaires, tarifs et accès
     url: https://www.fontevraud.fr/informations-pratiques/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: noel-a-fontevraud-2026-quel-jour-choisir-avec-les-enfants
   decision: Choisir une date et la bonne formule d'entrée selon l'âge des enfants et les activités souhaitées, sans confondre accès libre, activités incluses et réservations obligatoires.
@@ -87,41 +93,63 @@ radar:
     dataThrough: 2026-10-24
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Fontevraud - Noël à Fontevraud 2026, programme officiel »; aucune page forte GSC n'est requise.
+eventEndsAt: 2027-03-07
 ---
 
-## Mission retenue
-Préparer la visite de Noël 2026 à l'Abbaye royale de Fontevraud, avec un choix concret du jour et des animations. Le programme officiel débute le 28 novembre 2026 ; ne pas supposer que toutes les activités durent jusqu'au 7 mars 2027, date générale affichée pour l'événement.
+Pour Noël 2026, l'Abbaye royale de Fontevraud, près de Saumur, réunit patinoire, illuminations, marché gourmand, balades à poney et installations artistiques. Mais ces animations n'ont **pas toutes les mêmes dates** : le week-end des 28 et 29 novembre est celui du marché, tandis que les poneys ne sont annoncés que trois dimanches. Le [programme de Noël de l'abbaye](https://www.fontevraud.fr/evenement/noel-a-fontevraud/) affiche une période générale du **28 novembre 2026 au 7 mars 2027**, sans garantir que chaque animation fonctionne jusqu'en mars.
 
-## Pourquoi cette mission
-Le refresh de la Carte Avantage Adulte SNCF a été relu : ses conditions essentielles sont déjà correctement expliquées, et sa baisse GSC est de cause incertaine. L'expansion « transports parisiens avec poussette » répondrait à une autre intention que le guide des billets, mais reste pérenne. Fontevraud est plus urgent : calendrier familial précis, plusieurs activités à conditions différentes, aucune page dédiée ni doublon direct dans le catalogue Radar. Les pages Noël d'autres villes ne couvrent pas cette décision locale.
+## Quel jour venir avec les enfants ?
 
-## Décision du lecteur
-Savoir quand venir pour le marché, les poneys, la patinoire, les illuminations ou le spectacle, et ce qui doit être payé ou réservé.
+- **Samedi 28 novembre :** pour découvrir le marché gourmand (10 h-17 h 30, accès libre), profiter de la patinoire et attendre les illuminations. Des lectures de Noël sont aussi prévues à 15 h 30 et 16 h 30, à partir de 7 ans.
+- **Dimanche 29 novembre :** le meilleur choix pour combiner marché, patinoire et poney avec un enfant de 3 à 10 ans. Particularité importante : l'abbaye annonce **l'entrée gratuite pour tous** ce dernier dimanche du mois. Le marché est décrit comme accessible dans le cadre du billet d'entrée, mais cette gratuité générale évite normalement le prix habituel d'entrée ; vérifiez les modalités d'accès à l'approche de la date.
+- **Dimanches 6 et 13 décembre :** pour les balades à poney de 11 h à 17 h, avec la patinoire et la visite de l'abbaye. Le marché gourmand du lancement n'est plus annoncé à ces dates.
+- **Mercredis et samedis jusqu'à la fin des vacances de Noël :** pour les illuminations après le coucher du soleil et une visite prolongée jusqu'à **19 h**. Exception : le samedi 12 décembre, la nocturne habituelle n'est pas proposée.
+- **Pendant les vacances de Noël :** pour davantage de possibilités de patiner, la patinoire étant annoncée tous les jours de vacances, sauf fermeture du site. L'abbaye et le musée sont fermés **le 25 décembre 2026 et le 1er janvier 2027**.
 
-## Faits à traiter
-Marché les 28-29 novembre ; patinoire à partir du 28 novembre, mercredis/week-ends puis vacances ; poneys les 29 novembre, 6 et 13 décembre pour les 3-10 ans ; « La Maquette du temps » (10 minutes, réservation requise) ; illuminations à la tombée de la nuit et nocturnes. Vérifier les dates propres à chaque animation, les horaires, les fermetures du 25 décembre et du 1er janvier, la gratuité annoncée du 29 novembre, les tarifs abbaye seule ou abbaye + musée, les moins de 18 ans, les tables à langer, la restauration, l'accessibilité et le trajet depuis Saumur. Ne pas confondre les gratuités avec une activité incluse dans un billet payant.
+Si les enfants veulent avant tout voir les lumières, prévoyez de rester après la tombée de la nuit. Le calendrier de l'Avent géant du bâtiment d'accueil est en accès libre ; le parcours intérieur de l'abbaye relève, lui, des conditions d'entrée du monument.
 
-## Sources de départ
-Les deux pages officielles du frontmatter, à recouper pour les gratuités et les nocturnes.
+## Patinoire, poneys et spectacle : qu'est-ce qui est inclus ?
 
-## Affiliation
-Billet principal : aucun partenaire direct confirmé, ne pas inventer d'offre. Pour un séjour, la maison familiale Booking.com vérifiée ci-dessus peut être proposée discrètement en fin d'article, sans tarif ni disponibilité inventés.
+La **patinoire en plein air**, installée sur la pelouse du Réfectoire, ouvre normalement de **11 h à 18 h** les mercredis et week-ends à partir du 28 novembre, puis quotidiennement pendant les vacances scolaires. Elle est **incluse dans le billet d'entrée**, sans billet de patinoire supplémentaire annoncé. Lors des nocturnes du mercredi et du samedi, elle reste accessible jusqu'à 19 h. Le programme ne précise pas d'âge minimum ni de conditions particulières pour les plus petits : renseignez-vous avant de promettre une séance de glisse à un jeune enfant.
 
-## Continuations internes
-Pour un séjour autour de Saumur, renvoyer vers l'article existant « Où manger des fouées en famille autour de Saumur ? » au lieu de réécrire les conseils de restauration de la région. Ne pas reprendre les programmes de Noël des châteaux de Chambord ou Cheverny : ce sont des sorties distinctes déjà couvertes.
+Les **balades à poney**, réservées aux **3-10 ans**, sont annoncées les **29 novembre, 6 et 13 décembre**, de 11 h à 17 h, près de la pelouse du chevet. L'abbaye les présente en accès libre **dans le cadre du billet d'entrée** : cela ne signifie pas que l'entrée au monument est gratuite les 6 et 13 décembre.
+
+Pour une pause plus courte, **« La Maquette du temps »**, création de François Delarozière et de la compagnie La Machine, fait vivre une maquette de l'abbaye grâce au théâtre d'objets, à la mécanique et à la lumière. Le spectacle dure **10 minutes**, convient à tout public et se déroule dans la cour Saint-Benoît. **La réservation est obligatoire** : les séances et places disponibles doivent être vérifiées avant la visite, car la page générale ne donne pas de calendrier quotidien.
+
+Le parcours artistique permet aussi de découvrir la crèche napolitaine dans l'abbatiale, les créations d'Augustin Frison-Roche et des installations lumineuses. Une visite du musée d'Art moderne peut compléter la sortie, notamment pour son parcours sensoriel de Noël ; elle nécessite la formule d'entrée correspondante.
+
+## Combien coûte la sortie ?
+
+Pour la période du **5 octobre au 31 décembre 2026**, les [tarifs publiés par Fontevraud](https://www.fontevraud.fr/informations-pratiques/) sont de **13 € par adulte** pour l'abbaye seule (11 € en prévente), ou **17 €** pour le billet abbaye + musée (15,50 € en prévente). L'entrée est **gratuite pour les moins de 18 ans**. Les étudiants de moins de 25 ans et plusieurs autres publics bénéficient aussi de gratuités, sous conditions.
+
+Pour **deux adultes et deux enfants de moins de 18 ans**, comptez donc **26 € pour l'abbaye seule**, ou **34 € avec le musée**, au plein tarif, hors repas et achats. Le **29 novembre 2026**, l'entrée de l'abbaye et du musée est annoncée gratuite pour tous. Une activité incluse dans le billet ne doit pas être confondue avec un accès gratuit à l'ensemble du site les autres jours.
+
+Ces tarifs sont publiés pour **2026** : pour une visite en janvier, février ou mars 2027, vérifiez la grille applicable à votre date. La durée conseillée pour la découverte du site est d'environ **trois heures**, davantage si vous combinez patinoire, musée et illuminations. L'achat du billet et l'entrée ne sont plus possibles dans la dernière heure d'ouverture.
+
+## Venir depuis Saumur et visiter avec un bébé
+
+Fontevraud-l'Abbaye se situe à environ **15 minutes de route de Saumur** selon le site du monument. Les parkings visiteurs indiqués se trouvent notamment **place du 8-Mai-1945**, **rue du Logis-Bourbon** et **place du Grand-Clos**. Depuis Saumur, les bus du réseau **Ogalo** desservent également le secteur : contrôlez les horaires du jour, surtout le soir et pendant les vacances.
+
+Des **tables à langer** et des **consignes à bagages** sont indiquées parmi les équipements. Le **musée d'Art moderne est accessible aux personnes à mobilité réduite**, tandis que l'abbaye ne l'est que **partiellement** ; un fauteuil roulant peut être prêté sur réservation. Avec une poussette, renseignez-vous sur les parties du parcours accessibles avant de venir. La nourriture et les boissons ne sont pas admises dans le musée.
+
+Pour une pause, la **Terrasse Gourmande** propose de la restauration rapide sur place ou à emporter et reste ouverte jusqu'à 19 h lors des nocturnes. Si vous prolongez la sortie autour de Saumur, vous pouvez aussi consulter notre guide [où manger des fouées en famille autour de Saumur](https://www.fam-space.fr/articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/) pour choisir un restaurant adapté aux enfants.
+
+## Passer la nuit près de l'abbaye
+
+Pour transformer cette sortie en week-end, [Les écuries des Princesses à Fontevraud-l'Abbaye](https://www.booking.com/hotel/fr/les-ecuries-des-princesses.fr.html) est une maison de vacances avec **deux chambres pour quatre personnes**, une cuisine et un parking privé. Elle est située dans le village, à proximité de l'abbaye. Vérifiez le prix, les couchages et les disponibilités pour vos dates ; aucun tarif de séjour n'est garanti à l'avance.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
-- /articles/evenements/marche-de-noel-de-cusset-2026-en-famille-quel-jour-choisir/ | Marché de Noël de Cusset 2026 en famille: quel jour choisir? | evenements | Cusset, Allier, Auvergne-Rhône-Alpes
-- /articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/ | Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille | evenements | Nevers, Nièvre, Bourgogne-Franche-Comté
-- /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
-- /articles/evenements/lumieres-de-noel-a-montbeliard-2026-quel-jour-venir-avec-des-enfants/ | Lumières de Noël à Montbéliard 2026: quel jour venir avec des enfants? | evenements | Montbéliard, Doubs, Bourgogne-Franche-Comté
 - /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | Marché de Noël d'Amiens 2026 en famille: horaires, Père Noël et patinoire | evenements | Amiens, Somme, Hauts-de-France
-- /articles/evenements/contes-et-histoires-2026-comment-choisir-un-monument-a-visiter-avec-les-enfants/ | Contes et Histoires 2026: comment choisir un monument à visiter avec les enfants | evenements
-- /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | Noël à Toulouse 2026 en famille: marchés, Père Noël et patinoire | evenements | Toulouse, Haute-Garonne, Occitanie
-- /articles/evenements/hop-hop-hop-festival-2026-en-famille-quel-jour-choisir/ | Hop Hop Hop Festival 2026 en famille: quel jour choisir? | evenements | Saint-Cirgues, Lot, Occitanie
+- /articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/ | Noël à Trévarez 2026 en famille: dates, horaires et réservation | evenements | Saint-Goazec, Finistère, Bretagne
+- /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
+- /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | Marché de Noël de Bordeaux 2026 en famille: horaires, animations et budget | evenements | Bordeaux, Gironde, Nouvelle-Aquitaine
+- /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | Marché de Noël de Reims 2026 en famille: horaires, grande roue et animations | evenements | Reims, Marne, Grand Est
+- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
+- /articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/ | Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille | evenements | Nevers, Nièvre, Bourgogne-Franche-Comté
+- /articles/evenements/noel-a-orleans-2026-en-famille-marches-horaires-et-maneges-apres-noel/ | Marché de Noël d’Orléans 2026 en famille: horaires, lieux et manèges | evenements | Orléans, Loiret, Centre-Val de Loire
 - /articles/parentalite/ludotheque-du-choletais-jouer-sur-place-et-emprunter-en-famille/ | Ludothèque du Choletais: jouer sur place et emprunter en famille | parentalite | Cholet, Maine-et-Loire, Pays de la Loire
 - /articles/evenements/fete-de-l-automne-2026-a-terra-botanica-journee-ou-terra-nocta-en-famille/ | Fête de l'Automne 2026 à Terra Botanica: animations et tarifs | evenements | Angers, Maine-et-Loire, Pays de la Loire
 - /articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/ | Où manger des fouées en famille autour de Saumur ? | cuisine | Saumur, Maine-et-Loire, Pays de la Loire
@@ -143,12 +171,12 @@ Pour un séjour autour de Saumur, renvoyer vers l'article existant « Où manger
 - opportunity | /articles/evenements/fete-de-l-automne-2026-a-terra-botanica-journee-ou-terra-nocta-en-famille/ | 2026-10-13T12:37:05.098Z
 - opportunity | /articles/evenements/les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille/ | 2026-10-27T13:28:21.076Z
 - opportunity | /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | 2026-10-19T13:54:07.745Z
+- opportunity | /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | 2026-10-21T07:36:18.372Z
+- opportunity | /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | 2026-10-20T00:30:38.975Z
+- opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | 2026-10-10T08:38:56.921Z
 - opportunity | /articles/evenements/noel-2026-a-villandry-spectacles-et-ateliers-a-choisir-selon-l-age/ | 2026-10-27T10:35:41.254Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-10-26T21:31:06.119Z
-- opportunity | /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | 2026-10-24T23:34:36.270Z
-- opportunity | /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | 2026-10-27T07:35:50.437Z
-- opportunity | /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | 2026-10-26T18:32:56.730Z
 
 ### Phases 2 et 3
 
