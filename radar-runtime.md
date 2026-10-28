@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Marché de Noël de Grenoble 2026 en famille : quand voir le Père Noël ?"
-subtitle: Chalets place Victor-Hugo, rencontres gratuites, horaires et accès en tram
-summary: Du 20 novembre au 24 décembre 2026, le marché de Noël de Grenoble accueille les familles place Victor-Hugo. Choisir son jour selon les horaires et la présence du Père Noël.
+title: "Marché de Noël de Grenoble 2026 en famille : horaires et Père Noël"
+subtitle: Quel jour venir place Victor-Hugo, comment rejoindre les chalets et préparer la visite avec des enfants
+summary: Du 20 novembre au 24 décembre 2026, le marché de Noël de Grenoble accueille les familles place Victor-Hugo. Les rencontres gratuites avec le Père Noël sont annoncées les mercredis et week-ends, du 21 novembre au 23 décembre, de 14 h à 19 h.
 category: evenements
 location:
   city: Grenoble
@@ -69,15 +74,17 @@ location:
 keywords:
   - marché de Noël Grenoble 2026
   - Père Noël Grenoble 2026
-  - marché Noël Grenoble horaires tram famille
+  - marché de Noël Grenoble horaires famille
 sources:
   - title: Grenoble Alpes Tourisme - Marché de Noël de Grenoble 2026
     url: https://www.grenoble-tourisme.com/fr/catalogue/detail/marche-de-noel-de-grenoble-258480/
-  - title: Grenoble Alpes Tourisme - Rencontres avec le Père Noël au marché
+  - title: Grenoble Alpes Tourisme - Le Père Noël au marché de Noël de Grenoble
     url: https://www.grenoble-tourisme.com/fr/catalogue/detail/le-pere-noel-marche-de-noel-de-grenoble-6348212/
+  - title: RockyPop Grenoble - Hébergements familiaux
+    url: https://www.rockypop.com/grenoble/dormir/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel
   decision: Choisir une visite calme des chalets ou un mercredi/week-end avec rencontre du Père Noël, connaître les horaires et rejoindre la place Victor-Hugo sans difficulté avec des enfants.
@@ -87,48 +94,56 @@ radar:
     dataThrough: 2026-10-25
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Grenoble Alpes Tourisme - Marché de Noël de Grenoble 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-24
 ---
 
-## Mission retenue
-Préparer un guide pratique du marché de Noël de Grenoble 2026, place Victor-Hugo, centré sur le choix du jour pour une famille, plutôt qu'un inventaire général des animations de Noël de l'agglomération.
+Le **marché de Noël de Grenoble** se tient **place Victor-Hugo du 20 novembre au 24 décembre 2026**. L'entrée est gratuite : on peut parcourir les chalets d'artisans et de gourmandises sans acheter de billet. Avec des enfants, le choix du jour dépend surtout d'une envie : flâner tranquillement ou rencontrer le Père Noël.
 
-## Pourquoi cette mission
-Le marché commence le 20 novembre et ses horaires sont déjà confirmés par Grenoble Alpes Tourisme. Pas de page équivalente à Grenoble dans le catalogue : la Foire de Grenoble est un autre événement. Le refresh Carte Avantage Adulte SNCF a été relu et reste conforme aux conditions officielles, sans amélioration décisive identifiée ; celui du Mois Givré attend encore le programme du 13 novembre. L'expansion « stages de Noël à la Cité des sciences » est documentée, mais un guide très proche existe déjà pour les stages de Toussaint. Grenoble offre maintenant une décision locale distincte.
+## Quel jour choisir pour voir le Père Noël ?
 
-## Décision du lecteur
-Savoir s'il vaut mieux venir un jour ordinaire pour les chalets ou un mercredi/samedi/dimanche pour rencontrer le Père Noël, sans confondre horaires du marché et horaires des animations.
+Le Père Noël est annoncé dans son chalet et en déambulation **les mercredis, samedis et dimanches, de 14 h à 19 h**, avec possibilité pour les enfants de lui remettre leur lettre. La [fiche de Grenoble Alpes Tourisme](https://www.grenoble-tourisme.com/fr/catalogue/detail/le-pere-noel-marche-de-noel-de-grenoble-6348212/) affiche **du 21 novembre au 23 décembre 2026** en titre, mais une période légèrement plus large dans son encadré d'ouverture. Pour préparer la sortie, retenez les rencontres des mercredis et week-ends entre le 21 novembre et le 23 décembre, et vérifiez la fiche avant le départ si vous visez une date précise. **La présence du Père Noël n'est pas annoncée tous les jours** et ne doit pas être confondue avec les horaires des chalets.
 
-## Faits à traiter
-- Marché du 20 novembre au 24 décembre 2026, place Victor-Hugo, accès gratuit. Horaires : lundi à mercredi et dimanche 10 h–20 h ; jeudi à samedi 10 h–21 h. Programme complémentaire encore annoncé « à venir ».
-- Chalet et déambulation du Père Noël annoncés les mercredis et week-ends, 14 h–19 h, en accès libre. La fiche comporte une légère divergence entre ses dates de titre (21 novembre–23 décembre) et ses périodes d'ouverture (20 novembre–24 décembre) : vérifier les séances exactes avant de publier, sans étendre ces rencontres à tous les jours.
-- Arrêts Victor-Hugo et lignes de tram A, B et D annoncés par l'office ; proposer une arrivée simple en transport public. Pour poussette, pauses, repas et météo, rester concret sans inventer de services.
-- Ne pas présenter les attractions ou spectacles d'autres communes comme faisant partie du marché de Grenoble. Ne pas inventer de tarifs pour les achats ou les consommations.
+Si la rencontre n'est pas une priorité, un lundi, mardi, jeudi ou vendredi permet de profiter des stands sans organiser la visite autour de ce créneau. Cela ne garantit toutefois pas une faible affluence. Pour les plus jeunes, venir en journée laisse davantage de souplesse pour une pause ou un retour anticipé.
 
-## Sources de départ
-Les deux fiches 2026 de Grenoble Alpes Tourisme ci-dessus, consultées le 28 octobre 2026.
+## Horaires des chalets et budget à prévoir
 
-## Affiliation
-L'accès principal est gratuit : aucune billetterie à ajouter. RockyPop Grenoble Hotel, 9 rue de Strasbourg, dispose de chambres familiales/communicantes présentées sur Booking.com ; piste secondaire pour un séjour, sans prix garanti ni lien artificiel vers une activité payante.
+Selon la [fiche officielle du marché](https://www.grenoble-tourisme.com/fr/catalogue/detail/marche-de-noel-de-grenoble-258480/), les horaires habituels sont :
 
-## Continuations internes
-- Pour organiser une journée plus longue à Grenoble, renvoyer à /destinations/auvergne-rhone-alpes/isere/grenoble/ : Bastille, musée, stationnement et séjour sont déjà détaillés et ne doivent pas être recopiés.
-- Ne pas mailler artificiellement vers la Foire de Grenoble : autre lieu et autre calendrier.
+- **Lundi, mardi, mercredi et dimanche : 10 h à 20 h.**
+- **Jeudi, vendredi et samedi : 10 h à 21 h.**
+
+Le marché se termine le **jeudi 24 décembre**. Pour une visite ce dernier jour, revérifiez l'heure de fermeture auprès de l'organisateur : un horaire particulier peut s'appliquer à la veille de Noël.
+
+L'accès au marché et les rencontres annoncées avec le Père Noël sont gratuits. En revanche, les boissons, spécialités à manger et cadeaux proposés par les chalets sont payants, sans tarif unique communiqué. Fixer un petit budget gourmandises ou achats avant de venir évite les surprises. Le programme complémentaire des animations est encore indiqué « à venir » par l'office de tourisme : ne comptez pas sur un spectacle ou un atelier précis sans confirmation.
+
+## Venir place Victor-Hugo avec une poussette
+
+Le marché se déroule en plein centre-ville, **place Victor-Hugo, 38000 Grenoble**. Grenoble Alpes Tourisme indique les **trams A, B et D**, ainsi que plusieurs bus, pour rejoindre le secteur Victor-Hugo. Le tram est pratique pour éviter la recherche de stationnement au cœur de la ville. Avec une poussette, prévoyez une marge pour traverser les allées et rejoindre l'arrêt lors des périodes animées.
+
+La sortie se déroule en extérieur : vêtements chauds, protection contre la pluie et chaussures adaptées sont utiles, surtout avec un enfant qui reste longtemps dans sa poussette. Pour un bébé, emportez ce qu'il faut pour le repas ou le biberon : **aucun micro-ondes, espace de change ou service de chauffe-biberon n'est confirmé** dans les informations officielles consultées. Une pause dans un établissement voisin peut être envisagée, sans présumer de ses équipements.
+
+## Prolonger la sortie en week-end
+
+Pour une nuit sur place, le **RockyPop Grenoble Hotel**, rue de Strasbourg, propose notamment des chambres communicantes et des appartements adaptés aux familles. Vous pouvez [consulter les hébergements RockyPop Grenoble sur Booking.com](https://www.booking.com/hotel/fr/rockypop-grenoble.html) en renseignant vos dates et l'âge des enfants : tarifs, configuration exacte et disponibilités sont à vérifier avant réservation.
+
+Si vous souhaitez ajouter la Bastille, un musée ou préparer le stationnement en périphérie, le [guide Grenoble en famille](/destinations/auvergne-rhone-alpes/isere/grenoble/) détaille ces options pour organiser une journée ou un séjour plus long.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
 - /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | Marché de Noël d'Amiens 2026 en famille: horaires, Père Noël et patinoire | evenements | Amiens, Somme, Hauts-de-France
-- /articles/sorties/ete-oh-parcs-grenoble-2026-famille/ | L’Été Oh! Parcs Grenoble 2026: horaires et activités gratuites | sorties | Grenoble, Isère, Auvergne-Rhône-Alpes
 - /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | Marché de Noël de Bordeaux 2026 en famille: horaires, animations et budget | evenements | Bordeaux, Gironde, Nouvelle-Aquitaine
 - /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | Marché de Noël de Reims 2026 en famille: horaires, grande roue et animations | evenements | Reims, Marne, Grand Est
 - /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
-- /articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/ | Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille | evenements | Nevers, Nièvre, Bourgogne-Franche-Comté
 - /articles/evenements/noel-a-orleans-2026-en-famille-marches-horaires-et-maneges-apres-noel/ | Marché de Noël d’Orléans 2026 en famille: horaires, lieux et manèges | evenements | Orléans, Loiret, Centre-Val de Loire
-- /articles/cuisine/3-recettes-de-l-isere-faciles-a-preparer-en-famille/ | 3 recettes de l'Isère faciles à préparer en famille | cuisine | Grenoble, Isère, Auvergne-Rhône-Alpes
+- /articles/sorties/ete-oh-parcs-grenoble-2026-famille/ | L’Été Oh! Parcs Grenoble 2026: horaires et activités gratuites | sorties | Grenoble, Isère, Auvergne-Rhône-Alpes
+- /articles/evenements/marche-de-noel-de-mulhouse-2026-en-famille-dates-etoffe-et-parcours-avec-les-enfants/ | Marché de Noël de Mulhouse 2026 en famille: horaires, étoffe et animations | evenements | Mulhouse, Haut-Rhin, Grand Est
+- /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | Noël à Toulouse 2026 en famille: marchés, Père Noël et patinoire | evenements | Toulouse, Haute-Garonne, Occitanie
 - /articles/evenements/foire-de-grenoble-2026-en-famille-jours-gratuits-animations-et-budget/ | Foire de Grenoble 2026 en famille: jours gratuits, programme et tarifs | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
 - /articles/bons-plans/carte-tattoo-isere-2026-2027-comment-obtenir-60-a-120-pour-les-activites-d-un-collegien/ | Carte Tattoo Isère 2026-2027: comment obtenir 60 à 120 € pour les activités d'un collégien | bons-plans | Grenoble, Isère, Auvergne-Rhône-Alpes
 - /articles/parentalite/laep-a-grenoble-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | LAEP à Grenoble: où aller avec un enfant de moins de 6 ans? | parentalite | Grenoble, Isère, Auvergne-Rhône-Alpes
+- /articles/cuisine/3-recettes-de-l-isere-faciles-a-preparer-en-famille/ | 3 recettes de l'Isère faciles à préparer en famille | cuisine | Grenoble, Isère, Auvergne-Rhône-Alpes
 - /articles/evenements/foulee-blanche-2027-en-famille-courses-ages-tarifs-et-programme-a-autrans/ | Foulée Blanche 2027 en famille: courses, âges, tarifs et programme à Autrans | evenements | Autrans-Méaudre en Vercors, Isère, Auvergne-Rhône-Alpes
 - /articles/evenements/festival-du-film-pour-enfants-2026-en-isere-seances-ateliers-et-tarifs/ | Festival du Film pour Enfants 2026 en Isère: séances, ateliers et tarifs | evenements | Vizille, Isère, Auvergne-Rhône-Alpes
 - /articles/voyages/chamrousse-en-famille-quel-secteur-choisir-pour-l-hiver-2026-2027/ | Chamrousse en famille: quel secteur choisir pour l'hiver 2026-2027? | voyages | Chamrousse, Isère, Auvergne-Rhône-Alpes
@@ -139,7 +154,6 @@ L'accès principal est gratuit : aucune billetterie à ajouter. RockyPop Grenobl
 - /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | Marché de Noël d'Avignon 2026 en famille: horaires et accès | evenements | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
 - /articles/evenements/festival-international-des-jeux-de-cannes-2027-en-famille-quel-jour-et-quel-billet-choisir/ | Festival des Jeux de Cannes 2027 en famille: billets, âges et visite | evenements | Cannes, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
 - /articles/evenements/noel-a-fontevraud-2026-quel-jour-choisir-avec-les-enfants/ | Noël à Fontevraud 2026: patinoire, marché, dates et tarifs en famille | evenements | Fontevraud-l'Abbaye, Maine-et-Loire, Pays de la Loire
-- /articles/evenements/batiment-b-a-saint-denis-decouvrir-le-street-art-en-famille/ | Bâtiment B à Saint-Denis: découvrir le street art en famille | evenements | Saint-Denis, La Réunion, La Réunion
 
 ### Historique Radar lié
 
@@ -149,10 +163,10 @@ L'accès principal est gratuit : aucune billetterie à ajouter. RockyPop Grenobl
 - opportunity | /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | 2026-10-19T13:54:07.745Z
 - opportunity | /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | 2026-10-28T15:29:23.387Z
 - opportunity | /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | 2026-10-21T07:36:18.372Z
+- opportunity | /articles/evenements/marche-de-noel-de-mulhouse-2026-en-famille-dates-etoffe-et-parcours-avec-les-enfants/ | 2026-10-19T09:37:22.517Z
 - opportunity | /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | 2026-10-20T00:30:38.975Z
 - opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
 - opportunity | /articles/evenements/noel-a-fontevraud-2026-quel-jour-choisir-avec-les-enfants/ | 2026-10-28T01:34:03.741Z
-- opportunity | /articles/evenements/noel-a-orleans-2026-en-famille-marches-horaires-et-maneges-apres-noel/ | 2026-10-25T07:29:47.050Z
 
 ### Phases 2 et 3
 
