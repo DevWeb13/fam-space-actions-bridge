@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Paris avec une poussette : métro, RER ou bus, quel trajet choisir ?"
-subtitle: Éviter les escaliers, vérifier les ascenseurs et connaître les règles pour monter avec une poussette
-summary: Guide pratique pour choisir un trajet parisien réellement faisable avec une poussette, sans confondre accessibilité des stations et tarif des transports.
+title: "Paris avec une poussette : métro, RER, bus ou tram, que choisir ?"
+subtitle: Repérer les accès sans escaliers, contrôler les ascenseurs et prévoir un trajet de repli
+summary: À Paris, le meilleur transport avec une poussette dépend surtout des accès aux stations et de la possibilité de la plier. Voici comment comparer métro, RER, bus et tram et vérifier son parcours avant de partir.
 category: voyages
 location:
   city: Paris
@@ -72,17 +77,19 @@ keywords:
   - bus Paris poussette dépliée
   - itinéraire accessible poussette Paris
 sources:
-  - title: RATP — Gares et stations accessibles (27 août 2026)
+  - title: RATP — Quelles gares et stations sont accessibles ? (27 août 2026)
     url: https://www.ratp.fr/aide-contact/questions/preparer-mon-trajet/information-trafic/gares-stations-accessibles
-  - title: Île-de-France Mobilités — Vérifier l'accessibilité de son trajet (20 juillet 2026)
+  - title: Île-de-France Mobilités — Équipements et services accessibles sur un trajet (20 juillet 2026)
     url: https://www.iledefrance-mobilites.fr/aide-et-contacts/s-informer-sur-l-accessibilite/je-souhaite-connaitre-les-equipements-et-services-accessibles-sur-mes-traj
   - title: RATP — État des ascenseurs (27 août 2026)
     url: https://www.ratp.fr/aide-contact/questions/preparer-mon-trajet/information-trafic/etat-ascenseurs
-  - title: RATP — Bagages et poussettes dans les transports
+  - title: RATP — État des ascenseurs par ligne
+    url: https://www.ratp.fr/services/etat-equipement
+  - title: RATP — Que puis-je emporter comme bagages ? (28 août 2026)
     url: https://www.ratp.fr/aide-contact/questions/preparer-mon-trajet/voyage-en-regle/emporter-bagages
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir
   decision: Choisir un trajet praticable avec une poussette selon les stations, les correspondances et la possibilité ou non de la plier, puis savoir quoi vérifier juste avant le départ.
@@ -95,33 +102,41 @@ radar:
     basis: "La page « Transports à Paris avec des enfants: quel titre choisir pour payer juste? » conserve 2409 impressions sur la semaine récente, avec une position moyenne de 8.838 et 150.6 % de son pic."
 ---
 
-## Mission retenue
-Nouvel article pratique sur les trajets à Paris **avec une poussette**, distinct du choix des billets. La page forte sur les titres de transport a enregistré 2 409 impressions récentes dans le snapshot GSC.
+Avec une poussette, le trajet le plus rapide sur le plan du métro n'est pas toujours le plus simple à réaliser. Une station sans ascenseur, une correspondance avec des escaliers ou un équipement en panne peuvent obliger à porter l'enfant et la poussette. Avant de choisir entre métro, RER, bus et tramway à Paris, posez-vous une question : **pouvez-vous plier et porter la poussette, ou faut-il un parcours sans marches de bout en bout ?**
 
-## Pourquoi cette mission
-- **Refresh comparé :** Halloween à Chantilly présente un signal `coverage_loss`, mais l'article intégral, ses neuf sources et les arbitrages d'âge, horaires et billets ont été contrôlés sur `master` : aucune amélioration décisive établie, et l'événement se termine le 1er novembre. La baisse d'impressions seule ne justifie pas de le réécrire.
-- **Expansion retenue :** le guide performant des tarifs parisiens explique le coût des trajets, pas la possibilité physique de les effectuer avec une poussette. La décision est distincte, pérenne et documentée par la RATP et Île-de-France Mobilités.
-- **Opportunité saisonnière comparée :** marché de Noël Notre-Dame à Paris du 26 novembre au 27 décembre 2026, entrée gratuite et dates confirmées par la Ville (https://www.paris.fr/evenements/marche-de-noel-notre-dame-124520). Offre essentiellement artisanale, sans choix familial complexe documenté à ce stade : moins utile que l'expansion.
+## Métro : la ligne 14 est un bon point de départ, pas tout le réseau
 
-## Décision du lecteur
-Savoir s'il peut rejoindre sa destination sans porter la poussette dans des escaliers, quel mode privilégier et comment préparer une alternative si un ascenseur est hors service.
+La [RATP précise que seule la ligne 14 du métro est accessible en autonomie](https://www.ratp.fr/aide-contact/questions/preparer-mon-trajet/information-trafic/gares-stations-accessibles) sur l'ensemble de son parcours. Les autres lignes comportent encore de nombreux accès par escaliers : une station équipée d'un escalator ne garantit pas un parcours utilisable avec une poussette qu'on ne peut pas porter.
 
-## Faits à traiter
-- Ne pas promettre que tout le métro est accessible : ligne 14 accessible en autonomie, autres lignes à contrôler station par station ; RER, bus et tram peuvent être des alternatives, sans garantir tous les accès.
-- Expliquer la recherche d'itinéraire accessible dans Île-de-France Mobilités, le détail des équipements et le contrôle des ascenseurs au départ **et à l'arrivée**, le jour même.
-- Règles RATP : poussettes acceptées de préférence pliées ; dans les bus standards/articulés, au maximum deux poussettes dépliées, une dans les petits bus ; accès par porte centrale avec accord du conducteur et titre validé. Préciser que la place disponible n'est pas garantie.
-- Distinguer trajet avec poussette pliable/portée et trajet où aucune marche n'est envisageable ; prévoir la marche supplémentaire, les correspondances et une solution de repli. Ne pas inventer de liste de stations « sans escaliers » immuable.
+Si vous pouvez plier la poussette, d'autres lignes peuvent convenir, à condition de pouvoir gérer l'enfant, les sacs et les marches. Si vous ne pouvez pas la porter, ne choisissez pas un itinéraire sur la seule présence d'une station de métro proche : contrôlez les accès précis et chaque correspondance. Même sur la ligne 14, un ascenseur momentanément hors service peut changer la donne.
 
-## Sources de départ
-Les quatre sources officielles du frontmatter, actualisées en 2026 pour les fiches RATP et Île-de-France Mobilités.
+## RER, tramway ou bus : souvent plus pratiques, sous conditions
 
-## Affiliation
-Citadines Bastille Gare de Lyon Paris sur Booking.com : appartements familiaux avec cuisine, micro-ondes et ascenseur dans la résidence. À environ dix minutes à pied de Gare de Lyon ; ne pas confondre l'ascenseur de l'établissement avec l'accessibilité de la station. Pas d'autre partenaire utile confirmé.
+Une grande partie des gares du RER A et du RER B disposent d'aménagements d'accessibilité, mais **pas toutes**. Vérifiez la gare de départ, la gare d'arrivée et les correspondances, sans supposer qu'une ligne entière offre un accès sans marches.
 
-## Continuations internes
-- Renvoyer au guide `/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/` pour les tarifs et supports, sans refaire ses comparaisons.
-- Pour un trajet d'aéroport, renvoyer aux guides Orly et CDG existants plutôt que détailler leurs billets et itinéraires.
-- La destination Vincennes en cours traite déjà le cas Château de Vincennes (métro 1) versus gare RER A ; éviter de dupliquer cet exemple en détail.
+Le tramway peut être une bonne alternative lorsqu'il dessert directement votre destination : le réseau est conçu pour être accessible, mais il faut toujours regarder l'approche de l'arrêt et les éventuelles perturbations.
+
+Le bus évite souvent les longs couloirs souterrains et les escaliers. Il peut toutefois être bondé, et l'emplacement pour une poussette ouverte n'est jamais garanti. Un trajet un peu plus long, mais direct en bus ou en tram, peut être préférable à plusieurs changements de métro.
+
+## Peut-on garder la poussette dépliée dans le bus ?
+
+La [règle RATP](https://www.ratp.fr/aide-contact/questions/preparer-mon-trajet/voyage-en-regle/emporter-bagages) accepte les poussettes, de préférence pliées. Dans les bus standards et articulés, **deux poussettes dépliées au maximum** sont admises ; dans les midibus et minibus, **une seule**. Les poussettes pliées montent par la porte avant.
+
+Avec une poussette dépliée, l'accès peut se faire par la porte centrale **avec l'accord du conducteur et après validation du titre de transport**. Si les emplacements sont déjà occupés ou si la circulation dans le véhicule est gênée, prévoyez de plier la poussette lorsque c'est possible ou d'attendre le bus suivant. Gardez l'enfant en sécurité et veillez à ne pas bloquer les passages.
+
+## Vérifier un trajet sans marches avant de partir
+
+Sur l'application ou le site [Île-de-France Mobilités](https://www.iledefrance-mobilites.fr/aide-et-contacts/s-informer-sur-l-accessibilite/je-souhaite-connaitre-les-equipements-et-services-accessibles-sur-mes-traj), recherchez votre départ et votre destination, ouvrez l'itinéraire envisagé, puis choisissez **« Accéder aux détails sur l'accessibilité »**. Vous y trouverez les informations sur les équipements et l'état des ascenseurs aux différentes étapes. La rubrique « Gares, stations, arrêts » permet également d'examiner une station en particulier.
+
+Le jour du déplacement, consultez aussi l'[état des ascenseurs RATP par ligne](https://www.ratp.fr/services/etat-equipement) pour le métro et les RER A et B. Contrôlez les équipements **au départ, à l'arrivée et aux correspondances** : un ascenseur fonctionnel à l'entrée ne suffit pas si la sortie est inaccessible.
+
+Comparez ensuite le parcours complet, et non seulement le temps dans le véhicule : marche jusqu'à l'arrêt, entrée dans la station, changement de quai, sortie et dernière portion à pied. Pour une poussette impossible à porter, conservez une solution de repli en surface, par exemple un bus ou un tram desservant le même secteur. Évitez de compter sur l'aide spontanée d'autres voyageurs pour franchir les escaliers.
+
+## Un séjour à Paris avec bébé : limiter les correspondances dès le logement
+
+Pour quelques jours sur place, choisir un hébergement avec cuisine peut faciliter les repas et les biberons. Le [Citadines Bastille Gare de Lyon Paris, proposé sur Booking.com](https://www.booking.com/hotel/fr/citadines-paris-bastille-nation.fr.html), dispose de studios et appartements avec cuisine équipée, notamment d'un micro-ondes, et d'un ascenseur dans la résidence. L'établissement indique se trouver à environ dix minutes à pied de la gare de Lyon. Vérifiez la capacité du logement, les équipements pour bébé, les disponibilités et le chemin piéton avant de réserver : **l'ascenseur de l'hôtel ne garantit pas celui de la gare ou du métro voisin**.
+
+Pour choisir ensuite le bon ticket ou forfait selon l'âge des enfants et le nombre de déplacements, consultez notre guide [Transports à Paris avec des enfants : quel titre choisir pour payer juste ?](https://www.fam-space.fr/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/). Si vous arrivez en avion avec une poussette et des valises, les trajets sont détaillés séparément pour [Orly](https://www.fam-space.fr/articles/voyages/aeroport-d-orly-avec-des-enfants-metro-14-orlyval-ou-taxi/) et [Paris-Charles-de-Gaulle](https://www.fam-space.fr/articles/voyages/rejoindre-l-aeroport-paris-cdg-en-famille-rer-b-bus-9517-ou-taxi/).
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -134,7 +149,7 @@ Citadines Bastille Gare de Lyon Paris sur Booking.com : appartements familiaux a
 - /articles/evenements/les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille/ | Féeries de Noël 2026 à Paris: parcours lumineux, billets et patinoire en famille | evenements | Paris, Paris, Île-de-France
 - /articles/voyages/aeroport-d-orly-avec-des-enfants-metro-14-orlyval-ou-taxi/ | Rejoindre Orly en famille: métro 14, Orlyval ou taxi en 2026 | voyages | Orly, Val-de-Marne, Île-de-France
 - /articles/activites/le-vaisseau-a-strasbourg-quel-billet-choisir-pour-une-sortie-avec-des-enfants/ | Le Vaisseau à Strasbourg: quel billet choisir pour une sortie avec des enfants | activites | Strasbourg, Bas-Rhin, Grand Est
-- /articles/sorties/safari-de-peaugres-avec-enfants-quel-billet-choisir-et-comment-organiser-la-journee/ | Safari de Peaugres avec enfants: quel billet choisir et comment organiser la journée | sorties | Peaugres, Ardèche, Auvergne-Rhône-Alpes
+- /articles/voyages/rejoindre-l-aeroport-paris-cdg-en-famille-rer-b-bus-9517-ou-taxi/ | Aéroport CDG en famille: RER B, bus 9517 ou taxi en 2026? | voyages | Roissy-en-France, Val-d'Oise, Île-de-France
 - /articles/evenements/odyssee-lumineuse-2026-2027-au-parc-floral-de-paris-billet-date-ou-open-en-famille/ | Odyssée Lumineuse 2026-2027 à Paris: billets, dates et visite en famille | evenements | Paris, Paris, Île-de-France
 - /articles/bons-plans/navigo-liberte-en-famille-en-2026-tarif-enfant-passe-ou-telephone/ | Navigo Liberté+ en famille: tarifs enfants et choix du passe en 2026 | bons-plans | Paris, Paris, Île-de-France
 - /articles/sorties/l-aquarium-tropical-de-la-porte-doree-en-famille/ | L’Aquarium tropical de la Porte Dorée en famille | sorties | Paris, Paris, Île-de-France
@@ -161,7 +176,7 @@ Citadines Bastille Gare de Lyon Paris sur Booking.com : appartements familiaux a
 - opportunity | /articles/bons-plans/navigo-liberte-en-famille-en-2026-tarif-enfant-passe-ou-telephone/ | 2026-10-25T10:33:30.080Z
 - opportunity | /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | 2026-10-09T14:37:47.734Z
 - opportunity | /articles/evenements/odyssee-lumineuse-2026-2027-au-parc-floral-de-paris-billet-date-ou-open-en-famille/ | 2026-10-26T15:30:14.299Z
-- opportunity | /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | 2026-10-22T04:59:04.773Z
+- opportunity | /articles/voyages/rejoindre-l-aeroport-paris-cdg-en-famille-rer-b-bus-9517-ou-taxi/ | 2026-10-15T09:28:56.552Z
 
 ### Phases 2 et 3
 
