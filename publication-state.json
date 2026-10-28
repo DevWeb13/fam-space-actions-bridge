@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261028-2202-titre-de-travail-meubler-sa-maison-a-petit-prix-en-meurthe-et-moselle-",
+  "lastProcessedCommit": "cea3fa1a0df0f2032ae7ca013fa90070afb6804f"
 }
