@@ -267,3 +267,4 @@ automation/image-20261028-0348-clement-batimentb-blois-fontevraud-lerins-ed7ac14
 automation/image-20261028-0641-foulee-six-03bc8829|560d1aa6a49c155119a456d51004be51e05af798
 automation/image-20261028-0641-foulee-six-03bc8829|9db823f4e7f61e3974f2e806d27c78e7ce5d5326
 automation/image-20261028-1242-cannes-aubusson-mayotte-f0f9213|d1ae4ca085bd3235eb59c0293d71b893b5f0a10e
+automation/image-20261028-1242-cannes-aubusson-mayotte-f0f9213|86a9ab2206f7c6f56b443a73eb4e8a13f800fd4a
