@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,91 +14,145 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Mayenne
 - Région: Pays de la Loire
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Titre de travail :** « Se déplacer en Mayenne avec des enfants : bus, transport à la demande et train sans voiture ».
-
-**Angle :** aider les familles vivant en Mayenne ou y séjournant à organiser leurs trajets quotidiens et occasionnels sans voiture, en distinguant les réseaux selon leur commune et leurs besoins. Le département combine les bus TUL de Laval Agglomération, les cars et transports à la demande Aléop, ainsi que des liaisons TER ; ces services n'ont ni les mêmes territoires, ni les mêmes conditions de réservation.
-
-## Besoin du lecteur
-Identifier le bon réseau pour un trajet familial, comprendre où chercher les horaires, comment réserver un transport à la demande, quel titre acheter pour un enfant, comment gérer poussette et correspondances, et savoir quand une solution alternative devient nécessaire. Distinguer les déplacements ordinaires des inscriptions au transport scolaire, qui obéissent à d'autres règles.
-
-## Valeur éditoriale
-- Construire un parcours de décision concret : trajet dans Laval Agglomération (TUL et TULIB), entre communes mayennaises (Aléop et TAD), ou via une gare (TER, notamment Laval–Évron).
-- Expliquer les différences importantes pour les familles : gratuité des moins de 6 ans accompagnés sur TUL contre moins de 4 ans sur les cars Aléop ; TAD Aléop à réserver au plus tard la veille avant 16 h sur les secteurs vérifiés ; TULIB à réserver jusqu'à une heure avant le départ. Les jours de gratuité TUL et les horaires varient selon le service : vérifier les règles précises avant rédaction.
-- Apporter des conseils vérifiables pour les poussettes (consignes officielles TUL), les trajets avec plusieurs enfants, les retours en soirée et les zones rurales peu desservies ; ne jamais présenter le TAD comme un taxi libre de porte à porte.
-- Séparer clairement transports scolaires et lignes grand public. Préférer des exemples de trajets réalistes et des liens vers les horaires officiels plutôt qu'une liste de toutes les lignes ou des horaires figés.
-- Sujet durable, différent des quatre articles récents (visites, événement, séjour touristique) et utile au-delà d'une seule question tarifaire.
-
-## Affiliation
-- **KAYAK — comparaison de voitures de location à Laval (Mayenne)** : https://www.kayak.fr/location-voiture-Laval.45168.cars.ksp . Page d'offres effectivement consultée, avec agences et véhicules proposés à Laval ; solution secondaire pour les familles dont le trajet rural ne peut pas être assuré par les transports publics. Prix, disponibilité et équipements pour enfants à vérifier aux dates choisies ; ne pas promettre un tarif ni un siège auto inclus.
-- **Transport principal :** billets TUL, Aléop et TER via leurs canaux officiels ; aucune offre partenaire de billetterie pertinente identifiée. Pas d'hébergement ajouté : il s'agit d'un guide de mobilité pratique, pas d'une sortie nécessitant une nuitée.
-
-## Sources de départ
-- TUL, présentation du réseau et de son périmètre : https://www.tul-laval.com/services/le-reseau-tul
-- TUL, tarifs et abonnements en vigueur : https://www.tul-laval.com/tarifs/titres-abonnements
-- TUL, gratuité annoncée certains jours et validation : https://www.tul-laval.com/tarifs/gratuite-mercredis-weekends-et-jours-feries
-- TUL, réservation et limites du TULIB : https://www.tul-laval.com/se-deplacer/transport-la-demande/mode-demploi-tulib
-- TUL, consignes pour les poussettes : https://www.tul-laval.com/contact/questions-frequentes/bien-voyager
-- Aléop, tickets de car en Mayenne : https://aleop.paysdelaloire.fr/tarifs/tickets-en-mayenne
-- Aléop, exemple documenté de TAD et modalités de réservation autour de Mayenne, Le Horps et Lassay-les-Châteaux : https://aleop.paysdelaloire.fr/avec-le-transport-la-demande-je-voyage-en-toute-simplicite/transport-la-demande-mayenne-le-horps
-- Aléop, autre secteur TAD (Craon) : https://aleop.paysdelaloire.fr/avec-le-transport-la-demande-je-voyage-en-toute-simplicite/transport-la-demande-craon
-- Aléop, abonnement scolaire 2026-2027 : https://aleop.paysdelaloire.fr/tarifs/abonnement-scolaire-en-mayenne
-- SNCF TER, liaison Laval–Évron : https://www.ter.sncf.com/pays-de-la-loire/trajet-laval-evron
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "vie-pratique"
+title: "Se déplacer en Mayenne avec des enfants sans voiture: bus, TAD et TER"
+subtitle: "Choisir le bon réseau, réserver un trajet rural et anticiper les tarifs familiaux"
+summary: "Bus à Laval, cars Aléop, transports à la demande et TER: les solutions pour voyager en famille en Mayenne, avec tarifs enfants et réservations."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "transport Mayenne sans voiture avec enfants"
+  - "bus TUL Laval famille"
+  - "transport à la demande Aléop Mayenne"
+  - "TER Laval Évron"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Mayenne"
+  region: "Pays de la Loire"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "TUL - Le réseau TUL"
+    url: "https://www.tul-laval.com/services/le-reseau-tul"
+  - title: "TUL - Titres et abonnements"
+    url: "https://www.tul-laval.com/tarifs/titres-abonnements"
+  - title: "TUL - Gratuité mercredis, week-ends et jours fériés"
+    url: "https://www.tul-laval.com/tarifs/gratuite-mercredis-weekends-et-jours-feries"
+  - title: "TUL - Mode d'emploi TULIB"
+    url: "https://www.tul-laval.com/se-deplacer/transport-la-demande/mode-demploi-tulib"
+  - title: "TUL - Bien voyager avec une poussette"
+    url: "https://www.tul-laval.com/contact/questions-frequentes/bien-voyager"
+  - title: "Aléop - Tickets en Mayenne"
+    url: "https://aleop.paysdelaloire.fr/tarifs/tickets-en-mayenne"
+  - title: "Aléop - Transport à la demande Mayenne, Le Horps, Lassay-les-Châteaux"
+    url: "https://aleop.paysdelaloire.fr/avec-le-transport-la-demande-je-voyage-en-toute-simplicite/transport-la-demande-mayenne-le-horps"
+  - title: "Aléop - Transport à la demande Craon"
+    url: "https://aleop.paysdelaloire.fr/avec-le-transport-la-demande-je-voyage-en-toute-simplicite/transport-la-demande-craon"
+  - title: "SNCF TER - Trajet Laval-Évron"
+    url: "https://www.ter.sncf.com/pays-de-la-loire/trajet-laval-evron"
+  - title: "SNCF TER - Questions et réponses"
+    url: "https://www.ter.sncf.com/pays-de-la-loire/services-contacts/questions-reponses"
+  - title: "Aléop - Abonnement scolaire en Mayenne"
+    url: "https://aleop.paysdelaloire.fr/tarifs/abonnement-scolaire-en-mayenne"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+En Mayenne, département des Pays de la Loire dont Laval est la préfecture, voyager sans voiture avec des enfants est possible, mais le bon transport dépend beaucoup du point de départ. Un bus dans l'agglomération lavalloise, un car entre deux communes, une navette réservée dans un village ou un train entre deux gares ne fonctionnent pas de la même façon. Voici comment choisir sans se tromper de réseau ni manquer le retour.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Quel transport choisir selon son trajet ?
+
+- **À Laval et dans les communes de Laval Agglomération:** commencer par les bus **TUL**, puis regarder **TULIB** si aucun bus régulier ne dessert le trajet souhaité. Le [réseau TUL couvre 34 communes](https://www.tul-laval.com/services/le-reseau-tul), avec notamment des lignes urbaines, une ligne interurbaine et un service de soirée les vendredis et samedis.
+- **Entre communes mayennaises, hors réseau TUL:** rechercher une ligne de **car Aléop**. Dans certains secteurs ruraux, un **transport à la demande Aléop** permet de rejoindre un arrêt de car ou une gare, sur réservation.
+- **Entre deux gares:** comparer les horaires des **trains Aléop en TER**. Par exemple, [Laval-Évron](https://www.ter.sncf.com/pays-de-la-loire/trajet-laval-evron) est une liaison ferroviaire à vérifier sur la fiche horaire de la ligne 22.
+
+Avant d'acheter un billet, rechercher l'aller **et** le retour à la date exacte, surtout le mercredi, le samedi, pendant les vacances et en soirée. Un transport disponible à l'aller ne garantit pas une correspondance pratique pour rentrer.
+
+## À Laval: bus TUL, gratuité et transport à la demande TULIB
+
+Sur les bus TUL, **un enfant de moins de 6 ans accompagné voyage gratuitement**. Pour les autres voyageurs, le [ticket unité affiché à 1,30 €](https://www.tul-laval.com/tarifs/titres-abonnements) est valable une heure, correspondance comprise; le ticket journée est affiché à 3,25 €. Les abonnements jeunes peuvent être plus adaptés aux déplacements fréquents.
+
+Autre avantage familial: le [réseau TUL est gratuit les mercredis, samedis, dimanches et jours fériés](https://www.tul-laval.com/tarifs/gratuite-mercredis-weekends-et-jours-feries). Cela ne dispense pas de valider un titre: les abonnés valident leur carte, tandis que les voyageurs occasionnels peuvent demander un ticket gratuit au conducteur. En cas de correspondance avec ce ticket gratuit, il faut en demander un nouveau à chaque montée. Les conditions propres à chaque service restent applicables.
+
+**TULIB** n'est pas un taxi qu'on peut appeler à n'importe quelle heure: c'est un transport collectif sur réservation pour rejoindre des points utiles et des lignes TUL. Selon le [mode d'emploi TULIB](https://www.tul-laval.com/se-deplacer/transport-la-demande/mode-demploi-tulib), on peut réserver ou annuler jusqu'à **une heure avant le départ**, en ligne ou auprès d'INFOTUL au **02 43 53 00 00** (choix 2). Le service est limité à **un aller-retour par personne et par jour**, ne circule **ni le dimanche ni les jours fériés**, et demande de se présenter à l'arrêt cinq minutes avant. Il faut disposer de son titre avant de monter: **aucune vente à bord de TULIB**. Les jours gratuits ne créent pas de circulations supplémentaires.
+
+## Dans les autres communes: cars et TAD Aléop
+
+Pour les cars Aléop de Mayenne, le [ticket simple coûte 2,40 €](https://aleop.paysdelaloire.fr/tarifs/tickets-en-mayenne) et **les moins de 4 ans voyagent gratuitement**. Le ticket s'achète auprès du conducteur ou dans l'application Wop M-Ticket; le carnet de dix e-tickets à 19 € est proposé uniquement dans l'application. Si vous payez à bord, prévoyez l'appoint. Attention à la différence d'âge avec TUL: un enfant de 4 ou 5 ans gratuit sur les bus TUL accompagnés ne l'est pas automatiquement dans un car Aléop.
+
+Le **transport à la demande (TAD) Aléop** sert surtout à relier des arrêts définis à une ligne régulière. Dans le secteur de [Mayenne, Le Horps et Lassay-les-Châteaux](https://aleop.paysdelaloire.fr/avec-le-transport-la-demande-je-voyage-en-toute-simplicite/transport-la-demande-mayenne-le-horps), les créneaux annoncés sont du lundi au vendredi, hors jours fériés, **7 h-9 h, 12 h 30-14 h 30 et 17 h-19 h**. Autour de [Craon](https://aleop.paysdelaloire.fr/avec-le-transport-la-demande-je-voyage-en-toute-simplicite/transport-la-demande-craon), ils sont **7 h-9 h et 17 h-19 h**: ce ne sont donc pas les mêmes plages partout.
+
+Dans ces deux secteurs, la démarche est la suivante:
+
+1. **S'inscrire gratuitement** auprès d'Allô Aléop au **09 69 39 14 14**.
+2. **Réserver au plus tard la veille avant 16 h**, ou le **vendredi avant 16 h pour un départ le lundi**. Après ouverture du compte, la réservation en ligne est également possible.
+3. Vérifier l'**arrêt de prise en charge**, l'arrêt de correspondance et l'horaire du car qui suit. Réserver aussi le trajet retour lorsqu'il est nécessaire.
+
+Le TAD ne dépose pas librement à une adresse choisie: la prise en charge à domicile est une exception prévue notamment pour les personnes à mobilité réduite ou de plus de 75 ans, sous conditions. Pour une famille avec un bébé, demandez lors de la réservation quel véhicule est prévu et comment transporter la poussette: les consignes de bus urbain ne suffisent pas à garantir son embarquement dans un autre véhicule.
+
+## Quand le train est-il plus simple ?
+
+Si le départ et l'arrivée sont proches de gares, le TER peut éviter un long parcours en car. La [liaison Laval-Évron](https://www.ter.sncf.com/pays-de-la-loire/trajet-laval-evron) donne un exemple concret: la SNCF publie les départs et la fiche horaire de la ligne 22. Il faut toutefois prévoir comment rejoindre la gare d'Évron et vérifier le dernier train du retour.
+
+Les billets et tarifs ferroviaires sont **distincts de ceux des bus TUL et des cars Aléop**: renseignez l'âge de chaque enfant dans la recherche SNCF, plutôt que de reprendre la règle de gratuité d'un autre réseau. La [FAQ officielle TER](https://www.ter.sncf.com/pays-de-la-loire/services-contacts/questions-reponses) explique où acheter les billets, comment vérifier le trafic et précise qu'un billet TER ne garantit pas une place assise réservée.
+
+## Poussette, plusieurs enfants et correspondances: ce qui change vraiment
+
+Dans les bus TUL, les [consignes officielles pour les poussettes](https://www.tul-laval.com/contact/questions-frequentes/bien-voyager) demandent de **plier la poussette et de prendre l'enfant sur les genoux, ou de placer la poussette dans le sens inverse de la marche**. Le réseau recommande d'éviter si possible les périodes les plus chargées, **7 h-9 h et 16 h 30-18 h**. Avec plusieurs jeunes enfants, mieux vaut donc prévoir une marge à l'embarquement plutôt qu'une correspondance trop serrée.
+
+Pour un trajet rural, l'enjeu principal est souvent la **correspondance entre TAD et car**. Vérifiez le nom exact de l'arrêt: un rendez-vous « à Mayenne » ou « à Craon » ne signifie pas que le véhicule passe devant n'importe quel bâtiment. Pour un retour après une activité, comparez d'abord les derniers départs: certains TAD fonctionnent seulement en semaine et sur des plages limitées. Une solution de voiture partagée ou de location peut alors être utile ponctuellement, mais elle ne remplace pas la vérification des horaires disponibles.
+
+## Et pour aller à l'école ?
+
+Les transports scolaires ont leurs **propres inscriptions et conditions**: un ticket de car grand public ou une réservation TAD ne remplace pas l'inscription scolaire. Pour l'année **2026-2027**, [Aléop annonce en Mayenne un abonnement scolaire de 171 € par enfant](https://aleop.paysdelaloire.fr/tarifs/abonnement-scolaire-en-mayenne), avec des règles particulières selon la situation et une gratuité dès le troisième enfant transporté. Il faut vérifier le périmètre desservi et la procédure d'inscription, notamment si l'élève utilise aussi TUL.
+
+Pour préparer un déplacement inhabituel, le plus fiable reste de consulter la fiche du **réseau correspondant à chaque portion du trajet**: un seul itinéraire familial peut associer un TAD, un car et un TER, avec trois règles de réservation ou de billet différentes.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -127,4 +181,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
