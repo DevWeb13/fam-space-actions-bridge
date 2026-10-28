@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261028-1759-titre-de-travail-se-deplacer-en-mayenne-avec-des-enfants-bus-transport",
+  "lastProcessedCommit": "f18d2443e84ef867fd18a105e52eb4bf74f07554"
 }
