@@ -145,10 +145,10 @@ Citadines Bastille Gare de Lyon Paris sur Booking.com : appartements familiaux a
 - /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/dia-de-los-muertos-2026-au-jardin-d-acclimatation-billets-et-animations-en-famille/ | Día de los Muertos 2026 au Jardin d’Acclimatation: programme, billets et tailles | evenements | Paris, Paris, Île-de-France
 - /articles/sorties/vacances-de-la-toussaint-2026-au-musee-carnavalet-quelle-activite-choisir-selon-l-age/ | Vacances de la Toussaint 2026 au musée Carnavalet: activités en famille dès 4 ans | sorties | Paris, Paris, Île-de-France
+- /articles/voyages/iles-de-lerins-en-famille-quelle-ile-choisir-et-comment-organiser-la-traversee/ | Îles de Lérins en famille: quelle île choisir et comment organiser la traversée ? | voyages | Cannes, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
 - /articles/voyages/rambouillet-en-famille-sans-voiture-un-week-end-entre-ferme-chateau-et-trains-miniatures/ | Rambouillet en famille sans voiture: un week-end entre ferme, château et trains miniatures | voyages | Rambouillet, Yvelines, Île-de-France
 - /articles/voyages/collonges-la-rouge-turenne-et-curemonte-en-famille-quel-circuit-choisir/ | Collonges-la-Rouge, Turenne et Curemonte en famille: quel circuit choisir ? | voyages | Collonges-la-Rouge, Corrèze, Nouvelle-Aquitaine
 - /articles/voyages/chambery-en-famille-un-week-end-entre-elephants-et-sciences/ | Chambéry en famille: un week-end entre éléphants et sciences | voyages | Chambéry, Savoie, Auvergne-Rhône-Alpes
-- /articles/voyages/visiter-la-cite-du-volcan-en-famille-a-la-reunion/ | Visiter la Cité du Volcan en famille à La Réunion | voyages | Le Tampon, La Réunion, La Réunion
 
 ### Historique Radar lié
 
