@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Marché de Noël de Saint-Étienne 2026 en famille : dates, horaires et accès"
-subtitle: Deux places en centre-ville, horaires spéciaux et conseils pour choisir son moment avec des enfants.
-summary: "Préparer une visite du marché de Noël de Saint-Étienne du 21 novembre au 31 décembre 2026 : lieux, horaires, accès et précautions pour les familles."
+title: "Marché de Noël de Saint-Étienne 2026 en famille : quand venir et comment y aller ?"
+subtitle: Deux places, des horaires exceptionnels en décembre et un trajet à prévoir avec les enfants
+summary: Du 21 novembre au 31 décembre 2026, le marché de Noël de Saint-Étienne s'installe places de l'Hôtel-de-Ville et Jean-Jaurès. Horaires confirmés, soirée de la Sainte-Barbe, accès en tram et conseils pour les familles.
 category: evenements
 location:
   city: Saint-Étienne
@@ -68,16 +73,18 @@ location:
   region: Auvergne-Rhône-Alpes
 keywords:
   - marché de Noël Saint-Étienne 2026
-  - Noël à Sainté en famille
   - marché de Noël Saint-Étienne horaires
+  - Noël à Sainté avec enfants
 sources:
-  - title: Ville de Saint-Étienne - Marché de Noël 2026, dates et horaires des chalets
+  - title: Ville de Saint-Étienne — Noël à Sainté, marché de Noël 2026 (dates, places et horaires)
     url: https://connect.saint-etienne.fr/demarche/417/4
-  - title: STAS - Horaires, itinéraires et état du réseau
+  - title: STAS — Itinéraires, horaires et informations trafic
     url: https://www.reseau-stas.fr/
+  - title: Saint-Étienne Métropole — Transports en commun et accessibilité
+    url: https://consignevelo.saint-etienne-metropole.fr/habiter-se-deplacer/deplacement-et-mobilite/en-transports-en-commun
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: marche-de-noel-de-saint-etienne-2026-en-famille-dates-horaires-et-acces
   decision: Choisir le jour et l'heure adaptés aux enfants, savoir quelles places visiter et éviter une mauvaise surprise lors des horaires exceptionnels ou du trajet.
@@ -87,47 +94,65 @@ radar:
     dataThrough: 2026-10-25
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Ville de Saint-Étienne - Marché de Noël 2026, dates et horaires des chalets »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-31
 ---
 
-## Mission retenue
-Créer un guide pratique du marché de Noël de Saint-Étienne 2026, distinct du seul article Fam Space existant sur le Pass 4 musées de la ville.
+Le **marché de Noël de Saint-Étienne se tiendra du 21 novembre au 31 décembre 2026**, sur les **places de l'Hôtel-de-Ville et Jean-Jaurès**, en plein centre-ville. Pour une sortie avec des enfants, le choix du créneau compte : les chalets ferment plus tôt les 24 et 31 décembre, tandis que le 5 décembre, à l'occasion de la Sainte-Barbe, l'ouverture est prolongée jusqu'à 23 h.
 
-## Pourquoi cette mission
-Événement à venir dans moins d'un mois, avec dates et horaires 2026 publiés par la Ville et aucune page Fam Space équivalente. Le refresh Futuroween, malgré la baisse GSC, couvre déjà l'essentiel du programme officiel et la baisse reste « uncertain » ; l'expansion des transports parisiens à partir d'une page forte est déjà largement couverte par les guides Navigo Liberté+, poussette et aéroports.
+## Quel jour et à quelle heure venir avec les enfants ?
 
-## Décision du lecteur
-Savoir si une sortie de jour, de soirée ou du 5 décembre convient mieux à sa famille et comment organiser l'aller-retour sans perdre du temps.
+La [Ville de Saint-Étienne confirme les horaires 2026](https://connect.saint-etienne.fr/demarche/417/4) suivants pour les chalets :
 
-## Faits à traiter
-Marché annoncé du 21 novembre au 31 décembre, places de l'Hôtel-de-Ville et Jean-Jaurès ; dimanche-jeudi 10 h 30-20 h, vendredi-samedi 10 h 30-21 h 30 ; 5 décembre jusqu'à 23 h pour la Sainte-Barbe ; 24 et 31 décembre fermeture à 18 h ; 25 décembre 14 h-19 h seulement selon les exposants volontaires. Vérifier l'accès en tram et les équipements adaptés aux poussettes. Ne pas présenter les animations, manèges, tarifs d'attractions ou programmes des années passées comme confirmés pour 2026.
+- **Du dimanche au jeudi :** 10 h 30 à 20 h.
+- **Vendredi et samedi :** 10 h 30 à 21 h 30.
+- **Samedi 5 décembre (Sainte-Barbe) :** ouverture prolongée jusqu'à 23 h.
+- **Jeudis 24 et 31 décembre :** fermeture anticipée à 18 h.
+- **Vendredi 25 décembre :** 14 h à 19 h, **uniquement pour les exposants volontaires**. Tous les chalets ne seront donc pas nécessairement ouverts.
 
-## Sources de départ
-La page municipale de candidature des chalets confirme les dates, places et horaires 2026 ; consulter les actualités de la Ville pour le programme visiteurs lorsqu'il paraîtra. STAS pour les itinéraires et perturbations.
+Pour les tout-petits, choisissez plutôt une visite en journée, avant la fatigue et le froid du soir. Pour profiter des lumières, arrivez en fin d'après-midi et prévoyez un retour assez tôt. La soirée du 5 décembre est intéressante si vos enfants peuvent rester dehors plus tard ; elle ne garantit toutefois pas un spectacle précis sur les deux places. Vérifiez le programme de la Sainte-Barbe avant de promettre une animation particulière.
 
-## Affiliation
-Pour les familles qui prolongent la visite en week-end, vérifier les appartements familiaux du Residhotel St Etienne Centre sur Booking.com : https://www.booking.com/hotel/fr/residhotel-st-etienne-centre.fr.html. Pas de billetterie à inventer pour l'accès au marché.
+## Deux places à parcourir, sans programme d'animations à inventer
 
-## Continuations internes
-- Éviter de détailler les musées : renvoyer si utile au guide Fam Space « Pass 4 musées à Saint-Étienne » pour une journée intérieure.
-- Séparer les informations 2026 confirmées des animations encore non publiées et actualiser seulement quand l'organisateur les confirme.
+Les chalets sont annoncés **place de l'Hôtel-de-Ville et place Jean-Jaurès**. Vous pouvez passer de l'une à l'autre à pied et adapter la durée de la promenade à l'âge des enfants. Les achats et consommations éventuels sont à prévoir dans votre budget ; la page municipale consultée concerne les chalets et **n'annonce pas de billet d'entrée** pour se promener sur le marché.
+
+Au 28 octobre 2026, cette annonce officielle ne détaille pas de programme visiteurs confirmant des manèges, une patinoire, une rencontre avec le Père Noël ou leurs tarifs. Ne construisez pas la sortie autour de ces activités sans publication complémentaire de la Ville.
+
+## Venir en tram plutôt que chercher une place en centre-ville
+
+Les arrêts de tram **Hôtel de Ville** et **Place Jean Jaurès** desservent directement les deux secteurs du marché, notamment par les lignes **T1 et T2**. C'est une option pratique pour éviter de stationner près des chalets, surtout avec une poussette. Avant le départ, consultez l'[itinéraire, les horaires de retour et les perturbations sur le site STAS](https://www.reseau-stas.fr/), particulièrement le 5 décembre et les jours fériés. Ne présumez pas qu'une fermeture des chalets à 23 h signifie que le tram circule aussi tard.
+
+En voiture, prévoyez un parking public puis un parcours à pied : le stationnement et la circulation peuvent être plus compliqués lors des festivités. Choisissez votre point d'arrivée avant de partir plutôt que de compter sur une place au pied du marché.
+
+## Poussette, repas et pauses : les précautions utiles
+
+Avec une poussette, les deux places se visitent en extérieur ; les passages autour des chalets peuvent toutefois devenir étroits en cas d'affluence. Les trams disposent d'aménagements d'accessibilité décrits par [Saint-Étienne Métropole](https://consignevelo.saint-etienne-metropole.fr/habiter-se-deplacer/deplacement-et-mobilite/en-transports-en-commun), mais cela ne garantit pas une circulation fluide dans le marché. Gardez la possibilité de raccourcir la visite ou de vous écarter des files.
+
+Pour un bébé, emportez de quoi le changer, le nourrir et le protéger du froid ou de la pluie. **Aucun espace de change ni service de réchauffage des repas n'est confirmé** dans l'annonce municipale : ne comptez pas sur un micro-ondes ou une table à langer sur place sans vérification. Pour les plus grands, fixez un budget pour les achats et une heure de départ avant de commencer la promenade.
+
+Si vous souhaitez compléter la journée par une visite à l'intérieur, notre [guide du Pass 4 musées de Saint-Étienne](https://www.fam-space.fr/articles/bons-plans/pass-4-musees-a-saint-etienne-est-il-interessant-pour-une-famille/) aide à décider si le pass vaut le coup pour votre famille, en tenant compte des gratuités pour les jeunes.
+
+## Passer la nuit à Saint-Étienne avec les enfants
+
+Pour les familles qui viennent de plus loin ou souhaitent profiter du centre-ville sur deux jours, le [Residhotel St Etienne Centre sur Booking.com](https://www.booking.com/hotel/fr/residhotel-st-etienne-centre.fr.html) propose des logements avec **kitchenette, réfrigérateur et micro-ondes**, utiles pour les repas des enfants. Vérifiez la capacité exacte de l'appartement pour votre famille, la disponibilité d'un lit bébé, les conditions de réservation et le trajet à pied jusqu'aux deux places avant de réserver.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
-- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
 - /articles/bons-plans/pass-4-musees-a-saint-etienne-est-il-interessant-pour-une-famille/ | Pass 4 musées à Saint-Étienne: est-il intéressant pour une famille? | bons-plans | Saint-Étienne, Loire, Auvergne-Rhône-Alpes
-- /articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/ | Noël à Trévarez 2026 en famille: dates, horaires et réservation | evenements | Saint-Goazec, Finistère, Bretagne
-- /articles/evenements/noel-a-fontevraud-2026-quel-jour-choisir-avec-les-enfants/ | Noël à Fontevraud 2026: patinoire, marché, dates et tarifs en famille | evenements | Fontevraud-l'Abbaye, Maine-et-Loire, Pays de la Loire
+- /articles/evenements/lumieres-de-noel-a-montbeliard-2026-quel-jour-venir-avec-des-enfants/ | Lumières de Noël à Montbéliard 2026: quel jour venir avec des enfants? | evenements | Montbéliard, Doubs, Bourgogne-Franche-Comté
 - /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | Marché de Noël d'Amiens 2026 en famille: horaires, Père Noël et patinoire | evenements | Amiens, Somme, Hauts-de-France
 - /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | Marché de Noël de Bordeaux 2026 en famille: horaires, animations et budget | evenements | Bordeaux, Gironde, Nouvelle-Aquitaine
 - /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | Marché de Noël de Reims 2026 en famille: horaires, grande roue et animations | evenements | Reims, Marne, Grand Est
+- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
 - /articles/evenements/noel-a-orleans-2026-en-famille-marches-horaires-et-maneges-apres-noel/ | Marché de Noël d’Orléans 2026 en famille: horaires, lieux et manèges | evenements | Orléans, Loiret, Centre-Val de Loire
+- /articles/evenements/marche-de-noel-de-mulhouse-2026-en-famille-dates-etoffe-et-parcours-avec-les-enfants/ | Marché de Noël de Mulhouse 2026 en famille: horaires, étoffe et animations | evenements | Mulhouse, Haut-Rhin, Grand Est
 - /articles/voyages/charlieu-en-famille-abbaye-musees-et-balades-dans-la-loire/ | Charlieu en famille: abbaye, musées et balades dans la Loire | voyages | Charlieu, Loire, Auvergne-Rhône-Alpes
 - /articles/sorties/chateau-de-boutheon-avec-des-enfants-chateau-parc-ou-billet-couple/ | Château de Bouthéon avec des enfants: château, parc ou billet couplé? | sorties | Andrézieux-Bouthéon, Loire, Auvergne-Rhône-Alpes
 - /articles/activites/escape-game-du-chateau-de-la-roche-en-famille-alerte-submersion-des-10-ans/ | Escape game du Château de la Roche en famille: Alerte Submersion dès 10 ans | activites | Saint-Priest-la-Roche, Loire, Auvergne-Rhône-Alpes
 - /articles/vie-pratique/cantine-et-periscolaire-a-roanne-les-demarches-avant-la-rentree-2026/ | Cantine et périscolaire à Roanne: les démarches avant la rentrée 2026 | vie-pratique | Roanne, Loire, Auvergne-Rhône-Alpes
 - /articles/evenements/foulee-blanche-2027-en-famille-courses-ages-tarifs-et-programme-a-autrans/ | Foulée Blanche 2027 en famille: courses, âges, tarifs et programme à Autrans | evenements | Autrans-Méaudre en Vercors, Isère, Auvergne-Rhône-Alpes
+- /articles/evenements/noel-a-fontevraud-2026-quel-jour-choisir-avec-les-enfants/ | Noël à Fontevraud 2026: patinoire, marché, dates et tarifs en famille | evenements | Fontevraud-l'Abbaye, Maine-et-Loire, Pays de la Loire
 - /articles/evenements/batiment-b-a-saint-denis-decouvrir-le-street-art-en-famille/ | Bâtiment B à Saint-Denis: découvrir le street art en famille | evenements | Saint-Denis, La Réunion, La Réunion
 - /articles/evenements/noel-2026-au-chateau-royal-de-blois-decors-spectacles-et-visites-selon-l-age/ | Noël 2026 au château royal de Blois: décors, spectacles et tarifs en famille | evenements | Blois, Loir-et-Cher, Centre-Val de Loire
 - /articles/evenements/marie-antoinette-a-fontainebleau-2026-2027-exposition-ou-visite-guidee-avec-les-enfants/ | Marie-Antoinette à Fontainebleau 2026-2027: exposition, visites et tarifs en famille | evenements | Fontainebleau, Seine-et-Marne, Île-de-France
@@ -136,7 +161,6 @@ Pour les familles qui prolongent la visite en week-end, vérifier les appartemen
 - /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | Noël de Casse-Noisette 2026 à Pierrefonds: visites, dates et tarifs en famille | evenements | Pierrefonds, Oise, Hauts-de-France
 - /articles/evenements/festival-de-la-sainte-barbe-2026-a-lens-lievin-quelle-soiree-choisir-avec-les-enfants/ | Festival de la Sainte-Barbe 2026 à Lens-Liévin: programme en famille du 4 au 6 décembre | evenements | Lens, Pas-de-Calais, Hauts-de-France
 - /articles/evenements/saint-nicolas-2026-a-carcassonne-marche-aux-flambeaux-ou-campements-medievaux-avec-les-enfants/ | Saint-Nicolas 2026 à Carcassonne: campements médiévaux et marche aux flambeaux en famille | evenements | Carcassonne, Aude, Occitanie
-- /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | Noël 2026 à Chantilly: Le Noël oublié, billets et séances en famille | evenements | Chantilly, Oise, Hauts-de-France
 
 ### Historique Radar lié
 
@@ -144,11 +168,11 @@ Pour les familles qui prolongent la visite en week-end, vérifier les appartemen
 - opportunity | /articles/evenements/les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille/ | 2026-10-27T13:28:21.076Z
 - opportunity | /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | 2026-10-19T13:54:07.745Z
 - opportunity | /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | 2026-10-21T07:36:18.372Z
+- opportunity | /articles/evenements/marche-de-noel-de-mulhouse-2026-en-famille-dates-etoffe-et-parcours-avec-les-enfants/ | 2026-10-19T09:37:22.517Z
 - opportunity | /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | 2026-10-20T00:30:38.975Z
 - opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
 - opportunity | /articles/evenements/marie-antoinette-a-fontainebleau-2026-2027-exposition-ou-visite-guidee-avec-les-enfants/ | 2026-10-27T18:27:41.322Z
 - opportunity | /articles/evenements/noel-2026-a-villandry-spectacles-et-ateliers-a-choisir-selon-l-age/ | 2026-10-27T10:35:41.254Z
-- opportunity | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-10-26T21:31:06.119Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-royal-de-blois-decors-spectacles-et-visites-selon-l-age/ | 2026-10-27T22:28:21.356Z
 
 ### Phases 2 et 3
