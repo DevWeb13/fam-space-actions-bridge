@@ -265,3 +265,4 @@ automation/image-20261027-2146-nantes-fontainebleau-brehat-rambouillet-af3aa408|
 automation/image-20261027-2146-nantes-fontainebleau-brehat-rambouillet-af3aa408|a3e5864d44c468c6da077be5fba20ba265e10ac4
 automation/image-20261028-0348-clement-batimentb-blois-fontevraud-lerins-ed7ac14|ed7ac1418257b37bc0df7160a827a1579e2122e2
 automation/image-20261028-0641-foulee-six-03bc8829|560d1aa6a49c155119a456d51004be51e05af798
+automation/image-20261028-0641-foulee-six-03bc8829|9db823f4e7f61e3974f2e806d27c78e7ce5d5326
