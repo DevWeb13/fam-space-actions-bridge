@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Marché de Noël d'Avignon 2026 en famille : dates, horaires et accès"
-subtitle: "Place de l'Horloge : quand venir, que prévoir avec les enfants et comment rejoindre les chalets"
-summary: "Préparer une sortie familiale au marché de Noël des commerçants d'Avignon, du 27 novembre 2026 au 2 janvier 2027 : entrée gratuite, horaires, accès et possibilité de dormir sur place."
+title: "Marché de Noël d'Avignon 2026 en famille : horaires et accès"
+subtitle: "Place de l'Horloge : quand venir avec les enfants, où se garer et comment rejoindre les chalets"
+summary: Du 27 novembre 2026 au 2 janvier 2027, le marché de Noël des commerçants d'Avignon est gratuit. Horaires confirmés, accès depuis la gare, parkings et conseils avec une poussette.
 category: evenements
 location:
   city: Avignon
@@ -79,7 +84,7 @@ sources:
     url: https://avignon-tourisme.com/offres/avignon-gare-centre-avignon-fr-4254665/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces
   decision: Savoir quand aller au marché gratuit de la place de l'Horloge avec des enfants et choisir un accès simple, sans confondre les chalets confirmés avec d'éventuelles animations de Noël non annoncées.
@@ -89,30 +94,40 @@ radar:
     dataThrough: 2026-10-25
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Avignon Tourisme — Marché de Noël des commerçants 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2027-01-02
 ---
 
-## Mission retenue
-Le marché de Noël des commerçants d'Avignon, distinct des visites patrimoniales de la ville. L'office de tourisme confirme les chalets place de l'Horloge du 27 novembre 2026 au 2 janvier 2027.
+Le marché de Noël des commerçants revient **place de l'Horloge, au centre d'Avignon, du vendredi 27 novembre 2026 au samedi 2 janvier 2027**. L'entrée est libre : vous pouvez venir voir les chalets avec les enfants sans acheter de billet. L'essentiel est de choisir un horaire adapté à leur rythme et un accès qui évite de chercher une place au dernier moment.
 
-## Pourquoi cette mission
-Le refresh Futuroween (662 puis 351 impressions) a été relu entièrement : dates, billet, programmation, nuitée et conseils restent utiles ; son signal GSC est incertain, sans défaut éditorial majeur établi. L'expansion depuis le guide fort « Transports à Paris avec des enfants » (2 409 impressions) est moins prioritaire : l'angle poussette a déjà été soumis à la relecture Radar. Avignon est une opportunité datée, officiellement documentée et absente du catalogue, avec une décision autonome pour le lecteur.
+## Dates et horaires : quel créneau choisir ?
 
-## Décision du lecteur
-Choisir le bon créneau pour une visite familiale gratuite et décider entre arrivée en train, parking central ou parc-relais.
+D'après la [fiche 2026 d'Avignon Tourisme](https://avignon-tourisme.com/offres/marche-de-noel-des-commercants-avignon-fr-5191837/), le marché ouvre **de 11 h à 20 h du dimanche au jeudi**, et **de 11 h à 21 h le vendredi et le samedi**, pendant toute la période annoncée.
 
-## Faits à traiter
-Entrée libre ; du 27/11/2026 au 02/01/2027 ; 11 h–20 h du dimanche au jeudi et 11 h–21 h vendredi/samedi ; place de l'Horloge ; produits régionaux, artisanat et jouets en bois. Vérifier les accès, le trajet depuis Avignon-Centre, les parkings et les besoins poussette/pauses. Ne pas inventer de Père Noël, patinoire, spectacles ou horaires spéciaux non confirmés.
+Avec de jeunes enfants, une visite en début d'après-midi permet de parcourir les chalets avant la fatigue du soir. Si vous souhaitez profiter de l'ambiance après la tombée de la nuit, prévoyez plutôt une sortie courte, des vêtements chauds et un horaire de retour compatible avec le coucher des plus petits. Les horaires affichés peuvent être actualisés, notamment autour des fêtes : consultez la fiche officielle avant de partir.
 
-## Sources de départ
-Avignon Tourisme (fiche du marché actualisée le 1er octobre 2026, stationnement et gare Centre). Distinguer les faits confirmés des programmes à venir.
+## Que trouver sur la place de l'Horloge ?
 
-## Affiliation
-Pas de billet payant à proposer. Pour une nuit en famille, ApartHotel Sainte-Marthe sur Booking.com : https://www.booking.com/hotel/fr/ra-c-sidence-sainte-marthe.fr.html (appartements avec kitchenette ; disponibilité et conditions à contrôler).
+Le marché est organisé par la Fédération des commerçants et artisans de la ville. L'office de tourisme annonce des **chalets en bois**, des produits régionaux, des spécialités gastronomiques, des bijoux, des tissus et des **jouets en bois**. C'est une sortie à envisager pour flâner et choisir quelques cadeaux, plutôt qu'une activité nécessitant une réservation.
 
-## Continuations internes
-- L'article « Avignon avec un bébé : poussette, Palais des Papes et où dormir » prend le relais sur le séjour avec tout-petit, sans répéter son contenu.
-- Le guide sur les gratuités du Palais des Papes et du pont d'Avignon prend le relais sur ces visites patrimoniales.
-- Ne pas transformer le guide du marché en guide général de Noël dans toute la ville.
+Ne confondez pas ce marché confirmé avec l'ensemble des festivités de Noël à Avignon : la fiche consultée ne confirme ni patinoire, ni rencontre avec le Père Noël, ni spectacles sur ce site. Ne promettez donc pas ces animations aux enfants sans programme distinct publié par les organisateurs.
+
+## Venir en train ou en voiture
+
+**En train :** choisissez **Avignon-Centre**, sur le boulevard Saint-Roch, et non Avignon TGV, qui est une autre gare. Depuis Avignon-Centre, rejoignez la vieille ville par la porte de la République, puis remontez la rue de la République vers la place de l'Horloge. Comptez une marche dans le centre historique, avec une marge supplémentaire pour les petites jambes et les arrêts. La [fiche officielle de la gare Centre](https://avignon-tourisme.com/offres/avignon-gare-centre-avignon-fr-4254665/) confirme sa proximité immédiate avec le centre.
+
+**En voiture, pour une visite courte :** le **parking du Palais des Papes** est pratique pour rejoindre la place de l'Horloge à pied. Il est payant, ouvert 24 h/24 et limité aux véhicules de 1,90 m de hauteur. Avec une poussette, privilégiez sa sortie de plain-pied par la rue de la Juiverie plutôt que la sortie avec escaliers. Vérifiez le tarif et les places avant de vous engager.
+
+**Pour éviter le stationnement payant du centre :** le **P+R Italiens**, avenue des Italiens, propose des places gratuites et la navette gratuite CityZen Italiens vers le secteur de la place Pie ; il reste ensuite un trajet à pied. Le **P+R Piot** est une autre possibilité, avec une navette P1 gratuite jusqu'à la porte de l'Oulle, mais l'approche du marché se fait depuis l'ouest du centre. Contrôlez les horaires de retour des navettes, surtout si vous restez en soirée. Les capacités, dessertes et conditions sont détaillées par [Avignon Tourisme dans son guide du stationnement](https://avignon-tourisme.com/informations-pratiques/ou-se-garer-a-avignon/).
+
+## Avec une poussette : prévoir une visite souple
+
+La place de l'Horloge se découvre à pied, mais prévoyez de circuler dans des rues de centre ancien et d'adapter votre parcours à l'affluence autour des chalets. Pour un bébé, emportez le nécessaire pour le change et le repas, ainsi qu'une protection contre le froid ou la pluie. Aucun espace de change, service de réchauffage des biberons ou animation pour tout-petits n'est garanti par la fiche du marché : ne comptez pas dessus sans confirmation.
+
+Gardez la visite assez courte pour pouvoir faire une pause à l'écart des chalets. Si vous prolongez la journée par une découverte du Palais des Papes, notre [guide d'Avignon avec un bébé](https://www.fam-space.fr/articles/parentalite/premier-week-end-a-avignon-avec-un-bebe-ou-dormir-et-quoi-prevoir/) explique notamment pourquoi un porte-bébé est utile pour ce monument. Les familles qui habitent Avignon ou Montfavet peuvent aussi consulter les [conditions de gratuité du Palais et du pont d'Avignon le week-end](https://www.fam-space.fr/articles/bons-plans/avignonnais-palais-des-papes-et-pont-gratuits-le-week-end/) si elles souhaitent ajouter une visite patrimoniale.
+
+## Et si vous passez la nuit à Avignon ?
+
+Pour transformer la sortie en petit séjour, l'[ApartHotel Sainte-Marthe sur Booking.com](https://www.booking.com/hotel/fr/ra-c-sidence-sainte-marthe.fr.html) propose des appartements de différentes capacités avec kitchenette, réfrigérateur et micro-ondes, pratiques pour les repas d'une famille. Il se situe près du centre historique, mais pas directement sur la place de l'Horloge : vérifiez le trajet, la capacité exacte du logement, les équipements pour bébé et les conditions de réservation aux dates choisies.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -121,17 +136,18 @@ Pas de billet payant à proposer. Pour une nuit en famille, ApartHotel Sainte-Ma
 - /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
 - /articles/parentalite/premier-week-end-a-avignon-avec-un-bebe-ou-dormir-et-quoi-prevoir/ | Avignon avec un bébé: poussette, Palais des Papes et où dormir | parentalite | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
 - /articles/bons-plans/avignonnais-palais-des-papes-et-pont-gratuits-le-week-end/ | Avignonnais: Palais des Papes et Pont gratuits le week-end | bons-plans | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
-- /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/evenements/halloween-a-avignon-une-visite-familiale-pour-decouvrir-l-archeologie-funeraire/ | Halloween à Avignon: un atelier familial pour découvrir l'archéologie funéraire | evenements | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
-- /articles/evenements/noel-a-fontevraud-2026-quel-jour-choisir-avec-les-enfants/ | Noël à Fontevraud 2026: patinoire, marché, dates et tarifs en famille | evenements | Fontevraud-l'Abbaye, Maine-et-Loire, Pays de la Loire
-- /articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/ | Noël à Trévarez 2026 en famille: dates, horaires et réservation | evenements | Saint-Goazec, Finistère, Bretagne
 - /articles/sorties/palais-roure-avignon-famille-2026/ | Palais du Roure à Avignon en famille: retour sur les rendez-vous gratuits d'août 2026 | sorties | Avignon, Vaucluse, Provence-Alpes-Côte d'Azur
+- /articles/evenements/noel-a-aix-en-provence-2026-en-famille-marches-santons-ou-maneges/ | Noël à Aix-en-Provence 2026 en famille: marchés, santons et manèges | evenements | Aix-en-Provence, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur
+- /articles/evenements/lumieres-de-noel-a-montbeliard-2026-quel-jour-venir-avec-des-enfants/ | Lumières de Noël à Montbéliard 2026: quel jour venir avec des enfants? | evenements | Montbéliard, Doubs, Bourgogne-Franche-Comté
+- /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | Marché de Noël d'Amiens 2026 en famille: horaires, Père Noël et patinoire | evenements | Amiens, Somme, Hauts-de-France
 - /articles/vie-pratique/veloroute-du-calavon-avec-des-enfants-quelle-balade-choisir/ | Véloroute du Calavon avec des enfants: quelle balade choisir ? | vie-pratique | Apt, Vaucluse, Provence-Alpes-Côte d’Azur
 - /articles/evenements/halloween-2026-au-parc-spirou-nocturnes-naruto-reservation-et-maison-hantee/ | Halloween 2026 au Parc Spirou: billets, nocturnes Naruto et maison hantée | evenements | Monteux, Vaucluse, Provence-Alpes-Côte d'Azur
 - /articles/activites/grottes-de-thouzon-avec-des-enfants-preparer-la-visite-sous-terre/ | Grottes de Thouzon avec des enfants: préparer la visite sous terre | activites | Le Thor, Vaucluse, Provence-Alpes-Côte d’Azur
 - /articles/voyages/orange-avec-des-enfants-ou-dormir-pour-tout-faire-a-pied/ | Orange avec des enfants: où dormir pour tout faire à pied | voyages | Orange, Vaucluse, Provence-Alpes-Côte d’Azur
 - /articles/sorties/parc-spirou-avec-de-jeunes-enfants-regardez-la-taille-avant-d-acheter-les-billets/ | Parc Spirou avec de jeunes enfants: regardez la taille avant d'acheter les billets | sorties | Monteux, Vaucluse, Provence-Alpes-Côte d’Azur
 - /articles/evenements/foulee-blanche-2027-en-famille-courses-ages-tarifs-et-programme-a-autrans/ | Foulée Blanche 2027 en famille: courses, âges, tarifs et programme à Autrans | evenements | Autrans-Méaudre en Vercors, Isère, Auvergne-Rhône-Alpes
+- /articles/evenements/noel-a-fontevraud-2026-quel-jour-choisir-avec-les-enfants/ | Noël à Fontevraud 2026: patinoire, marché, dates et tarifs en famille | evenements | Fontevraud-l'Abbaye, Maine-et-Loire, Pays de la Loire
 - /articles/evenements/batiment-b-a-saint-denis-decouvrir-le-street-art-en-famille/ | Bâtiment B à Saint-Denis: découvrir le street art en famille | evenements | Saint-Denis, La Réunion, La Réunion
 - /articles/evenements/noel-2026-au-chateau-royal-de-blois-decors-spectacles-et-visites-selon-l-age/ | Noël 2026 au château royal de Blois: décors, spectacles et tarifs en famille | evenements | Blois, Loir-et-Cher, Centre-Val de Loire
 - /articles/evenements/marie-antoinette-a-fontainebleau-2026-2027-exposition-ou-visite-guidee-avec-les-enfants/ | Marie-Antoinette à Fontainebleau 2026-2027: exposition, visites et tarifs en famille | evenements | Fontainebleau, Seine-et-Marne, Île-de-France
@@ -139,20 +155,19 @@ Pas de billet payant à proposer. Pour une nuit en famille, ApartHotel Sainte-Ma
 - /articles/evenements/noel-2026-a-villandry-spectacles-et-ateliers-a-choisir-selon-l-age/ | Noël 2026 à Villandry: décors, spectacle d'ombres et ateliers en famille | evenements | Villandry, Indre-et-Loire, Centre-Val de Loire
 - /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | Noël de Casse-Noisette 2026 à Pierrefonds: visites, dates et tarifs en famille | evenements | Pierrefonds, Oise, Hauts-de-France
 - /articles/evenements/festival-de-la-sainte-barbe-2026-a-lens-lievin-quelle-soiree-choisir-avec-les-enfants/ | Festival de la Sainte-Barbe 2026 à Lens-Liévin: programme en famille du 4 au 6 décembre | evenements | Lens, Pas-de-Calais, Hauts-de-France
-- /articles/evenements/saint-nicolas-2026-a-carcassonne-marche-aux-flambeaux-ou-campements-medievaux-avec-les-enfants/ | Saint-Nicolas 2026 à Carcassonne: campements médiévaux et marche aux flambeaux en famille | evenements | Carcassonne, Aude, Occitanie
 
 ### Historique Radar lié
 
 - opportunity | /articles/evenements/festival-de-la-sainte-barbe-2026-a-lens-lievin-quelle-soiree-choisir-avec-les-enfants/ | 2026-10-27T04:28:31.006Z
-- opportunity | /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | 2026-10-19T19:48:02.164Z
 - opportunity | /articles/evenements/halloween-2026-au-parc-spirou-nocturnes-naruto-reservation-et-maison-hantee/ | 2026-10-12T17:34:53.933Z
 - opportunity | /articles/evenements/les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille/ | 2026-10-27T13:28:21.076Z
+- opportunity | /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | 2026-10-19T13:54:07.745Z
 - opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
 - opportunity | /articles/evenements/marie-antoinette-a-fontainebleau-2026-2027-exposition-ou-visite-guidee-avec-les-enfants/ | 2026-10-27T18:27:41.322Z
 - opportunity | /articles/evenements/noel-2026-a-villandry-spectacles-et-ateliers-a-choisir-selon-l-age/ | 2026-10-27T10:35:41.254Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-royal-de-blois-decors-spectacles-et-visites-selon-l-age/ | 2026-10-27T22:28:21.356Z
+- opportunity | /articles/evenements/noel-a-aix-en-provence-2026-en-famille-marches-santons-ou-maneges/ | 2026-10-25T15:16:03.590Z
 - opportunity | /articles/evenements/noel-a-fontevraud-2026-quel-jour-choisir-avec-les-enfants/ | 2026-10-28T01:34:03.741Z
-- opportunity | /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | 2026-10-27T07:35:50.437Z
 
 ### Phases 2 et 3
 
