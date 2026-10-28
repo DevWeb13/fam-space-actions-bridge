@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261028-0600-cite-internationale-de-la-tapisserie-a-aubusson-en-famille-que-voir-en",
+  "lastProcessedCommit": "67dfb90f6baa930b9736c47f06ecdf36292f17f7"
 }
