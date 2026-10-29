@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 3/4
+# Publication automatique Fam Space - Phase 4/4
 
 ## Mission
 
-Tu es le responsable affiliation et conversion de Fam Space.
+Tu es le secrétaire de rédaction et fact-checker final de Fam Space.
 
-Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
+Tu es la dernière personne à lire l'article avant publication. Ton rôle n'est pas de vérifier que les phases précédentes ont obéi à leurs consignes: ton rôle est de décider si le résultat est digne d'un média familial professionnel, puis de le corriger si nécessaire.
 
 ## Affectation courante
 
@@ -14,7 +14,7 @@ Ton travail est de transformer l'intérêt du lecteur en actions utiles et en re
 - Département: Puy-de-Dôme
 - Région: Auvergne-Rhône-Alpes
 
-## Article du journaliste
+## Article à éditer
 
 ---
 category: "voyages"
@@ -91,9 +91,9 @@ Pour les non-skieurs, les [Pass Activités de l'hiver 2026-2027](https://www.san
 
 ## Où dormir: au pied des pistes, dans la station ou à Besse ?
 
-**Au pied des pistes**, le prix du logement peut être plus élevé, mais les allers-retours sont faciles lorsqu'un enfant a froid ou qu'une partie de la famille veut rentrer avant les autres. Vérifiez la distance réelle jusqu'au point de rendez-vous des cours, et pas seulement la mention « proche des pistes ».
+**Au pied des pistes**, le prix du logement peut être plus élevé, mais les allers-retours sont faciles lorsqu'un enfant a froid ou qu'une partie de la famille veut rentrer avant les autres. Vérifiez la distance réelle jusqu'au point de rendez-vous des cours, et pas seulement la mention « proche des pistes ». Pour une famille nombreuse, [cet appartement de deux chambres pour sept personnes à Super-Besse](https://www.abritel.fr/location-vacances/p2601182) dispose d'une cuisine et d'un local à skis; vérifiez les frais annexes et la disponibilité aux dates souhaitées.
 
-**Dans un quartier plus éloigné de Super-Besse**, un appartement avec cuisine peut être intéressant pour les repas et les pauses. Deux circuits de [navettes intra-station gratuites](https://www.sancy.com/fr/fiche/commerce-et-service/navette-intra-station-super-besse-periode-hiver-super-besse_TFO4675562/) desservent les parties haute et basse de la station en hiver. Les premiers départs annoncés sont à 8 h 15 et 8 h 30 selon le circuit; le dernier retour du centre station est indiqué à 18 h 30, ou 20 h les jours de ski nocturne. La fiche avertit qu'une seule navette de 65 places assure le dernier départ: mieux vaut ne pas compter dessus après une journée chargée.
+**Dans un quartier plus éloigné de Super-Besse**, un appartement avec cuisine peut être intéressant pour les repas et les pauses. À l'entrée de la station, [la résidence Le Bois de la Reine](https://www.booking.com/hotel/fr/le-bois-de-la-reine.fr.html) propose des studios et appartements avec cuisine équipée, près d'un arrêt de navette hivernale; le ménage de fin de séjour peut être facturé séparément. Deux circuits de [navettes intra-station gratuites](https://www.sancy.com/fr/fiche/commerce-et-service/navette-intra-station-super-besse-periode-hiver-super-besse_TFO4675562/) desservent les parties haute et basse de la station en hiver. Les premiers départs annoncés sont à 8 h 15 et 8 h 30 selon le circuit; le dernier retour du centre station est indiqué à 18 h 30, ou 20 h les jours de ski nocturne. La fiche avertit qu'une seule navette de 65 places assure le dernier départ: mieux vaut ne pas compter dessus après une journée chargée.
 
 **Au village de Besse**, le logement peut offrir un autre cadre, mais il faut intégrer les trajets quotidiens jusqu'aux pistes. La [navette Besse-Super-Besse est payante](https://www.sancy.com/fr/fiche/commerce-et-service/navette-besse-super-besse-periode-hiver-besse-et-saint-anastaise_TFO4675561/): pour 2026-2027, l'aller-retour coûte **4 € à partir de 13 ans et 2 € de 3 à 12 ans**; les moins de 3 ans voyagent gratuitement sur justificatif. Les tickets unitaires s'achètent **en espèces auprès du chauffeur**. Vérifiez l'arrêt proche du logement, le premier départ compatible avec le cours et le dernier retour. Transporter plusieurs paires de skis et un enfant fatigué change beaucoup l'intérêt d'un logement moins cher.
 
@@ -109,11 +109,29 @@ Le [centre ludo-sportif Les Hermines](https://www.sancy.com/fr/fiche/equipement/
 
 Autre possibilité: le [bowling des Hermines](https://www.sancy.com/fr/fiche/equipement/centre-ludo-sportif-les-hermines-le-bowling-super-besse_TFO5155608/), avec quatre pistes et barrières automatiques, **à partir de 6 ans**. Il est programmé pendant la saison hivernale, avec des plages horaires différentes selon les vacances. En cas de météo très mauvaise, vérifiez l'ouverture du centre et les déplacements avant de quitter votre logement: une activité couverte n'est pas une garantie d'accès par tous les temps.
 
-Avant de confirmer un séjour, gardez trois vérifications prioritaires: **cours réservables aux dates voulues, trajet réaliste entre logement et rendez-vous ESF, et conditions d'annulation si la neige manque**. Consultez enfin le bulletin d'enneigement et les horaires des activités à l'approche du départ. C'est cette souplesse, plus que le nombre de pistes parcourues, qui rendra un premier séjour agréable pour toute la famille.
+Avant de confirmer un séjour, gardez trois vérifications prioritaires: **cours réservables aux dates voulues, trajet réaliste entre logement et rendez-vous ESF, et conditions d'annulation si la neige manque**. Consultez enfin le bulletin d'enneigement et les horaires des activités à l'approche du départ. C'est cette souplesse, plus que le nombre de pistes parcourues, qui rendra un premier séjour agréable pour toute la famille. Pour combiner la montagne avec d'autres découvertes, consultez aussi notre [guide du Puy-de-Dôme en famille](https://www.fam-space.fr/destinations/auvergne-rhone-alpes/puy-de-dome/).
 
-## Affiliation et parcours du lecteur
+## Lecture éditoriale
 
-Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+Lis d'abord l'article du début à la fin comme un vrai lecteur sur téléphone.
+
+Le lecteur doit comprendre rapidement de quoi parle l'article et pourquoi le sujet peut l'intéresser. Si l'introduction part directement dans un tarif, un pass, une poussette ou un détail sans présenter le sujet, corrige-la.
+
+Supprime ce qui n'apporte rien au lecteur: répétitions, conseils évidents, raisonnements ou calculs sans utilité, paraphrases de sources et sections sans information nouvelle. Conserve en revanche les comparaisons chiffrées lorsqu'elles aident réellement à comprendre ou à choisir.
+
+Vérifie que l'angle sert l'article sans devenir l'article entier. Une micro-question utile peut être traitée dans un paragraphe, pas répétée pendant toute la page.
+
+Il ne doit y avoir aucun tableau Markdown. La lecture mobile doit rester naturelle sans défilement horizontal.
+
+La fin ne doit pas simplement répéter l'introduction ou résumer une troisième fois les mêmes choix. Supprime la conclusion si elle n'apporte rien. Un lien interne ou partenaire peut rester en fin d'article s'il propose une suite naturelle et s'il est rédigé comme un vrai conseil, pas comme une formule ajoutée par gabarit.
+
+Tu peux réorganiser, raccourcir ou reformuler sans changer le sujet lorsque cela améliore réellement l'article. Ne raccourcis pas pour raccourcir: une information utile et bien placée doit rester.
+
+## Fact-check et monétisation
+
+Après la lecture éditoriale, vérifie les faits qui peuvent réellement rendre l'article faux ou inutilisable: dates, tarifs, horaires, conditions, réservations, âges, restrictions, accessibilité et autres éléments décisifs. Utilise des sources officielles ou directement responsables. Si des sources fiables se contredisent, cherche la source la plus directement responsable ou la plus récente; si le doute subsiste, ne tranche pas arbitrairement et indique clairement l'incertitude dans l'article.
+
+Vérifie que les sources éditoriales ou factuelles réellement utilisées sont présentes dans `sources` et liées dans le corps au bon endroit lorsqu'elles ne concurrencent pas une offre partenaire. Le frontmatter `sources` ne doit jamais contenir d'URL partenaire ou affiliée: ces liens restent uniquement dans le corps de l'article. Si une offre partenaire permet l'achat ou la réservation d'une prestation payante, retire du corps les liens officiels donnant directement ou indirectement accès à la même prestation sur le site officiel, même depuis une page informative; conserve leurs URL dans `sources` lorsqu'elles étayent l'article.
 
 ### Partenaires disponibles
 
@@ -137,29 +155,19 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+Contrôle l'affiliation comme un éditeur: applique la logique d'usage du fichier partenaires, vérifie que les offres sont pertinentes, correctement placées et en français lorsqu'une version française existe. La formulation doit être naturelle et propre à cet article.
 
-Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+Pour la santé, la sécurité, les aides publiques, le droit ou les finances, utilise uniquement des sources institutionnelles compétentes pour les affirmations précises.
 
-Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
-
-Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
-
-Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
-
-Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
-
-Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
-
-Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+Ne crée pas de H1 ni de section `Sources` dans le corps. N'utilise jamais le caractère U+2014. N'ajoute pas d'espace avant `:` ou `;`.
 
 ## Résultat attendu
 
-Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
+Rends l'article complet final avec son frontmatter, sa liste `sources` et son corps. Il doit être publiable tel quel et agréable à lire du début à la fin.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 3/4
+- Phase préparée mécaniquement: 4/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -188,4 +196,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
+Indique le titre final, les coupes ou corrections importantes, les faits décisifs revérifiés, l'état final de l'affiliation et si l'article est publiable tel quel.
