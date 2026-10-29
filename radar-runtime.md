@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Noël des Alpes 2026 à Annecy en famille : marché, patinoire ou illuminations ?"
-subtitle: "Du 26 novembre au 3 janvier : choisir son parcours entre les quais, les Jardins de l'Europe et la vieille ville"
-summary: "Noël des Alpes 2026-2027 à Annecy : dates officielles, lieux du marché, patinoire, Père Noël, illuminations et conseils pour une sortie avec des enfants."
+title: "Noël des Alpes 2026 à Annecy en famille : marché, patinoire et illuminations"
+subtitle: Du 26 novembre au 3 janvier, trois idées de sortie entre les quais du lac, les Jardins de l’Europe et la vieille ville
+summary: Où aller à Noël des Alpes 2026-2027 à Annecy avec des enfants ? Marché gratuit, patinoire, Père Noël, illuminations et informations encore à confirmer.
 category: evenements
 location:
   city: Annecy
@@ -72,13 +77,15 @@ keywords:
   - patinoire jardins de l'Europe Annecy
   - Père Noël Annecy ancienne Grenette
 sources:
-  - title: Office de tourisme du lac d'Annecy — Noël des Alpes, informations mises à jour par la Ville
+  - title: Office de tourisme du lac d’Annecy — Noël des Alpes, informations de la Ville
     url: https://www.lac-annecy.com/fete-et-manifestation/noel-des-alpes-annecy/
-  - title: Office de tourisme du lac d'Annecy — Illuminations des bâtiments historiques
+  - title: Office de tourisme du lac d’Annecy — Illuminations des bâtiments historiques
     url: https://www.lac-annecy.com/fete-et-manifestation/noel-des-alpes-illuminations-des-batiments-historiques-annecy/
+  - title: Sibra — Espace d'information voyageurs près de la gare
+    url: https://www.sibra.fr/espace-sibra/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: noel-des-alpes-2026-a-annecy-en-famille-marche-patinoire-ou-illuminations
   decision: "Choisir une sortie de Noël adaptée à l'âge des enfants, au temps disponible et au budget : marché et Père Noël, patinoire, ou illuminations en soirée ; savoir où aller et quelles informations vérifier avant de partir."
@@ -88,32 +95,48 @@ radar:
     dataThrough: 2026-10-26
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Office de tourisme du lac d'Annecy — Noël des Alpes, informations mises à jour par la Ville »; aucune page forte GSC n'est requise.
+eventEndsAt: 2027-01-03
 ---
 
-## Mission retenue
-Préparer le Noël des Alpes 2026-2027 à Annecy avec des enfants, en distinguant les activités réparties dans le centre et au bord du lac.
+À Annecy, **Noël des Alpes se tient du jeudi 26 novembre 2026 au dimanche 3 janvier 2027 inclus**. Le marché de Noël s'étend des quais du lac aux Jardins de l'Europe, tandis que le Père Noël est annoncé place de l'Ancienne Grenette et que des bâtiments du centre seront illuminés. L'accès au marché est gratuit, mais cela ne signifie pas que la patinoire le soit. Pour choisir votre sortie en famille, le plus utile est de distinguer ces lieux et ce qui reste à confirmer dans le programme 2026-2027.
 
-## Pourquoi cette mission
-L'office de tourisme publie déjà les dates 2026 et les principaux lieux, un mois avant l'ouverture. Aucun article Noël des Alpes/Noël à Annecy dans le catalogue de 839 articles ni dans l'historique Radar ; les autres pages Annecy portent sur les bus, la fête du lac ou des événements sans rapport. Le meilleur refresh GSC, Futuroween (662 à 316 impressions, signal « uncertain »), a été lu intégralement : article déjà utile et documenté, événement finissant le 1er novembre, aucune amélioration indépendante décisive constatée. L'expansion de la page forte « Transports à Paris avec des enfants » (2 675 impressions récentes) passe après : les décisions proches sont déjà couvertes par les pages poussette, Orly, CDG et Navigo Liberté+.
+## Pour une balade gratuite : les chalets au bord du lac
 
-## Décision du lecteur
-Choisir entre une balade gratuite au marché et à la rencontre du Père Noël, une sortie avec patinoire, ou une visite après la tombée de la nuit, sans confondre les lieux ni les conditions d'accès.
+Les chalets sont annoncés sur les **quais de Vicenza, de Bayreuth et Napoléon III, jusqu'aux Jardins de l'Europe**. C'est le choix le plus souple avec de jeunes enfants : vous pouvez regarder les décorations, prendre une collation et écourter la visite dès que le froid ou la fatigue se font sentir.
 
-## Faits à traiter
-- **Confirmé par la Ville via l'office :** du 26 novembre 2026 au 3 janvier 2027 ; accès libre au marché ; chalets sur les quais de Vicenza, Bayreuth et Napoléon III jusqu'aux Jardins de l'Europe ; patinoire et zone festive dans les jardins ; Père Noël place de l'Ancienne Grenette.
-- Illuminations des bâtiments historiques : trois sites annoncés (Conservatoire, tour de l'horloge de la porte Sainte-Claire, église Notre-Dame-de-Liesse). Créneau 17 h–23 h 45 affiché **avec mention « dates à confirmer »** : le présenter comme provisoire.
-- Vérifier avant rédaction les horaires précis par zone, tarifs et conditions de la patinoire, jours de présence du Père Noël, activités adaptées aux petits, accès en poussette, sanitaires et trajets depuis la gare. Ne pas recycler les horaires ni les nombres de chalets de 2025 comme faits 2026.
+Le marché est en accès libre ; prévoyez seulement un budget pour les achats et la restauration. Les horaires d'ouverture précis des différents secteurs, y compris les 24, 25 et 31 décembre et le 1er janvier, ne sont pas encore détaillés sur la [fiche officielle de Noël des Alpes](https://www.lac-annecy.com/fete-et-manifestation/noel-des-alpes-annecy/). Vérifiez-les avant de partir, surtout pour une visite en soirée ou un jour férié.
 
-## Sources de départ
-Les deux fiches officielles indiquées en frontmatter, actualisées par la Ville d'Annecy.
+## Pour patiner : direction les Jardins de l'Europe
 
-## Affiliation
-L'accès au marché est gratuit ; aucune billetterie partenaire équivalente vérifiée. Pour une famille prolongeant la visite, hébergement Booking.com précis vérifié : Le Pâquier - MyCosyApart, trois chambres et cuisine près du lac (URL ci-dessus). Ne pas annoncer de prix ni de disponibilité sans dates.
+La **patinoire et la zone festive** sont annoncées aux Jardins de l'Europe, près du lac. C'est la partie à privilégier si les enfants veulent faire autre chose que se promener parmi les chalets.
 
-## Continuations internes
-- Renvoyer vers « Bus à Annecy avec des enfants : quel ticket choisir » pour le détail des transports, sans le recopier.
-- Rester centré sur Noël des Alpes : la page « Fête du lac d'Annecy 2026 » concerne un autre événement, pas une source de programme hivernal.
-- Si le programme des spectacles et la tarification de la patinoire ne sont pas encore publiés, indiquer précisément ce qui reste à confirmer et prévoir une vérification avant le 26 novembre.
+En revanche, la fiche officielle ne précise pas encore le **prix d'entrée, la location des patins, les horaires des séances, l'âge minimal ou les éventuels équipements d'aide aux débutants** pour cette édition. Ne prévoyez donc pas un budget ou une séance à heure fixe sur la base des tarifs des années précédentes. Avec un tout-petit qui ne patine pas, la promenade autour du marché reste une solution sans réservation.
+
+## Pour voir le Père Noël : place de l'Ancienne Grenette
+
+La Ville annonce la présence du **Père Noël place de l'Ancienne Grenette**, dans le centre historique. C'est un arrêt à prévoir plutôt avant Noël, sans promettre une rencontre à n'importe quel moment : **les jours et heures de présence ne sont pas encore publiés** dans la fiche 2026.
+
+Si cette rencontre est le but principal de la sortie, consultez le programme actualisé avant de vous déplacer. Les spectacles, concerts et déambulations sont également annoncés, mais leurs dates et leurs éventuelles conditions d'accès ne sont pas encore suffisamment détaillées pour organiser une journée autour d'un spectacle précis.
+
+## Pour les illuminations : trois bâtiments du centre
+
+Pour une sortie après la tombée de la nuit, trois installations lumineuses sont annoncées : le **Conservatoire**, la **tour de l'horloge de la porte Sainte-Claire** et l'**église Notre-Dame-de-Liesse**. L'accès est libre.
+
+La [fiche officielle des illuminations](https://www.lac-annecy.com/fete-et-manifestation/noel-des-alpes-illuminations-des-batiments-historiques-annecy/) affiche pour l'instant la période du **26 novembre au 3 janvier, de 17 h à 23 h 45**, avec la mention explicite **« dates à confirmer »**. Ces horaires sont donc provisoires, pas une garantie de fonctionnement chaque soir. Avec de jeunes enfants, une courte boucle dans la vieille ville peut être plus agréable qu'une visite tardive de tous les sites.
+
+## Venir avec une poussette et gérer les besoins des petits
+
+Depuis la **gare d'Annecy**, rejoignez le centre-ville à pied, puis poursuivez vers les quais et les Jardins de l'Europe. La vieille ville comporte des secteurs pavés : une poussette maniable sera plus pratique, et un porte-bébé peut dépanner. Prévoyez des vêtements chauds, surtout pour une balade au bord du lac après la nuit tombée.
+
+Pour les familles qui arrivent en bus ou se garent hors du centre, notre guide [Bus à Annecy avec des enfants : quel ticket choisir et comment éviter les galères](/articles/vie-pratique/bus-a-annecy-avec-des-enfants-quel-ticket-choisir-et-comment-eviter-les-galeres/) explique les titres Sibra et les parkings relais. L'[Espace Sibra](https://www.sibra.fr/espace-sibra/) se trouve rue de la Gare, près du pôle d'échanges.
+
+Aucune information 2026 suffisamment précise n'a encore été publiée sur les **toilettes accessibles, les tables à langer, les espaces pour nourrir un bébé ou la possibilité de réchauffer un repas** sur le marché. Mieux vaut prévoir de quoi nourrir et changer les petits sans compter sur un équipement particulier. Pour une pause au chaud, repérez un café ou un restaurant avant la visite et vérifiez ses équipements.
+
+## Et pour passer le week-end à Annecy ?
+
+Pour une famille qui souhaite rester une nuit ou deux, [Le Pâquier – MyCosyApart sur Booking.com](https://www.booking.com/hotel/fr/apartment-6-people-in-the-heart-of-annecy.fr.html) propose un appartement de **trois chambres avec cuisine équipée**, en vieille ville, à proximité du lac. Attention avec une poussette ou des bagages : l'appartement est annoncé au **deuxième étage sans ascenseur**. Vérifiez le nombre de couchages adapté à votre famille, le tarif, la disponibilité et les conditions pour vos dates avant de réserver.
+
+**À vérifier avant le 26 novembre :** horaires par zone et jours fériés, tarif et conditions de la patinoire, calendrier du Père Noël et confirmation des créneaux d'illuminations. Ces précisions peuvent changer le meilleur moment pour venir, mais pas l'emplacement des trois grandes options de sortie déjà annoncées.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
