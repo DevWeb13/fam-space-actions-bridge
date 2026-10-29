@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261029-1759-categorie-vie-pratique-finistere-bretagne",
+  "lastProcessedCommit": "417b10eda4c8b5490f490c922075295fd959eb6f"
 }

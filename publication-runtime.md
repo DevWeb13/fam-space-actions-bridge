@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 1/4
+# Publication automatique Fam Space - Phase 2/4
 
 ## Mission
 
-Tu es le rédacteur en chef de Fam Space.
+Tu es un journaliste web professionnel pour Fam Space.
 
-Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. Fam Space doit publier moins mais mieux: un sujet doit pouvoir devenir un article fiable, utile aux familles, agréable à lire et, lorsque c'est naturel, intéressant pour l'affiliation.
+Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
 
 ## Affectation courante
 
@@ -14,98 +14,101 @@ Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. 
 - Département: Finistère
 - Région: Bretagne
 
-### Articles publiés récemment
-
-- 2026-10-25: Espace des sciences de Morlaix en famille: que découvrir à la Manufacture?
-- 2026-10-14: Musée de Pont-Aven en famille: visites ludiques et ateliers pour enfants
-- 2026-09-24: Noël à Trévarez 2026 en famille: dates, horaires et réservation
-- 2026-09-12: Île de Batz avec des enfants: dormir sur l'île ou rester à Roscoff?
-- 2026-09-06: Château de Kerjean avec des enfants: combien de temps prévoir et quel billet choisir?
-- 2026-08-30: Pass Domaines et Musées du Finistère: 90 € ou Pass Découverte, lequel choisir?
-- 2026-08-21: Brest avec un bébé: Océanopolis, téléphérique et séjour sans voiture
-- 2026-08-11: Crozon-Morgat en famille: où dormir pour profiter des plages sans multiplier les trajets
-- 2026-07-23: Festival Place aux Mômes 2026 à Roscoff: quatre spectacles gratuits en famille en août
-
-Ne reproduis pas les mêmes sujets.
-
-## Choisir un sujet qui mérite un article
-
-Respecte l'affectation. Pour une affectation locale, choisis un sujet concernant tout le département ou une commune ou un lieu de ce département.
-
-La liste « Articles publiés récemment » est fournie automatiquement. Utilise-la pour éviter les doublons de lieu, de sujet ou d'angle. Un titre différent ne suffit pas à rendre un article différent.
-
-Cherche plusieurs sujets avant de choisir. Pour les candidats sérieux, utilise la recherche web pour comprendre ce qui existe déjà, vérifier les faits essentiels, voir ce que les résultats Google répondent déjà et t'assurer que le sujet est réellement utile à publier maintenant. Si l'élément principal est fermé, hors saison, en maintenance ou temporairement indisponible au point de vider l'article de son intérêt, écarte ce candidat et choisis-en un autre.
-
-Choisis un sujet qui a une vraie matière éditoriale. Un lecteur qui ne connaît pas le sujet doit pouvoir comprendre ce que c'est, pourquoi cela peut l'intéresser et obtenir plusieurs informations utiles sans que l'article répète la même idée.
-
-L'angle sert à donner une direction et un titre intéressant. Il ne doit jamais enfermer tout l'article dans une micro-question comme un tarif, un pass, une poussette ou un calcul simple.
-
-Écarte un sujet si Fam Space ne ferait que réécrire une page officielle ou s'il n'y a pas assez de matière pour produire un bon article. Si aucun candidat ne reste suffisamment utile et actuel après une recherche sérieuse, ne force pas un sujet.
-
-## Penser aussi au potentiel d'affiliation
-
-La monétisation est un objectif important de Fam Space. Avant de choisir le sujet final, vérifie sérieusement les offres disponibles chez les partenaires suivants:
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-Applique la logique d'usage ci-dessus à chaque candidat sérieux et vérifie les offres avant de les retenir dans le brief.
-
-À qualité éditoriale comparable, privilégie clairement le sujet qui possède une piste d'affiliation naturelle et vérifiée. Ne choisis toutefois jamais un sujet médiocre uniquement parce qu'il est affiliable et n'invente jamais une offre sans rapport avec le lecteur.
-
-Si un excellent sujet n'a réellement aucune offre partenaire pertinente après vérification, il peut rester publiable. Le brief doit alors le dire clairement. L'absence d'affiliation ne doit jamais résulter d'une recherche superficielle.
-
-## Sujets à écarter
-
-Écarte les sujets politiques ou militants, les guerres et conflits armés, les contenus haineux, violents, sexuellement explicites, dangereux ou trompeurs, ainsi que les conseils médicaux, juridiques ou financiers personnalisés à risque élevé.
-
-Ne choisis pas comme sujet principal une maladie, un diagnostic, un traitement, une vaccination ou une urgence médicale ou psychiatrique.
-
-Pour un événement ponctuel, ne le retiens pas s'il commence dans moins de 30 jours. S'il a déjà commencé, il doit rester au moins 30 jours d'utilité réelle. Cette règle ne concerne pas les attractions permanentes, destinations durables ou activités disponibles sur une longue période.
-
-## Résultat attendu
-
-Prépare un brief court. Le fichier doit contenir exactement ces sections:
+## Brief du rédacteur en chef
 
 ## Sujet retenu
-Le sujet, un titre de travail et l'angle principal. Décris aussi en une ou deux phrases ce qu'est réellement le sujet afin que le journaliste parte avec le bon contexte.
+
+**Catégorie :** vie-pratique — Finistère (Bretagne).
+
+**Titre de travail :** « Ouessant avec des enfants sans voiture : ferry, bagages et déplacements sur l’île ».
+
+**Angle :** organiser concrètement une journée ou un court séjour familial sur Ouessant, de l’embarquement à Brest ou au Conquet jusqu’au retour, sans supposer qu’une voiture ou qu’une navette est disponible partout. Ouessant est une île du Finistère desservie toute l’année par les bateaux BreizhGo Penn Ar Bed ; le débarquement au port du Stiff est à environ 4 km du bourg de Lampaul. Les transports sur place changent selon la saison, notamment à partir du 2 novembre 2026.
 
 ## Besoin du lecteur
-Ce que le lecteur doit comprendre, apprendre ou pouvoir faire après avoir lu l'article. Ne réduis pas ce besoin à une seule micro-question si le sujet mérite un traitement plus large.
+
+Savoir choisir le port et le trajet, réserver les billets pour adultes, enfants et bébés, prévoir les bagages et l’arrivée au port, rejoindre Lampaul puis explorer l’île à un rythme adapté aux enfants. Comprendre les différences entre excursion à la journée et nuit sur place, entre marche, vélo et transport local, ainsi que les précautions liées au vent, à la météo maritime, aux commerces et aux services disponibles. Pouvoir estimer les dépenses sans confondre tarifs du bateau et des navettes.
 
 ## Valeur éditoriale
-Les quelques informations ou distinctions qui justifient l'article et ce que Fam Space peut apporter de mieux qu'une simple reprise des sources.
+
+- **Traversée :** départs de Brest et du Conquet toute l’année, Camaret en saison ; réservation même pour les moins de 3 ans, dont le billet est gratuit. Les tarifs aller-retour 2026 Penn Ar Bed sont de 33,50 € par adulte en période normale ou 39,80 € en haute saison, 22 € de 4 à 17 ans et gratuit avant 4 ans ; distinguer les périodes et actualiser avant publication si besoin.
+- **Bagages et embarquement :** arrivée conseillée au moins 45 minutes avant le bateau ; enregistrement des bagages au plus tard 30 minutes avant le départ ; franchise de 20 kg par adulte et 10 kg par enfant. Vérifier auprès du transporteur les conditions précises pour poussettes et matériel bébé, sans les présumer.
+- **Arrivée sur l’île :** port du Stiff à 4 km de Lampaul. Point essentiel et actuel : selon l’office de tourisme, **à partir du 2 novembre 2026 et pendant l’hiver, seul le Taxi Mauve assure le transport local, à réserver impérativement à l’avance**. Ne pas présenter la navette habituelle d’Ouessant Évasion comme garantie en hiver ; hors hiver, elle propose habituellement un aller-retour à 6 €.
+- **Sur place :** différencier routes praticables à vélo et sentiers côtiers réservés aux piétons ; vérifier les loueurs ouverts selon le mois, les vélos adaptés aux enfants, les casques et le transport des bagages vers le logement. Proposer un programme réaliste avec pauses, ravitaillement et plan B météo, sans promettre l’ouverture d’un musée ou d’un service non vérifié.
+- **Apport Fam Space :** réunir en une seule préparation familiale les informations dispersées entre compagnie maritime, office de tourisme et transporteurs, avec des choix adaptés à la saison et à l’âge des enfants. Sujet distinct de l’article déjà publié sur l’île de Batz et des articles sur Brest ou Crozon.
 
 ## Affiliation
-Les pistes partenaires réellement vérifiées, avec partenaire, offre et URL exacte, y compris les besoins secondaires naturels. Si aucune offre pertinente n'existe réellement, indique-le clairement.
+
+**Action principale :** aucune traversée Penn Ar Bed ni excursion équivalente vers Ouessant trouvée et confirmée chez GetYourGuide, Tiqets, Klook, WeGoTrip ou KKday ; garder la réservation officielle du bateau comme information pratique, sans lui substituer une offre sans rapport. Pas de location de vélo pertinente confirmée chez BikesBooking.
+
+**Besoin secondaire naturel — séjour sur l’île :** deux hébergements réellement consultés sur **Abritel**, sans garantie de disponibilité aux dates futures :
+- **Jardin Mamm-goz, maison à Lampaul** : meublé de tourisme 3 étoiles, 2 chambres, capacité annoncée de 5 personnes, cuisine, lave-linge et Wi-Fi ; localisation pratique pour les commerces. https://www.abritel.fr/location-vacances/p654208
+- **Maison typique ouessantine avec jardin clos** : 2 chambres, capacité annoncée de 4 personnes, cuisine, jardin et lave-linge ; prévoir un transfert depuis le port et vérifier l’emplacement exact avant réservation. https://www.abritel.fr/location-vacances/p2151547
+
+Ces pages partenaires servent uniquement à établir l’existence et les caractéristiques annoncées des logements, pas les faits éditoriaux. Présenter une ou deux offres seulement si le passage sur les nuits sur l’île le justifie ; vérifier les conditions, prix et disponibilités lors de la rédaction.
 
 ## Sources de départ
-Les meilleures sources officielles ou directement responsables pour lancer la rédaction, avec l'URL exacte de chaque page utile.
 
-Ne rédige pas le corps final de l'article pendant cette phase.
+- Penn Ar Bed — préparer sa traversée pour Ouessant (ports, arrivée) : https://pennarbed.breizhgo.bzh/iles-bretonnes/ile-ouessant/preparer-sa-traversee/
+- Penn Ar Bed — tarifs passagers 2026 et conditions par âge/saison : https://pennarbed.breizhgo.bzh/tarifs/
+- Penn Ar Bed — règles de bagages et enregistrement : https://pennarbed.breizhgo.bzh/faq/bagages-q1/
+- Penn Ar Bed — accès et stationnement aux gares maritimes : https://pennarbed.breizhgo.bzh/preparer-sa-traversee/acces-stationnement/
+- Office de tourisme d’Ouessant — arrivée et conseils pratiques : https://www.ouessant-tourisme.com/preparer-son-sejour-a-ouessant/venir-a-ouessant/avant-de-venir/
+- Office de tourisme d’Ouessant — navettes et changement de service hivernal au 2 novembre 2026 : https://www.ouessant-tourisme.com/preparer-son-sejour-a-ouessant/se-deplacer-sur-lile/navettes/
+- Office de tourisme d’Ouessant — vélos et restrictions sur les sentiers côtiers : https://www.ouessant-tourisme.com/preparer-son-sejour-a-ouessant/se-deplacer-sur-lile/location-de-velos/
+- Ouessant Évasion — tarifs de navette habituelle, à distinguer de la période hivernale : https://ouessantevasion.bzh/page/nos-tarifs
+
+## Écrire l'article
+
+Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
+
+Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
+
+Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
+
+Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
+
+Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
+
+Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+
+N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
+
+Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
+
+Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
+
+À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
+
+## Format du candidat
+
+Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
+
+```yaml
+---
+category: "<catégorie assignée>"
+title: "Titre direct et informatif"
+subtitle: "Précision différente du titre"
+summary: "Résumé de 90 à 180 caractères"
+keywords:
+  - "mot-clé principal"
+  - "mot-clé secondaire"
+location:
+  city: "Ville"
+  department: "Département assigné"
+  region: "Région assignée"
+sources:
+  - title: "Page officielle utilisée"
+    url: "https://..."
+---
+```
+
+La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+
+Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 1/4
+- Phase préparée mécaniquement: 2/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -118,30 +121,20 @@ Toute la plomberie technique est gérée mécaniquement. Ne cherche aucune branc
 
 Écris uniquement publication-request.md sur la branche main de DevWeb13/fam-space-actions-bridge avec le résultat éditorial demandé dans ce runtime. Le pipeline mécanique se charge de la phase, de la branche de travail, des commits, de la validation et de la suite du cycle.
 
-Si tu retiens un sujet, utilise:
+Utilise:
 
 ~~~yaml
 ---
-action: start
+action: advance
 ---
 
-<brief complet demandé ci-dessus>
+<article complet demandé ci-dessus, frontmatter compris>
 ~~~
 
-Si, après une recherche sérieuse, aucun sujet suffisamment utile et actuel ne mérite un article, utilise:
-
-~~~yaml
----
-action: skip
----
-
-<raison factuelle et courte>
-~~~
-
-Un échec technique n'est jamais une raison de skip. Une fois publication-request.md écrit, termine le passage.
+Rends toujours l'article complet, même si cette phase ne nécessite que peu de corrections. Une fois publication-request.md écrit, termine le passage.
 
 ## Rapport final
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les principaux sujets envisagés, les doublons écartés, le sujet retenu, pourquoi il mérite un article, les pistes d'affiliation réellement vérifiées et les principales sources. En cas de skip, explique simplement pourquoi aucun sujet suffisamment bon n'a été retenu.
+Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
