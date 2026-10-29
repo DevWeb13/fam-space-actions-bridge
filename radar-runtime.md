@@ -969,6 +969,10 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 
 ### Articles publiés
 
+- /articles/evenements/marche-de-noel-de-clermont-ferrand-2026-en-famille-horaires-animations-et-acces/ | Marché de Noël de Clermont-Ferrand 2026 en famille: horaires, animations et accès | evenements | Clermont-Ferrand, Puy-de-Dôme, Auvergne-Rhône-Alpes
+- /articles/bons-plans/chateau-de-chateaubriant-en-famille-une-sortie-a-petit-budget/ | Château de Châteaubriant en famille, une sortie à petit budget | bons-plans | Châteaubriant, Loire-Atlantique, Pays de la Loire
+- /articles/evenements/marche-de-noel-de-montpellier-2026-en-famille-dates-fermetures-et-attractions/ | Marché de Noël de Montpellier 2026 en famille: horaires, jours fermés et manèges | evenements | Montpellier, Hérault, Occitanie
+- /articles/voyages/super-besse-en-famille-premiers-skis-et-activites-sans-ski-en-hiver-2026-2027/ | Super-Besse en famille: premiers skis et activités sans ski en hiver 2026-2027 | voyages | Besse-et-Saint-Anastaise, Puy-de-Dôme, Auvergne-Rhône-Alpes
 - /articles/evenements/noel-des-alpes-2026-a-annecy-en-famille-marche-patinoire-ou-illuminations/ | Noël des Alpes 2026 à Annecy en famille: marché, patinoire et illuminations | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/cuisine/camembert-de-normandie-dans-l-orne-aop-visites-et-recettes-en-famille/ | Camembert de Normandie dans l’Orne: AOP, visites et recettes en famille | cuisine | Orne, Normandie
 - /articles/parentalite/laep-dans-l-herault-jouer-avec-son-enfant-et-rencontrer-d-autres-parents/ | LAEP dans l'Hérault: jouer avec son enfant et rencontrer d'autres parents | parentalite | Hérault, Occitanie
@@ -1877,9 +1881,11 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 - refresh | /articles/evenements/lire-en-poche-2026-a-gradignan-avec-des-enfants-organiser-une-journee-sans-perdre-les-ateliers/ | 2026-10-06T12:23:52.449Z
 - opportunity | /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | 2026-10-16T17:46:42.470Z
 - opportunity | /articles/evenements/luminescences-2026-2027-a-amneville-en-famille-soiree-seule-ou-zoo-et-lanternes/ | 2026-10-22T09:37:18.560Z
+- opportunity | /articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/ | 2026-10-29T14:26:32.277Z
 - opportunity | /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | 2026-10-19T13:54:07.745Z
 - opportunity | /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | 2026-10-28T15:29:23.387Z
 - opportunity | /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | 2026-10-21T07:36:18.372Z
+- opportunity | /articles/evenements/marche-de-noel-de-clermont-ferrand-2026-en-famille-horaires-animations-et-acces/ | 2026-10-29T11:32:05.289Z
 - opportunity | /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | 2026-10-29T00:28:19.695Z
 - opportunity | /articles/evenements/marche-de-noel-de-montpellier-2026-en-famille-dates-fermetures-et-attractions/ | 2026-10-29T08:29:37.767Z
 - opportunity | /articles/evenements/marche-de-noel-de-mulhouse-2026-en-famille-dates-etoffe-et-parcours-avec-les-enfants/ | 2026-10-19T09:37:22.517Z
@@ -1916,6 +1922,7 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 - opportunity | /articles/evenements/noel-a-orleans-2026-en-famille-marches-horaires-et-maneges-apres-noel/ | 2026-10-25T07:29:47.050Z
 - opportunity | /articles/evenements/noel-a-provins-2026-en-famille-marche-medieval-ou-visite-guidee/ | 2026-10-24T03:31:56.628Z
 - opportunity | /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | 2026-10-24T23:34:36.270Z
+- opportunity | /articles/evenements/noel-d-autrefois-2026-au-musee-de-plein-air-quel-jour-venir-en-famille/ | 2026-10-29T17:29:29.382Z
 - opportunity | /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | 2026-10-27T07:35:50.437Z
 - opportunity | /articles/evenements/noel-des-alpes-2026-a-annecy-en-famille-marche-patinoire-ou-illuminations/ | 2026-10-29T05:28:53.475Z
 - opportunity | /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | 2026-10-26T18:32:56.730Z
@@ -1946,8 +1953,49 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 - opportunity | /articles/sorties/vacances-de-la-toussaint-2026-au-louvre-quelles-activites-choisir-avec-des-enfants/ | 2026-10-03T17:26:28.881Z
 - opportunity | /articles/sorties/vacances-de-la-toussaint-2026-au-musee-carnavalet-quelle-activite-choisir-selon-l-age/ | 2026-10-07T12:23:23.783Z
 - opportunity | /articles/evenements/vacances-royales-2026-a-versailles-animations-napoleon-dates-et-billets-en-famille/ | 2026-10-14T18:43:15.620Z
+- opportunity | /articles/evenements/ville-de-noel-d-arras-2026-en-famille-grande-roue-patinoire-et-horaires/ | 2026-10-29T20:30:33.011Z
 
 ## Travaux éditoriaux en cours
+
+### Publication en cours
+
+- Branche: automation/publication-20261029-2202-sujet-amenager-et-preparer-un-jardin-familial-en-vendee-a-l-automne-en
+- HEAD: publication: phase 1 sujet-amenager-et-preparer-un-jardin-familial-en-vendee-a-l-automne-en
+
+## Sujet retenu
+
+**Sujet :** aménager et préparer un jardin familial en Vendée à l'automne, en tenant compte du terrain et du climat local.
+
+**Titre de travail :** « Jardin familial en Vendée : que planter et préparer à l’automne ? »
+
+**Angle :** aider les familles à faire des choix durables et simples dès l'automne : haies, coin de jeux et de découverte pour les enfants, paillage, compost, plantations et arrosage économe. Les besoins ne sont pas identiques sur le littoral exposé aux embruns, dans le bocage, la plaine ou les marais. Il s'agit d'un guide pratique pour le jardin de la maison, pas d'un guide de visites de jardins ni de locations de vacances.
+
+## Besoin du lecteur
+
+Comprendre comment préparer son jardin avant l'hiver, choisir des végétaux adaptés à son secteur de Vendée et organiser un extérieur agréable pour les enfants sans multiplier l'entretien, l'arrosage ou les achats. Savoir quoi faire à l'automne, quoi reporter au printemps et où trouver des références locales fiables.
+
+## Valeur éditoriale
+
+- **Une vraie différence locale :** le CAUE de Vendée publie cinq carnets de plantations distincts (bocage, plaine, littoral, marais breton, marais poitevin). Partir de cette distinction plutôt que proposer une liste universelle de plantes.
+- **Des gestes immédiatement utiles :** plantations automnales, haie diversifiée contre le vent, paillage avec les feuilles et broyats du jardin, compostage des déchets de cuisine, arrosage raisonné pour la saison chaude suivante. Vendée Transitions a actualisé ses conseils le 30 juin 2026.
+- **Une approche familiale :** distinguer l'espace de jeux, les zones plantées et les refuges de biodiversité ; proposer de petites activités d'observation et de jardinage avec les enfants, sans encourager à goûter des baies sauvages (certaines sont toxiques).
+- **Une synthèse originale :** transformer les ressources séparées du CAUE, de Vendée Eau et de Trivalis en parcours concret « observer son terrain → choisir selon son secteur → préparer le sol → planter → entretenir ». Les pages existantes donnent les bases, mais pas ce parcours familial transversal.
+- Sujet pérenne et de saison au 29 octobre 2026, sans fermeture ni événement ponctuel. Aucun doublon avec les sept articles récents fournis.
+
+## Affiliation
+
+**Aucune offre partenaire pertinente confirmée.** Vérification des catégories de partenaires fournies : Booking, Expedia, Agoda, Hotels et Abritel/Vrbo concernent l'hébergement ; GetYourGuide, Tiqets, Klook, WeGoTrip, KKday et Go City les visites ; les autres partenaires concernent les transports ou la consigne. Aucun ne propose une offre vérifiée de végétaux, de paillage ou de matériel utile à l'aménagement du jardin familial. Des locations de maisons vendéennes existent sur Abritel (exemple vérifié : https://www.abritel.fr/location-vacances/p2017005), mais elles ne répondent pas au besoin du lecteur qui aménage son propre jardin : **ne pas les ajouter artificiellement**. Ne pas inventer de produit affilié.
+
+## Sources de départ
+
+- CAUE de la Vendée, **cinq carnets « Planter dans… »** (choix de végétaux selon les secteurs vendéens) : https://www.caue85.com/?portfolio=carnets-planter-dans
+- CAUE de la Vendée, **Un jardin plein de vie** (haies, paillage, compost, tonte différenciée, partenariat avec Vendée Eau et Trivalis) : https://www.caue85.com/jardin-plein-de-vie/
+- Vendée Transitions, **Jardiner et favoriser la biodiversité vendéenne**, mis à jour le 30 juin 2026 (plantations d'automne, haies mixtes, végétaux locaux) : https://vendee-transitions.fr/habiter/jardiner-responsable-leau-les-bons-gestes-les-bonnes-pratiques/
+- Vendée Transitions, **Comment faire des économies d'eau au jardin ?** (conseils du service public Vendée Eau) : https://vendee-transitions.fr/consommer-durable/comment-faire-des-economies-deau-au-jardin/
+- Trivalis, **Tri et devenir des biodéchets** (compostage domestique en Vendée) : https://trivalis.fr/tri-des-dechets/tri-biodechets/
+- CAUE de la Vendée, **Le monde des fruits sauvages** (reconnaissance des baies comestibles et toxiques, ressource pédagogique) : https://www.caue85.com/le-monde-des-fruits-sauvages/
+- Office français de la biodiversité, **Se renseigner avant d'acheter une graine, une plante ou un arbuste** (espèces locales et exotiques envahissantes) : https://ofb.gouv.fr/actions-citoyennes/se-renseigner-avant-acheter-une-graine-une-plante-ou-un-arbuste
+
 
 ### Destination en cours
 
