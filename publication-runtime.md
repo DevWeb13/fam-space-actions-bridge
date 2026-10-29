@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,101 +14,147 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Finistère
 - Région: Bretagne
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Catégorie :** vie-pratique — Finistère (Bretagne).
-
-**Titre de travail :** « Ouessant avec des enfants sans voiture : ferry, bagages et déplacements sur l’île ».
-
-**Angle :** organiser concrètement une journée ou un court séjour familial sur Ouessant, de l’embarquement à Brest ou au Conquet jusqu’au retour, sans supposer qu’une voiture ou qu’une navette est disponible partout. Ouessant est une île du Finistère desservie toute l’année par les bateaux BreizhGo Penn Ar Bed ; le débarquement au port du Stiff est à environ 4 km du bourg de Lampaul. Les transports sur place changent selon la saison, notamment à partir du 2 novembre 2026.
-
-## Besoin du lecteur
-
-Savoir choisir le port et le trajet, réserver les billets pour adultes, enfants et bébés, prévoir les bagages et l’arrivée au port, rejoindre Lampaul puis explorer l’île à un rythme adapté aux enfants. Comprendre les différences entre excursion à la journée et nuit sur place, entre marche, vélo et transport local, ainsi que les précautions liées au vent, à la météo maritime, aux commerces et aux services disponibles. Pouvoir estimer les dépenses sans confondre tarifs du bateau et des navettes.
-
-## Valeur éditoriale
-
-- **Traversée :** départs de Brest et du Conquet toute l’année, Camaret en saison ; réservation même pour les moins de 3 ans, dont le billet est gratuit. Les tarifs aller-retour 2026 Penn Ar Bed sont de 33,50 € par adulte en période normale ou 39,80 € en haute saison, 22 € de 4 à 17 ans et gratuit avant 4 ans ; distinguer les périodes et actualiser avant publication si besoin.
-- **Bagages et embarquement :** arrivée conseillée au moins 45 minutes avant le bateau ; enregistrement des bagages au plus tard 30 minutes avant le départ ; franchise de 20 kg par adulte et 10 kg par enfant. Vérifier auprès du transporteur les conditions précises pour poussettes et matériel bébé, sans les présumer.
-- **Arrivée sur l’île :** port du Stiff à 4 km de Lampaul. Point essentiel et actuel : selon l’office de tourisme, **à partir du 2 novembre 2026 et pendant l’hiver, seul le Taxi Mauve assure le transport local, à réserver impérativement à l’avance**. Ne pas présenter la navette habituelle d’Ouessant Évasion comme garantie en hiver ; hors hiver, elle propose habituellement un aller-retour à 6 €.
-- **Sur place :** différencier routes praticables à vélo et sentiers côtiers réservés aux piétons ; vérifier les loueurs ouverts selon le mois, les vélos adaptés aux enfants, les casques et le transport des bagages vers le logement. Proposer un programme réaliste avec pauses, ravitaillement et plan B météo, sans promettre l’ouverture d’un musée ou d’un service non vérifié.
-- **Apport Fam Space :** réunir en une seule préparation familiale les informations dispersées entre compagnie maritime, office de tourisme et transporteurs, avec des choix adaptés à la saison et à l’âge des enfants. Sujet distinct de l’article déjà publié sur l’île de Batz et des articles sur Brest ou Crozon.
-
-## Affiliation
-
-**Action principale :** aucune traversée Penn Ar Bed ni excursion équivalente vers Ouessant trouvée et confirmée chez GetYourGuide, Tiqets, Klook, WeGoTrip ou KKday ; garder la réservation officielle du bateau comme information pratique, sans lui substituer une offre sans rapport. Pas de location de vélo pertinente confirmée chez BikesBooking.
-
-**Besoin secondaire naturel — séjour sur l’île :** deux hébergements réellement consultés sur **Abritel**, sans garantie de disponibilité aux dates futures :
-- **Jardin Mamm-goz, maison à Lampaul** : meublé de tourisme 3 étoiles, 2 chambres, capacité annoncée de 5 personnes, cuisine, lave-linge et Wi-Fi ; localisation pratique pour les commerces. https://www.abritel.fr/location-vacances/p654208
-- **Maison typique ouessantine avec jardin clos** : 2 chambres, capacité annoncée de 4 personnes, cuisine, jardin et lave-linge ; prévoir un transfert depuis le port et vérifier l’emplacement exact avant réservation. https://www.abritel.fr/location-vacances/p2151547
-
-Ces pages partenaires servent uniquement à établir l’existence et les caractéristiques annoncées des logements, pas les faits éditoriaux. Présenter une ou deux offres seulement si le passage sur les nuits sur l’île le justifie ; vérifier les conditions, prix et disponibilités lors de la rédaction.
-
-## Sources de départ
-
-- Penn Ar Bed — préparer sa traversée pour Ouessant (ports, arrivée) : https://pennarbed.breizhgo.bzh/iles-bretonnes/ile-ouessant/preparer-sa-traversee/
-- Penn Ar Bed — tarifs passagers 2026 et conditions par âge/saison : https://pennarbed.breizhgo.bzh/tarifs/
-- Penn Ar Bed — règles de bagages et enregistrement : https://pennarbed.breizhgo.bzh/faq/bagages-q1/
-- Penn Ar Bed — accès et stationnement aux gares maritimes : https://pennarbed.breizhgo.bzh/preparer-sa-traversee/acces-stationnement/
-- Office de tourisme d’Ouessant — arrivée et conseils pratiques : https://www.ouessant-tourisme.com/preparer-son-sejour-a-ouessant/venir-a-ouessant/avant-de-venir/
-- Office de tourisme d’Ouessant — navettes et changement de service hivernal au 2 novembre 2026 : https://www.ouessant-tourisme.com/preparer-son-sejour-a-ouessant/se-deplacer-sur-lile/navettes/
-- Office de tourisme d’Ouessant — vélos et restrictions sur les sentiers côtiers : https://www.ouessant-tourisme.com/preparer-son-sejour-a-ouessant/se-deplacer-sur-lile/location-de-velos/
-- Ouessant Évasion — tarifs de navette habituelle, à distinguer de la période hivernale : https://ouessantevasion.bzh/page/nos-tarifs
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "vie-pratique"
+title: "Ouessant avec des enfants sans voiture: ferry, bagages et déplacements"
+subtitle: "De Brest ou du Conquet jusqu'au port du Stiff, les bons choix pour une journée ou un séjour en famille"
+summary: "Traversée, tarifs enfants, bagages, navettes et vélos: comment découvrir Ouessant en famille sans voiture, y compris pendant l'hiver."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Ouessant avec enfants sans voiture"
+  - "ferry Ouessant famille"
+  - "navette port du Stiff Lampaul"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Ouessant"
+  department: "Finistère"
+  region: "Bretagne"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Penn Ar Bed - Préparer sa traversée vers Ouessant"
+    url: "https://pennarbed.breizhgo.bzh/iles-bretonnes/ile-ouessant/preparer-sa-traversee/"
+  - title: "Penn Ar Bed - Durées des traversées"
+    url: "https://pennarbed.breizhgo.bzh/faq/durees-des-traversees/"
+  - title: "Penn Ar Bed - Tarifs passagers 2026"
+    url: "https://pennarbed.breizhgo.bzh/tarifs/"
+  - title: "Penn Ar Bed - Bagages et enregistrement"
+    url: "https://pennarbed.breizhgo.bzh/faq/bagages-q1/"
+  - title: "Penn Ar Bed - Gare maritime de Brest"
+    url: "https://pennarbed.breizhgo.bzh/preparer-sa-traversee/acces-stationnement/brest/"
+  - title: "Penn Ar Bed - Gare maritime du Conquet"
+    url: "https://pennarbed.breizhgo.bzh/preparer-sa-traversee/acces-stationnement/le-conquet/"
+  - title: "Office de tourisme d'Ouessant - Avant de venir"
+    url: "https://www.ouessant-tourisme.com/preparer-son-sejour-a-ouessant/venir-a-ouessant/avant-de-venir/"
+  - title: "Office de tourisme d'Ouessant - Navettes et Taxi Mauve"
+    url: "https://www.ouessant-tourisme.com/preparer-son-sejour-a-ouessant/se-deplacer-sur-lile/navettes/"
+  - title: "Office de tourisme d'Ouessant - Location de vélos"
+    url: "https://www.ouessant-tourisme.com/preparer-son-sejour-a-ouessant/se-deplacer-sur-lile/location-de-velos/"
+  - title: "Ouessant Évasion - Tarifs des transferts"
+    url: "https://ouessantevasion.bzh/page/nos-tarifs"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Ouessant, île du Finistère à l'extrémité ouest de la Bretagne, se découvre très bien sans voiture: paysages de landes, phares, petits villages et promenades face à l'océan. Avec des enfants, la vraie difficulté n'est pas de trouver quoi voir, mais d'organiser les déplacements entre le bateau, le bourg et les lieux de balade. **Le ferry arrive au port du Stiff, à environ 4 km de Lampaul**, le principal bourg de l'île. Il faut donc prévoir la suite du trajet avant d'embarquer.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Brest ou Le Conquet: quel ferry choisir avec des enfants ?
+
+Les bateaux BreizhGo Penn Ar Bed desservent Ouessant toute l'année depuis **Brest et Le Conquet**. Des départs depuis Camaret existent aussi d'avril à septembre, selon le calendrier. Les [durées annoncées par la compagnie](https://pennarbed.breizhgo.bzh/faq/durees-des-traversees/) sont d'environ **2 h 30 depuis Brest** et **1 h 30 depuis Le Conquet**, hors opérations d'embarquement, de débarquement et éventuels changements liés à la mer.
+
+Le Conquet permet donc une traversée plus courte, appréciable avec de jeunes enfants ou en cas de mal de mer. Brest peut être plus pratique si l'on arrive en train ou si l'on veut éviter un trajet terrestre supplémentaire. Pour une excursion à la journée, comparez surtout **les heures réelles d'arrivée et de retour**: elles déterminent le temps dont vous disposerez sur l'île.
+
+La compagnie recommande de [réserver sa traversée](https://pennarbed.breizhgo.bzh/iles-bretonnes/ile-ouessant/preparer-sa-traversee/) à l'avance et d'arriver **au moins 45 minutes avant le départ**. Les [gares maritimes de Brest](https://pennarbed.breizhgo.bzh/preparer-sa-traversee/acces-stationnement/brest/) et [du Conquet](https://pennarbed.breizhgo.bzh/preparer-sa-traversee/acces-stationnement/le-conquet/) conseillent même une heure en période de vacances scolaires ou de week-end prolongé. Si vous venez en voiture jusqu'au continent, vérifiez le stationnement avant le départ: au Conquet, les parkings de longue durée ne sont pas tous au pied du quai et les services de navette peuvent varier.
+
+Les horaires et parfois les ports de départ ou d'arrivée peuvent être modifiés par la météo et les marées. Gardez une marge pour les correspondances et consultez les informations de la compagnie la veille et le jour du voyage.
+
+## Billets, tarifs et bagages: ce qu'il faut prévoir
+
+D'après les [tarifs aller-retour Penn Ar Bed pour 2026](https://pennarbed.breizhgo.bzh/tarifs/), le plein tarif est de **33,50 € par adulte en période normale** et de **39,80 € en haute saison**. Le billet coûte **22 € de 4 à 17 ans**; il est **gratuit avant 4 ans**. La haute saison comprend notamment juillet à septembre et certains week-ends et jours fériés de mai et juin. Pour deux adultes et deux enfants de 4 à 17 ans, cela représente 111 € en période normale ou 123,60 € en haute saison, hors déplacements sur l'île. Ces montants sont ceux de 2026: vérifiez les tarifs en vigueur à la réservation.
+
+**Même gratuit, le billet d'un bébé doit être réservé**: chaque passager compte dans la capacité du navire. Ajoutez donc bien les moins de 4 ans à la réservation.
+
+Côté bagages, la [compagnie précise](https://pennarbed.breizhgo.bzh/faq/bagages-q1/) que tous doivent être pesés, y compris les bagages à main. La franchise annoncée est de **20 kg par adulte et 10 kg par enfant**; deux bagages à main par personne sont autorisés, selon les conditions du navire. Avec des bagages à enregistrer, présentez-vous **au plus tard 30 minutes avant le départ**. Les autres bagages voyagent en soute ou en conteneur selon le bateau.
+
+Pour une poussette, un porte-bébé volumineux ou du matériel particulier, demandez directement à Penn Ar Bed les modalités d'embarquement et de rangement: les règles consultées ne permettent pas de garantir leur prise en charge de la même manière sur tous les navires. Prévoyez de garder à portée de main vêtements chauds, eau, collations et nécessaire pour changer ou nourrir un bébé, sans compter sur la présence d'un micro-ondes ou d'une table à langer à bord.
+
+## Du port du Stiff à Lampaul: attention à la saison
+
+Le port du Stiff n'est pas au centre du village. Faire ses 4 km à pied peut convenir à des marcheurs équipés, mais c'est une mauvaise surprise avec valises, poussette ou enfants fatigués par la traversée.
+
+**À partir du 2 novembre 2026, et pendant la période hivernale, seul le Taxi Mauve assure le transport local sur Ouessant**, selon l'[office de tourisme](https://www.ouessant-tourisme.com/preparer-son-sejour-a-ouessant/se-deplacer-sur-lile/navettes/). **La réservation préalable est impérative.** Contactez le transporteur avant d'acheter vos billets de bateau pour confirmer un transfert à l'aller **et au retour**, le prix, la place disponible et, si nécessaire, les conditions de transport d'un jeune enfant.
+
+Hors de cette période, Ouessant Évasion propose habituellement une navette entre le Stiff et Lampaul, sans réservation pour ce trajet. Son [tarif affiché](https://ouessantevasion.bzh/page/nos-tarifs) est de **6 € aller-retour**, distinct du prix du ferry. Ce service et ce tarif ne doivent **pas** être considérés comme disponibles en hiver. Pour être déposé directement à un hébergement, renseignez-vous sur un transfert spécifique.
+
+Le meilleur réflexe est de choisir votre solution de transport **avant** de fixer le programme de la journée. Une fois à Lampaul, vous trouverez un point de départ plus commode pour les courses, les pauses et les promenades.
+
+## Marcher ou louer des vélos sur l'île ?
+
+Avec de jeunes enfants, mieux vaut choisir **un secteur à explorer tranquillement** plutôt que vouloir faire le tour d'Ouessant en quelques heures. Une balade depuis Lampaul, une pause au bourg et un point de vue sur le littoral peuvent déjà remplir une journée, surtout avec les horaires du bateau.
+
+Le vélo devient intéressant avec des enfants qui roulent à l'aise. Les routes et chemins intérieurs permettent de rejoindre différents secteurs, mais **les sentiers côtiers sont interdits aux vélos**: il faut laisser les bicyclettes pour parcourir ces portions à pied. L'[office de tourisme publie les coordonnées des loueurs et un planning d'ouverture mensuel](https://www.ouessant-tourisme.com/preparer-son-sejour-a-ouessant/se-deplacer-sur-lile/location-de-velos/). Vérifiez avant de partir les tailles de vélos, sièges ou remorques pour enfants, casques, horaires de restitution et éventuel acheminement des bagages. Un loueur mentionné sur le site n'est pas nécessairement ouvert à votre date.
+
+Pour un bébé ou un enfant qui marche peu, un porte-bébé peut être plus adapté aux passages irréguliers des sentiers qu'une poussette. Le vent peut aussi rendre une sortie à vélo pénible: prévoyez un parcours raccourci et la possibilité de revenir vers Lampaul sans dépendre d'une location ou d'un transport non confirmé.
+
+## Une journée suffit-elle, ou vaut-il mieux dormir sur place ?
+
+**Pour une journée**, privilégiez une traversée offrant suffisamment de temps sur l'île, un transfert organisé entre le Stiff et Lampaul, puis une seule grande promenade avec pause déjeuner. Ne planifiez pas une visite éloignée à heure fixe sans avoir vérifié son ouverture et votre moyen de retour au port.
+
+**Avec une nuit sur place**, vous pouvez répartir les balades et mieux composer avec le rythme des enfants. En contrepartie, il faut organiser le transfert des bagages et réserver le logement en amont. L'[office de tourisme](https://www.ouessant-tourisme.com/preparer-son-sejour-a-ouessant/venir-a-ouessant/avant-de-venir/) rappelle que l'offre d'hébergement est limitée et que le bivouac est interdit sur l'île. Avant de réserver, vérifiez la distance réelle entre votre logement et Lampaul, les équipements pour bébé et la possibilité d'arriver sans voiture.
+
+Pour les repas, prévoyez une solution simple en cas de fermeture ou de restaurant complet; réserver est conseillé en période fréquentée. L'office de tourisme signale également un seul distributeur bancaire, au Carrefour Express de Lampaul: un peu d'espèces peut éviter une difficulté, notamment pour de petits services.
+
+## Les décisions à prendre avant de partir
+
+Une fois les billets choisis, trois points font la différence: **un transfert confirmé depuis le Stiff**, **une promenade compatible avec l'âge des enfants** et **un retour compatible avec le dernier bateau réservé**. Ajoutez un vêtement coupe-vent même par beau temps et vérifiez la météo maritime, plutôt que de bâtir le séjour autour d'un programme trop serré.
+
+Ouessant se savoure davantage en prenant le temps de regarder la mer et les paysages qu'en cherchant à multiplier les kilomètres. Sans voiture, c'est tout à fait possible - à condition de ne pas improviser les transports sur l'île, surtout en hiver.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -137,4 +183,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
