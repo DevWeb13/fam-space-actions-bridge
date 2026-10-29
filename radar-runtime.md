@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Marché de Noël 100 % Côte-d’Or 2026 à Dijon : samedi ou dimanche avec les enfants ?"
-subtitle: "Deux jours gratuits aux Jardins du Département : spectacles, ateliers et horaires du Père Noël"
-summary: Les 12 et 13 décembre 2026, choisir le meilleur créneau familial au marché de Noël du Département à Dijon selon les spectacles, ateliers et rencontres avec le Père Noël.
+subtitle: Spectacles à 11 h, ateliers gratuits et créneaux du Père Noël les 12 et 13 décembre
+summary: Aux Jardins du Département, le samedi mise sur les comptines et les décorations de Noël, le dimanche sur la magie et les biscuits. Horaires précis pour choisir sa sortie en famille.
 category: evenements
 location:
   city: Dijon
@@ -72,11 +77,13 @@ keywords:
   - Jardins du Département Dijon Noël enfants
   - spectacles ateliers gratuits Père Noël Dijon
 sources:
-  - title: Département de la Côte-d'Or — Marché de Noël 100 % Côte-d'Or, programme 2026
+  - title: Département de la Côte-d'Or — Programme officiel du Marché de Noël 2026
     url: https://www.cotedor.fr/agenda/magie-et-gourmandises-vous-attendent-au-marche-de-noel-du-departement-0
+  - title: DiviaMobilités — Parking Trémouille-Marché et desserte République
+    url: https://information.divia.fr/sinformer/voiture/parkings-en-ouvrage/tremouille-marche/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants
   decision: Choisir le samedi ou le dimanche et le bon horaire selon l'âge des enfants, le spectacle souhaité, l'atelier et la rencontre avec le Père Noël, sans payer d'entrée.
@@ -86,29 +93,43 @@ radar:
     dataThrough: 2026-10-26
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Département de la Côte-d'Or — Marché de Noël 100 % Côte-d'Or, programme 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-13T18:00:00+01:00
 ---
 
-## Mission retenue
-Préparer la sortie familiale au marché de Noël 100 % Côte-d'Or dans les Jardins du Département à Dijon, événement distinct des marchés de Noël habituels de la ville.
+Les **samedi 12 et dimanche 13 décembre 2026**, les Jardins du Département, au **23 boulevard de la Trémouille à Dijon**, accueillent le Marché de Noël 100 % Côte-d’Or. L’entrée, les spectacles et les ateliers sont gratuits. Pour choisir son jour avec des enfants, la différence se joue surtout sur le spectacle de 11 h et l’atelier de l’après-midi : comptines et décorations le samedi, magie et biscuits le dimanche.
 
-## Pourquoi cette mission
-Programme officiel 2026 déjà détaillé, événement gratuit limité à deux jours et choix réel entre deux spectacles jeunesse. Le refresh Futuroween, malgré une baisse GSC de signal incertain, est déjà complet et s'achève le 1er novembre. L'expansion des transports parisiens est moins nette après les pages récentes sur poussette, Navigo Liberté+ et aéroports. Aucun doublon sur cet événement précis dans le catalogue ; la Foire de Dijon concerne une autre manifestation.
+## Samedi ou dimanche : quel programme choisir ?
 
-## Décision du lecteur
-Choisir entre le samedi 12 décembre (spectacle de comptines à 11 h, atelier de décorations l'après-midi) et le dimanche 13 (magie à 11 h, décoration de biscuits l'après-midi), puis caler la rencontre avec le Père Noël.
+**Samedi 12 décembre, de 10 h à 21 h** : le spectacle *Swann au pays des comptines* est annoncé de **11 h à 12 h**. L’après-midi, les enfants peuvent participer à un atelier manuel de décoration de Noël. Le programme comprend aussi une démonstration culinaire de **12 h 30 à 14 h**, une chorale de **17 h 30 à 18 h 30** et un concert des Rockers de Noël de **18 h 30 à 20 h**. Ce jour convient particulièrement aux familles qui préfèrent les comptines ou souhaitent profiter du marché en fin de journée.
 
-## Faits à traiter
-Samedi 10 h-21 h, dimanche 9 h-18 h ; 21 exposants locaux ; entrée, ateliers et animations gratuits. Spectacles jeunesse à 11 h les deux jours. Père Noël samedi 12 h-13 h, 13 h 30-14 h, 15 h-16 h, 16 h 30-17 h 30, 18 h-18 h 45, 19 h 15-20 h ; dimanche 12 h-13 h, 14 h-15 h, 15 h 30-16 h 30, 17 h-17 h 45. Adresse : 23 boulevard de la Trémouille. Prévoir météo, poussette et repas bébé sans inventer d'équipements non confirmés ; revérifier les horaires avant publication.
+**Dimanche 13 décembre, de 9 h à 18 h** : le spectacle *Parlons Magie !* se tient de **11 h à 12 h**. L’atelier de l’après-midi est consacré à la décoration de biscuits. Deux concerts sont prévus ensuite : Rosebud de **14 h 30 à 15 h 30**, puis un concert folk de **16 h à 17 h**. C’est le choix le plus adapté si les enfants préfèrent la magie ou une activité gourmande.
 
-## Sources de départ
-Département de la Côte-d'Or : https://www.cotedor.fr/agenda/magie-et-gourmandises-vous-attendent-au-marche-de-noel-du-departement-0
+Les deux jours, le marché annonce un photocall, un atelier des lutins et **21 exposants de Côte-d’Or**. La liste détaillée des exposants n’est pas encore publiée. Les horaires des ateliers de l’après-midi ne sont pas précisés : ne prévoyez pas une séance à heure fixe sans confirmation.
 
-## Affiliation
-Aucun billet à vendre. Pour les familles qui prolongent la visite, City Loft Apparthotel sur Booking.com est une piste vérifiée ; ne pas promettre la disponibilité aux dates du marché.
+## À quelle heure rencontrer le Père Noël ?
 
-## Continuations internes
-- Pour une autre activité gourmande à Dijon, renvoyer au guide de la fabrique de pain d'épices : /articles/cuisine/fabrique-de-pain-d-epices-a-dijon-faut-il-reserver-et-combien-prevoir-avec-des-enfants/.
-- Ne pas développer les autres événements de Dijon : ce brief concerne uniquement le marché départemental des 12 et 13 décembre.
+Les créneaux annoncés par le Département sont suffisamment précis pour organiser la visite autour du spectacle ou de l’atelier.
+
+- **Samedi** : 12 h–13 h, 13 h 30–14 h, 15 h–16 h, 16 h 30–17 h 30, 18 h–18 h 45 et 19 h 15–20 h.
+- **Dimanche** : 12 h–13 h, 14 h–15 h, 15 h 30–16 h 30 et 17 h–17 h 45.
+
+Avec un jeune enfant, une formule simple consiste à assister au spectacle de 11 h puis à rejoindre le Père Noël à partir de midi, en prévoyant une éventuelle attente. Une borne photo est annoncée à proximité de sa rencontre. Le programme ne garantit ni un temps d'attente ni une photo sans file.
+
+Le [programme officiel du Département](https://www.cotedor.fr/agenda/magie-et-gourmandises-vous-attendent-au-marche-de-noel-du-departement-0) reste la référence pour vérifier les créneaux avant de partir.
+
+## Accès, poussette et repas des tout-petits
+
+Le marché se déroule **dans les Jardins du Département**, et non sur les emplacements habituels des autres marchés de Noël dijonnais. L’adresse à utiliser est **23 boulevard de la Trémouille, 21000 Dijon**.
+
+En tramway, la station **République**, desservie par les lignes **T1 et T2**, permet de rejoindre le secteur. En voiture, le parking payant **Trémouille-Marché**, au 7 boulevard de la Trémouille, est une possibilité à proximité ; [DiviaMobilités en donne les accès et les conditions](https://information.divia.fr/sinformer/voiture/parkings-en-ouvrage/tremouille-marche/). Vérifiez les éventuelles perturbations et le stationnement avant le départ.
+
+La visite comporte des espaces extérieurs : vêtements chauds, protection contre la pluie et chaussures adaptées sont utiles en décembre. Avec une poussette, prévoyez de pouvoir ralentir dans les passages fréquentés et d’attendre devant les animations. Le Département ne précise pas dans son programme la présence de table à langer, de point de chauffe pour les repas bébé ni de zone abritée pour les nourrissons. Emportez donc de quoi nourrir et changer votre enfant sans compter sur ces équipements. Pour un repas sur place, les exposants proposent des produits locaux, mais les menus et tarifs ne sont pas encore détaillés.
+
+## Prolonger le week-end à Dijon
+
+Si vous venez de plus loin pour les deux journées, le [City Loft Dijon sur Booking.com](https://www.booking.com/hotel/fr/city-loft.html), situé rue des Godrans dans le centre, propose notamment des studios familiaux avec kitchenette et micro-ondes : un point pratique pour les repas des enfants. Vérifiez la capacité exacte du logement, les conditions d’un éventuel lit bébé, le prix total et la disponibilité pour les **12 et 13 décembre 2026** avant de réserver ; ils ne sont pas confirmés pour ce week-end.
+
+Pour ajouter une visite gourmande sans confondre les deux activités, découvrez aussi [la Fabrique de pain d’épices Mulot & Petitjean à Dijon : horaires, tarifs et réservation](/articles/cuisine/fabrique-de-pain-d-epices-a-dijon-faut-il-reserver-et-combien-prevoir-avec-des-enfants/). Ses horaires habituels concernent notamment le samedi, pas le dimanche : vérifiez l’ouverture effective avant de l’associer au marché.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
