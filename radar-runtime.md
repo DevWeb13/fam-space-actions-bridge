@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 3/3
+# Radar Fam Space - actualisation GSC
 
 ## Mission
 
@@ -8,194 +8,903 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 3/3
+## Snapshot GSC quotidien
 
-Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
+Le cache compact est `radar-gsc-snapshot.json` sur `main` de `DevWeb13/fam-space-actions-bridge`. Il ne contient jamais les lignes GSC brutes.
 
-Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
+Cette tâche est séparée de la sélection éditoriale. **S'il n'existe aucune branche Radar active et que le snapshot doit être renouvelé, actualise uniquement le snapshot puis termine le passage. Ne choisis pas de mission dans la même exécution.** Le passage horaire suivant effectuera la phase 1 avec le snapshot prêt.
 
-Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
+Le snapshot est réutilisable lorsqu'il a `schemaVersion: 1`, a été généré le jour courant en Europe/Paris et que `dataThrough` n'a pas plus de sept jours de retard.
 
-Ensuite:
-- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
-- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
-- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
-- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
-- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
-- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
-- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
-- ne force ni longueur ni affiliation.
+Lorsqu'un nouveau snapshot est nécessaire, utilise Windsor.ai avec le compte `sc-domain:fam-space.fr`, connector `searchconsole`, `include_fresh_data: false`. **Chaque appel `get_data` Search Analytics doit filtrer explicitement `search_type = web` avec `filters: [["search_type","eq","web"]]`.** Récupère 28 jours jusqu'à la dernière journée consolidée:
 
-Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
+- une lecture `date, clicks, impressions` pour déterminer la fin réelle;
+- quatre lectures consécutives de sept jours `date, page, clicks, impressions, position`;
+- pour les meilleurs refresh examinables, les requêtes de l'URL exacte sur `peakStart..peakEnd` et `recentStart..recentEnd`.
 
-Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
-- `summary`: contrôles et corrections réellement effectués;
-- `sources`: URLs factuelles revérifiées;
-- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
-- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+Utilise la logique de le module Radar embarqué plus bas: `unwrapRows`, `buildRadarShortlist`, `diagnoseQueries` et `probableDuplicates`. Une réponse Windsor est considérée complète lorsque `status: done`, que `data` est un tableau et que `total_rows` correspond à `data.length`, sans indicateur explicite de troncature. **Un nombre rond de lignes, notamment 1 500, n'est jamais à lui seul une preuve de plafonnement et ne doit pas arrêter Radar.** Découpe seulement la période si Windsor signale réellement une réponse incomplète/tronquée, si `total_rows` ne correspond pas au nombre de lignes reçues, ou si `unwrapRows` refuse la réponse, notamment à son seuil conservateur de 5 000 lignes par réponse. Un 429, un refus d'accès ou un plafond réellement non résolu termine le passage. Maximum 50 appels `get_data`. Les réponses brutes restent temporaires.
 
-**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlist `refresh` avec ses diagnostics compacts, `strongPages`, `excluded` et les avertissements utiles.
 
-## Règles partenaires
+## Snapshot actuellement disponible
 
-### Partenaires disponibles
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-10-29T02:27:59+01:00",
+  "dataThrough": "2026-10-26",
+  "from": "2026-09-29",
+  "refresh": [
+    {
+      "url": "/articles/voyages/futuroween-2026-futuroscope-billet-programme-enfants/",
+      "title": "Futuroween 2026 au Futuroscope: billet, programme et conseils avec des enfants",
+      "category": "voyages",
+      "publishedAt": "2026-08-25",
+      "ageDays": 65,
+      "peakStart": "2026-10-11",
+      "peakEnd": "2026-10-17",
+      "recentStart": "2026-10-20",
+      "recentEnd": "2026-10-26",
+      "peakImpressions": 662,
+      "recentImpressions": 316,
+      "score": 346,
+      "signal": "uncertain",
+      "commonQueries": 3,
+      "positionDelta": 0.458,
+      "impressionRatio": 0.265,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Chasseneuil-du-Poitou",
+        "department": "Vienne",
+        "region": "Nouvelle-Aquitaine"
+      },
+      "focusQueries": [
+        "futuroscope halloween 2026",
+        "futuroween 2026",
+        "halloween futuroscope 2026"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/carte-avantage-adulte-sncf-quand-est-elle-interessante-avec-des-enfants/",
+      "title": "Carte Avantage Adulte SNCF: quand est-elle intéressante avec des enfants?",
+      "category": "bons-plans",
+      "publishedAt": "2026-08-29",
+      "ageDays": 61,
+      "peakStart": "2026-09-29",
+      "peakEnd": "2026-10-05",
+      "recentStart": "2026-10-20",
+      "recentEnd": "2026-10-26",
+      "peakImpressions": 237,
+      "recentImpressions": 108,
+      "score": 129,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "focusQueries": []
+    },
+    {
+      "url": "/articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/",
+      "title": "Halloween 2026 au Château de Chantilly avec des enfants: ateliers, nocturnes et spectacle",
+      "category": "sorties",
+      "publishedAt": "2026-10-08",
+      "ageDays": 21,
+      "peakStart": "2026-10-11",
+      "peakEnd": "2026-10-17",
+      "recentStart": "2026-10-20",
+      "recentEnd": "2026-10-26",
+      "peakImpressions": 232,
+      "recentImpressions": 50,
+      "score": 127.4,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0.014,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Chantilly",
+        "department": "Oise",
+        "region": "Hauts-de-France"
+      },
+      "focusQueries": [
+        "chateau de chantilly halloween 2026",
+        "chantilly halloween 2026",
+        "château de chantilly halloween 2026"
+      ]
+    },
+    {
+      "url": "/articles/parentalite/petite-section-peut-on-alleger-les-apres-midis-a-l-ecole-maternelle/",
+      "title": "Petite section: peut-on alléger les après-midis à l'école maternelle?",
+      "category": "parentalite",
+      "publishedAt": "2026-08-28",
+      "ageDays": 62,
+      "peakStart": "2026-10-08",
+      "peakEnd": "2026-10-14",
+      "recentStart": "2026-10-20",
+      "recentEnd": "2026-10-26",
+      "peakImpressions": 109,
+      "recentImpressions": 24,
+      "score": 85,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0.818,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "focusQueries": [
+        "amenagement ecole maternelle",
+        "formulaire aménagement temps scolaire petite section",
+        "aménagement temps scolaire"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
+      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
+      "category": "vie-pratique",
+      "publishedAt": "2026-09-28",
+      "ageDays": 31,
+      "peakStart": "2026-09-29",
+      "peakEnd": "2026-10-05",
+      "recentStart": "2026-10-20",
+      "recentEnd": "2026-10-26",
+      "peakImpressions": 128,
+      "recentImpressions": 50,
+      "score": 78,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0.367,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Toulouse",
+        "department": "Haute-Garonne",
+        "region": "Occitanie"
+      },
+      "focusQueries": [
+        "aide a la restauration scolaire haute garonne",
+        "ars cantine haute garonne",
+        "aide cantine scolaire toulouse"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/parking-relais-a-strasbourg-en-famille-comment-choisir-son-p-r-et-son-forfait/",
+      "title": "Parking-relais à Strasbourg en famille: comment choisir son P+R et son forfait",
+      "category": "vie-pratique",
+      "publishedAt": "2026-10-01",
+      "ageDays": 28,
+      "peakStart": "2026-10-04",
+      "peakEnd": "2026-10-10",
+      "recentStart": "2026-10-20",
+      "recentEnd": "2026-10-26",
+      "peakImpressions": 140,
+      "recentImpressions": 62,
+      "score": 72.8,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Strasbourg",
+        "department": "Bas-Rhin",
+        "region": "Grand Est"
+      },
+      "focusQueries": [
+        "parking relais Strasbourg famille",
+        "P+R Strasbourg tarif"
+      ]
+    },
+    {
+      "url": "/articles/voyages/train-de-la-rhune-avec-des-enfants-billets-duree-et-conseils-en-2026/",
+      "title": "Train de la Rhune avec des enfants: billets, durée et conseils en 2026",
+      "category": "voyages",
+      "publishedAt": "2026-09-30",
+      "ageDays": 29,
+      "peakStart": "2026-10-03",
+      "peakEnd": "2026-10-09",
+      "recentStart": "2026-10-20",
+      "recentEnd": "2026-10-26",
+      "peakImpressions": 70,
+      "recentImpressions": 3,
+      "score": 64.767,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Sare",
+        "department": "Pyrénées-Atlantiques",
+        "region": "Nouvelle-Aquitaine"
+      },
+      "focusQueries": [
+        "Train de la Rhune avec enfants",
+        "Train de la Rhune tarifs 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/fete-de-l-automne-2026-a-terra-botanica-journee-ou-terra-nocta-en-famille/",
+      "title": "Fête de l'Automne 2026 à Terra Botanica: animations et tarifs",
+      "category": "evenements",
+      "publishedAt": "2026-10-13",
+      "ageDays": 16,
+      "peakStart": "2026-10-13",
+      "peakEnd": "2026-10-19",
+      "recentStart": "2026-10-20",
+      "recentEnd": "2026-10-26",
+      "peakImpressions": 118,
+      "recentImpressions": 10,
+      "score": 57.6,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Angers",
+        "department": "Maine-et-Loire",
+        "region": "Pays de la Loire"
+      },
+      "focusQueries": [
+        "Fête de l'Automne Terra Botanica 2026",
+        "Terra Botanica Toussaint 2026 enfants",
+        "Terra Nocta octobre 2026 Angers"
+      ]
+    },
+    {
+      "url": "/articles/parentalite/montchavin-les-coches-avec-un-bebe-garderie-horaires-et-sejour-d-hiver/",
+      "title": "Montchavin-Les Coches avec un bébé: garderie, horaires et séjour d'hiver",
+      "category": "parentalite",
+      "publishedAt": "2026-09-26",
+      "ageDays": 33,
+      "peakStart": "2026-09-29",
+      "peakEnd": "2026-10-05",
+      "recentStart": "2026-10-20",
+      "recentEnd": "2026-10-26",
+      "peakImpressions": 64,
+      "recentImpressions": 8,
+      "score": 56,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Montchavin-Les Coches",
+        "department": "Savoie",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "focusQueries": [
+        "Montchavin Les Coches bébé",
+        "garderie Montchavin Les Coches"
+      ]
+    },
+    {
+      "url": "/articles/voyages/week-end-a-etretat-en-famille-organiser-deux-jours-autour-des-falaises/",
+      "title": "Week-end à Étretat en famille: organiser deux jours autour des falaises",
+      "category": "voyages",
+      "publishedAt": "2026-10-02",
+      "ageDays": 27,
+      "peakStart": "2026-10-03",
+      "peakEnd": "2026-10-09",
+      "recentStart": "2026-10-20",
+      "recentEnd": "2026-10-26",
+      "peakImpressions": 61,
+      "recentImpressions": 2,
+      "score": 53.1,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Étretat",
+        "department": "Seine-Maritime",
+        "region": "Normandie"
+      },
+      "focusQueries": [
+        "week-end Étretat en famille",
+        "Étretat avec enfants"
+      ]
+    },
+    {
+      "url": "/articles/parentalite/laep-en-seine-et-marne-ou-aller-et-comment-se-passe-une-premiere-visite/",
+      "title": "LAEP en Seine-et-Marne: où aller et comment se passe une première visite?",
+      "category": "parentalite",
+      "publishedAt": "2026-10-01",
+      "ageDays": 28,
+      "peakStart": "2026-10-02",
+      "peakEnd": "2026-10-08",
+      "recentStart": "2026-10-20",
+      "recentEnd": "2026-10-26",
+      "peakImpressions": 70,
+      "recentImpressions": 16,
+      "score": 50.4,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Meaux",
+        "department": "Seine-et-Marne",
+        "region": "Île-de-France"
+      },
+      "focusQueries": [
+        "LAEP Seine-et-Marne",
+        "lieu accueil enfants parents Meaux"
+      ]
+    },
+    {
+      "url": "/articles/evenements/foire-d-automne-de-saint-jean-du-gard-2026-en-famille-animations-et-conseils/",
+      "title": "Foire d'Automne de Saint-Jean-du-Gard 2026 en famille: animations et conseils",
+      "category": "evenements",
+      "publishedAt": "2026-09-25",
+      "ageDays": 34,
+      "peakStart": "2026-10-07",
+      "peakEnd": "2026-10-13",
+      "recentStart": "2026-10-20",
+      "recentEnd": "2026-10-26",
+      "peakImpressions": 84,
+      "recentImpressions": 35,
+      "score": 49,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Saint-Jean-du-Gard",
+        "department": "Gard",
+        "region": "Occitanie"
+      },
+      "focusQueries": [
+        "Foire d'Automne Saint-Jean-du-Gard 2026",
+        "Saint-Jean-du-Gard en famille"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/bus-gratuit-a-poitiers-pour-les-moins-de-12-ans-quelle-carte-faut-il-prevoir/",
+      "title": "Bus gratuit à Poitiers pour les moins de 12 ans: quelle carte faut-il prévoir ?",
+      "category": "vie-pratique",
+      "publishedAt": "2026-09-09",
+      "ageDays": 50,
+      "peakStart": "2026-10-13",
+      "peakEnd": "2026-10-19",
+      "recentStart": "2026-10-20",
+      "recentEnd": "2026-10-26",
+      "peakImpressions": 113,
+      "recentImpressions": 66,
+      "score": 47,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Poitiers",
+        "department": "Vienne",
+        "region": "Nouvelle-Aquitaine"
+      },
+      "focusQueries": [
+        "bus gratuit Poitiers enfant",
+        "carte Modalis moins de 12 ans"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/pass-sports-citoyen-dans-l-oise-15-a-cumuler-avec-le-pass-sport-en-2026/",
+      "title": "Pass Sports Citoyen dans l'Oise: 15 € à cumuler avec le pass Sport en 2026",
+      "category": "bons-plans",
+      "publishedAt": "2026-09-30",
+      "ageDays": 29,
+      "peakStart": "2026-10-03",
+      "peakEnd": "2026-10-09",
+      "recentStart": "2026-10-20",
+      "recentEnd": "2026-10-26",
+      "peakImpressions": 46,
+      "recentImpressions": 1,
+      "score": 42.63,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Beauvais",
+        "department": "Oise",
+        "region": "Hauts-de-France"
+      },
+      "focusQueries": [
+        "Pass Sports Citoyen Oise",
+        "pass Sport 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/mois-givre-2026-a-belfort-en-famille-ce-qui-est-deja-annonce/",
+      "title": "Mois Givré 2026 à Belfort en famille: ce qui est déjà annoncé",
+      "category": "evenements",
+      "publishedAt": "2026-09-29",
+      "ageDays": 30,
+      "peakStart": "2026-10-01",
+      "peakEnd": "2026-10-07",
+      "recentStart": "2026-10-20",
+      "recentEnd": "2026-10-26",
+      "peakImpressions": 48,
+      "recentImpressions": 10,
+      "score": 38,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Belfort",
+        "department": "Territoire de Belfort",
+        "region": "Bourgogne-Franche-Comté"
+      },
+      "focusQueries": [
+        "Mois Givré Belfort 2026",
+        "Belfort Noël famille"
+      ]
+    }
+  ],
+  "strongPages": [
+    {
+      "url": "/articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/",
+      "title": "Pierrefonds à la Toussaint 2026: atelier lanterne et soirée d'Halloween",
+      "category": "evenements",
+      "recentImpressions": 299,
+      "recentClicks": 12,
+      "recentPosition": 6.856,
+      "retention": 1.503
+    },
+    {
+      "url": "/articles/sorties/parc-en-folie-2026-a-rennes-billet-en-ligne-ou-sur-place-quelle-formule-choisir-en-famille/",
+      "title": "Parc en Folie 2026 à Rennes: tarifs, espace 0-3 ans et infos pratiques en famille",
+      "category": "sorties",
+      "recentImpressions": 438,
+      "recentClicks": 11,
+      "recentPosition": 6.221,
+      "retention": 1.115
+    },
+    {
+      "url": "/articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/",
+      "title": "Où manger des fouées en famille autour de Saumur ?",
+      "category": "cuisine",
+      "recentImpressions": 278,
+      "recentClicks": 5,
+      "recentPosition": 10.514,
+      "retention": 1.264
+    },
+    {
+      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
+      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
+      "category": "voyages",
+      "recentImpressions": 2675,
+      "recentClicks": 4,
+      "recentPosition": 8.811,
+      "retention": 1.451
+    },
+    {
+      "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
+      "title": "Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite",
+      "category": "sorties",
+      "recentImpressions": 301,
+      "recentClicks": 4,
+      "recentPosition": 7.937,
+      "retention": 1.536
+    },
+    {
+      "url": "/articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/",
+      "title": "Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers",
+      "category": "vie-pratique",
+      "recentImpressions": 69,
+      "recentClicks": 4,
+      "recentPosition": 6.029,
+      "retention": 1.045
+    },
+    {
+      "url": "/articles/evenements/halloween-au-chateau-de-villersexel-2026-en-famille-quelle-experience-choisir/",
+      "title": "Halloween 2026 au Château de Villersexel: parc gratuit, visites et âge minimum",
+      "category": "evenements",
+      "recentImpressions": 214,
+      "recentClicks": 3,
+      "recentPosition": 9.21,
+      "retention": 0.656
+    },
+    {
+      "url": "/articles/sorties/cosquer-mediterranee-avec-des-enfants-age-poussette-tarifs/",
+      "title": "Cosquer Méditerranée avec des enfants: que peut-on visiter selon leur âge?",
+      "category": "sorties",
+      "recentImpressions": 80,
+      "recentClicks": 3,
+      "recentPosition": 6.638,
+      "retention": 1.951
+    },
+    {
+      "url": "/articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/",
+      "title": "Recycleries autour de Chartres: où donner et acheter d'occasion ?",
+      "category": "maison",
+      "recentImpressions": 109,
+      "recentClicks": 2,
+      "recentPosition": 8.541,
+      "retention": 0.965
+    },
+    {
+      "url": "/articles/maison/encombrants-a-bourges-quand-sortir-meubles-et-gros-objets/",
+      "title": "Encombrants à Bourges: quand sortir meubles et gros objets",
+      "category": "maison",
+      "recentImpressions": 104,
+      "recentClicks": 2,
+      "recentPosition": 7.087,
+      "retention": 1.072
+    }
+  ],
+  "excluded": {
+    "expired": 116,
+    "cooling": 6
+  },
+  "warnings": [
+    "GSC recherche web : 8050 lignes sur quatre semaines, réponses complètes (1611, 1751, 2115, 2573).",
+    "Catalogue Radar : 839 articles et 122 entrées d'historique ; exclusions selon les métadonnées disponibles.",
+    "Diagnostics de requêtes effectués sur 5 candidats ; certaines requêtes peuvent être masquées par GSC.",
+    "Les baisses d'impressions ne prouvent ni désindexation ni perte de position."
+  ]
+}
 
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
+## Module Radar embarqué
 
-### Logique d'usage
+Le code ci-dessous est fourni directement pour les calculs Radar nécessaires à ce passage. Ne va pas le relire dans un autre fichier.
 
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+```javascript
+// Pure JavaScript: usable in Node or a connector orchestration runtime.
+const DAY = 86400000;
+const dayNumber = (date) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date ?? ""))
+    throw new Error("Date GSC invalide.");
+  const value = Date.parse(`${date}T00:00:00Z`);
+  if (
+    !Number.isFinite(value) ||
+    new Date(value).toISOString().slice(0, 10) !== date
+  )
+    throw new Error("Date GSC invalide.");
+  return value / DAY;
+};
+const isoDay = (value) => new Date(value * DAY).toISOString().slice(0, 10);
+const round = (value) => Math.round(value * 1000) / 1000;
+export function unwrapRows(response) {
+  const value = response?.structuredContent ?? response;
+  if (response?.isError || (value.status && value.status !== "done"))
+    throw new Error("GSC indisponible ou traitement incomplet.");
+  const rows = Array.isArray(value) ? value : value.data;
+  if (
+    !Array.isArray(rows) ||
+    value.truncated === true ||
+    value.has_more === true ||
+    (value.total_rows !== undefined && value.total_rows !== rows.length)
+  )
+    throw new Error("Réponse GSC absente ou tronquée.");
+  // Conservative per-response threshold, not a claimed Windsor plan limit.
+  // Concatenated arrays are allowed after each response has been checked.
+  if (!Array.isArray(value) && rows.length >= 5000)
+    throw new Error(
+      "Réponse GSC potentiellement plafonnée; découper la période.",
+    );
+  if (rows.some((row) => row.search_type && row.search_type !== "web"))
+    throw new Error(
+      "Le périmètre Radar doit contenir seulement la recherche web.",
+    );
+  return rows;
+}
+export function canonicalPage(value) {
+  // Some connector runtimes do not expose the URL global.
+  if (typeof value !== "string") return undefined;
+  const path = value.replace(/^https?:\/\/(?:www\.)?fam-space\.fr(?=\/)/i, "");
+  if (!/^\/articles\/[^/?#]+\/[^/?#]+\/$/.test(path)) return undefined;
+  if (path.split("/").some((part) => part === "." || part === ".."))
+    return undefined;
+  return path;
+}
+const metric = (row, name) => {
+  const value = Number(row[name]);
+  if (
+    row[name] === null ||
+    row[name] === undefined ||
+    !Number.isFinite(value) ||
+    value < 0
+  )
+    throw new Error(`Métrique GSC invalide: ${name}.`);
+  return value;
+};
+function addMetric(target, row) {
+  const impressions = metric(row, "impressions");
+  target.impressions += impressions;
+  target.clicks += metric(row, "clicks");
+  target.positionSum += impressions ? metric(row, "position") * impressions : 0;
+}
+const empty = () => ({ impressions: 0, clicks: 0, positionSum: 0 });
+const view = (sum) => ({
+  impressions: round(sum.impressions),
+  clicks: round(sum.clicks),
+  impressionsPerDay: round(sum.impressions / 7),
+  position: sum.impressions ? round(sum.positionSum / sum.impressions) : null,
+});
+function windowSum(days, start, end) {
+  const result = empty();
+  for (let date = start; date <= end; date++) {
+    const row = days.get(date);
+    if (row) for (const key of Object.keys(result)) result[key] += row[key];
+  }
+  return result;
+}
+export function buildRadarShortlist(
+  response,
+  catalog,
+  {
+    now = new Date().toISOString(),
+    siteRows,
+    from,
+    limit = 15,
+    history = [],
+  } = {},
+) {
+  const rows = unwrapRows(response);
+  const site = siteRows ? unwrapRows(siteRows) : rows;
+  if (!site.length)
+    throw new Error("GSC ne retourne aucune journée consolidée.");
+  const siteDays = site.map((row) => dayNumber(row.date));
+  const end = siteDays.reduce((max, date) => Math.max(max, date), -Infinity);
+  const observedStart = siteDays.reduce(
+    (min, date) => Math.min(min, date),
+    Infinity,
+  );
+  const today = dayNumber(now.slice(0, 10));
+  if (end > today || today - end > 7)
+    throw new Error(
+      "Données GSC trop anciennes ou datées dans le futur; aucun export historique de secours.",
+    );
+  // Never create comparison weeks before the first observed site day.
+  const start = from ? Math.max(dayNumber(from), observedStart) : observedStart;
+  if (!Number.isFinite(start) || end - start < 13)
+    throw new Error("Au moins 14 jours GSC sont nécessaires.");
+  const byPage = new Map();
+  for (const row of rows) {
+    const page = canonicalPage(row.page),
+      date = dayNumber(row.date);
+    if (!page || date < start || date > end) continue;
+    if (!byPage.has(page)) byPage.set(page, new Map());
+    const days = byPage.get(page);
+    if (!days.has(date)) days.set(date, empty());
+    addMetric(days.get(date), row);
+  }
+  const entries = [];
+  for (const article of catalog) {
+    const page = canonicalPage(article.url);
+    if (
+      !page ||
+      article.status === "draft" ||
+      Date.parse(article.publishedAt) > Date.parse(now)
+    )
+      continue;
+    const days = byPage.get(page) ?? new Map();
+    const publishedDay = dayNumber(article.publishedAt.slice(0, 10));
+    const firstDay = Math.max(start, publishedDay);
+    if (end - firstDay < 13) continue;
+    const recent = windowSum(days, end - 6, end);
+    let peak = empty(),
+      peakStart = firstDay;
+    // The reference week ends before the recent week: no overlapping comparison.
+    for (let first = firstDay; first + 6 < end - 6; first++) {
+      const sum = windowSum(days, first, first + 6);
+      if (sum.impressions > peak.impressions) {
+        peak = sum;
+        peakStart = first;
+      }
+    }
+    const total = windowSum(days, firstDay, end);
+    const expired = Boolean(
+      article.eventEndsAt && article.eventEndsAt < now.slice(0, 10),
+    );
+    const reviewDue = Boolean(
+      article.reviewAt && article.reviewAt <= now.slice(0, 10),
+    );
+    const lastRefresh = history
+      .filter((item) => item.url === page && item.mode === "refresh")
+      .map((item) => item.publishedAt)
+      .sort()
+      .at(-1);
+    const cooling = Boolean(
+      lastRefresh && Date.parse(now) - Date.parse(lastRefresh) < 14 * DAY,
+    );
+    const ageDays = today - publishedDay;
+    const retention = peak.impressions
+      ? recent.impressions / peak.impressions
+      : 1;
+    const maturity = reviewDue ? 1 : Math.min(1, Math.max(0, ageDays) / 30);
+    const evidence =
+      Math.min(1, peak.impressions / 35) * Math.min(1, total.impressions / 50);
+    const score =
+      expired || cooling
+        ? 0
+        : Math.max(0, peak.impressions - recent.impressions) *
+            evidence *
+            maturity +
+          (reviewDue ? 35 : 0);
+    entries.push({
+      url: page,
+      title: article.title,
+      category: article.category,
+      location: article.location,
+      keywords: article.keywords ?? article.topic?.keywords ?? [],
+      publishedAt: article.publishedAt,
+      eventEndsAt: article.eventEndsAt,
+      reviewAt: article.reviewAt,
+      expired,
+      cooling,
+      reviewDue,
+      ageDays,
+      peakStart: isoDay(peakStart),
+      peakEnd: isoDay(peakStart + 6),
+      recentStart: isoDay(end - 6),
+      recentEnd: isoDay(end),
+      peak: view(peak),
+      recent: view(recent),
+      retention: round(retention),
+      score: round(score),
+      signal: "needs_query_check",
+    });
+  }
+  return {
+    schemaVersion: 1,
+    retrievedAt: now,
+    dataThrough: isoDay(end),
+    from: isoDay(start),
+    caveat:
+      "Les lignes absentes valent zéro dans les données retournées. GSC peut masquer des requêtes; les signaux ne prouvent ni désindexation ni causalité.",
+    refresh: entries
+      .filter((item) => item.score > 0)
+      .sort((a, b) => b.score - a.score || a.url.localeCompare(b.url))
+      .slice(0, limit),
+    strongPages: entries
+      .filter(
+        (item) =>
+          !item.expired &&
+          item.recent.impressions >= 35 &&
+          item.retention >= 0.5,
+      )
+      .sort(
+        (a, b) =>
+          b.recent.clicks - a.recent.clicks ||
+          b.recent.impressions - a.recent.impressions ||
+          a.url.localeCompare(b.url),
+      )
+      .slice(0, 10),
+    excluded: {
+      expired: entries.filter((item) => item.expired).length,
+      cooling: entries.filter((item) => item.cooling).length,
+    },
+  };
+}
+export function diagnoseQueries(peakResponse, recentResponse) {
+  const aggregate = (response) => {
+    const result = new Map();
+    for (const row of unwrapRows(response)) {
+      if (typeof row.query !== "string")
+        throw new Error("Requête GSC manquante.");
+      if (!result.has(row.query)) result.set(row.query, empty());
+      addMetric(result.get(row.query), row);
+    }
+    return result;
+  };
+  const peak = aggregate(peakResponse),
+    recent = aggregate(recentResponse);
+  const common = [...peak.keys()].filter(
+    (query) =>
+      peak.get(query).impressions >= 10 &&
+      (recent.get(query)?.impressions ?? 0) >= 3,
+  );
+  let weight = 0,
+    change = 0;
+  for (const query of common) {
+    const first = peak.get(query),
+      last = recent.get(query);
+    const w = Math.min(first.impressions, last.impressions);
+    weight += w;
+    change +=
+      w *
+      (last.positionSum / last.impressions -
+        first.positionSum / first.impressions);
+  }
+  const delta = weight ? change / weight : null;
+  const total = (values) =>
+    [...values.values()].reduce((sum, item) => sum + item.impressions, 0);
+  const ratio = total(peak) ? total(recent) / total(peak) : null;
+  return {
+    signal:
+      delta !== null && delta >= 3
+        ? "rank_loss"
+        : delta !== null &&
+            Math.abs(delta) <= 2 &&
+            ratio !== null &&
+            ratio <= 0.25
+          ? "coverage_loss"
+          : "uncertain",
+    commonQueries: common.length,
+    positionDelta: delta === null ? null : round(delta),
+    impressionRatio: ratio === null ? null : round(ratio),
+    queries: [...new Set([...peak.keys(), ...recent.keys()])]
+      .map((query) => ({
+        query,
+        peak: view(peak.get(query) ?? empty()),
+        recent: view(recent.get(query) ?? empty()),
+      }))
+      .sort((a, b) => b.peak.impressions - a.peak.impressions)
+      .slice(0, 20),
+    caveat:
+      "coverage_loss désigne une baisse d'exposition observée, pas une preuve de désindexation. Les requêtes masquées et la saisonnalité limitent le diagnostic.",
+  };
+}
+const STOP = new Set(
+  "avec pour dans sans famille familles enfant enfants tarif tarifs duree conseil conseils visite visiter billet billets activite activites sortie sorties evenement evenements preparation pratique pratiques autour leur leurs aussi quoi comment quel quelle quelles quels quand faire partir 2026 2027".split(
+    " ",
+  ),
+);
+const words = (value) =>
+  new Set(
+    String(value)
+      .replace(/œ/g, "oe")
+      .normalize("NFD")
+      .replace(/\p{Diacritic}/gu, "")
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((word) => word.length >= 3 && !STOP.has(word)),
+  );
+export function probableDuplicates(subject, catalog, limit = 5) {
+  const terms = words(
+    [
+      subject.title,
+      ...(subject.keywords ?? subject.topic?.keywords ?? []),
+    ].join(" "),
+  );
+  return catalog
+    .filter(
+      (article) => canonicalPage(article.url) !== canonicalPage(subject.url),
+    )
+    .map((article) => {
+      const candidate = words(
+        [
+          article.title,
+          ...(article.keywords ?? article.topic?.keywords ?? []),
+        ].join(" "),
+      );
+      const shared = [...terms].filter((word) => candidate.has(word));
+      const sameCity = Boolean(
+        subject.location?.city &&
+          subject.location.city === article.location?.city,
+      );
+      const sameDepartment = Boolean(
+        subject.location?.department &&
+          subject.location.department === article.location?.department,
+      );
+      return {
+        url: article.url,
+        title: article.title,
+        location: article.location,
+        sharedTerms: shared,
+        score:
+          shared.length / Math.max(1, new Set([...terms, ...candidate]).size) +
+          (sameCity ? 0.2 : sameDepartment ? 0.1 : 0),
+      };
+    })
+    .filter(
+      (item) =>
+        item.sharedTerms.length >= 2 ||
+        (item.sharedTerms.length === 1 && item.sharedTerms[0].length >= 6),
+    )
+    .sort((a, b) => b.score - a.score || a.url.localeCompare(b.url))
+    .slice(0, limit);
+}
+```
 
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+## Résultat attendu
 
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-## Candidat validé de la phase précédente
-
----
-title: "Festival BD Colomiers 2026 en famille : quel jour choisir et combien ça coûte ?"
-subtitle: "Du 20 au 22 novembre : ateliers, lectures et spectacles selon l'âge des enfants"
-summary: "Vendredi pour les lectures en pyjama, samedi pour les ateliers et une lecture dès 6 ans, dimanche pour les jeux en ville et les séances des plus jeunes : les horaires, lieux et tarifs pour organiser la visite."
-category: evenements
-location:
-  city: Colomiers
-  department: Haute-Garonne
-  region: Occitanie
-keywords:
-  - festival BD Colomiers 2026
-  - festival BD Colomiers enfants
-  - festival BD Colomiers tarifs 2026
-sources:
-  - title: Festival BD Colomiers — édition 2026
-    url: https://www.bdcolomiers.com/les-evenements/le-festival
-  - title: Festival BD Colomiers — tarifs, horaires et accès
-    url: https://www.bdcolomiers.com/les-evenements/infos-pratiques
-  - title: Festival BD Colomiers — animations jeunesse
-    url: https://www.bdcolomiers.com/les-evenements/animations-et-ateliers/animations-jeunesse
-  - title: Festival BD Colomiers — animations tout public
-    url: https://www.bdcolomiers.com/les-evenements/animations-et-ateliers/animations-tout-public
-  - title: Festival BD Colomiers — Nouvelle vague, lectures live
-    url: https://www.bdcolomiers.com/les-evenements/spectacles-et-evenements/nouvelle-vague-lectures-live
-  - title: Cinéma Véo Grand Central — séances du festival BD 2026
-    url: https://colomiers.veocinemas.fr/events/84950-festival-bd-colomiers-2026-or-avant-premieres-rencontres-seances-speciales/
-radar:
-  schemaVersion: 1
-  phase: 2
-  mode: opportunity
-  slug: festival-bd-colomiers-2026-en-famille-quel-jour-choisir-et-combien-prevoir
-  decision: Choisir le jour et les activités selon l'âge des enfants, puis prévoir le budget réel entre Hall Comminges, ateliers, spectacles et cinéma.
-  affiliationPotential: Billets du festival vendus sur place, sans partenaire billetterie vérifié. Appart'City Classic Toulouse Colomiers vérifié sur Booking.com pour une famille venant passer le week-end (appartements avec kitchenette, couchages familiaux et lit bébé sur demande) ; disponibilité du 20 au 22 novembre non confirmée.
-  gsc:
-    retrievedAt: 2026-10-29T02:27:59+01:00
-    dataThrough: 2026-10-26
-    signal: seasonal_opportunity
-    basis: Opportunité saisonnière vérifiée via « Festival BD Colomiers — édition 2026 »; aucune page forte GSC n'est requise.
-eventEndsAt: 2026-11-22
----
-
-Du **vendredi 20 au dimanche 22 novembre 2026**, le Festival BD Colomiers accueille les familles autour des bandes dessinées, des ateliers créatifs, des lectures et du cinéma. Pour une première visite avec des enfants, **le samedi offre le plus de choix**. Le vendredi convient à une courte sortie après l'école ; le dimanche ajoute un parcours de jeux dans la ville et des films pour les plus jeunes. Attention : **l'entrée au Hall Comminges est payante pour certains adultes**, mais les expositions et plusieurs animations sont en accès libre.
-
-## Vendredi, samedi ou dimanche : que choisir avec les enfants ?
-
-**Vendredi 20 novembre : une sortie courte en fin de journée.** Au Pavillon blanc Henri-Molina, les ateliers de portraits mêlant photographie et dessin se déroulent de **16 h à 18 h 30**. À **18 h**, la **Pyjama Party** invite les familles à écouter des albums et comptines : pyjamas et doudous sont les bienvenus. Le Hall Comminges ouvre de **14 h à 19 h**. C'est le choix le plus simple pour profiter d'une animation sans consacrer toute une journée au festival.
-
-**Samedi 21 novembre : le plus polyvalent.** Au Pavillon blanc, les lectures **« Raconte-moi »** ont lieu de **11 h à 11 h 30** et de **16 h à 16 h 30**. Les ateliers créatifs sont proposés de **10 h à 12 h** et de **14 h à 18 h**. Un atelier photo avec l'association Déclic est annoncé à **13 h 30**, et un atelier de dessin et photo avec **Anne Letuffe**, pensé pour les tout-petits et leurs accompagnants, à **15 h**. À **17 h**, les lectures BD live **« Nouvelle vague »** au Chapikioske s'adressent aux enfants **dès 6 ans** : séance d'une heure, **2 € par personne**. Le Hall ferme à **20 h**, ce qui laisse du temps aux amateurs de BD pour parcourir les stands.
-
-**Dimanche 22 novembre : lectures, dessins et jeux en ville.** Les lectures et ateliers du Pavillon blanc reprennent aux mêmes horaires que le samedi, dont l'atelier d'Anne Letuffe à **15 h**. De **11 h à 17 h**, la **« Coupe du monde de Colomiers »** propose un parcours participatif mêlant football, défis et bande dessinée : le kit est à récupérer au point info du festival. La lecture live de **17 h** est cette fois destinée aux **12 ans et plus** ; ne la choisissez pas pour un enfant de 6 ans en pensant retrouver le programme du samedi.
-
-Les ateliers jeunesse du Pavillon blanc sont **en accès libre dans la limite des places disponibles**, avec matériel fourni. L'accès libre ne garantit donc pas de pouvoir participer à l'atelier voulu. Retrouvez les détails sur le [programme officiel des animations jeunesse](https://www.bdcolomiers.com/les-evenements/animations-et-ateliers/animations-jeunesse).
-
-## Combien prévoir pour une famille ?
-
-La [billetterie officielle](https://www.bdcolomiers.com/les-evenements/infos-pratiques) distingue plusieurs dépenses :
-
-- **Hall Comminges** (éditeurs, stands et dédicaces) : **3 € par adulte**, gratuit pour les **moins de 18 ans**, les étudiants et les titulaires de la **carte Pastel-Tisséo**. Le **pass week-end à 5 €** donne accès au Hall pendant les trois jours. Achat uniquement sur place.
-- **Expositions** : accès libre.
-- **Spectacles au Chapikioske** : **2 € par personne** ; vente des billets sur place à partir de **30 minutes avant** la représentation.
-- **Projections au cinéma Véo Grand Central** : **6,50 €** au tarif normal et **5 € pour les moins de 14 ans**. Réservation distincte auprès du cinéma.
-
-Par exemple, **deux adultes et deux enfants de 8 et 12 ans** paient **6 €** pour entrer une journée au Hall, sans spectacle ni cinéma. S'ils assistent tous les quatre à une lecture live à 2 €, leur budget devient **14 €**. Pour deux adultes qui souhaitent visiter le Hall sur deux jours, deux pass week-end coûtent **10 €**, contre 12 € avec quatre billets à la journée.
-
-Il est aussi possible de profiter des expositions et animations en accès libre **sans acheter de billet pour le Hall**. Prévoyez un supplément seulement si vous souhaitez un spectacle, une projection, des achats de livres ou un repas.
-
-## Et si les enfants préfèrent le cinéma ?
-
-Le **Véo Grand Central** propose des séances spécifiques pendant le festival. Parmi les choix adaptés aux familles figurent **« À la poursuite de l'Affreunard »**, samedi à **11 h**, annoncé dès **4 ans**, et **« Le Noël d'Ernest et Célestine »**, dimanche à **16 h**, annoncé dès **3 ans**. Ces séances peuvent convenir à un enfant qui préfère rester assis devant un film plutôt que multiplier les ateliers.
-
-Vérifiez la séance et réservez directement sur le [programme 2026 du cinéma Véo Grand Central](https://colomiers.veocinemas.fr/events/84950-festival-bd-colomiers-2026-or-avant-premieres-rencontres-seances-speciales/) : le billet du Hall Comminges ne comprend pas le cinéma.
-
-## Où aller et comment venir depuis Toulouse ?
-
-Le festival se répartit entre plusieurs lieux. Le **Hall Comminges**, au **6 place des Fêtes**, rassemble les stands d'éditeurs et les dédicaces. Le **Pavillon blanc Henri-Molina**, au **4 place Alex-Raymond**, accueille les ateliers et lectures jeunesse. Le **Chapikioske**, sur cette même place, reçoit les spectacles. Le **cinéma Véo Grand Central** se trouve au **10 allée du Rouergue**. Ne partez pas du principe que toutes les animations ont lieu au Hall.
-
-Le Pavillon blanc ouvre **vendredi de 13 h à 19 h**, puis **samedi et dimanche de 10 h à 19 h**. Pour venir de Toulouse en transports, l'organisateur indique le **métro A puis le bus L2**, ou le **TER Toulouse–Auch jusqu'à la gare de Colomiers**. Vérifiez les correspondances sur [Tisséo](https://www.tisseo.fr/plan-interactif) avant le départ.
-
-Avec une poussette, choisissez un ou deux lieux prioritaires plutôt qu'un programme trop chargé : les activités sont réparties dans le centre-ville. Le festival est labellisé **Villes pour Tous**, mais les conditions précises d'accès en poussette, les tables à langer et la possibilité de réchauffer un repas bébé ne sont pas détaillées dans les informations officielles consultées. Prévoyez donc le nécessaire pour les changes et les repas, ainsi qu'une pause entre deux activités.
-
-Pour déjeuner, l'organisateur signale des restaurants accessibles à pied et trois food trucks, avec des options végétariennes et véganes. Les menus enfants et les équipements bébé ne sont pas confirmés : si ces points sont indispensables, mieux vaut les demander à l'établissement choisi.
-
-## Dormir à Colomiers pour prolonger le week-end
-
-Pour les familles venant de loin, l'[Appart'City Classic Toulouse Colomiers sur Booking.com](https://www.booking.com/hotel/fr/my-suitevillage-colomiers.fr.html) est une option à examiner : cette résidence propose des appartements, dont des configurations familiales, pratiques pour garder un rythme souple avec des enfants. Vérifiez la capacité réelle, les équipements nécessaires, le trajet jusqu'aux lieux du festival et le prix total pour les nuits souhaitées. **Aucune disponibilité ni aucun tarif pour le week-end du 20 au 22 novembre n'est confirmé ici.**
-
-Pour ajuster votre programme avant de partir, consultez la [page officielle du Festival BD Colomiers 2026](https://www.bdcolomiers.com/les-evenements/le-festival) : les ateliers ont des places limitées et chaque lieu suit ses propres horaires.
-
-## Contexte éditorial ciblé pour le maillage et les doublons
-
-### Articles proches préparés mécaniquement
-
-- /articles/evenements/festival-cite-en-jeux-2026-a-colomiers-quel-jour-choisir-avec-des-enfants/ | Festival Cité en Jeux 2026 à Colomiers: quel jour choisir avec des enfants | evenements | Colomiers, Haute-Garonne, Occitanie
-- /articles/evenements/hop-hop-hop-festival-2026-en-famille-quel-jour-choisir/ | Hop Hop Hop Festival 2026 en famille: quel jour choisir? | evenements | Saint-Cirgues, Lot, Occitanie
-- /articles/evenements/marche-de-noel-de-cusset-2026-en-famille-quel-jour-choisir/ | Marché de Noël de Cusset 2026 en famille: quel jour choisir? | evenements | Cusset, Allier, Auvergne-Rhône-Alpes
-- /articles/bons-plans/filitosa-en-famille-quel-billet-choisir-et-combien-prevoir/ | Filitosa en famille: quel billet choisir et combien prévoir? | bons-plans | Sollacaro, Corse-du-Sud, Corse
-- /articles/evenements/habits-de-lumiere-a-epernay-avec-des-enfants-quel-jour-choisir-en-2026/ | Habits de Lumière à Épernay avec des enfants: quel jour choisir en 2026? | evenements | Épernay, Marne, Grand Est
-- /articles/activites/accrocamp-toulouse-avec-des-enfants-quel-pass-choisir-selon-leur-taille/ | AccroCamp Toulouse avec des enfants: quel pass choisir selon leur taille? | activites | Toulouse, Haute-Garonne, Occitanie
-- /articles/sorties/chateau-de-kerjean-avec-des-enfants-combien-de-temps-prevoir-et-quel-billet-choisir/ | Château de Kerjean avec des enfants: combien de temps prévoir et quel billet choisir? | sorties | Saint-Vougay, Finistère, Bretagne
-- /articles/bons-plans/musee-de-gajac-a-villeneuve-sur-lot-combien-coute-vraiment-une-visite-en-famille/ | Musée de Gajac à Villeneuve-sur-Lot: combien coûte vraiment une visite en famille? | bons-plans | Villeneuve-sur-Lot, Lot-et-Garonne, Nouvelle-Aquitaine
-- /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | Noël à Toulouse 2026 en famille: marchés, Père Noël et patinoire | evenements | Toulouse, Haute-Garonne, Occitanie
-- /articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/ | Déchets verts à Toulouse Métropole en 2027: collecte, broyage et compostage | maison | Toulouse, Haute-Garonne, Occitanie
-- /articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/ | Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates | vie-pratique | Toulouse, Haute-Garonne, Occitanie
-- /articles/voyages/saint-bertrand-de-comminges-avec-des-enfants-village-seul-ou-grande-boucle-a-pied/ | Saint-Bertrand-de-Comminges avec des enfants: village seul ou grande boucle à pied? | voyages | Saint-Bertrand-de-Comminges, Haute-Garonne, Occitanie
-- /articles/sorties/aeroscopia-a-blagnac-en-famille-tarifs-avions-et-conseils-de-visite/ | Aeroscopia à Blagnac en famille: tarifs, avions et conseils de visite | sorties | Blagnac, Haute-Garonne, Occitanie
-- /articles/bons-plans/pass-explorateurs-toulouse-en-famille-quand-est-il-vraiment-rentable/ | Pass Explorateurs Toulouse en famille: quand est-il vraiment rentable? | bons-plans | Toulouse, Haute-Garonne, Occitanie
-- /articles/maison/moustique-tigre-en-haute-garonne-proteger-la-maison-et-le-jardin/ | Moustique tigre en Haute-Garonne: protéger la maison et le jardin | maison | Toulouse, Haute-Garonne, Occitanie
-- /articles/voyages/cite-de-l-espace-a-toulouse-en-famille-en-2026-une-journee-suffit-elle-et-ou-dormir/ | Cité de l'espace à Toulouse en famille en 2026: une journée suffit-elle et où dormir | voyages | Toulouse, Haute-Garonne, Occitanie
-- /articles/sorties/un-ete-au-bord-du-lac-toulouse-2026-famille/ | Un été au bord du lac à Toulouse: activités gratuites en famille à la Reynerie | sorties | Toulouse, Haute-Garonne, Occitanie
-- /articles/evenements/marche-de-noel-de-clermont-ferrand-2026-en-famille-horaires-animations-et-acces/ | Marché de Noël de Clermont-Ferrand 2026 en famille: horaires, animations et accès | evenements | Clermont-Ferrand, Puy-de-Dôme, Auvergne-Rhône-Alpes
-- /articles/evenements/marche-de-noel-de-montpellier-2026-en-famille-dates-fermetures-et-attractions/ | Marché de Noël de Montpellier 2026 en famille: horaires, jours fermés et manèges | evenements | Montpellier, Hérault, Occitanie
-- /articles/evenements/noel-des-alpes-2026-a-annecy-en-famille-marche-patinoire-ou-illuminations/ | Noël des Alpes 2026 à Annecy en famille: marché, patinoire et illuminations | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
-- /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
-- /articles/evenements/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/ | Marchés de Noël de Tours 2026 en famille: lieux, dates et budget | evenements | Tours, Indre-et-Loire, Centre-Val de Loire
-
-### Historique Radar lié
-
-- opportunity | /articles/evenements/marche-de-noel-de-clermont-ferrand-2026-en-famille-horaires-animations-et-acces/ | 2026-10-29T11:32:05.289Z
-- opportunity | /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | 2026-10-29T00:28:19.695Z
-- opportunity | /articles/evenements/marche-de-noel-de-montpellier-2026-en-famille-dates-fermetures-et-attractions/ | 2026-10-29T08:29:37.767Z
-- opportunity | /articles/evenements/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/ | 2026-10-28T21:29:26.054Z
-- opportunity | /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | 2026-10-24T23:34:36.270Z
-- opportunity | /articles/evenements/noel-des-alpes-2026-a-annecy-en-famille-marche-patinoire-ou-illuminations/ | 2026-10-29T05:28:53.475Z
-
-### Phases 2 et 3
-
-Écris `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet de l'article. **N'ajoute aucun bloc `radar`.** Le script reprend mécaniquement le bloc Radar de la phase précédente et incrémente la phase.
-
-Pour un refresh, le script conserve de lui-même les champs protégés de l'article source. Pour une opportunity, il conserve la catégorie, le territoire et le slug choisis en phase 1.
-
-En phase 3 seulement, ajoute `radarReview` dans la requête avec `summary`, `sources` et, pour un refresh, `substantialChanges` et `regressionCheck`.
-
-## Écriture autorisée
-
-N'effectue aucune plomberie Git. Ne crée, ne nomme et ne supprime aucune branche Radar; ne choisis aucun SHA; ne modifie aucun fichier de DevWeb13/fam-space-qwik.
-
-Écris uniquement radar-request.md sur la branche main de DevWeb13/fam-space-actions-bridge selon le format fourni dans ce runtime. Le workflow GitHub se charge du reste. Une fois cette requête écrite, termine le passage.
+Actualise uniquement radar-gsc-snapshot.json sur la branche main de DevWeb13/fam-space-actions-bridge avec le snapshot compact décrit ci-dessus, puis termine ce passage. Ne choisis aucune mission Radar dans la même exécution et ne modifie aucun autre fichier interne.
