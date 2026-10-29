@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261029-0603-sujet-preparer-un-premier-sejour-aux-sports-d-hiver-en-famille-a-super",
+  "lastProcessedCommit": "aa32e9d9ef58c4b8d4e90fb491aa4a115e9320a1"
 }
