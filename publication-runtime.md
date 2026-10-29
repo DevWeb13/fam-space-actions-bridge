@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,94 +14,137 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Vendée
 - Région: Pays de la Loire
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Sujet :** aménager et préparer un jardin familial en Vendée à l'automne, en tenant compte du terrain et du climat local.
-
-**Titre de travail :** « Jardin familial en Vendée : que planter et préparer à l’automne ? »
-
-**Angle :** aider les familles à faire des choix durables et simples dès l'automne : haies, coin de jeux et de découverte pour les enfants, paillage, compost, plantations et arrosage économe. Les besoins ne sont pas identiques sur le littoral exposé aux embruns, dans le bocage, la plaine ou les marais. Il s'agit d'un guide pratique pour le jardin de la maison, pas d'un guide de visites de jardins ni de locations de vacances.
-
-## Besoin du lecteur
-
-Comprendre comment préparer son jardin avant l'hiver, choisir des végétaux adaptés à son secteur de Vendée et organiser un extérieur agréable pour les enfants sans multiplier l'entretien, l'arrosage ou les achats. Savoir quoi faire à l'automne, quoi reporter au printemps et où trouver des références locales fiables.
-
-## Valeur éditoriale
-
-- **Une vraie différence locale :** le CAUE de Vendée publie cinq carnets de plantations distincts (bocage, plaine, littoral, marais breton, marais poitevin). Partir de cette distinction plutôt que proposer une liste universelle de plantes.
-- **Des gestes immédiatement utiles :** plantations automnales, haie diversifiée contre le vent, paillage avec les feuilles et broyats du jardin, compostage des déchets de cuisine, arrosage raisonné pour la saison chaude suivante. Vendée Transitions a actualisé ses conseils le 30 juin 2026.
-- **Une approche familiale :** distinguer l'espace de jeux, les zones plantées et les refuges de biodiversité ; proposer de petites activités d'observation et de jardinage avec les enfants, sans encourager à goûter des baies sauvages (certaines sont toxiques).
-- **Une synthèse originale :** transformer les ressources séparées du CAUE, de Vendée Eau et de Trivalis en parcours concret « observer son terrain → choisir selon son secteur → préparer le sol → planter → entretenir ». Les pages existantes donnent les bases, mais pas ce parcours familial transversal.
-- Sujet pérenne et de saison au 29 octobre 2026, sans fermeture ni événement ponctuel. Aucun doublon avec les sept articles récents fournis.
-
-## Affiliation
-
-**Aucune offre partenaire pertinente confirmée.** Vérification des catégories de partenaires fournies : Booking, Expedia, Agoda, Hotels et Abritel/Vrbo concernent l'hébergement ; GetYourGuide, Tiqets, Klook, WeGoTrip, KKday et Go City les visites ; les autres partenaires concernent les transports ou la consigne. Aucun ne propose une offre vérifiée de végétaux, de paillage ou de matériel utile à l'aménagement du jardin familial. Des locations de maisons vendéennes existent sur Abritel (exemple vérifié : https://www.abritel.fr/location-vacances/p2017005), mais elles ne répondent pas au besoin du lecteur qui aménage son propre jardin : **ne pas les ajouter artificiellement**. Ne pas inventer de produit affilié.
-
-## Sources de départ
-
-- CAUE de la Vendée, **cinq carnets « Planter dans… »** (choix de végétaux selon les secteurs vendéens) : https://www.caue85.com/?portfolio=carnets-planter-dans
-- CAUE de la Vendée, **Un jardin plein de vie** (haies, paillage, compost, tonte différenciée, partenariat avec Vendée Eau et Trivalis) : https://www.caue85.com/jardin-plein-de-vie/
-- Vendée Transitions, **Jardiner et favoriser la biodiversité vendéenne**, mis à jour le 30 juin 2026 (plantations d'automne, haies mixtes, végétaux locaux) : https://vendee-transitions.fr/habiter/jardiner-responsable-leau-les-bons-gestes-les-bonnes-pratiques/
-- Vendée Transitions, **Comment faire des économies d'eau au jardin ?** (conseils du service public Vendée Eau) : https://vendee-transitions.fr/consommer-durable/comment-faire-des-economies-deau-au-jardin/
-- Trivalis, **Tri et devenir des biodéchets** (compostage domestique en Vendée) : https://trivalis.fr/tri-des-dechets/tri-biodechets/
-- CAUE de la Vendée, **Le monde des fruits sauvages** (reconnaissance des baies comestibles et toxiques, ressource pédagogique) : https://www.caue85.com/le-monde-des-fruits-sauvages/
-- Office français de la biodiversité, **Se renseigner avant d'acheter une graine, une plante ou un arbuste** (espèces locales et exotiques envahissantes) : https://ofb.gouv.fr/actions-citoyennes/se-renseigner-avant-acheter-une-graine-une-plante-ou-un-arbuste
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "maison"
+title: "Jardin familial en Vendée: que planter et préparer à l’automne ?"
+subtitle: "Choisir les bonnes plantes selon son terrain et créer un extérieur agréable pour les enfants"
+summary: "Du littoral aux marais vendéens, les bons gestes pour planter à l’automne, protéger le sol et aménager un jardin familial facile à entretenir."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "jardin familial Vendée"
+  - "plantations automne Vendée"
+  - "plantes adaptées Vendée"
+  - "jardin enfants"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Vendée"
+  region: "Pays de la Loire"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "CAUE de la Vendée - Carnets Planter dans le bocage, la plaine, le littoral et les marais"
+    url: "https://www.caue85.com/?portfolio=carnets-planter-dans"
+  - title: "CAUE de la Vendée - Un jardin plein de vie"
+    url: "https://www.caue85.com/jardin-plein-de-vie/"
+  - title: "Vendée Transitions - Jardiner et favoriser la biodiversité vendéenne"
+    url: "https://vendee-transitions.fr/habiter/jardiner-responsable-leau-les-bons-gestes-les-bonnes-pratiques/"
+  - title: "Vendée Transitions - Comment faire des économies d’eau au jardin ?"
+    url: "https://vendee-transitions.fr/consommer-durable/comment-faire-des-economies-deau-au-jardin/"
+  - title: "Trivalis - Les biodéchets sont nos ressources"
+    url: "https://trivalis.fr/reduction-des-dechets/reduction-dechets-vegetaux-biodechets/"
+  - title: "CAUE de la Vendée - Le monde des fruits sauvages"
+    url: "https://www.caue85.com/le-monde-des-fruits-sauvages/"
+  - title: "Office français de la biodiversité - Se renseigner avant d’acheter une plante"
+    url: "https://ofb.gouv.fr/actions-citoyennes/se-renseigner-avant-acheter-une-graine-une-plante-ou-un-arbuste"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+En Vendée, l’automne est une bonne période pour préparer le jardin de la maison: installer une haie, planter des arbustes, protéger la terre et réfléchir aux espaces où les enfants pourront jouer. Mais un terrain exposé aux embruns sur la côte ne se plante pas comme un jardin du bocage ou un sol humide des marais. Avant de remplir le coffre de végétaux, mieux vaut regarder ce qui se passe chez soi.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## D’abord, observer son terrain
+
+Après une pluie, où l’eau stagne-t-elle ? Quelles parties restent à l’ombre ? D’où vient le vent dominant ? Repérez aussi les passages habituels, les fenêtres depuis lesquelles on surveille les enfants et la place qu’occuperont les végétaux une fois adultes.
+
+La Vendée n’a pas une seule palette de plantations. Le [CAUE de la Vendée publie cinq carnets « Planter dans… »](https://www.caue85.com/?portfolio=carnets-planter-dans), consacrés au bocage, à la plaine, au littoral, au Marais breton vendéen et au Marais poitevin. Ils détaillent les essences adaptées à ces paysages et leurs usages. C’est le meilleur point de départ pour faire une liste de plantes correspondant à son secteur, puis vérifier les conditions particulières de son jardin.
+
+Sur le **littoral**, le vent et les embruns peuvent limiter les choix, surtout dans les zones très exposées. Dans le **bocage**, les haies structurent traditionnellement le paysage et peuvent inspirer les limites d’un jardin. En **plaine**, l’exposition au soleil et le dessèchement du sol méritent une attention particulière. Dans les **marais breton et poitevin**, il faut examiner la nature du sol et les périodes d’humidité avant de planter. Ces repères ne remplacent pas l’observation de la parcelle: deux jardins voisins peuvent avoir des conditions différentes.
+
+## Que planter à l’automne ?
+
+Pour les arbres et arbustes adaptés au terrain, l’automne permet aux racines de commencer à s’installer avant les chaleurs de l’année suivante. C’est l’un des conseils de [Vendée Transitions pour un jardin plus résistant à la sécheresse](https://vendee-transitions.fr/habiter/jardiner-responsable-leau-les-bons-gestes-les-bonnes-pratiques/). Il faut toutefois attendre que le sol soit praticable: évitez de planter dans une terre gelée ou détrempée.
+
+Une **haie mélangée**, composée de plusieurs espèces adaptées au lieu, est souvent plus intéressante qu’un alignement d’une seule plante. Elle peut filtrer le vent, offrir des abris à la petite faune et rendre la limite du jardin moins monotone. Prévoyez sa largeur adulte et son entretien dès le départ: une haie trop serrée contre un passage ou une aire de jeux deviendra vite gênante.
+
+Pour l’ombre future, Vendée Transitions cite notamment le tilleul et le charme dans les grands jardins, ainsi que des arbres de moindre développement pour des espaces plus réduits. Il ne s’agit pas d’une liste à planter partout: choisissez l’essence définitive avec le carnet du CAUE correspondant à votre secteur et vérifiez son encombrement à maturité.
+
+Avant un achat, l’[Office français de la biodiversité recommande de privilégier les espèces indigènes adaptées au territoire](https://ofb.gouv.fr/actions-citoyennes/se-renseigner-avant-acheter-une-graine-une-plante-ou-un-arbuste), de vérifier leur nom botanique et d’éviter les plantes exotiques envahissantes. Demandez également d’où proviennent les plants; le label « Végétal local » peut aider à s’orienter.
+
+## Préparer le sol sans tout retourner
+
+Un jardin familial n’a pas besoin d’être entièrement refait. Désherbez localement les emplacements de plantation, décompactez seulement si nécessaire et gardez autant que possible les zones déjà vivantes.
+
+Les feuilles mortes saines et les petits branchages broyés peuvent devenir un **paillage** au pied des plantations. Cette couverture protège la terre, freine les herbes concurrentes et aide à conserver l’humidité. Le [CAUE explique ces gestes dans « Un jardin plein de vie »](https://www.caue85.com/jardin-plein-de-vie/), aux côtés de l’entretien des haies, du compostage et de la tonte différenciée. Laissez simplement le collet des plantes dégagé: le paillis ne doit pas s’accumuler contre les tiges.
+
+Pour les épluchures et déchets végétaux, installez un composteur dans un endroit accessible aux adultes mais à l’écart des jeux. Alternez matières humides de cuisine et matières sèches du jardin, puis aérez le mélange. [Trivalis présente le compostage domestique et partagé en Vendée](https://trivalis.fr/reduction-des-dechets/reduction-dechets-vegetaux-biodechets/) et conseille de se rapprocher de sa communauté de communes ou d’agglomération pour obtenir un composteur. Le compost mûr servira plus tard à améliorer le sol: il n’est pas nécessaire d’acheter systématiquement des sacs d’amendement.
+
+## Prévoir un vrai coin pour les enfants
+
+L’aménagement le plus pratique sépare sans cloisonner trois usages: une surface dégagée pour courir et jouer, des plantations que l’on peut observer sans les piétiner, et un coin plus tranquille où la végétation peut accueillir insectes et oiseaux. Gardez une vue sur les jeux depuis la maison et éloignez-les des outils, du composteur, des points d’eau non sécurisés et des végétaux épineux ou toxiques.
+
+À l’automne, les enfants peuvent ramasser des feuilles pour le paillage, comparer les graines, observer les vers de terre ou marquer l’emplacement d’une future haie. Les fruits sauvages demandent une règle claire: **on observe, on ne goûte pas**. Le [CAUE rappelle dans sa ressource pédagogique sur les fruits sauvages](https://www.caue85.com/le-monde-des-fruits-sauvages/) que certaines baies des haies sont toxiques et que les listes d’identification ne sont pas exhaustives.
+
+Inutile de transformer toute la pelouse en massif. Une petite bande de fleurs vivaces, une haie bien placée et un espace de jeu réellement utilisable apportent souvent davantage qu’un jardin très chargé, difficile à entretenir.
+
+## Anticiper l’arrosage de l’été prochain
+
+L’économie d’eau se décide en partie dès la plantation. Privilégiez la pleine terre lorsque c’est possible: les plantes en pot subissent plus vite la chaleur et le dessèchement. Préparez le paillage et, si le lieu s’y prête, réfléchissez à un récupérateur d’eau de pluie.
+
+Au printemps et en été, observez la terre et la météo avant d’arroser. Mieux vaut généralement apporter l’eau au pied des plantes, tôt le matin ou tard le soir, plutôt que mouiller tout le feuillage. Un arrosage moins fréquent mais suffisamment profond favorise l’enracinement, tout en restant à adapter aux jeunes plantations et aux conditions réelles. Ces principes sont détaillés dans les [conseils de Vendée Transitions avec Vendée Eau](https://vendee-transitions.fr/consommer-durable/comment-faire-des-economies-deau-au-jardin/).
+
+La récupération d’eau ne dispense pas de respecter d’éventuelles restrictions locales en période sèche. Pensez aussi à sécuriser les réserves d’eau pour les jeunes enfants.
+
+## Ce qu’on peut remettre au printemps
+
+À l’automne, concentrez les efforts sur le choix des végétaux, les plantations adaptées, le paillage et l’organisation des espaces. Les semis sensibles au froid, la mise en place d’un potager estival et les ajustements du coin de jeux pourront attendre le retour de températures favorables.
+
+Avant de commander beaucoup de plants, essayez une petite zone. Vous verrez comment elle réagit aux pluies hivernales et au vent, et pourrez compléter le jardin progressivement, sans achats inutiles.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -130,4 +173,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
