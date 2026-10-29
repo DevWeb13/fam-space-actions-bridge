@@ -273,3 +273,4 @@ automation/image-20261028-1848-seine-avignon-cuivre-aubrac-paris-408eabf|d1678dd
 automation/image-20261029-0045-neuvic-saintetienne-tours-mayenne-1c2b8fa|7a0fafcc7d414d746c926d607703cec24b37367a
 automation/image-20261029-0045-neuvic-saintetienne-tours-mayenne-1c2b8fa|903a73ef7073eca24002794a26b9c12a6664aebe
 automation/image-20261029-0640-camembert-grenoble-annecy-meubles-laep-164a1b7|164a1b747c3755b5129ae9dc60d7e38bb1dab675
+automation/image-20261029-0640-camembert-grenoble-annecy-meubles-laep-164a1b7|4f63d046e1f75d71b3f24ac91e0956f793d1cfee
