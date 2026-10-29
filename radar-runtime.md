@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Festival BD Colomiers 2026 en famille : quel jour choisir et combien prévoir ?"
-subtitle: "Du 20 au 22 novembre : lectures, ateliers jeunesse, spectacles et tarifs selon l'âge"
-summary: Un guide pour choisir vendredi, samedi ou dimanche au festival BD de Colomiers, repérer les activités adaptées aux enfants et distinguer les accès gratuits des animations payantes.
+title: "Festival BD Colomiers 2026 en famille : quel jour choisir et combien ça coûte ?"
+subtitle: "Du 20 au 22 novembre : ateliers, lectures et spectacles selon l'âge des enfants"
+summary: "Vendredi pour les lectures en pyjama, samedi pour les ateliers et une lecture dès 6 ans, dimanche pour les jeux en ville et les séances des plus jeunes : les horaires, lieux et tarifs pour organiser la visite."
 category: evenements
 location:
   city: Colomiers
@@ -68,20 +73,24 @@ location:
   region: Occitanie
 keywords:
   - festival BD Colomiers 2026
-  - BD Colomiers ateliers enfants
+  - festival BD Colomiers enfants
   - festival BD Colomiers tarifs 2026
 sources:
   - title: Festival BD Colomiers — édition 2026
     url: https://www.bdcolomiers.com/les-evenements/le-festival
-  - title: Festival BD Colomiers — infos pratiques, tarifs et accès
+  - title: Festival BD Colomiers — tarifs, horaires et accès
     url: https://www.bdcolomiers.com/les-evenements/infos-pratiques
-  - title: Festival BD Colomiers — animations et ateliers jeunesse
+  - title: Festival BD Colomiers — animations jeunesse
     url: https://www.bdcolomiers.com/les-evenements/animations-et-ateliers/animations-jeunesse
-  - title: Festival BD Colomiers — spectacles et âges
+  - title: Festival BD Colomiers — animations tout public
+    url: https://www.bdcolomiers.com/les-evenements/animations-et-ateliers/animations-tout-public
+  - title: Festival BD Colomiers — Nouvelle vague, lectures live
     url: https://www.bdcolomiers.com/les-evenements/spectacles-et-evenements/nouvelle-vague-lectures-live
+  - title: Cinéma Véo Grand Central — séances du festival BD 2026
+    url: https://colomiers.veocinemas.fr/events/84950-festival-bd-colomiers-2026-or-avant-premieres-rencontres-seances-speciales/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: festival-bd-colomiers-2026-en-famille-quel-jour-choisir-et-combien-prevoir
   decision: Choisir le jour et les activités selon l'âge des enfants, puis prévoir le budget réel entre Hall Comminges, ateliers, spectacles et cinéma.
@@ -91,33 +100,55 @@ radar:
     dataThrough: 2026-10-26
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Festival BD Colomiers — édition 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-11-22
 ---
 
-## Mission retenue
-Préparer la visite familiale du festival BD Colomiers, du 20 au 22 novembre 2026 : bande dessinée contemporaine, lectures, ateliers, spectacles et rencontres répartis dans plusieurs lieux de Colomiers.
+Du **vendredi 20 au dimanche 22 novembre 2026**, le Festival BD Colomiers accueille les familles autour des bandes dessinées, des ateliers créatifs, des lectures et du cinéma. Pour une première visite avec des enfants, **le samedi offre le plus de choix**. Le vendredi convient à une courte sortie après l'école ; le dimanche ajoute un parcours de jeux dans la ville et des films pour les plus jeunes. Attention : **l'entrée au Hall Comminges est payante pour certains adultes**, mais les expositions et plusieurs animations sont en accès libre.
 
-## Pourquoi cette mission
-Opportunité officielle documentée trois semaines avant l'événement, avec des choix concrets par âge, jour et budget. Le meilleur refresh GSC, Futuroween, reste complet et actualisé ; sa baisse d'impressions est classée « uncertain » et ne justifie pas une réécriture à la veille de la fin de l'événement. L'expansion des transports parisiens issue de la page forte recoupe déjà les pages dédiées à Navigo Liberté+, aux poussettes et aux aéroports. Aucun article BD Colomiers dans le catalogue ; le festival Cité en Jeux à Colomiers (16-18 octobre) est un autre événement, déjà terminé.
+## Vendredi, samedi ou dimanche : que choisir avec les enfants ?
 
-## Décision du lecteur
-Savoir si vendredi soir, samedi ou dimanche convient le mieux à l'âge des enfants et aux activités souhaitées, et ce qu'il faut réellement payer.
+**Vendredi 20 novembre : une sortie courte en fin de journée.** Au Pavillon blanc Henri-Molina, les ateliers de portraits mêlant photographie et dessin se déroulent de **16 h à 18 h 30**. À **18 h**, la **Pyjama Party** invite les familles à écouter des albums et comptines : pyjamas et doudous sont les bienvenus. Le Hall Comminges ouvre de **14 h à 19 h**. C'est le choix le plus simple pour profiter d'une animation sans consacrer toute une journée au festival.
 
-## Faits à traiter
-- Dates 20-22 novembre. Hall Comminges : vendredi 14h-19h, samedi 10h-20h, dimanche 10h-19h. Pavillon blanc : vendredi 13h-19h, samedi/dimanche 10h-19h.
-- Hall : 3 € par adulte, gratuit moins de 18 ans, étudiants et carte Pastel-Tisséo ; pass week-end 5 €. Expositions libres. Spectacles Chapikioske 2 €, billets sur place 30 min avant ; cinéma 6,50 € adulte et 5 € moins de 14 ans, réservation distincte.
-- Vendredi 18h : Pyjama Party (lectures). Samedi/dimanche : « Raconte-moi » à 11h et 16h, ateliers créatifs 10h-12h et 14h-18h, accès libre dans la limite des places. Samedi 17h : lecture live dès 6 ans ; dimanche 17h : lecture live dès 12 ans. Dimanche 11h-17h : jeu participatif « Coupe du monde de Colomiers ».
-- Bien distinguer Hall Comminges, Pavillon blanc, Chapikioske et cinéma. Accès depuis Toulouse via métro A + bus L2 ou TER Toulouse-Auch (gare de Colomiers). Vérifier les détails et âges des séances avant publication, sans supposer que tout le festival est gratuit.
-- Prévoir conseils pratiques pour jeunes enfants (pauses, poussette, repas bébé), sans inventer d'équipements non documentés.
+**Samedi 21 novembre : le plus polyvalent.** Au Pavillon blanc, les lectures **« Raconte-moi »** ont lieu de **11 h à 11 h 30** et de **16 h à 16 h 30**. Les ateliers créatifs sont proposés de **10 h à 12 h** et de **14 h à 18 h**. Un atelier photo avec l'association Déclic est annoncé à **13 h 30**, et un atelier de dessin et photo avec **Anne Letuffe**, pensé pour les tout-petits et leurs accompagnants, à **15 h**. À **17 h**, les lectures BD live **« Nouvelle vague »** au Chapikioske s'adressent aux enfants **dès 6 ans** : séance d'une heure, **2 € par personne**. Le Hall ferme à **20 h**, ce qui laisse du temps aux amateurs de BD pour parcourir les stands.
 
-## Sources de départ
-Pages officielles du festival ci-dessus, notamment « Infos pratiques » (mise à jour le 16 octobre 2026) et « Animations jeunesse ». Ne pas utiliser de programmes 2025.
+**Dimanche 22 novembre : lectures, dessins et jeux en ville.** Les lectures et ateliers du Pavillon blanc reprennent aux mêmes horaires que le samedi, dont l'atelier d'Anne Letuffe à **15 h**. De **11 h à 17 h**, la **« Coupe du monde de Colomiers »** propose un parcours participatif mêlant football, défis et bande dessinée : le kit est à récupérer au point info du festival. La lecture live de **17 h** est cette fois destinée aux **12 ans et plus** ; ne la choisissez pas pour un enfant de 6 ans en pensant retrouver le programme du samedi.
 
-## Affiliation
-Aucun billet partenaire pertinent vérifié : le festival vend ses entrées sur place. Pour les familles venant de loin, Appart'City Classic Toulouse Colomiers existe sur Booking.com (https://www.booking.com/hotel/fr/my-suitevillage-colomiers.fr.html) ; ne pas annoncer de prix ou de disponibilité aux dates du festival sans vérification.
+Les ateliers jeunesse du Pavillon blanc sont **en accès libre dans la limite des places disponibles**, avec matériel fourni. L'accès libre ne garantit donc pas de pouvoir participer à l'atelier voulu. Retrouvez les détails sur le [programme officiel des animations jeunesse](https://www.bdcolomiers.com/les-evenements/animations-et-ateliers/animations-jeunesse).
 
-## Continuations internes
-- Ne pas confondre avec l'article Cité en Jeux 2026 à Colomiers, consacré aux jeux de société et à un événement clos le 18 octobre : aucune reprise de ses horaires ou activités.
-- Ne pas recycler les contenus des autres festivals BD (Bédéciné à Illzach, bd BOUM à Blois) : l'intention est exclusivement le choix d'une visite à Colomiers en 2026.
+## Combien prévoir pour une famille ?
+
+La [billetterie officielle](https://www.bdcolomiers.com/les-evenements/infos-pratiques) distingue plusieurs dépenses :
+
+- **Hall Comminges** (éditeurs, stands et dédicaces) : **3 € par adulte**, gratuit pour les **moins de 18 ans**, les étudiants et les titulaires de la **carte Pastel-Tisséo**. Le **pass week-end à 5 €** donne accès au Hall pendant les trois jours. Achat uniquement sur place.
+- **Expositions** : accès libre.
+- **Spectacles au Chapikioske** : **2 € par personne** ; vente des billets sur place à partir de **30 minutes avant** la représentation.
+- **Projections au cinéma Véo Grand Central** : **6,50 €** au tarif normal et **5 € pour les moins de 14 ans**. Réservation distincte auprès du cinéma.
+
+Par exemple, **deux adultes et deux enfants de 8 et 12 ans** paient **6 €** pour entrer une journée au Hall, sans spectacle ni cinéma. S'ils assistent tous les quatre à une lecture live à 2 €, leur budget devient **14 €**. Pour deux adultes qui souhaitent visiter le Hall sur deux jours, deux pass week-end coûtent **10 €**, contre 12 € avec quatre billets à la journée.
+
+Il est aussi possible de profiter des expositions et animations en accès libre **sans acheter de billet pour le Hall**. Prévoyez un supplément seulement si vous souhaitez un spectacle, une projection, des achats de livres ou un repas.
+
+## Et si les enfants préfèrent le cinéma ?
+
+Le **Véo Grand Central** propose des séances spécifiques pendant le festival. Parmi les choix adaptés aux familles figurent **« À la poursuite de l'Affreunard »**, samedi à **11 h**, annoncé dès **4 ans**, et **« Le Noël d'Ernest et Célestine »**, dimanche à **16 h**, annoncé dès **3 ans**. Ces séances peuvent convenir à un enfant qui préfère rester assis devant un film plutôt que multiplier les ateliers.
+
+Vérifiez la séance et réservez directement sur le [programme 2026 du cinéma Véo Grand Central](https://colomiers.veocinemas.fr/events/84950-festival-bd-colomiers-2026-or-avant-premieres-rencontres-seances-speciales/) : le billet du Hall Comminges ne comprend pas le cinéma.
+
+## Où aller et comment venir depuis Toulouse ?
+
+Le festival se répartit entre plusieurs lieux. Le **Hall Comminges**, au **6 place des Fêtes**, rassemble les stands d'éditeurs et les dédicaces. Le **Pavillon blanc Henri-Molina**, au **4 place Alex-Raymond**, accueille les ateliers et lectures jeunesse. Le **Chapikioske**, sur cette même place, reçoit les spectacles. Le **cinéma Véo Grand Central** se trouve au **10 allée du Rouergue**. Ne partez pas du principe que toutes les animations ont lieu au Hall.
+
+Le Pavillon blanc ouvre **vendredi de 13 h à 19 h**, puis **samedi et dimanche de 10 h à 19 h**. Pour venir de Toulouse en transports, l'organisateur indique le **métro A puis le bus L2**, ou le **TER Toulouse–Auch jusqu'à la gare de Colomiers**. Vérifiez les correspondances sur [Tisséo](https://www.tisseo.fr/plan-interactif) avant le départ.
+
+Avec une poussette, choisissez un ou deux lieux prioritaires plutôt qu'un programme trop chargé : les activités sont réparties dans le centre-ville. Le festival est labellisé **Villes pour Tous**, mais les conditions précises d'accès en poussette, les tables à langer et la possibilité de réchauffer un repas bébé ne sont pas détaillées dans les informations officielles consultées. Prévoyez donc le nécessaire pour les changes et les repas, ainsi qu'une pause entre deux activités.
+
+Pour déjeuner, l'organisateur signale des restaurants accessibles à pied et trois food trucks, avec des options végétariennes et véganes. Les menus enfants et les équipements bébé ne sont pas confirmés : si ces points sont indispensables, mieux vaut les demander à l'établissement choisi.
+
+## Dormir à Colomiers pour prolonger le week-end
+
+Pour les familles venant de loin, l'[Appart'City Classic Toulouse Colomiers sur Booking.com](https://www.booking.com/hotel/fr/my-suitevillage-colomiers.fr.html) est une option à examiner : cette résidence propose des appartements, dont des configurations familiales, pratiques pour garder un rythme souple avec des enfants. Vérifiez la capacité réelle, les équipements nécessaires, le trajet jusqu'aux lieux du festival et le prix total pour les nuits souhaitées. **Aucune disponibilité ni aucun tarif pour le week-end du 20 au 22 novembre n'est confirmé ici.**
+
+Pour ajuster votre programme avant de partir, consultez la [page officielle du Festival BD Colomiers 2026](https://www.bdcolomiers.com/les-evenements/le-festival) : les ateliers ont des places limitées et chaque lieu suit ses propres horaires.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -125,16 +156,15 @@ Aucun billet partenaire pertinent vérifié : le festival vend ses entrées sur 
 
 - /articles/evenements/festival-cite-en-jeux-2026-a-colomiers-quel-jour-choisir-avec-des-enfants/ | Festival Cité en Jeux 2026 à Colomiers: quel jour choisir avec des enfants | evenements | Colomiers, Haute-Garonne, Occitanie
 - /articles/evenements/hop-hop-hop-festival-2026-en-famille-quel-jour-choisir/ | Hop Hop Hop Festival 2026 en famille: quel jour choisir? | evenements | Saint-Cirgues, Lot, Occitanie
-- /articles/bons-plans/filitosa-en-famille-quel-billet-choisir-et-combien-prevoir/ | Filitosa en famille: quel billet choisir et combien prévoir? | bons-plans | Sollacaro, Corse-du-Sud, Corse
-- /articles/sorties/chateau-de-kerjean-avec-des-enfants-combien-de-temps-prevoir-et-quel-billet-choisir/ | Château de Kerjean avec des enfants: combien de temps prévoir et quel billet choisir? | sorties | Saint-Vougay, Finistère, Bretagne
-- /articles/evenements/bedecine-2026-a-illzach-en-famille-ateliers-et-spectacles-selon-l-age/ | Bédéciné 2026 à Illzach en famille: ateliers, spectacles et billets | evenements | Illzach, Haut-Rhin, Grand Est
 - /articles/evenements/marche-de-noel-de-cusset-2026-en-famille-quel-jour-choisir/ | Marché de Noël de Cusset 2026 en famille: quel jour choisir? | evenements | Cusset, Allier, Auvergne-Rhône-Alpes
-- /articles/sorties/zoo-de-labenne-avec-des-enfants-quelle-duree-prevoir-et-quel-billet-choisir/ | Zoo de Labenne avec des enfants: quelle durée prévoir et quel billet choisir ? | sorties | Labenne, Landes, Nouvelle-Aquitaine
-- /articles/voyages/lascaux-en-famille-quel-billet-choisir-et-quel-budget-prevoir-en-2026/ | Lascaux en famille: quel billet choisir et quel budget prévoir en 2026 | voyages | Montignac-Lascaux, Dordogne, Nouvelle-Aquitaine
+- /articles/bons-plans/filitosa-en-famille-quel-billet-choisir-et-combien-prevoir/ | Filitosa en famille: quel billet choisir et combien prévoir? | bons-plans | Sollacaro, Corse-du-Sud, Corse
+- /articles/evenements/habits-de-lumiere-a-epernay-avec-des-enfants-quel-jour-choisir-en-2026/ | Habits de Lumière à Épernay avec des enfants: quel jour choisir en 2026? | evenements | Épernay, Marne, Grand Est
+- /articles/activites/accrocamp-toulouse-avec-des-enfants-quel-pass-choisir-selon-leur-taille/ | AccroCamp Toulouse avec des enfants: quel pass choisir selon leur taille? | activites | Toulouse, Haute-Garonne, Occitanie
+- /articles/sorties/chateau-de-kerjean-avec-des-enfants-combien-de-temps-prevoir-et-quel-billet-choisir/ | Château de Kerjean avec des enfants: combien de temps prévoir et quel billet choisir? | sorties | Saint-Vougay, Finistère, Bretagne
+- /articles/bons-plans/musee-de-gajac-a-villeneuve-sur-lot-combien-coute-vraiment-une-visite-en-famille/ | Musée de Gajac à Villeneuve-sur-Lot: combien coûte vraiment une visite en famille? | bons-plans | Villeneuve-sur-Lot, Lot-et-Garonne, Nouvelle-Aquitaine
 - /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | Noël à Toulouse 2026 en famille: marchés, Père Noël et patinoire | evenements | Toulouse, Haute-Garonne, Occitanie
 - /articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/ | Déchets verts à Toulouse Métropole en 2027: collecte, broyage et compostage | maison | Toulouse, Haute-Garonne, Occitanie
 - /articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/ | Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates | vie-pratique | Toulouse, Haute-Garonne, Occitanie
-- /articles/activites/accrocamp-toulouse-avec-des-enfants-quel-pass-choisir-selon-leur-taille/ | AccroCamp Toulouse avec des enfants: quel pass choisir selon leur taille? | activites | Toulouse, Haute-Garonne, Occitanie
 - /articles/voyages/saint-bertrand-de-comminges-avec-des-enfants-village-seul-ou-grande-boucle-a-pied/ | Saint-Bertrand-de-Comminges avec des enfants: village seul ou grande boucle à pied? | voyages | Saint-Bertrand-de-Comminges, Haute-Garonne, Occitanie
 - /articles/sorties/aeroscopia-a-blagnac-en-famille-tarifs-avions-et-conseils-de-visite/ | Aeroscopia à Blagnac en famille: tarifs, avions et conseils de visite | sorties | Blagnac, Haute-Garonne, Occitanie
 - /articles/bons-plans/pass-explorateurs-toulouse-en-famille-quand-est-il-vraiment-rentable/ | Pass Explorateurs Toulouse en famille: quand est-il vraiment rentable? | bons-plans | Toulouse, Haute-Garonne, Occitanie
@@ -145,13 +175,14 @@ Aucun billet partenaire pertinent vérifié : le festival vend ses entrées sur 
 - /articles/evenements/marche-de-noel-de-montpellier-2026-en-famille-dates-fermetures-et-attractions/ | Marché de Noël de Montpellier 2026 en famille: horaires, jours fermés et manèges | evenements | Montpellier, Hérault, Occitanie
 - /articles/evenements/noel-des-alpes-2026-a-annecy-en-famille-marche-patinoire-ou-illuminations/ | Noël des Alpes 2026 à Annecy en famille: marché, patinoire et illuminations | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
+- /articles/evenements/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/ | Marchés de Noël de Tours 2026 en famille: lieux, dates et budget | evenements | Tours, Indre-et-Loire, Centre-Val de Loire
 
 ### Historique Radar lié
 
-- opportunity | /articles/evenements/bedecine-2026-a-illzach-en-famille-ateliers-et-spectacles-selon-l-age/ | 2026-10-23T12:33:36.649Z
 - opportunity | /articles/evenements/marche-de-noel-de-clermont-ferrand-2026-en-famille-horaires-animations-et-acces/ | 2026-10-29T11:32:05.289Z
 - opportunity | /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | 2026-10-29T00:28:19.695Z
 - opportunity | /articles/evenements/marche-de-noel-de-montpellier-2026-en-famille-dates-fermetures-et-attractions/ | 2026-10-29T08:29:37.767Z
+- opportunity | /articles/evenements/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/ | 2026-10-28T21:29:26.054Z
 - opportunity | /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | 2026-10-24T23:34:36.270Z
 - opportunity | /articles/evenements/noel-des-alpes-2026-a-annecy-en-famille-marche-patinoire-ou-illuminations/ | 2026-10-29T05:28:53.475Z
 
