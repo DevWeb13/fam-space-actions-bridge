@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Noël à Bayeux 2026 en famille : marché ou Galopades ?"
-subtitle: Choisir son jour entre les chalets du 11 au 23 décembre et les Galopades du 18 décembre
-summary: Dates officielles du marché de Noël et des Galopades 2026 à Bayeux, choix du jour de visite et précautions sur les animations encore non publiées.
+title: "Noël à Bayeux 2026 en famille : marché et Galopades, quel jour venir ?"
+subtitle: Du 11 au 23 décembre pour les chalets, le 18 décembre pour ajouter les Galopades
+summary: Les dates confirmées du marché de Noël et des Galopades de Bayeux en 2026, avec des conseils pour choisir une sortie adaptée aux enfants sans reprendre les horaires de 2025.
 category: evenements
 location:
   city: Bayeux
@@ -75,9 +80,11 @@ sources:
     url: https://www.bayeux.fr/fr/un-noel-bayeux
   - title: Ville de Bayeux - Marché de Noël
     url: https://www.bayeux.fr/fr/marche-de-noel
+  - title: Ville de Bayeux - Les Galopades de Noël (page à actualiser pour 2026)
+    url: https://www.bayeux.fr/fr/les-galopades-de-noel
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: noel-a-bayeux-2026-en-famille-marche-ou-galopades
   decision: Choisir une date pour découvrir les chalets avec des enfants ou profiter aussi des Galopades, sans confondre le programme 2026 avec celui de 2025.
@@ -87,43 +94,55 @@ radar:
     dataThrough: 2026-10-27
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Ville de Bayeux - Un Noël à Bayeux »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-23
 ---
 
-## Mission retenue
-Préparer un guide local des fêtes de Noël 2026 à Bayeux, centré sur le choix du jour entre le marché et les Galopades.
+À Bayeux, le **marché de Noël se tiendra du 11 au 23 décembre 2026**, tandis que les **Galopades de Noël sont annoncées le vendredi 18 décembre**. Pour une promenade entre les chalets avec de jeunes enfants, plusieurs dates conviennent. Pour profiter aussi de l'ambiance de la course déguisée, le 18 décembre est le jour à retenir. Les horaires précis et les modalités 2026 des animations ne sont pas encore tous publiés.
 
-## Pourquoi cette mission
-Les dates de décembre sont déjà officielles et l'intention est distincte du guide Fam Space général « Bayeux en famille : 1 ou 2 jours ». Le meilleur refresh GSC, Futuroween, est déjà complet et se termine le 1er novembre ; la baisse d'exposition est compatible avec la fin de saison. Une expansion des transports parisiens à partir de la page forte recouperait plusieurs guides existants (titres, Orly, CDG, Navigo).
+## Marché ou Galopades : quelle date choisir ?
 
-## Décision du lecteur
-Savoir quand venir avec des enfants : marché du 11 au 23 décembre ou vendredi 18 décembre pour combiner avec les Galopades, selon l'âge, l'envie d'animation et le temps disponible.
+**Du 11 au 17 décembre, puis du 19 au 23 décembre**, privilégiez une visite centrée sur le marché : les enfants peuvent découvrir les chalets et les illuminations sans devoir caler la sortie sur un événement sportif. Prévoyez une durée souple, avec une pause au chaud si nécessaire.
 
-## Faits à traiter
-La Ville confirme le marché du 11 au 23 décembre 2026 sous l'arbre de la Liberté, avec plus de 40 exposants attendus, et les Galopades le vendredi 18 décembre 2026. La page détaillée du marché est encore en construction. La page spécifique des Galopades contient des horaires et tarifs d'une édition antérieure (vendredi 19 décembre) : ne surtout pas les attribuer à 2026. Ne pas reprendre non plus les horaires de circulation et les spectacles datés 2025 de la page « Un Noël à Bayeux ». Vérifier les mises à jour avant la rédaction et signaler les informations 2026 non publiées.
+**Vendredi 18 décembre**, choisissez plutôt une sortie festive en fin de journée si vos enfants aiment les déguisements et les animations de rue. C'est la seule date actuellement annoncée pour combiner le marché et les Galopades. Pour participer à la course, attendez la publication des parcours, des âges admis et des inscriptions **2026** avant de vous organiser. Avec un bébé ou un enfant qui se fatigue vite, une courte visite du marché peut rester plus agréable qu'une longue soirée.
 
-## Sources de départ
-Les deux pages municipales du frontmatter ; pour les Galopades, vérifier la mise à jour 2026 de https://www.bayeux.fr/fr/les-galopades-de-noel avant tout horaire, âge ou tarif.
+## Où se trouve le marché de Noël ?
 
-## Affiliation
-Booking.com référence des hébergements familiaux à Bayeux, dont Novotel Bayeux : https://www.booking.com/family/city/fr/bayeux.fr.html . Proposer un hébergement pertinent seulement pour les familles qui restent une nuit ; aucune offre de billet à inventer.
+Les chalets seront installés **sous l'arbre de la Liberté, place de la Liberté**, au cœur de Bayeux. La Ville attend **plus de 40 exposants**, notamment des artisans d'art et des producteurs locaux. Des animations sont annoncées, mais leur programme détaillé est encore en préparation sur la [page municipale du marché de Noël](https://www.bayeux.fr/fr/marche-de-noel).
 
-## Continuations internes
-- L'article existant « Bayeux en famille : 1 ou 2 jours et quel budget prévoir » prend le relais pour les musées, la cathédrale, les hôtels et le budget d'un séjour.
-- Ne pas recopier ses comparaisons de visites et de stationnement ; conserver seulement les accès utiles au marché.
-- Vérifier le programme et les horaires 2026 dès leur publication, sans recycler ceux de 2025.
+Les horaires quotidiens, les éventuelles activités pour enfants et leurs tarifs ne sont pas encore confirmés pour 2026. Ne prévoyez donc pas une rencontre avec le Père Noël ou un manège précis à une heure donnée sur la base d'anciens programmes.
+
+## Les Galopades du 18 décembre : participer ou regarder ?
+
+Les Galopades sont traditionnellement une manifestation familiale et conviviale, avec des participants costumés dans les rues de Bayeux. La **date du vendredi 18 décembre 2026** figure sur le [programme de Noël de la Ville](https://www.bayeux.fr/fr/un-noel-bayeux).
+
+Attention : la [page détaillée des Galopades](https://www.bayeux.fr/fr/les-galopades-de-noel) affiche encore un **vendredi 19 décembre**, avec des distances, des horaires et des tarifs correspondant à une édition précédente. **Ces informations ne doivent pas être utilisées pour 2026.** Les départs, les catégories d'âge, les prix, les inscriptions et les éventuelles restrictions de circulation restent à confirmer pour la nouvelle édition.
+
+Si les enfants ne courent pas, vous pouvez envisager de venir admirer les déguisements, mais choisissez votre emplacement et votre heure une fois le parcours 2026 publié.
+
+## Venir avec un bébé ou une poussette
+
+Le marché se visite dans le centre historique, où les pavés et l'affluence peuvent rendre la poussette moins pratique, surtout le soir des Galopades. Un porte-bébé peut être utile pour les tout-petits. Prévoyez des vêtements chauds, une collation et de quoi gérer le repas ou le biberon de bébé : aucun espace de change, micro-ondes ou service de restauration adapté aux bébés n'est confirmé pour l'événement 2026.
+
+Si vous venez en voiture le 18 décembre, vérifiez les restrictions de circulation et de stationnement publiées par la Ville avant de partir. Les arrêtés et horaires affichés pour Noël **2025** ne valent pas pour **2026**.
+
+## Et si vous restez une nuit à Bayeux ?
+
+Pour transformer le marché en petite escapade, le [Novotel Bayeux sur Booking.com](https://www.booking.com/hotel/fr/novotel.html) est une piste d'hébergement familial à comparer selon les dates, les couchages et le budget. Les disponibilités et prix pour votre séjour sont à vérifier au moment de réserver.
+
+Si vous souhaitez ajouter la cathédrale, les musées ou une deuxième journée de visite, notre guide [Bayeux en famille : 1 ou 2 jours et quel budget prévoir](https://www.fam-space.fr/articles/voyages/bayeux-en-famille-1-ou-2-jours-et-quel-budget-prevoir/) détaille ces choix sans surcharger votre programme de Noël.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
+- /articles/evenements/lumieres-de-noel-a-montbeliard-2026-quel-jour-venir-avec-des-enfants/ | Lumières de Noël à Montbéliard 2026: quel jour venir avec des enfants? | evenements | Montbéliard, Doubs, Bourgogne-Franche-Comté
+- /articles/evenements/marche-de-noel-de-cusset-2026-en-famille-quel-jour-choisir/ | Marché de Noël de Cusset 2026 en famille: quel jour choisir? | evenements | Cusset, Allier, Auvergne-Rhône-Alpes
 - /articles/voyages/bayeux-en-famille-1-ou-2-jours-et-quel-budget-prevoir/ | Bayeux en famille: 1 ou 2 jours et quel budget prévoir | voyages | Bayeux, Calvados, Normandie
 - /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
-- /articles/evenements/marche-de-noel-de-cusset-2026-en-famille-quel-jour-choisir/ | Marché de Noël de Cusset 2026 en famille: quel jour choisir? | evenements | Cusset, Allier, Auvergne-Rhône-Alpes
+- /articles/evenements/noel-a-chambord-2026-avec-des-enfants-quand-venir-et-que-prevoir/ | Noël à Chambord 2026 avec des enfants: quand venir et que prévoir | evenements | Chambord, Loir-et-Cher, Centre-Val de Loire
 - /articles/evenements/noel-a-nantes-2026-marche-gratuit-ou-visite-guidee-du-voyage-en-hiver/ | Noël à Nantes 2026: marché de Noël et Voyage en hiver en famille | evenements | Nantes, Loire-Atlantique, Pays de la Loire
 - /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
 - /articles/evenements/noel-a-provins-2026-en-famille-marche-medieval-ou-visite-guidee/ | Noël à Provins 2026: marché médiéval, animations et visites en famille | evenements | Provins, Seine-et-Marne, Île-de-France
-- /articles/evenements/rouen-givree-2026-en-famille-marche-de-noel-et-refuge-givre/ | Rouen Givrée 2026 en famille: marché de Noël et Refuge Givré | evenements | Rouen, Seine-Maritime, Normandie
-- /articles/evenements/lumieres-de-noel-a-montbeliard-2026-quel-jour-venir-avec-des-enfants/ | Lumières de Noël à Montbéliard 2026: quel jour venir avec des enfants? | evenements | Montbéliard, Doubs, Bourgogne-Franche-Comté
 - /articles/vie-pratique/ferry-ouistreham-portsmouth-en-famille-preparer-le-depart-et-la-traversee/ | Ferry Ouistreham-Portsmouth en famille: préparer le départ et la traversée | vie-pratique | Ouistreham, Calvados, Normandie
 - /articles/parentalite/laep-a-caen-4-lieux-pour-venir-avec-un-enfant-sans-inscription/ | LAEP à Caen: 4 lieux pour venir avec un enfant sans inscription | parentalite | Caen, Calvados, Normandie
 - /articles/cuisine/ateliers-cuisine-a-caen-avec-des-enfants-quelle-formule-choisir/ | Bien Dans Son Assiette à Caen: quel atelier cuisine choisir avec un enfant ? | cuisine | Caen, Calvados, Normandie
