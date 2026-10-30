@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Noël à Chartres 2026 en famille : marché ou illuminations, quel soir venir ?"
-subtitle: Choisir sa date entre les projections gratuites et le marché, sans multiplier les kilomètres avec les enfants
-summary: Dates, horaires et parcours court pour combiner le marché de Noël et les illuminations de Chartres en famille en 2026.
+title: "Noël à Chartres 2026 : quand voir le marché et les illuminations en famille ?"
+subtitle: Les dates à choisir et un parcours court autour de la cathédrale avec les enfants
+summary: "Illuminations dès fin novembre, marché du 4 au 24 décembre : les bons créneaux pour profiter de Noël à Chartres sans parcourir toute la ville avec les enfants."
 category: evenements
 location:
   city: Chartres
@@ -68,21 +73,25 @@ location:
   region: Centre-Val de Loire
 keywords:
   - Noël Chartres 2026
-  - Chartres en lumières fête Noël 2026
   - marché de Noël Chartres 2026
   - illuminations Chartres avec enfants
+  - Chartres en lumières fête Noël 2026
 sources:
-  - title: Ville de Chartres - Agenda des animations pour les enfants
-    url: https://www.chartres.fr/vacances-a-chartres/enfants
-  - title: Chartres en lumières - Présentation et horaires officiels 2026
-    url: https://www.chartresenlumieres.com/fr/a-propos/quest-ce-que-chartres-en-lumieres
-  - title: Les Vitrines de Chartres - Illuminations de Noël 2026
+  - title: Les Vitrines de Chartres — Illuminations de Noël 2026
     url: https://www.vitrines-chartres.com/agenda/illuminations-de-noel-2026-371.html
-  - title: Les Vitrines de Chartres - Marché de Noël 2026
+  - title: Les Vitrines de Chartres — Marché de Noël 2026
     url: https://www.vitrines-chartres.com/agenda/marche-de-noel-de-chartres-2025-148.html
+  - title: Ville de Chartres — Agenda des animations pour les enfants
+    url: https://www.chartres.fr/vacances-a-chartres/enfants
+  - title: Chartres en lumières — Présentation et horaires 2026
+    url: https://www.chartresenlumieres.com/fr/a-propos/quest-ce-que-chartres-en-lumieres
+  - title: Chartres en lumières — Durée du parcours
+    url: https://www.chartresenlumieres.com/fr/informations-pratiques/faq/detail/combien-de-temps-faut-il-pour-voir-chartres-en-lumieres
+  - title: Chartres en lumières — Venir à Chartres
+    url: https://www.chartresenlumieres.com/fr/informations-pratiques/faq/detail/comment-venir-a-chartres
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir
   decision: Savoir quand venir pour voir les illuminations seules ou les associer au marché de Noël, et choisir un parcours réaliste avec des enfants.
@@ -92,43 +101,63 @@ radar:
     dataThrough: 2026-10-27
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Ville de Chartres - Agenda des animations pour les enfants »; aucune page forte GSC n'est requise.
+eventEndsAt: 2027-01-03
 ---
 
-## Mission retenue
-Préparer une sortie de Noël à Chartres en distinguant le parcours lumineux gratuit du marché de Noël, dont les périodes ne coïncident pas entièrement.
+À Chartres, pas besoin d'attendre l'ouverture du marché de Noël pour voir les illuminations. Les décors lumineux de Noël sont annoncés dès le **27 novembre 2026**, tandis que les chalets ouvrent le **4 décembre**. Avec des enfants, le meilleur choix dépend donc de ce que vous voulez voir : seulement les projections sur les monuments, ou aussi les stands et l'ambiance du marché.
 
-## Pourquoi cette mission
-Opportunité officielle à venir, utile pour choisir une date avant les réservations de décembre. Aucun article Chartres sur Noël ou les illuminations dans le catalogue ; les trois pages locales portent sur d'autres besoins. Le refresh Futuroween, pourtant premier signal GSC, est déjà complet et se termine le 1er novembre : la baisse paraît surtout saisonnière. Une expansion de la page forte sur les transports parisiens recouperait les guides existants sur Navigo Liberté+ et les poussettes.
+## Quel jour venir selon votre envie ?
 
-## Décision du lecteur
-Savoir si la famille peut venir avant l'ouverture du marché, quel soir combiner les deux et quelle partie des illuminations visiter sans faire le circuit entier.
+- **Du 27 novembre au 3 décembre :** pour les lumières sans marché. [Les Vitrines de Chartres annoncent les illuminations de Noël du 27 novembre au 3 janvier](https://www.vitrines-chartres.com/agenda/illuminations-de-noel-2026-371.html). La [Ville de Chartres inscrit « Chartres en lumières fête Noël » du 29 novembre au 3 janvier](https://www.chartres.fr/vacances-a-chartres/enfants) : ce sont deux dates de lancement annoncées pour des programmations de Noël, à ne pas confondre avec la saison générale de Chartres en lumières, commencée en avril.
+- **Du 4 au 23 décembre :** pour associer marché et projections le même jour. Le vendredi 4 marque l'ouverture du marché ; le samedi 5, une première animation déambulatoire est annoncée, mais son horaire précis reste à vérifier.
+- **Le jeudi 24 décembre :** marché ouvert seulement de **10 h à 16 h**. Les projections se regardent à la nuit tombée : ce n'est donc pas le créneau le plus simple pour enchaîner immédiatement les deux avec de jeunes enfants.
+- **Du 25 décembre au 3 janvier 2027 :** les illuminations continuent, mais le marché est terminé.
 
-## Faits à traiter
-- Les Vitrines annoncent les décors de Noël du 27 novembre 2026 au 3 janvier 2027 ; la Ville présente « Chartres en lumières fête Noël » du 29 novembre au 3 janvier. Expliquer les deux annonces sans les confondre avec la saison générale d'avril à janvier.
-- Marché du 4 au 24 décembre : dimanche-jeudi 12 h-19 h, vendredi 12 h-20 h, samedi 10 h-20 h, 24 décembre 10 h-16 h ; entrée gratuite. L'organisateur écrit par erreur « mercredi 24 décembre » : en 2026, c'est un jeudi. Son nouvel emplacement doit être confirmé avant d'être affirmé.
-- Illuminations gratuites, généralement jusqu'à 23 h en période hivernale ; horaires à revérifier au calendrier du jour. Parcours intégral de 5 à 7 km : proposer une boucle courte autour de la cathédrale plutôt que de promettre de tout voir avec une poussette.
-- Distinguer projections, chalets et éventuelles animations ponctuelles ; vérifier accès depuis la gare, pauses, froid et retour des enfants.
+Si vous venez spécialement pour les deux, privilégiez un après-midi suivi d'un début de soirée **entre le 4 et le 23 décembre**. Pour une promenade plus calme et plus courte, les projections seules suffisent.
 
-## Sources de départ
-Ville de Chartres, organisateur Chartres en lumières et association organisatrice du marché Les Vitrines de Chartres (liens officiels ci-dessus).
+## Marché de Noël : horaires, entrée et emplacement
 
-## Affiliation
-Aucune billetterie naturelle pour les deux activités gratuites. Pour un séjour avec nuitée, Booking.com propose des hôtels familiaux à Chartres, dont Campanile PRIME Chartres Centre Gare Cathédrale ; vérifier capacité et conditions avant recommandation.
+L'[association Les Vitrines de Chartres](https://www.vitrines-chartres.com/agenda/marche-de-noel-de-chartres-2025-148.html) confirme le marché du **4 au 24 décembre 2026**, avec une **entrée gratuite** :
 
-## Continuations internes
-- Ne pas transformer cette page en guide général de Chartres ni en catalogue d'hébergements.
-- Aucun article Fam Space existant sur le même événement ; ne pas forcer un lien vers les autres pages Chartres sans utilité pour la sortie.
+- **Dimanche à jeudi :** 12 h–19 h.
+- **Vendredi :** 12 h–20 h.
+- **Samedi :** 10 h–20 h.
+- **Jeudi 24 décembre :** 10 h–16 h.
+
+L'organisateur a écrit « mercredi 24 décembre » sur sa page, mais **le 24 décembre 2026 tombe un jeudi** : c'est bien l'horaire spécial du 24 qu'il faut retenir. Il annonce également un **changement d'emplacement** pour cette édition, sans donner encore de nouvelle adresse sur sa page officielle. Vérifiez le lieu exact avant de prévoir votre trajet, surtout avec une poussette. Les chalets annoncés mêlent gourmandises et idées de cadeaux ; les achats et consommations restent payants.
+
+## Une petite promenade lumineuse plutôt que le circuit complet
+
+Les projections de [Chartres en lumières](https://www.chartresenlumieres.com/fr/a-propos/quest-ce-que-chartres-en-lumieres) sont **gratuites**, visibles chaque soir à partir de la tombée de la nuit. L'organisateur indique une fin vers **23 h à partir du 25 octobre** pour la saison 2026 ; vérifiez le calendrier du soir choisi avant le départ. Les scénographies tournent en boucle : il n'est pas nécessaire d'arriver à une heure de séance précise.
+
+Pour une sortie avec de jeunes enfants, commencez par les **portails illuminés de la cathédrale**, puis, si tout le monde a encore envie de marcher, regardez la **façade du musée des Beaux-Arts** à proximité. Vous pouvez ensuite revenir vers le centre et la gare plutôt que de descendre jusqu'aux ponts et lavoirs de la basse-ville. C'est une suggestion de parcours court, pas un itinéraire officiel balisé.
+
+Le [parcours complet représente 5 à 7 km](https://www.chartresenlumieres.com/fr/informations-pratiques/faq/detail/combien-de-temps-faut-il-pour-voir-chartres-en-lumieres). Au portail royal, les deux scénographies durent environ **30 minutes au total** ; ailleurs, les séquences animées sont généralement plus courtes, autour de 3 à 5 minutes. Vous pouvez donc prévoir une pause devant la cathédrale et décider sur place de prolonger ou non la balade.
+
+## Avec une poussette ou un bébé : les détails qui changent la soirée
+
+Les rues du centre ancien peuvent être pavées ou en pente : avec une poussette, mieux vaut rester sur un secteur réduit autour de la cathédrale et renoncer à la basse-ville si le sol est humide. Prévoyez vêtements chauds, protection contre la pluie et un retour possible dès que les enfants fatiguent. Une boisson ou un repas pris avant les projections évite d'attendre trop tard dans le froid.
+
+Ne comptez pas sans vérification sur une table à langer, un micro-ondes ou un espace de repas bébé au marché : ces services ne sont pas confirmés par les informations publiées. Si vous avez besoin de réchauffer un repas ou de changer un nourrisson, anticipez un arrêt dans un lieu adapté.
+
+## Venir en train, rentrer ou rester une nuit
+
+D'après les [informations d'accès de Chartres en lumières](https://www.chartresenlumieres.com/fr/informations-pratiques/faq/detail/comment-venir-a-chartres), la gare de Chartres est à environ **5 minutes à pied du centre-ville** ; des trains relient notamment Paris-Montparnasse à Chartres. Vérifiez surtout **l'heure du dernier train retour**, après la tombée de la nuit. En voiture, consultez les parkings et les éventuelles restrictions du centre avant de partir, sans supposer que le marché se tiendra à son ancien emplacement.
+
+Pour les familles qui souhaitent dormir sur place, le [Campanile PRIME – Chartres Centre Gare Cathédrale sur Booking.com](https://www.booking.com/hotel/fr/inter-chatelet.fr.html) est une option près de la gare et du centre historique. L'établissement propose des chambres adaptées à certains séjours en famille, mais vérifiez la **capacité exacte selon le nombre et l'âge des enfants**, la possibilité de lit bébé, les tarifs et les conditions pour vos dates de décembre.
+
+Le **budget d'entrée est de 0 €** pour le marché et les illuminations ; prévoyez séparément transport, gourmandises, achats et éventuellement hébergement. Avant de partir, contrôlez les annonces des organisateurs, en particulier le nouvel emplacement du marché et les horaires du soir choisi.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
-- /articles/evenements/lumieres-de-noel-a-montbeliard-2026-quel-jour-venir-avec-des-enfants/ | Lumières de Noël à Montbéliard 2026: quel jour venir avec des enfants? | evenements | Montbéliard, Doubs, Bourgogne-Franche-Comté
 - /articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/ | Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille | evenements | Nevers, Nièvre, Bourgogne-Franche-Comté
+- /articles/cuisine/apres-une-cueillette-en-eure-et-loir-5-recettes-faciles-a-faire-avec-les-enfants/ | Après une cueillette en Eure-et-Loir: 5 recettes faciles à faire avec les enfants | cuisine | Chartres, Eure-et-Loir, Centre-Val de Loire
 - /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
 - /articles/vie-pratique/accueil-periscolaire-a-chartres-forfait-ou-carte-occasionnelle-en-2026-2027/ | Accueil périscolaire à Chartres: forfait ou carte occasionnelle en 2026-2027 ? | vie-pratique | Chartres, Eure-et-Loir, Centre-Val de Loire
-- /articles/cuisine/apres-une-cueillette-en-eure-et-loir-5-recettes-faciles-a-faire-avec-les-enfants/ | Après une cueillette en Eure-et-Loir: 5 recettes faciles à faire avec les enfants | cuisine | Chartres, Eure-et-Loir, Centre-Val de Loire
 - /articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/ | Recycleries autour de Chartres: où donner et acheter d'occasion ? | maison | Chartres, Eure-et-Loir, Centre-Val de Loire
+- /articles/evenements/lumieres-de-noel-a-montbeliard-2026-quel-jour-venir-avec-des-enfants/ | Lumières de Noël à Montbéliard 2026: quel jour venir avec des enfants? | evenements | Montbéliard, Doubs, Bourgogne-Franche-Comté
 - /articles/evenements/noel-a-fontevraud-2026-quel-jour-choisir-avec-les-enfants/ | Noël à Fontevraud 2026: patinoire, marché, dates et tarifs en famille | evenements | Fontevraud-l'Abbaye, Maine-et-Loire, Pays de la Loire
 - /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
 - /articles/activites/chateau-de-maintenon-avec-de-jeunes-enfants-ce-qu-il-faut-prevoir/ | Château de Maintenon avec de jeunes enfants: ce qu'il faut prévoir | activites | Maintenon, Eure-et-Loir, Centre-Val de Loire
