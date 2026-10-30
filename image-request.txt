@@ -279,3 +279,4 @@ automation/image-20261029-1240-chateaubriant-clermont-montpellier-superbesse-970
 automation/image-20261029-1849-cerf-dijon-villeneuve-baux-montauban-24698d2|f161b2805bd8a989e41bd7e0b14a1cbf933a9f2f
 automation/image-20261029-1849-cerf-dijon-villeneuve-baux-montauban-24698d2|8d65d2dbe6e63d2390379cbbaecf34041b4f490f
 automation/image-20261029-1849-cerf-dijon-villeneuve-baux-montauban-24698d2|6359216e182e477187dd216e049a4d137f229622
+automation/image-20261030-0646-vache-macval-colomiers-dijon-flottins-arras-vendee-ouessant-a9c4b02|cfd09ae8bafc12ecffb227ed1304a7c5f99c644e
