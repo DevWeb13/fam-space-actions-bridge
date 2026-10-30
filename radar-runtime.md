@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Festival des Petits Explorateurs 2026 à Dijon : quels ateliers choisir en famille ?"
-subtitle: "Le 5 décembre au gymnase Sellenet : horaires, activités inclusives et budget"
-summary: Choisir un créneau et des ateliers adaptés aux enfants pour la première édition du Festival des Petits Explorateurs à Dijon, le 5 décembre 2026.
+title: "Festival des Petits Explorateurs 2026 à Dijon : matin ou après-midi avec les enfants ?"
+subtitle: "Le 5 décembre au gymnase Sellenet : ateliers, horaires, entrée et conseils pour une visite adaptée"
+summary: "Émotions, activités sensorielles, jeux libres ou ateliers sur l'inclusion : les créneaux à privilégier au Festival des Petits Explorateurs de Dijon, avec les tarifs et les précautions pratiques."
 category: evenements
 location:
   city: Dijon
@@ -71,13 +76,15 @@ keywords:
   - CAP vers l'inclusion Dijon 5 décembre
   - ateliers enfants Dijon 5 décembre 2026
 sources:
-  - title: "Ville de Dijon - Festival des Petits Explorateurs : programme détaillé"
+  - title: "Ville de Dijon - Festival des Petits Explorateurs : programme et conditions"
     url: https://www.dijon.fr/agenda/le-festival-des-petits-explorateurs-cap-vers-linclusion/
   - title: Dijon Bourgogne Tourisme - Festival des Petits Explorateurs
     url: https://www.destinationdijon.com/agenda/le-festival-des-petits-explorateurs/
+  - title: Divia Mobilités - Réseau et itinéraires bus et tram
+    url: https://information.divia.fr/sinformer/bus-et-tram/decouvrir-le-reseau/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: festival-des-petits-explorateurs-2026-a-dijon-quels-ateliers-choisir-en-famille
   decision: Choisir à quelle heure venir et quels ateliers privilégier selon les envies, l'âge et les besoins de l'enfant, en connaissant le budget et la règle de sortie définitive.
@@ -87,46 +94,58 @@ radar:
     dataThrough: 2026-10-27
     signal: seasonal_opportunity
     basis: "Opportunité saisonnière vérifiée via « Ville de Dijon - Festival des Petits Explorateurs : programme détaillé »; aucune page forte GSC n'est requise."
+eventEndsAt: 2026-12-05
 ---
 
-## Mission retenue
-Première édition du Festival des Petits Explorateurs « CAP vers l'inclusion », une journée d'ateliers sensoriels, créatifs, sportifs et de sensibilisation au handicap, le samedi 5 décembre 2026 au gymnase Sellenet de Dijon.
+Le **samedi 5 décembre 2026**, le gymnase Sellenet à Dijon accueille la première édition du **Festival des Petits Explorateurs – CAP vers l'inclusion**, de **10 h à 17 h**. Ateliers autour des émotions, découvertes sensorielles, activités sportives adaptées et jeux libres : l'intérêt est de pouvoir choisir des expériences selon les envies et le rythme de son enfant, plutôt que de chercher à tout faire.
 
-## Pourquoi cette mission
-Programme 2026 précis, événement encore à venir et décision familiale concrète. Le refresh Futuroween, malgré sa baisse d'impressions, couvre déjà les informations utiles et se termine le 1er novembre ; la baisse ne démontre pas une lacune. L'expansion de la page forte sur les transports parisiens recouperait les guides existants (Navigo Liberté+, Orly, CDG). Aucun doublon de ce festival dans le catalogue compact de 852 articles ; la foire et la fête foraine de Dijon sont d'autres événements.
+## Venir le matin ou l'après-midi ?
 
-## Décision du lecteur
-Savoir si la journée convient à son enfant et choisir le matin, l'après-midi ou une journée complète selon les ateliers et spectacles qui l'intéressent, sans mauvaise surprise sur le tarif ni les sorties.
+**Le matin** convient particulièrement aux familles attirées par les expériences sensorielles et les activités à partager avec un jeune enfant. L'atelier parents-enfants autour des émotions « S'apaiser ensemble » est proposé de **10 h à 10 h 45** puis de **11 h à 11 h 45**. L'histoire sonore en duo a lieu de **10 h 30 à 11 h 30** ; les bouteilles sensorielles commencent à **10 h 30** et les marionnettes à doigts à **11 h 30**. Une activité physique adaptée est également annoncée de **10 h à 12 h**, tandis que la découverte de la nature se prolonge jusqu'à **13 h 30**.
 
-## Faits à traiter
-- Samedi 5 décembre, 10 h-17 h, gymnase Sellenet, 203 rue d'Auxonne ; 5 € par enfant à partir de 2 ans, toute sortie définitive. Ne pas supposer la gratuité des adultes ni une réservation obligatoire sans confirmation.
-- Matin : émotions à 10 h et 11 h, histoire sonore à 10 h 30, nature et activités sensorielles ; après-midi : ateliers de sensibilisation à 14 h et 15 h, décoration de Noël à 15 h, comptines à 16 h ; médiation animale à 11 h, 13 h et 15 h. Préciser les créneaux utiles sans recopier tout le programme.
-- Jeux libres, buvette/restauration et atelier photo payant séparément ; vérifier accès en transport, poussettes, sanitaires, repas bébé, accessibilité réelle et éventuelles modalités d'inscription auprès de l'organisateur.
+**L'après-midi** est plus intéressant si votre enfant veut découvrir les différences ou repartir avec une création : sensibilisation à l'autisme à **14 h**, à la déficience visuelle et découverte tactile du livre à **15 h**, décoration de Noël à **15 h**. Le spectacle « Tablier à comptines » est prévu à **16 h**. Maquillage et tatouages éphémères sont annoncés de **14 h à 17 h**.
 
-## Sources de départ
-Ville de Dijon : programme détaillé et conditions ; Dijon Bourgogne Tourisme : date, adresse et tarif. Les pages partenaires ne servent pas à établir les faits de l'événement.
+Pour les enfants attirés par les animaux, la médiation « Tous différents, tous lapins » offre trois rendez-vous : **11 h, 13 h et 15 h**, pendant 45 minutes chacun. Des jeux en bois, Kapla, une cabane géante et d'autres activités libres permettent de varier les plaisirs sans enchaîner uniquement des ateliers à horaire fixe.
 
-## Affiliation
-Aucune offre de billet partenaire vérifiée. Pour une famille venue passer le week-end, hébergement Adagio Access Dijon République sur Booking.com, avec cuisine et chambres familiales ; ne pas annoncer de prix ni de disponibilité pour le 5 décembre.
+Ces créneaux viennent du [programme publié par la Ville de Dijon](https://www.dijon.fr/agenda/le-festival-des-petits-explorateurs-cap-vers-linclusion/). Les capacités d'accueil et les éventuelles inscriptions à certains ateliers ne sont pas précisées : pour une activité indispensable à votre enfant, vérifiez les modalités auprès de l'organisation avant le déplacement.
 
-## Continuations internes
-En cas de week-end prolongé, le guide Fam Space de la fabrique de pain d'épices à Dijon peut servir de complément, sans détourner cet article de son événement. Ne pas réécrire les articles sur la foire et la fête foraine : ce sont des sorties distinctes.
+## Quel budget prévoir ?
+
+L'entrée annoncée est de **5 € par enfant à partir de 2 ans** : comptez donc **10 € pour deux enfants** ou **15 € pour trois enfants** concernés par ce tarif. Le prix applicable aux adultes accompagnants et les conditions exactes pour les moins de 2 ans ne sont pas indiqués dans le programme consulté ; ne les supposez pas gratuits sans confirmation.
+
+Une restauration et une buvette sont prévues, sans tarifs publiés. L'atelier photo de Noël constitue une dépense supplémentaire : **10 € les 3 photos, 15 € les 5 ou 20 € les 10**. Pour maîtriser le budget, choisissez à l'avance si vous souhaitez ces photos et prévoyez une marge pour manger sur place.
+
+**Attention : toute sortie est définitive.** Si vous souhaitez déjeuner à l'extérieur, vous ne pourrez pas compter sur un retour dans le festival. Pour une journée complète, organisez donc le repas en tenant compte de cette règle.
+
+## Inclusion, poussette et besoins des tout-petits
+
+Le festival met l'inclusion au centre de sa programmation, notamment avec des ateliers de sensibilisation au handicap et des activités adaptées. Cela ne confirme toutefois pas, à lui seul, l'accessibilité de tous les espaces du gymnase ou de chaque atelier. Pour un fauteuil roulant, des besoins sensoriels particuliers ou une assistance spécifique, mieux vaut demander à l'organisation les conditions concrètes d'accueil et la possibilité d'aménagements.
+
+Avec une poussette ou un bébé, vérifiez également la place disponible pour circuler, la présence d'une table à langer, les sanitaires accessibles et la possibilité de réchauffer un repas : ces équipements ne sont pas détaillés dans l'annonce. Le festival propose de quoi se restaurer, mais ne garantit pas de micro-ondes ni de repas adaptés aux nourrissons. Emportez le nécessaire pour les changes et les collations, sans présumer qu'un équipement bébé sera disponible.
+
+## Où se trouve le festival et comment venir ?
+
+Le rendez-vous a lieu au **gymnase Sellenet, 203 rue d'Auxonne, 21000 Dijon**. Pour venir en bus ou en tram, consultez le [calculateur d'itinéraires et les informations du réseau Divia Mobilités](https://information.divia.fr/sinformer/bus-et-tram/decouvrir-le-reseau/) en renseignant cette adresse : aucune ligne ni arrêt précis n'a été confirmé pour l'entrée du gymnase. Si vous venez en voiture, prévoyez du temps pour trouver un stationnement, car le programme ne garantit pas de parking réservé aux visiteurs.
+
+## Prolonger la sortie en week-end à Dijon
+
+Pour une famille qui vient de plus loin, l'[Aparthotel Adagio Access Dijon République sur Booking.com](https://www.booking.com/hotel/fr/aparthotel-adagio-access-dijon-republique.fr.html) propose des studios et appartements avec **cuisine équipée, réfrigérateur et micro-ondes**, utiles pour les repas des enfants. Des logements familiaux et des lits bébé gratuits sur demande sont indiqués, sous réserve de disponibilité ; vérifiez la capacité du logement et les conditions pour vos dates. Aucun prix ni disponibilité pour la nuit du 5 décembre n'est confirmé ici.
+
+Si vous restez à Dijon le lendemain, la [Fabrique de pain d'épices Mulot & Petitjean](https://www.fam-space.fr/articles/cuisine/fabrique-de-pain-d-epices-a-dijon-faut-il-reserver-et-combien-prevoir-avec-des-enfants/) est une autre idée de découverte familiale. Consultez toutefois ses jours d'ouverture avant de l'intégrer au programme : sa visite habituelle n'est pas annoncée le dimanche.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
-- /articles/cuisine/fabrique-de-pain-d-epices-a-dijon-faut-il-reserver-et-combien-prevoir-avec-des-enfants/ | Fabrique de pain d'épices à Dijon: faut-il réserver et combien prévoir avec des enfants? | cuisine | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
 - /articles/evenements/foire-de-dijon-2026-en-famille-dates-ateliers-animaux-et-gratuites/ | Foire de Dijon 2026 avec les enfants: gratuités, ateliers et Ferme Côte-d'Or | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/evenements/festival-cite-en-jeux-2026-a-colomiers-quel-jour-choisir-avec-des-enfants/ | Festival Cité en Jeux 2026 à Colomiers: quel jour choisir avec des enfants | evenements | Colomiers, Haute-Garonne, Occitanie
-- /articles/evenements/habits-de-lumiere-a-epernay-avec-des-enfants-quel-jour-choisir-en-2026/ | Habits de Lumière à Épernay avec des enfants: quel jour choisir en 2026? | evenements | Épernay, Marne, Grand Est
-- /articles/evenements/salon-du-chocolat-paris-2026-avec-des-enfants-quel-billet-choisir-et-quels-ateliers-reserver/ | Salon du Chocolat Paris 2026 avec des enfants: quel billet choisir et quels ateliers réserver | evenements | Paris, Paris, Île-de-France
-- /articles/cuisine/anchois-de-collioure-quelle-visite-choisir-avec-des-enfants/ | Anchois de Collioure: quelle visite choisir avec des enfants? | cuisine | Collioure, Pyrénées-Orientales, Occitanie
-- /articles/evenements/festival-interceltique-lorient-2026-en-famille/ | Festival Interceltique de Lorient 2026: quels rendez-vous choisir avec des enfants ? | evenements | Lorient, Morbihan, Bretagne
-- /articles/evenements/lire-en-poche-2026-a-gradignan-avec-des-enfants-organiser-une-journee-sans-perdre-les-ateliers/ | Lire en Poche 2026 à Gradignan avec des enfants: organiser une journée sans perdre les ateliers | evenements | Gradignan, Gironde, Nouvelle-Aquitaine
-- /articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/ | Fête foraine de Dijon 2026: dates, horaires et budget avec les enfants | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/bons-plans/vacaf-2026-en-cote-d-or-jusqu-a-80-du-sejour-pris-en-charge/ | VACAF 2026 en Côte-d'Or: jusqu'à 80 % du séjour pris en charge | bons-plans | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/cuisine/fabrique-de-pain-d-epices-a-dijon-faut-il-reserver-et-combien-prevoir-avec-des-enfants/ | Fabrique de pain d'épices à Dijon: faut-il réserver et combien prévoir avec des enfants? | cuisine | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
 - /articles/parentalite/cercles-de-parents-en-cote-d-or-trois-seances-gratuites-pour-echanger-pendant-les-premieres-annees/ | Cercles de Parents en Côte-d'Or: trois séances gratuites pour échanger pendant les premières années | parentalite | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/ | Fête foraine de Dijon 2026: dates, horaires et budget avec les enfants | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/evenements/lire-en-poche-2026-a-gradignan-avec-des-enfants-organiser-une-journee-sans-perdre-les-ateliers/ | Lire en Poche 2026 à Gradignan avec des enfants: organiser une journée sans perdre les ateliers | evenements | Gradignan, Gironde, Nouvelle-Aquitaine
+- /articles/evenements/festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants/ | Les Petits Asticots 2026: spectacles, âges et réservations en famille | evenements | Chamonix-Mont-Blanc, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/parentalite/l-ilot-des-familles-a-tarbes-quels-ateliers-pour-les-parents-d-enfants-de-0-a-6-ans/ | L'îlot des Familles à Tarbes: quels ateliers pour les parents d'enfants de 0 à 6 ans? | parentalite | Tarbes, Hautes-Pyrénées, Occitanie
+- /articles/parentalite/petite-section-peut-on-alleger-les-apres-midis-a-l-ecole-maternelle/ | Petite section: peut-on alléger les après-midis à l'école maternelle? | parentalite
+- /articles/bons-plans/vacaf-2026-en-cote-d-or-jusqu-a-80-du-sejour-pris-en-charge/ | VACAF 2026 en Côte-d'Or: jusqu'à 80 % du séjour pris en charge | bons-plans | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
 - /articles/maison/canape-matelas-ou-electromenager-a-dijon-donner-faire-enlever-ou-aller-en-dechetterie/ | Canapé, matelas ou électroménager à Dijon: donner, faire enlever ou aller en déchetterie ? | maison | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
 - /articles/vie-pratique/frais-scolaires-en-cote-d-or-quelles-aides-demander-au-departement/ | Frais scolaires en Côte-d'Or: quelles aides demander au Département? | vie-pratique | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
 - /articles/activites/parc-de-l-auxois-avec-des-enfants-comment-combiner-animaux-maneges-et-piscine/ | Parc de l'Auxois avec des enfants: comment combiner animaux, manèges et piscine | activites | Arnay-sous-Vitteaux, Côte-d'Or, Bourgogne-Franche-Comté
@@ -138,18 +157,21 @@ En cas de week-end prolongé, le guide Fam Space de la fabrique de pain d'épice
 - /articles/evenements/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/ | Marchés de Noël de Tours 2026 en famille: lieux, dates et budget | evenements | Tours, Indre-et-Loire, Centre-Val de Loire
 - /articles/evenements/marche-de-noel-de-saint-etienne-2026-en-famille-dates-horaires-et-acces/ | Marché de Noël de Saint-Étienne 2026 en famille: dates, horaires et accès | evenements | Saint-Étienne, Loire, Auvergne-Rhône-Alpes
 - /articles/evenements/la-seine-musicale-en-famille-en-2027-quels-concerts-et-ateliers-selon-l-age/ | La Seine Musicale en famille en 2027: quels concerts et ateliers selon l'âge ? | evenements | Boulogne-Billancourt, Hauts-de-Seine, Île-de-France
+- /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | Marché de Noël d'Avignon 2026 en famille: horaires et accès | evenements | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
+- /articles/evenements/festival-international-des-jeux-de-cannes-2027-en-famille-quel-jour-et-quel-billet-choisir/ | Festival des Jeux de Cannes 2027 en famille: billets, âges et visite | evenements | Cannes, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
 
 ### Historique Radar lié
 
+- opportunity | /articles/evenements/festival-international-des-jeux-de-cannes-2027-en-famille-quel-jour-et-quel-billet-choisir/ | 2026-10-28T09:26:08.391Z
+- opportunity | /articles/evenements/festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants/ | 2026-10-13T18:36:59.570Z
 - opportunity | /articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/ | 2026-10-25T17:34:53.718Z
 - opportunity | /articles/evenements/foire-de-dijon-2026-en-famille-dates-ateliers-animaux-et-gratuites/ | 2026-10-21T16:31:41.000Z
 - refresh | /articles/evenements/lire-en-poche-2026-a-gradignan-avec-des-enfants-organiser-une-journee-sans-perdre-les-ateliers/ | 2026-10-06T12:23:52.449Z
+- opportunity | /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | 2026-10-28T15:29:23.387Z
 - opportunity | /articles/evenements/marche-de-noel-de-clermont-ferrand-2026-en-famille-horaires-animations-et-acces/ | 2026-10-29T11:32:05.289Z
 - opportunity | /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | 2026-10-29T00:28:19.695Z
 - opportunity | /articles/evenements/marche-de-noel-de-montpellier-2026-en-famille-dates-fermetures-et-attractions/ | 2026-10-29T08:29:37.767Z
 - opportunity | /articles/evenements/marche-de-noel-de-saint-etienne-2026-en-famille-dates-horaires-et-acces/ | 2026-10-28T18:37:09.008Z
-- opportunity | /articles/evenements/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/ | 2026-10-28T21:29:26.054Z
-- opportunity | /articles/evenements/noel-des-alpes-2026-a-annecy-en-famille-marche-patinoire-ou-illuminations/ | 2026-10-29T05:28:53.475Z
 
 ### Phases 2 et 3
 
