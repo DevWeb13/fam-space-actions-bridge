@@ -283,3 +283,4 @@ automation/image-20261030-0646-vache-macval-colomiers-dijon-flottins-arras-vende
 automation/image-20261030-0646-vache-macval-colomiers-dijon-flottins-arras-vendee-ouessant-a9c4b02|566901e65ec8161e8853da6ec293cedd664272d0
 automation/image-20261030-1249-laval-brest-somme-dinan-dfa2cb5|dfa2cb58bd186f673f16a784ee02393eee79490f
 automation/image-20261030-1249-laval-brest-somme-dinan-dfa2cb5|ba7783f248b932ecd0fef88106c4af045f93e074
+automation/image-20261030-1844-bayeux-angers-orleans-dordogne-oingt-12c9718-f4a7|6aefc3989f3a2e444a3619d23260cb06e20c68bc
