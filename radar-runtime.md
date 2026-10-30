@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Lumières de Laval 2026 en famille : marché, grande roue ou croisière ?"
-subtitle: Choisir la bonne date et les activités selon l'âge des enfants et le budget
-summary: "Du 21 novembre 2026 au 3 janvier 2027, les Lumières de Laval réunissent illuminations, trois marchés à dates distinctes, grande roue et croisières : les repères pour organiser une sortie familiale sans se tromper de jour."
+title: "Lumières de Laval 2026 en famille : quel jour venir et quel budget ?"
+subtitle: "Illuminations, marchés, grande roue et croisière : choisir une date sans se tromper"
+summary: Du 21 novembre 2026 au 3 janvier 2027, Laval s'illumine sur le thème du Bal de Noël. Voici les dates précises des trois marchés, les tarifs de la grande roue et de la croisière, et les bons choix selon l'âge des enfants.
 category: evenements
 location:
   city: Laval
@@ -71,16 +76,19 @@ keywords:
   - Noël Laval 2026 famille
   - marchés de Noël Laval 2026
   - grande roue Laval enfants
+  - croisière Lumières Laval tarif
 sources:
-  - title: Laval Tourisme - Les Lumières de Laval, édition 2026
+  - title: "Laval Tourisme - Les Lumières de Laval 2026 : programme, marchés, grande roue et tarifs"
     url: https://www.laval-tourisme.com/sortez-vibrez/le-plein-d-evenements/les-lumieres-de-laval/
-  - title: Laval Tourisme - Le bal de Noël, dates officielles
+  - title: "Laval Tourisme - Le Bal de Noël 2026 : dates des illuminations"
     url: https://www.laval-tourisme.com/offres/les-lumieres-de-laval-le-bal-de-noel-laval-fr-6059570/
-  - title: Laval Tourisme - Croisière des Lumières 2026
+  - title: "Laval Tourisme - Croisière des Lumières 2026 : tarifs et dates de départ"
     url: https://www.laval-tourisme.com/offres/croisiere-des-lumieres-2026-laval-fr-6854586/
+  - title: Laval Agglomération - Transports urbains lavallois
+    url: https://www.agglo-laval.fr/utile-au-quotidien/transports-et-mobilites/tul
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere
   decision: Permettre aux parents de choisir une date où les activités souhaitées sont réellement ouvertes, puis de décider entre promenade lumineuse, marchés, grande roue et croisière selon l'âge des enfants, le rythme et le budget.
@@ -90,45 +98,84 @@ radar:
     dataThrough: 2026-10-27
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Laval Tourisme - Les Lumières de Laval, édition 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2027-01-10
 ---
 
-## Mission retenue
-Préparer une sortie familiale aux **Lumières de Laval 2026**, édition « Bal de Noël », sans confondre les périodes d'illuminations, les trois marchés et les animations payantes.
+Pour les **Lumières de Laval 2026**, inutile de prévoir une journée entière si vos enfants veulent surtout admirer les illuminations. En revanche, si vous comptez sur un marché de Noël, un tour de grande roue ou une croisière, **le choix de la date change tout** : ces animations n'ont pas le même calendrier.
 
-## Pourquoi cette mission
-Programme 2026 déjà publié par Laval Tourisme, événement à venir et décision concrète de calendrier. Aucun article consacré aux Lumières de Laval parmi les 852 titres du catalogue; les pages proches sur Laval traitent d'autres sujets. Le meilleur refresh GSC, Futuroween (baisse d'impressions, pas de perte de classement prouvée), est déjà complet et se termine le 1er novembre. L'expansion de la page forte « Transports à Paris avec des enfants » est moins distincte : billets, aéroports, poussettes et Navigo Liberté+ disposent déjà de guides dédiés.
+L'édition « Bal de Noël » se déroule **du 21 novembre 2026 au 3 janvier 2027**, avec des illuminations à partir de **17 h**. Le lancement est annoncé le **samedi 21 novembre à partir de 18 h 45**. La grande roue reste installée jusqu'au **10 janvier 2027**. Le [programme de Laval Tourisme](https://www.laval-tourisme.com/sortez-vibrez/le-plein-d-evenements/les-lumieres-de-laval/) permet de suivre les éventuels ajustements.
 
-## Décision du lecteur
-Trouver une date correspondant aux envies des enfants et choisir une sortie gratuite ou payante sans arriver un jour où le marché ou la croisière ne fonctionne pas.
+## Quel jour venir pour trouver un marché de Noël ?
 
-## Faits à traiter
-- Illuminations **21 novembre 2026 – 3 janvier 2027**, allumées dès 17 h; lancement **21 novembre à partir de 18 h 45**. Grande roue au square de Boston **21 novembre – 10 janvier** : 6 € adulte, 4 € enfant de moins de 10 ans, gratuit moins de 2 ans; moins de 10 ans accompagnés.
-- Marchés **25–29 novembre** (place du 11-Novembre), **4–6 décembre** (marché des créateurs, même place), **9–13 décembre** (square de Boston). Horaires à contrôler par marché : ne pas appliquer automatiquement les horaires de l'un aux autres.
-- Croisière promenade sur le Vallis Guidonis **25 novembre – 30 décembre**, jours de départ à confirmer pour chaque date, **16 h 45–18 h**, 12 € par personne, gratuit moins de 2 ans; billets non échangeables/non remboursables selon l'organisateur. Distinguer clairement cette croisière des dîners-croisières, bien plus chers.
-- Préciser parcours, froid et foule, poussette, pauses, repas bébé et accès seulement sur informations vérifiées; proposer des exemples de budget avec âge et nombre de personnes explicites, sans supposer de places disponibles.
+Trois rendez-vous se succèdent, et non un marché ouvert pendant toute la période des illuminations.
 
-## Sources de départ
-Laval Tourisme : page événement 2026, fiche calendrier et fiche croisière, liens officiels ci-dessus.
+- **Du mercredi 25 au dimanche 29 novembre**, place du 11-Novembre : marché de Noël d'environ 20 exposants.
+- **Du vendredi 4 au dimanche 6 décembre**, place du 11-Novembre : marché des Lumières consacré aux artisans-créateurs, intéressant pour chercher un cadeau original.
+- **Du mercredi 9 au dimanche 13 décembre**, square de Boston : second marché de Noël, annoncé avec environ 50 exposants, juste à côté de la grande roue.
 
-## Affiliation
-Hôtel et Apparts Marin sur Booking.com, pertinent pour un week-end sans voiture; vérifier couchages, cuisine et lit bébé selon l'offre. Pas d'offre partenaire vérifiée pour les activités principales.
+Pour les marchés de Noël des **25–29 novembre et 9–13 décembre**, Laval Tourisme annonce les mêmes horaires : **11 h–20 h le mercredi et le jeudi**, **11 h–23 h le vendredi et le samedi**, **10 h–20 h le dimanche**.
 
-## Continuations internes
-- Renvoyer vers « Mayenne en famille pendant 3 jours : Laval, Sainte-Suzanne et Château-Gontier » pour un séjour plus long, sans reprendre son itinéraire.
-- Renvoyer au besoin vers « Se déplacer en Mayenne avec des enfants sans voiture » pour les déplacements régionaux; garder ici seulement l'accès concret aux Lumières.
+Le marché des créateurs a ses **propres horaires** : **vendredi 4 décembre de 12 h à 22 h**, **samedi 5 de 9 h 30 à 22 h**, **dimanche 6 de 11 h à 20 h**.
+
+**Pour une sortie avec de jeunes enfants**, les 5–6 ou 12–13 décembre sont des choix intéressants : marché, illuminations et grande roue peuvent être réunis le même jour. Le 12 ou le 13 décembre, le marché se trouve directement au square de Boston. En dehors de ces trois périodes, vous pouvez profiter des lumières et de la roue, mais pas compter sur ces marchés.
+
+## Grande roue : quel âge et combien coûte un tour ?
+
+Installée au **square de Boston**, la grande roue est annoncée **du 21 novembre au 10 janvier**. Elle ouvre tous les jours, avec des horaires différents selon les vacances scolaires :
+
+- **Hors vacances** : 14 h–22 h, jusqu'à minuit les vendredis et samedis.
+- **Pendant les vacances** : 11 h–23 h, jusqu'à minuit les vendredis et samedis.
+
+En cabine classique ou accessible aux personnes à mobilité réduite, le tarif annoncé est de **6 € par adulte**, **4 € pour un enfant de moins de 10 ans** et **gratuit avant 2 ans**. Les enfants de moins de 10 ans doivent être accompagnés d'un adulte.
+
+Exemple : **2 adultes et 2 enfants de 6 et 9 ans paient 20 €** pour un tour. Avec un enfant de 10 ans à la place de celui de 9 ans, le total passe à **22 €**.
+
+Pour profiter de la vue illuminée, choisissez un créneau après 17 h. Avec un enfant sensible au vide ou au froid, une simple promenade au pied de la roue peut suffire : il n'est pas nécessaire de payer une attraction pour découvrir l'ambiance.
+
+## Croisière des Lumières : une option plus calme, mais à réserver
+
+La **croisière promenade sur le Vallis Guidonis** permet de découvrir les lumières depuis la Mayenne, avec des commentaires du capitaine. Le départ se fait au **25 quai André-Pinçon** ; la sortie dure **1 h 15, de 16 h 45 à 18 h**.
+
+Elle est annoncée entre le **25 novembre et le 30 décembre**, mais **pas tous les jours**. La fiche de l'organisateur affiche notamment des départs les 25–28 novembre, 2–3, 5–6, 9, 12–13, 16–17, 20, 23 et 26–27 décembre. Elle ne détaille pas encore tous les jours jusqu'au 30 décembre : vérifiez donc le **départ exact proposé à la réservation** avant de fixer votre sortie. Les 24 et 25 décembre sont exclus.
+
+Le prix de la promenade est de **12 € par personne**, avec gratuité pour les **moins de 2 ans**. Pour **2 adultes et 2 enfants de 6 et 9 ans**, comptez **48 €**. Les billets sont annoncés **non échangeables et non remboursables** : mieux vaut choisir la date avant d'acheter. Consultez la [fiche de la croisière des Lumières](https://www.laval-tourisme.com/offres/croisiere-des-lumieres-2026-laval-fr-6854586/) pour les départs et la réservation.
+
+Attention à ne pas la confondre avec les **dîners-croisières** : Laval Tourisme annonce aussi des formules à **58 € par adulte et 30 € par enfant de moins de 12 ans**, ou des soirées musicales à **73 € et 37 €**. Ce n'est pas le même budget ni le même horaire.
+
+## Quelle formule choisir selon votre famille ?
+
+**Petit budget ou tout-petits :** une promenade dans le centre illuminé après 17 h, avec une pause au chaud si nécessaire. Vous n'avez pas besoin de réserver de billet pour vous promener dans les rues. Les 25–29 novembre et 4–13 décembre permettent d'y ajouter un marché aux dates précisées plus haut.
+
+**Enfants qui veulent une attraction :** la grande roue, plus facile à intégrer à une sortie courte qu'une croisière à heure fixe. Pour **2 adultes et 2 enfants de 6 et 9 ans**, le budget de l'attraction est de **20 €**, hors achats au marché et transports.
+
+**Famille qui veut les deux expériences payantes :** grande roue et croisière reviennent ensemble à **68 € pour ces mêmes quatre personnes**, hors repas. Le **samedi 12 décembre**, par exemple, combine aussi le marché de Noël du square de Boston, sous réserve de disponibilité des billets de croisière.
+
+## Poussette, bébé et accès : les points à anticiper
+
+Prévoyez des vêtements chauds et une sortie assez courte pour les petits : l'intérêt principal est dehors, en fin de journée, et le lancement ou les soirées de marché peuvent attirer du monde. Une poussette peut aider pour les pauses, mais les rues fréquentées et les files d'attente peuvent ralentir la promenade. Pour la **croisière**, ne présumez pas que la poussette peut être embarquée : demandez à l'organisateur les conditions d'accès et de rangement, notamment en cas de besoin d'accessibilité.
+
+Si vous venez avec un bébé, emportez de quoi assurer son repas et son change : aucun micro-ondes public ni espace à langer spécifique n'a été confirmé pour l'événement. Pour la grande roue, une cabine PMR est annoncée, mais il reste prudent de vérifier les modalités d'accès selon les besoins de votre famille.
+
+Les lieux utiles sont le **centre-ville et la place du 11-Novembre**, le **square de Boston** pour la roue et le marché de décembre, et le **quai André-Pinçon** pour le bateau. Laval Agglomération indique une navette gratuite de centre-ville et des lignes TUL ; vérifiez les horaires du retour, surtout après 19 h ou le dimanche, sur le [réseau de transports de Laval](https://www.agglo-laval.fr/utile-au-quotidien/transports-et-mobilites/tul).
+
+## Et si vous restez dormir à Laval ?
+
+Pour une famille arrivant en train, l'[Hôtel et Apparts Marin à Laval](https://www.booking.com/hotel/fr/marin-laval.fr.html), près de la gare, est une option à examiner : **certains logements disposent d'une cuisine** et un **lit bébé peut être demandé**. Vérifiez la capacité réelle de l'hébergement choisi, la confirmation du lit bébé et les conditions d'annulation pour vos dates ; aucune disponibilité n'est présumée.
+
+Si les Lumières s'inscrivent dans un séjour plus long, retrouvez aussi notre [itinéraire de trois jours en Mayenne avec des enfants](/articles/voyages/mayenne-en-famille-pendant-3-jours-laval-sainte-suzanne-et-chateau-gontier/), entre Laval, Sainte-Suzanne et Château-Gontier.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
+- /articles/evenements/lumieres-de-noel-a-montbeliard-2026-quel-jour-venir-avec-des-enfants/ | Lumières de Noël à Montbéliard 2026: quel jour venir avec des enfants? | evenements | Montbéliard, Doubs, Bourgogne-Franche-Comté
+- /articles/evenements/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/ | Marchés de Noël de Tours 2026 en famille: lieux, dates et budget | evenements | Tours, Indre-et-Loire, Centre-Val de Loire
 - /articles/evenements/marche-de-noel-de-lille-2026-en-famille-village-grande-roue-et-infos-pratiques/ | Marché de Noël de Lille 2026 en famille: village, Grande Roue et infos pratiques | evenements | Lille, Nord, Hauts-de-France
 - /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | Marché de Noël de Reims 2026 en famille: horaires, grande roue et animations | evenements | Reims, Marne, Grand Est
-- /articles/evenements/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/ | Marchés de Noël de Tours 2026 en famille: lieux, dates et budget | evenements | Tours, Indre-et-Loire, Centre-Val de Loire
+- /articles/evenements/marche-de-noel-de-cusset-2026-en-famille-quel-jour-choisir/ | Marché de Noël de Cusset 2026 en famille: quel jour choisir? | evenements | Cusset, Allier, Auvergne-Rhône-Alpes
+- /articles/evenements/noel-a-chambord-2026-avec-des-enfants-quand-venir-et-que-prevoir/ | Noël à Chambord 2026 avec des enfants: quand venir et que prévoir | evenements | Chambord, Loir-et-Cher, Centre-Val de Loire
+- /articles/evenements/noel-a-metz-2026-en-famille-marches-et-sentier-des-lanternes/ | Noël à Metz 2026 en famille: marchés et Sentier des Lanternes | evenements | Metz, Moselle, Grand Est
 - /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
-- /articles/evenements/lumieres-de-noel-a-montbeliard-2026-quel-jour-venir-avec-des-enfants/ | Lumières de Noël à Montbéliard 2026: quel jour venir avec des enfants? | evenements | Montbéliard, Doubs, Bourgogne-Franche-Comté
-- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
-- /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | Noël à Toulouse 2026 en famille: marchés, Père Noël et patinoire | evenements | Toulouse, Haute-Garonne, Occitanie
-- /articles/voyages/marches-de-noel-de-colmar-avec-des-enfants-en-2026-1-ou-2-jours-et-ou-dormir/ | Marchés de Noël de Colmar avec des enfants en 2026: 1 ou 2 jours et où dormir | voyages | Colmar, Haut-Rhin, Grand Est
 - /articles/evenements/le-lait-a-la-loupe-a-laval-faut-il-reserver-avec-des-enfants/ | Le lait à la loupe à Laval: faut-il réserver avec des enfants? | evenements | Laval, Mayenne, Pays de la Loire
 - /articles/voyages/mayenne-en-famille-pendant-3-jours-laval-sainte-suzanne-et-chateau-gontier/ | Mayenne en famille pendant 3 jours: Laval, Sainte-Suzanne et Château-Gontier | voyages | Laval, Mayenne, Pays de la Loire
 - /articles/sorties/exposition-trafic-especes-laval-famille-2026/ | Trafic d’espèces à Laval: une enquête gratuite à vivre en famille | sorties | Laval, Mayenne, Pays de la Loire
@@ -153,9 +200,8 @@ Hôtel et Apparts Marin sur Booking.com, pertinent pour un week-end sans voiture
 - opportunity | /articles/evenements/marche-de-noel-de-montpellier-2026-en-famille-dates-fermetures-et-attractions/ | 2026-10-29T08:29:37.767Z
 - opportunity | /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | 2026-10-20T00:30:38.975Z
 - opportunity | /articles/evenements/marche-de-noel-de-saint-etienne-2026-en-famille-dates-horaires-et-acces/ | 2026-10-28T18:37:09.008Z
-- opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
 - opportunity | /articles/evenements/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/ | 2026-10-28T21:29:26.054Z
-- opportunity | /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | 2026-10-24T23:34:36.270Z
+- opportunity | /articles/evenements/noel-des-alpes-2026-a-annecy-en-famille-marche-patinoire-ou-illuminations/ | 2026-10-29T05:28:53.475Z
 
 ### Phases 2 et 3
 
