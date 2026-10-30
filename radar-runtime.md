@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Noël à Caen 2026 en famille : marché ou visite des illuminations ?"
-subtitle: Marché du 28 novembre au 29 décembre, visites guidées les 9 et 16 décembre.
-summary: Choisir une promenade libre au marché de Noël ou une visite commentée du centre illuminé, selon l'âge des enfants, le temps disponible et le budget.
+title: "Noël à Caen 2026 en famille : marché de Noël ou visite guidée illuminée ?"
+subtitle: Chalets du 28 novembre au 29 décembre ; visites commentées les 9 et 16 décembre sur réservation
+summary: "Marché à parcourir librement ou visite guidée d'1 h 30 dans Caen illuminé : dates, tarifs, réservation et conseils pratiques pour choisir avec des enfants."
 category: evenements
 location:
   city: Caen
@@ -75,9 +80,11 @@ sources:
     url: https://www.caen-evenements.com/evenements/marche-de-noel-2026/
   - title: Caen la mer Tourisme - Dans la ville illuminée, RDV Découverte
     url: https://www.caenlamer-tourisme.fr/agenda-evenements/dans-la-ville-illuminee-en-partenariat-avec-caen-evenements-rdv-decouverte/
+  - title: Hôtel Astrid - Chambres et tarifs
+    url: https://www.hotelastrid.fr/fr/nos-chambres-et-tarifs
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations
   decision: Savoir si une promenade au marché suffit ou si la visite guidée du 9 ou du 16 décembre mérite une réservation pour sa famille.
@@ -87,48 +94,59 @@ radar:
     dataThrough: 2026-10-27
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Caen Événements - Marché de Noël 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-29
 ---
 
-## Mission retenue
-Préparer Noël à Caen avec des enfants en distinguant le marché saisonnier de la visite guidée du centre illuminé, deux expériences qui n'imposent ni la même durée ni la même réservation.
+À Caen, Noël 2026 se découvre de deux façons : **se promener à son rythme entre les chalets du marché**, du 28 novembre au 29 décembre, ou **réserver une visite commentée de la ville illuminée**, les mercredis 9 et 16 décembre. Avec de jeunes enfants, la première formule permet de repartir dès que la fatigue arrive. La seconde convient mieux à ceux qui aiment écouter des histoires sur la ville et peuvent suivre une visite de **1 h 30 en soirée**.
 
-## Pourquoi cette mission
-Édition 2026 et deux séances datées confirmées par les organisateurs, sujet encore absent du catalogue Caen. Le meilleur refresh GSC, Futuroween, est déjà complet et se termine le 1er novembre ; son recul d'exposition ne justifie pas de retoucher une page utile. L'expansion des transports parisiens recoupe déjà les articles sur les titres, Navigo Liberté+, les poussettes et les aéroports.
+## Marché de Noël : une promenade à organiser librement
 
-## Décision du lecteur
-Choisir une sortie libre entre les chalets ou réserver 1 h 30 de visite commentée, sans confondre les deux offres ni payer inutilement.
+[Caen Événements](https://www.caen-evenements.com/evenements/marche-de-noel-2026/) annonce **une cinquantaine de chalets répartis dans le centre-ville**, avec des artisans, des créateurs, des décorations, des bijoux, des jeux pour enfants, des produits du terroir et des stands alimentaires.
 
-## Faits à traiter
-Marché du 28 novembre au 29 décembre 2026, une cinquantaine de chalets selon Caen Événements. Visites les mercredis 9 et 16 décembre de 17 h à 18 h 30, 8 € plein tarif, 6 € réduit, gratuit pour les moins de 10 ans ; réservation obligatoire, pas de vente sur place, fin au marché avec boisson chaude. Vérifier les horaires, l'implantation précise, l'accès libre et les animations 2026 avant de les affirmer : ne pas reprendre le programme 2025. Prévoir un choix simple pour poussette, jeunes enfants et retour après la tombée de la nuit.
+Vous pouvez simplement flâner et regarder les vitrines, puis choisir une gourmandise ou un cadeau selon votre budget. Contrairement à la visite commentée, cette promenade ne demande pas de réserver une séance. Avec un enfant en bas âge, prévoyez plutôt un petit tour et une pause qu'un programme chargé.
 
-## Sources de départ
-Caen Événements pour le marché ; Caen la mer Tourisme pour la visite, les tarifs et la réservation.
+**Attention aux horaires :** la page 2026 de l'organisateur confirme les dates mais ne donne pas encore les heures d'ouverture quotidiennes ni le détail des animations. Les horaires, emplacements précis des chalets et rendez-vous avec le Père Noël vus dans les programmes antérieurs ne doivent pas être considérés comme confirmés pour 2026. Vérifiez ces éléments avant de fixer votre heure d'arrivée, notamment autour des 24 et 25 décembre.
 
-## Affiliation
-L'action principale n'a pas de partenaire de billetterie pertinent : la réservation officielle reste en Sources. Pour les familles qui restent une nuit, Hôtel Astrid Caen Centre sur Booking.com (https://www.booking.com/hotel/fr/astrid.fr.html) propose des chambres familiales ; comparer la capacité et les conditions à la date choisie.
+## Visite « Dans la ville illuminée » : pour qui et à quel prix ?
 
-## Continuations internes
-- L'article Fam Space sur les tickets Twisto à Caen peut prendre le relais pour les tarifs de transport, sans les redévelopper.
-- Ne pas présenter les animations, la parade ou les horaires de Noël 2025 comme des confirmations 2026.
+L'Office de tourisme de Caen la mer propose une découverte commentée du patrimoine éclairé, entre places, églises, abbayes et hôtels particuliers. Elle **se termine au marché de Noël avec une boisson chaude offerte**. Il s'agit d'une visite culturelle guidée, pas d'une entrée payante au marché.
+
+Les deux séances annoncées sont les **mercredis 9 et 16 décembre 2026, de 17 h à 18 h 30**. Les tarifs publiés sont de **8 € au plein tarif**, **6 € au tarif réduit** (notamment scolaires, étudiants, demandeurs d'emploi et personnes en situation de handicap), et **gratuit pour les moins de 10 ans**. Par exemple, deux adultes au plein tarif accompagnés de deux enfants de moins de 10 ans paient 16 € au total.
+
+**Réservation et paiement à l'avance obligatoires** : les places sont limitées et aucune billetterie n'est prévue sur place le jour de la visite. Les modalités figurent sur la fiche de Caen la mer Tourisme indiquée dans les références de l'article. Vérifiez la disponibilité de la date choisie, ainsi que le point de rendez-vous communiqué lors de la réservation.
+
+## Quelle formule choisir avec un bébé ou des enfants ?
+
+Pour un bébé en poussette ou un enfant qui ne tient pas longtemps dehors, le **marché seul** est généralement le choix le plus souple : vous pouvez raccourcir la balade, vous arrêter pour un goûter et rentrer sans contrainte d'horaire. Anticipez le froid, l'affluence en soirée et les déplacements entre chalets. Aucun espace de change, micro-ondes ou service spécifique pour les repas de bébé n'est confirmé dans les informations 2026 consultées ; emportez le nécessaire.
+
+La **visite guidée** est plus adaptée à un enfant curieux du patrimoine, capable de marcher ou de rester attentif pendant 90 minutes. Elle se déroule à la tombée de la nuit : prévoyez des vêtements chauds et demandez à l'organisateur si le parcours convient à votre poussette ou aux besoins de mobilité de votre famille. La gratuité des moins de 10 ans ne signifie pas que la visite soit spécialement conçue pour les tout-petits.
+
+## Rejoindre le centre et rentrer après la sortie
+
+Les chalets sont annoncés **dans le centre-ville de Caen**. Si vous venez en train ou comptez prendre le bus ou le tram, repérez votre arrêt et surtout le trajet du retour, particulièrement après la visite de 18 h 30. Pour choisir entre ticket Famille, titres à durée limitée et parking relais, consultez notre guide [Quel ticket Twisto choisir à Caen avec des enfants ?](https://www.fam-space.fr/articles/vie-pratique/quel-ticket-twisto-choisir-a-caen-avec-des-enfants/). Vérifiez les horaires de circulation à votre date, car les services peuvent changer pendant les fêtes.
+
+## Prolonger la soirée par une nuit à Caen
+
+Si vous venez de plus loin, l'[Hôtel Astrid Caen Centre sur Booking.com](https://www.booking.com/hotel/fr/astrid.fr.html) est une option à comparer pour rester près du centre. L'établissement indique proposer une **chambre familiale avec deux lits doubles pour trois ou quatre personnes**. Vérifiez les couchages adaptés à vos enfants, les conditions d'annulation, l'accessibilité et le prix réel à vos dates avant de réserver.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
-- /articles/vie-pratique/quel-ticket-twisto-choisir-a-caen-avec-des-enfants/ | Quel ticket Twisto choisir à Caen avec des enfants? | vie-pratique | Caen, Calvados, Normandie
-- /articles/evenements/noel-2026-a-rochefort-en-terre-avec-des-enfants-village-et-illuminations/ | Noël 2026 à Rochefort-en-Terre avec des enfants: village et illuminations | evenements | Rochefort-en-Terre, Morbihan, Bretagne
+- /articles/evenements/noel-a-nantes-2026-marche-gratuit-ou-visite-guidee-du-voyage-en-hiver/ | Noël à Nantes 2026: marché de Noël et Voyage en hiver en famille | evenements | Nantes, Loire-Atlantique, Pays de la Loire
 - /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
-- /articles/evenements/lumieres-de-noel-a-montbeliard-2026-quel-jour-venir-avec-des-enfants/ | Lumières de Noël à Montbéliard 2026: quel jour venir avec des enfants? | evenements | Montbéliard, Doubs, Bourgogne-Franche-Comté
-- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
 - /articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/ | Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille | evenements | Nevers, Nièvre, Bourgogne-Franche-Comté
+- /articles/evenements/noel-a-fontevraud-2026-quel-jour-choisir-avec-les-enfants/ | Noël à Fontevraud 2026: patinoire, marché, dates et tarifs en famille | evenements | Fontevraud-l'Abbaye, Maine-et-Loire, Pays de la Loire
+- /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
 - /articles/evenements/noel-des-alpes-2026-a-annecy-en-famille-marche-patinoire-ou-illuminations/ | Noël des Alpes 2026 à Annecy en famille: marché, patinoire et illuminations | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
-- /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | Marché de Noël d'Avignon 2026 en famille: horaires et accès | evenements | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
+- /articles/evenements/marche-de-noel-de-cusset-2026-en-famille-quel-jour-choisir/ | Marché de Noël de Cusset 2026 en famille: quel jour choisir? | evenements | Cusset, Allier, Auvergne-Rhône-Alpes
+- /articles/evenements/noel-2026-a-rochefort-en-terre-avec-des-enfants-village-et-illuminations/ | Noël 2026 à Rochefort-en-Terre avec des enfants: village et illuminations | evenements | Rochefort-en-Terre, Morbihan, Bretagne
 - /articles/parentalite/laep-a-caen-4-lieux-pour-venir-avec-un-enfant-sans-inscription/ | LAEP à Caen: 4 lieux pour venir avec un enfant sans inscription | parentalite | Caen, Calvados, Normandie
 - /articles/cuisine/ateliers-cuisine-a-caen-avec-des-enfants-quelle-formule-choisir/ | Bien Dans Son Assiette à Caen: quel atelier cuisine choisir avec un enfant ? | cuisine | Caen, Calvados, Normandie
 - /articles/maison/decheteries-de-caen-la-mer-qr-code-ou-plaque-obligatoires-depuis-septembre-2026/ | Déchèteries de Caen la mer: QR code ou plaque obligatoires depuis septembre 2026 | maison | Caen, Calvados, Normandie
+- /articles/vie-pratique/quel-ticket-twisto-choisir-a-caen-avec-des-enfants/ | Quel ticket Twisto choisir à Caen avec des enfants? | vie-pratique | Caen, Calvados, Normandie
 - /articles/evenements/equidays-2026-en-famille-dans-le-calvados-villages-gratuits-parade-et-animations/ | Équidays 2026 en famille dans le Calvados: villages gratuits, parade et animations | evenements | Caen, Calvados, Normandie
 - /articles/bons-plans/cinema-famille-gratuit-au-memorial-de-caen-pendant-l-ete-2026/ | Cinéma famille gratuit au Mémorial de Caen pendant l'été 2026 | bons-plans | Caen, Calvados, Normandie
-- /articles/evenements/week-end-joyeux-caen-2026-famille/ | Week-end joyeux 2026 à Caen: deux jours gratuits au château en famille | evenements | Caen, Calvados, Normandie
 - /articles/vie-pratique/ferry-ouistreham-portsmouth-en-famille-preparer-le-depart-et-la-traversee/ | Ferry Ouistreham-Portsmouth en famille: préparer le départ et la traversée | vie-pratique | Ouistreham, Calvados, Normandie
 - /articles/activites/festyland-avec-de-jeunes-enfants-quelles-attractions-selon-leur-taille/ | Festyland avec de jeunes enfants: quelles attractions selon leur taille? | activites | Carpiquet, Calvados, Normandie
 - /articles/voyages/bayeux-en-famille-1-ou-2-jours-et-quel-budget-prevoir/ | Bayeux en famille: 1 ou 2 jours et quel budget prévoir | voyages | Bayeux, Calvados, Normandie
@@ -142,8 +160,9 @@ L'action principale n'a pas de partenaire de billetterie pertinent : la réserva
 
 - opportunity | /articles/evenements/festival-bd-colomiers-2026-en-famille-quel-jour-choisir-et-combien-prevoir/ | 2026-10-29T23:28:55.064Z
 - opportunity | /articles/evenements/festival-des-petits-explorateurs-2026-a-dijon-quels-ateliers-choisir-en-famille/ | 2026-10-30T03:27:02.483Z
-- opportunity | /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | 2026-10-28T15:29:23.387Z
-- opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
+- opportunity | /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | 2026-10-29T00:28:19.695Z
+- opportunity | /articles/evenements/noel-a-fontevraud-2026-quel-jour-choisir-avec-les-enfants/ | 2026-10-28T01:34:03.741Z
+- opportunity | /articles/evenements/noel-a-nantes-2026-marche-gratuit-ou-visite-guidee-du-voyage-en-hiver/ | 2026-10-24T15:27:41.430Z
 - opportunity | /articles/evenements/noel-des-alpes-2026-a-annecy-en-famille-marche-patinoire-ou-illuminations/ | 2026-10-29T05:28:53.475Z
 - opportunity | /articles/evenements/ville-de-noel-d-arras-2026-en-famille-grande-roue-patinoire-et-horaires/ | 2026-10-29T20:30:33.011Z
 
