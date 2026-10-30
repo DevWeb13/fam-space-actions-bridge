@@ -281,3 +281,4 @@ automation/image-20261029-1849-cerf-dijon-villeneuve-baux-montauban-24698d2|8d65
 automation/image-20261029-1849-cerf-dijon-villeneuve-baux-montauban-24698d2|6359216e182e477187dd216e049a4d137f229622
 automation/image-20261030-0646-vache-macval-colomiers-dijon-flottins-arras-vendee-ouessant-a9c4b02|cfd09ae8bafc12ecffb227ed1304a7c5f99c644e
 automation/image-20261030-0646-vache-macval-colomiers-dijon-flottins-arras-vendee-ouessant-a9c4b02|566901e65ec8161e8853da6ec293cedd664272d0
+automation/image-20261030-1249-laval-brest-somme-dinan-dfa2cb5|dfa2cb58bd186f673f16a784ee02393eee79490f
