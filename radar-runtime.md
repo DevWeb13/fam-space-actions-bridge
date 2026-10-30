@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Ateliers A'musées à La Rochelle en décembre 2026 : quelle séance choisir en famille ?"
-subtitle: "Dimanche gratuit dès 7 ans ou atelier mosaïque dès 5 ans : dates, réservations et budget"
-summary: Au musée du Nouveau Monde de La Rochelle, comparer le rendez-vous familial gratuit du 6 décembre et l'atelier de création du 21 décembre 2026 pour choisir selon l'âge, l'envie et la disponibilité.
+title: "Ateliers A'musées à La Rochelle : tissage ou mosaïque en décembre 2026 ?"
+subtitle: "Deux séances familiales au musée du Nouveau Monde, les 6 et 21 décembre : âges, horaires, tarifs et réservation"
+summary: Le 6 décembre, les enfants dès 7 ans découvrent le tissage lors d'un atelier gratuit. Le 21 décembre, les familles avec enfants dès 5 ans peuvent créer une mosaïque. Voici comment choisir et réserver sans confondre les tarifs.
 category: activites
 location:
   city: La Rochelle
@@ -68,19 +73,23 @@ location:
   region: Nouvelle-Aquitaine
 keywords:
   - ateliers A'musées La Rochelle décembre 2026
-  - musée du Nouveau Monde enfants Noël 2026
+  - musée du Nouveau Monde atelier enfant Noël
   - Du fil à l'étoffe 6 décembre 2026
   - Splendeurs de verre 21 décembre 2026
 sources:
   - title: Musée du Nouveau Monde - Ateliers A'musées octobre-décembre 2026
     url: https://museedunouveaumonde.larochelle.fr/un-avant-gout/en-ce-moment/evenement/ateliers-amusees-de-cet-ete
-  - title: Infiniment Charentes / Nous La Rochelle - Du fil à l'étoffe, 6 décembre
+  - title: Infiniment Charentes - Du fil à l'étoffe, 6 décembre 2026
     url: https://www.infiniment-charentes.com/fiche-sit/animation-ateliers-amusees-un-dimanche-au-musee-8011010
-  - title: Infiniment Charentes / Nous La Rochelle - Splendeurs de verre, 21 décembre
+  - title: Infiniment Charentes - Splendeurs de verre, 21 décembre 2026
     url: https://www.infiniment-charentes.com/fiche-sit/animation-ateliers-amusees-vacances-de-noel-au-musee-du-nouveau-monde-8010995
+  - title: Musée du Nouveau Monde - Accès, tarifs et horaires
+    url: https://museedunouveaumonde.larochelle.fr/preparer-la-visite/acces-tarifs-et-horaires
+  - title: Musée du Nouveau Monde - Outils de visite et accessibilité
+    url: https://museedunouveaumonde.larochelle.fr/preparer-la-visite/informations-pratiques/outils-de-visite
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: ateliers-a-musees-a-la-rochelle-en-decembre-2026-quelle-seance-choisir-en-famille
   decision: Choisir une séance réellement adaptée à l'âge de l'enfant, comprendre ce qui est gratuit ou payant et savoir comment réserver avant de se déplacer.
@@ -90,49 +99,56 @@ radar:
     dataThrough: 2026-10-27
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Musée du Nouveau Monde - Ateliers A'musées octobre-décembre 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-21
 ---
 
-## Mission retenue
-Présenter deux rendez-vous distincts des Ateliers A'musées au musée du Nouveau Monde, sans les confondre avec une visite libre du musée ni avec le marché de Noël.
+Au musée du Nouveau Monde, à La Rochelle, deux ateliers familiaux sont prévus en décembre 2026. Ils durent chacun **1 h 30**, mais ne s'adressent pas tout à fait aux mêmes enfants : **tissage gratuit dès 7 ans le dimanche 6 décembre**, ou **création d'une mosaïque dès 5 ans le lundi 21 décembre**. Il faut s'inscrire auprès du musée avant de venir ; les places disponibles et les conditions de participation sont à confirmer au moment de l'appel.
 
-## Pourquoi cette mission
-L'article SNCF Carte Avantage Adulte, candidat refresh, explique déjà les règles familiales et les conditions officielles vérifiées (49 €, 30 % adulte, jusqu'à trois enfants à -60 %) : pas de correction décisive établie malgré la baisse d'impressions GSC. L'expansion des transports parisiens, page forte, recoupe des articles récents sur Navigo Liberté+, poussette et accès CDG. Ici, deux activités datées, officiellement documentées et absentes du catalogue compact répondent à un choix concret avant décembre.
+## Le 6 décembre : découvrir le tissage, dès 7 ans
 
-## Décision du lecteur
-Savoir si réserver la découverte textile gratuite du 6 décembre pour un enfant d'au moins 7 ans, ou la création en mosaïque du 21 décembre accessible dès 5 ans, et anticiper les contraintes pratiques.
+**« Du fil à l'étoffe : une histoire de liens »** se déroule **dimanche 6 décembre 2026, de 15 h à 16 h 30**. Les familles observent des objets décorés par les Amérindiens, puis les enfants s'initient au tissage à la main pour confectionner une pochette à trésors.
 
-## Faits à traiter
-- **Dimanche 6 décembre 2026, 15 h-16 h 30 :** « Du fil à l'étoffe : une histoire de liens », découverte des objets amérindiens et initiation au tissage, en famille dès 7 ans ; gratuit selon la fiche touristique institutionnelle.
-- **Lundi 21 décembre 2026, 10 h 15-11 h 45 ou 14 h-15 h 30 :** « Splendeurs de verre », découverte des objets en verre et fabrication d'une mosaïque, en famille dès 5 ans.
-- Musée du Nouveau Monde, 10 rue Fleuriau ; inscription annoncée au **05 46 51 51 45**. La page générale indique **4 €** pour les Ateliers A'musées, mais ne pas appliquer ce prix au 6 décembre gratuit ni au 21 décembre sans vérification spécifique. Vérifier places, modalités de participation adulte, accessibilité/poussette et services bébé.
-- La page générale annonce un programme jusqu'au 31 décembre : ne pas en déduire des séances quotidiennes. Le PDF détaillé d'octobre-décembre est lié sur le site municipal, mais son contenu n'a pas pu être consulté dans ce passage.
+La [fiche de l'atelier du 6 décembre publiée par Infiniment Charentes](https://www.infiniment-charentes.com/fiche-sit/animation-ateliers-amusees-un-dimanche-au-musee-8011010) annonce la **gratuité**. C'est le choix le plus simple pour un enfant de 7 ans ou plus qui aime manipuler et fabriquer, sans prévoir de budget d'atelier. La séance n'est pas annoncée pour les moins de 7 ans.
 
-## Sources de départ
-Les trois liens officiels/institutionnels du frontmatter, à privilégier pour dates, âges et réservations.
+## Le 21 décembre : fabriquer une mosaïque, dès 5 ans
 
-## Affiliation
-Aucun billet partenaire artificiel. Hébergement Booking.com identifié pour les familles qui prolongent la sortie ; ne pas inventer de tarif ou de disponibilité.
+**« Splendeurs de verre »** a lieu **lundi 21 décembre 2026**, avec deux créneaux : **10 h 15-11 h 45** ou **14 h-15 h 30**. Après la découverte d'objets en verre, les participants réalisent un objet décoratif en mosaïque, accompagnés de Sandrine Barbe, restauratrice d'art, et de Suzelle Corvaisier, médiatrice culturelle.
 
-## Continuations internes
-- Pour les visites touristiques à compléter dans le centre, renvoyer à l'article existant sur les tours de La Rochelle plutôt que réécrire leur programme.
-- Pour un séjour avec plusieurs visites, renvoyer au guide existant « La Rochelle Océan Pass avec des enfants » sans supposer que le pass couvre cet atelier.
+L'atelier est accessible **en famille dès 5 ans** : c'est donc la meilleure option des deux pour un enfant de 5 ou 6 ans. Les deux horaires et l'âge minimum figurent sur la [fiche « Splendeurs de verre »](https://www.infiniment-charentes.com/fiche-sit/animation-ateliers-amusees-vacances-de-noel-au-musee-du-nouveau-monde-8010995).
+
+**Attention au prix :** la [page générale des Ateliers A'musées](https://museedunouveaumonde.larochelle.fr/un-avant-gout/en-ce-moment/evenement/ateliers-amusees-de-cet-ete) affiche 4 €, mais la fiche propre au 21 décembre ne confirme pas ce tarif pour cette séance. Demandez le montant exact, notamment pour l'adulte accompagnateur, avant de réserver. Ne transposez pas non plus le tarif de cette page au rendez-vous gratuit du 6 décembre.
+
+## Réserver et préparer la venue avec des enfants
+
+Les inscriptions se font au **05 46 51 51 45**, numéro donné par le musée pour son programme d'ateliers. Précisez la date, le créneau souhaité, l'âge et le nombre d'enfants, puis demandez combien d'adultes peuvent ou doivent participer. Le nombre de places restantes n'est pas publié dans les informations consultées.
+
+Les deux rendez-vous se tiennent au **musée du Nouveau Monde, 10 rue Fleuriau, 17000 La Rochelle**. Ce sont des ateliers programmés, pas des créneaux de visite libre ni des animations du marché de Noël. Le musée est accessible depuis les arrêts Yélo **Dupaty** ou **place de Verdun** ; un parking payant se trouve également place de Verdun. Consultez les [indications d'accès du musée](https://museedunouveaumonde.larochelle.fr/preparer-la-visite/acces-tarifs-et-horaires) avant de partir.
+
+Avec un bébé, une poussette ou des difficultés à monter les escaliers, vérifiez l'organisation au téléphone : le musée indique **ne pas être accessible aux personnes à mobilité réduite**, et ses **toilettes se trouvent au premier étage**. Aucun équipement de change ni espace poussette dédié n'a pu être confirmé. Mieux vaut poser ces questions avant de réserver plutôt que de découvrir une contrainte sur place.
+
+## Et si vous passez le week-end à La Rochelle ?
+
+Pour une famille venue de plus loin, le [Bel appartement - 2 chambres - Proche du vieux marché](https://www.booking.com/hotel/fr/bel-appartement-2-chambres-proche-du-vieux-marche.fr.html), dans le centre, propose deux chambres et une cuisine ; un lit bébé peut être demandé, sous réserve de disponibilité. Il se situe au troisième étage : vérifiez les conditions d'accès si vous voyagez avec une poussette. Les prix et disponibilités doivent être consultés pour vos dates.
+
+Si vous ajoutez d'autres musées à votre séjour, notre guide sur le [La Rochelle Océan Pass avec des enfants](/articles/bons-plans/la-rochelle-ocean-pass-avec-des-enfants-quand-est-il-vraiment-rentable/) aide à décider si le pass vaut son prix. **Ne supposez pas que les ateliers A'musées y sont inclus** : l'accès aux collections et l'inscription à une activité spécifique sont deux choses différentes.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
-- /articles/sorties/fort-boyard-en-famille-depuis-la-rochelle-quelle-croisiere-choisir/ | Fort Boyard en famille depuis La Rochelle: quelle croisière choisir | sorties | La Rochelle, Charente-Maritime, Nouvelle-Aquitaine
 - /articles/bons-plans/la-rochelle-ocean-pass-avec-des-enfants-quand-est-il-vraiment-rentable/ | La Rochelle Océan Pass avec des enfants: quand est-il vraiment rentable ? | bons-plans | La Rochelle, Charente-Maritime, Nouvelle-Aquitaine
+- /articles/sorties/fort-boyard-en-famille-depuis-la-rochelle-quelle-croisiere-choisir/ | Fort Boyard en famille depuis La Rochelle: quelle croisière choisir | sorties | La Rochelle, Charente-Maritime, Nouvelle-Aquitaine
 - /articles/sorties/tours-la-rochelle-activites-famille-ete-2026/ | Tours de La Rochelle en famille: que reste-t-il à faire fin août 2026 ? | sorties | La Rochelle, Charente-Maritime, Nouvelle-Aquitaine
-- /articles/vie-pratique/colmar-avec-des-enfants-quand-il-pleut-quel-musee-choisir/ | Colmar avec des enfants quand il pleut: quel musée choisir ? | vie-pratique | Colmar, Haut-Rhin, Grand Est
-- /articles/cuisine/fort-royer-quelle-visite-ostreicole-choisir-avec-des-enfants/ | Fort-Royer: quelle visite ostréicole choisir avec des enfants? | cuisine | Saint-Pierre-d'Oléron, Charente-Maritime, Nouvelle-Aquitaine
-- /articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/ | Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants | evenements | Le Mans, Sarthe, Pays de la Loire
 - /articles/evenements/noel-2026-a-chenonceau-quel-jour-decouvrir-les-decors-en-famille/ | Noël à Chenonceau 2026: décors, nocturnes et tarifs en famille | evenements | Chenonceaux, Indre-et-Loire, Centre-Val de Loire
+- /articles/sorties/musee-cour-or-metz-ateliers-famille-ete-2026/ | Musée de La Cour d’Or à Metz en famille: prochains ateliers en septembre 2026 | sorties | Metz, Moselle, Grand Est
 - /articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/ | Marché de Noël 100 % Côte-d’Or à Dijon 2026: horaires, spectacles et Père Noël | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/evenements/noel-d-autrefois-2026-au-musee-de-plein-air-quel-jour-venir-en-famille/ | Noël d’autrefois 2026 à Villeneuve-d’Ascq: dates, ateliers et accès en famille | evenements | Villeneuve-d'Ascq, Nord, Hauts-de-France
+- /articles/activites/ateliers-matisse-nice-famille-aout-2026/ | Ateliers Matisse à Nice: sept matinées créatives pour les 4 à 7 ans en août | activites | Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur
 - /articles/parentalite/parents-separes-en-charente-maritime-une-aide-caf-pour-les-visites-a-distance/ | Parents séparés en Charente-Maritime: une aide Caf pour les visites à distance | parentalite | La Rochelle, Charente-Maritime, Nouvelle-Aquitaine
 - /articles/evenements/festival-du-cerf-volant-2027-a-chatelaillon-plage-le-guide-des-familles/ | Festival du cerf-volant 2027 à Châtelaillon-Plage: le guide des familles | evenements | Châtelaillon-Plage, Charente-Maritime, Nouvelle-Aquitaine
 - /articles/voyages/paleosite-de-saint-cesaire-en-famille-combien-de-temps-prevoir-en-2026/ | Paléosite de Saint-Césaire en famille: combien de temps prévoir en 2026? | voyages | Saint-Césaire, Charente-Maritime, Nouvelle-Aquitaine
 - /articles/sorties/chateau-des-enigmes-de-pons-en-famille-preparer-la-visite-en-2026/ | Château des Énigmes de Pons en famille: préparer la visite en 2026 | sorties | Pons, Charente-Maritime, Nouvelle-Aquitaine
+- /articles/cuisine/fort-royer-quelle-visite-ostreicole-choisir-avec-des-enfants/ | Fort-Royer: quelle visite ostréicole choisir avec des enfants? | cuisine | Saint-Pierre-d'Oléron, Charente-Maritime, Nouvelle-Aquitaine
 - /articles/maison/maison-de-vacances-sur-l-ile-d-oleron-en-famille-les-criteres-qui-changent-vraiment-le-sejour/ | Maison de vacances sur l'île d'Oléron en famille: les critères qui changent vraiment le séjour | maison | Saint-Pierre-d'Oléron, Charente-Maritime, Nouvelle-Aquitaine
 - /articles/evenements/festival-les-martinelles-2026-en-famille/ | Les Martinelles à Saint-Martin-de-Ré: deux journées gratuites pour les enfants | evenements | Saint-Martin-de-Ré, Charente-Maritime, Nouvelle-Aquitaine
 - /articles/activites/mac-val-en-famille-a-vitry-sur-seine-visites-ateliers-et-conseils-pratiques/ | MAC VAL en famille à Vitry-sur-Seine: visites, ateliers et conseils pratiques | activites | Vitry-sur-Seine, Val-de-Marne, Île-de-France
@@ -142,12 +158,12 @@ Aucun billet partenaire artificiel. Hébergement Booking.com identifié pour les
 - /articles/activites/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives/ | Palais idéal du facteur Cheval en famille: visite et conseils à Hauterives | activites | Hauterives, Drôme, Auvergne-Rhône-Alpes
 - /articles/activites/espace-des-sciences-de-morlaix-en-famille-que-decouvrir-a-la-manufacture/ | Espace des sciences de Morlaix en famille: que découvrir à la Manufacture? | activites | Morlaix, Finistère, Bretagne
 - /articles/activites/visiter-le-chateau-de-la-rochefoucauld-en-famille-parcours-tarifs-et-conseils/ | Visiter le château de La Rochefoucauld en famille: parcours, tarifs et conseils | activites | La Rochefoucauld-en-Angoumois, Charente, Nouvelle-Aquitaine
-- /articles/activites/lac-du-bouchet-en-famille-tour-du-lac-baignade-et-activites/ | Lac du Bouchet en famille: tour du lac, baignade et activités | activites | Cayres, Haute-Loire, Auvergne-Rhône-Alpes
 
 ### Historique Radar lié
 
 - opportunity | /articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/ | 2026-10-29T14:26:32.277Z
 - opportunity | /articles/evenements/noel-2026-a-chenonceau-quel-jour-decouvrir-les-decors-en-famille/ | 2026-10-24T12:31:27.784Z
+- opportunity | /articles/evenements/noel-d-autrefois-2026-au-musee-de-plein-air-quel-jour-venir-en-famille/ | 2026-10-29T17:29:29.382Z
 
 ### Phases 2 et 3
 
