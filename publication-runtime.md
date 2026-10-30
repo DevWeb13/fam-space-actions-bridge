@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,94 +14,153 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Bouches-du-Rhône
 - Région: Provence-Alpes-Côte d’Azur
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Saint-Rémy-de-Provence en famille à petit prix : Glanum, musées et réductions à connaître** (Bouches-du-Rhône, bons plans).
-
-Angle : organiser une journée culturelle et ludique dans Saint-Rémy et aux abords de Glanum, en distinguant les vraies gratuités pour les enfants, les dimanches gratuits, les billets combinés et le Saint-Rémy Pass, plutôt que d'acheter systématiquement tous les billets au plein tarif.
-
-Saint-Rémy-de-Provence réunit le site archéologique antique de Glanum, le musée des Alpilles consacré au territoire et aux arts graphiques, et le musée Estrine avec son parcours autour de Van Gogh. Ces lieux permanents permettent une sortie familiale à plusieurs rythmes, sans dépendre d'un événement ponctuel.
-
-## Besoin du lecteur
-
-Comprendre ce que chaque lieu propose aux enfants et choisir un parcours réaliste selon leur âge, la saison, le budget et le temps disponible. Savoir quand une entrée est gratuite, quand un billet combiné ou un pass est réellement avantageux, et préparer les déplacements entre le centre ancien et Glanum, les pauses, les horaires et l'équipement pour les plus petits.
-
-## Valeur éditoriale
-
-- **Comparer des règles différentes** : Glanum est gratuit aux moins de 18 ans et le premier dimanche de novembre à mars, sauf fermeture exceptionnelle ; le musée des Alpilles est gratuit aux moins de 18 ans et le premier dimanche d'avril à septembre, mais n'ouvre pas le dimanche en saison hivernale ; le musée Estrine est gratuit aux moins de 18 ans et le premier dimanche hors juillet-août-septembre. Les adultes ne bénéficient donc pas tous des mêmes économies au même moment.
-- **Alerte calendaire** : Glanum est fermé le 1er novembre, même si ce jour est le premier dimanche de novembre en 2026 ; ne pas conseiller cette date comme journée gratuite. Vérifier les dates et horaires au moment de la rédaction.
-- **Comparer sans promesse excessive** : entrée normale de Glanum à 9 €, tarif partenaire à 7,50 € sous conditions, billets jumelés avec l'Hôtel de Sade (12 €) ou Montmajour (14 €). Le Saint-Rémy Pass est mentionné par le site officiel de Glanum et la mairie ; la page touristique le présente encore comme « Pass 2025 » malgré un visuel 2026 : confirmer ses modalités en cours avant de promettre sa délivrance ou une économie précise.
-- **Expérience familiale concrète** : livret d'enquête de Glanum pour les 6-12 ans (2 €), terrain accidenté déconseillé aux poussettes, pique-nique uniquement dans l'espace autorisé avant l'accueil ; sac muséojeu proposé au musée des Alpilles. Expliquer les différences de contenu entre cité antique, culture provençale et peinture, et proposer un programme souple plutôt que trois visites imposées.
-- Éviter d'étendre le sujet aux Carrières des Lumières, déjà traitées récemment, et aux billets d'événements passés.
-
-## Affiliation
-
-- **Tiqets — billet d'entrée au site archéologique de Glanum**, offre vérifiée à partir de 9 € : https://www.tiqets.com/fr/activites-attractions-saint-remy-de-provence-c96034/billets-pour-site-archeologique-de-glanum-p987971/ . Proposition naturelle uniquement pour les adultes au tarif normal souhaitant réserver en ligne ; présenter d'abord les gratuités et réductions officielles, qui peuvent être plus avantageuses.
-- **Booking.com — Résidence Le Moulin de St Rémy 95 m2**, appartement à Saint-Rémy-de-Provence avec deux chambres, cuisine et parking, utile pour prolonger la visite en week-end familial : https://www.booking.com/hotel/fr/le-moulin-de-st-remy.fr.html . Offre vérifiée ; disponibilité et prix selon les dates, à ne pas inventer.
-- Pas de location de voiture, transfert ou autre service artificiellement ajouté à une journée de visite.
-
-## Sources de départ
-
-- Centre des monuments nationaux, Glanum : horaires, tarifs, gratuités, fermetures, billets jumelés, réductions et accès : https://www.site-glanum.fr/visiter/informations-pratiques
-- Centre des monuments nationaux, Glanum en famille : livret, poussettes, pique-nique et activités : https://www.site-glanum.fr/visiter/en-famille
-- Ville de Saint-Rémy-de-Provence, musée des Alpilles : contenu, sac muséojeu, tarifs, horaires et Saint-Rémy Pass : https://www.mairie-saintremydeprovence.com/que-faire-a-saint-remy/envie-de-culture/musee-des-alpilles/
-- Musée Estrine, informations pratiques et gratuités : https://www.musee-estrine.fr/fr/pratique/
-- Office de tourisme Alpilles en Provence, présentation du Saint-Rémy Pass (attention aux mentions 2025 encore présentes) : https://www.alpillesenprovence.com/saint-remy-pass/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "bons-plans"
+title: "Saint-Rémy-de-Provence en famille: Glanum, musées et entrées gratuites"
+subtitle: "Les bons tarifs et les horaires à connaître pour composer une journée culturelle sans multiplier les dépenses"
+summary: "À Saint-Rémy-de-Provence, les moins de 18 ans visitent Glanum et deux musées gratuitement. Voici quand les adultes peuvent aussi économiser."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Saint-Rémy-de-Provence en famille petit budget"
+  - "Glanum gratuit enfants"
+  - "musée des Alpilles tarifs"
+  - "musée Estrine gratuit dimanche"
+  - "Saint-Rémy Pass"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Saint-Rémy-de-Provence"
+  department: "Bouches-du-Rhône"
+  region: "Provence-Alpes-Côte d’Azur"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Cité antique de Glanum - informations pratiques"
+    url: "https://www.site-glanum.fr/visiter/informations-pratiques"
+  - title: "Cité antique de Glanum - visite en famille"
+    url: "https://www.site-glanum.fr/visiter/en-famille"
+  - title: "Ville de Saint-Rémy-de-Provence - musée des Alpilles"
+    url: "https://www.mairie-saintremydeprovence.com/que-faire-a-saint-remy/envie-de-culture/musee-des-alpilles/"
+  - title: "Musée Estrine - informations pratiques"
+    url: "https://www.musee-estrine.fr/fr/pratique/"
+  - title: "Musée Estrine - centre d’interprétation Vincent van Gogh"
+    url: "https://www.musee-estrine.fr/fr/vincent-van-gogh/"
+  - title: "Office de tourisme Alpilles en Provence - Saint-Rémy Pass"
+    url: "https://www.alpillesenprovence.com/saint-remy-pass/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Saint-Rémy-de-Provence, dans les Bouches-du-Rhône, on peut passer de vestiges antiques à un musée sur la vie provençale, puis à la peinture, sans payer d'entrée pour les enfants de moins de 18 ans. Les trois lieux à connaître sont la cité antique de Glanum, le musée des Alpilles et le musée Estrine. Pour les adultes, les tarifs et les jours gratuits diffèrent: le choix de la date compte autant que celui des visites.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Trois visites, trois façons de découvrir Saint-Rémy
+
+### Glanum: explorer une ville antique à ciel ouvert
+
+Au pied des Alpilles, au sud du centre de Saint-Rémy, Glanum conserve les traces d'une cité marquée par les cultures gauloise, grecque et romaine. On se promène parmi les vestiges plutôt que dans des salles de musée: une bonne option pour les enfants qui aiment chercher des détails et imaginer la vie d'autrefois.
+
+Le Centre des monuments nationaux propose un **livret d'enquête pour les 6-12 ans à 2 €**, à demander à l'accueil. Des animations peuvent aussi être programmées pendant les vacances, sans être systématiques. Le terrain est accidenté: **les poussettes sont déconseillées**, et le porte-bébé est plus pratique avec un tout-petit. Le pique-nique est permis sous les oliviers *avant* le bâtiment d'accueil, pas à l'intérieur du parc archéologique. Ces indications figurent dans la page officielle [Glanum en famille](https://www.site-glanum.fr/visiter/en-famille).
+
+### Musée des Alpilles: objets provençaux et découverte par le jeu
+
+Installé dans un ancien hôtel particulier du centre historique, le musée des Alpilles raconte la vie locale à travers des objets du quotidien, les liens entre habitants et paysages, et des collections d'arts graphiques. Il convient bien à une famille qui préfère une visite à l'intérieur ou veut comprendre le territoire après une balade.
+
+À l'accueil, on peut demander un **sac muséojeu** pour parcourir les collections à son rythme. C'est un vrai atout pour les enfants qui ne veulent pas simplement suivre des cartels. La [présentation du musée par la mairie](https://www.mairie-saintremydeprovence.com/que-faire-a-saint-remy/envie-de-culture/musee-des-alpilles/) détaille aussi les ateliers ponctuels, à distinguer de la visite libre.
+
+### Musée Estrine: comprendre Van Gogh, sans chercher ses tableaux originaux
+
+Au cœur de Saint-Rémy, le musée Estrine associe collections de peinture moderne et contemporaine et espace pédagogique consacré à Vincent van Gogh, qui a vécu dans la commune en 1889-1890. Son [centre d'interprétation](https://www.musee-estrine.fr/fr/vincent-van-gogh/) explique la vie du peintre, ses lettres et son influence à travers des supports multimédias.
+
+**Attention à une confusion fréquente: le musée ne conserve aucune œuvre originale de Van Gogh.** On y vient pour comprendre son parcours et découvrir d'autres artistes. Pour une famille avec des enfants déjà curieux de peinture, cette visite peut être plus parlante qu'une succession de salles sans fil conducteur.
+
+## Les gratuités et réductions qui changent vraiment le budget
+
+**À Glanum**, l'entrée est gratuite pour les moins de 18 ans. Elle l'est également, sous conditions, pour les 18-25 ans ressortissants de l'Union européenne ou résidents réguliers non européens en France, les demandeurs d'emploi, les personnes en situation de handicap et leur accompagnateur, ainsi que les titulaires du Pass éducation. Le plein tarif adulte est de **9 €**. Certains justificatifs ou billets partenaires donnent accès au tarif de **7,50 €**; une carte SNCF Grand Voyageur permet un tarif de **6 €** selon les conditions affichées. Le premier dimanche de **janvier, février, mars, novembre et décembre**, l'entrée est normalement gratuite pour tous. Mais **Glanum est fermé le dimanche 1er novembre 2026**: ce jour-là ne permet donc aucune visite gratuite. Vérifiez les [conditions et fermetures officielles de Glanum](https://www.site-glanum.fr/visiter/informations-pratiques) avant de partir.
+
+**Au musée des Alpilles**, les moins de 18 ans et les habitants de Saint-Rémy-de-Provence entrent gratuitement, sur justificatif. Le billet adulte coûte **7 €**, ou **4 €** pour plusieurs publics éligibles, notamment les étudiants, demandeurs d'emploi et bénéficiaires du RSA. L'entrée est également gratuite pour tous le **premier dimanche d'avril à septembre**. Ce bon plan ne s'applique pas en hiver: le musée est alors fermé le dimanche. Les détails sont publiés par la [ville de Saint-Rémy-de-Provence](https://www.mairie-saintremydeprovence.com/que-faire-a-saint-remy/envie-de-culture/musee-des-alpilles/).
+
+**Au musée Estrine**, les moins de 18 ans, les étudiants et les demandeurs d'emploi figurent parmi les publics admis gratuitement sur justificatif. Le plein tarif est de **9 €**, ou **12 € pour certaines expositions temporaires**; des tarifs réduits existent. Le **premier dimanche du mois**, l'entrée est gratuite, **sauf en juillet, août et septembre**. Consultez les [tarifs du musée Estrine](https://www.musee-estrine.fr/fr/pratique/) pour les conditions applicables à l'exposition choisie.
+
+Pour une famille avec deux adultes et deux enfants mineurs, une visite de Glanum au plein tarif revient ainsi à **18 € d'entrées**, hors livret ou autres dépenses. Un jour de gratuité réellement ouvert, cette dépense peut disparaître. Inutile, en revanche, de programmer les trois visites dans la même journée simplement parce que les enfants ne paient pas.
+
+## Saint-Rémy Pass et billets combinés: quand les regarder ?
+
+Le **Saint-Rémy Pass** repose sur un principe intéressant: après une visite à plein tarif dans l'un des cinq sites participants, les quatre autres peuvent proposer un tarif réduit. Il concerne Glanum, le musée des Alpilles, le musée Estrine, l'Hôtel de Sade et le cloître Saint-Paul-de-Mausole.
+
+Il faut toutefois rester prudent: la [page de l'office de tourisme consacrée au pass](https://www.alpillesenprovence.com/saint-remy-pass/) affiche encore des mentions **« Pass 2025 »** et des horaires anciens, malgré un visuel 2026. Les sites partenaires citent toujours le dispositif, mais ses modalités de délivrance actuelles ne sont pas suffisamment claires pour garantir une économie précise. **Demandez confirmation à l'office de tourisme ou au premier lieu visité avant de compter dessus.** Le pass n'est pas une entrée gratuite à tous les monuments.
+
+À Glanum, il existe aussi des **billets jumelés**: **12 €** pour Glanum et l'Hôtel de Sade, **14 €** pour Glanum et l'abbaye de Montmajour. Ils peuvent être intéressants si les deux visites sont réellement prévues et ouvertes aux dates choisies. Pour une famille dont les enfants bénéficient déjà de la gratuité, mieux vaut comparer les seuls billets adultes nécessaires plutôt qu'acheter un forfait par réflexe. Les montants figurent sur la [billetterie et les informations officielles de Glanum](https://www.site-glanum.fr/visiter/informations-pratiques).
+
+## Quel programme choisir selon l'âge et la saison ?
+
+**Avec des enfants de 6 à 12 ans**, privilégiez Glanum le matin, avec son livret d'enquête, puis une pause et éventuellement le musée des Alpilles. Le contraste entre les ruines en plein air et les objets du quotidien donne deux expériences différentes. Par temps chaud, prévoyez eau, chapeaux et chaussures adaptées au terrain.
+
+**Avec de jeunes enfants ou une poussette**, le centre historique et le musée des Alpilles sont plus simples à envisager que les chemins irréguliers de Glanum. Une seule visite intérieure, complétée par une promenade et une pause, peut suffire.
+
+**Avec des adolescents attirés par l'art**, le musée Estrine est un bon point de départ pour parler de Van Gogh et de peinture contemporaine. Glanum peut ensuite apporter une découverte très différente, à condition de ne pas sous-estimer la fatigue liée aux déplacements et aux visites.
+
+Les horaires imposent aussi leur rythme:
+
+- **Glanum**: de **10 h à 17 h d'octobre à mars**, fermé le lundi durant cette période; fermeture également les **1er et 11 novembre**, entre autres jours fériés. Dernière entrée 45 minutes avant la fermeture. D'avril à septembre, les horaires sont plus étendus.
+- **Musée des Alpilles**: d'**octobre à mars, du mercredi au samedi de 13 h à 17 h 30**; d'avril à septembre, du mardi au dimanche de **10 h à 13 h et de 14 h à 18 h**.
+- **Musée Estrine**: de **14 h à 17 h 30** en février, mars, novembre et décembre; de **10 h à 13 h et de 14 h à 18 h** en avril, mai, juin et octobre; de **10 h à 18 h** de juillet à septembre. Fermé le lundi. Le musée annonce une **fermeture annuelle à compter du 20 décembre 2026 à 17 h 30**; les dates de réouverture doivent être vérifiées.
+
+Ces plages proviennent des [horaires de Glanum](https://www.site-glanum.fr/visiter/informations-pratiques), du [musée des Alpilles](https://www.mairie-saintremydeprovence.com/que-faire-a-saint-remy/envie-de-culture/musee-des-alpilles/) et du [musée Estrine](https://www.musee-estrine.fr/fr/pratique/). Un dimanche gratuit à un endroit ne signifie donc pas que les trois lieux seront ouverts.
+
+## Accès, stationnement et pauses: les détails utiles
+
+Le musée des Alpilles se trouve **place Favier** et le musée Estrine **place Philippe-Latourelle**, tous deux dans le centre historique. Glanum est plus au sud, **avenue Vincent-Van-Gogh**: prévoyez un déplacement distinct et évitez d'enchaîner les visites sans pause, surtout avec de jeunes enfants.
+
+Pour Glanum, le Centre des monuments nationaux indique un **parking municipal en face de l'entrée**, avec un forfait voiture de **4 € pour huit heures**. Le musée Estrine signale le **parking gratuit de l'Espace de la Libération**. Vérifiez la signalisation sur place, les conditions de stationnement pouvant évoluer.
+
+Si vous emportez un repas, gardez en tête que l'espace de pique-nique autorisé à Glanum est **avant l'accueil**, sous les oliviers. La buvette du site fonctionne habituellement **d'avril à fin septembre**: hors saison, mieux vaut ne pas compter dessus.
+
+Le bon plan le plus sûr reste finalement de choisir **une ou deux visites adaptées aux enfants**, puis de vérifier les gratuités de chacun avant d'acheter un billet adulte.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -130,4 +189,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
