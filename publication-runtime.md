@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 3/4
+# Publication automatique Fam Space - Phase 4/4
 
 ## Mission
 
-Tu es le responsable affiliation et conversion de Fam Space.
+Tu es le secrétaire de rédaction et fact-checker final de Fam Space.
 
-Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
+Tu es la dernière personne à lire l'article avant publication. Ton rôle n'est pas de vérifier que les phases précédentes ont obéi à leurs consignes: ton rôle est de décider si le résultat est digne d'un média familial professionnel, puis de le corriger si nécessaire.
 
 ## Affectation courante
 
@@ -14,7 +14,7 @@ Ton travail est de transformer l'intérêt du lecteur en actions utiles et en re
 - Département: Bouches-du-Rhône
 - Région: Provence-Alpes-Côte d’Azur
 
-## Article du journaliste
+## Article à éditer
 
 ---
 category: "bons-plans"
@@ -54,7 +54,7 @@ sources:
 
 Au pied des Alpilles, au sud du centre de Saint-Rémy, Glanum conserve les traces d'une cité marquée par les cultures gauloise, grecque et romaine. On se promène parmi les vestiges plutôt que dans des salles de musée: une bonne option pour les enfants qui aiment chercher des détails et imaginer la vie d'autrefois.
 
-Le Centre des monuments nationaux propose un **livret d'enquête pour les 6-12 ans à 2 €**, à demander à l'accueil. Des animations peuvent aussi être programmées pendant les vacances, sans être systématiques. Le terrain est accidenté: **les poussettes sont déconseillées**, et le porte-bébé est plus pratique avec un tout-petit. Le pique-nique est permis sous les oliviers *avant* le bâtiment d'accueil, pas à l'intérieur du parc archéologique. Ces indications figurent dans la page officielle [Glanum en famille](https://www.site-glanum.fr/visiter/en-famille).
+Le Centre des monuments nationaux propose un **livret d'enquête pour les 6-12 ans à 2 €**, à demander à l'accueil. Des animations peuvent aussi être programmées pendant les vacances, sans être systématiques. Le terrain est accidenté: **les poussettes sont déconseillées**, et le porte-bébé est plus pratique avec un tout-petit. Le pique-nique est permis sous les oliviers *avant* le bâtiment d'accueil, pas à l'intérieur du parc archéologique. Ces conseils pratiques sont détaillés par le Centre des monuments nationaux.
 
 ### Musée des Alpilles: objets provençaux et découverte par le jeu
 
@@ -70,7 +70,7 @@ Au cœur de Saint-Rémy, le musée Estrine associe collections de peinture moder
 
 ## Les gratuités et réductions qui changent vraiment le budget
 
-**À Glanum**, l'entrée est gratuite pour les moins de 18 ans. Elle l'est également, sous conditions, pour les 18-25 ans ressortissants de l'Union européenne ou résidents réguliers non européens en France, les demandeurs d'emploi, les personnes en situation de handicap et leur accompagnateur, ainsi que les titulaires du Pass éducation. Le plein tarif adulte est de **9 €**. Certains justificatifs ou billets partenaires donnent accès au tarif de **7,50 €**; une carte SNCF Grand Voyageur permet un tarif de **6 €** selon les conditions affichées. Le premier dimanche de **janvier, février, mars, novembre et décembre**, l'entrée est normalement gratuite pour tous. Mais **Glanum est fermé le dimanche 1er novembre 2026**: ce jour-là ne permet donc aucune visite gratuite. Vérifiez les [conditions et fermetures officielles de Glanum](https://www.site-glanum.fr/visiter/informations-pratiques) avant de partir.
+**À Glanum**, l'entrée est gratuite pour les moins de 18 ans. Elle l'est également, sous conditions, pour les 18-25 ans ressortissants de l'Union européenne ou résidents réguliers non européens en France, les demandeurs d'emploi, les personnes en situation de handicap et leur accompagnateur, ainsi que les titulaires du Pass éducation. Le plein tarif adulte est de **9 €**. Certains justificatifs ou billets partenaires donnent accès au tarif de **7,50 €**; une carte SNCF Grand Voyageur permet un tarif de **6 €** selon les conditions affichées. Le premier dimanche de **janvier, février, mars, novembre et décembre**, l'entrée est normalement gratuite pour tous. Mais **Glanum est fermé le dimanche 1er novembre 2026**: ce jour-là ne permet donc aucune visite gratuite. Avant de payer, vérifiez les conditions de gratuité et les fermetures annoncées par le monument. Si un billet adulte payant est nécessaire, vous pouvez [réserver l'entrée du site archéologique de Glanum sur Tiqets](https://www.tiqets.com/fr/activites-attractions-saint-remy-de-provence-c96034/billets-pour-site-archeologique-de-glanum-p987971/). L'offre porte sur l'entrée simple, pas sur les billets jumelés ni sur les gratuités.
 
 **Au musée des Alpilles**, les moins de 18 ans et les habitants de Saint-Rémy-de-Provence entrent gratuitement, sur justificatif. Le billet adulte coûte **7 €**, ou **4 €** pour plusieurs publics éligibles, notamment les étudiants, demandeurs d'emploi et bénéficiaires du RSA. L'entrée est également gratuite pour tous le **premier dimanche d'avril à septembre**. Ce bon plan ne s'applique pas en hiver: le musée est alors fermé le dimanche. Les détails sont publiés par la [ville de Saint-Rémy-de-Provence](https://www.mairie-saintremydeprovence.com/que-faire-a-saint-remy/envie-de-culture/musee-des-alpilles/).
 
@@ -84,7 +84,7 @@ Le **Saint-Rémy Pass** repose sur un principe intéressant: après une visite �
 
 Il faut toutefois rester prudent: la [page de l'office de tourisme consacrée au pass](https://www.alpillesenprovence.com/saint-remy-pass/) affiche encore des mentions **« Pass 2025 »** et des horaires anciens, malgré un visuel 2026. Les sites partenaires citent toujours le dispositif, mais ses modalités de délivrance actuelles ne sont pas suffisamment claires pour garantir une économie précise. **Demandez confirmation à l'office de tourisme ou au premier lieu visité avant de compter dessus.** Le pass n'est pas une entrée gratuite à tous les monuments.
 
-À Glanum, il existe aussi des **billets jumelés**: **12 €** pour Glanum et l'Hôtel de Sade, **14 €** pour Glanum et l'abbaye de Montmajour. Ils peuvent être intéressants si les deux visites sont réellement prévues et ouvertes aux dates choisies. Pour une famille dont les enfants bénéficient déjà de la gratuité, mieux vaut comparer les seuls billets adultes nécessaires plutôt qu'acheter un forfait par réflexe. Les montants figurent sur la [billetterie et les informations officielles de Glanum](https://www.site-glanum.fr/visiter/informations-pratiques).
+À Glanum, il existe aussi des **billets jumelés**: **12 €** pour Glanum et l'Hôtel de Sade, **14 €** pour Glanum et l'abbaye de Montmajour. Ils peuvent être intéressants si les deux visites sont réellement prévues et ouvertes aux dates choisies. Pour une famille dont les enfants bénéficient déjà de la gratuité, mieux vaut comparer les seuls billets adultes nécessaires plutôt qu'acheter un forfait par réflexe. Ces montants proviennent des informations tarifaires du monument; vérifiez la disponibilité des billets jumelés directement auprès de celui-ci.
 
 ## Quel programme choisir selon l'âge et la saison ?
 
@@ -100,7 +100,7 @@ Les horaires imposent aussi leur rythme:
 - **Musée des Alpilles**: d'**octobre à mars, du mercredi au samedi de 13 h à 17 h 30**; d'avril à septembre, du mardi au dimanche de **10 h à 13 h et de 14 h à 18 h**.
 - **Musée Estrine**: de **14 h à 17 h 30** en février, mars, novembre et décembre; de **10 h à 13 h et de 14 h à 18 h** en avril, mai, juin et octobre; de **10 h à 18 h** de juillet à septembre. Fermé le lundi. Le musée annonce une **fermeture annuelle à compter du 20 décembre 2026 à 17 h 30**; les dates de réouverture doivent être vérifiées.
 
-Ces plages proviennent des [horaires de Glanum](https://www.site-glanum.fr/visiter/informations-pratiques), du [musée des Alpilles](https://www.mairie-saintremydeprovence.com/que-faire-a-saint-remy/envie-de-culture/musee-des-alpilles/) et du [musée Estrine](https://www.musee-estrine.fr/fr/pratique/). Un dimanche gratuit à un endroit ne signifie donc pas que les trois lieux seront ouverts.
+Ces plages proviennent des horaires communiqués par Glanum, du [musée des Alpilles](https://www.mairie-saintremydeprovence.com/que-faire-a-saint-remy/envie-de-culture/musee-des-alpilles/) et du [musée Estrine](https://www.musee-estrine.fr/fr/pratique/). Un dimanche gratuit à un endroit ne signifie donc pas que les trois lieux seront ouverts.
 
 ## Accès, stationnement et pauses: les détails utiles
 
@@ -110,11 +110,33 @@ Pour Glanum, le Centre des monuments nationaux indique un **parking municipal en
 
 Si vous emportez un repas, gardez en tête que l'espace de pique-nique autorisé à Glanum est **avant l'accueil**, sous les oliviers. La buvette du site fonctionne habituellement **d'avril à fin septembre**: hors saison, mieux vaut ne pas compter dessus.
 
+### Si la sortie devient un week-end dans les Alpilles
+
+Pour répartir les visites sur deux jours, [les appartements du Mas de Valrugues Holifrance à Saint-Rémy-de-Provence](https://www.booking.com/hotel/fr/mas-de-valrugues-holifrance.fr.html) proposent un coin cuisine avec micro-ondes et plaques de cuisson, ainsi que des couchages pour quatre personnes selon le logement choisi. Comparez le coût total et les disponibilités aux dates du séjour: pour une simple journée de visites, une nuit sur place n'est pas nécessaire.
+
 Le bon plan le plus sûr reste finalement de choisir **une ou deux visites adaptées aux enfants**, puis de vérifier les gratuités de chacun avant d'acheter un billet adulte.
 
-## Affiliation et parcours du lecteur
+## Lecture éditoriale
 
-Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+Lis d'abord l'article du début à la fin comme un vrai lecteur sur téléphone.
+
+Le lecteur doit comprendre rapidement de quoi parle l'article et pourquoi le sujet peut l'intéresser. Si l'introduction part directement dans un tarif, un pass, une poussette ou un détail sans présenter le sujet, corrige-la.
+
+Supprime ce qui n'apporte rien au lecteur: répétitions, conseils évidents, raisonnements ou calculs sans utilité, paraphrases de sources et sections sans information nouvelle. Conserve en revanche les comparaisons chiffrées lorsqu'elles aident réellement à comprendre ou à choisir.
+
+Vérifie que l'angle sert l'article sans devenir l'article entier. Une micro-question utile peut être traitée dans un paragraphe, pas répétée pendant toute la page.
+
+Il ne doit y avoir aucun tableau Markdown. La lecture mobile doit rester naturelle sans défilement horizontal.
+
+La fin ne doit pas simplement répéter l'introduction ou résumer une troisième fois les mêmes choix. Supprime la conclusion si elle n'apporte rien. Un lien interne ou partenaire peut rester en fin d'article s'il propose une suite naturelle et s'il est rédigé comme un vrai conseil, pas comme une formule ajoutée par gabarit.
+
+Tu peux réorganiser, raccourcir ou reformuler sans changer le sujet lorsque cela améliore réellement l'article. Ne raccourcis pas pour raccourcir: une information utile et bien placée doit rester.
+
+## Fact-check et monétisation
+
+Après la lecture éditoriale, vérifie les faits qui peuvent réellement rendre l'article faux ou inutilisable: dates, tarifs, horaires, conditions, réservations, âges, restrictions, accessibilité et autres éléments décisifs. Utilise des sources officielles ou directement responsables. Si des sources fiables se contredisent, cherche la source la plus directement responsable ou la plus récente; si le doute subsiste, ne tranche pas arbitrairement et indique clairement l'incertitude dans l'article.
+
+Vérifie que les sources éditoriales ou factuelles réellement utilisées sont présentes dans `sources` et liées dans le corps au bon endroit lorsqu'elles ne concurrencent pas une offre partenaire. Le frontmatter `sources` ne doit jamais contenir d'URL partenaire ou affiliée: ces liens restent uniquement dans le corps de l'article. Si une offre partenaire permet l'achat ou la réservation d'une prestation payante, retire du corps les liens officiels donnant directement ou indirectement accès à la même prestation sur le site officiel, même depuis une page informative; conserve leurs URL dans `sources` lorsqu'elles étayent l'article.
 
 ### Partenaires disponibles
 
@@ -138,29 +160,19 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+Contrôle l'affiliation comme un éditeur: applique la logique d'usage du fichier partenaires, vérifie que les offres sont pertinentes, correctement placées et en français lorsqu'une version française existe. La formulation doit être naturelle et propre à cet article.
 
-Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+Pour la santé, la sécurité, les aides publiques, le droit ou les finances, utilise uniquement des sources institutionnelles compétentes pour les affirmations précises.
 
-Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
-
-Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
-
-Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
-
-Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
-
-Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
-
-Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+Ne crée pas de H1 ni de section `Sources` dans le corps. N'utilise jamais le caractère U+2014. N'ajoute pas d'espace avant `:` ou `;`.
 
 ## Résultat attendu
 
-Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
+Rends l'article complet final avec son frontmatter, sa liste `sources` et son corps. Il doit être publiable tel quel et agréable à lire du début à la fin.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 3/4
+- Phase préparée mécaniquement: 4/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -189,4 +201,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
+Indique le titre final, les coupes ou corrections importantes, les faits décisifs revérifiés, l'état final de l'affiliation et si l'article est publiable tel quel.
