@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Noël 2026 à Brest en famille : marché, projections et jours à privilégier"
-subtitle: "Marché de Noël, spectacles lumineux et transports gratuits : choisir la bonne date avec les enfants"
-summary: À Brest, le marché de Noël 2026 est annoncé du 27 novembre au 27 décembre, les projections monumentales du 17 au 27 décembre et les transports gratuits les 12 et 19 décembre. Quel jour venir en famille ?
+title: "Noël 2026 à Brest en famille : quand voir le marché et les projections ?"
+subtitle: Horaires des chalets, dates des illuminations et deux samedis de transports gratuits pour choisir sa sortie
+summary: Le marché de Noël de Brest ouvre du 27 novembre au 27 décembre 2026, mais les projections monumentales commencent seulement le 17 décembre. Voici les dates et horaires utiles pour une sortie avec les enfants.
 category: evenements
 location:
   city: Brest
@@ -71,13 +76,15 @@ keywords:
   - marché de Noël Brest 2026
   - projections monumentales Brest décembre 2026
 sources:
-  - title: "Brest métropole - Marché de Noël 2026 : dates, horaires et manèges"
+  - title: "Brest métropole - Appel à candidatures Marché de Noël 2026 : calendrier et horaires"
     url: https://brest.fr/appel-candidatures-marche-de-noel-2026
-  - title: Brest métropole - Animations de Noël 2026, projections et transports gratuits
+  - title: "Brest métropole - Des projets pour dynamiser le commerce : animations de Noël 2026"
     url: https://brest.fr/actualites/des-projets-pour-dynamiser-le-commerce
+  - title: Bibus - Zoom sur la place de la Liberté et ses stations
+    url: https://www.bibus.fr/bibus-et-vous/actualites/les-evenements-du-reseau/zoom-sur-la-place-de-la-liberte
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier
   decision: Choisir une date selon que la famille veut voir le marché seul, les projections lumineuses à partir du 17 décembre, ou profiter des transports gratuits les 12 et 19 décembre, puis organiser une sortie simple avec les enfants.
@@ -87,46 +94,57 @@ radar:
     dataThrough: 2026-10-27
     signal: seasonal_opportunity
     basis: "Opportunité saisonnière vérifiée via « Brest métropole - Marché de Noël 2026 : dates, horaires et manèges »; aucune page forte GSC n'est requise."
+eventEndsAt: 2026-12-27
 ---
 
-## Mission retenue
-Préparer une visite familiale des festivités de Noël 2026 dans le centre de Brest, en distinguant le marché et ses manèges des nouvelles projections monumentales.
+À Brest, **le marché de Noël et les projections lumineuses ne commencent pas à la même date**. Les chalets et manèges anciens sont annoncés place de la Liberté du **27 novembre au 27 décembre 2026**. Pour voir aussi les images monumentales sur les bâtiments du centre, il faut attendre le **17 décembre**. Le choix du jour change donc vraiment le programme d'une famille.
 
-## Pourquoi cette mission
-Opportunité saisonnière proche, documentée par deux annonces officielles 2026 et absente des 852 articles du catalogue. Le refresh SNCF (signal GSC incertain) est déjà complet et conforme aux règles officielles consultées. Une expansion des transports parisiens, pourtant issus d'une page forte, recouperait les pages existantes sur Navigo Liberté+ et les poussettes.
+## Quel jour choisir avec les enfants ?
 
-## Décision du lecteur
-Savoir quand venir pour voir les animations qui l'intéressent et si le trajet peut être gratuit, sans confondre les périodes.
+- **Du 27 novembre au 11 décembre :** privilégiez les chalets, les manèges anciens et une promenade dans le centre. Les projections monumentales ne sont pas encore programmées.
+- **Samedi 12 décembre :** une date intéressante pour profiter du marché avec les **transports en commun annoncés gratuits**, mais toujours sans les projections monumentales.
+- **Du 17 au 27 décembre :** c'est la période à viser pour associer marché et projections sur l'Hôtel de ville (côté rue Frézier) et l'église Saint-Louis. Le parcours artistique annoncé autour de l'ancien Printemps et la scénographie des Ateliers des Capucins peuvent compléter la sortie, selon leur programme définitif.
+- **Samedi 19 décembre :** le meilleur compromis annoncé à ce stade : marché, période des projections et **deuxième samedi de transports gratuits**. La gratuité n'est pas annoncée pour les autres jours, notamment le samedi 26.
 
-## Faits à traiter
-- Marché place de la Liberté du 27 novembre au 27 décembre 2026, environ 35 chalets, manèges anciens ; horaires détaillés dans la source municipale.
-- Projections sur l'Hôtel de ville (côté Frézier) et l'église Saint-Louis du 17 au 27 décembre ; parcours artistique et scénographie aux Capucins annoncés, horaires précis à confirmer.
-- Transports en commun annoncés gratuits les samedis 12 et 19 décembre ; ne pas généraliser à tous les jours.
-- Attention : la source municipale écrit « samedi 27 novembre », mais le 27 novembre 2026 est un vendredi. Conserver la date sans jour de semaine et revérifier le programme définitif.
-- Ne pas inventer le prix des manèges, les horaires des projections, les modalités d'accès ou les équipements bébé.
+Ces périodes proviennent des [annonces 2026 de Brest métropole](https://brest.fr/actualites/des-projets-pour-dynamiser-le-commerce). Les **heures précises des projections**, leur fréquence et les modalités d'accès aux installations artistiques ne sont pas encore détaillées dans cette annonce : vérifiez le programme définitif avant de prévoir une sortie exclusivement en soirée.
 
-## Sources de départ
-Les deux pages officielles de Brest métropole figurent dans le frontmatter.
+## Horaires du marché de Noël 2026
 
-## Affiliation
-Hôtel Oceania Brest, rue de Siam, vérifié sur Booking.com : chambres familiales et lit bébé sur demande. Offre à intégrer seulement pour les familles qui souhaitent rester une nuit au centre.
+La Ville annonce environ **35 chalets** sur la place de la Liberté rénovée, avec des produits artisanaux et festifs, des animations et des manèges anciens. Les horaires publiés dans son [calendrier du marché 2026](https://brest.fr/appel-candidatures-marche-de-noel-2026) sont les suivants :
 
-## Continuations internes
-- L'article Fam Space « Brest avec un bébé : Océanopolis, téléphérique et séjour sans voiture » prend le relais pour les détails poussette, téléphérique et séjour ; ne pas réécrire ces sujets.
-- Prévoir une vérification du programme municipal final avant les fêtes, sans attribuer au marché les animations de l'édition 2025.
+- **Lundi, mardi, jeudi et vendredi :** 12 h à 20 h.
+- **Mercredi et dimanche :** 10 h à 20 h.
+- **Samedi :** 10 h à 21 h.
+- **Du 21 au 27 décembre :** plage particulière annoncée de 10 h à 20 h.
+
+Attention aux journées de fête, notamment le **24 décembre** : vérifiez les éventuels horaires dérogatoires dans le programme final. La page municipale contient également une erreur de jour de semaine à l'ouverture : **le 27 novembre 2026 est un vendredi**, et non un samedi. La période du 27 novembre au 27 décembre est, elle, reprise par les deux annonces officielles.
+
+## Prévoir le budget et une visite sans fatigue
+
+Pour une sortie courte, concentrez-vous sur la place de la Liberté et laissez chaque enfant choisir éventuellement un manège ou une gourmandise. **Aucun tarif 2026 des manèges n'est précisé dans les annonces consultées** : ne prévoyez pas un forfait supposé, et gardez une marge pour les achats sur place. Aucun billet de réservation du marché n'est annoncé par la Ville.
+
+Avec de jeunes enfants, une visite en fin d'après-midi permet de profiter de l'ambiance lumineuse sans forcément prolonger jusqu'à la fermeture. Prévoyez un vêtement coupe-vent, une protection contre la pluie et une pause à l'abri si nécessaire. Les annonces ne confirment pas de table à langer, de micro-ondes pour réchauffer un repas bébé ni de service de prêt de poussette sur le marché : mieux vaut emporter le nécessaire.
+
+## Venir en tramway ou rester une nuit
+
+Le marché se situe **place de la Liberté**, desservie par le tramway A à l'arrêt Liberté ; la ligne B dessert **Liberté Quartz**. Le [plan du pôle d'échanges publié par Bibus](https://www.bibus.fr/bibus-et-vous/actualites/les-evenements-du-reseau/zoom-sur-la-place-de-la-liberte) permet de distinguer les arrêts de tram et de bus. Vérifiez les horaires de retour et les éventuelles perturbations, surtout après les projections.
+
+Si vous venez de plus loin pour les illuminations, l'[Hôtel Oceania Brest, rue de Siam, sur Booking.com](https://www.booking.com/hotel/fr/hotel-oceania-brest-centre.fr.html) est une option centrale proposant des chambres familiales. Demandez confirmation d'un lit bébé pour la chambre et les dates choisies avant de réserver ; ni tarif ni disponibilité ne sont garantis ici.
+
+Pour prolonger le séjour avec un tout-petit, notre [guide de Brest avec un bébé](https://www.fam-space.fr/articles/parentalite/premier-week-end-a-brest-avec-un-bebe-ou-dormir-et-quoi-faire/) détaille le téléphérique, les Capucins, Océanopolis et les déplacements en poussette, sans les confondre avec le programme de Noël.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
-- /articles/evenements/marche-de-noel-de-montpellier-2026-en-famille-dates-fermetures-et-attractions/ | Marché de Noël de Montpellier 2026 en famille: horaires, jours fermés et manèges | evenements | Montpellier, Hérault, Occitanie
-- /articles/voyages/marches-de-noel-de-colmar-avec-des-enfants-en-2026-1-ou-2-jours-et-ou-dormir/ | Marchés de Noël de Colmar avec des enfants en 2026: 1 ou 2 jours et où dormir | voyages | Colmar, Haut-Rhin, Grand Est
+- /articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/ | Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille | evenements | Nevers, Nièvre, Bourgogne-Franche-Comté
 - /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
 - /articles/evenements/marche-de-noel-de-cusset-2026-en-famille-quel-jour-choisir/ | Marché de Noël de Cusset 2026 en famille: quel jour choisir? | evenements | Cusset, Allier, Auvergne-Rhône-Alpes
 - /articles/evenements/noel-a-nantes-2026-marche-gratuit-ou-visite-guidee-du-voyage-en-hiver/ | Noël à Nantes 2026: marché de Noël et Voyage en hiver en famille | evenements | Nantes, Loire-Atlantique, Pays de la Loire
 - /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
 - /articles/evenements/noel-a-provins-2026-en-famille-marche-medieval-ou-visite-guidee/ | Noël à Provins 2026: marché médiéval, animations et visites en famille | evenements | Provins, Seine-et-Marne, Île-de-France
 - /articles/evenements/rouen-givree-2026-en-famille-marche-de-noel-et-refuge-givre/ | Rouen Givrée 2026 en famille: marché de Noël et Refuge Givré | evenements | Rouen, Seine-Maritime, Normandie
+- /articles/activites/noel-2026-a-l-ecomusee-d-alsace-en-famille-quand-venir-et-que-prevoir/ | Noël 2026 à l'Écomusée d'Alsace en famille: quand venir et que prévoir? | activites | Ungersheim, Haut-Rhin, Grand Est
 - /articles/parentalite/premier-week-end-a-brest-avec-un-bebe-ou-dormir-et-quoi-faire/ | Brest avec un bébé: Océanopolis, téléphérique et séjour sans voiture | parentalite | Brest, Finistère, Bretagne
 - /articles/activites/espace-des-sciences-de-morlaix-en-famille-que-decouvrir-a-la-manufacture/ | Espace des sciences de Morlaix en famille: que découvrir à la Manufacture? | activites | Morlaix, Finistère, Bretagne
 - /articles/activites/musee-de-pont-aven-en-famille-visites-ludiques-et-ateliers-pour-enfants/ | Musée de Pont-Aven en famille: visites ludiques et ateliers pour enfants | activites | Pont-Aven, Finistère, Bretagne
@@ -137,10 +155,10 @@ Hôtel Oceania Brest, rue de Siam, vérifié sur Booking.com : chambres familial
 - /articles/voyages/crozon-morgat-en-famille-ou-dormir-pour-profiter-des-plages-sans-multiplier-les-trajets/ | Crozon-Morgat en famille: où dormir pour profiter des plages sans multiplier les trajets | voyages | Crozon, Finistère, Bretagne
 - /articles/evenements/festival-place-aux-momes-roscoff-2026-famille/ | Festival Place aux Mômes 2026 à Roscoff: quatre spectacles gratuits en famille en août | evenements | Roscoff, Finistère, Bretagne
 - /articles/evenements/marche-de-noel-de-clermont-ferrand-2026-en-famille-horaires-animations-et-acces/ | Marché de Noël de Clermont-Ferrand 2026 en famille: horaires, animations et accès | evenements | Clermont-Ferrand, Puy-de-Dôme, Auvergne-Rhône-Alpes
+- /articles/evenements/marche-de-noel-de-montpellier-2026-en-famille-dates-fermetures-et-attractions/ | Marché de Noël de Montpellier 2026 en famille: horaires, jours fermés et manèges | evenements | Montpellier, Hérault, Occitanie
 - /articles/evenements/noel-des-alpes-2026-a-annecy-en-famille-marche-patinoire-ou-illuminations/ | Noël des Alpes 2026 à Annecy en famille: marché, patinoire et illuminations | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/evenements/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/ | Marchés de Noël de Tours 2026 en famille: lieux, dates et budget | evenements | Tours, Indre-et-Loire, Centre-Val de Loire
 - /articles/evenements/marche-de-noel-de-saint-etienne-2026-en-famille-dates-horaires-et-acces/ | Marché de Noël de Saint-Étienne 2026 en famille: dates, horaires et accès | evenements | Saint-Étienne, Loire, Auvergne-Rhône-Alpes
-- /articles/evenements/la-seine-musicale-en-famille-en-2027-quels-concerts-et-ateliers-selon-l-age/ | La Seine Musicale en famille en 2027: quels concerts et ateliers selon l'âge ? | evenements | Boulogne-Billancourt, Hauts-de-Seine, Île-de-France
 
 ### Historique Radar lié
 
