@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261030-2156-saint-remy-de-provence-en-famille-a-petit-prix-glanum-musees-et-reduct",
+  "lastProcessedCommit": "3af504d0bdc2f6424352eaf40f026585cf139fff"
 }
