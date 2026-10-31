@@ -288,3 +288,4 @@ automation/image-20261030-1844-bayeux-angers-orleans-dordogne-oingt-12c9718-f4a7
 automation/image-20261031-0041-canistrelli-caen-chartres-gard-648051f|13e98f40af57e397fba47267d8f78d3db236fcb9
 automation/image-20261031-0041-canistrelli-caen-chartres-gard-648051f|e98516c7bec3b0c92c109b8dd731c57f64ad3caa
 automation/image-20261031-0645-larochelle-fougeres-glanum-nancy-rera-ff98662|e969aaccb8ab46001884896c5577e9b66e33002a
+automation/image-20261031-0645-larochelle-fougeres-glanum-nancy-rera-ff98662|5683bbf4fcdd4811638b49c738aae807958cdf39
