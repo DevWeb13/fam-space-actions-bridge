@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Disneyland Paris en RER A avec des enfants : trajet et tickets en 2026"
-subtitle: Quel ticket acheter, où descendre et comment préparer le retour depuis Paris
-summary: Un trajet familial depuis Paris jusqu'à Marne-la-Vallée–Chessy, avec les tarifs 2026, les correspondances et les précautions poussette.
+title: "Disneyland Paris en RER A avec des enfants : trajet et billets 2026"
+subtitle: Le bon train vers Marne-la-Vallée–Chessy, les tarifs selon l'âge et les précautions pour rentrer après les parcs
+summary: Depuis Paris, le RER A rejoint directement les portes de Disneyland Paris. Voici le sens à prendre, le coût des tickets pour toute la famille et les vérifications utiles avec une poussette ou pour un retour tardif.
 category: voyages
 location:
   city: Chessy
@@ -71,17 +76,27 @@ keywords:
   - ticket RER Paris Disneyland 2026
   - Marne-la-Vallée Chessy en famille
 sources:
-  - title: Disneyland Paris — Comment venir en RER depuis Paris
+  - title: Disneyland Paris — Comment venir aux parcs
     url: https://www.disneylandparis.com/fr-fr/services-visiteurs/comment-venir-a-disneyland-paris
-  - title: Île-de-France Mobilités — Tarifs 2026
+  - title: Île-de-France Mobilités — Tarifs des transports 2026
     url: https://www.iledefrance-mobilites.fr/tarifs-titre-de-transport-en-commun-2026
-  - title: Île-de-France Mobilités — Réductions pour les 4 à moins de 10 ans
+  - title: Île-de-France Mobilités — Ticket Métro-Train-RER et correspondances
+    url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/ticket-metro-train-rer
+  - title: Île-de-France Mobilités — Réduction enfants de 4 à moins de 10 ans
     url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/tarifs-reduits/enfants-4-10-ans
-  - title: RATP — Aller à Disneyland en RER
-    url: https://www.ratp.fr/visiter-paris/lieux/disneyland
+  - title: Île-de-France Mobilités — Gratuité avant 4 ans
+    url: https://www.iledefrance-mobilites.fr/gratuite-pour-les-enfants-de-moins-de-4-ans
+  - title: Île-de-France Mobilités — Voyager en famille avec Navigo Easy
+    url: https://www.iledefrance-mobilites.fr/aide-et-contacts/passe-navigo-easy/voyage-groupe-famille
+  - title: RATP — Vérifier les ascenseurs avant le trajet
+    url: https://www.ratp.fr/aide-contact/questions/preparer-mon-trajet/information-trafic/etat-ascenseurs
+  - title: RATP — Information trafic RER A
+    url: https://www.ratp.fr/infos-trafic/rer/a
+  - title: Disneyland Paris — Staycity Aparthotels et ses services
+    url: https://www.disneylandparis.com/fr-be/hotels/staycity-aparthotels
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: disneyland-paris-en-rer-a-avec-des-enfants-trajet-et-tickets-en-2026
   decision: Savoir si le RER A convient à sa famille pour rejoindre Disneyland depuis Paris, quel titre acheter pour chaque âge et comment sécuriser le retour.
@@ -94,28 +109,47 @@ radar:
     basis: "La page « Transports à Paris avec des enfants: quel titre choisir pour payer juste? » conserve 3127 impressions sur la semaine récente, avec une position moyenne de 8.693 et 143.4 % de son pic."
 ---
 
-## Mission retenue
-Une page consacrée uniquement au trajet Paris–Disneyland Paris en RER A avec des enfants, distincte des guides généraux sur les transports franciliens et sur les séjours Disney.
+Pour rejoindre Disneyland Paris depuis Paris avec des enfants, le **RER A direction Marne-la-Vallée–Chessy** est souvent la solution la plus simple : il vous dépose à son terminus, juste devant les parcs, sans navette supplémentaire. Disneyland Paris annonce environ **35 minutes depuis Nation**. Le point à préparer n'est donc pas seulement l'aller, mais aussi le bon titre de transport pour chaque enfant et le dernier trajet du soir.
 
-## Pourquoi cette mission
-Le refresh Futuroween est déjà précis et son événement s'achève le 1er novembre ; la baisse d'exposition ne justifie pas une réécriture. Les autres refresh examinés (Carte Avantage Adulte SNCF, petite section) répondent déjà aux décisions essentielles sans lacune indépendante démontrée. L'opportunité saisonnière « Snow, un Noël de chien » à Troyes est documentée mais beaucoup plus ponctuelle. La page forte sur les transports à Paris ouvre ici une intention distincte et durable : réaliser le trajet concret jusqu'aux parcs.
+## Quel RER prendre et où descendre ?
 
-## Décision du lecteur
-Choisir le RER A ou une autre solution selon l'âge des enfants, la poussette, l'heure d'arrivée et le retour, puis acheter les bons tickets sans payer un forfait inutile.
+À Paris, le RER A passe notamment par Charles-de-Gaulle–Étoile, Auber, Châtelet–Les Halles, Gare de Lyon et Nation. Selon votre point de départ, vous pouvez rejoindre l'une de ces gares à pied ou par une correspondance en métro.
 
-## Faits à traiter
-RER A direction Marne-la-Vallée–Chessy (et non Boissy-Saint-Léger), terminus au pied des parcs, environ 35 minutes depuis Nation selon Disney ; départ et correspondances à adapter à la gare parisienne. En 2026, ticket Métro-Train-RER 2,55 € adulte, 1,30 € de 4 à moins de 10 ans, gratuit avant 4 ans ; vérifier les supports individuels, la validité des correspondances, les conditions poussette et l'état des ascenseurs. Vérifier horaires et perturbations du jour, surtout pour le retour après le spectacle nocturne. Ne pas confondre billet RER et entrée Disney ; ne pas recycler les prix des billets d'entrée comme des faits éditoriaux.
+**Vérifiez la destination affichée sur le train : Marne-la-Vallée–Chessy.** Tous les RER A ne vont pas à Disneyland ; certains desservent notamment la branche de Boissy-Saint-Léger. Restez dans le train jusqu'au terminus Marne-la-Vallée–Chessy, puis suivez les indications vers les parcs. Le temps total dépend de votre gare de départ et des éventuelles correspondances : les 35 minutes annoncées par [Disneyland Paris](https://www.disneylandparis.com/fr-fr/services-visiteurs/comment-venir-a-disneyland-paris) concernent **Nation**, pas n'importe quelle adresse parisienne.
 
-## Sources de départ
-Disneyland Paris, Île-de-France Mobilités et RATP indiqués dans le frontmatter.
+## Combien coûte le trajet en famille en 2026 ?
 
-## Affiliation
-Le ticket de RER n'a pas de partenaire naturel. Le billet d'entrée aux parcs est vérifié sur Booking.com et peut être proposé une fois dans le contexte de la préparation. L'hébergement Staycity vérifié est pertinent seulement pour les familles qui préfèrent dormir près des parcs après une longue journée.
+Le **ticket Métro-Train-RER** est valable de Paris jusqu'à Chessy, sans supplément de zone. D'après les [tarifs officiels 2026 d'Île-de-France Mobilités](https://www.iledefrance-mobilites.fr/tarifs-titre-de-transport-en-commun-2026) :
 
-## Continuations internes
-- Renvoyer au guide « Transports à Paris avec des enfants » pour comparer tickets, Navigo Jour/Semaine et Paris Visite sans reproduire son comparatif.
-- Renvoyer au guide « Disneyland Paris en famille en 2026 » pour la durée de visite, les hôtels et le budget global.
-- Éviter de redévelopper les contenus Noël/Halloween Disneyland déjà publiés : le sujet reste le transport toute l'année.
+- **À partir de 10 ans et pour les adultes : 2,55 € par trajet**, soit 5,10 € aller-retour.
+- **De 4 ans à moins de 10 ans : 1,30 € par trajet**, soit 2,60 € aller-retour, avec le [tarif enfant](https://www.iledefrance-mobilites.fr/titres-et-tarifs/tarifs-reduits/enfants-4-10-ans).
+- **Avant 4 ans : gratuit**, sans ticket, avec un justificatif d'âge à pouvoir présenter selon les [conditions de gratuité](https://www.iledefrance-mobilites.fr/gratuite-pour-les-enfants-de-moins-de-4-ans).
+
+Exemple : pour **deux adultes et deux enfants de 6 et 8 ans**, comptez **15,40 € aller-retour** en tickets à l'unité pour les quatre personnes, hors autres déplacements. Si vous prévoyez beaucoup de trajets dans Paris le même jour, comparez avec un forfait avant d'acheter. Notre guide [Transports à Paris avec des enfants : quel titre choisir pour payer juste ?](https://www.fam-space.fr/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/) détaille ce calcul.
+
+## Acheter et valider les tickets sans se tromper
+
+Les tickets peuvent être chargés sur un **passe Navigo Easy** ou sur un smartphone compatible. Chaque voyageur payant doit disposer de son propre titre : un seul passe Navigo Easy ne peut pas faire passer toute la famille. Sur iPhone, l'application Cartes permet toutefois de créer plusieurs cartes de transport distinctes dans un même téléphone, à valider séparément. Île-de-France Mobilités explique les [options pour les familles](https://www.iledefrance-mobilites.fr/aide-et-contacts/passe-navigo-easy/voyage-groupe-famille).
+
+Un ticket Métro-Train-RER couvre les correspondances **métro, train et RER pendant deux heures après la première validation**, tant que vous ne sortez pas du réseau. Il ne couvre **ni les bus ni les tramways** : si votre trajet vers la gare commence par un bus, prévoyez le titre adapté. Les [conditions du ticket](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/ticket-metro-train-rer) précisent également qu'il faut un nouveau trajet payant pour repartir de Disneyland vers Paris. Achetez ou préparez vos titres de retour avant la fatigue du soir.
+
+## Avec une poussette ou un bébé : ce qui change
+
+Le trajet en RER évite de devoir emprunter une navette entre la gare de Chessy et les entrées des parcs. En revanche, **l'accès aux quais et les correspondances parisiennes ne sont pas toujours simples avec une poussette**. Avant de choisir une gare, vérifiez les ascenseurs au départ, à l'arrivée et à chaque correspondance sur le [service indiqué par la RATP](https://www.ratp.fr/aide-contact/questions/preparer-mon-trajet/information-trafic/etat-ascenseurs). Ne supposez pas qu'un trajet avec peu de changements est automatiquement sans escalier.
+
+Pour un enfant de moins de 4 ans en poussette, Île-de-France Mobilités indique qu'il est possible de demander l'ouverture des portes latérales aux portiques. Gardez de quoi occuper les enfants et une petite collation accessible ; une poussette pliable peut faciliter les passages chargés, mais il faut prévoir la possibilité de la porter si un équipement est hors service.
+
+## Le retour après le spectacle nocturne
+
+C'est le moment où une journée simple peut se compliquer. Avant de rester jusqu'au spectacle final, consultez les **horaires du dernier RER A vers Paris**, les éventuels travaux et l'état du trafic **pour votre date précise** sur la [page RER A de la RATP](https://www.ratp.fr/infos-trafic/rer/a). Un horaire habituel ne garantit pas la circulation un soir de travaux. Vérifiez aussi la dernière correspondance si votre hôtel n'est pas sur le RER A.
+
+Si les enfants sont petits ou si vous devez traverser Paris après l'arrivée du train, choisissez votre heure de départ du parc en conservant une marge. En cas d'interruption annoncée, comparez l'itinéraire de remplacement avant de décider de rester jusqu'à la fermeture. Pour préparer un parcours plus facile avec une poussette dans la capitale, consultez aussi [Paris avec une poussette : métro, RER, bus ou tram ?](https://www.fam-space.fr/articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/).
+
+## Billet d'entrée et nuit sur place : deux décisions distinctes
+
+**Le ticket de RER ne comprend pas l'entrée à Disneyland Paris.** Pour préparer la visite, vous pouvez consulter les [billets Disneyland Paris proposés sur Booking.com](https://www.booking.com/attractions/fr/prjyfitkuhfz-one-day-admission-to-disneylandr-paris.fr.html) et sélectionner les dates, le nombre de parcs et les âges avant de comparer les conditions. Le transport jusqu'aux parcs n'est pas inclus dans cette offre.
+
+Si un retour tardif en RER paraît trop fatigant, [Staycity Aparthotels near Disneyland Paris sur Booking.com](https://www.booking.com/hotel/fr/staycity-aparthotels-paris-marne-la-vallee.fr.html) propose des logements avec cuisine et une navette gratuite vers les parcs ; vérifiez les horaires de la navette, la capacité du logement et les disponibilités aux dates choisies. L'établissement se trouve à Bailly-Romainvilliers, **pas à la sortie immédiate de la gare RER**. Pour décider si une nuit vaut la dépense, notre guide [Disneyland Paris en famille en 2026 : combien de jours, quel hôtel et quel budget prévoir ?](https://www.fam-space.fr/articles/voyages/disneyland-paris-en-famille-en-2026-combien-de-jours-quel-hotel-et-quel-budget-prevoir/) traite le séjour complet.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
