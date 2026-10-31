@@ -289,3 +289,4 @@ automation/image-20261031-0041-canistrelli-caen-chartres-gard-648051f|13e98f40af
 automation/image-20261031-0041-canistrelli-caen-chartres-gard-648051f|e98516c7bec3b0c92c109b8dd731c57f64ad3caa
 automation/image-20261031-0645-larochelle-fougeres-glanum-nancy-rera-ff98662|e969aaccb8ab46001884896c5577e9b66e33002a
 automation/image-20261031-0645-larochelle-fougeres-glanum-nancy-rera-ff98662|5683bbf4fcdd4811638b49c738aae807958cdf39
+automation/image-20261031-1245-m24-murat-toulon-versailles-d7f9e5f|6d3c37775ce4586dbefcfe9241c3681c91f336e4
