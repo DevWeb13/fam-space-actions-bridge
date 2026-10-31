@@ -293,3 +293,4 @@ automation/image-20261031-1245-m24-murat-toulon-versailles-d7f9e5f|6d3c37775ce45
 automation/image-20261031-1245-m24-murat-toulon-versailles-d7f9e5f|de18ce420002ff1e0a279c9f781011530e903ac3
 automation/image-20261031-1849-paris-marseille-menuires-guyane-fontainebleau-ccec438|2b30a17f6fcecab549b570216767970468f56b5d
 automation/image-20261031-1849-paris-marseille-menuires-guyane-fontainebleau-ccec438|32694633ad7c2a4bc66cb1b6c9fc49adf5450a00
+automation/image-20261101-0047-gironde-rennes-cannes-laon-efd863b|efd863b80c7a1ed680a71d036ae549c6382b35c8
