@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 1/4
+# Publication automatique Fam Space - Phase 2/4
 
 ## Mission
 
-Tu es le rédacteur en chef de Fam Space.
+Tu es un journaliste web professionnel pour Fam Space.
 
-Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. Fam Space doit publier moins mais mieux: un sujet doit pouvoir devenir un article fiable, utile aux familles, agréable à lire et, lorsque c'est naturel, intéressant pour l'affiliation.
+Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
 
 ## Affectation courante
 
@@ -14,94 +14,93 @@ Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. 
 - Département: Sarthe
 - Région: Pays de la Loire
 
-### Articles publiés récemment
-
-- 2026-10-25: Halloween 2026 au Zoo de La Flèche: tarifs, jeux et entrée offerte aux enfants déguisés
-- 2026-09-26: Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants
-- 2026-09-07: Le Mans sans voiture avec des enfants: où dormir et comment organiser un week-end
-- 2026-08-23: Zoo de La Flèche en famille: tarifs 2026, durée et conseils de visite
-- 2026-07-22: Le Mans l’été au bord de l’Huisne 2026: une sortie gratuite en famille
-
-Ne reproduis pas les mêmes sujets.
-
-## Choisir un sujet qui mérite un article
-
-Respecte l'affectation. Pour une affectation locale, choisis un sujet concernant tout le département ou une commune ou un lieu de ce département.
-
-La liste « Articles publiés récemment » est fournie automatiquement. Utilise-la pour éviter les doublons de lieu, de sujet ou d'angle. Un titre différent ne suffit pas à rendre un article différent.
-
-Cherche plusieurs sujets avant de choisir. Pour les candidats sérieux, utilise la recherche web pour comprendre ce qui existe déjà, vérifier les faits essentiels, voir ce que les résultats Google répondent déjà et t'assurer que le sujet est réellement utile à publier maintenant. Si l'élément principal est fermé, hors saison, en maintenance ou temporairement indisponible au point de vider l'article de son intérêt, écarte ce candidat et choisis-en un autre.
-
-Choisis un sujet qui a une vraie matière éditoriale. Un lecteur qui ne connaît pas le sujet doit pouvoir comprendre ce que c'est, pourquoi cela peut l'intéresser et obtenir plusieurs informations utiles sans que l'article répète la même idée.
-
-L'angle sert à donner une direction et un titre intéressant. Il ne doit jamais enfermer tout l'article dans une micro-question comme un tarif, un pass, une poussette ou un calcul simple.
-
-Écarte un sujet si Fam Space ne ferait que réécrire une page officielle ou s'il n'y a pas assez de matière pour produire un bon article. Si aucun candidat ne reste suffisamment utile et actuel après une recherche sérieuse, ne force pas un sujet.
-
-## Penser aussi au potentiel d'affiliation
-
-La monétisation est un objectif important de Fam Space. Avant de choisir le sujet final, vérifie sérieusement les offres disponibles chez les partenaires suivants:
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-Applique la logique d'usage ci-dessus à chaque candidat sérieux et vérifie les offres avant de les retenir dans le brief.
-
-À qualité éditoriale comparable, privilégie clairement le sujet qui possède une piste d'affiliation naturelle et vérifiée. Ne choisis toutefois jamais un sujet médiocre uniquement parce qu'il est affiliable et n'invente jamais une offre sans rapport avec le lecteur.
-
-Si un excellent sujet n'a réellement aucune offre partenaire pertinente après vérification, il peut rester publiable. Le brief doit alors le dire clairement. L'absence d'affiliation ne doit jamais résulter d'une recherche superficielle.
-
-## Sujets à écarter
-
-Écarte les sujets politiques ou militants, les guerres et conflits armés, les contenus haineux, violents, sexuellement explicites, dangereux ou trompeurs, ainsi que les conseils médicaux, juridiques ou financiers personnalisés à risque élevé.
-
-Ne choisis pas comme sujet principal une maladie, un diagnostic, un traitement, une vaccination ou une urgence médicale ou psychiatrique.
-
-Pour un événement ponctuel, ne le retiens pas s'il commence dans moins de 30 jours. S'il a déjà commencé, il doit rester au moins 30 jours d'utilité réelle. Cette règle ne concerne pas les attractions permanentes, destinations durables ou activités disponibles sur une longue période.
-
-## Résultat attendu
-
-Prépare un brief court. Le fichier doit contenir exactement ces sections:
+## Brief du rédacteur en chef
 
 ## Sujet retenu
-Le sujet, un titre de travail et l'angle principal. Décris aussi en une ou deux phrases ce qu'est réellement le sujet afin que le journaliste parte avec le bon contexte.
+
+**Titre de travail :** « Le nouveau musée M24 au Mans en famille : voitures de légende, circuit et visite avec les enfants ».
+
+**Angle :** découvrir ce que le M24, ouvert en mai 2026, propose réellement aux familles, puis organiser une visite adaptée à l'âge des enfants et à la durée disponible, avec ou sans découverte du circuit.
+
+Situé au Mans (Sarthe), à l'entrée du circuit, le M24 – Musée du Sport Automobile est le musée rénové et agrandi consacré aux 24 Heures du Mans et aux autres sports mécaniques (Formule 1, rallye, IndyCar, motos). Il réunit collections, scénographie immersive, espace famille et parcours de visite du circuit distinct du musée.
 
 ## Besoin du lecteur
-Ce que le lecteur doit comprendre, apprendre ou pouvoir faire après avoir lu l'article. Ne réduis pas ce besoin à une seule micro-question si le sujet mérite un traitement plus large.
+
+Savoir ce qu'une famille peut voir et faire au M24, même sans être passionnée de course automobile ; distinguer visite libre du musée, accès libre au circuit et visite guidée des coulisses ; choisir un parcours et un billet adaptés, prévoir la durée, les pauses, le transport et éventuellement un séjour au Mans.
 
 ## Valeur éditoriale
-Les quelques informations ou distinctions qui justifient l'article et ce que Fam Space peut apporter de mieux qu'une simple reprise des sources.
+
+- **Actualité durable :** nouveau musée inauguré le 27 mai et ouvert au public le 28 mai 2026, avec 8 600 m² et plus de 120 véhicules. Ouverture annoncée tous les jours de 10 h à 18 h du 1er octobre 2026 au 30 avril 2027 : sortie intérieure pertinente pour l'automne et l'hiver.
+- **Expérience familiale concrète :** espace famille, application gratuite avec parcours « famille » dans le musée et sur le circuit ; durée indicative officielle de 1 h 30 pour le musée, 1 h pour le circuit et 3 h pour l'ensemble. Distinguer le parcours de visite du musée de la promenade sur le circuit : la visite libre donne accès aux tribunes, pas aux bâtiments des coulisses.
+- **Choix des billets :** musée seul (20 € adulte, 12 € de 6 à 17 ans, gratuit avant 6 ans), circuit seul (7 € adulte, 4 € jeune), combiné (24 € adulte, 14 € jeune), forfaits famille affichés (58 €, 20 € ou 72 € selon la formule). Faire expliquer au journaliste la composition exacte du forfait famille après vérification, sans l'inventer ; signaler aussi les réductions, la réservation non obligatoire pour les particuliers et les billets datés non échangeables.
+- **Organisation :** parking gratuit, accès depuis la gare par tram T1 avec environ 20 minutes de marche depuis Guetteloup ou bus avec marche plus courte selon l'arrêt, cafétéria, espace bébé, ascenseurs et accessibilité. Prévenir que l'accès au circuit et les circulations peuvent changer pendant les compétitions.
+- **Différence avec les contenus existants :** ne pas refaire le guide « Le Mans sans voiture avec des enfants » de septembre 2026 ; se concentrer sur la nouvelle expérience M24 et ses choix de visite, en ajoutant seulement les informations d'accès nécessaires. Les pages de présentation du musée donnent les caractéristiques et tarifs ; l'article Fam Space doit aider à composer une sortie familiale réaliste et à éviter les confusions entre billets.
 
 ## Affiliation
-Les pistes partenaires réellement vérifiées, avec partenaire, offre et URL exacte, y compris les besoins secondaires naturels. Si aucune offre pertinente n'existe réellement, indique-le clairement.
+
+- **Billetterie de l'activité principale :** aucune offre équivalente du M24 confirmée après recherche ciblée sur Tiqets, GetYourGuide et Klook ; ne pas substituer une activité automobile différente. Billetterie officielle à utiliser comme source pratique : https://ticket.m24-musee.com/ (lien non affilié).
+- **Hébergement secondaire vérifié : Booking.com — Hotel Le Circuit Le Mans**, hôtel situé dans le secteur du circuit, proposant notamment une chambre familiale avec un lit double et deux lits simples (jusqu'à quatre personnes), parking et restaurant. Piste naturelle uniquement pour les familles qui prolongent la sortie par un week-end ; ne pas le présenter comme indispensable à une visite du musée. Offre : https://www.booking.com/hotel/fr/le-green-7.fr.html . Disponibilité et prix à vérifier selon les dates ; aucun tarif fixe annoncé.
 
 ## Sources de départ
-Les meilleures sources officielles ou directement responsables pour lancer la rédaction, avec l'URL exacte de chaque page utile.
 
-Ne rédige pas le corps final de l'article pendant cette phase.
+- Musée M24, présentation des visites, parcours famille et distinction musée/circuit : https://www.m24-musee.com/visiter/particuliers/
+- Musée M24, tarifs, forfaits, accès, équipements et FAQ : https://www.m24-musee.com/informations-pratiques/
+- Musée M24, parcours permanent et collections : https://www.m24-musee.com/parcours-permanent/
+- Automobile Club de l'Ouest, inauguration et ampleur du nouveau musée (27 mai 2026) : https://www.lemans.org/fr/actualites/aco/le-m24-musee-du-sport-automobile-est-inaugure-60617
+- Automobile Club de l'Ouest, ouverture quotidienne et horaires hiver 2026-2027 : https://www.lemans.org/fr/actualites/aco/la-billetterie-du-m24-musee-du-sport-automobile-est-ouverte-60513
+
+## Écrire l'article
+
+Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
+
+Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
+
+Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
+
+Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
+
+Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
+
+Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+
+N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
+
+Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
+
+Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
+
+À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
+
+## Format du candidat
+
+Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
+
+```yaml
+---
+category: "<catégorie assignée>"
+title: "Titre direct et informatif"
+subtitle: "Précision différente du titre"
+summary: "Résumé de 90 à 180 caractères"
+keywords:
+  - "mot-clé principal"
+  - "mot-clé secondaire"
+location:
+  city: "Ville"
+  department: "Département assigné"
+  region: "Région assignée"
+sources:
+  - title: "Page officielle utilisée"
+    url: "https://..."
+---
+```
+
+La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+
+Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 1/4
+- Phase préparée mécaniquement: 2/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -114,30 +113,20 @@ Toute la plomberie technique est gérée mécaniquement. Ne cherche aucune branc
 
 Écris uniquement publication-request.md sur la branche main de DevWeb13/fam-space-actions-bridge avec le résultat éditorial demandé dans ce runtime. Le pipeline mécanique se charge de la phase, de la branche de travail, des commits, de la validation et de la suite du cycle.
 
-Si tu retiens un sujet, utilise:
+Utilise:
 
 ~~~yaml
 ---
-action: start
+action: advance
 ---
 
-<brief complet demandé ci-dessus>
+<article complet demandé ci-dessus, frontmatter compris>
 ~~~
 
-Si, après une recherche sérieuse, aucun sujet suffisamment utile et actuel ne mérite un article, utilise:
-
-~~~yaml
----
-action: skip
----
-
-<raison factuelle et courte>
-~~~
-
-Un échec technique n'est jamais une raison de skip. Une fois publication-request.md écrit, termine le passage.
+Rends toujours l'article complet, même si cette phase ne nécessite que peu de corrections. Une fois publication-request.md écrit, termine le passage.
 
 ## Rapport final
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les principaux sujets envisagés, les doublons écartés, le sujet retenu, pourquoi il mérite un article, les pistes d'affiliation réellement vérifiées et les principales sources. En cas de skip, explique simplement pourquoi aucun sujet suffisamment bon n'a été retenu.
+Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
