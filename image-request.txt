@@ -286,3 +286,4 @@ automation/image-20261030-1249-laval-brest-somme-dinan-dfa2cb5|ba7783f248b932ecd
 automation/image-20261030-1844-bayeux-angers-orleans-dordogne-oingt-12c9718-f4a7|6aefc3989f3a2e444a3619d23260cb06e20c68bc
 automation/image-20261030-1844-bayeux-angers-orleans-dordogne-oingt-12c9718-f4a7|974e11f2eb1df2c674633a8bcfb7348aaa98ef9e
 automation/image-20261031-0041-canistrelli-caen-chartres-gard-648051f|13e98f40af57e397fba47267d8f78d3db236fcb9
+automation/image-20261031-0041-canistrelli-caen-chartres-gard-648051f|e98516c7bec3b0c92c109b8dd731c57f64ad3caa
