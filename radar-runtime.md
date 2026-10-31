@@ -973,6 +973,10 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 
 ### Articles publiés
 
+- /articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/ | Noël 2026 à Toulon en famille: marché, patinoire et horaires | evenements | Toulon, Var, Provence-Alpes-Côte d’Azur
+- /articles/bons-plans/a-marie-galante-l-habitation-murat-se-decouvre-gratuitement-en-famille/ | À Marie-Galante, l’habitation Murat se découvre gratuitement en famille | bons-plans | Grand-Bourg, Guadeloupe, Guadeloupe
+- /articles/activites/visiter-le-nouveau-musee-m24-au-mans-en-famille-billets-parcours-et-circuit/ | Visiter le nouveau musée M24 au Mans en famille: billets, parcours et circuit | activites | Le Mans, Sarthe, Pays de la Loire
+- /articles/voyages/chateau-de-versailles-depuis-paris-avec-des-enfants-rer-c-train-n-ou-l/ | Château de Versailles depuis Paris avec des enfants: RER C, train N ou L ? | voyages | Versailles, Yvelines, Île-de-France
 - /articles/voyages/disneyland-paris-en-rer-a-avec-des-enfants-trajet-et-tickets-en-2026/ | Disneyland Paris en RER A avec des enfants: trajet et tarifs 2026 | voyages | Chessy, Seine-et-Marne, Île-de-France
 - /articles/bons-plans/fougeres-en-famille-a-petit-prix-chateau-coursive-et-balade-gratuite/ | Fougères en famille à petit prix: château, Coursive et balade gratuite | bons-plans | Fougères, Ille-et-Vilaine, Bretagne
 - /articles/parentalite/ludotheques-du-grand-nancy-ou-jouer-en-famille-et-emprunter-des-jeux/ | Ludothèques du Grand Nancy: où jouer en famille et emprunter des jeux | parentalite | Meurthe-et-Moselle, Grand Est
@@ -1870,6 +1874,7 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 - opportunity | /articles/evenements/bd-boum-2026-a-blois-en-famille-ateliers-bd-expositions-et-cinema-selon-l-age/ | 2026-10-18T19:49:09.191Z
 - opportunity | /articles/evenements/bedecine-2026-a-illzach-en-famille-ateliers-et-spectacles-selon-l-age/ | 2026-10-23T12:33:36.649Z
 - refresh | /articles/vie-pratique/carte-okay-savoie-2026-2027-comment-obtenir-et-utiliser-les-80-du-collegien/ | 2026-10-06T08:50:37.159Z
+- opportunity | /articles/voyages/chateau-de-fontainebleau-depuis-paris-en-famille-train-r-bus-3401-et-budget/ | 2026-10-31T16:31:36.357Z
 - opportunity | /articles/voyages/chateau-de-versailles-depuis-paris-avec-des-enfants-rer-c-train-n-ou-l/ | 2026-10-31T07:32:47.278Z
 - opportunity | /articles/activites/cite-du-chocolat-valrhona-a-la-toussaint-2026-quel-atelier-choisir-selon-l-age/ | 2026-10-05T14:27:51.219Z
 - opportunity | /articles/sorties/cosquer-mediterranee-avec-des-enfants-age-poussette-tarifs/ | 2026-10-03T11:22:17.769Z
@@ -1918,6 +1923,7 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 - refresh | /articles/activites/la-cite-de-la-mer-a-cherbourg-en-famille-tarifs-duree-et-conseils-de-visite/ | 2026-10-17T06:36:14.977Z
 - refresh | /articles/parentalite/laep-a-nantes-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | 2026-10-17T18:40:41.973Z
 - opportunity | /articles/evenements/les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille/ | 2026-10-27T13:28:21.076Z
+- opportunity | /articles/evenements/les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille/ | 2026-10-31T19:33:18.323Z
 - refresh | /articles/evenements/lire-en-poche-2026-a-gradignan-avec-des-enfants-organiser-une-journee-sans-perdre-les-ateliers/ | 2026-10-06T12:23:52.449Z
 - opportunity | /articles/evenements/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere/ | 2026-10-30T09:27:15.122Z
 - opportunity | /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | 2026-10-16T17:46:42.470Z
@@ -1951,6 +1957,7 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 - opportunity | /articles/bons-plans/navigo-liberte-en-famille-en-2026-tarif-enfant-passe-ou-telephone/ | 2026-10-25T10:33:30.080Z
 - opportunity | /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | 2026-10-30T06:28:26.726Z
 - opportunity | /articles/evenements/noel-2026-a-chenonceau-quel-jour-decouvrir-les-decors-en-famille/ | 2026-10-24T12:31:27.784Z
+- opportunity | /articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/ | 2026-10-31T10:28:17.432Z
 - opportunity | /articles/evenements/noel-2026-a-villandry-spectacles-et-ateliers-a-choisir-selon-l-age/ | 2026-10-27T10:35:41.254Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-10-26T21:31:06.119Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/ | 2026-10-23T19:58:30.214Z
@@ -1990,6 +1997,7 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 - opportunity | /articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/ | 2026-10-30T12:36:12.349Z
 - opportunity | /articles/activites/stages-de-science-a-la-cite-des-sciences-pendant-la-toussaint-2026-lequel-choisir-selon-l-age/ | 2026-10-04T05:39:23.036Z
 - opportunity | /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | 2026-10-24T19:30:32.700Z
+- opportunity | /articles/evenements/tous-en-sons-2026-a-marseille-quel-spectacle-choisir-selon-l-age-des-enfants/ | 2026-10-31T13:29:50.851Z
 - opportunity | /articles/evenements/toussaint-2026-a-vaux-le-vicomte-lampe-torche-ou-carnaval-des-animaux-avec-les-enfants/ | 2026-10-11T11:27:54.175Z
 - opportunity | /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | 2026-10-11T19:35:57.703Z
 - opportunity | /articles/sorties/toussaint-2026-au-louvre-lens-quelle-activite-choisir-selon-l-age/ | 2026-10-07T19:13:00.627Z
@@ -2002,106 +2010,6 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 - opportunity | /articles/evenements/ville-de-noel-d-arras-2026-en-famille-grande-roue-patinoire-et-horaires/ | 2026-10-29T20:30:33.011Z
 
 ## Travaux éditoriaux en cours
-
-### Publication en cours
-
-- Branche: automation/publication-20261031-1804-titre-de-travail-ateliers-de-patisserie-en-gironde-cuisiner-avec-son-e
-- HEAD: publication: phase 3 20261031-1804-titre-de-travail-ateliers-de-patisserie-en-gironde-cuisiner-avec-son-e
-
----
-category: "cuisine"
-title: "Ateliers de pâtisserie en Gironde: en duo ou enfant seul ?"
-subtitle: "Six adresses à Bordeaux, Eysines et Fronsac pour choisir selon l'âge, la recette et le prix"
-summary: "Cours en duo ou sans les parents, biscuits décorés ou gâteaux: comparez les ateliers de pâtisserie en Gironde, leurs âges, tarifs et réservations."
-keywords:
-  - "atelier pâtisserie enfant Gironde"
-  - "atelier pâtisserie parent enfant Bordeaux"
-  - "cours pâtisserie enfant Bordeaux"
-  - "atelier biscuits Fronsac"
-location:
-  department: "Gironde"
-  region: "Nouvelle-Aquitaine"
-sources:
-  - title: "MOSS Pâtisserie - cours enfants et duos, âges et tarifs"
-    url: "https://moss-patisserie.fr/atelier-patisserie-bordeaux/"
-  - title: "Labo&Gato - atelier duo parent-enfant à Bordeaux"
-    url: "https://atelierpatissier.laboetgato.fr/fr/accueil/94-atelier-duo-parent-enfant.html?pr=4992"
-  - title: "Maison Tchovi - atelier Petits Chefs"
-    url: "https://www.maisontchovi.com/boutique-ateliers/p/deluxe-package-ssm8n-2myb8"
-  - title: "Lili Bloom - atelier biscuits licorne en duo"
-    url: "https://lilibloom.fr/products/atelier-patisserie-biscuits-licorne-duo-parent-enfant-par-lisa"
-  - title: "Lili Bloom - calendrier des ateliers"
-    url: "https://lilibloom.fr/collections/ateliers"
-  - title: "L'Atelier Gourmand Bordeaux-Eysines - programme adulte-enfant"
-    url: "https://www.atelier-gourmand.fr/nos-ateliers/bordeaux/programme/binome-adulte/enfant-860"
----
-
-Préparer des sablés, pocher des choux ou décorer son propre gâteau: en Gironde, plusieurs pâtissiers accueillent les enfants dans leurs ateliers, à Bordeaux, à Eysines et à Fronsac, près de Libourne. Mais les formules ne se ressemblent pas. Certaines permettent de cuisiner **avec** son enfant; d'autres lui donnent sa place dans un cours réservé aux jeunes. Voici comment choisir sans se tromper de format ni de budget.
-
-## Pour pâtisser ensemble: les ateliers en duo
-
-### MOSS Pâtisserie: une formule dès 4 ans
-
-Dans le secteur de Bordeaux, [MOSS Pâtisserie](https://moss-patisserie.fr/atelier-patisserie-bordeaux/) propose un cours **parent-enfant dès 4 ans**, d'une durée de **1 h 30**, à **89 € pour le duo**. Un enfant supplémentaire coûte 25 €. Le format convient à une première expérience partagée, plutôt qu'à un cours où l'adulte reste simplement spectateur.
-
-L'atelier est organisé le mercredi sur demande ou pendant les vacances scolaires: il faut donc contacter l'organisatrice pour connaître les créneaux et le thème proposé. MOSS propose aussi des cours pour les enfants sans leurs parents, détaillés plus bas.
-
-### L'Atelier Gourmand à Eysines: choux ou cupcakes à deux
-
-Au **36 rue Guynemer à Eysines**, [L'Atelier Gourmand](https://www.atelier-gourmand.fr/nos-ateliers/bordeaux/programme/binome-adulte/enfant-860) affiche des cours adulte-enfant de **2 heures à 59 € par binôme**. Une seule inscription couvre l'adulte et l'enfant.
-
-Deux formules sont particulièrement adaptées aux amateurs de desserts: **« Choux Addict »**, pour préparer éclairs au chocolat et chouquettes, et **« Les Cupcakes »**, consacré à la pâte, aux glaçages et aux décorations. Des séances de choux sont annoncées les **15 et 29 novembre 2026**, et une séance cupcakes le **13 décembre 2026**; les places sont à vérifier au moment de réserver.
-
-Le site demande d'apporter des boîtes hermétiques pour les réalisations. L'âge minimum n'étant pas clairement indiqué sur ces fiches, mieux vaut le confirmer avant d'inscrire un jeune enfant.
-
-### Labo&Gato à Bordeaux: préparer un goûter complet
-
-Chez [Labo&Gato](https://atelierpatissier.laboetgato.fr/fr/accueil/94-atelier-duo-parent-enfant.html?pr=4992), l'atelier **« Little Chef »** réunit **un adulte et un enfant de 6 à 11 ans**. Pendant **2 heures**, ils réalisent trois préparations sucrées, variables selon la saison et l'inspiration du chef: cookies, cakes ou pâte à tartiner peuvent être au programme.
-
-La séance bordelaise du **mercredi 18 novembre 2026, de 14 h 30 à 16 h 30**, est affichée à **100 € pour les deux participants**. C'est l'une des formules les plus chères de cette sélection, mais aussi une option pour ceux qui veulent travailler plusieurs recettes au cours de la même séance. Le calendrier de réservation permet de contrôler les places restantes.
-
-### Lili Bloom à Fronsac: fabriquer et décorer ses biscuits
-
-À **Fronsac**, au **10A route de Loiseau**, [Lili Bloom](https://lilibloom.fr/products/atelier-patisserie-biscuits-licorne-duo-parent-enfant-par-lisa) propose notamment un atelier de **biscuits licorne dès 6 ans**, en duo adulte-enfant. La première heure sert à préparer et découper des sablés au chocolat; la seconde est consacrée au glaçage et à la décoration. Les enfants repartent avec leurs biscuits.
-
-Le format dure **2 heures**, avec **quatre duos maximum**. La fiche consultée indique **49 € pour le duo**, mais elle est **en rupture de stock**: ce tarif décrit cette séance, pas une réservation actuellement disponible. Pour les prochains thèmes et créneaux, consultez le [calendrier des ateliers Lili Bloom](https://lilibloom.fr/collections/ateliers). C'est une bonne piste pour un enfant qui aime surtout décorer et personnaliser ses créations.
-
-## Pour un enfant qui veut participer sans ses parents
-
-### Maison Tchovi: cake design dès 10 ans
-
-À Bordeaux, [Maison Tchovi](https://www.maisontchovi.com/boutique-ateliers/p/deluxe-package-ssm8n-2myb8) accueille les **10 ans et plus** dans son atelier **« Petits Chefs »**, au **1 rue Géo-Delvaille**. Ici, l'activité porte principalement sur le **cake design**: l'enfant décore son gâteau et l'emporte. Il ne s'agit donc pas d'un cours complet consacré à la préparation d'une pâte depuis le début.
-
-La formule est annoncée **le samedi de 14 h à 16 h**, à **25 € par enfant**, avec **dix places maximum**. Aucun niveau préalable n'est demandé et le tablier est fourni. C'est l'option la moins chère de cette sélection pour un enfant participant seul.
-
-### MOSS: pâtisserie en petit groupe dès 6 ans
-
-[MOSS Pâtisserie](https://moss-patisserie.fr/atelier-patisserie-bordeaux/) accueille aussi les **enfants seuls dès 6 ans** pour **1 h 30 à 45 € par enfant**, en groupe de **sept au maximum**. Les séances sont proposées pendant les vacances scolaires ou le mercredi sur demande.
-
-Ce choix convient davantage à un enfant qui veut apprendre à pâtisser dans un petit groupe, sans payer une place pour l'adulte. Il faut demander le programme exact et la date avant de réserver.
-
-## Et pour apprendre les canelés bordelais ?
-
-L'[atelier privé de pâtisserie de L'idée sucrée sur GetYourGuide](https://www.getyourguide.com/bordeaux-l287/bordeaux-traditional-canneles-workshop-t1098106/) accepte les **enfants dès 5 ans accompagnés d'un adulte**. Il peut se tenir chez le chef ou à domicile dans le secteur de Bordeaux. Les ingrédients, le matériel et les fiches recettes sont fournis.
-
-Attention à deux détails: malgré le titre « Traditional Canelé Workshop », la description évoque **plusieurs pâtisseries possibles** selon le cours, pas uniquement des canelés. La fiche annonce aussi **3 heures** en en-tête, mais **environ 2 heures** dans ses informations pratiques. Faites confirmer la recette, la durée et le prix total pour votre groupe avant de choisir une date.
-
-## Quel atelier choisir selon votre enfant ?
-
-**Pour une première séance dès 4 ans**, MOSS est l'option explicitement ouverte aux plus jeunes, avec participation d'un adulte. **Pour un duo à budget plus contenu**, les cours à 59 € de L'Atelier Gourmand à Eysines sont intéressants, sous réserve de vérifier l'âge accepté. **Pour les biscuits décorés**, Lili Bloom propose un format très ciblé dès 6 ans, mais il faut attendre une séance réservable. **Pour un enfant autonome**, MOSS dès 6 ans ou Maison Tchovi dès 10 ans évitent de payer un cours en duo.
-
-Le choix dépend aussi de ce que l'enfant souhaite faire: préparer une recette de bout en bout, multiplier les réalisations ou surtout décorer un gâteau. Ces activités ne développent pas exactement les mêmes gestes.
-
-## Avant de réserver: les détails qui comptent
-
-Vérifiez **qui cuisine réellement**, surtout dans les formules parent-enfant, puis le **prix pour l'ensemble des participants**. Un cours à 25 € par enfant n'est pas directement comparable à un duo à 59, 89 ou 100 €. Les calendriers et les places évoluent; les dates indiquées ici sont celles affichées lors de la vérification fin octobre 2026.
-
-Signalez toute **allergie alimentaire** avant paiement. Lili Bloom mentionne notamment la présence de blé, d'œufs, de produits laitiers et de fruits à coque dans son atelier. Demandez aussi les conditions d'annulation: chez MOSS, l'annulation est possible jusqu'à **48 heures** avant le cours; Maison Tchovi prévoit une annulation gratuite jusqu'à **72 heures** avant. Chez Lili Bloom, les conditions varient selon le délai restant avant la séance. Pour un déplacement à Fronsac ou à Eysines, contrôlez enfin l'adresse précise du cours, et pas seulement le nom « Bordeaux » affiché dans certains programmes.
-
-## Prolonger l'atelier par un week-end à Bordeaux
-
-Pour une famille qui profite du cours pour passer une ou deux nuits à Bordeaux, l'[Aparthotel Adagio Bordeaux Centre Gambetta](https://www.booking.com/hotel/fr/adagio-city-aparthotel-bordeaux-gambetta.fr.html) propose des appartements avec cuisine équipée et des hébergements familiaux en centre-ville. Vérifiez la capacité et le tarif pour vos dates avant de réserver. Pour organiser les autres sorties sans multiplier les déplacements, consultez aussi notre guide [Bordeaux en famille](https://www.fam-space.fr/destinations/nouvelle-aquitaine/gironde/bordeaux/).
-
 
 ### Destination en cours
 
