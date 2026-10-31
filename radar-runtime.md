@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Château de Versailles depuis Paris avec des enfants : RER C, train N ou L ?"
-subtitle: Choisir la gare, calculer les billets 2026 et éviter une marche inutile avec les enfants
-summary: Depuis Paris, comparez le RER C vers Versailles Château Rive Gauche, la ligne N vers Chantiers et la ligne L vers Rive Droite selon votre point de départ, les enfants et la marche jusqu'au Château.
+subtitle: Quelle gare choisir, combien coûtent les billets en 2026 et comment simplifier le retour ?
+summary: "RER C, trains N et L ou bus 171 : choisissez votre trajet vers le château de Versailles selon votre gare parisienne, la marche avec les enfants et les titres de transport nécessaires."
 category: voyages
 location:
   city: Versailles
@@ -71,16 +76,27 @@ keywords:
   - RER C château Versailles famille
   - Versailles Chantiers ou Rive Gauche
   - tarif train Versailles enfant 2026
+  - bus 171 château Versailles
 sources:
-  - title: Château de Versailles — informations pratiques et gares
+  - title: Château de Versailles — informations pratiques et accès
     url: https://www.chateauversailles.fr/preparer-ma-visite/informations-pratiques
   - title: Île-de-France Mobilités — Ticket Métro-Train-RER
     url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/ticket-metro-train-rer
-  - title: Versailles Grand Parc — venir en transports
+  - title: Île-de-France Mobilités — Ticket Bus-Tram
+    url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/ticket-bus-tram
+  - title: Île-de-France Mobilités — réduction pour les enfants de 4 à moins de 10 ans
+    url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/tarifs-reduits/enfants-4-10-ans
+  - title: Île-de-France Mobilités — gratuité avant 4 ans
+    url: https://www.iledefrance-mobilites.fr/gratuite-pour-les-enfants-de-moins-de-4-ans
+  - title: RATP — ligne de bus 171
+    url: https://www.ratp.fr/plans-lignes/busratp/171
+  - title: Île-de-France Mobilités — accessibilité des itinéraires
+    url: https://www.iledefrance-mobilites.fr/aide-et-contacts/s-informer-sur-l-accessibilite/connaitre-les-equipements-et-services-accessibles-trajets
+  - title: Versailles Grand Parc — venir et se déplacer
     url: https://www.versailles-tourisme.com/venir-et-se-deplacer-a-versailles-grand-parc.html
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: chateau-de-versailles-depuis-paris-avec-des-enfants-rer-c-train-n-ou-l
   decision: Depuis son point de départ parisien, choisir la ligne et la gare qui simplifient vraiment le trajet familial vers le Château, puis prévoir le bon titre de transport et le retour.
@@ -91,33 +107,52 @@ radar:
     signal: strong_page
     sourceUrl: /articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/
     basis: "La page « Transports à Paris avec des enfants: quel titre choisir pour payer juste? » conserve 3127 impressions sur la semaine récente, avec une position moyenne de 8.693 et 143.4 % de son pic."
+reviewAt: 2026-12-15
 ---
 
-## Mission retenue
-Créer un guide de trajet **Paris → château de Versailles** avec enfants, distinct du guide général des titres franciliens et des conseils de visite du Château.
+Pour rejoindre le château de Versailles depuis Paris avec des enfants, le meilleur train n'est pas forcément celui qui s'arrête le plus près : une liaison directe depuis votre gare parisienne peut être plus reposante qu'un trajet avec plusieurs correspondances. Le **RER C** offre la marche la plus courte à l'arrivée, mais les lignes **N** et **L** sont de bonnes alternatives selon votre point de départ.
 
-## Pourquoi cette mission
-Expansion concrète de la page transports parisiens performante (3 127 impressions récentes). Le refresh Futuroween est déjà complet et se termine le 1er novembre ; la Carte Avantage Adulte SNCF conserve des conditions exactes et n'a pas de défaut éditorial décisif vérifié. L'opportunité Saint-Nicolas à Nancy est déjà traitée sur Fam Space et son programme 2026 reste partiel.
+## RER C, ligne N ou ligne L : quelle gare choisir ?
 
-## Décision du lecteur
-Choisir entre RER C, ligne N, ligne L et éventuellement bus 171 selon la gare parisienne de départ, le temps de marche et les contraintes familiales ; savoir quel titre charger et anticiper le retour.
+- **Vous pouvez rejoindre facilement le RER C :** prenez un train desservant **Versailles Château Rive Gauche**. C'est la gare la plus proche du Château, à environ **10 minutes à pied** de l'entrée, selon les indications du domaine. Vérifiez bien la destination affichée : tous les RER C ne vont pas à cette gare.
+- **Vous partez de Paris-Montparnasse :** la **ligne N** dessert **Versailles Chantiers**, à environ **18 minutes à pied** du Château. C'est souvent plus simple de garder ce trajet direct que de changer de ligne uniquement pour gagner quelques minutes de marche.
+- **Vous partez de Paris-Saint-Lazare :** la **ligne L** rejoint **Versailles Rive Droite**, à environ **17 minutes à pied**. Elle évite de traverser Paris pour récupérer le RER C.
 
-## Faits à traiter
-- RER C → Versailles Château Rive Gauche, environ 10 min à pied ; ligne N depuis Montparnasse → Versailles Chantiers, environ 18 min ; ligne L depuis Saint-Lazare → Versailles Rive Droite, environ 17 min, selon le Château.
-- Ticket Métro-Train-RER 2026 : 2,55 € plein tarif, 1,30 € tarif réduit ; vérifier gratuité avant 4 ans et réduction de 4 à moins de 10 ans, support et validité du ticket. Ne pas réinventer les règles générales des forfaits.
-- Vérifier le trafic, les correspondances, les ascenseurs et le retour pour la date du lecteur ; ne pas promettre une accessibilité uniforme des gares.
-- Bus 171 depuis Pont de Sèvres comme alternative pertinente, avec titre Bus-Tram distinct à vérifier.
+Ces durées sont des **temps de marche indicatifs entre la gare et le Château**, pas des durées de train. Avec une poussette, un enfant qui marche lentement ou une pause en chemin, prévoyez davantage. L'adresse d'arrivée est **place d'Armes, 78000 Versailles**. Les trois accès sont confirmés par les [informations pratiques du Château](https://www.chateauversailles.fr/preparer-ma-visite/informations-pratiques).
 
-## Sources de départ
-Les trois sources officielles du frontmatter ; compléter au besoin avec l'information officielle du Château sur les gares et les conditions de tarifs réduits d'Île-de-France Mobilités.
+Le critère décisif est donc votre **trajet complet depuis l'hébergement**, et non la seule distance de la gare au monument. Une correspondance supplémentaire, des escaliers ou un long détour dans une grande station peuvent annuler le bénéfice des huit minutes de marche économisées à Versailles.
 
-## Affiliation
-Pour les familles qui visitent le Château, une offre d'entrée sur Tiqets existe : https://www.tiqets.com/fr/billets-chateau-de-versailles-l141873/ . Pour prolonger la sortie, Le Logis Versaillais sur Booking.com dispose d'appartements avec cuisine et de chambres familiales : https://www.booking.com/hotel/fr/le-logis-versaillais.fr.html . Ne pas présenter ces pages comme sources des faits de transport.
+## Quel ticket prévoir pour l'aller-retour en 2026 ?
 
-## Continuations internes
-- Renvoi vers `/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/` pour le choix général des titres et forfaits.
-- Renvoi vers `/articles/parentalite/visiter-le-chateau-de-versailles-avec-un-bebe-poussette-billets-et-parcours/` pour poussettes **dans le domaine**, billets de visite et parcours.
-- Ne pas reprendre les animations de `/articles/evenements/vacances-royales-2026-a-versailles-animations-napoleon-dates-et-billets-en-famille/`.
+Pour un trajet en métro, RER ou train dans l'Île-de-France, le [Ticket Métro-Train-RER](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/ticket-metro-train-rer) coûte en 2026 **2,55 € par adulte** et **1,30 € pour un enfant de 4 ans à moins de 10 ans**. Les **moins de 4 ans voyagent gratuitement**, sans ticket, avec un justificatif d'âge si nécessaire.
+
+Ce ticket couvre les correspondances entre métro, train et RER pendant **2 heures à partir de la première validation, sans sortir du réseau**. Il faut un nouveau ticket pour le retour : un même ticket ne couvre pas la visite du Château entre les deux trajets.
+
+Par exemple, pour **deux adultes et deux enfants de 4 à moins de 10 ans**, le trajet ferroviaire revient à **7,70 € à l'aller**, soit **15,40 € aller-retour** avec ces tickets à l'unité, hors coût éventuel des supports.
+
+Les tickets s'achètent sur un **passe Navigo Easy** ou un **smartphone compatible**. Chaque voyageur payant doit disposer de son propre support de validation ; on ne fait pas passer toute la famille avec un seul passe. Sur un même Navigo Easy, il n'est pas possible de mélanger des tickets plein tarif et tarif réduit.
+
+Si vous avez déjà un forfait Navigo valable pour le parcours, vérifiez sa couverture avant de racheter des tickets. Pour comparer les forfaits d'une journée ou d'un séjour entier, consultez notre guide [des transports à Paris avec des enfants](https://www.fam-space.fr/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/).
+
+## Et le bus 171 depuis Pont de Sèvres ?
+
+Si vous êtes déjà à **Pont de Sèvres**, à l'ouest de Paris, le **bus 171** relie ce terminus à l'arrêt **Château** à Versailles. Il peut être pratique pour éviter une arrivée dans une gare suivie d'une marche plus longue. En revanche, si vous devez d'abord traverser Paris en métro pour l'atteindre, ajoutez cette correspondance au calcul du temps et du budget.
+
+Le 171 nécessite un **Ticket Bus-Tram**, distinct du billet de métro ou de RER : **2,05 € plein tarif** ou **1,05 € pour les 4 à moins de 10 ans** en 2026. Si vous arrivez à Pont de Sèvres par la ligne 9 du métro avec des tickets à l'unité, prévoyez donc **un ticket Métro-Train-RER puis un ticket Bus-Tram** par voyageur payant. Vérifiez les départs et l'arrêt desservi sur la [ligne 171 de la RATP](https://www.ratp.fr/plans-lignes/busratp/171).
+
+## Poussette, travaux et retour : les vérifications utiles
+
+Avant de partir, recherchez votre itinéraire à la **date et à l'heure prévues** dans Île-de-France Mobilités. Contrôlez les travaux sur les lignes C, N ou L, les éventuels changements de terminus, ainsi que les horaires de retour. Ne supposez pas qu'un train circule jusqu'à Versailles parce que sa ligne y passe habituellement.
+
+Avec une poussette, consultez aussi les [détails d'accessibilité de chaque étape](https://www.iledefrance-mobilites.fr/aide-et-contacts/s-informer-sur-l-accessibilite/connaitre-les-equipements-et-services-accessibles-trajets), notamment **l'état des ascenseurs**. Une gare desservie par le bon train n'est pas nécessairement accessible sans escalier le jour de votre voyage. Gardez un peu de marge entre l'heure de sortie du Château et le train de retour, surtout avec un enfant fatigué.
+
+Pour les règles de poussette **à l'intérieur du Château**, les billets gratuits des enfants et le parcours dans les jardins, notre guide [visiter le château de Versailles avec un bébé](https://www.fam-space.fr/articles/parentalite/visiter-le-chateau-de-versailles-avec-un-bebe-poussette-billets-et-parcours/) détaille ces choix sans les confondre avec l'accès en transport.
+
+## Réserver la visite ou prolonger le séjour
+
+Le billet de transport **n'inclut pas l'entrée au Château**. Si vous prévoyez de visiter les salles, vous pouvez [consulter les billets pour le château de Versailles sur Tiqets](https://www.tiqets.com/fr/billets-chateau-de-versailles-l141873/) et choisir une formule adaptée à votre programme. Vérifiez les prestations incluses et les réservations nécessaires pour les enfants avant de payer.
+
+Pour transformer la sortie en nuit sur place, [Le Logis Versaillais sur Booking.com](https://www.booking.com/hotel/fr/le-logis-versaillais.fr.html) propose des appartements équipés d'une cuisine, avec notamment un micro-ondes, ainsi que des logements familiaux. Cela peut faciliter les repas et le rythme des plus jeunes ; vérifiez la capacité et les disponibilités pour vos dates.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -126,10 +161,10 @@ Pour les familles qui visitent le Château, une offre d'entrée sur Tiqets exist
 - /articles/parentalite/visiter-le-chateau-de-versailles-avec-un-bebe-poussette-billets-et-parcours/ | Visiter le château de Versailles avec un bébé: poussette, billets et parcours | parentalite | Versailles, Yvelines, Île-de-France
 - /articles/evenements/vacances-royales-2026-a-versailles-animations-napoleon-dates-et-billets-en-famille/ | Vacances royales 2026 à Versailles: animations Napoléon, dates et billets | evenements | Versailles, Yvelines, Île-de-France
 - /articles/cuisine/atelier-cuisine-a-versailles-enfant-seul-ou-duo-parent-enfant-que-choisir/ | Atelier cuisine à Versailles: enfant seul ou duo parent-enfant, que choisir ? | cuisine | Versailles, Yvelines, Île-de-France
+- /articles/sorties/chateau-de-breteuil-en-famille-contes-de-perrault-jardins-et-visite-du-chateau/ | Château de Breteuil en famille: contes de Perrault, jardins et visite du château | sorties | Choisel, Yvelines, Île-de-France
 - /articles/activites/chateau-de-biron-avec-des-enfants-tarifs-et-conseils-pour-la-visite/ | Château de Biron avec des enfants: tarifs et conseils pour la visite | activites | Biron, Dordogne, Nouvelle-Aquitaine
 - /articles/sorties/chateau-de-chenonceau-en-famille-billets-duree-et-conseils-avec-des-enfants/ | Château de Chenonceau en famille: billets, durée et conseils avec des enfants | sorties | Chenonceaux, Indre-et-Loire, Centre-Val de Loire
 - /articles/voyages/train-de-la-rhune-avec-des-enfants-billets-duree-et-conseils-en-2026/ | Train de la Rhune avec des enfants: billets, durée et conseils en 2026 | voyages | Sare, Pyrénées-Atlantiques, Nouvelle-Aquitaine
-- /articles/sorties/chateau-de-breteuil-en-famille-contes-de-perrault-jardins-et-visite-du-chateau/ | Château de Breteuil en famille: contes de Perrault, jardins et visite du château | sorties | Choisel, Yvelines, Île-de-France
 - /articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/ | Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite | sorties | Paris, Paris, Île-de-France
 - /articles/bons-plans/pass-destination-yvelines-hauts-de-seine-en-famille-comment-profiter-d-au-moins-15-de-reduction/ | Pass Destination Yvelines-Hauts-de-Seine en famille: comment profiter d'au moins 15% de réduction? | bons-plans | Versailles, Yvelines, Île-de-France
 - /articles/vie-pratique/imagine-r-dans-les-yvelines-ce-qui-change-pour-les-eleves-boursiers-a-la-rentree-2026/ | Imagine R dans les Yvelines: ce qui change pour les élèves boursiers à la rentrée 2026 | vie-pratique | Versailles, Yvelines, Île-de-France
