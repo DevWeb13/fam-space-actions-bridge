@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,92 +14,149 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Gironde
 - Région: Nouvelle-Aquitaine
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Titre de travail :** « Ateliers de pâtisserie en Gironde : cuisiner avec son enfant ou le laisser pâtisser seul ? »
-
-**Angle :** aider les familles à choisir un vrai atelier selon l’âge, le format (duo ou enfant seul), la recette, le budget et la commune. À Bordeaux, Eysines et Fronsac, des professionnels proposent des cours de pâtisserie, de canelés, de biscuits décorés et de cake design ; leurs conditions d’accueil diffèrent sensiblement.
-
-## Besoin du lecteur
-Identifier un atelier réellement adapté à son enfant, savoir si l’adulte participe ou accompagne seulement, comparer le prix total pour un duo ou un enfant seul, la durée, le niveau de difficulté, les créations à emporter et les modalités de réservation. Prévoir les contraintes pratiques : dates, allergies, trajets et annulation.
-
-## Valeur éditoriale
-- **Dès 4 ans accompagné :** MOSS Pâtisserie (Bordeaux), formule parent-enfant de 1 h 30 à 89 € le duo ; enfant seul dès 6 ans, 1 h 30 à 45 €. Cours enfants proposés les mercredis et pendant les vacances.
-- **Dès 5 ans accompagné :** atelier de canelés proposé par L’idée sucrée sur GetYourGuide, en petit groupe privé chez le chef ou à domicile à Bordeaux. La page affiche 3 h en en-tête, mais environ 2 h dans les consignes : ne pas figer la durée sans clarification.
-- **Dès 6 ans en duo :** Lili Bloom (Fronsac), fabrication et décoration de biscuits en 2 h, quatre duos maximum ; exemple de séance à 49 € le duo, mais la fiche consultée est en rupture de stock. Vérifier les nouvelles dates plutôt que promettre cette séance.
-- **Atelier duo daté :** Labo&Gato (Bordeaux), « Little Chef » le 18 novembre 2026 de 14 h 30 à 16 h 30, 100 € pour le duo, autour d’un goûter maison ; places indiquées limitées lors de la vérification.
-- **Dès 10 ans, enfant seul :** Maison Tchovi (Bordeaux), cake design le samedi de 14 h à 16 h, 25 € par enfant, dix places maximum.
-- **Autre format :** L’Atelier Gourmand à Eysines affiche des cours en binôme adulte-enfant ; contrôler les séances et prix propres à Eysines, sans reprendre ceux des autres villes de l’enseigne.
-
-Mettre en avant les différences de participation réelle (préparer une pâte, décorer un gâteau, apprendre une technique), de tarification et de calendrier. Les résultats de recherche renvoient surtout à des fiches d’organisateurs : la comparaison transversale par âge et budget constitue l’apport du guide. Les ateliers sont récurrents ou proposés sur plusieurs dates, pas un événement ponctuel imminent.
-
-## Affiliation
-- **GetYourGuide — « Bordeaux: Traditional Canelé Workshop »**, atelier privé de pâtisserie par L’idée sucrée, enfants à partir de 5 ans accompagnés, ingrédients et recettes fournis, possibilité de cours chez le chef ou à domicile : https://www.getyourguide.com/bordeaux-l287/bordeaux-traditional-canneles-workshop-t1098106/ . Offre directement liée au sujet, mais vérifier tarif, calendrier et durée exacte à la réservation.
-- **Booking.com — Aparthotel Adagio Bordeaux Centre Gambetta**, appartement d’une chambre pour quatre personnes et cuisine équipée, dans le centre de Bordeaux, pour une famille qui profite de l’atelier lors d’un séjour : https://www.booking.com/hotel/fr/adagio-city-aparthotel-bordeaux-gambetta.html . Hébergement secondaire seulement, à placer discrètement en fin d’article ; disponibilité et prix selon dates.
-
-Les ateliers MOSS, Labo&Gato, Lili Bloom et Maison Tchovi ne disposent pas d’une réservation équivalente vérifiée chez les partenaires consultés : utiliser leurs pages officielles, sans leur substituer une activité différente.
-
-## Sources de départ
-- MOSS Pâtisserie, formules, prix, âges et calendrier : https://moss-patisserie.fr/atelier-patisserie-bordeaux/
-- Labo&Gato, programme et atelier duo du 18 novembre 2026 à Bordeaux : https://atelierpatissier.laboetgato.fr/fr/
-- Maison Tchovi, « Petits Chefs », prix, âge et horaire : https://www.maisontchovi.com/boutique-ateliers/p/deluxe-package-ssm8n-2myb8
-- Lili Bloom, atelier duo, âges, prix et conditions (séance affichée en rupture de stock) : https://lilibloom.fr/products/atelier-patisserie-biscuits-licorne-duo-parent-enfant-par-lisa
-- Lili Bloom, programme général : https://lilibloom.fr/collections/ateliers
-- L’Atelier Gourmand Bordeaux/Eysines, formats : https://www.atelier-gourmand.fr/nos-ateliers/bordeaux
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "cuisine"
+title: "Ateliers de pâtisserie en Gironde: en duo ou enfant seul ?"
+subtitle: "Six adresses à Bordeaux, Eysines et Fronsac pour choisir selon l'âge, la recette et le prix"
+summary: "Cours en duo ou sans les parents, biscuits décorés ou gâteaux: comparez les ateliers de pâtisserie en Gironde, leurs âges, tarifs et réservations."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "atelier pâtisserie enfant Gironde"
+  - "atelier pâtisserie parent enfant Bordeaux"
+  - "cours pâtisserie enfant Bordeaux"
+  - "atelier biscuits Fronsac"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Gironde"
+  region: "Nouvelle-Aquitaine"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "MOSS Pâtisserie - cours enfants et duos, âges et tarifs"
+    url: "https://moss-patisserie.fr/atelier-patisserie-bordeaux/"
+  - title: "Labo&Gato - atelier duo parent-enfant à Bordeaux"
+    url: "https://atelierpatissier.laboetgato.fr/fr/accueil/94-atelier-duo-parent-enfant.html?pr=4992"
+  - title: "Maison Tchovi - atelier Petits Chefs"
+    url: "https://www.maisontchovi.com/boutique-ateliers/p/deluxe-package-ssm8n-2myb8"
+  - title: "Lili Bloom - atelier biscuits licorne en duo"
+    url: "https://lilibloom.fr/products/atelier-patisserie-biscuits-licorne-duo-parent-enfant-par-lisa"
+  - title: "Lili Bloom - calendrier des ateliers"
+    url: "https://lilibloom.fr/collections/ateliers"
+  - title: "L'Atelier Gourmand Bordeaux-Eysines - programme adulte-enfant"
+    url: "https://www.atelier-gourmand.fr/nos-ateliers/bordeaux/programme/binome-adulte/enfant-860"
+  - title: "GetYourGuide - atelier de pâtisserie de L'idée sucrée à Bordeaux"
+    url: "https://www.getyourguide.com/bordeaux-l287/bordeaux-traditional-canneles-workshop-t1098106/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Préparer des sablés, pocher des choux ou décorer son propre gâteau: en Gironde, plusieurs pâtissiers accueillent les enfants dans leurs ateliers, à Bordeaux, à Eysines et à Fronsac, près de Libourne. Mais les formules ne se ressemblent pas. Certaines permettent de cuisiner **avec** son enfant; d'autres lui donnent sa place dans un cours réservé aux jeunes. Voici comment choisir sans se tromper de format ni de budget.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Pour pâtisser ensemble: les ateliers en duo
+
+### MOSS Pâtisserie: une formule dès 4 ans
+
+Dans le secteur de Bordeaux, [MOSS Pâtisserie](https://moss-patisserie.fr/atelier-patisserie-bordeaux/) propose un cours **parent-enfant dès 4 ans**, d'une durée de **1 h 30**, à **89 € pour le duo**. Un enfant supplémentaire coûte 25 €. Le format convient à une première expérience partagée, plutôt qu'à un cours où l'adulte reste simplement spectateur.
+
+L'atelier est organisé le mercredi sur demande ou pendant les vacances scolaires: il faut donc contacter l'organisatrice pour connaître les créneaux et le thème proposé. MOSS propose aussi des cours pour les enfants sans leurs parents, détaillés plus bas.
+
+### L'Atelier Gourmand à Eysines: choux ou cupcakes à deux
+
+Au **36 rue Guynemer à Eysines**, [L'Atelier Gourmand](https://www.atelier-gourmand.fr/nos-ateliers/bordeaux/programme/binome-adulte/enfant-860) affiche des cours adulte-enfant de **2 heures à 59 € par binôme**. Une seule inscription couvre l'adulte et l'enfant.
+
+Deux formules sont particulièrement adaptées aux amateurs de desserts: **« Choux Addict »**, pour préparer éclairs au chocolat et chouquettes, et **« Les Cupcakes »**, consacré à la pâte, aux glaçages et aux décorations. Des séances de choux sont annoncées les **15 et 29 novembre 2026**, et une séance cupcakes le **13 décembre 2026**; les places sont à vérifier au moment de réserver.
+
+Le site demande d'apporter des boîtes hermétiques pour les réalisations. L'âge minimum n'étant pas clairement indiqué sur ces fiches, mieux vaut le confirmer avant d'inscrire un jeune enfant.
+
+### Labo&Gato à Bordeaux: préparer un goûter complet
+
+Chez [Labo&Gato](https://atelierpatissier.laboetgato.fr/fr/accueil/94-atelier-duo-parent-enfant.html?pr=4992), l'atelier **« Little Chef »** réunit **un adulte et un enfant de 6 à 11 ans**. Pendant **2 heures**, ils réalisent trois préparations sucrées, variables selon la saison et l'inspiration du chef: cookies, cakes ou pâte à tartiner peuvent être au programme.
+
+La séance bordelaise du **mercredi 18 novembre 2026, de 14 h 30 à 16 h 30**, est affichée à **100 € pour les deux participants**. C'est l'une des formules les plus chères de cette sélection, mais aussi une option pour ceux qui veulent travailler plusieurs recettes au cours de la même séance. Le calendrier de réservation permet de contrôler les places restantes.
+
+### Lili Bloom à Fronsac: fabriquer et décorer ses biscuits
+
+À **Fronsac**, au **10A route de Loiseau**, [Lili Bloom](https://lilibloom.fr/products/atelier-patisserie-biscuits-licorne-duo-parent-enfant-par-lisa) propose notamment un atelier de **biscuits licorne dès 6 ans**, en duo adulte-enfant. La première heure sert à préparer et découper des sablés au chocolat; la seconde est consacrée au glaçage et à la décoration. Les enfants repartent avec leurs biscuits.
+
+Le format dure **2 heures**, avec **quatre duos maximum**. La fiche consultée indique **49 € pour le duo**, mais elle est **en rupture de stock**: ce tarif décrit cette séance, pas une réservation actuellement disponible. Pour les prochains thèmes et créneaux, consultez le [calendrier des ateliers Lili Bloom](https://lilibloom.fr/collections/ateliers). C'est une bonne piste pour un enfant qui aime surtout décorer et personnaliser ses créations.
+
+## Pour un enfant qui veut participer sans ses parents
+
+### Maison Tchovi: cake design dès 10 ans
+
+À Bordeaux, [Maison Tchovi](https://www.maisontchovi.com/boutique-ateliers/p/deluxe-package-ssm8n-2myb8) accueille les **10 ans et plus** dans son atelier **« Petits Chefs »**, au **1 rue Géo-Delvaille**. Ici, l'activité porte principalement sur le **cake design**: l'enfant décore son gâteau et l'emporte. Il ne s'agit donc pas d'un cours complet consacré à la préparation d'une pâte depuis le début.
+
+La formule est annoncée **le samedi de 14 h à 16 h**, à **25 € par enfant**, avec **dix places maximum**. Aucun niveau préalable n'est demandé et le tablier est fourni. C'est l'option la moins chère de cette sélection pour un enfant participant seul.
+
+### MOSS: pâtisserie en petit groupe dès 6 ans
+
+[MOSS Pâtisserie](https://moss-patisserie.fr/atelier-patisserie-bordeaux/) accueille aussi les **enfants seuls dès 6 ans** pour **1 h 30 à 45 € par enfant**, en groupe de **sept au maximum**. Les séances sont proposées pendant les vacances scolaires ou le mercredi sur demande.
+
+Ce choix convient davantage à un enfant qui veut apprendre à pâtisser dans un petit groupe, sans payer une place pour l'adulte. Il faut demander le programme exact et la date avant de réserver.
+
+## Et pour apprendre les canelés bordelais ?
+
+L'atelier privé proposé par **L'idée sucrée** sur [GetYourGuide](https://www.getyourguide.com/bordeaux-l287/bordeaux-traditional-canneles-workshop-t1098106/) accepte les **enfants dès 5 ans accompagnés d'un adulte**. Il peut se tenir chez le chef ou à domicile dans le secteur de Bordeaux. Les ingrédients, le matériel et les fiches recettes sont fournis.
+
+Attention à deux détails: malgré le titre « Traditional Canelé Workshop », la description évoque **plusieurs pâtisseries possibles** selon le cours, pas uniquement des canelés. La fiche annonce aussi **3 heures** en en-tête, mais **environ 2 heures** dans ses informations pratiques. Faites confirmer la recette, la durée et le prix total pour votre groupe avant de choisir une date.
+
+## Quel atelier choisir selon votre enfant ?
+
+**Pour une première séance dès 4 ans**, MOSS est l'option explicitement ouverte aux plus jeunes, avec participation d'un adulte. **Pour un duo à budget plus contenu**, les cours à 59 € de L'Atelier Gourmand à Eysines sont intéressants, sous réserve de vérifier l'âge accepté. **Pour les biscuits décorés**, Lili Bloom propose un format très ciblé dès 6 ans, mais il faut attendre une séance réservable. **Pour un enfant autonome**, MOSS dès 6 ans ou Maison Tchovi dès 10 ans évitent de payer un cours en duo.
+
+Le choix dépend aussi de ce que l'enfant souhaite faire: préparer une recette de bout en bout, multiplier les réalisations ou surtout décorer un gâteau. Ces activités ne développent pas exactement les mêmes gestes.
+
+## Avant de réserver: les détails qui comptent
+
+Vérifiez **qui cuisine réellement**, surtout dans les formules parent-enfant, puis le **prix pour l'ensemble des participants**. Un cours à 25 € par enfant n'est pas directement comparable à un duo à 59, 89 ou 100 €. Les calendriers et les places évoluent; les dates indiquées ici sont celles affichées lors de la vérification fin octobre 2026.
+
+Signalez toute **allergie alimentaire** avant paiement. Lili Bloom mentionne notamment la présence de blé, d'œufs, de produits laitiers et de fruits à coque dans son atelier. Demandez aussi les conditions d'annulation: chez MOSS, l'annulation est possible jusqu'à **48 heures** avant le cours; Maison Tchovi prévoit une annulation gratuite jusqu'à **72 heures** avant. Chez Lili Bloom, les conditions varient selon le délai restant avant la séance. Pour un déplacement à Fronsac ou à Eysines, contrôlez enfin l'adresse précise du cours, et pas seulement le nom « Bordeaux » affiché dans certains programmes.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -128,4 +185,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
