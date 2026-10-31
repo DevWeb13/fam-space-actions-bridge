@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Les Luminéales du Thabor 2026 à Rennes : tarifs et visite en famille"
-subtitle: Quel billet choisir, avec de jeunes enfants ou une poussette, pour le parcours nocturne Des Noëls dans le monde ?
-summary: Du 27 novembre 2026 au 3 janvier 2027, le parc du Thabor accueille un parcours lumineux et musical nocturne. Comparez les tarifs famille, les gratuités, les créneaux et les contraintes pratiques avant de réserver.
+title: "Luminéales du Thabor 2026 à Rennes : tarifs famille, horaires et poussettes"
+subtitle: Quel billet choisir et comment préparer cette balade nocturne avec des enfants ?
+summary: "Du 27 novembre 2026 au 3 janvier 2027, les Luminéales transforment le Thabor en parcours lumineux et musical. Prix pour une famille, gratuités, créneaux, poussettes et retour : les points à vérifier avant de réserver."
 category: evenements
 location:
   city: Rennes
@@ -69,15 +74,16 @@ location:
 keywords:
   - Luminéales du Thabor Rennes 2026
   - Des Noëls dans le monde Rennes enfants
-  - parcours lumineux Thabor tarifs famille
+  - Luminéales Thabor tarif famille
+  - parcours lumineux Thabor poussette
 sources:
-  - title: Les Luminéales du Thabor - site officiel de l'organisateur
+  - title: Les Luminéales du Thabor - informations et billetterie officielles
     url: https://leslumineales.fr/
   - title: Destination Rennes - Les Luminéales du Thabor
     url: https://www.tourisme-rennes.com/sortir/les-lumineales-du-thabor-des-noels-dans-le-monde/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille
   decision: Permettre à une famille de décider si ce parcours nocturne convient à l'âge et à la mobilité de ses enfants, de choisir le billet réellement le moins cher et un créneau praticable, puis de préparer l'aller-retour.
@@ -87,33 +93,54 @@ radar:
     dataThrough: 2026-10-28
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Les Luminéales du Thabor - site officiel de l'organisateur »; aucune page forte GSC n'est requise.
+eventEndsAt: 2027-01-03
 ---
 
-## Mission retenue
-Présenter la première édition des Luminéales du Thabor, « Des Noëls dans le monde », un parcours lumineux et musical extérieur à Rennes, distinct des marchés de Noël et des visites ordinaires du parc.
+Du **27 novembre 2026 au 3 janvier 2027**, le parc du Thabor à Rennes accueille la première édition des **Luminéales**, intitulée « Des Noëls dans le monde ». Ce n'est pas un marché de Noël : il s'agit d'une balade nocturne payante, ponctuée de dix escales lumineuses et musicales autour des traditions de Noël, du Mexique à l'Ukraine en passant notamment par l'Italie et la Colombie.
 
-## Pourquoi cette mission
-L'événement débute le 27 novembre et dispose déjà d'une billetterie et d'informations officielles détaillées. Aucun article du catalogue ni candidat actif ne traite cette expérience. Le refresh SNCF Carte Avantage Adulte (signal GSC incertain) a été lu : ses informations utiles restent conformes à la source officielle, sans amélioration décisive démontrée. Une expansion de la page forte « Transports à Paris avec des enfants » (3 127 impressions récentes) reste envisageable, mais plusieurs trajets distincts sont déjà couverts ; l'ouverture prochaine de cette première édition prime.
+Pour une famille, le choix dépend surtout du **prix réel des billets**, de l'heure à laquelle les enfants peuvent tenir dehors et de la facilité du retour. La durée annoncée est d'environ **1 h 15**, sans compter le trajet jusqu'au parc.
 
-## Décision du lecteur
-Comparer le coût réel pour sa composition familiale, réserver le bon créneau et savoir si une balade nocturne de 1 h 15 convient aux petits, aux poussettes et aux contraintes de retour.
+## Quel billet revient le moins cher en famille ?
 
-## Faits à traiter
-- Dates du 27/11/2026 au 03/01/2027 ; entrée place Saint-Mélaine ; 19 h-minuit, dernière entrée 22 h 30 ; durée indicative 1 h 15.
-- Plein tarif 15 €, réduit 10 €, Sortir! 5 €, pack famille dès 4 personnes à 10 € par personne ; moins de 5 ans gratuit mais billet gratuit à réserver. **Clarifier le tarif exact à 5 ans** : la page de l'organisateur mentionne « moins de 5 ans » pour la gratuité et « 6 à 17 ans » pour le réduit.
-- Réservation par créneau, billets non échangeables et non remboursables, y compris en cas de pluie hors annulation par l'organisateur ; comparer pack et billets individuels avant d'acheter.
-- Poussettes autorisées ; pentes et gravier sur certains secteurs ; toilettes ouvertes ; parc fermé au public à 18 h 30 avant l'accès sur billet. Prévoir météo, pauses, transports STAR et dernier retour.
-- Ne pas confondre ce spectacle payant avec les illuminations ou animations gratuites de Rennes dont la programmation 2026 reste à confirmer.
+Voici les tarifs annoncés par [l'organisateur des Luminéales](https://leslumineales.fr/) pour cette édition :
 
-## Sources de départ
-Site de l'organisateur et fiche Destination Rennes renseignés dans le frontmatter ; vérifier à nouveau tarifs et créneaux au moment de la rédaction.
+- **15 €** au plein tarif ;
+- **10 €** au tarif réduit, notamment pour les **6-17 ans**, les étudiants, les bénéficiaires du RSA, les demandeurs d'emploi et les personnes à mobilité réduite ;
+- **5 €** au tarif **Sortir!**, pour les personnes éligibles ;
+- **gratuit pour les moins de 5 ans**, avec un billet gratuit à réserver malgré tout ;
+- **10 € par personne avec le pack famille**, proposé à partir de quatre personnes.
 
-## Affiliation
-Billetterie officielle en Sources, sans la présenter comme partenaire. Pour un séjour, proposer sobrement l'appartement TY AR PARIZ T3 proche du Thabor sur Booking.com ; deux chambres dont l'accès à la seconde passe par la première, cuisine, lit bébé sur demande et sous réserve de disponibilité. Ne pas inventer de prix ni de disponibilité.
+Le pack n'est donc pas automatiquement le meilleur choix. **Deux adultes et deux enfants de 6 à 17 ans** paieraient **50 €** en billets individuels (15 + 15 + 10 + 10), contre **40 €** avec le pack famille : une économie de 10 €. À l'inverse, **deux adultes et deux enfants de moins de 5 ans** totalisent **30 €** avec les billets individuels et les deux entrées gratuites : inutile de payer un pack à 40 €. Pour deux adultes et un enfant de 6 à 17 ans, les billets individuels totalisent **40 €**.
 
-## Continuations internes
-- Pour les trajets STAR et la gratuité des moins de 12 ans, renvoyer vers /articles/vie-pratique/rennes-avec-des-enfants-les-transports-sont-gratuits-avant-12-ans-mais-pas-sans-carte/ plutôt que répéter les démarches.
-- Ne pas développer un guide général de Noël à Rennes : rester centré sur la décision de réserver cette balade nocturne.
+**Attention à l'âge de 5 ans exactement :** la grille officielle indique la gratuité *avant* 5 ans et le tarif réduit *de 6 à 17 ans*. Elle ne précise pas clairement le tarif applicable à un enfant qui a déjà 5 ans. Vérifiez ce cas auprès de l'organisateur avant de payer, plutôt que de supposer la gratuité ou la réduction. Vérifiez aussi l'application des tarifs préférentiels dans le panier, surtout si votre famille cumule plusieurs profils éligibles. Des justificatifs sont demandés pour les tarifs réduits et gratuits.
+
+## À quelle heure réserver avec des enfants ?
+
+Le parcours est annoncé **de 19 h à minuit**, avec une **dernière entrée à 22 h 30**. L'accès se fait à l'heure du créneau figurant sur le billet, par **la place Saint-Mélaine**, et non par n'importe quelle entrée du Thabor. Le parc ferme d'abord au public à **18 h 30** : une promenade dans les jardins en fin d'après-midi ne permet pas de rester sur place en attendant le spectacle.
+
+Avec un enfant jeune ou fatigué le soir, un créneau proche de **19 h** est généralement plus raisonnable qu'une entrée tardive : comptez environ 1 h 15 de visite, puis le retour. La billetterie existe aussi sur place à partir de 19 h, mais **un créneau complet en ligne ne peut pas être récupéré au guichet**. Mieux vaut donc réserver à l'avance.
+
+Les billets sont **ni échangeables ni remboursables**. La pluie n'ouvre pas droit à remboursement, sauf annulation par l'organisateur. Regardez la météo avant d'acheter si votre famille supporte mal une longue sortie dehors.
+
+## Poussette, petits enfants et pauses : est-ce praticable ?
+
+**Les poussettes sont autorisées.** Cela ne signifie pas pour autant que tout le parcours soit plat : certains secteurs du parc présentent des **pentes, des dénivelés et du gravier**. Une poussette maniable et de bonnes chaussures seront plus adaptées qu'un équipement difficile à pousser. Pour une personne en fauteuil roulant, l'organisateur recommande un accompagnant et propose de répondre aux questions d'accessibilité à **contact@leslumineales.fr**.
+
+Les **toilettes du parc seront ouvertes**. Un chalet doit proposer boissons chaudes et petite restauration, mais les informations publiées ne garantissent ni table à langer ni possibilité de réchauffer un repas de bébé : mieux vaut prévoir ce dont vous avez besoin. Habillez les enfants pour une balade hivernale en extérieur et gardez la possibilité de faire des pauses.
+
+Les dix escales mêlent chants, projections et installations lumineuses, avec une création musicale du duo Birds on a Wire. L'expérience peut plaire aux enfants qui aiment observer et se promener, mais elle ne se présente pas comme un parc de manèges ou une succession d'ateliers. Pour un tout-petit qui ne tient pas longtemps dehors après 19 h, le coût et l'horaire méritent réflexion.
+
+## Comment venir et surtout rentrer du Thabor ?
+
+L'organisateur indique les **bus C5** (arrêt Thabor), **C2, C3 et 12** (arrêt Fossés), ainsi que le **métro Sainte-Anne** suivi d'une marche. Vérifiez votre **dernier départ** sur [le réseau STAR](https://www.star.fr/) avant de choisir une entrée tardive. Pour la gratuité des enfants et les titres adaptés aux familles, notre guide [des transports à Rennes avec des enfants](https://www.fam-space.fr/articles/vie-pratique/rennes-avec-des-enfants-les-transports-sont-gratuits-avant-12-ans-mais-pas-sans-carte/) détaille notamment le rôle de la carte KorriGo pour les 5-11 ans.
+
+Si vous venez en voiture, le stationnement du centre est limité. Le parking **Kléber**, à environ **600 m**, dispose d'une sortie accessible 24 h/24, mais ses horaires d'entrée varient. Les parcs-relais STAR sont une autre possibilité, à condition de vérifier leur ouverture à l'heure du retour : certains ferment le dimanche et les jours fériés.
+
+## Et pour un week-end à Rennes ?
+
+Si vous prolongez la soirée par un séjour, l'[appartement TY AR PARIZ T3 près du Thabor sur Booking.com](https://www.booking.com/hotel/fr/ty-ar-pariz-t3-rennes-centre-parc-du-thabor.html) peut convenir à une famille souhaitant disposer d'une cuisine. Il comporte deux espaces nuit, mais **l'accès à la seconde chambre passe par la première**, un détail à connaître si les enfants se couchent avant les adultes. Un lit bébé est annoncé sur demande : faites-le confirmer, ainsi que le linge de lit, le prix total et la disponibilité à vos dates.
+
+Cette sortie payante est distincte des illuminations et animations gratuites de Noël à Rennes. Ne présumez pas de leur programme 2026 sans annonce officielle : choisissez les Luminéales pour cette balade immersive précise, et non comme un billet donnant accès à l'ensemble des festivités de la ville.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -121,12 +148,12 @@ Billetterie officielle en Sources, sans la présenter comme partenaire. Pour un 
 
 - /articles/activites/balade-a-velo-autour-de-rennes-quel-parcours-choisir-avec-des-enfants/ | Balade à vélo autour de Rennes: quel parcours choisir avec des enfants? | activites | Rennes, Ille-et-Vilaine, Bretagne
 - /articles/vie-pratique/rennes-avec-des-enfants-les-transports-sont-gratuits-avant-12-ans-mais-pas-sans-carte/ | Rennes avec des enfants: transports gratuits avant 12 ans, comment ça marche? | vie-pratique | Rennes, Ille-et-Vilaine, Bretagne
+- /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/parentalite/laep-a-rennes-ou-jouer-gratuitement-avec-son-enfant/ | LAEP à Rennes: où jouer gratuitement avec son enfant? | parentalite | Rennes, Ille-et-Vilaine, Bretagne
 - /articles/maison/ecotravo-a-rennes-metropole-qui-peut-obtenir-jusqu-a-15-000-pour-renover-sa-maison/ | écoTravo à Rennes Métropole: qui peut obtenir jusqu'à 15 000 € pour rénover sa maison? | maison | Rennes, Ille-et-Vilaine, Bretagne
 - /articles/evenements/parents-delires-rennes-2026-famille/ | Par’ents Délires 4 à Rennes: une fête gratuite pour toute la famille le 26 août 2026 | evenements | Rennes, Ille-et-Vilaine, Bretagne
 - /articles/sorties/parc-en-folie-2026-a-rennes-billet-en-ligne-ou-sur-place-quelle-formule-choisir-en-famille/ | Parc en Folie 2026 à Rennes: tarifs, espace 0-3 ans et infos pratiques en famille | sorties | Bruz, Ille-et-Vilaine, Bretagne
-- /articles/sorties/cite-des-climats-a-beaune-en-famille-tarifs-parcours-enfants-et-billets/ | Cité des Climats à Beaune en famille: tarifs, parcours enfants et billets | sorties | Beaune, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/evenements/course-des-chateaux-d-ottrott-2026-quelles-epreuves-choisir-pour-les-enfants/ | Course des Châteaux d'Ottrott 2026: quelles épreuves choisir pour les enfants? | evenements | Ottrott, Bas-Rhin, Grand Est
+- /articles/evenements/noel-2026-a-chenonceau-quel-jour-decouvrir-les-decors-en-famille/ | Noël à Chenonceau 2026: décors, nocturnes et tarifs en famille | evenements | Chenonceaux, Indre-et-Loire, Centre-Val de Loire
 - /articles/bons-plans/fougeres-en-famille-a-petit-prix-chateau-coursive-et-balade-gratuite/ | Fougères en famille à petit prix: château, Coursive et balade gratuite | bons-plans | Fougères, Ille-et-Vilaine, Bretagne
 - /articles/cuisine/ferme-marine-de-cancale-avec-des-enfants-quelle-visite-choisir-a-la-toussaint-2026/ | Ferme Marine de Cancale avec des enfants: quelle visite choisir à la Toussaint 2026? | cuisine | Cancale, Ille-et-Vilaine, Bretagne
 - /articles/evenements/quai-des-bulles-2026-a-saint-malo-en-famille-tarifs-programme-et-conseils/ | Quai des Bulles 2026 à Saint-Malo en famille: tarifs, programme et conseils | evenements | Saint-Malo, Ille-et-Vilaine, Bretagne
@@ -145,8 +172,10 @@ Billetterie officielle en Sources, sans la présenter comme partenaire. Pour un 
 ### Historique Radar lié
 
 - opportunity | /articles/evenements/festival-des-petits-explorateurs-2026-a-dijon-quels-ateliers-choisir-en-famille/ | 2026-10-30T03:27:02.483Z
+- opportunity | /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | 2026-10-19T19:48:02.164Z
 - opportunity | /articles/evenements/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere/ | 2026-10-30T09:27:15.122Z
 - opportunity | /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | 2026-10-30T06:28:26.726Z
+- opportunity | /articles/evenements/noel-2026-a-chenonceau-quel-jour-decouvrir-les-decors-en-famille/ | 2026-10-24T12:31:27.784Z
 - opportunity | /articles/evenements/noel-a-bayeux-2026-en-famille-marche-ou-galopades/ | 2026-10-30T15:36:05.374Z
 - opportunity | /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | 2026-10-30T21:26:32.584Z
 - opportunity | /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | 2026-10-30T18:26:56.039Z
