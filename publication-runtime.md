@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 1/4
+# Publication automatique Fam Space - Phase 2/4
 
 ## Mission
 
-Tu es le rédacteur en chef de Fam Space.
+Tu es un journaliste web professionnel pour Fam Space.
 
-Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. Fam Space doit publier moins mais mieux: un sujet doit pouvoir devenir un article fiable, utile aux familles, agréable à lire et, lorsque c'est naturel, intéressant pour l'affiliation.
+Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
 
 ## Affectation courante
 
@@ -14,114 +14,95 @@ Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. 
 - Département: Paris
 - Région: Île-de-France
 
-### Articles publiés récemment
-
-- 2026-10-28: Paris avec une poussette: métro, RER, bus ou tram, que choisir ?
-- 2026-10-27: Féeries de Noël 2026 à Paris: parcours lumineux, billets et patinoire en famille
-- 2026-10-26: Odyssée Lumineuse 2026-2027 à Paris: billets, dates et visite en famille
-- 2026-10-25: Navigo Liberté+ en famille: tarifs enfants et choix du passe en 2026
-- 2026-10-23: Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates
-- 2026-10-23: L’Aquarium tropical de la Porte Dorée en famille
-- 2026-10-22: Salon du Cheval de Paris 2026 en famille: animations, jumping et billets
-- 2026-10-18: Métamorphoses 2026 au quai Branly: séances gratuites et films par âge
-- 2026-10-10: À Paris, où donner ou déposer meubles, jouets et électroménager ?
-- 2026-10-09: Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille
-- 2026-10-08: Día de los Muertos 2026 au Jardin d’Acclimatation: programme, billets et tailles
-- 2026-10-07: Vacances de la Toussaint 2026 au musée Carnavalet: activités en famille dès 4 ans
-- 2026-10-06: Mondial de l’Auto 2026 avec des enfants: billets, horaires et créneaux
-- 2026-10-05: Vacances de la Toussaint 2026 à la Cité des sciences: les ateliers numériques gratuits avec des enfants
-- 2026-10-04: Stages de science à la Cité des sciences à la Toussaint 2026: durées, âges et tarifs
-- 2026-10-03: Fête des rues aux enfants 2026 à Paris: où aller selon l'arrondissement?
-- 2026-10-03: Mon Premier Festival 2026 à Paris: quel film choisir selon l'âge?
-- 2026-10-03: Paris Sport Vacances automne 2026: demi-journée gratuite ou stage à la journée?
-- 2026-10-03: Vacances de la Toussaint 2026 au Louvre: le programme famille du 17 octobre au 1er novembre
-- 2026-09-26: Consigne à bagages à Paris en famille: gare ou dépôt en ville?
-- 2026-09-11: Atelier des Lumières avec un enfant: quel programme choisir et peut-on venir avec une poussette ?
-- 2026-09-07: Salon du Chocolat Paris 2026 avec des enfants: quel billet choisir et quels ateliers réserver
-- 2026-08-29: Transports à Paris avec des enfants: quel titre choisir pour payer juste?
-- 2026-08-23: Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite
-- 2026-07-16: Paris Plages 2026: où se baigner et jouer avec des enfants
-
-Ne reproduis pas les mêmes sujets.
-
-## Choisir un sujet qui mérite un article
-
-Respecte l'affectation. Pour une affectation locale, choisis un sujet concernant tout le département ou une commune ou un lieu de ce département.
-
-La liste « Articles publiés récemment » est fournie automatiquement. Utilise-la pour éviter les doublons de lieu, de sujet ou d'angle. Un titre différent ne suffit pas à rendre un article différent.
-
-Cherche plusieurs sujets avant de choisir. Pour les candidats sérieux, utilise la recherche web pour comprendre ce qui existe déjà, vérifier les faits essentiels, voir ce que les résultats Google répondent déjà et t'assurer que le sujet est réellement utile à publier maintenant. Si l'élément principal est fermé, hors saison, en maintenance ou temporairement indisponible au point de vider l'article de son intérêt, écarte ce candidat et choisis-en un autre.
-
-Choisis un sujet qui a une vraie matière éditoriale. Un lecteur qui ne connaît pas le sujet doit pouvoir comprendre ce que c'est, pourquoi cela peut l'intéresser et obtenir plusieurs informations utiles sans que l'article répète la même idée.
-
-L'angle sert à donner une direction et un titre intéressant. Il ne doit jamais enfermer tout l'article dans une micro-question comme un tarif, un pass, une poussette ou un calcul simple.
-
-Écarte un sujet si Fam Space ne ferait que réécrire une page officielle ou s'il n'y a pas assez de matière pour produire un bon article. Si aucun candidat ne reste suffisamment utile et actuel après une recherche sérieuse, ne force pas un sujet.
-
-## Penser aussi au potentiel d'affiliation
-
-La monétisation est un objectif important de Fam Space. Avant de choisir le sujet final, vérifie sérieusement les offres disponibles chez les partenaires suivants:
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-Applique la logique d'usage ci-dessus à chaque candidat sérieux et vérifie les offres avant de les retenir dans le brief.
-
-À qualité éditoriale comparable, privilégie clairement le sujet qui possède une piste d'affiliation naturelle et vérifiée. Ne choisis toutefois jamais un sujet médiocre uniquement parce qu'il est affiliable et n'invente jamais une offre sans rapport avec le lecteur.
-
-Si un excellent sujet n'a réellement aucune offre partenaire pertinente après vérification, il peut rester publiable. Le brief doit alors le dire clairement. L'absence d'affiliation ne doit jamais résulter d'une recherche superficielle.
-
-## Sujets à écarter
-
-Écarte les sujets politiques ou militants, les guerres et conflits armés, les contenus haineux, violents, sexuellement explicites, dangereux ou trompeurs, ainsi que les conseils médicaux, juridiques ou financiers personnalisés à risque élevé.
-
-Ne choisis pas comme sujet principal une maladie, un diagnostic, un traitement, une vaccination ou une urgence médicale ou psychiatrique.
-
-Pour un événement ponctuel, ne le retiens pas s'il commence dans moins de 30 jours. S'il a déjà commencé, il doit rester au moins 30 jours d'utilité réelle. Cette règle ne concerne pas les attractions permanentes, destinations durables ou activités disponibles sur une longue période.
-
-## Résultat attendu
-
-Prépare un brief court. Le fichier doit contenir exactement ces sections:
+## Brief du rédacteur en chef
 
 ## Sujet retenu
-Le sujet, un titre de travail et l'angle principal. Décris aussi en une ou deux phrases ce qu'est réellement le sujet afin que le journaliste parte avec le bon contexte.
+**Sujet :** les ateliers de cuisine et de pâtisserie à faire en famille à Paris (75), avec un enfant qui participe réellement à la préparation.
+
+**Titre de travail :** « Ateliers cuisine parent-enfant à Paris : pâtisserie, chocolat ou pain selon l’âge »
+
+**Angle :** aider à choisir un atelier qui correspond à l’âge de l’enfant, au budget familial, à la langue du cours et à l’envie de cuisiner un vrai plat, de confectionner des douceurs ou de découvrir le travail du boulanger. Paris compte plusieurs formats durables : cours de cuisine en duo chez Chefsquare, macarons aux Galeries Lafayette, chocolat à l’Atelier C, pâtisserie au Cordon Bleu et pain au levain à l’Atelier P1. Ce sont des expériences pratiques, pas de simples dégustations.
 
 ## Besoin du lecteur
-Ce que le lecteur doit comprendre, apprendre ou pouvoir faire après avoir lu l'article. Ne réduis pas ce besoin à une seule micro-question si le sujet mérite un traitement plus large.
+Comprendre ce que l’enfant fera concrètement, à partir de quel âge, combien de temps dure la séance et combien coûte réellement une sortie parent-enfant (prix par participant ou par duo, adulte accompagnateur payant ou non). Choisir selon les recettes, le niveau d’autonomie, la langue, le lieu et les contraintes pratiques : allergènes, matériel fourni, créations à emporter, réservation et calendrier. Donner aussi des idées pour refaire une recette simple à la maison après l’atelier, sans transformer le guide en annuaire promotionnel.
 
 ## Valeur éditoriale
-Les quelques informations ou distinctions qui justifient l'article et ce que Fam Space peut apporter de mieux qu'une simple reprise des sources.
+- **Cuisiner un repas ou pâtisser :** Chefsquare propose notamment pizzas, pâtes, makis, choux et desserts dans ses cours parent-enfant 6–12 ans, annoncés à 38 € **par participant** : deux places sont nécessaires pour un duo. La fiche affiche « 1 h » à un endroit et « 2 heures » dans sa description : vérifier cette contradiction avant publication. Des dates sont affichées en novembre, décembre 2026 et janvier 2027.
+- **Macarons en famille :** aux Galeries Lafayette Haussmann (9e), atelier de 1 h 30 en **anglais**, réservé aux enfants de 5 à 12 ans avec adulte payant ; tarifs officiels relevés : 20 € enfant et 59 € adulte, soit 79 € le duo. Un autre cours de macarons à Baked in Paris (5e), proposé sur GetYourGuide, dure 2 h, accueille les familles et exige qu’au moins un adulte achète une place et participe. Ne pas confondre les deux expériences.
+- **Chocolat :** l’Atelier C (12e) prévoit une heure de fabrication de chocolats pour les 5–16 ans avec un adulte, à 29 € selon sa page ; environ un à deux dimanches par mois, sous réserve des dates réellement ouvertes.
+- **Pâtisserie plus technique :** Le Cordon Bleu, Hôtel de la Marine (8e), accueille dès 6 ans pour 2 h à 99 € la place ; l’adulte encadre sans cuisiner s’il ne réserve pas sa propre place. Programme publié jusqu’à fin décembre 2026 (choux, sablés, chocolats de Noël, pain d’épices).
+- **Pain au levain pour plus grands :** Atelier P1, rue Marcadet (18e), dès 12 ans, 3 h, 90 € la place ; ne pas orienter vers son adresse de Pantin, hors département. La viennoiserie est annoncée sans date ouverte, donc ne pas la présenter comme réservable.
+- **Plus jeunes :** Aten-Te Aute annonce des ateliers dès 3 ans, en français, anglais ou espagnol, avec tarif distinct pour l’accompagnant non participant. Vérifier le programme exact selon la séance.
+- L’intérêt de Fam Space est d’expliquer les **vraies différences de participation et de coût** plutôt que d’aligner des ateliers. Aucun doublon direct dans la liste des articles parisiens récents ; le Salon du Chocolat 2026 est un événement distinct, pas un cours parent-enfant.
+- Les pages de réservation affichent des disponibilités évolutives : ne pas garantir une place sans sélection d’une date. Les allergènes doivent être vérifiés pour chaque recette.
 
 ## Affiliation
-Les pistes partenaires réellement vérifiées, avec partenaire, offre et URL exacte, y compris les besoins secondaires naturels. Si aucune offre pertinente n'existe réellement, indique-le clairement.
+- **GetYourGuide — Paris : Macaron Baking Class for Families and Kids**, atelier de macarons pour familles à Baked in Paris, 31 rue Buffon, Paris 5e ; durée annoncée de 2 h, groupe limité à 8, cours en anglais, enfants de moins de 5 ans sous surveillance adulte, au moins un adulte payant et participant. Offre précise et page de réservation consultée ; horaires et places à sélectionner : https://www.getyourguide.com/paris-l16/paris-macaron-baking-class-for-families-and-kids-t861757/
+- **Booking.com — Residhome Paris Opéra**, appart’hôtel proche des Galeries Lafayette, avec kitchenette et appartements/chambres familiaux, notamment configuration pour quatre personnes ; piste secondaire uniquement pour les familles de passage qui prolongent la sortie en séjour à Paris. Disponibilité et prix variables selon dates et composition du groupe : https://www.booking.com/hotel/fr/residhome-prestige-paris-opera.html
+- **Klook — cours de macarons aux Galeries Lafayette :** page partenaire identifiée mais affichée « Complet » lors de la vérification ; **ne pas la présenter comme réservable** tant que cette situation n’a pas changé : https://www.klook.com/fr/activity/19780-macaron-baking-class-galeries-lafayette-paris/
+- Pas d’offre directe confirmée chez les partenaires autorisés pour les ateliers Chefsquare, Atelier C, Cordon Bleu et Atelier P1. Ne pas substituer une activité différente ni inventer une réservation partenaire.
 
 ## Sources de départ
-Les meilleures sources officielles ou directement responsables pour lancer la rédaction, avec l'URL exacte de chaque page utile.
+- Chefsquare, cours parent-enfant et détails des recettes, prix par personne, calendrier : https://chefsquare.com/products/cours-de-cuisine-et-patisserie-pour-parent-et-enfant-paris
+- Chefsquare, catalogue des cours familiaux : https://chefsquare.com/collections/cours-de-cuisine-parent-enfant-a-paris
+- Galeries Lafayette Paris Haussmann, atelier macarons famille, âges, tarifs, langue et conditions : https://haussmann.galerieslafayette.com/en/events/french-macaron-bakery-class-in-the-heart-of-paris-family-experience/
+- Atelier C, atelier chocolat en famille : https://atelierc.paris/events/atelier-en-famille/
+- Le Cordon Bleu, Hôtel de la Marine, atelier parent-enfant pâtisserie et programme 2026 : https://www.cordonbleu.edu/paris-hoteldelamarine/atelier-parent-enfant-patisserie/fr
+- Atelier P1, cours de pain au levain, âge et calendrier à Paris : https://atelierp1.fr/atelier/
+- Aten-Te Aute, ateliers pâtisserie famille dès 3 ans : https://www.atenteaute.com/en/home
 
-Ne rédige pas le corps final de l'article pendant cette phase.
+## Écrire l'article
+
+Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
+
+Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
+
+Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
+
+Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
+
+Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
+
+Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+
+N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
+
+Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
+
+Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
+
+À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
+
+## Format du candidat
+
+Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
+
+```yaml
+---
+category: "<catégorie assignée>"
+title: "Titre direct et informatif"
+subtitle: "Précision différente du titre"
+summary: "Résumé de 90 à 180 caractères"
+keywords:
+  - "mot-clé principal"
+  - "mot-clé secondaire"
+location:
+  city: "Ville"
+  department: "Département assigné"
+  region: "Région assignée"
+sources:
+  - title: "Page officielle utilisée"
+    url: "https://..."
+---
+```
+
+La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+
+Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 1/4
+- Phase préparée mécaniquement: 2/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -134,30 +115,20 @@ Toute la plomberie technique est gérée mécaniquement. Ne cherche aucune branc
 
 Écris uniquement publication-request.md sur la branche main de DevWeb13/fam-space-actions-bridge avec le résultat éditorial demandé dans ce runtime. Le pipeline mécanique se charge de la phase, de la branche de travail, des commits, de la validation et de la suite du cycle.
 
-Si tu retiens un sujet, utilise:
+Utilise:
 
 ~~~yaml
 ---
-action: start
+action: advance
 ---
 
-<brief complet demandé ci-dessus>
+<article complet demandé ci-dessus, frontmatter compris>
 ~~~
 
-Si, après une recherche sérieuse, aucun sujet suffisamment utile et actuel ne mérite un article, utilise:
-
-~~~yaml
----
-action: skip
----
-
-<raison factuelle et courte>
-~~~
-
-Un échec technique n'est jamais une raison de skip. Une fois publication-request.md écrit, termine le passage.
+Rends toujours l'article complet, même si cette phase ne nécessite que peu de corrections. Une fois publication-request.md écrit, termine le passage.
 
 ## Rapport final
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les principaux sujets envisagés, les doublons écartés, le sujet retenu, pourquoi il mérite un article, les pistes d'affiliation réellement vérifiées et les principales sources. En cas de skip, explique simplement pourquoi aucun sujet suffisamment bon n'a été retenu.
+Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
