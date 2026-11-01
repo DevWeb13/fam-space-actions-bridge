@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261102-0058-sujet-se-deplacer-dans-le-sud-des-landes-avec-des-enfants-sans-voiture",
+  "lastProcessedCommit": "6f7ce6a0320590efd13b1200197536f448e4f591"
 }
