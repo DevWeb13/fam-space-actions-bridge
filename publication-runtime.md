@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,97 +14,138 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Calvados
 - Région: Normandie
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Sujet :** Les bons plans pour visiter Falaise en famille (Calvados) : Pass Découverte, Pass Promotionnel et billets famille.
-
-**Titre de travail :** « Visiter Falaise en famille à petit prix : quels pass et billets choisir ? »
-
-**Angle principal :** aider les familles à organiser de vraies visites (château Guillaume-le-Conquérant, Mémorial des Civils, musée des Automates et autres sites du Pays de Falaise) en distinguant les deux pass territoriaux des tarifs familiaux propres aux musées. Le Pass Découverte est un billet payant pour trois visites ; le Pass Promotionnel 2026/2027 est remis gratuitement après un premier billet plein tarif dans un réseau de 16 partenaires. Ce ne sont pas deux noms pour le même produit.
-
-## Besoin du lecteur
-
-Comprendre ce que l'on peut découvrir à Falaise avec des enfants, choisir les visites adaptées à leurs âges, savoir comment obtenir les différents pass, vérifier leurs conditions et leurs périodes de validité, puis éviter de payer un pass plus cher que des billets famille ou réduits. Préparer une journée ou un week-end sans se heurter aux fermetures de certains musées.
-
-## Valeur éditoriale
-
-- **Deux dispositifs différents :** Pass Découverte à **16,50 € par personne de plus de 12 ans**, donnant accès aux trois sites de Falaise jusqu'au **31 décembre de l'année d'achat** ; Pass Promotionnel **gratuit après achat d'un billet plein tarif** chez un des **16 partenaires**, ouvrant droit à des avantages sur des visites ultérieures. Les réductions individuelles du Pass Promotionnel ne sont pas chiffrées sur sa page de présentation : ne pas inventer de pourcentage ni promettre un cumul.
-- **Le pass payant n'est pas toujours le moins cher pour une famille :** au château, **9,50 € adulte**, **5 € de 6 à 16 ans**, gratuit moins de 6 ans, **pass famille 24 €** (jusqu'à deux adultes et quatre enfants) ; au Mémorial, **pass famille 18 €** sous conditions d'âges et de composition ; au musée des Automates, **5 € adulte**, gratuit jusqu'à 12 ans et **pass famille 15 €** pour les compositions indiquées. Exemple à expliciter et revérifier en rédaction : deux adultes et deux enfants de 13 et 15 ans paieraient **66 €** pour quatre Pass Découverte, contre **57 €** en cumulant les trois billets famille admissibles (24 + 18 + 15 €), hors suppléments. À l'inverse, deux adultes seuls peuvent économiser avec le Pass Découverte : 33 € au lieu de 46 € pour les trois entrées plein tarif.
-- **Calendrier réellement important :** château fermé exceptionnellement **du 2 au 6 novembre 2026**, puis **du 4 janvier au 20 février 2027** ; Mémorial ouvert seulement **mercredi et samedi après-midi du 2 novembre au 18 décembre 2026** ; musée des Automates fermé dimanche, lundi et jours fériés. Ne pas promettre les trois visites le même jour sans vérifier le calendrier exact.
-- **Intérêt familial des lieux :** château médiéval et scénographie, Mémorial consacré à la vie des civils pendant la Seconde Guerre mondiale (contenu à contextualiser selon la sensibilité et l'âge des enfants), 300 automates dans des vitrines animées. Au château, donjons inaccessibles en poussette/fauteuil roulant ; tablettes réservées aux plus de 10 ans. Les sites du Pass Promotionnel s'étendent aussi hors du centre de Falaise : ne pas laisser croire qu'ils se visitent tous à pied.
-- **Valeur ajoutée :** recommandations par composition familiale, âge et temps disponible, distinction entre pass et simples réductions, exemples chiffrés contrôlables, calendrier de visites réaliste. Ne pas recopier la liste brute des 16 partenaires.
-
-## Affiliation
-
-- **Action principale :** aucune billetterie partenaire pertinente et vérifiée pour le Pass Découverte, le Pass Promotionnel ou les trois musées parmi les offres recherchées chez GetYourGuide, Tiqets et Klook. Les modalités d'achat sont celles de l'office de tourisme et des sites responsables ; ne pas fabriquer de lien affilié pour les entrées.
-- **Hébergement pertinent pour prolonger les visites :** **Booking.com — La Maison Des Buis**, chambre d'hôtes **à Falaise**, avec chambres familiales, réfrigérateur et micro-ondes selon les types de chambres, petit déjeuner ; vérifier la capacité et le tarif avec l'âge des enfants : https://www.booking.com/hotel/fr/la-maison-des-buis.fr.html
-- **Autre option si séjour en chalet/cuisine utile :** **Booking.com — Relais Du Saussay**, à **Pertheville-Ners près de Falaise**, chalets avec kitchenette, micro-ondes, lits superposés et lit bébé sur demande ; hébergement en dehors du centre nécessitant un trajet : https://www.booking.com/hotel/fr/relais-du-saussay.fr.html
-- Une seule suggestion d'hébergement suffit dans l'article si elle correspond naturellement à l'itinéraire. Ne pas confondre page de partenaire et source de faits éditoriaux.
-
-## Sources de départ
-
-- Office de tourisme Falaise – Suisse Normande, **Pass Découverte** (prix, âge, trois sites, achat, échéance) : https://www.falaise-suissenormande.com/guide-pratique/le-pass-decouverte-de-falaise/
-- Office de tourisme, **Pass Promotionnel 2026/2027** (fonctionnement, réseau de 16 partenaires) : https://www.falaise-suissenormande.com/2026/06/05/le-pass-promotionnel/
-- Château Guillaume-le-Conquérant, **tarifs famille, gratuités, fermetures et accessibilité** : https://www.chateau-guillaume-leconquerant.fr/preparer-votre-visite/seul--en-famille-ou-entre-amis-3-12.html
-- Mémorial de Falaise, **tarifs famille et horaires saisonniers** : https://www.memorial-falaise.fr/sites-et-musees/memorial-de-falaise-les-civils-dans-la-guerre/
-- Musée des Automates, **site officiel et horaires généraux** : https://www.automates-avenue.fr/index.php
-- Réseau des musées de Normandie, **tarifs du musée des Automates et conditions du pass famille** : https://www.musees-normandie.fr/musees-normandie/musee-des-automates/
-- Normandie Tourisme, **tarif bas-carbone et informations pratiques du musée des Automates** : https://www.normandie-tourisme.fr/sites-lieux-de-visites/musee-des-automates/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "bons-plans"
+title: "Visiter Falaise en famille à petit prix: quel pass choisir ?"
+subtitle: "Château, Mémorial et musée des Automates: les tarifs qui changent vraiment la facture"
+summary: "À Falaise, le Pass Découverte n'est pas toujours plus avantageux que les billets famille. Comparaisons de prix, visites et fermetures à connaître."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "visiter Falaise en famille"
+  - "Pass Découverte Falaise"
+  - "Pass Promotionnel Falaise"
+  - "tarifs famille château Falaise"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Falaise"
+  department: "Calvados"
+  region: "Normandie"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Office de tourisme Falaise - Suisse Normande: Pass Découverte"
+    url: "https://www.falaise-suissenormande.com/guide-pratique/le-pass-decouverte-de-falaise/"
+  - title: "Office de tourisme Falaise - Suisse Normande: Pass Promotionnel 2026/2027"
+    url: "https://www.falaise-suissenormande.com/2026/06/05/le-pass-promotionnel/"
+  - title: "Château Guillaume-le-Conquérant: horaires, tarifs et accessibilité"
+    url: "https://www.chateau-guillaume-leconquerant.fr/preparer-votre-visite/seul--en-famille-ou-entre-amis-3-12.html"
+  - title: "Mémorial de Falaise: horaires et tarifs"
+    url: "https://www.memorial-falaise.fr/sites-et-musees/memorial-de-falaise-les-civils-dans-la-guerre/"
+  - title: "Mémorial de Falaise: visite avec des enfants"
+    url: "https://www.memorial-falaise.fr/decouvrir-le-memorial/pour-les-enfants/"
+  - title: "Réseau des musées de Normandie: musée des Automates"
+    url: "https://www.musees-normandie.fr/musees-normandie/musee-des-automates/"
+  - title: "Musée des Automates: site officiel"
+    url: "https://www.automates-avenue.fr/index.php"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Falaise, dans le Calvados, une même sortie peut mener d'un château médiéval à un musée consacré aux civils de la Seconde Guerre mondiale, puis à des vitrines peuplées d'automates anciens. Pour visiter ces trois lieux en famille, deux pass existent, mais ils ne fonctionnent pas du tout de la même façon. Et selon l'âge des enfants, **acheter des billets famille séparés peut coûter moins cher que le pass payant**.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Trois visites, trois expériences différentes
+
+Le **château Guillaume-le-Conquérant** permet d'explorer une forteresse médiévale et ses donjons, sur le site de naissance de Guillaume le Conquérant. La scénographie aide à imaginer la vie du château. Attention avec de jeunes enfants: les donjons ne sont accessibles ni en poussette ni en fauteuil roulant, et les tablettes de visite sont réservées aux plus de 10 ans. Les chemins sont parfois pentus ou irréguliers. [Consulter les conditions de visite du château](https://www.chateau-guillaume-leconquerant.fr/preparer-votre-visite/seul--en-famille-ou-entre-amis-3-12.html).
+
+À proximité, le **Mémorial de Falaise - Les Civils dans la Guerre** raconte l'Occupation, les bombardements, l'exode et la reconstruction à travers des témoignages et des objets. C'est une visite plus exigeante émotionnellement que le château. Le musée la conseille à partir de **8 ans** et propose un parcours pour enfants, un livret et un audioguide adapté. Comptez environ une heure, davantage avec le film d'animation. [Voir les supports proposés aux familles](https://www.memorial-falaise.fr/decouvrir-le-memorial/pour-les-enfants/).
+
+Le **musée des Automates** est plus léger: dans une rue parisienne reconstituée, plus de 300 personnages mécaniques reprennent vie dans des décors inspirés des vitrines des grands magasins du XXe siècle. La visite dure environ une heure et le musée est accessible aux personnes à mobilité réduite. [Découvrir le musée et ses informations pratiques](https://www.musees-normandie.fr/musees-normandie/musee-des-automates/).
+
+## Le Pass Découverte: 16,50 € pour les trois musées
+
+Le [Pass Découverte de Falaise](https://www.falaise-suissenormande.com/guide-pratique/le-pass-decouverte-de-falaise/) donne une entrée dans chacun de ces trois sites pour **16,50 € par personne**. Il s'achète à l'office de tourisme ou dans l'un des trois établissements. Les visites peuvent être réparties sur plusieurs jours, jusqu'au **31 décembre de l'année d'achat**; le billet n'est ni échangeable ni remboursable.
+
+L'office de tourisme le présente pour les personnes **de plus de 12 ans**, tandis que le château indique « à partir de 12 ans ». Pour un enfant qui a exactement 12 ans, mieux vaut demander confirmation avant d'acheter. Dans tous les cas, le pass ne remplace pas automatiquement les tarifs enfants, les gratuités ou les formules famille.
+
+## Les billets famille: parfois une meilleure affaire
+
+Les tarifs affichés pour 2026 permettent de comparer sans se fier au seul prix du pass:
+
+- **Château:** 9,50 € par adulte, 5 € de 6 à 16 ans et gratuit pour les moins de 6 ans. Le **pass famille à 24 €** couvre jusqu'à deux adultes et quatre enfants. [Tarifs du château](https://www.chateau-guillaume-leconquerant.fr/preparer-votre-visite/seul--en-famille-ou-entre-amis-3-12.html).
+- **Mémorial:** 8,50 € par adulte, 7,50 € au tarif scolaire de 10 à 18 ans. Le **tarif famille à 18 €** s'applique à deux adultes avec au moins un enfant de 10 à 18 ans, ou à un adulte avec au moins deux enfants de cet âge, dans la limite de quatre enfants. Les audioguides sont en supplément. [Tarifs du Mémorial](https://www.memorial-falaise.fr/sites-et-musees/memorial-de-falaise-les-civils-dans-la-guerre/).
+- **Musée des Automates:** 5 € par adulte, **gratuit jusqu'à 12 ans inclus**. Le **pass famille à 15 €** concerne deux adultes avec deux jeunes de 13 à 18 ans, ou un adulte avec trois jeunes de cette tranche d'âge. [Tarifs du musée](https://www.musees-normandie.fr/musees-normandie/musee-des-automates/).
+
+**Exemple concret: deux adultes et deux enfants de 13 et 15 ans.** Quatre Pass Découverte reviennent à **66 €**. Pour ces mêmes quatre visiteurs, les trois tarifs famille admissibles totalisent **57 €**: 24 € au château, 18 € au Mémorial et 15 € aux Automates. Soit **9 € économisés** avec les billets famille, hors options supplémentaires.
+
+**À l'inverse, pour deux adultes sans enfant**, les trois entrées ordinaires coûtent **46 €** au total (19 € + 17 € + 10 €), contre **33 €** pour deux Pass Découverte. Le pass devient alors intéressant si les deux personnes souhaitent réellement visiter les trois lieux.
+
+Avec des enfants de moins de 13 ans, regardez d'abord les gratuités et les billets adaptés à leur âge, notamment au musée des Automates. Pour une seule ou deux visites, comparez les entrées à l'unité plutôt que d'acheter systématiquement le pass trois sites.
+
+## Le Pass Promotionnel: un autre dispositif, gratuit
+
+Le [Pass Promotionnel Falaise - Suisse Normande 2026/2027](https://www.falaise-suissenormande.com/2026/06/05/le-pass-promotionnel/) **n'est pas un billet groupé pour les trois musées**. Il est remis gratuitement **après l'achat d'un billet plein tarif** chez l'un des 16 partenaires. Il donne ensuite accès à des réductions ou avantages lors de visites ultérieures dans le réseau.
+
+Ce réseau comprend notamment le château de Falaise, le Mémorial, le musée des Automates, mais aussi des sites plus éloignés, des activités de loisirs et des producteurs locaux. Il peut donc intéresser une famille qui poursuit ses découvertes dans le Pays de Falaise et en Suisse Normande. Tous les partenaires ne se trouvent pas dans le centre-ville.
+
+La page officielle ne détaille pas le montant de chaque réduction. **Impossible donc de promettre un pourcentage d'économie ou le cumul avec un billet famille.** Avant de choisir une première entrée plein tarif pour obtenir ce pass, demandez au site concerné quelles réductions seront réellement applicables aux visites suivantes.
+
+## Attention aux fermetures de novembre et de l'hiver
+
+Les trois lieux ne sont pas toujours ouverts le même jour. C'est particulièrement important pour un séjour à l'automne ou en hiver:
+
+- **Château:** ouverture habituelle de 10 h à 18 h, dernière entrée une heure avant la fermeture, avec fermetures ponctuelles possibles le lundi. **Fermé du 2 au 6 novembre 2026**, puis du **4 janvier au 20 février 2027**, ainsi que les 25 décembre et 1er janvier. [Calendrier du château](https://www.chateau-guillaume-leconquerant.fr/preparer-votre-visite/seul--en-famille-ou-entre-amis-3-12.html).
+- **Mémorial:** du **2 novembre au 18 décembre 2026**, ouverture uniquement **le mercredi et le samedi de 14 h à 18 h**. D'autres horaires sont annoncés pour les vacances de fin d'année. [Horaires du Mémorial](https://www.memorial-falaise.fr/sites-et-musees/memorial-de-falaise-les-civils-dans-la-guerre/).
+- **Musée des Automates:** ouvert du mardi au samedi selon les jours, **fermé le dimanche, le lundi et les jours fériés**. Dernière admission une heure avant la fermeture. [Horaires détaillés](https://www.musees-normandie.fr/musees-normandie/musee-des-automates/).
+
+**Pour une journée en famille**, le château et les Automates forment un duo contrasté, surtout avec de jeunes enfants. Avec des enfants plus grands intéressés par l'histoire, ajoutez le Mémorial si son ouverture et le rythme de la journée le permettent. Pour les trois sites, répartir les visites sur deux jours évite de courir et reste compatible avec le Pass Découverte, tant que sa date limite n'est pas dépassée.
+
+Avant de payer, choisissez donc vos visites et vos dates, puis comparez le **total des billets réellement applicables à votre famille** avec le prix des pass. C'est cette vérification, plus que le nom « pass », qui détermine la meilleure économie.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -133,4 +174,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
