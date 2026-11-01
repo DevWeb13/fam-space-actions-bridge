@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,98 +14,142 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Haute-Saône
 - Région: Bourgogne-Franche-Comté
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Titre de travail :** « Quatre jeux de piste gratuits en Haute-Saône : quelle aventure Sigéric choisir en famille ? »
-
-**Sujet et angle :** comparer les quatre parcours autonomes d’Explor Games® « Sigéric au pays des 4 Rivières » à Champlitte, Renaucourt, Ray-sur-Saône et Savoyeux, pour aider les familles à choisir selon leurs envies, l’âge des enfants, le terrain et la météo. Il s’agit d’enquêtes de plein air guidées par une application mobile, mêlant énigmes, histoire locale et découverte des paysages. L’office de tourisme confirme leur gratuité, leur accessibilité toute l’année, l’absence de réservation et une durée moyenne de 1 h 30 à 2 h par mission.
-
-## Besoin du lecteur
-
-Comprendre le fonctionnement de l’application, les quatre histoires et leurs lieux de départ ; choisir entre parcours urbain/patrimonial (Champlitte, Ray-sur-Saône), forêt/arboretum (Renaucourt) et berges de Saône (Savoyeux) ; préparer une sortie adaptée aux enfants sans se déplacer pour rien. Expliquer l’autonomie des parcours, le matériel à prévoir (téléphone chargé, application téléchargée, chaussures adaptées), les éventuelles contraintes de cheminement et les possibilités de prolonger la journée.
-
-## Valeur éditoriale
-
-- Comparaison réellement utile des quatre aventures indépendantes : **Champlitte**, « Albert la crosse et les brigands », dans la cité ; **Renaucourt**, « Le défi des fées », dans l’arboretum ; **Ray-sur-Saône**, « Le voyage de Roze », du château aux rues du village ; **Savoyeux**, « L’antre du drakkar », sur les berges près de la Voie Bleue.
-- Donner les points de départ précis et des conseils concrets pour une sortie avec enfants, sans inventer de distance, d’âge minimal ou d’accessibilité poussette : ces éléments ne sont pas tous documentés officiellement et doivent être présentés avec prudence.
-- Distinguer le jeu de piste extérieur de la **visite guidée intérieure du château de Ray-sur-Saône**, soumise à réservation et à une saison d’ouverture distincte. Vérifier les accès au parc en période hivernale avant de conseiller le parcours de Ray, même si l’office annonce les jeux disponibles toute l’année.
-- Proposer, sans forcer, une sortie de 2 h ou une journée avec visite du village, pique-nique ou promenade selon le site. Les pages touristiques décrivent déjà chaque parcours séparément ; Fam Space apportera surtout le choix comparé et la préparation familiale.
-
-## Affiliation
-
-**Activité principale :** les quatre Explor Games® sont gratuits et sans réservation. Recherche d’offres équivalentes chez GetYourGuide, Tiqets et Klook : aucune billetterie pertinente identifiée ; ne pas inventer de billet payant.
-
-**Hébergements pertinents pour une famille souhaitant découvrir plusieurs parcours sur un week-end :**
-
-- **Booking.com — Le Tilleul de Ray**, à Ray-sur-Saône : chambre familiale, kitchenette commune et équipements pour enfants annoncés par l’hébergement ; pertinent pour le parcours du château et les bords de Saône. URL vérifiée : https://www.booking.com/hotel/fr/le-tilleul-de-ray.fr.html
-- **Booking.com — Au Bon Vivant**, à Dampierre-sur-Salon : chambres familiales, dont une chambre quadruple affichée, et table d’hôtes ; point de séjour dans le secteur des Quatre Rivières. URL vérifiée : https://www.booking.com/hotel/fr/au-bon-vivant.fr.html
-
-**Partenaires alternatifs vérifiés :** Le Tilleul de Ray figure aussi sur Expedia (https://www.expedia.fr/Ray-Sur-Saone-Hotel-Le-Tilleul-De-Ray.h115288412.Description-Hotel) et Agoda (https://www.agoda.com/zh-tw/le-tilleul-de-ray/hotel/ray-sur-saone-fr.html). Ne retenir qu’une ou deux offres utiles dans l’article, sans en faire le sujet principal. Prix et disponibilités à recontrôler pour les dates choisies.
-
-## Sources de départ
-
-- **Office de tourisme des 4 Rivières, présentation officielle, gratuité, durée, toute l’année et mode d’emploi :** https://tourisme.4rivieres.fr/mesurez-vous-a-l-explor-games--4dc9de8f80f93ddb877506a368f9119a.html
-- **Champlitte, « Albert la crosse et les brigands » :** https://www.tourisme-valdegray.com/en/activite/explor-games-sigeric-au-pays-des-4-rivieres-albert-la-crosse-et-les-brigands/
-- **Renaucourt, « Le défi des fées » :** https://www.tourisme-valdegray.com/en/activite/explor-games-sigeric-au-pays-des-4-rivieres-le-defi-des-fees/
-- **Ray-sur-Saône, « Le voyage de Roze » :** https://www.tourisme-valdegray.com/activite/explor-games-sigeric-au-pays-des-4-rivieres-le-voyage-de-roze/
-- **Savoyeux, « L’antre du drakkar » :** https://www.tourisme-valdegray.com/activite/explor-games-sigeric-au-pays-des-4-rivieres-lantre-du-drakkar/
-- **Office de tourisme Val de Gray, parc du château de Ray (visite distincte, terrain et équipements) :** https://www.tourisme-valdegray.com/visite/parc-du-chateau-de-ray-sur-saone/
-- **Application iOS, fiche de l’éditeur sur l’App Store :** https://apps.apple.com/ci/app/sig%C3%A9ric-au-pays-des-4-rivi%C3%A8res/id1617965855
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "activites"
+title: "Quatre jeux de piste gratuits en Haute-Saône: lequel choisir en famille ?"
+subtitle: "De Champlitte aux berges de la Saône, quatre aventures Sigéric à comparer avant de partir"
+summary: "À Champlitte, Renaucourt, Ray-sur-Saône et Savoyeux, quatre enquêtes gratuites sur smartphone. Voici comment choisir et préparer la sortie en famille."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "jeux de piste gratuits Haute-Saône"
+  - "Explor Games Sigéric 4 Rivières"
+  - "sortie famille Champlitte Renaucourt Ray-sur-Saône Savoyeux"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Haute-Saône"
+  region: "Bourgogne-Franche-Comté"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Office de tourisme des 4 Rivières - présentation et fonctionnement des Explor Games"
+    url: "https://tourisme.4rivieres.fr/mesurez-vous-a-l-explor-games--4dc9de8f80f93ddb877506a368f9119a.html"
+  - title: "Office de tourisme Val de Gray - Albert la crosse et les brigands, Champlitte"
+    url: "https://www.tourisme-valdegray.com/activite/explor-games-sigeric-au-pays-des-4-rivieres-albert-la-crosse-et-les-brigands/"
+  - title: "Office de tourisme Val de Gray - Le défi des fées, Renaucourt"
+    url: "https://www.tourisme-valdegray.com/en/activite/explor-games-sigeric-au-pays-des-4-rivieres-le-defi-des-fees/"
+  - title: "Office de tourisme Val de Gray - Le voyage de Roze, Ray-sur-Saône"
+    url: "https://www.tourisme-valdegray.com/activite/explor-games-sigeric-au-pays-des-4-rivieres-le-voyage-de-roze/"
+  - title: "Office de tourisme Val de Gray - L'antre du drakkar, Savoyeux"
+    url: "https://www.tourisme-valdegray.com/activite/explor-games-sigeric-au-pays-des-4-rivieres-lantre-du-drakkar/"
+  - title: "Office de tourisme Val de Gray - Parc du château de Ray-sur-Saône"
+    url: "https://www.tourisme-valdegray.com/visite/parc-du-chateau-de-ray-sur-saone/"
+  - title: "Apple App Store - Sigéric au pays des 4 rivières"
+    url: "https://apps.apple.com/fr/app/sig%C3%A9ric-au-pays-des-4-rivi%C3%A8res/id1617965855"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Une enquête au milieu des ruelles, une autre dans une forêt peuplée de fées, une troisième autour d'un château et une dernière au bord de la Saône: en Haute-Saône, les quatre jeux de piste « Sigéric au pays des 4 Rivières » transforment la promenade en aventure familiale. Ils se déroulent à Champlitte, Renaucourt, Ray-sur-Saône et Savoyeux, dans l'est de la France, avec un téléphone pour suivre l'histoire et résoudre des énigmes.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+Ces Explor Games® sont **gratuits, sans réservation et proposés toute l'année** par l'[office de tourisme des 4 Rivières](https://tourisme.4rivieres.fr/mesurez-vous-a-l-explor-games--4dc9de8f80f93ddb877506a368f9119a.html). Chaque mission dure en moyenne **1 h 30 à 2 h**. Les quatre aventures sont indépendantes: nul besoin de les faire dans l'ordre.
+
+## Quel parcours choisir avec les enfants ?
+
+### Champlitte: une enquête dans les rues d'une cité de caractère
+
+Dans « Albert la crosse et les brigands », les enfants accompagnent Sigéric et Colomban, rencontrent Albert le colporteur et recherchent une crosse disparue, entre Vikings et créatures malicieuses. Le décor est celui des rues et du patrimoine de Champlitte.
+
+**À choisir si** la famille préfère découvrir un bourg et ses bâtiments plutôt que marcher en pleine nature. Le départ se situe **devant le bureau de l'office de tourisme des 4 Rivières, 2 allée du Sainfoin**. La [fiche de l'aventure de Champlitte](https://www.tourisme-valdegray.com/activite/explor-games-sigeric-au-pays-des-4-rivieres-albert-la-crosse-et-les-brigands/) conseille des chaussures de sport.
+
+À savoir en hiver: le bureau de Champlitte est annoncé fermé du **1er novembre au 31 mars**, mais le jeu extérieur est présenté séparément comme accessible toute l'année. Il ne faut donc pas compter sur un accueil au bureau pour démarrer l'enquête.
+
+### Renaucourt: fées et énigmes au milieu des arbres
+
+« Le défi des fées » conduit Sigéric et Colomban dans l'arboretum de Renaucourt, à la recherche d'un chevalier et de l'aide de la fée Bellis. Le cadre forestier fait partie de l'aventure: on vient autant pour les énigmes que pour découvrir la végétation.
+
+**À choisir si** les enfants aiment les histoires fantastiques et les balades en forêt. Le départ est indiqué **à la cabane de l'étang**. La [fiche de Renaucourt](https://www.tourisme-valdegray.com/en/activite/explor-games-sigeric-au-pays-des-4-rivieres-le-defi-des-fees/) recommande des chaussures de sport et mentionne une aire de pique-nique ombragée.
+
+Après une période pluvieuse, mieux vaut privilégier des chaussures adaptées aux chemins et éviter cette sortie si le terrain est glissant.
+
+### Ray-sur-Saône: du château aux ruelles du village
+
+Dans « Le voyage de Roze », l'intrigue mène les joueurs vers le château, où ils croisent Roze et son chien Lido, puis dans le village à la recherche d'un objet précieux de Sigéric.
+
+**À choisir si** l'on veut associer une enquête à un paysage de château et à un village ancien. Le départ est **devant la grille du château, 18 rue du Château** selon la [fiche du parcours](https://www.tourisme-valdegray.com/activite/explor-games-sigeric-au-pays-des-4-rivieres-le-voyage-de-roze/).
+
+Attention à ne pas confondre les activités: **le jeu de piste ne vaut pas réservation d'une visite intérieure du château**. Le [parc du château](https://www.tourisme-valdegray.com/visite/parc-du-chateau-de-ray-sur-saone/) est présenté comme gratuit et en visite libre, mais il s'étage sur un coteau abrupt. Les conditions précises d'accès en période de gel, de neige ou de fermeture exceptionnelle ne sont pas confirmées pour le jour de votre sortie. En hiver, mieux vaut les demander à l'office avant de se déplacer spécialement pour ce parcours.
+
+### Savoyeux: Vikings et créature mystérieuse au bord de l'eau
+
+« L'antre du drakkar » installe l'aventure sur les berges de la Saône: les Vikings approchent, un artefact a été volé et une créature des eaux pourrait aider les héros.
+
+**À choisir si** la famille préfère les paysages de rivière aux ruelles ou à la forêt. Le départ se trouve **sur la Voie Bleue, côté tunnel, au port de Savoyeux**. La [fiche officielle de Savoyeux](https://www.tourisme-valdegray.com/activite/explor-games-sigeric-au-pays-des-4-rivieres-lantre-du-drakkar/) signale une aire de pique-nique.
+
+Avec de jeunes enfants, la proximité de l'eau demande une surveillance attentive. En cas de crue ou de berges glissantes, mieux vaut reporter la sortie.
+
+## Comment jouer sans réservation ?
+
+Téléchargez l'application gratuite **« Sigéric au pays des 4 rivières »** avant de partir, sélectionnez l'aventure sur place, puis suivez les indications à l'écran. L'office de tourisme précise qu'il n'est pas nécessaire de constituer une équipe ni de réserver un créneau. L'application est notamment [disponible sur iPhone et iPad](https://apps.apple.com/fr/app/sig%C3%A9ric-au-pays-des-4-rivi%C3%A8res/id1617965855); sa fiche Apple indique iOS 13.4 ou une version ultérieure.
+
+Prévoyez un téléphone suffisamment chargé, de quoi le protéger de la pluie, et vérifiez que l'application et l'aventure choisie s'ouvrent correctement avant de quitter un endroit connecté. Une batterie externe peut être utile si le téléphone sert aussi à la navigation. L'essentiel du jeu se vit dehors: l'écran guide la famille, mais il faut marcher et observer les lieux.
+
+**Quel âge faut-il avoir ?** L'organisateur présente les jeux comme destinés à tous les publics, sans fixer d'âge minimal propre aux parcours. La mention « 4+ » sur l'App Store est une classification de l'application, **pas une garantie qu'un enfant de 4 ans résoudra seul les énigmes**. Avec les plus petits, prévoyez qu'un adulte lise les consignes et accompagne la progression.
+
+**Et avec une poussette ?** Aucun descriptif officiel consulté ne garantit la praticabilité intégrale des quatre circuits en poussette, ni leur distance exacte. Le parc de Ray est en pente, Renaucourt traverse un environnement forestier et Savoyeux longe la rivière: ne présumez pas que ces parcours sont tous accessibles avec des roues. Demandez une confirmation à l'office si c'est un critère décisif.
+
+## Une sortie de deux heures ou une journée entière ?
+
+Pour une première expérience, **un seul jeu suffit à remplir une demi-journée**, en comptant l'enquête et une pause. Si les enfants ont encore de l'énergie, prolongez simplement la découverte des rues de Champlitte ou de Ray-sur-Saône, ou prévoyez un pique-nique près de Renaucourt ou de Savoyeux lorsque les conditions le permettent.
+
+Les quatre départs se trouvent dans des communes différentes: ne les considérez pas comme les étapes d'un même circuit à pied. Pour en faire plusieurs dans la journée, il faut prévoir les déplacements entre les sites et tenir compte du rythme des enfants.
+
+Pour vérifier un accès avant le départ, notamment autour du château de Ray ou après de fortes pluies, l'[office de tourisme des 4 Rivières](https://tourisme.4rivieres.fr/mesurez-vous-a-l-explor-games--4dc9de8f80f93ddb877506a368f9119a.html) indique le **03 84 67 67 19**. Les jeux sont gratuits: il n'y a pas de billet d'entrée à acheter.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -134,4 +178,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
