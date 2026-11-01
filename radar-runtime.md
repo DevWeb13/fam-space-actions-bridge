@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Noël 2026 à Besançon en famille : contes gratuits, marché solidaire ou artisans ?"
-subtitle: Trois rendez-vous confirmés pour choisir une sortie selon l'âge des enfants et la date.
-summary: Comparer les contes gratuits du Musée du Temps, le marché solidaire de Chamars et le marché artisanal de la rue Mégevand, sans attribuer à 2026 le programme général de Noël 2025.
+title: "Noël 2026 à Besançon en famille : contes, marché solidaire ou artisans ?"
+subtitle: Trois sorties aux dates différentes, avec les réservations et les accès à connaître.
+summary: "Contes gratuits dès 3 ans au Musée du Temps, marché solidaire près de Chamars ou artisans rue Mégevand : choisissez votre sortie de Noël 2026 à Besançon selon le jour et les enfants."
 category: evenements
 location:
   city: Besançon
@@ -72,15 +77,17 @@ keywords:
   - marché solidaire Noël Chamars 2026
   - marché artisanal Besançon 5 6 décembre 2026
 sources:
-  - title: Musée du Temps de Besançon — contes gratuits 2026
+  - title: Musée du Temps — contes de Noël 2026
     url: https://www.mdt.besancon.fr/event/marche-de-noel/
-  - title: Récidev — Marché solidaire de Noël 2026
+  - title: Musée du Temps — consignes de visite, poussettes et table à langer
+    url: https://www.mdt.besancon.fr/infos-pratiques/consignes-de-visite-pour-votre-confort/
+  - title: Récidev — marché solidaire de Noël 2026
     url: https://marchesolidairedenoel.fr/
   - title: Office de tourisme du Grand Besançon — marché artisanal spécial Noël
     url: https://www.besancon-tourisme.com/fr/fiche-sit/F105241_marche-artisanal-edition-speciale-noel-besancon/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: noel-2026-a-besancon-en-famille-contes-gratuits-marche-solidaire-ou-artisans
   decision: Choisir un rendez-vous de Noël réellement programmé à Besançon en 2026 selon l'âge des enfants, le jour disponible, le budget et la nécessité de réserver.
@@ -90,32 +97,50 @@ radar:
     dataThrough: 2026-10-29
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Musée du Temps de Besançon — contes gratuits 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-20
 ---
 
-## Mission retenue
-Guide pratique de trois sorties de Noël distinctes et documentées à Besançon, plutôt qu'un programme municipal général 2026 encore incomplet.
+À Besançon, trois rendez-vous de Noël 2026 se distinguent : une heure de contes pour les enfants dès 3 ans, un marché solidaire ouvert pendant douze jours et un marché d'artisans concentré sur un week-end. Ils ne se visitent pas de la même façon : **les contes se réservent**, tandis que les marchés se prêtent davantage à une promenade et à la recherche de cadeaux.
 
-## Pourquoi cette mission
-Le refresh Futuroween est à sa dernière journée (1er novembre) et sa baisse d'impressions ne justifie pas une refonte. Lumigny a un signal GSC incertain sans défaut éditorial établi. Les expansions naturelles de la page forte sur les transports parisiens (Orly, CDG, Navigo Liberté+, poussette, Versailles, Disneyland) sont déjà largement traitées. Ici, trois rendez-vous futurs sont confirmés par leurs responsables, sans doublon bisontin dans les 892 articles du catalogue ni dans l'historique Radar.
+## Quel rendez-vous choisir selon votre date ?
 
-## Décision du lecteur
-Savoir où aller et quand : contes adaptés dès 3 ans, marché solidaire accessible en tram, ou marché artisanal concentré sur un week-end.
+- **Samedi 28 novembre, 5, 12 ou 19 décembre, de 16 h à 17 h :** les contes du Musée du Temps, pour les enfants à partir de 3 ans. Animation gratuite, mais inscription obligatoire.
+- **Samedi 5 et dimanche 6 décembre :** le marché artisanal de la cour du centre diocésain, au 20 rue Mégevand. Une trentaine d'artisans locaux et des concerts sont annoncés.
+- **Du mercredi 9 au dimanche 20 décembre :** le marché solidaire de Noël organisé par Récidev, près de l'arrêt de tram Chamars, de 11 h à 19 h, sauf le lundi à partir de 14 h.
 
-## Faits à traiter
-- Contes du Musée du Temps : samedis du 28 novembre au 19 décembre, 16 h-17 h, gratuits sur inscription, dès 3 ans, un adulte accompagnateur maximum par enfant.
-- Marché solidaire Récidev : 9-20 décembre, arrêt Chamars, 11 h-19 h sauf lundi dès 14 h ; programme détaillé encore en mise à jour.
-- Marché artisanal : 5-6 décembre, cour du centre diocésain, 20 rue Mégevand, 30 artisans et concerts annoncés ; horaires et gratuité à vérifier.
-- Ne pas recycler les horaires, animations ni tarifs du marché municipal de 2025 comme des faits 2026. Vérifier accès poussette, sanitaires et modalités de réservation avant rédaction.
+Le samedi 5 décembre permet de combiner le marché artisanal avec les contes, à condition d'avoir réservé ces derniers et de tenir compte du trajet entre les lieux. Le samedi 12 ou 19 décembre, ce sont les contes et le marché solidaire qui se recoupent.
 
-## Sources de départ
-Les trois pages officielles du frontmatter.
+## Contes au Musée du Temps : gratuit, mais à réserver
 
-## Affiliation
-Expedia.fr : Best Western Hotel Fontaine Argent, suite annoncée pour quatre personnes ; contrôler la capacité et les conditions de l'offre choisie. Ne pas ajouter de billetterie artificielle.
+Dans la salle des partenaires du Musée du Temps, les bibliothécaires racontent des histoires de Noël, de lutins et de créatures magiques. La séance dure une heure. L'annonce précise **un adulte accompagnateur maximum par enfant** : une famille venant avec plusieurs adultes doit donc vérifier la composition de son groupe avant de réserver.
 
-## Continuations internes
-- Renvoyer au guide Fam Space « Bus et tram à Besançon en famille : tarifs et gratuités Ginko en 2026 » pour le détail des transports.
-- Renvoyer au guide « Week-end dans le Doubs en famille » si la sortie s'inscrit dans un séjour, sans recopier ses propositions.
+L'inscription s'effectue sur [le portail des bibliothèques municipales](https://bibliotheques.besancon.fr/) ou au **03 81 87 81 40**. La gratuité concerne cette animation ; elle ne signifie pas que toutes les visites du musée sont gratuites. Consultez [l'annonce du Musée du Temps](https://www.mdt.besancon.fr/event/marche-de-noel/) pour les éventuelles mises à jour.
+
+Pour les familles avec un bébé, le musée autorise les poussettes, dispose de rampes et d'ascenseurs sur son parcours et annonce une table à langer près des sanitaires du rez-de-chaussée. Les porte-bébés dorsaux ne sont pas admis. Ces [consignes générales du musée](https://www.mdt.besancon.fr/infos-pratiques/consignes-de-visite-pour-votre-confort/) ne précisent toutefois pas la configuration de la salle des contes : demandez confirmation si vous avez besoin d'y garder une poussette ou d'un accès adapté.
+
+## Marché solidaire : des cadeaux qui soutiennent des associations
+
+Le [marché solidaire de Noël de Récidev](https://marchesolidairedenoel.fr/) se tient du 9 au 20 décembre 2026, près de Chamars. Il met à l'honneur les achats solidaires et les associations plutôt que les attractions payantes. C'est un choix intéressant pour regarder des objets et discuter avec les exposants, sans devoir organiser la sortie autour d'un spectacle à heure fixe.
+
+Le site de l'organisateur est encore en cours de mise à jour pour l'édition 2026 : **ne considérez pas les animations, menus ou stands des années précédentes comme confirmés**. Le prix des achats et de la restauration dépendra des exposants. L'accès aux sanitaires, les équipements bébé et les conditions précises de circulation en poussette ne sont pas encore détaillés pour cette édition.
+
+## Marché artisanal rue Mégevand : le week-end du 5 et 6 décembre
+
+Dans la cour du centre diocésain, au **20 rue Mégevand**, l'édition spéciale Noël réunit **30 artisans locaux** selon l'[office de tourisme du Grand Besançon](https://www.besancon-tourisme.com/fr/fiche-sit/F105241_marche-artisanal-edition-speciale-noel-besancon/). Deux concerts sont annoncés : **Mo'Blues le samedi 5 décembre** et **Lost In Jazz le dimanche 6 décembre**. Un quiz, une roue des cadeaux, un brasseur et un food-truck figurent aussi au programme.
+
+C'est le rendez-vous à privilégier pour des cadeaux fabriqués localement, avec une pause musicale possible. En revanche, les **horaires précis, le tarif d'entrée éventuel et les horaires des concerts** ne sont pas indiqués sur la fiche officielle consultée. L'accès poussette et les sanitaires du site ne sont pas non plus documentés pour ce marché. Vérifiez ces points auprès de l'organisateur avant de partir avec de jeunes enfants.
+
+## Se déplacer avec des enfants
+
+Le marché solidaire est desservi par l'**arrêt de tram Chamars**. Les contes ont lieu au Musée du Temps, dans le centre historique ; le marché artisanal est rue Mégevand. En décembre, prévoyez des vêtements chauds pour les parties en extérieur et un programme suffisamment court pour les plus petits.
+
+**Bon plan le samedi :** les transports Ginko sont gratuits pour tous, y compris les bus et les trams. Pour les autres jours, les titres adaptés à une famille, les parkings relais et les règles pour les poussettes sont détaillés dans notre guide [Bus et tram à Besançon en famille : tarifs et gratuités Ginko en 2026](/articles/vie-pratique/bus-et-tram-a-besancon-en-famille-tarifs-et-gratuites-ginko-en-2026/).
+
+## Et pour passer la nuit à Besançon ?
+
+Si vous venez de plus loin, le [Best Western Hotel Fontaine Argent sur Expedia.fr](https://www.expedia.fr/Besancon-Hotel-Hotel-Fontaine-Argent.h41704156.Description-Hotel) propose notamment une **suite annoncée pour quatre personnes**, avec un grand lit et un canapé-lit. Attention à bien sélectionner cette catégorie : d'autres chambres de l'hôtel sont limitées à deux ou trois personnes. Vérifiez le tarif réel, les disponibilités aux dates de décembre, le couchage des enfants, le parking payant et les conditions d'annulation avant de réserver.
+
+Pour compléter un séjour par des visites hors des marchés de Noël, notre guide [Week-end dans le Doubs en famille : quel budget pour trois grandes sorties ?](/articles/voyages/week-end-dans-le-doubs-en-famille-quel-budget-pour-3-grandes-sorties-en-2026/) compare notamment la Citadelle, Dino-Zoo et le Gouffre de Poudrey.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
