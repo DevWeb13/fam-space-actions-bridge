@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,97 +14,138 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Haute-Savoie
 - Région: Auvergne-Rhône-Alpes
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Titre de travail :** « Chamonix en famille sans voiture : train gratuit, bus à prix réduit et sorties avec la carte d’hôte »
-
-**Angle :** préparer un séjour économique dans la vallée de Chamonix-Mont-Blanc en distinguant les avantages réellement gratuits, les titres à acheter et les activités accessibles avec des enfants. La carte d’hôte est remise gratuitement par les hébergements touristiques et donne notamment accès au Mont-Blanc Express entre Servoz et Vallorcine ; elle réduit aussi certains abonnements de bus et entrées de loisirs. Sujet durable, applicable en automne comme en hiver, et distinct des articles Fam Space récents sur la Mer de Glace et les événements de Haute-Savoie.
-
-## Besoin du lecteur
-
-Savoir obtenir la carte pour chaque membre de la famille, organiser des déplacements dans la vallée sans voiture, choisir entre train et bus selon le trajet et la durée du séjour, éviter les frais ou fausses gratuités, et sélectionner quelques visites familiales accessibles. Pouvoir aussi préparer un week-end avec un hébergement doté d’une cuisine.
-
-## Valeur éditoriale
-
-- **Distinguer train et bus :** Mont-Blanc Express gratuit uniquement pour les trajets internes Servoz–Vallorcine sur présentation d’une carte valide ; trajet vers Saint-Gervais-Le Fayet ou la Suisse non inclus. La carte seule ne permet **pas** de monter gratuitement dans les bus : titre séparé obligatoire, sauf autre titre éligible (notamment forfait de ski valide).
-- **Comparer les coûts familiaux sans induire en erreur :** selon la grille officielle en vigueur depuis le 1er juillet 2026, bus avec carte d’hôte à 5 € pour 2 jours, 6 € pour 3 jours et 10 € pour 7 jours ; tarif public 3 jours à 9 €. Pour quatre voyageurs d’au moins 4 ans, 3 jours reviennent à 24 € avec carte contre 36 € au tarif public individuel, hors autres formules éventuelles. Pas de réduction sur le ticket unitaire ni sur le bus de nuit.
-- **Expliquer l’obtention :** gratuite auprès d’un hébergeur touristique, à réclamer à l’arrivée ; pour un hébergement gratuit, 10 € par personne pour une semaine, à retirer en mairie ou à l’office de tourisme. Vérifier auprès de l’établissement choisi qu’il délivre bien la carte.
-- **Proposer de vraies sorties :** Musée des Cristaux à 5,50 € au lieu de 8 € pour les adultes porteurs de la carte, gratuit pour les moins de 18 ans, avec parcours autonomes dès 6 et 8 ans ; Maison de l’Alpage à Servoz gratuite même sans carte ; piscine/patinoire Richard Bozon avec réduction à vérifier selon les séances. Ne pas promettre une ouverture permanente : Musée des Cristaux fermé du 16 novembre au 14 décembre 2026.
-- **Précautions saisonnières :** horaires ferroviaires adaptés pour travaux jusqu’au 6 novembre 2026 ; contrôler les correspondances, ouvertures et activités au moment de rédiger. La page officielle Chamonix donne déjà les règles de la carte, mais un guide familial peut croiser transports, âges, budget, lieux de visite et exemples de parcours plutôt que la paraphraser.
-
-## Affiliation
-
-Pistes d’hébergement vérifiées sur **Booking.com**, pertinentes pour un séjour en famille utilisant les transports de la vallée (prix et disponibilités à vérifier selon les dates, sans présumer de la remise de la carte d’hôte par chaque établissement) :
-
-- **Appart’hôtel Bellamy Chamonix** : appartements avec cuisine équipée, configurations pour 4 ou 5 personnes, centre de Chamonix. https://www.booking.com/hotel/fr/appart-39-bellamy-chamonix.html
-- **Résidence Pierre & Vacances La Rivière** : studios et appartements avec coin cuisine et micro-ondes, proche du centre et de la gare ; utile pour séjourner sans voiture. https://www.booking.com/hotel/fr/maeva-la-riviere.en-gb.html
-
-Pas de billetterie partenaire pertinente confirmée pour la carte d’hôte, le train local ou les réductions municipales : conserver les sources officielles pour ces services. Ne pas ajouter artificiellement de remontées mécaniques payantes au sujet.
-
-## Sources de départ
-
-- Office de tourisme de Chamonix, carte d’hôte : https://www.chamonix.com/infos-et-services/la-carte-d-hote
-- Office de tourisme, transports et horaires 2026 : https://www.chamonix.com/infos-et-services/transports
-- Chamonix Mobilité, grille officielle à partir du 1er juillet 2026 : https://www.chamonix.com/sites/default/files/media/brochures/Tarifs-Cham-Ete2026.pdf
-- SNCF, horaires travaux du 28 septembre au 6 novembre 2026 : https://www.chamonix.com/sites/default/files/media/brochures/Chamonix-automne-travaux_2026_affiche-v1.pdf
-- SNCF TER, présentation du Mont-Blanc Express : https://www.ter.sncf.com/auvergne-rhone-alpes/decouvrir/trains-touristiques/mont-blanc-express
-- Musée des Cristaux, âges, tarifs et fermetures 2026 : https://www.chamonix.com/en-cas-de-mauvais-temps/musee-des-cristaux
-- Maison de l’Alpage, gratuité et horaires : https://en.chamonix.com/en-cas-de-mauvais-temps/maison-de-l-alpage
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "bons-plans"
+title: "Chamonix en famille sans voiture: train gratuit et bus à prix réduit avec la carte d’hôte"
+subtitle: "Comment obtenir la carte, choisir ses transports et prévoir des sorties abordables dans la vallée"
+summary: "La carte d’hôte facilite les vacances sans voiture dans la vallée de Chamonix. Voici les trajets gratuits, les vrais tarifs des bus et deux visites à petit prix."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "carte d'hôte Chamonix famille"
+  - "Chamonix sans voiture"
+  - "Mont-Blanc Express gratuit"
+  - "bus Chamonix Mobilité tarifs"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Chamonix-Mont-Blanc"
+  department: "Haute-Savoie"
+  region: "Auvergne-Rhône-Alpes"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Office de tourisme de Chamonix - La carte d'hôte"
+    url: "https://www.chamonix.com/infos-et-services/la-carte-d-hote"
+  - title: "Office de tourisme de Chamonix - Transports"
+    url: "https://www.chamonix.com/infos-et-services/transports"
+  - title: "Chamonix Mobilité - Grille tarifaire à partir du 1er juillet 2026"
+    url: "https://www.chamonix.com/sites/default/files/media/brochures/Tarifs-Cham-Ete2026.pdf"
+  - title: "SNCF TER - Mont-Blanc Express"
+    url: "https://www.ter.sncf.com/auvergne-rhone-alpes/decouvrir/trains-touristiques/mont-blanc-express"
+  - title: "SNCF TER - Horaires de travaux du 28 septembre au 6 novembre 2026"
+    url: "https://www.chamonix.com/sites/default/files/media/brochures/Chamonix-automne-travaux_2026_affiche-v1.pdf"
+  - title: "Office de tourisme de Chamonix - Musée des Cristaux"
+    url: "https://www.chamonix.com/en-cas-de-mauvais-temps/musee-des-cristaux"
+  - title: "Office de tourisme de Chamonix - Maison de l'Alpage"
+    url: "https://en.chamonix.com/en-cas-de-mauvais-temps/maison-de-l-alpage"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Un séjour à Chamonix, au pied du mont Blanc en Haute-Savoie, ne nécessite pas forcément de voiture. Le train relie plusieurs villages de la vallée, des bus complètent le réseau et la **carte d’hôte**, délivrée aux visiteurs hébergés sur place, réduit certaines dépenses. Mais attention: elle rend le train gratuit sur un tronçon précis, **pas les bus**.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## La carte d’hôte: comment l’obtenir ?
+
+La carte est remise **gratuitement par l’hébergeur touristique à l’arrivée**. Demandez-la dès votre installation et vérifiez avant de réserver que l’établissement choisi la délivre. Chaque voyageur qui utilise les avantages de transport doit disposer d’une carte valide, à l’exception des enfants de moins de 4 ans.
+
+Si vous logez gratuitement chez des proches, la démarche est différente: la carte coûte **10 € par personne pour un séjour d’une semaine** et se retire en mairie ou à l’office de tourisme. Les conditions sont détaillées sur la [page officielle de la carte d’hôte](https://www.chamonix.com/infos-et-services/la-carte-d-hote).
+
+## Le Mont-Blanc Express: quels trajets sont gratuits ?
+
+Avec une carte d’hôte en cours de validité, les déplacements en **Mont-Blanc Express entre Servoz et Vallorcine** sont gratuits. Cela permet notamment de rejoindre Les Houches, Chamonix ou Argentière en train, sans acheter un billet pour ces trajets internes. Il suffit de présenter la carte au contrôleur.
+
+La limite est importante: la ligne continue jusqu’à **Saint-Gervais-les-Bains-Le Fayet** d’un côté et **Martigny, en Suisse**, de l’autre, mais les trajets au-delà de Servoz ou Vallorcine ne sont **pas compris** dans cette gratuité. Si vous arrivez par Le Fayet, prévoyez donc un titre pour la partie non couverte. La [présentation SNCF du Mont-Blanc Express](https://www.ter.sncf.com/auvergne-rhone-alpes/decouvrir/trains-touristiques/mont-blanc-express) permet de situer l'ensemble de la ligne.
+
+Pour une sortie familiale, le train peut être une activité en soi: les paysages de montagne défilent entre les villages, et l’on peut descendre pour visiter avant de repartir. Consultez néanmoins les horaires avant de choisir une excursion: des [horaires adaptés pour travaux](https://www.chamonix.com/sites/default/files/media/brochures/Chamonix-automne-travaux_2026_affiche-v1.pdf) s’appliquent jusqu’au **6 novembre 2026**. Les [fiches de transport de la vallée](https://www.chamonix.com/infos-et-services/transports) permettent de vérifier les circulations à votre date.
+
+## Les bus: une réduction, pas une gratuité
+
+La carte d’hôte **n’est pas un billet de bus**. Pour emprunter Chamonix Mobilité, il faut acheter un titre distinct, sauf si vous possédez déjà un autre titre accepté sur le réseau, par exemple certains forfaits de ski valides.
+
+D’après la [grille tarifaire applicable depuis le 1er juillet 2026](https://www.chamonix.com/sites/default/files/media/brochures/Tarifs-Cham-Ete2026.pdf), les abonnements au tarif carte d’hôte coûtent **5 € pour 2 jours, 6 € pour 3 jours et 10 € pour 7 jours**, par voyageur. Les enfants de moins de 4 ans voyagent gratuitement.
+
+Pour deux adultes et deux enfants d’au moins 4 ans, **trois jours de bus coûtent donc 24 €** avec la carte, contre **36 €** en achetant quatre abonnements grand public de trois jours à 9 €. Il existe toutefois un **ticket groupe à 10 € par jour pour trois à cinq personnes**: sur trois journées complètes, il revient à 30 €. La bonne formule dépend donc du nombre de voyageurs et des jours où vous utiliserez réellement les bus. Si vous prenez surtout le train, inutile d’acheter systématiquement un abonnement de bus.
+
+Le ticket unitaire ne bénéficie d’aucune réduction carte d’hôte. Les titres réduits s’achètent en ligne ou aux bornes prévues, **pas auprès du conducteur**. Les tarifs carte d’hôte ne s’appliquent pas aux bus de nuit après 21 h; vérifiez les horaires de retour et les conditions sur la [page officielle de la carte](https://www.chamonix.com/infos-et-services/la-carte-d-hote).
+
+## Deux visites adaptées aux familles
+
+### À Chamonix: le Musée des Cristaux
+
+Le musée présente des minéraux du massif du Mont-Blanc et du monde entier: quartz, fluorines et pierres aux couleurs surprenantes. Les enfants peuvent emprunter gratuitement un parcours-jeu **dès 6 ans** ou un carnet d’exploration **dès 8 ans**, à demander à l’accueil.
+
+L’entrée est **gratuite pour les moins de 18 ans**. Pour les adultes, elle coûte **5,50 € avec la carte d’hôte**, contre 8 € au plein tarif. Une famille de deux adultes et deux mineurs paie donc **11 €** avec la carte. Le musée se trouve au **615 allée du Recteur Payot**; les arrêts indiqués sont Chamonix Centre pour le bus et Chamonix centre pour le train.
+
+Attention au calendrier: le [Musée des Cristaux](https://www.chamonix.com/en-cas-de-mauvais-temps/musee-des-cristaux) annonce une **fermeture annuelle du 16 novembre au 14 décembre 2026**. Le bâtiment est accessible pour la visite en fauteuil, mais l’accès depuis le centre-ville présente une pente soutenue: le cheminement adapté mérite d’être repéré à l’avance.
+
+### À Servoz: la Maison de l’Alpage
+
+Pour une sortie **entièrement gratuite**, même sans carte d’hôte, la Maison de l’Alpage raconte comment l’agriculture et l’élevage ont façonné les paysages de montagne. Cette petite visite culturelle peut compléter un trajet en train jusqu’à Servoz, sans imposer de remontée mécanique payante.
+
+Elle se situe au **113 rue du Bouchet, à Servoz**. La gare de Servoz est la gare la plus proche; prévoyez de rejoindre le centre du village à pied ou de vérifier une correspondance locale. L’exposition est annoncée du **lundi au samedi**, avec des fermetures certains jours fériés. Une rampe facilite l’accès à l’exposition principale, mais le deuxième étage n’est pas accessible en fauteuil. Consultez les [conditions d’ouverture de la Maison de l’Alpage](https://en.chamonix.com/en-cas-de-mauvais-temps/maison-de-l-alpage) avant de partir.
+
+## Comment organiser un séjour sans voiture ?
+
+Pour **un court séjour centré sur Chamonix**, un hébergement proche d’une gare ou d’un arrêt fréquent facilite les sorties avec des enfants. Un appartement avec cuisine permet aussi de préparer les repas sur place plutôt que de manger dehors à chaque fois. Avant de réserver, vérifiez la remise de la carte d’hôte et le trajet réel depuis la gare: « proche du centre » ne signifie pas toujours « facile avec des bagages ou une poussette ».
+
+Pour **une journée tranquille**, vous pouvez visiter le Musée des Cristaux lorsqu’il est ouvert, puis profiter du centre de Chamonix. Pour **une autre journée**, le Mont-Blanc Express permet de rejoindre Servoz ou de découvrir les villages vers Vallorcine sans payer les trajets internes couverts par la carte.
+
+Le meilleur réflexe consiste à **préparer d’abord les sorties en train**, puis à acheter un abonnement de bus uniquement si les trajets prévus le justifient. Les [horaires des bus et du train](https://www.chamonix.com/infos-et-services/transports) et les ouvertures des lieux peuvent varier selon la saison: vérifiez-les ensemble, surtout en novembre et lors des changements de service.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -133,4 +174,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
