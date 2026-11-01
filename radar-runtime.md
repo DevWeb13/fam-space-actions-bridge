@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Cirque de Noël d’Alsace 2026 à Eckbolsheim : quelle séance choisir avec des enfants ?"
-subtitle: Séances de jour ou du soir, durée, accès au chapiteau et points à vérifier avant de réserver
-summary: Du 27 novembre au 13 décembre 2026, le Cirque de Noël d’Alsace revient près de Strasbourg. Repères concrets pour choisir une séance adaptée aux enfants et préparer le trajet.
+title: "Cirque de Noël d’Alsace 2026 à Eckbolsheim : quelle séance choisir en famille ?"
+subtitle: Dates et horaires, durée réelle, billets et accès au chapiteau près du Zénith de Strasbourg
+summary: Du 27 novembre au 13 décembre 2026, le Cirque de Noël d’Alsace propose des séances en journée et en soirée sous chapiteau à Eckbolsheim. Les horaires confirmés, le temps à prévoir sur place et les points à vérifier avec des enfants.
 category: evenements
 location:
   city: Eckbolsheim
@@ -68,20 +73,23 @@ location:
   region: Grand Est
 keywords:
   - Cirque de Noël d’Alsace 2026
-  - cirque Noël Strasbourg enfants
-  - cirque Zénith Eckbolsheim horaires billets
+  - cirque de Noël Strasbourg enfants horaires
+  - Cirque de Noël Eckbolsheim billets
+  - cirque parking Zénith Strasbourg tram
 sources:
-  - title: Cirque de Noël d’Alsace - dates, horaires et durée 2026
+  - title: Cirque de Noël d’Alsace — calendrier, durée et ouverture des portes 2026
     url: https://www.cirquedenoelalsace.com/dates-et-horaires
-  - title: Cirque de Noël d’Alsace - programme des artistes 2026
+  - title: Cirque de Noël d’Alsace — artistes et programme 2026
     url: https://www.cirquedenoelalsace.com/programme
-  - title: Zénith de Strasbourg - spectacle, séances et accès
+  - title: Zénith de Strasbourg — Cirque de Noël d’Alsace 2026, lieu et accès
     url: https://www.zenith-strasbourg.fr/evenement/cirque-de-noel-dalsace/
-  - title: Cirque de Noël d’Alsace - billetterie de l’organisateur
+  - title: Zénith de Strasbourg — tram et accès au site
+    url: https://www.zenith-strasbourg.fr/infos-pratiques/acces-parking/
+  - title: Cirque de Noël d’Alsace — billetterie Weezevent
     url: https://my.weezevent.com/cirque-de-noel-dalsace-strasbourg
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: cirque-de-noel-d-alsace-2026-a-eckbolsheim-quelle-seance-choisir-avec-des-enfants
   decision: Choisir une représentation en journée ou en soirée selon l’âge et le rythme des enfants, prévoir le temps total sur place et le trajet, puis vérifier le tarif et les places pour la séance souhaitée.
@@ -91,43 +99,67 @@ radar:
     dataThrough: 2026-10-29
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Cirque de Noël d’Alsace - dates, horaires et durée 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-13
 ---
 
-## Mission retenue
-Préparer la visite au Cirque de Noël d’Alsace 2026, sous chapiteau sur le parking du Zénith à Eckbolsheim, et non dans la salle du Zénith.
+Le **Cirque de Noël d’Alsace** revient du **27 novembre au 13 décembre 2026**, sous un chapiteau installé **sur le parking du Zénith de Strasbourg, à Eckbolsheim**. Il ne se déroule pas dans la salle du Zénith. Avec des enfants, le choix dépend surtout de l'heure de fin : le spectacle dure près de deux heures, sans compter l'arrivée et le trajet.
 
-## Pourquoi cette mission
-Opportunité datée, distincte des marchés de Noël de Strasbourg déjà couverts et documentée par l’organisateur. Le meilleur refresh GSC, Futuroween, se termine le 1er novembre et son article est déjà complet ; la baisse d’impressions saisonnière ne justifie pas une réécriture. L’expansion envisagée autour de la Cité des sciences recoupe des pages existantes et n’offre pas ici de décision nouvelle aussi nette.
+## Quelle séance choisir selon le rythme des enfants ?
 
-## Décision du lecteur
-Retenir une séance adaptée au rythme des enfants, savoir quand arriver et comment rejoindre le chapiteau, puis acheter les bonnes places sans confondre l’événement avec les spectacles à l’intérieur du Zénith.
+Le [calendrier de l'organisateur](https://www.cirquedenoelalsace.com/dates-et-horaires) annonce les représentations suivantes :
 
-## Faits à traiter
-Du 27 novembre au 13 décembre 2026, séances de 11 h, 14 h, 14 h 30, 16 h 30, 17 h ou 19 h 30 selon le jour : reproduire uniquement les horaires du calendrier officiel. Spectacle sans animaux ; artistes et numéros présentés sur le programme officiel. L’organisateur annonce 1 h 40 de spectacle et 15 minutes d’entracte ; portes ouvertes 45 minutes avant. Accès tram A « Parc des Sports » et chemin piéton vers le Zénith ; grand parking gratuit annoncé. Vérifier sur la billetterie les tarifs par âge, catégories, disponibilités et éventuelles conditions pour les très jeunes enfants ; ne pas inventer de prix ni d’âge minimum. Pour poussette, toilettes, table à langer et accessibilité du chapiteau, signaler les points non documentés au lieu de supposer les services du Zénith applicables au chapiteau.
+- **Vendredis 27 novembre, 4 et 11 décembre :** 19 h 30 uniquement.
+- **Samedi 28 novembre et samedi 12 décembre :** 14 h, 17 h et 19 h 30.
+- **Samedi 5 décembre :** 14 h, 16 h 30 et 19 h 30.
+- **Dimanches 29 novembre, 6 et 13 décembre :** 11 h, 14 h et 16 h 30.
+- **Mercredi 9 décembre :** 14 h 30 et 17 h.
 
-## Sources de départ
-Pages officielles de l’organisateur et du Zénith indiquées dans le frontmatter ; la billetterie Weezevent sert à contrôler les places et les prix, pas à établir le programme.
+Pour des enfants qui fatiguent en soirée, les séances de **11 h, 14 h ou 14 h 30** sont les plus simples à organiser. Celle de 11 h permet de sortir vers 12 h 55, avant le déjeuner. Une séance de **19 h 30** se termine vers **21 h 25** : mieux vaut la réserver aux enfants à l'aise avec une sortie tardive, surtout s'il reste un trajet pour rentrer.
 
-## Affiliation
-L’action principale est le billet de cirque, sans partenaire de billetterie confirmé. En complément seulement pour un séjour, proposer la chambre familiale de quatre personnes du Brit Hotel Le Lodge via Expedia.fr, sans annoncer de disponibilité ni de tarif pour une date non sélectionnée.
+Ces heures de sortie sont indicatives, calculées à partir de la durée annoncée. Elles n'incluent pas le temps pour quitter le chapiteau et rejoindre le tram ou la voiture.
 
-## Continuations internes
-L’article [Marché de Noël de Strasbourg 2026 en famille](/articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/) prend le relais si la famille veut visiter les chalets du centre : ne pas réécrire son parcours, ses horaires et ses conseils d’affluence.
+## Combien de temps prévoir et que voit-on sur scène ?
+
+L'organisateur annonce **1 h 40 de spectacle et 15 minutes d'entracte**, soit **1 h 55 au total**. Les portes ouvrent **45 minutes avant** chaque représentation. Il est donc possible de s'installer sans arriver à la dernière minute, mais avec de jeunes enfants, inutile de prolonger excessivement l'attente si ce n'est pas nécessaire.
+
+Le spectacle est **sans animaux**. Le [programme 2026](https://www.cirquedenoelalsace.com/programme) présente notamment la jongleuse Kelly Joo, le duo d'acrobates Paschenko, la spécialiste de la sphère aérienne Nicole Tucci et le clown Tortelini. Le Zénith annonce également un espace gourmand avec des spécialités alsaciennes, mais ne publie pas de tarifs pour les consommations.
+
+## Billets : que vérifier avant de payer ?
+
+La [billetterie de l'organisateur sur Weezevent](https://my.weezevent.com/cirque-de-noel-dalsace-strasbourg) permet d'accéder à la réservation. Avant de valider, sélectionnez **la date et l'heure exactes**, puis vérifiez le prix total, les catégories de places, les éventuels tarifs enfants et les conditions applicables aux tout-petits.
+
+Les tarifs détaillés par âge et par catégorie, les disponibilités séance par séance et un éventuel âge minimum ne sont pas confirmables dans les informations publiques consultables : il serait trompeur de donner un budget précis pour une famille. Pour un bébé ou un enfant très jeune, demandez également si une place ou un billet spécifique est nécessaire.
+
+## Où se trouve le chapiteau et comment y venir ?
+
+L'adresse de référence est **1 allée du Zénith, 67201 Eckbolsheim**, mais l'entrée à chercher est celle du **chapiteau sur le parking**, et non celle de la salle de concerts.
+
+- **En tram :** ligne **A**, arrêt **Parc des Sports**, puis chemin piéton vers le Zénith. Le site du Zénith indique environ **10 minutes de marche** jusqu'à son enceinte ; prévoyez davantage si les enfants marchent lentement et pour repérer le chapiteau.
+- **En voiture :** l'annonce du cirque précise qu'un **grand parking gratuit** est disponible. Les sorties peuvent prendre du temps après une séance fréquentée.
+
+Le [plan d'accès officiel du Zénith](https://www.zenith-strasbourg.fr/infos-pratiques/acces-parking/) aide à préparer le trajet. Ses indications sur les portes et les équipements **de la salle** ne doivent toutefois pas être confondues avec celles du chapiteau temporaire.
+
+**Poussette, sanitaires, table à langer et accessibilité :** les pages officielles consultées ne précisent pas si la poussette peut entrer dans le chapiteau, où elle doit être déposée, ni si des toilettes adaptées, une table à langer ou un cheminement accessible sont prévus pour cet événement. Si l'un de ces points est indispensable, contactez l'organisateur avant de réserver plutôt que de compter sur les installations habituelles du Zénith.
+
+## Prolonger la sortie par une nuit à Strasbourg
+
+Pour les familles venant de loin, le **Brit Hotel Le Lodge**, à Strasbourg, propose une **chambre familiale pour quatre personnes** et se trouve à environ **1,2 km du Zénith**. Vous pouvez [consulter la chambre familiale du Brit Hotel Le Lodge sur Expedia.fr](https://www.expedia.fr/Strasbourg-Hotel-Brit-Hotel-Lodge.h15044191.Description-Hotel) en renseignant vos dates et l'âge des enfants. La capacité de quatre personnes est indiquée, mais ni le prix ni la disponibilité aux dates du cirque ne sont garantis sans recherche datée.
+
+Si vous souhaitez aussi découvrir les chalets du centre-ville, notre guide du [marché de Noël de Strasbourg 2026 avec des enfants](/articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/) aide à choisir une promenade adaptée sans transformer la journée du cirque en marathon.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
+- /articles/vie-pratique/parking-relais-a-strasbourg-en-famille-comment-choisir-son-p-r-et-son-forfait/ | Parking-relais à Strasbourg en famille: comment choisir son P+R et son forfait | vie-pratique | Strasbourg, Bas-Rhin, Grand Est
 - /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
 - /articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/ | Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants | evenements | Le Mans, Sarthe, Pays de la Loire
 - /articles/activites/le-vaisseau-a-strasbourg-quel-billet-choisir-pour-une-sortie-avec-des-enfants/ | Le Vaisseau à Strasbourg: quel billet choisir pour une sortie avec des enfants | activites | Strasbourg, Bas-Rhin, Grand Est
-- /articles/vie-pratique/parking-relais-a-strasbourg-en-famille-comment-choisir-son-p-r-et-son-forfait/ | Parking-relais à Strasbourg en famille: comment choisir son P+R et son forfait | vie-pratique | Strasbourg, Bas-Rhin, Grand Est
-- /articles/evenements/course-des-chateaux-d-ottrott-2026-quelles-epreuves-choisir-pour-les-enfants/ | Course des Châteaux d'Ottrott 2026: quelles épreuves choisir pour les enfants? | evenements | Ottrott, Bas-Rhin, Grand Est
 - /articles/bons-plans/pass-strasbourg-et-nord-alsace-en-famille-quand-est-il-vraiment-rentable/ | Pass Strasbourg et Nord Alsace en famille: quand est-il vraiment rentable? | bons-plans | Strasbourg, Bas-Rhin, Grand Est
-- /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | Marché de Noël d'Avignon 2026 en famille: horaires et accès | evenements | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
-- /articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/ | Noël 2026 à Toulon en famille: marché, patinoire et horaires | evenements | Toulon, Var, Provence-Alpes-Côte d’Azur
-- /articles/cuisine/maison-du-pain-a-selestat-decouvrir-la-boulangerie-en-famille/ | Maison du Pain à Sélestat: découvrir la boulangerie en famille | cuisine | Sélestat, Bas-Rhin, Grand Est
+- /articles/evenements/course-des-chateaux-d-ottrott-2026-quelles-epreuves-choisir-pour-les-enfants/ | Course des Châteaux d'Ottrott 2026: quelles épreuves choisir pour les enfants? | evenements | Ottrott, Bas-Rhin, Grand Est
 - /articles/maison/renover-sa-maison-dans-l-eurometropole-de-strasbourg-aides-et-demarches-2026/ | Rénover sa maison dans l’Eurométropole de Strasbourg: aides et démarches 2026 | maison | Strasbourg, Bas-Rhin, Grand Est
+- /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
+- /articles/cuisine/maison-du-pain-a-selestat-decouvrir-la-boulangerie-en-famille/ | Maison du Pain à Sélestat: découvrir la boulangerie en famille | cuisine | Sélestat, Bas-Rhin, Grand Est
 - /articles/voyages/wissembourg-sans-voiture-avec-des-enfants-que-faire-a-pied-sur-une-journee/ | Wissembourg sans voiture avec des enfants: que faire à pied sur une journée? | voyages | Wissembourg, Bas-Rhin, Grand Est
 - /articles/sorties/chateau-du-haut-koenigsbourg-en-famille-tarifs-2026-et-conseils-de-visite/ | Château du Haut-Koenigsbourg en famille: tarifs 2026 et conseils de visite | sorties | Orschwiller, Bas-Rhin, Grand Est
 - /articles/activites/arachnima-strasbourg-famille-2026/ | Arachnima 2026 à Strasbourg: dernier week-end gratuit au square Hasek | activites | Strasbourg, Bas-Rhin, Grand Est
@@ -136,6 +168,7 @@ L’article [Marché de Noël de Strasbourg 2026 en famille](/articles/evenement
 - /articles/evenements/noel-2026-a-cannes-en-famille-marche-du-centre-ou-village-du-palm-beach/ | Noël 2026 à Cannes en famille: marché du centre et Palm Beach | evenements | Cannes, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
 - /articles/evenements/les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille/ | Luminéales du Thabor 2026 à Rennes: tarifs, horaires et visite en famille | evenements | Rennes, Ille-et-Vilaine, Bretagne
 - /articles/evenements/tous-en-sons-2026-a-marseille-quel-spectacle-choisir-selon-l-age-des-enfants/ | Tous en Sons ! 2026 à Marseille: spectacles enfants, âges et tarifs | evenements | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d’Azur
+- /articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/ | Noël 2026 à Toulon en famille: marché, patinoire et horaires | evenements | Toulon, Var, Provence-Alpes-Côte d’Azur
 - /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | Noël à Caen 2026 en famille: marché de Noël et visite illuminée | evenements | Caen, Calvados, Normandie
 - /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | Noël à Chartres 2026 en famille: marché et illuminations | evenements | Chartres, Eure-et-Loir, Centre-Val de Loire
 - /articles/evenements/noel-a-bayeux-2026-en-famille-marche-ou-galopades/ | Noël à Bayeux 2026 en famille: marché et Galopades | evenements | Bayeux, Calvados, Normandie
@@ -144,7 +177,7 @@ L’article [Marché de Noël de Strasbourg 2026 en famille](/articles/evenement
 ### Historique Radar lié
 
 - opportunity | /articles/evenements/les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille/ | 2026-10-31T19:33:18.323Z
-- opportunity | /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | 2026-10-28T15:29:23.387Z
+- opportunity | /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | 2026-10-29T00:28:19.695Z
 - opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
 - opportunity | /articles/evenements/noel-2026-a-cannes-en-famille-marche-du-centre-ou-village-du-palm-beach/ | 2026-10-31T22:36:58.800Z
 - opportunity | /articles/evenements/noel-2026-a-paris-la-defense-en-famille-marche-animations-ou-patinoire/ | 2026-11-01T01:35:08.448Z
