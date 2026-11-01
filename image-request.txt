@@ -297,3 +297,4 @@ automation/image-20261101-0047-gironde-rennes-cannes-laon-efd863b|efd863b80c7a1e
 automation/image-20261101-0047-gironde-rennes-cannes-laon-efd863b|4821a552251d26cce2bfade45409b91c190638ba
 automation/image-20261101-0640-hs-amneville-defense-ocean-149c50b|e04c567e9c34166a1ffedc36a0eeb187b85a8a84
 automation/image-20261101-0640-hs-amneville-defense-ocean-149c50b|2d53586ce467f50acd8762ef675d3121f76cefc5
+automation/image-20261101-1244-kayak-cuisine-noel-002d001|7b0a888b9b3d712b7e1478e88f2d5628d14351b9
