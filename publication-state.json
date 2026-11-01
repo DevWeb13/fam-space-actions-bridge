@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261101-2101-sujet-une-sortie-scientifique-en-famille-au-forum-departemental-des-sc",
+  "lastProcessedCommit": "dde33565c8e864f8fd84cd04c4eb5cbe694052af"
 }
