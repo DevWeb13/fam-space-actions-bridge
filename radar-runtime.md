@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Saint-Nicolas 2026 à Épinal en famille : défilé du 5 décembre ou marché de Noël ?"
-subtitle: "Cortège, feu d'artifice et marché : choisir le bon jour avec des enfants"
-summary: "Le 5 décembre, Épinal prévoit le grand cortège de Saint-Nicolas et son feu d'artifice. Le marché de Noël se prolonge du 27 novembre au 1er janvier : les repères pour choisir sa sortie."
+title: "Saint-Nicolas 2026 à Épinal en famille : défilé, marché et horaires"
+subtitle: Le 5 décembre pour les chars et le feu d'artifice, ou une visite plus tranquille du marché de Noël
+summary: "À Épinal, le cortège de Saint-Nicolas est annoncé le samedi 5 décembre 2026, avec spectacle à 17 h 30, départ à 18 h et feu d'artifice vers 20 h. Le marché de Noël reste ouvert du 27 novembre au 1er janvier : comment choisir avec des enfants ?"
 category: evenements
 location:
   city: Épinal
@@ -77,7 +82,7 @@ sources:
     url: https://www.epinal.fr/actualites/marche-de-noel-chalet-disponible-pour-les-commercants/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: saint-nicolas-2026-a-epinal-en-famille-defile-du-5-decembre-ou-marche-de-noel
   decision: Choisir entre la soirée du 5 décembre pour le cortège et le feu d'artifice, et une visite plus courte du marché à une autre date, en connaissant les horaires et contraintes avec des enfants.
@@ -87,44 +92,53 @@ radar:
     dataThrough: 2026-10-29
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Épinal Tourisme - Cortège de Saint-Nicolas 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2027-01-01
 ---
 
-## Mission retenue
-Préparer une sortie familiale aux fêtes de Saint-Nicolas 2026 à Épinal : le grand cortège du samedi 5 décembre ou le marché de Noël ouvert plusieurs semaines.
+Pour les fêtes de Saint-Nicolas 2026 à Épinal, deux sorties assez différentes sont possibles. Le **samedi 5 décembre** concentre le grand défilé, les chars et le feu d'artifice : c'est la soirée à choisir pour vivre le cortège, mais elle suppose de rester dehors et de gérer la foule. Le **marché de Noël, du 27 novembre 2026 au 1er janvier 2027 inclus**, permet une promenade plus souple dans le centre historique, notamment avec de jeunes enfants.
 
-## Pourquoi cette mission
-Opportunité locale imminente et distincte, confirmée par l'office de tourisme et la Ville. Aucun doublon épinalien dans le catalogue compact (l'article « Mer en vue ! » traite une autre visite). Le refresh Futuroween perd naturellement sa pertinence après Halloween ; Lumigny est déjà détaillé et son signal GSC reste incertain. L'expansion issue des transports parisiens, page forte, recoupe plusieurs guides récents.
+## Samedi 5 décembre : trois rendez-vous en soirée
 
-## Décision du lecteur
-Savoir s'il vaut mieux venir le 5 décembre pour voir Saint-Nicolas et les chars en soirée, ou choisir un autre jour pour profiter simplement du marché avec de jeunes enfants.
+Selon l'[agenda d'Épinal Tourisme](https://www.tourisme-epinal.com/sejourner/agenda/cortege-de-saint-nicolas-6217331), le programme annoncé est le suivant :
 
-## Faits à traiter
-- Marché de Noël du 27 novembre 2026 au 1er janvier 2027 inclus, centre historique ; animations gratuites les week-ends, sans inventer un programme détaillé non encore confirmé.
-- Samedi 5 décembre : spectacle annoncé à 17 h 30 devant la basilique Saint-Maurice, départ du cortège à 18 h place des Vieux-Moulins, feu d'artifice annoncé vers 20 h au pont Sadi-Carnot.
-- L'office de tourisme avertit que les horaires ne sont pas garantis : les revérifier, ainsi que le parcours, les accès, les fermetures de rues et les conditions pour les poussettes avant la rédaction définitive. Ne pas reprendre des horaires de marché issus de sites non officiels.
+- **17 h 30 :** spectacle « La légende de Saint-Nicolas », par les Compagnons d'Eleusis, devant le beffroi de la basilique Saint-Maurice.
+- **18 h :** départ du cortège **place des Vieux-Moulins**, avec une soixantaine de chars et d'ensembles musicaux annoncés.
+- **Vers 20 h :** disparition de Saint-Nicolas et **feu d'artifice au pont Sadi-Carnot**.
 
-## Sources de départ
-Ville d'Épinal (27 octobre 2026) et Épinal Tourisme (fiche 2026 du cortège), URLs ci-dessus.
+Ces horaires sont **signalés comme non garantis par l'office de tourisme**. Le parcours définitif et les mesures de circulation de l'édition 2026 doivent également être revérifiés avant de choisir un point d'observation. Les trois lieux cités correspondent à des moments différents : ne comptez pas voir le départ et le final depuis une seule place sans vous déplacer.
 
-## Affiliation
-Aucun billet à vendre pour l'action principale. Pour les familles restant dormir, suite familiale pour quatre personnes au Mercure Épinal Centre vérifiée sur Expedia.fr ; ne pas annoncer de disponibilité ni de prix pour le 5 décembre sans vérification.
+Avec des enfants qui souhaitent surtout voir passer les chars, mieux vaut choisir à l'avance un emplacement sur le parcours confirmé plutôt que de vouloir suivre tout le cortège. Pour un bébé ou un enfant sensible au bruit, anticipez les fanfares, la foule et les détonations du feu d'artifice. Une poussette peut devenir difficile à manœuvrer dans les zones très fréquentées ; aucun dispositif particulier pour les poussettes ou espace de change n'est confirmé dans le programme consulté.
 
-## Continuations internes
-- La page Fam Space sur les fêtes de Saint-Nicolas à Nancy concerne une autre ville : ne pas dupliquer ses explications générales.
-- Ne proposer « Mer en vue ! » à Épinal comme repli en intérieur que si les dates de l'exposition couvrent effectivement le séjour.
+## Le marché de Noël : une sortie plus courte, à une autre date
+
+La [Ville d'Épinal](https://www.epinal.fr/actualites/marche-de-noel-chalet-disponible-pour-les-commercants/) confirme un marché de Noël **du vendredi 27 novembre 2026 au vendredi 1er janvier 2027 inclus**, dans le **centre historique**. Des **animations gratuites sont annoncées les week-ends**, sans programme détaillé permettant encore de promettre une activité précise à une date donnée.
+
+C'est une option plus simple si vous voulez découvrir les chalets à votre rythme, faire une pause quand les enfants fatiguent ou éviter la longue soirée du 5 décembre. Prévoyez un budget pour les achats et les consommations éventuels, mais n'achetez pas de billet pour une animation dont la nécessité de réservation n'est pas annoncée. Les **horaires quotidiens des chalets** et les conditions particulières des 25 décembre et 1er janvier ne sont pas confirmés par la communication municipale consultée : vérifiez-les avant de partir, surtout si vous venez de loin.
+
+## Accès et retour : ce qu'il faut vérifier
+
+Le 5 décembre, privilégiez un trajet qui vous permette de rejoindre le centre **sans dépendre d'une rue ou d'un parking susceptible d'être fermé**. Les arrêtés de circulation, les éventuelles déviations de bus et les horaires de retour propres à **2026** ne sont pas encore établis dans les deux annonces officielles consultées. Ne reprenez pas automatiquement les restrictions ni les navettes d'une édition précédente.
+
+Si vous venez en train, préparez le trajet entre la gare, votre lieu d'observation et le retour, surtout après le feu d'artifice. Avec un jeune enfant, prévoyez des vêtements chauds, une solution pour patienter et la possibilité de rentrer avant 20 h si la soirée devient trop longue. Pour une visite du marché à une autre date, consultez simplement les heures d'ouverture actualisées et les accès au centre.
+
+## Dormir à Épinal pour profiter du week-end
+
+Pour une famille qui souhaite rester la nuit après le cortège, le [Mercure Épinal Centre sur Expedia.fr](https://www.expedia.fr/Epinal-Hotel-Mercure-Epinal-Centre.h11641.Description-Hotel) propose notamment une **suite familiale pour quatre personnes**, avec **un lit double et deux lits simples**. L'établissement se trouve au **13 place Émile-Stein**, dans le centre-ville. Vérifiez les disponibilités, le tarif total et les conditions d'annulation pour les dates réellement choisies : aucune disponibilité particulière pour le 5 décembre n'est garantie ici.
+
+Si vous hésitez entre plusieurs villes lorraines pour cette fête, notre guide des [Fêtes de Saint-Nicolas 2026 à Nancy en famille](https://www.fam-space.fr/articles/evenements/fetes-de-saint-nicolas-2026-a-nancy-en-famille-defile-dates-et-visite/) détaille l'autre grand rendez-vous du 5 décembre, avec ses propres villages et animations.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
-- /articles/evenements/fetes-de-saint-nicolas-2026-a-nancy-en-famille-defile-dates-et-visite/ | Fêtes de Saint-Nicolas 2026 à Nancy en famille: défilé, villages et animations | evenements | Nancy, Meurthe-et-Moselle, Grand Est
-- /articles/evenements/saint-nicolas-2026-a-carcassonne-marche-aux-flambeaux-ou-campements-medievaux-avec-les-enfants/ | Saint-Nicolas 2026 à Carcassonne: campements médiévaux et marche aux flambeaux en famille | evenements | Carcassonne, Aude, Occitanie
-- /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | Noël à Caen 2026 en famille: marché de Noël et visite illuminée | evenements | Caen, Calvados, Normandie
-- /articles/evenements/mer-en-vue-a-epinal-en-famille-preparer-la-visite/ | Mer en vue ! à Épinal en famille: préparer la visite | evenements | Épinal, Vosges, Grand Est
 - /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | Noël 2026 à Brest en famille: marché, projections et horaires | evenements | Brest, Finistère, Bretagne
 - /articles/evenements/marche-de-noel-de-saint-etienne-2026-en-famille-dates-horaires-et-acces/ | Marché de Noël de Saint-Étienne 2026 en famille: dates, horaires et accès | evenements | Saint-Étienne, Loire, Auvergne-Rhône-Alpes
-- /articles/evenements/noel-d-autrefois-2026-au-musee-de-plein-air-quel-jour-venir-en-famille/ | Noël d’autrefois 2026 à Villeneuve-d’Ascq: dates, ateliers et accès en famille | evenements | Villeneuve-d'Ascq, Nord, Hauts-de-France
-- /articles/evenements/noel-a-bayeux-2026-en-famille-marche-ou-galopades/ | Noël à Bayeux 2026 en famille: marché et Galopades | evenements | Bayeux, Calvados, Normandie
+- /articles/evenements/fetes-de-saint-nicolas-2026-a-nancy-en-famille-defile-dates-et-visite/ | Fêtes de Saint-Nicolas 2026 à Nancy en famille: défilé, villages et animations | evenements | Nancy, Meurthe-et-Moselle, Grand Est
+- /articles/evenements/saint-nicolas-2026-a-carcassonne-marche-aux-flambeaux-ou-campements-medievaux-avec-les-enfants/ | Saint-Nicolas 2026 à Carcassonne: campements médiévaux et marche aux flambeaux en famille | evenements | Carcassonne, Aude, Occitanie
+- /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
+- /articles/evenements/mer-en-vue-a-epinal-en-famille-preparer-la-visite/ | Mer en vue ! à Épinal en famille: préparer la visite | evenements | Épinal, Vosges, Grand Est
+- /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | Noël à Caen 2026 en famille: marché de Noël et visite illuminée | evenements | Caen, Calvados, Normandie
+- /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | Marché de Noël d'Amiens 2026 en famille: horaires, Père Noël et patinoire | evenements | Amiens, Somme, Hauts-de-France
 - /articles/voyages/gerardmer-ou-la-bresse-ou-poser-ses-valises-avec-des-enfants-dans-les-vosges/ | Gérardmer ou La Bresse: où poser ses valises avec des enfants dans les Vosges? | voyages | Gérardmer, Vosges, Grand Est
 - /articles/sorties/fraispertuis-city-en-famille-tarifs-2026-tailles-et-conseils-de-visite/ | Fraispertuis City en famille: tarifs 2026, tailles et conseils de visite | sorties | Jeanménil, Vosges, Grand Est
 - /articles/evenements/planete-ocean-a-paris-preparer-la-visite-en-famille/ | Planète Océan à Paris: préparer la visite en famille | evenements | Paris, Paris, Île-de-France
@@ -134,24 +148,24 @@ Aucun billet à vendre pour l'action principale. Pour les familles restant dormi
 - /articles/evenements/tous-en-sons-2026-a-marseille-quel-spectacle-choisir-selon-l-age-des-enfants/ | Tous en Sons ! 2026 à Marseille: spectacles enfants, âges et tarifs | evenements | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d’Azur
 - /articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/ | Noël 2026 à Toulon en famille: marché, patinoire et horaires | evenements | Toulon, Var, Provence-Alpes-Côte d’Azur
 - /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | Noël à Chartres 2026 en famille: marché et illuminations | evenements | Chartres, Eure-et-Loir, Centre-Val de Loire
+- /articles/evenements/noel-a-bayeux-2026-en-famille-marche-ou-galopades/ | Noël à Bayeux 2026 en famille: marché et Galopades | evenements | Bayeux, Calvados, Normandie
 - /articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/ | Soleils d'hiver 2026 à Angers en famille: marché, manèges et Père Noël | evenements | Angers, Maine-et-Loire, Pays de la Loire
 - /articles/evenements/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere/ | Lumières de Laval 2026 en famille: marchés, grande roue et croisière | evenements | Laval, Mayenne, Pays de la Loire
 - /articles/evenements/festival-des-petits-explorateurs-2026-a-dijon-quels-ateliers-choisir-en-famille/ | Festival des Petits Explorateurs 2026 à Dijon: ateliers, horaires et tarifs | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
 - /articles/evenements/flottins-d-evian-2026-un-village-de-noel-en-bois-flotte-a-decouvrir-en-famille/ | Flottins d’Évian 2026: un village de Noël en bois flotté à découvrir en famille | evenements | Évian-les-Bains, Haute-Savoie, Auvergne-Rhône-Alpes
-- /articles/evenements/festival-bd-colomiers-2026-en-famille-quel-jour-choisir-et-combien-prevoir/ | Festival BD Colomiers 2026 en famille: programme, tarifs et accès | evenements | Colomiers, Haute-Garonne, Occitanie
 
 ### Historique Radar lié
 
-- opportunity | /articles/evenements/festival-bd-colomiers-2026-en-famille-quel-jour-choisir-et-combien-prevoir/ | 2026-10-29T23:28:55.064Z
 - opportunity | /articles/evenements/festival-des-petits-explorateurs-2026-a-dijon-quels-ateliers-choisir-en-famille/ | 2026-10-30T03:27:02.483Z
 - opportunity | /articles/evenements/fetes-de-saint-nicolas-2026-a-nancy-en-famille-defile-dates-et-visite/ | 2026-10-19T16:47:56.278Z
 - opportunity | /articles/evenements/les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille/ | 2026-10-31T19:33:18.323Z
 - opportunity | /articles/evenements/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere/ | 2026-10-30T09:27:15.122Z
+- opportunity | /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | 2026-10-19T13:54:07.745Z
+- opportunity | /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | 2026-10-29T00:28:19.695Z
 - opportunity | /articles/evenements/marche-de-noel-de-saint-etienne-2026-en-famille-dates-horaires-et-acces/ | 2026-10-28T18:37:09.008Z
 - opportunity | /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | 2026-10-30T06:28:26.726Z
 - opportunity | /articles/evenements/noel-2026-a-cannes-en-famille-marche-du-centre-ou-village-du-palm-beach/ | 2026-10-31T22:36:58.800Z
 - opportunity | /articles/evenements/noel-2026-a-paris-la-defense-en-famille-marche-animations-ou-patinoire/ | 2026-11-01T01:35:08.448Z
-- opportunity | /articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/ | 2026-10-31T10:28:17.432Z
 
 ### Phases 2 et 3
 
