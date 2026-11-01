@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Noël 2026 à Chambéry en famille : marché, village ou Fabrique de Noël ?"
-subtitle: Choisir entre les chalets, les animations du Palais de Justice et les ateliers du 12 décembre
-summary: "À Chambéry, comparez les deux espaces de Noël ouverts du 27 novembre au 3 janvier et le marché artisanal du 12 décembre : horaires, activités pour enfants, coûts et accès."
+title: "Noël 2026 à Chambéry en famille : marché, village ou ateliers créatifs ?"
+subtitle: "Chalets et Père Noël, pause gourmande ou Fabrique de Noël le 12 décembre : comment choisir"
+summary: "Du 27 novembre 2026 au 3 janvier 2027, Chambéry propose deux espaces de Noël en centre-ville. Le 12 décembre, Rubanox accueille aussi un marché artisanal et des ateliers sur inscription : lieux, horaires, budget et conseils avec enfants."
 category: evenements
 location:
   city: Chambéry
@@ -74,15 +79,19 @@ keywords:
 sources:
   - title: Ville de Chambéry — Marché et village de Noël 2026
     url: https://www.chambery.fr/actualite/1695/9-le-marche-de-noel-revient-a-chambery-du-27-novembre-au-3-janvier.htm
+  - title: Ville de Chambéry — Noël 2026 et programmation à venir
+    url: https://www.chambery.fr/493-noel.htm
   - title: Ville de Chambéry — Marché artisanal et Fabrique de Noël du 12 décembre
     url: https://www.chambery.fr/agenda/3638/316-marche-de-noel-artisanal-fabrique-de-noel.htm
-  - title: Ville de Chambéry — Programme de Noël 2026, encore en préparation
-    url: https://www.chambery.fr/493-noel.htm
   - title: Ville de Chambéry — Stationnement en centre-ville
     url: https://www.chambery.fr/390-je-viens-en-centre-ville-en-voiture.htm
+  - title: Ville de Chambéry — Toilettes publiques et carte
+    url: https://www.chambery.fr/307-proprete-et-entretien-de-la-ville.htm
+  - title: Kyriad Chambéry Centre - Curial — Chambres et services
+    url: https://chambery-centre-curial.kyriad.com/fr-fr/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel
   decision: "Choisir la sortie de Noël la plus adaptée à l'âge des enfants, au budget et à la date : chalets et Père Noël, village gourmand et concerts, ou ateliers créatifs le 12 décembre."
@@ -92,33 +101,60 @@ radar:
     dataThrough: 2026-10-29
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Ville de Chambéry — Marché et village de Noël 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2027-01-03
 ---
 
-## Mission retenue
-Comparer trois expériences de Noël à Chambéry, sans transformer la page en guide général de la ville.
+À Chambéry, les familles peuvent choisir entre trois sorties de Noël assez différentes : flâner parmi les chalets et chercher la Maison du Père Noël, s'installer au village gourmand avec ses animations, ou consacrer le samedi 12 décembre à l'artisanat et à un atelier créatif. Les deux premiers lieux ouvrent du **27 novembre 2026 au 3 janvier 2027** ; le troisième ne dure qu'une journée. Voici comment choisir sans prévoir plus de déplacements ni de dépenses que nécessaire.
 
-## Pourquoi cette mission
-Les dates et les deux lieux principaux sont publiés par la Ville, ainsi qu'un rendez-vous artisanal distinct le 12 décembre. Aucun article Noël à Chambéry ni mission concurrente locale n'apparaît dans le catalogue et l'historique fournis ; le guide de week-end existant traite les visites permanentes. Le refresh Futuroween concerne une saison terminée ; Lumigny est déjà complet et son signal GSC « uncertain » ne justifie pas de modification. Les expansions de la page forte « transports à Paris » croisent des articles existants sur les titres, Navigo Liberté et les trajets : priorité à cette occasion datée.
+## Le marché boulevard de la Colonne : pour les chalets et le Père Noël
 
-## Décision du lecteur
-Aider une famille à choisir le bon lieu et le bon jour, en distinguant la promenade parmi les chalets, une pause avec animations et restauration, et une activité créative à réserver.
+Entre la place du Centenaire et la place des Éléphants, **37 chalets en bois** mettent à l'honneur les produits locaux et les savoir-faire dans une ambiance alpine. La Ville annonce aussi une **Maison du Père Noël** et un espace pour les familles et les enfants.
 
-## Faits à traiter
-- Marché boulevard de la Colonne / place des Éléphants : 37 chalets, Maison du Père Noël, du 27 novembre 2026 au 3 janvier 2027, 11 h–21 h tous les jours, jusqu'à 22 h vendredi et samedi.
-- Village place du Palais de Justice–Robert Badinter : restauration, concerts, Maison du pain d'épices, mêmes dates, 11 h–21 h, jusqu'à 23 h vendredi et samedi.
-- Fabrique de Noël à Rubanox, 235 avenue Alsace-Lorraine : samedi 12 décembre, 10 h–18 h, 50 artisans, entrée au marché libre, ateliers créatifs payants sur inscription. Vérifier âges, prix et modalités avant de les annoncer.
-- Programme des parades et horaires du Père Noël non encore détaillés par la Ville : ne rien inventer. Vérifier accessibilité poussette, sanitaires, transport depuis la gare et parkings ; ne pas reprendre les gratuités de Noël 2025 comme si elles valaient pour 2026.
-- Événement saisonnier jusqu'au 3 janvier 2027.
+C'est le choix le plus simple pour une promenade avec de jeunes enfants : regarder les décorations, faire un tour des stands, puis repartir dès que la fatigue arrive. La présence de la Maison du Père Noël est annoncée, mais **ses horaires de rencontre et les éventuelles modalités d'accès ne sont pas encore publiés**. Ne promettez donc pas aux enfants une rencontre à heure fixe avant de consulter le [programme municipal de Noël](https://www.chambery.fr/493-noel.htm).
 
-## Sources de départ
-Les quatre pages municipales du frontmatter, en priorité les deux annonces datées de 2026.
+**Horaires :** tous les jours de 11 h à 21 h, jusqu'à 22 h les vendredis et samedis. Le marché se visite sans réservation annoncée ; prévoyez un budget uniquement pour les achats et consommations que vous choisirez. La [Ville confirme les dates, les 37 chalets et les horaires](https://www.chambery.fr/actualite/1695/9-le-marche-de-noel-revient-a-chambery-du-27-novembre-au-3-janvier.htm).
 
-## Affiliation
-Pour une famille venue en week-end, examiner le Kyriad Chambéry Centre - Curial sur Booking.com, avec une capacité familiale affichée jusqu'à quatre personnes ; vérifier les conditions réelles avant de conseiller l'offre. Aucune réservation partenaire nécessaire pour les marchés eux-mêmes.
+## Le village du Palais de Justice : pour manger et profiter des animations
 
-## Continuations internes
-- Le guide « Chambéry en famille : un week-end entre éléphants et sciences » (/articles/voyages/chambery-en-famille-un-week-end-entre-elephants-et-sciences/) prend le relais pour les musées, la vieille ville et les idées de visite hors Noël.
-- Le guide « Voyager en train avec des enfants » (/articles/voyages/voyager-train-enfants-ete-2026-conseils/) peut compléter les conseils de trajet si utile, sans répéter son contenu.
+Sur la **place du Palais de Justice–Robert Badinter**, le deuxième espace de Noël réunit **sept chalets**, un chapiteau consacré à la restauration et aux animations, des concerts et une **Maison du pain d'épices**. Il convient mieux aux familles qui veulent prolonger la sortie par une pause gourmande ou venir en début de soirée.
+
+**Horaires :** du 27 novembre au 3 janvier, de 11 h à 21 h tous les jours, et **jusqu'à 23 h les vendredis et samedis**. Attention à ne pas confondre cette fermeture tardive avec celle du marché du boulevard, qui ferme une heure plus tôt ces deux soirs.
+
+Les concerts et animations sont annoncés, mais leurs dates précises ne sont pas encore disponibles. Le programme des parades et les horaires des rencontres avec le Père Noël restent également à confirmer. Pour une sortie centrée sur un spectacle, attendez la publication des créneaux plutôt que de choisir une date au hasard.
+
+Les deux espaces étant dans le centre-ville, il est possible de les associer à une même promenade, sans chercher à tout voir.
+
+## Le 12 décembre à Rubanox : pour fabriquer plutôt qu'acheter
+
+Le **samedi 12 décembre 2026, de 10 h à 18 h**, le collectif Wom'Bat organise un marché de Noël artisanal à **Rubanox, 235 avenue Alsace-Lorraine**. Une cinquantaine d'artistes et d'artisans sont annoncés, avec une buvette et des foodtrucks.
+
+La **Fabrique de Noël** propose en parallèle des ateliers de macramé, poterie, marqueterie, aquarelle ou décoration de Noël. C'est une idée à privilégier si les enfants aiment créer un objet à rapporter, plutôt que simplement parcourir des stands.
+
+**L'entrée à l'événement et au marché est libre ; les ateliers sont payants et sur inscription.** La [fiche de la Ville consacrée à Rubanox](https://www.chambery.fr/agenda/3638/316-marche-de-noel-artisanal-fabrique-de-noel.htm) ne précise pas encore les prix, les âges minimums ni les créneaux de chaque atelier. Vérifiez ces trois points auprès de l'organisateur avant de promettre une activité à un enfant ; les places ne sont pas garanties sans réservation.
+
+Rubanox n'est pas sur la place des Éléphants : prévoyez cette visite comme une étape distincte, particulièrement avec une poussette ou des enfants fatigués.
+
+## Quel budget et quel moment choisir ?
+
+Pour **une sortie courte et souple**, choisissez les chalets du boulevard en journée. Pour **un repas et une ambiance de soirée**, privilégiez le village du Palais de Justice ; le prix dépendra des consommations. Pour **une activité manuelle**, réservez plutôt le 12 décembre, après confirmation du tarif et de l'âge accepté par l'atelier.
+
+Aucun prix fiable n'est publié pour les consommations du marché, et aucun tarif d'atelier détaillé n'est annoncé : il serait trompeur de donner un budget familial chiffré. Les horaires généraux sont publiés, mais vérifiez les éventuels aménagements des jours fériés, notamment les 24 et 25 décembre et le 1er janvier, avant de partir.
+
+## Venir avec une poussette, en train ou en voiture
+
+Le marché et le village se trouvent dans le **centre-ville largement piéton**. Une poussette peut être pratique pour relier les deux lieux, mais les pavés du centre ancien peuvent être irréguliers et la foule ralentir les déplacements. L'accessibilité précise des installations temporaires, notamment du chapiteau, et celle des ateliers de Rubanox ne sont pas confirmées dans les annonces consultées.
+
+La gare de **Chambéry–Challes-les-Eaux** permet de rejoindre le centre à pied ; comptez une quinzaine de minutes à titre indicatif, davantage avec de jeunes enfants et des bagages. Le centre est également desservi par les bus urbains. Pour préparer un trajet ferroviaire avec une poussette, consultez nos [conseils pour voyager en train avec des enfants](/articles/voyages/voyager-train-enfants-ete-2026-conseils/), en revérifiant les conditions du transporteur pour votre voyage.
+
+En voiture, les parkings **Ravet, Château et Curial** permettent d'éviter de chercher une place dans les rues piétonnes. La Ville indique actuellement la gratuité **le samedi de 14 h à 19 h** dans les parkings du Château et de la Falaise ; vérifiez les conditions à votre date sur la [page officielle du stationnement](https://www.chambery.fr/390-je-viens-en-centre-ville-en-voiture.htm).
+
+Pour les pauses avec un bébé, la Ville propose une [carte des toilettes publiques](https://www.chambery.fr/307-proprete-et-entretien-de-la-ville.htm). En revanche, les annonces de Noël ne confirment ni table à langer, ni espace bébé, ni sanitaires propres aux installations : anticipez une pause dans un établissement adapté si ces équipements vous sont indispensables.
+
+## Rester une nuit pour profiter de Chambéry
+
+Pour une famille qui vient de plus loin, le **Kyriad Chambéry Centre - Curial**, au **371 rue de la République**, propose des chambres familiales pouvant accueillir **jusqu'à quatre personnes** et une kitchenette, pratique pour un repas simple ou les besoins d'un jeune enfant. Vous pouvez [consulter les chambres du Kyriad Chambéry Centre - Curial sur Booking.com](https://www.booking.com/hotel/fr/kyriad-chambery-centre.fr.html) en indiquant vos dates, le nombre de voyageurs et l'âge des enfants. Vérifiez la disposition des lits, le tarif total et les conditions d'annulation avant de réserver : une chambre standard ne garantit pas quatre couchages.
+
+Si vous prolongez le séjour, notre guide [Chambéry en famille : un week-end entre éléphants et sciences](/articles/voyages/chambery-en-famille-un-week-end-entre-elephants-et-sciences/) propose des visites dans la vieille ville, à Eurêka et au Musée Savoisien, sans les confondre avec les animations temporaires de Noël.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -126,12 +162,12 @@ Pour une famille venue en week-end, examiner le Kyriad Chambéry Centre - Curial
 
 - /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | Marché de Noël d'Amiens 2026 en famille: horaires, Père Noël et patinoire | evenements | Amiens, Somme, Hauts-de-France
 - /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | Noël 2026 à Brest en famille: marché, projections et horaires | evenements | Brest, Finistère, Bretagne
+- /articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/ | Marché de Noël 100 % Côte-d’Or à Dijon 2026: horaires, spectacles et Père Noël | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
 - /articles/maison/emprunter-un-broyeur-a-grand-chambery-electrique-ou-thermique-que-choisir/ | Emprunter un broyeur à Grand Chambéry: électrique ou thermique, que choisir? | maison | Chambéry, Savoie, Auvergne-Rhône-Alpes
 - /articles/voyages/chambery-en-famille-un-week-end-entre-elephants-et-sciences/ | Chambéry en famille: un week-end entre éléphants et sciences | voyages | Chambéry, Savoie, Auvergne-Rhône-Alpes
-- /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
-- /articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/ | Noël 2026 à Toulon en famille: marché, patinoire et horaires | evenements | Toulon, Var, Provence-Alpes-Côte d’Azur
 - /articles/sorties/tresor-verney-chambery-enfants-2026/ | Le trésor du Verney à Chambéry: les séances 2026 sont terminées | sorties | Chambéry, Savoie, Auvergne-Rhône-Alpes
-- /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | Noël à Caen 2026 en famille: marché de Noël et visite illuminée | evenements | Caen, Calvados, Normandie
+- /articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/ | Noël 2026 à Toulon en famille: marché, patinoire et horaires | evenements | Toulon, Var, Provence-Alpes-Côte d’Azur
+- /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
 - /articles/vie-pratique/carte-okay-savoie-2026-2027-comment-obtenir-et-utiliser-les-80-du-collegien/ | Carte OKAY Savoie 2026-2027: comment obtenir et utiliser les 80 € du collégien | vie-pratique | Chambéry, Savoie, Auvergne-Rhône-Alpes
 - /articles/sorties/les-menuires-sans-ski-en-famille-luges-piscines-et-balades-en-hiver/ | Les Menuires sans ski en famille: luges, piscines et balades en hiver | sorties | Les Belleville, Savoie, Auvergne-Rhône-Alpes
 - /articles/bons-plans/ski-a-aussois-en-famille-en-2026-2027-forfaits-et-budget/ | Ski à Aussois en famille en 2026-2027: forfaits et budget | bons-plans | Aussois, Savoie, Auvergne-Rhône-Alpes
@@ -140,25 +176,25 @@ Pour une famille venue en week-end, examiner le Kyriad Chambéry Centre - Curial
 - /articles/activites/croisiere-a-chanaz-en-famille-tarifs-2026-duree-et-conseils/ | Croisière à Chanaz en famille: tarifs 2026, durée et conseils | activites | Chanaz, Savoie, Auvergne-Rhône-Alpes
 - /articles/evenements/grand-bivouac-2026-a-albertville-en-famille-preparer-sa-journee-au-festival/ | Grand Bivouac 2026 à Albertville en famille: préparer sa journée au festival | evenements | Albertville, Savoie, Auvergne-Rhône-Alpes
 - /articles/evenements/tous-en-sons-2026-a-marseille-quel-spectacle-choisir-selon-l-age-des-enfants/ | Tous en Sons ! 2026 à Marseille: spectacles enfants, âges et tarifs | evenements | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d’Azur
+- /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | Noël à Caen 2026 en famille: marché de Noël et visite illuminée | evenements | Caen, Calvados, Normandie
 - /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | Noël à Chartres 2026 en famille: marché et illuminations | evenements | Chartres, Eure-et-Loir, Centre-Val de Loire
 - /articles/evenements/noel-a-bayeux-2026-en-famille-marche-ou-galopades/ | Noël à Bayeux 2026 en famille: marché et Galopades | evenements | Bayeux, Calvados, Normandie
 - /articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/ | Soleils d'hiver 2026 à Angers en famille: marché, manèges et Père Noël | evenements | Angers, Maine-et-Loire, Pays de la Loire
 - /articles/evenements/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere/ | Lumières de Laval 2026 en famille: marchés, grande roue et croisière | evenements | Laval, Mayenne, Pays de la Loire
 - /articles/evenements/festival-des-petits-explorateurs-2026-a-dijon-quels-ateliers-choisir-en-famille/ | Festival des Petits Explorateurs 2026 à Dijon: ateliers, horaires et tarifs | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/evenements/flottins-d-evian-2026-un-village-de-noel-en-bois-flotte-a-decouvrir-en-famille/ | Flottins d’Évian 2026: un village de Noël en bois flotté à découvrir en famille | evenements | Évian-les-Bains, Haute-Savoie, Auvergne-Rhône-Alpes
 
 ### Historique Radar lié
 
 - refresh | /articles/vie-pratique/carte-okay-savoie-2026-2027-comment-obtenir-et-utiliser-les-80-du-collegien/ | 2026-10-06T08:50:37.159Z
 - opportunity | /articles/evenements/festival-des-petits-explorateurs-2026-a-dijon-quels-ateliers-choisir-en-famille/ | 2026-10-30T03:27:02.483Z
 - opportunity | /articles/evenements/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere/ | 2026-10-30T09:27:15.122Z
+- opportunity | /articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/ | 2026-10-29T14:26:32.277Z
 - opportunity | /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | 2026-10-19T13:54:07.745Z
 - opportunity | /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | 2026-10-29T00:28:19.695Z
 - opportunity | /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | 2026-10-30T06:28:26.726Z
 - opportunity | /articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/ | 2026-10-31T10:28:17.432Z
 - opportunity | /articles/evenements/noel-a-bayeux-2026-en-famille-marche-ou-galopades/ | 2026-10-30T15:36:05.374Z
 - opportunity | /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | 2026-10-30T21:26:32.584Z
-- opportunity | /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | 2026-10-30T18:26:56.039Z
 
 ### Phases 2 et 3
 
