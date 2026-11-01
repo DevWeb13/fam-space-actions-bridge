@@ -295,3 +295,4 @@ automation/image-20261031-1849-paris-marseille-menuires-guyane-fontainebleau-cce
 automation/image-20261031-1849-paris-marseille-menuires-guyane-fontainebleau-ccec438|32694633ad7c2a4bc66cb1b6c9fc49adf5450a00
 automation/image-20261101-0047-gironde-rennes-cannes-laon-efd863b|efd863b80c7a1ed680a71d036ae549c6382b35c8
 automation/image-20261101-0047-gironde-rennes-cannes-laon-efd863b|4821a552251d26cce2bfade45409b91c190638ba
+automation/image-20261101-0640-hs-amneville-defense-ocean-149c50b|e04c567e9c34166a1ffedc36a0eeb187b85a8a84
