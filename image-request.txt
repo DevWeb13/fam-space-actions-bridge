@@ -300,3 +300,4 @@ automation/image-20261101-0640-hs-amneville-defense-ocean-149c50b|2d53586ce467f5
 automation/image-20261101-1244-kayak-cuisine-noel-002d001|7b0a888b9b3d712b7e1478e88f2d5628d14351b9
 automation/image-20261101-1244-kayak-cuisine-noel-002d001|eb280fc92196babb62aa8acfb64a752c1942fb74
 automation/image-20261101-1846-falaise-cirque-selestat-martinique-f80c3e0|f80c3e02fe23df7e6a4d6d777296e9660d87a9d6
+automation/image-20261101-1846-falaise-cirque-selestat-martinique-f80c3e0|99197a273a22344149b419dfc8b82f0cec11c995
