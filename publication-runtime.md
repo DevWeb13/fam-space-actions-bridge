@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,102 +14,148 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Nord
 - Région: Hauts-de-France
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Sujet :** Une sortie scientifique en famille au Forum départemental des Sciences, à Villeneuve-d'Ascq (Nord, Hauts-de-France).
-
-**Titre de travail :** « Forum des Sciences à Villeneuve-d'Ascq en famille : planétarium, enquêtes et expériences selon l'âge »
-
-**Angle :** Construire une sortie qui intéresse réellement les enfants, du tout-petit à l'adolescent, en choisissant parmi plusieurs activités différentes et en organisant les séances sans mauvaise surprise.
-
-Le Forum départemental des Sciences est un centre de culture scientifique du Département du Nord, ouvert au public, qui réunit un planétarium immersif rénové en 2025, des expositions et des animations participatives. Sa programmation actuelle comprend notamment « Tous à plumes ! » (jusqu'au 29 août 2027), « Croque Couleurs » et l'Espace d'Atom (jusqu'au 17 janvier 2027), ainsi que les enquêtes Enigma.
-
-## Besoin du lecteur
-
-Savoir quelles activités conviennent à l'âge de ses enfants, ce qu'on y fait concrètement, comment associer ou choisir les séances sur une après-midi, combien prévoir pour la famille et comment réserver et venir. Donner aussi des options utiles pour les fratries d'âges différents, sans présenter le lieu comme un simple planétarium ni promettre de pouvoir tout faire en une seule visite.
-
-## Valeur éditoriale
-
-- **Des expériences réellement distinctes :** Espace d'Atom (2-4 ans, mini-ateliers autour des couleurs) ; Croque Couleurs (3-6 ans, exploration sensorielle) ; atelier « Boule de plumes » dans l'exposition Tous à plumes ! (3-6 ans, sur créneaux et places limitées) ; planétarium dès 3 ans avec séances différenciées selon l'âge ; Enigma dès 7, 9 ou 12 ans selon l'enquête. La programmation hebdomadaire d'Enigma doit être confirmée auprès de l'accueil : la liste datée visible sur sa page concerne l'été 2026.
-- **Composer une visite réaliste :** séances à heures fixes, certaines de 45 min à 1 h 15, capacité limitée et chevauchements possibles ; proposer des parcours par âge plutôt qu'une accumulation d'activités.
-- **Budget expliqué sans fausse économie :** planétarium 9 € par adulte et 4 € jusqu'à 12 ans ; expositions et Enigma 8 € par adulte, gratuits jusqu'à 12 ans ; Espace d'Atom 5 € par personne. Pass tribu 25 € pour quatre personnes/une activité ou 35 € pour deux activités, à comparer au tarif individuel : avec deux adultes et deux enfants de moins de 13 ans, une seule exposition coûte 16 €, donc le pass à 25 € n'est pas automatiquement avantageux. Gratuité le premier dimanche du mois, selon les conditions et places.
-- **Point pratique important au 1er novembre 2026 :** la page officielle signale la billetterie en ligne indisponible ; réserver par téléphone au 03 59 73 96 00. Période scolaire : mercredi, samedi, dimanche et jours fériés de 14 h à 18 h ; vacances : mardi à dimanche de 14 h à 18 h. Accès par métro ligne 1, arrêt Villeneuve-d'Ascq – Hôtel de Ville. Évoquer l'accessibilité et vérifier les horaires avant le déplacement.
-- **Différenciation :** les pages officielles présentent chaque activité séparément ; Fam Space peut les rapprocher, comparer les âges, le rythme, les coûts et les contraintes pour aider à choisir. Aucun doublon direct dans les articles récents fournis : les articles sur Villeneuve-d'Ascq traitent d'un événement de Noël et de la Villa Cavrois, pas du Forum des Sciences.
-
-## Affiliation
-
-- **Activité principale :** aucune billetterie exacte du Forum des Sciences confirmée après recherches ciblées sur GetYourGuide, Tiqets, Klook, WeGoTrip et KKday. Ne pas inventer de billet partenaire ; utiliser les pages officielles et indiquer la réservation téléphonique tant que la billetterie en ligne est indisponible.
-- **Hébergement, pour les familles prolongeant la sortie en séjour dans la métropole lilloise :**
-  - **Booking.com — B&B HOTEL Lille Villeneuve d'Ascq Grand Stade 3 étoiles** : hôtel à Villeneuve-d'Ascq avec chambres familiales et réception 24 h/24 ; https://www.booking.com/hotel/fr/b-amp-b-lille-grand-stade.fr.html
-  - **Booking.com — L'Appart Lille Métropole Arena** : appartement à Villeneuve-d'Ascq, avec cuisine équipée, micro-ondes et option deux chambres pour quatre voyageurs ; https://www.booking.com/hotel/fr/appart-lille-metropole-arena.fr.html
-  Ces offres ont une fiche partenaire vérifiée, mais leurs disponibilités et tarifs dépendent des dates ; les proposer seulement si une nuit sur place est pertinente, dans une courte section pratique, pas comme condition de la visite.
-
-## Sources de départ
-
-- Forum des Sciences, activités actuellement proposées : https://forumdepartementaldessciences.fr/activites/
-- Planétarium, séances, âges et horaires : https://forumdepartementaldessciences.fr/activites/le-planetarium/
-- Tous à plumes !, atelier 3-6 ans et dates : https://forumdepartementaldessciences.fr/activites/tous-a-plumes/
-- Croque Couleurs, 3-6 ans et dates : https://forumdepartementaldessciences.fr/activites/croque-couleurs/
-- Espace d'Atom, 2-4 ans : https://forumdepartementaldessciences.fr/activites/espace-datom/
-- Enigma, enquêtes et âges : https://forumdepartementaldessciences.fr/activites/enigma/
-- Ouverture, tarifs, pass et réservations : https://forumdepartementaldessciences.fr/informations-pratiques/ouverture-et-tarifs/
-- Accès et transports : https://forumdepartementaldessciences.fr/informations-pratiques/quand-et-comment-venir/
-- Accessibilité : https://forumdepartementaldessciences.fr/informations-pratiques/accessibilite/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "activites"
+title: "Forum des Sciences à Villeneuve-d'Ascq en famille: que choisir selon l'âge ?"
+subtitle: "Planétarium, ateliers pour les petits et enquêtes scientifiques: les bonnes séances pour organiser sa visite"
+summary: "Au Forum des Sciences, près de Lille, choisissez entre planétarium, expériences et enquêtes selon l'âge des enfants, les horaires et le budget familial."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Forum des Sciences Villeneuve-d'Ascq en famille"
+  - "planétarium Villeneuve-d'Ascq enfants"
+  - "activités scientifiques enfants Nord"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Villeneuve-d'Ascq"
+  department: "Nord"
+  region: "Hauts-de-France"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Forum des Sciences - Planétarium"
+    url: "https://forumdepartementaldessciences.fr/activites/le-planetarium/"
+  - title: "Forum des Sciences - Espace d'Atom"
+    url: "https://forumdepartementaldessciences.fr/activites/espace-datom/"
+  - title: "Forum des Sciences - Croque Couleurs"
+    url: "https://forumdepartementaldessciences.fr/activites/croque-couleurs/"
+  - title: "Forum des Sciences - Tous à plumes !"
+    url: "https://forumdepartementaldessciences.fr/activites/tous-a-plumes/"
+  - title: "Forum des Sciences - Enigma"
+    url: "https://forumdepartementaldessciences.fr/activites/enigma/"
+  - title: "Forum des Sciences - Ouverture et tarifs"
+    url: "https://forumdepartementaldessciences.fr/informations-pratiques/ouverture-et-tarifs/"
+  - title: "Forum des Sciences - Comment venir ?"
+    url: "https://forumdepartementaldessciences.fr/informations-pratiques/quand-et-comment-venir/"
+  - title: "Forum des Sciences - Accessibilité"
+    url: "https://forumdepartementaldessciences.fr/informations-pratiques/accessibilite/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Villeneuve-d'Ascq, près de Lille, le Forum départemental des Sciences propose bien plus qu'une projection d'étoiles: les enfants peuvent manipuler, explorer les couleurs, découvrir les oiseaux ou résoudre une enquête. Le choix dépend surtout de leur âge, car plusieurs activités se déroulent à heure fixe et ne s'adressent pas aux mêmes publics.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## De 2 à 6 ans: toucher, observer, expérimenter
+
+**De 2 à 4 ans: l'Espace d'Atom.** Une médiatrice accompagne d'abord les familles dans une activité collective, puis les enfants explorent de petits ateliers autour des couleurs avec leur adulte. Comptines, gestes et manipulations permettent d'avancer à leur rythme. La séance dure une heure et accueille au maximum 16 personnes. C'est le choix le plus adapté pour une première découverte avec un tout-petit. [Programme de l'Espace d'Atom](https://forumdepartementaldessciences.fr/activites/espace-datom/).
+
+**De 3 à 6 ans: Croque Couleurs.** Ici, les enfants s'intéressent à la façon dont ils perçoivent les couleurs, dans une exposition interactive accompagnée par un médiateur. Comptez 1 h 15, avec seulement 16 places par séance. L'exposition est annoncée jusqu'au **17 janvier 2027**. [Découvrir Croque Couleurs](https://forumdepartementaldessciences.fr/activites/croque-couleurs/).
+
+**Autre option de 3 à 6 ans: Boule de plumes.** Cet atelier sensoriel, intégré à l'exposition **Tous à plumes !**, invite les petits à écouter, toucher et observer le monde des oiseaux. Il dure une heure, avec 16 places maximum, et est inclus dans le billet de l'exposition. Les créneaux annoncés sont le mercredi, le samedi et le dimanche à 14 h 15 et 15 h 30. L'exposition elle-même, ouverte à tous les âges, est programmée jusqu'au **29 août 2027**: elle peut aussi convenir à une fratrie. [Voir Tous à plumes ! et l'atelier](https://forumdepartementaldessciences.fr/activites/tous-a-plumes/).
+
+Ces trois propositions ne sont pas interchangeables: Atom privilégie les très jeunes enfants et le partage avec un adulte; Croque Couleurs explore la perception; Boule de plumes s'appuie sur la nature. Pour un enfant de 3 ou 4 ans, mieux vaut choisir une expérience qui lui plaît que vouloir enchaîner les trois.
+
+## Dès 3 ans: un planétarium qui adapte ses histoires à l'âge
+
+Rénové en 2025, le **planétarium** associe ciel étoilé et projections immersives sous un dôme, avec un médiateur pour guider la séance. Ce n'est pas un film unique proposé à tous les visiteurs: le programme change selon l'âge.
+
+Pour les **3-6 ans**, « Le petit ciel étoilé » propose une découverte du ciel en 45 minutes. Dès **6 ans**, « À la belle étoile » s'intéresse notamment aux constellations; dès **9 ans**, « Le ciel ce soir » permet d'apprendre à repérer des astres. Les séances plus longues durent généralement environ une heure. Il faut choisir le bon programme avant de réserver et **arriver avant le début**: les retardataires ne sont pas admis une fois la projection commencée. [Consulter les séances du planétarium](https://forumdepartementaldessciences.fr/activites/le-planetarium/).
+
+## Dès 7 ans: jouer les enquêteurs avec Enigma
+
+Pour les enfants qui aiment chercher des indices, **Enigma** transforme la science en investigation. Trois enquêtes existent, mais **une seule est proposée chaque semaine**:
+
+- **« Codes secrets »**, dès 7 ans: découvrir les messages chiffrés et la cryptologie.
+- **« Illusions retrouvées »**, dès 9 ans: enquêter sur la vision, l'œil et le cerveau.
+- **« En quête d'évolution »**, dès 12 ans: comprendre les transformations de la biodiversité.
+
+Chaque enquête dure environ **1 h 15**, avec un maximum de 20 participants. Les séances sont annoncées à 14 h 45 et 16 h 15 les jours d'ouverture au public, mais le calendrier détaillé publié sur la page peut concerner une période passée. **Demandez quelle enquête est réellement programmée le jour choisi**, surtout si l'âge de votre enfant ne permet pas les trois. [Découvrir les enquêtes Enigma](https://forumdepartementaldessciences.fr/activites/enigma/).
+
+## Quelle visite prévoir pour une famille ?
+
+Avec un enfant de **2 à 4 ans**, réservez plutôt l'Espace d'Atom comme activité principale. Pour les **3-6 ans**, choisissez entre Croque Couleurs, Boule de plumes ou une courte séance de planétarium, selon ses goûts et sa capacité à rester attentif.
+
+À partir de **7 ans**, une enquête Enigma ou une séance d'astronomie peut constituer le temps fort de la sortie. Si vous souhaitez ajouter Tous à plumes !, gardez une marge: sa visite libre est annoncée pour environ 1 h 15. Le Forum ouvre l'après-midi, de 14 h à 18 h pour les visiteurs individuels; il n'est donc pas réaliste de tout faire.
+
+Pour une **fratrie d'âges éloignés**, le plus simple peut être de se séparer temporairement entre deux activités, si plusieurs adultes accompagnent les enfants. Sinon, privilégiez l'exposition Tous à plumes !, accessible à tous, et vérifiez que le programme du planétarium convient au plus jeune. Les séances à horaires fixes peuvent se chevaucher: demandez à l'accueil de confirmer l'enchaînement avant de payer.
+
+## Combien coûte la sortie ?
+
+Selon les [tarifs officiels du Forum des Sciences](https://forumdepartementaldessciences.fr/informations-pratiques/ouverture-et-tarifs/):
+
+- **Planétarium**: 9 € par adulte et 4 € par enfant jusqu'à 12 ans.
+- **Expositions et Enigma**: 8 € par adulte, gratuit jusqu'à 12 ans.
+- **Espace d'Atom**: 5 € par adulte et 5 € par enfant.
+- **Pass tribu**: 25 € pour quatre personnes et une activité, ou 35 € pour quatre personnes et deux activités.
+
+Le pass n'est **pas automatiquement le moins cher**. Pour deux adultes et deux enfants de moins de 13 ans, une exposition seule revient à **16 €** aux tarifs individuels, contre **25 €** avec le pass. En revanche, une exposition suivie du planétarium représenterait **42 €** en billets individuels, contre **35 €** avec le pass deux activités, sous réserve que les séances choisies soient éligibles et disponibles. Vérifiez le panier exact auprès de l'accueil, notamment pour des enfants d'âges différents.
+
+Le Forum annonce aussi la **gratuité pour tous le premier dimanche du mois**, ainsi que des réductions et gratuités sous conditions (notamment pour les bénéficiaires de certains minima sociaux ou les personnes en situation de handicap). Les places restent limitées, même les jours gratuits.
+
+## Réserver et venir sans mauvaise surprise
+
+**Au 1er novembre 2026, la billetterie en ligne est signalée indisponible sur le site officiel.** Pour réserver et connaître les séances réellement proposées, appelez le **03 59 73 96 00**. C'est particulièrement important pour Enigma, les ateliers à 16 places et les familles qui souhaitent combiner deux activités.
+
+Le Forum des Sciences se trouve **1 place François-Mitterrand, 59650 Villeneuve-d'Ascq**. En transports en commun, prenez la **ligne 1 du métro**, arrêt **Villeneuve-d'Ascq - Hôtel de Ville**. En voiture, le site indique la sortie 3 « Hôtel de Ville » depuis la RN 227. [Accès et itinéraires officiels](https://forumdepartementaldessciences.fr/informations-pratiques/quand-et-comment-venir/).
+
+Les horaires d'ouverture au public sont **14 h-18 h le mercredi, le samedi, le dimanche et les jours fériés en période scolaire**, et **du mardi au dimanche de 14 h à 18 h pendant les vacances**. Le lieu ferme le lundi, ainsi que les 1er janvier, 1er mai et 25 décembre. Vérifiez les horaires propres à chaque séance, qui ne coïncident pas nécessairement avec l'ouverture générale.
+
+Le bâtiment et les expositions sont annoncés **accessibles aux personnes à mobilité réduite**; un ascenseur est disponible et le planétarium dispose de quatre emplacements PMR. Pour des besoins spécifiques, mieux vaut les signaler lors de la réservation. [Informations officielles sur l'accessibilité](https://forumdepartementaldessciences.fr/informations-pratiques/accessibilite/).
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -138,4 +184,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
