@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261102-0924-sujet-la-nouvelle-visite-immersive-de-la-confiserie-des-hautes-vosges-",
+  "lastProcessedCommit": "bf51e9e2fdbe05e4cc804c6835ccf6b9a3f9871a"
 }
