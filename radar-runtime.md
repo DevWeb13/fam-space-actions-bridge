@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Bus gratuit à Poitiers pour les moins de 12 ans: quelle carte faut-il prévoir ?"
-subtitle: La gratuité Vitalis existe depuis juillet 2026, mais les enfants de 3 à 11 ans doivent avoir leur propre carte Modalis
-summary: À Poitiers, les moins de 12 ans voyagent gratuitement sur Vitalis. Voici la carte à demander, les frais possibles et les règles à respecter.
+title: "Bus gratuit à Poitiers pour les moins de 12 ans : quelle carte faut-il prévoir ?"
+subtitle: Abonnement à 0 € de 3 à 11 ans, carte Modalis à 2,50 € et démarches si l'enfant possède déjà une carte
+summary: À Poitiers, les moins de 12 ans voyagent gratuitement sur Vitalis, mais dès 3 ans une carte Modalis avec abonnement est obligatoire. Coût de la carte, validation et ancienne carte après le 1er novembre 2026.
 slug: bus-gratuit-a-poitiers-pour-les-moins-de-12-ans-quelle-carte-faut-il-prevoir
 status: published
 publishedAt: 2026-09-09T02:01:52+02:00
@@ -81,7 +86,7 @@ image:
   alt: Bus du réseau Vitalis à Poitiers
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/vie-pratique/(2026)/(09)/bus-gratuit-a-poitiers-pour-les-moins-de-12-ans-quelle-carte-faut-il-prevoir/index.md
   targetSha: 0fb8b48a74953c418f3ee4dfde06d077654086ad
@@ -106,36 +111,73 @@ radar:
       - bus poitiers
       - tarif bus poitiers
       - distance bressuire poitiers
+reviewAt: 2026-12-14
+sources:
+  - title: Vitalis - Comment voyager sur le réseau pour les moins de 12 ans ?
+    url: https://aide.vitalis-poitiers.fr/hc/fr/articles/37634067409693-Comment-voyager-sur-le-r%C3%A9seau-pour-les-moins-de-12-ans
+  - title: Vitalis - Tarifs et carte Modalis
+    url: https://www.vitalis-poitiers.fr/tarifs/1000/
+  - title: Vitalis - Gratuités depuis le 1er juillet 2026
+    url: https://www.vitalis-poitiers.fr/news/des-le-1er-juillet-2026-profitez-des-gratuites/
+  - title: Vitalis - Adresses, horaires et contact des agences
+    url: https://aide.vitalis-poitiers.fr/hc/fr/articles/8210378481565-Je-souhaite-vous-faire-part-d-une-suggestion-comment-vous-contacter
+  - title: Vitalis - Tarifs réduits selon les revenus
+    url: https://www.vitalis-poitiers.fr/news/les-tarifs-reduits-selon-les-revenus/
+  - title: Vitalis - Réduction à partir du troisième abonnement 12-17 ans
+    url: https://aide.vitalis-poitiers.fr/hc/fr/articles/8211659853981-Y-a-t-il-un-tarif-r%C3%A9duit-ou-une-gratuit%C3%A9-si-plusieurs-abonnements-sont-achet%C3%A9s
 ---
 
-## Mission retenue
-Actualiser le guide Vitalis de Poitiers pour les familles après la fin des deux échéances de lancement de la gratuité.
+Depuis le 1er juillet 2026, les enfants de moins de 12 ans voyagent gratuitement sur le réseau Vitalis de Grand Poitiers. **Dès 3 ans, il faut pourtant une carte Modalis nominative chargée de l'abonnement annuel 3–11 ans à 0 €**. Et depuis la fin de l'offre de lancement, créer cette carte coûte **2,50 €**.
 
-## Pourquoi cette mission
-Le texte conseille encore de faire valider une ancienne carte « avant le 1er novembre 2026 » alors que nous sommes le 2 novembre, et présente au présent la gratuité de création de carte terminée le 30 septembre. Cette information périmée touche directement la démarche et le coût du lecteur. Le signal GSC est `uncertain` (143 impressions sur la semaine de pointe, 45 sur la dernière) : ne pas présenter cette baisse comme une perte de classement. Le refresh de Lumigny n'a pas de correction indépendante aussi nette ; l'expansion de la page forte sur les transports parisiens recoupe déjà les guides Navigo, Orly, CDG et poussette ; l'atelier familial de Noël du 16 décembre au Havre est documenté mais plus éloigné et plus limité.
+Pour vos déplacements à [Poitiers et dans la Vienne](/destinations/nouvelle-aquitaine/vienne/), la démarche dépend de l'âge de l'enfant et de la carte qu'il possède déjà.
 
-## Décision du lecteur
-Distinguer les démarches pour les moins de 3 ans, les 3–11 ans avec ou sans carte Modalis, et les enfants atteignant 12 ans ; savoir quoi vérifier si le chargement automatique d'une ancienne carte n'a pas été finalisé avant le 1er novembre.
+## Avant 3 ans : pas de titre à demander
 
-## Faits à traiter
-- Conserver la gratuité annuelle 3–11 ans à 0 €, la carte Modalis nominative obligatoire et la validation à chaque montée et correspondance ; moins de 3 ans sans titre et accompagnés.
-- Au 2 novembre, création de carte à 2,50 € hors promotion échue le 30 septembre ; frais d'envoi E-boutique de 3,50 € éventuels. Ne pas laisser croire que la création est encore offerte.
-- Transformer l'échéance du 1er novembre en information passée. Vitalis ne précise pas publiquement la procédure après dépassement : inviter les familles concernées à vérifier le titre sur la carte et à contacter Vitalis ou passer en agence, sans affirmer que la gratuité est annulée ou que la validation tardive suffit.
-- Préserver la fin de validité à la veille des 12 ans, les réductions possibles ensuite, les adresses et horaires des deux agences, ALLOBUS, les justificatifs et la possibilité de commander en ligne.
-- Préserver l'image, les liens internes utiles et les renseignements encore exacts ; n'effectuer aucune réécriture inutile.
+Un enfant de moins de 3 ans circule gratuitement **sans carte ni abonnement**, à condition d'être accompagné sous la responsabilité d'un représentant légal.
 
-## Sources de départ
-- Vitalis, FAQ moins de 12 ans : https://aide.vitalis-poitiers.fr/hc/fr/articles/37634067409693-Comment-voyager-sur-le-r%C3%A9seau-pour-les-moins-de-12-ans
-- Vitalis, tarifs et création de carte : https://www.vitalis-poitiers.fr/tarifs/1000/
-- Vitalis, gratuités et ancienne carte : https://www.vitalis-poitiers.fr/news/des-le-1er-juillet-2026-profitez-des-gratuites/
-- Vitalis, horaires et contact des agences : https://aide.vitalis-poitiers.fr/hc/fr/articles/8210378481565-Je-souhaite-vous-faire-part-d-une-suggestion-comment-vous-contacter
+## De 3 à 11 ans : un abonnement gratuit, mais une carte obligatoire
 
-## Affiliation
-Aucune offre partenaire pertinente à ajouter : le service est gratuit pour les enfants éligibles, hormis les frais de support ou d'envoi.
+L'abonnement annuel **3–11 ans coûte 0 €** et permet de voyager sur tout le réseau Vitalis jusqu'à la veille du douzième anniversaire de l'enfant.
 
-## Continuations internes
-- Conserver le lien vers la destination Poitiers pour les familles qui préparent leurs déplacements.
-- Le guide de l'Espace Mendès France renvoie déjà vers cet article : maintenir une information Vitalis fiable sans dupliquer son contenu.
+Si votre enfant n'a pas encore de carte, vous pouvez demander une **carte Modalis nominative** en agence Vitalis ou sur [l'E-boutique Vitalis](https://eboutique-vitalis.easyticketing.it/), avec une **photo et une pièce d'identité de l'enfant**. Faites-y charger l'abonnement gratuit avant son premier trajet.
+
+La création de la carte coûte **2,50 € depuis le 1er octobre 2026** : l'offre qui la rendait gratuite a pris fin le 30 septembre. Une commande par l'E-boutique peut ajouter **3,50 € de frais d'envoi postal**. En cas de perte ou de vol, le duplicata coûte **15 €**. L'abonnement reste gratuit ; ces montants concernent le support et son acheminement. Les conditions sont détaillées dans la [FAQ officielle Vitalis](https://aide.vitalis-poitiers.fr/hc/fr/articles/37634067409693-Comment-voyager-sur-le-r%C3%A9seau-pour-les-moins-de-12-ans).
+
+## À chaque montée, validez la carte
+
+L'enfant doit **valider sa carte Modalis à chaque montée** dans un bus ou un car Vitalis, y compris en correspondance, et pouvoir la présenter lors d'un contrôle.
+
+S'il ne peut pas présenter une carte chargée de l'abonnement 3–11 ans, Vitalis indique qu'il doit **acheter un titre auprès du conducteur**, même s'il a moins de 12 ans. Vérifiez donc que le titre gratuit est bien chargé avant un trajet scolaire ou une sortie.
+
+## Ancienne carte Modalis : que faire après le 1er novembre 2026 ?
+
+Pour les enfants qui détenaient déjà une carte Modalis avec abonnement **avant le 1er juillet 2026**, Vitalis a procédé à un chargement automatique à distance du nouvel abonnement gratuit. Pour le finaliser, il fallait présenter la carte sur un valideur **avant le 1er novembre 2026**.
+
+**Cette échéance est désormais passée.** Au 2 novembre, les informations publiques de Vitalis ne précisent pas ce qui se passe lorsqu'une famille n'a pas effectué cette validation à temps. Il ne faut donc supposer ni que le titre a été annulé, ni qu'une simple validation tardive suffit.
+
+Si vous êtes concernés, **faites vérifier le chargement et la validité du titre par Vitalis avant le prochain trajet** : contactez ALLOBUS au **05 49 44 66 88** ou rendez-vous en agence avec la carte. Cela évite de découvrir au moment de monter que le titre attendu n'est pas utilisable.
+
+## À 12 ans : prévoir un nouvel abonnement
+
+La gratuité 3–11 ans s'arrête **la veille du 12e anniversaire**, même si celui-ci tombe pendant l'année scolaire. Il faut alors acheter un abonnement **12–17 ans** pour continuer à voyager en règle.
+
+Des [tarifs réduits selon le quotient familial](https://www.vitalis-poitiers.fr/news/les-tarifs-reduits-selon-les-revenus/) peuvent s'appliquer aux habitants de Grand Poitiers, après étude des droits. Vitalis prévoit aussi **50 % de réduction sur l'abonnement annuel 12–17 ans à partir du troisième enfant**, sous conditions : achats simultanés pour le même foyer, hors E-boutique. Vérifiez ces droits avant de payer.
+
+## Où demander la carte ou vérifier un abonnement à Poitiers ?
+
+<!-- article-image-body:01 -->
+
+![Gare de Poitiers où se trouve l'agence principale Vitalis](/images/articles/2026/09/bus-gratuit-a-poitiers-pour-les-moins-de-12-ans-quelle-carte-faut-il-prevoir-body-01.webp)
+
+*Photo: [patrick janicek from Courbevoie, France](https://commons.wikimedia.org/wiki/File:GARE_DE_POITIERS_(6082957020).jpg) - [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+L'agence Vitalis du **Pôle d'Échanges Multimodal de la gare**, au **58 boulevard du Grand Cerf**, accueille le public **du lundi au vendredi de 8 h à 18 h**.
+
+L'agence du siège Vitalis, **9 avenue de Northampton**, est ouverte **du lundi au vendredi de 9 h à 12 h 30 et de 14 h à 17 h**.
+
+Pour éviter un déplacement inutile, **ALLOBUS : [05 49 44 66 88](tel:+33549446688)**, du lundi au vendredi de 8 h à 18 h. Vous pouvez notamment demander comment régulariser une ancienne carte dont le chargement n'a pas été finalisé avant le 1er novembre.
 
 ## Article source exact à préserver et améliorer
 
