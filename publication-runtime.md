@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 3/4
+# Publication automatique Fam Space - Phase 4/4
 
 ## Mission
 
-Tu es le responsable affiliation et conversion de Fam Space.
+Tu es le secrétaire de rédaction et fact-checker final de Fam Space.
 
-Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
+Tu es la dernière personne à lire l'article avant publication. Ton rôle n'est pas de vérifier que les phases précédentes ont obéi à leurs consignes: ton rôle est de décider si le résultat est digne d'un média familial professionnel, puis de le corriger si nécessaire.
 
 ## Affectation courante
 
@@ -14,7 +14,7 @@ Ton travail est de transformer l'intérêt du lecteur en actions utiles et en re
 - Département: Ain
 - Région: Auvergne-Rhône-Alpes
 
-## Article du journaliste
+## Article à éditer
 
 ---
 category: "activites"
@@ -44,15 +44,15 @@ sources:
 
 À Bourg-en-Bresse, dans l'Ain, le monastère royal de Brou réunit une église gothique richement sculptée, trois cloîtres et un musée des Beaux-Arts. On peut y venir avec des enfants sans leur imposer une longue visite historique: livrets-jeux, énigmes et chasse au trésor permettent de découvrir les lieux à leur rythme. Le bon choix dépend surtout de leur âge et du temps dont vous disposez.
 
-Le monument a été voulu au XVIe siècle par Marguerite d'Autriche en mémoire de son époux, Philibert le Beau. L'église abrite leurs tombeaux et celui de la mère de Philibert: une histoire familiale qui donne un fil conducteur à la découverte des sculptures et des bâtiments. Le [site officiel retrace cette histoire](https://www.monastere-de-brou.fr/decouvrir/histoire-du-monument).
+Le monument a été voulu au XVIe siècle par Marguerite d'Autriche en mémoire de son époux, Philibert le Beau. L'église abrite leurs tombeaux et celui de la mère de Philibert: une histoire familiale qui donne un fil conducteur à la découverte des sculptures et des bâtiments.
 
 ## Visite libre, petit dragon ou coffre caché ?
 
-**Pour une première découverte: la visite libre.** Comptez environ **1 h 30**, hors exposition temporaire, pour parcourir l'église, les cloîtres et le musée. Des livrets et cartels adaptés aux enfants, ainsi que des jeux accessibles par QR code, jalonnent le parcours sans supplément. L'espace « Quel chantier ! » permet notamment d'aborder les métiers des bâtisseurs. C'est la formule la plus souple si les enfants sont petits ou si vous préférez écourter la visite. Le [détail du parcours libre](https://www.monastere-de-brou.fr/visiter/visites-et-activites) est publié par le monument.
+**Pour une première découverte: la visite libre.** Comptez environ **1 h 30**, hors exposition temporaire, pour parcourir l'église, les cloîtres et le musée. Des livrets et cartels adaptés aux enfants, ainsi que des jeux accessibles par QR code, jalonnent le parcours sans supplément. L'espace « Quel chantier ! » permet notamment d'aborder les métiers des bâtisseurs. C'est la formule la plus souple si les enfants sont petits ou si vous préférez écourter la visite.
 
 **Dès 7 ans: « Grou, le petit dragon de Brou ».** Ce livret-jeu coûte **2 €**, à acheter à la billetterie. Rébus, mots cachés, coloriages et autres énigmes entraînent les enfants de l'église au musée en passant par les cloîtres. Il s'ajoute au droit d'entrée éventuel; ce n'est pas une activité comprise automatiquement dans tous les billets.
 
-**Dès 5 ans: « À la recherche du coffre caché ».** Ici, la famille emprunte une sacoche d'indices pour résoudre des jeux en autonomie pendant **environ 2 heures**. Le forfait est de **35 €**, avec l'entrée au monument pour **deux adultes et jusqu'à quatre enfants**. La sacoche se loue directement à la billetterie, selon les disponibilités, au plus tard deux heures avant la fermeture. Les plus jeunes ont besoin d'un adulte pour les accompagner dans les énigmes. Toutes les conditions des deux jeux figurent sur la [page officielle des activités en famille](https://www.monastere-de-brou.fr/visiter/en-famille).
+**Dès 5 ans: « À la recherche du coffre caché ».** Ici, la famille emprunte une sacoche d'indices pour résoudre des jeux en autonomie pendant **environ 2 heures**. Le forfait est de **35 €**, avec l'entrée au monument pour **deux adultes et jusqu'à quatre enfants**. La sacoche se loue directement à la billetterie, selon les disponibilités, au plus tard deux heures avant la fermeture. Les plus jeunes ont besoin d'un adulte pour les accompagner dans les énigmes.
 
 Pour une famille avec deux adultes payants, la visite libre revient à 22 € avant tout jeu supplémentaire, tandis que le forfait coffre caché est à 35 € pour le groupe prévu. La différence correspond à une expérience plus longue et structurée, pas simplement à un billet d'entrée plus cher. Avec un enfant fatigué ou peu intéressé par les énigmes, la visite libre reste probablement le meilleur choix.
 
@@ -60,15 +60,17 @@ Pour une famille avec deux adultes payants, la visite libre revient à 22 € av
 
 Dans l'église, les tombeaux sculptés et les détails des décors donnent de quoi observer et poser des questions. Les trois cloîtres offrent ensuite un changement d'ambiance, avant les œuvres du musée des Beaux-Arts. Avec de jeunes enfants, mieux vaut choisir quelques espaces qui les intriguent que vouloir examiner toutes les salles.
 
-Les familles qui aiment les activités guidées peuvent aussi consulter le [programme du monastère](https://www.monastere-de-brou.fr/visiter/en-famille): visites contées et ateliers sont proposés à certaines dates, avec des âges et des tarifs propres à chaque rendez-vous. Ils ne remplacent pas les jeux accessibles pendant la visite ordinaire.
+Les familles qui aiment les activités guidées peuvent aussi consulter le programme proposé sur place: visites contées et ateliers sont proposés à certaines dates, avec des âges et des tarifs propres à chaque rendez-vous. Ils ne remplacent pas les jeux accessibles pendant la visite ordinaire.
 
-Jusqu'au **3 janvier 2027**, l'exposition [« Le triptyque de Moulins, l'éclat retrouvé d'un chef-d'œuvre de la Renaissance »](https://www.monastere-de-brou.fr/agenda/2026/le-triptyque-de-moulins-l-eclat-retrouve-d-un-chef-d-aeuvre-de-la-renaissance) présente notamment une peinture restaurée de Jean Hey. Elle est comprise dans le billet d'entrée, dans la limite des places disponibles. C'est un complément intéressant pour les enfants curieux d'art, sans être indispensable pour profiter du monument.
+Jusqu'au **3 janvier 2027**, l'exposition « Le triptyque de Moulins, l'éclat retrouvé d'un chef-d'œuvre de la Renaissance » présente notamment une peinture restaurée de Jean Hey. Elle est comprise dans le billet d'entrée, dans la limite des places disponibles. C'est un complément intéressant pour les enfants curieux d'art, sans être indispensable pour profiter du monument.
 
 ## Tarifs: les gratuités qui comptent pour les familles
 
 Le **tarif individuel affiché est de 11 €**. L'entrée est **gratuite pour les moins de 18 ans en famille**, ainsi que pour les moins de 26 ans ressortissants de l'Union européenne. D'autres gratuités existent, notamment pour les personnes en situation de handicap avec leur accompagnateur et pour les demandeurs d'emploi ou bénéficiaires du RSA sur justificatif récent. L'entrée est aussi gratuite le premier dimanche de janvier, février, mars, novembre et décembre.
 
-Le billet donne accès à l'église, aux cloîtres, au musée et aux expositions temporaires; les jeux payants sont à distinguer de cette entrée. Consultez les [tarifs et justificatifs officiels](https://www.monastere-de-brou.fr/visiter/informations-pratiques) avant de réserver, notamment si vous bénéficiez d'une gratuité.
+Pour une visite classique avec entrée payante, vous pouvez [réserver le billet d'entrée au monastère royal de Brou sur Tiqets](https://www.tiqets.com/fr/activites-attractions-bourg-en-bresse-c67097/billets-pour-monastere-royal-de-brou-billet-d-entree-p987873/). Le billet proposé concerne l'accès au monument, pas le livret Grou ni la chasse au coffre: ces jeux se prennent à la billetterie du site. Si vous bénéficiez d'une gratuité, vérifiez plutôt les justificatifs et modalités d'accès avant d'acheter un billet.
+
+Le billet d'entrée donne accès à l'église, aux cloîtres, au musée et aux expositions temporaires; les jeux payants sont à distinguer de cette entrée.
 
 ## Horaires, poussette et accès
 
@@ -76,11 +78,35 @@ Le monastère se trouve au **63 boulevard de Brou, 01000 Bourg-en-Bresse**. Il o
 
 Les **poussettes sont autorisées**; une **table à langer** et des **consignes pour les bagages** sont disponibles. Le parcours est accessible aux personnes à mobilité réduite, avec un ascenseur pour le premier niveau, même si certaines portes des salles d'exposition sont étroites. La nourriture n'est pas autorisée à l'intérieur: pour un pique-nique, privilégiez les abords du monument.
 
-Sans voiture, rejoignez Bourg-en-Bresse en train puis utilisez le réseau de bus local: **ligne 2, arrêt « Valéry »**, ou **ligne 6, arrêt « Monastère de Brou »**. Les [informations pratiques officielles](https://www.monastere-de-brou.fr/visiter/informations-pratiques) permettent de vérifier les horaires, les conditions d'accès et les services avant le départ.
+Sans voiture, rejoignez Bourg-en-Bresse en train puis utilisez le réseau de bus local: **ligne 2, arrêt « Valéry »**, ou **ligne 6, arrêt « Monastère de Brou »**. Vérifiez les horaires du réseau et les conditions d'accès au monument avant le départ.
 
-## Affiliation et parcours du lecteur
+## Prolonger la visite à Bourg-en-Bresse
 
-Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+Si vous venez de loin ou prévoyez un week-end dans l'Ain, l'[Appart'City Classic Bourg-en-Bresse sur Booking.com](https://www.booking.com/hotel/fr/antaeus-sophia-park.fr.html) propose des studios et appartements avec cuisine, dont des logements familiaux pouvant accueillir jusqu'à six personnes. L'établissement se trouve à quelques minutes à pied du monastère. Vérifiez le logement exact, le prix total et les conditions d'annulation pour vos dates.
+
+Pour prévoir une autre journée dans le département, notre guide du [Parc des Oiseaux à Villars-les-Dombes avec des enfants](https://www.fam-space.fr/articles/sorties/parc-des-oiseaux-en-famille-billets-horaires-et-visite-avec-des-enfants/) aide à organiser cette sortie selon la saison et l'âge des enfants.
+
+## Lecture éditoriale
+
+Lis d'abord l'article du début à la fin comme un vrai lecteur sur téléphone.
+
+Le lecteur doit comprendre rapidement de quoi parle l'article et pourquoi le sujet peut l'intéresser. Si l'introduction part directement dans un tarif, un pass, une poussette ou un détail sans présenter le sujet, corrige-la.
+
+Supprime ce qui n'apporte rien au lecteur: répétitions, conseils évidents, raisonnements ou calculs sans utilité, paraphrases de sources et sections sans information nouvelle. Conserve en revanche les comparaisons chiffrées lorsqu'elles aident réellement à comprendre ou à choisir.
+
+Vérifie que l'angle sert l'article sans devenir l'article entier. Une micro-question utile peut être traitée dans un paragraphe, pas répétée pendant toute la page.
+
+Il ne doit y avoir aucun tableau Markdown. La lecture mobile doit rester naturelle sans défilement horizontal.
+
+La fin ne doit pas simplement répéter l'introduction ou résumer une troisième fois les mêmes choix. Supprime la conclusion si elle n'apporte rien. Un lien interne ou partenaire peut rester en fin d'article s'il propose une suite naturelle et s'il est rédigé comme un vrai conseil, pas comme une formule ajoutée par gabarit.
+
+Tu peux réorganiser, raccourcir ou reformuler sans changer le sujet lorsque cela améliore réellement l'article. Ne raccourcis pas pour raccourcir: une information utile et bien placée doit rester.
+
+## Fact-check et monétisation
+
+Après la lecture éditoriale, vérifie les faits qui peuvent réellement rendre l'article faux ou inutilisable: dates, tarifs, horaires, conditions, réservations, âges, restrictions, accessibilité et autres éléments décisifs. Utilise des sources officielles ou directement responsables. Si des sources fiables se contredisent, cherche la source la plus directement responsable ou la plus récente; si le doute subsiste, ne tranche pas arbitrairement et indique clairement l'incertitude dans l'article.
+
+Vérifie que les sources éditoriales ou factuelles réellement utilisées sont présentes dans `sources` et liées dans le corps au bon endroit lorsqu'elles ne concurrencent pas une offre partenaire. Le frontmatter `sources` ne doit jamais contenir d'URL partenaire ou affiliée: ces liens restent uniquement dans le corps de l'article. Si une offre partenaire permet l'achat ou la réservation d'une prestation payante, retire du corps les liens officiels donnant directement ou indirectement accès à la même prestation sur le site officiel, même depuis une page informative; conserve leurs URL dans `sources` lorsqu'elles étayent l'article.
 
 ### Partenaires disponibles
 
@@ -104,29 +130,19 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+Contrôle l'affiliation comme un éditeur: applique la logique d'usage du fichier partenaires, vérifie que les offres sont pertinentes, correctement placées et en français lorsqu'une version française existe. La formulation doit être naturelle et propre à cet article.
 
-Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+Pour la santé, la sécurité, les aides publiques, le droit ou les finances, utilise uniquement des sources institutionnelles compétentes pour les affirmations précises.
 
-Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
-
-Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
-
-Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
-
-Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
-
-Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
-
-Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+Ne crée pas de H1 ni de section `Sources` dans le corps. N'utilise jamais le caractère U+2014. N'ajoute pas d'espace avant `:` ou `;`.
 
 ## Résultat attendu
 
-Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
+Rends l'article complet final avec son frontmatter, sa liste `sources` et son corps. Il doit être publiable tel quel et agréable à lire du début à la fin.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 3/4
+- Phase préparée mécaniquement: 4/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -155,4 +171,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
+Indique le titre final, les coupes ou corrections importantes, les faits décisifs revérifiés, l'état final de l'affiliation et si l'article est publiable tel quel.
