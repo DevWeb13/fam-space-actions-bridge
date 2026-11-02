@@ -306,3 +306,4 @@ automation/image-20261102-0044-forum-chamonix-quimper-epinal-mayotte-4d91e34|580
 automation/image-20261102-0643-pommes-rouen-yego-de6fb34|d3c952b6ed6e922776fe1b451f2c30e4d09412a6
 automation/image-20261102-0643-pommes-rouen-yego-de6fb34|a3a710aa516efbeec5eeaf9052478c11b61fadab
 automation/image-20261102-1244-confiserie-olive-var-b640da0|64d8fb5a539569bc64d838509cf2e22fbe7bb32f
+automation/image-20261102-1244-confiserie-olive-var-b640da0|dcc3ee7bc4b1fe4aafe554d48ad4f556f7e5d0ff
