@@ -308,3 +308,4 @@ automation/image-20261102-0643-pommes-rouen-yego-de6fb34|a3a710aa516efbeec5eeaf9
 automation/image-20261102-1244-confiserie-olive-var-b640da0|64d8fb5a539569bc64d838509cf2e22fbe7bb32f
 automation/image-20261102-1244-confiserie-olive-var-b640da0|dcc3ee7bc4b1fe4aafe554d48ad4f556f7e5d0ff
 automation/image-20261102-1849-belfort-angouleme-a16f941|bae2c83d3dfc6ca3f098a8f78277299d5df7d195
+automation/image-20261102-1849-belfort-angouleme-a16f941|ceae2552bc64cf6fd44885ad039e5d1bf58e845e
