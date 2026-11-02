@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Saint-Nicolas 2026 à Saint-Nicolas-de-Port : village, défilé ou procession en famille ?"
-subtitle: Le 5 décembre, choisir entre les animations de l'après-midi et les rendez-vous du soir selon l'âge des enfants.
-summary: "Festivités de Saint-Nicolas-de-Port le 5 décembre 2026 : village gratuit, défilé, procession aux flambeaux, horaires confirmés et précautions pour une sortie avec des enfants."
+title: "Saint-Nicolas-de-Port 2026 en famille : village, défilé ou procession ?"
+subtitle: Le samedi 5 décembre, choisir le bon moment pour venir avec les enfants
+summary: "Village gratuit de 14 h à 19 h, défilé de chars et procession aux flambeaux : les repères confirmés et les précautions pour la Saint-Nicolas 2026 à Saint-Nicolas-de-Port."
 category: evenements
 location:
   city: Saint-Nicolas-de-Port
@@ -71,13 +76,15 @@ keywords:
   - festivités Saint Nicolas de Port défilé 2026
   - village Saint Nicolas de Port procession aux flambeaux
 sources:
-  - title: Ville de Saint-Nicolas-de-Port - Festivités du 5 décembre 2026
+  - title: Ville de Saint-Nicolas-de-Port - Festivités de la Saint-Nicolas, 5 décembre 2026
     url: https://www.saintnicolasdeport.com/fr/ev/1263095/792846/festivites-de-la-saint-nicolas-1
-  - title: Ville de Saint-Nicolas-de-Port - Village du 5 décembre, horaires et lieu
+  - title: Ville de Saint-Nicolas-de-Port - Village de la Saint-Nicolas, 14 h à 19 h
     url: https://www.saintnicolasdeport.com/fr/nw/1263056/3010347/village-de-la-saint-nicolas-recherche-de-producteurs-et-artisans-en-gastronomie
+  - title: Ville de Saint-Nicolas-de-Port - Se déplacer
+    url: https://saintnicolasdeport.com/fr/rb/1023453/se-deplacer-19
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: saint-nicolas-2026-a-saint-nicolas-de-port-village-defile-ou-procession-en-famille
   decision: Choisir le bon moment pour venir avec des enfants le 5 décembre, entre village de l'après-midi, défilé et procession en soirée, sans confondre Saint-Nicolas-de-Port avec Nancy.
@@ -87,29 +94,46 @@ radar:
     dataThrough: 2026-10-30
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Ville de Saint-Nicolas-de-Port - Festivités du 5 décembre 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-05
 ---
 
-## Mission retenue
-Préparer une sortie familiale aux festivités de Saint-Nicolas-de-Port le samedi 5 décembre 2026, événement distinct des Fêtes de Nancy.
+Le **samedi 5 décembre 2026**, Saint-Nicolas-de-Port, en Meurthe-et-Moselle, célèbre la Saint-Nicolas avec un village, des spectacles de rue, un défilé de chars et une procession aux flambeaux dans la basilique. L'accès aux festivités est **gratuit**. Pour une famille, le choix dépend surtout de l'âge des enfants : une promenade l'après-midi est plus facile à écourter qu'une soirée de défilé et de procession.
 
-## Pourquoi cette mission
-L'opportunité saisonnière est officielle, datée et encore absente du catalogue. Le refresh Lumigny, malgré sa baisse d'impressions au signal « uncertain », couvre déjà correctement billets, calendrier et accès ; aucun changement éditorial décisif n'a été confirmé. Une expansion autour du planétarium de la Cité des sciences chevaucherait le guide existant, qui traite déjà billet, âge et réservation. Le choix entre les trois temps de Saint-Nicolas-de-Port apporte une décision locale réellement nouvelle.
+## Le village de 14 h à 19 h : le choix le plus souple avec de jeunes enfants
 
-## Décision du lecteur
-Permettre aux parents de privilégier une sortie en journée avec de jeunes enfants ou d'organiser le défilé et la procession avec des enfants plus grands, en tenant compte de la durée, de la foule et du retour.
+Le [Village de la Saint-Nicolas](https://www.saintnicolasdeport.com/fr/nw/1263056/3010347/village-de-la-saint-nicolas-recherche-de-producteurs-et-artisans-en-gastronomie) est confirmé **place des Droits de l'Homme, de 14 h à 19 h**, le samedi 5 décembre. La Ville annonce aussi des spectacles et des déambulations dans le cadre de la fête, sans publier encore un horaire individuel pour chacun.
 
-## Faits à traiter
-La Ville annonce le 5 décembre 2026 à partir de 14 h une fête gratuite avec village, spectacles, déambulations, défilé de chars et procession aux flambeaux dans la basilique. Le village est confirmé de 14 h à 19 h, place des Droits de l'Homme. Ne pas inventer l'heure exacte ni le parcours du défilé, ni l'horaire de la procession : les vérifier à la publication. Préciser accès, transports, stationnement et conditions pratiques uniquement après contrôle des sources. Distinguer l'accès gratuit à la fête des achats sur place.
+Avec un bébé ou un enfant de maternelle, privilégiez une visite de l'après-midi : vous pouvez découvrir les stands et l'ambiance sans attendre les rendez-vous du soir. Prévoyez une pause au chaud si nécessaire et gardez une marge pour les repas et la fatigue. La Ville recherche des producteurs proposant de la petite restauration, mais ne confirme pas encore la liste définitive des stands : mieux vaut ne pas compter sur une offre précise.
 
-## Sources de départ
-Les deux pages municipales ci-dessus ; contrôler les éventuelles mises à jour du programme et des accès avant rédaction.
+L'entrée gratuite ne signifie pas que les boissons, les repas et les achats auprès des exposants sont offerts.
 
-## Affiliation
-Proposer sobrement un hébergement à proximité pour une nuit sur place, avec capacité et conditions vérifiées ; ne pas suggérer de billet payant pour la fête.
+## Défilé et procession : deux rendez-vous différents
 
-## Continuations internes
-- Lier le guide Fam Space des Fêtes de Saint-Nicolas à Nancy uniquement pour les animations propres à Nancy ; ne pas les recopier.
-- Vérifier le programme municipal définitif avant d'affirmer les horaires du défilé ou de la procession.
+Le [programme général annoncé par la Ville](https://www.saintnicolasdeport.com/fr/ev/1263095/792846/festivites-de-la-saint-nicolas-1) comprend un **défilé de chars et de groupes musicaux**, puis la **procession ancestrale aux flambeaux dans la basilique**. Cette dernière est un moment de tradition religieuse, distinct du spectacle des chars dans les rues.
+
+Pour des enfants qui veulent surtout voir les chars, le défilé est le rendez-vous à privilégier, à condition de vérifier son heure de départ et son parcours avant de venir. Pour des enfants plus grands intéressés par la tradition et l'atmosphère de la basilique, la procession peut prolonger la sortie, avec davantage d'attente et une fin de soirée à anticiper.
+
+**Au 2 novembre 2026, la page municipale ne donne ni l'heure précise ni le parcours du défilé, ni l'horaire de la procession.** Ne vous fiez pas aux horaires d'une édition précédente. La Ville renvoie également à son application « St Nicolas » pour préparer la visite. Consultez ses annonces actualisées quelques jours avant le 5 décembre.
+
+## Foule, poussette et retour : ce qu'il faut anticiper
+
+La fête attire habituellement beaucoup de visiteurs, selon l'organisateur. Avec une poussette, prévoyez un itinéraire court et acceptez de changer d'emplacement si la foule devient dense. Un porte-bébé peut être plus maniable pendant les rassemblements, selon l'âge de l'enfant. Pour la soirée, emportez des vêtements chauds et convenez d'un point de rendez-vous avec les enfants assez grands pour se déplacer seuls quelques instants.
+
+La Ville ne publie pas encore de dispositif spécifique pour le **stationnement, les rues fermées, les toilettes, les tables à langer ou l'accessibilité des différents espaces** le 5 décembre. Ces éléments sont à confirmer avant le départ, particulièrement si vous venez en fauteuil roulant ou avec une poussette.
+
+## Comment venir à Saint-Nicolas-de-Port ?
+
+Saint-Nicolas-de-Port est une commune distincte de Nancy. La [page municipale consacrée aux déplacements](https://saintnicolasdeport.com/fr/rb/1023453/se-deplacer-19) indique notamment les **bus SUB lignes 23 et 24** : la 23 relie le secteur à Nancy (Artem), tandis que la 24 dessert notamment Laneuveville. La gare ferroviaire la plus proche se trouve à **Varangéville**, dans la commune voisine.
+
+Ces dessertes habituelles ne garantissent pas un retour après la procession. Vérifiez les horaires du **samedi 5 décembre**, le dernier départ et les éventuelles déviations avant de choisir de rester en soirée. En voiture, ne supposez pas que les places proches du centre seront accessibles pendant le défilé : attendez le plan de circulation de l'organisateur.
+
+Si vous cherchez plutôt les villages, illuminations et le grand défilé **dans Nancy**, consultez notre [guide des Fêtes de Saint-Nicolas 2026 à Nancy](https://www.fam-space.fr/articles/evenements/fetes-de-saint-nicolas-2026-a-nancy-en-famille-defile-dates-et-visite/). Les deux villes proposent des événements différents le même week-end.
+
+## Dormir sur place pour éviter un retour tardif
+
+Pour les familles venant de loin, une nuit à Saint-Nicolas-de-Port peut simplifier la soirée. La maison d'hôtes [Les Berges de l'Ô sur Booking.com](https://www.booking.com/hotel/fr/les-berges-de-l-a.fr.html), au **10 ruelle du Moulin**, annonce des chambres familiales, un parking privé gratuit et l'accueil des enfants. L'arrivée est indiquée **de 17 h à 21 h** : il faut donc organiser l'enregistrement autour des festivités.
+
+La fiche précise que les enfants de plus de 4 ans sont facturés au tarif adulte, qu'un lit bébé peut être demandé gratuitement et que les lits d'appoint sont payants et soumis à disponibilité. Renseignez les âges de tous les enfants pour vérifier **la capacité réelle du logement**, le prix et les conditions d'annulation pour la nuit du 5 au 6 décembre ; aucune disponibilité à cette date n'est garantie.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
