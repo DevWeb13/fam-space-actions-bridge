@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,98 +14,122 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Vosges
 - Région: Grand Est
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Sujet :** la nouvelle visite immersive de la Confiserie des Hautes Vosges (CDHV), à Plainfaing (Vosges, 88).
-
-**Titre de travail :** « Bonbons des Vosges à Plainfaing : une visite gratuite et sensorielle en famille ».
-
-**Angle :** découvrir comment les bonbons des Vosges sont fabriqués, en suivant le parcours immersif de 700 m² ouvert en juillet 2026, puis la démonstration artisanale et la dégustation. Cette entreprise familiale de Plainfaing propose désormais une sortie culturelle et gourmande d'environ une heure, accessible sans billet ni réservation individuelle du lundi au samedi. Ce n'est pas un atelier où les enfants fabriquent eux-mêmes des bonbons : ils découvrent le métier et les gestes du confiseur.
-
-## Besoin du lecteur
-
-Savoir ce que les enfants voient et font réellement (histoire du sucre, cinq sens, plantes et miel des Vosges, outils, cinéma, démonstration et dégustation), si la visite convient à leur famille, combien de temps prévoir, quand venir et comment organiser une halte agréable, y compris par mauvais temps. Distinguer les horaires des visites de ceux de la boutique, ouverte aussi le dimanche, et les visites individuelles des groupes. Prévoir une alternative si l'on ne peut venir que le dimanche.
-
-## Valeur éditoriale
-
-- **Nouveauté concrète de 2026 :** parcours scénographique de 700 m² et découverte des cinq sens, en plus de la fabrication traditionnelle au chaudron. Décrire les étapes et ce que les enfants peuvent observer, sans promettre de manipulation du sucre par les visiteurs.
-- **Organisation familiale :** visite gratuite annoncée d'environ 1 h, sans réservation individuelle ; visites du lundi au samedi de 9 h à 17 h en continu, aucune visite le dimanche ni les jours fériés ; boutique distincte, ouverte le dimanche ; parking gratuit, accès PMR, ateliers climatisés et tables de pique-nique. Reconfirmer ces horaires directement auprès de la CDHV avant publication : des fiches touristiques conservent les anciens créneaux de visites.
-- **Comparaison utile, sans en faire un catalogue :** la Confiserie Géromoise à Gérardmer propose une visite gratuite de fabrication d'environ 25 min, sept jours sur sept, et constitue une option pour le dimanche. Les deux lieux ne proposent pas la même expérience ; vérifier les conditions le jour du départ.
-- **Valeur au-delà d'une fiche officielle :** proposer une lecture du parcours adaptée aux familles, expliquer les étapes de fabrication, donner les bons repères d'horaires et de durée et signaler que l'accès à la boutique ne signifie pas qu'une visite de l'atelier est possible. Aucun âge minimal n'a été confirmé : ne pas en inventer.
-
-## Affiliation
-
-L'activité principale est gratuite et sans billet : aucune billetterie payante équivalente et pertinente confirmée chez GetYourGuide, Tiqets ou Klook. Pas de lien marchand vers la boutique officielle dans le corps de l'article.
-
-Pour les familles qui prolongent la sortie en séjour dans les Hautes-Vosges, deux **offres d'hébergement identifiées sur Booking.com** (disponibilité et prix à choisir selon les dates, commission effective non vérifiée) :
-
-- **Logement Spacieux, Fraize**, appartement avec deux chambres, cuisine équipée, parking gratuit et capacité affichée jusqu'à six personnes ; proche de Plainfaing : https://www.booking.com/hotel/fr/logement-spacieux-fraize.fr.html
-- **Logis Hotel Des Bains, Gérardmer**, chambres familiales de quatre ou cinq personnes, pratique pour un séjour qui inclut aussi Gérardmer ; chambres familiales accessibles uniquement par des escaliers : https://www.booking.com/hotel/fr/des-bains.fr.html
-
-Ne proposer qu'une ou deux de ces adresses, naturellement en fin d'article, si le séjour dans le secteur est évoqué. Ne pas présenter ces URL ordinaires comme preuve de suivi des commissions.
-
-## Sources de départ
-
-- CDHV, **nouvel espace immersif**, déroulé, gratuité, durée et horaires actuels : https://www.cdhv.fr/nouvel-espace-immersif
-- CDHV, **visite des ateliers**, équipements et distinction boutique/visites : https://www.cdhv.fr/visite
-- CDHV, **fabrication artisanale** : https://www.cdhv.fr/notre-confiserie/fabrication-artisanale
-- Office de tourisme / Massif des Vosges, **nouvel espace de juillet 2026** et informations de contexte : https://www.massif-des-vosges.fr/sit/940000969-confiserie-des-hautes-vosges/
-- Confiserie Géromoise, **visite gratuite et horaires du dimanche** : https://www.confiserie-geromoise.fr/visites-confiserie-vosges
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "activites"
+title: "Confiserie des Hautes Vosges à Plainfaing: une visite gratuite en famille"
+subtitle: "Un nouveau parcours sensoriel de 700 m², les gestes du confiseur et une dégustation"
+summary: "À Plainfaing, découvrez les bonbons des Vosges en famille: parcours immersif, fabrication au chaudron, dégustation et horaires à connaître."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Confiserie des Hautes Vosges visite"
+  - "Plainfaing en famille"
+  - "bonbons des Vosges fabrication"
+  - "activité gratuite Vosges"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Plainfaing"
+  department: "Vosges"
+  region: "Grand Est"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "CDHV - Nouvel espace immersif et horaires des visites"
+    url: "https://www.cdhv.fr/nouvel-espace-immersif"
+  - title: "CDHV - Visite des ateliers, horaires et services"
+    url: "https://www.cdhv.fr/visite"
+  - title: "CDHV - Les étapes de fabrication artisanale"
+    url: "https://www.cdhv.fr/notre-confiserie/fabrication-artisanale"
+  - title: "Massif des Vosges - Confiserie des Hautes Vosges"
+    url: "https://www.massif-des-vosges.fr/sit/940000969-confiserie-des-hautes-vosges/"
+  - title: "Confiserie Géromoise - Visites et horaires"
+    url: "https://www.confiserie-geromoise.fr/visites-confiserie-vosges"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Plainfaing, dans les Hautes-Vosges, la Confiserie des Hautes Vosges (CDHV) fait découvrir aux familles comment sont fabriqués ses bonbons traditionnels. Depuis juillet 2026, la visite s'est enrichie d'un **parcours immersif de 700 m²**, avant la découverte du travail des confiseurs et une dégustation. L'ensemble est gratuit et dure environ une heure, selon les [informations de la confiserie](https://www.cdhv.fr/nouvel-espace-immersif) et du [Massif des Vosges](https://www.massif-des-vosges.fr/sit/940000969-confiserie-des-hautes-vosges/).
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Ce que les enfants découvrent pendant la visite
+
+Le nouveau parcours ne se limite pas à regarder des bonbons derrière une vitre. Il raconte l'histoire du sucre, évoque les plantes de la montagne vosgienne, les abeilles et le miel, et propose des découvertes autour des **cinq sens**. On passe notamment par un espace consacré aux matières premières, des présentations d'anciens outils et une salle de projection. Les enfants peuvent ainsi comprendre d'où viennent les parfums et pourquoi certains bonbons sont associés aux Vosges.
+
+Le moment le plus concret reste l'atelier: un confiseur explique ses gestes pendant la fabrication. Le sucre chauffe dans un **chaudron en cuivre**, puis la pâte est coulée, parfumée et travaillée avant de passer dans des cylindres qui donnent leur forme aux bonbons. Les arômes peuvent rappeler le sapin des Vosges, l'eucalyptus ou la bergamote. La [confiserie détaille ces étapes](https://www.cdhv.fr/notre-confiserie/fabrication-artisanale), de la cuisson à l'emballage.
+
+La dégustation permet de découvrir le résultat. En revanche, **les enfants ne fabriquent pas eux-mêmes leurs bonbons**: c'est une visite de découverte, avec des éléments sensoriels, une démonstration professionnelle et des explications, pas un atelier de cuisine participatif.
+
+## Est-ce adapté à l'âge de vos enfants ?
+
+Pour les enfants qui aiment observer, sentir et comprendre comment les choses sont faites, le mélange entre parcours sensoriel et démonstration offre plus de variété qu'une simple visite d'usine. Les plus jeunes pourront surtout apprécier les odeurs, les images et la dégustation; les plus grands auront davantage de matière pour suivre les étapes de fabrication.
+
+**Aucun âge minimum n'est annoncé** par l'établissement. Pour un tout-petit, gardez simplement à l'esprit que la visite complète dure environ une heure et comporte des moments d'explication. L'accès aux personnes à mobilité réduite est annoncé, mais les modalités précises pour circuler avec une poussette ne sont pas détaillées: mieux vaut les demander à la confiserie si c'est déterminant pour vous.
+
+C'est aussi une sortie intéressante quand il pleut ou qu'il fait très chaud: les ateliers sont climatisés, d'après la [page pratique de la CDHV](https://www.cdhv.fr/visite).
+
+## Horaires: attention à la différence entre visite et boutique
+
+La CDHV annonce actuellement les conditions suivantes pour les visiteurs individuels:
+
+- **Visite gratuite:** du lundi au samedi, de **9 h à 17 h en continu**. Pas de visite le dimanche ni les jours fériés.
+- **Boutique:** du lundi au samedi de **9 h à 18 h 30**; dimanche et jours fériés de **10 h à 18 h**.
+- **Réservation:** aucune réservation individuelle n'est demandée dans les consignes publiées; les groupes de plus de 20 personnes doivent contacter l'établissement.
+
+Ces horaires sont ceux de la [page officielle des visites](https://www.cdhv.fr/visite), consultée le 2 novembre 2026. Certaines fiches touristiques indiquent encore d'anciens créneaux, notamment une interruption à midi: pour préparer la sortie, privilégiez la page de la confiserie. La fermeture des visites à 17 h ne signifie pas qu'il faut arriver à 17 h pour commencer un parcours d'une heure.
+
+**Adresse:** 3074 route de Gérardmer, lieu-dit Habaurupt, 88230 Plainfaing. Un parking gratuit, accessible notamment aux camping-cars et aux autocars, ainsi que des tables de pique-nique sont annoncés sur place. Pour vérifier une situation particulière ou une modification ponctuelle: **03 29 50 44 56**.
+
+## Et si vous êtes dans les Vosges un dimanche ?
+
+La boutique de Plainfaing peut être ouverte sans que la fabrication se visite. Si votre seule journée disponible est le dimanche, une autre possibilité se trouve à Gérardmer: la **Confiserie Géromoise**, au 680 route d'Épinal.
+
+Elle annonce une **visite commentée gratuite d'environ 25 minutes**, avec dégustation et sans réservation pour les particuliers, **sept jours sur sept**. Les départs ont lieu toutes les 30 minutes, de 10 h à 11 h 30 et de 14 h à 18 h, avec derniers départs à **11 h et 17 h 30**. Les horaires et les éventuelles exceptions sont à confirmer avant de partir sur la [page officielle de la Confiserie Géromoise](https://www.confiserie-geromoise.fr/visites-confiserie-vosges).
+
+Ce n'est pas le même programme: à Plainfaing, l'intérêt est le grand parcours immersif ajouté à la fabrication; à Gérardmer, la visite est plus courte et centrée sur les gestes de l'artisan. Le bon choix dépend donc surtout du jour disponible et du temps que vos enfants auront envie d'y consacrer.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -134,4 +158,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
