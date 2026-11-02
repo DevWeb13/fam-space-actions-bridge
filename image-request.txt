@@ -302,3 +302,4 @@ automation/image-20261101-1244-kayak-cuisine-noel-002d001|eb280fc92196babb62aa8a
 automation/image-20261101-1846-falaise-cirque-selestat-martinique-f80c3e0|f80c3e02fe23df7e6a4d6d777296e9660d87a9d6
 automation/image-20261101-1846-falaise-cirque-selestat-martinique-f80c3e0|99197a273a22344149b419dfc8b82f0cec11c995
 automation/image-20261102-0044-forum-chamonix-quimper-epinal-mayotte-4d91e34|94f7c0e1655007ba28ccfe70b26edda0488acf82
+automation/image-20261102-0044-forum-chamonix-quimper-epinal-mayotte-4d91e34|580503d734a855d76cec485e8a1c6076259f2db7
