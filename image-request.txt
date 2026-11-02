@@ -303,3 +303,4 @@ automation/image-20261101-1846-falaise-cirque-selestat-martinique-f80c3e0|f80c3e
 automation/image-20261101-1846-falaise-cirque-selestat-martinique-f80c3e0|99197a273a22344149b419dfc8b82f0cec11c995
 automation/image-20261102-0044-forum-chamonix-quimper-epinal-mayotte-4d91e34|94f7c0e1655007ba28ccfe70b26edda0488acf82
 automation/image-20261102-0044-forum-chamonix-quimper-epinal-mayotte-4d91e34|580503d734a855d76cec485e8a1c6076259f2db7
+automation/image-20261102-0643-pommes-rouen-yego-de6fb34|d3c952b6ed6e922776fe1b451f2c30e4d09412a6
