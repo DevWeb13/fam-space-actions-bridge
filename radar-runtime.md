@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,25 +60,18 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Mini World Lyon: tarifs, billets famille et durée de visite"
-subtitle: Quel billet choisir et combien de temps prévoir dans le parc de miniatures de Vaulx-en-Velin
-summary: "Mini World Lyon en famille: prévoyez 2 à 4 h, comparez tarifs, billets datés, pack famille et Lyon City Card, et préparez l’accès au Carré de Soie."
+title: "Mini World Lyon : quel billet choisir en famille et combien de temps prévoir ?"
+subtitle: "Pack famille, tarifs réduits en caisse, gratuité des petits et Lyon City Card : les différences qui comptent"
+summary: À Mini World Lyon, comparez billets datés, pack à 54 €, réductions sur justificatif et gratuité des moins de 4 ans avant de prévoir 2 à 4 h de visite.
 slug: mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite
 status: published
 publishedAt: 2026-09-25T06:00:59+02:00
 updatedAt: 2026-09-25T11:10:49+02:00
 category: bons-plans
-readingTime: 4
+readingTime: 5
 location:
   city: Vaulx-en-Velin
   department: Rhône
@@ -82,21 +87,23 @@ image:
 sources:
   - title: Mini World Lyon
     url: https://miniworldlyon.com/
-  - title: Tarifs
+  - title: Tarifs officiels de Mini World Lyon
     url: https://miniworldlyon.com/tarifs/
-  - title: Horaires
+  - title: Horaires et calendrier d'ouverture
     url: https://miniworldlyon.com/horaires/
-  - title: Infos pratiques
+  - title: Informations pratiques et accès
     url: https://miniworldlyon.com/infos-pratiques/
-  - title: Questions fréquentes
+  - title: Questions fréquentes et services aux familles
     url: https://miniworldlyon.com/questions-frequentes/
+  - title: Le parc et les visites des coulisses
+    url: https://miniworldlyon.com/le-parc/
 affiliate:
   enabled: true
   type: travel
   destination: Vaulx-en-Velin
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/bons-plans/(2026)/(09)/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/index.md
   targetSha: 82e4650367da47b76bb5c2d1a6e5f15f97ac06fb
@@ -123,34 +130,65 @@ radar:
       - mini world lyon tarif
 ---
 
-## Mission retenue
-Actualiser le guide Mini World Lyon, surtout les tarifs réduits et les conditions des billets enfants, sans réécrire les informations toujours valables.
+À Vaulx-en-Velin, au Carré de Soie, **Mini World Lyon** réunit plus de 3 000 m² de décors miniatures animés. On y explore cinq univers — ville, montagne, campagne, Lyon et Côte d'Azur — où les véhicules circulent et les lumières recréent le jour et la nuit. L'exposition temporaire est comprise dans l'entrée. Pour une famille, le choix du billet dépend surtout du nombre et de l'âge des enfants, mais aussi des réductions auxquelles les adultes peuvent prétendre.
 
-## Pourquoi cette mission
-Le snapshot GSC (au 30 octobre) relève 463 impressions récentes et 4 clics, sans preuve de perte de classement (`uncertain`). L'amélioration est indépendante de ce signal : le guide compare les billets mais omet plusieurs réductions déterminantes pour des familles. Le refresh Lumigny, mieux classé dans le snapshot, est déjà précis et conforme aux informations actuelles du parc; sa baisse d'impressions ne justifie pas une réécriture. Une expansion depuis la page forte sur les transports parisiens recouperait notamment les articles CDG, Orly et Navigo. L'opportunité Festi'Jeux à Andard (13-15 novembre, programme officiel confirmé, pas de doublon local) est valable, mais la correction des choix tarifaires sur une page déjà consultée passe devant.
+## Billets datés, pack famille ou billet liberté ?
 
-## Décision du lecteur
-Comparer les billets web, le pack famille, les tarifs réduits sur justificatif et la Lyon City Card selon ses enfants, son budget et son programme.
+Les **billets web datés** commencent à **16,90 € par adulte** et **11,90 € par enfant de 4 à 17 ans**. Ce sont des prix d'appel : le montant à payer dépend de la date choisie. Ces billets ne sont ni modifiables ni remboursables.
 
-## Faits à traiter
-- Tarifs officiels actuels : web daté dès 16,90 € adulte et 11,90 € enfant 4-17 ans; pack 2 adultes + 2 enfants à 54 €; billet liberté 20,90 €/15,90 €; fin de journée 13,90 €/9,90 €, avec visite raccourcie.
-- Réductions en caisse sur justificatif : adulte 15,90 € (notamment demandeur d'emploi, RSA, étudiant, senior, handicap, résident de Vaulx-en-Velin); enfant handicapé 10,90 €; adulte en fauteuil 10,90 € et enfant de moins de 18 ans en fauteuil gratuit. Comparer ces options avant de conseiller le pack, sans présumer du cumul des réductions.
-- Gratuité 0-3 ans inclus, billet à retirer en caisse, limite annoncée de trois bambins par adulte payant.
-- Préserver : durée minimale 2 h et possible 3-4 h, poussettes, réentrée, cinq univers, coulisses (10 € selon page tarifs, FAQ divergente), transports et parking, City Card et hébergement. Recontrôler les horaires datés.
-- Éviter un CTA d'achat vers la billetterie officielle non affiliée dans le corps : l'utiliser comme source de vérification; garder la City Card partenaire uniquement si elle sert réellement le lecteur.
+Le **pack famille daté** coûte **54 € pour deux adultes et deux enfants**, avec un tarif annoncé de **10,90 € par enfant supplémentaire**. À titre de comparaison, deux billets adultes et deux billets enfants aux prix web minimum totalisent 57,60 € : le pack fait alors économiser 3,60 €. Il faut néanmoins refaire le calcul si l'un des visiteurs bénéficie d'une réduction particulière ou si un enfant entre gratuitement.
 
-## Sources de départ
-- https://miniworldlyon.com/tarifs/
-- https://miniworldlyon.com/questions-frequentes/
-- https://miniworldlyon.com/horaires/
-- https://www.tiqets.com/fr/les-choses-a-faire-a-lyon-c66838/billets-pour-lyon-city-card-p976069/
+Les **0-3 ans inclus** ne paient pas l'entrée, mais leur billet gratuit doit être retiré en caisse. Le parc précise une limite de **trois enfants de cet âge par adulte payant**. Ne comptez donc pas un enfant de 3 ans comme un enfant payant dans un pack sans comparer les autres formules.
 
-## Affiliation
-Conserver la Lyon City Card via Tiqets pour une visite combinée à d'autres attractions et les hébergements Booking pertinents. Aucun billet Mini World seul affilié confirmé : ne pas en inventer.
+Si vous ne pouvez pas fixer la date, le **billet liberté non daté** coûte **20,90 € par adulte** et **15,90 € par enfant de 4 à 17 ans**. Il est annoncé sans limite de validité. Autre option : le tarif de **fin de journée**, applicable pendant les **1 h 30 avant la fermeture**, à **13,90 € par adulte** et **9,90 € par enfant**. Il est moins cher, mais laisse trop peu de temps pour une découverte complète.
 
-## Continuations internes
-- Conserver un lien vers le guide de l'événement Halloween à Mini World uniquement si le contexte reste utile; l'événement 2026 est terminé.
-- Ne pas confondre une visite seule avec un séjour multi-attractions pour recommander la City Card.
+*Tarifs vérifiés le 2 novembre 2026, susceptibles de changer.*
+
+## Les réductions à vérifier avant d'acheter
+
+Certains tarifs ne sont accessibles **qu'en caisse, avec un justificatif en cours de validité** :
+
+- **15,90 € pour un adulte** demandeur d'emploi, bénéficiaire du RSA, enseignant, étudiant, senior d'au moins 65 ans, en situation de handicap ou habitant de Vaulx-en-Velin ;
+- **10,90 € pour un enfant en situation de handicap** ;
+- **10,90 € pour un adulte en fauteuil roulant**, et **gratuité pour un enfant de moins de 18 ans en fauteuil roulant**.
+
+Ces tarifs peuvent rendre des entrées individuelles plus intéressantes que le pack selon votre situation. Le parc ne précise pas de cumul entre réductions : ne l'anticipez pas dans votre calcul. Pour une famille ayant droit à un tarif réduit, comparez le coût de chaque formule **avant** d'acheter des billets datés non remboursables.
+
+## La Lyon City Card est-elle intéressante ?
+
+Pour **Mini World seul**, des billets individuels ou un pack sont généralement plus adaptés qu'un pass touristique. En revanche, si vous prévoyez plusieurs visites à Lyon et des déplacements en transports en commun, comparez le coût total avec la [Lyon City Card proposée sur Tiqets](https://www.tiqets.com/fr/les-choses-a-faire-a-lyon-c66838/billets-pour-lyon-city-card-p976069/).
+
+Mini World indique accepter les Lyon City Card actives de 24 h, 48 h, 72 h, 96 h et un an, **sans réservation préalable pour l'entrée au parc**. L'offre Tiqets consultée présente notamment les formules 24 h, 48 h et 72 h et mentionne Mini World parmi les visites incluses. Vérifiez les durées proposées et les activités réellement utiles à votre famille avant de choisir : une City Card n'est pas automatiquement rentable pour une seule attraction.
+
+## Combien de temps rester avec des enfants ?
+
+<!-- article-image-body:01 -->
+
+![Décor miniature de l'Auditorium de Lyon éclairé pendant un cycle de nuit](/images/articles/2026/09/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite-body-01.webp)
+
+<!-- /article-image-body:01 -->
+
+Prévoyez **au moins deux heures**, et facilement **trois à quatre heures** si les enfants aiment chercher les personnages cachés et attendre les animations. Ce n'est pas un parc de manèges : la visite consiste à observer de grands paysages animés à son rythme. Les tout-petits, dès 2 ans selon le parc, peuvent aussi apprécier les scènes.
+
+Les **poussettes sont autorisées**, mais leur circulation peut être moins facile dans certains passages étroits les jours d'affluence. Des **marchepieds** aident les petits à regarder les décors, les sanitaires disposent de **tables à langer** et des **casiers gratuits** sont prévus. Le parc est accessible aux personnes en situation de handicap ; il recommande le début de journée pour circuler plus facilement.
+
+La nourriture et les boissons ne sont **pas autorisées dans les espaces de visite**. Un **tampon de réentrée** permet toutefois de sortir déjeuner puis de revenir le même jour. Les enfants de moins de 12 ans doivent être accompagnés d'un adulte responsable.
+
+## Faut-il ajouter la visite des coulisses ?
+
+La visite guidée des coulisses dure environ **45 minutes**, en supplément du billet d'entrée. Le parc annonce des départs à **15 h et 16 h 30** les jours d'ouverture, avec **4 à 8 participants** : en dessous de quatre inscrits, la visite est annulée et les billets en ligne remboursés. Les **moins de 4 ans ne peuvent pas participer**.
+
+La page tarifs et le descriptif de la visite affichent **10 € par personne**, tandis que la FAQ mentionne encore **12 €**. Le prix de 10 € est donc le plus cohérent avec les pages dédiées, mais vérifiez-le lors de la réservation. Pour une première visite avec de jeunes enfants, ce supplément n'est pas indispensable pour profiter des cinq mondes.
+
+## Accès, horaires et séjour sur place
+
+Mini World Lyon se trouve au **3 avenue de Bohlen, 69120 Vaulx-en-Velin**, au bout du centre commercial Carré de Soie. Depuis l'arrêt **Vaulx-en-Velin La Soie** (métro A ou tram T3), comptez environ **cinq minutes à pied**. En voiture, le centre commercial propose un **parking gratuit de 1 800 places** ; l'adresse GPS conseillée est « Parking Centre Commercial Carré de Soie, 3 avenue de Bohlen ».
+
+Si vous venez en TER, le parc annonce aussi **3 € de réduction sur présentation en caisse d'un billet TER daté du jour** ; les conditions de cumul avec d'autres réductions ne sont pas précisées.
+
+Le parc est **entièrement couvert**, mais ses jours et horaires d'ouverture varient. Consultez le calendrier officiel avant de partir, surtout si vous envisagez un billet de fin de journée.
+
+Pour une sortie depuis Lyon, il n'est pas nécessaire de dormir sur place. Si vous venez de loin ou prolongez la visite en week-end, vous pouvez [comparer les hébergements à Vaulx-en-Velin sur Booking.com](https://www.booking.com/city/fr/vaulx-en-velin.fr.html), notamment autour du Carré de Soie où se trouve l'ibis Lyon Carré de Soie.
 
 ## Article source exact à préserver et améliorer
 
@@ -248,6 +286,13 @@ Pour une simple sortie depuis Lyon, un hébergement n'est pas nécessaire. En re
 ### Articles proches préparés mécaniquement
 
 - /articles/evenements/halloween-2026-a-mini-world-lyon-la-chasse-aux-31-mechants-en-famille/ | Halloween 2026 à Mini World Lyon: la Chasse aux 31 Méchants en famille | evenements | Vaulx-en-Velin, Rhône, Auvergne-Rhône-Alpes
+- /articles/sorties/chateau-de-kerjean-avec-des-enfants-combien-de-temps-prevoir-et-quel-billet-choisir/ | Château de Kerjean avec des enfants: combien de temps prévoir et quel billet choisir? | sorties | Saint-Vougay, Finistère, Bretagne
+- /articles/voyages/paleosite-de-saint-cesaire-en-famille-combien-de-temps-prevoir-en-2026/ | Paléosite de Saint-Césaire en famille: combien de temps prévoir en 2026? | voyages | Saint-Césaire, Charente-Maritime, Nouvelle-Aquitaine
+- /articles/activites/micropolis-avec-de-jeunes-enfants-combien-de-temps-prevoir-et-quoi-emporter/ | Micropolis avec de jeunes enfants: combien de temps prévoir et quoi emporter? | activites | Saint-Léons, Aveyron, Occitanie
+- /articles/activites/vallee-des-singes-a-romagne-combien-de-temps-prevoir-pour-la-visite/ | Vallée des Singes à Romagne: combien de temps prévoir pour la visite? | activites | Romagne, Vienne, Nouvelle-Aquitaine
+- /articles/bons-plans/filitosa-en-famille-quel-billet-choisir-et-combien-prevoir/ | Filitosa en famille: quel billet choisir et combien prévoir? | bons-plans | Sollacaro, Corse-du-Sud, Corse
+- /articles/activites/anatomik-park-a-cap-sciences-a-partir-de-quel-age-et-combien-de-temps-prevoir/ | Anatomik Park à Cap Sciences: à partir de quel âge et combien de temps prévoir? | activites | Bordeaux, Gironde, Nouvelle-Aquitaine
+- /articles/sorties/centre-historique-minier-de-lewarde-combien-de-temps-prevoir-avec-des-enfants/ | Centre Historique Minier de Lewarde: combien de temps prévoir avec des enfants | sorties | Lewarde, Nord, Hauts-de-France
 - /articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/ | Mini World Lyon: tarifs, billets famille et durée de visite | bons-plans | Vaulx-en-Velin, Rhône, Auvergne-Rhône-Alpes
 - /articles/voyages/week-end-dans-les-pierres-dorees-en-famille-oingt-jarnioux-et-balades/ | Week-end dans les Pierres Dorées en famille: Oingt, Jarnioux et balades | voyages | Rhône, Auvergne-Rhône-Alpes
 - /articles/evenements/automne-des-gones-2026-a-lyon-quels-ateliers-gratuits-choisir-avec-les-enfants/ | Automne des gones 2026 à Lyon: ateliers et sorties gratuites en famille | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
@@ -258,17 +303,10 @@ Pour une simple sortie depuis Lyon, un hébergement n'est pas nécessaire. En re
 - /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | Festival Lumière 2026: Laurel & Hardy en famille le 17 octobre à Lyon | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/parentalite/cafe-papote-a-lyon-4e-ou-echanger-gratuitement-avec-d-autres-parents/ | Café Papote à Lyon 4e: où échanger gratuitement avec d'autres parents | parentalite | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/cuisine/a-claveisolles-decouvrir-comment-le-lait-de-chevre-devient-fromage-avec-les-enfants/ | À Claveisolles, découvrir comment le lait de chèvre devient fromage avec les enfants | cuisine | Claveisolles, Rhône, Auvergne-Rhône-Alpes
-- /articles/maison/decheteries-mobiles-a-lyon-que-peut-on-deposer-et-quand-preferer-une-decheterie-fixe/ | Déchèteries mobiles à Lyon: que peut-on déposer et quand préférer une déchèterie fixe? | maison | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/vie-pratique/location-de-voiture-a-lyon-avec-des-enfants-ce-qu-il-faut-verifier-avant-de-reserver/ | Location de voiture à Lyon avec des enfants: ce qu'il faut vérifier avant de réserver | vie-pratique | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/activites/parc-de-courzieu-en-famille-tarifs-horaires-et-conseils-pour-la-visite/ | Parc de Courzieu en famille: tarifs, horaires et conseils pour la visite | activites | Courzieu, Rhône, Auvergne-Rhône-Alpes
 - /articles/bons-plans/chamonix-en-famille-sans-voiture-train-gratuit-et-bus-a-prix-reduit-avec-la-carte-d-hote/ | Chamonix en famille sans voiture: train gratuit et bus à prix réduit avec la carte d’hôte | bons-plans | Chamonix-Mont-Blanc, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/bons-plans/visiter-falaise-en-famille-a-petit-prix-quel-pass-choisir/ | Visiter Falaise en famille à petit prix: quel pass choisir ? | bons-plans | Falaise, Calvados, Normandie
 - /articles/bons-plans/a-marie-galante-l-habitation-murat-se-decouvre-gratuitement-en-famille/ | À Marie-Galante, l’habitation Murat se découvre gratuitement en famille | bons-plans | Grand-Bourg, Guadeloupe, Guadeloupe
 - /articles/bons-plans/fougeres-en-famille-a-petit-prix-chateau-coursive-et-balade-gratuite/ | Fougères en famille à petit prix: château, Coursive et balade gratuite | bons-plans | Fougères, Ille-et-Vilaine, Bretagne
-- /articles/bons-plans/saint-remy-de-provence-en-famille-glanum-musees-et-entrees-gratuites/ | Saint-Rémy-de-Provence en famille: Glanum, musées et entrées gratuites | bons-plans | Saint-Rémy-de-Provence, Bouches-du-Rhône, Provence-Alpes-Côte d’Azur
-- /articles/bons-plans/chateau-de-chateaubriant-en-famille-une-sortie-a-petit-budget/ | Château de Châteaubriant en famille, une sortie à petit budget | bons-plans | Châteaubriant, Loire-Atlantique, Pays de la Loire
-- /articles/bons-plans/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites/ | Pass Nantes en famille en 2026: tarifs, visites incluses et alternatives gratuites | bons-plans | Nantes, Loire-Atlantique, Pays de la Loire
-- /articles/bons-plans/reserve-tresor-a-roura-decouvrir-la-foret-en-famille-en-acces-libre/ | Réserve Trésor à Roura: découvrir la forêt en famille en accès libre | bons-plans | Roura, Guyane, Guyane
 
 ### Historique Radar lié
 
