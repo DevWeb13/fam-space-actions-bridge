@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,105 +14,149 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Var
 - Région: Provence-Alpes-Côte d’Azur
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Sujet :** découvrir l'huile d'olive du Var avec des enfants, de l'olivier au moulin puis à la cuisine familiale.
-
-**Titre de travail :** « Huile d'olive dans le Var en famille : trois moulins à découvrir et des idées pour cuisiner »
-
-**Angle :** profiter de la période de récolte de novembre pour comprendre comment les olives deviennent de l'huile, choisir une visite adaptée à la famille et prolonger la découverte par une dégustation et des préparations simples à la maison. Il s'agit d'un guide pratique et culinaire, pas d'une simple liste de moulins.
-
-Trois expériences complémentaires, toutes situées dans le Var : le Moulin du Partégal à La Farlède (vieux moulin et moulin moderne, visite guidée avec dégustation), le Jardin des Oliviers à Sanary-sur-Mer (oliveraie et espace muséal pédagogique) et L'Olive du Verger à Hyères (production pendant la récolte et visite sur confirmation). Les activités ne reposent pas sur un événement ponctuel.
-
-## Besoin du lecteur
-
-Comprendre ce que les enfants verront réellement, choisir entre visite guidée, découverte pédagogique et moulin en fonctionnement, connaître les périodes d'ouverture et les réservations nécessaires, distinguer huile d'olive et olives de table, puis utiliser une huile découverte sur place dans des recettes familiales faciles. Le guide doit aider à préparer une sortie à la journée ou une étape gourmande pendant un séjour, sans promettre une démonstration en direct à chaque visite.
-
-## Valeur éditoriale
-
-- **Trois expériences réellement différentes :** au Partégal, visite individuelle gratuite d'environ 1 h 15 avec dégustation, réservation en ligne obligatoire en novembre ; au Jardin des Oliviers, entrée libre, oliveraie pédagogique et horaires distincts pour les espaces extérieurs et le musée ; à L'Olive du Verger, visites annoncées pendant la récolte du 15 octobre au 15 décembre, à 11 h et 16 h, mais créneau, tarif et taille du groupe à faire confirmer auprès du producteur. Ne pas confondre les horaires des boutiques avec ceux des visites.
-- **Pourquoi maintenant :** le Partégal décrit son ancien moulin en activité en novembre ; les producteurs varois expliquent que la récolte s'étend de l'automne à la fin de l'année, avec des profils d'huiles différents selon la maturité. Vérifier les créneaux précis avant de conseiller une visite.
-- **Un véritable angle cuisine :** expliquer simplement le parcours récolte–tri–broyage–extraction, proposer une petite dégustation comparative adaptée aux enfants (odeurs, douceur, amertume) et suggérer des utilisations familiales concrètes, par exemple tartines, pommes de terre au four ou tartinade d'olives de table déjà préparées. Ne pas recommander de manger des olives fraîchement cueillies telles quelles.
-- **Informations pratiques utiles :** durée, réservation, accès, pauses, intérêt selon l'âge, distinction entre visite gratuite et achat en boutique, et accessibilité partielle du Jardin des Oliviers (bâtiment accessible, une partie des extérieurs non accessible en fauteuil). Ne pas inventer d'âge minimal, de tarif ni de disponibilité.
-- **Différenciation :** VisitVar propose déjà un grand circuit de moulins ; Fam Space doit apporter une sélection raisonnée de trois formats, une aide au choix pour les familles et une vraie suite culinaire, plutôt que reproduire ce circuit.
-
-## Affiliation
-
-**Activité principale :** recherches d'offres de visites et dégustations chez GetYourGuide, Tiqets et Klook ; aucune offre partenaire correspondant précisément aux trois visites ci-dessus n'a pu être confirmée. Les réservations des moulins restent donc sur leurs pages officielles, sans les présenter comme des liens affiliés.
-
-**Hébergement pour les familles en séjour dans le secteur :**
-
-- **Booking.com — Hotel Le Coudon, La Farlède :** hôtel proposant des chambres familiales et un parking, pratique pour un séjour autour du Partégal. Page d'établissement vérifiée : https://www.booking.com/hotel/fr/comfort-laferlede.fr.html
-- **Booking.com — Almanarre, Hyères :** appartement de deux chambres avec cuisine équipée et équipements familiaux, pertinent pour une étape à Hyères et la visite de L'Olive du Verger. Page d'établissement vérifiée : https://www.booking.com/hotel/fr/almanarre.fr.html
-
-Ces URL établissent la présence des offres sur Booking.com, pas une disponibilité ni un prix à des dates données, ni le suivi effectif d'une commission. Les proposer uniquement si une nuitée est utile au lecteur, sans transformer la visite d'un moulin en prétexte à séjour.
-
-**Autres besoins :** aucune location de véhicule, transfert ou billetterie additionnelle n'a été retenue faute de nécessité éditoriale et d'offre précisément adaptée confirmée.
-
-## Sources de départ
-
-- Moulin du Partégal, visite guidée, réservation, durée, dégustation, conditions saisonnières : https://moulindupartegal.fr/fr/content/39-visiter-le-moulin
-- Moulin du Partégal, page de réservation : https://moulindupartegal.fr/fr/content/47-reserver-une-visite-individuelle-au-moulin-du-partegal
-- Office de tourisme du Var, Jardin des Oliviers à Sanary, horaires détaillés, entrée libre et accessibilité : https://www.visitvar.fr/fiche/le-jardin-des-oliviers-5490336
-- Producteur L'Olive du Verger, période de récolte, visites et contact à Hyères (attention : certains affichages de « prochaine visite » sont datés et doivent être reconfirmés) : https://www.loliveduverger.fr/visites
-- Moulin du Haut Jasson, explication de la récolte et des profils d'huile d'octobre à décembre : https://www.moulinduhautjasson.com/fr/qui-sommes-nous/culture-et-recolte.html
-- France Olive, repères pour la dégustation et la compréhension des arômes : https://www.franceolive.fr/categorie/qualite-des-produits/comment-deguster
-- VisitVar, circuit déjà publié des moulins du département, à ne pas recopier : https://www.visitvar.fr/que-faire-var/itineraires/oliveraies-moulins-huile-var
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "cuisine"
+title: "Huile d’olive dans le Var en famille: trois lieux à visiter et des idées pour cuisiner"
+subtitle: "Moulin en activité, oliveraie pédagogique ou dégustation: choisir une sortie et prolonger la découverte à table"
+summary: "Trois adresses dans le Var pour découvrir l’huile d’olive avec des enfants, avec les conditions de visite, les bonnes questions à poser et des recettes faciles."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "huile d'olive Var en famille"
+  - "visite moulin huile olive Var"
+  - "Jardin des Oliviers Sanary"
+  - "Moulin du Partégal"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Var"
+  region: "Provence-Alpes-Côte d’Azur"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Moulin du Partégal - visite guidée et conditions"
+    url: "https://moulindupartegal.fr/fr/content/39-visiter-le-moulin"
+  - title: "Moulin du Partégal - réservation des visites individuelles"
+    url: "https://moulindupartegal.fr/fr/content/47-reserver-une-visite-individuelle-au-moulin-du-partegal"
+  - title: "Office de tourisme de Sanary-sur-Mer - Jardin des Oliviers"
+    url: "https://www.visitvar.fr/fiche/le-jardin-des-oliviers-5490336"
+  - title: "L'Olive du Verger - informations du domaine"
+    url: "https://www.loliveduverger.fr/visites"
+  - title: "Moulin du Haut Jasson - culture et récolte"
+    url: "https://www.moulinduhautjasson.com/fr/qui-sommes-nous/culture-et-recolte.html"
+  - title: "France Olive - comment déguster une huile"
+    url: "https://www.franceolive.fr/categorie/qualite-des-produits/comment-deguster"
+  - title: "France Olive - préparation familiale des olives de table"
+    url: "https://www.franceolive.fr/categorie/transformation-olives-et-huile-d-olive/les-bases-de-la-preparation-familiale-d-olives-de-table"
 ---
-```
+Dans le Var, entre Toulon, Sanary-sur-Mer et Hyères, l’automne est une bonne période pour découvrir avec les enfants comment les olives deviennent de l’huile. Certains moulins montrent les machines, d’autres lieux permettent de se promener parmi les arbres ou de goûter des huiles aux saveurs différentes. Voici trois visites qui ne proposent pas tout à fait la même expérience, puis des idées simples pour continuer en cuisine.
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+## Trois adresses, selon ce que votre famille veut découvrir
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+### Le Moulin du Partégal, à La Farlède: voir l’ancien et le nouveau moulin
+
+C’est le choix le plus complet pour une première découverte de la fabrication. La visite guidée présente un ancien moulin avec sa meule et sa presse, puis les équipements modernes d’extraction. Une grande roue à eau fait aussi partie du décor. Les explications sur les étiquettes des bouteilles donnent une occasion concrète de comprendre ce qu’on achète.
+
+La [visite individuelle du Moulin du Partégal](https://moulindupartegal.fr/fr/content/39-visiter-le-moulin) est **gratuite, dure environ 1 h 15 et comprend une dégustation**. Le moulin indique que l’ancienne installation fonctionne en novembre, mais cela ne garantit pas que les enfants assisteront à une production en direct à l’heure de leur passage: mieux vaut le demander au moment de réserver.
+
+**À prévoir:** hors juillet et août, le moulin demande de réserver un créneau en ligne. La page comporte aussi une mention ambiguë sur l’accès éventuel à une visite déjà commencée sans réservation: pour éviter un déplacement inutile, utilisez la [réservation officielle](https://moulindupartegal.fr/fr/content/47-reserver-une-visite-individuelle-au-moulin-du-partegal). Adresse: 159 chemin des Laures, 83210 La Farlède; téléphone: 04 94 48 48 85. La boutique est ouverte du lundi au samedi, de 9 h à 12 h et de 14 h à 18 h d’octobre à mars, mais **ce ne sont pas les horaires des visites**.
+
+Pour les enfants qui aiment comprendre comment fonctionnent les machines, c’est la sortie à privilégier. Avec un tout-petit, la durée de la visite guidée est à prendre en compte; aucun âge minimum n’est annoncé.
+
+### Le Jardin des Oliviers, à Sanary-sur-Mer: explorer une oliveraie et un moulin traditionnel
+
+Ici, on vient d’abord pour le lieu: une oliveraie pédagogique de plus de 500 arbres, des cultures provençales, un ancien moulin et un espace d’exposition. C’est une bonne option pour les enfants qui préfèrent observer les arbres et les objets plutôt que suivre longtemps les explications d’une visite industrielle.
+
+L’[office de tourisme de Sanary-sur-Mer](https://www.visitvar.fr/fiche/le-jardin-des-oliviers-5490336) indique une **entrée libre** et des horaires différents selon les espaces:
+
+- **Jardin extérieur:** du mardi au samedi, de 9 h 30 à 12 h et de 14 h à 16 h.
+- **Espace muséal du moulin:** mercredi et vendredi de 14 h à 18 h; samedi de 9 h 30 à 12 h et de 14 h à 18 h.
+
+Si vous voulez voir **à la fois les oliviers et le musée**, choisissez donc un mercredi, un vendredi après-midi ou un samedi pendant leurs heures communes. Une visite guidée est annoncée sans inscription préalable, mais ses horaires ne sont pas précisés: ne la considérez pas comme systématique.
+
+Le bâtiment muséal est accessible en fauteuil roulant, contrairement à une grande partie des extérieurs. Ce point mérite aussi attention avec une poussette. Un parking est signalé à proximité. Adresse: 665 chemin de Sainte-Trinide, 83110 Sanary-sur-Mer; téléphone: 06 36 12 70 08.
+
+Particularité importante: le jardin est un site pédagogique, **pas un magasin d’huile**. Sa production n’est pas proposée à la vente, même si des dégustations peuvent avoir lieu.
+
+### L’Olive du Verger, à Hyères: se renseigner pour une visite pendant la récolte
+
+Au Domaine du Plan du Pont, l’intérêt serait d’observer le travail d’un producteur pendant la période où les olives arrivent au moulin. Les informations précédemment publiées par le domaine évoquaient des visites entre mi-octobre et mi-décembre, avec dégustation de l’huile du jour.
+
+**Attention avant de vous déplacer:** au 2 novembre 2026, la [page officielle de L’Olive du Verger](https://www.loliveduverger.fr/visites) affiche désormais un site en préparation, sans calendrier de réservation consultable. Les créneaux autrefois annoncés ne peuvent donc pas être considérés comme confirmés. Il faut contacter directement le producteur pour connaître les dates, le tarif éventuel, le nombre de places et la possibilité de voir le moulin fonctionner.
+
+Adresse: Domaine du Plan du Pont, 325 chemin du Muat, 83400 Hyères; téléphone: **06 16 99 21 62**. Cette troisième adresse est à envisager **uniquement après confirmation**, et non comme une visite libre garantie.
+
+## Ce que les enfants vont apprendre: de l’arbre à la bouteille
+
+Le parcours peut se raconter en quatre gestes. On **récolte** les olives sur l’arbre, puis on les **trie** pour retirer notamment feuilles et fruits abîmés. Elles sont ensuite **broyées** pour obtenir une pâte, dont l’huile est **séparée** grâce aux équipements du moulin. Enfin, l’huile est conservée puis mise en bouteille.
+
+C’est aussi l’occasion de comprendre pourquoi toutes les huiles ne se ressemblent pas. Le [Moulin du Haut Jasson, dans le Var](https://www.moulinduhautjasson.com/fr/qui-sommes-nous/culture-et-recolte.html), explique que les olives récoltées plus tôt peuvent donner des huiles au fruité vert marqué, tandis que des récoltes plus tardives donnent d’autres profils aromatiques. La variété et le savoir-faire du moulinier jouent également un rôle.
+
+Une question intéressante à poser pendant la visite: « Qu’est-ce qui change entre une olive verte, une olive mûre et l’huile qu’on en tire ? » Les enfants peuvent ainsi relier ce qu’ils voient sur l’arbre à ce qu’ils goûtent.
+
+## Une petite dégustation à refaire à la maison
+
+Pas besoin d’organiser une dégustation professionnelle. Prenez deux huiles d’olive alimentaires différentes, idéalement l’une douce et l’autre plus intense. Versez-en quelques gouttes sur deux petits morceaux de pain et proposez aux enfants de décrire ce qu’ils sentent: herbe coupée, fruit, douceur, légère amertume ou sensation poivrée. Ils peuvent simplement dire laquelle ils préfèrent, sans chercher une « bonne réponse ».
+
+La [méthode de dégustation présentée par France Olive](https://www.franceolive.fr/categorie/qualite-des-produits/comment-deguster) distingue notamment les arômes, l’amertume et le piquant. Ces sensations ne signifient pas automatiquement qu’une huile est mauvaise. Pour une dégustation familiale, de petites quantités sur du pain suffisent.
+
+**Ne confondez pas olives à huile et olives de table prêtes à manger.** Une olive fraîchement cueillie n’est généralement pas consommable telle quelle: elle est très amère et doit subir une préparation adaptée. [France Olive explique les étapes nécessaires](https://www.franceolive.fr/categorie/transformation-olives-et-huile-d-olive/les-bases-de-la-preparation-familiale-d-olives-de-table). Pour cuisiner avec les enfants, choisissez des olives de table déjà préparées, achetées en bocal ou chez un producteur.
+
+## Trois idées de cuisine pour prolonger la visite
+
+**Tartines de tomates et huile d’olive.** Faites griller du pain, ajoutez des tomates coupées en petits morceaux, puis un filet de l’huile choisie. Les enfants peuvent comparer deux tartines préparées avec des huiles différentes. En saison froide, remplacez les tomates par des légumes rôtis.
+
+**Pommes de terre au four, huile et herbes.** Coupez des pommes de terre en quartiers, mélangez-les avec un peu d’huile d’olive et du thym, puis faites-les rôtir jusqu’à ce qu’elles soient tendres et dorées. Un adulte s’occupe du couteau et du four. À table, quelques gouttes d’une huile plus parfumée permettent de retrouver les arômes de la dégustation.
+
+**Tartinade d’olives prêtes à consommer.** Mixez des olives de table dénoyautées avec un peu d’huile d’olive et, selon les goûts, quelques câpres ou herbes. Servez sur du pain grillé ou avec des légumes. Pour les jeunes enfants, vérifiez soigneusement l’absence de noyaux et adaptez la texture.
+
+L’intérêt n’est pas d’acheter plusieurs bouteilles après la visite: une seule huile appréciée par la famille suffit pour essayer ces trois préparations.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -141,4 +185,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
