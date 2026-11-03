@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Slava’s Snowshow à Lyon en 2026 : quelle séance choisir en famille ?"
-subtitle: Âge conseillé, séances de l'après-midi, tarifs et samedi en famille à la Maison de la danse
-summary: Du 25 novembre au 6 décembre 2026, le spectacle de clowns Slava’s Snowshow revient à la Maison de la danse à Lyon. Guide pour décider si l'expérience convient aux enfants et sélectionner une représentation sans confondre spectacle et animations associées.
+title: "Slava’s Snowshow à Lyon 2026 : horaires, âge et budget en famille"
+subtitle: "Du 25 novembre au 6 décembre à la Maison de la danse : choisir une séance et comprendre le samedi en famille"
+summary: "Slava’s Snowshow revient à Lyon du 25 novembre au 6 décembre 2026. Séances en journée, âge conseillé dès 8 ans, tarifs de 20 à 50 € et animations du 5 décembre : les repères pour réserver avec des enfants."
 category: evenements
 location:
   city: Lyon
@@ -68,18 +73,22 @@ location:
   region: Auvergne-Rhône-Alpes
 keywords:
   - Slava Snowshow Lyon 2026 enfants
-  - Maison de la danse Slava Snowshow billets
+  - Maison de la danse Slava Snowshow horaires billets
   - Slava Snowshow samedi en famille 5 décembre
 sources:
-  - title: Maison de la danse — Slava’s Snowshow, calendrier et tarifs
+  - title: Maison de la danse — Slava’s Snowshow, horaires et tarifs
     url: https://maisondeladanse.com/node/2086
   - title: Maison de la danse — Samedis en famille
     url: https://maisondeladanse.com/node/2067
-  - title: Maison de la danse — Tarifs et billetterie
+  - title: Maison de la danse — Billetterie
     url: https://maisondeladanse.com/information/billetterie
+  - title: Maison de la danse — Venir à la Maison
+    url: https://maisondeladanse.com/information/deplacer
+  - title: Maison de la danse — Accessibilité
+    url: https://maisondeladanse.com/information/en-situation-de-handicap
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: slava-s-snowshow-a-lyon-en-2026-quelle-seance-choisir-en-famille
   decision: Déterminer si ce spectacle de 1 h 45 avec entracte, conseillé dès 8 ans, convient à son enfant et choisir entre les séances de journée et du soir, notamment le samedi 5 décembre et ses animations familiales, en connaissant le budget réel.
@@ -89,47 +98,67 @@ radar:
     dataThrough: 2026-10-31
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Maison de la danse — Slava’s Snowshow, calendrier et tarifs »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-06
 ---
 
-## Mission retenue
-Présenter le spectacle de clowns visuel Slava’s Snowshow à la Maison de la danse du 25 novembre au 6 décembre 2026, distinct de la Fête des Lumières.
+Du **25 novembre au 6 décembre 2026**, *Slava’s Snowshow* transforme la Grande salle de la Maison de la danse, à Lyon, en univers de clowns, de mime et de neige théâtrale. Le spectacle dure **1 h 45, entracte compris**, et la salle le **conseille à partir de 8 ans**. Pour une sortie avec des enfants, le choix de l'horaire compte autant que celui des places : plusieurs représentations commencent à 15 h, et le samedi 5 décembre propose aussi un rendez-vous familial distinct.
 
-## Pourquoi cette mission
-Opportunité saisonnière confirmée par l'organisateur, avec plusieurs représentations, un vrai choix d'horaire et une contrainte d'âge. Le refresh Lumigny montre une baisse d'impressions sans cause éditoriale établie ; l'expansion depuis la page forte « transports à Paris avec des enfants » ne présente pas ici de décision nouvelle aussi urgente. Aucun doublon Slava’s Snowshow dans le catalogue et l'historique compact, ni dans les travaux Publication/Destination fournis.
+## Quelle séance choisir avec des enfants ?
 
-## Décision du lecteur
-Choisir une séance adaptée à l'âge, à la fatigue des enfants et au budget, et savoir ce qu'ajoute le samedi en famille.
+Les horaires annoncés par la [Maison de la danse](https://maisondeladanse.com/node/2086) sont les suivants :
 
-## Faits à traiter
-Dates du 25 novembre au 6 décembre, durée 1 h 45 entracte compris, recommandé dès 8 ans, tarifs unitaires 20 à 50 € selon placement, disponibilité à vérifier séance par séance. Séances de l'après-midi les 28 et 29 novembre, 2, 5 et 6 décembre ; le 5 décembre, représentation à 11 h et 15 h et rendez-vous « samedi en famille » annoncé à partir de 14 h : vérifier les modalités et éviter de promettre l'accès aux animations avec n'importe quel billet. Vérifier accessibilité, transport et accueil des familles auprès de la salle.
+- **Mercredi 25 novembre** à 19 h 30 ; jeudi 26 et vendredi 27 à 20 h 30.
+- **Samedi 28 novembre** à 15 h et 20 h 30 ; dimanche 29 à 15 h et 19 h 30.
+- **Mardi 1er décembre** à 20 h 30 ; mercredi 2 à 15 h et 19 h 30.
+- **Jeudi 3 et vendredi 4 décembre** à 20 h 30.
+- **Samedi 5 décembre** à 11 h et 15 h ; dimanche 6 à 15 h.
 
-## Sources de départ
-Programme officiel, Samedis en famille et page billetterie de la Maison de la danse ci-dessus.
+Pour un enfant qui fatigue vite le soir, privilégiez les séances de 15 h des 28 et 29 novembre, 2, 5 ou 6 décembre. Celle de 11 h le samedi 5 permet une sortie plus tôt dans la journée. Les représentations de 20 h 30 finissent théoriquement vers 22 h 15, hors sortie de salle et trajet retour : elles conviennent mieux à des enfants habitués aux soirées tardives.
 
-## Affiliation
-Billetterie officielle en sources ; pas de partenaire spectacle vérifié. Examiner un hébergement familial pertinent si un séjour à Lyon se justifie.
+Le spectacle joue sur les images, la musique, les gestes et des effets de neige ou de vent. Le conseil « dès 8 ans » n'est pas une promesse d'adaptation aux plus petits : avant de réserver pour un enfant plus jeune ou sensible aux effets immersifs, demandez l'avis de la billetterie.
 
-## Continuations internes
-Renvoyer au guide Fam Space de la Fête des Lumières pour les illuminations lyonnaises, sans reproduire ses parcours. Ne pas redévelopper les autres événements de Lyon déjà couverts. Préserver la décision propre à ce spectacle et aux horaires.
+## Quel budget prévoir pour la famille ?
+
+La Maison de la danse affiche un **tarif à l'unité de 20 à 50 € par personne**, selon la catégorie de place. Pour deux adultes et un enfant, comptez donc **60 à 150 €** si chacun achète un billet à l'unité dans cette fourchette ; pour quatre personnes, **80 à 200 €**, hors déplacement et repas. Ce sont des bornes de calcul, pas un devis ni la garantie de places côte à côte à ces prix.
+
+La [page billetterie](https://maisondeladanse.com/information/billetterie) présente aussi des avantages liés à certains abonnements : notamment des places de 8 à 16 € pour les moins de 14 ans accompagnant un abonné sur une sélection comprenant *Slava’s Snowshow*. Cette réduction **n'est pas un tarif enfant universel** pour un achat isolé. Comparez les conditions avant de retenir le prix le plus bas. Vérifiez les disponibilités séance par séance ; la présence d'un horaire au programme ne garantit pas qu'il reste des billets.
+
+## Samedi 5 décembre : que comprend le « samedi en famille » ?
+
+La salle annonce un rendez-vous **à partir de 14 h**, autour du spectacle du samedi 5 décembre. Son programme [Samedis en famille](https://maisondeladanse.com/node/2067) décrit habituellement des propositions gratuites avant ou après certaines représentations : présentation de l'univers du spectacle, goûter et activité partagée selon le rendez-vous.
+
+Attention à la différence entre **la représentation de 11 h**, **celle de 15 h** et **les animations à partir de 14 h**. Le programme consulté ne permet pas d'affirmer que tout billet, notamment celui de 11 h, donne automatiquement accès à toutes les activités. Demandez à la salle le déroulé précis, les âges admis et les éventuelles inscriptions avant de construire votre après-midi autour de ces animations.
+
+## Accès, fauteuil roulant et organisation pratique
+
+La Maison de la danse se trouve **8 avenue Jean Mermoz, 69008 Lyon**, place du Bachut. Consultez les [indications d'accès de la salle](https://maisondeladanse.com/information/deplacer) et votre itinéraire TCL avant de partir. Le parking situé devant le théâtre n'est plus accessible en raison du réaménagement de la place : ne comptez pas vous y garer au dernier moment.
+
+Pour les personnes à mobilité réduite, des places spécifiques en orchestre sont prévues ; l'accès par ascenseur se situe **avenue Général Frère**, sur le côté du théâtre. Des toilettes accessibles sont indiquées au rez-de-chaussée ou au premier étage par ascenseur. Il faut [prévenir la billetterie à l'avance](https://maisondeladanse.com/information/en-situation-de-handicap), au **04 72 78 18 00**, afin de réserver une place adaptée. Les modalités de stationnement des poussettes et les services pour les bébés ne sont pas confirmés pour ce spectacle : renseignez-vous directement auprès de la salle si vous venez avec un tout-petit.
+
+## Prolonger la sortie par un séjour à Lyon
+
+Si vous venez de loin, une nuit peut éviter le retour tardif après une séance du soir. Vous pouvez [comparer les hébergements à Lyon sur Booking.com](https://www.booking.com/city/fr/lyon.fr.html), en vérifiant la capacité réelle de la chambre pour les enfants, les conditions d'annulation et le trajet jusqu'à la Maison de la danse. Aucun tarif ni disponibilité d'hôtel n'est garanti ici.
+
+Le spectacle ne doit pas être confondu avec la Fête des Lumières, qui se déroule en ville du 5 au 8 décembre. Si vous restez pour les illuminations, notre [guide de la Fête des Lumières 2026 à Lyon en famille](https://www.fam-space.fr/articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/) aide à choisir la soirée et à anticiper les déplacements.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
-- /articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/ | Mini World Lyon: quel billet choisir en famille et combien de temps prévoir ? | bons-plans | Vaulx-en-Velin, Rhône, Auvergne-Rhône-Alpes
-- /articles/evenements/habits-de-lumiere-a-epernay-avec-des-enfants-quel-jour-choisir-en-2026/ | Habits de Lumière à Épernay avec des enfants: quel jour choisir en 2026? | evenements | Épernay, Marne, Grand Est
-- /articles/maison/maison-de-vacances-a-amboise-avec-des-enfants-7-criteres-pour-bien-choisir/ | Maison de vacances à Amboise avec des enfants: 7 critères pour bien choisir | maison | Amboise, Indre-et-Loire, Centre-Val de Loire
-- /articles/maison/maison-de-vacances-au-lac-d-orient-en-famille-comment-bien-choisir/ | Maison de vacances au lac d'Orient en famille: comment bien choisir | maison | Mesnil-Saint-Père, Aube, Grand Est
-- /articles/parentalite/maison-des-parents-a-guingamp-quand-y-aller-et-quel-service-choisir/ | Maison des Parents à Guingamp: quand y aller et quel service choisir ? | parentalite | Guingamp, Côtes-d'Armor, Bretagne
-- /articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/ | Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants | evenements | Le Mans, Sarthe, Pays de la Loire
-- /articles/maison/tri-biodechets-maison-collecte-composteur-lombricomposteur/ | Quel système choisir pour trier les biodéchets à la maison ? | maison
-- /articles/cuisine/anchois-de-collioure-quelle-visite-choisir-avec-des-enfants/ | Anchois de Collioure: quelle visite choisir avec des enfants? | cuisine | Collioure, Pyrénées-Orientales, Occitanie
-- /articles/evenements/automne-des-gones-2026-a-lyon-quels-ateliers-gratuits-choisir-avec-les-enfants/ | Automne des gones 2026 à Lyon: ateliers et sorties gratuites en famille | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
+- /articles/activites/parc-de-courzieu-en-famille-tarifs-horaires-et-conseils-pour-la-visite/ | Parc de Courzieu en famille: tarifs, horaires et conseils pour la visite | activites | Courzieu, Rhône, Auvergne-Rhône-Alpes
+- /articles/cuisine/maison-de-la-salers-visite-degustation-et-budget-avec-des-enfants/ | Maison de la Salers: visite, dégustation et budget avec des enfants | cuisine | Saint-Bonnet-de-Salers, Cantal, Auvergne-Rhône-Alpes
+- /articles/activites/prehistosite-de-brassempouy-en-famille-horaires-ateliers-et-budget-2026/ | PréhistoSite de Brassempouy en famille: horaires, ateliers et budget 2026 | activites | Brassempouy, Landes, Nouvelle-Aquitaine
+- /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | Marché de Noël de Bordeaux 2026 en famille: horaires, animations et budget | evenements | Bordeaux, Gironde, Nouvelle-Aquitaine
+- /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | Noël 2026 à Brest en famille: marché, projections et horaires | evenements | Brest, Finistère, Bretagne
+- /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | Noël des Siècles 2026 à Champs-sur-Marne: billets, budget et horaires en famille | evenements | Champs-sur-Marne, Seine-et-Marne, Île-de-France
+- /articles/evenements/ville-de-noel-d-arras-2026-en-famille-grande-roue-patinoire-et-horaires/ | Ville de Noël d’Arras 2026 en famille: horaires, attractions et budget | evenements | Arras, Pas-de-Calais, Hauts-de-France
+- /articles/evenements/automne-des-gones-2026-a-lyon-quels-ateliers-gratuits-choisir-avec-les-enfants/ | Automne des gones 2026 à Lyon: ateliers et sorties gratuites en famille | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/evenements/toussaint-2026-au-musee-des-confluences-a-lyon-spectacles-et-ateliers-par-age/ | Toussaint 2026 au musée des Confluences: cinq rendez-vous pour les enfants | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | Festival Lumière 2026: Laurel & Hardy en famille le 17 octobre à Lyon | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/parentalite/cafe-papote-a-lyon-4e-ou-echanger-gratuitement-avec-d-autres-parents/ | Café Papote à Lyon 4e: où échanger gratuitement avec d'autres parents | parentalite | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/maison/decheteries-mobiles-a-lyon-que-peut-on-deposer-et-quand-preferer-une-decheterie-fixe/ | Déchèteries mobiles à Lyon: que peut-on déposer et quand préférer une déchèterie fixe? | maison | Lyon, Rhône, Auvergne-Rhône-Alpes
+- /articles/vie-pratique/location-de-voiture-a-lyon-avec-des-enfants-ce-qu-il-faut-verifier-avant-de-reserver/ | Location de voiture à Lyon avec des enfants: ce qu'il faut vérifier avant de réserver | vie-pratique | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/voyages/week-end-dans-les-pierres-dorees-en-famille-oingt-jarnioux-et-balades/ | Week-end dans les Pierres Dorées en famille: Oingt, Jarnioux et balades | voyages | Rhône, Auvergne-Rhône-Alpes
 - /articles/evenements/halloween-2026-a-mini-world-lyon-la-chasse-aux-31-mechants-en-famille/ | Halloween 2026 à Mini World Lyon: la Chasse aux 31 Méchants en famille | evenements | Vaulx-en-Velin, Rhône, Auvergne-Rhône-Alpes
 - /articles/evenements/equita-lyon-2026-en-famille-village-enfants-billets-et-spectacles/ | Equita Lyon 2026 avec des enfants: billets, Village Enfants et spectacles | evenements | Chassieu, Rhône, Auvergne-Rhône-Alpes
@@ -147,10 +176,10 @@ Renvoyer au guide Fam Space de la Fête des Lumières pour les illuminations lyo
 - opportunity | /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | 2026-10-10T15:40:28.185Z
 - opportunity | /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | 2026-10-19T19:48:02.164Z
 - opportunity | /articles/evenements/halloween-2026-a-mini-world-lyon-la-chasse-aux-31-mechants-en-famille/ | 2026-10-22T12:58:21.691Z
-- refresh | /articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/ | 2026-11-02T16:35:39.647Z
+- opportunity | /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | 2026-10-21T07:36:18.372Z
+- opportunity | /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | 2026-10-30T06:28:26.726Z
+- opportunity | /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | 2026-10-26T18:32:56.730Z
 - opportunity | /articles/evenements/saint-nicolas-2026-a-epinal-en-famille-defile-du-5-decembre-ou-marche-de-noel/ | 2026-11-01T21:31:28.158Z
-- opportunity | /articles/evenements/saint-nicolas-2026-a-saint-nicolas-de-port-village-defile-ou-procession-en-famille/ | 2026-11-02T23:31:49.432Z
-- opportunity | /articles/evenements/toussaint-2026-au-musee-des-confluences-a-lyon-spectacles-et-ateliers-par-age/ | 2026-10-15T17:42:32.693Z
 
 ### Phases 2 et 3
 
