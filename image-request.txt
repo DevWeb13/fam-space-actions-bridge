@@ -310,3 +310,4 @@ automation/image-20261102-1244-confiserie-olive-var-b640da0|dcc3ee7bc4b1fe4aafe5
 automation/image-20261102-1849-belfort-angouleme-a16f941|bae2c83d3dfc6ca3f098a8f78277299d5df7d195
 automation/image-20261102-1849-belfort-angouleme-a16f941|ceae2552bc64cf6fd44885ad039e5d1bf58e845e
 automation/image-20261103-0046-albi-saintnicolas-herault-c673b07|dab98daaca2a394a39d840d97ce1c2dcf7f0375b
+automation/image-20261103-0046-albi-saintnicolas-herault-c673b07|a40fa8342b70beea760c90d356d20127bf4299e7
