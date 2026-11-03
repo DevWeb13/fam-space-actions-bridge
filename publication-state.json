@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261103-0601-sujet-decouvrir-le-domaine-de-chaalis-en-famille-a-fontaine-chaalis-oi",
+  "lastProcessedCommit": "d1b0beb83d2394c18aada2a977666adca73213a3"
 }
