@@ -312,3 +312,4 @@ automation/image-20261102-1849-belfort-angouleme-a16f941|ceae2552bc64cf6fd44885a
 automation/image-20261103-0046-albi-saintnicolas-herault-c673b07|dab98daaca2a394a39d840d97ce1c2dcf7f0375b
 automation/image-20261103-0046-albi-saintnicolas-herault-c673b07|a40fa8342b70beea760c90d356d20127bf4299e7
 automation/image-20261103-0640-brou-metz-vendee-croisic-6b90d01|9a917e22d030cf14a8b206c7fd9049f58aaf71bf
+automation/image-20261103-0640-brou-metz-vendee-croisic-6b90d01|231fc2c38d3f8a4b0b9a9fadf1e12ed525d13c7f
