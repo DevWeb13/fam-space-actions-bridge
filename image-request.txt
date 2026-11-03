@@ -317,3 +317,4 @@ automation/image-20261103-1244-strasbourg-metz-chaalis-010e463|8c86bd451ebc5ea77
 automation/image-20261103-1244-strasbourg-metz-chaalis-010e463|08ef7d443a78c7d517dbfe3d2b9c617656e69089
 automation/image-20261103-1849-sare-strasbourg-goulaine-pontdegau|4a84f2d16458d6defb70cc7bbae68ff8bf9a8760
 automation/image-20261103-1849-sare-strasbourg-goulaine-pontdegau|9c086418ed257f64a26820f50870a1611c19dff6
+automation/image-20261104-0049-michelin-cerfs-slava-parata-240fece|240fece3c8d76d3aa2e9d90b61687aa4f66f2b2b
