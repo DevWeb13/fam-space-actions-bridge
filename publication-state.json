@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261103-1001-grottes-de-sare-en-famille-visite-souterraine-prehistoire-et-conseils-",
+  "lastProcessedCommit": "0896c20aa7786fdc70c79e866c4575cd45bf8636"
 }
