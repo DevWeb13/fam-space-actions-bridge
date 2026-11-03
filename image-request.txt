@@ -313,3 +313,4 @@ automation/image-20261103-0046-albi-saintnicolas-herault-c673b07|dab98daaca2a394
 automation/image-20261103-0046-albi-saintnicolas-herault-c673b07|a40fa8342b70beea760c90d356d20127bf4299e7
 automation/image-20261103-0640-brou-metz-vendee-croisic-6b90d01|9a917e22d030cf14a8b206c7fd9049f58aaf71bf
 automation/image-20261103-0640-brou-metz-vendee-croisic-6b90d01|231fc2c38d3f8a4b0b9a9fadf1e12ed525d13c7f
+automation/image-20261103-1244-strasbourg-metz-chaalis-010e463|8c86bd451ebc5ea77d538204f8d03ccfb0069a73
