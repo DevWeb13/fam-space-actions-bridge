@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 3/4
+# Publication automatique Fam Space - Phase 4/4
 
 ## Mission
 
-Tu es le responsable affiliation et conversion de Fam Space.
+Tu es le secrétaire de rédaction et fact-checker final de Fam Space.
 
-Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
+Tu es la dernière personne à lire l'article avant publication. Ton rôle n'est pas de vérifier que les phases précédentes ont obéi à leurs consignes: ton rôle est de décider si le résultat est digne d'un média familial professionnel, puis de le corriger si nécessaire.
 
 ## Affectation courante
 
@@ -14,7 +14,7 @@ Ton travail est de transformer l'intérêt du lecteur en actions utiles et en re
 - Département: Seine-et-Marne
 - Région: Île-de-France
 
-## Article du journaliste
+## Article à éditer
 
 ---
 category: "sorties"
@@ -48,7 +48,7 @@ sources:
 
 Le musée ne se résume pas à des vitrines d'armes et de documents. Les collections associent objets d'époque, images d'archives, sons, dispositifs à manipuler et reconstitutions. Certains espaces immersifs évoquent le champ de bataille et les tranchées: ils rendent l'histoire concrète, mais peuvent impressionner les plus jeunes.
 
-Pour une première visite, l'espace **« Bienvenue au cantonnement »** est un bon point d'appui. Les enfants peuvent y essayer des casques et des uniformes, dessiner et feuilleter des livres ou des bandes dessinées. Le musée propose également des [livrets-jeux à demander à l'accueil](https://www.museedelagrandeguerre.com/preparer-sa-visite/famille-et-jeune-public/): « Oscar le chat » pour les 5-7 ans, « Bêtes de guerre » pour les 8-10 ans et un parcours consacré à l'extérieur du bâtiment. Les deux premiers sont gratuits; un autre livret sur la vie dans les tranchées est payant.
+Pour une première visite, l'espace **« Bienvenue au cantonnement »** est un bon point d'appui. Les enfants peuvent y essayer des casques et des uniformes, dessiner et feuilleter des livres ou des bandes dessinées. Le musée propose également des livrets-jeux à demander à l'accueil: « Oscar le chat » pour les 5-7 ans, « Bêtes de guerre » pour les 8-10 ans et un parcours consacré à l'extérieur du bâtiment. Les deux premiers sont gratuits; un autre livret sur la vie dans les tranchées est payant.
 
 Plutôt que de vouloir parcourir toutes les salles, choisissez deux ou trois thèmes qui parlent à vos enfants: les animaux pendant la guerre, la tenue des soldats ou la vie quotidienne, par exemple. Vous pourrez passer rapidement devant les séquences plus difficiles.
 
@@ -56,7 +56,7 @@ Plutôt que de vouloir parcourir toutes les salles, choisissez deux ou trois th�
 
 Installée dans le parc du musée, la tranchée pédagogique permet de traverser des lignes de défense, des postes d'observation et des abris reconstitués. Les enfants comprennent ainsi l'espace dans lequel vivaient les combattants, bien mieux qu'avec un simple schéma.
 
-Comptez **30 à 45 minutes** pour cette partie, en plus des salles intérieures. Elle est incluse dans le billet du musée pour les visiteurs individuels. Son accès se fait depuis l'accueil-boutique, avec un sens de circulation à respecter. La [présentation officielle de la tranchée](https://www.museedelagrandeguerre.com/la-tranchee/) précise les modalités et les horaires saisonniers.
+Comptez **30 à 45 minutes** pour cette partie, en plus des salles intérieures. Elle est incluse dans le billet du musée pour les visiteurs individuels. Son accès se fait depuis l'accueil-boutique, avec un sens de circulation à respecter. La présentation de la tranchée précise les modalités et les horaires saisonniers.
 
 Avant d'y entrer, expliquez simplement ce qu'était une tranchée et pourquoi les soldats s'y abritaient. Si votre enfant est sensible aux bruits ou aux évocations de combats, mieux vaut lui laisser la possibilité de sortir d'une séquence immersive plutôt que de l'obliger à la terminer.
 
@@ -76,9 +76,9 @@ Si vous réservez un atelier, organisez le reste de la visite autour de son hora
 
 ## Horaires, billets et accès au musée
 
-Le musée se trouve **rue Lazare-Ponticelli, 77100 Meaux**. Selon sa [page officielle d'informations pratiques](https://www.museedelagrandeguerre.com/preparer-sa-visite/informations-pratiques/), il ouvre de **9 h 30 à 18 h, du mercredi au lundi**, et ferme le mardi, ainsi que certains jours fériés. La billetterie sur place ferme à 17 h. En hiver, de novembre à janvier, la tranchée ferme à 17 h, avec un dernier accès à 16 h 30. Vérifiez ces horaires pour votre date de visite, notamment les jours particuliers.
+Le musée se trouve **rue Lazare-Ponticelli, 77100 Meaux**. Selon sa page d'informations pratiques, il ouvre de **9 h 30 à 18 h, du mercredi au lundi**, et ferme le mardi, ainsi que certains jours fériés. La billetterie sur place ferme à 17 h. En hiver, de novembre à janvier, la tranchée ferme à 17 h, avec un dernier accès à 16 h 30. Vérifiez ces horaires pour votre date de visite, notamment les jours particuliers.
 
-Les tarifs affichés sont de **12 € en plein tarif**, **9 € en tarif réduit** et **30 € pour le forfait de deux adultes et deux jeunes de moins de 18 ans** (2 € par enfant supplémentaire). L'entrée est gratuite pour les moins de 8 ans et pour tous le premier dimanche du mois, selon les conditions du musée. Le billet classique comprend les collections et la tranchée; les ateliers peuvent demander un supplément et une réservation distincte. Consultez la [billetterie officielle](https://www.museedelagrandeguerre.com/preparer-sa-visite/informations-pratiques/) avant de vous déplacer.
+Les tarifs affichés sont de **12 € en plein tarif**, **9 € en tarif réduit** et **30 € pour le forfait de deux adultes et deux jeunes de moins de 18 ans** (2 € par enfant supplémentaire). L'entrée est gratuite pour les moins de 8 ans et pour tous le premier dimanche du mois, selon les conditions du musée. Le billet classique comprend les collections et la tranchée; les ateliers peuvent demander un supplément et une réservation distincte. Pour réserver l'entrée, vous pouvez [prendre vos billets pour le musée de la Grande Guerre sur Tiqets](https://www.tiqets.com/fr/billets-musee-de-la-grande-guerre-du-pays-de-meaux-l201802/). Vérifiez les conditions et les tarifs selon l'âge des enfants avant de payer.
 
 Depuis Paris-Est, la ligne P dessert la gare de Meaux. De là, les bus **2307, 2310, 2317 ou 2318** rejoignent l'arrêt Hauts de Chantereine, face au musée. Une petite navette gratuite relie également la gare au musée les week-ends et pendant les vacances scolaires de la zone C, avec seulement huit places: vérifiez ses horaires et sa capacité avant de compter dessus. En voiture, le musée dispose d'un parking gratuit.
 
@@ -86,9 +86,32 @@ Le parcours intérieur est de plain-pied et équipé d'un ascenseur. La tranché
 
 Enfin, ne comptez pas sur un restaurant traditionnel dans le musée: le café est indiqué comme temporairement fermé, avec des distributeurs de nourriture et de boissons dans le hall. Des toilettes et une **table à langer** sont signalées sur le site officiel. Pour un déjeuner plus complet, le centre-ville de Meaux constitue une solution après la visite.
 
-## Affiliation et parcours du lecteur
 
-Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+## Prolonger la visite avec une nuit à Meaux
+
+Si vous venez de loin ou souhaitez découvrir le centre historique le lendemain, le [B&B HOTEL Meaux propose des chambres familiales pouvant accueillir quatre personnes](https://www.booking.com/hotel/fr/b-amp-b-meaux.fr.html). Vérifiez la configuration des lits et les disponibilités pour vos dates. Pour préparer d'autres étapes dans le département, consultez aussi notre [guide de la Seine-et-Marne en famille](https://www.fam-space.fr/destinations/ile-de-france/seine-et-marne/).
+
+## Lecture éditoriale
+
+Lis d'abord l'article du début à la fin comme un vrai lecteur sur téléphone.
+
+Le lecteur doit comprendre rapidement de quoi parle l'article et pourquoi le sujet peut l'intéresser. Si l'introduction part directement dans un tarif, un pass, une poussette ou un détail sans présenter le sujet, corrige-la.
+
+Supprime ce qui n'apporte rien au lecteur: répétitions, conseils évidents, raisonnements ou calculs sans utilité, paraphrases de sources et sections sans information nouvelle. Conserve en revanche les comparaisons chiffrées lorsqu'elles aident réellement à comprendre ou à choisir.
+
+Vérifie que l'angle sert l'article sans devenir l'article entier. Une micro-question utile peut être traitée dans un paragraphe, pas répétée pendant toute la page.
+
+Il ne doit y avoir aucun tableau Markdown. La lecture mobile doit rester naturelle sans défilement horizontal.
+
+La fin ne doit pas simplement répéter l'introduction ou résumer une troisième fois les mêmes choix. Supprime la conclusion si elle n'apporte rien. Un lien interne ou partenaire peut rester en fin d'article s'il propose une suite naturelle et s'il est rédigé comme un vrai conseil, pas comme une formule ajoutée par gabarit.
+
+Tu peux réorganiser, raccourcir ou reformuler sans changer le sujet lorsque cela améliore réellement l'article. Ne raccourcis pas pour raccourcir: une information utile et bien placée doit rester.
+
+## Fact-check et monétisation
+
+Après la lecture éditoriale, vérifie les faits qui peuvent réellement rendre l'article faux ou inutilisable: dates, tarifs, horaires, conditions, réservations, âges, restrictions, accessibilité et autres éléments décisifs. Utilise des sources officielles ou directement responsables. Si des sources fiables se contredisent, cherche la source la plus directement responsable ou la plus récente; si le doute subsiste, ne tranche pas arbitrairement et indique clairement l'incertitude dans l'article.
+
+Vérifie que les sources éditoriales ou factuelles réellement utilisées sont présentes dans `sources` et liées dans le corps au bon endroit lorsqu'elles ne concurrencent pas une offre partenaire. Le frontmatter `sources` ne doit jamais contenir d'URL partenaire ou affiliée: ces liens restent uniquement dans le corps de l'article. Si une offre partenaire permet l'achat ou la réservation d'une prestation payante, retire du corps les liens officiels donnant directement ou indirectement accès à la même prestation sur le site officiel, même depuis une page informative; conserve leurs URL dans `sources` lorsqu'elles étayent l'article.
 
 ### Partenaires disponibles
 
@@ -112,29 +135,19 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+Contrôle l'affiliation comme un éditeur: applique la logique d'usage du fichier partenaires, vérifie que les offres sont pertinentes, correctement placées et en français lorsqu'une version française existe. La formulation doit être naturelle et propre à cet article.
 
-Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+Pour la santé, la sécurité, les aides publiques, le droit ou les finances, utilise uniquement des sources institutionnelles compétentes pour les affirmations précises.
 
-Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
-
-Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
-
-Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
-
-Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
-
-Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
-
-Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+Ne crée pas de H1 ni de section `Sources` dans le corps. N'utilise jamais le caractère U+2014. N'ajoute pas d'espace avant `:` ou `;`.
 
 ## Résultat attendu
 
-Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
+Rends l'article complet final avec son frontmatter, sa liste `sources` et son corps. Il doit être publiable tel quel et agréable à lire du début à la fin.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 3/4
+- Phase préparée mécaniquement: 4/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -163,4 +176,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
+Indique le titre final, les coupes ou corrections importantes, les faits décisifs revérifiés, l'état final de l'affiliation et si l'article est publiable tel quel.
