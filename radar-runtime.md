@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Cerfs-volants à Paris le 21 novembre 2026 : spectacle ou atelier dès 2 ans ?"
-subtitle: Au Regard du Cygne, choisir entre danse jeune public et atelier parent-enfant
-summary: "Le 21 novembre 2026, le Regard du Cygne propose un spectacle et un atelier autour du papier pour les familles dès 2 ans : horaires, durées, prix et réservations."
+title: "Cerfs-volants à Paris : spectacle ou atelier en famille le 21 novembre 2026 ?"
+subtitle: Au Regard du Cygne, deux rendez-vous dès 2 ans à choisir selon l'envie et le budget
+summary: "Spectacle à 10 h ou atelier parent-enfant à 11 h : horaires, prix par personne, réservation et conseils pour le Family Day Cerfs-volants à Paris."
 category: evenements
 location:
   city: Paris
@@ -68,16 +73,20 @@ location:
   region: Île-de-France
 keywords:
   - Cerfs-volants Regard du Cygne 21 novembre 2026
-  - Family Day Paris spectacle atelier enfant
-  - spectacle danse enfant Paris 2 ans novembre 2026
+  - spectacle enfant Paris dès 2 ans novembre 2026
+  - atelier parent enfant Regard du Cygne
 sources:
-  - title: Ville de Paris - Cerfs-volants, Catherine Gendre
+  - title: Ville de Paris — Cerfs-volants, Catherine Gendre
     url: https://www.paris.fr/evenements/cerfs-volants-catherine-gendre-117337
-  - title: Ville de Paris - Festival d'Automne 2026
-    url: https://www.paris.fr/evenements/festival-d-automne-2026-tout-le-programme-123786
+  - title: Le Regard du Cygne — Family Day Cerfs-volants
+    url: https://leregarducygne.com/family-day-cerfs-volants-catherine-gendre/
+  - title: Billetterie du spectacle — Le Regard du Cygne
+    url: https://leregardducygne.mapado.com/event/795518-family-day-spectacle-cerfs-volants-catherine-gendre-compagnie-soleil-sous-la-pluie
+  - title: Billetterie de l'atelier — Le Regard du Cygne
+    url: https://leregardducygne.mapado.com/event/795497-family-day-atelier-parents-enfants-cerfs-volants-catherine-gendre-compagnie-soleil-sous-la-pluie
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: cerfs-volants-a-paris-le-21-novembre-2026-spectacle-ou-atelier-des-2-ans
   decision: Savoir si le spectacle de 40 minutes et l'atelier parent-enfant de 45 minutes conviennent à son enfant dès 2 ans, choisir une ou deux activités et réserver les places nécessaires sans confondre les deux horaires et tarifs.
@@ -87,28 +96,40 @@ radar:
     dataThrough: 2026-10-31
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Ville de Paris - Cerfs-volants, Catherine Gendre »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-11-21
 ---
 
-## Mission retenue
-Le Family Day « Cerfs-volants » de Catherine Gendre au Regard du Cygne (Paris 20e), samedi 21 novembre 2026 : un spectacle autour du papier suivi d'un atelier parent-enfant, deux expériences distinctes.
+Le samedi **21 novembre 2026**, le Regard du Cygne, dans le 20e arrondissement de Paris, accueille *Cerfs-volants* de Catherine Gendre : un spectacle mêlant mouvement, musique et papier, puis un atelier avec les artistes. Les deux propositions sont annoncées **dès 2 ans**, mais elles ne se déroulent pas au même horaire et leurs billets ne coûtent pas le même prix. Voici comment choisir sans réserver la mauvaise activité.
 
-## Pourquoi cette mission
-Une décision familiale concrète, proche et documentée officiellement, absente du catalogue et de l'historique Radar embarqués. Le refresh Lumigny présente surtout une baisse d'impressions sans preuve d'une amélioration éditoriale utile; l'expansion d'une page forte risquerait davantage de redoubler un guide existant. Ce rendez-vous ponctuel justifie une page autonome avant la date.
+## Spectacle à 10 h : pour découvrir avant de participer
 
-## Décision du lecteur
-Choisir spectacle seul, atelier seul ou les deux selon l'âge, l'attention de l'enfant, le budget et les places à réserver.
+De **10 h à 10 h 40**, la compagnie Soleil sous la pluie invite les enfants à regarder autrement une feuille de papier. Sa fabrication, ses transformations et les gestes qui l'accompagnent deviennent matière à une proposition chorégraphique et musicale.
 
-## Faits à traiter
-Le 21 novembre : spectacle à 10 h (40 min), atelier à 11 h (45 min), dès 2 ans; spectacle 11 € adulte et 5 € enfant, atelier 5 € par personne, sur réservation. Vérifier les conditions d'inscription séparée, les places disponibles, les accompagnants, l'accès poussette et les modalités PMR auprès de l'organisateur. Adresse : 210 rue de Belleville, Paris 20e. Ne pas confondre tarif de chaque activité et tarif total d'une famille.
+C'est le choix le plus simple pour une première sortie culturelle avec un tout-petit qui préfère observer plutôt que participer. **Tarif annoncé : 11 € par adulte et 5 € par enfant.** Pour un adulte et un enfant, comptez donc **16 €** hors éventuels frais de réservation.
 
-## Sources de départ
-Ville de Paris, fiche de l'événement et programme du Festival d'Automne 2026 (liens en frontmatter); organisateur Le Regard du Cygne pour les réservations et conditions pratiques.
+## Atelier à 11 h : pour expérimenter avec son enfant
 
-## Affiliation
-Aucune billetterie partenaire confirmée. Envisager un hébergement précis à Paris pour les familles de passage seulement si l'offre est vérifiée.
+À **11 h**, les artistes animent un **atelier parent-enfant de 45 minutes** autour des pratiques explorées dans le spectacle. Il s'adresse davantage aux familles qui souhaitent bouger, manipuler ou expérimenter ensemble plutôt que rester spectatrices.
 
-## Continuations internes
-Chercher un guide Fam Space de Paris en famille pour le contexte transport/séjour, sans réécrire le guide. Éviter de traiter le Festival d'Automne entier : la page répond uniquement au choix spectacle/atelier de ce Family Day.
+Le tarif est de **5 € par personne**, adulte comme enfant : **10 € pour un duo**. La présentation officielle ne précise pas si avoir assisté au spectacle est obligatoire pour participer à l'atelier seul. Vérifiez cette condition sur la billetterie de l'organisateur avant de réserver uniquement l'atelier.
+
+## Faire les deux : quel budget prévoir ?
+
+Pour **un adulte et un enfant**, les deux activités représentent **26 €** au total, hors frais éventuels : 16 € pour le spectacle, puis 10 € pour l'atelier. Avec **deux adultes et un enfant**, comptez **42 €** si tous les trois participent aux deux propositions.
+
+Les réservations sont obligatoires. L'organisateur propose des pages de billetterie distinctes pour le spectacle et l'atelier : vérifiez que chaque personne dispose bien de la réservation correspondant à l'activité choisie. La disponibilité des places au 21 novembre n'a pas pu être confirmée en temps réel.
+
+## Venir avec un tout-petit : les points pratiques
+
+Le rendez-vous se déroule **au Regard du Cygne, 210 rue de Belleville, 75020 Paris**, dans un espace couvert. La [fiche de la Ville de Paris](https://www.paris.fr/evenements/cerfs-volants-catherine-gendre-117337) annonce un accueil accessible aux personnes à mobilité réduite et aux personnes déficientes visuelles. En revanche, elle ne détaille pas les équipements adaptés, ni l'accueil des poussettes, leur stationnement ou la présence d'un espace de change : contactez le lieu avant de venir si ces éléments sont nécessaires à votre famille.
+
+Prévoyez une marge entre l'arrivée, l'installation et les deux séquences. Si votre enfant a besoin d'une pause après quarante minutes de spectacle, vous pouvez aussi privilégier une seule activité. Pour organiser le trajet avec une poussette, consultez notre guide [Paris avec une poussette : métro, RER, bus ou tram ?](/articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/).
+
+## Si vous passez le week-end à Paris
+
+Pour une famille venue de loin, le **Novotel Paris 20 Belleville**, au 64-74 boulevard de Belleville, propose notamment des chambres familiales. Vous pouvez [examiner les chambres du Novotel Paris 20 Belleville sur Booking.com](https://www.booking.com/hotel/fr/novotel-paris-20-belleville.fr.html) en indiquant le nombre d'adultes et l'âge des enfants. Les tarifs et disponibilités pour le week-end du 21 novembre restent à confirmer.
+
+Pour les billets du Family Day, privilégiez les pages de réservation de l'organisateur indiquées dans les références de l'article : aucune offre de billetterie partenaire n'a été vérifiée pour cette représentation.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -116,13 +137,12 @@ Chercher un guide Fam Space de Paris en famille pour le contexte transport/séjo
 
 - /articles/evenements/planete-ocean-a-paris-preparer-la-visite-en-famille/ | Planète Océan à Paris: préparer la visite en famille | evenements | Paris, Paris, Île-de-France
 - /articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/ | Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite | sorties | Paris, Paris, Île-de-France
+- /articles/cuisine/ateliers-cuisine-parent-enfant-a-paris-lesquels-choisir-selon-l-age-et-le-budget/ | Ateliers cuisine parent-enfant à Paris: lesquels choisir selon l’âge et le budget ? | cuisine | Paris, Paris, Île-de-France
 - /articles/sorties/vacances-de-la-toussaint-2026-a-la-cite-des-sciences-quels-ateliers-choisir-selon-l-age/ | Vacances de la Toussaint 2026 à la Cité des sciences: les ateliers numériques gratuits avec des enfants | sorties | Paris, Paris, Île-de-France
 - /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | Mondial de l’Auto 2026 avec des enfants: billets, horaires et créneaux | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/salon-du-chocolat-paris-2026-avec-des-enfants-quel-billet-choisir-et-quels-ateliers-reserver/ | Salon du Chocolat Paris 2026 avec des enfants: quel billet choisir et quels ateliers réserver | evenements | Paris, Paris, Île-de-France
 - /articles/sorties/vacances-de-la-toussaint-2026-au-musee-carnavalet-quelle-activite-choisir-selon-l-age/ | Vacances de la Toussaint 2026 au musée Carnavalet: activités en famille dès 4 ans | sorties | Paris, Paris, Île-de-France
 - /articles/activites/atelier-des-lumieres-avec-un-enfant-quel-programme-choisir-et-peut-on-venir-avec-une-poussette/ | Atelier des Lumières avec un enfant: quel programme choisir et peut-on venir avec une poussette ? | activites | Paris, Paris, Île-de-France
-- /articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/ | Transports à Paris avec des enfants: quel titre choisir pour payer juste? | voyages | Paris, Paris, Île-de-France
-- /articles/cuisine/ateliers-cuisine-parent-enfant-a-paris-lesquels-choisir-selon-l-age-et-le-budget/ | Ateliers cuisine parent-enfant à Paris: lesquels choisir selon l’âge et le budget ? | cuisine | Paris, Paris, Île-de-France
 - /articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/ | Paris avec une poussette: métro, RER, bus ou tram, que choisir ? | voyages | Paris, Paris, Île-de-France
 - /articles/evenements/les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille/ | Féeries de Noël 2026 à Paris: parcours lumineux, billets et patinoire en famille | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/odyssee-lumineuse-2026-2027-au-parc-floral-de-paris-billet-date-ou-open-en-famille/ | Odyssée Lumineuse 2026-2027 à Paris: billets, dates et visite en famille | evenements | Paris, Paris, Île-de-France
@@ -132,6 +152,7 @@ Chercher un guide Fam Space de Paris en famille pour le contexte transport/séjo
 - /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | Salon du Cheval de Paris 2026 en famille: animations, jumping et billets | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/metamorphoses-2026-au-quai-branly-quels-films-choisir-avec-des-enfants/ | Métamorphoses 2026 au quai Branly: séances gratuites et films par âge | evenements | Paris, Paris, Île-de-France
 - /articles/maison/a-paris-ou-donner-ou-deposer-meubles-jouets-et-electromenager/ | À Paris, où donner ou déposer meubles, jouets et électroménager ? | maison | Paris, Paris, Île-de-France
+- /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/ | Traîneau flottant de Noël à Metz 2026: dates, horaires et embarquement | evenements | Metz, Moselle, Grand Est
 - /articles/evenements/saint-nicolas-2026-a-saint-nicolas-de-port-village-defile-ou-procession-en-famille/ | Saint-Nicolas-de-Port 2026 en famille: village, défilé et procession | evenements | Saint-Nicolas-de-Port, Meurthe-et-Moselle, Grand Est
 - /articles/evenements/festival-du-livre-jeunesse-de-rouen-2026-quel-jour-et-quelles-activites-choisir-avec-les-enfants/ | Festival du livre jeunesse de Rouen 2026: dates, tarifs et activités en famille | evenements | Rouen, Seine-Maritime, Normandie
@@ -145,10 +166,10 @@ Chercher un guide Fam Space de Paris en famille pour le contexte transport/séjo
 - opportunity | /articles/evenements/metamorphoses-2026-au-quai-branly-quels-films-choisir-avec-des-enfants/ | 2026-10-18T04:19:39.869Z
 - opportunity | /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | 2026-10-06T19:20:39.093Z
 - opportunity | /articles/bons-plans/navigo-liberte-en-famille-en-2026-tarif-enfant-passe-ou-telephone/ | 2026-10-25T10:33:30.080Z
+- opportunity | /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | 2026-10-09T14:37:47.734Z
 - opportunity | /articles/evenements/odyssee-lumineuse-2026-2027-au-parc-floral-de-paris-billet-date-ou-open-en-famille/ | 2026-10-26T15:30:14.299Z
 - opportunity | /articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/ | 2026-10-28T12:27:07.569Z
 - opportunity | /articles/evenements/saint-nicolas-2026-a-epinal-en-famille-defile-du-5-decembre-ou-marche-de-noel/ | 2026-11-01T21:31:28.158Z
-- opportunity | /articles/evenements/saint-nicolas-2026-a-saint-nicolas-de-port-village-defile-ou-procession-en-famille/ | 2026-11-02T23:31:49.432Z
 
 ### Phases 2 et 3
 
