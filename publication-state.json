@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261103-0156-ocearium-du-croisic-en-famille-le-croisic-loire-atlantique",
+  "lastProcessedCommit": "207cfc41803e5cecc78120d576dc3798c2335b69"
 }
