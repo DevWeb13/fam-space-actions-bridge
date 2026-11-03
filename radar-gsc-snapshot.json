@@ -1,26 +1,26 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-02T02:27:57+01:00",
-  "dataThrough": "2026-10-30",
-  "from": "2026-10-03",
+  "generatedAt": "2026-11-03T01:32:28+01:00",
+  "dataThrough": "2026-10-31",
+  "from": "2026-10-04",
   "refresh": [
     {
       "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
       "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
       "category": "evenements",
       "publishedAt": "2026-10-16",
-      "ageDays": 17,
+      "ageDays": 18,
       "peakStart": "2026-10-17",
       "peakEnd": "2026-10-23",
-      "recentStart": "2026-10-24",
-      "recentEnd": "2026-10-30",
+      "recentStart": "2026-10-25",
+      "recentEnd": "2026-10-31",
       "peakImpressions": 1318,
-      "recentImpressions": 801,
-      "score": 292.967,
-      "signal": "uncertain",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0.074,
+      "recentImpressions": 833,
+      "score": 291,
+      "signal": "coverage_loss",
+      "commonQueries": 1,
+      "positionDelta": 0.3,
+      "impressionRatio": 0.085,
       "basis": "Baisse d'impressions observée; causalité et classement non établis.",
       "location": {
         "city": "Lumigny-Nesles-Ormeaux",
@@ -34,133 +34,22 @@
       ]
     },
     {
-      "url": "/articles/parentalite/laep-a-nantes-ou-aller-avec-un-enfant-de-moins-de-6-ans/",
-      "title": "LAEP à Nantes: où aller avec un enfant de moins de 6 ans?",
-      "category": "parentalite",
-      "publishedAt": "2026-09-30",
-      "ageDays": 33,
-      "peakStart": "2026-10-03",
-      "peakEnd": "2026-10-09",
-      "recentStart": "2026-10-24",
-      "recentEnd": "2026-10-30",
-      "peakImpressions": 138,
-      "recentImpressions": 13,
-      "score": 160,
-      "signal": "uncertain",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
-      "location": {
-        "city": "Nantes",
-        "department": "Loire-Atlantique",
-        "region": "Pays de la Loire"
-      },
-      "focusQueries": [
-        "laep nantes",
-        "laep",
-        "cape nantes"
-      ]
-    },
-    {
-      "url": "/articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/",
-      "title": "Mini World Lyon: tarifs, billets famille et durée de visite",
-      "category": "bons-plans",
-      "publishedAt": "2026-09-25",
-      "ageDays": 38,
-      "peakStart": "2026-10-17",
-      "peakEnd": "2026-10-23",
-      "recentStart": "2026-10-24",
-      "recentEnd": "2026-10-30",
-      "peakImpressions": 574,
-      "recentImpressions": 463,
-      "score": 111,
-      "signal": "uncertain",
-      "commonQueries": 5,
-      "positionDelta": 0.039,
-      "impressionRatio": 0.461,
-      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
-      "location": {
-        "city": "Vaulx-en-Velin",
-        "department": "Rhône",
-        "region": "Auvergne-Rhône-Alpes"
-      },
-      "focusQueries": [
-        "billets pour mini world lyon",
-        "combien de temps pour visiter mini world lyon",
-        "mini world lyon tarif"
-      ]
-    },
-    {
-      "url": "/articles/vie-pratique/bus-gratuit-a-poitiers-pour-les-moins-de-12-ans-quelle-carte-faut-il-prevoir/",
-      "title": "Bus gratuit à Poitiers pour les moins de 12 ans: quelle carte faut-il prévoir ?",
-      "category": "vie-pratique",
-      "publishedAt": "2026-09-09",
-      "ageDays": 54,
-      "peakStart": "2026-10-17",
-      "peakEnd": "2026-10-23",
-      "recentStart": "2026-10-24",
-      "recentEnd": "2026-10-30",
-      "peakImpressions": 143,
-      "recentImpressions": 45,
-      "score": 98,
-      "signal": "uncertain",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0.5,
-      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
-      "location": {
-        "city": "Poitiers",
-        "department": "Vienne",
-        "region": "Nouvelle-Aquitaine"
-      },
-      "focusQueries": [
-        "bus poitiers",
-        "tarif bus poitiers",
-        "distance bressuire poitiers"
-      ]
-    },
-    {
-      "url": "/articles/parentalite/petite-section-peut-on-alleger-les-apres-midis-a-l-ecole-maternelle/",
-      "title": "Petite section: peut-on alléger les après-midis à l'école maternelle?",
-      "category": "parentalite",
-      "publishedAt": "2026-08-28",
-      "ageDays": 66,
-      "peakStart": "2026-10-08",
-      "peakEnd": "2026-10-14",
-      "recentStart": "2026-10-24",
-      "recentEnd": "2026-10-30",
-      "peakImpressions": 109,
-      "recentImpressions": 33,
-      "score": 76,
-      "signal": "uncertain",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0.909,
-      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
-      "focusQueries": [
-        "amenagement ecole maternelle",
-        "formulaire aménagement temps scolaire petite section",
-        "aménagement temps scolaire"
-      ]
-    },
-    {
       "url": "/articles/vie-pratique/parking-relais-a-strasbourg-en-famille-comment-choisir-son-p-r-et-son-forfait/",
       "title": "Parking-relais à Strasbourg en famille: comment choisir son P+R et son forfait",
       "category": "vie-pratique",
       "publishedAt": "2026-10-01",
-      "ageDays": 32,
+      "ageDays": 33,
       "peakStart": "2026-10-04",
       "peakEnd": "2026-10-10",
-      "recentStart": "2026-10-24",
-      "recentEnd": "2026-10-30",
+      "recentStart": "2026-10-25",
+      "recentEnd": "2026-10-31",
       "peakImpressions": 140,
-      "recentImpressions": 65,
-      "score": 75,
-      "signal": "needs_query_check",
-      "commonQueries": null,
+      "recentImpressions": 62,
+      "score": 78,
+      "signal": "uncertain",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "basis": "Baisse d'impressions observée; causalité et classement non établis.",
       "location": {
         "city": "Strasbourg",
@@ -168,36 +57,9 @@
         "region": "Grand Est"
       },
       "focusQueries": [
-        "parking relais Strasbourg famille",
-        "P+R Strasbourg tarif"
-      ]
-    },
-    {
-      "url": "/articles/voyages/train-de-la-rhune-avec-des-enfants-billets-duree-et-conseils-en-2026/",
-      "title": "Train de la Rhune avec des enfants: billets, durée et conseils en 2026",
-      "category": "voyages",
-      "publishedAt": "2026-09-30",
-      "ageDays": 33,
-      "peakStart": "2026-10-03",
-      "peakEnd": "2026-10-09",
-      "recentStart": "2026-10-24",
-      "recentEnd": "2026-10-30",
-      "peakImpressions": 70,
-      "recentImpressions": 6,
-      "score": 64,
-      "signal": "needs_query_check",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
-      "location": {
-        "city": "Sare",
-        "department": "Pyrénées-Atlantiques",
-        "region": "Nouvelle-Aquitaine"
-      },
-      "focusQueries": [
-        "Train de la Rhune avec enfants",
-        "Train de la Rhune tarifs 2026"
+        "p+r strasbourg",
+        "parking p+r strasbourg",
+        "parking relais cts"
       ]
     },
     {
@@ -205,18 +67,18 @@
       "title": "Déchets verts à Toulouse Métropole en 2027: collecte, broyage et compostage",
       "category": "maison",
       "publishedAt": "2026-10-15",
-      "ageDays": 18,
+      "ageDays": 19,
       "peakStart": "2026-10-16",
       "peakEnd": "2026-10-22",
-      "recentStart": "2026-10-24",
-      "recentEnd": "2026-10-30",
+      "recentStart": "2026-10-25",
+      "recentEnd": "2026-10-31",
       "peakImpressions": 112,
-      "recentImpressions": 7,
-      "score": 63,
-      "signal": "needs_query_check",
-      "commonQueries": null,
+      "recentImpressions": 15,
+      "score": 61.433,
+      "signal": "uncertain",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "basis": "Baisse d'impressions observée; causalité et classement non établis.",
       "location": {
         "city": "Toulouse",
@@ -224,37 +86,9 @@
         "region": "Occitanie"
       },
       "focusQueries": [
-        "déchets verts Toulouse Métropole 2027",
-        "collecte déchets végétaux Toulouse",
-        "broyage gratuit Toulouse Métropole"
-      ]
-    },
-    {
-      "url": "/articles/parentalite/laep-en-seine-et-marne-ou-aller-et-comment-se-passe-une-premiere-visite/",
-      "title": "LAEP en Seine-et-Marne: où aller et comment se passe une première visite?",
-      "category": "parentalite",
-      "publishedAt": "2026-10-01",
-      "ageDays": 32,
-      "peakStart": "2026-10-03",
-      "peakEnd": "2026-10-09",
-      "recentStart": "2026-10-24",
-      "recentEnd": "2026-10-30",
-      "peakImpressions": 70,
-      "recentImpressions": 8,
-      "score": 62,
-      "signal": "needs_query_check",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
-      "location": {
-        "city": "Meaux",
-        "department": "Seine-et-Marne",
-        "region": "Île-de-France"
-      },
-      "focusQueries": [
-        "LAEP Seine-et-Marne",
-        "lieu accueil enfants parents Meaux"
+        "collecte déchets verts toulouse",
+        "calendrier ramassage déchets verts toulouse 2026",
+        "calendrier collecte déchets verts toulouse métropole 2026"
       ]
     },
     {
@@ -262,18 +96,18 @@
       "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
       "category": "vie-pratique",
       "publishedAt": "2026-09-28",
-      "ageDays": 35,
+      "ageDays": 36,
       "peakStart": "2026-10-12",
       "peakEnd": "2026-10-18",
-      "recentStart": "2026-10-24",
-      "recentEnd": "2026-10-30",
+      "recentStart": "2026-10-25",
+      "recentEnd": "2026-10-31",
       "peakImpressions": 106,
-      "recentImpressions": 44,
-      "score": 62,
-      "signal": "needs_query_check",
-      "commonQueries": null,
+      "recentImpressions": 45,
+      "score": 61,
+      "signal": "uncertain",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0.909,
       "basis": "Baisse d'impressions observée; causalité et classement non établis.",
       "location": {
         "city": "Toulouse",
@@ -281,37 +115,66 @@
         "region": "Occitanie"
       },
       "focusQueries": [
-        "aide restauration scolaire Haute-Garonne",
-        "aide cantine collège Haute-Garonne",
-        "ARS Haute-Garonne 2026-2027"
+        "aide a la restauration scolaire haute garonne",
+        "ars cantine haute garonne",
+        "aide restauration scolaire haute-garonne"
       ]
     },
     {
-      "url": "/articles/voyages/week-end-a-etretat-en-famille-organiser-deux-jours-autour-des-falaises/",
-      "title": "Week-end à Étretat en famille: organiser deux jours autour des falaises",
-      "category": "voyages",
-      "publishedAt": "2026-10-02",
-      "ageDays": 31,
-      "peakStart": "2026-10-03",
-      "peakEnd": "2026-10-09",
-      "recentStart": "2026-10-24",
-      "recentEnd": "2026-10-30",
-      "peakImpressions": 61,
-      "recentImpressions": 3,
+      "url": "/articles/parentalite/laep-en-seine-et-marne-ou-aller-et-comment-se-passe-une-premiere-visite/",
+      "title": "LAEP en Seine-et-Marne: où aller et comment se passe une première visite?",
+      "category": "parentalite",
+      "publishedAt": "2026-10-01",
+      "ageDays": 33,
+      "peakStart": "2026-10-04",
+      "peakEnd": "2026-10-10",
+      "recentStart": "2026-10-25",
+      "recentEnd": "2026-10-31",
+      "peakImpressions": 67,
+      "recentImpressions": 9,
       "score": 58,
+      "signal": "uncertain",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Meaux",
+        "department": "Seine-et-Marne",
+        "region": "Île-de-France"
+      },
+      "focusQueries": [
+        "laep",
+        "laep champs sur marne",
+        "laep meaux"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/carte-okay-savoie-2026-2027-comment-obtenir-et-utiliser-les-80-du-collegien/",
+      "title": "Carte OKAY Savoie 2026-2027: comment obtenir et utiliser les 80 € du collégien",
+      "category": "vie-pratique",
+      "publishedAt": "2026-09-02",
+      "ageDays": 62,
+      "peakStart": "2026-10-06",
+      "peakEnd": "2026-10-12",
+      "recentStart": "2026-10-25",
+      "recentEnd": "2026-10-31",
+      "peakImpressions": 131,
+      "recentImpressions": 75,
+      "score": 56,
       "signal": "needs_query_check",
       "commonQueries": null,
       "positionDelta": null,
       "impressionRatio": null,
       "basis": "Baisse d'impressions observée; causalité et classement non établis.",
       "location": {
-        "city": "Étretat",
-        "department": "Seine-Maritime",
-        "region": "Normandie"
+        "city": "Chambéry",
+        "department": "Savoie",
+        "region": "Auvergne-Rhône-Alpes"
       },
       "focusQueries": [
-        "week-end Étretat en famille",
-        "Étretat avec enfants"
+        "carte OKAY Savoie 2026-2027",
+        "80 euros collégien Savoie"
       ]
     },
     {
@@ -319,11 +182,11 @@
       "title": "Foire d'Automne de Saint-Jean-du-Gard 2026 en famille: animations et conseils",
       "category": "evenements",
       "publishedAt": "2026-09-25",
-      "ageDays": 38,
+      "ageDays": 39,
       "peakStart": "2026-10-07",
       "peakEnd": "2026-10-13",
-      "recentStart": "2026-10-24",
-      "recentEnd": "2026-10-30",
+      "recentStart": "2026-10-25",
+      "recentEnd": "2026-10-31",
       "peakImpressions": 84,
       "recentImpressions": 29,
       "score": 55,
@@ -343,59 +206,59 @@
       ]
     },
     {
-      "url": "/articles/vie-pratique/carte-okay-savoie-2026-2027-comment-obtenir-et-utiliser-les-80-du-collegien/",
-      "title": "Carte OKAY Savoie 2026-2027: comment obtenir et utiliser les 80 € du collégien",
-      "category": "vie-pratique",
-      "publishedAt": "2026-09-02",
-      "ageDays": 61,
-      "peakStart": "2026-10-06",
-      "peakEnd": "2026-10-12",
-      "recentStart": "2026-10-24",
-      "recentEnd": "2026-10-30",
-      "peakImpressions": 131,
-      "recentImpressions": 78,
-      "score": 53,
+      "url": "/articles/voyages/train-de-la-rhune-avec-des-enfants-billets-duree-et-conseils-en-2026/",
+      "title": "Train de la Rhune avec des enfants: billets, durée et conseils en 2026",
+      "category": "voyages",
+      "publishedAt": "2026-09-30",
+      "ageDays": 34,
+      "peakStart": "2026-10-04",
+      "peakEnd": "2026-10-10",
+      "recentStart": "2026-10-25",
+      "recentEnd": "2026-10-31",
+      "peakImpressions": 54,
+      "recentImpressions": 6,
+      "score": 48,
       "signal": "needs_query_check",
       "commonQueries": null,
       "positionDelta": null,
       "impressionRatio": null,
       "basis": "Baisse d'impressions observée; causalité et classement non établis.",
       "location": {
-        "city": "Chambéry",
-        "department": "Savoie",
-        "region": "Auvergne-Rhône-Alpes"
+        "city": "Sare",
+        "department": "Pyrénées-Atlantiques",
+        "region": "Nouvelle-Aquitaine"
       },
       "focusQueries": [
-        "carte OKAY Savoie 2026-2027",
-        "80 euros collégien Savoie"
+        "Train de la Rhune avec enfants",
+        "Train de la Rhune tarifs 2026"
       ]
     },
     {
-      "url": "/articles/bons-plans/pass-sports-citoyen-dans-l-oise-15-a-cumuler-avec-le-pass-sport-en-2026/",
-      "title": "Pass Sports Citoyen dans l'Oise: 15 € à cumuler avec le pass Sport en 2026",
-      "category": "bons-plans",
-      "publishedAt": "2026-09-30",
-      "ageDays": 33,
-      "peakStart": "2026-10-03",
-      "peakEnd": "2026-10-09",
-      "recentStart": "2026-10-24",
-      "recentEnd": "2026-10-30",
-      "peakImpressions": 46,
-      "recentImpressions": 1,
-      "score": 42.3,
+      "url": "/articles/voyages/week-end-a-etretat-en-famille-organiser-deux-jours-autour-des-falaises/",
+      "title": "Week-end à Étretat en famille: organiser deux jours autour des falaises",
+      "category": "voyages",
+      "publishedAt": "2026-10-02",
+      "ageDays": 32,
+      "peakStart": "2026-10-04",
+      "peakEnd": "2026-10-10",
+      "recentStart": "2026-10-25",
+      "recentEnd": "2026-10-31",
+      "peakImpressions": 49,
+      "recentImpressions": 2,
+      "score": 47,
       "signal": "needs_query_check",
       "commonQueries": null,
       "positionDelta": null,
       "impressionRatio": null,
       "basis": "Baisse d'impressions observée; causalité et classement non établis.",
       "location": {
-        "city": "Beauvais",
-        "department": "Oise",
-        "region": "Hauts-de-France"
+        "city": "Étretat",
+        "department": "Seine-Maritime",
+        "region": "Normandie"
       },
       "focusQueries": [
-        "Pass Sports Citoyen Oise",
-        "pass Sport 2026"
+        "week-end Étretat en famille",
+        "Étretat avec enfants"
       ]
     },
     {
@@ -403,11 +266,11 @@
       "title": "Gastronomades 2026 à Angoulême en famille: faut-il prévoir le week-end ?",
       "category": "evenements",
       "publishedAt": "2026-09-19",
-      "ageDays": 44,
+      "ageDays": 45,
       "peakStart": "2026-10-06",
       "peakEnd": "2026-10-12",
-      "recentStart": "2026-10-24",
-      "recentEnd": "2026-10-30",
+      "recentStart": "2026-10-25",
+      "recentEnd": "2026-10-31",
       "peakImpressions": 67,
       "recentImpressions": 28,
       "score": 39,
@@ -425,6 +288,148 @@
         "Gastronomades 2026 Angoulême",
         "Gastronomades en famille"
       ]
+    },
+    {
+      "url": "/articles/vie-pratique/transport-scolaire-en-ardeche-peut-on-utiliser-scolaire-le-week-end-et-pendant-les-vacances/",
+      "title": "Transport scolaire en Ardèche: peut-on utiliser Scolaire+ le week-end et pendant les vacances?",
+      "category": "vie-pratique",
+      "publishedAt": "2026-10-01",
+      "ageDays": 33,
+      "peakStart": "2026-10-04",
+      "peakEnd": "2026-10-10",
+      "recentStart": "2026-10-25",
+      "recentEnd": "2026-10-31",
+      "peakImpressions": 46,
+      "recentImpressions": 7,
+      "score": 39,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Privas",
+        "department": "Ardèche",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "focusQueries": [
+        "transport scolaire Ardèche 2026 2027",
+        "Scolaire+ Mobilité Région Ardèche"
+      ]
+    },
+    {
+      "url": "/articles/evenements/exploradome-en-famille-fabriq-expo-tarifs-et-conseils-de-visite/",
+      "title": "Exploradôme en famille: Fabriq’Expo, tarifs et conseils de visite",
+      "category": "evenements",
+      "publishedAt": "2026-09-24",
+      "ageDays": 40,
+      "peakStart": "2026-10-16",
+      "peakEnd": "2026-10-22",
+      "recentStart": "2026-10-25",
+      "recentEnd": "2026-10-31",
+      "peakImpressions": 37,
+      "recentImpressions": 0,
+      "score": 37,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Vitry-sur-Seine",
+        "department": "Val-de-Marne",
+        "region": "Île-de-France"
+      },
+      "focusQueries": [
+        "Exploradôme en famille",
+        "Fabriq’Expo 2026",
+        "musée sciences enfants Val-de-Marne"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/pass-sports-citoyen-dans-l-oise-15-a-cumuler-avec-le-pass-sport-en-2026/",
+      "title": "Pass Sports Citoyen dans l'Oise: 15 € à cumuler avec le pass Sport en 2026",
+      "category": "bons-plans",
+      "publishedAt": "2026-09-30",
+      "ageDays": 34,
+      "peakStart": "2026-10-04",
+      "peakEnd": "2026-10-10",
+      "recentStart": "2026-10-25",
+      "recentEnd": "2026-10-31",
+      "peakImpressions": 42,
+      "recentImpressions": 1,
+      "score": 35.26,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Beauvais",
+        "department": "Oise",
+        "region": "Hauts-de-France"
+      },
+      "focusQueries": [
+        "Pass Sports Citoyen Oise",
+        "pass Sport 2026"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/packs-sites-touristiques-ariege-2026/",
+      "title": "Packs Ariège 2026: jusqu'à cinq sites au prix de trois",
+      "category": "bons-plans",
+      "publishedAt": "2026-07-27",
+      "ageDays": 99,
+      "peakStart": "2026-10-10",
+      "peakEnd": "2026-10-16",
+      "recentStart": "2026-10-25",
+      "recentEnd": "2026-10-31",
+      "peakImpressions": 1,
+      "recentImpressions": 0,
+      "score": 35.001,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Tarascon-sur-Ariège",
+        "department": "Ariège",
+        "region": "Occitanie"
+      },
+      "focusQueries": [
+        "packs sites touristiques Ariège",
+        "visites famille Ariège",
+        "tarifs réduits Ariège 2026"
+      ]
+    },
+    {
+      "url": "/articles/activites/la-cite-de-la-mer-a-cherbourg-en-famille-tarifs-duree-et-conseils-de-visite/",
+      "title": "La Cité de la Mer à Cherbourg en famille: tarifs, visite et billets 2026",
+      "category": "activites",
+      "publishedAt": "2026-08-18",
+      "ageDays": 77,
+      "peakStart": "2026-10-18",
+      "peakEnd": "2026-10-24",
+      "recentStart": "2026-10-25",
+      "recentEnd": "2026-10-31",
+      "peakImpressions": 82,
+      "recentImpressions": 103,
+      "score": 35,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Cherbourg-en-Cotentin",
+        "department": "Manche",
+        "region": "Normandie"
+      },
+      "focusQueries": [
+        "Cité de la Mer Cherbourg famille",
+        "activité famille Manche"
+      ]
     }
   ],
   "strongPages": [
@@ -432,100 +437,100 @@
       "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
       "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
       "category": "evenements",
-      "recentImpressions": 801,
+      "recentImpressions": 833,
       "recentClicks": 15,
-      "recentPosition": 6.984,
-      "retention": 0.608
+      "recentPosition": 7.077,
+      "retention": 0.632
     },
     {
       "url": "/articles/bons-plans/centre-spatial-guyanais-a-kourou-3-experiences-gratuites-et-un-musee-en-famille/",
       "title": "Centre spatial guyanais à Kourou: 3 expériences gratuites et un musée en famille",
       "category": "bons-plans",
-      "recentImpressions": 155,
-      "recentClicks": 8,
-      "recentPosition": 9.084,
-      "retention": 11.071
+      "recentImpressions": 164,
+      "recentClicks": 7,
+      "recentPosition": 9.067,
+      "retention": 6.56
     },
     {
       "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
       "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
       "category": "voyages",
-      "recentImpressions": 3295,
-      "recentClicks": 5,
-      "recentPosition": 8.621,
-      "retention": 1.445
+      "recentImpressions": 3219,
+      "recentClicks": 6,
+      "recentPosition": 8.653,
+      "retention": 1.411
     },
     {
       "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
       "title": "Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite",
       "category": "sorties",
-      "recentImpressions": 293,
+      "recentImpressions": 288,
       "recentClicks": 5,
-      "recentPosition": 8.263,
-      "retention": 1.069
+      "recentPosition": 8.389,
+      "retention": 1.018
     },
     {
       "url": "/articles/sorties/cosquer-mediterranee-avec-des-enfants-age-poussette-tarifs/",
       "title": "Cosquer Méditerranée avec des enfants: que peut-on visiter selon leur âge?",
       "category": "sorties",
-      "recentImpressions": 73,
+      "recentImpressions": 67,
       "recentClicks": 5,
-      "recentPosition": 6.425,
-      "retention": 0.986
+      "recentPosition": 6.358,
+      "retention": 0.893
     },
     {
       "url": "/articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/",
-      "title": "Mini World Lyon: tarifs, billets famille et durée de visite",
+      "title": "Mini World Lyon: quel billet choisir en famille et combien de temps prévoir ?",
       "category": "bons-plans",
-      "recentImpressions": 463,
+      "recentImpressions": 419,
       "recentClicks": 4,
-      "recentPosition": 8.564,
-      "retention": 0.807
+      "recentPosition": 8.568,
+      "retention": 0.73
     },
     {
       "url": "/articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/",
       "title": "Où manger des fouées en famille autour de Saumur ?",
       "category": "cuisine",
-      "recentImpressions": 309,
+      "recentImpressions": 296,
       "recentClicks": 4,
-      "recentPosition": 10.175,
-      "retention": 1.236
+      "recentPosition": 10.074,
+      "retention": 1.184
     },
     {
       "url": "/articles/maison/encombrants-a-bourges-quand-sortir-meubles-et-gros-objets/",
       "title": "Encombrants à Bourges: quand sortir meubles et gros objets",
       "category": "maison",
-      "recentImpressions": 149,
+      "recentImpressions": 143,
       "recentClicks": 3,
-      "recentPosition": 7.101,
-      "retention": 1.536
+      "recentPosition": 7.224,
+      "retention": 1.474
     },
     {
-      "url": "/articles/bons-plans/pass-culture-en-duo-comment-un-jeune-peut-inviter-un-parent-ou-un-proche/",
-      "title": "Pass Culture en duo: comment un jeune peut inviter un parent ou un proche",
-      "category": "bons-plans",
-      "recentImpressions": 61,
-      "recentClicks": 3,
-      "recentPosition": 4.393,
-      "retention": 0.813
-    },
-    {
-      "url": "/articles/vie-pratique/cars-lio-dans-l-herault-en-famille-billets-tram-et-poussettes/",
-      "title": "Cars liO dans l'Hérault en famille: billets, tram et poussettes",
-      "category": "vie-pratique",
-      "recentImpressions": 102,
+      "url": "/articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/",
+      "title": "Recycleries autour de Chartres: où donner et acheter d'occasion ?",
+      "category": "maison",
+      "recentImpressions": 117,
       "recentClicks": 2,
-      "recentPosition": 8.961,
-      "retention": 1.36
+      "recentPosition": 7.957,
+      "retention": 0.992
+    },
+    {
+      "url": "/articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/",
+      "title": "Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers",
+      "category": "vie-pratique",
+      "recentImpressions": 65,
+      "recentClicks": 2,
+      "recentPosition": 7.477,
+      "retention": 0.97
     }
   ],
   "excluded": {
-    "expired": 160,
-    "cooling": 1
+    "expired": 163,
+    "cooling": 5
   },
   "warnings": [
-    "GSC recherche web : 8779 lignes sur quatre semaines, réponses complètes (1715, 1940, 2330, 2794).",
-    "Catalogue Radar : 905 articles et 152 entrées d'historique ; exclusions selon les métadonnées disponibles.",
+    "GSC recherche web : 8905 lignes sur quatre semaines, réponses complètes (1738, 1984, 2395, 2788).",
+    "Catalogue Radar : 921 articles et 159 entrées d'historique ; exclusions selon les métadonnées disponibles.",
     "Diagnostics de requêtes effectués sur 5 candidats ; certaines requêtes peuvent être masquées par GSC.",
     "Les baisses d'impressions ne prouvent ni désindexation ni perte de position."
   ]
