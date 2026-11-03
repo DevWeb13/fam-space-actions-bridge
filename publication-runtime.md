@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,90 +14,129 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Oise
 - Région: Hauts-de-France
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Sujet :** découvrir le domaine de Chaalis en famille, à Fontaine-Chaalis (Oise).
-**Titre de travail :** « Domaine de Chaalis en famille : abbaye, chapelle immersive et visite pendant les travaux ».
-**Angle :** préparer une escapade culturelle accessible aux enfants, en distinguant précisément ce qui reste visitable du château-musée en chantier.
-
-À proximité d'Ermenonville, ce domaine historique réunit les ruines d'une abbaye cistercienne, un parc, une roseraie et une chapelle ornée de fresques Renaissance. Le musée Jacquemart-André est actuellement en travaux : les collections habituelles ne sont donc pas accessibles comme avant.
-
-## Besoin du lecteur
-Comprendre ce que la famille pourra réellement voir aujourd'hui, organiser un parcours adapté à l'âge des enfants, choisir la bonne saison, anticiper les horaires d'ouverture, le budget, les pauses et éventuellement un séjour à proximité. Ne pas présenter les animations estivales terminées comme encore disponibles.
-
-## Valeur éditoriale
-- Distinguer les espaces ouverts (parc, vestiges, chapelle et roseraie selon saison) du château-musée en travaux et des collections temporairement invisibles.
-- Expliquer l'expérience immersive de la chapelle (séance sonore et lumineuse d'environ 20 minutes, incluse dans le billet, accès conditionné à l'animation) et proposer un parcours familial raisonnable sans inventer d'activité enfant permanente.
-- Donner les horaires saisonniers : du 3 novembre au 21 décembre 2026, ouverture le week-end de 10 h à 17 h, selon Oise Tourisme ; vérifier à nouveau avant publication. Tarifs indicatifs affichés : 10 € adulte, 7 € de 7 à 18 ans, gratuit avant 7 ans.
-- Prévenir que la roseraie présente moins d'intérêt floral en novembre et que la chasse au trésor estivale 2026 s'est achevée en août.
-- Les résultats de recherche fournissent surtout des descriptions patrimoniales et horaires : l'article doit apporter la décision pratique « est-ce une bonne sortie familiale maintenant, malgré les travaux ? ».
-
-## Affiliation
-- **Billetterie principale :** aucune offre directe Chaalis confirmée dans les recherches ciblées Tiqets et GetYourGuide ; ne pas présenter une billetterie partenaire comme acquise.
-- **Hébergement secondaire vérifié :** Booking.com, Château d'Ermenonville, hôtel à environ 2 km de l'abbaye, avec chambres familiales : https://www.booking.com/hotel/fr/chac-teau-d-ermenonville.fr.html . À proposer uniquement pour les familles prolongeant la visite en week-end, sous réserve des dates, capacités et tarifs.
-- **Autre piste d'hébergement vérifiée :** Booking.com, sélection d'hébergements à Ermenonville : https://www.booking.com/city/fr/ermenonville.fr.html . Préférer l'établissement précis ci-dessus à une liste générale.
-- Aucun lien affilié personnalisé ou commission effectivement attribuée n'a été vérifié ; les URL sont des pages d'offres partenaires.
-
-## Sources de départ
-- Oise Tourisme, fiche du domaine et avertissement sur le musée en travaux : https://www.oisetourisme.com/activite/domaine-de-chaalis/
-- Oise Tourisme, parc et roseraie, séance immersive de la chapelle, tarifs et calendrier actualisé : https://www.oisetourisme.com/activite/parc-et-roseraie-du-domaine-de-chaalis/
-- Oise Tourisme, présentation patrimoniale et horaires généraux : https://www.oisetourisme.com/visiter/les-incontournables/le-domaine-de-chaalis/
-- Oise Tourisme, musée Jacquemart-André et restrictions dues aux travaux : https://www.oisetourisme.com/activite/musee-jacquemart-andre/
-- Site du domaine, à consulter pour confirmer les informations de visite : https://www.domainedechaalis.fr/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "voyages"
+title: "Domaine de Chaalis en famille: que visiter pendant les travaux ?"
+subtitle: "Ruines de l’abbaye, chapelle immersive et promenade près d’Ermenonville: préparer sa sortie sans mauvaise surprise"
+summary: "Le domaine de Chaalis reste ouvert malgré les travaux du musée. Découvrez le parcours familial, la chapelle immersive, les tarifs et les horaires."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "domaine de Chaalis en famille"
+  - "abbaye de Chaalis visite travaux"
+  - "chapelle immersive Chaalis"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Fontaine-Chaalis"
+  department: "Oise"
+  region: "Hauts-de-France"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Oise Tourisme - Domaine de Chaalis"
+    url: "https://www.oisetourisme.com/activite/domaine-de-chaalis/"
+  - title: "Oise Tourisme - Parc et roseraie du Domaine de Chaalis"
+    url: "https://www.oisetourisme.com/activite/parc-et-roseraie-du-domaine-de-chaalis/"
+  - title: "Oise Tourisme - Musée Jacquemart-André"
+    url: "https://www.oisetourisme.com/activite/musee-jacquemart-andre/"
+  - title: "Oise Tourisme - Restauration du domaine de Chaalis"
+    url: "https://www.oisetourisme.com/restauration-du-domaine-de-chaalis-ce-qui-change-des-2025/"
+  - title: "Oise Tourisme - Le Domaine de Chaalis"
+    url: "https://www.oisetourisme.com/visiter/les-incontournables/le-domaine-de-chaalis/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Fontaine-Chaalis, près d’Ermenonville dans l’Oise, le domaine de Chaalis réunit les ruines d’une ancienne abbaye, un grand parc et une chapelle Renaissance dont les fresques se découvrent au fil d’une animation lumineuse et sonore. C’est une escapade culturelle qui peut plaire aux enfants sans leur imposer une longue visite de musée. Mais depuis novembre 2025, le château-musée Jacquemart-André est en restauration: mieux vaut savoir ce que l’on pourra réellement visiter avant de partir.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Que peut-on voir malgré les travaux ?
+
+Le parc, les vestiges de l’abbaye cistercienne, la roseraie et la chapelle Sainte-Marie restent accessibles. Les ruines monumentales donnent immédiatement un point d’accroche aux enfants: on peut observer les arches, imaginer l’ancienne église et alterner découvertes et promenade.
+
+En revanche, **il ne faut pas venir pour parcourir les salles habituelles du musée Jacquemart-André**. Une partie des œuvres a été prêtée à d’autres musées, le reste est conservé en réserve. L’intérieur du château n’est accessible que dans le cadre de la visite consacrée aux coulisses du chantier, annoncée comme comprise dans le droit d’entrée. Les conditions et créneaux de cette visite sont à confirmer avant le déplacement. Ces restrictions sont détaillées par [Oise Tourisme sur la fiche du musée](https://www.oisetourisme.com/activite/musee-jacquemart-andre/).
+
+Le chantier doit se poursuivre jusqu’en 2028, selon [la présentation de la restauration par Oise Tourisme](https://www.oisetourisme.com/restauration-du-domaine-de-chaalis-ce-qui-change-des-2025/). Pour une famille, la bonne approche consiste donc à choisir Chaalis pour son patrimoine extérieur et sa chapelle, plutôt que pour ses collections.
+
+## La chapelle immersive: le moment fort de la visite
+
+La chapelle conserve des fresques peintes au XVIe siècle par le Primatice. Pour les découvrir, le domaine propose une séance d’environ **20 minutes**, mêlant éclairage progressif et récit sonore au casque. L’expérience est incluse dans le billet d’entrée.
+
+Attention: la chapelle est accessible **uniquement pendant cette animation**, et non librement à tout moment. Les horaires publiés sont 10 h 30, 11 h 30, 14 h, 15 h, 16 h et 17 h. Le dernier créneau affiché coïncidant avec l’heure de fermeture hivernale, mieux vaut privilégier une séance antérieure et confirmer les horaires auprès du domaine. [Oise Tourisme décrit l’animation et ses créneaux](https://www.oisetourisme.com/activite/parc-et-roseraie-du-domaine-de-chaalis/).
+
+Avec de jeunes enfants, le format court peut être un avantage. Il faut toutefois vérifier qu’ils accepteront de porter un casque et de rester attentifs pendant la séance. Aucune activité ludique permanente pour enfants n’est garantie par cette présentation.
+
+## Quel parcours choisir avec des enfants ?
+
+Une visite simple consiste à commencer par les ruines et les allées du parc, puis à rejoindre la chapelle pour une séance programmée. Cela permet de donner un rythme à la sortie sans transformer la promenade en parcours historique exhaustif.
+
+Avec des enfants plus grands, on peut prolonger la découverte par les explications sur la restauration du château, si la visite des coulisses est effectivement proposée le jour choisi. C’est une façon concrète de comprendre pourquoi un monument ferme temporairement et comment ses collections sont protégées.
+
+La roseraie de 3 500 m² fait aussi partie du domaine, mais **novembre n’est pas la saison des roses**: la promenade conserve son intérêt paysager, sans les floraisons attendues au printemps ou en début d’été. La chasse au trésor et les spectacles estivaux annoncés pour juillet-août 2026 ne doivent pas non plus être considérés comme des animations disponibles en automne.
+
+Pour une première visite familiale, prévoir environ une heure et demie à deux heures est un repère raisonnable, **pas une durée officielle**: elle dépend de la météo, des pauses et de l’horaire de la chapelle.
+
+## Horaires, billets et budget familial
+
+Pour la période du **3 novembre au 21 décembre 2026**, la fiche [Parc et roseraie d’Oise Tourisme](https://www.oisetourisme.com/activite/parc-et-roseraie-du-domaine-de-chaalis/) indique une ouverture **le samedi et le dimanche, de 10 h à 17 h**. Une autre fiche touristique présente des bornes de période légèrement différentes; il est donc prudent de vérifier le calendrier précis avant le départ, surtout autour des vacances scolaires et des fêtes.
+
+Les tarifs affichés sont de **10 € par adulte**, **7 € de 7 à 18 ans** et **gratuit pour les moins de 7 ans**. À titre d’exemple, deux adultes accompagnés de deux enfants de 8 et 5 ans paieraient 27 € aux tarifs indiqués, hors dépenses sur place.
+
+Le domaine se trouve sur la **D126, 60300 Fontaine-Chaalis**. Un parking gratuit, des toilettes et une aire de pique-nique sont signalés par [la fiche pratique du domaine](https://www.oisetourisme.com/activite/domaine-de-chaalis/). Des possibilités de restauration sont également mentionnées, sans garantie d’ouverture à chaque date: pour une sortie en basse saison, mieux vaut prévoir de quoi manger ou vérifier le service.
+
+Les fiches consultées ne précisent pas suffisamment les conditions de circulation des poussettes sur l’ensemble des chemins et dans la chapelle. Avec un bébé ou une personne ayant des difficultés à marcher, contacter l’accueil avant de venir: **03 44 54 04 02**.
+
+## Est-ce une bonne sortie familiale en ce moment ?
+
+**Oui, si vous cherchez une promenade patrimoniale ponctuée d’une expérience immersive**, et que vos enfants apprécient les ruines, les jardins et les histoires de monuments. La chapelle apporte une véritable découverte, même quand les collections du château sont indisponibles.
+
+**Mieux vaut choisir une autre période** si votre priorité est la roseraie en fleurs ou des animations de plein air pour enfants. Et si vous souhaitez surtout voir les œuvres du musée, certaines sont actuellement présentées ailleurs dans l’Oise, notamment à Chantilly et à Senlis, comme l’explique [Oise Tourisme](https://www.oisetourisme.com/activite/domaine-de-chaalis/).
+
+Pour organiser la visite, consultez le [site du Domaine de Chaalis](https://www.domainedechaalis.fr/) avant de partir, particulièrement pour les séances de la chapelle et les éventuelles visites du chantier.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -126,4 +165,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
