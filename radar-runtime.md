@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Noël 2026 au château de Goulaine : le spectacle immersif vaut-il la sortie en famille ?"
-subtitle: Dates, séances, accès et contraintes avec des enfants
-summary: Aider les familles à décider si La Merveilleuse Histoire du Père Noël, parcours-spectacle intérieur d'environ une heure à Haute-Goulaine, convient à leur âge, leur mobilité et leur programme de novembre-décembre.
+title: "Noël 2026 au château de Goulaine : billets et conseils pour les familles"
+subtitle: Un parcours immersif d'une heure près de Nantes, avec des contraintes à connaître avant de réserver
+summary: Dates et prix de la billetterie 2026, durée, poussettes, accessibilité, repas et accès au château de Goulaine pour préparer la Merveilleuse Histoire du Père Noël avec des enfants.
 category: evenements
 location:
   city: Haute-Goulaine
@@ -69,15 +74,17 @@ location:
 keywords:
   - Merveilleuse Histoire du Père Noël Goulaine 2026
   - spectacle Noël château de Goulaine enfants
-  - horaires billets Noël Haute-Goulaine
+  - billets horaires Noël Haute-Goulaine
 sources:
-  - title: Spectacles Polaris - La Merveilleuse Histoire du Père Noël
+  - title: Polaris Spectacles - La Merveilleuse Histoire du Père Noël
     url: https://www.goulaine-spectacles.com/spectacle-1
-  - title: Spectacles Polaris - Informations pratiques
+  - title: Polaris Spectacles - Informations pratiques
     url: https://www.goulaine-spectacles.com/pratique
+  - title: Placeminute - Billetterie du spectacle 2026
+    url: https://polaris-horslesmurs.placeminute.com/event/immersive-experience/polaris-presente-la-merveilleuse-histoire-du-pere-noel-2026-chateau-de-goulaine,47483.html
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille
   decision: Savoir si réserver ce spectacle d'une heure au château de Goulaine avec ses enfants, à quelle séance venir et comment organiser l'accès, notamment avec une poussette ou une personne à mobilité réduite.
@@ -87,43 +94,54 @@ radar:
     dataThrough: 2026-10-31
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Spectacles Polaris - La Merveilleuse Histoire du Père Noël »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-20
 ---
 
-## Mission retenue
-La Merveilleuse Histoire du Père Noël, spectacle immersif intérieur au château de Goulaine, près de Nantes, annoncé du 14 novembre au 21 décembre 2026.
+Au château de Goulaine, à Haute-Goulaine près de Nantes, **La Merveilleuse Histoire du Père Noël** propose une sortie de Noël différente d'une visite classique : les familles avancent de scène en scène au milieu des décors et des comédiens. Comptez **environ une heure à l'intérieur**. Avant d'acheter les billets, deux limites sont importantes : les poussettes restent à l'accueil et le parcours est annoncé **non accessible aux personnes à mobilité réduite**.
 
-## Pourquoi cette mission
-Opportunité saisonnière proche, distincte des 921 articles du catalogue : aucune page sur Goulaine. Le refresh Lumigny (1 318 puis 833 impressions) n'a pas de lacune éditoriale indépendante démontrée : son article explique déjà les billets, dates et conditions. Une expansion autour des pages fortes risquerait davantage de reprendre des intentions déjà traitées ; cette sortie répond à une décision nouvelle et concrète.
+## Quand venir et combien coûtent les billets ?
 
-## Décision du lecteur
-Déterminer si le parcours-spectacle convient à sa famille et choisir une séance compatible avec son déplacement et les contraintes des enfants.
+La [billetterie 2026 de l'organisateur](https://polaris-horslesmurs.placeminute.com/event/immersive-experience/polaris-presente-la-merveilleuse-histoire-du-pere-noel-2026-chateau-de-goulaine,47483.html) annonce des séances **du 13 novembre au 20 décembre 2026**, avec un prix affiché **à partir de 15,99 €**. Le prix définitif dépend du créneau et des billets choisis : vérifiez le total pour chaque membre de la famille avant de payer. Aucun tarif enfant précis ni gratuité selon l'âge n'a pu être confirmé sur la page publique consultable ; ne présumez donc pas qu'un tout-petit entre gratuitement.
 
-## Faits à traiter
-Le producteur annonce environ une heure en intérieur, une dizaine de scènes, des vendredis soir et des séances les samedis et dimanches ; les heures de séance exactes sont à relever dans la billetterie, sans confondre avec les larges horaires d'ouverture du site. Vérifier prix, âges, conditions de réservation et éventuelles dates supplémentaires. Poussettes non admises dans le spectacle (dépôt à l'accueil) ; spectacle annoncé non accessible aux PMR : le dire clairement. Parking et car Aléop 331 arrêt Allée du château ; horaires et retour à confirmer. Les pages officielles comportent des dates parfois discordantes (13/14 novembre, 20/21 décembre) : privilégier les dates réellement proposées à la réservation, sans inventer.
+Attention aux dates : certaines pages de présentation de Polaris mentionnent plutôt le 14 novembre au 21 décembre. Pour choisir votre journée, privilégiez **les dates et heures réellement sélectionnables dans la billetterie**, plutôt que cette plage générale. L'organisateur indique une ouverture le vendredi soir, le samedi et le dimanche, mais les plages affichées sur son site (vendredi 18 h 30-23 h, samedi 9 h-23 h, dimanche 9 h-21 h) **ne correspondent pas aux horaires de début de chaque séance**. La sélection précise des heures s'effectue dans le calendrier de réservation.
 
-## Sources de départ
-Site de l'organisateur et informations pratiques cités en frontmatter ; billetterie liée depuis ces pages.
+## Le spectacle convient-il aux jeunes enfants ?
 
-## Affiliation
-Pas de partenaire de billetterie vérifié. Pour un séjour, l'Hôtel de la Louée dispose d'une chambre triple sur Booking ; ne pas promettre une disponibilité ni l'adéquation à une famille de quatre.
+Le parcours traverse une dizaine de décors : atelier du Père Noël, confiserie, personnages costumés, lutins et univers féérique. Les enfants qui aiment suivre une histoire vivante plutôt que rester assis devant une scène devraient apprécier cette formule. En revanche, une heure de déplacement et de spectacle peut être longue pour un enfant qui a besoin de pauses fréquentes.
 
-## Continuations internes
-Ne pas redévelopper les marchés de Noël de Nantes ni un guide général de séjour : renvoyer vers les pages Fam Space correspondantes si elles existent. Ne pas confondre ce spectacle avec l'ancien spectacle Jules Verne du même château.
+**Avec un bébé ou une poussette**, prévoyez un porte-bébé si cela convient à votre famille : selon les [consignes pratiques de Polaris](https://www.goulaine-spectacles.com/pratique), les poussettes ne peuvent pas entrer et doivent être déposées à l'accueil. Les toilettes sont annoncées **à l'issue du spectacle** ; mieux vaut prévoir le passage aux sanitaires et les besoins des enfants avant le départ. Aucun service de change pour bébé n'est confirmé par l'organisateur.
+
+**Pour une personne à mobilité réduite**, le producteur indique explicitement que le spectacle n'est pas accessible. Il vaut mieux contacter l'équipe avant tout achat si un membre de la famille a une contrainte de déplacement. Aucune restriction d'âge minimale n'a pu être établie à partir des informations officielles accessibles : vérifiez les conditions de votre billet si vous venez avec un très jeune enfant.
+
+## Accès au château et repas sur place
+
+Le spectacle se déroule **allée du Château, 44115 Haute-Goulaine**, à environ quinze minutes de Nantes selon l'organisateur. Un **parking sur place** est annoncé. En transports, Polaris indique le **car Aléop 331, arrêt « Allée du château »** : vérifiez l'aller et surtout le dernier retour correspondant à votre séance, notamment le vendredi soir.
+
+Une **buvette et une restauration légère** sont prévues sur place. Leur présence ne garantit pas un repas complet ni une offre adaptée à chaque régime ou à l'alimentation d'un bébé : si vous réservez une séance proche du dîner, anticipez ce point.
+
+Pour prolonger la journée, vous pouvez découvrir les animations du centre-ville grâce à notre [guide de Noël à Nantes 2026](https://www.fam-space.fr/articles/evenements/noel-a-nantes-2026-marche-gratuit-ou-visite-guidee-du-voyage-en-hiver/). Les deux sorties sont distinctes et nécessitent de prévoir le déplacement entre Nantes et Haute-Goulaine.
+
+## Et si vous restez dormir près de Nantes ?
+
+Pour une famille qui vient de plus loin, l'[Hôtel de la Louée à Haute-Goulaine sur Booking.com](https://www.booking.com/hotel/fr/ha-tel-de-la-loua-c-e.fr.html) est une piste à examiner à proximité du château. Une chambre triple est signalée dans le brief de réservation ; **vérifiez directement la capacité selon le nombre et l'âge des enfants**, ainsi que le prix et les disponibilités à votre date. Une chambre triple ne convient pas automatiquement à une famille de quatre.
+
+Le bon choix reste celui d'une séance disponible à un horaire compatible avec le rythme des enfants, après vérification des billets et des contraintes du parcours.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
-- /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | Noël des Siècles 2026 à Champs-sur-Marne: billets, budget et horaires en famille | evenements | Champs-sur-Marne, Seine-et-Marne, Île-de-France
 - /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
+- /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | Noël des Siècles 2026 à Champs-sur-Marne: billets, budget et horaires en famille | evenements | Champs-sur-Marne, Seine-et-Marne, Île-de-France
 - /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | Marché de Noël d'Amiens 2026 en famille: horaires, Père Noël et patinoire | evenements | Amiens, Somme, Hauts-de-France
 - /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | Noël 2026 à Chantilly: Le Noël oublié, billets et séances en famille | evenements | Chantilly, Oise, Hauts-de-France
 - /articles/evenements/train-du-pere-noel-a-toucy-2026-horaires-tarifs-et-reservation/ | Train du Père Noël à Toucy 2026: horaires, tarifs et réservation | evenements | Toucy, Yonne, Bourgogne-Franche-Comté
 - /articles/evenements/noel-2026-a-chenonceau-quel-jour-decouvrir-les-decors-en-famille/ | Noël à Chenonceau 2026: décors, nocturnes et tarifs en famille | evenements | Chenonceaux, Indre-et-Loire, Centre-Val de Loire
 - /articles/bons-plans/chateau-de-chateaubriant-en-famille-une-sortie-a-petit-budget/ | Château de Châteaubriant en famille, une sortie à petit budget | bons-plans | Châteaubriant, Loire-Atlantique, Pays de la Loire
-- /articles/evenements/festi-momes-2026-a-nantes-quelle-seance-choisir-selon-l-age-des-enfants/ | Festi'Mômes 2026 à Nantes: séances, spectacles et tarifs en famille | evenements | Nantes, Loire-Atlantique, Pays de la Loire
+- /articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/ | Noël à Trévarez 2026 en famille: dates, horaires et réservation | evenements | Saint-Goazec, Finistère, Bretagne
 - /articles/bons-plans/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites/ | Pass Nantes en famille en 2026: tarifs, visites incluses et alternatives gratuites | bons-plans | Nantes, Loire-Atlantique, Pays de la Loire
 - /articles/evenements/noel-a-nantes-2026-marche-gratuit-ou-visite-guidee-du-voyage-en-hiver/ | Noël à Nantes 2026: marché de Noël et Voyage en hiver en famille | evenements | Nantes, Loire-Atlantique, Pays de la Loire
+- /articles/evenements/festi-momes-2026-a-nantes-quelle-seance-choisir-selon-l-age-des-enfants/ | Festi'Mômes 2026 à Nantes: séances, spectacles et tarifs en famille | evenements | Nantes, Loire-Atlantique, Pays de la Loire
 - /articles/parentalite/laep-a-nantes-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | LAEP à Nantes: où aller avec un enfant de moins de 6 ans ? | parentalite | Nantes, Loire-Atlantique, Pays de la Loire
 - /articles/cuisine/atelier-cuisine-parent-enfant-a-nantes-gratuit-au-breil-ou-cours-prive/ | Ateliers cuisine parent-enfant à Nantes: où cuisiner ensemble? | cuisine | Nantes, Loire-Atlantique, Pays de la Loire
 - /articles/maison/broyeur-de-vegetaux-a-nantes-metropole-acheter-a-plusieurs-ou-profiter-des-operations-gratuites/ | Broyeur de végétaux à Nantes Métropole: acheter à plusieurs ou profiter des opérations gratuites ? | maison | Nantes, Loire-Atlantique, Pays de la Loire
@@ -131,7 +149,6 @@ Ne pas redévelopper les marchés de Noël de Nantes ni un guide général de s�
 - /articles/activites/planete-sauvage-en-famille-tarifs-2026-duree-et-conseils-de-visite/ | Planète Sauvage en famille: tarifs 2026, durée et conseils de visite | activites | Port-Saint-Père, Loire-Atlantique, Pays de la Loire
 - /articles/evenements/utopiales-2026-a-nantes-en-famille-dates-billets-et-conseils-pour-preparer-la-visite/ | Utopiales 2026 à Nantes en famille: dates, billets et conseils pour préparer la visite | evenements | Nantes, Loire-Atlantique, Pays de la Loire
 - /articles/evenements/folie-plantes-nantes-2026-famille/ | Folie des plantes 2026 à Nantes: un week-end gratuit à découvrir en famille | evenements | Nantes, Loire-Atlantique, Pays de la Loire
-- /articles/evenements/festival-ete-continue-carquefou-2026-famille/ | Festival L’Été Continue 2026 à Carquefou: six jours gratuits en famille | evenements | Carquefou, Loire-Atlantique, Pays de la Loire
 - /articles/evenements/festival-du-livre-jeunesse-de-rouen-2026-quel-jour-et-quelles-activites-choisir-avec-les-enfants/ | Festival du livre jeunesse de Rouen 2026: dates, tarifs et activités en famille | evenements | Rouen, Seine-Maritime, Normandie
 - /articles/evenements/saint-nicolas-2026-a-epinal-en-famille-defile-du-5-decembre-ou-marche-de-noel/ | Saint-Nicolas 2026 à Épinal: cortège du 5 décembre et marché de Noël en famille | evenements | Épinal, Vosges, Grand Est
 - /articles/evenements/noel-2026-a-quimper-en-famille-village-concert-ou-ateliers-gratuits/ | Noël 2026 à Quimper en famille: village, concert et animations gratuites | evenements | Quimper, Finistère, Bretagne
