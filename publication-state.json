@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261103-2203-titre-de-travail-musee-de-la-grande-guerre-a-meaux-avec-des-enfants-tr",
+  "lastProcessedCommit": "46bdd6c3e6b47972958b349b41a956ee83527233"
 }
