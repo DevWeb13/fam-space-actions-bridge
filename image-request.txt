@@ -315,3 +315,4 @@ automation/image-20261103-0640-brou-metz-vendee-croisic-6b90d01|9a917e22d030cf14
 automation/image-20261103-0640-brou-metz-vendee-croisic-6b90d01|231fc2c38d3f8a4b0b9a9fadf1e12ed525d13c7f
 automation/image-20261103-1244-strasbourg-metz-chaalis-010e463|8c86bd451ebc5ea77d538204f8d03ccfb0069a73
 automation/image-20261103-1244-strasbourg-metz-chaalis-010e463|08ef7d443a78c7d517dbfe3d2b9c617656e69089
+automation/image-20261103-1849-sare-strasbourg-goulaine-pontdegau|4a84f2d16458d6defb70cc7bbae68ff8bf9a8760
