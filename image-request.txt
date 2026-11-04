@@ -319,3 +319,4 @@ automation/image-20261103-1849-sare-strasbourg-goulaine-pontdegau|4a84f2d16458d6
 automation/image-20261103-1849-sare-strasbourg-goulaine-pontdegau|9c086418ed257f64a26820f50870a1611c19dff6
 automation/image-20261104-0049-michelin-cerfs-slava-parata-240fece|240fece3c8d76d3aa2e9d90b61687aa4f66f2b2b
 automation/image-20261104-0049-michelin-cerfs-slava-parata-240fece|8987c7bbc96527ebcccfa7778fbbd0ff0dbf22af
+automation/image-20261104-0049-michelin-cerfs-slava-parata-240fece|eb09d6131b4702dec89757bfb54d5fea65a5238a
