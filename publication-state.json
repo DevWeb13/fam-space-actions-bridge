@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261104-1802-titre-de-travail-abbaye-de-saint-savin-en-famille-visites-a-petit-prix",
+  "lastProcessedCommit": "41cb1e144d3ef12b1918db8a8a3e71aa467a3b8f"
 }
