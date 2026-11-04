@@ -107,10 +107,10 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
       "peakImpressions": 1318,
       "recentImpressions": 796,
       "score": 330.6,
-      "signal": "needs_query_check",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
+      "signal": "uncertain",
+      "commonQueries": 1,
+      "positionDelta": -3.7,
+      "impressionRatio": 0.085,
       "basis": "Baisse d'impressions observée; causalité et classement non établis.",
       "location": {
         "city": "Lumigny-Nesles-Ormeaux",
@@ -136,10 +136,10 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
       "peakImpressions": 112,
       "recentImpressions": 18,
       "score": 62.667,
-      "signal": "needs_query_check",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "basis": "Baisse d'impressions observée; causalité et classement non établis.",
       "location": {
         "city": "Toulouse",
@@ -165,10 +165,10 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
       "peakImpressions": 131,
       "recentImpressions": 70,
       "score": 61,
-      "signal": "needs_query_check",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "basis": "Baisse d'impressions observée; causalité et classement non établis.",
       "location": {
         "city": "Chambéry",
@@ -193,10 +193,10 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
       "peakImpressions": 115,
       "recentImpressions": 61,
       "score": 54,
-      "signal": "needs_query_check",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "basis": "Baisse d'impressions observée; causalité et classement non établis.",
       "location": {
         "city": "Strasbourg",
@@ -221,10 +221,10 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
       "peakImpressions": 84,
       "recentImpressions": 32,
       "score": 52,
-      "signal": "needs_query_check",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "basis": "Baisse d'impressions observée; causalité et classement non établis.",
       "location": {
         "city": "Saint-Jean-du-Gard",
@@ -621,7 +621,8 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
   "warnings": [
     "GSC recherche web : 9069 lignes sur quatre semaines, réponses complètes (1736, 2054, 2466, 2813).",
     "Catalogue Radar : 935 articles et 166 entrées d'historique.",
-    "Diagnostics de requêtes non encore effectués; les baisses d'impressions ne prouvent ni désindexation ni perte de position."
+    "Diagnostics de requêtes effectués sur 5 candidats ; certaines requêtes peuvent être masquées par GSC.",
+    "Les baisses d'impressions ne prouvent ni désindexation ni perte de position."
   ]
 }
 
