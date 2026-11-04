@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261104-1401-titre-de-travail-aquarium-de-touraine-en-famille-explorer-trois-mondes",
+  "lastProcessedCommit": "71b6c38b1a648df5dbad44f862c64cb9398cd3b7"
 }
