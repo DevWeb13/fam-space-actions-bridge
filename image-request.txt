@@ -323,3 +323,4 @@ automation/image-20261104-0049-michelin-cerfs-slava-parata-240fece|eb09d6131b470
 automation/image-20261104-0049-michelin-cerfs-slava-parata-240fece|481878a5b6097295ed8b7858850b49d8cdecf06a
 automation/image-20261104-0947-seven-hero-f66afcd|f66afcd2f10ec10a59092fda4bd8db50d80db184
 automation/image-20261104-0947-seven-hero-f66afcd|899a9b3d79ab1685fb21306e7a2bb29fb56f5aa0
+automation/image-20261104-1548-paris-havre-bretagne-36151a9|36151a95c348d347589b47e3014901ee934d5feb
