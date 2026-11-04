@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Ateliers textiles au musée Bourdelle à Paris : styliste ou broderie en famille en 2026 ?"
-subtitle: "Deux ateliers autour de L'étoffe de l'artiste : dès 4 ans ou dès 7 ans, dates, prix et réservation"
-summary: "Au musée Bourdelle, choisissez entre Styliste en herbe dès 4 ans et Broderie simultanée dès 7 ans : séances jusqu'en décembre 2026, durée, budget et billets."
+title: "Ateliers textiles au musée Bourdelle : styliste ou broderie avec les enfants ?"
+subtitle: Dès 4 ou 7 ans, comparez les créations, les séances de novembre et décembre 2026 et le vrai budget familial.
+summary: "Au musée Bourdelle à Paris, Styliste en herbe et Broderie simultanée proposent deux créations très différentes. Âges, horaires, billets d'atelier et d'exposition : les points à vérifier avant de réserver."
 category: activites
 location:
   city: Paris
@@ -70,13 +75,19 @@ keywords:
   - atelier textile famille musée Bourdelle 2026
   - Styliste en herbe Broderie simultanée Paris
 sources:
-  - title: Ville de Paris - Styliste en herbe au musée Bourdelle
+  - title: Musée Bourdelle — Styliste en herbe
+    url: https://www.bourdelle.paris.fr/visiter/preparer-sa-visite/agenda/styliste-en-herbe-atelier-textile-en-famille-autour-de-lexposition-letoffe-de-lartiste
+  - title: Musée Bourdelle — Broderie simultanée
+    url: https://bourdelle.paris.fr/visiter/preparer-sa-visite/agenda/broderie-simultanee-atelier-textile-en-famille-autour-de-lexposition-letoffe-de-lartiste
+  - title: Ville de Paris — Styliste en herbe
     url: https://www.paris.fr/evenements/styliste-en-herbe-atelier-textile-en-famille-autour-de-l-exposition-l-etoffe-de-l-artiste-125419
-  - title: Ville de Paris - Broderie simultanée au musée Bourdelle
+  - title: Ville de Paris — Broderie simultanée
     url: https://www.paris.fr/evenements/broderie-simultanee-atelier-textile-en-famille-autour-de-l-exposition-l-etoffe-de-l-artiste-125421
+  - title: Musée Bourdelle — Informations pratiques et tarifs
+    url: https://bourdelle.paris.fr/visiter/preparer-sa-visite/informations-pratiques
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: ateliers-textiles-au-musee-bourdelle-a-paris-styliste-ou-broderie-en-famille-en-2026
   decision: Choisir l'atelier réellement adapté à l'âge et aux envies de l'enfant, calculer le prix de la sortie et réserver le bon créneau sans confondre billet d'atelier et billet d'exposition.
@@ -86,41 +97,61 @@ radar:
     dataThrough: 2026-10-31
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Ville de Paris - Styliste en herbe au musée Bourdelle »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-30
 ---
 
-## Mission retenue
-Comparer les deux ateliers familiaux de l'exposition « L'étoffe de l'artiste » au musée Bourdelle : création de silhouette textile (« Styliste en herbe ») ou tableau en punch needle (« Broderie simultanée »).
+Au musée Bourdelle, dans le 15e arrondissement de Paris, l'exposition « L'étoffe de l'artiste » inspire deux ateliers à faire avec un enfant. **Styliste en herbe**, dès 4 ans, invite à composer une tenue à partir de tissus. **Broderie simultanée**, dès 7 ans, permet de créer un petit tableau textile avec la technique du *punch needle*. Le bon choix dépend surtout de l'âge, de l'envie de manipuler des matières et du temps que l'enfant peut consacrer à sa création.
 
-## Pourquoi cette mission
-Le refresh Lumigny est déjà complet sur la décision billet nocturne/combiné : la baisse d'impressions GSC ne démontre pas de lacune. L'expansion des transports parisiens depuis la page forte risquerait de redoubler ses comparaisons tarifaires sans nouvelle décision suffisamment délimitée. Ici, deux ateliers officiels à venir, plusieurs dates jusqu'à fin décembre, deux seuils d'âge et des réservations distinctes apportent une décision immédiatement utile. Aucun article Bourdelle/textile correspondant dans le catalogue compact ni l'historique Radar; pas de chevauchement avec le candidat Publication à Meaux ou les destinations en cours.
+## Quel atelier choisir selon l'âge et l'activité ?
 
-## Décision du lecteur
-Pour un enfant de 4 à 6 ans, privilégier Styliste en herbe (1 h 30); à partir de 7 ans, choisir entre création de silhouette et initiation au punch needle (2 h) selon ses envies, les places et le coût total.
+### Styliste en herbe : imaginer une tenue dès 4 ans
 
-## Faits à traiter
-Dates restantes : 22 et 29 novembre, 6, 20, 22, 27, 29 décembre pour Styliste (vérifier horaires propres à chaque séance); 22 et 29 novembre, 6, 20, 23, 27, 30 décembre pour Broderie. Styliste : dès 4 ans, 10 € adulte et 8 € enfant pour l'atelier, billet d'exposition en sus pour l'adulte, entrée d'exposition gratuite pour l'enfant selon la Ville de Paris. Broderie : dès 7 ans, 10 € plein tarif ou 8 € réduit + billet d'exposition; vérifier les conditions enfant/adulte à la billetterie. Réservation obligatoire, disponibilité non garantie; musée au 18 rue Antoine-Bourdelle, Paris 15e. Accessibilité PMR annoncée; vérifier conditions poussettes, sanitaires et restauration sans les inventer.
+Après une découverte de silhouettes d'artistes dans l'exposition, adultes et enfants assemblent des échantillons textiles sur une silhouette en carton. C'est le choix le plus accessible pour un enfant de **4 à 6 ans**, ou pour un plus grand qui aime inventer des vêtements, associer couleurs et matières. La séance dure **1 h 30**.
 
-## Sources de départ
-Les deux fiches Ville de Paris du frontmatter, qui renvoient aux deux billetteries distinctes de Paris Musées.
+### Broderie simultanée : créer un tableau dès 7 ans
 
-## Affiliation
-Pas d'affiliation naturelle pour les ateliers : conserver la billetterie officielle dans les sources. Éventuel hébergement familial proche sur Booking uniquement après vérification concrète.
+Inspiré des recherches de motifs et de tissus de Sonia Delaunay, cet atelier initie à la broderie *punch needle* pour réaliser un petit tableau. Il s'adresse aux enfants **à partir de 7 ans** et dure **2 heures**. Il convient davantage à ceux qui souhaitent découvrir une technique textile et prendre le temps de travailler un motif.
 
-## Continuations internes
-Ne pas développer un guide général des musées de Paris : rester sur le choix des deux ateliers. Ajouter un lien vers une page Fam Space sur les sorties parisiennes si une page réellement pertinente existe; ne pas inventer de maillage.
+À 7 ans ou plus, les deux sont possibles : préférez Styliste pour l'imagination autour du vêtement, Broderie pour l'expérimentation d'un geste artisanal. Ce sont des ateliers **en famille**, pas des séances où l'on dépose simplement son enfant.
+
+## Les prochaines dates et les horaires en 2026
+
+**Styliste en herbe** : les dimanches **22 et 29 novembre, 6, 20 et 27 décembre**, de **14 h 30 à 16 h** ; les mardis **22 et 29 décembre**, de **10 h 30 à 12 h**.
+
+**Broderie simultanée** : les dimanches **22 et 29 novembre, 6, 20 et 27 décembre**, de **16 h à 18 h** ; les mercredis **23 et 30 décembre**, de **10 h 30 à 12 h 30**.
+
+Ces créneaux sont ceux annoncés par le musée pour la fin de l'année 2026. Ils ne garantissent pas qu'il reste des places. Le calendrier officiel présente également des séances en janvier 2027 : si décembre est complet, consultez les nouvelles dates avant de renoncer.
+
+## Quel budget prévoir pour une famille ?
+
+Pour **chacun des deux ateliers**, le musée indique **10 € par adulte** et **8 € par enfant**. Chaque participant doit réserver sa propre place. Il faut également tenir compte du **billet d'exposition de l'adulte** : l'accès à l'exposition temporaire coûte normalement **12 €**, ou **10 € au tarif réduit**, tandis que l'enfant de moins de 18 ans y entre gratuitement.
+
+Ainsi, pour un adulte et un enfant, comptez **18 € d'atelier**, soit **30 € au total** si l'adulte paie l'exposition au tarif plein. Pour deux adultes et deux enfants : **36 € d'atelier**, soit **60 €** avec deux billets d'exposition adultes au plein tarif. Ces exemples ne tiennent pas compte d'éventuelles gratuités ou réductions de l'exposition pour les adultes : vérifiez vos justificatifs et le panier de réservation avant paiement.
+
+**Attention à ne pas confondre** la place à l'atelier et l'entrée à l'exposition. La réservation de l'atelier est obligatoire et les deux activités disposent de leur propre sélection de séances sur la billetterie de Paris Musées. Retrouvez les accès de réservation sur les fiches officielles [Styliste en herbe](https://www.paris.fr/evenements/styliste-en-herbe-atelier-textile-en-famille-autour-de-l-exposition-l-etoffe-de-l-artiste-125419) et [Broderie simultanée](https://www.paris.fr/evenements/broderie-simultanee-atelier-textile-en-famille-autour-de-l-exposition-l-etoffe-de-l-artiste-125421).
+
+## Préparer la visite avec des enfants
+
+Le **musée Bourdelle**, au **18 rue Antoine-Bourdelle, Paris 15e**, est accessible notamment par les stations **Montparnasse–Bienvenüe** (lignes 4, 6, 12 et 13) et **Falguière** (ligne 12). Il ouvre habituellement du mardi au dimanche de 10 h à 18 h. Des travaux à l'accueil peuvent imposer un accès temporaire par le **16 rue Antoine-Bourdelle**, au portail vert : vérifiez cette indication avant de partir.
+
+Le musée annonce un accès **PMR**, des **toilettes accessibles**, une **table à langer**, ainsi que le **prêt de poussettes et de porte-bébés**. Il ne précise pas dans ces informations si une poussette personnelle peut entrer dans chaque salle d'atelier : contactez l'accueil si vous venez avec un bébé. Le **café-restaurant Le Rhodia** est annoncé ouvert de 10 h à 17 h 30 du mardi au dimanche ; pour une séance de broderie se terminant à 18 h, mieux vaut donc prévoir le goûter avant. Les **valises et gros bagages ne sont pas acceptés**, même au vestiaire, en raison des mesures de sécurité.
+
+Pour un séjour à Paris, le secteur **Montparnasse** permet de rejoindre facilement le musée. Comparez les hébergements adaptés à votre composition familiale sur [Booking.com à Paris](https://www.booking.com/city/fr/paris.fr.html), en vérifiant les chambres familiales, les conditions d'annulation et la distance réelle jusqu'au musée. Aucun tarif ni disponibilité d'hôtel n'est garanti ici.
+
+Si vous venez avec une poussette et souhaitez préparer le reste de vos déplacements, consultez aussi notre guide [Paris avec une poussette : métro, RER, bus ou tram ?](/articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/).
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
-- /articles/cuisine/ateliers-cuisine-parent-enfant-a-paris-lesquels-choisir-selon-l-age-et-le-budget/ | Ateliers cuisine parent-enfant à Paris: lesquels choisir selon l’âge et le budget ? | cuisine | Paris, Paris, Île-de-France
 - /articles/sorties/vacances-de-la-toussaint-2026-a-la-cite-des-sciences-quels-ateliers-choisir-selon-l-age/ | Vacances de la Toussaint 2026 à la Cité des sciences: les ateliers numériques gratuits avec des enfants | sorties | Paris, Paris, Île-de-France
+- /articles/cuisine/ateliers-cuisine-parent-enfant-a-paris-lesquels-choisir-selon-l-age-et-le-budget/ | Ateliers cuisine parent-enfant à Paris: lesquels choisir selon l’âge et le budget ? | cuisine | Paris, Paris, Île-de-France
 - /articles/evenements/planete-ocean-a-paris-preparer-la-visite-en-famille/ | Planète Océan à Paris: préparer la visite en famille | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/salon-du-chocolat-paris-2026-avec-des-enfants-quel-billet-choisir-et-quels-ateliers-reserver/ | Salon du Chocolat Paris 2026 avec des enfants: quel billet choisir et quels ateliers réserver | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/ | Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/metamorphoses-2026-au-quai-branly-quels-films-choisir-avec-des-enfants/ | Métamorphoses 2026 au quai Branly: séances gratuites et films par âge | evenements | Paris, Paris, Île-de-France
 - /articles/activites/atelier-des-lumieres-avec-un-enfant-quel-programme-choisir-et-peut-on-venir-avec-une-poussette/ | Atelier des Lumières avec un enfant: quel programme choisir et peut-on venir avec une poussette ? | activites | Paris, Paris, Île-de-France
-- /articles/sorties/musee-cour-or-metz-ateliers-famille-ete-2026/ | Musée de La Cour d’Or à Metz en famille: prochains ateliers en septembre 2026 | sorties | Metz, Moselle, Grand Est
+- /articles/activites/ateliers-matisse-nice-famille-aout-2026/ | Ateliers Matisse à Nice: sept matinées créatives pour les 4 à 7 ans en août | activites | Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur
 - /articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/ | Paris avec une poussette: métro, RER, bus ou tram, que choisir ? | voyages | Paris, Paris, Île-de-France
 - /articles/evenements/les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille/ | Féeries de Noël 2026 à Paris: parcours lumineux, billets et patinoire en famille | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/odyssee-lumineuse-2026-2027-au-parc-floral-de-paris-billet-date-ou-open-en-famille/ | Odyssée Lumineuse 2026-2027 à Paris: billets, dates et visite en famille | evenements | Paris, Paris, Île-de-France
