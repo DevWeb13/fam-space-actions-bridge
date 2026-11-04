@@ -2618,6 +2618,28 @@
       "feedImageUrl": "https://www.fam-space.fr/images/articles/2026/11/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants.webp",
       "feedPubDate": "Tue, 03 Nov 2026 11:46:19 GMT",
       "source": "pinterest-v2"
+    },
+    "l-aventure-michelin-en-famille-a-clermont-ferrand": {
+      "id": "1314472035081859_122127855627477492",
+      "at": "2026-11-04T21:57:57.879Z",
+      "productionSha": "350b965f6f5b1ab6a099156dffdfc9533da2a656",
+      "mode": "hero",
+      "kind": "feed",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Micheline%2C_L%27Aventure_Michelin.jpg/1920px-Micheline%2C_L%27Aventure_Michelin.jpg",
+      "feedImageUrl": "https://www.fam-space.fr/images/articles/2026/11/l-aventure-michelin-en-famille-a-clermont-ferrand.webp",
+      "feedPubDate": "Tue, 03 Nov 2026 23:51:25 GMT",
+      "source": "pinterest-v2"
+    },
+    "rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants": {
+      "id": "1314472035081859_122127855735477492",
+      "at": "2026-11-04T21:58:02.061Z",
+      "productionSha": "350b965f6f5b1ab6a099156dffdfc9533da2a656",
+      "mode": "hero",
+      "kind": "feed",
+      "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Cit%C3%A9_des_sciences_et_de_l%27industrie_07.jpg/1920px-Cit%C3%A9_des_sciences_et_de_l%27industrie_07.jpg",
+      "feedImageUrl": "https://www.fam-space.fr/images/articles/2026/11/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants.webp",
+      "feedPubDate": "Wed, 04 Nov 2026 08:49:28 GMT",
+      "source": "pinterest-v2"
     }
   }
 }
