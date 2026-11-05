@@ -2162,7 +2162,7 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 ### Publication en cours
 
 - Branche: automation/publication-20261105-1857-titre-de-travail-ou-rencontrer-d-autres-parents-avec-son-tout-petit-da
-- HEAD: publication: phase 2 20261105-1857-titre-de-travail-ou-rencontrer-d-autres-parents-avec-son-tout-petit-da
+- HEAD: publication: phase 3 20261105-1857-titre-de-travail-ou-rencontrer-d-autres-parents-avec-son-tout-petit-da
 
 ---
 category: "parentalite"
