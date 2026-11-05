@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,87 +14,131 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Haut-Rhin
 - Région: Grand Est
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Sujet :** condensation, humidité et moisissures dans les logements familiaux du Haut-Rhin, à l'approche de l'hiver.
-
-**Titre de travail :** « Humidité dans la maison en hiver dans le Haut-Rhin : les bons gestes et les aides près de chez soi ».
-
-**Angle :** distinguer la condensation ordinaire des signes qui réclament une recherche de cause, puis orienter concrètement les familles vers les interlocuteurs du département. Le sujet concerne les logements occupés par les familles, notamment à Colmar, Mulhouse et ailleurs dans le Haut-Rhin, et non une visite touristique.
-
-## Besoin du lecteur
-Comprendre pourquoi les vitres ruissellent ou des taches apparaissent en hiver ; savoir aérer et ventiler sans condamner le chauffage, limiter l'humidité produite par la cuisine, les douches et le linge, repérer les situations où les gestes quotidiens ne suffisent plus et trouver un conseil local gratuit avant d'engager des travaux. Distinguer les démarches possibles pour locataires et propriétaires sans donner de conseil juridique personnalisé.
-
-## Valeur éditoriale
-- Expliquer les différences entre condensation, défaut de ventilation, infiltration et pont thermique, sans prétendre diagnostiquer un logement à distance.
-- Donner une routine familiale praticable : aération brève, ventilation non obstruée, vigilance après les activités humides ; l'ADEME préconise notamment 5 à 10 minutes d'ouverture quotidienne des fenêtres.
-- Éviter la fausse solution consistant à simplement masquer ou nettoyer les taches sans traiter leur cause.
-- Apporter une vraie dimension départementale : ADIL 68 à Colmar et Mulhouse, et orientation France Rénov' pour les questions de travaux et de rénovation.
-- Sujet durable, particulièrement opportun à l'entrée de la saison de chauffage ; différent des articles récents consacrés aux sorties, musées et marchés de Noël.
-
-## Affiliation
-**Aucune offre partenaire pertinente retenue après vérification.** Recherche d'offres Booking.com et Expedia.fr d'hébergements familiaux dans le Haut-Rhin, et d'activités sur GetYourGuide et Tiqets : des hébergements existent, notamment https://www.booking.com/hotel/fr/appart-city-mulhouse.en-gb.html et https://www.expedia.fr/Destinations-En-Haut-Rhin.d6050967.Destinations-location-vacances, mais ils ne répondent pas au besoin de traiter l'humidité de son logement habituel. Aucune prestation pertinente de diagnostic, ventilation ou amélioration du logement n'a été vérifiée parmi les partenaires autorisés. Ne pas introduire de lien touristique artificiel.
-
-## Sources de départ
-- ADEME, aération quotidienne et ventilation : https://agirpourlatransition.ademe.fr/particuliers/proteger-sante/eviter-polluants/aeration-quotidienne-logement
-- Ministère chargé de la Santé, qualité de l'air intérieur, humidité et moisissures : https://sante.gouv.fr/sante-et-environnement/batiments/article/qualite-de-l-air-interieur-comment-agir-recommandations
-- ADIL du Haut-Rhin, contacts à Colmar et Mulhouse et accompagnement logement : https://www.anil.org/adil-68
-- France Rénov', service public de conseil en rénovation : https://france-renov.gouv.fr/
-- Recherche de l'Espace Conseil France Rénov' local : https://france-renov.gouv.fr/preparer-projet/trouver-conseiller/recherche
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "maison"
+title: "Humidité et moisissures en hiver dans le Haut-Rhin: que faire et qui contacter ?"
+subtitle: "Condensation sur les fenêtres, taches sur les murs, ventilation: les gestes utiles et les conseils gratuits près de chez vous."
+summary: "Comment limiter la condensation en hiver, reconnaître une humidité persistante et trouver un conseil logement gratuit à Colmar, Mulhouse ou ailleurs dans le Haut-Rhin."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "humidité logement Haut-Rhin"
+  - "condensation fenêtres hiver"
+  - "moisissures maison"
+  - "ADIL 68"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Haut-Rhin"
+  region: "Grand Est"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "ADEME - Pourquoi aérer son logement tous les jours ?"
+    url: "https://agirpourlatransition.ademe.fr/particuliers/proteger-sante/eviter-polluants/aeration-quotidienne-logement"
+  - title: "Ministère de la Santé - Qualité de l'air intérieur: recommandations"
+    url: "https://sante.gouv.fr/sante-et-environnement/batiments/article/qualite-de-l-air-interieur-comment-agir-recommandations"
+  - title: "ADIL du Haut-Rhin - Conseils et coordonnées"
+    url: "https://www.anil.org/adil-68"
+  - title: "ADIL du Haut-Rhin - Horaires et permanences"
+    url: "https://www.anil.org/adil-68/horaires-et-permanences/"
+  - title: "France Rénov' - Service public de la rénovation"
+    url: "https://france-renov.gouv.fr/"
+  - title: "ADIL 68 - Prêts Territoires et Habitat 68"
+    url: "https://www.anil.org/adil-68/notre-expertise/les-prets-pour-ameliorer-ou-acheter-un-logement-existant/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+En hiver, des vitres couvertes de buée au réveil ou des traces noires dans un angle de chambre peuvent inquiéter. Dans le Haut-Rhin, à Mulhouse, Colmar comme dans les communes environnantes, la question est la même: s'agit-il de condensation liée à la vie quotidienne ou d'un problème du bâtiment ? Quelques observations permettent de savoir quoi faire, sans attribuer trop vite la faute au chauffage ou aux habitudes de la famille.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Buée sur les vitres ou moisissures: ce n'est pas la même alerte
+
+L'air intérieur contient de la vapeur d'eau, notamment après une douche, la cuisson des repas ou le séchage du linge. Au contact d'une surface froide, cette vapeur peut se transformer en gouttelettes: c'est la condensation. Une fenêtre embuée ponctuellement n'indique donc pas à elle seule un défaut du logement.
+
+En revanche, des taches qui reviennent, une odeur de moisi, un mur durablement humide ou une peinture qui se dégrade méritent une recherche de cause. Le [ministère de la Santé](https://sante.gouv.fr/sante-et-environnement/batiments/article/qualite-de-l-air-interieur-comment-agir-recommandations) distingue plusieurs origines possibles: ventilation insuffisante, infiltration, dégât des eaux, humidité venant du sol ou pont thermique, c'est-à-dire une zone du bâtiment où la chaleur s'échappe plus facilement. Plusieurs causes peuvent se cumuler.
+
+L'emplacement donne parfois un indice, pas un diagnostic. Une trace près d'une fuite visible ne se traite pas comme de la buée sur une vitre; des taches derrière un meuble contre un mur froid peuvent signaler une circulation d'air insuffisante ou un problème d'isolation. Si la cause reste incertaine, mieux vaut demander un avis avant de dépenser pour un appareil ou des travaux.
+
+## Les gestes utiles sans laisser les fenêtres ouvertes toute la journée
+
+L'[ADEME recommande d'ouvrir largement les fenêtres pendant 5 à 10 minutes chaque jour](https://agirpourlatransition.ademe.fr/particuliers/proteger-sante/eviter-polluants/aeration-quotidienne-logement), y compris en hiver. Une ouverture courte renouvelle l'air sans refroidir durablement les murs et les meubles. Si le logement permet une circulation d'air entre deux façades, l'aération peut être encore plus rapide. Surveillez les jeunes enfants pendant l'ouverture des fenêtres.
+
+L'aération ponctuelle ne remplace pas la ventilation permanente du logement. Vérifiez que les entrées d'air et les bouches d'extraction ne sont pas bouchées; si une VMC fonctionne mal ou fait un bruit inhabituel, faites vérifier l'installation plutôt que de la condamner.
+
+Après une douche, laissez l'extraction d'air faire son travail; en cuisinant, utilisez les équipements d'extraction adaptés. Si vous devez sécher du linge à l'intérieur, privilégiez un espace ventilé et évitez de le faire dans une chambre déjà humide. Éloigner légèrement un meuble d'un mur froid peut aussi faciliter la circulation de l'air, mais ne répare pas un défaut d'isolation.
+
+Chauffer davantage sans corriger la source d'humidité ne suffit pas. À l'inverse, couper systématiquement le chauffage dans une pièce humide peut refroidir les surfaces et favoriser la condensation. L'objectif est de combiner température adaptée, renouvellement d'air et recherche des éventuels défauts.
+
+## Quand les taches reviennent: agir sur la cause
+
+Les moisissures ne sont pas seulement inesthétiques. Le [ministère de la Santé](https://sante.gouv.fr/sante-et-environnement/batiments/article/qualite-de-l-air-interieur-comment-agir-recommandations) rappelle qu'elles peuvent favoriser ou aggraver des troubles respiratoires, notamment des allergies et de l'asthme. Il recommande d'identifier et de supprimer la source d'humidité, puis de nettoyer les zones touchées.
+
+Photographier les traces, noter leur emplacement et leur évolution, ainsi que les circonstances où elles apparaissent, peut faciliter les échanges avec un bailleur ou un professionnel. Une fuite active, une infiltration ou des moisissures étendues justifient une intervention adaptée: repeindre par-dessus ne règle pas le problème. Si un membre de la famille présente des symptômes respiratoires, demandez également un avis médical.
+
+## Locataire ou propriétaire: qui peut vous orienter dans le Haut-Rhin ?
+
+Si vous êtes locataire, signalez rapidement par écrit les traces persistantes ou un défaut apparent à votre bailleur, avec des photos datées. Évitez d'engager de gros travaux sans avoir clarifié la cause et les responsabilités. Si vous êtes propriétaire, faites identifier le problème avant de choisir entre réparation d'une fuite, amélioration de la ventilation ou isolation. Dans les deux cas, un conseil indépendant peut éviter une dépense mal ciblée.
+
+L'[ADIL du Haut-Rhin](https://www.anil.org/adil-68) apporte gratuitement une information juridique, financière et pratique sur le logement, y compris les rapports entre locataire et bailleur et les situations d'habitat dégradé.
+
+- **Colmar:** 16a avenue de la Liberté, 68000 Colmar - 03 89 21 75 35.
+- **Mulhouse:** 83 rue Koechlin, 68200 Mulhouse - 03 89 46 79 50.
+- **Courriel:** contact@adil68.fr.
+
+Les consultations ont lieu par téléphone ou sur rendez-vous. L'ADIL propose également des [permanences dans plusieurs communes du département](https://www.anil.org/adil-68/horaires-et-permanences/), notamment Altkirch, Cernay, Guebwiller, Saint-Louis et Thann. Consultez le calendrier avant de vous déplacer: les dates et modalités peuvent changer.
+
+## Avant des travaux, vérifier les conseils et les aides
+
+Si l'humidité révèle un problème de ventilation ou d'isolation, [France Rénov'](https://france-renov.gouv.fr/) propose un conseil gratuit pour définir les travaux adaptés et comprendre les aides disponibles. Ce service public permet de trouver un Espace Conseil proche de son domicile. Le conseil n'est pas une promesse de subvention: les aides dépendent du logement, du ménage et des travaux envisagés.
+
+Il existe aussi dans certains territoires du Haut-Rhin des [prêts Territoires et Habitat 68](https://www.anil.org/adil-68/notre-expertise/les-prets-pour-ameliorer-ou-acheter-un-logement-existant/) pour des projets d'amélioration du logement, sous conditions. L'ADIL peut vérifier si le dispositif est pertinent pour votre situation. Ne signez pas un devis simplement parce qu'une entreprise annonce une aide: commencez par faire préciser le problème et les solutions possibles.
+
+Si les fenêtres restent humides malgré une aération régulière, si les taches progressent ou si une pièce sent durablement le moisi, le bon réflexe n'est pas de multiplier les produits: c'est de faire rechercher la cause, puis de choisir une réponse proportionnée.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -123,4 +167,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
