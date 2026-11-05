@@ -1015,6 +1015,11 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 
 ### Articles publiés
 
+- /articles/bons-plans/abbaye-de-saint-savin-en-famille-tarifs-gratuites-et-visite-avec-les-enfants/ | Abbaye de Saint-Savin en famille: tarifs, gratuités et visite avec les enfants | bons-plans | Saint-Savin, Vienne, Nouvelle-Aquitaine
+- /articles/cuisine/halles-de-tours-en-famille-un-panier-d-automne-deux-repas-simples/ | Halles de Tours en famille: un panier d’automne, deux repas simples | cuisine | Tours, Indre-et-Loire, Centre-Val de Loire
+- /articles/activites/atelier-laine-cardee-de-noel-a-paris-le-2-decembre-2026-creer-ses-decorations-des-7-ans/ | Atelier laine cardée de Noël à Paris le 2 décembre 2026: décorations dès 7 ans | activites | Paris, Paris, Île-de-France
+- /articles/activites/aquarium-de-touraine-en-famille-que-voir-avec-les-enfants/ | Aquarium de Touraine en famille: que voir avec les enfants ? | activites | Lussault-sur-Loire, Indre-et-Loire, Centre-Val de Loire
+- /articles/activites/atelier-pop-up-gratuit-a-paris-le-21-novembre-2026-creer-un-livre-anime-en-famille/ | Atelier pop-up gratuit à Paris le 21 novembre 2026: créer en famille dès 7 ans | activites | Paris, Paris, Île-de-France
 - /articles/activites/jeux-nature-gratuits-au-parc-floral-de-paris-le-18-novembre-2026-quel-jeu-selon-l-age/ | Jeux nature gratuits au Parc floral de Paris le 18 novembre 2026 | activites | Paris, Paris, Île-de-France
 - /articles/activites/visiter-le-museum-du-havre-avec-des-enfants-que-decouvrir/ | Visiter le Muséum du Havre avec des enfants: que découvrir ? | activites | Le Havre, Seine-Maritime, Normandie
 - /articles/maison/materiautheques-en-bretagne-preparer-son-projet-et-acheter-les-bons-materiaux/ | Matériauthèques en Bretagne: préparer son projet et acheter les bons matériaux | maison | Bretagne
@@ -1988,6 +1993,7 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 - opportunity | /articles/voyages/chateau-de-versailles-depuis-paris-avec-des-enfants-rer-c-train-n-ou-l/ | 2026-10-31T07:32:47.278Z
 - opportunity | /articles/evenements/cirque-de-noel-d-alsace-2026-a-eckbolsheim-quelle-seance-choisir-avec-des-enfants/ | 2026-11-01T12:31:31.417Z
 - opportunity | /articles/activites/cite-du-chocolat-valrhona-a-la-toussaint-2026-quel-atelier-choisir-selon-l-age/ | 2026-10-05T14:27:51.219Z
+- opportunity | /articles/evenements/contes-gratuits-a-paris-le-14-novembre-2026-quelle-seance-choisir-en-famille/ | 2026-11-05T00:34:45.481Z
 - opportunity | /articles/sorties/cosquer-mediterranee-avec-des-enfants-age-poussette-tarifs/ | 2026-10-03T11:22:17.769Z
 - opportunity | /articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/ | 2026-10-23T06:21:12.326Z
 - opportunity | /articles/evenements/dia-de-los-muertos-2026-au-jardin-d-acclimatation-billets-et-animations-en-famille/ | 2026-10-08T14:56:52.034Z
@@ -2145,39 +2151,76 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 ### Publication en cours
 
 - Branche: automation/publication-20261105-0158-titre-de-travail-fetes-de-l-ours-2027-dans-les-pyrenees-orientales-que
-- HEAD: publication: phase 1 titre-de-travail-fetes-de-l-ours-2027-dans-les-pyrenees-orientales-que
+- HEAD: publication: phase 2 20261105-0158-titre-de-travail-fetes-de-l-ours-2027-dans-les-pyrenees-orientales-que
 
-## Sujet retenu
-**Titre de travail :** Fêtes de l’Ours 2027 dans les Pyrénées-Orientales : quelle fête découvrir avec les enfants ?
+---
+category: "evenements"
+title: "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?"
+subtitle: "Trois villages du Haut-Vallespir, des traditions spectaculaires et des précautions à connaître avec des enfants"
+summary: "À Prats-de-Mollo, Saint-Laurent-de-Cerdans et Arles-sur-Tech, découvrez les Fêtes de l’Ours 2027 et choisissez votre sortie en famille."
+keywords:
+  - "Fêtes de l’Ours 2027"
+  - "Fête de l’Ours Pyrénées-Orientales en famille"
+  - "Haut-Vallespir carnaval"
+location:
+  department: "Pyrénées-Orientales"
+  region: "Occitanie"
+sources:
+  - title: "Fêtes de l’Ours du Haut-Vallespir - présentation"
+    url: "https://www.fetesdelours.com/"
+  - title: "Fête de l’Ours de Prats-de-Mollo - organisateurs"
+    url: "https://www.fetesdelours.com/les-fetes-de-lours/fete-de-lours-de-prats-de-mollo-la-preste/"
+  - title: "Fête de l’Ours de Saint-Laurent-de-Cerdans - organisateurs"
+    url: "https://www.fetesdelours.com/les-fetes-de-lours/fete-de-lours-de-saint-laurent-de-cerdans/"
+  - title: "Tourisme Occitanie - Fêtes de l’Ours 2027"
+    url: "https://www.tourisme-occitanie.com/fr/fiche/fete-et-manifestation/fetes-de-l-ours-prats-de-mollo-la-preste_TFOFMALAR0660018062/"
+  - title: "UNESCO - Les fêtes de l’Ours dans les Pyrénées"
+    url: "https://ich.unesco.org/fr/RL/les-ftes-de-lours-dans-les-pyrnes-01846"
+---
 
-Les Fêtes de l’Ours sont trois carnavals traditionnels du Haut-Vallespir, à Arles-sur-Tech, Prats-de-Mollo-la-Preste et Saint-Laurent-de-Cerdans. Des habitants déguisés en ours parcourent les rues au milieu de scènes théâtrales, de musique et de poursuites ; cette tradition fait partie du patrimoine culturel immatériel reconnu par l’UNESCO depuis 2022. L’édition 2027 est annoncée pour février ; Saint-Laurent-de-Cerdans est annoncé du 12 au 14 février, tandis que les dates des deux autres communes restent à confirmer.
+Chaque hiver, trois villages du Haut-Vallespir, dans les Pyrénées-Orientales, voient surgir des ours bien particuliers: des habitants costumés qui traversent les rues, poursuivent la foule et finissent par être capturés. À **Prats-de-Mollo-la-Preste, Saint-Laurent-de-Cerdans et Arles-sur-Tech**, ces fêtes mêlent théâtre populaire, carnaval et traditions catalanes. Pour une famille, c’est une découverte mémorable, à condition de savoir que les poursuites, la musique et la proximité des personnages peuvent impressionner les plus jeunes.
 
-**Angle :** expliquer les différences entre les trois fêtes et aider les parents à choisir une expérience adaptée à l’âge et à la sensibilité des enfants, sans présenter ces poursuites parfois impressionnantes comme une animation douce pour tout-petits.
+## Trois fêtes, trois façons de vivre la tradition
 
-## Besoin du lecteur
-Comprendre le rituel, identifier les trois villages et leurs particularités, anticiper l’ambiance bruyante et les poursuites, choisir où se placer avec des enfants, préparer l’habillement, les déplacements et éventuellement un séjour sur place. Distinguer dates annoncées et programme détaillé encore non confirmé.
+**Prats-de-Mollo-la-Preste: pour voir la chasse à l’ours de près.** Trois jeunes incarnent les ours, vêtus de toisons et enduits d’un mélange comprenant du noir de fumée. Ils poursuivent les participants et peuvent leur laisser des marques noires sur le visage. La capture puis le rasage symbolique des ours racontent leur retour à l’humanité. C’est une expérience physique et animée, à privilégier avec des enfants qui apprécient les spectacles mouvementés. Le [site des organisateurs de Prats-de-Mollo](https://www.fetesdelours.com/les-fetes-de-lours/fete-de-lours-de-prats-de-mollo-la-preste/) décrit ce rituel; le programme qu’il affiche actuellement est celui de **2026**, et non celui de 2027.
 
-## Valeur éditoriale
-- Comparer trois fêtes proches mais différentes : tradition de l’ours à Prats-de-Mollo, figures de la Monaca et carnaval à Saint-Laurent-de-Cerdans, célébration à Arles-sur-Tech.
-- Expliquer les scènes de poursuite, le noir de fumée qui peut tacher les vêtements, la foule et le bruit ; donner des conseils prudents sans promettre de zones calmes ni de dispositifs non annoncés.
-- Éclairer le sens culturel de la fête et son inscription UNESCO de 2022, plutôt que recopier un programme.
-- Vérifier avant rédaction finale les horaires, lieux précis, modalités d’accès et dates 2027 auprès des organisateurs ; ne pas reprendre les horaires 2026 comme ceux de 2027.
+**Saint-Laurent-de-Cerdans: pour découvrir l’ours au milieu du carnaval.** Ici, la fête fait une large place aux personnages traditionnels, notamment la **Monaca**, et aux défilés dans les ruelles. Le Meneur capture l’ours et le présente à la foule. Cette dimension carnavalesque peut intéresser les enfants curieux des costumes et des personnages, sans rendre les courses-poursuites moins impressionnantes. La [présentation des organisateurs](https://www.fetesdelours.com/les-fetes-de-lours/fete-de-lours-de-saint-laurent-de-cerdans/) permet de comprendre les différents rôles.
 
-## Affiliation
-La fête est une manifestation populaire : aucune billetterie partenaire directe vérifiée sur GetYourGuide, Tiqets ou Klook ; ne pas suggérer de billet payant.
+**Arles-sur-Tech: une troisième fête à suivre dans le même territoire.** Le village participe au cycle traditionnel des Fêtes de l’Ours du Haut-Vallespir. C’est une autre occasion de découvrir le rite dans un cadre local, mais il serait trompeur de la présenter comme une version plus calme ou mieux adaptée aux petits sans connaître le déroulement de 2027. Pour choisir, attendez les informations propres à cette commune sur le [site commun des Fêtes de l’Ours](https://www.fetesdelours.com/).
 
-Hébergements pertinents pour un week-end dans le Haut-Vallespir, pages partenaires vérifiées (disponibilité aux dates de février 2027 non confirmée) :
-- **Booking.com — FASTHOTEL Le Costabonne**, Prats-de-Mollo-la-Preste, chambre familiale pouvant accueillir quatre personnes : https://www.booking.com/hotel/fr/restaurant-le-costabonne.fr.html
-- **Booking.com — Le Domaine de Falgos Golf & Spa**, Saint-Laurent-de-Cerdans, chambre familiale affichée : https://www.booking.com/hotel/fr/le-domaine-de-falgos.fr.html
+## Que racontent ces ours ?
 
-Ne pas promettre de tarifs ni de disponibilités pour les jours de fête.
+Il ne s’agit pas d’un spectacle animalier: les ours sont joués par des habitants. La poursuite, la capture et la transformation finale évoquent le passage de l’hiver au printemps, ainsi que les liens entre l’être humain et la nature. Le mythe local de Jean de l’Ours, personnage mi-homme, mi-ours, nourrit aussi cet imaginaire.
 
-## Sources de départ
-- Organisateur, présentation des trois fêtes : https://www.fetesdelours.com/
-- Organisateur, Prats-de-Mollo (programme actuellement affiché : 2026) : https://www.fetesdelours.com/les-fetes-de-lours/fete-de-lours-de-prats-de-mollo-la-preste/
-- Organisateur, Saint-Laurent-de-Cerdans (programme actuellement affiché : 2026) : https://www.fetesdelours.com/les-fetes-de-lours/fete-de-lours-de-saint-laurent-de-cerdans/
-- Tourisme Occitanie, annonce février 2027 et dates Saint-Laurent-de-Cerdans : https://www.tourisme-occitanie.com/fr/fiche/fete-et-manifestation/fetes-de-l-ours-prats-de-mollo-la-preste_TFOFMALAR0660018062/
-- UNESCO, inscription et description des traditions : https://ich.unesco.org/en/RL/bear-festivities-in-the-pyrenees-01846
+Ces traditions ne sont pas de simples reconstitutions pour touristes. Elles sont transmises au sein des villages, notamment par les familles et les associations. Depuis **2022**, les [fêtes de l’Ours dans les Pyrénées figurent au patrimoine culturel immatériel de l’humanité de l’UNESCO](https://ich.unesco.org/fr/RL/les-ftes-de-lours-dans-les-pyrnes-01846). L’inscription concerne des fêtes en France et en Andorre, pas uniquement les trois communes du Haut-Vallespir.
+
+## Avec des enfants: participer ou regarder ?
+
+La question n’est pas seulement celle de l’âge. Un enfant qui aime les carnavals bruyants pourra être fasciné; un autre, plus sensible aux masques, à la foule ou aux mouvements brusques, préférera observer de loin. Les ours peuvent courir vers les spectateurs, et le noir de fumée utilisé à Prats-de-Mollo peut tacher les vêtements.
+
+Pour une première découverte, choisissez un emplacement qui permette de vous écarter facilement, plutôt que de rester au cœur d’un passage étroit. Expliquez aux enfants avant de venir que les ours sont des personnes déguisées et que les poursuites font partie du rituel. Des vêtements peu fragiles, des chaussures fermées et une couche chaude pour février seront plus pratiques qu’une tenue de sortie.
+
+Avec un bébé ou un enfant en poussette, mieux vaut ne pas compter sur une circulation fluide au milieu des défilés: rues encombrées et déplacements rapides sont possibles. Aucun espace calme, parcours accessible ou dispositif d'accueil particulier pour 2027 n’a pu être confirmé. Pour un enfant facilement effrayé, observer un moment à distance - ou renoncer à la séquence de poursuite - reste un choix raisonnable.
+
+## Dates des Fêtes de l’Ours 2027: ce qui est annoncé
+
+Selon [Tourisme Occitanie](https://www.tourisme-occitanie.com/fr/fiche/fete-et-manifestation/fetes-de-l-ours-prats-de-mollo-la-preste_TFOFMALAR0660018062/), les fêtes sont prévues en **février 2027**:
+
+- **Saint-Laurent-de-Cerdans: du 12 au 14 février 2027**, dates annoncées pour la manifestation.
+- **Prats-de-Mollo-la-Preste: date 2027 à venir.**
+- **Arles-sur-Tech: date 2027 à venir.**
+
+Attention: les dates d’un festival sur plusieurs jours ne donnent pas à elles seules l’heure de la poursuite de l’ours. Les horaires précis, les points de départ, les éventuelles animations pour enfants et les modalités de circulation restent à vérifier dans les programmes 2027. Ne vous fiez pas aux horaires 2026 encore visibles sur certaines pages des organisateurs.
+
+## Préparer la journée sans mauvaise surprise
+
+Ces villages se trouvent dans le Haut-Vallespir, territoire de montagne au sud du massif du Canigó. En février, prévoyez du temps pour les déplacements et vérifiez la météo ainsi que les conditions routières avant le départ. Pour le stationnement, les restrictions de circulation et les éventuelles navettes, attendez les annonces municipales ou touristiques propres à chaque fête: aucun plan 2027 commun n’est confirmé.
+
+Les fêtes sont des manifestations populaires, et aucune billetterie payante n’est à prévoir sur la base des informations vérifiées. En revanche, certains repas, bals ou activités annexes peuvent avoir leurs propres conditions: consultez le programme avant de vous déplacer.
+
+Si vous souhaitez prolonger la visite par une nuit sur place, mieux vaut choisir d’abord **le village et la date effective de la fête**, puis rechercher un hébergement à proximité. Les disponibilités pour février 2027 ne sont pas établies à ce stade.
+
+Pour une famille qui découvre la tradition, le meilleur choix n’est donc pas nécessairement la fête la plus célèbre: c’est celle dont le programme et l’ambiance correspondent à la sensibilité des enfants. Les trois villages ont chacun leur caractère, mais aucun ne doit être présenté comme une animation tranquille pour tout-petits.
 
 
 ### Destination en cours
