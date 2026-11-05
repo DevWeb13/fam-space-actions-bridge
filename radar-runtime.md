@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Atelier omamori gratuit à Paris le 21 novembre 2026 : créer une amulette japonaise dès 7 ans"
-subtitle: À la bibliothèque Amélie, une activité manuelle autour de la culture japonaise, sur inscription conseillée
-summary: Le 21 novembre 2026 à 10 h 30, la bibliothèque Amélie à Paris 7e propose un atelier gratuit de création d'omamori dès 7 ans. Comment s'inscrire et préparer la sortie.
+title: "Atelier omamori gratuit à Paris le 21 novembre 2026 : créer une amulette dès 7 ans"
+subtitle: Un atelier de création japonaise à la bibliothèque Amélie, avec réservation conseillée
+summary: Samedi 21 novembre à 10 h 30, les enfants dès 7 ans peuvent fabriquer un omamori à la bibliothèque Amélie, dans le 7e arrondissement de Paris. L'atelier est gratuit ; voici comment demander une place et préparer la visite.
 category: activites
 location:
   city: Paris
@@ -68,14 +73,14 @@ location:
   region: Île-de-France
 keywords:
   - atelier omamori Paris 21 novembre 2026
-  - activité manga gratuite Paris enfant 7 ans
-  - bibliothèque Amélie atelier amulette japonaise
+  - activité japonaise gratuite Paris enfant
+  - bibliothèque Amélie omamori réservation
 sources:
   - title: Ville de Paris - Mordus du Manga, atelier Omamoris
     url: https://www.paris.fr/evenements/mordus-du-manga-atelier-omamoris-124768
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: atelier-omamori-gratuit-a-paris-le-21-novembre-2026-creer-une-amulette-japonaise-des-7-ans
   decision: Savoir si l'atelier de création d'une amulette japonaise convient à son enfant dès 7 ans, où se rendre et comment demander une place avant le 21 novembre.
@@ -85,28 +90,35 @@ radar:
     dataThrough: 2026-11-02
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Ville de Paris - Mordus du Manga, atelier Omamoris »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-11-21
 ---
 
-## Mission retenue
-Atelier de création d'omamori (petite amulette japonaise en tissu), à la bibliothèque Amélie, Paris 7e, le samedi 21 novembre 2026 à 10 h 30.
+Le samedi 21 novembre 2026 à 10 h 30, la bibliothèque Amélie, à Paris, propose aux enfants **dès 7 ans** de créer leur propre *omamori*, une petite amulette japonaise en tissu. L'atelier est **gratuit** et la réservation est conseillée : une sortie créative à envisager pour les enfants curieux de la culture japonaise, même sans être passionnés de manga.
 
-## Pourquoi cette mission
-Le candidat refresh Lumigny dispose déjà des réponses essentielles (billet seul ou combiné, tarifs, calendrier, accès, poussette et hébergement) : sa baisse d'impressions ne prouve pas une lacune. Une expansion issue des transports parisiens risquerait de répéter les pages déjà consacrées aux titres et à la poussette. L'atelier omamori apporte une décision locale, datée, originale et vérifiée, sans doublon direct repéré dans le catalogue compact.
+## Que va fabriquer votre enfant ?
 
-## Décision du lecteur
-Choisir cette activité gratuite si l'enfant a au moins 7 ans et aime créer, puis contacter la bibliothèque pour réserver ou confirmer une place.
+Un omamori est une amulette protectrice japonaise, généralement présentée comme un petit sachet de tissu coloré et brodé, fermé par un nœud traditionnel. L'atelier invite les participants à en réaliser une dans le cadre de l'événement **Mordus du Manga**. C'est l'occasion de découvrir un objet de la culture japonaise en passant par une activité manuelle, plutôt que par une simple présentation.
 
-## Faits à traiter
-Samedi 21 novembre à 10 h 30, bibliothèque Amélie, 164 rue de Grenelle, Paris 7e. Gratuit, dès 7 ans. Réservation conseillée (pas obligatoire selon la fiche) par bibliotheque.amelie@paris.fr ou 01 47 05 89 66. Création d'une amulette japonaise protectrice dans le cadre de Mordus du Manga. Accessibilité PMR annoncée ; accueil en LSF non renseigné. Durée, matériel à apporter et présence obligatoire d'un adulte non précisés : ne pas les inventer.
+La [fiche de la Ville de Paris](https://www.paris.fr/evenements/mordus-du-manga-atelier-omamoris-124768) ne précise ni la durée de la séance, ni le matériel à apporter, ni si un adulte doit rester auprès de l'enfant. Si ces points comptent pour votre organisation, demandez-les au moment de l'inscription.
 
-## Sources de départ
-Ville de Paris, fiche de l'événement : https://www.paris.fr/evenements/mordus-du-manga-atelier-omamoris-124768
+## Comment demander une place ?
 
-## Affiliation
-Pas d'achat lié à l'atelier. Pas de lien marchand artificiel. Pour les familles de passage à Paris, une recherche d'hébergement peut être utile mais aucune offre spécifique n'a été vérifiée.
+L'atelier se tient à la **bibliothèque Amélie, 164 rue de Grenelle, Paris 7e**, le samedi 21 novembre à **10 h 30**. Il s'adresse aux enfants à partir de 7 ans, sans frais de participation.
 
-## Continuations internes
-Ne pas transformer ce rendez-vous ponctuel en guide général des activités japonaises. Un lien vers le guide Fam Space des transports à Paris avec enfants peut aider pour le déplacement, sans recopier les tarifs. Ne pas répéter les articles existants sur les autres ateliers parisiens.
+La Ville de Paris indique une **réservation conseillée**, et non obligatoire. Pour éviter de vous déplacer alors que les places seraient prises, contactez directement la bibliothèque :
+
+- Par courriel : **bibliotheque.amelie@paris.fr**
+- Par téléphone : **01 47 05 89 66**
+
+Précisez l'âge de l'enfant et demandez si une place est encore disponible. Le nombre de participants n'est pas indiqué dans l'annonce.
+
+## Accessibilité et trajet avec des enfants
+
+La fiche officielle annonce un accès pour les personnes à mobilité réduite et pour les personnes déficientes auditives. Elle ne renseigne pas l'accueil en langue des signes ni les conditions d'accueil pour certains autres handicaps : contactez la bibliothèque si vous avez besoin d'un aménagement particulier.
+
+Pour venir avec un plus jeune enfant en poussette, préparez le trajet jusqu'à la rue de Grenelle en vérifiant les ascenseurs et les correspondances. Notre guide [Paris avec une poussette : métro, RER, bus ou tram, que choisir ?](https://www.fam-space.fr/articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/) aide à choisir un parcours praticable.
+
+Si vous êtes de passage à Paris pour le week-end, recherchez un hébergement familial dans le 7e arrondissement ou près d'une liaison pratique vers la bibliothèque. Vérifiez la capacité réelle de la chambre et les équipements pour enfants avant de réserver ; aucune disponibilité particulière n'est confirmée pour cette date.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
