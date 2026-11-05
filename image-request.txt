@@ -333,3 +333,4 @@ automation/image-20261105-0943-four-hero-109b0dd|109b0ddf7bd84401cdaf72fa77f03c4
 automation/image-20261105-0943-four-hero-109b0dd|a66dc8fcb82557968cfc66cacccb0e2f53b1e99d
 automation/image-20261105-1545-four-hero-24308e3|24308e397bd08583c2976fb72b2388f0110e172b
 automation/image-20261105-1545-four-hero-24308e3|3a5de3d88520ab2513cd8c1e9f0f18774d86520d
+automation/image-20261105-2146-calder-mogettes-petite-terre-jeux-b75dd60|b75dd6018d543c4938c8d46c71218154bcffacd6
