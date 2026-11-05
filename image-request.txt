@@ -327,3 +327,4 @@ automation/image-20261104-1548-paris-havre-bretagne-36151a9|36151a95c348d347589b
 automation/image-20261104-1548-paris-havre-bretagne-36151a9|ef4c6c21fde3703ef3494afd6db70f0cd0b3ee42
 automation/image-20261104-2142-five-hero-a0d2be7|a0d2be751c721e7805041033af61a2a4b04a1608
 automation/image-20261104-2142-five-hero-a0d2be7|d721236dacabc192a29d5178b16dbc2c307c2a4d
+automation/image-20261105-0341-berck-paris-corte-e8afd9e|e8afd9ed61c87a1e0df0834c0ca44c10c981c907
