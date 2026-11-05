@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261105-2302-sujet-condensation-humidite-et-moisissures-dans-les-logements-familiau",
+  "lastProcessedCommit": "1d97e20ab82c4bdfb695b3b2c3d5e0660233d117"
 }
