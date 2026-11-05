@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,91 +14,132 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Allier
 - Région: Auvergne-Rhône-Alpes
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Le PAL 2027 en famille : organiser une ou deux journées entre animaux et attractions dans l’Allier.**
-
-Angle : aider les parents à arbitrer entre parc animalier et manèges selon l’âge, la taille des enfants, le temps disponible et le budget, puis à choisir entre une journée et un séjour avec nuitée. Le PAL, à Saint-Pourçain-sur-Besbre près de Dompierre-sur-Besbre, réunit un parc zoologique, des attractions et des hébergements immersifs. La saison 2026 est terminée, mais les billets et séjours 2027 sont déjà proposés ; les dates exactes d'ouverture et modalités doivent être vérifiées avant publication.
-
-## Besoin du lecteur
-Comprendre ce que contient le billet, identifier les attractions accessibles aux enfants selon leur taille, organiser un parcours réaliste entre animaux, spectacles et manèges, anticiper repas, pauses, poussette et déplacements, puis décider si deux jours et un hébergement sont utiles. Expliquer les différences entre billet daté, non daté et deux jours sans promettre un tarif constant.
-
-## Valeur éditoriale
-- Le parc cumule 31 attractions et environ 1 000 animaux : il faut aider à hiérarchiser, pas simplement énumérer.
-- Distinguer les contraintes de taille des attractions des catégories tarifaires, et prévoir un programme adapté aux petits et aux plus grands.
-- Comparer une journée concentrée et deux jours plus tranquilles, en tenant compte des présentations animalières et des pauses.
-- Clarifier les possibilités de nuitée sur place ou à Dompierre-sur-Besbre, avec leurs avantages pratiques.
-- Les pages officielles présentent offres et équipements séparément ; l'article doit relier ces informations dans une préparation de visite familiale, sans copier un catalogue.
-- Ne pas annoncer comme acquis les horaires détaillés 2027 non encore confirmés.
-
-## Affiliation
-**Action principale :** billets 2027 proposés sur le site officiel du PAL, mais aucune offre de billetterie spécifique au PAL n'a été vérifiée chez GetYourGuide, Tiqets ou Klook. Ne pas présenter la billetterie officielle comme une offre affiliée.
-
-**Hébergement partenaire Booking.com vérifié :**
-- L'Auberge de l'Olive, Dompierre-sur-Besbre, à environ 9 km du parc, avec chambres triples, quadruples et familiales : https://www.booking.com/hotel/fr/l-39-auberge-de-l-39-olive.fr.html
-- Logement, idéal famille, amis, tout y est !, Dompierre-sur-Besbre, maison de trois chambres avec cuisine et parking, à environ 7,5 km du parc : https://www.booking.com/hotel/fr/maison-ideale-famille-amis-tout-y-est.fr.html
-
-Ces pages Booking.com établissent l'existence des offres, non la disponibilité ou le tarif pour une date précise en 2027. Une seule ou deux propositions à intégrer naturellement selon le développement de l'article. Les Lodges et Savana RESERVE du PAL sont des options éditoriales pertinentes, mais aucune offre de ces établissements chez un partenaire autorisé n'a été vérifiée ; ne pas les présenter comme affiliés.
-
-## Sources de départ
-- Site officiel du PAL, description du parc et offres de billets 2027 : https://www.lepal.com/
-- Site officiel, billets et catégories d'âge/taille : https://www.lepal.com/preparer-votre-visite/tarifs-et-achats-des-billets
-- Site officiel, offres de séjours 2027 : https://www.lepal.com/sejours/toutes-les-offres
-- Présentation touristique indépendante, repères de visite et saisonnalité : https://www.travelinauvergne.fr/destinations/allier/saint-pourcain-sur-besbre/le-pal
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "activites"
+title: "Le PAL 2027 en famille: une ou deux journées entre animaux et attractions ?"
+subtitle: "Billets, taille des enfants, parcours et nuitées dans l’Allier"
+summary: "Comment profiter du PAL avec des enfants en 2027: choisir les attractions, répartir les visites, comparer les billets et prévoir une nuit près du parc."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Le PAL 2027 en famille"
+  - "visiter Le PAL avec enfants"
+  - "billets Le PAL 2027"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Saint-Pourçain-sur-Besbre"
+  department: "Allier"
+  region: "Auvergne-Rhône-Alpes"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Le PAL - parc animalier et attractions"
+    url: "https://www.lepal.com/"
+  - title: "Le PAL - tarifs et billets"
+    url: "https://www.lepal.com/preparer-votre-visite/tarifs-et-achats-des-billets"
+  - title: "Le PAL - calendrier et horaires"
+    url: "https://www.lepal.com/preparer-votre-visite/calendrier-et-horaires"
+  - title: "Le PAL - accès et services"
+    url: "https://www.lepal.com/preparer-votre-visite/page/acces-et-services"
+  - title: "Le PAL - séjours"
+    url: "https://www.lepal.com/sejours/toutes-les-offres"
 ---
-```
+Au PAL, dans l’Allier, on peut observer des girafes puis embarquer dans un manège sans changer de parc. Situé à Saint-Pourçain-sur-Besbre, près de Dompierre-sur-Besbre, ce site réunit environ 1 000 animaux et 31 attractions. Pour une famille, la vraie difficulté n’est pas de trouver de quoi s’occuper, mais de choisir ce qui mérite son temps.
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+## Animaux ou manèges: par quoi commencer ?
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+Avant la visite, demandez à chaque enfant ce qu’il attend le plus: voir les animaux, profiter des attractions à sensations ou essayer les manèges accessibles aux plus petits. Cela évite de traverser plusieurs fois le parc pour satisfaire tout le monde.
+
+Avec de jeunes enfants, alterner observation des animaux et petites attractions est souvent plus agréable qu’une longue série de files d’attente. Les espaces animaliers permettent de ralentir le rythme, mais ils demandent aussi de marcher. Avec des enfants plus grands, on peut sélectionner quelques attractions incontournables dès l’arrivée, puis réserver un créneau aux animaux.
+
+Le parc présente des animaux de plusieurs continents et propose des présentations animalières et des animations pédagogiques. Ces activités sont comprises dans le billet ordinaire, tout comme les attractions accessibles selon la taille de chacun: consultez la [présentation officielle du PAL](https://www.lepal.com/) et vérifiez les horaires des animations le jour de votre venue.
+
+## La taille compte davantage que l’âge pour les attractions
+
+Un enfant peut payer son entrée sans pour autant pouvoir monter dans tous les manèges. Les restrictions de taille minimale ou maximale sont propres à chaque attraction, pour des raisons de sécurité. Il vaut donc mieux sélectionner les attractions sur le site du parc avant de promettre un grand huit à un enfant.
+
+La tarification suit une autre logique: l’entrée est gratuite pour les enfants mesurant moins d’un mètre, chaussures comprises. À partir d’un mètre et jusqu’à 9 ans inclus, le tarif enfant s’applique; dès 10 ans, c’est le tarif adulte. Ces règles sont indiquées sur la [page officielle des billets](https://www.lepal.com/preparer-votre-visite/tarifs-et-achats-des-billets).
+
+Si les enfants n’ont pas tous la taille requise, le PAL propose un système de « Babyswitch » permettant aux adultes de se relayer sur certaines attractions sans refaire toute la file: renseignez-vous auprès de l’opérateur sur place. C’est particulièrement utile pour une famille avec un tout-petit et un adolescent.
+
+## Une journée: choisir plutôt que tout faire
+
+Sur une seule journée, mieux vaut retenir quelques attractions prioritaires et un ou deux temps forts animaliers que chercher à couvrir les 31 manèges et tous les espaces zoologiques.
+
+Un déroulé souple peut fonctionner: commencer par les attractions les plus importantes pour la famille, prendre ensuite le temps d’observer les animaux, déjeuner, puis décider de la suite selon la fatigue et l’affluence. Les présentations animalières s’insèrent dans ce programme à partir de leurs horaires réels, pas l’inverse.
+
+Prévoyez une marge pour les pauses et les déplacements. Le parc met à disposition des aires de pique-nique et plusieurs points de restauration. Son application permet de consulter le plan, les temps d’attente et les animations: utile pour adapter la journée plutôt que suivre un itinéraire figé.
+
+## Deux jours: pour quelles familles est-ce intéressant ?
+
+Deux jours consécutifs permettent de consacrer davantage de temps à chaque univers: par exemple, privilégier les attractions le premier jour, puis les animaux et les animations le second, tout en gardant la possibilité de revenir à un manège apprécié. Ce rythme convient particulièrement aux familles qui viennent de loin, avec plusieurs enfants d’âges différents ou qui veulent éviter de courir.
+
+Cela ne signifie pas qu’il faut impérativement dormir dans le parc. Les [Lodges du PAL et l’hôtel Savana RESERVE](https://www.lepal.com/sejours/toutes-les-offres) proposent une expérience immersive au contact des animaux, avec des formules de séjour à examiner attentivement selon les prestations incluses. Une nuit à Dompierre-sur-Besbre peut aussi être pratique pour rejoindre le parc le lendemain, sans nécessairement choisir une formule immersive.
+
+Pour décider, comparez le coût total: entrées, hébergement, repas et trajet. Une seconde journée est surtout intéressante si vous comptez réellement profiter des deux espaces du parc sans vous presser.
+
+## Quel billet choisir en 2027 ?
+
+Le PAL distingue plusieurs formules. Le **billet Malin**, daté et vendu en ligne jusqu’à la veille de la visite, est annoncé à partir de 33 € par adulte et 28 € par enfant. Il convient lorsque la date est fixée. Le **billet Liberté**, non daté pour 2027, est affiché à 41 € par adulte et 35 € par enfant en ligne: il coûte davantage, mais laisse plus de souplesse. Le **billet Passion**, valable deux jours consécutifs à dates déterminées, est affiché à 59 € par adulte et 49 € par enfant en ligne.
+
+Ces montants sont les offres affichées lors de la préparation de cet article, pas des prix garantis pour toute la saison. Vérifiez les conditions, les dates disponibles et les éventuelles évolutions sur la [billetterie officielle](https://www.lepal.com/preparer-votre-visite/tarifs-et-achats-des-billets) avant d’acheter. Les billets ordinaires comprennent parc animalier, attractions accessibles et présentations; l’hébergement et les repas ne sont pas compris dans une simple entrée.
+
+Le [calendrier officiel](https://www.lepal.com/preparer-votre-visite/calendrier-et-horaires) est également indispensable: le parc n’ouvre pas tous les jours de l’année, et les horaires varient. Ne construisez pas votre séjour sur les horaires d’une saison précédente.
+
+## Poussette, repas et accès: les détails qui changent la journée
+
+Le PAL dispose de parkings gratuits et d’aires de pique-nique. Une poussette peut être louée à l’entrée: le tarif actuellement indiqué est de 9 € par jour, avec une empreinte bancaire de 50 €. Des tables à langer sont présentes dans la plupart des sanitaires, et des bracelets d’identification gratuits sont proposés à l’entrée pour les enfants. Les animaux de compagnie ne sont pas admis, sauf chiens guides ou d’assistance.
+
+Le parc se rejoint principalement en voiture. La gare la plus proche est Dompierre-Sept-Fons; pour un trajet sans voiture, vérifiez en amont les correspondances et l’existence d’une navette à votre date, car les services peuvent être saisonniers. Tous ces détails figurent sur la [page officielle d’accès et de services](https://www.lepal.com/preparer-votre-visite/page/acces-et-services).
+
+Pour une première visite avec des enfants, le meilleur programme reste celui qui laisse de la place à une découverte imprévue: un animal qui retient leur attention, une attraction qu’ils souhaitent refaire ou une pause dont ils ont vraiment besoin.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -127,4 +168,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
