@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Atelier couture gratuit à Paris le 28 novembre 2026 : créer en famille dès 8 ans"
-subtitle: Une initiation intergénérationnelle à la bibliothèque Jeunesse Diderot, sur réservation à partir du 7 novembre
-summary: Le samedi 28 novembre 2026, la bibliothèque Jeunesse Diderot propose un atelier couture gratuit de 10 h 30 à 13 h, dès 8 ans, avec l'association 3P.
+title: "Atelier couture gratuit à Paris le 28 novembre 2026 : dès 8 ans"
+subtitle: À la bibliothèque Jeunesse Diderot, une initiation intergénérationnelle pour apprendre à coudre et créer ensemble
+summary: Le samedi 28 novembre, de 10 h 30 à 13 h, la bibliothèque Jeunesse Diderot accueille un atelier couture gratuit dès 8 ans. Les réservations ouvrent le 7 novembre.
 category: activites
 location:
   city: Paris
@@ -74,7 +79,7 @@ sources:
     url: https://www.paris.fr/evenements/atelier-couture-125317
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: atelier-couture-gratuit-a-paris-le-28-novembre-2026-creer-en-famille-des-8-ans
   decision: Savoir si l'atelier convient à l'âge de son enfant et comment réserver une place pour découvrir la couture ensemble.
@@ -84,42 +89,43 @@ radar:
     dataThrough: 2026-11-02
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Ville de Paris — Atelier couture du 28 novembre 2026 »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-11-28
 ---
 
-## Mission retenue
-Présenter l'atelier de couture intergénérationnel animé avec l'association 3P à la bibliothèque Jeunesse Diderot, 42 avenue Daumesnil, Paris 12e, le samedi 28 novembre 2026.
+Apprendre à coudre en famille sans acheter de matériel ni s'engager dans des cours réguliers : c'est l'idée de l'atelier proposé le **samedi 28 novembre 2026** à la bibliothèque Jeunesse Diderot, dans le 12e arrondissement de Paris. L'activité est **gratuite, ouverte dès 8 ans et accessible uniquement sur réservation**.
 
-## Pourquoi cette mission
-Opportunité datée et officielle, avec ouverture des réservations le 7 novembre. Aucun sujet couture correspondant repéré dans le catalogue et l'historique Radar fournis. Les signaux GSC des refresh prioritaires ne prouvent pas une lacune éditoriale ; l'expansion d'une page forte demanderait une intention autonome mieux établie.
+## Ce que les enfants vont découvrir
 
-## Décision du lecteur
-Déterminer si cette initiation convient à son enfant et savoir quand et comment réserver.
+Avec l'association 3P, petits et grands s'initient ensemble aux étapes essentielles de la couture. L'objectif est de réaliser une création surprise tout en découvrant une manière de fabriquer et de réemployer plutôt que de jeter.
 
-## Faits à traiter
-Gratuit, dès 8 ans, 10 h 30–13 h le 28 novembre, réservation obligatoire à partir du 7 novembre ; bibliothèque Jeunesse Diderot, 42 avenue Daumesnil, Paris 12e, téléphone 01 43 40 69 94. Activité intergénérationnelle de découverte des bases de la couture et création d'un objet, avec dimension réemploi. La fiche annonce un accès non adapté aux personnes à mobilité réduite. Vérifier les modalités de réservation et la disponibilité des places avant publication, sans inventer les fournitures ou la création exacte.
+L'atelier est annoncé comme **intergénérationnel** : il ne s'adresse donc pas uniquement aux enfants. En revanche, la fiche officielle ne précise ni la création exacte, ni la liste des fournitures, ni si chaque enfant doit être accompagné d'un adulte. Pour ces détails, mieux vaut contacter la bibliothèque avant de venir.
 
-## Sources de départ
-- https://www.paris.fr/evenements/atelier-couture-125317
+## Quand réserver une place ?
 
-## Affiliation
-Aucune offre directe : atelier gratuit, sans vente de billets. Un hébergement pour un atelier de deux heures et demie n'apporterait pas de conseil naturel à cette page locale.
+Les inscriptions ouvrent **le samedi 7 novembre 2026**. La réservation est obligatoire, même si l'atelier ne coûte rien. Pour connaître la procédure d'inscription et vérifier s'il reste des places, consultez la [fiche de l'atelier publiée par la Ville de Paris](https://www.paris.fr/evenements/atelier-couture-125317) ou appelez directement la bibliothèque au **01 43 40 69 94**. La fiche ne garantit pas de disponibilité en temps réel.
 
-## Continuations internes
-- Renvoyer vers un guide Fam Space existant sur les transports parisiens en famille plutôt que redévelopper le sujet.
-- Ne pas transformer cet événement ponctuel en guide général de couture ou d'activités manuelles.
+L'activité dure **de 10 h 30 à 13 h**, soit deux heures et demie : prévoyez ce créneau complet dans votre journée. L'âge minimum annoncé est **8 ans**.
+
+## Adresse et accessibilité
+
+Rendez-vous à la **bibliothèque Jeunesse Diderot, 42 avenue Daumesnil, Paris 12e**. Il s'agit d'une activité en intérieur.
+
+Point important avant de réserver : la Ville de Paris indique que le lieu **n'est pas accessible aux personnes à mobilité réduite**. Elle annonce un accès pour les personnes déficientes auditives et mentales, mais pas pour les personnes déficientes visuelles, et ne prévoit pas d'accueil en langue des signes. En cas de besoin particulier, demandez confirmation directement à l'établissement.
+
+Si vous venez à Paris avec un plus jeune enfant en poussette, notre guide [Paris avec une poussette : métro, RER, bus ou tram, que choisir ?](https://www.fam-space.fr/articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/) aide à préparer un trajet adapté. Vérifiez toutefois séparément les conditions d'accès à la bibliothèque : un transport praticable ne rend pas le lieu accessible.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
 ### Articles proches préparés mécaniquement
 
+- /articles/activites/atelier-pop-up-gratuit-a-paris-le-21-novembre-2026-creer-un-livre-anime-en-famille/ | Atelier pop-up gratuit à Paris le 21 novembre 2026: créer en famille dès 7 ans | activites | Paris, Paris, Île-de-France
+- /articles/activites/atelier-laine-cardee-de-noel-a-paris-le-2-decembre-2026-creer-ses-decorations-des-7-ans/ | Atelier laine cardée de Noël à Paris le 2 décembre 2026: décorations dès 7 ans | activites | Paris, Paris, Île-de-France
 - /articles/evenements/cerfs-volants-a-paris-le-21-novembre-2026-spectacle-ou-atelier-des-2-ans/ | Cerfs-volants à Paris le 21 novembre 2026: spectacle et atelier dès 2 ans | evenements | Paris, Paris, Île-de-France
-- /articles/activites/atelier-scratch-gratuit-a-paris-le-7-novembre-2026-programmer-un-jeu-video-des-8-ans/ | Atelier Scratch gratuit à Paris le 7 novembre 2026: créer un jeu vidéo | activites | Paris, Paris, Île-de-France
 - /articles/activites/jeux-nature-gratuits-au-parc-floral-de-paris-le-18-novembre-2026-quel-jeu-selon-l-age/ | Jeux nature gratuits au Parc floral de Paris le 18 novembre 2026 | activites | Paris, Paris, Île-de-France
+- /articles/activites/atelier-scratch-gratuit-a-paris-le-7-novembre-2026-programmer-un-jeu-video-des-8-ans/ | Atelier Scratch gratuit à Paris le 7 novembre 2026: créer un jeu vidéo | activites | Paris, Paris, Île-de-France
 - /articles/evenements/planete-ocean-a-paris-preparer-la-visite-en-famille/ | Planète Océan à Paris: préparer la visite en famille | evenements | Paris, Paris, Île-de-France
 - /articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/ | Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite | sorties | Paris, Paris, Île-de-France
 - /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | Rencontres du ciel et de l’espace 2026 à Paris: ateliers, âges et billets en famille | evenements | Paris, Paris, Île-de-France
-- /articles/sorties/vacances-de-la-toussaint-2026-a-la-cite-des-sciences-quels-ateliers-choisir-selon-l-age/ | Vacances de la Toussaint 2026 à la Cité des sciences: les ateliers numériques gratuits avec des enfants | sorties | Paris, Paris, Île-de-France
-- /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | Mondial de l’Auto 2026 avec des enfants: billets, horaires et créneaux | evenements | Paris, Paris, Île-de-France
 - /articles/activites/ateliers-textiles-au-musee-bourdelle-a-paris-styliste-ou-broderie-en-famille-en-2026/ | Ateliers textiles au musée Bourdelle à Paris: styliste ou broderie en famille | activites | Paris, Paris, Île-de-France
 - /articles/cuisine/ateliers-cuisine-parent-enfant-a-paris-lesquels-choisir-selon-l-age-et-le-budget/ | Ateliers cuisine parent-enfant à Paris: lesquels choisir selon l’âge et le budget ? | cuisine | Paris, Paris, Île-de-France
 - /articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/ | Paris avec une poussette: métro, RER, bus ou tram, que choisir ? | voyages | Paris, Paris, Île-de-France
@@ -130,13 +136,15 @@ Aucune offre directe : atelier gratuit, sans vente de billets. Un hébergement p
 - /articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/ | Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | Salon du Cheval de Paris 2026 en famille: animations, jumping et billets | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/metamorphoses-2026-au-quai-branly-quels-films-choisir-avec-des-enfants/ | Métamorphoses 2026 au quai Branly: séances gratuites et films par âge | evenements | Paris, Paris, Île-de-France
+- /articles/activites/aquarium-de-touraine-en-famille-que-voir-avec-les-enfants/ | Aquarium de Touraine en famille: que voir avec les enfants ? | activites | Lussault-sur-Loire, Indre-et-Loire, Centre-Val de Loire
 - /articles/activites/visiter-le-museum-du-havre-avec-des-enfants-que-decouvrir/ | Visiter le Muséum du Havre avec des enfants: que découvrir ? | activites | Le Havre, Seine-Maritime, Normandie
 - /articles/activites/l-aventure-michelin-en-famille-a-clermont-ferrand/ | L’Aventure Michelin en famille à Clermont-Ferrand | activites | Clermont-Ferrand, Puy-de-Dôme, Auvergne-Rhône-Alpes
 - /articles/activites/grottes-de-sare-en-famille-visite-tarifs-et-conseils-pratiques/ | Grottes de Sare en famille: visite, tarifs et conseils pratiques | activites | Sare, Pyrénées-Atlantiques, Nouvelle-Aquitaine
-- /articles/activites/noel-2026-au-5e-lieu-a-strasbourg-la-visite-disney-vaut-elle-le-detour-avec-des-enfants/ | Visite Disney à Strasbourg au 5e Lieu: dates et billets de Noël 2026 | activites | Strasbourg, Bas-Rhin, Grand Est
 
 ### Historique Radar lié
 
+- opportunity | /articles/activites/atelier-laine-cardee-de-noel-a-paris-le-2-decembre-2026-creer-ses-decorations-des-7-ans/ | 2026-11-04T18:34:22.540Z
+- opportunity | /articles/activites/atelier-pop-up-gratuit-a-paris-le-21-novembre-2026-creer-un-livre-anime-en-famille/ | 2026-11-04T15:34:37.269Z
 - opportunity | /articles/activites/atelier-scratch-gratuit-a-paris-le-7-novembre-2026-programmer-un-jeu-video-des-8-ans/ | 2026-11-04T08:27:47.912Z
 - opportunity | /articles/activites/ateliers-textiles-au-musee-bourdelle-a-paris-styliste-ou-broderie-en-famille-en-2026/ | 2026-11-04T01:30:49.478Z
 - opportunity | /articles/evenements/cerfs-volants-a-paris-le-21-novembre-2026-spectacle-ou-atelier-des-2-ans/ | 2026-11-03T19:37:26.112Z
@@ -144,9 +152,7 @@ Aucune offre directe : atelier gratuit, sans vente de billets. Un hébergement p
 - opportunity | /articles/activites/jeux-nature-gratuits-au-parc-floral-de-paris-le-18-novembre-2026-quel-jeu-selon-l-age/ | 2026-11-04T12:35:19.125Z
 - opportunity | /articles/evenements/les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille/ | 2026-10-27T13:28:21.076Z
 - opportunity | /articles/evenements/metamorphoses-2026-au-quai-branly-quels-films-choisir-avec-des-enfants/ | 2026-10-18T04:19:39.869Z
-- opportunity | /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | 2026-10-06T19:20:39.093Z
 - opportunity | /articles/bons-plans/navigo-liberte-en-famille-en-2026-tarif-enfant-passe-ou-telephone/ | 2026-10-25T10:33:30.080Z
-- opportunity | /articles/activites/noel-2026-au-5e-lieu-a-strasbourg-la-visite-disney-vaut-elle-le-detour-avec-des-enfants/ | 2026-11-03T09:41:24.597Z
 
 ### Phases 2 et 3
 
