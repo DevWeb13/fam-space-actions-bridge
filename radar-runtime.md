@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Pokémon et biodiversité à Paris le 28 novembre 2026 : atelier dessin dès 10 ans"
-subtitle: Un atelier gratuit pour relier les créatures Pokémon aux espèces réelles à la bibliothèque Gutenberg
-summary: "Le 28 novembre 2026, la bibliothèque Gutenberg propose un atelier de dessin scientifique gratuit, sur réservation, pour les enfants dès 10 ans : découvrir les animaux et plantes qui inspirent les Pokémon."
+title: "Atelier Pokémon et biodiversité à Paris : dessiner la nature le 28 novembre 2026"
+subtitle: Un atelier gratuit dès 10 ans à la bibliothèque Gutenberg, sur réservation
+summary: Le samedi 28 novembre 2026, les enfants dès 10 ans peuvent découvrir les espèces qui inspirent les Pokémon et s'initier au dessin naturaliste à l'encre de Chine à Paris 15e. Horaires, inscription et accessibilité.
 category: activites
 location:
   city: Paris
@@ -75,7 +80,7 @@ sources:
     url: https://www.paris.fr/evenements/pokemon-et-biodiversite-113313
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: pokemon-et-biodiversite-a-paris-le-28-novembre-2026-atelier-dessin-des-10-ans
   decision: Savoir si l'atelier convient à son enfant de 10 ans ou plus, où et quand se présenter et comment réserver avant de se déplacer.
@@ -85,28 +90,34 @@ radar:
     dataThrough: 2026-11-02
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Ville de Paris — Pokémon et Biodiversité »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-11-28
 ---
 
-## Mission retenue
-Atelier « Pokémon et Biodiversité », le samedi 28 novembre 2026 de 15 h à 16 h 30 à la bibliothèque Gutenberg, 8 rue de la Montagne d'Aulas, Paris 15e. Initiation au dessin naturaliste par points à l'encre de Chine, à partir des espèces animales et végétales ayant inspiré les Pokémon.
+Les Pokémon ont souvent des cousins dans le monde réel. Le samedi 28 novembre 2026, la bibliothèque Gutenberg, dans le 15e arrondissement de Paris, propose aux enfants **dès 10 ans** de découvrir ces inspirations animales et végétales en dessinant. L'atelier est **gratuit, mais la réservation est obligatoire** : mieux vaut s'inscrire avant de prévoir le déplacement.
 
-## Pourquoi cette mission
-L'événement officiel est précis, daté et encore à venir. Aucune entrée Pokémon ou bibliothèque Gutenberg dans le catalogue compact ou l'historique Radar ; le MOBE d'Orléans traite la biodiversité sous une autre intention. Les baisses d'impressions des refresh prioritaires (Lumigny, transports parisiens, Grand Noël) n'établissent pas de défaut éditorial. L'expansion depuis une page forte n'offre pas ici de décision distincte mieux étayée que cet atelier concret.
+## Observer les espèces derrière les Pokémon
 
-## Décision du lecteur
-Déterminer si l'atelier gratuit est adapté à l'âge de son enfant, réserver sa place et préparer le déplacement.
+Pendant une heure et demie, les participants explorent les liens entre créatures imaginaires et biodiversité, puis s'essaient au **dessin naturaliste par petits points à l'encre de Chine**. Cette technique permet de représenter les formes et les détails par accumulation de points plutôt que par grands traits. L'activité mêle donc culture Pokémon, observation du vivant et initiation à une pratique du dessin scientifique.
 
-## Faits à traiter
-Date, horaire 15 h–16 h 30, adresse, gratuité, âge minimum 10 ans et réservation obligatoire ; accessibilité indiquée pour plusieurs types de handicap sur la fiche officielle. Décrire le dessin à l'encre de Chine et la découverte des inspirations biologiques sans promettre un matériel offert ni une présence de personnages costumés. Vérifier les modalités de réservation auprès de la bibliothèque (01 45 54 69 76) ; ne pas inventer de places disponibles.
+Ce n'est ni une rencontre avec des personnages costumés ni une séance de jeu vidéo. Elle s'adresse surtout aux enfants qui aiment dessiner, observer la nature ou comprendre comment les créateurs puisent leurs idées dans le réel.
 
-## Sources de départ
-Ville de Paris, fiche officielle de l'événement : https://www.paris.fr/evenements/pokemon-et-biodiversite-113313 (mise à jour le 23 septembre 2026).
+## Date, adresse et réservation
 
-## Affiliation
-Aucun achat nécessaire pour l'activité. Hébergement familial dans Paris 15e uniquement comme option secondaire pour un séjour, sans prix ni disponibilité présumés ; Booking.com présente notamment Novotel Paris Centre Gare Montparnasse et YOOMA Urban Lodge Tour Eiffel.
+L'atelier se tient **samedi 28 novembre 2026, de 15 h à 16 h 30**, à la **bibliothèque Gutenberg, 8 rue de la Montagne d'Aulas, Paris 15e**.
 
-## Continuations internes
-Ne pas réécrire un guide général de transports parisiens : renvoyer à l'article Fam Space « Transports à Paris avec des enfants ». Ne pas transformer cet atelier ponctuel en guide général sur la biodiversité ni le confondre avec le MOBE d'Orléans.
+La [fiche officielle de la Ville de Paris](https://www.paris.fr/evenements/pokemon-et-biodiversite-113313) confirme la gratuité, l'âge minimum de 10 ans et l'inscription obligatoire. Pour demander une place et connaître les modalités d'inscription, contactez directement la bibliothèque au **01 45 54 69 76**. La fiche ne garantit pas de places encore disponibles : confirmez votre réservation avant de venir.
+
+Le matériel fourni, la nécessité d'être accompagné d'un adulte et les conditions d'accueil des enfants seuls ne sont pas précisés pour cette séance. Posez ces questions à la bibliothèque si elles déterminent votre venue.
+
+## Accessibilité et trajet avec des enfants
+
+La Ville de Paris indique que l'événement est accessible aux personnes à mobilité réduite ainsi qu'aux personnes présentant des déficiences auditives, visuelles ou mentales. En revanche, **l'accueil en langue des signes n'est pas disponible**. Pour un aménagement particulier, contactez l'équipe avant l'inscription.
+
+Pour rejoindre la bibliothèque, préparez le trajet à partir de votre adresse de départ et vérifiez les éventuelles perturbations du réseau. Si vous venez avec plusieurs enfants et souhaitez choisir les titres adaptés à leurs âges, consultez notre [guide des transports à Paris avec des enfants](https://www.fam-space.fr/articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/) pour les questions d'accessibilité avec poussette et les correspondances.
+
+## Prolonger la sortie pendant un séjour à Paris
+
+Pour les familles qui passent le week-end à Paris, dormir dans le 15e arrondissement peut éviter un long trajet après l'atelier. Comparez les [hébergements du 15e arrondissement sur Booking.com](https://www.booking.com/searchresults.fr.html?ss=Paris+15e+arrondissement) en vérifiant l'adresse exacte, la capacité pour les enfants, les équipements nécessaires et le prix total aux dates du séjour. Aucun hébergement ni tarif n'est garanti par la réservation de l'atelier.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
@@ -115,11 +126,10 @@ Ne pas réécrire un guide général de transports parisiens : renvoyer à l'art
 - /articles/activites/atelier-pop-up-gratuit-a-paris-le-21-novembre-2026-creer-un-livre-anime-en-famille/ | Atelier pop-up gratuit à Paris le 21 novembre 2026: créer en famille dès 7 ans | activites | Paris, Paris, Île-de-France
 - /articles/evenements/cerfs-volants-a-paris-le-21-novembre-2026-spectacle-ou-atelier-des-2-ans/ | Cerfs-volants à Paris le 21 novembre 2026: spectacle et atelier dès 2 ans | evenements | Paris, Paris, Île-de-France
 - /articles/activites/atelier-laine-cardee-de-noel-a-paris-le-2-decembre-2026-creer-ses-decorations-des-7-ans/ | Atelier laine cardée de Noël à Paris le 2 décembre 2026: décorations dès 7 ans | activites | Paris, Paris, Île-de-France
+- /articles/activites/jeux-nature-gratuits-au-parc-floral-de-paris-le-18-novembre-2026-quel-jeu-selon-l-age/ | Jeux nature gratuits au Parc floral de Paris le 18 novembre 2026 | activites | Paris, Paris, Île-de-France
 - /articles/evenements/planete-ocean-a-paris-preparer-la-visite-en-famille/ | Planète Océan à Paris: préparer la visite en famille | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/paris-plages-2026-en-famille/ | Paris Plages 2026: où se baigner et jouer avec des enfants | evenements | Paris, Paris, Île-de-France
-- /articles/activites/jeux-nature-gratuits-au-parc-floral-de-paris-le-18-novembre-2026-quel-jeu-selon-l-age/ | Jeux nature gratuits au Parc floral de Paris le 18 novembre 2026 | activites | Paris, Paris, Île-de-France
 - /articles/evenements/fete-des-rues-aux-enfants-2026-a-paris-ou-aller-selon-l-arrondissement/ | Fête des rues aux enfants 2026 à Paris: où aller selon l'arrondissement? | evenements | Paris, Paris, Île-de-France
-- /articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/ | Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite | sorties | Paris, Paris, Île-de-France
 - /articles/activites/atelier-scratch-gratuit-a-paris-le-7-novembre-2026-programmer-un-jeu-video-des-8-ans/ | Atelier Scratch gratuit à Paris le 7 novembre 2026: créer un jeu vidéo | activites | Paris, Paris, Île-de-France
 - /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | Rencontres du ciel et de l’espace 2026 à Paris: ateliers, âges et billets en famille | evenements | Paris, Paris, Île-de-France
 - /articles/activites/ateliers-textiles-au-musee-bourdelle-a-paris-styliste-ou-broderie-en-famille-en-2026/ | Ateliers textiles au musée Bourdelle à Paris: styliste ou broderie en famille | activites | Paris, Paris, Île-de-France
@@ -130,6 +140,7 @@ Ne pas réécrire un guide général de transports parisiens : renvoyer à l'art
 - /articles/bons-plans/navigo-liberte-en-famille-en-2026-tarif-enfant-passe-ou-telephone/ | Navigo Liberté+ en famille: tarifs enfants et choix du passe en 2026 | bons-plans | Paris, Paris, Île-de-France
 - /articles/sorties/l-aquarium-tropical-de-la-porte-doree-en-famille/ | L’Aquarium tropical de la Porte Dorée en famille | sorties | Paris, Paris, Île-de-France
 - /articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/ | Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | Salon du Cheval de Paris 2026 en famille: animations, jumping et billets | evenements | Paris, Paris, Île-de-France
 - /articles/activites/aquarium-de-touraine-en-famille-que-voir-avec-les-enfants/ | Aquarium de Touraine en famille: que voir avec les enfants ? | activites | Lussault-sur-Loire, Indre-et-Loire, Centre-Val de Loire
 - /articles/activites/visiter-le-museum-du-havre-avec-des-enfants-que-decouvrir/ | Visiter le Muséum du Havre avec des enfants: que découvrir ? | activites | Le Havre, Seine-Maritime, Normandie
 - /articles/activites/l-aventure-michelin-en-famille-a-clermont-ferrand/ | L’Aventure Michelin en famille à Clermont-Ferrand | activites | Clermont-Ferrand, Puy-de-Dôme, Auvergne-Rhône-Alpes
