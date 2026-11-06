@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261106-0702-titre-de-travail-logement-mal-isole-dans-le-vaucluse-comment-ameliorer",
+  "lastProcessedCommit": "af7643b5e6eefbd7e9913c595a1c566f8d8785d4"
 }
