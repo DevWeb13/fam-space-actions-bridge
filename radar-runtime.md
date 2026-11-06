@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Spectacle de Noël gratuit à Paris le 5 décembre 2026 : P'tit loup et la magie en famille"
-subtitle: Un spectacle de contes et de magie à la bibliothèque Mohammed Arkoun, sur réservation
-summary: Le 5 décembre, la bibliothèque Mohammed Arkoun propose un spectacle gratuit autour du loup, des contes et de la magie. Voici les informations pour décider d'y aller et réserver.
+title: "Spectacle de Noël gratuit à Paris le 5 décembre 2026 : P'tit loup magique"
+subtitle: Contes, humour et magie à la bibliothèque Mohammed Arkoun, sur réservation
+summary: Le samedi 5 décembre, « Mon p'tit loup magique » invite les familles à découvrir le loup autrement, entre histoires, musique et magie. Spectacle gratuit à Paris 5e, avec inscription obligatoire par courriel.
 category: evenements
 location:
   city: Paris
@@ -75,7 +80,7 @@ sources:
     url: https://www.paris.fr/evenements/spectacle-de-noel-124809
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: spectacle-de-noel-gratuit-a-paris-le-5-decembre-2026-p-tit-loup-et-la-magie-en-famille
   decision: Savoir si le spectacle de contes et de magie convient à sa famille, connaître le lieu, l'horaire et la procédure de réservation avant que les places ne soient prises.
@@ -85,28 +90,34 @@ radar:
     dataThrough: 2026-11-03
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Ville de Paris - Spectacle de Noël à la bibliothèque Mohammed Arkoun »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-05
 ---
 
-## Mission retenue
-Présenter le spectacle « P'tit loup » du samedi 5 décembre 2026, de 15 h à 16 h, à la bibliothèque Mohammed Arkoun, 74 rue Mouffetard, Paris 5e. Conte, humour, musique et magie autour de la peur du loup.
+Le samedi 5 décembre 2026, la bibliothèque Mohammed Arkoun, dans le 5e arrondissement de Paris, accueille **« Mon p'tit loup magique »**, un spectacle gratuit pour les enfants et leurs accompagnants. Pendant une heure, le personnage d'Arthur part à la rencontre d'un loup qui n'est peut-être pas aussi méchant qu'on le raconte. Pour y assister, il faut réserver par courriel auprès de la bibliothèque.
 
-## Pourquoi cette mission
-Le candidat refresh Cosquer couvre déjà les décisions essentielles sur l'âge, la poussette, les billets et la durée; sa baisse d'impressions ne révèle pas de lacune indépendante. Une expansion d'une page forte reste possible mais moins urgente qu'un spectacle gratuit à réservation ouverte depuis le 5 novembre. Le sujet est distinct des ateliers manuels de Noël récemment traités et aucun doublon direct n'apparaît dans l'historique Radar.
+## Un loup, des contes et un peu de magie
 
-## Décision du lecteur
-Comprendre ce qu'est ce spectacle, vérifier qu'il convient à ses enfants et savoir comment réserver avant le 5 décembre.
+Arthur cherche à comprendre ce qui se cache derrière la peur du loup. Sa rencontre avec l'animal, jusque dans le chapeau d'un magicien, devient une histoire d'amitié inattendue. Le spectacle mêle des récits populaires, des expressions autour du loup, de la musique, de l'humour et des tours de magie.
 
-## Faits à traiter
-Date : samedi 5 décembre 2026; horaire : 15 h-16 h; bibliothèque Mohammed Arkoun, 74 rue Mouffetard, Paris 5e; gratuit; réservation obligatoire à partir du 5 novembre, par courriel auprès de la bibliothèque selon la Ville de Paris. Aucun âge minimal précis annoncé : ne pas en inventer. Accessibilité non renseignée : ne pas présumer des aménagements.
+C'est une proposition à envisager pour les enfants qui aiment les histoires racontées sur scène. **Aucun âge minimum précis n'est indiqué** par l'organisateur : pour un très jeune enfant, mieux vaut demander directement à la bibliothèque si la représentation lui convient. Le thème de la peur du loup peut aussi mériter une petite explication avant la sortie.
 
-## Sources de départ
-Page événement officielle de la Ville de Paris ci-dessus, mise à jour le 3 novembre 2026.
+## Quand et comment réserver ?
 
-## Affiliation
-Aucune vente liée à l'activité gratuite. Ne pas ajouter d'offre d'hébergement précise sans vérification réelle de sa pertinence.
+- **Date :** samedi 5 décembre 2026.
+- **Horaire :** de 15 h à 16 h.
+- **Lieu :** bibliothèque Mohammed Arkoun, 74 rue Mouffetard, 75005 Paris.
+- **Tarif :** gratuit.
+- **Inscription :** obligatoire, uniquement par courriel, ouverte depuis le 5 novembre 2026.
 
-## Continuations internes
-Éviter de reprendre les articles d'ateliers de Noël déjà publiés; un lien interne vers une sélection d'activités familiales parisiennes peut compléter l'information si une page pertinente existe.
+Pour demander des places, écrivez à **bibliotheque.mohammed-arkoun@paris.fr**, en précisant le nombre d'adultes et d'enfants. La demande ne vaut pas confirmation : attendez le retour de la bibliothèque avant de vous déplacer. Pour une question pratique, elle est également joignable au **01 43 37 96 54**.
+
+La [fiche officielle de la Ville de Paris](https://www.paris.fr/evenements/spectacle-de-noel-124809) permet de retrouver les informations de l'événement. Elle ne précise pas les aménagements d'accessibilité pour les différents handicaps : contactez la bibliothèque si votre famille a un besoin particulier.
+
+## Prolonger la sortie dans le quartier Mouffetard
+
+La bibliothèque se trouve rue Mouffetard, dans le Quartier latin. Les familles qui viennent de loin peuvent profiter du déplacement pour se promener dans le quartier avant ou après la séance, sans prévoir une deuxième activité payante.
+
+Pour un séjour à Paris, l'[hôtel Apolonia Paris Mouffetard sur Booking.com](https://www.booking.com/hotel/fr/comfort-inn-mouffetard-quartier-latin.fr.html), au 56 rue Mouffetard, constitue une piste proche de la bibliothèque. Vérifiez la capacité exacte de la chambre selon l'âge et le nombre d'enfants, ainsi que les tarifs et disponibilités aux dates souhaitées.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
