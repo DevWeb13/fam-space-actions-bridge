@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,25 +60,18 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Transports à Paris avec des enfants: quel titre choisir pour payer juste?"
-subtitle: "Tickets, Navigo Jour, Navigo Semaine ou Paris Visite: le bon choix dépend surtout du nombre de trajets, des aéroports et des jours de séjour"
-summary: Comparez les titres de transport 2026 à Paris pour une famille selon l'âge des enfants, le nombre de trajets et l'arrivée par Orly ou CDG.
+subtitle: "Tickets, Navigo Liberté+, Navigo Jour, Semaine ou Paris Visite: comparez selon votre éligibilité, les âges et les aéroports"
+summary: Comparez les tarifs 2026 des transports parisiens en famille, y compris Navigo Liberté+ pour les personnes éligibles, selon les trajets et les aéroports.
 slug: transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste
 status: published
 publishedAt: 2026-08-29T00:00:45+02:00
 updatedAt: 2026-10-07T15:14:00+02:00
 category: voyages
-readingTime: 5
+readingTime: 6
 location:
   city: Paris
   department: Paris
@@ -82,7 +86,7 @@ image:
   alt: Quai de la station Stalingrad sur la ligne 2 du métro de Paris
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/voyages/(2026)/(08)/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/index.md
   targetSha: 8b61558b057eb75a7d983228b8f5cc6e38d986b9
@@ -108,33 +112,81 @@ radar:
       - Paris Visite ou Navigo famille
 ---
 
-## Mission retenue
-Actualiser le comparatif des transports parisiens en famille pour intégrer Navigo Liberté+ **avec ses conditions d'accès**, et non comme une option universelle pour les touristes.
+<!-- article-image-credit -->
+*Photo: [최광모](https://commons.wikimedia.org/wiki/File:Paris_Metro_-_Ligne_2_-_station_Stalingrad_platform.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le premier refresh du snapshot totalise 1 975 impressions récentes, contre 2 930 au pic, mais cette baisse ne prouve pas une perte de classement. La lacune indépendante est vérifiée dans l'article entier sur master: Navigo Liberté+ n'y figure pas, alors qu'il change le calcul pour les personnes éligibles. Une expansion depuis une page forte (par exemple Foire de Grenoble) serait moins distincte et plus saisonnière; les opportunités locales sont déjà largement couvertes dans le catalogue et l'historique. Ne pas recréer un article consacré à Liberté+, déjà publié.
+À Paris, acheter automatiquement un forfait illimité pour toute la famille n'est pas toujours le choix le plus économique. En 2026, un ticket Métro-Train-RER coûte 2,55 € au plein tarif et 1,30 € au tarif réduit. Le Navigo Jour coûte 12,30 €, tandis que Paris Visite commence à 30,60 € pour un adulte sur une journée. Pour les personnes qui résident ou travaillent en Île-de-France, Navigo Liberté+ peut aussi réduire la facture. Le bon choix dépend du nombre de déplacements, de l'âge des enfants, des dates du séjour et des trajets vers les aéroports.
 
-## Décision du lecteur
-Savoir si Liberté+ lui est réellement accessible avant de comparer le coût de ses trajets avec les tickets, Navigo Jour, Navigo Semaine et Paris Visite, selon les âges et les aéroports.
+Les montants ci-dessous proviennent des [tarifs officiels 2026 d'Île-de-France Mobilités](https://www.iledefrance-mobilites.fr/tarifs-titre-de-transport-en-commun-2026).
 
-## Faits à traiter
-- Tarifs 2026 Liberté+: métro/train/RER 2,04 € et bus/tram 1,64 € au plein tarif; 1,02 € et 0,82 € au tarif réduit sur passe, sous conditions. Plafond journalier équivalent à Navigo Jour hors dessertes aéroportuaires.
-- Éligibilité: résidence ou travail en Île-de-France; le service sur téléphone n'est pas disponible aux résidents hors région. Préciser la souscription préalable, le RIB, la facturation différée et la distinction passe/téléphone. **Ne pas présenter Liberté+ comme une solution ouverte à tous les visiteurs.**
-- Préserver les comparaisons actuelles: tickets classiques, gratuité des moins de 4 ans, réductions des 4 à moins de 10 ans, Navigo Jour/Semaine, Paris Visite, exemples chiffrés, Orly/CDG, poussette et liens internes pertinents. Recalculer seulement les exemples touchés; ne pas supprimer d'informations encore valables.
+## Pour peu de trajets, les tickets à l'unité restent souvent les plus simples
 
-## Sources de départ
-- https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/liberte-plus
-- https://www.iledefrance-mobilites.fr/aide-et-contacts/navigo-liberte-plus-sur-telephone/quelles-conditions-navigo-liberte
-- https://www.iledefrance-mobilites.fr/aide-et-contacts/navigo-liberte-plus/comment-souscrire-un-contrat-navigo-liberte-plus
-- https://www.iledefrance-mobilites.fr/tarifs-titre-de-transport-en-commun-2026
+Le Ticket Métro-Train-RER coûte 2,55 € par trajet au plein tarif. Il permet de voyager en métro, train et RER dans toute l'Île-de-France, hors dessertes des aéroports. Le Ticket Bus-Tram coûte 2,05 € au plein tarif.
 
-## Affiliation
-Aucune affiliation naturelle: le lecteur choisit un titre de transport public, pas une réservation commerciale.
+Pour un adulte qui effectue deux allers-retours en métro dans la journée, soit quatre trajets, la dépense atteint 10,20 €. Elle reste inférieure aux 12,30 € d'un Navigo Jour. À partir de cinq trajets Métro-Train-RER dans la même journée, le total des tickets à l'unité atteint 12,75 € : le Navigo Jour devient légèrement moins cher.
 
-## Continuations internes
-- Renvoyer vers /articles/bons-plans/navigo-liberte-en-famille-en-2026-tarif-enfant-passe-ou-telephone/ pour les modalités détaillées, sans les recopier.
-- Conserver les guides existants Orly/CDG pour les trajets aéroportuaires.
-- Garder le comparatif général centré sur le choix pratique et les cas où Liberté+ n'est pas accessible.
+Ces titres peuvent être chargés sur un smartphone compatible ou sur un [passe Navigo Easy](https://www.iledefrance-mobilites.fr/titres-et-tarifs/supports/passe-navigo-easy). Le passe physique coûte 2 € et chaque voyageur doit avoir son propre support pour voyager simultanément avec les autres membres de la famille.
+
+## Navigo Liberté+ : avantageux, mais pas accessible à tous les visiteurs
+
+Avant de comparer les prix, vérifiez votre éligibilité. [Île-de-France Mobilités précise](https://www.iledefrance-mobilites.fr/aide-et-contacts/navigo-liberte-plus-sur-telephone/quelles-conditions-navigo-liberte) que Navigo Liberté+ s'adresse aux personnes **résidant ou travaillant en Île-de-France**. Un touriste de passage qui ne remplit aucune de ces conditions ne doit donc pas compter sur cette formule. Le service sur téléphone n'est pas disponible aux résidents hors Île-de-France ; une personne qui habite ailleurs mais travaille dans la région peut souscrire sur passe en agence avec un justificatif de son employeur francilien.
+
+Pour une personne éligible, les [tarifs Liberté+ 2026](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/liberte-plus) sont de **2,04 € en métro, train ou RER** et **1,64 € en bus ou tram** au plein tarif. Sur passe, les personnes ayant droit au tarif réduit paient respectivement 1,02 € et 0,82 € ; **le tarif réduit n'est pas disponible sur téléphone**. La facturation intervient le mois suivant les déplacements, et la dépense quotidienne est plafonnée au prix du Navigo Jour pour les trajets ordinaires, hors liaisons aéroportuaires.
+
+Quatre trajets en métro coûtent ainsi 8,16 € avec Liberté+ contre 10,20 € en tickets classiques ; six trajets coûteraient théoriquement 12,24 €, toujours sous le plafond de 12,30 €. Contrairement au Navigo Jour acheté à l'avance, Liberté+ facture les déplacements réellement effectués, dans la limite du plafond applicable.
+
+Il faut toutefois **souscrire avant de voyager**, fournir un RIB et disposer du support adapté. La [souscription sur passe](https://www.iledefrance-mobilites.fr/aide-et-contacts/navigo-liberte-plus/comment-souscrire-un-contrat-navigo-liberte-plus) peut se faire en ligne ou dans les points d'accueil prévus ; sur téléphone, elle se fait dans l'application Île-de-France Mobilités, sous conditions. Pour les justificatifs, les modalités et le choix du support, consultez notre guide [Navigo Liberté+ en famille : tarif enfant, passe ou téléphone](/articles/bons-plans/navigo-liberte-en-famille-en-2026-tarif-enfant-passe-ou-telephone/).
+
+## Avec un enfant de moins de 10 ans, ne copiez pas forcément le choix des adultes
+
+Les enfants de moins de 4 ans voyagent gratuitement. De 4 ans à moins de 10 ans, ils bénéficient notamment de 50 % de réduction sur les tickets Métro-Train-RER, Bus-Tram et Paris Région vers les aéroports. En 2026, cela donne 1,30 € pour un trajet Métro-Train-RER et 1,05 € pour un trajet Bus-Tram. Les conditions figurent sur la [page officielle consacrée aux enfants de 4 à moins de 10 ans](https://www.iledefrance-mobilites.fr/titres-et-tarifs/tarifs-reduits/enfants-4-10-ans).
+
+Le Navigo Jour coûte 12,30 € sans tarif enfant spécifique. Une famille peut donc choisir Navigo Jour pour un adulte qui multiplie les déplacements et des tickets à tarif réduit pour un enfant qui voyage moins. Pour un enfant éligible au tarif réduit Liberté+ sur passe, il faut aussi tenir compte des conditions propres à ce contrat : ne présumez pas que le tarif réduit s'applique sur téléphone.
+
+## Navigo Jour devient intéressant lors d'une journée très mobile
+
+Le Navigo Jour coûte 12,30 € en 2026 et permet des déplacements illimités dans les zones 1 à 5 pendant une journée. Il couvre métro, train, RER, tram et bus, mais pas les dessertes aéroportuaires concernées vers Orly ou Charles-de-Gaulle.
+
+Pour une journée comprenant plusieurs quartiers éloignés, des retours à l'hôtel ou un programme susceptible de changer, l'illimité évite de compter chaque déplacement. Pour deux ou trois trajets en métro, les tickets restent généralement moins chers. Une personne déjà abonnée à Liberté+ bénéficie quant à elle du plafonnement quotidien sans avoir à acheter Navigo Jour.
+
+## Pour plusieurs jours du lundi au dimanche, vérifiez Navigo Semaine avant Paris Visite
+
+Le [Navigo Semaine](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/forfait-navigo-semaine) coûte 32,40 € toutes zones en 2026. C'est un tarif compétitif pour un séjour avec de nombreux déplacements, mais il fonctionne sur une semaine fixe du lundi au dimanche, et non pendant sept jours glissants à compter de l'achat.
+
+En toutes zones, il couvre métro, train et RER dans les zones 1 à 5, notamment Orly par la ligne 14 et Charles-de-Gaulle par le RER B. Orlyval reste exclu.
+
+Un séjour du lundi au vendredi entre dans une seule période de validité. Un séjour du vendredi au mardi chevauche deux semaines et rend la formule moins évidente.
+
+Pour un visiteur qui souhaite un support physique, le [passe Navigo Découverte](https://www.iledefrance-mobilites.fr/titres-et-tarifs/supports/passe-navigo-decouverte) est destiné notamment aux touristes et visiteurs. Il coûte 5 €, est personnel et nécessite nom, prénom et photo.
+
+## Paris Visite devient surtout pertinent quand ses avantages correspondent au séjour
+
+Le forfait [Paris Visite](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/forfait-paris-visite) est valable pendant 1, 2, 3 ou 5 jours consécutifs dans toute l'Île-de-France. En 2026, il coûte 30,60 € pour 1 jour, 45,40 € pour 2 jours, 63,80 € pour 3 jours et 78 € pour 5 jours au tarif adulte. Les enfants de 4 ans à moins de 10 ans bénéficient du demi-tarif.
+
+Son avantage pratique face au Navigo Jour et aux tickets classiques est d'inclure les dessertes d'Orly et de Charles-de-Gaulle ainsi que l'ensemble des zones 1 à 5. Il peut devenir cohérent avec un aéroport et plusieurs déplacements lointains, par exemple Versailles ou Disneyland Paris, surtout si les dates rendent Navigo Semaine peu avantageux.
+
+Si Disneyland fait partie du voyage, chiffrez séparément cette étape avec notre guide [Disneyland Paris en famille : combien de jours, quel hôtel et quel budget prévoir](/articles/voyages/disneyland-paris-en-famille-en-2026-combien-de-jours-quel-hotel-et-quel-budget-prevoir/).
+
+Pour une journée à La Villette, notre guide [Cité des sciences en famille : billets, espaces enfants et organisation de la visite](/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/) aide à construire le programme autour d'un créneau de visite.
+
+## Arrivée par Orly ou CDG : ajoutez le coût de l'aéroport avant de comparer
+
+Le [Ticket Paris Région Aéroports](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/ticket-paris-region-aeroports) coûte 14 € par trajet au plein tarif et 7 € au tarif réduit. Il concerne notamment Orly via la ligne 14 ou Orlyval et Charles-de-Gaulle via le RER B. Navigo Liberté+ facture également les trajets aéroportuaires concernés à part : ils ne bénéficient pas du plafond journalier ordinaire.
+
+Pour préparer ces liaisons avec enfants, poussette et bagages, consultez nos guides pour [rejoindre Orly en métro 14, Orlyval ou taxi](/articles/voyages/aeroport-d-orly-avec-des-enfants-metro-14-orlyval-ou-taxi/) et [rejoindre Roissy-CDG en RER B, bus 9517 ou taxi](/articles/voyages/rejoindre-l-aeroport-paris-cdg-en-famille-rer-b-bus-9517-ou-taxi/).
+
+Pour un adulte, un aller-retour aéroport représente 28 € à lui seul. Il faut l'ajouter au coût des déplacements urbains lorsque le titre choisi ne couvre pas ces liaisons.
+
+Exemple : sur deux jours, deux Navigo Jour coûtent 24,60 €. Avec un aller-retour aéroport à 28 €, le total atteint 52,60 € par adulte. Paris Visite 2 jours coûte 45,40 € et inclut les dessertes d'aéroport : dans ce scénario, il revient 7,20 € moins cher, avant ses éventuels avantages culturels ou commerciaux.
+
+Si vous arrivez tôt ou repartez tard avec les valises, notre guide [consigne à bagages à Paris en famille : gare ou dépôt en ville ?](/articles/vie-pratique/consigne-a-bagages-a-paris-en-famille-gare-ou-depot-en-ville/) compare les solutions selon le quartier et le temps disponible.
+
+## La règle pratique avant d'acheter
+
+Commencez par vérifier si chaque personne est éligible à Liberté+ ; ce n'est pas une formule universelle pour les touristes. Sinon, comptez les trajets prévus : quelques déplacements favorisent les tickets à l'unité ; une journée chargée peut justifier Navigo Jour ; plusieurs jours dans la même semaine invitent à regarder Navigo Semaine ; un séjour court avec aéroport peut rendre Paris Visite intéressant.
+
+Ne choisissez pas un titre unique pour toute la famille par réflexe. Gratuité des moins de 4 ans, réductions des 4 à moins de 10 ans, accès à Liberté+ et dates de voyage peuvent conduire à des choix différents pour adultes et enfants.
 
 ## Article source exact à préserver et améliorer
 
@@ -241,6 +293,8 @@ Ne choisissez pas un seul titre pour toute la famille par réflexe. Avec la grat
 - /articles/activites/atelier-des-lumieres-avec-un-enfant-quel-programme-choisir-et-peut-on-venir-avec-une-poussette/ | Atelier des Lumières avec un enfant: quel programme choisir et peut-on venir avec une poussette ? | activites | Paris, Paris, Île-de-France
 - /articles/activites/atelier-laine-cardee-de-noel-a-paris-le-2-decembre-2026-creer-ses-decorations-des-7-ans/ | Atelier laine cardée de Noël à Paris le 2 décembre 2026: décorations dès 7 ans | activites | Paris, Paris, Île-de-France
 - /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
+- /articles/sorties/soiree-jeux-gratuite-a-paris-le-21-novembre-2026-jeux-video-et-jeux-de-societe-en-famille/ | Soirée jeux gratuite à Paris le 21 novembre 2026: jeux vidéo et jeux de société en famille | sorties | Paris, Paris, Île-de-France
+- /articles/activites/atelier-calder-gratuit-a-paris-le-14-novembre-2026-creer-un-mobile-des-5-ans/ | Atelier Calder à Paris le 14 novembre 2026: fabriquer un mobile dès 5 ans | activites | Paris, Paris, Île-de-France
 - /articles/evenements/contes-gratuits-a-paris-le-14-novembre-2026-quel-spectacle-choisir-selon-l-age/ | Contes gratuits à Paris le 14 novembre 2026: trois rendez-vous en famille | evenements | Paris, Paris, Île-de-France
 - /articles/activites/pokemon-et-biodiversite-a-paris-le-28-novembre-2026-atelier-dessin-des-10-ans/ | Atelier Pokémon et biodiversité à Paris le 28 novembre 2026: dessin dès 10 ans | activites | Paris, Paris, Île-de-France
 - /articles/activites/atelier-omamori-gratuit-a-paris-le-21-novembre-2026-creer-une-amulette-japonaise-des-7-ans/ | Atelier omamori gratuit à Paris le 21 novembre 2026: créer une amulette dès 7 ans | activites | Paris, Paris, Île-de-France
@@ -249,8 +303,6 @@ Ne choisissez pas un seul titre pour toute la famille par réflexe. Avec la grat
 - /articles/activites/atelier-pop-up-gratuit-a-paris-le-21-novembre-2026-creer-un-livre-anime-en-famille/ | Atelier pop-up gratuit à Paris le 21 novembre 2026: créer en famille dès 7 ans | activites | Paris, Paris, Île-de-France
 - /articles/activites/jeux-nature-gratuits-au-parc-floral-de-paris-le-18-novembre-2026-quel-jeu-selon-l-age/ | Jeux nature gratuits au Parc floral de Paris le 18 novembre 2026 | activites | Paris, Paris, Île-de-France
 - /articles/activites/atelier-scratch-gratuit-a-paris-le-7-novembre-2026-programmer-un-jeu-video-des-8-ans/ | Atelier Scratch gratuit à Paris le 7 novembre 2026: créer un jeu vidéo | activites | Paris, Paris, Île-de-France
-- /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | Rencontres du ciel et de l’espace 2026 à Paris: ateliers, âges et billets en famille | evenements | Paris, Paris, Île-de-France
-- /articles/activites/ateliers-textiles-au-musee-bourdelle-a-paris-styliste-ou-broderie-en-famille-en-2026/ | Ateliers textiles au musée Bourdelle à Paris: styliste ou broderie en famille | activites | Paris, Paris, Île-de-France
 - /articles/voyages/la-parata-et-les-iles-sanguinaires-en-famille-balades-et-sortie-en-mer/ | La Parata et les îles Sanguinaires en famille: balades et sortie en mer | voyages | Ajaccio, Corse-du-Sud, Corse
 - /articles/voyages/pont-de-gau-en-famille-en-automne-et-en-hiver-flamants-roses-et-marais/ | Pont de Gau en famille en automne et en hiver: flamants roses et marais | voyages | Saintes-Maries-de-la-Mer, Bouches-du-Rhône, Provence-Alpes-Côte d’Azur
 - /articles/voyages/domaine-de-chaalis-en-famille-que-visiter-pendant-les-travaux/ | Domaine de Chaalis en famille: que visiter pendant les travaux ? | voyages | Fontaine-Chaalis, Oise, Hauts-de-France
@@ -258,12 +310,12 @@ Ne choisissez pas un seul titre pour toute la famille par réflexe. Avec la grat
 
 ### Historique Radar lié
 
+- opportunity | /articles/activites/atelier-calder-gratuit-a-paris-le-14-novembre-2026-creer-un-mobile-des-5-ans/ | 2026-11-05T16:36:05.180Z
 - opportunity | /articles/activites/atelier-couture-gratuit-a-paris-le-28-novembre-2026-creer-en-famille-des-8-ans/ | 2026-11-05T04:36:26.347Z
 - opportunity | /articles/activites/atelier-laine-cardee-de-noel-a-paris-le-2-decembre-2026-creer-ses-decorations-des-7-ans/ | 2026-11-04T18:34:22.540Z
 - opportunity | /articles/activites/atelier-omamori-gratuit-a-paris-le-21-novembre-2026-creer-une-amulette-japonaise-des-7-ans/ | 2026-11-05T07:29:24.731Z
 - opportunity | /articles/activites/atelier-pop-up-gratuit-a-paris-le-21-novembre-2026-creer-un-livre-anime-en-famille/ | 2026-11-04T15:34:37.269Z
 - opportunity | /articles/activites/atelier-scratch-gratuit-a-paris-le-7-novembre-2026-programmer-un-jeu-video-des-8-ans/ | 2026-11-04T08:27:47.912Z
-- opportunity | /articles/activites/ateliers-textiles-au-musee-bourdelle-a-paris-styliste-ou-broderie-en-famille-en-2026/ | 2026-11-04T01:30:49.478Z
 - opportunity | /articles/evenements/contes-gratuits-a-paris-le-14-novembre-2026-quel-spectacle-choisir-selon-l-age/ | 2026-11-05T13:27:24.356Z
 - opportunity | /articles/evenements/contes-gratuits-a-paris-le-14-novembre-2026-quelle-seance-choisir-en-famille/ | 2026-11-05T00:34:45.481Z
 - opportunity | /articles/evenements/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/ | 2026-11-04T21:32:12.180Z
