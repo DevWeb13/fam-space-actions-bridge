@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Lecture d'hiver gratuite à Paris le 12 décembre 2026 : deux séances pour les 1-3 ans"
-subtitle: À la bibliothèque Astrid Lindgren, inscription dès le 28 novembre
-summary: Deux rendez-vous de lecture autour de l'arrivée de l'hiver pour les enfants de 1 à 3 ans accompagnés d'un adulte, gratuits sur réservation dans le 19e arrondissement.
+subtitle: À la bibliothèque Astrid Lindgren, inscriptions ouvertes le 28 novembre
+summary: Le Samedi des tout-petits propose deux lectures gratuites sur l'arrivée de l'hiver, le 12 décembre à Paris 19e. Horaires, âge et réservation pour préparer la sortie.
 category: activites
 location:
   city: Paris
@@ -75,7 +80,7 @@ sources:
     url: https://www.paris.fr/evenements/samedi-des-tout-petits-123218
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: lecture-d-hiver-gratuite-a-paris-le-12-decembre-2026-deux-seances-pour-les-1-3-ans
   decision: Choisir la séance de lecture adaptée à son enfant de 1 à 3 ans et savoir quand et comment réserver avant le 12 décembre.
@@ -85,28 +90,37 @@ radar:
     dataThrough: 2026-11-03
     signal: seasonal_opportunity
     basis: Opportunité saisonnière vérifiée via « Ville de Paris — Samedi des tout-petits »; aucune page forte GSC n'est requise.
+eventEndsAt: 2026-12-12
 ---
 
-## Mission retenue
-Présenter le « Samedi des tout-petits » du 12 décembre 2026 à la bibliothèque Astrid Lindgren, 42 rue Petit, Paris 19e : deux séances de lecture pour les 1-3 ans sur le thème de l'arrivée de l'hiver.
+Le samedi 12 décembre 2026, la bibliothèque Astrid Lindgren, dans le 19e arrondissement de Paris, accueille les enfants de **1 à 3 ans accompagnés d'un adulte** pour un moment de lecture autour de la fin de l'automne et de l'arrivée de l'hiver. Deux séances gratuites sont proposées, mais **l'inscription est obligatoire à partir du 28 novembre**.
 
-## Pourquoi cette mission
-Les principaux refresh GSC signalent des pertes d'impressions sans lacune éditoriale démontrée. L'expansion d'une page forte n'offre pas ici une décision aussi distincte et datée. Cette lecture pour les 1-3 ans répond à un autre public et à une autre activité que les ateliers manuels et spectacles de Noël récemment retenus. Vérifier le doublon exact avant rédaction.
+## Quelle séance choisir ?
 
-## Décision du lecteur
-Choisir entre 10 h 15–10 h 55 et 11 h–11 h 45 et anticiper l'inscription qui ouvre le 28 novembre.
+Les deux créneaux annoncés par la Ville de Paris ont des durées légèrement différentes :
 
-## Faits à traiter
-Samedi 12 décembre 2026; deux créneaux distincts; gratuit; réservation obligatoire à partir du 28 novembre; public 1-3 ans accompagné; bibliothèque Astrid Lindgren, 42 rue Petit, Paris 19e. Accessibilité PMR annoncée; autres handicaps non renseignés. Ne pas promettre de places disponibles.
+- **10 h 15 à 10 h 55** : 40 minutes de lecture.
+- **11 h à 11 h 45** : 45 minutes de lecture.
 
-## Sources de départ
-Ville de Paris : https://www.paris.fr/evenements/samedi-des-tout-petits-123218
+Le thème et la tranche d'âge sont identiques. Choisissez donc surtout selon le rythme de votre enfant, notamment son heure habituelle de sieste ou de repas. La Ville de Paris ne précise pas de différence de programme entre les deux séances.
 
-## Affiliation
-Aucun billet payant pour cette activité. Une recherche Booking.com confirme des hébergements dans le 19e, sans offre datée ni hébergement familial précis vérifié : ne pas forcer une recommandation.
+Il s'agit d'un rendez-vous de lecture partagé avec les tout-petits et leurs accompagnants, et non d'un atelier de bricolage. Le programme est consacré à l'arrivée de l'hiver, sans liste de livres annoncée.
 
-## Continuations internes
-Ne pas répéter les guides généraux de sorties parisiennes. Ne pas confondre cette lecture 1-3 ans avec les ateliers de bricolage de Noël du 19 décembre ou les spectacles pour les plus grands. Lier une page Fam Space existante seulement si elle aide réellement à organiser le trajet ou une autre activité.
+## Comment réserver sa place ?
+
+Les inscriptions ouvrent **le samedi 28 novembre 2026**. L'événement est gratuit, mais accessible uniquement sur réservation : il ne faut pas compter sur une entrée libre le jour même.
+
+Consultez la [fiche officielle du Samedi des tout-petits](https://www.paris.fr/evenements/samedi-des-tout-petits-123218) pour les indications actualisées. Si la procédure d'inscription n'y est pas précisée, contactez directement la bibliothèque au **01 42 45 56 40**. Les places disponibles ne sont pas confirmées à ce stade.
+
+## Où se rendre avec un jeune enfant ?
+
+**Bibliothèque Astrid Lindgren — 42 rue Petit, 75019 Paris.** L'activité se déroule à l'intérieur, ce qui évite de dépendre de la météo de décembre.
+
+La fiche de la Ville de Paris indique un accès pour les personnes à mobilité réduite. Elle ne renseigne pas l'accessibilité pour les déficiences auditives, visuelles ou mentales et précise que l'accueil en langue des signes n'est pas disponible. Pour un besoin particulier, mieux vaut joindre la bibliothèque avant de se déplacer.
+
+Si vous venez avec une poussette et devez choisir vos transports, notre guide [Paris avec une poussette : métro, RER, bus ou tram ?](https://www.fam-space.fr/articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/) aide à préparer un itinéraire adapté.
+
+Pour les familles qui prolongent leur passage à Paris, il est possible de [consulter les hébergements du 19e arrondissement](https://www.booking.com/district/fr/paris/buttes-chaumont.fr.html) en précisant les dates du séjour et le nombre d'enfants. Les disponibilités, équipements pour bébé et tarifs pour le 12 décembre restent à vérifier avant toute réservation.
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
