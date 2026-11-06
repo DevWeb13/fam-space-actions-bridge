@@ -2179,7 +2179,7 @@ export function probableDuplicates(subject, catalog, limit = 5) {
 ### Publication en cours
 
 - Branche: automation/publication-20261106-1503-titre-de-travail-paleospace-de-villers-sur-mer-en-famille-dinosaures-p
-- HEAD: publication: phase 2 20261106-1503-titre-de-travail-paleospace-de-villers-sur-mer-en-famille-dinosaures-p
+- HEAD: publication: phase 3 20261106-1503-titre-de-travail-paleospace-de-villers-sur-mer-en-famille-dinosaures-p
 
 ---
 category: "sorties"
@@ -2248,6 +2248,10 @@ Les **falaises des Vaches Noires** sont encore plus directement liées aux colle
 Le [Paléospace propose des découvertes guidées des falaises](https://www.paleospace-villers.fr/activite/visite-guidee-les-falaises-des-vaches-noires/), uniquement lorsque les marées le permettent. Vérifiez la programmation et la réservation plutôt que de prévoir cette activité comme une étape garantie.
 
 Si la météo se dégrade, restez sur le musée et, si une séance est disponible, le planétarium: la sortie conserve tout son intérêt sans accès aux falaises.
+
+## Prolonger la visite le temps d'un week-end
+
+Si vous venez de plus loin, dormir à Villers-sur-Mer permet de profiter du Paléospace sans précipitation et de garder une autre demi-journée pour le marais ou la plage. Pour préparer ce séjour, [comparez les hébergements à Villers-sur-Mer sur Booking.com](https://www.booking.com/city/fr/villers-sur-mer.fr.html), notamment l'ibis Styles Deauville Villers Plage et l'Hôtel Outre-Mer - Villa Le Couchant. Vérifiez les chambres adaptées à votre famille et les disponibilités à vos dates.
 
 ## Horaires de novembre et décembre 2026
 
