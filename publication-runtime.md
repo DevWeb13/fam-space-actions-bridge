@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,88 +14,141 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Calvados
 - Région: Normandie
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Titre de travail :** Paléospace de Villers-sur-Mer en famille : dinosaures, planétarium et balade sur les traces des fossiles.
-
-**Angle :** Construire une sortie scientifique complète et adaptable à l'âge des enfants, en distinguant la visite du musée, les séances du planétarium et les découvertes autour des falaises des Vaches Noires. Le Paléospace est un musée de sciences naturelles de Villers-sur-Mer (Calvados) consacré notamment aux fossiles jurassiques, aux dinosaures, au méridien de Greenwich et au marais littoral. Il reste ouvert certains jours en automne et en hiver, notamment les week-ends de novembre 2026.
-
-## Besoin du lecteur
-Comprendre ce que les enfants verront réellement, les activités possibles selon leur âge, les différences entre les billets musée/planétarium/Mission Jurassique, les durées, les horaires saisonniers et les solutions d'accès. Savoir comment prolonger la découverte dans la station sans présenter la recherche de fossiles sur les falaises comme une activité libre sans précautions ni réglementation.
-
-## Valeur éditoriale
-- Parcours cohérent du Jurassique à la découverte du littoral actuel : fossiles et reconstitutions, planétarium, marais et paysage des Vaches Noires.
-- Distinguer les âges : musée accessible aux plus jeunes ; Mission Jurassique à partir de 7 ans ; planétarium généralement à partir de 7 ans, certaines séances dès 4 ans, adulte obligatoire.
-- Donner des choix de visite selon la météo et le temps disponible ; visite libre conseillée d'environ 1 h 15.
-- Vérifier le calendrier précis avant le départ : du 2 au 30 novembre 2026, ouverture annoncée le week-end et le 11 novembre ; décembre avec horaires différents. Ne pas recopier des horaires génériques périmés.
-- Éviter de réduire l'article à une grille tarifaire, déjà disponible sur le site officiel.
-
-## Affiliation
-- **Billetterie principale :** aucune offre Paléospace confirmée chez GetYourGuide ou Tiqets lors de la recherche ciblée ; orienter vers la billetterie officielle pour cette activité, sans prétendre à une offre partenaire.
-- **Booking.com — hôtels à Villers-sur-Mer :** https://www.booking.com/city/fr/villers-sur-mer.fr.html ; établissements affichés dont ibis Styles Deauville Villers Plage et Hôtel Outre-Mer - Villa Le Couchant. Piste pertinente pour une famille transformant la sortie en week-end ; disponibilité et tarif à confirmer selon les dates.
-- **Booking.com — hébergements familiaux :** https://www.booking.com/family/city/fr/villers-sur-mer.fr.html ; recherche dédiée aux séjours avec enfants.
-- **Abritel — locations de vacances à Villers-sur-Mer :** https://www.abritel.fr/d/5008/villers-sur-mer ; appartements et maisons proposés pour un séjour familial, disponibilité selon dates. Alternative secondaire à l'hôtel, à utiliser seulement si utile au lecteur.
-
-## Sources de départ
-- Paléospace, présentation officielle : https://www.paleospace-villers.fr/
-- Paléospace, tarifs et âges des activités : https://www.paleospace-villers.fr/tarifs/
-- Paléospace, horaires, accès, stationnement et accessibilité : https://www.paleospace-villers.fr/horaires/
-- Office de tourisme Normandie Cabourg Pays d'Auge, calendrier détaillé 2026 : https://www.normandie-cabourg-paysdauge-tourisme.fr/patrimoine-culturel/le-paleospace-musee-de-france/
-- Réseau des musées de Normandie, collections et parcours : https://www.musees-normandie.fr/musees-normandie/paleospace/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "sorties"
+title: "Paléospace de Villers-sur-Mer en famille: fossiles, planétarium et visites"
+subtitle: "Quel parcours choisir selon l'âge des enfants, et comment prolonger la découverte sur le littoral normand ?"
+summary: "Musée, réalité virtuelle, planétarium et falaises des Vaches Noires: préparez une sortie au Paléospace adaptée aux enfants, aux horaires et à la météo."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Paléospace Villers-sur-Mer famille"
+  - "musée dinosaures Calvados"
+  - "falaises des Vaches Noires enfants"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Villers-sur-Mer"
+  department: "Calvados"
+  region: "Normandie"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Paléospace - visite libre du musée"
+    url: "https://www.paleospace-villers.fr/activite/visite-libre-du-musee/"
+  - title: "Paléospace - tarifs et conditions d'âge"
+    url: "https://www.paleospace-villers.fr/tarifs/"
+  - title: "Paléospace - Mission Jurassique"
+    url: "https://www.paleospace-villers.fr/activite/mission-jurassique-realite-virtuelle/"
+  - title: "Paléospace - agenda et réservations"
+    url: "https://www.paleospace-villers.fr/agenda/"
+  - title: "Paléospace - horaires et accès"
+    url: "https://www.paleospace-villers.fr/horaires/"
+  - title: "Normandie Cabourg Pays d'Auge Tourisme - calendrier du Paléospace"
+    url: "https://www.normandie-cabourg-paysdauge-tourisme.fr/patrimoine-culturel/le-paleospace-musee-de-france/"
+  - title: "Paléospace - visites des falaises des Vaches Noires"
+    url: "https://www.paleospace-villers.fr/activite/visite-guidee-les-falaises-des-vaches-noires/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Villers-sur-Mer, entre Deauville et Houlgate dans le Calvados, le Paléospace fait découvrir aux familles une Normandie bien différente de celle d'aujourd'hui: celle des mers du Jurassique, peuplées de reptiles marins. Ce musée de sciences naturelles permet de voir de vrais fossiles, de comprendre les dinosaures de la région et, selon la programmation, de voyager sous la coupole d'un planétarium.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+La bonne formule dépend surtout de l'âge des enfants. La visite libre suffit déjà pour une sortie réussie; les expériences supplémentaires demandent de vérifier les séances disponibles.
+
+## Ce que les enfants découvrent dans le musée
+
+La galerie du Jurassique présente notamment des ammonites et des reptiles marins dont les fossiles proviennent des falaises des Vaches Noires, situées entre Villers-sur-Mer et Houlgate. Les espaces consacrés aux dinosaures de Normandie, au méridien de Greenwich et au marais littoral élargissent la découverte: on passe de la vie ancienne à la géographie et à la nature actuelle.
+
+Les enfants de **4 à 6 ans** peuvent suivre un livret-jeu de piste; à partir de **7 ans**, un jeu sur tablette est proposé. Ces supports sont inclus sans supplément dans la visite libre, selon la [présentation officielle du musée](https://www.paleospace-villers.fr/activite/visite-libre-du-musee/). Ils aident à garder un fil conducteur sans imposer aux plus jeunes une longue visite guidée.
+
+Prévoyez environ **1 h 15** pour la visite libre, davantage si les enfants s'arrêtent longuement devant les fossiles ou les dispositifs interactifs.
+
+## Planétarium ou Mission Jurassique: deux expériences différentes
+
+Le **planétarium** propose un voyage commenté dans le ciel et l'Univers sous une coupole immersive. Les séances ordinaires sont accessibles à partir de **7 ans**, mais certains programmes, notamment « Noisettes » ou « H2O », sont proposés dès **4 ans**. Un adulte doit accompagner les enfants.
+
+**Mission Jurassique** ne se déroule pas sous le planétarium: cette activité associe un casque de réalité virtuelle, une plongée imaginaire parmi les animaux préhistoriques et un temps d'initiation avec un médiateur scientifique. Elle dure environ **30 minutes**, dont 8 minutes en réalité virtuelle, et est accessible dès **7 ans**, avec un adulte. La [réservation est obligatoire](https://www.paleospace-villers.fr/activite/mission-jurassique-realite-virtuelle/).
+
+Ne supposez pas que ces deux activités sont proposées à chaque ouverture du musée: consultez l'[agenda des séances](https://www.paleospace-villers.fr/agenda/) avant d'organiser votre journée. La visite libre du musée, elle, ne nécessite pas de réservation.
+
+## Quel billet choisir ?
+
+Pour une première visite avec de jeunes enfants, le billet **musée seul** est souvent le choix le plus simple: **9,90 € par adulte**, **7,90 € en tarif enfant ou réduit**, ou **30 € pour un forfait famille de quatre personnes, dont deux adultes au maximum**.
+
+Si vos enfants ont l'âge requis et qu'une séance leur convient, le billet **musée + planétarium** coûte **16,50 € par adulte** et **13,50 € au tarif réduit**. Le billet **musée + Mission Jurassique** est affiché à **14,50 € par adulte** et **12,50 € en tarif réduit**. Le planétarium seul dispose aussi de son propre billet.
+
+Ces tarifs, relevés sur la [grille officielle du Paléospace](https://www.paleospace-villers.fr/tarifs/), peuvent évoluer. Le tarif réduit concerne notamment les enfants de 4 à 14 ans; vérifiez les autres conditions avant d'acheter. La billetterie du musée ferme une heure avant l'établissement.
+
+## Prolonger la sortie: marais ou falaises des Vaches Noires ?
+
+Par beau temps, la visite peut se poursuivre autour du **marais littoral de Villers-sur-Mer**, pour observer un milieu naturel très différent des salles du musée. C'est une manière accessible de relier les explications scientifiques à un paysage réel.
+
+Les **falaises des Vaches Noires** sont encore plus directement liées aux collections: ce gisement célèbre conserve des traces de la mer jurassique. Mais il ne faut pas assimiler cette découverte à une chasse aux fossiles libre au pied des parois. Les falaises présentent des risques d'éboulement, les marées peuvent rendre certains passages dangereux et le site fait l'objet de règles de protection. Restez à distance des parois, respectez les restrictions locales et privilégiez une **sortie encadrée**, avec un guide qui connaît les conditions du jour.
+
+Le [Paléospace propose des découvertes guidées des falaises](https://www.paleospace-villers.fr/activite/visite-guidee-les-falaises-des-vaches-noires/), uniquement lorsque les marées le permettent. Vérifiez la programmation et la réservation plutôt que de prévoir cette activité comme une étape garantie.
+
+Si la météo se dégrade, restez sur le musée et, si une séance est disponible, le planétarium: la sortie conserve tout son intérêt sans accès aux falaises.
+
+## Horaires de novembre et décembre 2026
+
+Le calendrier publié par [l'office de tourisme Normandie Cabourg Pays d'Auge](https://www.normandie-cabourg-paysdauge-tourisme.fr/patrimoine-culturel/le-paleospace-musee-de-france/) annonce:
+
+- **Du 2 au 30 novembre 2026**: ouverture les samedis et dimanches de **10 h à 18 h**, ainsi que le **11 novembre**.
+- **Du 1er au 18 décembre 2026**: les mercredis, samedis et dimanches de **10 h à 18 h**.
+- **Du 19 décembre 2026 au 3 janvier 2027**: ouverture quotidienne de **10 h à 18 h**, sauf le **25 décembre**; le **1er janvier**, ouverture de **13 h à 18 h**.
+
+Ces créneaux concernent l'ouverture du musée, pas nécessairement toutes les activités. Vérifiez les [horaires officiels](https://www.paleospace-villers.fr/horaires/) et les séances avant de partir, particulièrement pendant les vacances.
+
+## Accès et conseils pratiques
+
+Le musée se trouve au **5 avenue Jean-Moulin, 14640 Villers-sur-Mer**. En voiture, le **parking sud du Paléospace est gratuit toute l'année**, selon les [informations d'accès du musée](https://www.paleospace-villers.fr/horaires/). Pour une visite avec poussette ou des besoins spécifiques d'accessibilité, mieux vaut demander confirmation des conditions de circulation et des activités choisies au **02 31 81 77 60**.
+
+Pour une sortie courte, privilégiez le musée et son parcours-jeu. Avec des enfants plus grands, ajoutez une activité réservée à l'avance. Et si vous souhaitez découvrir les fossiles sur le terrain, gardez cette partie pour une sortie guidée, compatible avec les marées et la météo.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -124,4 +177,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
