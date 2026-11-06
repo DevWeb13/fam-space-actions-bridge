@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,23 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Atelier musical gratuit à Paris le 18 novembre 2026 : fabriquer un bâton de pluie dès 6 ans"
-subtitle: Une heure de création musicale à la bibliothèque Buffon, sur inscription
-summary: Le 18 novembre 2026, la bibliothèque Buffon propose aux enfants dès 6 ans de fabriquer un bâton de pluie pendant le festival Monte le son. L'atelier est gratuit, avec inscription obligatoire.
+subtitle: À la bibliothèque Buffon, une heure pour créer son instrument pendant Monte le son
+summary: Mercredi 18 novembre, les enfants dès 6 ans peuvent fabriquer gratuitement un bâton de pluie à la bibliothèque Buffon, dans le 5e arrondissement de Paris. L'atelier dure de 16 h à 17 h et nécessite une inscription préalable.
 category: activites
 location:
   city: Paris
@@ -75,7 +80,7 @@ sources:
     url: https://www.paris.fr/evenements/l-atelier-du-mercredi-novembre-2026-fabrique-ton-instrument-114832
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: opportunity
   slug: atelier-musical-gratuit-a-paris-le-18-novembre-2026-fabriquer-un-baton-de-pluie-des-6-ans
   decision: Savoir si l'atelier de fabrication d'un bâton de pluie convient à son enfant dès 6 ans et comment réserver sa place pour le 18 novembre.
@@ -85,28 +90,40 @@ radar:
     dataThrough: 2026-11-03
     signal: seasonal_opportunity
     basis: "Opportunité saisonnière vérifiée via « Ville de Paris - L'atelier du mercredi : Fabrique ton instrument »; aucune page forte GSC n'est requise."
+eventEndsAt: 2026-11-18
 ---
 
-## Mission retenue
-Présenter l'atelier gratuit de fabrication d'un bâton de pluie, mercredi 18 novembre 2026 à la bibliothèque Buffon, dans le cadre du festival Monte le son.
+Envie de faire découvrir la musique à votre enfant autrement qu'en écoutant un concert ? **Mercredi 18 novembre 2026, de 16 h à 17 h**, la bibliothèque Buffon, à Paris, invite les enfants **dès 6 ans** à fabriquer un bâton de pluie. Cet atelier du festival *Monte le son* est **gratuit, mais la réservation est obligatoire**.
 
-## Pourquoi cette mission
-Le premier refresh GSC, transports parisiens avec enfants, présente une baisse d'impressions sans cause éditoriale établie et a déjà été travaillé récemment. L'expansion d'une page forte demande une intention supplémentaire clairement distincte. Cette activité datée, encore à venir, possède une décision concrète, une source municipale précise et un sujet musical différent des récentes lectures et activités de Noël.
+## Un instrument à fabriquer soi-même
 
-## Décision du lecteur
-Vérifier que l'enfant a au moins 6 ans, que le créneau convient et savoir comment s'inscrire avant de se déplacer.
+Le bâton de pluie est un instrument qui produit un son évoquant la pluie lorsqu'on le retourne. Pendant cet atelier créatif, les enfants sont invités à fabriquer le leur : une façon concrète d'aborder les sons et la musique en manipulant un objet.
 
-## Faits à traiter
-Mercredi 18 novembre 2026, 16 h à 17 h, bibliothèque Buffon, 15 bis rue Buffon, Paris 5e, section jeunesse au deuxième étage. Atelier de fabrication d'un bâton de pluie, gratuit, inscription obligatoire sur place ou au 01 55 43 25 25. Accessibilité PMR annoncée ; autres formes d'accessibilité indiquées comme non accessibles sur la fiche. Ne pas promettre de places disponibles ni de matériel supplémentaire.
+L'activité se tient dans la **section jeunesse, au deuxième étage** de la bibliothèque Buffon. La fiche municipale ne précise ni le détail des étapes de fabrication ni le matériel à apporter : mieux vaut demander à la bibliothèque lors de l'inscription plutôt que prévoir des fournitures particulières.
 
-## Sources de départ
-Ville de Paris : https://www.paris.fr/evenements/l-atelier-du-mercredi-novembre-2026-fabrique-ton-instrument-114832
+## Comment réserver une place ?
 
-## Affiliation
-Pas de billet payant. Hébergement facultatif pour les familles en séjour : Hôtel des Nations Saint Germain sur Booking.com, avec chambres familiales annoncées, sans tarif ni disponibilité vérifiés pour la date.
+L'inscription se fait **directement à la bibliothèque ou par téléphone au 01 55 43 25 25**. La gratuité ne dispense pas de réserver et aucune disponibilité en temps réel n'est annoncée.
 
-## Continuations internes
-Éviter de reprendre les guides généraux de transports parisiens : maillage interne si utile. Ne pas confondre cet atelier musical avec les bricolages de Noël ou les lectures en bibliothèque déjà traités. Ne pas élargir artificiellement en guide du festival entier.
+Pour décider avant de vous déplacer, voici les informations essentielles :
+
+- **Date et horaire :** mercredi 18 novembre 2026, de 16 h à 17 h.
+- **Âge :** à partir de 6 ans.
+- **Adresse :** bibliothèque Buffon, 15 bis rue Buffon, 75005 Paris.
+- **Lieu précis :** section jeunesse, deuxième étage.
+- **Tarif :** gratuit, sur inscription obligatoire.
+
+La [fiche de l'événement publiée par la Ville de Paris](https://www.paris.fr/evenements/l-atelier-du-mercredi-novembre-2026-fabrique-ton-instrument-114832) permet de retrouver les informations officielles avant la sortie.
+
+## Accessibilité : vérifier selon les besoins de l'enfant
+
+La Ville de Paris indique que l'événement est **accessible aux personnes à mobilité réduite**. En revanche, sa fiche le signale comme non accessible aux personnes ayant une déficience auditive, visuelle ou mentale ; elle précise également que l'accueil en langue des signes n'est pas disponible. Pour un besoin particulier, contactez la bibliothèque avant de réserver.
+
+## Pour les familles qui séjournent à Paris
+
+Si cet atelier s'inscrit dans quelques jours de découverte de la capitale, l'[Hôtel des Nations Saint Germain sur Booking.com](https://www.booking.com/hotel/fr/desnations.en-gb.html), au 54 rue Monge dans le 5e arrondissement, constitue une piste d'hébergement dans le secteur. Vérifiez directement les types de chambres, les tarifs et les disponibilités aux dates de votre séjour : ils ne sont pas confirmés ici.
+
+Pour organiser vos déplacements avec un plus jeune enfant, consultez aussi notre guide [Paris avec une poussette : métro, RER, bus ou tram, que choisir ?](/articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/).
 
 ## Contexte éditorial ciblé pour le maillage et les doublons
 
