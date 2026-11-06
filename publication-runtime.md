@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,87 +14,120 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Côte-d'Or
 - Région: Bourgogne-Franche-Comté
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Titre de travail :** « Week-end dans l'Auxois avec des enfants : château de Bussy-Rabutin, villages et balades en Côte-d'Or ».
-
-Angle : organiser un court séjour familial autour de Bussy-le-Grand et de Semur-en-Auxois, en combinant patrimoine accessible en hiver, promenade et nuit sur place. Le château de Bussy-Rabutin est un monument historique visitable toute l'année hors jours de fermeture ; ses salles, son parc et ses propositions pour les familles constituent une étape concrète, pas un événement ponctuel.
-
-## Besoin du lecteur
-Savoir construire une escapade d'un ou deux jours dans l'Auxois avec enfants : choisir une visite adaptée à leur âge, prévoir une alternative en cas de pluie, connaître les temps de visite, les contraintes de poussette et les périodes d'ouverture, puis choisir où dormir sans multiplier les déplacements.
-
-## Valeur éditoriale
-- Construire un itinéraire réaliste plutôt qu'une simple fiche de château : visite du château de Bussy-Rabutin, découverte du centre médiéval de Semur-en-Auxois et possibilité d'une balade courte selon la météo.
-- Distinguer visite libre (environ 1 h 30 conseillée), visites commentées pendant certaines vacances et ateliers famille sur réservation ; ne pas annoncer ces derniers comme disponibles tous les jours.
-- Expliquer les conditions concrètes : gratuité du château pour les moins de 18 ans, fermeture les 11 novembre et 25 décembre notamment, poussettes autorisées dans le parc mais pas dans les salles, porte-bébé recommandé. Vérifier les horaires à la rédaction.
-- Ne pas reprendre l'abbaye de Fontenay comme attraction centrale : article Fam Space déjà publié le 4 novembre. Éviter aussi la Cité des Climats de Beaune déjà traitée.
-- Des guides touristiques décrivent déjà Bussy-Rabutin isolément ; la valeur ajoutée sera l'organisation du séjour familial, les arbitrages saisonniers et le choix du point de chute.
-
-## Affiliation
-- **Booking.com — hôtels et autres hébergements à Semur-en-Auxois**, point de chute pour prolonger la visite dans l'Auxois : https://www.booking.com/city/fr/semur-en-auxios.fr.html (page effectivement consultée, proposant notamment Logis Hostellerie d'Aussois et Hôtel Relais de la Côte d'Or ; disponibilité et capacité familiale à vérifier selon dates).
-- **Abritel — locations de vacances à Semur-en-Auxois**, alternative avec cuisine ou plusieurs couchages : https://www.abritel.fr/d/11263/semur-en-auxois (offres réellement affichées ; dates et capacité à vérifier).
-- **Billetterie principale :** les recherches ciblées GetYourGuide et Tiqets n'ont pas confirmé de billet pour Bussy-Rabutin. Ne pas inventer de billetterie affiliée ; renvoyer à la billetterie officielle du monument si nécessaire. Ne pas présenter les pages d'hébergement comme des sources historiques.
-
-## Sources de départ
-- Château de Bussy-Rabutin, informations pratiques, horaires, tarifs et accessibilité : https://www.chateau-bussy-rabutin.fr/visiter/informations-pratiques
-- Château de Bussy-Rabutin, visites et activités : https://www.chateau-bussy-rabutin.fr/visiter/visites-et-activites
-- Château de Bussy-Rabutin, familles : https://www.chateau-bussy-rabutin.fr/visiter/en-famille
-- Office de tourisme des Terres d'Auxois, présentation et équipements du château : https://www.terres-auxois.fr/sit/chateau-de-bussy-rabutin
-- Ville de Semur-en-Auxois, musée municipal (attention : horaires publics affichés jusqu'à septembre 2026 ; ne pas promettre une ouverture hivernale sans confirmation) : https://www.ville-semur-en-auxois.fr/musee/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "voyages"
+title: "Week-end dans l'Auxois en famille: château de Bussy-Rabutin et Semur-en-Auxois"
+subtitle: "Deux étapes en Côte-d'Or, entre portraits étonnants, ruelles médiévales et promenades à adapter à la météo"
+summary: "Organisez un ou deux jours dans l'Auxois avec des enfants: château de Bussy-Rabutin, balade à Semur-en-Auxois, tarifs, horaires et conseils pratiques."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "week-end Auxois en famille"
+  - "château de Bussy-Rabutin enfants"
+  - "Semur-en-Auxois famille"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Côte-d'Or"
+  region: "Bourgogne-Franche-Comté"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Château de Bussy-Rabutin - informations pratiques"
+    url: "https://www.chateau-bussy-rabutin.fr/visiter/informations-pratiques"
+  - title: "Château de Bussy-Rabutin - visites et activités"
+    url: "https://www.chateau-bussy-rabutin.fr/visiter/visites-et-activites"
+  - title: "Château de Bussy-Rabutin - en famille"
+    url: "https://www.chateau-bussy-rabutin.fr/visiter/en-famille"
+  - title: "Terres d'Auxois Tourisme - patrimoine de Semur-en-Auxois"
+    url: "https://www.terres-auxois.fr/bienvenue-en-terres-dauxois/patrimoine-semur-en-auxois/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Dans l'ouest de la Côte-d'Or, l'Auxois réunit châteaux, villages anciens et paysages vallonnés. Pour un week-end avec des enfants, deux étapes se complètent bien: le château de Bussy-Rabutin, à Bussy-le-Grand, et la cité médiévale de Semur-en-Auxois. La première se visite aussi par temps froid; la seconde invite à marcher, à observer les tours et à découvrir la vallée de l'Armançon. L'intérêt est de ne pas transformer le séjour en course entre les monuments.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Premier jour: un château où les portraits racontent des histoires
+
+Le château de Bussy-Rabutin fut la demeure de Roger de Bussy-Rabutin, courtisan et écrivain du XVIIe siècle. À l'intérieur, les galeries de portraits et leurs inscriptions offrent une façon amusante d'aborder le lieu avec des enfants: chercher les personnages, comparer les costumes et imaginer les histoires derrière les visages. Inutile de tout expliquer pour apprécier les salles.
+
+Comptez **environ 1 h 30** pour le château et ses abords, durée conseillée par le monument. La visite libre laisse le temps de s'arrêter dans les pièces qui intéressent les enfants. Le parc et les jardins prolongent la découverte lorsque la météo le permet, avec notamment un labyrinthe. Le [château détaille ses propositions familiales](https://www.chateau-bussy-rabutin.fr/visiter/en-famille).
+
+Pendant certaines vacances scolaires, des visites commentées et des ateliers peuvent compléter la visite. **Ils ne sont pas proposés quotidiennement**: consultez les [visites et activités du château](https://www.chateau-bussy-rabutin.fr/visiter/visites-et-activites) et réservez les ateliers en amont. Avec de jeunes enfants ou pour un premier passage, la visite libre reste l'option la plus souple.
+
+### Avec un bébé ou un enfant en bas âge
+
+Les poussettes sont acceptées dans le parc, **pas dans les salles du château**. Elles peuvent être laissées sous les arcades de la cour; prévoyez un porte-bébé pour l'intérieur. Le monument permet de prendre un goûter dans l'espace prévu à cet effet et de faire réchauffer biberons et petits pots sur demande à l'accueil. Ces détails peuvent faire pencher la balance en faveur d'une visite courte plutôt que d'un atelier à horaire fixe.
+
+## Deuxième jour: Semur-en-Auxois à pied, sans programme chargé
+
+À Semur-en-Auxois, le centre ancien conserve des remparts, des tours et des rues qui donnent immédiatement le sentiment d'entrer dans une ville médiévale. La vallée encaissée de l'Armançon offre un autre regard sur les fortifications. L'[office de tourisme des Terres d'Auxois présente ce patrimoine](https://www.terres-auxois.fr/bienvenue-en-terres-dauxois/patrimoine-semur-en-auxois/).
+
+Prévoyez une promenade libre dans le cœur historique, avec des arrêts pour regarder les tours et les façades. Avec des enfants qui aiment marcher, prolongez vers un point de vue sur la vallée; avec une poussette ou après la pluie, privilégiez les rues les plus faciles et renoncez aux descentes raides. Il n'est pas nécessaire de réserver une visite intérieure pour profiter de la ville.
+
+**En cas de pluie**, mieux vaut réduire cette promenade que compter sur l'ouverture improvisée d'un musée ou d'une tour: certaines visites patrimoniales sont saisonnières. Le château, avec ses salles intérieures, constitue l'étape à privilégier lors de la journée la plus humide, tout en prévoyant des vêtements chauds.
+
+## Un jour ou deux: comment organiser les étapes ?
+
+**Sur une journée**, choisissez le château le matin ou en début d'après-midi, puis une courte découverte de Semur si les enfants ont encore de l'énergie. Évitez de caler une autre grande visite entre les deux.
+
+**Sur deux jours**, consacrez une demi-journée au château et à son parc, puis gardez Semur pour le lendemain. Dormir autour de Semur-en-Auxois permet de disposer d'un point de chute pour le dîner et le petit déjeuner. Une chambre familiale peut convenir pour une nuit; un logement avec cuisine devient intéressant avec un bébé ou plusieurs enfants. Vérifiez les couchages réels et les horaires d'arrivée avant de réserver.
+
+La voiture reste la solution la plus simple pour relier ces étapes. Les gares de Montbard et des Laumes-Alésia ne déposent pas directement au château: il faut prévoir un trajet complémentaire, notamment en taxi ou à vélo selon la saison et l'âge des enfants.
+
+## Horaires, tarifs et accès au château de Bussy-Rabutin
+
+Selon les [informations pratiques officielles](https://www.chateau-bussy-rabutin.fr/visiter/informations-pratiques), du **15 septembre au 14 mai**, le château ouvre de **9 h 15 à 12 h et de 14 h à 17 h**. Le dernier accès se fait une heure avant la fermeture. Il ferme notamment les **1er et 11 novembre, 25 décembre, 1er janvier et 1er mai**. Consultez les horaires avant le départ, surtout pour un séjour pendant les fêtes.
+
+Le billet individuel château et parc est affiché à **9 €**, contre **4 €** pour le parc seul. L'entrée est gratuite pour les **moins de 18 ans**; d'autres gratuités existent, notamment pour certains jeunes adultes et le premier dimanche des mois de novembre à mars. Ces tarifs sont à confirmer lors de la réservation.
+
+Le château se trouve **rue du Château, 21150 Bussy-le-Grand**. Un parking est situé à environ **150 mètres de l'accueil**. Les chemins extérieurs gravillonnés et en pente peuvent compliquer la circulation en fauteuil; un ascenseur dessert l'étage avec l'aide d'un agent. Pour des besoins particuliers, contactez le monument au **03 80 96 00 03**.
+
+En hiver, le bon compromis est simple: garder du temps pour les salles du château, mais ne promettre ni une longue balade au parc ni une activité familiale qui ne figure pas au programme du jour.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -123,4 +156,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
