@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,35 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +60,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille"
-subtitle: Choisir entre la promenade lumineuse seule et le billet combiné avec les parcs animaliers jusqu'au 30 novembre
-summary: "Safari de Lumières à Lumigny du 15 octobre 2026 au 3 janvier 2027: tarifs enfants, billet combiné, jours d'ouverture, dernière entrée et conseils pour les familles."
+subtitle: "Billet nocturne ou formule avec les deux parcs: tarifs, calendrier et réservation pour les familles"
+summary: "Du 15 octobre 2026 au 3 janvier 2027, choisissez votre billet pour le Safari de Lumières à Lumigny: prix enfants, combiné jusqu'au 30 novembre, horaires et réservation en ligne."
 category: evenements
 location:
   city: Lumigny-Nesles-Ormeaux
@@ -95,7 +99,7 @@ updatedAt: null
 readingTime: 4
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/index.md
   targetSha: 8b54c675d6787cb50d8c5965c950eeccf08931a1
@@ -122,28 +126,61 @@ radar:
       - Lumigny Safari de Lumières billet combiné
 ---
 
-## Mission retenue
-Améliorer le guide existant du Safari de Lumières 2026-2027 à Lumigny, sans créer un nouvel article.
+<!-- article-image-credit -->
+*Photo: [Aviator12](https://commons.wikimedia.org/wiki/File:Parc_des_F%C3%A9lins_(Entr%C3%A9e).jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC constate 1 318 impressions sur la semaine haute contre 683 récemment, sans établir de perte de position. Lacune indépendante: l'article affirme que la réservation en ligne est obligatoire et les billets datés, mais ne donne aucun accès direct à la billetterie dans le corps du guide; la source officielle présente pourtant une action de réservation. Le lecteur doit pouvoir passer du choix au créneau réel sans chercher ailleurs.
+Du **15 octobre 2026 au 3 janvier 2027**, le **Lumigny Safari Reserve**, en Seine-et-Marne, célèbre ses 20 ans avec un parcours nocturne de lanternes géantes. Comptez **environ une heure** de promenade parmi des animaux lumineux, **sans visite des animaux vivants le soir**. Jusqu'au **30 novembre 2026**, une formule combinée permet aussi de découvrir les deux parcs animaliers en journée.
 
-## Décision du lecteur
-Choisir le billet nocturne seul ou la formule deux parcs + lumières, vérifier le jour et réserver le créneau réellement proposé.
+## Quel billet réserver pour votre famille?
 
-## Faits à traiter
-Ajouter un lien pratique clairement identifiable vers la réservation officielle depuis la section billets; distinguer le calendrier indicatif des créneaux réellement vendus, sans inventer de disponibilités. Préserver les prix 16,90/14,90 € et 39/29 €, la gratuité des moins de 3 ans explicitement établie pour le billet seul, les calculs famille, la fin du combiné au 30 novembre, la fermeture zoologique dès décembre, l'horaire 18 h-22 h et dernière entrée 20 h 30, le parking, les repas et les réserves d'accessibilité. Ne pas remplacer le lien d'hébergement existant.
+<!-- article-image-body:01 -->
 
-## Sources de départ
-- Organisateur: https://lumigny-safari-reserve.com/evenements/lumigny-safari-de-lumieres/
-- Horaires des parcs: https://lumigny-safari-reserve.com/horaires-et-tarifs/
-- Calendrier complémentaire: https://www.visitparisregion.com/fr/lumigny-safari-de-lumieres
+![Tigre blanc photographié au Parc des Félins en 2018, visite animalière de jour distincte des illuminations nocturnes](/images/articles/2026/10/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille-body-01.webp)
 
-## Affiliation
-L'hébergement Booking.com déjà intégré peut rester pour une nuit sur place; la réservation des lumières relève de la billetterie officielle et ne doit pas être présentée comme affiliée.
+<!-- /article-image-body:01 -->
 
-## Continuations internes
-Ne pas créer un deuxième guide sur le même événement. Conserver les images et leurs crédits intacts. Ne pas présenter la baisse GSC comme une preuve de recul de classement.
+**Pour les illuminations seules**, le billet coûte **16,90 € dès 11 ans**, **14,90 € de 3 à 10 ans** et est **gratuit avant 3 ans**. Deux adultes avec deux enfants de 3 à 10 ans paient donc **63,60 €**, hors repas.
+
+**Pour une journée dans les deux parcs suivie des lumières**, le billet combiné « deux parcs + Lumières » est proposé **jusqu'au 30 novembre 2026**. Il donne accès à **Lumigny Safari Reserve et Terre de Singes en journée**, puis au parcours nocturne à partir de 18 h. Comptez **39 € dès 11 ans** et **29 € de 3 à 10 ans**, soit **136 €** pour la même famille de quatre personnes. La gratuité avant 3 ans n'est pas explicitement confirmée sur la page de l'événement pour cette formule: vérifiez-la au moment de l'achat.
+
+**Dès le 1er décembre**, les deux parcs zoologiques sont en fermeture hivernale: seul le parcours lumineux reste proposé aux soirées programmées. Le **pass annuel** ne couvre pas le Safari de Lumières.
+
+### Réserver une date réellement disponible
+
+La **réservation en ligne est obligatoire** et les **billets sont datés**. Pour choisir la formule et voir les soirées effectivement proposées, passez par la **[page officielle du Safari de Lumières et son bouton « Je réserve mes billets »](https://lumigny-safari-reserve.com/evenements/lumigny-safari-de-lumieres/)**.
+
+Sélectionnez d'abord le billet nocturne ou combiné, puis vérifiez **la date proposée, le nombre de places, les âges et le montant final** avant de payer. Le calendrier général indique les jours prévus, mais **ne garantit pas qu'un billet reste disponible** pour votre soirée. Les week-ends et vacances scolaires peuvent être très demandés.
+
+## Quelles dates et quels horaires?
+
+Le parcours lumineux ouvre de **18 h à 22 h**, avec **dernière entrée à 20 h 30**. Le [calendrier publié par VisitParisRegion](https://www.visitparisregion.com/fr/lumigny-safari-de-lumieres) annonce:
+
+- **Du 15 octobre au 1er novembre 2026:** tous les jours.
+- **Du 2 novembre au 18 décembre 2026:** jeudi, vendredi, samedi et dimanche hors vacances scolaires; tous les soirs pendant les vacances concernées.
+- **Du 19 décembre 2026 au 3 janvier 2027:** tous les jours, **sauf les 24, 25 et 31 décembre et le 1er janvier**.
+
+Si vous choisissez le combiné avant décembre, **Lumigny Safari Reserve ouvre de 10 h à 17 h** et **Terre de Singes de 13 h 30 à 17 h** sur cette période, selon les [horaires des parcs](https://lumigny-safari-reserve.com/horaires-et-tarifs/). Organisez les visites animalières en journée, avant le parcours de 18 h. Un billet nocturne seul **ne permet pas d'entrer voir les animaux l'après-midi**.
+
+## Que découvrent les enfants pendant la promenade?
+
+Trois univers se succèdent: les **fonds marins** avec poissons, méduses et hippocampes géants; les **animaux du monde** en lanternes colorées; puis un univers **fantastique** avec dragons et phénix. Des ambiances sonores accompagnent les scènes.
+
+La visite se fait **librement, au rythme des enfants**. Prévoyez plus d'une heure si vous vous arrêtez souvent et, comme il s'agit d'une promenade extérieure d'automne ou d'hiver, des **vêtements chauds et chaussures adaptées**.
+
+VisitParisRegion indique des **aménagements pour les personnes à mobilité réduite** et un **accès en fauteuil roulant en autonomie**, sans détailler chaque portion du parcours ni les contraintes pour les poussettes. En cas de besoin particulier, mieux vaut interroger le parc **avant l'achat**.
+
+## Accès, parking et repas
+
+Le parc se situe à **La Fortelle, 77540 Lumigny-Nesles-Ormeaux**. Le **parking est gratuit** et accessible durant les soirées. **Snack, restaurant et boutique** restent ouverts; le parc annonce notamment burger raclette, gaufres et autres gourmandises hivernales. **Les repas ne sont pas compris** dans les billets.
+
+Pour toute question sur l'accessibilité, les services ou la visite avec de jeunes enfants, contactez l'équipe au **01 64 51 33 33**.
+
+## Passer la nuit près du parc
+
+Si vous préférez éviter un long retour après les illuminations, **[Le Royaume des Lions à Rigny](https://www.booking.com/hotel/fr/le-royaume-des-lions-lumigny-nesles-ormeaux.fr.html)** propose des **chambres familiales**, un **parking privé gratuit** et un restaurant à proximité. **La chambre se réserve séparément et ne comprend pas automatiquement le billet Safari de Lumières.**
+
+Avant de réserver, vérifiez les couchages, le prix, le petit-déjeuner, l'annulation et les disponibilités aux dates choisies. La fiche de l'établissement indique une **contribution à la conservation animale de 1 € par personne et par nuit** (hors moins de 3 ans), payable sur place, un **dépôt de garantie remboursable de 100 €** à l'arrivée et un **lit bébé à 10 € par séjour sur demande**.
 
 ## Article source exact à préserver et améliorer
 
