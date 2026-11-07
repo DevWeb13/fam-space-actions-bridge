@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Biotropica en famille à Val-de-Reuil: animaux, tarifs et visite par temps de pluie"
-subtitle: Une serre tropicale et un vaste parc extérieur à découvrir dans l'Eure, toute l'année
-summary: Biotropica, à Val-de-Reuil dans l'Eure, associe serre tropicale et espaces animaliers dehors. Tarifs, horaires et conseils pour une visite en famille.
+subtitle: "Serre tropicale, espaces extérieurs et budget : billets ou pass annuel selon vos visites"
+summary: À Biotropica, comparez billets, réductions, pass annuels et parking avant une sortie en famille. Horaires, animaux, pluie et services bébé à Val-de-Reuil.
 slug: biotropica-en-famille-a-val-de-reuil-animaux-tarifs-et-visite-par-temps-de-pluie
 status: published
 publishedAt: 2026-10-20T12:10:23+02:00
@@ -98,7 +101,7 @@ affiliate:
   destination: Val-de-Reuil
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/activites/(2026)/(10)/biotropica-en-famille-a-val-de-reuil-animaux-tarifs-et-visite-par-temps-de-pluie/index.md
   targetSha: ea0c067decd6f8329062d271c392a82cfdb09357
@@ -125,33 +128,94 @@ radar:
       - parc animalier Eure
 ---
 
-## Mission retenue
-Améliorer le guide existant Biotropica à Val-de-Reuil, sans créer de nouvel article.
+<!-- article-image-credit -->
+*Photo: [Eponimm](https://commons.wikimedia.org/wiki/File:Lac_des_Deux-Amants.JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC montre 55 impressions sur trois jours puis 7, sans établir la cause de la baisse. Lacune indépendante : l'article ne présente que les billets ordinaires alors que le parc propose aussi des tarifs réduits et des abonnements annuels, utiles aux familles qui hésitent entre une sortie unique et plusieurs visites.
+À Val-de-Reuil, dans l'Eure, **Biotropica** associe une serre tropicale et un parcours animalier en plein air, sur la base de loisirs de Léry-Poses. Avant de partir, deux choix comptent : faut-il prévoir une journée entière malgré la pluie, et vaut-il mieux acheter des billets ou un pass annuel ? Le stationnement s'ajoute dans les deux cas.
 
-## Décision du lecteur
-Choisir la formule réellement adaptée à la composition familiale et à la fréquence des visites, avec le coût du stationnement.
+## Une serre tropicale et des animaux en plein air
 
-## Faits à traiter
-- Billets actuels : 18,50 € dès 12 ans, 13,50 € de 3 à 11 ans, gratuit avant 3 ans.
-- Tarifs PSH sur justificatif : 16 € dès 12 ans et 11 € de 3 à 11 ans ; la FAQ précise la gratuité de l'accompagnant lorsque la carte mentionne un besoin d'accompagnement.
-- Abonnements nominatifs valables un an : 55 € adulte, 40 € enfant ; comparaison simple avec les billets ordinaires, rentable à partir de trois visites selon la FAQ, hors stationnement.
-- Parking 6 € par voiture à chaque venue ; un pass parking distinct existe selon la FAQ, sans prix confirmé.
-- Préserver intégralement les horaires, la fermeture anticipée des caisses et espaces extérieurs, la distinction serre/extérieurs sous la pluie, les animaux, la durée, la navette, les poussettes, tables à langer, micro-ondes, pique-nique, accessibilité, images et crédits.
-- Vérifier les noms des deux hôtels face aux URL Booking.com avant toute modification : les slugs des liens actuels ne correspondent pas clairement aux noms affichés.
+<!-- article-image-body:02 -->
 
-## Sources de départ
-- Biotropica, tarifs et horaires : https://www.biotropica.fr/tarifs-et-horaires/
-- Biotropica, FAQ (pass annuel, accompagnant et parking) : https://www.biotropica.fr/faq/
-- Biotropica, accès : https://www.biotropica.fr/acces-au-parc/
+![Portrait d'un panda roux photographié au parc animalier de Sainte-Croix en Moselle, et non à Biotropica](/images/articles/2026/10/biotropica-en-famille-a-val-de-reuil-animaux-tarifs-et-visite-par-temps-de-pluie-body-02.webp)
 
-## Affiliation
-Conserver les offres d'hébergement pertinentes après contrôle de leur correspondance exacte ; ne pas inventer de billetterie affiliée.
+*Photo: [Musicaline](https://commons.wikimedia.org/wiki/File:Panda_roux_DSCF1218.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
 
-## Continuations internes
-Conserver le lien existant vers Lyons-la-Forêt sans développer ce second sujet.
+<!-- /article-image-body:02 -->
+
+<!-- article-image-body:01 -->
+
+![Dragon de Komodo photographié au Tropiquarium de Servion en Suisse, illustration de l'espèce et non d'un animal de Biotropica](/images/articles/2026/10/biotropica-en-famille-a-val-de-reuil-animaux-tarifs-et-visite-par-temps-de-pluie-body-01.webp)
+
+*Photo: [Marie-Noëlle Charles](https://commons.wikimedia.org/wiki/File:Padar,_dragon_de_Komodo.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+La [serre tropicale de 5 000 m²](https://www.biotropica.fr/le-parc-de-biotropica/) abrite une végétation dense et des animaux comme les paresseux, tamarins, loriquets, grenouilles colorées ou le dragon de Komodo. C'est la partie la plus confortable par temps froid ou humide.
+
+À l'extérieur, environ **10 hectares** accueillent notamment les pandas roux du Jardin d'Asie, les manchots de Humboldt, les suricates, les kangourous et la ferme des enfants. Les [différents univers](https://www.biotropica.fr/nos-univers/) aident à choisir les étapes qui plairont aux enfants.
+
+Par temps de pluie, la serre reste intéressante, mais **le parcours extérieur n'est pas couvert**. Pour voir les pandas roux, les manchots et les grands espaces, prévoyez chaussures et vêtements adaptés plutôt que de compter uniquement sur la serre.
+
+## Combien de temps prévoir avec des enfants ?
+
+Biotropica recommande **3 à 4 heures au minimum** pour voir les espaces intérieurs et extérieurs, davantage si vous souhaitez assister à un nourrissage commenté ou observer longtemps les animaux.
+
+Avec de jeunes enfants, commencez par leur univers préféré, puis alternez serre et extérieur selon la fatigue et la météo. Le lac des pélicans se prête à une promenade plus longue, la ferme des enfants à un arrêt plus court. Les horaires des présentations et nourrissages pouvant varier, consultez le programme du jour.
+
+## Billets, tarifs réduits et pass annuel : quel budget ?
+
+Selon les [tarifs officiels de Biotropica](https://www.biotropica.fr/tarifs-et-horaires/), le billet ordinaire coûte **18,50 € dès 12 ans**, **13,50 € de 3 à 11 ans** et reste **gratuit avant 3 ans**. Pour deux adultes et deux enfants de 3 à 11 ans, comptez donc **64 € d'entrées**, ou **70 € avec le parking de 6 €** pour une voiture.
+
+Sur présentation d'un justificatif, le tarif pour une personne en situation de handicap est de **16 € dès 12 ans** et **11 € de 3 à 11 ans**. La [FAQ](https://www.biotropica.fr/faq/) précise que l'accompagnant bénéficie de la gratuité lorsque la Carte mobilité inclusion mentionne un besoin d'accompagnement. Cette gratuité dépend donc de la mention portée sur la carte.
+
+Pour plusieurs sorties, Biotropica propose un **abonnement annuel nominatif**, valable un an de date à date, à **55 € dès 12 ans** et **40 € de 3 à 11 ans**. Il est établi sur place lors de la première visite, avec photo. Trois billets ordinaires reviennent à 55,50 € par adulte et 40,50 € par enfant : **le pass devient légèrement avantageux dès la troisième visite** pour ces tarifs, sans compter le stationnement. Pour notre famille de quatre, les pass représentent **190 €**, contre **192 € pour trois journées de billets ordinaires**.
+
+Attention : **le parking de la base de loisirs coûte 6 € par voiture et par venue**, en supplément des entrées. Trois visites en voiture ajoutent donc 18 €, que vous choisissiez les billets ou les pass Biotropica. La FAQ mentionne un **pass annuel de parking distinct**, à demander directement à la base de loisirs, sans tarif public confirmé. Pour un usage régulier, renseignez-vous avant de calculer votre budget total.
+
+La réservation n'est **pas obligatoire pour une visite individuelle** : les billets s'achètent aussi aux caisses d'entrée. En revanche, elle est obligatoire pour les groupes. La [FAQ du parc](https://www.biotropica.fr/faq/) détaille ces conditions.
+
+## Horaires : attention aux dernières entrées
+
+**D'octobre à mars, Biotropica ouvre de 10h à 17h30**, en semaine comme les week-ends et jours fériés. Les caisses ferment **1h30 avant la fermeture** et les espaces extérieurs **une heure avant** : arriver au plus tard en début d'après-midi laisse davantage de temps pour tout voir.
+
+Le parc annonce une ouverture toute l'année, sauf **le 25 décembre et le 1er janvier**. Les horaires des autres saisons varient entre semaine, week-end et vacances : vérifiez la [grille officielle](https://www.biotropica.fr/tarifs-et-horaires/) avant le départ.
+
+## Déjeuner sur place ou apporter son pique-nique ?
+
+Le restaurant de la serre ouvre à partir de **11h30**. Le snack extérieur fonctionne sur des périodes plus limitées, notamment durant certaines vacances et certains week-ends : ne comptez pas systématiquement dessus en automne ou en hiver.
+
+Les consignes officielles sur le pique-nique ne sont pas parfaitement concordantes : la page des conditions d'accès l'interdit dans l'enceinte du parc, tandis que la FAQ mentionne des zones extérieures sous réserve de disponibilité, avec priorité aux groupes. La solution la plus sûre est de **demander un tampon à l'accueil**, de sortir manger sur la base de loisirs puis de revenir **avant la fermeture des caisses**.
+
+Pour les bébés, des **tables à langer** sont disponibles dans les sanitaires et des **micro-ondes** au restaurant et au snack. Biotropica **ne prête pas de poussettes** : emportez la vôtre.
+
+## Accès, navette et accessibilité
+
+<!-- article-image-body:03 -->
+
+![Entrée de la gare ferroviaire de Val-de-Reuil dans l'Eure, photographiée en août 2016](/images/articles/2026/10/biotropica-en-famille-a-val-de-reuil-animaux-tarifs-et-visite-par-temps-de-pluie-body-03.webp)
+
+*Photo: [Minuellou](https://commons.wikimedia.org/wiki/File:Gare_de_Val_de_Reuil_ao%C3%BBt_2016.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:03 -->
+
+Biotropica se trouve **Butte de la Capoulade, 27100 Val-de-Reuil**, sur la base de loisirs de Léry-Poses. En voiture, l'[accès officiel](https://www.biotropica.fr/acces-au-parc/) indique la sortie 20 de l'A13. Pour le GPS, « La Coudrette, Val-de-Reuil » peut être plus pratique.
+
+En transports, rejoignez la **gare de Val-de-Reuil** sur la ligne Paris-Rouen, puis consultez les horaires de la **navette Semo** vers le parc : elle ne circule pas à toute heure.
+
+Le parcours est annoncé accessible en fauteuil roulant ou avec un déambulateur, mais la remontée vers la serre peut être difficile. Une **voiturette électrique d'assistance** est proposée sur demande ; un **fauteuil roulant peut être prêté gratuitement sur réservation**, sous réserve de disponibilité.
+
+## Passer une nuit près de Biotropica
+
+Pour les familles qui prolongent la sortie en week-end, deux hôtels de Val-de-Reuil peuvent servir de point de départ :
+
+- Le [Kyriad Rouen Sud - Val de Reuil](https://www.booking.com/hotel/fr/premiere-classe-rouen-sud-val-de-reuil-xml.fr.html), anciennement Première Classe, propose notamment une formule de chambre avec un lit double et deux lits simples et un parking gratuit. Vérifiez la capacité réelle autorisée pour votre famille et les disponibilités.
+- Le [Brit Hotel Rouen Sud Val De Reuil](https://www.booking.com/hotel/fr/best-rouen-est-val-de-reuil.fr.html), anciennement Best Hotel, dispose de chambres familiales, d'un parking privé gratuit et d'un restaurant. Vérifiez la configuration de couchage et les conditions du dîner avant de réserver.
+
+Les anciens noms expliquent les adresses des pages de réservation, qui correspondent bien à ces établissements.
+
+Pour une autre journée dans l'Eure, notre guide de [Lyons-la-Forêt avec des enfants](https://www.fam-space.fr/articles/voyages/lyons-la-foret-avec-des-enfants-journee-ou-week-end-dans-le-village-et-la-foret/) propose la découverte du village et de la forêt dans un cadre très différent.
 
 ## Article source exact à préserver et améliorer
 
