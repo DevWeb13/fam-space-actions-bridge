@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 3/3
+# Radar Fam Space - actualisation GSC
 
 ## Mission
 
@@ -8,324 +8,1029 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 3/3
-
-Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
-
-Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
-
-Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
-
-Ensuite:
-- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
-- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
-- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
-- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
-- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
-- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
-- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
-- ne force ni longueur ni affiliation.
-
-Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
-
-Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
-- `summary`: contrôles et corrections réellement effectués;
-- `sources`: URLs factuelles revérifiées;
-- pour un refresh, `substantialChanges`: au moins deux changements substantiels;
-- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau.
-
-**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
-
-## Règles partenaires
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-## Candidat validé de la phase précédente
-
----
-title: "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille"
-subtitle: "Billet nocturne ou formule avec les deux parcs: tarifs, calendrier et réservation pour les familles"
-summary: "Du 15 octobre 2026 au 3 janvier 2027, choisissez votre billet pour le Safari de Lumières à Lumigny: prix enfants, combiné jusqu'au 30 novembre, horaires et réservation en ligne."
-category: evenements
-location:
-  city: Lumigny-Nesles-Ormeaux
-  department: Seine-et-Marne
-  region: Île-de-France
-image:
-  src: /images/articles/2026/10/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille.webp
-  alt: Entrée historique du Parc des Félins à Lumigny, photographiée en 2013, sans les illuminations du Safari de Lumières 2026
-sources:
-  - title: Lumigny Safari Reserve - Safari de Lumières, programme, billets et tarifs
-    url: https://lumigny-safari-reserve.com/evenements/lumigny-safari-de-lumieres/
-  - title: VisitParisRegion - Lumigny Safari de Lumières, calendrier et accessibilité
-    url: https://www.visitparisregion.com/fr/lumigny-safari-de-lumieres
-  - title: Lumigny Safari Reserve - Horaires des deux parcs animaliers
-    url: https://lumigny-safari-reserve.com/horaires-et-tarifs/
-eventEndsAt: 2027-01-03
-affiliate:
-  enabled: true
-  type: travel
-  destination: Lumigny-Nesles-Ormeaux
-topic:
-  key: evenements|lumigny-nesles-ormeaux|lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille|2026
-  keywords:
-    - Lumigny Safari de Lumières 2026 2027
-    - Safari de Lumières Lumigny tarifs famille
-    - Lumigny Safari de Lumières billet combiné
-slug: lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille
-status: published
-publishedAt: 2026-10-16T17:46:42.359Z
-updatedAt: null
-readingTime: 4
-radar:
-  schemaVersion: 1
-  phase: 2
-  mode: refresh
-  targetPath: src/routes/articles/evenements/(2026)/(10)/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/index.md
-  targetSha: 8b54c675d6787cb50d8c5965c950eeccf08931a1
-  targetUrl: /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/
-  decision: Permettre aux familles de réserver le bon billet daté, en distinguant visite nocturne seule et journée combinée avant le 30 novembre, et de vérifier concrètement la date disponible.
-  affiliationPotential: Conserver l'hébergement Booking.com déjà proposé, sans prétendre qu'il inclut l'entrée; billetterie officielle du parc pour l'activité principale, sans affiliation artificielle.
-  gsc:
-    retrievedAt: 2026-11-06T01:28:02+01:00
-    dataThrough: 2026-11-03
-    signal: needs_query_check
-    basis: Baisse d'impressions observée; causalité et classement non établis.
-    peakStart: 2026-10-17
-    peakEnd: 2026-10-23
-    recentStart: 2026-10-28
-    recentEnd: 2026-11-03
-    peakImpressions: 1318
-    recentImpressions: 683
-    commonQueries: null
-    positionDelta: null
-    impressionRatio: null
-    focusQueries:
-      - Lumigny Safari de Lumières 2026 2027
-      - Safari de Lumières Lumigny tarifs famille
-      - Lumigny Safari de Lumières billet combiné
----
-
-<!-- article-image-credit -->
-*Photo: [Aviator12](https://commons.wikimedia.org/wiki/File:Parc_des_F%C3%A9lins_(Entr%C3%A9e).jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
-<!-- /article-image-credit -->
-
-Du **15 octobre 2026 au 3 janvier 2027**, le **Lumigny Safari Reserve**, en Seine-et-Marne, célèbre ses 20 ans avec un parcours nocturne de lanternes géantes. Comptez **environ une heure** de promenade parmi des animaux lumineux, **sans visite des animaux vivants le soir**. Jusqu'au **30 novembre 2026**, une formule combinée permet aussi de découvrir les deux parcs animaliers en journée.
-
-## Quel billet réserver pour votre famille?
-
-<!-- article-image-body:01 -->
-
-![Tigre blanc photographié au Parc des Félins en 2018, visite animalière de jour distincte des illuminations nocturnes](/images/articles/2026/10/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille-body-01.webp)
-
-<!-- /article-image-body:01 -->
-
-**Pour les illuminations seules**, le billet coûte **16,90 € dès 11 ans**, **14,90 € de 3 à 10 ans** et est **gratuit avant 3 ans**. Deux adultes avec deux enfants de 3 à 10 ans paient donc **63,60 €**, hors repas.
-
-**Pour une journée dans les deux parcs suivie des lumières**, le billet combiné « deux parcs + Lumières » est proposé **jusqu'au 30 novembre 2026**. Il donne accès à **Lumigny Safari Reserve et Terre de Singes en journée**, puis au parcours nocturne à partir de 18 h. Comptez **39 € dès 11 ans** et **29 € de 3 à 10 ans**, soit **136 €** pour la même famille de quatre personnes. La gratuité avant 3 ans n'est pas explicitement confirmée sur la page de l'événement pour cette formule: vérifiez-la au moment de l'achat.
-
-**Dès le 1er décembre**, les deux parcs zoologiques sont en fermeture hivernale: seul le parcours lumineux reste proposé aux soirées programmées. Le **pass annuel** ne couvre pas le Safari de Lumières.
-
-### Réserver une date réellement disponible
-
-La **réservation en ligne est obligatoire** et les **billets sont datés**. Pour choisir la formule et voir les soirées effectivement proposées, passez par la **[page officielle du Safari de Lumières et son bouton « Je réserve mes billets »](https://lumigny-safari-reserve.com/evenements/lumigny-safari-de-lumieres/)**.
-
-Sélectionnez d'abord le billet nocturne ou combiné, puis vérifiez **la date proposée, le nombre de places, les âges et le montant final** avant de payer. Le calendrier général indique les jours prévus, mais **ne garantit pas qu'un billet reste disponible** pour votre soirée. Les week-ends et vacances scolaires peuvent être très demandés.
-
-## Quelles dates et quels horaires?
-
-Le parcours lumineux ouvre de **18 h à 22 h**, avec **dernière entrée à 20 h 30**. Le [calendrier publié par VisitParisRegion](https://www.visitparisregion.com/fr/lumigny-safari-de-lumieres) annonce:
-
-- **Du 15 octobre au 1er novembre 2026:** tous les jours.
-- **Du 2 novembre au 18 décembre 2026:** jeudi, vendredi, samedi et dimanche hors vacances scolaires; tous les soirs pendant les vacances concernées.
-- **Du 19 décembre 2026 au 3 janvier 2027:** tous les jours, **sauf les 24, 25 et 31 décembre et le 1er janvier**.
-
-Si vous choisissez le combiné avant décembre, **Lumigny Safari Reserve ouvre de 10 h à 17 h** et **Terre de Singes de 13 h 30 à 17 h** sur cette période, selon les [horaires des parcs](https://lumigny-safari-reserve.com/horaires-et-tarifs/). Organisez les visites animalières en journée, avant le parcours de 18 h. Un billet nocturne seul **ne permet pas d'entrer voir les animaux l'après-midi**.
-
-## Que découvrent les enfants pendant la promenade?
-
-Trois univers se succèdent: les **fonds marins** avec poissons, méduses et hippocampes géants; les **animaux du monde** en lanternes colorées; puis un univers **fantastique** avec dragons et phénix. Des ambiances sonores accompagnent les scènes.
-
-La visite se fait **librement, au rythme des enfants**. Prévoyez plus d'une heure si vous vous arrêtez souvent et, comme il s'agit d'une promenade extérieure d'automne ou d'hiver, des **vêtements chauds et chaussures adaptées**.
-
-VisitParisRegion indique des **aménagements pour les personnes à mobilité réduite** et un **accès en fauteuil roulant en autonomie**, sans détailler chaque portion du parcours ni les contraintes pour les poussettes. En cas de besoin particulier, mieux vaut interroger le parc **avant l'achat**.
-
-## Accès, parking et repas
-
-Le parc se situe à **La Fortelle, 77540 Lumigny-Nesles-Ormeaux**. Le **parking est gratuit** et accessible durant les soirées. **Snack, restaurant et boutique** restent ouverts; le parc annonce notamment burger raclette, gaufres et autres gourmandises hivernales. **Les repas ne sont pas compris** dans les billets.
-
-Pour toute question sur l'accessibilité, les services ou la visite avec de jeunes enfants, contactez l'équipe au **01 64 51 33 33**.
-
-## Passer la nuit près du parc
-
-Si vous préférez éviter un long retour après les illuminations, **[Le Royaume des Lions à Rigny](https://www.booking.com/hotel/fr/le-royaume-des-lions-lumigny-nesles-ormeaux.fr.html)** propose des **chambres familiales**, un **parking privé gratuit** et un restaurant à proximité. **La chambre se réserve séparément et ne comprend pas automatiquement le billet Safari de Lumières.**
-
-Avant de réserver, vérifiez les couchages, le prix, le petit-déjeuner, l'annulation et les disponibilités aux dates choisies. La fiche de l'établissement indique une **contribution à la conservation animale de 1 € par personne et par nuit** (hors moins de 3 ans), payable sur place, un **dépôt de garantie remboursable de 100 €** à l'arrivée et un **lit bébé à 10 € par séjour sur demande**.
-
-## Article source exact à préserver et améliorer
-
-Chemin: src/routes/articles/evenements/(2026)/(10)/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/index.md
-
----
-title: "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille"
-subtitle: Choisir entre la promenade lumineuse seule et le billet combiné avec les parcs animaliers jusqu'au 30 novembre
-summary: "Safari de Lumières à Lumigny du 15 octobre 2026 au 3 janvier 2027: tarifs enfants, billet combiné, jours d'ouverture, dernière entrée et conseils pour les familles."
-category: evenements
-location:
-  city: Lumigny-Nesles-Ormeaux
-  department: Seine-et-Marne
-  region: Île-de-France
-image:
-  src: "/images/articles/2026/10/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille.webp"
-  alt: "Entrée historique du Parc des Félins à Lumigny, photographiée en 2013, sans les illuminations du Safari de Lumières 2026"
-sources:
-  - title: Lumigny Safari Reserve - Safari de Lumières, programme, billets et tarifs
-    url: https://lumigny-safari-reserve.com/evenements/lumigny-safari-de-lumieres/
-  - title: VisitParisRegion - Lumigny Safari de Lumières, calendrier et accessibilité
-    url: https://www.visitparisregion.com/fr/lumigny-safari-de-lumieres
-  - title: Lumigny Safari Reserve - Horaires des deux parcs animaliers
-    url: https://lumigny-safari-reserve.com/horaires-et-tarifs/
-eventEndsAt: 2027-01-03
-affiliate:
-  enabled: true
-  type: travel
-  destination: Lumigny-Nesles-Ormeaux
-topic:
-  key: evenements|lumigny-nesles-ormeaux|lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille|2026
-  keywords:
-    - Lumigny Safari de Lumières 2026 2027
-    - Safari de Lumières Lumigny tarifs famille
-    - Lumigny Safari de Lumières billet combiné
-slug: lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille
-status: published
-publishedAt: 2026-10-16T17:46:42.359Z
-updatedAt: null
-readingTime: 4
----
-<!-- article-image-credit -->
-*Photo: [Aviator12](https://commons.wikimedia.org/wiki/File:Parc_des_F%C3%A9lins_(Entr%C3%A9e).jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
-<!-- /article-image-credit -->
-
-Du **15 octobre 2026 au 3 janvier 2027**, le **Lumigny Safari Reserve**, en Seine-et-Marne, fête ses 20 ans avec un parcours nocturne de lanternes géantes: le **Lumigny Safari de Lumières**. La promenade, conçue pour les familles, dure environ **une heure** et montre des **animaux lumineux, pas les animaux vivants du zoo**. Jusqu'au **30 novembre**, une formule combinée permet de visiter les deux parcs animaliers en journée avant les illuminations du soir.
-
-## Lumières seules ou deux parcs et Lumières: quel billet prendre?
-
-<!-- article-image-body:01 -->
-
-![Tigre blanc photographié au Parc des Félins en 2018, visite animalière de jour distincte des illuminations nocturnes](/images/articles/2026/10/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille-body-01.webp)
-
-<!-- /article-image-body:01 -->
-
-**Le billet Safari de Lumières seul** donne accès à la promenade nocturne. Il coûte **16,90 € à partir de 11 ans**, **14,90 € de 3 à 10 ans** et est **gratuit pour les moins de 3 ans**. Pour deux adultes et deux enfants de 3 à 10 ans, comptez **63,60 €**, hors repas.
-
-**Le billet combiné « deux parcs + Lumières »**, proposé **jusqu'au 30 novembre 2026**, permet de visiter **Lumigny Safari Reserve et Terre de Singes en journée**, puis les lanternes à partir de 18 h. Il coûte **39 € à partir de 11 ans** et **29 € de 3 à 10 ans**, soit **136 €** pour cette même famille de quatre personnes. La page de l'événement ne précise pas explicitement la gratuité des moins de 3 ans pour cette formule: vérifiez-la avant le paiement.
-
-**À compter du 1er décembre**, les deux parcs zoologiques entrent en **fermeture hivernale** et seul le parcours des lumières reste accessible le soir, aux dates prévues. Pendant les soirées, les espaces de vie des animaux et les circuits animaliers sont fermés aux visiteurs.
-
-La **réservation en ligne est obligatoire** pour les illuminations. Les **billets sont datés** et le **pass annuel** du parc ne donne pas accès à cet événement. Vérifiez les conditions de vente et les places disponibles pour votre date avant de réserver.
-
-## Quels jours venir et jusqu'à quelle heure?
-
-Les illuminations ouvrent de **18 h à 22 h**, avec une **dernière entrée à 20 h 30**. Selon le calendrier publié par VisitParisRegion:
-
-- **Du 15 octobre au 1er novembre 2026:** tous les jours.
-- **Du 2 novembre au 18 décembre 2026:** les **jeudis, vendredis, samedis et dimanches** hors vacances scolaires; tous les soirs pendant les vacances concernées.
-- **Du 19 décembre 2026 au 3 janvier 2027:** tous les jours **sauf les 24, 25 et 31 décembre, ainsi que le 1er janvier**.
-
-Avant le déplacement, vérifiez qu'un créneau est effectivement proposé à la date choisie.
-
-Avec un billet combiné avant décembre, les deux parcs animaliers ouvrent jusqu'à **17 h** sur cette période et **Terre de Singes à partir de 13 h 30**. Il faut donc prévoir la visite des animaux en journée avant de commencer les lumières à 18 h. Pour le billet nocturne seul, venir dans l'après-midi n'apporte pas d'accès aux animaux.
-
-## Trois univers de lanternes à découvrir avec les enfants
-
-Le parcours traverse **trois univers**: les **fonds marins**, avec poissons, méduses et hippocampes géants; les **animaux du monde**, représentés par de grandes lanternes colorées; puis un monde **fantastique**, avec dragons et phénix. Des ambiances sonores accompagnent les différentes scènes.
-
-La promenade se visite **librement, à son rythme**, et s'adresse aussi aux jeunes enfants. Comptez **environ une heure**, davantage si votre famille s'arrête souvent devant les installations. À l'automne comme en hiver, prévoyez des vêtements chauds et des chaussures adaptées à une promenade extérieure.
-
-VisitParisRegion mentionne des **aménagements pour les personnes à mobilité réduite** et un **accès en fauteuil roulant en autonomie**, sans détailler chaque portion du parcours ni les contraintes éventuelles pour les poussettes. En cas de besoin particulier, contactez le parc avant l'achat.
-
-## Accès, parking et repas
-
-Le Lumigny Safari Reserve se trouve à **La Fortelle, 77540 Lumigny-Nesles-Ormeaux**. Le **parking est gratuit** et reste ouvert durant les soirées. Le **snack, le restaurant et la boutique** accueillent les visiteurs; une carte hivernale comprenant notamment burger raclette et gaufres est annoncée. **Les repas ne sont pas inclus** dans les prix des billets indiqués plus haut.
-
-Pour une question d'accessibilité, de services ou d'organisation, l'équipe est joignable au **01 64 51 33 33**.
-
-## Dormir près du parc après les illuminations
-
-Pour éviter un long trajet de nuit avec les enfants, **[Le Royaume des Lions à Rigny](https://www.booking.com/hotel/fr/le-royaume-des-lions-lumigny-nesles-ormeaux.fr.html)** propose des **chambres familiales**, un **parking privé gratuit** et un restaurant à proximité du parc. Cette nuitée se réserve séparément: **ne supposez pas que le billet Safari de Lumières est compris dans le prix de la chambre**.
-
-Avant de réserver, vérifiez les couchages et le prix aux dates souhaitées. La fiche de l'hôtel indique une **contribution à la conservation animale de 1 € par personne et par nuit**, sauf pour les moins de 3 ans, payable sur place; un **dépôt de garantie remboursable de 100 €** est demandé à l'arrivée, et un **lit bébé sur demande coûte 10 € par séjour**. Le petit-déjeuner, les conditions d'annulation et les disponibilités doivent également être contrôlés selon la formule retenue.
-
-## Contexte éditorial ciblé pour le maillage et les doublons
-
-### Articles proches préparés mécaniquement
-
-- /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | Thoiry Lumières Sauvages 2026-2027: dates, billets et visite en famille | evenements | Thoiry, Yvelines, Île-de-France
-- /articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/ | Planète Préhistorique à Bordeaux: dates, durée et tarifs en famille | sorties | Bordeaux, Gironde, Nouvelle-Aquitaine
-- /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/evenements/halloween-2026-au-safari-de-peaugres-animations-et-lumieres-sauvages/ | Halloween 2026 au Safari de Peaugres: animations, tarifs et Festival Lumières Sauvages | evenements | Peaugres, Ardèche, Auvergne-Rhône-Alpes
-- /articles/activites/wow-safari-thoiry-en-famille-tarifs-duree-et-conseils-pour-organiser-la-visite/ | Wow Safari Thoiry en famille: tarifs 2026, billets et durée | activites | Thoiry, Yvelines, Île-de-France
-- /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | Noël à Chartres 2026 en famille: marché et illuminations | evenements | Chartres, Eure-et-Loir, Centre-Val de Loire
-- /articles/sorties/safari-de-peaugres-avec-enfants-quel-billet-choisir-et-comment-organiser-la-journee/ | Safari de Peaugres avec enfants: quel billet choisir et comment organiser la journée | sorties | Peaugres, Ardèche, Auvergne-Rhône-Alpes
-- /articles/evenements/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere/ | Lumières de Laval 2026 en famille: marchés, grande roue et croisière | evenements | Laval, Mayenne, Pays de la Loire
-- /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille | evenements | Lumigny-Nesles-Ormeaux, Seine-et-Marne, Île-de-France
-- /articles/sorties/musee-de-la-grande-guerre-a-meaux-avec-des-enfants-que-voir-selon-leur-age/ | Musée de la Grande Guerre à Meaux avec des enfants: que voir selon leur âge ? | sorties | Meaux, Seine-et-Marne, Île-de-France
-- /articles/voyages/chateau-de-fontainebleau-depuis-paris-en-famille-train-r-bus-3401-et-budget/ | Château de Fontainebleau depuis Paris en famille: train R, bus 3401 et budget | voyages | Fontainebleau, Seine-et-Marne, Île-de-France
-- /articles/voyages/disneyland-paris-en-rer-a-avec-des-enfants-trajet-et-tickets-en-2026/ | Disneyland Paris en RER A avec des enfants: trajet et tarifs 2026 | voyages | Chessy, Seine-et-Marne, Île-de-France
-- /articles/evenements/marie-antoinette-a-fontainebleau-2026-2027-exposition-ou-visite-guidee-avec-les-enfants/ | Marie-Antoinette à Fontainebleau 2026-2027: exposition, visites et tarifs en famille | evenements | Fontainebleau, Seine-et-Marne, Île-de-France
-- /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | Noël des Siècles 2026 à Champs-sur-Marne: billets, budget et horaires en famille | evenements | Champs-sur-Marne, Seine-et-Marne, Île-de-France
-- /articles/evenements/noel-a-provins-2026-en-famille-marche-medieval-ou-visite-guidee/ | Noël à Provins 2026: marché médiéval, animations et visites en famille | evenements | Provins, Seine-et-Marne, Île-de-France
-- /articles/evenements/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget/ | Grand Noël 2026 à Vaux-le-Vicomte en famille: billets, offre enfant et animations | evenements | Maincy, Seine-et-Marne, Île-de-France
-- /articles/bons-plans/chateau-de-champs-sur-marne-en-famille-gratuites-tarifs-et-dates-a-eviter/ | Château de Champs-sur-Marne en famille: gratuités, tarifs et dates à éviter | bons-plans | Champs-sur-Marne, Seine-et-Marne, Île-de-France
-- /articles/evenements/toussaint-2026-a-vaux-le-vicomte-lampe-torche-ou-carnaval-des-animaux-avec-les-enfants/ | Toussaint 2026 à Vaux-le-Vicomte: les animations pour les enfants | evenements | Maincy, Seine-et-Marne, Île-de-France
-- /articles/evenements/contes-gratuits-a-paris-le-14-novembre-2026-quel-spectacle-choisir-selon-l-age/ | Contes gratuits à Paris le 14 novembre 2026: trois rendez-vous en famille | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/semaine-du-golfe-2027-en-famille-ou-voir-les-bateaux/ | Semaine du Golfe 2027 en famille: où voir les bateaux ? | evenements | Morbihan, Bretagne
-- /articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/ | Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ? | evenements | Pyrénées-Orientales, Occitanie
-- /articles/evenements/contes-gratuits-a-paris-le-14-novembre-2026-quelle-seance-choisir-en-famille/ | Contes gratuits à Paris le 14 novembre 2026: spectacles et scène ouverte en famille | evenements | Paris, Paris, Île-de-France
-
-### Historique Radar lié
-
-- opportunity | /articles/voyages/chateau-de-fontainebleau-depuis-paris-en-famille-train-r-bus-3401-et-budget/ | 2026-10-31T16:31:36.357Z
-- opportunity | /articles/evenements/contes-gratuits-a-paris-le-14-novembre-2026-quel-spectacle-choisir-selon-l-age/ | 2026-11-05T13:27:24.356Z
-- opportunity | /articles/evenements/contes-gratuits-a-paris-le-14-novembre-2026-quelle-seance-choisir-en-famille/ | 2026-11-05T00:34:45.481Z
-- opportunity | /articles/voyages/disneyland-paris-en-rer-a-avec-des-enfants-trajet-et-tickets-en-2026/ | 2026-10-31T04:29:30.633Z
-- opportunity | /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | 2026-10-19T19:48:02.164Z
-- opportunity | /articles/evenements/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget/ | 2026-10-20T22:29:05.422Z
-- opportunity | /articles/evenements/halloween-2026-au-safari-de-peaugres-animations-et-lumieres-sauvages/ | 2026-10-13T05:01:12.150Z
-- opportunity | /articles/evenements/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere/ | 2026-10-30T09:27:15.122Z
-- opportunity | /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | 2026-10-16T17:46:42.470Z
-- opportunity | /articles/evenements/marie-antoinette-a-fontainebleau-2026-2027-exposition-ou-visite-guidee-avec-les-enfants/ | 2026-10-27T18:27:41.322Z
-
-### Phases 2 et 3
-
-Écris `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet de l'article. **N'ajoute aucun bloc `radar`.** Le script reprend mécaniquement le bloc Radar de la phase précédente et incrémente la phase.
-
-Pour un refresh, le script conserve de lui-même les champs protégés de l'article source. Pour une opportunity, il conserve la catégorie, le territoire et le slug choisis en phase 1.
-
-En phase 3 seulement, ajoute `radarReview` dans la requête avec `summary`, `sources` et, pour un refresh, `substantialChanges` et `regressionCheck`.
-
-## Écriture autorisée
-
-N'effectue aucune plomberie Git. Ne crée, ne nomme et ne supprime aucune branche Radar; ne choisis aucun SHA; ne modifie aucun fichier de DevWeb13/fam-space-qwik.
-
-Écris uniquement radar-request.md sur la branche main de DevWeb13/fam-space-actions-bridge selon le format fourni dans ce runtime. Le workflow GitHub se charge du reste. Une fois cette requête écrite, termine le passage.
+## Snapshot GSC quotidien
+
+Le cache compact est `radar-gsc-snapshot.json` sur `main` de `DevWeb13/fam-space-actions-bridge`. Il ne contient jamais les lignes GSC brutes.
+
+Cette tâche est séparée de la sélection éditoriale. **S'il n'existe aucune branche Radar active et que le snapshot doit être renouvelé, actualise uniquement le snapshot puis termine le passage. Ne choisis pas de mission dans la même exécution.** Le passage horaire suivant effectuera la phase 1 avec le snapshot prêt.
+
+Le snapshot est réutilisable lorsqu'il a `schemaVersion: 1`, a été généré le jour courant en Europe/Paris et que `dataThrough` n'a pas plus de sept jours de retard.
+
+Lorsqu'un nouveau snapshot est nécessaire, utilise Windsor.ai avec le compte `sc-domain:fam-space.fr`, connector `searchconsole`, `include_fresh_data: false`. **Chaque appel `get_data` Search Analytics doit filtrer explicitement `search_type = web` avec `filters: [["search_type","eq","web"]]`.** Récupère 28 jours jusqu'à la dernière journée consolidée:
+
+- une lecture `date, clicks, impressions` pour déterminer la fin réelle;
+- quatre lectures consécutives de sept jours `date, page, clicks, impressions, position`;
+- pour les **cinq premiers articles** de `refresh` (priorité aux chutes rapides), deux lectures des requêtes Google par article : une sur `peakStart..peakEnd`, l'autre sur `recentStart..recentEnd`, avec la page exacte et `search_type = web`. Selon l'article, les fenêtres comportent trois ou sept jours. Cela représente au plus dix appels de diagnostic, en plus des cinq lectures initiales.
+- applique `attachRadarQueryDiagnosis(item, peakResponse, recentResponse)` **uniquement à l'article correspondant**. Les recherches transmises à la rédaction doivent être celles liées au diagnostic (perte de positions, perte d'exposition ou potentiel de clics), pas une liste générique. Ne copie jamais un diagnostic entre deux URL.
+- les autres candidats gardent `needs_query_check` avec des mesures `null` (non mesurées). Cela ne constitue pas un diagnostic de perte de positions. Si les cinq diagnostics demandés n'ont pas été obtenus, ne prétends pas les avoir effectués : signale l'échec de collecte plutôt que fabriquer les mesures.
+
+Utilise la logique de le module Radar embarqué plus bas: `unwrapRows`, `buildRadarShortlist`, `attachRadarQueryDiagnosis` (qui appelle `diagnoseQueries`) et `probableDuplicates`. Une réponse Windsor est considérée complète lorsque `status: done`, que `data` est un tableau et que `total_rows` correspond à `data.length`, sans indicateur explicite de troncature. **Un nombre rond de lignes, notamment 1 500, n'est jamais à lui seul une preuve de plafonnement et ne doit pas arrêter Radar.** Découpe seulement la période si Windsor signale réellement une réponse incomplète/tronquée, si `total_rows` ne correspond pas au nombre de lignes reçues, ou si `unwrapRows` refuse la réponse, notamment à son seuil conservateur de 5 000 lignes par réponse. Un 429, un refus d'accès ou un plafond réellement non résolu termine le passage. Maximum 50 appels `get_data`. Les réponses brutes restent temporaires.
+
+Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlist `refresh` avec ses diagnostics compacts, `strongPages`, `excluded` et les avertissements utiles.
+
+## Snapshot actuellement disponible
+
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-06T01:28:02+01:00",
+  "dataThrough": "2026-11-03",
+  "from": "2026-10-07",
+  "refresh": [
+    {
+      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
+      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
+      "category": "voyages",
+      "publishedAt": "2026-08-29T00:00:45+02:00",
+      "ageDays": 69,
+      "peakStart": "2026-10-21",
+      "peakEnd": "2026-10-27",
+      "recentStart": "2026-10-28",
+      "recentEnd": "2026-11-03",
+      "peakImpressions": 2930,
+      "recentImpressions": 1975,
+      "score": 955,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "focusQueries": [
+        "transport Paris avec enfants",
+        "Paris Visite ou Navigo famille"
+      ]
+    },
+    {
+      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
+      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-16T17:46:42.359Z",
+      "ageDays": 21,
+      "peakStart": "2026-10-17",
+      "peakEnd": "2026-10-23",
+      "recentStart": "2026-10-28",
+      "recentEnd": "2026-11-03",
+      "peakImpressions": 1318,
+      "recentImpressions": 683,
+      "score": 444.5,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Lumigny-Nesles-Ormeaux",
+        "department": "Seine-et-Marne",
+        "region": "Île-de-France"
+      },
+      "focusQueries": [
+        "Lumigny Safari de Lumières 2026 2027",
+        "Safari de Lumières Lumigny tarifs famille",
+        "Lumigny Safari de Lumières billet combiné"
+      ]
+    },
+    {
+      "url": "/articles/evenements/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget/",
+      "title": "Grand Noël 2026 à Vaux-le-Vicomte en famille: billets, offre enfant et animations",
+      "category": "evenements",
+      "publishedAt": "2026-10-20T22:29:05.320Z",
+      "ageDays": 17,
+      "peakStart": "2026-10-21",
+      "peakEnd": "2026-10-27",
+      "recentStart": "2026-10-28",
+      "recentEnd": "2026-11-03",
+      "peakImpressions": 285,
+      "recentImpressions": 35,
+      "score": 141.667,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Maincy",
+        "department": "Seine-et-Marne",
+        "region": "Île-de-France"
+      },
+      "focusQueries": [
+        "Grand Noël Vaux-le-Vicomte 2026 famille",
+        "Vaux-le-Vicomte Noël 2026 billet enfant offert",
+        "Grand Noël Maincy patinoire Odyssée Nordique"
+      ]
+    },
+    {
+      "url": "/articles/sorties/walibi-rhone-alpes-en-famille-quel-billet-choisir-selon-la-taille-des-enfants/",
+      "title": "Walibi Rhône-Alpes en famille: attractions, tailles et billets en 2026",
+      "category": "sorties",
+      "publishedAt": "2026-09-22T11:00:15+02:00",
+      "ageDays": 45,
+      "peakStart": "2026-10-16",
+      "peakEnd": "2026-10-22",
+      "recentStart": "2026-10-28",
+      "recentEnd": "2026-11-03",
+      "peakImpressions": 256,
+      "recentImpressions": 169,
+      "score": 87,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Les Avenières Veyrins-Thuellin",
+        "department": "Isère",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "focusQueries": [
+        "Walibi Rhône-Alpes en famille",
+        "tarifs Walibi 2026"
+      ]
+    },
+    {
+      "url": "/articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/",
+      "title": "Où manger des fouées en famille autour de Saumur ?",
+      "category": "cuisine",
+      "publishedAt": "2026-10-11T18:36:52+02:00",
+      "ageDays": 26,
+      "peakStart": "2026-10-21",
+      "peakEnd": "2026-10-27",
+      "recentStart": "2026-10-28",
+      "recentEnd": "2026-11-03",
+      "peakImpressions": 303,
+      "recentImpressions": 206,
+      "score": 84.067,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Saumur",
+        "department": "Maine-et-Loire",
+        "region": "Pays de la Loire"
+      },
+      "focusQueries": [
+        "fouées Saumur",
+        "restaurant troglodytique Saumur",
+        "fouées en famille",
+        "restaurant famille Maine-et-Loire"
+      ]
+    },
+    {
+      "url": "/articles/activites/la-cite-de-la-mer-a-cherbourg-en-famille-tarifs-duree-et-conseils-de-visite/",
+      "title": "La Cité de la Mer à Cherbourg en famille: tarifs, visite et billets 2026",
+      "category": "activites",
+      "publishedAt": "2026-08-18T15:06:21+02:00",
+      "ageDays": 80,
+      "peakStart": "2026-10-21",
+      "peakEnd": "2026-10-27",
+      "recentStart": "2026-10-28",
+      "recentEnd": "2026-11-03",
+      "peakImpressions": 97,
+      "recentImpressions": 59,
+      "score": 73,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Cherbourg-en-Cotentin",
+        "department": "Manche",
+        "region": "Normandie"
+      },
+      "focusQueries": [
+        "Cité de la Mer Cherbourg famille",
+        "activité famille Manche"
+      ]
+    },
+    {
+      "url": "/articles/sorties/parc-spirou-avec-de-jeunes-enfants-regardez-la-taille-avant-d-acheter-les-billets/",
+      "title": "Parc Spirou avec de jeunes enfants: regardez la taille avant d'acheter les billets",
+      "category": "sorties",
+      "publishedAt": "2026-09-03T04:04:27+02:00",
+      "ageDays": 64,
+      "peakStart": "2026-10-21",
+      "peakEnd": "2026-10-27",
+      "recentStart": "2026-10-28",
+      "recentEnd": "2026-11-03",
+      "peakImpressions": 140,
+      "recentImpressions": 70,
+      "score": 70,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Monteux",
+        "department": "Vaucluse",
+        "region": "Provence-Alpes-Côte d’Azur"
+      },
+      "focusQueries": [
+        "Parc Spirou enfants taille attractions",
+        "Parc Spirou billets famille"
+      ]
+    },
+    {
+      "url": "/articles/evenements/festival-du-livre-de-colmar-2026-en-famille-dates-ateliers-et-acces/",
+      "title": "Festival du Livre de Colmar 2026 en famille: dates, horaires et animations jeunesse",
+      "category": "evenements",
+      "publishedAt": "2026-10-20T08:52:25.760Z",
+      "ageDays": 17,
+      "peakStart": "2026-10-21",
+      "peakEnd": "2026-10-27",
+      "recentStart": "2026-10-28",
+      "recentEnd": "2026-11-03",
+      "peakImpressions": 61,
+      "recentImpressions": 31,
+      "score": 65,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Colmar",
+        "department": "Haut-Rhin",
+        "region": "Grand Est"
+      },
+      "focusQueries": [
+        "Festival du Livre Colmar 2026 enfants",
+        "festival livre Colmar 21 22 novembre 2026",
+        "festival livre Colmar animations jeunesse gratuites"
+      ]
+    },
+    {
+      "url": "/articles/evenements/halloween-2026-au-parc-spirou-nocturnes-naruto-reservation-et-maison-hantee/",
+      "title": "Halloween 2026 au Parc Spirou: billets, nocturnes Naruto et maison hantée",
+      "category": "evenements",
+      "publishedAt": "2026-10-12T17:34:53.859Z",
+      "ageDays": 25,
+      "peakStart": "2026-10-17",
+      "peakEnd": "2026-10-23",
+      "recentStart": "2026-10-28",
+      "recentEnd": "2026-11-03",
+      "peakImpressions": 141,
+      "recentImpressions": 63,
+      "score": 65,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Monteux",
+        "department": "Vaucluse",
+        "region": "Provence-Alpes-Côte d'Azur"
+      },
+      "focusQueries": [
+        "Halloween Parc Spirou 2026",
+        "réservation Halloween Parc Spirou billet non daté",
+        "nocturnes Naruto Parc Spirou",
+        "Cirque Carnage Parc Spirou 2026"
+      ]
+    },
+    {
+      "url": "/articles/sorties/aeroscopia-a-blagnac-en-famille-tarifs-avions-et-conseils-de-visite/",
+      "title": "Aeroscopia à Blagnac en famille: tarifs, avions et conseils de visite",
+      "category": "sorties",
+      "publishedAt": "2026-08-24T00:36:16+02:00",
+      "ageDays": 74,
+      "peakStart": "2026-10-19",
+      "peakEnd": "2026-10-25",
+      "recentStart": "2026-10-28",
+      "recentEnd": "2026-11-03",
+      "peakImpressions": 96,
+      "recentImpressions": 34,
+      "score": 62,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Blagnac",
+        "department": "Haute-Garonne",
+        "region": "Occitanie"
+      },
+      "focusQueries": [
+        "Aeroscopia en famille",
+        "musée avion Toulouse enfants"
+      ]
+    },
+    {
+      "url": "/articles/sorties/cosquer-mediterranee-avec-des-enfants-age-poussette-tarifs/",
+      "title": "Cosquer Méditerranée avec des enfants: que peut-on visiter selon leur âge?",
+      "category": "sorties",
+      "publishedAt": "2026-10-03T11:22:17.704Z",
+      "ageDays": 34,
+      "peakStart": "2026-10-21",
+      "peakEnd": "2026-10-27",
+      "recentStart": "2026-10-28",
+      "recentEnd": "2026-11-03",
+      "peakImpressions": 82,
+      "recentImpressions": 21,
+      "score": 61,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Marseille",
+        "department": "Bouches-du-Rhône",
+        "region": "Provence-Alpes-Côte d'Azur"
+      },
+      "focusQueries": [
+        "Cosquer Méditerranée enfant",
+        "Cosquer Méditerranée moins de 3 ans",
+        "Cosquer Méditerranée poussette",
+        "Cosquer Méditerranée tarifs enfants",
+        "Cosquer Méditerranée durée visite"
+      ]
+    },
+    {
+      "url": "/articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/",
+      "title": "Planète Préhistorique à Bordeaux: dates, durée et tarifs en famille",
+      "category": "sorties",
+      "publishedAt": "2026-09-27T14:41:35+02:00",
+      "ageDays": 40,
+      "peakStart": "2026-10-20",
+      "peakEnd": "2026-10-26",
+      "recentStart": "2026-10-28",
+      "recentEnd": "2026-11-03",
+      "peakImpressions": 74,
+      "recentImpressions": 14,
+      "score": 60,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Bordeaux",
+        "department": "Gironde",
+        "region": "Nouvelle-Aquitaine"
+      },
+      "focusQueries": [
+        "Planète Préhistorique Bordeaux enfants",
+        "Bassins des Lumières dinosaures"
+      ]
+    },
+    {
+      "url": "/articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/",
+      "title": "Déchets verts à Toulouse Métropole en 2027: collecte, broyage et compostage",
+      "category": "maison",
+      "publishedAt": "2026-10-15T19:13:56+02:00",
+      "ageDays": 22,
+      "peakStart": "2026-10-16",
+      "peakEnd": "2026-10-22",
+      "recentStart": "2026-10-28",
+      "recentEnd": "2026-11-03",
+      "peakImpressions": 112,
+      "recentImpressions": 33,
+      "score": 57.933,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Toulouse",
+        "department": "Haute-Garonne",
+        "region": "Occitanie"
+      },
+      "focusQueries": [
+        "déchets verts Toulouse Métropole 2027",
+        "collecte déchets végétaux Toulouse",
+        "broyage gratuit Toulouse Métropole"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/carte-okay-savoie-2026-2027-comment-obtenir-et-utiliser-les-80-du-collegien/",
+      "title": "Carte OKAY Savoie 2026-2027: comment obtenir et utiliser les 80 € du collégien",
+      "category": "vie-pratique",
+      "publishedAt": "2026-09-02T02:00:51+02:00",
+      "ageDays": 65,
+      "peakStart": "2026-10-07",
+      "peakEnd": "2026-10-13",
+      "recentStart": "2026-10-28",
+      "recentEnd": "2026-11-03",
+      "peakImpressions": 123,
+      "recentImpressions": 71,
+      "score": 52,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Chambéry",
+        "department": "Savoie",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "focusQueries": [
+        "carte OKAY Savoie 2026-2027",
+        "80 euros collégien Savoie"
+      ]
+    },
+    {
+      "url": "/articles/voyages/train-de-la-rhune-avec-des-enfants-billets-duree-et-conseils-en-2026/",
+      "title": "Train de la Rhune avec des enfants: billets, durée et conseils en 2026",
+      "category": "voyages",
+      "publishedAt": "2026-09-30T20:04:26+02:00",
+      "ageDays": 37,
+      "peakStart": "2026-10-08",
+      "peakEnd": "2026-10-14",
+      "recentStart": "2026-10-28",
+      "recentEnd": "2026-11-03",
+      "peakImpressions": 51,
+      "recentImpressions": 0,
+      "score": 51,
+      "signal": "needs_query_check",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "basis": "Baisse d'impressions observée; causalité et classement non établis.",
+      "location": {
+        "city": "Sare",
+        "department": "Pyrénées-Atlantiques",
+        "region": "Nouvelle-Aquitaine"
+      },
+      "focusQueries": [
+        "Train de la Rhune avec enfants",
+        "Train de la Rhune tarifs 2026"
+      ]
+    }
+  ],
+  "strongPages": [
+    {
+      "url": "/articles/evenements/foire-de-grenoble-2026-en-famille-jours-gratuits-animations-et-budget/",
+      "title": "Foire de Grenoble 2026 en famille: jours gratuits, programme et tarifs",
+      "category": "evenements",
+      "recentImpressions": 1760,
+      "recentClicks": 25,
+      "recentPosition": 6.693,
+      "retention": 2.789
+    },
+    {
+      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
+      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
+      "category": "evenements",
+      "recentImpressions": 683,
+      "recentClicks": 14,
+      "recentPosition": 7.069,
+      "retention": 0.518
+    },
+    {
+      "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
+      "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
+      "category": "evenements",
+      "recentImpressions": 151,
+      "recentClicks": 8,
+      "recentPosition": 6.536,
+      "retention": 4.719
+    },
+    {
+      "url": "/articles/bons-plans/centre-spatial-guyanais-a-kourou-3-experiences-gratuites-et-un-musee-en-famille/",
+      "title": "Centre spatial guyanais à Kourou: 3 expériences gratuites et un musée en famille",
+      "category": "bons-plans",
+      "recentImpressions": 154,
+      "recentClicks": 6,
+      "recentPosition": 8.734,
+      "retention": 1.878
+    },
+    {
+      "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
+      "title": "Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite",
+      "category": "sorties",
+      "recentImpressions": 277,
+      "recentClicks": 4,
+      "recentPosition": 9.574,
+      "retention": 0.92
+    },
+    {
+      "url": "/articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/",
+      "title": "Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille",
+      "category": "evenements",
+      "recentImpressions": 136,
+      "recentClicks": 3,
+      "recentPosition": 8.566,
+      "retention": 1.283
+    },
+    {
+      "url": "/articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/",
+      "title": "Recycleries autour de Chartres: où donner et acheter d'occasion ?",
+      "category": "maison",
+      "recentImpressions": 117,
+      "recentClicks": 3,
+      "recentPosition": 7.402,
+      "retention": 0.992
+    },
+    {
+      "url": "/articles/vie-pratique/cantine-au-college-en-essonne-obtenir-son-tarif-2026-2027-sans-refaire-la-mauvaise-demarche/",
+      "title": "Cantine au collège en Essonne: obtenir son tarif 2026-2027 sans refaire la mauvaise démarche",
+      "category": "vie-pratique",
+      "recentImpressions": 100,
+      "recentClicks": 3,
+      "recentPosition": 9.35,
+      "retention": 3.125
+    },
+    {
+      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
+      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
+      "category": "voyages",
+      "recentImpressions": 1975,
+      "recentClicks": 2,
+      "recentPosition": 8.856,
+      "retention": 0.674
+    },
+    {
+      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
+      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
+      "category": "vie-pratique",
+      "recentImpressions": 127,
+      "recentClicks": 2,
+      "recentPosition": 5.827,
+      "retention": 1.198
+    }
+  ],
+  "excluded": {
+    "expired": 164,
+    "cooling": 4
+  },
+  "warnings": [
+    "GSC recherche web : 9333 lignes sur quatre semaines, réponses complètes (1770, 2185, 2636, 2742).",
+    "Catalogue Radar : 966 articles et 179 entrées d'historique.",
+    "Diagnostics de requêtes non effectués : les signaux de baisse restent provisoires.",
+    "Les baisses d'impressions ne prouvent ni désindexation ni perte de position."
+  ]
+}
+
+## Module Radar embarqué
+
+Le code ci-dessous est fourni directement pour les calculs Radar nécessaires à ce passage. Ne va pas le relire dans un autre fichier.
+
+```javascript
+// Pure JavaScript: usable in Node or a connector orchestration runtime.
+const DAY = 86400000;
+const dayNumber = (date) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date ?? ""))
+    throw new Error("Date GSC invalide.");
+  const value = Date.parse(`${date}T00:00:00Z`);
+  if (
+    !Number.isFinite(value) ||
+    new Date(value).toISOString().slice(0, 10) !== date
+  )
+    throw new Error("Date GSC invalide.");
+  return value / DAY;
+};
+const isoDay = (value) => new Date(value * DAY).toISOString().slice(0, 10);
+const round = (value) => Math.round(value * 1000) / 1000;
+export function unwrapRows(response) {
+  const value = response?.structuredContent ?? response;
+  if (response?.isError || (value.status && value.status !== "done"))
+    throw new Error("GSC indisponible ou traitement incomplet.");
+  const rows = Array.isArray(value) ? value : value.data;
+  if (
+    !Array.isArray(rows) ||
+    value.truncated === true ||
+    value.has_more === true ||
+    (value.total_rows !== undefined && value.total_rows !== rows.length)
+  )
+    throw new Error("Réponse GSC absente ou tronquée.");
+  // Conservative per-response threshold, not a claimed Windsor plan limit.
+  // Concatenated arrays are allowed after each response has been checked.
+  if (!Array.isArray(value) && rows.length >= 5000)
+    throw new Error(
+      "Réponse GSC potentiellement plafonnée; découper la période.",
+    );
+  if (rows.some((row) => row.search_type && row.search_type !== "web"))
+    throw new Error(
+      "Le périmètre Radar doit contenir seulement la recherche web.",
+    );
+  return rows;
+}
+export function canonicalPage(value) {
+  // Some connector runtimes do not expose the URL global.
+  if (typeof value !== "string") return undefined;
+  const path = value.replace(/^https?:\/\/(?:www\.)?fam-space\.fr(?=\/)/i, "");
+  if (!/^\/articles\/[^/?#]+\/[^/?#]+\/$/.test(path)) return undefined;
+  if (path.split("/").some((part) => part === "." || part === ".."))
+    return undefined;
+  return path;
+}
+const metric = (row, name) => {
+  const value = Number(row[name]);
+  if (
+    row[name] === null ||
+    row[name] === undefined ||
+    !Number.isFinite(value) ||
+    value < 0
+  )
+    throw new Error(`Métrique GSC invalide: ${name}.`);
+  return value;
+};
+function addMetric(target, row) {
+  const impressions = metric(row, "impressions");
+  target.impressions += impressions;
+  target.clicks += metric(row, "clicks");
+  target.positionSum += impressions ? metric(row, "position") * impressions : 0;
+}
+const empty = () => ({ impressions: 0, clicks: 0, positionSum: 0 });
+const view = (sum, days = 7) => ({
+  impressions: round(sum.impressions),
+  clicks: round(sum.clicks),
+  impressionsPerDay: round(sum.impressions / days),
+  position: sum.impressions ? round(sum.positionSum / sum.impressions) : null,
+});
+function windowSum(days, start, end) {
+  const result = empty();
+  for (let date = start; date <= end; date++) {
+    const row = days.get(date);
+    if (row) for (const key of Object.keys(result)) result[key] += row[key];
+  }
+  return result;
+}
+export function buildRadarShortlist(
+  response,
+  catalog,
+  {
+    now = new Date().toISOString(),
+    siteRows,
+    from,
+    limit = 15,
+    history = [],
+  } = {},
+) {
+  const rows = unwrapRows(response);
+  const site = siteRows ? unwrapRows(siteRows) : rows;
+  if (!site.length)
+    throw new Error("GSC ne retourne aucune journée consolidée.");
+  const siteDays = site.map((row) => dayNumber(row.date));
+  const end = siteDays.reduce((max, date) => Math.max(max, date), -Infinity);
+  const observedStart = siteDays.reduce(
+    (min, date) => Math.min(min, date),
+    Infinity,
+  );
+  const today = dayNumber(now.slice(0, 10));
+  if (end > today || today - end > 7)
+    throw new Error(
+      "Données GSC trop anciennes ou datées dans le futur; aucun export historique de secours.",
+    );
+  // Never create comparison weeks before the first observed site day.
+  const start = from ? Math.max(dayNumber(from), observedStart) : observedStart;
+  if (!Number.isFinite(start) || end - start < 13)
+    throw new Error("Au moins 14 jours GSC sont nécessaires.");
+  const byPage = new Map();
+  for (const row of rows) {
+    const page = canonicalPage(row.page),
+      date = dayNumber(row.date);
+    if (!page || date < start || date > end) continue;
+    if (!byPage.has(page)) byPage.set(page, new Map());
+    const days = byPage.get(page);
+    if (!days.has(date)) days.set(date, empty());
+    addMetric(days.get(date), row);
+  }
+  const entries = [];
+  for (const article of catalog) {
+    const page = canonicalPage(article.url);
+    if (
+      !page ||
+      article.status === "draft" ||
+      Date.parse(article.publishedAt) > Date.parse(now)
+    )
+      continue;
+    const days = byPage.get(page) ?? new Map();
+    const publishedDay = dayNumber(article.publishedAt.slice(0, 10));
+    const firstDay = Math.max(start, publishedDay);
+    // Three days of growth followed by three consolidated days of decline
+    // can be detected before a new page has two full GSC weeks.
+    if (end - firstDay < 5) continue;
+    const recent = windowSum(days, end - 6, end);
+    const recent3 = windowSum(days, end - 2, end);
+    let peak3 = empty(), peak3Start = firstDay;
+    for (let first = firstDay; first + 2 < end - 2; first++) {
+      const sum = windowSum(days, first, first + 2);
+      if (sum.impressions > peak3.impressions) {
+        peak3 = sum;
+        peak3Start = first;
+      }
+    }
+    let peak7 = empty(), peak7Start = firstDay;
+    if (end - firstDay >= 13) {
+      for (let first = firstDay; first + 6 < end - 6; first++) {
+        const sum = windowSum(days, first, first + 6);
+        if (sum.impressions > peak7.impressions) {
+          peak7 = sum;
+          peak7Start = first;
+        }
+      }
+    }
+    const total = windowSum(days, firstDay, end);
+    const expired = Boolean(
+      article.eventEndsAt && article.eventEndsAt < now.slice(0, 10),
+    );
+    const reviewDue = Boolean(
+      article.reviewAt && article.reviewAt <= now.slice(0, 10),
+    );
+    const lastRefresh = history
+      .filter((item) => item.url === page && item.mode === "refresh")
+      .map((item) => item.publishedAt)
+      .sort()
+      .at(-1);
+    const cooling = Boolean(
+      lastRefresh && Date.parse(now) - Date.parse(lastRefresh) < 14 * DAY,
+    );
+    const ageDays = today - publishedDay;
+    const firstVisible = [...days]
+      .filter(([date, values]) => date >= firstDay && values.impressions > 0)
+      .map(([date]) => date)
+      .sort((a, b) => a - b)[0];
+    const newlyVisible =
+      ageDays <= 30 ||
+      (firstVisible !== undefined && firstVisible > start && end - firstVisible <= 21);
+    const rapidDrop =
+      newlyVisible &&
+      peak3.impressions >= 20 &&
+      peak3.impressions - recent3.impressions >= 15 &&
+      recent3.impressions <= peak3.impressions * 0.35;
+    const weeklyDecline = end - firstDay >= 13
+      ? Math.max(0, peak7.impressions - recent.impressions) *
+        Math.min(1, peak7.impressions / 35) *
+        Math.min(1, total.impressions / 50)
+      : 0;
+    const rapidScore = rapidDrop ? (peak3.impressions - recent3.impressions) * 3 : 0;
+    const recentPosition = recent.impressions
+      ? recent.positionSum / recent.impressions
+      : null;
+    const clickPotentialScore =
+      end - firstDay >= 13 && recentPosition !== null && recentPosition <= 10
+        ? Math.max(0, recent.impressions * 0.01 - recent.clicks) * 10
+        : 0;
+    const searchPotential =
+      !rapidDrop && clickPotentialScore > weeklyDecline && clickPotentialScore > 0;
+    const score =
+      expired || cooling
+        ? 0
+        : Math.max(rapidScore, weeklyDecline, clickPotentialScore) +
+          (reviewDue ? 35 : 0);
+    const peak = rapidDrop ? peak3 : peak7;
+    const peakStart = rapidDrop ? peak3Start : peak7Start;
+    const peakDays = rapidDrop ? 3 : 7;
+    const comparedRecent = rapidDrop ? recent3 : recent;
+    const comparedRecentStart = rapidDrop ? end - 2 : end - 6;
+    const retention = peak.impressions
+      ? comparedRecent.impressions / peak.impressions
+      : 1;
+    entries.push({
+      url: page,
+      title: article.title,
+      category: article.category,
+      location: article.location,
+      keywords: article.keywords ?? article.topic?.keywords ?? [],
+      publishedAt: article.publishedAt,
+      eventEndsAt: article.eventEndsAt,
+      reviewAt: article.reviewAt,
+      expired,
+      cooling,
+      reviewDue,
+      ageDays,
+      rapidDrop,
+      peakStart: isoDay(peakStart),
+      peakEnd: isoDay(peakStart + peakDays - 1),
+      recentStart: isoDay(comparedRecentStart),
+      recentEnd: isoDay(end),
+      peak: view(peak, peakDays),
+      recent: view(comparedRecent, peakDays),
+      retention: round(retention),
+      score: round(score),
+      signal: searchPotential ? "search_potential" : "needs_query_check",
+      basis: rapidDrop
+        ? `Visibilité récente : ${round(peak3.impressions)} impressions sur trois jours, puis ${round(recent3.impressions)} sur les trois derniers jours consolidés; cause non établie.`
+        : "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      ...(searchPotential
+        ? {
+            basis: `Page visible avec ${round(recent.impressions)} impressions, ${round(recent.clicks)} clics et une position moyenne de ${round(recentPosition)} sur sept jours; intention de recherche à examiner.`,
+            commonQueries: null,
+            positionDelta: null,
+            impressionRatio: null,
+            focusQueries: (Array.isArray(article.keywords)
+              ? article.keywords
+              : Array.isArray(article.topic?.keywords)
+                ? article.topic.keywords
+                : []
+            ).slice(0, 5),
+          }
+        : {}),
+    });
+  }
+  return {
+    schemaVersion: 1,
+    retrievedAt: now,
+    dataThrough: isoDay(end),
+    from: isoDay(start),
+    caveat:
+      "Les lignes absentes valent zéro dans les données retournées. GSC peut masquer des requêtes; les signaux ne prouvent ni désindexation ni causalité.",
+    refresh: entries
+      .filter((item) => item.score > 0)
+      .sort((a, b) =>
+        Number(b.rapidDrop && b.category !== "evenements") -
+          Number(a.rapidDrop && a.category !== "evenements") ||
+        Number(b.rapidDrop) - Number(a.rapidDrop) ||
+        b.score - a.score ||
+        a.url.localeCompare(b.url))
+      .slice(0, limit),
+    strongPages: entries
+      .filter(
+        (item) =>
+          !item.expired &&
+          item.recent.impressions >= 35 &&
+          item.retention >= 0.5,
+      )
+      .sort(
+        (a, b) =>
+          b.recent.clicks - a.recent.clicks ||
+          b.recent.impressions - a.recent.impressions ||
+          a.url.localeCompare(b.url),
+      )
+      .slice(0, 10),
+    excluded: {
+      expired: entries.filter((item) => item.expired).length,
+      cooling: entries.filter((item) => item.cooling).length,
+    },
+  };
+}
+export function diagnoseQueries(peakResponse, recentResponse) {
+  const aggregate = (response) => {
+    const result = new Map();
+    for (const row of unwrapRows(response)) {
+      if (typeof row.query !== "string")
+        throw new Error("Requête GSC manquante.");
+      if (!result.has(row.query)) result.set(row.query, empty());
+      addMetric(result.get(row.query), row);
+    }
+    return result;
+  };
+  const peak = aggregate(peakResponse),
+    recent = aggregate(recentResponse);
+  const common = [...peak.keys()].filter(
+    (query) =>
+      peak.get(query).impressions >= 10 &&
+      (recent.get(query)?.impressions ?? 0) >= 3,
+  );
+  let weight = 0,
+    change = 0;
+  for (const query of common) {
+    const first = peak.get(query),
+      last = recent.get(query);
+    const w = Math.min(first.impressions, last.impressions);
+    weight += w;
+    change +=
+      w *
+      (last.positionSum / last.impressions -
+        first.positionSum / first.impressions);
+  }
+  const delta = weight ? change / weight : null;
+  const total = (values) =>
+    [...values.values()].reduce((sum, item) => sum + item.impressions, 0);
+  const ratio = total(peak) ? total(recent) / total(peak) : null;
+  return {
+    signal:
+      delta !== null && delta >= 3
+        ? "rank_loss"
+        : delta !== null &&
+            Math.abs(delta) <= 2 &&
+            ratio !== null &&
+            ratio <= 0.25
+          ? "coverage_loss"
+          : "uncertain",
+    commonQueries: common.length,
+    positionDelta: delta === null ? null : round(delta),
+    impressionRatio: ratio === null ? null : round(ratio),
+    queries: [...new Set([...peak.keys(), ...recent.keys()])]
+      .map((query) => ({
+        query,
+        peak: view(peak.get(query) ?? empty()),
+        recent: view(recent.get(query) ?? empty()),
+      }))
+      .sort((a, b) => b.peak.impressions - a.peak.impressions),
+    caveat:
+      "coverage_loss désigne une baisse d'exposition observée, pas une preuve de désindexation. Les requêtes masquées et la saisonnalité limitent le diagnostic.",
+  };
+}
+// The shortlist ranks pages; only per-page query rows can establish a diagnosis.
+export function attachRadarQueryDiagnosis(item, peakResponse, recentResponse) {
+  const diagnosis = diagnoseQueries(peakResponse, recentResponse);
+  const signal =
+    item.signal === "search_potential" && diagnosis.signal === "uncertain"
+      ? "search_potential"
+      : diagnosis.signal;
+  const priority = (query) => {
+    const lostImpressions = Math.max(0, query.peak.impressions - query.recent.impressions);
+    const lostPositions =
+      query.peak.position !== null && query.recent.position !== null
+        ? Math.max(0, query.recent.position - query.peak.position)
+        : 0;
+    if (signal === "rank_loss")
+      return query.peak.impressions >= 10 && query.recent.impressions >= 3
+        ? lostPositions * Math.min(query.peak.impressions, query.recent.impressions)
+        : 0;
+    if (signal === "search_potential") return query.recent.impressions;
+    return lostImpressions;
+  };
+  const relevantQueries = diagnosis.queries
+    .filter((query) => signal !== "rank_loss" || priority(query) > 0)
+    .sort((a, b) => priority(b) - priority(a) || b.peak.impressions - a.peak.impressions)
+    .slice(0, 5)
+    .map(({ query }) => query);
+  const basis =
+    item.basis + " " +
+    (signal === "rank_loss"
+      ? `Recul moyen de ${diagnosis.positionDelta} positions sur ${diagnosis.commonQueries} requête(s) comparable(s).`
+      : signal === "coverage_loss"
+        ? `Baisse d'exposition sur les requêtes visibles (ratio ${diagnosis.impressionRatio}), sans recul de classement comparable établi.`
+        : signal === "search_potential"
+          ? "Les requêtes visibles ne démontrent pas une perte de classement."
+          : `Diagnostic sur ${diagnosis.commonQueries} requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.`);
+  return {
+    ...item,
+    signal,
+    basis,
+    commonQueries: diagnosis.commonQueries,
+    positionDelta: diagnosis.positionDelta,
+    impressionRatio: diagnosis.impressionRatio,
+    focusQueries: relevantQueries.length ? relevantQueries : item.focusQueries ?? [],
+  };
+}
+
+const STOP = new Set(
+  "avec pour dans sans famille familles enfant enfants tarif tarifs duree conseil conseils visite visiter billet billets activite activites sortie sorties evenement evenements preparation pratique pratiques autour leur leurs aussi quoi comment quel quelle quelles quels quand faire partir 2026 2027".split(
+    " ",
+  ),
+);
+const words = (value) =>
+  new Set(
+    String(value)
+      .replace(/œ/g, "oe")
+      .normalize("NFD")
+      .replace(/\p{Diacritic}/gu, "")
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((word) => word.length >= 3 && !STOP.has(word)),
+  );
+export function probableDuplicates(subject, catalog, limit = 5) {
+  const terms = words(
+    [
+      subject.title,
+      ...(subject.keywords ?? subject.topic?.keywords ?? []),
+    ].join(" "),
+  );
+  return catalog
+    .filter(
+      (article) => canonicalPage(article.url) !== canonicalPage(subject.url),
+    )
+    .map((article) => {
+      const candidate = words(
+        [
+          article.title,
+          ...(article.keywords ?? article.topic?.keywords ?? []),
+        ].join(" "),
+      );
+      const shared = [...terms].filter((word) => candidate.has(word));
+      const sameCity = Boolean(
+        subject.location?.city &&
+          subject.location.city === article.location?.city,
+      );
+      const sameDepartment = Boolean(
+        subject.location?.department &&
+          subject.location.department === article.location?.department,
+      );
+      return {
+        url: article.url,
+        title: article.title,
+        location: article.location,
+        sharedTerms: shared,
+        score:
+          shared.length / Math.max(1, new Set([...terms, ...candidate]).size) +
+          (sameCity ? 0.2 : sameDepartment ? 0.1 : 0),
+      };
+    })
+    .filter(
+      (item) =>
+        item.sharedTerms.length >= 2 ||
+        (item.sharedTerms.length === 1 && item.sharedTerms[0].length >= 6),
+    )
+    .sort((a, b) => b.score - a.score || a.url.localeCompare(b.url))
+    .slice(0, limit);
+}
+```
+
+## Résultat attendu
+
+Actualise uniquement radar-gsc-snapshot.json sur la branche main de DevWeb13/fam-space-actions-bridge avec le snapshot compact décrit ci-dessus, puis termine ce passage. Ne choisis aucune mission Radar dans la même exécution et ne modifie aucun autre fichier interne.
