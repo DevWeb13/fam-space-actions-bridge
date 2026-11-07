@@ -54,8 +54,6 @@ Sélectionne seulement les liens internes réellement utiles et vérifie les rou
 
 Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
 
-Dans le frontmatter YAML, entoure de guillemets les valeurs textuelles contenant `: ` (par exemple `summary: "Visite en famille : tarifs et horaires"`) afin de conserver un YAML valide.
-
 Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
