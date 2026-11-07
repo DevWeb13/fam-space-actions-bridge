@@ -766,9 +766,8 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 
 ### Historique Radar lié
 
-- opportunity | /articles/evenements/contes-gratuits-a-paris-le-14-novembre-2026-quel-spectacle-choisir-selon-l-age/ | 2026-11-05T13:27:24.356Z
-- opportunity | /articles/evenements/contes-gratuits-a-paris-le-14-novembre-2026-quelle-seance-choisir-en-famille/ | 2026-11-05T00:34:45.481Z
 - opportunity | /articles/evenements/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/ | 2026-11-04T21:32:12.180Z
+- refresh | /articles/vie-pratique/ferry-ouistreham-portsmouth-en-famille-preparer-le-depart-et-la-traversee/ | 2026-11-07T07:35:04.984Z
 - opportunity | /articles/evenements/foire-de-grenoble-2026-en-famille-jours-gratuits-animations-et-budget/ | 2026-10-21T13:33:34.395Z
 - opportunity | /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | 2026-10-08T02:18:12.427Z
 - refresh | /articles/evenements/halloween-au-chateau-de-villersexel-2026-en-famille-quelle-experience-choisir/ | 2026-10-16T10:34:46.747Z
@@ -778,6 +777,7 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 - opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | 2026-10-10T08:38:56.921Z
 - opportunity | /articles/bons-plans/navigo-liberte-en-famille-en-2026-tarif-enfant-passe-ou-telephone/ | 2026-10-25T10:33:30.080Z
+- refresh | /articles/bons-plans/navigo-liberte-en-famille-en-2026-tarif-enfant-passe-ou-telephone/ | 2026-11-07T04:27:46.536Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-10-26T21:31:06.119Z
 - opportunity | /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | 2026-10-30T21:26:32.584Z
 - opportunity | /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | 2026-10-30T18:26:56.039Z
@@ -802,34 +802,83 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 ### Publication en cours
 
 - Branche: automation/publication-20261107-1100-la-vallee-des-saints-a-carnoet-en-famille-sculptures-geantes-balade-et
-- HEAD: publication: phase 1 la-vallee-des-saints-a-carnoet-en-famille-sculptures-geantes-balade-et
+- HEAD: publication: phase 2 20261107-1100-la-vallee-des-saints-a-carnoet-en-famille-sculptures-geantes-balade-et
 
-## Sujet retenu
-**La Vallée des Saints à Carnoët en famille : sculptures géantes, balade et séjour au cœur de la Bretagne.**
+---
+category: "voyages"
+title: "La Vallée des Saints à Carnoët: visiter les géants de granit en famille"
+subtitle: "Une balade entre sculptures et légendes bretonnes, avec les bons repères pour les enfants et les poussettes"
+summary: "À Carnoët, découvrez plus de 200 statues monumentales en famille: parcours, poussette, parking, visites et conseils pour prolonger l'escapade."
+keywords:
+  - "Vallée des Saints en famille"
+  - "Carnoët Côtes-d'Armor"
+  - "visite Vallée des Saints poussette"
+location:
+  city: "Carnoët"
+  department: "Côtes-d'Armor"
+  region: "Bretagne"
+sources:
+  - title: "La Vallée des Saints - Informations pratiques"
+    url: "https://www.lavalleedessaints.com/informations-pratiques/"
+  - title: "La Vallée des Saints - Stationnement"
+    url: "https://www.lavalleedessaints.com/preparer-sa-visite/stationnement/"
+  - title: "La Vallée des Saints - Venir en famille"
+    url: "https://www.lavalleedessaints.com/decouvrir-le-site/venir-en-famille/"
+  - title: "La Vallée des Saints - Accessibilité"
+    url: "https://www.lavalleedessaints.com/preparer-sa-visite/accessibilite/"
+  - title: "La Vallée des Saints - Visites guidées"
+    url: "https://www.lavalleedessaints.com/preparer-sa-visite/visites-guidees/"
+  - title: "La Vallée des Saints - Nos services"
+    url: "https://www.lavalleedessaints.com/preparer-sa-visite/nos-services/"
+  - title: "La Vallée des Saints - Accueil et boutique"
+    url: "https://www.lavalleedessaints.com/preparer-sa-visite/accueil-et-boutique/"
+  - title: "Tourisme Côtes-d'Armor - La Vallée des Saints"
+    url: "https://www.cotesdarmor.com/fr/fiche/patrimoine-culturel/la-vallee-des-saints-carnoet_TFOPCUBRE022V500H5M/"
+  - title: "Tourisme Côtes-d'Armor - Une journée en Centre Bretagne"
+    url: "https://www.cotesdarmor.com/a-voir-a-faire/routes-touristiques/une-journee-en-centre-bretagne/"
+---
 
-Angle : préparer une découverte familiale de cette galerie de statues monumentales en plein air, accessible toute l'année, en distinguant visite libre, parcours avec jeunes enfants, services et possibilité de prolonger le voyage dans le Centre-Bretagne. Située à Carnoët dans les Côtes-d'Armor, la Vallée des Saints rassemble plus de 200 sculptures de saints bretons en granit, sur un vaste site naturel ; ce n'est ni un parc d'attractions ni une exposition intérieure.
+Sur une colline de Carnoët, dans les Côtes-d'Armor, d'immenses personnages de granit semblent veiller sur la campagne bretonne. La Vallée des Saints est une galerie de sculptures à ciel ouvert: plus de 200 statues inspirées de figures historiques et légendaires de Bretagne, à découvrir en marchant à son rythme. Pour une famille, c'est une sortie qui mêle promenade, histoires et jeu d'observation, sans billet d'entrée.
 
-## Besoin du lecteur
-Comprendre ce que l'on voit, pourquoi la visite plaît aux familles et comment organiser une demi-journée ou une étape de séjour : accès libre, stationnement payant, relief et chemins, poussette et mobilité réduite, durée à adapter, météo, restauration, pique-nique, visites guidées saisonnières, intérêt pour les différents âges et hébergements alentour. Préciser que les services et visites accompagnées n'ont pas tous les mêmes horaires que l'accès au site.
+## Des géants de pierre qui racontent la Bretagne
 
-## Valeur éditoriale
-- Faire découvrir le projet artistique et ses statues plutôt que limiter l'article au prix du parking.
-- Distinguer accès gratuit 24 h/24 toute l'année, parking payant, accueil et restauration à horaires variables ; éviter de promettre des visites guidées quotidiennes en novembre.
-- Proposer un parcours familial réaliste sur un site naturel d'environ huit hectares, avec chemin de terre non goudronné et possibilité de voir plusieurs statues sans tout parcourir.
-- Donner des conseils concrets pour une visite en automne-hiver (lumière du jour, vent, chaussures, jeunes enfants), sans présenter les équipements comme systématiquement ouverts.
-- Suggérer de prolonger par un séjour dans le Centre-Bretagne, sans confondre Carnoët (22) avec Clohars-Carnoët (29).
+Ici, les œuvres ne sont pas alignées dans un musée. Elles occupent un paysage ouvert, avec des panoramas sur la Bretagne intérieure. Certaines statues dépassent plusieurs mètres de hauteur. Leurs visages, vêtements, animaux et objets sculptés offrent autant de détails à remarquer.
 
-## Affiliation
-Offres partenaires vérifiées sur leurs pages propres, à présenter comme options pour les familles qui prolongent la découverte ; disponibilité et tarifs à vérifier selon les dates :
-- **Abritel — locations de vacances à Carnoët**, dont des maisons de plusieurs chambres pour familles : https://www.abritel.fr/d/4048/carnoet
-- **Booking.com — Relais De La Tour à Callac**, appartement avec deux chambres, cuisine et parking, adapté à une étape familiale dans le secteur : https://www.booking.com/hotel/fr/relais-de-la-tour.en-gb.html
-L'accès au site est gratuit ; aucune billetterie partenaire pour la visite libre n'a été identifiée. Ne pas inventer d'offre GetYourGuide/Tiqets. Les deux hébergements sont des pistes secondaires et non des conditions de visite.
+Le projet fait revivre des saints bretons, personnages parfois historiques, parfois entourés de légendes, tout en mettant à l'honneur le travail des sculpteurs et le granit régional. La [présentation de Tourisme Côtes-d'Armor](https://www.cotesdarmor.com/fr/fiche/patrimoine-culturel/la-vallee-des-saints-carnoet_TFOPCUBRE022V500H5M/) donne un aperçu de cette démarche artistique ambitieuse.
 
-## Sources de départ
-- Site officiel de la Vallée des Saints, informations pratiques et accès annuel : https://www.lavalleedessaints.com/informations-pratiques/
-- Site officiel, accessibilité, cheminements et parcours : https://www.lavalleedessaints.com/preparer-sa-visite/accessibilite/
-- Tourisme Côtes-d'Armor, présentation du site et des sculptures : https://www.cotesdarmor.com/fr/fiche/patrimoine-culturel/la-vallee-des-saints-carnoet_TFOPCUBRE022V500H5M/
-- Tourisme Côtes-d'Armor, informations sur parking, horaires saisonniers et restauration : https://groupes.cotesdarmor.com/fr/fiche/patrimoine-culturel/la-vallee-des-saints-carnoet_TFOPCUBRE022V500H5M/
+Avec de jeunes enfants, inutile de transformer la balade en visite exhaustive. Proposez-leur plutôt de retrouver les animaux gravés dans la pierre: chouette, chien, oie ou renard. Le [site officiel propose cette piste de découverte familiale](https://www.lavalleedessaints.com/decouvrir-le-site/venir-en-famille/) et signale aussi un livret-jeu vendu à la boutique.
+
+## Quel parcours prévoir avec des enfants ?
+
+Le site naturel consacré aux sculptures s'étend sur environ huit hectares. La visite dure généralement **une à deux heures**, mais une famille avec un tout-petit peut très bien profiter d'une sélection de statues proches de l'entrée, faire une pause, puis repartir. Le terrain est vallonné et les déplacements se font sur de l'herbe, de la terre ou des chemins empierrés: ce n'est pas une promenade urbaine sur sol lisse.
+
+**Avec une poussette**, la visite est possible, mais elle peut demander des efforts, particulièrement après la pluie. Un chemin non goudronné permet de voir de nombreuses œuvres sans traverser toutes les parties enherbées. Une poussette tout-terrain sera plus confortable qu'un modèle à petites roues; pour un bébé, le porte-bébé peut être plus pratique selon les conditions.
+
+**Avec une personne ayant des difficultés à marcher**, il n'est pas nécessaire de parcourir toute la colline pour apprécier les statues. Des bancs de granit permettent de s'arrêter. Le site indique également des aménagements accessibles et un dépose-minute près de l'entrée; en revanche, le cheminement autour des œuvres reste naturel et n'est pas intégralement goudronné. Les modalités de visites accompagnées en voiturette électrique sont à vérifier avant de venir, notamment hors saison. Voir les [informations officielles d'accessibilité](https://www.lavalleedessaints.com/preparer-sa-visite/accessibilite/).
+
+## Entrée gratuite, mais parking payant
+
+L'[accès à la Vallée des Saints](https://www.lavalleedessaints.com/informations-pratiques/) est libre, **24 heures sur 24 et toute l'année**. Il ne faut donc pas acheter de billet pour simplement se promener parmi les statues.
+
+En revanche, le [parking officiel](https://www.lavalleedessaints.com/preparer-sa-visite/stationnement/) coûte **10 € par voiture** et **3 € par moto**, indépendamment de la durée de stationnement. Le règlement à la borne de sortie se fait par carte bancaire. Depuis le parking principal, comptez environ 250 mètres de liaison piétonne non goudronnée jusqu'au site. L'adresse à utiliser est **Quénéquillec, 22160 Carnoët**, à ne pas confondre avec Clohars-Carnoët, dans le Finistère.
+
+## Manger, faire une pause et visiter hors saison
+
+Des tables de pique-nique en extérieur sont accessibles librement. Le site dispose également de sanitaires, d'un accueil, d'une boutique et d'une restauration, mais leurs horaires ne suivent pas ceux de la colline: **ouvert toute l'année ne signifie pas services ouverts à toute heure**.
+
+D'après les [informations officielles sur les services](https://www.lavalleedessaints.com/preparer-sa-visite/nos-services/), les sanitaires ont des plages d'ouverture saisonnières et des jours d'exception. La [boutique annonce notamment 10 h à 17 h de novembre à mars](https://www.lavalleedessaints.com/preparer-sa-visite/accueil-et-boutique/), hors certaines dates de fermeture. Pour la restauration, vérifiez les horaires avant de compter sur un repas sur place.
+
+Les [visites guidées](https://www.lavalleedessaints.com/preparer-sa-visite/visites-guidees/) apportent une autre dimension aux statues, en racontant les personnages et leurs attributs. Elles sont payantes et leur programmation saisonnière s'interrompt au début de novembre jusqu'au printemps; ne partez donc pas du principe qu'un guide sera disponible lors d'une visite hivernale. Un audioguide est également proposé pour découvrir les œuvres à son rythme.
+
+En automne et en hiver, privilégiez les heures de jour: la colline est exposée au vent et les chemins peuvent être humides. Chaussures adaptées, vêtement coupe-vent et itinéraire raccourci rendent la sortie plus agréable avec les enfants. L'ouverture permanente du terrain ne remplace ni l'éclairage naturel ni les services d'accueil.
+
+## Et si la Vallée des Saints devenait une étape de voyage ?
+
+La visite se prête à une halte lors d'un séjour dans le Centre-Bretagne, loin des stations balnéaires. Pour prolonger la journée, [Tourisme Côtes-d'Armor propose un itinéraire](https://www.cotesdarmor.com/a-voir-a-faire/routes-touristiques/une-journee-en-centre-bretagne/) qui associe la Vallée des Saints aux paysages des gorges du Corong et à l'abbaye de Bon-Repos. Avec de jeunes enfants, mieux vaut choisir une seule étape supplémentaire plutôt que chercher à tout faire.
+
+Pour dormir dans le secteur, une maison de vacances à Carnoët ou un appartement à Callac peut servir de base à une découverte plus tranquille. Ce sont des options de séjour, pas des prestations nécessaires à la visite libre; les disponibilités, équipements familiaux et tarifs dépendront des dates choisies.
+
+La Vallée des Saints fonctionne particulièrement bien quand on laisse les enfants choisir leurs statues préférées, observer les détails et s'inventer des histoires. Le plaisir vient autant de la promenade que de ces rencontres inattendues avec les géants de granit.
 
 
 ### Destination en cours
