@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261107-0259-pass-cantal-2026-2027-100-d-activites-pour-les-enfants-du-cantal-comme",
+  "lastProcessedCommit": "2616f4e3fcdd1c4d7e9a42b97ac233800ddcf231"
 }
