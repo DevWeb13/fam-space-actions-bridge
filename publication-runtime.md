@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,87 +14,133 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Côtes-d'Armor
 - Région: Bretagne
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**La Vallée des Saints à Carnoët en famille : sculptures géantes, balade et séjour au cœur de la Bretagne.**
-
-Angle : préparer une découverte familiale de cette galerie de statues monumentales en plein air, accessible toute l'année, en distinguant visite libre, parcours avec jeunes enfants, services et possibilité de prolonger le voyage dans le Centre-Bretagne. Située à Carnoët dans les Côtes-d'Armor, la Vallée des Saints rassemble plus de 200 sculptures de saints bretons en granit, sur un vaste site naturel ; ce n'est ni un parc d'attractions ni une exposition intérieure.
-
-## Besoin du lecteur
-Comprendre ce que l'on voit, pourquoi la visite plaît aux familles et comment organiser une demi-journée ou une étape de séjour : accès libre, stationnement payant, relief et chemins, poussette et mobilité réduite, durée à adapter, météo, restauration, pique-nique, visites guidées saisonnières, intérêt pour les différents âges et hébergements alentour. Préciser que les services et visites accompagnées n'ont pas tous les mêmes horaires que l'accès au site.
-
-## Valeur éditoriale
-- Faire découvrir le projet artistique et ses statues plutôt que limiter l'article au prix du parking.
-- Distinguer accès gratuit 24 h/24 toute l'année, parking payant, accueil et restauration à horaires variables ; éviter de promettre des visites guidées quotidiennes en novembre.
-- Proposer un parcours familial réaliste sur un site naturel d'environ huit hectares, avec chemin de terre non goudronné et possibilité de voir plusieurs statues sans tout parcourir.
-- Donner des conseils concrets pour une visite en automne-hiver (lumière du jour, vent, chaussures, jeunes enfants), sans présenter les équipements comme systématiquement ouverts.
-- Suggérer de prolonger par un séjour dans le Centre-Bretagne, sans confondre Carnoët (22) avec Clohars-Carnoët (29).
-
-## Affiliation
-Offres partenaires vérifiées sur leurs pages propres, à présenter comme options pour les familles qui prolongent la découverte ; disponibilité et tarifs à vérifier selon les dates :
-- **Abritel — locations de vacances à Carnoët**, dont des maisons de plusieurs chambres pour familles : https://www.abritel.fr/d/4048/carnoet
-- **Booking.com — Relais De La Tour à Callac**, appartement avec deux chambres, cuisine et parking, adapté à une étape familiale dans le secteur : https://www.booking.com/hotel/fr/relais-de-la-tour.en-gb.html
-L'accès au site est gratuit ; aucune billetterie partenaire pour la visite libre n'a été identifiée. Ne pas inventer d'offre GetYourGuide/Tiqets. Les deux hébergements sont des pistes secondaires et non des conditions de visite.
-
-## Sources de départ
-- Site officiel de la Vallée des Saints, informations pratiques et accès annuel : https://www.lavalleedessaints.com/informations-pratiques/
-- Site officiel, accessibilité, cheminements et parcours : https://www.lavalleedessaints.com/preparer-sa-visite/accessibilite/
-- Tourisme Côtes-d'Armor, présentation du site et des sculptures : https://www.cotesdarmor.com/fr/fiche/patrimoine-culturel/la-vallee-des-saints-carnoet_TFOPCUBRE022V500H5M/
-- Tourisme Côtes-d'Armor, informations sur parking, horaires saisonniers et restauration : https://groupes.cotesdarmor.com/fr/fiche/patrimoine-culturel/la-vallee-des-saints-carnoet_TFOPCUBRE022V500H5M/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "voyages"
+title: "La Vallée des Saints à Carnoët: visiter les géants de granit en famille"
+subtitle: "Une balade entre sculptures et légendes bretonnes, avec les bons repères pour les enfants et les poussettes"
+summary: "À Carnoët, découvrez plus de 200 statues monumentales en famille: parcours, poussette, parking, visites et conseils pour prolonger l'escapade."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Vallée des Saints en famille"
+  - "Carnoët Côtes-d'Armor"
+  - "visite Vallée des Saints poussette"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Carnoët"
+  department: "Côtes-d'Armor"
+  region: "Bretagne"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "La Vallée des Saints - Informations pratiques"
+    url: "https://www.lavalleedessaints.com/informations-pratiques/"
+  - title: "La Vallée des Saints - Stationnement"
+    url: "https://www.lavalleedessaints.com/preparer-sa-visite/stationnement/"
+  - title: "La Vallée des Saints - Venir en famille"
+    url: "https://www.lavalleedessaints.com/decouvrir-le-site/venir-en-famille/"
+  - title: "La Vallée des Saints - Accessibilité"
+    url: "https://www.lavalleedessaints.com/preparer-sa-visite/accessibilite/"
+  - title: "La Vallée des Saints - Visites guidées"
+    url: "https://www.lavalleedessaints.com/preparer-sa-visite/visites-guidees/"
+  - title: "La Vallée des Saints - Nos services"
+    url: "https://www.lavalleedessaints.com/preparer-sa-visite/nos-services/"
+  - title: "La Vallée des Saints - Accueil et boutique"
+    url: "https://www.lavalleedessaints.com/preparer-sa-visite/accueil-et-boutique/"
+  - title: "Tourisme Côtes-d'Armor - La Vallée des Saints"
+    url: "https://www.cotesdarmor.com/fr/fiche/patrimoine-culturel/la-vallee-des-saints-carnoet_TFOPCUBRE022V500H5M/"
+  - title: "Tourisme Côtes-d'Armor - Une journée en Centre Bretagne"
+    url: "https://www.cotesdarmor.com/a-voir-a-faire/routes-touristiques/une-journee-en-centre-bretagne/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Sur une colline de Carnoët, dans les Côtes-d'Armor, d'immenses personnages de granit semblent veiller sur la campagne bretonne. La Vallée des Saints est une galerie de sculptures à ciel ouvert: plus de 200 statues inspirées de figures historiques et légendaires de Bretagne, à découvrir en marchant à son rythme. Pour une famille, c'est une sortie qui mêle promenade, histoires et jeu d'observation, sans billet d'entrée.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Des géants de pierre qui racontent la Bretagne
+
+Ici, les œuvres ne sont pas alignées dans un musée. Elles occupent un paysage ouvert, avec des panoramas sur la Bretagne intérieure. Certaines statues dépassent plusieurs mètres de hauteur. Leurs visages, vêtements, animaux et objets sculptés offrent autant de détails à remarquer.
+
+Le projet fait revivre des saints bretons, personnages parfois historiques, parfois entourés de légendes, tout en mettant à l'honneur le travail des sculpteurs et le granit régional. La [présentation de Tourisme Côtes-d'Armor](https://www.cotesdarmor.com/fr/fiche/patrimoine-culturel/la-vallee-des-saints-carnoet_TFOPCUBRE022V500H5M/) donne un aperçu de cette démarche artistique ambitieuse.
+
+Avec de jeunes enfants, inutile de transformer la balade en visite exhaustive. Proposez-leur plutôt de retrouver les animaux gravés dans la pierre: chouette, chien, oie ou renard. Le [site officiel propose cette piste de découverte familiale](https://www.lavalleedessaints.com/decouvrir-le-site/venir-en-famille/) et signale aussi un livret-jeu vendu à la boutique.
+
+## Quel parcours prévoir avec des enfants ?
+
+Le site naturel consacré aux sculptures s'étend sur environ huit hectares. La visite dure généralement **une à deux heures**, mais une famille avec un tout-petit peut très bien profiter d'une sélection de statues proches de l'entrée, faire une pause, puis repartir. Le terrain est vallonné et les déplacements se font sur de l'herbe, de la terre ou des chemins empierrés: ce n'est pas une promenade urbaine sur sol lisse.
+
+**Avec une poussette**, la visite est possible, mais elle peut demander des efforts, particulièrement après la pluie. Un chemin non goudronné permet de voir de nombreuses œuvres sans traverser toutes les parties enherbées. Une poussette tout-terrain sera plus confortable qu'un modèle à petites roues; pour un bébé, le porte-bébé peut être plus pratique selon les conditions.
+
+**Avec une personne ayant des difficultés à marcher**, il n'est pas nécessaire de parcourir toute la colline pour apprécier les statues. Des bancs de granit permettent de s'arrêter. Le site indique également des aménagements accessibles et un dépose-minute près de l'entrée; en revanche, le cheminement autour des œuvres reste naturel et n'est pas intégralement goudronné. Les modalités de visites accompagnées en voiturette électrique sont à vérifier avant de venir, notamment hors saison. Voir les [informations officielles d'accessibilité](https://www.lavalleedessaints.com/preparer-sa-visite/accessibilite/).
+
+## Entrée gratuite, mais parking payant
+
+L'[accès à la Vallée des Saints](https://www.lavalleedessaints.com/informations-pratiques/) est libre, **24 heures sur 24 et toute l'année**. Il ne faut donc pas acheter de billet pour simplement se promener parmi les statues.
+
+En revanche, le [parking officiel](https://www.lavalleedessaints.com/preparer-sa-visite/stationnement/) coûte **10 € par voiture** et **3 € par moto**, indépendamment de la durée de stationnement. Le règlement à la borne de sortie se fait par carte bancaire. Depuis le parking principal, comptez environ 250 mètres de liaison piétonne non goudronnée jusqu'au site. L'adresse à utiliser est **Quénéquillec, 22160 Carnoët**, à ne pas confondre avec Clohars-Carnoët, dans le Finistère.
+
+## Manger, faire une pause et visiter hors saison
+
+Des tables de pique-nique en extérieur sont accessibles librement. Le site dispose également de sanitaires, d'un accueil, d'une boutique et d'une restauration, mais leurs horaires ne suivent pas ceux de la colline: **ouvert toute l'année ne signifie pas services ouverts à toute heure**.
+
+D'après les [informations officielles sur les services](https://www.lavalleedessaints.com/preparer-sa-visite/nos-services/), les sanitaires ont des plages d'ouverture saisonnières et des jours d'exception. La [boutique annonce notamment 10 h à 17 h de novembre à mars](https://www.lavalleedessaints.com/preparer-sa-visite/accueil-et-boutique/), hors certaines dates de fermeture. Pour la restauration, vérifiez les horaires avant de compter sur un repas sur place.
+
+Les [visites guidées](https://www.lavalleedessaints.com/preparer-sa-visite/visites-guidees/) apportent une autre dimension aux statues, en racontant les personnages et leurs attributs. Elles sont payantes et leur programmation saisonnière s'interrompt au début de novembre jusqu'au printemps; ne partez donc pas du principe qu'un guide sera disponible lors d'une visite hivernale. Un audioguide est également proposé pour découvrir les œuvres à son rythme.
+
+En automne et en hiver, privilégiez les heures de jour: la colline est exposée au vent et les chemins peuvent être humides. Chaussures adaptées, vêtement coupe-vent et itinéraire raccourci rendent la sortie plus agréable avec les enfants. L'ouverture permanente du terrain ne remplace ni l'éclairage naturel ni les services d'accueil.
+
+## Et si la Vallée des Saints devenait une étape de voyage ?
+
+La visite se prête à une halte lors d'un séjour dans le Centre-Bretagne, loin des stations balnéaires. Pour prolonger la journée, [Tourisme Côtes-d'Armor propose un itinéraire](https://www.cotesdarmor.com/a-voir-a-faire/routes-touristiques/une-journee-en-centre-bretagne/) qui associe la Vallée des Saints aux paysages des gorges du Corong et à l'abbaye de Bon-Repos. Avec de jeunes enfants, mieux vaut choisir une seule étape supplémentaire plutôt que chercher à tout faire.
+
+Pour dormir dans le secteur, une maison de vacances à Carnoët ou un appartement à Callac peut servir de base à une découverte plus tranquille. Ce sont des options de séjour, pas des prestations nécessaires à la visite libre; les disponibilités, équipements familiaux et tarifs dépendront des dates choisies.
+
+La Vallée des Saints fonctionne particulièrement bien quand on laisse les enfants choisir leurs statues préférées, observer les détails et s'inventer des histoires. Le plaisir vient autant de la promenade que de ces rencontres inattendues avec les géants de granit.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -123,4 +169,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
