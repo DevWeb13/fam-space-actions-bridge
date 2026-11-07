@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: À Paris, où donner ou déposer meubles, jouets et électroménager ?
-subtitle: "Collecte gratuite, ressourceries, déchèteries et enlèvement à domicile: le bon circuit selon l'objet."
-summary: "Lit d'enfant, matelas, jouets ou frigo: comment faire de la place à Paris sans dépôt sauvage, en privilégiant le don et les services gratuits."
+subtitle: "Collecte gratuite, ressourceries et espaces tri : où aller selon l'objet et les fermetures en cours."
+summary: "Meubles, jouets, matelas ou frigo : les solutions gratuites à Paris, avec les déchèteries fermées fin 2026 et les bons points de dépôt."
 slug: a-paris-ou-donner-ou-deposer-meubles-jouets-et-electromenager
 status: published
 publishedAt: 2026-10-10T05:02:08+02:00
@@ -99,9 +102,17 @@ sources:
     url: https://www.paris.fr/pages/huit-decheteries-parisiennes-recyclent-vos-encombrants-17799
   - title: Ville de Paris - Avec le Trimobile, déposez vos petits encombrants
     url: https://www.paris.fr/pages/avec-le-trimobile-deposez-vos-petits-encombrants-6058
+  - title: Ville de Paris - Espace tri Poterne des Peupliers
+    url: https://www.paris.fr/lieux/espace-tri-poterne-des-peupliers-decheterie-1816
+  - title: Ville de Paris - Espace tri Porte de Pantin
+    url: https://www.paris.fr/lieux/espace-tri-de-la-porte-de-pantin-decheterie-18537
+  - title: Ville de Paris - Espace tri Porte de la Chapelle
+    url: https://www.paris.fr/lieux/espace-tri-de-la-porte-de-la-chapelle-decheterie-1763
+  - title: Ville de Paris - Horaires des espaces tri
+    url: https://www.paris.fr/lieux/espaces-tri-decheteries/tous-les-horaires
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/maison/(2026)/(10)/a-paris-ou-donner-ou-deposer-meubles-jouets-et-electromenager/index.md
   targetSha: 8811b3e07219a814107322c12681c00b0bb50d3a
@@ -127,35 +138,72 @@ radar:
       - donner meubles jouets Paris
       - recyclage électroménager Paris
       - ressourcerie Paris
+reviewAt: 2026-12-31
 ---
 
-## Mission retenue
-Actualiser le guide pratique parisien sur le don, les encombrants et les jouets, en corrigeant les points de dépôt temporairement indisponibles.
+Un lit devenu trop petit, des jouets qui s'accumulent, un réfrigérateur à remplacer : dans un appartement parisien, faire de la place demande parfois plus d'organisation que de porter les objets jusqu'à la porte. La bonne solution dépend surtout de leur état et de leur taille. **Un meuble encore utilisable ne suit pas forcément le même circuit qu'un matelas usé ou qu'un lave-linge hors service.** Et avant de transporter des jouets en déchèterie, attention aux fermetures pour travaux de fin 2026.
 
-## Pourquoi cette mission
-Le snapshot GSC montre 56 impressions sur trois jours au pic contre 16 récemment, sans cause SEO établie. Une lacune indépendante et vérifiée justifie ce refresh : l'article recommande trois déchèteries pour les jouets sans avertir que **Poterne des Peupliers (13e) est fermée pour travaux du 2 novembre au 31 décembre 2026** et que **Porte de Pantin (19e) est temporairement fermée pour travaux**. Ces informations figurent sur les fiches officielles de la Ville de Paris et rendent le conseil actuel trompeur.
+## Un meuble en bon état : essayer le don avant la collecte
 
-## Décision du lecteur
-Choisir un lieu de dépôt réellement accessible selon l'objet, plutôt que faire un trajet inutile avec des jouets ou des meubles.
+<!-- article-image-body:01 -->
 
-## Faits à traiter
-- Corriger la liste des trois déchèteries acceptant les jouets : conserver l'information sur les filières, mais distinguer les sites fermés de celui de Porte de la Chapelle (18e), dont les horaires officiels restent publiés.
-- Indiquer les dates précises de fermeture de Poterne des Peupliers et la fermeture temporaire sans date de réouverture confirmée de Porte de Pantin. Orienter vers les fiches actualisées des établissements et la liste générale des espaces tri avant déplacement.
-- Vérifier la distinction entre jouets réemployables, petits jouets usagés et jouets électriques ; préserver les autres circuits de don et de collecte.
-- Préserver intégralement les conseils utiles sur la collecte municipale à 3 m³, Ecosystem à domicile, ressourceries, Trimobile, déchets dangereux, les images, crédits et le lien interne.
+![Entrée de la Ressourcerie de Belleville, boutique d'objets d'occasion rue des Rigoles à Paris](/images/articles/2026/10/a-paris-ou-donner-ou-deposer-meubles-jouets-et-electromenager-body-01.webp)
 
-## Sources de départ
-- https://www.paris.fr/lieux/espace-tri-poterne-des-peupliers-decheterie-1816
-- https://www.paris.fr/lieux/espace-tri-de-la-porte-de-pantin-decheterie-18537
-- https://www.paris.fr/lieux/espace-tri-de-la-porte-de-la-chapelle-decheterie-1763
-- https://www.paris.fr/pages/huit-decheteries-parisiennes-recyclent-vos-encombrants-17799
-- https://www.paris.fr/pages/donner-une-seconde-vie-aux-jouets-usages-pour-s-inscrire-dans-une-dynamique-circulaire-et-durable-36095
+*Photo: [Augustin Cléchet](https://commons.wikimedia.org/wiki/File:Entr%C3%A9e_de_la_Ressourcerie_de_Belleville.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
 
-## Affiliation
-Aucune piste naturelle : les solutions publiques et associatives gratuites répondent au besoin.
+<!-- /article-image-body:01 -->
 
-## Continuations internes
-Conserver le renvoi existant vers les démarches scolaires en cas de déménagement ; ne pas développer ce sous-sujet ici.
+Pour une commode, une table ou un lit d'enfant encore utilisable, les **ressourceries et recycleries** permettent de prolonger la vie de l'objet. Certaines acceptent aussi la décoration, les livres ou les vêtements. La Ville de Paris propose une [carte des lieux de réemploi et des réparateurs](https://www.paris.fr/pages/ressourceries-recycleries-les-lieux-du-reemploi-a-paris-6016) : elle aide à chercher une structure selon l'arrondissement et le type de bien.
+
+**Appelez avant d'apporter un meuble volumineux.** Les associations n'ont pas toutes la place de stocker une armoire ou un canapé, et leurs critères de reprise peuvent varier. Un don direct à une personne qui vient récupérer l'objet peut aussi éviter un transport.
+
+Pour un meuble abîmé mais réparable, la réparation mérite d'être envisagée avant la mise au rebut. La [Ville détaille les solutions de réemploi des meubles](https://www.paris.fr/pages/donner-une-seconde-vie-a-nos-meubles-usages-paris-engagee-pour-faciliter-le-tri-et-le-reemploi-36096) et précise que les meubles récupérés en déchèterie sont dirigés vers une filière spécialisée.
+
+## Lit, matelas, armoire : la collecte municipale gratuite
+
+Un sommier cassé, un matelas inutilisable ou un meuble trop encombrant pour être transporté peut relever du **service gratuit d'enlèvement des encombrants de Paris**. Il est réservé aux particuliers et fonctionne sur rendez-vous, avec un dépôt **limité à 3 m³ par demande**.
+
+La démarche se fait sur le [téléservice municipal des encombrants](https://teleservices.paris.fr/ramen/). Indiquez les objets à retirer, choisissez le créneau proposé et respectez les consignes de dépôt communiquées lors de la réservation. La collecte se fait **au pied de l'immeuble**, et non à l'intérieur de l'appartement : il faut donc pouvoir descendre le mobilier. Les [conditions et exclusions sont rappelées par la mairie du 10e](https://mairie10.paris.fr/pages/encombrants-s-en-debarrasser-proprement-17124).
+
+Ne sortez pas un objet sur le trottoir plusieurs jours à l'avance : **sans rendez-vous et hors consignes, il s'agit d'un dépôt sauvage**. La [Ville rappelle que l'abandon d'encombrants est sanctionné](https://www.paris.fr/pages/les-encombrants-un-service-public-hors-norme-17519). Pour un déménagement, réservez la collecte dès que vous connaissez les meubles à retirer, plutôt que de supposer qu'un créneau sera disponible à la dernière minute. Si un meuble est infesté de punaises de lit, signalez-le lors de la demande et emballez-le hermétiquement selon les consignes de la Ville.
+
+## Réfrigérateur ou lave-linge : pas besoin de le descendre
+
+Le gros électroménager bénéficie d'une solution différente, particulièrement utile dans les immeubles sans ascenseur. Avec **Ecosystem**, il est possible de faire récupérer gratuitement, **à l'intérieur du logement et sur rendez-vous**, un appareil usagé, même s'il ne fonctionne plus.
+
+La [liste officielle des appareils acceptés](https://www.paris.fr/pages/votre-gros-electromenager-collecte-gratuitement-au-sein-de-votre-domicile-23984) comprend notamment réfrigérateurs, congélateurs, lave-linge, sèche-linge, lave-vaisselle, fours et micro-ondes. La réservation s'effectue via [Je donne mon électroménager](https://www.jedonnemonelectromenager.fr/), le service d'Ecosystem. Vérifiez les instructions de préparation lors de la prise de rendez-vous, notamment pour les appareils branchés ou raccordés.
+
+C'est une distinction importante : **un frigo ne doit pas nécessairement suivre le même parcours qu'une armoire**. Les appareils récupérés peuvent être remis en état ou, lorsque ce n'est pas possible, dépollués et recyclés.
+
+## Jouets, vêtements et petits appareils : choisir le bon dépôt
+
+Pour des jouets complets et propres dont les enfants ne se servent plus, le don à une association ou à une ressourcerie est souvent la première piste. Pour les **petits jouets usagés non réemployables**, des bornes de collecte spécifiques existent dans certains espaces tri. Mais deux des trois sites souvent cités sont fermés pour travaux fin 2026 :
+
+- **Poterne des Peupliers (13e)** : [fermée du 2 novembre au 31 décembre 2026](https://www.paris.fr/lieux/espace-tri-poterne-des-peupliers-decheterie-1816).
+- **Porte de Pantin (19e)** : [fermée pour travaux](https://www.paris.fr/lieux/espace-tri-de-la-porte-de-pantin-decheterie-18537), avec une période exceptionnelle annoncée du 1er novembre au 31 décembre 2026 ; vérifier la réouverture sur sa fiche.
+- **Porte de la Chapelle (18e)** : [accepte les petits jouets usagés](https://www.paris.fr/lieux/espace-tri-de-la-porte-de-la-chapelle-decheterie-1763), au 17/25 avenue de la Porte de la Chapelle. Horaires habituels affichés : tous les jours de 9 h 30 à 19 h, arrivée au plus tard quinze minutes avant la fermeture. Vérifier les exceptions avant de partir.
+
+Un jouet électrique ou électronique hors d'usage relève de la filière des équipements électriques : ne le confondez pas avec un petit jouet sans composant électrique. Pour tout dépôt, vérifiez les catégories acceptées par l'établissement.
+
+Les vêtements et chaussures suivent des points d'apport textile ou des circuits de don, plutôt que la collecte ordinaire des encombrants. Pour une bouilloire, un sèche-cheveux, des câbles ou une petite lampe hors d'usage, le **Trimobile** peut être plus pratique : cette remorque de collecte se déplace dans les quartiers et accepte plusieurs catégories de petits objets.
+
+Consultez [le planning des Trimobiles](https://www.paris.fr/pages/avec-le-trimobile-deposez-vos-petits-encombrants-6058) avant de partir. Le lieu et l'horaire peuvent changer d'un mois à l'autre ; il ne s'agit pas d'un point de dépôt permanent.
+
+## Déchèterie : utile si vous pouvez transporter les objets
+
+Si vous avez plusieurs objets à évacuer et un moyen de les transporter, les déchèteries parisiennes constituent une autre solution gratuite pour les particuliers. On peut notamment y apporter, selon le site, des meubles, matelas ou appareils électriques. Certaines disposent aussi d'un espace de réemploi pour les meubles encore utilisables.
+
+Attention aux différences entre établissements : **les mini-déchèteries Vincent Auriol, Pasteur et du Canal sont réservées aux personnes à pied**, sans accès en voiture. La [liste des déchèteries et des déchets acceptés](https://www.paris.fr/pages/huit-decheteries-parisiennes-recyclent-vos-encombrants-17799) et les [horaires actualisés de chaque espace tri](https://www.paris.fr/lieux/espaces-tri-decheteries/tous-les-horaires) sont à vérifier avant de charger le véhicule. Un site ouvert n'accepte pas nécessairement tous les objets.
+
+À la Porte de la Chapelle, l'accès est gratuit pour les particuliers éligibles, avec pièce d'identité et justificatif de domicile de moins d'un an ; les dépôts sont limités à 3 m³ par passage et les véhicules à moins de 3,5 tonnes. Les conditions exactes figurent sur [sa fiche officielle](https://www.paris.fr/lieux/espace-tri-de-la-porte-de-la-chapelle-decheterie-1763).
+
+## Cartons, peinture, gravats : les erreurs à éviter
+
+Tous les objets dont on veut se débarrasser ne sont pas des encombrants municipaux. Les **cartons de déménagement pliés** relèvent normalement du bac jaune ; les gros cartons pliés peuvent aussi être apportés à un Trimobile qui les accepte. Les **peintures, solvants et autres déchets dangereux** nécessitent une collecte adaptée. Les **gravats et déchets de travaux** ont également leur propre filière : ils ne doivent pas être ajoutés à une demande d'enlèvement de meubles. Depuis janvier 2025, les déchèteries municipales parisiennes n'acceptent plus les déchets du bâtiment.
+
+La [rubrique municipale « Que faire de ses déchets ? »](https://www.paris.fr/pages/en-2019-paris-vous-facilite-le-tri-6266) permet de retrouver le circuit selon le matériau. En cas de doute sur un objet inhabituel, mieux vaut consulter cette page avant de réserver une collecte ou de se déplacer.
+
+Si ce tri accompagne un changement de logement avec des enfants, notre guide [changer d'école après un déménagement](/articles/vie-pratique/demenagement-comment-changer-d-ecole-maternelle-ou-elementaire-sans-rater-une-etape/) aide aussi à anticiper les démarches scolaires.
 
 ## Article source exact à préserver et améliorer
 
