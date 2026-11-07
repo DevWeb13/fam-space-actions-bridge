@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -98,7 +101,7 @@ affiliate:
   destination: Sedan
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/sorties/(2026)/(10)/chateau-fort-de-sedan-en-famille-parcours-tarifs-et-conseils-de-visite/index.md
   targetSha: 723e6698613b9533bb8ac737cdd5c6a039aa80fd
@@ -127,31 +130,83 @@ radar:
       - château fort de sedan
 ---
 
-## Mission retenue
-Améliorer le guide de visite du château fort de Sedan : comparaison concrète des billets individuels et du forfait famille.
+Dans les Ardennes, près de la frontière belge, le château fort de Sedan invite les familles à découvrir une forteresse vieille de six siècles, entre tours, salles historiques et scènes immersives. Le circuit raconte l'histoire des princes de Sedan en faisant parcourir un château parmi les plus vastes d'Europe.
 
-## Pourquoi cette mission
-L'article explique les trois grilles tarifaires mais mentionne le forfait famille sans son prix ni mise en garde sur les enfants de 4 à 6 ans. Lacune indépendante de la baisse GSC (63 puis 6 impressions sur trois jours ; cause inconnue). Le site officiel affiche les montants permettant une décision utile.
+Construit à partir de 1424 et agrandi au fil des générations, l'ensemble couvre environ **35 000 m²**. Ses murs épais, ses passages et ses points de vue sur Sedan permettent de comprendre comment les fortifications ont évolué avec les techniques de défense. L'[histoire officielle du château](https://www.chateau-fort-sedan.fr/histoire/) retrace ces transformations.
 
-## Décision du lecteur
-Calculer le coût de sa sortie en fonction des âges et de la période et éviter de payer un forfait moins avantageux que les billets séparés.
+## Une forteresse à visiter, mais aussi une histoire à vivre
 
-## Faits à traiter
-- Site officiel : forfait « famille nombreuse » pour 2 adultes et 2 enfants à 39 € hors vacances/animations, 46 € pendant les petites vacances avec animations, 52 € en juillet-août ; suppléments par enfant respectivement 2 €, 3 €, 3 €.
-- Exemple hors animations : 2 adultes et 2 enfants de 7 à 15 ans coûtent 41 € séparément contre 39 € en forfait ; avec deux enfants de 4 à 6 ans, billets individuels à 24 € car gratuits dans cette formule. Ne pas supposer que tous les foyers sont éligibles sans vérifier les conditions du forfait.
-- Vérifier les tarifs à la date de visite et distinguer billets ordinaires, vacances animées et été.
-- Préserver parcours immersif, visite guidée, environ 300 marches, impossibilité d'utiliser une poussette, escape game 10 ans et plus, images, crédits et informations pratiques.
+<!-- article-image-body:01 -->
 
-## Sources de départ
-- https://www.chateau-fort-sedan.fr/informations-pratiques/
-- https://www.chateau-fort-sedan.fr/visite/
+![Vue d'un espace intérieur du château fort de Sedan photographié en janvier 2024.](/images/articles/2026/10/chateau-fort-de-sedan-en-famille-parcours-tarifs-et-conseils-de-visite-body-01.webp)
 
-## Affiliation
-Conserver les liens Booking.com de l'hôtel du Château Fort et du Saint Michel, sans ajout artificiel.
+*Photo: [Chabe01](https://commons.wikimedia.org/wiki/File:Int%C3%A9rieur_Ch%C3%A2teau_Sedan_-_Sedan_(FR08)_-_2024-01-27_-_11.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
 
-## Continuations internes
-- Ne pas transformer ce guide en page d'événement saisonnier.
-- Conserver le lien existant vers la sortie gratuite à Charleville-Mézières.
+<!-- /article-image-body:01 -->
+
+Le parcours permanent « L'Épopée des Princes de Sedan », inauguré en 2024, ajoute trois séquences scénographiées au circuit historique. Il occupe environ 3 000 m² de la forteresse.
+
+Dans **« Le puits des légendes »**, les visiteurs entrent dans un univers inspiré des récits ardennais et suivent Charlotte de La Marck dans une quête autour de l'épée Flamberge. Aux tours jumelles, **« La forteresse assiégée »** utilise sons, décors et dispositifs interactifs pour évoquer la vie des défenseurs d'un château médiéval. Puis **« Le mariage princier »**, dans le logis princier, entraîne le visiteur à la Renaissance, autour de l'union de Charlotte de La Marck et d'Henri de La Tour d'Auvergne.
+
+Ces scènes donnent vie à l'histoire pour les enfants, tandis que salles, remparts et passages permettent de découvrir la forteresse elle-même. Pour savoir à quoi s'attendre, l'organisateur détaille les [trois étapes du parcours immersif](https://www.chateau-fort-sedan.fr/parcours-immersif/).
+
+## Visite libre, guide ou animations: que choisir avec des enfants?
+
+**La visite libre** est le choix le plus souple. Elle est proposée toute l'année, selon le calendrier d'ouverture, avec des panneaux explicatifs sur le circuit. On peut avancer à son rythme, prendre le temps de regarder l'architecture et s'arrêter plus longtemps dans les séquences qui plaisent aux enfants. Un livret, dont une version enfant en français, ou un audioguide permettent d'aller plus loin, moyennant supplément.
+
+**La visite guidée** conviendra davantage aux familles dont les enfants aiment écouter des récits et poser des questions. L'organisateur annonce notamment des départs à 15h les mercredis et week-ends de mai-juin et septembre-octobre, sous réserve de disponibilité, mais pas durant les petites vacances scolaires. Des créneaux différents sont prévus en été. Consultez les [formules et dates des visites](https://www.chateau-fort-sedan.fr/visite/) avant de faire votre choix; il ne faut pas compter sur une visite guidée tous les jours.
+
+**Les spectacles et animations de vacances** forment encore une troisième expérience. Leur programmation et leur tarif varient selon la période. La présence d'un parcours immersif permanent ne signifie donc pas qu'un spectacle de chevalerie est organisé le jour de votre venue.
+
+Avec de jeunes enfants, mieux vaut privilégier la visite libre si vous voulez maîtriser le rythme. Avec des plus grands passionnés d'histoire, la visite guidée peut apporter davantage, à condition qu'ils soient à l'aise avec la durée et la marche.
+
+## Environ 300 marches: ce qu'il faut savoir avant de venir
+
+<!-- article-image-body:02 -->
+
+![Vue sur le château fort de Sedan depuis ses remparts en août 2017, illustrant les niveaux du site.](/images/articles/2026/10/chateau-fort-de-sedan-en-famille-parcours-tarifs-et-conseils-de-visite-body-02.webp)
+
+*Photo: [Thierry Grenot](https://commons.wikimedia.org/wiki/File:Chateau_fort_de_Sedan_depuis_les_ramparts.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+**Le circuit comporte environ 300 marches** et n'est **pas accessible aux poussettes ni aux fauteuils roulants**. Pour un enfant qui ne marche pas encore, le château recommande un porte-bébé; avec de jeunes marcheurs, mieux vaut anticiper la fatigue et les nombreux escaliers.
+
+La cour, l'accueil, le café, les toilettes et la salle audiovisuelle sont accessibles aux personnes à mobilité réduite. En revanche, **seules la billetterie et la salle audiovisuelle sont accessibles dans le cadre de la visite**: ces espaces ne remplacent pas le circuit historique. Le film de présentation dure environ six minutes.
+
+Des chaussures adaptées aux marches et aux sols anciens sont utiles, même pour les plus grands.
+
+## Tarifs: la période change le budget
+
+Le château affiche plusieurs grilles tarifaires. Pour la **visite ordinaire hors vacances scolaires et animations**, comptez **12 € par adulte** et **8,50 € de 7 à 15 ans**. Les 4-6 ans et les moins de 4 ans entrent gratuitement dans cette formule.
+
+Lors des **petites vacances scolaires avec animations**, les tarifs annoncés passent à **14 € par adulte**, **11 € de 7 à 15 ans** et **8 € de 4 à 6 ans**. En **juillet-août**, ils sont respectivement de **16 €**, **12 €** et **10 €**. L'entrée reste gratuite pour les moins de 4 ans quelle que soit la formule.
+
+Cette variation est importante avec un enfant de 4 à 6 ans, dont l'entrée devient payante pendant les animations. Le **forfait « famille nombreuse » pour deux adultes et deux enfants** coûte **39 € hors vacances et animations**, **46 € pendant les petites vacances avec animations** et **52 € en juillet-août**. Le supplément par enfant est respectivement de **2 €, 3 € ou 3 €**.
+
+**Comparez avant d'acheter :** hors animations, deux adultes et deux enfants de 7 à 15 ans paient **41 € en billets séparés**, contre **39 € en forfait** sous réserve d'éligibilité. Avec deux enfants de 4 à 6 ans, les billets séparés coûtent seulement **24 €**, leurs entrées étant gratuites : le forfait reviendrait **15 € plus cher**. Le château l'appelle « famille nombreuse » : confirmez les conditions auprès de la billetterie et vérifiez les [tarifs officiels pour votre date](https://www.chateau-fort-sedan.fr/informations-pratiques/).
+
+Les suppléments annoncés restent de **3 € pour la visite guidée**, **2 € pour le livret** et **3 € pour l'audioguide**.
+
+Les horaires ne sont pas identiques toute l'année: selon le jour, l'ouverture peut être de 12h à 18h, de 10h à 18h ou de 10h à 19h, avec des jours de fermeture. Le dernier billet est vendu une heure avant la fermeture. Vérifiez donc le jour choisi sur le calendrier du château, plutôt que de vous fier à une amplitude générale.
+
+## L'escape game est une activité séparée
+
+Le château propose aussi **« Dans l'ombre de la conspiration »**, un jeu d'énigmes inspiré de l'histoire de la principauté de Sedan. Il ne fait pas partie automatiquement du billet de visite.
+
+L'[escape game officiel](https://www.chateau-fort-sedan.fr/escape-game/) est **interdit aux moins de 10 ans**, les mineurs doivent être accompagnés d'un adulte et la réservation est obligatoire. L'activité est déconseillée aux personnes claustrophobes ou sensibles à la pénombre; elle ne convient pas aux poussettes ni aux personnes à mobilité réduite. C'est une option à envisager séparément avec des préadolescents ou adolescents qui apprécient les énigmes, pas une étape incontournable de la sortie familiale.
+
+## Organiser la sortie à Sedan
+
+Le château se trouve **cour du Château, à Sedan (08200)**. La gare est annoncée à environ **1,9 km**; le réseau de bus TAC dessert Sedan et Charleville-Mézières. En voiture, les accès indiqués passent notamment par l'A34 et l'E44. Pensez à vérifier votre itinéraire avant de partir.
+
+Pour déjeuner ou faire une pause, le **Café La Marck**, dans la cour, propose boissons et restauration. L'organisateur signale aussi des espaces verts autour de la forteresse pour pique-niquer par beau temps. Les toilettes avec table à langer sont accessibles gratuitement dans la cour.
+
+Après la visite, une promenade dans le vieux Sedan, au pied des remparts, permet de prolonger la découverte si les enfants ont encore envie de marcher.
+
+Pour prolonger la sortie en week-end, [l'Hôtel Le Château Fort de Sedan](https://www.booking.com/hotel/fr/hotellerielechateaufort.fr.html) permet de dormir dans la forteresse. Il propose différentes chambres, dont des configurations familiales selon les disponibilités. [Le Saint Michel, au pied du château](https://www.booking.com/hotel/fr/le-saint-michel.fr.html) est une autre option avec chambres familiales et restaurant. Vérifiez le nombre de couchages, les prix et les disponibilités pour vos dates.
+
+Si vous restez une deuxième journée dans les Ardennes, le [parc animalier gratuit de Charleville-Mézières](https://www.fam-space.fr/articles/bons-plans/parc-animalier-de-charleville-mezieres-une-sortie-gratuite-toute-l-annee/) offre une promenade de nature avec plusieurs parcours, en complément de la visite historique.
 
 ## Article source exact à préserver et améliorer
 
