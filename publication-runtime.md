@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,84 +14,131 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Nord
 - Région: Hauts-de-France
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Titre de travail :** Transports gratuits pour les moins de 18 ans dans la métropole lilloise : le guide des trajets en famille.
-
-**Angle :** Comprendre concrètement comment les familles de la Métropole européenne de Lille peuvent utiliser la gratuité ilévia au quotidien, pour l'école et les sorties, et éviter les erreurs de titre ou de réseau. Le dispositif permet aux résidents de 4 à 17 ans de voyager gratuitement sur les réseaux éligibles avec une carte Pass Pass personnelle chargée du titre approprié ; il ne s'étend pas automatiquement aux TER.
-
-## Besoin du lecteur
-Savoir qui est éligible selon l'âge et la commune de résidence, comment obtenir et charger la carte, quels transports sont couverts, comment valider à chaque trajet, quelles règles s'appliquent aux enfants non résidents et comment organiser les déplacements scolaires et familiaux sans confondre métro, bus, Arc en Ciel et TER.
-
-## Valeur éditoriale
-- Distinguer la gratuité du **titre** et la carte Pass Pass personnelle, qui peut être payante lors d'une première demande.
-- Expliquer les différences entre les enfants résidant dans la MEL et ceux venant d'autres communes du Nord ; les moins de 4 ans accompagnés ont une règle distincte.
-- Illustrer les trajets en famille, les correspondances, les contrôles et le cas particulier du TER, exclu du titre gratuit.
-- Présenter les démarches selon que l'enfant possède déjà une carte ou non, sans promettre que tous les transports scolaires sont identiques.
-- Fournir des exemples pratiques par âge, sans transformer l'article en simple copie de la FAQ officielle.
-
-## Affiliation
-Aucune offre pertinente vérifiée parmi les catégories partenaires du runtime. Il s'agit d'un titre de transport public gratuit destiné aux résidents : ni hébergement, ni billetterie d'attraction, ni location de vacances, ni transfert privé ne correspond à l'action principale du lecteur. Ne pas ajouter de lien commercial artificiel.
-
-## Sources de départ
-- ilévia, présentation officielle du titre et périmètre : https://www.ilevia.fr/cms/institutionnel/la-gratuite-dans-la-mel-le-titre-moins-de-18-ans
-- ilévia, fiche du titre, conditions, réseaux et validation : https://www.ilevia.fr/boutique/tout-le-catalogue/titre-moins-de-18-ans
-- ilévia, FAQ achat et utilisation, démarches avec ou sans carte, non-résidents et TER : https://www.ilevia.fr/faq/achat-et-utilisation-des-titres
-- ilévia, transports scolaires et titres adaptés : https://www.ilevia.fr/cms/institutionnel/rentree-scolaire
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "vie-pratique"
+title: "Transports gratuits à Lille: comment obtenir le titre moins de 18 ans ?"
+subtitle: "Carte Pass Pass, communes éligibles, validation et limites du dispositif pour les familles"
+summary: "Dans la métropole lilloise, les 4-17 ans résidents voyagent gratuitement sur plusieurs réseaux. Voici les démarches et les pièges à éviter."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "transports gratuits moins de 18 ans Lille"
+  - "titre moins de 18 ans ilévia"
+  - "carte Pass Pass enfant MEL"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Nord"
+  region: "Hauts-de-France"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "ilévia - Gratuité dans la MEL"
+    url: "https://www.ilevia.fr/cms/institutionnel/la-gratuite-dans-la-mel-le-titre-moins-de-18-ans"
+  - title: "ilévia - Titre moins de 18 ans"
+    url: "https://www.ilevia.fr/boutique/tout-le-catalogue/titre-moins-de-18-ans"
+  - title: "ilévia - FAQ achat et utilisation des titres"
+    url: "https://www.ilevia.fr/faq/achat-et-utilisation-des-titres"
+  - title: "ilévia - Portillons et validation"
+    url: "https://www.ilevia.fr/portillons"
+  - title: "ilévia - Transport scolaire"
+    url: "https://www.ilevia.fr/cms/institutionnel/rentree-scolaire"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Lille, Roubaix, Tourcoing et dans les autres communes de la Métropole européenne de Lille (MEL), les enfants et adolescents résidents peuvent prendre les transports en commun sans payer leurs trajets. Mais la gratuité n'est pas automatique: à partir de 4 ans, il faut une carte Pass Pass personnelle avec le **titre moins de 18 ans** chargé dessus. Une distinction importante pour les trajets vers l'école comme pour les sorties du week-end.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Quels enfants peuvent voyager gratuitement ?
+
+Le dispositif concerne les **jeunes de 4 à 17 ans inclus qui habitent une commune de la MEL**. C'est la résidence qui compte, pas simplement le fait d'aller à l'école à Lille ou d'y passer la journée. Le titre reste valable jusqu'au dernier jour du mois du 18e anniversaire, selon la [fiche officielle ilévia](https://www.ilevia.fr/boutique/tout-le-catalogue/titre-moins-de-18-ans).
+
+Les **moins de 4 ans** voyagent gratuitement sur le réseau ilévia lorsqu'ils sont accompagnés d'un adulte muni d'un titre valide et validé. Ils n'ont pas besoin du titre réservé aux 4-17 ans.
+
+Un enfant qui habite hors de la MEL, même dans le département du Nord, ne bénéficie pas du titre gratuit métropolitain: dès 4 ans, il lui faut un titre adapté à son trajet. La [FAQ ilévia](https://www.ilevia.fr/faq/achat-et-utilisation-des-titres) confirme cette différence entre résidents et non-résidents.
+
+## La carte Pass Pass est-elle gratuite elle aussi ?
+
+Non. **Le titre de transport coûte 0 €, mais la première carte Pass Pass personnelle coûte 4 €**. Cette carte nominative, avec photo, est le support indispensable pour voyager et passer les portillons du métro.
+
+- **Votre enfant n'a pas de carte:** demandez une carte personnelle et le titre moins de 18 ans sur le site ilévia, en agence ou par courrier, avec les justificatifs demandés. Une fois la demande acceptée, la carte est envoyée avec le titre chargé.
+- **Il possède déjà une carte personnelle:** demandez l'ajout du titre. Les informations officielles ne décrivent pas toutes exactement le même parcours: la [page de présentation](https://www.ilevia.fr/cms/institutionnel/la-gratuite-dans-la-mel-le-titre-moins-de-18-ans) indique un passage en agence pour une carte existante, tandis que la [fiche du titre](https://www.ilevia.fr/boutique/tout-le-catalogue/titre-moins-de-18-ans) mentionne également la demande en ligne. Vérifiez la possibilité offerte dans votre espace client avant de vous déplacer.
+
+Prévoyez la démarche avant la rentrée ou une première sortie autonome. Un enfant qui attend sa carte ne peut pas simplement monter à bord en déclarant qu'il a droit à la gratuité. En cas de perte, un duplicata peut coûter jusqu'à 8 €.
+
+## Bus, métro, tramway, Arc en Ciel: où fonctionne le titre ?
+
+Le titre permet de circuler dans le périmètre de la MEL sur le **métro, le tramway, les bus ilévia et les lignes Arc en Ciel concernées**, ainsi que sur le Transport sur Réservation selon ses conditions de fonctionnement. Pour un trajet Arc en Ciel qui se poursuit hors de la métropole, vérifiez le titre nécessaire pour la partie extérieure.
+
+**Attention au TER: il n'est pas compris.** Même si deux gares se trouvent dans la MEL, le titre gratuit moins de 18 ans ne remplace pas un billet de train. C'est un point particulièrement important pour les adolescents qui alternent bus et train. Le [catalogue des titres ilévia](https://www.ilevia.fr/boutique/tout-le-catalogue/titre-moins-de-18-ans) le précise expressément.
+
+## Faut-il valider une carte gratuite ?
+
+**Oui, à chaque montée et correspondance**, y compris pour un trajet gratuit. L'enfant doit présenter sa propre carte aux valideurs et pouvoir la montrer lors d'un contrôle. Un titre gratuit non validé peut entraîner une amende.
+
+Dans le métro, la carte sert aussi à franchir les portillons. Lors d'une correspondance entre les deux lignes de métro sans repasser devant les valideurs, il n'y a pas de nouvelle validation à effectuer. Retrouvez les règles détaillées sur la page [portillons et validation d'ilévia](https://www.ilevia.fr/portillons).
+
+Pour une sortie en famille, chacun voyage avec son titre adapté: le titre gratuit de l'enfant ne rend pas le trajet des parents gratuit. Et si vous accompagnez un enfant de moins de 4 ans, votre propre titre doit être valide.
+
+## Pour l'école et les activités: trois situations à distinguer
+
+**Un collégien de 12 ans qui habite la MEL** peut utiliser son titre moins de 18 ans pour aller au collège, au sport ou retrouver sa famille, sans acheter un nouveau ticket pour chaque déplacement sur les réseaux couverts.
+
+**Une adolescente de 16 ans qui habite hors MEL mais étudie à Lille** ne devient pas éligible du seul fait de sa scolarisation. Il faut examiner les titres adaptés à son domicile et à son itinéraire.
+
+**Un lycéen de la MEL qui prend un TER** doit prévoir un titre ferroviaire distinct, même s'il utilise gratuitement le bus pour rejoindre la gare.
+
+Pour les circuits scolaires spécifiques, les transports adaptés et les situations hors réseau ordinaire, les règles peuvent différer. Avant la rentrée, consultez la [rubrique transports scolaires d'ilévia](https://www.ilevia.fr/cms/institutionnel/rentree-scolaire) plutôt que de supposer que tous les services fonctionnent avec le même titre.
+
+## Et les vélos V'lille ?
+
+À partir de **14 ans**, un jeune éligible possédant le titre moins de 18 ans peut aussi bénéficier d'un abonnement V'lille gratuit. Cela ne signifie pas une inscription sans formalités ni frais annexes: il faut notamment prévoir un **dépôt de garantie de 200 €** et un **crédit temps initial de 5 €**. Ce service est donc à envisager séparément des trajets en métro ou en bus. Les conditions sont détaillées sur la [page de la gratuité dans la MEL](https://www.ilevia.fr/cms/institutionnel/la-gratuite-dans-la-mel-le-titre-moins-de-18-ans).
+
+Avant le premier trajet, le plus utile est de vérifier que le titre apparaît bien sur la carte personnelle de l'enfant et que l'itinéraire prévu reste dans le périmètre couvert.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -120,4 +167,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
