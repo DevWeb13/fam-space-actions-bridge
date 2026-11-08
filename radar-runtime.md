@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,25 +59,18 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Parc animalier de Gramat en famille: animaux, durée et conseils de visite"
-subtitle: Un parcours nature de 4 km dans le Lot, à adapter à l’âge des enfants et à la saison
-summary: "Loups, ours, élans, pauses avec bébé, horaires d’hiver et tarifs: comment préparer une visite du parc animalier de Gramat avec des enfants."
+title: "Parc animalier de Gramat en famille: billets, animaux et conseils de visite"
+subtitle: Quatre kilomètres de découverte dans le Lot, avec le bon billet selon le nombre de visites
+summary: "Billets à l'unité ou pass annuel, nourrissages compris ou privés, parcours de 4 km, poussettes et horaires: les choix utiles pour visiter Gramat avec des enfants."
 slug: parc-animalier-de-gramat-en-famille-animaux-duree-et-conseils-de-visite
 status: published
 publishedAt: 2026-10-27T08:27:57+01:00
 updatedAt: null
 category: activites
-readingTime: 6
+readingTime: 7
 location:
   city: Gramat
   department: Lot
@@ -99,6 +102,8 @@ sources:
     url: https://www.gramat-parc-animalier.com/immersive-experience/soigneur-dun-jour/
   - title: Parc animalier de Gramat - Horaires et tarifs
     url: https://www.gramat-parc-animalier.com/preparer-sa-visite/horaires-et-tarifs/
+  - title: Parc animalier de Gramat - Nourrissage à la carte
+    url: https://www.gramat-parc-animalier.com/immersive-experience/nourrissage-a-la-carte/
   - title: Parc animalier de Gramat - Se restaurer
     url: https://www.gramat-parc-animalier.com/preparer-sa-visite/se-restaurer/
   - title: Parc animalier de Gramat - Venir au parc
@@ -109,7 +114,7 @@ affiliate:
   destination: Gramat
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/activites/(2026)/(10)/parc-animalier-de-gramat-en-famille-animaux-duree-et-conseils-de-visite/index.md
   targetSha: 8186cb2c041fb99d7320a468fe4de652253ea9c8
@@ -137,30 +142,78 @@ radar:
       - sortie famille Lot
 ---
 
-## Mission retenue
-Actualiser le guide familial du parc animalier de Gramat, dans le Lot, en complétant les choix de billets et d'expériences réellement proposés.
+<!-- article-image-credit -->
+*Photo: [Julien 31](https://commons.wikimedia.org/wiki/File:Canis_lupus_meute_Gramat.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC signale 36 impressions sur trois jours puis 0, sans démontrer de cause SEO. La lacune indépendante est vérifiée : l'article détaille les billets ordinaires mais omet le pass annuel à 35 € adulte / 25 € enfant et le nourrissage privatif à 45 € en supplément des entrées. Ces options changent le choix et le budget des familles.
+À Gramat, dans le Lot, près de Rocamadour, le parc animalier invite les familles à découvrir la faune européenne au fil d’une promenade en plein air. Loups, ours et élans se découvrent le long d’un circuit de 4 km: mieux vaut envisager une petite randonnée ponctuée d’observations qu’une visite rapide de zoo. Pour le budget, le choix dépend surtout du nombre de visites prévues et de l’envie de réserver une expérience privée.
 
-## Décision du lecteur
-Savoir quand le pass annuel devient plus avantageux que les billets ordinaires et distinguer un nourrissage commenté inclus d'une expérience privée à réserver.
+## Quel billet choisir: visite ponctuelle ou pass annuel ?
 
-## Faits à traiter
-- Vérifier le pass nominatif valable un an, 35 € adulte et 25 € enfant de 4 à 11 ans, et calculer le seuil de rentabilité avec les billets web 16 €/10 € (à partir de trois visites pour les deux âges).
-- Distinguer les nourrissages publics inclus les week-ends et vacances des nourrissages privés : 45 € pour 1 à 6 personnes, environ 20 minutes, réservation en ligne au moins 48 h avant, entrées non incluses; préciser les animaux et créneaux sous réserve de disponibilité.
-- Préserver intégralement les informations déjà utiles : parcours de 4 km, accessibilité et poussettes, repas bébé, horaires d'hiver, tarifs 2026, billets web, transports, images et crédits, deux hébergements affiliés. Ne pas attribuer la baisse GSC à cette lacune.
+Les [tarifs officiels 2026](https://www.gramat-parc-animalier.com/preparer-sa-visite/horaires-et-tarifs/) distinguent la visite libre au guichet (**17 € par adulte, 11 € par enfant de 4 à 11 ans inclus**) et les billets achetés en ligne (**16 € et 10 €**). L’entrée est gratuite pour les moins de 4 ans. Le billet web de visite libre est non daté; vérifiez ses conditions au moment de l’achat.
 
-## Sources de départ
-- https://www.gramat-parc-animalier.com/preparer-sa-visite/horaires-et-tarifs/
-- https://www.gramat-parc-animalier.com/immersive-experience/nourrissage-a-la-carte/
-- https://www.gramat-parc-animalier.com/preparer-sa-visite/visiter-en-famille/
+Pour les familles qui habitent à proximité ou reviennent régulièrement, le **pass annuel nominatif** coûte **35 € par adulte et 25 € par enfant de 4 à 11 ans**. Il permet de visiter librement le parc pendant un an de date à date, avec accès aux animations de nourrissage des week-ends et vacances. Une photo d’identité est nécessaire pour établir la carte.
 
-## Affiliation
-Conserver les deux liens d'hébergement existants, Booking.com et Abritel, utiles pour un week-end. Ne pas ajouter de partenaire non vérifié.
+En comparant uniquement les entrées aux billets web, **trois visites** rendent le pass plus intéressant pour un adulte (35 € contre 48 €) comme pour un enfant payant (25 € contre 30 €). Pour une famille de deux adultes et deux enfants de 4 à 11 ans, trois visites coûteraient **156 € en billets web**, contre **120 € en pass annuels**, soit 36 € d’écart. Avec une ou deux visites, les billets ponctuels restent moins chers. Ces comparaisons ne tiennent pas compte d’éventuelles réductions particulières.
 
-## Continuations internes
-Conserver le renvoi existant vers le guide du Gouffre de Padirac plutôt que développer une seconde sortie ici.
+## Nourrissage public ou rencontre privée: quelle différence ?
+
+Les animations publiques de nourrissage sont **comprises dans le billet**, notamment les week-ends et pendant les vacances. Elles varient selon la période et les animaux: consultez l’[agenda du parc](https://www.gramat-parc-animalier.com/agenda/) pour choisir votre jour plutôt que de promettre aux enfants un rendez-vous précis.
+
+Le [nourrissage à la carte](https://www.gramat-parc-animalier.com/immersive-experience/nourrissage-a-la-carte/) est une autre formule: **45 € pour un groupe de 1 à 6 personnes**, pour environ **20 minutes** guidées par un soigneur. **Les entrées du parc ne sont pas incluses** et doivent être réservées séparément selon les conditions indiquées par le parc. La réservation s’effectue uniquement en ligne, **au moins 48 heures à l’avance**, sur les créneaux proposés à **15 h ou 16 h**. Il faut préciser l’animal souhaité en commentaire; loups, ours, rennes, renards polaires, ratons laveurs, porcs-épics ou genettes sont évoqués, sous réserve des disponibilités et conditions saisonnières.
+
+À titre d’exemple, pour deux adultes et deux enfants payants, le nourrissage privé représente **45 € de supplément** au prix des quatre entrées, et non un forfait familial d’accès au parc. Pour une expérience différente, [« Soigneur d’un jour »](https://www.gramat-parc-animalier.com/immersive-experience/soigneur-dun-jour/) est accessible dès 8 ans, se réserve exclusivement en ligne et occupe une matinée spécifique.
+
+## Loups, ours, élans: que voit-on vraiment ?
+
+Trois espaces méritent particulièrement qu’on prenne son temps. À la tanière des loups, une passerelle surélevée puis un espace vitré permettent d’observer les déplacements de la meute. L’observatoire des élans offre plusieurs angles de vue sur ces grands cervidés, tandis que la doline des ours dispose notamment d’une grotte vitrée. Ces aménagements sont décrits sur la page officielle des [observatoires du parc](https://www.gramat-parc-animalier.com/decouvrir-le-parc/notre-vision/les-observatoires/).
+
+L’observation dépend des animaux: un loup peut rester à distance, un ours se reposer. Avec les enfants, prendre quelques minutes devant un enclos permet parfois de repérer un comportement qu’on aurait manqué en passant trop vite.
+
+## À quel âge la sortie est-elle la plus intéressante ?
+
+Avec un tout-petit, les petites chèvres et l’aire de jeux offrent des moments plus immédiats que l’attente devant un grand enclos. Le parc présente aussi des panneaux pédagogiques pour les enfants plus grands qui veulent comprendre les comportements des animaux, comme le détaille la rubrique [visiter en famille](https://www.gramat-parc-animalier.com/preparer-sa-visite/visiter-en-famille/).
+
+## Quatre kilomètres à parcourir: quel rythme prévoir ?
+
+Le [parcours annoncé](https://www.gramat-parc-animalier.com/preparer-sa-visite/faq/) mesure **4 km**, pour une durée moyenne d’environ **3 heures**. Cette moyenne est une bonne base, pas une obligation. Avec des enfants qui s’arrêtent longuement devant les animaux, une pause repas ou un bébé à changer, il est préférable de garder une marge. Prévoyez aussi de pouvoir écourter le circuit en cas de fatigue.
+
+Une façon simple d’organiser la promenade consiste à choisir deux ou trois observations prioritaires, puis à laisser le reste de la visite se faire au rythme du groupe. Prévoyez des chaussures adaptées aux chemins, de l’eau et des vêtements en fonction de la météo. En période de pluie, certains espaces d’observation sont couverts, mais l’essentiel de la sortie reste dehors.
+
+### Poussette, fauteuil roulant et bébé: les limites à connaître
+
+Le parc annonce un parcours **adapté aux poussettes**, mais cela ne signifie pas que tous les chemins sont plats. Selon sa page [accessibilité](https://www.gramat-parc-animalier.com/preparer-sa-visite/accessibilite-handicap/), **80 % du parcours sont accessibles en fauteuil roulant**. Certaines portions, notamment vers la volière, les ours ou les chevaux de Przewalski, présentent des pentes plus marquées; les chemins peuvent aussi être creusés après de fortes pluies.
+
+Pour une poussette chargée ou une personne ayant des difficultés de déplacement, mieux vaut donc se renseigner auprès de l’accueil sur les portions à privilégier, plutôt que de compter sur une accessibilité intégrale. Les familles disposent, selon la liste des [services du parc](https://www.gramat-parc-animalier.com/preparer-sa-visite/services/), d’un prêt de poussettes, d’un espace de change et d’une chaise haute pour bébé. Le site mentionne également des sanitaires, des zones de repos et un parking gratuit.
+
+## Quelle saison choisir, notamment en automne ou en hiver ?
+
+Le parc est ouvert toute l’année **sauf le 25 décembre**, mais l’amplitude horaire change fortement. Selon les [horaires officiels](https://www.gramat-parc-animalier.com/preparer-sa-visite/horaires-et-tarifs/) affichés pour 2026:
+
+- **Du 31 août au 1er novembre 2026**: 10 h à 18 h 30.
+- **Du 2 novembre au 18 décembre 2026**: 13 h 30 à 17 h 30.
+- **Du 19 décembre 2026 au 3 janvier 2027**: 13 h à 17 h 30, avec fermeture le 25 décembre.
+
+L’hiver n’est pas une saison sans animaux: le parc indique que la majorité restent visibles, notamment les rennes, les élans et les renards polaires; la marmotte, elle, hiberne. En revanche, une ouverture à 13 h 30 laisse moins de souplesse pour parcourir 4 km avec de jeunes enfants. Pour une sortie hivernale, il est judicieux d’arriver dès l’ouverture et de ne pas prévoir un long déjeuner au milieu du circuit. Les horaires des périodes suivantes sont à revérifier avant de partir.
+
+## Manger sur place sans mauvaise surprise
+
+Le [self du parc](https://www.gramat-parc-animalier.com/preparer-sa-visite/se-restaurer/) fonctionne du début des vacances de Pâques à la fin de celles de Toussaint: il ne faut donc pas compter dessus pour un déjeuner hivernal. La buvette propose boissons et petite restauration, mais ses horaires peuvent varier selon la saison: vérifiez avant de compter dessus.
+
+Le pique-nique est autorisé à l’intérieur, dans un espace aménagé près des ours. C’est la solution la plus souple avec de jeunes enfants, particulièrement hors saison. Si vous voyagez avec un bébé, apportez son repas habituel: aucun service de réchauffage des petits pots n’est confirmé dans les informations consultées.
+
+## Venir au parc
+
+Le parc se trouve au **1681 avenue André-Malraux, 46500 Gramat**. La page [venir au parc](https://www.gramat-parc-animalier.com/preparer-sa-visite/venir-au-parc/) indique un parking gratuit, des bornes de recharge, une gare à Gramat et environ **40 minutes à pied depuis le centre-ville**. Les bus liO mentionnés pour desservir le parc sont **estivaux**: hors été, ne présumez pas d’une correspondance en transport en commun jusqu’à l’entrée.
+
+## Prolonger la visite par une nuit à Gramat
+
+Si vous prévoyez un week-end dans le nord du Lot, ces deux hébergements permettent de rejoindre facilement le parc:
+
+- [La résidence Lagrange Vacances Les Ségalières sur Booking.com](https://www.booking.com/hotel/fr/les-segalieres.fr.html), face au parc animalier, propose des cottages familiaux avec kitchenette, terrasse et parking. Vérifiez les éventuels suppléments pour le linge.
+- [Cette maison en pierre à Gramat sur Abritel](https://www.abritel.fr/location-vacances/p1582195a) accueille quatre personnes, avec deux chambres, une cuisine et un jardin, à environ trois minutes en voiture du parc. Un escalier raide et un cours d’eau signalés dans les avis demandent de la vigilance avec de jeunes enfants.
+
+Vérifiez les conditions et la disponibilité selon vos dates. Pour une autre sortie dans le secteur, notre [guide du Gouffre de Padirac avec des enfants](https://www.fam-space.fr/articles/sorties/gouffre-de-padirac-en-famille-tarifs-poussette-et-conseils-pour-la-visite/) explique les contraintes d’accès; pensez à vérifier sa période d’ouverture.
 
 ## Article source exact à préserver et améliorer
 
