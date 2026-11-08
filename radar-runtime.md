@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -85,6 +88,8 @@ image:
 sources:
   - title: Office de tourisme d'Aussois - Forfaits de ski, tarifs et promotions 2026-2027
     url: https://www.aussois.com/ski-et-glisse/les-forfaits-de-ski/
+  - title: Office de tourisme d'Aussois - Accessibilité et handiski
+    url: https://www.aussois.com/ski-et-glisse/accessibilite-et-handiski/
   - title: Office de tourisme d'Aussois - Domaine alpin
     url: https://www.aussois.com/ski-et-glisse/le-domaine-alpin-d-aussois/
   - title: Office de tourisme d'Aussois - Domaine nordique du Monolithe
@@ -103,7 +108,7 @@ affiliate:
   destination: Aussois
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/bons-plans/(2026)/(10)/ski-a-aussois-en-famille-en-2026-2027-forfaits-et-budget/index.md
   targetSha: 862dea87397bc655a90e9a2fd78a90ca9f134402
@@ -130,31 +135,100 @@ radar:
       - vacances en zone b
 ---
 
-## Mission retenue
-Actualiser de façon ciblée le guide des forfaits de ski à Aussois pour l'hiver 2026-2027, sans refaire les comparatifs déjà complets.
+<!-- article-image-credit -->
+*Photo: [Florian Pépellin](https://commons.wikimedia.org/wiki/File:Front_de_neige_et_remont%C3%A9es_d%27Aussois_(janvier_2023).JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC indique 43 puis 1 impression sur deux périodes de trois jours, mais ne démontre aucune perte de position. Une lacune indépendante existe : l'article détaille les économies classiques, mais omet le tarif handiski officiel et les forfaits piétons, utiles aux familles dont tous les membres ne skient pas.
+À Aussois, en Savoie, on peut passer ses premières heures sur les skis au pied du village avant de rejoindre les pistes d'altitude. Cette station de Haute Maurienne Vanoise, près de Modane, dispose d'un domaine alpin allant de 1 500 à 2 700 mètres et d'un front de neige pensé pour les débutants. Pour les familles, son intérêt tient aussi au choix entre plusieurs forfaits: une semaine de ski intensif n'est pas obligatoire pour profiter de la montagne.
 
-## Décision du lecteur
-Identifier le forfait réellement nécessaire et éviter de payer un forfait alpin à une personne qui ne skie pas, tout en connaissant les réductions d'accessibilité.
+Le domaine alpin annonce une ouverture **du 12 décembre 2026 au 9 avril 2027**, sous réserve de l'enneigement et des ouvertures effectives de pistes et remontées. Pour la première semaine, du 12 au 18 décembre, l'exploitant prévoit une ouverture partielle avec une remise de 20 %, sous réserve des conditions de neige. Voici comment préparer un séjour sans payer pour des journées de ski que personne n'utilisera. Les [caractéristiques du domaine et son calendrier](https://www.aussois.com/ski-et-glisse/le-domaine-alpin-d-aussois/) sont publiés par l'office de tourisme.
 
-## Faits à traiter
-- Handiski hiver 2026-2027 : réduction de 50 % sur les forfaits alpins de 1 à 6 jours sur présentation de la CMI « Invalidité » ; même réduction pour l'accompagnateur si le besoin est mentionné sur la carte ; achats simultanés de même durée, aux caisses seulement.
-- Forfaits piétons/raquettes : montée Grand Jeu avec retour à 9,60 €, Grand Jeu + Armoise à 16,20 €, forfait six jours à 54 € ; conditions d'âge et gratuités à préciser.
-- Domaine nordique : réduction « happy hour » de 2 € à partir de 14 h 30, si toujours affichée ; préserver les tarifs journaliers et la mention des secours payants.
-- Conserver intégralement les prix alpin 2026-2027, Pass Famille+, préventes, annulations, ESF, luge, transports, deux liens d'hébergement, trois images et crédits.
+## Débutants, enfants ou skieurs réguliers: quel forfait choisir?
 
-## Sources de départ
-- https://www.aussois.com/ski-et-glisse/les-forfaits-de-ski/
-- https://www.aussois.com/ski-et-glisse/accessibilite-et-handiski/
+Le bon point de départ est le programme réel de chaque personne. Un enfant qui prend ses premiers cours, un adolescent qui veut explorer les pistes et un parent qui skie seulement l'après-midi n'ont pas besoin du même titre.
 
-## Affiliation
-Conserver les deux hébergements Booking existants, sans ajout artificiel.
+Pour l'hiver **2026-2027**, les [tarifs publics des remontées mécaniques d'Aussois](https://www.aussois.com/ski-et-glisse/les-forfaits-de-ski/) distinguent notamment:
 
-## Continuations internes
-- Insérer les informations nouvelles au voisinage des comparatifs de forfaits, sans répéter les autres sections.
-- Garder le lien interne vers la coopérative de Beaufort comme idée de journée alternative.
+- **Front de neige: 17 €**, tarif identique enfant et adulte. Ce forfait couvre les téléskis Mulinière et Charrière. Il convient à une pratique limitée à cette zone, pas à une journée sur l'ensemble du domaine.
+- **4 heures: 31 € pour un enfant, 36,50 € pour un adulte.** À envisager si la famille ne skie qu'une partie de la journée.
+- **1 jour: 35 € pour un enfant, 41 € pour un adulte.** Pour quatre ou cinq euros supplémentaires par personne par rapport aux quatre heures, il laisse davantage de liberté.
+- **6 jours: 180 € pour un enfant, 212 € pour un adulte**, hors remise familiale éventuelle.
+
+Dans cette grille, « enfant » désigne une personne **née entre 2015 et 2021 inclus**; « adulte », une personne **née entre 1963 et 2014 inclus**. Une catégorie sénior distincte concerne les personnes nées entre 1952 et 1962. Les catégories sont définies par année de naissance et les tarifs réduits nécessitent un justificatif.
+
+Pour un enfant né **en 2022 ou après**, le forfait est offert sur présentation d'un justificatif. Les personnes nées en **1951 ou avant** bénéficient aussi de cette gratuité. Cela ne signifie pas qu'il faut entrer sur les remontées sans titre d'accès: certaines installations exigent que le bénéficiaire possède tout de même un forfait, même gratuit.
+
+### Handiski : une réduction de 50 % sous conditions
+
+Pour l'hiver 2026-2027, une personne présentant une **CMI portant la mention « Invalidité »** bénéficie de **50 % de réduction sur les forfaits de ski alpin de 1 à 6 jours**. Si la carte mentionne la nécessité d'un accompagnement, l'accompagnateur bénéficie également de 50 % sur son forfait. Les deux forfaits doivent être de même durée, achetés ensemble et réglés en une seule fois. **Ces tarifs ne sont disponibles qu'aux caisses des remontées mécaniques de la Maison d'Aussois**, pas en prévente en ligne. Les télésièges Grand Jeu et Armoise figurent parmi les remontées accessibles au ski assis ; mieux vaut vérifier les conditions d'accès selon le matériel et l'enneigement. Voir les [conditions officielles du handiski](https://www.aussois.com/ski-et-glisse/accessibilite-et-handiski/).
+
+## Le Pass Famille+ peut réduire de 79 € une semaine de ski
+
+Le **Pass Famille+** s'applique à partir de **quatre forfaits de six jours achetés ensemble**, comprenant au minimum deux adultes et deux enfants ou adolescents, selon les catégories et conditions de l'exploitant.
+
+Exemple avec deux adultes et deux enfants relevant de la catégorie enfant du tarif 2026-2027:
+
+- Quatre forfaits de six jours au tarif normal: **784 €**.
+- Les mêmes avec le Pass Famille+: **705 €**.
+- **Économie: 79 €** sur les remontées mécaniques.
+
+Ce total utilise les montants publiés, soit **190,50 € par adulte et 162 € par enfant** avec le pass. Il ne couvre ni les cours, ni la location des skis, ni l'hébergement. La réduction familiale n'est pas à présumer cumulable avec les autres promotions: comparez toujours le montant final proposé avant de payer. Conditions et tarifs figurent sur la [page officielle des forfaits](https://www.aussois.com/ski-et-glisse/les-forfaits-de-ski/).
+
+Autre avantage d'un forfait Aussois **six jours ou plus**: il donne accès, sous conditions, à une journée dans chacune des autres stations alpines de Haute Maurienne Vanoise, aux domaines nordiques du territoire et à des liaisons en bus interstations. Intéressant pour une famille qui veut varier les pistes; beaucoup moins si tout le monde compte rester sur le front de neige d'Aussois.
+
+## Les préventes valent-elles le coup?
+
+Aussois annonce des **réductions pouvant atteindre 50 %** sur certains forfaits réservés à l'avance. Le pourcentage réel et le nombre de forfaits encore disponibles varient selon les dates et les offres. Le « jusqu'à » ne garantit donc pas une remise de moitié sur le séjour que vous avez choisi.
+
+La bonne méthode consiste à comparer **le prix de prévente disponible pour vos dates** avec le tarif normal, puis avec le Pass Famille+ si votre groupe est éligible. Acheter longtemps avant le départ pour gagner quelques euros n'est pas forcément intéressant si les dates de vacances restent incertaines.
+
+Une possibilité d'**annulation sans motif avec remboursement intégral jusqu'à 30 jours avant le premier jour de validité** est publiée pour certains forfaits datés: ski alpin de 4 heures à 14 jours consécutifs, ski nordique daté et forfaits piétons datés. Elle exclut notamment les forfaits non datés et certains abonnements saison ou annuels. La demande écrite doit respecter le délai fixé par l'exploitant. Vérifiez [les conditions d'annulation détaillées](https://www.aussois.com/ski-et-glisse/les-forfaits-de-ski/) avant l'achat plutôt que de considérer tous les billets comme remboursables.
+
+## Apprendre à skier sans multiplier les frais
+
+Le front de neige se trouve près de la Maison d'Aussois, avec des remontées pour débutants, un jardin des neiges et une garderie. Cela permet à un enfant débutant de rester dans un secteur adapté pendant que d'autres membres de la famille skient plus haut.
+
+Le [jardin d'enfants de l'ESF](https://www.aussois.com/activite/jardin-denfants-apprentissage-du-ski-aussois/) accueille les **3 à 5 ans** pour un apprentissage ludique. La fiche indique des séances de deux heures et des formules de six cours; les prix qui y figurent ne sont pas explicitement identifiés comme ceux de 2026-2027. Mieux vaut demander le tarif et les disponibilités de votre semaine à l'école avant de fixer le budget.
+
+Avant de réserver cours et forfait, demandez quel accès est nécessaire pour le groupe de votre enfant. Cela évite d'acheter trop tôt un forfait alpin six jours à quelqu'un qui ne quitte pas encore l'espace d'initiation.
+
+Pour les jeunes déjà autonomes, le domaine comprend aussi des pistes vertes et bleues ainsi qu'une piste ludique, le **Marmot'Park**. Son [accès est présenté comme libre, mais un forfait valide est obligatoire](https://www.aussois.com/equipement/piste-ludique-marmotpark-aussois/), y compris pour les moins de cinq ans: une distinction importante entre activité sans supplément et activité sans forfait.
+
+## Des journées de neige moins chères que le ski alpin
+
+<!-- article-image-body:01 -->
+
+![Forts Charles-Albert et Marie-Christine sous la neige près d'Aussois en janvier 2023, dans le secteur de la piste de luge, sans montrer la piste](/images/articles/2026/10/ski-a-aussois-en-famille-en-2026-2027-forfaits-et-budget-body-01.webp)
+
+*Photo: [Florian Pépellin](https://commons.wikimedia.org/wiki/File:Forts_Charles-Albert_et_Marie-Christine_enneig%C3%A9s_(janvier_2023).JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Tout le monde n'a pas envie de chausser les skis de descente six jours de suite. Pour une famille avec des enfants d'âges différents, prévoir des journées alternatives peut alléger la facture et éviter la fatigue.
+
+**Pour monter sans skier**, les forfaits piétons et raquettes coûtent **9,60 €** pour un aller-retour par le télésiège Grand Jeu, ou **16,20 €** avec Grand Jeu et Armoise (retour compris). Le forfait nominatif **six jours à accès illimité** sur ces deux télésièges coûte **54 €** ; la formule saison est à **132 €**. Le tarif unique est annoncé pour les **5 à 74 ans inclus** ; la grille prévoit la gratuité pour les enfants nés en 2022 ou après et les personnes nées en 1951 ou avant, sur justificatif. Il s'agit de titres d'accès aux remontées, pas de forfaits alpins pour descendre à ski. Vérifiez les conditions d'ouverture des remontées et les itinéraires piétons avant de partir, sur la [grille officielle des forfaits](https://www.aussois.com/ski-et-glisse/les-forfaits-de-ski/).
+
+Au **domaine nordique du Monolithe**, situé entre Aussois et Val Cenis-Sardières, le plateau près du foyer nordique convient aux premières glisses, tandis que des tracés forestiers s'adressent aux plus habitués. L'ouverture annoncée va **du 19 décembre 2026 au 14 mars 2027**, sous réserve de l'enneigement. Le forfait de ski de fond à la journée coûte **6,20 € pour un jeune né entre 2011 et 2021**, et **9,60 € pour un adulte né entre 1952 et 2010**, suivant la grille publiée. Les itinéraires réservés aux piétons et aux raquettes sont distincts des pistes de fond: on ne marche pas sur ces dernières. À partir de **14 h 30**, une réduction « happy hour » de **2 €** s'applique au tarif public nordique, selon la grille 2026-2027. **Les secours sur les pistes nordiques sont payants**: vérifiez votre couverture avant de partir. Voir le [domaine nordique](https://www.aussois.com/ski-et-glisse/le-domaine-nordique-d-aussois/) et [ses tarifs 2026-2027](https://www.aussois.com/ski-et-glisse/les-forfaits-de-ski/).
+
+Pour une pause sans achat de forfait alpin, la [piste de luge Marie-Christine](https://www.aussois.com/equipement/piste-de-luge-marie-christine-aussois/), à l'entrée du village vers les forts de l'Esseillon, annonce un **accès libre** sous réserve de conditions météo favorables. Il faut apporter ou louer une luge et vérifier l'ouverture sur place.
+
+Pour une journée loin des pistes, notre [visite de la coopérative de Beaufort avec des enfants à Val Cenis](https://www.fam-space.fr/articles/cuisine/visiter-une-cooperative-de-beaufort-avec-des-enfants-a-val-cenis/) propose une autre idée de sortie dans la vallée, autour de la fabrication du fromage.
+
+## Logement et déplacements: les autres postes à surveiller
+
+<!-- article-image-body:02 -->
+
+![Vue hivernale du village d'Aussois et du fort Marie-Christine, photographiés depuis la vallée en janvier 2023](/images/articles/2026/10/ski-a-aussois-en-famille-en-2026-2027-forfaits-et-budget-body-02.webp)
+
+*Photo: [Florian Pépellin](https://commons.wikimedia.org/wiki/File:Vue_d%27Aussois_et_fort_Marie-Christine_en_hiver_(janvier_2023).JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Les économies ne se jouent pas uniquement aux caisses des remontées mécaniques. Un logement avec cuisine permet de préparer les repas, tandis qu'un hébergement proche du front de neige peut réduire les trajets quotidiens avec matériel et jeunes enfants. Pour une famille qui suit des cours tous les matins, la distance réelle jusqu'au rendez-vous ESF compte parfois davantage qu'une petite différence sur le prix de la nuit.
+
+Pour séjourner au plus près des remontées, la [résidence Goélia Les Flocons d'Argent](https://www.booking.com/hotel/fr/residence-goelia-les-flocons-d-argent.fr.html) propose des appartements avec cuisine au pied des pistes. Si vous préférez des chambres familiales avec un restaurant sur place, le [village de vacances Fleurs et Neige](https://www.booking.com/hotel/fr/fleurs-et-neige-aussois1.fr.html) est une autre possibilité à Aussois. Vérifiez les disponibilités et les tarifs pour les dates de votre séjour.
+
+Aussois est accessible en transports en commun depuis **la gare de Modane**, notamment avec la ligne **S52** en hiver. Dans la station, les navettes **A1 et A2 sont gratuites** selon leur desserte et période de fonctionnement; la seconde dessert le secteur nordique de Sardières et ne circule normalement pas le samedi. Les lignes interstations sont normalement payantes, sauf droits inclus dans certains forfaits six jours ou plus, avec des conditions d'utilisation selon les jours. Le [guide officiel des transports](https://www.aussois.com/transports/se-deplacer-en-haute-maurienne/) reste indispensable pour vérifier horaires, correspondances et itinéraires aux dates du séjour.
 
 ## Article source exact à préserver et améliorer
 
