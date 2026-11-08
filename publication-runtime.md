@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,88 +14,143 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Drôme
 - Région: Auvergne-Rhône-Alpes
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Titre de travail :** « Drôme sans voiture avec des enfants : organiser ses trajets en train et en bus sans se ruiner ».
-
-Guide pratique pour les familles résidant dans la Drôme ou qui la visitent sans voiture : combiner TER, cars Région et transports urbains (Citéa à Valence-Romans, Montélibus à Montélimar), avec des exemples d'organisation de journées et de séjours. Le sujet concerne les déplacements familiaux du quotidien autant que les sorties.
-
-## Besoin du lecteur
-Identifier quel réseau utiliser selon son trajet, chercher un horaire et une correspondance, comprendre les billets et réductions enfants, anticiper les retours, les dimanches et les déplacements avec poussette, et choisir un hébergement proche d'une gare si nécessaire. Savoir distinguer les tarifs et périmètres de chaque réseau plutôt que supposer qu'un billet est valable partout.
-
-## Valeur éditoriale
-- Le réseau régional de cars de la Drôme publie ses horaires, son plan et son calculateur d'itinéraire ; les dessertes scolaires accessibles aux autres voyageurs restent soumises aux places disponibles, et leurs fréquences ne doivent pas être présumées identiques le week-end.
-- TER illico PROMO : les samedis et pendant les vacances scolaires de la zone A, groupes de 2 à 5 personnes dont au moins un adulte, -40 % sur le tarif normal et gratuité des moins de 12 ans ; vérifier le périmètre et les conditions avant tout exemple chiffré.
-- Citéa : billet unité affiché à 1,40 €, billet 24 h à 3,90 € ; les moins de 6 ans voyagent avec un titre gratuit à demander au conducteur ou à charger sur Oùra. Ces conditions ne s'appliquent pas automatiquement aux autres réseaux.
-- Proposer des scénarios réalistes (arrivée en train à Valence-Ville, déplacements urbains à Valence/Romans, séjour à Montélimar) sans promettre de correspondances ou d'accessibilité non vérifiées. Comparer train + bus et déplacement régional ; distinguer l'abonnement scolaire des billets de loisirs.
-- L'intérêt éditorial est la mise en relation de plusieurs réseaux et règles tarifaires, que les pages des opérateurs présentent séparément. Vérifier à la rédaction horaires et tarifs à la date de publication.
-
-## Affiliation
-- **Booking.com — Appart'City Classic Valence**, https://www.booking.com/hotel/fr/appart-city-valence-centre.html : appart'hôtel près de la gare Valence-Ville (environ 3 minutes à pied annoncées), logements avec cuisine, jusqu'à un appartement familial de six personnes selon la catégorie. Pertinent pour les familles arrivant en train et passant une nuit ou davantage ; prix et disponibilité à vérifier aux dates du lecteur.
-- **Expedia.fr — Appart'City Classic Valence**, https://www.expedia.fr/en/Valence-Hotels-AppartCity-Valence-Centre.h5189566.Hotel-Information : même établissement, kitchenette et proximité de la gare confirmées ; alternative partenaire, ne pas multiplier les liens vers le même hébergement dans l'article.
-- Recherche des autres partenaires d'hébergement/location et de billetterie/visites : aucune prestation de transport local pertinente et vérifiée auprès des partenaires de billetterie ; billets TER, cars Région et réseaux urbains à présenter via les opérateurs, sans les transformer en offre affiliée. Les partenaires de location de voiture, transferts, vols, consigne ou vélo ne sont pas nécessaires à cet angle sans voiture en famille. Ne pas présenter de tarif d'hébergement sans dates.
-
-## Sources de départ
-- Cars Région Drôme, horaires, plan et calculateur : https://www.laregionvoustransporte.fr/cars-region/cars-region-de-la-drome/
-- TER Auvergne-Rhône-Alpes, conditions illico PROMO : https://www.ter.sncf.com/auvergne-rhone-alpes/tarifs-cartes/billets-reduction/illico-promo
-- Valence Romans Mobilités, titres et gratuité des moins de 6 ans : https://www.valenceromansmobilites.fr/tarifs-abonnements/bus/
-- Montélibus, opérateur local : https://www.montelibus.fr/
-- Région, transports scolaires de la Drôme (pour distinguer les usages) : https://www.laregionvoustransporte.fr/transport-scolaire/transport-scolaire-de-la-drome/
-- TER, informations pratiques et horaires : https://www.ter.sncf.com/auvergne-rhone-alpes/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "vie-pratique"
+title: "Drôme sans voiture avec des enfants: train, cars et bus pour se déplacer"
+subtitle: "Quels réseaux choisir, quels billets acheter et comment éviter les correspondances ratées"
+summary: "TER, cars Région, Citéa et Montélibus: les tarifs enfants, les bons plans et les réflexes pour organiser ses déplacements familiaux dans la Drôme."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Drôme sans voiture en famille"
+  - "transports enfants Drôme"
+  - "TER Drôme tarif famille"
+  - "bus Valence Montélimar"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Drôme"
+  region: "Auvergne-Rhône-Alpes"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Cars Région de la Drôme, horaires et itinéraires"
+    url: "https://www.laregionvoustransporte.fr/cars-region/cars-region-de-la-drome/"
+  - title: "TER Auvergne-Rhône-Alpes, billet illico PROMO"
+    url: "https://www.ter.sncf.com/auvergne-rhone-alpes/tarifs-cartes/billets-reduction/illico-promo"
+  - title: "Valence Romans Mobilités, tarifs Citéa"
+    url: "https://www.valenceromansmobilites.fr/tarifs-abonnements/bus/"
+  - title: "Montélibus, titres et tarifs"
+    url: "https://www.montelibus.fr/titres-et-tarifs"
+  - title: "Montélibus, horaires et informations trafic"
+    url: "https://www.montelibus.fr/"
+  - title: "Région Auvergne-Rhône-Alpes, transports scolaires de la Drôme"
+    url: "https://www.laregionvoustransporte.fr/transport-scolaire/transport-scolaire-de-la-drome/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Dans la Drôme, voyager avec des enfants sans voiture est possible, notamment autour de Valence, Romans-sur-Isère et Montélimar. Mais il faut jongler entre plusieurs réseaux: les TER pour relier les villes, les cars Région pour certaines communes et les bus urbains pour les derniers kilomètres. Le billet le moins cher dépend donc autant de l'âge des enfants que du trajet et du jour choisi.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Quel transport prendre selon votre destination?
+
+**Entre deux villes desservies par le rail**, commencez par regarder les [horaires TER Auvergne-Rhône-Alpes](https://www.ter.sncf.com/auvergne-rhone-alpes/). Le train est souvent le point de départ le plus simple pour organiser une journée entre Valence et Montélimar, par exemple. Vérifiez la gare exacte, l'horaire du retour et la durée de correspondance avant d'acheter.
+
+**Pour rejoindre une commune sans gare pratique**, consultez les [cars Région de la Drôme](https://www.laregionvoustransporte.fr/cars-region/cars-region-de-la-drome/). Leur site propose un choix de lignes, un plan, la recherche d'itinéraire et les informations trafic. Certaines dessertes sont surtout organisées autour des horaires scolaires: un aller possible le matin ne garantit pas un retour adapté à une sortie en famille, particulièrement le dimanche ou pendant les vacances.
+
+**À Valence et Romans-sur-Isère**, utilisez le réseau Citéa pour les déplacements locaux. **À Montélimar**, c'est Montélibus qui assure les trajets urbains. Les billets et les règles de gratuité de ces deux réseaux sont différents: ne supposez pas qu'un ticket de bus acheté dans une ville fonctionne dans l'autre.
+
+## Le bon plan TER pour les familles: illico PROMO
+
+Les samedis et pendant les vacances scolaires de la zone A, le [billet illico PROMO](https://www.ter.sncf.com/auvergne-rhone-alpes/tarifs-cartes/billets-reduction/illico-promo) accorde **40 % de réduction sur le tarif normal** et la **gratuité aux moins de 12 ans**. Il faut voyager à **2 à 5 personnes**, dont au moins un adulte, ensemble dans le même train, à la même date et dans la même classe.
+
+Pour deux adultes et deux enfants de 7 et 10 ans, c'est une offre à comparer en priorité avec le prix normal. Attention: elle ne couvre pas indistinctement tous les bus. Son périmètre annoncé concerne les TER, certains autocars TER et Cars Région Express prévus dans les conditions de l'offre, pas automatiquement les lignes locales des cars Région ou les bus urbains.
+
+Autre détail important: les billets illico PROMO **VACANCES sont vendus uniquement en ligne**; ceux du samedi sont également proposés en gare. Ils ne sont ni échangeables ni remboursables. Comparez les horaires avant de valider l'achat.
+
+## Valence et Romans: combien coûtent les bus Citéa?
+
+Sur le réseau [Citéa](https://www.valenceromansmobilites.fr/tarifs-abonnements/bus/), le billet unité coûte **1,40 €** et le billet **24 heures 3,90 €**. Le carnet de dix voyages coûte **8 €** et chaque voyage décompté permet une utilisation d'une heure sur le réseau, sans aller-retour sur la même ligne.
+
+Pour un adulte qui prévoit trois trajets distincts dans la journée, le billet 24 heures revient moins cher que trois tickets unité (3,90 € contre 4,20 €). Pour seulement un aller et un retour, deux billets unité restent moins chers.
+
+Les **moins de 6 ans voyagent gratuitement**, mais doivent être accompagnés d'un adulte **et avoir un titre gratuit**: billet enfant demandé au conducteur ou abonnement enfant sur carte Oùra. Ce n'est donc pas une montée sans titre.
+
+Une exception utile pour les correspondances: selon Valence Romans Mobilités, un billet de train mentionnant **Romans Gare ou Valence Gare** comme gare de départ ou d'arrivée permet d'emprunter gratuitement **l'InterCitéa**, sur présentation du billet au conducteur. Cette possibilité concerne cette liaison précise, pas l'ensemble des bus Citéa.
+
+## Montélimar: des tarifs et un âge de gratuité différents
+
+Sur [Montélibus](https://www.montelibus.fr/titres-et-tarifs), le ticket unité est affiché à **1 €**, valable une heure avec correspondance. Le ticket journée coûte **3 €** et le pass dix voyages **8 €**. Les enfants de **moins de 4 ans** voyagent gratuitement, contre moins de 6 ans sur Citéa.
+
+Le réseau demande de valider le titre à chaque montée, même lors d'une correspondance. Pour une famille qui arrive à Montélimar en train, mieux vaut donc vérifier séparément le prix du TER et celui des bus locaux. Avant une sortie le dimanche ou un jour férié, consultez aussi les [informations et horaires Montélibus](https://www.montelibus.fr/): toutes les lignes ne fonctionnent pas nécessairement comme en semaine.
+
+## Trois façons d'organiser une sortie sans voiture
+
+### Une journée à Valence en arrivant par le train
+
+Repérez d'abord votre arrivée à **Valence-Ville**, puis l'arrêt Citéa le plus utile pour votre visite. Si vous restez dans le centre, comparez aussi la marche à pied avec un trajet de bus: un déplacement supplémentaire avec une poussette n'est pas toujours un gain de temps. Pour une journée avec plusieurs trajets, comparez billets unité, carnet et billet 24 heures. Gardez un retour TER avec une marge raisonnable plutôt que le dernier train possible.
+
+### Valence et Romans dans la même journée
+
+Comparez le TER et les liaisons proposées par Citéa, en tenant compte de votre point de départ réel. Si vous empruntez l'InterCitéa avec un billet TER éligible, vérifiez la condition indiquée plus haut avant de payer un titre supplémentaire. Avec des enfants, une seule grande activité dans chaque ville peut être plus agréable qu'un programme dépendant de plusieurs correspondances serrées.
+
+### Quelques jours à Montélimar
+
+Une arrivée en train, suivie de trajets Montélibus, peut suffire pour un séjour centré sur la ville. Si vous prévoyez une excursion dans une commune voisine, vérifiez **d'abord le retour en car Région**, puis les horaires de l'aller: c'est souvent le retour qui limite la sortie. Pour un séjour avec un bébé, choisissez si possible un logement proche de la gare ou d'un arrêt réellement desservi, plutôt qu'un hébergement qui paraît proche uniquement sur une carte.
+
+## Poussette, vacances et trajets scolaires: les points à vérifier
+
+Pour une poussette, recherchez les informations d'accessibilité **sur la ligne, le véhicule et les arrêts concernés**. Une gare accessible ne signifie pas que chaque car ou arrêt du parcours le sera. Évitez de promettre un trajet sans marche ou une montée de plain-pied sans confirmation de l'opérateur.
+
+Les horaires changent selon les jours scolaires, les vacances et les jours fériés. Consultez les fiches horaires correspondant **à votre date de voyage**, les alertes trafic et le dernier retour possible. Prévoyez aussi du temps entre le train et le bus, surtout avec de jeunes enfants et des bagages.
+
+Enfin, ne confondez pas le billet pour une sortie avec l'abonnement scolaire. La [Région détaille le dispositif Scolaire+ Mobilité Région](https://www.laregionvoustransporte.fr/transport-scolaire/transport-scolaire-de-la-drome/): il peut permettre de voyager sur les cars Région en dehors du trajet domicile-école, mais **n'inclut pas les réseaux urbains ni le transport à la demande**. Les droits exacts et les horaires restent à vérifier selon le titre et la ligne.
+
+Le réflexe le plus rentable est simple: construire le trajet complet, vérifier chaque réseau et seulement ensuite acheter les billets. Une réduction TER intéressante ne compense pas une correspondance impossible ou un car sans retour le jour choisi.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -124,4 +179,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
