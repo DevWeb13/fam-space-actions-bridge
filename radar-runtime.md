@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "LAEP autour d'Annecy: trois lieux pour jouer avec son tout-petit"
-subtitle: À Meythet, Annecy et Alby-sur-Chéran, les âges accueillis, les horaires et les conditions d'accès ne sont pas les mêmes
-summary: "Trois lieux d'accueil enfants-parents autour d'Annecy: âges, horaires, coût et conditions d'accès pour choisir où venir avec un tout-petit."
+subtitle: À Meythet, aux Teppes et à Alby-sur-Chéran, comparez les âges, les créneaux et les conditions d'accueil
+summary: "Trois lieux d'accueil enfants-parents autour d'Annecy : horaires 2026-2027, âges, accès en bus, adhésion et prochaines séances pour venir sans mauvaise surprise."
 slug: laep-autour-d-annecy-trois-lieux-pour-jouer-avec-son-tout-petit
 status: published
 publishedAt: 2026-10-23T10:59:51+02:00
@@ -100,7 +103,7 @@ sources:
     url: https://mairie-alby-sur-cheran.fr/enfance-jeunesse/petite-enfance/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/parentalite/(2026)/(10)/laep-autour-d-annecy-trois-lieux-pour-jouer-avec-son-tout-petit/index.md
   targetSha: 247dea85decc3594f9272de9778ae1035cba3506
@@ -125,35 +128,60 @@ radar:
       - LAEP Annecy
       - lieu accueil enfants parents Haute-Savoie
       - LAEP Meythet Alby-sur-Chéran
+reviewAt: 2027-01-04
 ---
 
-## Mission retenue
-Actualiser utilement le guide des trois lieux d'accueil enfants-parents autour d'Annecy : Les Petites Bulles à Meythet, Le Patio aux Teppes et Les P'tits explorateurs à Alby-sur-Chéran.
+Un **lieu d'accueil enfants-parents (LAEP)** permet aux tout-petits de jouer avec d'autres enfants pendant que les adultes échangent ou partagent un moment avec eux. Autour d'Annecy, **Les Petites Bulles à Meythet**, **Le Patio aux Teppes** et **Les P'tits explorateurs à Alby-sur-Chéran** proposent cette formule, mais leurs horaires, âges et conditions d'accès diffèrent.
 
-## Pourquoi cette mission
-Le snapshot GSC signale une chute rapide de 40 à 0 impression sur deux fenêtres de trois jours, mais ne permet pas d'en déterminer la cause. Lacune indépendante constatée : l'article renvoie au calendrier 2026-2027 du SIPA mais ne donne que les séances de novembre 2026, alors que le calendrier officiel détaille les séances jusqu'en juillet 2027. Il manque aussi l'accès en bus indiqué par Le Mikado pour les familles sans voiture.
+Pour choisir sans déplacement inutile, retenez surtout ceci : **Meythet accueille gratuitement le jeudi matin**, **Le Patio ouvre plusieurs jours avec une adhésion familiale**, tandis qu'**Alby propose certains mardis matin seulement**, selon un calendrier précis.
 
-## Décision du lecteur
-Savoir quel lieu peut accueillir son enfant, à quel moment précis, à quel coût, et comment s'y rendre sans déplacement inutile.
+## Un LAEP, ce n'est pas une garderie
 
-## Faits à traiter
-- Ajouter une sélection concise des prochaines dates utiles du SIPA, en distinguant clairement les mardis sans séance et les périodes de vacances ; ne pas recopier inutilement tout le calendrier. Le calendrier officiel annonce notamment les 1, 8 et 15 décembre 2026 puis les 5, 12, 19 et 26 janvier 2027.
-- Préciser pour Le Patio l'accès en bus ligne 4, arrêts Anémones ou Plaine Edelweiss, selon la page officielle du Mikado ; ne pas confondre fermeture de l'accueil général et fermeture du LAEP.
-- Préserver les âges (0-6 ans Meythet et Patio ; 0-4 ans à Alby, 0-6 ans pendant les vacances), les horaires propres à chaque structure, l'adhésion annuelle du Patio, les gratuités, adresses, numéros, accès sans inscription, responsabilité de l'adulte, et la réserve sur l'éligibilité territoriale du SIPA. Préserver aussi image, crédits, sources et lien interne.
-- Vérifier les conditions auprès des organismes, sans présenter la baisse GSC comme une preuve de problème de référencement.
+L'enfant vient avec un parent ou un adulte familier, **qui reste présent et responsable de lui**. Des accueillants accompagnent les échanges sans imposer d'activité. On peut jouer, observer ou discuter et repartir librement. La [Caf présente le principe des LAEP](https://www.monenfant.fr/les-lieux-d-accueil-enfants-parents/) : accueil souple, confidentialité et absence d'inscription préalable.
 
-## Sources de départ
-- SIPA, calendrier 2026-2027 : https://www.sipalby.fr/espace-jeux-enfants-parents/
-- Le Mikado, Le Patio et horaires : https://lemikado.org/action-sociale/petite-enfance-annecy/
-- Le Mikado, accès : https://lemikado.org/contacts-horaires-acces/
-- Le Cairn, accueil familles : https://lecairn-annecymeythet.com/famille-habitants/
+## Les Petites Bulles à Meythet : gratuit le jeudi matin
 
-## Affiliation
-Aucune : le service est local, gratuit ou soumis à adhésion, sans achat partenaire pertinent.
+**Les Petites Bulles**, au **Cairn, 6 rue de l'Aérodrome à Meythet** (Annecy), accueillent les enfants de **0 à 6 ans** accompagnés d'un parent ou adulte référent. Les futurs parents sont également les bienvenus.
 
-## Continuations internes
-- Conserver le lien vers le guide Fam Space des bus à Annecy pour les règles détaillées avec poussette.
-- Ne pas développer un annuaire exhaustif des LAEP : renvoyer à la Caf pour les autres adresses.
+Le [Cairn annonce un accueil gratuit, anonyme et sans inscription](https://lecairn-annecymeythet.com/famille-habitants/), **chaque jeudi de 9 h à 12 h, y compris pendant les vacances scolaires**. Vous pouvez arriver ou repartir pendant ce créneau, sans obligation de rester toute la matinée.
+
+Pour les renseignements et l'accès, consultez les [informations pratiques du Cairn](https://lecairn-annecymeythet.com/infos-pratiques/) ou appelez le **04 50 22 08 13**. La page de l'activité ne détaille pas l'accessibilité de la salle : si vous venez avec une poussette ou devez éviter les escaliers, vérifiez ce point auprès de l'accueil.
+
+## Le Patio aux Teppes : plusieurs créneaux, avec adhésion
+
+**Le Patio**, proposé par **Le Mikado au site Teppes, place des Rhododendrons, 74000 Annecy**, reçoit les enfants **de la naissance à 6 ans** avec un adulte, dans la limite des places disponibles.
+
+Le [programme 2026-2027 du Mikado](https://lemikado.org/action-sociale/petite-enfance-annecy/) distingue deux périodes :
+
+- **Hors vacances scolaires :** lundi et mardi de **15 h à 17 h 30**, mercredi de **9 h à 12 h**, jeudi et vendredi de **9 h à 11 h 30**.
+- **Pendant les vacances scolaires :** lundi et mercredi de **9 h 30 à 11 h 30**.
+
+L'accueil est libre dans la limite des places, mais il faut une **carte d'adhésion familiale de 24 € pour la saison 2026-2027**, valable du **1er septembre 2026 au 31 août 2027**. Ce montant correspond à l'année, pas à chaque séance. Consultez les [conditions d'adhésion du Mikado](https://lemikado.org/adhesion/).
+
+**Sans voiture :** le [Mikado indique la ligne de bus 4, arrêts Anémones ou Plaine Edelweiss](https://lemikado.org/contacts-horaires-acces/), pour rejoindre le site Teppes. Le centre est joignable au **04 50 57 56 55**. Les horaires de l'accueil administratif affichés sur son site ne sont **pas** les horaires du LAEP : utilisez les créneaux ci-dessus et vérifiez les fermetures exceptionnelles avant de partir.
+
+## Les P'tits explorateurs à Alby-sur-Chéran : vérifier le mardi choisi
+
+Organisés par le **Syndicat intercommunal du Pays d'Alby (SIPA)**, **Les P'tits explorateurs** accueillent les enfants **de 0 à 4 ans**, et **jusqu'à 6 ans pendant les vacances scolaires**, avec un parent ou adulte familier.
+
+Rendez-vous dans la **salle petite enfance au deuxième étage de la Maison intercommunale des services publics**, au-dessus de la crèche, **118 route de Plaimpalais, 74540 Alby-sur-Chéran**. L'accueil est **gratuit, anonyme et sans inscription**, de **8 h 45 à 11 h 15**, les mardis inscrits au calendrier.
+
+Attention : **il n'y a pas de séance tous les mardis**. Le [calendrier officiel 2026-2027 du SIPA](https://www.sipalby.fr/espace-jeux-enfants-parents/) prévoit :
+
+- **Novembre 2026 :** les 3, 10, 17 et 24.
+- **Décembre 2026 :** les 1er, 8 et 15 ; **pas de séance annoncée les 22 et 29 décembre**.
+- **Janvier 2027 :** les 5, 12, 19 et 26.
+- **Février 2027 :** les 2, 9 et 16 ; **pas de séance annoncée les 23 février**.
+
+Les dates suivantes, jusqu'en juillet 2027, figurent sur le site du SIPA. Pendant les petites vacances, l'organisme annonce une ouverture une semaine sur deux : ne supposez donc pas qu'un mardi habituel est maintenu. Vérifiez le calendrier juste avant de venir.
+
+**Familles hors du Pays d'Alby :** le SIPA décrit une venue libre, mais la [mairie d'Alby-sur-Chéran](https://mairie-alby-sur-cheran.fr/enfance-jeunesse/petite-enfance/) évoque les familles des communes membres du syndicat. L'admission de toutes les familles extérieures n'est donc pas garantie. Pour confirmer votre situation, ou l'accès au deuxième étage avec une poussette, contactez le SIPA au **04 50 68 40 00** ou **04 50 68 40 01**.
+
+## Préparer sa première visite
+
+Si vous souhaitez venir sans adhésion, privilégiez **Meythet le jeudi** ou **Alby un mardi confirmé au calendrier**. Pour davantage de choix dans la semaine, **Le Patio** peut convenir si l'adhésion familiale correspond à vos besoins. Vérifiez toujours l'âge accepté, particulièrement à Alby où la limite passe de 4 à 6 ans pendant les vacances.
+
+Pour le trajet avec une poussette, notre [guide des bus à Annecy avec des enfants](https://www.fam-space.fr/articles/vie-pratique/bus-a-annecy-avec-des-enfants-quel-ticket-choisir-et-comment-eviter-les-galeres/) détaille les règles à bord. Si aucun de ces trois lieux ne vous convient, la [Caf explique comment trouver d'autres LAEP](https://www.monenfant.fr/les-lieux-d-accueil-enfants-parents/) près de chez vous.
 
 ## Article source exact à préserver et améliorer
 
