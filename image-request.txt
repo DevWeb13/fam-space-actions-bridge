@@ -349,3 +349,4 @@ automation/image-recovery-20261108-batch05-a7083e0|2d8e7a5abc093b9f6cc9e35e8f51b
 automation/image-recovery-20261108-batch05-a7083e0|5bf8c8d4cedf9914cac2b328ef6aa586464df909
 automation/image-recovery-20261108-batch06-98da02f|20db1dac47d95913698da5f3b188498bc55f4d8e
 automation/image-recovery-20261108-batch06-98da02f|3f9fad65264d184bb95ceeb1a3122c40e7e60f3d
+automation/image-recovery-20261108-batch07-a79df05|ee87aa373966f25da7b6800ec6b427972879ecb9
