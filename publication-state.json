@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261108-1101-sujet-les-pass-musees-regionaux-de-la-reunion-et-les-tarifs-reduits-po",
+  "lastProcessedCommit": "1e74aab882f7481e63c5e9f70d3cbb17f0360b3b"
 }
