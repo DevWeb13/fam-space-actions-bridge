@@ -339,3 +339,4 @@ automation/image-20261106-0345-four-hero-27659b5|27659b57be294e656a4ba4763ae276f
 automation/image-20261106-0345-four-hero-27659b5|d6eebad9b8d480a718a3af325b4feb1901cdd966
 automation/image-recovery-20261108-batch01-39a781e|4cb094ecba8eecd2aad124d5eef91f709f718d98
 automation/image-recovery-20261108-batch01-39a781e|50786ef28876b0e36fe86da8fce400cb0da1f44f
+automation/image-recovery-20261108-batch02-b27baa7|a2af4ed9e94e127e84ce08b3905f70ca1f65c288
