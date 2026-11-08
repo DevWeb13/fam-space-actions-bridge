@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 1/3
+# Radar Fam Space - Phase 2/3
 
 ## Mission
 
@@ -8,23 +8,22 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 1/3
+# Radar - Phase 2/3
 
-Tu es rédacteur en chef. Ta seule responsabilité est de choisir la meilleure mission du passage et de préparer un brief éditorial court. **Ne fais aucune plomberie Git et ne reconstruis aucune donnée GSC structurée.**
+Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
 
-Le snapshot GSC du jour est déjà prêt lorsque cette phase commence. Utilise le catalogue compact et l'historique du bridge fournis dans ce runtime, puis utilise le contexte des travaux en cours fourni dans ce runtime. Contrôle seulement les articles nécessaires sur `master`, sans relire tout le catalogue fichier par fichier.
+Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
 
-Examine **en premier** les articles `refresh`, en commençant par ceux marqués `rapidDrop: true`. Ils ont gagné des impressions, puis leur visibilité a fortement diminué en quelques jours. Les articles récents ne doivent pas être pénalisés par leur âge. Les autres pertes significatives viennent ensuite.
+Suis le diagnostic éditorial du brief:
+- `rank_loss`: réponds mieux aux intentions réellement en recul;
+- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
+- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
+- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
+- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
 
-Lis l'article source complet, ses sources et les requêtes GSC lorsqu'elles ont été diagnostiquées :
-- `rank_loss` : vérifier les intentions dont les positions ont réellement reculé ;
-- `coverage_loss` : examiner les recherches dont l'exposition diminue ;
-- `uncertain` ou `needs_query_check` : une chute d'impressions ne prouve pas la cause. Seule une lacune indépendante et vérifiée peut justifier une amélioration ;
-- `search_potential` : vérifier que la réponse et le titre correspondent réellement à l'intention.
+Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
 
-**Ne choisis pas un refresh pour changer une date ou forcer un `updatedAt`.** Identifie ce qui serait concrètement meilleur pour la famille, tout en conservant ce qui fonctionne déjà.
-
-**Seulement si aucun article existant n'est réellement améliorable**, cherche un événement exceptionnel avec un fort potentiel d'intérêt et éventuellement d'affiliation. Vérifie ses sources officielles et recherche les doublons de sujet sur `master`, en complément des articles proches déjà listés, ainsi que les contenus Publication/Destination en cours. Ne multiplie pas les nouveaux articles sur de petits événements gratuits.
+Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
 
 Applique directement les règles partenaires ci-dessous.
 
@@ -51,918 +50,246 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
 
-Le brief doit rester court et contenir uniquement ce qui aidera la rédaction:
+Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
+
+Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
+
+Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
+
+## Candidat validé de la phase précédente
+
+---
+title: "LAEP autour d'Annecy: trois lieux pour jouer avec son tout-petit"
+subtitle: À Meythet, Annecy et Alby-sur-Chéran, les âges accueillis, les horaires et les conditions d'accès ne sont pas les mêmes
+summary: "Trois lieux d'accueil enfants-parents autour d'Annecy: âges, horaires, coût et conditions d'accès pour choisir où venir avec un tout-petit."
+slug: laep-autour-d-annecy-trois-lieux-pour-jouer-avec-son-tout-petit
+status: published
+publishedAt: 2026-10-23T10:59:51+02:00
+updatedAt: null
+category: parentalite
+readingTime: 5
+location:
+  city: Annecy
+  department: Haute-Savoie
+  region: Auvergne-Rhône-Alpes
+topic:
+  key: parentalite|annecy|laep-autour-d-annecy-trois-lieux-pour-jouer-avec-son-tout-petit|2026
+  keywords:
+    - LAEP Annecy
+    - lieu accueil enfants parents Haute-Savoie
+    - LAEP Meythet Alby-sur-Chéran
+image:
+  src: /images/articles/2026/10/laep-autour-d-annecy-trois-lieux-pour-jouer-avec-son-tout-petit.webp
+  alt: Vue du centre de Meythet près d'Annecy en septembre 2007, illustration géographique sans représenter les lieux d'accueil enfants-parents.
+sources:
+  - title: Caf - Les lieux d'accueil enfants-parents
+    url: https://www.monenfant.fr/les-lieux-d-accueil-enfants-parents/
+  - title: Le Cairn - Les Petites Bulles, accueil des familles
+    url: https://lecairn-annecymeythet.com/famille-habitants/
+  - title: Le Cairn - Adresse et accès
+    url: https://lecairn-annecymeythet.com/infos-pratiques/
+  - title: Le Mikado - Le Patio et horaires 2026-2027
+    url: https://lemikado.org/action-sociale/petite-enfance-annecy/
+  - title: Le Mikado - Carte d'adhésion familiale 2026-2027
+    url: https://lemikado.org/adhesion/
+  - title: Le Mikado - Accès au site Teppes
+    url: https://lemikado.org/contacts-horaires-acces/
+  - title: SIPA - Les P'tits explorateurs et calendrier 2026-2027
+    url: https://www.sipalby.fr/espace-jeux-enfants-parents/
+  - title: Mairie d'Alby-sur-Chéran - Petite enfance et accès au LAEP
+    url: https://mairie-alby-sur-cheran.fr/enfance-jeunesse/petite-enfance/
+radar:
+  schemaVersion: 1
+  phase: 1
+  mode: refresh
+  targetPath: src/routes/articles/parentalite/(2026)/(10)/laep-autour-d-annecy-trois-lieux-pour-jouer-avec-son-tout-petit/index.md
+  targetSha: 247dea85decc3594f9272de9778ae1035cba3506
+  targetUrl: /articles/parentalite/laep-autour-d-annecy-trois-lieux-pour-jouer-avec-son-tout-petit/
+  decision: Choisir un LAEP réellement accessible selon l'âge de l'enfant, le jour disponible et les conditions d'accueil, notamment pour les séances de 2027.
+  affiliationPotential: "Aucune affiliation naturelle : accueil de proximité sans réservation commerciale."
+  gsc:
+    retrievedAt: 2026-11-08T02:28:56+01:00
+    dataThrough: 2026-11-05
+    signal: needs_query_check
+    basis: "Visibilité récente : 40 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie."
+    peakStart: 2026-10-25
+    peakEnd: 2026-10-27
+    recentStart: 2026-11-03
+    recentEnd: 2026-11-05
+    peakImpressions: 40
+    recentImpressions: 0
+    commonQueries: null
+    positionDelta: null
+    impressionRatio: null
+    focusQueries:
+      - LAEP Annecy
+      - lieu accueil enfants parents Haute-Savoie
+      - LAEP Meythet Alby-sur-Chéran
+---
 
 ## Mission retenue
-Le sujet et ce que c'est réellement.
+Actualiser utilement le guide des trois lieux d'accueil enfants-parents autour d'Annecy : Les Petites Bulles à Meythet, Le Patio aux Teppes et Les P'tits explorateurs à Alby-sur-Chéran.
 
 ## Pourquoi cette mission
-Pourquoi elle mérite une amélioration maintenant, ou pourquoi aucun article existant n'était utilement améliorable avant de retenir cet événement.
+Le snapshot GSC signale une chute rapide de 40 à 0 impression sur deux fenêtres de trois jours, mais ne permet pas d'en déterminer la cause. Lacune indépendante constatée : l'article renvoie au calendrier 2026-2027 du SIPA mais ne donne que les séances de novembre 2026, alors que le calendrier officiel détaille les séances jusqu'en juillet 2027. Il manque aussi l'accès en bus indiqué par Le Mikado pour les familles sans voiture.
 
 ## Décision du lecteur
-Ce que la page doit permettre au lecteur de comprendre ou de choisir. Formule un résultat pour le lecteur, pas un titre ni un plan. Les consignes de maillage, d'anti-doublon ou d'organisation entre articles appartiennent à `Continuations internes`, pas à la décision.
+Savoir quel lieu peut accueillir son enfant, à quel moment précis, à quel coût, et comment s'y rendre sans déplacement inutile.
 
 ## Faits à traiter
-Les informations décisives à vérifier, actualiser ou ajouter, et les informations existantes importantes à préserver pour un refresh.
+- Ajouter une sélection concise des prochaines dates utiles du SIPA, en distinguant clairement les mardis sans séance et les périodes de vacances ; ne pas recopier inutilement tout le calendrier. Le calendrier officiel annonce notamment les 1, 8 et 15 décembre 2026 puis les 5, 12, 19 et 26 janvier 2027.
+- Préciser pour Le Patio l'accès en bus ligne 4, arrêts Anémones ou Plaine Edelweiss, selon la page officielle du Mikado ; ne pas confondre fermeture de l'accueil général et fermeture du LAEP.
+- Préserver les âges (0-6 ans Meythet et Patio ; 0-4 ans à Alby, 0-6 ans pendant les vacances), les horaires propres à chaque structure, l'adhésion annuelle du Patio, les gratuités, adresses, numéros, accès sans inscription, responsabilité de l'adulte, et la réserve sur l'éligibilité territoriale du SIPA. Préserver aussi image, crédits, sources et lien interne.
+- Vérifier les conditions auprès des organismes, sans présenter la baisse GSC comme une preuve de problème de référencement.
 
 ## Sources de départ
-Les meilleures sources officielles ou directement responsables.
+- SIPA, calendrier 2026-2027 : https://www.sipalby.fr/espace-jeux-enfants-parents/
+- Le Mikado, Le Patio et horaires : https://lemikado.org/action-sociale/petite-enfance-annecy/
+- Le Mikado, accès : https://lemikado.org/contacts-horaires-acces/
+- Le Cairn, accueil familles : https://lecairn-annecymeythet.com/famille-habitants/
 
 ## Affiliation
-Les pistes réellement vérifiées, ou l'absence d'affiliation naturelle.
+Aucune : le service est local, gratuit ou soumis à adhésion, sans achat partenaire pertinent.
 
 ## Continuations internes
-Deux ou trois pistes seulement si elles sont réellement utiles. Indique quand une page existante doit prendre le relais sur un sous-sujet afin d'éviter de le redévelopper dans le nouvel article.
+- Conserver le lien vers le guide Fam Space des bus à Annecy pour les règles détaillées avec poussette.
+- Ne pas développer un annuaire exhaustif des LAEP : renvoyer à la Caf pour les autres adresses.
 
-Ensuite, soumets cette décision via le format `action: start` fourni plus bas dans ce runtime. Le modèle ne renseigne jamais le nom de branche, le SHA, `targetPath`, le slug technique d'une opportunity ni les métriques GSC détaillées déjà présentes dans le snapshot.
+## Article source exact à préserver et améliorer
 
-## Catégories éditoriales autorisées
+Chemin: src/routes/articles/parentalite/(2026)/(10)/laep-autour-d-annecy-trois-lieux-pour-jouer-avec-son-tout-petit/index.md
 
-- sorties — Sorties: Des idées de sorties à partager en famille, près de chez vous.
-- voyages — Voyages: Des conseils et inspirations pour voyager sereinement en famille.
-- evenements — Événements: Les événements à découvrir et à préparer avec les enfants.
-- activites — Activités: Des activités simples et enrichissantes pour tous les âges.
-- vie-pratique — Vie pratique: Des repères concrets pour faciliter le quotidien des familles.
-- maison — Maison: Des solutions pratiques pour une maison familiale agréable.
-- cuisine — Cuisine: Des idées et conseils pour cuisiner simplement en famille.
-- parentalite — Parentalité: Des ressources bienveillantes pour accompagner la vie de famille.
-- bons-plans — Bons plans: Réductions, gratuités, pass et aides pratiques pour économiser en famille.
+---
+title: "LAEP autour d'Annecy: trois lieux pour jouer avec son tout-petit"
+subtitle: À Meythet, Annecy et Alby-sur-Chéran, les âges accueillis, les horaires et les conditions d'accès ne sont pas les mêmes
+summary: "Trois lieux d'accueil enfants-parents autour d'Annecy: âges, horaires, coût et conditions d'accès pour choisir où venir avec un tout-petit."
+slug: laep-autour-d-annecy-trois-lieux-pour-jouer-avec-son-tout-petit
+status: published
+publishedAt: 2026-10-23T10:59:51+02:00
+updatedAt: null
+category: parentalite
+readingTime: 5
+location:
+  city: Annecy
+  department: Haute-Savoie
+  region: Auvergne-Rhône-Alpes
+topic:
+  key: parentalite|annecy|laep-autour-d-annecy-trois-lieux-pour-jouer-avec-son-tout-petit|2026
+  keywords:
+    - LAEP Annecy
+    - lieu accueil enfants parents Haute-Savoie
+    - LAEP Meythet Alby-sur-Chéran
+image:
+  src: "/images/articles/2026/10/laep-autour-d-annecy-trois-lieux-pour-jouer-avec-son-tout-petit.webp"
+  alt: "Vue du centre de Meythet près d'Annecy en septembre 2007, illustration géographique sans représenter les lieux d'accueil enfants-parents."
+sources:
+  - title: Caf - Les lieux d'accueil enfants-parents
+    url: https://www.monenfant.fr/les-lieux-d-accueil-enfants-parents/
+  - title: Le Cairn - Les Petites Bulles, accueil des familles
+    url: https://lecairn-annecymeythet.com/famille-habitants/
+  - title: Le Cairn - Adresse et accès
+    url: https://lecairn-annecymeythet.com/infos-pratiques/
+  - title: Le Mikado - Le Patio et horaires 2026-2027
+    url: https://lemikado.org/action-sociale/petite-enfance-annecy/
+  - title: Le Mikado - Carte d'adhésion familiale 2026-2027
+    url: https://lemikado.org/adhesion/
+  - title: Le Mikado - Accès au site Teppes
+    url: https://lemikado.org/contacts-horaires-acces/
+  - title: SIPA - Les P'tits explorateurs et calendrier 2026-2027
+    url: https://www.sipalby.fr/espace-jeux-enfants-parents/
+  - title: Mairie d'Alby-sur-Chéran - Petite enfance et accès au LAEP
+    url: https://mairie-alby-sur-cheran.fr/enfance-jeunesse/petite-enfance/
+---
 
-## Snapshot GSC préparé
+Dans un **lieu d'accueil enfants-parents (LAEP)**, les tout-petits peuvent découvrir des jeux et rencontrer d'autres enfants pendant que les adultes échangent ou prennent simplement le temps d'être avec eux. Autour d'Annecy, en Haute-Savoie, trois accueils proposent cette formule, mais pas aux mêmes horaires ni dans les mêmes conditions.
 
-{
-  "schemaVersion": 1,
-  "generatedAt": "2026-11-08T02:28:56+01:00",
-  "dataThrough": "2026-11-05",
-  "from": "2026-10-09",
-  "refresh": [
-    {
-      "url": "/articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/",
-      "title": "Déchets verts à Toulouse Métropole en 2027: collecte, broyage et compostage",
-      "category": "maison",
-      "publishedAt": "2026-10-15T19:13:56+02:00",
-      "location": {
-        "city": "Toulouse",
-        "department": "Haute-Garonne",
-        "region": "Occitanie"
-      },
-      "ageDays": 24,
-      "rapidDrop": true,
-      "peakStart": "2026-10-18",
-      "peakEnd": "2026-10-20",
-      "recentStart": "2026-11-03",
-      "recentEnd": "2026-11-05",
-      "peakImpressions": 83,
-      "recentImpressions": 20,
-      "score": 189,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 83 impressions sur trois jours, puis 20 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "collecte déchets verts toulouse",
-        "calendrier collecte déchets verts toulouse métropole 2026",
-        "calendrier ramassage déchets verts toulouse 2026",
-        "collecte dechet vert toulouse",
-        "enlèvement déchets verts gratuit toulouse"
-      ]
-    },
-    {
-      "url": "/articles/activites/biotropica-en-famille-a-val-de-reuil-animaux-tarifs-et-visite-par-temps-de-pluie/",
-      "title": "Biotropica en famille à Val-de-Reuil: animaux, tarifs et visite par temps de pluie",
-      "category": "activites",
-      "publishedAt": "2026-10-20T12:10:23+02:00",
-      "location": {
-        "city": "Val-de-Reuil",
-        "department": "Eure",
-        "region": "Normandie"
-      },
-      "ageDays": 19,
-      "rapidDrop": true,
-      "peakStart": "2026-10-21",
-      "peakEnd": "2026-10-23",
-      "recentStart": "2026-11-03",
-      "recentEnd": "2026-11-05",
-      "peakImpressions": 55,
-      "recentImpressions": 5,
-      "score": 150,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 55 impressions sur trois jours, puis 5 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "biotropica tarifs",
-        "animaux val de reuil",
-        "biotropica tarif",
-        "en famille",
-        "plan biotropica"
-      ]
-    },
-    {
-      "url": "/articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/",
-      "title": "Parc floral d’Orléans gratuit en hiver: horaires et sortie avec les enfants",
-      "category": "bons-plans",
-      "publishedAt": "2026-10-26T22:02:51+01:00",
-      "location": {
-        "city": "Orléans",
-        "department": "Loiret",
-        "region": "Centre-Val de Loire"
-      },
-      "ageDays": 13,
-      "rapidDrop": true,
-      "peakStart": "2026-10-30",
-      "peakEnd": "2026-11-01",
-      "recentStart": "2026-11-03",
-      "recentEnd": "2026-11-05",
-      "peakImpressions": 69,
-      "recentImpressions": 20,
-      "score": 147,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 69 impressions sur trois jours, puis 20 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "parc floral gratuit",
-        "parc floral de la source gratuit"
-      ]
-    },
-    {
-      "url": "/articles/bons-plans/ski-a-aussois-en-famille-en-2026-2027-forfaits-et-budget/",
-      "title": "Ski à Aussois en famille en 2026-2027: forfaits et budget",
-      "category": "bons-plans",
-      "publishedAt": "2026-10-21T08:22:10+02:00",
-      "location": {
-        "city": "Aussois",
-        "department": "Savoie",
-        "region": "Auvergne-Rhône-Alpes"
-      },
-      "ageDays": 18,
-      "rapidDrop": true,
-      "peakStart": "2026-10-23",
-      "peakEnd": "2026-10-25",
-      "recentStart": "2026-11-03",
-      "recentEnd": "2026-11-05",
-      "peakImpressions": 43,
-      "recentImpressions": 1,
-      "score": 126,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 43 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "aussois 2027",
-        "tarifs des forfaits de ski",
-        "vacances en zone b"
-      ]
-    },
-    {
-      "url": "/articles/voyages/aeroport-d-orly-avec-des-enfants-metro-14-orlyval-ou-taxi/",
-      "title": "Rejoindre Orly en famille: métro 14, Orlyval ou taxi en 2026",
-      "category": "voyages",
-      "publishedAt": "2026-10-13T15:33:13.271Z",
-      "location": {
-        "city": "Orly",
-        "department": "Val-de-Marne",
-        "region": "Île-de-France"
-      },
-      "ageDays": 26,
-      "rapidDrop": true,
-      "peakStart": "2026-10-16",
-      "peakEnd": "2026-10-18",
-      "recentStart": "2026-11-03",
-      "recentEnd": "2026-11-05",
-      "peakImpressions": 43,
-      "recentImpressions": 1,
-      "score": 126,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 43 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": []
-    },
-    {
-      "url": "/articles/parentalite/laep-autour-d-annecy-trois-lieux-pour-jouer-avec-son-tout-petit/",
-      "title": "LAEP autour d'Annecy: trois lieux pour jouer avec son tout-petit",
-      "category": "parentalite",
-      "publishedAt": "2026-10-23T10:59:51+02:00",
-      "location": {
-        "city": "Annecy",
-        "department": "Haute-Savoie",
-        "region": "Auvergne-Rhône-Alpes"
-      },
-      "ageDays": 16,
-      "rapidDrop": true,
-      "peakStart": "2026-10-25",
-      "peakEnd": "2026-10-27",
-      "recentStart": "2026-11-03",
-      "recentEnd": "2026-11-05",
-      "peakImpressions": 40,
-      "recentImpressions": 0,
-      "score": 120,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 40 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "LAEP Annecy",
-        "lieu accueil enfants parents Haute-Savoie",
-        "LAEP Meythet Alby-sur-Chéran"
-      ]
-    },
-    {
-      "url": "/articles/activites/visiter-le-chateau-de-la-rochefoucauld-en-famille-parcours-tarifs-et-conseils/",
-      "title": "Visiter le château de La Rochefoucauld en famille: parcours, tarifs et conseils",
-      "category": "activites",
-      "publishedAt": "2026-10-25T22:58:31+01:00",
-      "location": {
-        "city": "La Rochefoucauld-en-Angoumois",
-        "department": "Charente",
-        "region": "Nouvelle-Aquitaine"
-      },
-      "ageDays": 14,
-      "rapidDrop": true,
-      "peakStart": "2026-10-28",
-      "peakEnd": "2026-10-30",
-      "recentStart": "2026-11-03",
-      "recentEnd": "2026-11-05",
-      "peakImpressions": 41,
-      "recentImpressions": 2,
-      "score": 117,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 41 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "château de La Rochefoucauld en famille",
-        "visite château La Rochefoucauld enfants",
-        "tarifs château de La Rochefoucauld 2026"
-      ]
-    },
-    {
-      "url": "/articles/maison/a-paris-ou-donner-ou-deposer-meubles-jouets-et-electromenager/",
-      "title": "À Paris, où donner ou déposer meubles, jouets et électroménager ?",
-      "category": "maison",
-      "publishedAt": "2026-10-10T05:02:08+02:00",
-      "location": {
-        "city": "Paris",
-        "department": "Paris",
-        "region": "Île-de-France"
-      },
-      "ageDays": 29,
-      "rapidDrop": true,
-      "peakStart": "2026-10-12",
-      "peakEnd": "2026-10-14",
-      "recentStart": "2026-11-03",
-      "recentEnd": "2026-11-05",
-      "peakImpressions": 56,
-      "recentImpressions": 18,
-      "score": 114,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 56 impressions sur trois jours, puis 18 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "encombrants Paris collecte gratuite",
-        "donner meubles jouets Paris",
-        "recyclage électroménager Paris",
-        "ressourcerie Paris"
-      ]
-    },
-    {
-      "url": "/articles/activites/parc-animalier-de-gramat-en-famille-animaux-duree-et-conseils-de-visite/",
-      "title": "Parc animalier de Gramat en famille: animaux, durée et conseils de visite",
-      "category": "activites",
-      "publishedAt": "2026-10-27T08:27:57+01:00",
-      "location": {
-        "city": "Gramat",
-        "department": "Lot",
-        "region": "Occitanie"
-      },
-      "ageDays": 12,
-      "rapidDrop": true,
-      "peakStart": "2026-10-28",
-      "peakEnd": "2026-10-30",
-      "recentStart": "2026-11-03",
-      "recentEnd": "2026-11-05",
-      "peakImpressions": 36,
-      "recentImpressions": 0,
-      "score": 108,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 36 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "parc animalier de Gramat en famille",
-        "visiter parc animalier Gramat avec enfants",
-        "parc animalier Gramat horaires tarifs",
-        "sortie famille Lot"
-      ]
-    },
-    {
-      "url": "/articles/parentalite/laep-a-rennes-ou-jouer-gratuitement-avec-son-enfant/",
-      "title": "LAEP à Rennes: où jouer gratuitement avec son enfant?",
-      "category": "parentalite",
-      "publishedAt": "2026-10-20T16:09:21+02:00",
-      "location": {
-        "city": "Rennes",
-        "department": "Ille-et-Vilaine",
-        "region": "Bretagne"
-      },
-      "ageDays": 19,
-      "rapidDrop": true,
-      "peakStart": "2026-10-21",
-      "peakEnd": "2026-10-23",
-      "recentStart": "2026-11-03",
-      "recentEnd": "2026-11-05",
-      "peakImpressions": 38,
-      "recentImpressions": 4,
-      "score": 102,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 38 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "LAEP Rennes",
-        "lieu accueil enfants parents Rennes",
-        "sorties gratuites tout-petits Rennes"
-      ]
-    },
-    {
-      "url": "/articles/parentalite/maison-des-parents-aux-pennes-mirabeau-ateliers-gratuits-et-accueil-des-familles/",
-      "title": "Maison des Parents aux Pennes-Mirabeau: ateliers gratuits et accueil des familles",
-      "category": "parentalite",
-      "publishedAt": "2026-10-16T14:09:03+02:00",
-      "location": {
-        "city": "Les Pennes-Mirabeau",
-        "department": "Bouches-du-Rhône",
-        "region": "Provence-Alpes-Côte d’Azur"
-      },
-      "ageDays": 23,
-      "rapidDrop": true,
-      "peakStart": "2026-10-18",
-      "peakEnd": "2026-10-20",
-      "recentStart": "2026-11-03",
-      "recentEnd": "2026-11-05",
-      "peakImpressions": 50,
-      "recentImpressions": 17,
-      "score": 99,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 50 impressions sur trois jours, puis 17 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Maison des Parents Les Pennes-Mirabeau",
-        "Maison Câlins accueil enfants parents",
-        "ateliers parentalité gratuits Bouches-du-Rhône"
-      ]
-    },
-    {
-      "url": "/articles/cuisine/moulin-du-mont-ramus-a-bessan-choisir-son-huile-d-olive-en-famille/",
-      "title": "Moulin du Mont Ramus à Bessan: choisir son huile d’olive en famille",
-      "category": "cuisine",
-      "publishedAt": "2026-10-24T23:14:34+02:00",
-      "location": {
-        "city": "Bessan",
-        "department": "Hérault",
-        "region": "Occitanie"
-      },
-      "ageDays": 15,
-      "rapidDrop": true,
-      "peakStart": "2026-10-25",
-      "peakEnd": "2026-10-27",
-      "recentStart": "2026-11-03",
-      "recentEnd": "2026-11-05",
-      "peakImpressions": 36,
-      "recentImpressions": 4,
-      "score": 96,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 36 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Moulin du Mont Ramus",
-        "huile d’olive en cuisine",
-        "visite en famille en Hérault"
-      ]
-    },
-    {
-      "url": "/articles/activites/grottes-de-thouzon-avec-des-enfants-preparer-la-visite-sous-terre/",
-      "title": "Grottes de Thouzon avec des enfants: préparer la visite sous terre",
-      "category": "activites",
-      "publishedAt": "2026-10-04T19:20:54+02:00",
-      "location": {
-        "city": "Le Thor",
-        "department": "Vaucluse",
-        "region": "Provence-Alpes-Côte d’Azur"
-      },
-      "ageDays": 35,
-      "rapidDrop": true,
-      "peakStart": "2026-10-23",
-      "peakEnd": "2026-10-25",
-      "recentStart": "2026-11-03",
-      "recentEnd": "2026-11-05",
-      "peakImpressions": 35,
-      "recentImpressions": 5,
-      "score": 90,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 35 impressions sur trois jours, puis 5 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Grottes de Thouzon enfants",
-        "Grottes de Thouzon famille"
-      ]
-    },
-    {
-      "url": "/articles/activites/lac-du-bouchet-en-famille-tour-du-lac-baignade-et-activites/",
-      "title": "Lac du Bouchet en famille: tour du lac, baignade et activités",
-      "category": "activites",
-      "publishedAt": "2026-10-24T14:58:55+02:00",
-      "location": {
-        "city": "Cayres",
-        "department": "Haute-Loire",
-        "region": "Auvergne-Rhône-Alpes"
-      },
-      "ageDays": 15,
-      "rapidDrop": true,
-      "peakStart": "2026-10-25",
-      "peakEnd": "2026-10-27",
-      "recentStart": "2026-11-03",
-      "recentEnd": "2026-11-05",
-      "peakImpressions": 30,
-      "recentImpressions": 1,
-      "score": 87,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 30 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "lac du Bouchet en famille",
-        "tour du lac du Bouchet",
-        "lac du Bouchet poussette",
-        "baignade lac du Bouchet"
-      ]
-    },
-    {
-      "url": "/articles/parentalite/ludotheque-du-choletais-jouer-sur-place-et-emprunter-en-famille/",
-      "title": "Ludothèque du Choletais: jouer sur place et emprunter en famille",
-      "category": "parentalite",
-      "publishedAt": "2026-10-25T02:35:14+02:00",
-      "location": {
-        "city": "Cholet",
-        "department": "Maine-et-Loire",
-        "region": "Pays de la Loire"
-      },
-      "ageDays": 14,
-      "rapidDrop": true,
-      "peakStart": "2026-10-28",
-      "peakEnd": "2026-10-30",
-      "recentStart": "2026-11-03",
-      "recentEnd": "2026-11-05",
-      "peakImpressions": 28,
-      "recentImpressions": 0,
-      "score": 84,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 28 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "ludothèque du Choletais",
-        "jeux en famille à Cholet",
-        "emprunter des jeux"
-      ]
-    }
-  ],
-  "strongPages": [
-    {
-      "url": "/articles/evenements/foire-de-grenoble-2026-en-famille-jours-gratuits-animations-et-budget/",
-      "title": "Foire de Grenoble 2026 en famille: jours gratuits, programme et tarifs",
-      "category": "evenements",
-      "recentImpressions": 1911,
-      "recentClicks": 24,
-      "recentPosition": 6.869,
-      "retention": 2.186
-    },
-    {
-      "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
-      "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
-      "category": "evenements",
-      "recentImpressions": 213,
-      "recentClicks": 11,
-      "recentPosition": 6.746,
-      "retention": 6.656
-    },
-    {
-      "url": "/articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/",
-      "title": "Noël 2026 à Chantilly: Le Noël oublié, billets et séances en famille",
-      "category": "evenements",
-      "recentImpressions": 95,
-      "recentClicks": 5,
-      "recentPosition": 6.842,
-      "retention": 0.742
-    },
-    {
-      "url": "/articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/",
-      "title": "Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille",
-      "category": "evenements",
-      "recentImpressions": 151,
-      "recentClicks": 4,
-      "recentPosition": 8.225,
-      "retention": 1.36
-    },
-    {
-      "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
-      "title": "Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite",
-      "category": "sorties",
-      "recentImpressions": 312,
-      "recentClicks": 3,
-      "recentPosition": 9.702,
-      "retention": 1.037
-    },
-    {
-      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
-      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
-      "category": "vie-pratique",
-      "recentImpressions": 197,
-      "recentClicks": 3,
-      "recentPosition": 5.33,
-      "retention": 1.858
-    },
-    {
-      "url": "/articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/",
-      "title": "Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers",
-      "category": "vie-pratique",
-      "recentImpressions": 145,
-      "recentClicks": 3,
-      "recentPosition": 5.117,
-      "retention": 2.071
-    },
-    {
-      "url": "/articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/",
-      "title": "Recycleries autour de Chartres: où donner et acheter d'occasion ?",
-      "category": "maison",
-      "recentImpressions": 116,
-      "recentClicks": 3,
-      "recentPosition": 9.086,
-      "retention": 0.935
-    },
-    {
-      "url": "/articles/bons-plans/centre-spatial-guyanais-a-kourou-3-experiences-gratuites-et-un-musee-en-famille/",
-      "title": "Centre spatial guyanais à Kourou: 3 expériences gratuites et un musée en famille",
-      "category": "bons-plans",
-      "recentImpressions": 108,
-      "recentClicks": 3,
-      "recentPosition": 8.407,
-      "retention": 0.771
-    },
-    {
-      "url": "/articles/evenements/herofestival-marseille-2026-en-famille-billets-gratuite-enfants-et-conseils/",
-      "title": "HeroFestival Marseille 2026 en famille: billets, gratuité enfants et conseils",
-      "category": "evenements",
-      "recentImpressions": 105,
-      "recentClicks": 3,
-      "recentPosition": 5.657,
-      "retention": 2.763
-    }
-  ],
-  "excluded": {
-    "expired": 166,
-    "cooling": 11
-  },
-  "warnings": [
-    "GSC recherche web : 9632 lignes sur quatre semaines, réponses complètes (1848, 2292, 2745, 2747).",
-    "Catalogue Radar : 970 articles et 191 entrées d'historique.",
-    "Diagnostics par requêtes réalisés pour 5 articles.",
-    "Diagnostics par requêtes : 5/5.",
-    "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement."
-  ]
-}
+**Les Petites Bulles à Meythet**, **Le Patio à Annecy** et **Les P'tits explorateurs à Alby-sur-Chéran** se distinguent surtout par l'âge des enfants accueillis, les jours d'ouverture et l'éventuelle adhésion à prévoir.
 
-## Catalogue ciblé (doublons et publications récentes)
+## Un LAEP, ce n'est pas une garderie
 
-### Articles comparables et publications récentes
+On vient avec son enfant et **on reste avec lui**: l'adulte accompagnant en garde la responsabilité. Des accueillants sont présents pour faciliter les échanges et veiller au cadre du lieu, mais personne n'impose une activité ou un programme. On peut jouer, observer ou discuter avec d'autres parents.
 
-- /articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/ | Déchets verts à Toulouse Métropole en 2027: collecte, broyage et évacuation des gros volumes | maison | Toulouse, Haute-Garonne, Occitanie
-- /articles/activites/accrocamp-toulouse-avec-des-enfants-quel-pass-choisir-selon-leur-taille/ | AccroCamp Toulouse avec des enfants: quel pass choisir selon leur taille? | activites | Toulouse, Haute-Garonne, Occitanie
-- /articles/voyages/cite-de-l-espace-a-toulouse-en-famille-en-2026-une-journee-suffit-elle-et-ou-dormir/ | Cité de l'espace à Toulouse en famille en 2026: une journée suffit-elle et où dormir | voyages | Toulouse, Haute-Garonne, Occitanie
-- /articles/bons-plans/pass-explorateurs-toulouse-en-famille-quand-est-il-vraiment-rentable/ | Pass Explorateurs Toulouse en famille: quand est-il vraiment rentable? | bons-plans | Toulouse, Haute-Garonne, Occitanie
-- /articles/activites/biotropica-en-famille-a-val-de-reuil-animaux-tarifs-et-visite-par-temps-de-pluie/ | Biotropica en famille à Val-de-Reuil: animaux, tarifs et visite par temps de pluie | activites | Val-de-Reuil, Eure, Normandie
-- /articles/activites/parc-animalier-de-gramat-en-famille-animaux-duree-et-conseils-de-visite/ | Parc animalier de Gramat en famille: animaux, durée et conseils de visite | activites | Gramat, Lot, Occitanie
-- /articles/activites/parc-animalier-d-ecouves-en-famille-tarifs-horaires-et-conseils-pour-la-visite/ | Parc animalier d'Ecouves en famille: tarifs, horaires et conseils pour la visite | activites | Le Bouillon, Orne, Normandie
-- /articles/sorties/mont-faron-en-famille-telepherique-parc-animalier-et-conseils-2026/ | Mont Faron en famille: téléphérique, parc animalier et conseils 2026 | sorties | Toulon, Var, Provence-Alpes-Côte d’Azur
-- /articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/ | Parc floral d’Orléans gratuit en hiver: horaires et sortie avec les enfants | bons-plans | Orléans, Loiret, Centre-Val de Loire
-- /articles/maison/composteur-gratuit-a-orleans-metropole-comment-en-profiter-en-2026/ | Composteur gratuit à Orléans Métropole: comment en profiter en 2026 | maison | Orléans, Loiret, Centre-Val de Loire
-- /articles/sorties/chasse-motifs-loire-orleans-famille-2026/ | Chasse aux motifs de Loire à Orléans: une balade gratuite pour les 6 à 12 ans | sorties | Orléans, Loiret, Centre-Val de Loire
-- /articles/activites/mobe-d-orleans-en-famille-fossiles-jeux-et-biodiversite/ | MOBE d’Orléans en famille: fossiles, jeux et biodiversité | activites | Orléans, Loiret, Centre-Val de Loire
-- /articles/bons-plans/ski-a-aussois-en-famille-en-2026-2027-forfaits-et-budget/ | Ski à Aussois en famille en 2026-2027: forfaits et budget | bons-plans | Aussois, Savoie, Auvergne-Rhône-Alpes
-- /articles/bons-plans/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites/ | Pass Nantes en famille en 2026: tarifs, visites incluses et alternatives gratuites | bons-plans | Nantes, Loire-Atlantique, Pays de la Loire
-- /articles/bons-plans/nevers-en-famille-a-petit-budget-6-idees-gratuites-ou-presque/ | Nevers en famille à petit budget: 6 idées gratuites ou presque | bons-plans | Nevers, Nièvre, Bourgogne-Franche-Comté
-- /articles/cuisine/visiter-une-cooperative-de-beaufort-avec-des-enfants-a-val-cenis/ | Visiter une coopérative de Beaufort avec des enfants à Val Cenis | cuisine | Val Cenis, Savoie, Auvergne-Rhône-Alpes
-- /articles/voyages/aeroport-d-orly-avec-des-enfants-metro-14-orlyval-ou-taxi/ | Rejoindre Orly en famille: métro 14, Orlyval ou taxi en 2026 | voyages | Orly, Val-de-Marne, Île-de-France
-- /articles/voyages/rejoindre-l-aeroport-paris-cdg-en-famille-rer-b-bus-9517-ou-taxi/ | Aéroport CDG en famille: RER B, bus 9517 ou taxi en 2026? | voyages | Roissy-en-France, Val-d'Oise, Île-de-France
-- /articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/ | Paris avec une poussette: métro, RER, bus ou tram, que choisir ? | voyages | Paris, Paris, Île-de-France
-- /articles/vie-pratique/consigne-a-bagages-a-paris-en-famille-gare-ou-depot-en-ville/ | Consigne à bagages à Paris en famille: gare ou dépôt en ville? | vie-pratique | Paris, Paris, Île-de-France
-- /articles/parentalite/laep-autour-d-annecy-trois-lieux-pour-jouer-avec-son-tout-petit/ | LAEP autour d'Annecy: trois lieux pour jouer avec son tout-petit | parentalite | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
+Selon la [présentation des LAEP par la Caf](https://www.monenfant.fr/les-lieux-d-accueil-enfants-parents/), l'accueil repose sur la liberté de venir, la confidentialité et l'absence d'inscription. Les deux premiers lieux présentés ici accueillent les enfants jusqu'à 6 ans; celui d'Alby-sur-Chéran applique une limite plus basse hors vacances. Autre différence locale importante: Le Patio demande une adhésion familiale, alors que les deux autres structures annoncent un accès gratuit.
+
+## Les Petites Bulles à Meythet: gratuit le jeudi matin
+
+**Les Petites Bulles**, au **Cairn, 6 rue de l'Aérodrome à Meythet** (commune déléguée d'Annecy), accueillent les enfants de **0 à 6 ans** avec un parent ou un adulte référent. Les futurs parents peuvent aussi venir.
+
+Le [Cairn indique un accueil gratuit, anonyme et sans inscription](https://lecairn-annecymeythet.com/famille-habitants/), **chaque jeudi de 9h à 12h**, y compris pendant les vacances scolaires. On peut arriver et repartir pendant ce créneau: il n'est pas nécessaire de rester trois heures.
+
+Pour préparer votre venue, les [informations pratiques du Cairn](https://lecairn-annecymeythet.com/infos-pratiques/) donnent l'adresse, les possibilités d'accès et le téléphone **04 50 22 08 13**. L'emplacement précis de la salle LAEP et ses conditions d'accessibilité ne sont pas détaillés sur la page de l'activité: si vous venez avec une poussette ou devez éviter les escaliers, renseignez-vous auprès de l'accueil.
+
+## Le Patio à Annecy: plusieurs jours d'ouverture, avec adhésion
+
+**Le Patio** est le LAEP du **Mikado**, au **site Teppes, place des Rhododendrons, 74000 Annecy**. Il accueille les enfants **de la naissance à 6 ans** avec un adulte, dans la limite des places disponibles.
+
+Pour la saison **2026-2027**, le [calendrier du Patio publié par Le Mikado](https://lemikado.org/action-sociale/petite-enfance-annecy/) distingue:
+
+- **Hors vacances scolaires:** lundi et mardi de **15h à 17h30**, mercredi de **9h à 12h**, jeudi et vendredi de **9h à 11h30**.
+- **Pendant les vacances scolaires:** lundi et mercredi de **9h30 à 11h30**.
+
+L'accès est libre dans la limite des places, mais **une carte d'adhésion familiale est nécessaire**. Elle coûte **24 € pour la saison 2026-2027**, du 1er septembre 2026 au 31 août 2027. Il s'agit d'une adhésion annuelle et non d'un tarif par séance. Le Mikado en précise les [conditions et le montant](https://lemikado.org/adhesion/).
+
+Le [plan d'accès au site Teppes](https://lemikado.org/contacts-horaires-acces/) permet de repérer les lieux; le centre répond au **04 50 57 56 55**. Les horaires du LAEP ne doivent pas être confondus avec ceux de l'accueil général du Mikado. Vérifiez aussi les fermetures exceptionnelles avant le départ.
+
+## Les P'tits explorateurs à Alby-sur-Chéran: des mardis précis
+
+Au sud d'Annecy, **Les P'tits explorateurs** sont organisés par le **Syndicat intercommunal du Pays d'Alby (SIPA)**. Le lieu reçoit les enfants **de 0 à 4 ans**, et **jusqu'à 6 ans pendant les vacances scolaires**, avec un parent ou un adulte familier.
+
+L'accueil se tient dans la **salle petite enfance au deuxième étage de la Maison intercommunale des services publics**, au-dessus de la crèche, **118 route de Plaimpalais, 74540 Alby-sur-Chéran**. Le service est annoncé **gratuit, anonyme et sans inscription**.
+
+Les séances ont lieu **le mardi de 8h45 à 11h15**, mais **pas tous les mardis**. Le [calendrier 2026-2027 du SIPA](https://www.sipalby.fr/espace-jeux-enfants-parents/) prévoit notamment les **3, 10, 17 et 24 novembre 2026**, mais aucune séance le **27 octobre 2026**. Consultez les dates actualisées avant de vous déplacer.
+
+**Attention si vous habitez hors du Pays d'Alby:** le SIPA présente la venue comme libre, tandis que la [mairie d'Alby-sur-Chéran](https://mairie-alby-sur-cheran.fr/enfance-jeunesse/petite-enfance/) mentionne explicitement les familles des communes membres du syndicat. Cela ne permet pas d'affirmer que toutes les familles extérieures sont admises. Le SIPA peut confirmer les conditions au **04 50 68 40 00** ou **04 50 68 40 01**.
+
+## Avant la première visite
+
+Le choix dépend surtout du créneau qui convient à votre famille: **jeudi matin sans adhésion à Meythet**, **plusieurs jours possibles au Patio avec une adhésion**, ou **mardi matin sur calendrier à Alby-sur-Chéran**. Si votre enfant approche de 4 ans, vérifiez en particulier la règle d'âge des P'tits explorateurs.
+
+Les horaires et conditions peuvent évoluer; consultez la page de la structure choisie avant de partir. Si vous prenez les transports en commun avec une poussette, notre [guide des bus à Annecy avec des enfants](https://www.fam-space.fr/articles/vie-pratique/bus-a-annecy-avec-des-enfants-quel-ticket-choisir-et-comment-eviter-les-galeres/) explique les règles utiles à bord.
+
+Pour découvrir d'autres accueils près de chez vous, la [Caf présente les LAEP sur monenfant.fr](https://www.monenfant.fr/les-lieux-d-accueil-enfants-parents/); votre Caf ou le service petite enfance de votre commune peut aussi vous orienter vers les lieux et créneaux locaux.
+
+## Contexte éditorial ciblé pour le maillage et les doublons
+
+### Articles proches préparés mécaniquement
+
 - /articles/parentalite/laep-a-rennes-ou-jouer-gratuitement-avec-son-enfant/ | LAEP à Rennes: où jouer gratuitement avec son enfant? | parentalite | Rennes, Ille-et-Vilaine, Bretagne
 - /articles/maison/renovation-energetique-en-haute-savoie-jusqu-a-3-000-d-aide-departementale/ | Rénovation énergétique en Haute-Savoie: jusqu'à 3 000 € d'aide départementale | maison | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/parentalite/laep-dans-l-herault-jouer-avec-son-enfant-et-rencontrer-d-autres-parents/ | LAEP dans l'Hérault: jouer avec son enfant et rencontrer d'autres parents | parentalite | Hérault, Occitanie
-- /articles/activites/visiter-le-chateau-de-la-rochefoucauld-en-famille-parcours-tarifs-et-conseils/ | Visiter le château de La Rochefoucauld en famille: parcours, tarifs et conseils | activites | La Rochefoucauld-en-Angoumois, Charente, Nouvelle-Aquitaine
-- /articles/sorties/chateau-de-vincennes-en-famille-tarifs-parcours-et-conseils-de-visite/ | Château de Vincennes en famille: tarifs, parcours et conseils de visite | sorties | Vincennes, Val-de-Marne, Île-de-France
-- /articles/sorties/chateau-fort-de-sedan-en-famille-parcours-tarifs-et-conseils-de-visite/ | Château fort de Sedan en famille: parcours, tarifs et conseils de visite | sorties | Sedan, Ardennes, Grand Est
-- /articles/parentalite/visiter-le-chateau-de-versailles-avec-un-bebe-poussette-billets-et-parcours/ | Visiter le château de Versailles avec un bébé: poussette, billets et parcours | parentalite | Versailles, Yvelines, Île-de-France
-- /articles/maison/a-paris-ou-donner-ou-deposer-meubles-jouets-et-electromenager/ | À Paris, où donner ou déposer meubles, jouets et électroménager ? | maison | Paris, Paris, Île-de-France
-- /articles/evenements/paris-plages-2026-en-famille/ | Paris Plages 2026: où se baigner et jouer avec des enfants | evenements | Paris, Paris, Île-de-France
-- /articles/activites/atelier-calder-gratuit-a-paris-le-14-novembre-2026-creer-un-mobile-des-5-ans/ | Atelier Calder à Paris le 14 novembre 2026: fabriquer un mobile dès 5 ans | activites | Paris, Paris, Île-de-France
-- /articles/activites/paris-sport-vacances-automne-2026-demi-journee-gratuite-ou-stage-a-la-journee/ | Paris Sport Vacances automne 2026: demi-journée gratuite ou stage à la journée? | activites | Paris, Paris, Île-de-France
-- /articles/activites/parc-de-courzieu-en-famille-tarifs-horaires-et-conseils-pour-la-visite/ | Parc de Courzieu en famille: tarifs, horaires et conseils pour la visite | activites | Courzieu, Rhône, Auvergne-Rhône-Alpes
-- /articles/parentalite/la-maison-des-petits-pas-a-troyes-un-lieu-pour-souffler-avec-son-jeune-enfant/ | La Maison des Petits Pas à Troyes: un lieu pour souffler avec son jeune enfant | parentalite | Troyes, Aube, Grand Est
-- /articles/parentalite/maison-des-parents-aux-pennes-mirabeau-ateliers-gratuits-et-accueil-des-familles/ | Maison des Parents aux Pennes-Mirabeau: ateliers gratuits et accueil des familles | parentalite | Les Pennes-Mirabeau, Bouches-du-Rhône, Provence-Alpes-Côte d’Azur
-- /articles/parentalite/l-ilot-des-familles-a-tarbes-quels-ateliers-pour-les-parents-d-enfants-de-0-a-6-ans/ | L'îlot des Familles à Tarbes: quels ateliers pour les parents d'enfants de 0 à 6 ans? | parentalite | Tarbes, Hautes-Pyrénées, Occitanie
-- /articles/sorties/musee-calisson-aix-visite-enfants-2026/ | Musée du Calisson à Aix-en-Provence: une enquête gourmande pour les enfants en 2026 | sorties | Aix-en-Provence, Bouches-du-Rhône, Provence-Alpes-Côte d’Azur
-- /articles/parentalite/maison-des-parents-a-guingamp-quand-y-aller-et-quel-service-choisir/ | Maison des Parents à Guingamp: quand y aller et quel service choisir ? | parentalite | Guingamp, Côtes-d'Armor, Bretagne
-- /articles/cuisine/moulin-du-mont-ramus-a-bessan-choisir-son-huile-d-olive-en-famille/ | Moulin du Mont Ramus à Bessan: choisir son huile d’olive en famille | cuisine | Bessan, Hérault, Occitanie
-- /articles/cuisine/ateliers-cuisine-a-caen-avec-des-enfants-quelle-formule-choisir/ | Bien Dans Son Assiette à Caen: quel atelier cuisine choisir avec un enfant ? | cuisine | Caen, Calvados, Normandie
-- /articles/cuisine/huile-de-noix-du-perigord-du-moulin-de-neuvic-a-la-cuisine-familiale/ | Huile de noix du Périgord: du moulin de Neuvic à la cuisine familiale | cuisine | Neuvic, Dordogne, Nouvelle-Aquitaine
-- /articles/activites/grottes-de-thouzon-avec-des-enfants-preparer-la-visite-sous-terre/ | Grottes de Thouzon avec des enfants: préparer la visite sous terre | activites | Le Thor, Vaucluse, Provence-Alpes-Côte d’Azur
-- /articles/voyages/visiter-guedelon-avec-des-enfants-preparer-la-journee-en-2026/ | Visiter Guédelon avec des enfants: préparer la journée en 2026 | voyages | Treigny-Perreuse-Sainte-Colombe, Yonne, Bourgogne-Franche-Comté
-- /articles/evenements/noel-2026-a-rochefort-en-terre-avec-des-enfants-village-et-illuminations/ | Noël 2026 à Rochefort-en-Terre avec des enfants: village et illuminations | evenements | Rochefort-en-Terre, Morbihan, Bretagne
-- /articles/evenements/planete-ocean-a-paris-preparer-la-visite-en-famille/ | Planète Océan à Paris: préparer la visite en famille | evenements | Paris, Paris, Île-de-France
-- /articles/activites/lac-du-bouchet-en-famille-tour-du-lac-baignade-et-activites/ | Lac du Bouchet en famille: tour du lac, baignade et activités | activites | Cayres, Haute-Loire, Auvergne-Rhône-Alpes
-- /articles/sorties/lac-de-madine-en-famille-baignade-gratuite-et-activites-a-nonsard/ | Lac de Madine en famille: baignade gratuite et activités à Nonsard | sorties | Nonsard-Lamarche, Meuse, Grand Est
-- /articles/parentalite/premier-week-end-a-hossegor-avec-un-bebe-ou-dormir-et-quoi-prevoir/ | Hossegor avec un bébé: lac ou océan, quelles plages choisir ? | parentalite | Hossegor, Landes, Nouvelle-Aquitaine
-- /articles/voyages/week-end-en-famille-au-lac-de-sidiailles-activites-baignade-et-budget/ | Week-end en famille au lac de Sidiailles: activités, baignade et budget | voyages | Sidiailles, Cher, Centre-Val de Loire
-- /articles/parentalite/ludotheque-du-choletais-jouer-sur-place-et-emprunter-en-famille/ | Ludothèque du Choletais: jouer sur place et emprunter en famille | parentalite | Cholet, Maine-et-Loire, Pays de la Loire
-- /articles/vie-pratique/ludotheques-dans-le-gers-ou-jouer-et-emprunter-des-jeux-en-famille/ | Ludothèques dans le Gers: où jouer et emprunter des jeux en famille | vie-pratique | Auch, Gers, Occitanie
-- /articles/parentalite/ludotheques-du-grand-nancy-ou-jouer-en-famille-et-emprunter-des-jeux/ | Ludothèques du Grand Nancy: où jouer en famille et emprunter des jeux | parentalite | Meurthe-et-Moselle, Grand Est
-- /articles/vie-pratique/ludotheques-autour-de-dinan-emprunter-des-jeux-pour-la-maison/ | Ludothèques autour de Dinan: emprunter des jeux pour la maison | vie-pratique | Côtes-d'Armor, Bretagne
-- /articles/evenements/foire-de-grenoble-2026-en-famille-jours-gratuits-animations-et-budget/ | Foire de Grenoble 2026 en famille: jours gratuits, programme et tarifs | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
-- /articles/sorties/ete-oh-parcs-grenoble-2026-famille/ | L’Été Oh! Parcs Grenoble 2026: horaires et activités gratuites | sorties | Grenoble, Isère, Auvergne-Rhône-Alpes
-- /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
-- /articles/cuisine/3-recettes-de-l-isere-faciles-a-preparer-en-famille/ | 3 recettes de l'Isère faciles à préparer en famille | cuisine | Grenoble, Isère, Auvergne-Rhône-Alpes
-- /articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/ | Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants | evenements | Le Mans, Sarthe, Pays de la Loire
-- /articles/voyages/le-mans-sans-voiture-avec-des-enfants-ou-dormir-et-comment-organiser-un-week-end/ | Le Mans sans voiture avec des enfants: où dormir et comment organiser un week-end | voyages | Le Mans, Sarthe, Pays de la Loire
-- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
-- /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | Marché de Noël d'Avignon 2026 en famille: horaires et accès | evenements | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
-- /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | Noël 2026 à Chantilly: Le Noël oublié, billets et séances en famille | evenements | Chantilly, Oise, Hauts-de-France
-- /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | Halloween 2026 au Château de Chantilly avec des enfants: ateliers, nocturnes et spectacle | sorties | Chantilly, Oise, Hauts-de-France
-- /articles/cuisine/atelier-de-creme-chantilly-avec-des-enfants-a-partir-de-quel-age-et-comment-reserver/ | Atelier de crème Chantilly avec des enfants: à partir de quel âge et comment réserver | cuisine | Chantilly, Oise, Hauts-de-France
-- /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | Noël de Casse-Noisette 2026 à Pierrefonds: visites, dates et tarifs en famille | evenements | Pierrefonds, Oise, Hauts-de-France
-- /articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/ | Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille | evenements | Nevers, Nièvre, Bourgogne-Franche-Comté
-- /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | Noël à Chartres 2026 en famille: marché et illuminations | evenements | Chartres, Eure-et-Loir, Centre-Val de Loire
-- /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | Noël à Caen 2026 en famille: marché de Noël et visite illuminée | evenements | Caen, Calvados, Normandie
-- /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
-- /articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/ | Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite | sorties | Paris, Paris, Île-de-France
-- /articles/activites/stages-de-science-a-la-cite-des-sciences-pendant-la-toussaint-2026-lequel-choisir-selon-l-age/ | Stages de science à la Cité des sciences à la Toussaint 2026: durées, âges et tarifs | activites | Paris, Paris, Île-de-France
-- /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | Rencontres du ciel et de l’espace 2026 à Paris: ateliers, âges et billets en famille | evenements | Paris, Paris, Île-de-France
-- /articles/sorties/vacances-de-la-toussaint-2026-a-la-cite-des-sciences-quels-ateliers-choisir-selon-l-age/ | Vacances de la Toussaint 2026 à la Cité des sciences: les ateliers numériques gratuits avec des enfants | sorties | Paris, Paris, Île-de-France
-- /articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/ | Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates | vie-pratique | Toulouse, Haute-Garonne, Occitanie
-- /articles/bons-plans/cantine-au-college-dans-l-herault-jusqu-a-3-60-d-aide-par-repas/ | Cantine au collège dans l'Hérault: jusqu'à 3,60 € d'aide par repas | bons-plans | Montpellier, Hérault, Occitanie
-- /articles/maison/moustique-tigre-en-haute-garonne-proteger-la-maison-et-le-jardin/ | Moustique tigre en Haute-Garonne: protéger la maison et le jardin | maison | Toulouse, Haute-Garonne, Occitanie
-- /articles/vie-pratique/cantine-au-college-en-deux-sevres-comment-s-inscrire-en-ligne-pour-2026-2027/ | Cantine au collège en Deux-Sèvres: comment s'inscrire en ligne pour 2026-2027 | vie-pratique | Niort, Deux-Sèvres, Nouvelle-Aquitaine
-- /articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/ | Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers | vie-pratique | Hénin-Beaumont, Pas-de-Calais, Hauts-de-France
-- /articles/vie-pratique/cantine-au-college-en-essonne-obtenir-son-tarif-2026-2027-sans-refaire-la-mauvaise-demarche/ | Cantine au collège en Essonne: obtenir son tarif 2026-2027 sans refaire la mauvaise démarche | vie-pratique | Évry-Courcouronnes, Essonne, Île-de-France
-- /articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/ | Recycleries autour de Chartres: où donner et acheter d'occasion ? | maison | Chartres, Eure-et-Loir, Centre-Val de Loire
-- /articles/cuisine/apres-une-cueillette-en-eure-et-loir-5-recettes-faciles-a-faire-avec-les-enfants/ | Après une cueillette en Eure-et-Loir: 5 recettes faciles à faire avec les enfants | cuisine | Chartres, Eure-et-Loir, Centre-Val de Loire
-- /articles/maison/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/ | Meubles d'occasion en Meurthe-et-Moselle: où acheter, donner et réparer ? | maison | Meurthe-et-Moselle, Grand Est
-- /articles/bons-plans/centre-spatial-guyanais-a-kourou-3-experiences-gratuites-et-un-musee-en-famille/ | Centre spatial guyanais à Kourou: 3 expériences gratuites et un musée en famille | bons-plans | Kourou, Guyane, Guyane
-- /articles/activites/vakans-o-peyi-remire-montjoly-2026/ | Vakans o péyi à Rémire-Montjoly: un accueil de loisirs pour les 3 à 12 ans | activites | Rémire-Montjoly, Guyane, Guyane
-- /articles/evenements/braderie-ete-toulon-2026-famille/ | Braderie d’été de Toulon 2026 en famille: animations gratuites et accès au centre-ville | evenements | Toulon, Var, Provence-Alpes-Côte d’Azur
-- /articles/bons-plans/troyes-en-famille-a-petit-budget-musees-gratuites-et-balades-dans-le-centre/ | Troyes en famille à petit budget: musées, gratuités et balades dans le centre | bons-plans | Troyes, Aube, Grand Est
-- /articles/evenements/herofestival-marseille-2026-en-famille-billets-gratuite-enfants-et-conseils/ | HeroFestival Marseille 2026 en famille: billets, gratuité enfants et conseils | evenements | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d’Azur
-- /articles/evenements/fete-de-la-mer-2026-a-marseille-avec-des-enfants-quelle-escale-choisir-le-18-octobre/ | Fête de la mer 2026 à Marseille avec des enfants: quelle escale choisir? | evenements | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur
-- /articles/sorties/mucem-en-famille-billets-gratuites-et-conseils-pour-la-visite/ | Mucem Marseille en famille: tarifs 2026, billets et gratuités | sorties | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur
-- /articles/evenements/foire-aux-santons-de-marseille-2026-en-famille-quand-venir-et-que-voir/ | Foire aux santons de Marseille 2026: dates, inauguration et visite en famille | evenements | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur
-- /articles/sorties/petite-terre-en-famille-iguanes-balade-et-lagon/ | Petite-Terre en famille: iguanes, balade et lagon | sorties | La Désirade, Guadeloupe, Guadeloupe
-- /articles/sorties/soiree-jeux-gratuite-a-paris-le-21-novembre-2026-jeux-video-et-jeux-de-societe-en-famille/ | Soirée jeux gratuite à Paris le 21 novembre 2026: jeux vidéo et jeux de société en famille | sorties | Paris, Paris, Île-de-France
-- /articles/cuisine/mogettes-de-vendee-en-famille-quatre-repas-simples-et-les-bonnes-cuissons/ | Mogettes de Vendée en famille: quatre repas simples et les bonnes cuissons | cuisine | Vendée, Pays de la Loire
-- /articles/evenements/contes-gratuits-a-paris-le-14-novembre-2026-quel-spectacle-choisir-selon-l-age/ | Contes gratuits à Paris le 14 novembre 2026: trois rendez-vous en famille | evenements | Paris, Paris, Île-de-France
-- /articles/activites/le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions/ | Le PAL 2027 en famille: une ou deux journées entre animaux et attractions ? | activites | Saint-Pourçain-sur-Besbre, Allier, Auvergne-Rhône-Alpes
-- /articles/activites/pokemon-et-biodiversite-a-paris-le-28-novembre-2026-atelier-dessin-des-10-ans/ | Atelier Pokémon et biodiversité à Paris le 28 novembre 2026: dessin dès 10 ans | activites | Paris, Paris, Île-de-France
-- /articles/evenements/semaine-du-golfe-2027-en-famille-ou-voir-les-bateaux/ | Semaine du Golfe 2027 en famille: où voir les bateaux ? | evenements | Morbihan, Bretagne
-- /articles/activites/atelier-omamori-gratuit-a-paris-le-21-novembre-2026-creer-une-amulette-japonaise-des-7-ans/ | Atelier omamori gratuit à Paris le 21 novembre 2026: créer une amulette dès 7 ans | activites | Paris, Paris, Île-de-France
-- /articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/ | Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ? | evenements | Pyrénées-Orientales, Occitanie
-- /articles/activites/atelier-couture-gratuit-a-paris-le-28-novembre-2026-creer-en-famille-des-8-ans/ | Atelier couture gratuit à Paris le 28 novembre 2026: dès 8 ans | activites | Paris, Paris, Île-de-France
+- /articles/parentalite/laep-a-bastia-et-en-balagne-deux-lieux-gratuits-pour-les-tout-petits/ | LAEP à Bastia et en Balagne: deux lieux gratuits pour les tout-petits | parentalite | Bastia, Haute-Corse, Corse
+- /articles/parentalite/laep-a-caen-4-lieux-pour-venir-avec-un-enfant-sans-inscription/ | LAEP à Caen: 4 lieux pour venir avec un enfant sans inscription | parentalite | Caen, Calvados, Normandie
+- /articles/evenements/court-circuit-2026-a-annecy-en-famille-spectacles-tarifs-et-conseils/ | Court Circuit 2026 à Annecy en famille: spectacles, tarifs et conseils | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/evenements/alfest-2026-a-annecy-en-famille-horaires-jeux-et-braderie/ | ALFest 2026 à Annecy en famille: horaires, jeux et braderie | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/evenements/fete-du-lac-annecy-2026-en-famille/ | Fête du lac d’Annecy 2026: préparer la soirée avec des enfants | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/evenements/noel-des-alpes-2026-a-annecy-en-famille-marche-patinoire-ou-illuminations/ | Noël des Alpes 2026 à Annecy en famille: marché, patinoire et illuminations | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/parentalite/laep-autour-d-annecy-trois-lieux-pour-jouer-avec-son-tout-petit/ | LAEP autour d'Annecy: trois lieux pour jouer avec son tout-petit | parentalite | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/vie-pratique/bus-a-annecy-avec-des-enfants-quel-ticket-choisir-et-comment-eviter-les-galeres/ | Bus à Annecy avec des enfants: quel ticket choisir et comment éviter les galères | vie-pratique | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/bons-plans/chamonix-en-famille-sans-voiture-train-gratuit-et-bus-a-prix-reduit-avec-la-carte-d-hote/ | Chamonix en famille sans voiture: train gratuit et bus à prix réduit avec la carte d’hôte | bons-plans | Chamonix-Mont-Blanc, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/evenements/flottins-d-evian-2026-un-village-de-noel-en-bois-flotte-a-decouvrir-en-famille/ | Flottins d’Évian 2026: un village de Noël en bois flotté à découvrir en famille | evenements | Évian-les-Bains, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/evenements/festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants/ | Les Petits Asticots 2026: spectacles, âges et réservations en famille | evenements | Chamonix-Mont-Blanc, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/cuisine/ferme-du-petit-mont-a-bellevaux-en-famille-quelle-formule-choisir/ | Ferme du Petit Mont à Bellevaux en famille: quelle formule choisir ? | cuisine | Bellevaux, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/activites/mer-de-glace-avec-des-enfants-faut-il-descendre-jusqu-a-la-grotte/ | Mer de Glace avec des enfants: faut-il descendre jusqu'à la grotte? | activites | Chamonix-Mont-Blanc, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/voyages/evian-les-bains-en-famille-pendant-3-jours-lac-balades-et-activites-faciles/ | Évian-les-Bains en famille pendant 3 jours: lac, balades et activités faciles | voyages | Évian-les-Bains, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/evenements/festival-au-bonheur-des-momes-2026-en-famille/ | Au Bonheur des Mômes 2026: pass, spectacles et journée au Grand-Bornand | evenements | Le Grand-Bornand, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/parentalite/musee-de-la-corse-a-corte-decouvrir-l-ile-en-famille-par-les-objets-du-quotidien/ | Musée de la Corse à Corte: découvrir l’île en famille par les objets du quotidien | parentalite | Corte, Haute-Corse, Corse
-- /articles/evenements/cerfs-volants-de-berck-2027-organiser-sa-visite-en-famille/ | Cerfs-volants de Berck 2027: organiser sa visite en famille | evenements | Berck-sur-Mer, Pas-de-Calais, Hauts-de-France
-- /articles/evenements/contes-gratuits-a-paris-le-14-novembre-2026-quelle-seance-choisir-en-famille/ | Contes gratuits à Paris le 14 novembre 2026: spectacles et scène ouverte en famille | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/ | Écoute, je danse ! à Paris le 5 décembre 2026: spectacle gratuit dès 6 mois | evenements | Paris, Paris, Île-de-France
-- /articles/bons-plans/abbaye-de-saint-savin-en-famille-tarifs-gratuites-et-visite-avec-les-enfants/ | Abbaye de Saint-Savin en famille: tarifs, gratuités et visite avec les enfants | bons-plans | Saint-Savin, Vienne, Nouvelle-Aquitaine
-- /articles/cuisine/halles-de-tours-en-famille-un-panier-d-automne-deux-repas-simples/ | Halles de Tours en famille: un panier d’automne, deux repas simples | cuisine | Tours, Indre-et-Loire, Centre-Val de Loire
-- /articles/activites/atelier-laine-cardee-de-noel-a-paris-le-2-decembre-2026-creer-ses-decorations-des-7-ans/ | Atelier laine cardée de Noël à Paris le 2 décembre 2026: décorations dès 7 ans | activites | Paris, Paris, Île-de-France
-- /articles/activites/aquarium-de-touraine-en-famille-que-voir-avec-les-enfants/ | Aquarium de Touraine en famille: que voir avec les enfants ? | activites | Lussault-sur-Loire, Indre-et-Loire, Centre-Val de Loire
-- /articles/activites/atelier-pop-up-gratuit-a-paris-le-21-novembre-2026-creer-un-livre-anime-en-famille/ | Atelier pop-up gratuit à Paris le 21 novembre 2026: créer en famille dès 7 ans | activites | Paris, Paris, Île-de-France
-- /articles/activites/visiter-le-museum-du-havre-avec-des-enfants-que-decouvrir/ | Visiter le Muséum du Havre avec des enfants: que découvrir ? | activites | Le Havre, Seine-Maritime, Normandie
-- /articles/maison/materiautheques-en-bretagne-preparer-son-projet-et-acheter-les-bons-materiaux/ | Matériauthèques en Bretagne: préparer son projet et acheter les bons matériaux | maison | Bretagne
-- /articles/activites/jeux-nature-gratuits-au-parc-floral-de-paris-le-18-novembre-2026-quel-jeu-selon-l-age/ | Jeux nature gratuits au Parc floral de Paris le 18 novembre 2026 | activites | Paris, Paris, Île-de-France
-- /articles/sorties/visiter-l-abbaye-de-fontenay-avec-des-enfants-meme-en-hiver/ | Visiter l'abbaye de Fontenay avec des enfants, même en hiver | sorties | Marmagne, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/activites/atelier-scratch-gratuit-a-paris-le-7-novembre-2026-programmer-un-jeu-video-des-8-ans/ | Atelier Scratch gratuit à Paris le 7 novembre 2026: créer un jeu vidéo | activites | Paris, Paris, Île-de-France
-- /articles/cuisine/ateliers-cuisine-et-patisserie-en-ardeche-avec-des-enfants-trois-adresses-selon-leur-age/ | Ateliers cuisine et pâtisserie en Ardèche avec des enfants: trois adresses selon leur âge | cuisine | Ardèche, Auvergne-Rhône-Alpes
-- /articles/vie-pratique/train-mobigo-en-famille-quels-billets-choisir-et-comment-preparer-le-trajet/ | TRAIN Mobigo en famille: quels billets choisir et comment préparer le trajet | vie-pratique | Bourgogne-Franche-Comté
-- /articles/activites/ateliers-textiles-au-musee-bourdelle-a-paris-styliste-ou-broderie-en-famille-en-2026/ | Ateliers textiles au musée Bourdelle à Paris: styliste ou broderie en famille | activites | Paris, Paris, Île-de-France
+- /articles/parentalite/decouvrir-la-bd-avec-ses-enfants-a-angouleme/ | Découvrir la BD avec ses enfants à Angoulême | parentalite | Angoulême, Charente, Nouvelle-Aquitaine
+- /articles/parentalite/ludotheques-du-grand-nancy-ou-jouer-en-famille-et-emprunter-des-jeux/ | Ludothèques du Grand Nancy: où jouer en famille et emprunter des jeux | parentalite | Meurthe-et-Moselle, Grand Est
+- /articles/parentalite/a-sainte-rose-decouvrir-la-mangrove-avec-son-enfant-en-pedalo/ | À Sainte-Rose, découvrir la mangrove avec son enfant en pédalo | parentalite | Sainte-Rose, Guadeloupe, Guadeloupe
 
 ### Historique Radar lié
 
-- opportunity | /articles/activites/atelier-scratch-gratuit-a-paris-le-7-novembre-2026-programmer-un-jeu-video-des-8-ans/ | 2026-11-04T08:27:47.912Z
-- opportunity | /articles/activites/ateliers-textiles-au-musee-bourdelle-a-paris-styliste-ou-broderie-en-famille-en-2026/ | 2026-11-04T01:30:49.478Z
-- refresh | /articles/activites/biotropica-en-famille-a-val-de-reuil-animaux-tarifs-et-visite-par-temps-de-pluie/ | 2026-11-07T21:36:00.316Z
-- refresh | /articles/sorties/chateau-fort-de-sedan-en-famille-parcours-tarifs-et-conseils-de-visite/ | 2026-11-07T15:31:39.896Z
-- opportunity | /articles/evenements/contes-gratuits-a-paris-le-14-novembre-2026-quel-spectacle-choisir-selon-l-age/ | 2026-11-05T13:27:24.356Z
-- opportunity | /articles/evenements/contes-gratuits-a-paris-le-14-novembre-2026-quelle-seance-choisir-en-famille/ | 2026-11-05T00:34:45.481Z
-- refresh | /articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/ | 2026-11-08T04:30:49.530Z
-- opportunity | /articles/evenements/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/ | 2026-11-04T21:32:12.180Z
-- opportunity | /articles/evenements/fete-de-la-mer-2026-a-marseille-avec-des-enfants-quelle-escale-choisir-le-18-octobre/ | 2026-10-06T16:58:51.946Z
-- opportunity | /articles/evenements/foire-aux-santons-de-marseille-2026-en-famille-quand-venir-et-que-voir/ | 2026-10-23T15:29:55.218Z
-- opportunity | /articles/evenements/foire-de-grenoble-2026-en-famille-jours-gratuits-animations-et-budget/ | 2026-10-21T13:33:34.395Z
-- opportunity | /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | 2026-10-08T02:18:12.427Z
-- opportunity | /articles/activites/jeux-nature-gratuits-au-parc-floral-de-paris-le-18-novembre-2026-quel-jeu-selon-l-age/ | 2026-11-04T12:35:19.125Z
-- opportunity | /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | 2026-10-28T15:29:23.387Z
-- opportunity | /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | 2026-10-29T00:28:19.695Z
-- opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
-- opportunity | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-10-26T21:31:06.119Z
-- opportunity | /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | 2026-10-30T21:26:32.584Z
-- opportunity | /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | 2026-10-30T18:26:56.039Z
-- opportunity | /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | 2026-10-27T07:35:50.437Z
-- refresh | /articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/ | 2026-11-08T07:28:43.032Z
-- opportunity | /articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/ | 2026-10-28T12:27:07.569Z
-- opportunity | /articles/activites/paris-sport-vacances-automne-2026-demi-journee-gratuite-ou-stage-a-la-journee/ | 2026-10-03T20:20:25.508Z
-- opportunity | /articles/activites/pokemon-et-biodiversite-a-paris-le-28-novembre-2026-atelier-dessin-des-10-ans/ | 2026-11-05T10:32:54.471Z
-- opportunity | /articles/voyages/rejoindre-l-aeroport-paris-cdg-en-famille-rer-b-bus-9517-ou-taxi/ | 2026-10-15T09:28:56.552Z
-- opportunity | /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | 2026-11-04T05:34:42.508Z
-- refresh | /articles/bons-plans/ski-a-aussois-en-famille-en-2026-2027-forfaits-et-budget/ | 2026-11-08T10:32:11.067Z
-- opportunity | /articles/sorties/soiree-jeux-gratuite-a-paris-le-21-novembre-2026-jeux-video-et-jeux-de-societe-en-famille/ | 2026-11-05T19:28:08.723Z
-- opportunity | /articles/activites/stages-de-science-a-la-cite-des-sciences-pendant-la-toussaint-2026-lequel-choisir-selon-l-age/ | 2026-10-04T05:39:23.036Z
-- opportunity | /articles/sorties/vacances-de-la-toussaint-2026-a-la-cite-des-sciences-quels-ateliers-choisir-selon-l-age/ | 2026-10-05T11:24:52.310Z
+- opportunity | /articles/evenements/alfest-2026-a-annecy-en-famille-horaires-jeux-et-braderie/ | 2026-10-20T15:29:27.541Z
+- opportunity | /articles/evenements/festival-les-petits-asticots-2026-quel-spectacle-choisir-avec-les-enfants/ | 2026-10-13T18:36:59.570Z
+- opportunity | /articles/evenements/noel-des-alpes-2026-a-annecy-en-famille-marche-patinoire-ou-illuminations/ | 2026-10-29T05:28:53.475Z
 
-## Travaux éditoriaux en cours
+### Phases 2 et 3
 
-### Destination en cours
+Écris `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet de l'article. **N'ajoute aucun bloc `radar`.** Le script reprend mécaniquement le bloc Radar de la phase précédente et incrémente la phase.
 
-- Branche: automation/destination-20261010-0720-vincennes
-- HEAD: content: destination candidate Vincennes
+Pour un refresh, le script conserve de lui-même les champs protégés de l'article source. Pour une opportunity, il conserve la catégorie, le territoire et le slug choisis en phase 1.
 
----
-result: enriched
-kind: city
-name: "Vincennes"
-url: "/destinations/ile-de-france/val-de-marne/vincennes/"
-intro:
-  - "Vincennes est une base pratique pour visiter l'est parisien sans voiture : le château et le Parc floral se combinent à pied, tandis que le zoo de Paris mérite une sortie distincte."
-sections:
-  - title: "Une journée sur place : associer le château au Parc floral"
-    paragraphs:
-      - "Pour une journée mêlant découverte et temps de jeu, commencez par le château, puis rejoignez le Parc floral par l'esplanade du château. Comptez environ 1 h 30 à 2 h pour le monument avant de laisser les enfants profiter des aires de jeux du parc. Les pique-niques ne sont pas autorisés dans l'enceinte du château, mais le Parc floral dispose de tables de pique-nique, de points d'eau et de toilettes avec table à langer."
-      - "Avec de jeunes enfants qui supportent mal les visites intérieures, faites plutôt du Parc floral la sortie principale : ses jeux et ses jardins évitent de construire la journée autour du donjon et de ses escaliers. L'accès au Parc floral est gratuit d'octobre à mars et payant d'avril à septembre ; le château est un site distinct avec son propre billet."
-  - title: "Sur deux jours, garder le zoo pour une autre sortie"
-    paragraphs:
-      - "Le Parc zoologique de Paris se trouve du côté de la Porte Dorée, dans le 12e arrondissement, et non à côté du château ou à l'intérieur du Parc floral. Depuis le terminus Château de Vincennes du métro 1, le bus 46 permet de le rejoindre. Le zoo recommande au minimum deux heures de visite : avec le trajet et les pauses, mieux vaut lui réserver une seconde journée plutôt que de l'ajouter à la visite du château et du Parc floral."
-      - "Pour un séjour d'une seule journée, choisissez donc entre le duo château et Parc floral, facile à enchaîner à pied, et une visite du zoo avec trajet dédié. Ce choix évite de traverser inutilement le bois avec des enfants fatigués."
-  - title: "Métro ou RER avec une poussette : deux arrivées différentes"
-    paragraphs:
-      - "La ligne 1 arrive au pied du château, mais la station Château de Vincennes comporte de nombreuses marches entre les quais et la rue. La gare Vincennes du RER A est équipée d'un ascenseur et d'escalators ; elle se situe à environ dix minutes à pied du château. Avec une poussette lourde ou des difficultés à emprunter les escaliers, le RER A peut donc être plus pratique malgré la marche supplémentaire. Vérifiez l'état des équipements avant de partir."
-accommodation:
-  title: "Où dormir selon les sorties prévues ?"
-  paragraphs:
-    - "Si votre programme privilégie le château, le Parc floral et le départ du bus 46 vers le zoo, cherchez un hébergement vers l'avenue de Paris et le terminus Château de Vincennes. Si vous prévoyez aussi plusieurs allers-retours vers le centre de Paris, la proximité de la gare Vincennes du RER A est un autre choix pratique. Avec une poussette, comparez surtout la distance réelle à pied jusqu'à la gare ou au métro plutôt que de réserver simplement un logement annoncé à Vincennes."
-sources:
-  - title: "Fam Space - Destination Vincennes et ses deux articles"
-    url: "https://www.fam-space.fr/destinations/ile-de-france/val-de-marne/vincennes/"
-    accessedAt: "2026-10-10"
-  - title: "Fam Space - Château de Vincennes en famille"
-    url: "https://www.fam-space.fr/articles/sorties/chateau-de-vincennes-en-famille-tarifs-parcours-et-conseils-de-visite/"
-    accessedAt: "2026-10-10"
-  - title: "Fam Space - Monument jeu d'enfant 2026 au château de Vincennes"
-    url: "https://www.fam-space.fr/articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/"
-    accessedAt: "2026-10-10"
-  - title: "Ville de Paris - Parc floral de Paris"
-    url: "https://www.paris.fr/lieux/parc-floral-de-paris-1"
-    accessedAt: "2026-10-10"
-  - title: "Château de Vincennes - Informations pratiques"
-    url: "https://www.chateau-de-vincennes.fr/visiter/informations-pratiques"
-    accessedAt: "2026-10-10"
-  - title: "Château de Vincennes - Offre adaptée aux visiteurs en mobilité réduite"
-    url: "https://www.chateau-de-vincennes.fr/visiter/visiteurs-en-situation-de-handicap/offre-adaptee-aux-visiteurs-en-mobilite-reduite"
-    accessedAt: "2026-10-10"
-  - title: "Parc zoologique de Paris - Tarifs, horaires et accès"
-    url: "https://www.parczoologiquedeparis.fr/fr/tarifs-horaires-acces"
-    accessedAt: "2026-10-10"
-  - title: "Parc zoologique de Paris - Services et conseils de visite"
-    url: "https://www.parczoologiquedeparis.fr/fr/services-conseils-de-visite"
-    accessedAt: "2026-10-10"
----
-
-### Destination en cours
-
-- Branche: automation/destination-20261013-0112-haut-rhin
-- HEAD: content: destination Haut-Rhin enrichment candidate
-
----
-result: enriched
-kind: department
-name: "Haut-Rhin"
-url: "/destinations/grand-est/haut-rhin/"
-intro:
-  - "Colmar, Mulhouse et Ungersheim ne se visitent pas de la même manière en famille. Le choix de la base dépend des musées, des villages et de la possibilité de se déplacer sans voiture."
-sections:
-  - title: "Colmar pour les villages, Mulhouse pour les musées"
-    paragraphs:
-      - "Colmar convient à une journée dans le centre suivie d'une sortie vers Turckheim ou Munster, accessibles sur la ligne de train vers Metzeral. Pour Riquewihr, Kaysersberg ou Eguisheim, cette ligne ne suffit pas : il faut vérifier les bus ou prévoir une voiture."
-      - "Mulhouse est une meilleure base pour les musées techniques : la Cité du Train et Electropolis sont desservis par le tram 3, et le Musée national de l'Automobile par le tram 1. Si ces visites sont prioritaires, dormir à Mulhouse évite de revenir chaque soir depuis Colmar."
-  - title: "Deux parcs à Ungersheim : prévoir deux journées"
-    paragraphs:
-      - "Le Parc du Petit Prince et l'Écomusée d'Alsace sont proches, mais le premier recommande déjà cinq à sept heures de visite. Une famille qui souhaite découvrir les deux aura plus de temps pour profiter de chaque site en leur réservant une journée distincte."
-      - "Sans voiture, le train rejoint Bollwiller, puis il faut prévoir une navette à la demande vers les sites. Le Parc du Petit Prince indique le service Filéa ; l'Écomusée annonce une navette Soléa ou trente minutes de marche. Réservez et vérifiez le retour avant d'acheter les billets."
-  - title: "Ne pas confondre train et bus touristique"
-    paragraphs:
-      - "Le Kut'zig dessert en saison plusieurs villages viticoles depuis Colmar, mais ne circule pas toute l'année : sa saison 2026 s'est achevée le 11 octobre. Hors saison, la ligne ferroviaire vers Turckheim et Munster offre un autre choix de sortie, sous réserve des horaires du jour."
-accommodation:
-  title: "Où se baser dans le Haut-Rhin ?"
-  paragraphs:
-    - "Choisissez Colmar pour le centre historique, les villages et la vallée de Munster ; choisissez Mulhouse pour les musées et une excursion vers Ungersheim via Bollwiller. Si le séjour combine plusieurs jours dans chaque secteur, deux hébergements peuvent éviter des allers-retours répétés avec les enfants."
-sources:
-  - title: "Fam Space - Haut-Rhin"
-    url: "https://www.fam-space.fr/destinations/grand-est/haut-rhin/"
-    accessedAt: "2026-10-13"
-  - title: "Mulhouse Tourisme - Transports en commun"
-    url: "https://www.tourisme-mulhouse.com/en/what-to-do-in-mulhouse/getting-around-mulhouse-by-public-transport/"
-    accessedAt: "2026-10-13"
-  - title: "Parc du Petit Prince - Informations pratiques"
-    url: "https://parcdupetitprince.com/infos-pratiques"
-    accessedAt: "2026-10-13"
-  - title: "Écomusée d'Alsace - Accès"
-    url: "https://www.ecomusee.alsace/preparez-votre-visite/acces/"
-    accessedAt: "2026-10-13"
-  - title: "Ville de Turckheim - Accès"
-    url: "https://www.turckheim.fr/acces-et-plan/"
-    accessedAt: "2026-10-13"
-  - title: "Office de tourisme de Colmar - Kut'zig"
-    url: "https://www.tourisme-colmar.com/fr/pratique/se-deplacer/kut-zig-le-bus-touristique-cabriolet"
-    accessedAt: "2026-10-13"
----
-
-### Phase 1 - refresh
-
-Écris `radar-request.md` avec seulement la décision éditoriale:
-
-```yaml
----
-action: start
-mode: refresh
-targetUrl: "/articles/categorie/slug/"
-decision: "Décision précise du lecteur à mieux servir"
-affiliationPotential: "Offre existante à conserver, nouvelle action naturelle à vérifier, ou absence d'affiliation naturelle"
----
-
-Brief éditorial court demandé par la phase 1.
-```
-
-Ne fournis ni branche, ni SHA, ni `targetPath`, ni `commonQueries`, ni `positionDelta`, ni `impressionRatio`, ni `focusQueries`. Le script les prend dans Git et dans le snapshot.
-
-### Phase 1 - opportunity
-
-Écris le minimum éditorial nécessaire au futur article:
-
-```yaml
----
-action: start
-mode: opportunity
-title: "Titre de travail"
-subtitle: "Sous-titre utile"
-summary: "Résumé"
-category: sorties
-location:
-  city: "Ville"
-  department: "Département"
-  region: "Région"
-keywords:
-  - "mot-clé utile"
-sources:
-  - title: "Source officielle"
-    url: "https://..."
-gscSignal: strong_page
-gscSourceUrl: "/articles/categorie/page-forte/"
-decision: "Décision précise du lecteur"
-affiliationPotential: "Piste commerciale réellement vérifiée ou absence naturelle"
----
-
-Brief éditorial court demandé par la phase 1.
-```
-
-Le slug, la branche, le SHA et la provenance technique sont générés par le script. Pour `seasonal_opportunity`, utilise `gscSignal: seasonal_opportunity` et omets `gscSourceUrl`: la source officielle du frontmatter sert de preuve. Pour `strong_page`, `gscSourceUrl` reste obligatoire et doit correspondre à une page réellement présente dans `strongPages`.
+En phase 3 seulement, ajoute `radarReview` avec `summary`, `sources` et, pour un refresh, `regressionCheck`. Une seule correction factuelle vérifiée peut être suffisante.
 
 ## Écriture autorisée
 
