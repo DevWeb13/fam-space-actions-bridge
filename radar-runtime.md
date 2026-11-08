@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Déchets verts à Toulouse Métropole en 2027: collecte, broyage et compostage"
-subtitle: Six ramassages gratuits ou trente payants, avec d'autres solutions pour les tontes et les branches.
-summary: "Collecte gratuite ou payante, inscription avant le 16 novembre 2026, broyage et composteur: les solutions pour les jardins de Toulouse Métropole en 2027."
+title: "Déchets verts à Toulouse Métropole en 2027 : collecte, broyage et évacuation des gros volumes"
+subtitle: Six collectes gratuites ou trente à 120 € par an, et les solutions pour les branches et les grosses tailles.
+summary: "Collecte des déchets verts à Toulouse Métropole en 2027 : inscription avant le 16 novembre 2026, tarifs, broyage gratuit, déchèteries et location de benne."
 slug: dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage
 status: published
 publishedAt: 2026-10-15T19:13:56+02:00
@@ -94,9 +97,11 @@ sources:
     url: https://metropole.toulouse.fr/demarches/demander-un-composteur-individuel
   - title: Toulouse Métropole - Les déchèteries
     url: https://metropole.toulouse.fr/mon-environnement/dechets-et-proprete/les-decheteries
+  - title: Toulouse Métropole - Réserver une benne pour déchets végétaux
+    url: https://metropole.toulouse.fr/demarches/collecte-de-dechets-vegetaux-reserver-une-benne
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/maison/(2026)/(10)/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/index.md
   targetSha: 1f411193dbce80c9d726adae6bc193815c178845
@@ -125,30 +130,83 @@ radar:
       - enlèvement déchets verts gratuit toulouse
 ---
 
-## Mission retenue
-Actualiser le guide des déchets végétaux à Toulouse Métropole pour 2027, surtout le choix après une grosse taille de jardin.
+Dans les 37 communes de Toulouse Métropole, les particuliers peuvent choisir entre six collectes gratuites et trente collectes payantes pour leurs déchets de jardin en 2027. Pour les branches et les gros volumes, d'autres services existent : broyage gratuit, compostage, dépôt en benne statique ou déchèterie, et même location d'une grande benne. Le bon choix dépend surtout de la quantité à traiter et de la nécessité de l'évacuer.
 
-## Pourquoi cette mission
-Le snapshot signale 83 puis 20 impressions sur trois jours, sans cause SEO démontrée. Lacune indépendante vérifiée : l'article détaille broyage, bennes statiques et déchèteries, mais omet la location municipale de grandes bennes, solution distincte pour évacuer des volumes exceptionnels.
+## Collecte 2027 : six passages gratuits ou trente pour 120 €
 
-## Décision du lecteur
-Distinguer les six collectes gratuites, les trente collectes à 120 €/an, le broyage qui laisse le broyat sur place, le dépôt et la location d'une benne pour une évacuation importante.
+Le [service de collecte de Toulouse Métropole](https://metropole.toulouse.fr/demarches/collecte-de-dechets-vegetaux-sabonner-au-service) concerne les particuliers des **37 communes de la Métropole**, et non l'ensemble de la Haute-Garonne. Les deux forfaits utilisent un **bac de 240 litres**, fourni lors du premier abonnement.
 
-## Faits à traiter
-- Ajouter sobrement la location officielle de bennes de 8 ou 15 m³, 500 € par benne pour sept jours selon la FAQ ; vérifier le tarif au moment de rédiger.
-- Préciser les contraintes d'accès : largeur minimale 4 m et dégagement vertical 4 m ; la demande est payante et l'annulation n'est pas possible selon la fiche du 14 octobre 2026.
-- Préserver impérativement l'échéance du 16 novembre 2026, les deux forfaits et leurs modalités de reconduction, les trois solutions gratuites de broyage, compostage, bennes statiques, déchèteries, images, crédits et liens utiles. Conserver l'avertissement sur les dates contradictoires d'août 2027 tant que la Métropole ne les harmonise pas.
+**Le forfait saisonnier gratuit** prévoit **six collectes par an**, une par mois en mars, avril, mai, juin, octobre et novembre. Un seul abonnement gratuit est autorisé par foyer. Il convient aux jardins produisant peu de déchets, ou lorsque le reste peut être broyé, composté ou déposé ailleurs.
 
-## Sources de départ
-- https://metropole.toulouse.fr/mon-environnement/dechets-et-proprete/les-dechets-vegetaux/faq-dechets-vegetaux
-- https://metropole.toulouse.fr/demarches/collecte-de-dechets-vegetaux-reserver-une-benne
-- https://metropole.toulouse.fr/demarches/collecte-de-dechets-vegetaux-sabonner-au-service
+**Le forfait annuel à 120 € TTC** comprend **30 collectes** : deux par mois en janvier, février, juillet, août, septembre et décembre, et trois par mois en mars, avril, mai, juin, octobre et novembre. Il convient à un entretien régulier du jardin.
 
-## Affiliation
-Aucune : renvoyer vers les démarches officielles sans détour commercial.
+**Attention au calendrier du forfait payant :** aucune collecte n'est prévue du 20 au 31 décembre 2027. Pour août, la page officielle mentionne à un endroit une interruption du **9 au 20 août**, et à un autre du **10 au 21 août**. La Métropole n'ayant pas harmonisé ces indications, vérifiez le calendrier envoyé par courriel pour votre adresse avant de sortir le bac.
 
-## Continuations internes
-Aucune nécessaire.
+## Avant le 16 novembre 2026 : qui doit s'inscrire ?
+
+La période d'inscription, de renouvellement payant et de désinscription pour 2027 va **du 1er juillet au 16 novembre 2026** :
+
+- **Déjà au forfait gratuit, sans changement :** reconduction automatique.
+- **Au forfait payant et souhaitant garder 30 passages :** renouvellement nécessaire avant la date limite.
+- **Au forfait payant, mais souhaitant revenir au gratuit :** sans renouvellement payant, passage automatique au gratuit.
+- **Nouvel abonné :** première inscription obligatoire pendant cette période.
+- **Souhaitant arrêter toute collecte :** demande explicite de désinscription, et non simple absence de paiement.
+
+Effectuez la démarche sur le [site officiel d'abonnement](https://metropole.toulouse.fr/demarches/collecte-de-dechets-vegetaux-sabonner-au-service). Indiquez votre **adresse complète** pour permettre la livraison du bac ; les foyers déjà équipés conservent leur bac. Le calendrier de collecte est envoyé par courriel avant les premiers passages.
+
+En cas de déménagement au sein de la Métropole, signalez la nouvelle adresse et **gardez le bac**. Si vous quittez le territoire, demandez la désinscription. La [FAQ officielle](https://metropole.toulouse.fr/mon-environnement/dechets-et-proprete/les-dechets-vegetaux/faq-dechets-vegetaux) détaille ces situations.
+
+## Que mettre dans le bac sans risquer un refus ?
+
+Le bac accueille les **déchets végétaux du jardin** : tontes, feuilles et petites tailles. Le couvercle doit pouvoir fermer entièrement. Branches dépassant du bac, sacs plastiques, terre, fruits et déchets alimentaires peuvent entraîner un refus ; les végétaux déposés à côté ne sont pas ramassés.
+
+Sortez le bac **la veille après 19 h**, pour une collecte entre **5 h et 16 h**, puis rentrez-le après le passage. Le format reste limité à **240 litres**. Deux abonnements payants, chacun avec son bac, sont possibles pour un foyer, mais le gratuit ne peut pas être cumulé avec un payant.
+
+## Branches et gros volumes : trois façons de broyer gratuitement
+
+<!-- article-image-body:01 -->
+
+![Broyeur de branches et de végétaux Bugnot exposé au Sommet de l'Élevage 2019, photographie illustrative](/images/articles/2026/10/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage-body-01.webp)
+
+*Photo: [Sebleouf](https://commons.wikimedia.org/wiki/File:Sommet_de_l%27%C3%89levage_2019_-_Broyeur_de_branches_et_v%C3%A9g%C3%A9taux_Bugnot_BV_N.45.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Le broyage réduit l'encombrement des branches et permet d'utiliser le broyat comme paillage. Toulouse Métropole propose [trois solutions gratuites](https://metropole.toulouse.fr/demarches/faire-une-demande-de-broyage-de-dechets-vegetaux).
+
+**Emprunter un broyeur.** Le prêt se réserve auprès de cinq agences Kiloutou partenaires, pour un jour en semaine ou un week-end. Au retrait, prévoyez **pièce d'identité, permis de conduire, justificatif de domicile et carte bancaire pour la garantie**. Vérifiez le modèle : le petit broyeur électrique peut tenir dans une voiture avec les sièges rabattus ; les modèles thermiques sont plus lourds ou nécessitent un attelage. Le transport et le retour sont à votre charge ; retard ou dégradation peuvent entraîner des frais.
+
+**Faire venir un professionnel.** La prestation gratuite est limitée à **deux interventions par foyer et par an**, avec **au moins 2 m³** de végétaux déjà coupés et regroupés. L'accès doit permettre le passage d'un véhicule de 3,5 tonnes et de son broyeur, avec **2,70 m de largeur, 2,70 m de hauteur et 5 m de longueur** libres. Les branches ne doivent pas dépasser **2 m de long et 17 cm de diamètre**. Vous devez être présent et **conserver le broyat sur place** : ce service ne l'évacue pas. Comptez environ 1 h 30 de broyage et 30 minutes de conseils.
+
+**Participer à une opération collective.** Des journées de broyage sont organisées ponctuellement dans les communes participantes. Consultez les dates et conditions officielles ; cette option peut être utile si le terrain est difficile d'accès.
+
+## Composteur gratuit : pour valoriser les petits végétaux
+
+<!-- article-image-body:02 -->
+
+![Tas de copeaux de bois destiné au jardin, illustrant le broyat réutilisable en paillage](/images/articles/2026/10/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage-body-02.webp)
+
+*Photo: [Geo Lightspeed7](https://commons.wikimedia.org/wiki/File:Wood_chip_pile.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Feuilles mortes, petits résidus secs et broyat peuvent alimenter un compost ou protéger les plantations en paillage. Les gros branchages doivent généralement être broyés avant réutilisation.
+
+Toulouse Métropole [propose un composteur individuel gratuit](https://metropole.toulouse.fr/demarches/demander-un-composteur-individuel) aux habitants de ses 37 communes disposant d'un jardin. Il faut réserver un retrait et suivre une **session d'information de 30 minutes**. Un foyer ayant déjà reçu un composteur de la Métropole depuis moins de sept ans ne peut normalement pas en obtenir un nouveau.
+
+Le compostage associe déchets alimentaires et végétaux adaptés ; il ne permet pas à lui seul d'absorber une grosse taille de haie ni de grandes quantités de tonte fraîche.
+
+## Après une grosse taille : déposer les végétaux ou louer une benne ?
+
+Pour **évacuer** les végétaux plutôt que conserver du broyat, trois possibilités méritent d'être distinguées.
+
+**Les bennes statiques gratuites.** Toulouse Métropole installe ponctuellement des camions-bennes dans certaines communes. Le dépôt est gratuit avec justificatif de domicile ; les végétaux sont acceptés en vrac ou en fagots, avec des branches de **2 m maximum et de moins de 20 cm de diamètre**. Consultez les lieux et calendriers sur la [page officielle des déchets végétaux](https://metropole.toulouse.fr/mon-environnement/dechets-et-proprete/les-dechets-vegetaux).
+
+**Les déchèteries grand public.** Elles conviennent lorsque vous pouvez transporter les déchets vous-même. Le **Pass déchèterie est obligatoire** : vérifiez les horaires, les volumes et les déchets admis sur la [page des déchèteries](https://metropole.toulouse.fr/mon-environnement/dechets-et-proprete/les-decheteries) avant de partir.
+
+**La location d'une grande benne.** Pour un arbre abattu ou un chantier de jardin produisant un volume exceptionnel, la Métropole propose des bennes de **8 ou 15 m³**, au tarif annoncé de **500 € par benne pour sept jours**. Le camion doit disposer d'un passage d'au moins **4 m de large** et d'un dégagement vertical d'au moins **4 m**, sans porche, câble ou branche gênante. Si l'accès est insuffisant, contactez le service avant toute demande. Selon la fiche officielle, les modalités peuvent être modifiées après la réservation, mais **l'annulation n'est pas possible**. Vérifiez les conditions et le tarif au moment de [réserver la benne auprès de Toulouse Métropole](https://metropole.toulouse.fr/demarches/collecte-de-dechets-vegetaux-reserver-une-benne).
+
+Le choix est donc simple : **broyage** si vous souhaitez garder les végétaux pour le jardin ; **benne statique ou déchèterie** si vous pouvez les transporter ; **location de grande benne** si le volume à évacuer justifie son coût et si le camion peut accéder au lieu.
 
 ## Article source exact à préserver et améliorer
 
@@ -270,21 +328,20 @@ Les **déchèteries grand public** constituent une autre option pour les volumes
 
 ### Articles proches préparés mécaniquement
 
-- /articles/bons-plans/pass-explorateurs-toulouse-en-famille-quand-est-il-vraiment-rentable/ | Pass Explorateurs Toulouse en famille: quand est-il vraiment rentable? | bons-plans | Toulouse, Haute-Garonne, Occitanie
 - /articles/activites/accrocamp-toulouse-avec-des-enfants-quel-pass-choisir-selon-leur-taille/ | AccroCamp Toulouse avec des enfants: quel pass choisir selon leur taille? | activites | Toulouse, Haute-Garonne, Occitanie
+- /articles/voyages/cite-de-l-espace-a-toulouse-en-famille-en-2026-une-journee-suffit-elle-et-ou-dormir/ | Cité de l'espace à Toulouse en famille en 2026: une journée suffit-elle et où dormir | voyages | Toulouse, Haute-Garonne, Occitanie
+- /articles/bons-plans/pass-explorateurs-toulouse-en-famille-quand-est-il-vraiment-rentable/ | Pass Explorateurs Toulouse en famille: quand est-il vraiment rentable? | bons-plans | Toulouse, Haute-Garonne, Occitanie
 - /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | Noël à Toulouse 2026 en famille: marchés, Père Noël et patinoire | evenements | Toulouse, Haute-Garonne, Occitanie
 - /articles/cuisine/ateliers-de-cuisine-parent-enfant-a-toulouse-chocolat-patisserie-ou-menu-complet/ | Ateliers de cuisine parent-enfant à Toulouse: chocolat, pâtisserie ou menu complet ? | cuisine | Toulouse, Haute-Garonne, Occitanie
 - /articles/sorties/un-ete-au-bord-du-lac-toulouse-2026-famille/ | Un été au bord du lac à Toulouse: activités gratuites en famille à la Reynerie | sorties | Toulouse, Haute-Garonne, Occitanie
-- /articles/voyages/cite-de-l-espace-a-toulouse-en-famille-en-2026-une-journee-suffit-elle-et-ou-dormir/ | Cité de l'espace à Toulouse en famille en 2026: une journée suffit-elle et où dormir | voyages | Toulouse, Haute-Garonne, Occitanie
-- /articles/maison/composteur-gratuit-a-orleans-metropole-comment-en-profiter-en-2026/ | Composteur gratuit à Orléans Métropole: comment en profiter en 2026 | maison | Orléans, Loiret, Centre-Val de Loire
-- /articles/maison/composteur-gratuit-a-bordeaux-metropole-que-choisir-selon-son-logement/ | Composteur gratuit à Bordeaux Métropole: que choisir selon son logement? | maison | Bordeaux, Gironde, Nouvelle-Aquitaine
+- /articles/sorties/aeroscopia-a-blagnac-en-famille-tarifs-avions-et-conseils-de-visite/ | Aeroscopia à Blagnac en famille: tarifs, avions et conseils de visite | sorties | Blagnac, Haute-Garonne, Occitanie
+- /articles/maison/broyeur-de-vegetaux-a-nantes-metropole-acheter-a-plusieurs-ou-profiter-des-operations-gratuites/ | Broyeur de végétaux à Nantes Métropole: acheter à plusieurs ou profiter des opérations gratuites ? | maison | Nantes, Loire-Atlantique, Pays de la Loire
 - /articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/ | Déchets verts à Toulouse Métropole en 2027: collecte, broyage et compostage | maison | Toulouse, Haute-Garonne, Occitanie
 - /articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/ | Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates | vie-pratique | Toulouse, Haute-Garonne, Occitanie
 - /articles/maison/moustique-tigre-en-haute-garonne-proteger-la-maison-et-le-jardin/ | Moustique tigre en Haute-Garonne: protéger la maison et le jardin | maison | Toulouse, Haute-Garonne, Occitanie
 - /articles/evenements/festival-bd-colomiers-2026-en-famille-quel-jour-choisir-et-combien-prevoir/ | Festival BD Colomiers 2026 en famille: programme, tarifs et accès | evenements | Colomiers, Haute-Garonne, Occitanie
 - /articles/evenements/festival-cite-en-jeux-2026-a-colomiers-quel-jour-choisir-avec-des-enfants/ | Festival Cité en Jeux 2026 à Colomiers: quel jour choisir avec des enfants | evenements | Colomiers, Haute-Garonne, Occitanie
 - /articles/voyages/saint-bertrand-de-comminges-avec-des-enfants-village-seul-ou-grande-boucle-a-pied/ | Saint-Bertrand-de-Comminges avec des enfants: village seul ou grande boucle à pied? | voyages | Saint-Bertrand-de-Comminges, Haute-Garonne, Occitanie
-- /articles/sorties/aeroscopia-a-blagnac-en-famille-tarifs-avions-et-conseils-de-visite/ | Aeroscopia à Blagnac en famille: tarifs, avions et conseils de visite | sorties | Blagnac, Haute-Garonne, Occitanie
 - /articles/maison/materiautheques-en-bretagne-preparer-son-projet-et-acheter-les-bons-materiaux/ | Matériauthèques en Bretagne: préparer son projet et acheter les bons matériaux | maison | Bretagne
 - /articles/maison/reparer-ses-objets-dans-l-herault-repair-cafes-et-bonus-reparation/ | Réparer ses objets dans l’Hérault: Repair Cafés et bonus réparation | maison | Hérault, Occitanie
 - /articles/maison/chaleur-a-mayotte-comment-rendre-son-logement-plus-confortable/ | Chaleur à Mayotte: comment rendre son logement plus confortable | maison | Mayotte
@@ -292,6 +349,7 @@ Les **déchèteries grand public** constituent une autre option pour les volumes
 - /articles/maison/fissures-et-secheresse-en-dordogne-proteger-sa-maison-et-demander-l-aide-argile/ | Fissures et sécheresse en Dordogne: protéger sa maison et demander l’aide argile | maison | Dordogne, Nouvelle-Aquitaine
 - /articles/maison/recuperer-l-eau-de-pluie-dans-la-somme-choisir-sa-cuve-et-obtenir-l-aide-2026/ | Récupérer l’eau de pluie dans la Somme: choisir sa cuve et obtenir l’aide 2026 | maison | Somme, Hauts-de-France
 - /articles/maison/jardin-familial-en-vendee-que-planter-et-preparer-a-l-automne/ | Jardin familial en Vendée: que planter et préparer à l’automne ? | maison | Vendée, Pays de la Loire
+- /articles/maison/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/ | Meubles d'occasion en Meurthe-et-Moselle: où acheter, donner et réparer ? | maison | Meurthe-et-Moselle, Grand Est
 
 ### Historique Radar lié
 
