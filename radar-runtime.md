@@ -657,10 +657,10 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 
 ### Articles comparables et publications récentes
 
-- /articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/ | Déchets verts à Toulouse Métropole en 2027: collecte, broyage et compostage | maison | Toulouse, Haute-Garonne, Occitanie
-- /articles/bons-plans/pass-explorateurs-toulouse-en-famille-quand-est-il-vraiment-rentable/ | Pass Explorateurs Toulouse en famille: quand est-il vraiment rentable? | bons-plans | Toulouse, Haute-Garonne, Occitanie
+- /articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/ | Déchets verts à Toulouse Métropole en 2027: collecte, broyage et évacuation des gros volumes | maison | Toulouse, Haute-Garonne, Occitanie
 - /articles/activites/accrocamp-toulouse-avec-des-enfants-quel-pass-choisir-selon-leur-taille/ | AccroCamp Toulouse avec des enfants: quel pass choisir selon leur taille? | activites | Toulouse, Haute-Garonne, Occitanie
-- /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | Noël à Toulouse 2026 en famille: marchés, Père Noël et patinoire | evenements | Toulouse, Haute-Garonne, Occitanie
+- /articles/voyages/cite-de-l-espace-a-toulouse-en-famille-en-2026-une-journee-suffit-elle-et-ou-dormir/ | Cité de l'espace à Toulouse en famille en 2026: une journée suffit-elle et où dormir | voyages | Toulouse, Haute-Garonne, Occitanie
+- /articles/bons-plans/pass-explorateurs-toulouse-en-famille-quand-est-il-vraiment-rentable/ | Pass Explorateurs Toulouse en famille: quand est-il vraiment rentable? | bons-plans | Toulouse, Haute-Garonne, Occitanie
 - /articles/activites/biotropica-en-famille-a-val-de-reuil-animaux-tarifs-et-visite-par-temps-de-pluie/ | Biotropica en famille à Val-de-Reuil: animaux, tarifs et visite par temps de pluie | activites | Val-de-Reuil, Eure, Normandie
 - /articles/activites/parc-animalier-de-gramat-en-famille-animaux-duree-et-conseils-de-visite/ | Parc animalier de Gramat en famille: animaux, durée et conseils de visite | activites | Gramat, Lot, Occitanie
 - /articles/activites/parc-animalier-d-ecouves-en-famille-tarifs-horaires-et-conseils-pour-la-visite/ | Parc animalier d'Ecouves en famille: tarifs, horaires et conseils pour la visite | activites | Le Bouillon, Orne, Normandie
@@ -777,14 +777,13 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 
 ### Historique Radar lié
 
-- opportunity | /articles/activites/atelier-omamori-gratuit-a-paris-le-21-novembre-2026-creer-une-amulette-japonaise-des-7-ans/ | 2026-11-05T07:29:24.731Z
-- opportunity | /articles/activites/atelier-pop-up-gratuit-a-paris-le-21-novembre-2026-creer-un-livre-anime-en-famille/ | 2026-11-04T15:34:37.269Z
 - opportunity | /articles/activites/atelier-scratch-gratuit-a-paris-le-7-novembre-2026-programmer-un-jeu-video-des-8-ans/ | 2026-11-04T08:27:47.912Z
 - opportunity | /articles/activites/ateliers-textiles-au-musee-bourdelle-a-paris-styliste-ou-broderie-en-famille-en-2026/ | 2026-11-04T01:30:49.478Z
 - refresh | /articles/activites/biotropica-en-famille-a-val-de-reuil-animaux-tarifs-et-visite-par-temps-de-pluie/ | 2026-11-07T21:36:00.316Z
 - refresh | /articles/sorties/chateau-fort-de-sedan-en-famille-parcours-tarifs-et-conseils-de-visite/ | 2026-11-07T15:31:39.896Z
 - opportunity | /articles/evenements/contes-gratuits-a-paris-le-14-novembre-2026-quel-spectacle-choisir-selon-l-age/ | 2026-11-05T13:27:24.356Z
 - opportunity | /articles/evenements/contes-gratuits-a-paris-le-14-novembre-2026-quelle-seance-choisir-en-famille/ | 2026-11-05T00:34:45.481Z
+- refresh | /articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/ | 2026-11-08T04:30:49.530Z
 - opportunity | /articles/evenements/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/ | 2026-11-04T21:32:12.180Z
 - opportunity | /articles/evenements/fete-de-la-mer-2026-a-marseille-avec-des-enfants-quelle-escale-choisir-le-18-octobre/ | 2026-10-06T16:58:51.946Z
 - opportunity | /articles/evenements/foire-aux-santons-de-marseille-2026-en-famille-quand-venir-et-que-voir/ | 2026-10-23T15:29:55.218Z
@@ -797,13 +796,14 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 - opportunity | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-10-26T21:31:06.119Z
 - opportunity | /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | 2026-10-30T21:26:32.584Z
 - opportunity | /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | 2026-10-30T18:26:56.039Z
-- opportunity | /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | 2026-10-24T23:34:36.270Z
 - opportunity | /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | 2026-10-27T07:35:50.437Z
+- refresh | /articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/ | 2026-11-08T07:28:43.032Z
 - opportunity | /articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/ | 2026-10-28T12:27:07.569Z
 - opportunity | /articles/activites/paris-sport-vacances-automne-2026-demi-journee-gratuite-ou-stage-a-la-journee/ | 2026-10-03T20:20:25.508Z
 - opportunity | /articles/activites/pokemon-et-biodiversite-a-paris-le-28-novembre-2026-atelier-dessin-des-10-ans/ | 2026-11-05T10:32:54.471Z
 - opportunity | /articles/voyages/rejoindre-l-aeroport-paris-cdg-en-famille-rer-b-bus-9517-ou-taxi/ | 2026-10-15T09:28:56.552Z
 - opportunity | /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | 2026-11-04T05:34:42.508Z
+- refresh | /articles/bons-plans/ski-a-aussois-en-famille-en-2026-2027-forfaits-et-budget/ | 2026-11-08T10:32:11.067Z
 - opportunity | /articles/sorties/soiree-jeux-gratuite-a-paris-le-21-novembre-2026-jeux-video-et-jeux-de-societe-en-famille/ | 2026-11-05T19:28:08.723Z
 - opportunity | /articles/activites/stages-de-science-a-la-cite-des-sciences-pendant-la-toussaint-2026-lequel-choisir-selon-l-age/ | 2026-10-04T05:39:23.036Z
 - opportunity | /articles/sorties/vacances-de-la-toussaint-2026-a-la-cite-des-sciences-quels-ateliers-choisir-selon-l-age/ | 2026-10-05T11:24:52.310Z
@@ -813,32 +813,83 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 ### Publication en cours
 
 - Branche: automation/publication-20261108-1101-sujet-les-pass-musees-regionaux-de-la-reunion-et-les-tarifs-reduits-po
-- HEAD: publication: phase 1 sujet-les-pass-musees-regionaux-de-la-reunion-et-les-tarifs-reduits-po
+- HEAD: publication: phase 2 20261108-1101-sujet-les-pass-musees-regionaux-de-la-reunion-et-les-tarifs-reduits-po
 
-## Sujet retenu
-**Sujet :** les Pass Musées régionaux de La Réunion et les tarifs réduits pour visiter plusieurs musées en famille.
+---
+category: "bons-plans"
+title: "Musées à La Réunion en famille: quel pass choisir pour payer moins cher ?"
+subtitle: "Kélonia, Stella Matutina, Cité du Volcan et MADOI: tarifs, réductions et idées de visites"
+summary: "Comparez les billets et pass des quatre musées régionaux de La Réunion, avec des exemples de budgets familiaux et les informations pour organiser vos visites."
+keywords:
+  - "pass musées La Réunion"
+  - "musées La Réunion famille"
+  - "tarifs réduits musées Réunion"
+location:
+  department: "La Réunion"
+  region: "La Réunion"
+sources:
+  - title: "Billetterie officielle des Musées régionaux"
+    url: "https://museesreunion.fr/le-catalogue-des-spectacles/"
+  - title: "Tarifs des Musées régionaux"
+    url: "https://museesreunion.fr/tarifs/"
+  - title: "Kélonia"
+    url: "https://museesreunion.fr/kelonia/"
+  - title: "Musée Stella Matutina"
+    url: "https://museesreunion.fr/musee-stella-matutina/"
+  - title: "MADOI"
+    url: "https://museesreunion.fr/madoi/"
+  - title: "Horaires des Musées régionaux"
+    url: "https://museesreunion.fr/horaires/"
+  - title: "Billetterie Monticket: Pass Musées Régionaux 2026"
+    url: "https://billetterie.monticket.re/awprod/MTIPP/AWCategories.aspx?CAT=8944&IDWL=87498&INS=MTI&LNG=FR&S=1&SEA=14595"
+---
 
-**Titre de travail :** « Musées à La Réunion en famille : pass, gratuités et visites à petit prix ».
+Voir des tortues marines, comprendre l'histoire du sucre, explorer les volcans ou découvrir des objets venus de l'océan Indien: les quatre musées régionaux de La Réunion proposent des sorties très différentes. Pour les familles qui souhaitent en visiter plusieurs, il existe des billets combinés. Mais le pass n'est pas toujours le choix le moins cher.
 
-**Angle :** organiser plusieurs découvertes culturelles à coût maîtrisé, en distinguant le pass multimusées, les billets séparés et les réductions selon l'âge et la situation. Les quatre établissements du réseau sont Kélonia (tortues marines), Stella Matutina (histoire du sucre), la Cité du Volcan (volcanisme) et le MADOI (arts décoratifs de l'océan Indien). Le pass annoncé par l'exploitant est valable six mois après achat ; ses formules et prix exacts doivent être contrôlés dans la billetterie au moment de la rédaction.
+## Quatre visites, quatre expériences
 
-## Besoin du lecteur
-Savoir quels lieux visiter avec les enfants, leurs différences, les âges adaptés aux activités, les tarifs réduits et gratuités, quand un pass est intéressant par rapport aux billets individuels, les contraintes pratiques et comment répartir les visites sur un séjour. Éviter de présenter les tarifs scolaires réservés aux groupes comme des tarifs familiaux.
+**Kélonia, à Saint-Leu**, est un observatoire des tortues marines avec des bassins, un espace de sensibilisation et un centre de soins pour les animaux blessés. C'est une sortie particulièrement parlante pour les jeunes enfants. Les visites guidées, en revanche, **ne sont pas adaptées aux moins de 7 ans**; la visite libre reste possible. [Découvrir Kélonia](https://museesreunion.fr/kelonia/).
 
-## Valeur éditoriale
-L'exploitant annonce quatre musées et un pass valable six mois. Ses tarifs individuels affichent 9 € plein / 6 € réduit pour Kélonia, Stella et Cité du Volcan, 5 € / 2 € pour MADOI, gratuité pour les moins de 4 ans en visite grand public. Le tarif réduit vise notamment les 4–12 ans, étudiants, bénéficiaires du RSA, demandeurs d'emploi, seniors et personnes à mobilité réduite. Un article utile peut proposer des exemples de budgets familiaux *après vérification du prix du pass*, expliquer que la visite guidée de Kélonia n'est pas adaptée aux moins de 7 ans et distinguer les activités supplémentaires comme le cinéma 4D. Ne pas promettre une économie avec le pass sans prix confirmé. Le réseau fonctionne actuellement ; le sujet est durable et distinct de l'article récent consacré uniquement à la Cité du Volcan.
+**Stella Matutina, également à Saint-Leu**, occupe une ancienne usine sucrière. Machines, témoignages et collections racontent l'histoire de la canne à sucre et de la société réunionnaise. Pour une visite guidée, il faut réserver: un supplément de 20 € s'applique au groupe de 1 à 9 personnes, en plus des billets d'entrée. [Informations du musée](https://museesreunion.fr/musee-stella-matutina/).
 
-## Affiliation
-- **Billets / pass :** vérification des offres des partenaires GetYourGuide, Tiqets et Klook : aucune fiche partenaire exacte et vérifiable correspondant au Pass Musées régionaux trouvée ; ne pas inventer de billet affilié. Billetterie officielle : https://museesreunion.fr/le-catalogue-des-spectacles/
-- **Hébergement secondaire pour les familles en séjour sur la côte ouest :** Booking.com, **Iloha Seaview Hotel**, Saint-Leu, référencé dans la sélection d'hébergements familiaux : https://www.booking.com/family/city/re/saint-leu.fr.html . La page consultée confirme l'établissement mais n'est pas une fiche de réservation individuelle : ne pas présenter cette URL comme une offre précise ou garantir une disponibilité. La sélection contient aussi Santa Apolonia. Abritel propose des hébergements familiaux à Saint-Leu (https://www.abritel.fr/d/5414/saint-leu), mais sans fiche individuelle retenue. Aucune offre secondaire individuelle suffisamment vérifiée pour insertion automatique à ce stade.
+**La Cité du Volcan, à Bourg-Murat dans les Hauts**, permet d'aborder le volcanisme réunionnais par des dispositifs muséographiques. Elle complète bien une découverte des paysages volcaniques. Le cinéma 4D constitue une prestation supplémentaire à 2 €, et non une activité automatiquement comprise dans le billet de base. [Consulter les tarifs](https://museesreunion.fr/tarifs/).
 
-## Sources de départ
-- Pass et billetterie du réseau (validité six mois) : https://museesreunion.fr/le-catalogue-des-spectacles/
-- Tarifs, catégories de réduction et gratuité : https://museesreunion.fr/tarifs/
-- Kélonia, horaires et restriction des visites guidées pour les moins de 7 ans : https://museesreunion.fr/kelonia/
-- Stella Matutina et visites guidées : https://museesreunion.fr/musee-stella-matutina/
-- Présentation officielle des quatre établissements : https://museesreunion.fr/
-- Programme officiel janvier-juin 2026 (document de référence à recouper avec pages actuelles) : https://museesreunion.fr/wp-content/uploads/agenda_2026_S1_PAGES_compressed.pdf
+**Le MADOI, à Saint-Louis**, est le Musée des arts décoratifs de l'océan Indien, installé au domaine historique de Maison Rouge. Ses collections et expositions invitent à découvrir les échanges culturels et les savoir-faire de la région. C'est une option intéressante pour des enfants curieux d'objets, d'art et d'histoire. [Présentation du MADOI](https://museesreunion.fr/madoi/).
+
+## Billets individuels: combien coûte une sortie ?
+
+Selon la [grille officielle](https://museesreunion.fr/tarifs/), Kélonia, Stella Matutina et la Cité du Volcan coûtent chacun **9 € en plein tarif** et **6 € en tarif réduit**. Le MADOI coûte **5 € ou 2 €**.
+
+Le tarif réduit concerne notamment les enfants de 4 à 12 ans, les étudiants, les demandeurs d'emploi, les bénéficiaires du RSA, les personnes de plus de 65 ans et les personnes à mobilité réduite. **L'entrée est gratuite avant 4 ans** pour les visites grand public. Un mineur doit être accompagné d'un adulte. Les tarifs scolaires indiqués sur le site ne sont pas les tarifs d'une famille venant individuellement.
+
+Pour deux adultes et deux enfants de 4 à 12 ans, une visite de Kélonia revient ainsi à **30 €** au tarif standard, hors activités supplémentaires. Avec un enfant de moins de 4 ans, son entrée est gratuite.
+
+## Les pass sont-ils réellement avantageux ?
+
+La [billetterie officielle Monticket](https://billetterie.monticket.re/awprod/MTIPP/AWCategories.aspx?CAT=8944&IDWL=87498&INS=MTI&LNG=FR&S=1&SEA=14595) affiche pour 2026 les formules suivantes, frais de billetterie de 0,50 € inclus par billet:
+
+- **Pass duo Kélonia + Stella Matutina:** 16,50 € plein tarif ou 11,50 € réduit.
+- **Pass quatre musées:** 24,50 € plein tarif ou 19,50 € réduit.
+
+En comparaison, acheter séparément les quatre entrées aux tarifs affichés sur le site des musées revient à 32 € en plein tarif ou 20 € en réduit. Le pass quatre musées représente donc une économie de **7,50 € par adulte au plein tarif**, mais seulement **0,50 € au tarif réduit** avant prise en compte des éventuels frais sur les billets individuels achetés en ligne.
+
+Pour une famille de deux adultes et deux enfants de 4 à 12 ans, les quatre pass coûtent **88 €** au total. Les quatre musées avec billets individuels aux tarifs affichés sur place reviendraient à **104 €**. Le gain théorique est donc de **16 €** pour cette famille. Si vous n'envisagez qu'un ou deux musées, comparez plutôt les billets correspondants: acheter un pass quatre musées pour une visite supplémentaire hypothétique n'est pas nécessairement rentable.
+
+Attention à la différence entre les prix affichés sur le site des musées et ceux de la billetterie en ligne, qui ajoutent des frais. Vérifiez le panier final avant paiement.
+
+## Six mois pour profiter des visites
+
+Les [pass sont valables six mois à partir de l'achat](https://museesreunion.fr/le-catalogue-des-spectacles/). La billetterie précise que les billets achetés en ligne sont utilisables **à compter du lendemain de l'achat**. Mieux vaut donc éviter de commander sur Internet le matin même d'une visite.
+
+Pour un séjour familial, il est pratique de regrouper Kélonia et Stella Matutina, tous deux à Saint-Leu, puis de consacrer une autre journée à la Cité du Volcan. Le MADOI peut s'intégrer à une sortie vers Saint-Louis. Les quatre visites n'ont pas besoin d'être réalisées en une seule semaine.
+
+## Horaires et points à vérifier avant de partir
+
+D'après les [horaires officiels](https://museesreunion.fr/horaires/), Kélonia ouvre tous les jours de 9 h à 18 h, avec fermeture de la billetterie à 17 h. Stella Matutina accueille les visiteurs du mardi au dimanche de 9 h 30 à 17 h 30. La Cité du Volcan ouvre le lundi de 13 h à 17 h, puis du mardi au dimanche de 9 h 30 à 17 h. Le MADOI ouvre du mardi au dimanche de 9 h à 17 h 30.
+
+Les quatre établissements ferment les 1er janvier, 1er mai, 1er novembre et 25 décembre; des horaires réduits s'appliquent les 24 et 31 décembre. Vérifiez les changements ponctuels et les éventuelles réservations d'activités sur le site officiel.
+
+Pour les familles avec poussette ou ayant des besoins précis d'accessibilité, mieux vaut contacter l'établissement concerné avant le déplacement: les conditions de circulation ne sont pas identiques dans les quatre sites.
 
 
 ### Destination en cours
