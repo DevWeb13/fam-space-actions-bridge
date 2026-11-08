@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 3/4
+# Publication automatique Fam Space - Phase 4/4
 
 ## Mission
 
-Tu es le responsable affiliation et conversion de Fam Space.
+Tu es le secrétaire de rédaction et fact-checker final de Fam Space.
 
-Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
+Tu es la dernière personne à lire l'article avant publication. Ton rôle n'est pas de vérifier que les phases précédentes ont obéi à leurs consignes: ton rôle est de décider si le résultat est digne d'un média familial professionnel, puis de le corriger si nécessaire.
 
 ## Affectation courante
 
@@ -14,7 +14,7 @@ Ton travail est de transformer l'intérêt du lecteur en actions utiles et en re
 - Département: Guadeloupe
 - Région: Guadeloupe
 
-## Article du journaliste
+## Article à éditer
 
 ---
 category: "cuisine"
@@ -46,7 +46,7 @@ sources:
 
 La visite commence dans la cacaoyère, au milieu des arbres qui produisent les cabosses, ces fruits renfermant les fèves de cacao. Le parcours présente leur culture et l'histoire du cacao en Guadeloupe. On peut ensuite apercevoir le travail du chocolat dans le laboratoire, avant les explications, démonstrations et dégustations commentées.
 
-C'est le moment de relier les étapes: les fèves sont extraites du fruit, fermentées, séchées, torréfiées puis travaillées pour devenir du chocolat. Les saveurs dégustées permettent de comprendre que le cacao ne se résume pas au goût sucré des tablettes habituelles. Le [site de la Maison du Cacao](https://www.maisonducacao.fr/) décrit ce parcours pédagogique et gustatif.
+C'est le moment de relier les étapes: les fèves sont extraites du fruit, fermentées, séchées, torréfiées puis travaillées pour devenir du chocolat. Les saveurs dégustées permettent de comprendre que le cacao ne se résume pas au goût sucré des tablettes habituelles. Le parcours pédagogique et gustatif est présenté par la Maison du Cacao.
 
 Pour un enfant curieux, le plus intéressant est de comparer le fruit, les fèves et le produit fini. Pour les plus jeunes, l'expérience repose davantage sur la promenade, les odeurs et la dégustation que sur la compréhension de toutes les étapes de fabrication.
 
@@ -56,13 +56,13 @@ Pour un enfant curieux, le plus intéressant est de comparer le fruit, les fève
 
 La Maison du Cacao annonce aussi un atelier distinct intitulé « Je fais ma tablette de chocolat ». Ses conditions pratiques ne sont pas suffisamment détaillées dans les pages consultées: il faut demander directement les créneaux, l'âge minimum éventuel, le prix et ce qui est fabriqué avant de réserver.
 
-**Pour une fabrication participative clairement décrite**, [Gwakako](https://www.gwakako.com/), autre établissement de Pointe-Noire, propose un atelier à sa plantation. Les participants prennent part à la torréfaction, à l'épluchage et au broyage, préparent leur tablette à emporter, goûtent des boissons au cacao et visitent la plantation. Compter environ 2 h 30. Ce n'est ni le même lieu ni le même billet que la Maison du Cacao.
+**Pour une fabrication participative clairement décrite**, Gwakako, autre établissement de Pointe-Noire, propose un atelier à sa plantation. Les participants prennent part à la torréfaction, à l'épluchage et au broyage, préparent leur tablette à emporter, goûtent des boissons au cacao et visitent la plantation. Compter environ 2 h 30. Ce n'est ni le même lieu ni le même billet que la Maison du Cacao.
 
 Le choix dépend donc surtout de l'envie des enfants: une découverte accessible et moins coûteuse à la Maison du Cacao, ou une activité plus longue, centrée sur les gestes de fabrication, chez Gwakako.
 
 ## Tarifs, horaires et réservation
 
-À la **Maison du Cacao**, les [tarifs affichés](https://www.maisonducacao.fr/contact) sont de 14 € à partir de 12 ans, 7 € de 3 à 11 ans et gratuit avant 3 ans. Pour deux adultes et deux enfants de 3 à 11 ans, l'entrée revient ainsi à 42 €. Une pièce d'identité peut être demandée pour justifier le tarif enfant.
+À la **Maison du Cacao**, les tarifs affichés sont de 14 € à partir de 12 ans, 7 € de 3 à 11 ans et gratuit avant 3 ans. Pour deux adultes et deux enfants de 3 à 11 ans, l'entrée revient ainsi à 42 €. Une pièce d'identité peut être demandée pour justifier le tarif enfant.
 
 L'établissement annonce une ouverture du mardi au samedi, de 9 h 30 à 13 h 30 puis de 14 h 30 à 17 h. La réservation est fortement recommandée: elle s'effectue [en ligne, avec paiement sur place](https://www.maisonducacao.fr/book-online). Le site présente une petite divergence sur la durée: une page parle d'environ une heure, tandis que les informations pratiques indiquent 1 h 30. Prévoyez plutôt 1 h 30 et confirmez l'horaire exact du départ lors de la réservation.
 
@@ -78,9 +78,32 @@ Si votre enfant a une allergie alimentaire, signalez-la à l'établissement avan
 
 Enfin, ne confondez pas les adresses: Gwakako indique expressément que son atelier se déroule **à sa plantation, route des Plaines**, et non à la Maison du Cacao. Vérifiez le lieu exact sur votre confirmation de réservation.
 
-## Affiliation et parcours du lecteur
 
-Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+## Séjourner à Pointe-Noire pour explorer la côte sous le vent
+
+Si la découverte du cacao fait partie d'un séjour en Basse-Terre, la [Villa les Gallières à Pointe-Noire, avec deux chambres climatisées, jardin et piscine](https://www.abritel.fr/location-vacances/p1735723) peut servir de base à une famille. L'annonce accepte les enfants et situe le logement à proximité des découvertes de la côte sous le vent. Vérifiez les dates, le tarif total et les conditions avant de réserver.
+
+## Lecture éditoriale
+
+Lis d'abord l'article du début à la fin comme un vrai lecteur sur téléphone.
+
+Le lecteur doit comprendre rapidement de quoi parle l'article et pourquoi le sujet peut l'intéresser. Si l'introduction part directement dans un tarif, un pass, une poussette ou un détail sans présenter le sujet, corrige-la.
+
+Supprime ce qui n'apporte rien au lecteur: répétitions, conseils évidents, raisonnements ou calculs sans utilité, paraphrases de sources et sections sans information nouvelle. Conserve en revanche les comparaisons chiffrées lorsqu'elles aident réellement à comprendre ou à choisir.
+
+Vérifie que l'angle sert l'article sans devenir l'article entier. Une micro-question utile peut être traitée dans un paragraphe, pas répétée pendant toute la page.
+
+Il ne doit y avoir aucun tableau Markdown. La lecture mobile doit rester naturelle sans défilement horizontal.
+
+La fin ne doit pas simplement répéter l'introduction ou résumer une troisième fois les mêmes choix. Supprime la conclusion si elle n'apporte rien. Un lien interne ou partenaire peut rester en fin d'article s'il propose une suite naturelle et s'il est rédigé comme un vrai conseil, pas comme une formule ajoutée par gabarit.
+
+Tu peux réorganiser, raccourcir ou reformuler sans changer le sujet lorsque cela améliore réellement l'article. Ne raccourcis pas pour raccourcir: une information utile et bien placée doit rester.
+
+## Fact-check et monétisation
+
+Après la lecture éditoriale, vérifie les faits qui peuvent réellement rendre l'article faux ou inutilisable: dates, tarifs, horaires, conditions, réservations, âges, restrictions, accessibilité et autres éléments décisifs. Utilise des sources officielles ou directement responsables. Si des sources fiables se contredisent, cherche la source la plus directement responsable ou la plus récente; si le doute subsiste, ne tranche pas arbitrairement et indique clairement l'incertitude dans l'article.
+
+Vérifie que les sources éditoriales ou factuelles réellement utilisées sont présentes dans `sources` et liées dans le corps au bon endroit lorsqu'elles ne concurrencent pas une offre partenaire. Le frontmatter `sources` ne doit jamais contenir d'URL partenaire ou affiliée: ces liens restent uniquement dans le corps de l'article. Si une offre partenaire permet l'achat ou la réservation d'une prestation payante, retire du corps les liens officiels donnant directement ou indirectement accès à la même prestation sur le site officiel, même depuis une page informative; conserve leurs URL dans `sources` lorsqu'elles étayent l'article.
 
 ### Partenaires disponibles
 
@@ -104,29 +127,19 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+Contrôle l'affiliation comme un éditeur: applique la logique d'usage du fichier partenaires, vérifie que les offres sont pertinentes, correctement placées et en français lorsqu'une version française existe. La formulation doit être naturelle et propre à cet article.
 
-Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+Pour la santé, la sécurité, les aides publiques, le droit ou les finances, utilise uniquement des sources institutionnelles compétentes pour les affirmations précises.
 
-Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
-
-Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
-
-Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
-
-Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
-
-Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
-
-Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+Ne crée pas de H1 ni de section `Sources` dans le corps. N'utilise jamais le caractère U+2014. N'ajoute pas d'espace avant `:` ou `;`.
 
 ## Résultat attendu
 
-Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
+Rends l'article complet final avec son frontmatter, sa liste `sources` et son corps. Il doit être publiable tel quel et agréable à lire du début à la fin.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 3/4
+- Phase préparée mécaniquement: 4/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -155,4 +168,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
+Indique le titre final, les coupes ou corrections importantes, les faits décisifs revérifiés, l'état final de l'affiliation et si l'article est publiable tel quel.
