@@ -357,3 +357,4 @@ automation/image-hero-20261109-0047-mini-kids-drome|1eaf776fe364fc14667fdd1d3118
 automation/image-hero-20261109-0047-mini-kids-drome|1294771200f3a30e2205a2e875e35c91b3006e8f
 automation/image-hero-20261109-0641-truffe-paris-lyon|3b45c1f786b2200dbe0e61618ae176cc46770a11
 automation/image-hero-20261109-0641-truffe-paris-lyon|9d609ccbdf190fa4c56198f133447dbe073e0d54
+automation/image-hero-20261109-1244-trois-ilets|f7715434e712f753150963c4cd356e86e5bd75c7
