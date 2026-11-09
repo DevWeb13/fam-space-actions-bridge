@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 3/3
+# Radar Fam Space - actualisation GSC
 
 ## Mission
 
@@ -8,406 +8,1119 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 3/3
-
-Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
-
-Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
-
-Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
-
-Ensuite:
-- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
-- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
-- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
-- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
-- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
-- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
-- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
-- ne force ni longueur ni affiliation.
-
-Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
-
-Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
-- `summary`: contrôles et corrections réellement effectués;
-- `sources`: URLs factuelles revérifiées;
-- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
-
-**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
-
-## Règles partenaires
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-## Candidat validé de la phase précédente
-
----
-title: "Moulin du Mont Ramus à Bessan: choisir son huile d’olive en famille"
-subtitle: De la visite guidée gratuite à la dégustation, les bons horaires et les goûts à découvrir
-summary: À Bessan, distinguez les départs de visite des horaires de boutique, préparez l’accès au moulin avec les enfants et découvrez comment choisir une huile d’olive pour vos repas.
-slug: moulin-du-mont-ramus-a-bessan-choisir-son-huile-d-olive-en-famille
-status: published
-publishedAt: 2026-10-24T23:14:34+02:00
-updatedAt: null
-category: cuisine
-readingTime: 5
-publicationOrigin: region
-location:
-  city: Bessan
-  department: Hérault
-  region: Occitanie
-topic:
-  key: cuisine|bessan|moulin-du-mont-ramus-a-bessan-choisir-son-huile-d-olive-en-famille|2026
-  keywords:
-    - Moulin du Mont Ramus
-    - huile d’olive en cuisine
-    - visite en famille en Hérault
-image:
-  src: /images/articles/2026/10/moulin-du-mont-ramus-a-bessan-choisir-son-huile-d-olive-en-famille.webp
-  alt: Pont sur l'Hérault à Bessan, vue de la commune et non du Moulin du Mont Ramus.
-sources:
-  - title: "Moulin du Mont Ramus: visite et renseignements pratiques"
-    url: https://www.moulindumontramus.fr/
-  - title: "Moulin du Mont Ramus: venir au moulin"
-    url: https://www.moulindumontramus.fr/venir-au-moulin
-  - title: "Office de tourisme Cap d’Agde Méditerranée: Le Moulin du Mont Ramus"
-    url: https://www.capdagde.com/visites-guidees/le-moulin-du-mont-ramus_1/
-  - title: "Office de tourisme: horaires de novembre à décembre 2026"
-    url: https://www.capdagde.com/fiche-sit/le-moulin-du-mont-ramus-nl/
-  - title: "Acceslibre: accessibilité du Moulin du Mont Ramus"
-    url: https://acceslibre.beta.gouv.fr/app/34-bessan/a/lieu-de-visite/erp/moulin-du-mont-ramus/
-  - title: "Bienvenue à la ferme: Moulin du Mont Ramus"
-    url: https://www.bienvenue-a-la-ferme.com/occitanie/herault/bessan/ferme/moulin-du-mont-ramus/300130
-  - title: "France Olive: L’extraction de l’huile d’olive"
-    url: https://huiles-et-olives.fr/les-produits/huiles-d-olive/extraction-huile-olive/
-  - title: "France Olive: La préparation des olives"
-    url: https://huiles-et-olives.fr/les-produits/olives/preparation/
-  - title: "France Olive: Alliances culinaires avec les huiles d’olive de France"
-    url: https://huiles-et-olives.fr/wp-content/uploads/2023/10/huiles-et-olives-Depliant-Alliances-culinaires-avec-huiles-olive-de-france.pdf
-  - title: "France Olive: Peut-on chauffer son huile d’olive?"
-    url: https://huiles-et-olives.fr/peut-on-chauffer-son-huile-dolive/
-  - title: "France Olive: Bien conserver son huile d’olive"
-    url: https://huiles-et-olives.fr/bien-conserver-son-huile-dolive/
-affiliate:
-  enabled: true
-  type: travel
-  destination: Bessan
-radar:
-  schemaVersion: 1
-  phase: 2
-  mode: refresh
-  targetPath: src/routes/articles/cuisine/(2026)/(10)/moulin-du-mont-ramus-a-bessan-choisir-son-huile-d-olive-en-famille/index.md
-  targetSha: 96aaf5e28fd79e916e2d02eea2978fc2c3ad462d
-  targetUrl: /articles/cuisine/moulin-du-mont-ramus-a-bessan-choisir-son-huile-d-olive-en-famille/
-  decision: Permettre à une famille de choisir un créneau de visite gratuit, de distinguer visite guidée et horaires de boutique, et de préparer l'accès avec de jeunes enfants.
-  affiliationPotential: Conserver l'hébergement Booking à Bessan déjà présent; aucune nouvelle offre nécessaire.
-  gsc:
-    retrievedAt: 2026-11-09T06:27:46+01:00
-    dataThrough: 2026-11-07
-    signal: uncertain
-    basis: "Visibilité récente : 36 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante."
-    peakStart: 2026-10-25
-    peakEnd: 2026-10-27
-    recentStart: 2026-11-05
-    recentEnd: 2026-11-07
-    peakImpressions: 36
-    recentImpressions: 0
-    commonQueries: 0
-    positionDelta: null
-    impressionRatio: 0
-    focusQueries:
-      - avis sur moulin du mont ramus - huiles & olives - 100% producteur
-      - moulin olive bessan
-      - oliveraie bessan
-      - moulin du mont ramus avis
-      - moulin huile d'olive bessan
----
-
-<!-- article-image-credit -->
-*Photo: [Fagairolles 34](https://commons.wikimedia.org/wiki/File:Bessan_pont.JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
-<!-- /article-image-credit -->
-
-À Bessan, dans l’Hérault, près d’Agde, le Moulin du Mont Ramus propose une découverte de l’olive depuis l’arbre jusqu’à la dégustation. La visite guidée passe par l’oliveraie, présente l’extraction de l’huile et la préparation des olives de table, puis se termine par une dégustation. De quoi comprendre en famille pourquoi deux huiles peuvent donner des goûts bien différents aux mêmes pâtes ou aux mêmes légumes.
-
-## Préparer sa visite au moulin
-
-Selon les [renseignements du moulin](https://www.moulindumontramus.fr/), **la visite est gratuite et dure de 45 minutes à une heure**. Elle se fait sans réservation, sauf pour les groupes à partir de dix personnes. Présentez-vous cinq minutes avant le départ.
-
-Les **départs des visites guidées**, du lundi au samedi, sont fixés à:
-
-- D’octobre à mars: 10 h 30, 15 h 30 et 16 h 30.
-- D’avril à septembre: 10 h, 11 h, 14 h 30, 15 h 30, 16 h 30 et 17 h 30.
-
-**Les horaires de boutique sont différents des départs de visite.** De novembre à mars, elle ouvre de **9 h 30 à 12 h 30 et de 14 h à 18 h**. En octobre, elle ferme à 18 h 30; d’avril à juin et en septembre, à 19 h (avec ouverture à 9 h 30 et pause de 12 h 30 à 14 h); en juillet et août, elle ouvre de 9 h 30 à 13 h et de 14 h à 19 h. Passer pendant l'ouverture de la boutique ne garantit donc pas une visite guidée immédiate. Ces horaires sont indiqués par le [producteur](https://www.moulindumontramus.fr/) et, pour novembre-décembre 2026, par l'[office de tourisme](https://www.capdagde.com/fiche-sit/le-moulin-du-mont-ramus-nl/).
-
-Le moulin est fermé le dimanche. **Entre mi-janvier et mi-février, faites confirmer l’ouverture au 04 67 32 04 73.** [Bienvenue à la ferme](https://www.bienvenue-a-la-ferme.com/occitanie/herault/bessan/ferme/moulin-du-mont-ramus/300130) signale une fermeture annuelle pendant cette période, que le calendrier général du moulin ne précise pas.
-
-### Accès avec des enfants
-
-Le domaine se trouve **route de Saint-Thibéry, 34550 Bessan**. Le [moulin donne un itinéraire routier depuis Agde](https://www.moulindumontramus.fr/venir-au-moulin); l'[office de tourisme](https://www.capdagde.com/visites-guidees/le-moulin-du-mont-ramus_1/) confirme un parking sur place, ainsi que des activités adaptées aux familles. Pour venir en voiture, utilisez l'adresse du domaine plutôt qu'une simple recherche du centre de Bessan.
-
-La [fiche collaborative Acceslibre](https://acceslibre.beta.gouv.fr/app/34-bessan/a/lieu-de-visite/erp/moulin-du-mont-ramus/) signale des places de stationnement adaptées, un chemin de plain-pied vers l'entrée, un accueil accessible et des toilettes adaptées. Elle indique aussi que les étages ne sont pas desservis par un ascenseur. **Ces indications ne garantissent pas que l'intégralité du parcours dans l'oliveraie soit praticable en poussette ou en fauteuil.** Avec une poussette, un fauteuil ou de jeunes enfants, demandez au moulin quelles parties de la visite sont accessibles avant de partir. Aucun trajet en transport en commun jusqu'à l'entrée n'est confirmé ici.
-
-## Une olive, deux chemins jusqu’à l’assiette
-
-<!-- article-image-body:01 -->
-
-![Lignes modernes d'extraction d'huile d'olive photographiées hors du Moulin du Mont Ramus.](/images/articles/2026/10/moulin-du-mont-ramus-a-bessan-choisir-son-huile-d-olive-en-famille-body-01.webp)
-
-*Photo: [Amenduni](https://commons.wikimedia.org/wiki/File:Modern_olive_oil_mill.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:01 -->
-
-Pour expliquer l’huile aux enfants, une question suffit: se trouve-t-elle déjà dans le fruit?
-
-Oui. Le moulin sert à l’en extraire. [France Olive décrit les étapes](https://huiles-et-olives.fr/les-produits/huiles-d-olive/extraction-huile-olive/): les olives sont débarrassées des feuilles et lavées, puis broyées entières, noyaux compris. La pâte obtenue est malaxée pour réunir les gouttelettes d’huile. On sépare ensuite l’huile de l’eau et des matières solides, notamment par centrifugation, en faisant tourner le mélange rapidement.
-
-L’olive destinée à être mangée suit un autre parcours. Fraîchement cueillie, elle est naturellement très amère, même mûre. La «désamérisation» consiste à lui retirer cette amertume. Vient aussi la préparation qui permettra sa conservation. [France Olive présente plusieurs méthodes pour les olives de table](https://huiles-et-olives.fr/les-produits/olives/preparation/), dont certaines utilisent une saumure, c’est-à-dire de l’eau salée.
-
-Voilà une question à poser au guide: comment prépare-t-on ici les olives proposées à la dégustation?
-
-## Goûter en pensant aux plats de la maison
-
-<!-- article-image-body:02 -->
-
-![Dégustation d'huile d'olive photographiée au Portugal, illustration d'une activité similaire.](/images/articles/2026/10/moulin-du-mont-ramus-a-bessan-choisir-son-huile-d-olive-en-famille-body-02.webp)
-
-*Photo: [flowcomm](https://commons.wikimedia.org/wiki/File:Olive_oil_tasting,_Portugal_(53979922996).jpg) - [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:02 -->
-
-Pendant la dégustation, demandez à comparer une huile douce et une huile plus expressive. Avec les enfants, cherchez des sensations simples: un parfum d’herbe, de l’amertume, un picotement en bouche ou dans la gorge. Ce piquant porte un nom, l’ardence.
-
-Les [alliances culinaires de France Olive](https://huiles-et-olives.fr/wp-content/uploads/2023/10/huiles-et-olives-Depliant-Alliances-culinaires-avec-huiles-olive-de-france.pdf) donnent trois repères pour passer de la dégustation à la cuisine:
-
-- **Un goût subtil**, généralement peu amer et peu ardent, accompagne les aliments délicats et les pâtisseries. Pensez à des carottes ou à un gâteau au yaourt.
-- **Un goût intense**, aux notes végétales ou herbacées, peut relever des pâtes et des légumes méditerranéens.
-- **Un goût à l’ancienne**, obtenu avec des olives maturées dans des conditions maîtrisées avant extraction, apporte notamment des notes d’olive noire et boisées. Il s’accorde avec les pommes de terre et les champignons.
-
-Ces familles décrivent des profils aromatiques. Demandez quels goûts sont représentés parmi les huiles disponibles au moulin, sans supposer que les trois y seront proposés.
-
-Pour choisir une bouteille, évoquez deux ou trois repas habituels avec la personne qui vous fait goûter. Vous pourrez ainsi chercher une huile pour votre cuisine quotidienne ou pour un usage précis.
-
-## Au four, dans la casserole ou au dernier moment?
-
-L’huile d’olive convient à la cuisson. [France Olive précise toutefois](https://huiles-et-olives.fr/peut-on-chauffer-son-huile-dolive/) qu’une cuisson longue ou à température élevée diminue ses arômes. Une huile d’olive courante peut donc servir à cuire. Pour profiter du parfum de celle que vous avez aimée à la dégustation, essayez aussi de l’ajouter en fin de préparation.
-
-Quelques essais permettent de sentir la différence:
-
-**Sur des légumes rôtis**, mélangez carottes et pommes de terre coupées avec de l’huile avant d’enfourner. Au service, ajoutez quelques gouttes de l’huile choisie au moulin sur une portion et comparez.
-
-**Dans des pâtes**, réservez un peu d’eau de cuisson avant de les égoutter. Mélangez-les avec un filet d’huile au goût intense et un peu de cette eau. Goûtez avant d’ajouter le fromage râpé pour mieux distinguer les arômes de l’huile.
-
-**Avec une purée**, répartissez quelques cuillerées dans deux petits bols et assaisonnez-les avec deux huiles différentes. Un aliment familier devient ainsi le support d’une nouvelle dégustation.
-
-Pour un autre repas à préparer ensemble, nos [recettes à faire avec les enfants après une cueillette](/articles/cuisine/apres-une-cueillette-en-eure-et-loir-5-recettes-faciles-a-faire-avec-les-enfants/) comprennent un tian de légumes à l’huile d’olive.
-
-## Acheter une quantité que l’on utilisera
-
-Adaptez le volume acheté à votre consommation. [France Olive conseille de consommer l’huile dans les trois mois après ouverture](https://huiles-et-olives.fr/bien-conserver-son-huile-dolive/) pour profiter de ses qualités aromatiques.
-
-Privilégiez un contenant opaque ou en verre foncé. Gardez-le bien fermé dans un placard, à l’abri de la lumière et des variations importantes de température. Le rangement près des plaques de cuisson est donc à éviter.
-
-## Une cuisine pour prolonger le séjour à Bessan
-
-Si vous intégrez le moulin à un week-end, [l’appartement L’Olivier à Bessan, proposé sur Booking.com](https://www.booking.com/hotel/fr/olivier-centre-village-au-calme.fr.html), peut accueillir jusqu’à quatre personnes avec deux chambres et une cuisine équipée. Vous pourrez y essayer l’huile choisie dès le dîner. Avant de réserver, vérifiez les disponibilités, les conditions d’annulation et le linge fourni. Aucun lit bébé ni lit d’appoint n’est disponible dans cet hébergement.
-
-## Article source exact à préserver et améliorer
-
-Chemin: src/routes/articles/cuisine/(2026)/(10)/moulin-du-mont-ramus-a-bessan-choisir-son-huile-d-olive-en-famille/index.md
-
----
-title: "Moulin du Mont Ramus à Bessan: choisir son huile d’olive en famille"
-subtitle: De l’oliveraie à la dégustation, des repères à rapporter dans sa cuisine
-summary: À Bessan, une visite gratuite chez le producteur pour comprendre les olives, comparer les huiles et choisir celle qui accompagnera les repas de famille.
-slug: moulin-du-mont-ramus-a-bessan-choisir-son-huile-d-olive-en-famille
-status: published
-publishedAt: 2026-10-24T23:14:34+02:00
-updatedAt: null
-category: cuisine
-readingTime: 5
-publicationOrigin: region
-location:
-  city: Bessan
-  department: Hérault
-  region: Occitanie
-topic:
-  key: cuisine|bessan|moulin-du-mont-ramus-a-bessan-choisir-son-huile-d-olive-en-famille|2026
-  keywords:
-    - Moulin du Mont Ramus
-    - huile d’olive en cuisine
-    - visite en famille en Hérault
-image:
-  src: "/images/articles/2026/10/moulin-du-mont-ramus-a-bessan-choisir-son-huile-d-olive-en-famille.webp"
-  alt: "Pont sur l'Hérault à Bessan, vue de la commune et non du Moulin du Mont Ramus."
-sources:
-  - title: "Moulin du Mont Ramus: visite et renseignements pratiques"
-    url: https://www.moulindumontramus.fr/
-  - title: "Office de tourisme Cap d’Agde Méditerranée: Le Moulin du Mont Ramus"
-    url: https://www.capdagde.com/visites-guidees/le-moulin-du-mont-ramus_1/
-  - title: "Bienvenue à la ferme: Moulin du Mont Ramus"
-    url: https://www.bienvenue-a-la-ferme.com/occitanie/herault/bessan/ferme/moulin-du-mont-ramus/300130
-  - title: "France Olive: L’extraction de l’huile d’olive"
-    url: https://huiles-et-olives.fr/les-produits/huiles-d-olive/extraction-huile-olive/
-  - title: "France Olive: La préparation des olives"
-    url: https://huiles-et-olives.fr/les-produits/olives/preparation/
-  - title: "France Olive: Alliances culinaires avec les huiles d’olive de France"
-    url: https://huiles-et-olives.fr/wp-content/uploads/2023/10/huiles-et-olives-Depliant-Alliances-culinaires-avec-huiles-olive-de-france.pdf
-  - title: "France Olive: Peut-on chauffer son huile d’olive?"
-    url: https://huiles-et-olives.fr/peut-on-chauffer-son-huile-dolive/
-  - title: "France Olive: Bien conserver son huile d’olive"
-    url: https://huiles-et-olives.fr/bien-conserver-son-huile-dolive/
-affiliate:
-  enabled: true
-  type: travel
-  destination: Bessan
----
-<!-- article-image-credit -->
-*Photo: [Fagairolles 34](https://commons.wikimedia.org/wiki/File:Bessan_pont.JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
-<!-- /article-image-credit -->
-
-À Bessan, dans l’Hérault, près d’Agde, le Moulin du Mont Ramus propose une découverte de l’olive depuis l’arbre jusqu’à la dégustation. La visite guidée passe par l’oliveraie, présente l’extraction de l’huile et la préparation des olives de table, puis se termine par une dégustation. De quoi comprendre en famille pourquoi deux huiles peuvent donner des goûts bien différents aux mêmes pâtes ou aux mêmes légumes.
-
-## Préparer sa visite au moulin
-
-Selon les [renseignements du moulin](https://www.moulindumontramus.fr/), **la visite est gratuite et dure de 45 minutes à une heure**. Elle se fait sans réservation, sauf pour les groupes à partir de dix personnes. Présentez-vous cinq minutes avant le départ.
-
-Les départs annoncés sont les suivants, du lundi au samedi:
-
-- D’octobre à mars: 10 h 30, 15 h 30 et 16 h 30.
-- D’avril à septembre: 10 h, 11 h, 14 h 30, 15 h 30, 16 h 30 et 17 h 30.
-
-Le moulin est fermé le dimanche. **Entre mi-janvier et mi-février, faites confirmer l’ouverture au 04 67 32 04 73.** [Bienvenue à la ferme](https://www.bienvenue-a-la-ferme.com/occitanie/herault/bessan/ferme/moulin-du-mont-ramus/300130) signale une fermeture annuelle pendant cette période, que le calendrier général du moulin ne précise pas.
-
-Le domaine se trouve route de Saint-Thibéry, à Bessan. L’[office de tourisme Cap d’Agde Méditerranée](https://www.capdagde.com/visites-guidees/le-moulin-du-mont-ramus_1/) indique un parking sur place et des activités adaptées aux familles.
-
-## Une olive, deux chemins jusqu’à l’assiette
-
-<!-- article-image-body:01 -->
-
-![Lignes modernes d'extraction d'huile d'olive photographiées hors du Moulin du Mont Ramus.](/images/articles/2026/10/moulin-du-mont-ramus-a-bessan-choisir-son-huile-d-olive-en-famille-body-01.webp)
-
-*Photo: [Amenduni](https://commons.wikimedia.org/wiki/File:Modern_olive_oil_mill.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:01 -->
-
-Pour expliquer l’huile aux enfants, une question suffit: se trouve-t-elle déjà dans le fruit?
-
-Oui. Le moulin sert à l’en extraire. [France Olive décrit les étapes](https://huiles-et-olives.fr/les-produits/huiles-d-olive/extraction-huile-olive/): les olives sont débarrassées des feuilles et lavées, puis broyées entières, noyaux compris. La pâte obtenue est malaxée pour réunir les gouttelettes d’huile. On sépare ensuite l’huile de l’eau et des matières solides, notamment par centrifugation, en faisant tourner le mélange rapidement.
-
-L’olive destinée à être mangée suit un autre parcours. Fraîchement cueillie, elle est naturellement très amère, même mûre. La «désamérisation» consiste à lui retirer cette amertume. Vient aussi la préparation qui permettra sa conservation. [France Olive présente plusieurs méthodes pour les olives de table](https://huiles-et-olives.fr/les-produits/olives/preparation/), dont certaines utilisent une saumure, c’est-à-dire de l’eau salée.
-
-Voilà une question à poser au guide: comment prépare-t-on ici les olives proposées à la dégustation?
-
-## Goûter en pensant aux plats de la maison
-
-<!-- article-image-body:02 -->
-
-![Dégustation d'huile d'olive photographiée au Portugal, illustration d'une activité similaire.](/images/articles/2026/10/moulin-du-mont-ramus-a-bessan-choisir-son-huile-d-olive-en-famille-body-02.webp)
-
-*Photo: [flowcomm](https://commons.wikimedia.org/wiki/File:Olive_oil_tasting,_Portugal_(53979922996).jpg) - [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:02 -->
-
-Pendant la dégustation, demandez à comparer une huile douce et une huile plus expressive. Avec les enfants, cherchez des sensations simples: un parfum d’herbe, de l’amertume, un picotement en bouche ou dans la gorge. Ce piquant porte un nom, l’ardence.
-
-Les [alliances culinaires de France Olive](https://huiles-et-olives.fr/wp-content/uploads/2023/10/huiles-et-olives-Depliant-Alliances-culinaires-avec-huiles-olive-de-france.pdf) donnent trois repères pour passer de la dégustation à la cuisine:
-
-- **Un goût subtil**, généralement peu amer et peu ardent, accompagne les aliments délicats et les pâtisseries. Pensez à des carottes ou à un gâteau au yaourt.
-- **Un goût intense**, aux notes végétales ou herbacées, peut relever des pâtes et des légumes méditerranéens.
-- **Un goût à l’ancienne**, obtenu avec des olives maturées dans des conditions maîtrisées avant extraction, apporte notamment des notes d’olive noire et boisées. Il s’accorde avec les pommes de terre et les champignons.
-
-Ces familles décrivent des profils aromatiques. Demandez quels goûts sont représentés parmi les huiles disponibles au moulin, sans supposer que les trois y seront proposés.
-
-Pour choisir une bouteille, évoquez deux ou trois repas habituels avec la personne qui vous fait goûter. Vous pourrez ainsi chercher une huile pour votre cuisine quotidienne ou pour un usage précis.
-
-## Au four, dans la casserole ou au dernier moment?
-
-L’huile d’olive convient à la cuisson. [France Olive précise toutefois](https://huiles-et-olives.fr/peut-on-chauffer-son-huile-dolive/) qu’une cuisson longue ou à température élevée diminue ses arômes. Une huile d’olive courante peut donc servir à cuire. Pour profiter du parfum de celle que vous avez aimée à la dégustation, essayez aussi de l’ajouter en fin de préparation.
-
-Quelques essais permettent de sentir la différence:
-
-**Sur des légumes rôtis**, mélangez carottes et pommes de terre coupées avec de l’huile avant d’enfourner. Au service, ajoutez quelques gouttes de l’huile choisie au moulin sur une portion et comparez.
-
-**Dans des pâtes**, réservez un peu d’eau de cuisson avant de les égoutter. Mélangez-les avec un filet d’huile au goût intense et un peu de cette eau. Goûtez avant d’ajouter le fromage râpé pour mieux distinguer les arômes de l’huile.
-
-**Avec une purée**, répartissez quelques cuillerées dans deux petits bols et assaisonnez-les avec deux huiles différentes. Un aliment familier devient ainsi le support d’une nouvelle dégustation.
-
-Pour un autre repas à préparer ensemble, nos [recettes à faire avec les enfants après une cueillette](/articles/cuisine/apres-une-cueillette-en-eure-et-loir-5-recettes-faciles-a-faire-avec-les-enfants/) comprennent un tian de légumes à l’huile d’olive.
-
-## Acheter une quantité que l’on utilisera
-
-Adaptez le volume acheté à votre consommation. [France Olive conseille de consommer l’huile dans les trois mois après ouverture](https://huiles-et-olives.fr/bien-conserver-son-huile-dolive/) pour profiter de ses qualités aromatiques.
-
-Privilégiez un contenant opaque ou en verre foncé. Gardez-le bien fermé dans un placard, à l’abri de la lumière et des variations importantes de température. Le rangement près des plaques de cuisson est donc à éviter.
-
-## Une cuisine pour prolonger le séjour à Bessan
-
-Si vous intégrez le moulin à un week-end, [l’appartement L’Olivier à Bessan, proposé sur Booking.com](https://www.booking.com/hotel/fr/olivier-centre-village-au-calme.fr.html), peut accueillir jusqu’à quatre personnes avec deux chambres et une cuisine équipée. Vous pourrez y essayer l’huile choisie dès le dîner. Avant de réserver, vérifiez les disponibilités, les conditions d’annulation et le linge fourni. Aucun lit bébé ni lit d’appoint n’est disponible dans cet hébergement.
-
-## Contexte éditorial ciblé pour le maillage et les doublons
-
-### Articles proches préparés mécaniquement
-
-- /articles/parentalite/laep-dans-l-herault-jouer-avec-son-enfant-et-rencontrer-d-autres-parents/ | LAEP dans l'Hérault: jouer avec son enfant et rencontrer d'autres parents | parentalite | Hérault, Occitanie
-- /articles/cuisine/ateliers-cuisine-a-caen-avec-des-enfants-quelle-formule-choisir/ | Bien Dans Son Assiette à Caen: quel atelier cuisine choisir avec un enfant ? | cuisine | Caen, Calvados, Normandie
-- /articles/cuisine/huile-de-noix-du-perigord-du-moulin-de-neuvic-a-la-cuisine-familiale/ | Huile de noix du Périgord: du moulin de Neuvic à la cuisine familiale | cuisine | Neuvic, Dordogne, Nouvelle-Aquitaine
-- /articles/activites/musee-parc-des-dinosaures-de-meze-en-famille-fossiles-visite-et-conseils/ | Musée-Parc des Dinosaures de Mèze en famille: fossiles, visite et conseils | activites | Mèze, Hérault, Occitanie
-- /articles/sorties/grotte-des-demoiselles-avec-des-enfants-visite-guidee-contee-ou-lanterne/ | Grotte des Demoiselles avec des enfants: visite guidée, contée ou lanterne? | sorties | Saint-Bauzille-de-Putois, Hérault, Occitanie
-- /articles/voyages/montpellier-ou-sete-sans-voiture-avec-des-enfants-ou-poser-ses-valises/ | Montpellier ou Sète sans voiture avec des enfants: où poser ses valises ? | voyages | Montpellier, Hérault, Occitanie
-- /articles/bons-plans/cantine-au-college-dans-l-herault-jusqu-a-3-60-d-aide-par-repas/ | Cantine au collège dans l'Hérault: jusqu'à 3,60 € d'aide par repas | bons-plans | Montpellier, Hérault, Occitanie
-- /articles/parentalite/maisons-des-1000-jours-dans-l-herault-ou-trouver-un-accompagnement-gratuit/ | Maisons des 1000 jours dans l'Hérault: où trouver un accompagnement gratuit | parentalite | Montpellier, Hérault, Occitanie
-- /articles/cuisine/moulin-du-mont-ramus-a-bessan-choisir-son-huile-d-olive-en-famille/ | Moulin du Mont Ramus à Bessan: choisir son huile d’olive en famille | cuisine | Bessan, Hérault, Occitanie
-- /articles/maison/reparer-ses-objets-dans-l-herault-repair-cafes-et-bonus-reparation/ | Réparer ses objets dans l’Hérault: Repair Cafés et bonus réparation | maison | Hérault, Occitanie
-- /articles/evenements/marche-de-noel-de-montpellier-2026-en-famille-dates-fermetures-et-attractions/ | Marché de Noël de Montpellier 2026 en famille: horaires, jours fermés et manèges | evenements | Montpellier, Hérault, Occitanie
-- /articles/vie-pratique/cars-lio-dans-l-herault-en-famille-billets-tram-et-poussettes/ | Cars liO dans l'Hérault en famille: billets, tram et poussettes | vie-pratique | Montpellier, Hérault, Occitanie
-- /articles/evenements/grands-zyeux-p-tites-zoreilles-2026-quelles-seances-gratuites-avec-les-tout-petits/ | Grands Zyeux P'tites Zoreilles 2026: spectacles gratuits avec les tout-petits autour de Béziers | evenements | Béziers, Hérault, Occitanie
-- /articles/evenements/abracada-bouh-2026-a-montpellier-animations-et-billets-en-famille/ | Abracada BOUH 2026 à Montpellier: programme et tarifs au château de Flaugergues | evenements | Montpellier, Hérault, Occitanie
-- /articles/evenements/coeur-de-ville-en-lumieres-2026-avec-des-enfants-comment-preparer-la-soiree-sans-voiture/ | Cœur de Ville en Lumières 2026 avec des enfants: comment préparer la soirée sans voiture? | evenements | Montpellier, Hérault, Occitanie
-- /articles/bons-plans/city-card-montpellier-en-famille-quand-est-elle-vraiment-rentable/ | City Card Montpellier en famille: quand est-elle vraiment rentable? | bons-plans | Montpellier, Hérault, Occitanie
-- /articles/cuisine/fete-de-la-truffe-2027-a-sarlat-en-famille-que-faire-et-que-gouter/ | Fête de la Truffe 2027 à Sarlat en famille: que faire et que goûter ? | cuisine | Sarlat-la-Canéda, Dordogne, Nouvelle-Aquitaine
-- /articles/cuisine/maison-du-cacao-a-pointe-noire-decouvrir-le-chocolat-en-famille/ | Maison du Cacao à Pointe-Noire: découvrir le chocolat en famille | cuisine | Pointe-Noire, Guadeloupe, Guadeloupe
-- /articles/cuisine/a-chiconi-decouvrir-la-cuisine-mahoraise-en-famille/ | À Chiconi, découvrir la cuisine mahoraise en famille | cuisine | Chiconi, Mayotte, Mayotte
-- /articles/cuisine/mogettes-de-vendee-en-famille-quatre-repas-simples-et-les-bonnes-cuissons/ | Mogettes de Vendée en famille: quatre repas simples et les bonnes cuissons | cuisine | Vendée, Pays de la Loire
-- /articles/cuisine/halles-de-tours-en-famille-un-panier-d-automne-deux-repas-simples/ | Halles de Tours en famille: un panier d’automne, deux repas simples | cuisine | Tours, Indre-et-Loire, Centre-Val de Loire
-- /articles/cuisine/ateliers-cuisine-et-patisserie-en-ardeche-avec-des-enfants-trois-adresses-selon-leur-age/ | Ateliers cuisine et pâtisserie en Ardèche avec des enfants: trois adresses selon leur âge | cuisine | Ardèche, Auvergne-Rhône-Alpes
-
-### Historique Radar lié
-
-- opportunity | /articles/evenements/abracada-bouh-2026-a-montpellier-animations-et-billets-en-famille/ | 2026-10-13T20:41:25.500Z
-- opportunity | /articles/evenements/grands-zyeux-p-tites-zoreilles-2026-quelles-seances-gratuites-avec-les-tout-petits/ | 2026-10-14T07:31:28.976Z
-- opportunity | /articles/evenements/marche-de-noel-de-montpellier-2026-en-famille-dates-fermetures-et-attractions/ | 2026-10-29T08:29:37.767Z
-
-### Phases 2 et 3
-
-Écris `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet de l'article. **N'ajoute aucun bloc `radar`.** Le script reprend mécaniquement le bloc Radar de la phase précédente et incrémente la phase.
-
-Pour un refresh, le script conserve de lui-même les champs protégés de l'article source. Pour une opportunity, il conserve la catégorie, le territoire et le slug choisis en phase 1.
-
-En phase 3 seulement, ajoute `radarReview` avec `summary`, `sources` et, pour un refresh, `regressionCheck`. Une seule correction factuelle vérifiée peut être suffisante.
-
-## Écriture autorisée
-
-N'effectue aucune plomberie Git. Ne crée, ne nomme et ne supprime aucune branche Radar; ne choisis aucun SHA; ne modifie aucun fichier de DevWeb13/fam-space-qwik.
-
-Écris uniquement radar-request.md sur la branche main de DevWeb13/fam-space-actions-bridge selon le format fourni dans ce runtime. Le workflow GitHub se charge du reste. Une fois cette requête écrite, termine le passage.
+## Snapshot GSC quotidien
+
+Le cache compact est `radar-gsc-snapshot.json` sur `main` de `DevWeb13/fam-space-actions-bridge`. Il ne contient jamais les lignes GSC brutes.
+
+Cette tâche est séparée de la sélection éditoriale. **S'il n'existe aucune branche Radar active et que le snapshot doit être renouvelé, actualise uniquement le snapshot puis termine le passage. Ne choisis pas de mission dans la même exécution.** Le passage horaire suivant effectuera la phase 1 avec le snapshot prêt.
+
+Le snapshot est réutilisable lorsqu'il a `schemaVersion: 1`, a été généré le jour courant en Europe/Paris et que `dataThrough` n'a pas plus de sept jours de retard.
+
+Lorsqu'un nouveau snapshot est nécessaire, utilise Windsor.ai avec le compte `sc-domain:fam-space.fr`, connector `searchconsole`, `include_fresh_data: false`. **Chaque appel `get_data` Search Analytics doit filtrer explicitement `search_type = web` avec `filters: [["search_type","eq","web"]]`.** Récupère 28 jours jusqu'à la dernière journée consolidée:
+
+- une lecture `date, clicks, impressions` pour déterminer la fin réelle;
+- quatre lectures consécutives de sept jours `date, page, clicks, impressions, position`;
+- appelle `buildRadarShortlist(pageRows, catalog.articles, { now, siteRows, from, history: catalog.history })` pour identifier les cinq premiers candidats. Pour chacun, récupère les requêtes de sa page exacte sur les deux fenêtres `peakStart..peakEnd` et `recentStart..recentEnd`, avec `search_type = web` (dix appels de requêtes au maximum).
+- regroupe les réponses par article : `queryPairs = [{ url, peakQueries, recentQueries }]`. Appelle ensuite **`buildRadarSnapshot(pageRows, catalog.articles, { now, siteRows, from, history: catalog.history, warnings }, queryPairs)`**, du module embarqué. Écris son résultat directement dans `radar-gsc-snapshot.json`, sans recopier les métriques manuellement.
+- pour les autres articles, le diagnostic reste `needs_query_check` avec des mesures `null`. Si une lecture échoue, signale-le sans inventer de chiffres. Ne confonds jamais « pas de donnée » et zéro.
+
+Utilise uniquement le module Radar embarqué pour présélectionner les candidats et construire le snapshot. La fonction `buildRadarSnapshot` centralise la mise en forme et le diagnostic par article. Une réponse Windsor est considérée complète lorsque `status: done`, que `data` est un tableau et que `total_rows` correspond à `data.length`, sans indicateur explicite de troncature. **Un nombre rond de lignes, notamment 1 500, n'est jamais à lui seul une preuve de plafonnement et ne doit pas arrêter Radar.** Découpe seulement la période si Windsor signale réellement une réponse incomplète/tronquée, si `total_rows` ne correspond pas au nombre de lignes reçues, ou si `unwrapRows` refuse la réponse, notamment à son seuil conservateur de 5 000 lignes par réponse. Un 429, un refus d'accès ou un plafond réellement non résolu termine le passage. Maximum 50 appels `get_data`. Les réponses brutes restent temporaires.
+
+Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlist `refresh` avec ses diagnostics compacts, `strongPages`, `excluded` et les avertissements utiles.
+
+## Snapshot actuellement disponible
+
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-09T06:27:46+01:00",
+  "dataThrough": "2026-11-07",
+  "from": "2026-10-11",
+  "refresh": [
+    {
+      "url": "/articles/parentalite/ludotheques-du-grand-nancy-ou-jouer-en-famille-et-emprunter-des-jeux/",
+      "title": "Ludothèques du Grand Nancy: où jouer en famille et emprunter des jeux",
+      "category": "parentalite",
+      "publishedAt": "2026-10-31T03:46:28+01:00",
+      "location": {
+        "city": "",
+        "department": "Meurthe-et-Moselle",
+        "region": "Grand Est"
+      },
+      "ageDays": 9,
+      "rapidDrop": true,
+      "peakStart": "2026-11-02",
+      "peakEnd": "2026-11-04",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 107,
+      "recentImpressions": 3,
+      "score": 312,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 107 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0.055,
+      "focusQueries": [
+        "ludothèque nancy",
+        "ludothèque",
+        "ludothèque villers les nancy",
+        "ludotheque",
+        "ludothèque vandoeuvre les nancy"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/centre-spatial-guyanais-a-kourou-3-experiences-gratuites-et-un-musee-en-famille/",
+      "title": "Centre spatial guyanais à Kourou: 3 expériences gratuites et un musée en famille",
+      "category": "bons-plans",
+      "publishedAt": "2026-10-12T21:37:05+02:00",
+      "location": {
+        "city": "Kourou",
+        "department": "Guyane",
+        "region": "Guyane"
+      },
+      "ageDays": 28,
+      "rapidDrop": true,
+      "peakStart": "2026-10-28",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 87,
+      "recentImpressions": 15,
+      "score": 216,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 87 impressions sur trois jours, puis 15 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0.3,
+      "focusQueries": [
+        "billets pour guyaspace expérience (ex-musée de l'espace)",
+        "centre spatial guyanais visite",
+        "qual a taxa?",
+        "visite centre spatial kourou tarif",
+        "visiter centre spatial kourou"
+      ]
+    },
+    {
+      "url": "/articles/parentalite/maison-des-parents-aux-pennes-mirabeau-ateliers-gratuits-et-accueil-des-familles/",
+      "title": "Maison des Parents aux Pennes-Mirabeau: ateliers gratuits et accueil des familles",
+      "category": "parentalite",
+      "publishedAt": "2026-10-16T14:09:03+02:00",
+      "location": {
+        "city": "Les Pennes-Mirabeau",
+        "department": "Bouches-du-Rhône",
+        "region": "Provence-Alpes-Côte d’Azur"
+      },
+      "ageDays": 24,
+      "rapidDrop": true,
+      "peakStart": "2026-10-18",
+      "peakEnd": "2026-10-20",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 50,
+      "recentImpressions": 10,
+      "score": 120,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 50 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0.042,
+      "focusQueries": [
+        "espace famille les pennes mirabeau",
+        "espace famille les pennes-mirabeau",
+        "crèche les pennes mirabeau",
+        "espace famille pennes mirabeau",
+        "oui les 2"
+      ]
+    },
+    {
+      "url": "/articles/activites/snowworld-amneville-en-famille-luge-bouees-ou-ski/",
+      "title": "SnowWorld Amnéville en famille: luge, bouées ou ski ?",
+      "category": "activites",
+      "publishedAt": "2026-11-01T00:58:13+01:00",
+      "location": {
+        "city": "Amnéville",
+        "department": "Moselle",
+        "region": "Grand Est"
+      },
+      "ageDays": 8,
+      "rapidDrop": true,
+      "peakStart": "2026-11-02",
+      "peakEnd": "2026-11-04",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 47,
+      "recentImpressions": 10,
+      "score": 111,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 47 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0.091,
+      "focusQueries": [
+        "luge amneville",
+        "snow hall amnéville",
+        "esf amneville",
+        "ski amneville prix",
+        "snowhall tarif"
+      ]
+    },
+    {
+      "url": "/articles/cuisine/moulin-du-mont-ramus-a-bessan-choisir-son-huile-d-olive-en-famille/",
+      "title": "Moulin du Mont Ramus à Bessan: choisir son huile d’olive en famille",
+      "category": "cuisine",
+      "publishedAt": "2026-10-24T23:14:34+02:00",
+      "location": {
+        "city": "Bessan",
+        "department": "Hérault",
+        "region": "Occitanie"
+      },
+      "ageDays": 16,
+      "rapidDrop": true,
+      "peakStart": "2026-10-25",
+      "peakEnd": "2026-10-27",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 36,
+      "recentImpressions": 0,
+      "score": 108,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 36 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "avis sur moulin du mont ramus - huiles & olives - 100% producteur",
+        "moulin olive bessan",
+        "oliveraie bessan",
+        "moulin du mont ramus avis",
+        "moulin huile d'olive bessan"
+      ]
+    },
+    {
+      "url": "/articles/parentalite/laep-a-rennes-ou-jouer-gratuitement-avec-son-enfant/",
+      "title": "LAEP à Rennes: où jouer gratuitement avec son enfant?",
+      "category": "parentalite",
+      "publishedAt": "2026-10-20T16:09:21+02:00",
+      "location": {
+        "city": "Rennes",
+        "department": "Ille-et-Vilaine",
+        "region": "Bretagne"
+      },
+      "ageDays": 20,
+      "rapidDrop": true,
+      "peakStart": "2026-10-21",
+      "peakEnd": "2026-10-23",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 38,
+      "recentImpressions": 2,
+      "score": 108,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 38 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "LAEP Rennes",
+        "lieu accueil enfants parents Rennes",
+        "sorties gratuites tout-petits Rennes"
+      ]
+    },
+    {
+      "url": "/articles/voyages/disneyland-paris-en-rer-a-avec-des-enfants-trajet-et-tickets-en-2026/",
+      "title": "Disneyland Paris en RER A avec des enfants: trajet et tarifs 2026",
+      "category": "voyages",
+      "publishedAt": "2026-10-31T04:29:30.562Z",
+      "location": {
+        "city": "Chessy",
+        "department": "Seine-et-Marne",
+        "region": "Île-de-France"
+      },
+      "ageDays": 9,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 35,
+      "recentImpressions": 1,
+      "score": 102,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 35 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "RER A Disneyland Paris enfants",
+        "ticket RER Paris Disneyland 2026",
+        "Marne-la-Vallée Chessy en famille"
+      ]
+    },
+    {
+      "url": "/articles/activites/grottes-de-thouzon-avec-des-enfants-preparer-la-visite-sous-terre/",
+      "title": "Grottes de Thouzon avec des enfants: préparer la visite sous terre",
+      "category": "activites",
+      "publishedAt": "2026-10-04T19:20:54+02:00",
+      "location": {
+        "city": "Le Thor",
+        "department": "Vaucluse",
+        "region": "Provence-Alpes-Côte d’Azur"
+      },
+      "ageDays": 36,
+      "rapidDrop": true,
+      "peakStart": "2026-10-23",
+      "peakEnd": "2026-10-25",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 35,
+      "recentImpressions": 5,
+      "score": 90,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 35 impressions sur trois jours, puis 5 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Grottes de Thouzon enfants",
+        "Grottes de Thouzon famille"
+      ]
+    },
+    {
+      "url": "/articles/parentalite/ludotheque-du-choletais-jouer-sur-place-et-emprunter-en-famille/",
+      "title": "Ludothèque du Choletais: jouer sur place et emprunter en famille",
+      "category": "parentalite",
+      "publishedAt": "2026-10-25T02:35:14+02:00",
+      "location": {
+        "city": "Cholet",
+        "department": "Maine-et-Loire",
+        "region": "Pays de la Loire"
+      },
+      "ageDays": 15,
+      "rapidDrop": true,
+      "peakStart": "2026-10-28",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 28,
+      "recentImpressions": 0,
+      "score": 84,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 28 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "ludothèque du Choletais",
+        "jeux en famille à Cholet",
+        "emprunter des jeux"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/colmar-avec-des-enfants-quand-il-pleut-quel-musee-choisir/",
+      "title": "Colmar avec des enfants quand il pleut: quel musée choisir ?",
+      "category": "vie-pratique",
+      "publishedAt": "2026-10-19T21:12:31+02:00",
+      "location": {
+        "city": "Colmar",
+        "department": "Haut-Rhin",
+        "region": "Grand Est"
+      },
+      "ageDays": 21,
+      "rapidDrop": true,
+      "peakStart": "2026-10-21",
+      "peakEnd": "2026-10-23",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 40,
+      "recentImpressions": 12,
+      "score": 84,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 40 impressions sur trois jours, puis 12 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Colmar en famille quand il pleut",
+        "musées Colmar enfants tarifs"
+      ]
+    },
+    {
+      "url": "/articles/activites/lac-du-bouchet-en-famille-tour-du-lac-baignade-et-activites/",
+      "title": "Lac du Bouchet en famille: tour du lac, baignade et activités",
+      "category": "activites",
+      "publishedAt": "2026-10-24T14:58:55+02:00",
+      "location": {
+        "city": "Cayres",
+        "department": "Haute-Loire",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "ageDays": 16,
+      "rapidDrop": true,
+      "peakStart": "2026-10-25",
+      "peakEnd": "2026-10-27",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 30,
+      "recentImpressions": 3,
+      "score": 81,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 30 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "lac du Bouchet en famille",
+        "tour du lac du Bouchet",
+        "lac du Bouchet poussette",
+        "baignade lac du Bouchet"
+      ]
+    },
+    {
+      "url": "/articles/activites/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives/",
+      "title": "Palais idéal du facteur Cheval en famille: visite et conseils à Hauterives",
+      "category": "activites",
+      "publishedAt": "2026-10-27T02:02:18+01:00",
+      "location": {
+        "city": "Hauterives",
+        "department": "Drôme",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "ageDays": 13,
+      "rapidDrop": true,
+      "peakStart": "2026-10-28",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 29,
+      "recentImpressions": 2,
+      "score": 81,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 29 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Palais idéal du facteur Cheval en famille",
+        "visiter le Palais idéal avec des enfants",
+        "Hauterives Drôme sortie famille"
+      ]
+    },
+    {
+      "url": "/articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/",
+      "title": "Paris avec une poussette: métro, RER, bus ou tram, que choisir ?",
+      "category": "voyages",
+      "publishedAt": "2026-10-28T12:27:07.504Z",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 12,
+      "rapidDrop": true,
+      "peakStart": "2026-10-29",
+      "peakEnd": "2026-10-31",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 26,
+      "recentImpressions": 0,
+      "score": 78,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 26 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "métro Paris poussette ascenseur",
+        "RER Paris avec poussette",
+        "bus Paris poussette dépliée",
+        "itinéraire accessible poussette Paris"
+      ]
+    },
+    {
+      "url": "/articles/voyages/banyuls-sur-mer-en-famille-aquarium-et-balade-hors-saison/",
+      "title": "Banyuls-sur-Mer en famille: aquarium et balade hors saison",
+      "category": "voyages",
+      "publishedAt": "2026-10-21T18:13:04+02:00",
+      "location": {
+        "city": "Banyuls-sur-Mer",
+        "department": "Pyrénées-Orientales",
+        "region": "Occitanie"
+      },
+      "ageDays": 19,
+      "rapidDrop": true,
+      "peakStart": "2026-10-22",
+      "peakEnd": "2026-10-24",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 25,
+      "recentImpressions": 0,
+      "score": 75,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 25 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Banyuls-sur-Mer en famille",
+        "aquarium Biodiversarium",
+        "Côte Vermeille hors saison"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites/",
+      "title": "Pass Nantes en famille en 2026: tarifs, visites incluses et alternatives gratuites",
+      "category": "bons-plans",
+      "publishedAt": "2026-10-27T17:17:43+01:00",
+      "location": {
+        "city": "Nantes",
+        "department": "Loire-Atlantique",
+        "region": "Pays de la Loire"
+      },
+      "ageDays": 13,
+      "rapidDrop": true,
+      "peakStart": "2026-10-29",
+      "peakEnd": "2026-10-31",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 24,
+      "recentImpressions": 0,
+      "score": 72,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 24 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Pass Nantes en famille 2026",
+        "Pass Nantes tarifs famille",
+        "Pass Nantes visites incluses",
+        "visiter Nantes avec enfants pas cher"
+      ]
+    }
+  ],
+  "strongPages": [
+    {
+      "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
+      "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
+      "category": "evenements",
+      "recentImpressions": 228,
+      "recentClicks": 13,
+      "recentPosition": 6.421,
+      "retention": 3.864
+    },
+    {
+      "url": "/articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/",
+      "title": "Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille",
+      "category": "evenements",
+      "recentImpressions": 176,
+      "recentClicks": 7,
+      "recentPosition": 8.102,
+      "retention": 1.586
+    },
+    {
+      "url": "/articles/evenements/alfest-2026-a-annecy-en-famille-horaires-jeux-et-braderie/",
+      "title": "ALFest 2026 à Annecy en famille: horaires, jeux et braderie",
+      "category": "evenements",
+      "recentImpressions": 39,
+      "recentClicks": 4,
+      "recentPosition": 4.821,
+      "retention": 1.219
+    },
+    {
+      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
+      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
+      "category": "vie-pratique",
+      "recentImpressions": 224,
+      "recentClicks": 3,
+      "recentPosition": 5.312,
+      "retention": 2.113
+    },
+    {
+      "url": "/articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/",
+      "title": "Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers",
+      "category": "vie-pratique",
+      "recentImpressions": 143,
+      "recentClicks": 3,
+      "recentPosition": 5.168,
+      "retention": 2.043
+    },
+    {
+      "url": "/articles/evenements/foire-de-dijon-2026-en-famille-dates-ateliers-animaux-et-gratuites/",
+      "title": "Foire de Dijon 2026 avec les enfants: gratuités, ateliers et Ferme Côte-d'Or",
+      "category": "evenements",
+      "recentImpressions": 78,
+      "recentClicks": 3,
+      "recentPosition": 6.654,
+      "retention": 2.053
+    },
+    {
+      "url": "/articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/",
+      "title": "Soleils d'hiver 2026 à Angers en famille: marché, manèges et Père Noël",
+      "category": "evenements",
+      "recentImpressions": 65,
+      "recentClicks": 3,
+      "recentPosition": 6.462,
+      "retention": 0.657
+    },
+    {
+      "url": "/articles/evenements/festival-du-livre-de-colmar-2026-en-famille-dates-ateliers-et-acces/",
+      "title": "Festival du Livre de Colmar 2026 en famille: dates, horaires et animations jeunesse",
+      "category": "evenements",
+      "recentImpressions": 55,
+      "recentClicks": 3,
+      "recentPosition": 7.145,
+      "retention": 0.902
+    },
+    {
+      "url": "/articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/",
+      "title": "Noël à Pau 2026 en famille: marchés, village et illuminations",
+      "category": "evenements",
+      "recentImpressions": 44,
+      "recentClicks": 3,
+      "recentPosition": 6.5,
+      "retention": 0.55
+    },
+    {
+      "url": "/articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/",
+      "title": "Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates",
+      "category": "evenements",
+      "recentImpressions": 130,
+      "recentClicks": 2,
+      "recentPosition": 9.754,
+      "retention": 0.58
+    }
+  ],
+  "excluded": {
+    "expired": 173,
+    "cooling": 20
+  },
+  "warnings": [
+    "GSC recherche web : 9953 lignes sur quatre semaines, réponses complètes (1984, 2395, 2788, 2786).",
+    "Catalogue Radar : 1003 articles et 200 entrées d'historique.",
+    "Diagnostics par requêtes réalisés pour 5 articles.",
+    "Diagnostics par requêtes : 5/5.",
+    "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement."
+  ]
+}
+
+## Module Radar embarqué
+
+Le code ci-dessous est fourni directement pour les calculs Radar nécessaires à ce passage. Ne va pas le relire dans un autre fichier.
+
+```javascript
+// Pure JavaScript: usable in Node or a connector orchestration runtime.
+const DAY = 86400000;
+const dayNumber = (date) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date ?? ""))
+    throw new Error("Date GSC invalide.");
+  const value = Date.parse(`${date}T00:00:00Z`);
+  if (
+    !Number.isFinite(value) ||
+    new Date(value).toISOString().slice(0, 10) !== date
+  )
+    throw new Error("Date GSC invalide.");
+  return value / DAY;
+};
+const isoDay = (value) => new Date(value * DAY).toISOString().slice(0, 10);
+const round = (value) => Math.round(value * 1000) / 1000;
+export function unwrapRows(response) {
+  const value = response?.structuredContent ?? response;
+  if (response?.isError || (value.status && value.status !== "done"))
+    throw new Error("GSC indisponible ou traitement incomplet.");
+  const rows = Array.isArray(value) ? value : value.data;
+  if (
+    !Array.isArray(rows) ||
+    value.truncated === true ||
+    value.has_more === true ||
+    (value.total_rows !== undefined && value.total_rows !== rows.length)
+  )
+    throw new Error("Réponse GSC absente ou tronquée.");
+  // Conservative per-response threshold, not a claimed Windsor plan limit.
+  // Concatenated arrays are allowed after each response has been checked.
+  if (!Array.isArray(value) && rows.length >= 5000)
+    throw new Error(
+      "Réponse GSC potentiellement plafonnée; découper la période.",
+    );
+  if (rows.some((row) => row.search_type && row.search_type !== "web"))
+    throw new Error(
+      "Le périmètre Radar doit contenir seulement la recherche web.",
+    );
+  return rows;
+}
+export function canonicalPage(value) {
+  // Some connector runtimes do not expose the URL global.
+  if (typeof value !== "string") return undefined;
+  const path = value.replace(/^https?:\/\/(?:www\.)?fam-space\.fr(?=\/)/i, "");
+  if (!/^\/articles\/[^/?#]+\/[^/?#]+\/$/.test(path)) return undefined;
+  if (path.split("/").some((part) => part === "." || part === ".."))
+    return undefined;
+  return path;
+}
+const metric = (row, name) => {
+  const value = Number(row[name]);
+  if (
+    row[name] === null ||
+    row[name] === undefined ||
+    !Number.isFinite(value) ||
+    value < 0
+  )
+    throw new Error(`Métrique GSC invalide: ${name}.`);
+  return value;
+};
+function addMetric(target, row) {
+  const impressions = metric(row, "impressions");
+  target.impressions += impressions;
+  target.clicks += metric(row, "clicks");
+  target.positionSum += impressions ? metric(row, "position") * impressions : 0;
+}
+const empty = () => ({ impressions: 0, clicks: 0, positionSum: 0 });
+const view = (sum, days = 7) => ({
+  impressions: round(sum.impressions),
+  clicks: round(sum.clicks),
+  impressionsPerDay: round(sum.impressions / days),
+  position: sum.impressions ? round(sum.positionSum / sum.impressions) : null,
+});
+function windowSum(days, start, end) {
+  const result = empty();
+  for (let date = start; date <= end; date++) {
+    const row = days.get(date);
+    if (row) for (const key of Object.keys(result)) result[key] += row[key];
+  }
+  return result;
+}
+export function buildRadarShortlist(
+  response,
+  catalog,
+  {
+    now = new Date().toISOString(),
+    siteRows,
+    from,
+    limit = 15,
+    history = [],
+  } = {},
+) {
+  const rows = unwrapRows(response);
+  const site = siteRows ? unwrapRows(siteRows) : rows;
+  if (!site.length)
+    throw new Error("GSC ne retourne aucune journée consolidée.");
+  const siteDays = site.map((row) => dayNumber(row.date));
+  const end = siteDays.reduce((max, date) => Math.max(max, date), -Infinity);
+  const observedStart = siteDays.reduce(
+    (min, date) => Math.min(min, date),
+    Infinity,
+  );
+  const today = dayNumber(now.slice(0, 10));
+  if (end > today || today - end > 7)
+    throw new Error(
+      "Données GSC trop anciennes ou datées dans le futur; aucun export historique de secours.",
+    );
+  // Never create comparison weeks before the first observed site day.
+  const start = from ? Math.max(dayNumber(from), observedStart) : observedStart;
+  if (!Number.isFinite(start) || end - start < 13)
+    throw new Error("Au moins 14 jours GSC sont nécessaires.");
+  const byPage = new Map();
+  for (const row of rows) {
+    const page = canonicalPage(row.page),
+      date = dayNumber(row.date);
+    if (!page || date < start || date > end) continue;
+    if (!byPage.has(page)) byPage.set(page, new Map());
+    const days = byPage.get(page);
+    if (!days.has(date)) days.set(date, empty());
+    addMetric(days.get(date), row);
+  }
+  const entries = [];
+  for (const article of catalog) {
+    const page = canonicalPage(article.url);
+    if (
+      !page ||
+      article.status === "draft" ||
+      Date.parse(article.publishedAt) > Date.parse(now)
+    )
+      continue;
+    const days = byPage.get(page) ?? new Map();
+    const publishedDay = dayNumber(article.publishedAt.slice(0, 10));
+    const firstDay = Math.max(start, publishedDay);
+    // Three days of growth followed by three consolidated days of decline
+    // can be detected before a new page has two full GSC weeks.
+    if (end - firstDay < 5) continue;
+    const recent = windowSum(days, end - 6, end);
+    const recent3 = windowSum(days, end - 2, end);
+    let peak3 = empty(), peak3Start = firstDay;
+    for (let first = firstDay; first + 2 < end - 2; first++) {
+      const sum = windowSum(days, first, first + 2);
+      if (sum.impressions > peak3.impressions) {
+        peak3 = sum;
+        peak3Start = first;
+      }
+    }
+    let peak7 = empty(), peak7Start = firstDay;
+    if (end - firstDay >= 13) {
+      for (let first = firstDay; first + 6 < end - 6; first++) {
+        const sum = windowSum(days, first, first + 6);
+        if (sum.impressions > peak7.impressions) {
+          peak7 = sum;
+          peak7Start = first;
+        }
+      }
+    }
+    const total = windowSum(days, firstDay, end);
+    const expired = Boolean(
+      article.eventEndsAt && article.eventEndsAt < now.slice(0, 10),
+    );
+    const reviewDue = Boolean(
+      article.reviewAt && article.reviewAt <= now.slice(0, 10),
+    );
+    const lastRefresh = history
+      .filter((item) => item.url === page && item.mode === "refresh")
+      .map((item) => item.publishedAt)
+      .sort()
+      .at(-1);
+    const cooling = Boolean(
+      lastRefresh && Date.parse(now) - Date.parse(lastRefresh) < 14 * DAY,
+    );
+    const ageDays = today - publishedDay;
+    const firstVisible = [...days]
+      .filter(([date, values]) => date >= firstDay && values.impressions > 0)
+      .map(([date]) => date)
+      .sort((a, b) => a - b)[0];
+    const newlyVisible =
+      ageDays <= 30 ||
+      (firstVisible !== undefined && firstVisible > start && end - firstVisible <= 21);
+    const rapidDrop =
+      newlyVisible &&
+      peak3.impressions >= 20 &&
+      peak3.impressions - recent3.impressions >= 15 &&
+      recent3.impressions <= peak3.impressions * 0.35;
+    const weeklyDecline = end - firstDay >= 13
+      ? Math.max(0, peak7.impressions - recent.impressions) *
+        Math.min(1, peak7.impressions / 35) *
+        Math.min(1, total.impressions / 50)
+      : 0;
+    const rapidScore = rapidDrop ? (peak3.impressions - recent3.impressions) * 3 : 0;
+    const recentPosition = recent.impressions
+      ? recent.positionSum / recent.impressions
+      : null;
+    const clickPotentialScore =
+      end - firstDay >= 13 && recentPosition !== null && recentPosition <= 10
+        ? Math.max(0, recent.impressions * 0.01 - recent.clicks) * 10
+        : 0;
+    const searchPotential =
+      !rapidDrop && clickPotentialScore > weeklyDecline && clickPotentialScore > 0;
+    const score =
+      expired || cooling
+        ? 0
+        : Math.max(rapidScore, weeklyDecline, clickPotentialScore) +
+          (reviewDue ? 35 : 0);
+    // Recent pages must use available, non-overlapping three-day windows.
+    const shortWindow = rapidDrop || end - firstDay < 13;
+    const peak = shortWindow ? peak3 : peak7;
+    const peakStart = shortWindow ? peak3Start : peak7Start;
+    const peakDays = shortWindow ? 3 : 7;
+    const comparedRecent = shortWindow ? recent3 : recent;
+    const comparedRecentStart = shortWindow ? end - 2 : end - 6;
+    const retention = peak.impressions
+      ? comparedRecent.impressions / peak.impressions
+      : 1;
+    entries.push({
+      url: page,
+      title: article.title,
+      category: article.category,
+      location: article.location,
+      keywords: article.keywords ?? article.topic?.keywords ?? [],
+      publishedAt: article.publishedAt,
+      eventEndsAt: article.eventEndsAt,
+      reviewAt: article.reviewAt,
+      expired,
+      cooling,
+      reviewDue,
+      ageDays,
+      rapidDrop,
+      peakStart: isoDay(peakStart),
+      peakEnd: isoDay(peakStart + peakDays - 1),
+      recentStart: isoDay(comparedRecentStart),
+      recentEnd: isoDay(end),
+      peak: view(peak, peakDays),
+      recent: view(comparedRecent, peakDays),
+      retention: round(retention),
+      score: round(score),
+      signal: searchPotential ? "search_potential" : "needs_query_check",
+      basis: rapidDrop
+        ? `Visibilité récente : ${round(peak3.impressions)} impressions sur trois jours, puis ${round(recent3.impressions)} sur les trois derniers jours consolidés; cause non établie.`
+        : "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      ...(searchPotential
+        ? {
+            basis: `Page visible avec ${round(recent.impressions)} impressions, ${round(recent.clicks)} clics et une position moyenne de ${round(recentPosition)} sur sept jours; intention de recherche à examiner.`,
+            commonQueries: null,
+            positionDelta: null,
+            impressionRatio: null,
+            focusQueries: (Array.isArray(article.keywords)
+              ? article.keywords
+              : Array.isArray(article.topic?.keywords)
+                ? article.topic.keywords
+                : []
+            ).slice(0, 5),
+          }
+        : {}),
+    });
+  }
+  return {
+    schemaVersion: 1,
+    retrievedAt: now,
+    dataThrough: isoDay(end),
+    from: isoDay(start),
+    caveat:
+      "Les lignes absentes valent zéro dans les données retournées. GSC peut masquer des requêtes; les signaux ne prouvent ni désindexation ni causalité.",
+    refresh: entries
+      .filter((item) => item.score > 0)
+      .sort((a, b) =>
+        Number(b.rapidDrop && b.category !== "evenements") -
+          Number(a.rapidDrop && a.category !== "evenements") ||
+        Number(b.rapidDrop) - Number(a.rapidDrop) ||
+        b.score - a.score ||
+        a.url.localeCompare(b.url))
+      .slice(0, limit),
+    strongPages: entries
+      .filter(
+        (item) =>
+          !item.expired &&
+          item.recent.impressions >= 35 &&
+          item.retention >= 0.5,
+      )
+      .sort(
+        (a, b) =>
+          b.recent.clicks - a.recent.clicks ||
+          b.recent.impressions - a.recent.impressions ||
+          a.url.localeCompare(b.url),
+      )
+      .slice(0, 10),
+    excluded: {
+      expired: entries.filter((item) => item.expired).length,
+      cooling: entries.filter((item) => item.cooling).length,
+    },
+  };
+}
+export function diagnoseQueries(peakResponse, recentResponse) {
+  const aggregate = (response) => {
+    const result = new Map();
+    for (const row of unwrapRows(response)) {
+      if (typeof row.query !== "string")
+        throw new Error("Requête GSC manquante.");
+      if (!result.has(row.query)) result.set(row.query, empty());
+      addMetric(result.get(row.query), row);
+    }
+    return result;
+  };
+  const peak = aggregate(peakResponse),
+    recent = aggregate(recentResponse);
+  const common = [...peak.keys()].filter(
+    (query) =>
+      peak.get(query).impressions >= 10 &&
+      (recent.get(query)?.impressions ?? 0) >= 3,
+  );
+  let weight = 0,
+    change = 0;
+  for (const query of common) {
+    const first = peak.get(query),
+      last = recent.get(query);
+    const w = Math.min(first.impressions, last.impressions);
+    weight += w;
+    change +=
+      w *
+      (last.positionSum / last.impressions -
+        first.positionSum / first.impressions);
+  }
+  const delta = weight ? change / weight : null;
+  const total = (values) =>
+    [...values.values()].reduce((sum, item) => sum + item.impressions, 0);
+  const ratio = total(peak) ? total(recent) / total(peak) : null;
+  return {
+    signal:
+      delta !== null && delta >= 3
+        ? "rank_loss"
+        : delta !== null &&
+            Math.abs(delta) <= 2 &&
+            ratio !== null &&
+            ratio <= 0.25
+          ? "coverage_loss"
+          : "uncertain",
+    commonQueries: common.length,
+    positionDelta: delta === null ? null : round(delta),
+    impressionRatio: ratio === null ? null : round(ratio),
+    queries: [...new Set([...peak.keys(), ...recent.keys()])]
+      .map((query) => ({
+        query,
+        peak: view(peak.get(query) ?? empty()),
+        recent: view(recent.get(query) ?? empty()),
+      }))
+      .sort((a, b) => b.peak.impressions - a.peak.impressions),
+    caveat:
+      "coverage_loss désigne une baisse d'exposition observée, pas une preuve de désindexation. Les requêtes masquées et la saisonnalité limitent le diagnostic.",
+  };
+}
+// The shortlist ranks pages; only per-page query rows can establish a diagnosis.
+export function attachRadarQueryDiagnosis(item, peakResponse, recentResponse) {
+  const diagnosis = diagnoseQueries(peakResponse, recentResponse);
+  const signal =
+    item.signal === "search_potential" && diagnosis.signal === "uncertain"
+      ? "search_potential"
+      : diagnosis.signal;
+  const priority = (query) => {
+    const lostImpressions = Math.max(0, query.peak.impressions - query.recent.impressions);
+    const lostPositions =
+      query.peak.position !== null && query.recent.position !== null
+        ? Math.max(0, query.recent.position - query.peak.position)
+        : 0;
+    if (signal === "rank_loss")
+      return query.peak.impressions >= 10 && query.recent.impressions >= 3
+        ? lostPositions * Math.min(query.peak.impressions, query.recent.impressions)
+        : 0;
+    if (signal === "search_potential") return query.recent.impressions;
+    return lostImpressions;
+  };
+  const relevantQueries = diagnosis.queries
+    .filter((query) => signal !== "rank_loss" || priority(query) > 0)
+    .sort((a, b) => priority(b) - priority(a) || b.peak.impressions - a.peak.impressions)
+    .slice(0, 5)
+    .map(({ query }) => query);
+  const basis =
+    item.basis + " " +
+    (signal === "rank_loss"
+      ? `Recul moyen de ${diagnosis.positionDelta} positions sur ${diagnosis.commonQueries} requête(s) comparable(s).`
+      : signal === "coverage_loss"
+        ? `Baisse d'exposition sur les requêtes visibles (ratio ${diagnosis.impressionRatio}), sans recul de classement comparable établi.`
+        : signal === "search_potential"
+          ? "Les requêtes visibles ne démontrent pas une perte de classement."
+          : `Diagnostic sur ${diagnosis.commonQueries} requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.`);
+  return {
+    ...item,
+    signal,
+    basis,
+    commonQueries: diagnosis.commonQueries,
+    positionDelta: diagnosis.positionDelta,
+    impressionRatio: diagnosis.impressionRatio,
+    focusQueries: relevantQueries.length ? relevantQueries : item.focusQueries ?? [],
+  };
+}
+
+
+/** Prepare one compact snapshot from one shortlist and per-page query responses. */
+export function buildRadarSnapshot(pageRows, catalog, options = {}, queryPairs = []) {
+  const shortlist = buildRadarShortlist(pageRows, catalog, options);
+  const pairs = new Map(queryPairs.map((pair) => [canonicalPage(pair.url), pair]));
+  const refresh = shortlist.refresh.map((candidate, index) => {
+    const pair = index < 5 ? pairs.get(candidate.url) : undefined;
+    const item = pair
+      ? attachRadarQueryDiagnosis(candidate, pair.peakQueries, pair.recentQueries)
+      : candidate;
+    return {
+      url: item.url,
+      title: item.title,
+      category: item.category,
+      publishedAt: item.publishedAt,
+      location: item.location,
+      ageDays: item.ageDays,
+      rapidDrop: item.rapidDrop,
+      peakStart: item.peakStart,
+      peakEnd: item.peakEnd,
+      recentStart: item.recentStart,
+      recentEnd: item.recentEnd,
+      peakImpressions: item.peak.impressions,
+      recentImpressions: item.recent.impressions,
+      score: item.score,
+      signal: item.signal,
+      basis: item.basis,
+      commonQueries: item.commonQueries ?? null,
+      positionDelta: item.positionDelta ?? null,
+      impressionRatio: item.impressionRatio ?? null,
+      focusQueries: item.focusQueries ?? item.keywords.slice(0, 5),
+    };
+  });
+  return {
+    schemaVersion: 1,
+    generatedAt: options.now ?? new Date().toISOString(),
+    dataThrough: shortlist.dataThrough,
+    from: shortlist.from,
+    refresh,
+    strongPages: shortlist.strongPages.map((item) => ({
+      url: item.url,
+      title: item.title,
+      category: item.category,
+      recentImpressions: item.recent.impressions,
+      recentClicks: item.recent.clicks,
+      recentPosition: item.recent.position,
+      retention: item.retention,
+    })),
+    excluded: shortlist.excluded,
+    warnings: [
+      ...(options.warnings ?? []),
+      `Diagnostics par requêtes : ${refresh.slice(0, 5).filter((item) => item.signal !== "needs_query_check" && item.commonQueries !== null).length}/${Math.min(5, refresh.length)}.`,
+      "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement.",
+    ],
+  };
+}
+
+const STOP = new Set(
+  "avec pour dans sans famille familles enfant enfants tarif tarifs duree conseil conseils visite visiter billet billets activite activites sortie sorties evenement evenements preparation pratique pratiques autour leur leurs aussi quoi comment quel quelle quelles quels quand faire partir 2026 2027".split(
+    " ",
+  ),
+);
+const words = (value) =>
+  new Set(
+    String(value)
+      .replace(/œ/g, "oe")
+      .normalize("NFD")
+      .replace(/\p{Diacritic}/gu, "")
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((word) => word.length >= 3 && !STOP.has(word)),
+  );
+export function probableDuplicates(subject, catalog, limit = 5) {
+  const terms = words(
+    [
+      subject.title,
+      ...(subject.keywords ?? subject.topic?.keywords ?? []),
+    ].join(" "),
+  );
+  return catalog
+    .filter(
+      (article) => canonicalPage(article.url) !== canonicalPage(subject.url),
+    )
+    .map((article) => {
+      const candidate = words(
+        [
+          article.title,
+          ...(article.keywords ?? article.topic?.keywords ?? []),
+        ].join(" "),
+      );
+      const shared = [...terms].filter((word) => candidate.has(word));
+      const sameCity = Boolean(
+        subject.location?.city &&
+          subject.location.city === article.location?.city,
+      );
+      const sameDepartment = Boolean(
+        subject.location?.department &&
+          subject.location.department === article.location?.department,
+      );
+      return {
+        url: article.url,
+        title: article.title,
+        location: article.location,
+        sharedTerms: shared,
+        score:
+          shared.length / Math.max(1, new Set([...terms, ...candidate]).size) +
+          (sameCity ? 0.2 : sameDepartment ? 0.1 : 0),
+      };
+    })
+    .filter(
+      (item) =>
+        item.sharedTerms.length >= 2 ||
+        (item.sharedTerms.length === 1 && item.sharedTerms[0].length >= 6),
+    )
+    .sort((a, b) => b.score - a.score || a.url.localeCompare(b.url))
+    .slice(0, limit);
+}
+```
+
+## Résultat attendu
+
+Actualise uniquement radar-gsc-snapshot.json sur la branche main de DevWeb13/fam-space-actions-bridge avec le snapshot compact décrit ci-dessus, puis termine ce passage. Ne choisis aucune mission Radar dans la même exécution et ne modifie aucun autre fichier interne.
