@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -104,7 +107,7 @@ sources:
     url: https://pennes-mirabeau.org/images/pdf/actu/25-26guide.pdf
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/parentalite/(2026)/(10)/maison-des-parents-aux-pennes-mirabeau-ateliers-gratuits-et-accueil-des-familles/index.md
   targetSha: 9cea767829eea6f4fb09b66e617989ac34658cb9
@@ -133,31 +136,88 @@ radar:
       - oui les 2
 ---
 
-## Mission retenue
-Actualiser le guide de la Maison des Parents aux Pennes-Mirabeau et de Maison Câlins, deux accueils distincts dans les mêmes locaux.
+---
+title: "Maison des Parents aux Pennes-Mirabeau: ateliers gratuits et accueil des familles"
+subtitle: "Ateliers sur réservation en novembre 2026 et Maison Câlins en accueil libre pour les 0-5 ans"
+summary: "Aux Pennes-Mirabeau, découvrez les ateliers gratuits de novembre 2026 à réserver et l'accueil libre de Maison Câlins pour les enfants de 0 à 5 ans."
+slug: maison-des-parents-aux-pennes-mirabeau-ateliers-gratuits-et-accueil-des-familles
+status: published
+publishedAt: 2026-10-16T14:09:03+02:00
+updatedAt: null
+reviewAt: 2026-11-26
+category: parentalite
+readingTime: 3
+location:
+  city: Les Pennes-Mirabeau
+  department: Bouches-du-Rhône
+  region: Provence-Alpes-Côte d’Azur
+topic:
+  key: parentalite|les-pennes-mirabeau|maison-des-parents-aux-pennes-mirabeau-ateliers-gratuits-et-accueil-des-familles|2026
+  keywords:
+    - Maison des Parents Les Pennes-Mirabeau
+    - Maison Câlins accueil enfants parents
+    - ateliers parentalité gratuits Bouches-du-Rhône
+image:
+  src: "/images/articles/2026/10/maison-des-parents-aux-pennes-mirabeau-ateliers-gratuits-et-accueil-des-familles.webp"
+  alt: "Vue générale des Pennes-Mirabeau depuis l'église Saint-Blaise, photographie de la commune sans lien avec les ateliers de la Maison des Parents"
+sources:
+  - title: Ville des Pennes-Mirabeau - Présentation de la Maison des Parents
+    url: https://pennes-mirabeau.org/index.php/def-mdp
+  - title: Ville des Pennes-Mirabeau - Programme des ateliers parentalité
+    url: https://pennes-mirabeau.org/index.php/actu-mdp/314-parentalite
+  - title: Ville des Pennes-Mirabeau - Team Parents du 17 novembre
+    url: https://pennes-mirabeau.org/index.php/agenda/276-team17nov
+  - title: Ville des Pennes-Mirabeau - Massage bébé du 19 novembre
+    url: https://pennes-mirabeau.org/index.php/agenda/286-massage19nov
+  - title: Ville des Pennes-Mirabeau - Portage en écharpe du 24 novembre
+    url: https://pennes-mirabeau.org/index.php/agenda/288-portage24nov
+  - title: Ville des Pennes-Mirabeau - Bien-être du 25 novembre
+    url: https://pennes-mirabeau.org/index.php/agenda/199-bien-etre25nov
+  - title: Ville des Pennes-Mirabeau - Maison Câlins
+    url: https://www.pennes-mirabeau.org/index.php/infos-mdp/134-calins
+  - title: Ville des Pennes-Mirabeau - Convention Maison Câlins 2024-2026
+    url: https://www.pennes-mirabeau.org/images/pdf/ville/delib2023/12/266x23.pdf
+  - title: Ville des Pennes-Mirabeau - Horaires de la Maison des Parents
+    url: https://www.pennes-mirabeau.org/index.php/mdp
+  - title: Ville des Pennes-Mirabeau - Guide municipal 2025-2026
+    url: https://pennes-mirabeau.org/images/pdf/actu/25-26guide.pdf
+---
+<!-- article-image-credit -->
+*Photo: [kallerna](https://commons.wikimedia.org/wiki/File:Les_Pennes-Mirabeau.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC indique 50 impressions du 18 au 20 octobre contre 10 du 5 au 7 novembre, sans cause SEO démontrée. Une lacune indépendante est vérifiée: l'article présente surtout trois ateliers d'octobre désormais passés et omet trois ateliers de novembre officiellement annoncés. La page officielle de Maison Câlins affiche désormais lundi et jeudi, ce qui permet aussi de lever une ambiguïté pratique.
+Aux Pennes-Mirabeau, dans le quartier de La Gavotte, la Maison des Parents propose des informations, des échanges et des ateliers gratuits aux familles. Dans les mêmes locaux, **Maison Câlins** accueille librement les enfants de 0 à 5 ans accompagnés. La différence essentielle: **les ateliers nécessitent une inscription, Maison Câlins non**.
 
-## Décision du lecteur
-Savoir quel accueil convient à son enfant, quand venir sans inscription et quel atelier gratuit réserver avant qu'il soit complet.
+## Maison des Parents: quels ateliers réserver en novembre 2026 ?
 
-## Faits à traiter
-- Remplacer la programmation périmée par les prochains ateliers municipaux: Team Parents le 17 novembre à 18 h (parents et futurs parents), massage bébé le 19 novembre à 16 h 30 (0-1 an), portage en écharpe le 24 novembre à 16 h (parents et futurs parents), atelier bien-être le 25 novembre à 14 h 30 (mamans et futures mamans). Vérifier chaque fiche avant rédaction et conserver la règle de réservation obligatoire et de places limitées.
-- Maison Câlins: la page municipale consultée le 9 novembre affiche lundi et jeudi de 9 h à 12 h, cohérente avec la convention 2024-2026; rectifier l'ancienne divergence mercredi/jeudi sans masquer le conseil d'appeler avant visite.
-- Préserver la gratuité, l'accès sans inscription et anonyme du LAEP pour les 0-5 ans accompagnés, la distinction avec une crèche, les coordonnées et l'adresse, les horaires de la Maison des Parents avec prudence sur les sources contradictoires, l'image et son crédit.
+Créée par la Ville avec la CAF des Bouches-du-Rhône, la [Maison des Parents](https://pennes-mirabeau.org/index.php/def-mdp) s'adresse aux parents d'enfants de différents âges, jusqu'à l'adolescence, ainsi qu'aux futurs parents selon les rendez-vous. Elle met aussi de la documentation à disposition.
 
-## Sources de départ
-- Programme municipal actualisé: https://pennes-mirabeau.org/index.php/actu-mdp/314-parentalite
-- Agenda municipal: https://pennes-mirabeau.org/index.php/agenda?filter_category=2&filter_from=2026-11-07
-- Maison Câlins: https://www.pennes-mirabeau.org/index.php/infos-mdp/134-calins
-- Horaires Maison des Parents: https://www.pennes-mirabeau.org/index.php/mdp
+Le [programme municipal](https://pennes-mirabeau.org/index.php/actu-mdp/314-parentalite) annonce quatre ateliers gratuits:
 
-## Affiliation
-Aucune offre naturelle: ne pas ajouter d'hébergement ou de partenaire commercial à ce service de proximité.
+- **Mardi 17 novembre, de 18h à 20h:** [Team Parents](https://pennes-mirabeau.org/index.php/agenda/276-team17nov), un temps d'échange pour parents et futurs parents autour de la confiance et de la relation parent-enfant.
+- **Jeudi 19 novembre, de 16h30 à 17h30:** [massage bébé](https://pennes-mirabeau.org/index.php/agenda/286-massage19nov), une initiation avec une infirmière puéricultrice pour les parents accompagnés d'un enfant de 0 à 1 an.
+- **Mardi 24 novembre, de 16h à 17h30:** [portage en écharpe](https://pennes-mirabeau.org/index.php/agenda/288-portage24nov), pour parents et futurs parents. Apportez votre écharpe ou votre porte-bébé si vous en avez un; l'intervenante propose du matériel aux familles qui n'en disposent pas.
+- **Mercredi 25 novembre, de 14h30 à 16h30:** [atelier bien-être](https://pennes-mirabeau.org/index.php/agenda/199-bien-etre25nov), destiné aux mamans et futures mamans. Prévoir un petit coussin et un plaid.
 
-## Continuations internes
-Conserver le sujet centré sur ces deux accueils; ne pas développer un guide général des crèches ou des LAEP. Vérifier les fiches des ateliers individuellement pour les éventuelles consignes pratiques.
+**Inscription en ligne obligatoire et places limitées:** chaque fiche d'atelier contient le formulaire à compléter. Pour toute question, contactez la Maison des Parents au **04 91 67 17 31**. Le programme évolue au fil des mois; vérifiez les prochaines dates auprès de la Ville après novembre.
+
+## Maison Câlins: un accueil libre pour les 0-5 ans
+
+**Maison Câlins** est un lieu d'accueil enfants-parents (LAEP) gratuit, ouvert aux enfants de la naissance à 5 ans accompagnés d'un parent ou d'un adulte référent. L'accueil est **sans inscription, anonyme et confidentiel**.
+
+Des jeux, des livres, un coin bébé et des espaces de motricité permettent aux enfants de découvrir et de jouer, tandis que les adultes échangent avec l'équipe. On peut rester quelques minutes ou une partie de la matinée. L'adulte accompagne son enfant pendant toute la visite: **ce n'est ni une crèche ni un service de garde**.
+
+**Attention aux jours d'ouverture:** la [fiche municipale Maison Câlins](https://www.pennes-mirabeau.org/index.php/infos-mdp/134-calins) indique **mercredi et jeudi de 9h à 12h**, tandis que la [convention municipale 2024-2026](https://www.pennes-mirabeau.org/images/pdf/ville/delib2023/12/266x23.pdf) prévoit **lundi et jeudi de 9h à 12h**. Ces deux documents officiels ne concordent pas: **appelez le 06 27 41 15 19 avant de vous déplacer**, notamment pour une première visite.
+
+## Adresse, contacts et horaires de la Maison des Parents
+
+**Adresse commune:** parc Saint-Georges, impasse Merlusse, quartier de La Gavotte, 13170 Les Pennes-Mirabeau.
+
+**Maison des Parents:** maisondesparents@vlpm.com; **04 91 67 17 31** pour les ateliers, ou **06 84 20 53 69** indiqué dans la présentation générale.
+
+Les horaires d'accueil hors ateliers méritent également une confirmation. La [page municipale](https://www.pennes-mirabeau.org/index.php/mdp) indique **lundi, mardi et jeudi de 14h à 18h**, **mercredi de 13h à 18h**, et fermeture le vendredi. Le [guide municipal 2025-2026](https://pennes-mirabeau.org/images/pdf/actu/25-26guide.pdf) affiche plutôt **lundi, mardi et jeudi de 13h à 17h30**, **mercredi de 9h à 12h puis de 13h à 17h30**.
+
+Précisez au téléphone si vous souhaitez assister à un atelier, demander un renseignement ou venir à Maison Câlins: les conditions d'accès sont différentes.
 
 ## Article source exact à préserver et améliorer
 
