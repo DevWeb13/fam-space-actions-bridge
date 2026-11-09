@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,94 +14,126 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Haute-Corse
 - Région: Corse
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Sujet :** profiter du train de Balagne pour une sortie familiale économique entre Calvi et L'Île-Rousse (Haute-Corse).
-
-**Titre de travail :** « Le train de Balagne en famille : plages, haltes et bons tarifs sans voiture »
-
-**Angle :** organiser une vraie journée ou un court séjour en famille en utilisant le train côtier : choix des arrêts, promenades et plages accessibles, tarifs selon l'âge, coupons réservés aux résidents et précautions hors saison. Le « Trinichellu » dessert la côte entre Calvi et L'Île-Rousse ; il ne faut pas confondre le service ferroviaire avec un petit train touristique routier. Les horaires actuellement publiés couvrent le 2 novembre 2026 au 3 janvier 2027.
-
-## Besoin du lecteur
-
-Savoir comment profiter de la Balagne sans multiplier les trajets en voiture : choisir une gare de départ et des haltes adaptées aux enfants, comprendre ce qui est réellement accessible à pied, estimer le budget du train pour adultes et enfants, distinguer billets classiques et réductions, prévoir un retour possible et les contraintes de poussette, bagages et saison.
-
-## Valeur éditoriale
-
-- Expliquer la différence entre trajet panoramique, sortie à la plage et véritable déplacement entre deux villes ; proposer deux parcours souples (court aller-retour et journée Calvi–L'Île-Rousse) sans promettre une desserte identique toute l'année.
-- Vérifier dans les fiches horaires en vigueur les haltes effectivement desservies et les retours avant de conseiller un arrêt. Ne pas reprendre les horaires estivaux pour novembre.
-- Détailler les tarifs périurbains officiels : adulte 2 € par section, jusqu'à 6 € pour trois sections ; enfant de 4 à 12 ans 2 € pour une ou deux sections, 3 € pour trois ; moins de 4 ans gratuit sans place distincte. Coupon de dix cases à 10 € réservé aux résidents corses, chaque case valant une section. Vérifier les conditions d'achat avant publication.
-- Ajouter des conseils concrets sur pauses, météo, poussettes et accès à pied, sans garantir d'équipements non documentés.
-- Ne pas refaire l'article existant « Calvi en famille : quel budget prévoir selon vos activités » : ici, le cœur est l'itinéraire ferroviaire, les arrêts et les réductions utiles sur toute la côte.
-
-## Affiliation
-
-- **Booking.com — Residence Des Îles, L'Île-Rousse :** https://www.booking.com/hotel/fr/residences-des-iles.fr.html . Offre précise vérifiée : appartements de deux chambres avec cuisine équipée, près de la plage et face à la gare ; hébergement pertinent pour prolonger le parcours sans voiture. Disponibilité et prix à vérifier aux dates choisies.
-- **Billet de train :** aucune offre de billetterie chez les partenaires attractions/city pass confirmée ; achat direct auprès des Chemins de fer de la Corse, sans lien d'affiliation inventé.
-- Les excursions maritimes, locations de voiture et transferts ne sont pas nécessaires au parcours économique proposé ; aucune seconde offre suffisamment pertinente vérifiée pour ce brief.
-
-## Sources de départ
-
-- Tarifs, enfants, coupons résidents, sections et conditions : https://www.train-corse.com/fr/tarifs
-- Horaires en vigueur du 2 novembre 2026 au 3 janvier 2027 et carte des gares : https://www.train-corse.com/fr/les-horaires
-- Présentation touristique officielle du train des plages et de ses possibilités : https://www.visit-corsica.com/fr/Accueil/Inspirations-corses/Inspirations-responsables-et-detente/Week-end-en-famille-en-Balagne
-- Plage de la gare à L'Île-Rousse et accès en train : https://www.visit-corsica.com/fr/Mes-Favoris/PLAGE-GARE
-- Gare de L'Île-Rousse : https://www.visit-corsica.com/fr/Mon-sejour/Accessibilite/Tous-les-prestataires-accessibilites/GARE-FERROVIAIRE-CFC-ILE-ROUSSE
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "bons-plans"
+title: "Train de Balagne en famille: arrêts, plages et tarifs entre Calvi et L'Île-Rousse"
+subtitle: "Deux idées de sorties sans voiture et les précautions à prendre selon la saison"
+summary: "Entre Calvi et L'Île-Rousse, le train longe la mer. Découvrez les haltes utiles, les prix pour les enfants et comment organiser le retour."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "train de Balagne en famille"
+  - "train des plages Calvi Île-Rousse"
+  - "tarifs train Balagne"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Haute-Corse"
+  region: "Corse"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Train Corse - tarifs et sections périurbaines de Balagne"
+    url: "https://www.train-corse.com/fr/tarifs"
+  - title: "Train Corse - horaires de la ligne Calvi - Île-Rousse"
+    url: "https://www.train-corse.com/fr/les-horaires"
+  - title: "Agence du tourisme de la Corse - Plage Gare"
+    url: "https://www.visit-corsica.com/fr/Mes-Favoris/PLAGE-GARE"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Entre Calvi et L'Île-Rousse, en Haute-Corse, un train longe les plages et les petites baies de Balagne. Souvent surnommé « Trinichellu », ce chemin de fer permet de découvrir la côte avec des enfants sans chercher une place de stationnement à chaque arrêt. Ce n'est pas un petit train routier touristique: il fait partie du réseau ferroviaire corse.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+La ligne peut servir à une simple promenade panoramique ou à une journée complète au bord de la mer. Mais il faut choisir son parcours selon les trains réellement prévus à la date du voyage, surtout hors saison.
+
+## Deux façons de profiter du train avec les enfants
+
+### Une sortie courte, avec une seule halte
+
+Depuis Calvi, on peut envisager un trajet côtier vers une halte desservie, une pause au bord de la mer puis un retour en train. C'est le format le plus souple avec de jeunes enfants: il évite de cumuler plusieurs correspondances et de longues marches.
+
+Attention toutefois: une halte visible sur la carte n'est pas nécessairement desservie par chaque train. Avant de partir, repérez le nom exact de l'arrêt, le train aller et surtout le retour dans la [fiche horaire Calvi - Île-Rousse](https://www.train-corse.com/fr/les-horaires). Ne choisissez pas une plage uniquement parce que les rails passent à proximité: vérifiez l'accès piéton depuis l'arrêt et la possibilité de revenir.
+
+### Une journée entre Calvi et L'Île-Rousse
+
+L'autre option consiste à parcourir toute la ligne jusqu'à L'Île-Rousse, à se promener en ville et à profiter du front de mer avant de repartir. La [fiche touristique de la plage de la Gare](https://www.visit-corsica.com/fr/Mes-Favoris/PLAGE-GARE) souligne la proximité du littoral et du chemin de fer, caractéristique de cette ligne.
+
+Ce parcours convient mieux si les horaires laissent suffisamment de temps sur place. Avec des enfants, mieux vaut prévoir une vraie pause dans la ville d'arrivée que multiplier les descentes intermédiaires. Si le dernier retour est trop tôt, réduisez le programme ou envisagez de passer une nuit sur place.
+
+## Combien coûte le train de Balagne?
+
+Le tarif périurbain distingue trois sections: L'Île-Rousse - Marine de Davia, Marine de Davia - Camp Raffalli (GR20) et Camp Raffalli - Calvi. Le prix dépend du nombre de sections parcourues, et non simplement du nombre d'arrêts.
+
+Selon le [barème publié pour le périurbain de Balagne](https://www.train-corse.com/fr/tarifs), un adulte paie 2 € pour une section, 4 € pour deux et 6 € pour les trois. Pour les enfants de 4 à 12 ans, le billet coûte 2 € pour une ou deux sections et 3 € pour trois. Les moins de 4 ans voyagent gratuitement, sans place distincte.
+
+Pour un aller simple Calvi - L'Île-Rousse, cela représente donc 6 € par adulte et 3 € par enfant de 4 à 12 ans. Une famille de deux adultes et deux enfants de cet âge paie 30 € pour l'aller-retour complet, au tarif périurbain indiqué. Ce budget ne comprend ni repas ni autres dépenses sur place.
+
+Les billets périurbains sont délivrés dans les gares de Calvi et de L'Île-Rousse ainsi que dans les trains de la desserte. Il est prudent de confirmer le tarif applicable au service choisi, notamment si votre trajet emprunte un train d'une autre catégorie.
+
+### Le coupon réservé aux résidents corses
+
+Le coupon de dix cases coûte 10 € et est réservé aux résidents de Corse. Chaque case correspond à une section. Il est délivré uniquement dans les gares de Calvi et de L'Île-Rousse. Pour des déplacements répétés, cette formule peut être intéressante, mais elle ne constitue pas une réduction accessible à tous les vacanciers.
+
+Ne confondez pas non plus ce coupon avec les réductions scolaires ou seniors du réseau: leurs conditions et leurs exclusions diffèrent, notamment sur les services périurbains.
+
+## Quels horaires vérifier hors saison?
+
+La page des [horaires du train corse](https://www.train-corse.com/fr/les-horaires) propose une fiche spécifique « Suburbain de Balagne Calvi - Île-Rousse », annoncée pour la période du **2 novembre 2026 au 3 janvier 2027**. Ce sont ces horaires qu'il faut consulter pour une sortie en novembre ou décembre, et non les anciennes fréquences estivales.
+
+Pour chaque déplacement, contrôlez dans les deux sens le jour de circulation, la halte exacte et l'heure du dernier retour utilisable. Les dessertes peuvent différer entre semaine, week-end et saison. La fiche en vigueur prime sur tout exemple de journée proposé ici. Si aucun aller-retour pratique n'existe, mieux vaut renoncer à cette halte plutôt que compter sur un train hypothétique.
+
+## Poussette, plage et météo: les points qui changent la sortie
+
+Le train offre une belle vue sur la mer, mais les petites haltes et les accès aux plages ne garantissent pas tous un cheminement adapté aux poussettes. Avec un bébé, renseignez-vous sur la montée à bord, la place disponible pour une poussette pliée et le chemin entre la halte et la plage. Un porte-bébé peut être plus pratique pour une courte promenade sur terrain irrégulier.
+
+En dehors de l'été, cette sortie se prête surtout à une balade et à un pique-nique abrité plutôt qu'à une baignade. Le vent, la pluie et la mer agitée peuvent rendre certaines pauses peu agréables avec des enfants. Emportez de l'eau, une couche supplémentaire et de quoi patienter si le prochain train est éloigné.
+
+Le meilleur bon plan n'est pas nécessairement de descendre à toutes les plages: c'est de choisir une halte facile, de profiter du paysage pendant le trajet et de conserver une solution de retour fiable.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -130,4 +162,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
