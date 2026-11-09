@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,88 +14,128 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Martinique
 - Région: Martinique
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Titre de travail:** « Fort-de-France – Trois-Îlets en famille sans voiture: choisir sa navette, rejoindre la plage et organiser le retour ».
-
-**Angle:** un guide pratique pour utiliser les navettes maritimes Blue Lines avec des enfants, puis organiser une journée sur place sans voiture. Blue Lines exploite des liaisons régulières entre Fort-de-France et trois débarcadères des Trois-Îlets: Pointe du Bout, bourg et Anse-à-l'Âne. Il s'agit de transport public, pas d'une excursion touristique guidée.
-
-## Besoin du lecteur
-Comprendre quel embarcadère choisir selon la destination, comment rejoindre les plages et les commerces, où acheter les billets, comment préparer les correspondances terrestres et le retour, et quels points vérifier avant de voyager avec un bébé, une poussette ou de jeunes enfants. Donner des exemples de journées réalistes, avec des solutions en cas de perturbation, sans promettre d'accessibilité non vérifiée.
-
-## Valeur éditoriale
-- Comparer les trois arrivées selon les activités accessibles à pied, la fréquence des traversées et les correspondances, plutôt que recopier un tableau d'horaires.
-- Expliquer le départ de Pointe Simon à Fort-de-France, les différences entre horaires de semaine et de week-end, les titres individuels et familiaux, les réductions enfants et l'information trafic. Vérifier les conditions exactes et tarifs au moment de la rédaction.
-- Proposer des parcours concrets avec pauses, repas, baignade éventuelle et marge avant le dernier bateau; vérifier sur place ou auprès de l'opérateur les conditions de transport des poussettes et l'accessibilité.
-- L'opérateur annonce trois liaisons actives; Sud Martinique Tourisme publie notamment 15 à 20 minutes de traversée pour Pointe du Bout. Des divergences d'horaires existent entre pages publiques: utiliser les horaires actuels de l'opérateur, pas des horaires recopiés d'un site tiers.
-- Le guide se distingue du précédent article « Où loger en Martinique avec des enfants: Sainte-Luce, Trois-Ilets ou Le Diamant? »: ici l'objet est le déplacement maritime et la journée sans voiture, pas le choix de la station de séjour.
-
-## Affiliation
-- **Action principale:** billet de navette Blue Lines, transport public vendu par l'opérateur; aucune billetterie partenaire équivalente confirmée. Ne pas substituer une excursion touristique à ce trajet.
-- **Booking.com, STUDIO FONCTIONNEL dans HOTEL CARAYOU SPA PISCINES**, Pointe du Bout, Les Trois-Îlets: appartement annoncé avec trois lits, kitchenette, piscines et aire de jeux, pertinent pour une famille qui prolonge la journée. https://www.booking.com/hotel/mq/studio-fonctionnel-dans-carayou-et-spa.fr.html . Vérifier les conditions d'occupation et disponibilités pour les dates choisies.
-- **Expedia.fr, Charmant T3 – Anse Mitan à Trois Ilets proche de la plage**: appartement avec deux chambres, cuisine et terrasse, adapté à un séjour familial prolongé. https://www.expedia.fr/Charming-T3-Anse-Mitan-In-Trois-Ilets-Near-The-Beach.h113496383.Description-Hotel . Vérifier distance réelle à pied du débarcadère et disponibilités.
-- Recherches d'offres de visites et d'excursions sur GetYourGuide effectuées sans offre précise et directement adaptée à cette traversée confirmée. Ne pas inventer de lien commercial pour la navette. Ces pages partenaires servent uniquement à établir l'existence des hébergements, pas les faits sur les transports.
-
-## Sources de départ
-- Blue Lines, opérateur, horaires, titres et information trafic: https://www.bluelines.mq/
-- Martinique Mobilités, réseau maritime et trois destinations desservies: https://www.martiniquemobilites.mq/se-deplacer-sur-le-reseau-maritime/
-- Sud Martinique Tourisme, liaison Pointe du Bout et renseignements pratiques: https://sud-martinique-tourisme.com/commerce-et-service/blue-lines-pointe-du-bout-fort-de-france/
-- Sud Martinique Tourisme, liaison bourg des Trois-Îlets: https://sud-martinique-tourisme.com/commerce-et-service/blue-lines-bourg-des-trois-ilets-fort-de-france/
-- Martinique Transport, réseau sud et correspondances: https://www.martiniquetransport.mq/sud/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "vie-pratique"
+title: "Fort-de-France - Trois-Îlets en famille: quelle navette prendre sans voiture ?"
+subtitle: "Pointe du Bout, Anse-à-l'Âne ou bourg: choisir le bon ponton et préparer le retour avec les enfants"
+summary: "Depuis Fort-de-France, trois débarcadères permettent de rejoindre les Trois-Îlets en bateau. Voici comment choisir, payer et organiser une journée en famille."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "navette Fort-de-France Trois-Îlets famille"
+  - "Blue Lines Pointe du Bout Anse-à-l'Âne"
+  - "Trois-Îlets sans voiture"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Martinique"
+  region: "Martinique"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Blue Lines - Foire aux questions"
+    url: "https://www.bluelines.mq/aide"
+  - title: "Blue Lines - Tarifs"
+    url: "https://www.bluelines.mq/tarifs"
+  - title: "Blue Lines - Horaires et information trafic"
+    url: "https://www.bluelines.mq/"
+  - title: "Martinique Mobilités - Réseau maritime"
+    url: "https://www.martiniquemobilites.mq/se-deplacer-sur-le-reseau-maritime/"
+  - title: "Sud Martinique Tourisme - Pointe du Bout"
+    url: "https://sud-martinique-tourisme.com/commerce-et-service/blue-lines-pointe-du-bout-fort-de-france/"
+  - title: "Sud Martinique Tourisme - Bourg des Trois-Îlets"
+    url: "https://sud-martinique-tourisme.com/commerce-et-service/blue-lines-bourg-des-trois-ilets-fort-de-france/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Depuis Fort-de-France, en Martinique, les navettes publiques Blue Lines traversent la baie jusqu'aux Trois-Îlets, sur la côte sud-ouest de l'île. Pour une famille sans voiture, c'est un moyen de rejoindre une plage, de déjeuner au bord de l'eau ou de découvrir le bourg sans faire tout le tour de la baie par la route. Mais les trois pontons d'arrivée ne desservent pas le même secteur: le choix du bateau détermine largement la journée.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Quel débarcadère choisir avec des enfants ?
+
+**Pointe du Bout: le choix le plus souple.** Ce secteur touristique rassemble des commerces, des restaurants et des accès aux plages environnantes. Il convient à une sortie où l'on veut pouvoir alterner promenade, pause et baignade, sans multiplier les transports. C'est aussi le ponton qui offre le plus de rotations selon la [FAQ de Blue Lines](https://www.bluelines.mq/aide). Attention: la plage de l'Anse Mitan n'a pas de débarcadère Blue Lines en service. Il faut la rejoindre à pied depuis le secteur de Pointe du Bout, en vérifiant le trajet selon l'âge des enfants et la chaleur.
+
+**Anse-à-l'Âne: pour privilégier la plage.** Ce débarcadère mène directement au quartier balnéaire du même nom. C'est une option intéressante pour poser les affaires et profiter du littoral, plutôt que d'organiser une longue visite. Le nombre de départs et les horaires ne sont toutefois pas identiques à ceux de Pointe du Bout: vérifiez impérativement la rotation de retour avant de vous installer.
+
+**Bourg des Trois-Îlets: pour une balade différente.** L'arrivée se fait dans le centre de la commune, davantage adaptée à une découverte du bourg et à une pause dans les commerces qu'à une journée exclusivement consacrée à la plage. La desserte est moins souple que celle de Pointe du Bout. [Sud Martinique Tourisme](https://sud-martinique-tourisme.com/commerce-et-service/blue-lines-bourg-des-trois-ilets-fort-de-france/) indique une traversée d'environ 15 à 25 minutes, contre environ 15 à 20 minutes pour [Pointe du Bout](https://sud-martinique-tourisme.com/commerce-et-service/blue-lines-pointe-du-bout-fort-de-france/). Ces durées restent indicatives.
+
+Les trois destinations figurent sur la présentation du [réseau maritime de Martinique Mobilités](https://www.martiniquemobilites.mq/se-deplacer-sur-le-reseau-maritime/). Il ne s'agit pas d'une excursion guidée: le bateau assure un transport public entre deux rives.
+
+## Où embarquer et comment acheter les billets ?
+
+À Fort-de-France, les navettes partent de **l'embarcadère de la Pointe Simon**. Il faut choisir la bonne ligne et le bon sens de circulation, puis se présenter suffisamment tôt: [Blue Lines précise](https://www.bluelines.mq/aide) que l'embarquement se fait sans réservation préalable, dans la limite des places disponibles.
+
+Sur la [grille tarifaire officielle de Blue Lines](https://www.bluelines.mq/tarifs), l'aller simple tout public est affiché à **5 €** et l'aller-retour à **7 €**. Le transport est **gratuit pour les moins de 5 ans**. Pour une famille de deux adultes et deux enfants de 6 et 3 ans, cela représente donc 21 € en billets aller-retour au tarif indiqué, l'enfant de 3 ans voyageant gratuitement. Le carnet réduit de douze trajets concerne notamment les 5-25 ans, mais ce n'est pas une réduction automatique sur le billet aller-retour occasionnel.
+
+Les titres sont proposés via l'application **MT Ticket**, aux distributeurs automatiques et dans les points de vente. L'application évite l'achat initial d'un support physique. Selon l'opérateur, le billet rechargeable coûte 2 € et la carte de transport 10 € à la première acquisition. Vérifiez les tarifs avant le départ, car ils peuvent évoluer.
+
+## Horaires: préparer le retour avant la plage
+
+Les horaires changent entre semaine, samedi, dimanche et jours fériés, et certaines lignes ne circulent pas tous les jours. Les fiches d'horaires de l'opérateur doivent donc primer sur les horaires recopiés dans les annuaires touristiques. Retrouvez les horaires et l'information trafic sur le [site de Blue Lines](https://www.bluelines.mq/).
+
+Avec de jeunes enfants, mieux vaut viser un bateau de retour **avant le dernier départ**, en gardant de la marge pour rejoindre le ponton. L'opérateur signale lui-même des capacités parfois limitées et des situations de forte affluence. Ne comptez pas sur un embarquement garanti à la dernière rotation.
+
+Avant de partir, consultez les alertes sur la [chaîne WhatsApp Blue Lines](https://whatsapp.com/channel/0029Vaoe5oH23n3nnmSgd61j) ou appelez le **0596 37 37 22** (du lundi au vendredi de 7 h 30 à 18 h, le samedi de 8 h à 12 h). Si une liaison est perturbée, demandez à l'opérateur quel ponton reste desservi et si une solution de remplacement existe réellement ce jour-là. Ne présumez pas qu'un bus de substitution est systématiquement organisé.
+
+## Trois idées de journées simples
+
+**Matinée à Pointe du Bout.** Prenez un départ matinal depuis Pointe Simon, promenez-vous dans le quartier, puis rejoignez un accès à la plage adapté aux enfants. Après le déjeuner, revenez tranquillement au ponton pour une rotation d'après-midi. C'est le parcours le plus facile à raccourcir en cas de fatigue.
+
+**Plage à Anse-à-l'Âne.** Choisissez un aller et un retour compatibles avec les horaires de la ligne. Prévoyez eau, protection solaire et une pause à l'ombre: l'intérêt de cette sortie est de rester dans le même secteur, pas d'enchaîner les visites. Si les rotations sont trop espacées le jour choisi, préférez Pointe du Bout.
+
+**Découverte du bourg.** Arrivez au ponton du bourg, prenez le temps de parcourir le centre et de déjeuner sur place, puis revenez par la liaison prévue. Cette option demande davantage d'attention aux horaires: elle se prête moins à une journée improvisée jusqu'au soir.
+
+## Poussette, bébé et correspondances: les points à anticiper
+
+Les conditions exactes de prise en charge d'une poussette, les possibilités de la laisser dépliée, les équipements à bord et l'accessibilité de chaque ponton ne sont pas suffisamment détaillés dans les informations publiques consultées pour être garantis. **Contactez Blue Lines avant le trajet**, particulièrement avec une poussette volumineuse ou si une personne a besoin d'un accès sans marche. Un porte-bébé peut être plus pratique pour les déplacements à pied, sans remplacer la vérification des conditions d'embarquement.
+
+Pour une correspondance en bus après l'arrivée, ne supposez pas qu'un billet maritime donne automatiquement accès au réseau terrestre: vérifiez le titre requis et les horaires de la ligne concernée. Si le retour dépend d'un bus puis d'un bateau, prévoyez une marge plus large. Pour une première sortie avec un bébé, rester à proximité du débarcadère évite cette contrainte.
+
+Enfin, emportez le nécessaire pour le trajet et la plage, mais évitez de vous charger inutilement: l'accès au ponton, l'embarquement et les promenades sont plus simples avec des bagages légers. L'essentiel est de choisir une arrivée correspondant à votre journée et de connaître **votre bateau de retour avant de quitter Fort-de-France**.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -124,4 +164,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
