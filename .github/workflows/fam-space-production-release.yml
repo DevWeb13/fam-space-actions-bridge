@@ -21,8 +21,7 @@ concurrency:
 
 jobs:
   release:
-    # Mise en production uniquement sur demande pendant la validation des filtres.
-    if: github.event_name == 'workflow_dispatch'
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     outputs:
       advanced: ${{ steps.release.outputs.advanced }}
