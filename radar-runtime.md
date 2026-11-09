@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "SnowWorld Amnéville en famille: luge, bouées ou ski ?"
 subtitle: Âges minimums, tarifs et réservations pour une sortie à la neige en Moselle
-summary: "Luge dès 3 ans, bouées dès 10 ans ou initiation au ski: les activités à choisir selon l'âge, les prix à prévoir et les règles pratiques à SnowWorld Amnéville."
+summary: "Luge dès 3 ans, bouées dès 10 ans ou initiation au ski: comparez les conditions d'accès, le coût du matériel et les réservations à SnowWorld Amnéville."
 slug: snowworld-amneville-en-famille-luge-bouees-ou-ski
 status: published
 publishedAt: 2026-11-01T00:58:13+01:00
@@ -101,7 +104,7 @@ affiliate:
   destination: Amnéville
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/activites/(2026)/(11)/snowworld-amneville-en-famille-luge-bouees-ou-ski/index.md
   targetSha: d7fce5d48eafe9b61e03056faccdb14c24c53cd9
@@ -128,32 +131,82 @@ radar:
       - esf amneville
       - ski amneville prix
       - snowhall tarif
+reviewAt: 2026-11-23
 ---
 
-## Mission retenue
-Actualiser le guide SnowWorld Amnéville en famille, surtout les frais de ski et les conditions pratiques de réservation.
+<!-- article-image-credit -->
+*Photo: [uploaded by User:Tom2](https://commons.wikimedia.org/wiki/File:Amn%C3%A9ville_Snowhall_indoor_ski_slope.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-L'article a perdu de la visibilité (47 puis 10 impressions sur deux périodes de trois jours), sans cause GSC démontrée. Une lacune indépendante est confirmée: le site officiel affiche 14,95 € pour la location skis/chaussures/casque contre 14,90 € dans l'article, et un supplément de 3 € pour les paiements de forfait ski au guichet n'est pas expliqué.
+Envie de faire découvrir la neige aux enfants sans partir à la montagne ? À Amnéville, en Moselle, **SnowWorld propose des pistes de glisse couvertes toute l'année**, autour de **−5 °C**. On peut y faire de la luge, descendre en bouée gonflable ou apprendre à skier. Le budget et la réservation varient selon l'activité.
 
-## Décision du lecteur
-Comparer le budget complet des activités selon l'âge et choisir comment acheter ou réserver au meilleur coût.
+## Luge, bouées ou ski: quelle activité choisir ?
 
-## Faits à traiter
-Vérifier et corriger le tarif de location et le calcul de l'exemple de cours particulier; expliquer le supplément de 3 € au guichet uniquement dans son périmètre exact (forfait ski), sans l'étendre à la luge achetée sur place. Confirmer les règles d'âge, taille, casque, gants, horaires et réservations avant toute modification. Préserver les trois activités, les exemples familiaux, les transports, les deux images et leurs crédits, les informations d'accessibilité, le lien Booking et le lien vers Luminescences. Ne pas attribuer la chute GSC à ces écarts.
+### La luge dès 3 ans, pour une première glisse
 
-## Sources de départ
-- https://www.snowworld.com/fr/amneville/ski-snowboard
-- https://www.snowworld.com/fr/amneville/luge
-- https://www.snowworld.com/en/amneville/tubing
-- https://www.esf-amneville.com/cours
+La luge se pratique dans un espace dédié. Elle coûte **9,95 € par personne pour une heure**, puis **7,50 € pour une heure supplémentaire**. La luge, les chaussures et le casque sont fournis; il faut apporter des vêtements chauds et des gants.
 
-## Affiliation
-Conserver le B&B HOTEL Amneville-les-Thermes déjà proposé sur Booking.com, sans offre ajoutée artificiellement.
+**Pour un enfant de 3 à 12 ans muni d'un billet luge, un adulte accompagnant peut accéder gratuitement à la piste.** Cet accès permet de l'accompagner, pas de faire gratuitement de la luge à sa place.
 
-## Continuations internes
-- Vérifier le périmètre du supplément au guichet avec SnowWorld si la formulation officielle reste ambiguë.
-- Ne pas redévelopper la visite du zoo: conserver le renvoi vers le guide Luminescences.
+Les billets sont vendus **uniquement à la caisse**, sans réservation en ligne. Pour vérifier la disponibilité avant de venir, appelez le **03 56 71 99 90**. Les luges personnelles sont interdites. Consultez les [conditions officielles de la luge](https://www.snowworld.com/fr/amneville/luge).
+
+### Les bouées dès 10 ans et 1,35 m, pour les plus grands
+
+Le *tubing* consiste à dévaler une piste enneigée dans une bouée gonflable. Il faut **avoir au moins 10 ans et mesurer au moins 135 cm**: les deux conditions sont obligatoires. Aucun apprentissage du ski n'est nécessaire.
+
+Le tarif est de **9,95 € par personne pour une heure**, enfants de 10 à 12 ans et adultes compris. Chaque participant descend seul dans sa bouée. **Casque et gants sont obligatoires**; les casques sont prêtés gratuitement.
+
+Contrairement à la luge, le tubing se **réserve en ligne** depuis la [page officielle de l'activité](https://www.snowworld.com/en/amneville/tubing), disponible en anglais.
+
+### Le ski dès 5 ans, avec ou sans cours
+
+Pour apprendre à skier, l'**ESF d'Amnéville** propose des cours particuliers dès **5 ans**. Une leçon de 55 minutes coûte **à partir de 56 € pour une ou deux personnes de même niveau**. Les stages enfants commencent à **135 € pour quatre séances d'1 h 30**, soit six heures au total.
+
+**Le prix du cours n'inclut ni le forfait d'accès aux pistes ni la location du matériel.** Réservez le cours auprès de l'[ESF Amnéville](https://www.esf-amneville.com/cours), puis prévoyez séparément le forfait et l'équipement auprès de SnowWorld.
+
+Pour les familles qui savent déjà skier, le complexe dispose d'une petite piste adaptée aux débutants et d'une grande piste de **620 mètres**, avec des passages bleus et rouges. Les tarifs des forfaits changent selon la durée et la période: consultez la [page ski et snowboard](https://www.snowworld.com/fr/amneville/ski-snowboard).
+
+## Quel budget prévoir en famille ?
+
+Trois repères pour une heure d'activité ou une première leçon:
+
+- **Deux enfants de 6 et 9 ans à la luge: 19,90 €** pour une heure, avec un adulte accompagnant admis gratuitement par enfant selon les conditions de SnowWorld.
+- **Un parent et un adolescent au tubing: 19,90 €** pour une heure, si tous deux respectent les conditions d'âge et de taille.
+- **Un enfant en cours particulier de ski: à partir de 70,90 € hors forfait d'accès**, soit 56 € de cours et 14,90 € de location skis, chaussures et casque. Le total réel est supérieur dès qu'on ajoute le forfait d'accès.
+
+Pour le ski sans cours, la [grille officielle de location](https://www.snowworld.com/fr/amneville/ski-snowboard) affiche actuellement **14,90 € pour les skis ou le snowboard avec chaussures**, casque prêté gratuitement. Une combinaison peut être louée **10,95 €**, les casiers coûtent **2 €** et les gants doivent être apportés ou achetés sur place.
+
+SnowWorld propose aussi un forfait ski **Friends & Family** d'une, deux ou quatre heures, **sans matériel inclus**. Consultez les [offres grand public](https://www.snowworld.com/fr/amneville/offres-grand-public) pour le prix du créneau choisi. Pour éviter les surprises, vérifiez le montant final au moment de l'achat en ligne et comparez-le au prix annoncé au guichet: les éventuels frais de caisse ne doivent pas être supposés applicables à la luge, vendue uniquement sur place. Ajoutez le transport, les vêtements nécessaires et le repas.
+
+*Tarifs revérifiés sur les pages officielles le 9 novembre 2026, susceptibles d'évoluer.*
+
+## Préparer la visite: équipement, horaires et règles
+
+Sur les pistes, prévoyez une tenue d'hiver et **des gants obligatoires**. Le casque est également obligatoire pour le ski et les bouées; SnowWorld en prête gratuitement. Le restaurant Chalet 55° et le snack permettent aux accompagnants de patienter dans un espace plus tempéré.
+
+**La durée du forfait commence au passage des portiques** et ne s'arrête pas pour une pause. Récupérez donc le matériel et changez-vous avant d'entrer sur les pistes. Les jeux libres dans la neige sont interdits et le complexe ne propose pas de garde d'enfants.
+
+Les [horaires officiels](https://www.snowworld.com/fr/amneville) indiquent **10 h à 22 h tous les jours du 2 novembre au 2 mai**. Attention: la [page ski](https://www.snowworld.com/fr/amneville/ski-snowboard) annonce des compétitions les **14, 15, 21 et 22 novembre 2026**; la grande piste n'ouvrira qu'à **14 h** ces jours-là. Vérifiez toujours le créneau de la piste et de l'activité avant de partir.
+
+## Où se trouve SnowWorld Amnéville ?
+
+<!-- article-image-body:01 -->
+
+![Bâtiment voyageurs de la gare SNCF d'Hagondange, point d'arrivée possible en TER](/images/articles/2026/11/snowworld-amneville-en-famille-luge-bouees-ou-ski-body-01.webp)
+
+*Photo: [Alexandre Chapus (Coyote du 86)](https://commons.wikimedia.org/wiki/File:Gare_SNCF_d%27Hagondange.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Le complexe se situe **chemin des Terrasses du Soleil, 57360 Amnéville**, dans le Centre thermal et touristique. **Le parking est gratuit**, avec des emplacements réservés aux personnes à mobilité réduite. SnowWorld accueille les personnes en situation de handicap; pour l'accès aux pistes, il recommande un accompagnant, qui doit disposer de son propre forfait. Le ski assis est possible avec son matériel et une pratique suffisante.
+
+Sans voiture, SnowWorld indique un TER jusqu'à **Hagondange**, puis un trajet à pied en montée vers le centre thermal. Autres possibilités mentionnées sur sa [page d'accès](https://www.snowworld.com/fr/amneville/ski-snowboard): le bus **77**, ou le **48** jusqu'à la mairie d'Amnéville, suivi de la navette **TR'AMM**. Vérifiez les correspondances et le retour avant de partir.
+
+## Prolonger la sortie à Amnéville
+
+Pour les familles qui viennent de loin, le [B&B HOTEL Amneville-les-Thermes sur Booking.com](https://www.booking.com/hotel/fr/roi-soleil-amneville-les-thermes.fr.html) est situé dans le secteur de loisirs, avec **chambres familiales et parking gratuit**. Vérifiez la capacité de la chambre et les conditions de séjour pour vos dates.
+
+Vous pouvez aussi compléter votre escapade avec les lanternes du zoo: notre guide de [Luminescences à Amnéville en famille](https://www.fam-space.fr/articles/evenements/luminescences-2026-2027-a-amneville-en-famille-soiree-seule-ou-zoo-et-lanternes/) explique les différentes formules de visite.
 
 ## Article source exact à préserver et améliorer
 
