@@ -360,3 +360,4 @@ automation/image-hero-20261109-0641-truffe-paris-lyon|9d609ccbdf190fa4c56198f133
 automation/image-hero-20261109-1244-trois-ilets|f7715434e712f753150963c4cd356e86e5bd75c7
 automation/image-hero-20261109-1244-trois-ilets|5f66d46806a8370e07493af28bea1a3007f894e4
 automation/image-hero-20261109-1845-chartres-dijon-laep|1e4d612cc65810b833e0a5348c8affaf5079cf65
+automation/image-hero-20261109-1845-chartres-dijon-laep|b27bb855f15fe663dcb3ab7de8da6634cb61ba8c
