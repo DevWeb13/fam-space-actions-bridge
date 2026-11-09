@@ -355,3 +355,4 @@ automation/image-hero-20261108-1842-menton-arche|6f1735cf99c9e9217cf97a977b99310
 automation/image-hero-20261108-1842-menton-arche|68a242f92a12050151b576e0be151f5ddcc71e13
 automation/image-hero-20261109-0047-mini-kids-drome|1eaf776fe364fc14667fdd1d3118f9984220c3e1
 automation/image-hero-20261109-0047-mini-kids-drome|1294771200f3a30e2205a2e875e35c91b3006e8f
+automation/image-hero-20261109-0641-truffe-paris-lyon|3b45c1f786b2200dbe0e61618ae176cc46770a11
