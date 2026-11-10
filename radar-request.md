@@ -110,4 +110,4 @@ Pour un week-end tout près du lac, [Le Flambeau au Bouchet-Saint-Nicolas sur Bo
 
 Pour une famille nombreuse qui préfère un logement entier, [ce gîte de deux chambres pour sept personnes à Cayres sur Abritel](https://www.abritel.fr/location-vacances/p2110660) dispose d’une cuisine et se trouve à quelques kilomètres du lac. Vérifiez la capacité réelle pour votre groupe, les disponibilités et les suppléments éventuels pour le linge.
 
-Si vous souhaitez compléter cette escapade par une visite de la ville, notre [guide du Puy-en-Velay avec des enfants](https://www.fam-space.fr/articles/voyages/le-puy-en-velay-avec-des-enfants-ou-dormir-pour-visiter-la-ville-a-pied/) propose des idées de parcours
+Si vous souhaitez compléter cette escapade par une visite de la ville, notre [guide du Puy-en-Velay avec des enfants](https://www.fam-space.fr/articles/voyages/le-puy-en-velay-avec-des-enfants-ou-dormir-pour-visiter-la-ville-a-pied/) propose des idées de parcours à pied et de logements dans le centre.
