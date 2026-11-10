@@ -369,3 +369,4 @@ automation/image-hero-20261110-1246-tete-de-mioche|060d3f35173d9eb303260cfbdd862
 automation/image-hero-20261110-1246-tete-de-mioche|beb7243878d9131fba3ed04381a64eac740eec85
 automation/image-hero-20261110-1848-touraine-gironde-marne|3767e305f68764508039dd5135513cd05fccfba3
 automation/image-hero-20261110-1848-touraine-gironde-marne|d20013b7df66adc6eb785242c706c0068ff14aa0
+automation/image-hero-20261111-0045-propriano-doubs|711ffdfd11108cc98fd562f1e2ed630385b908b2
