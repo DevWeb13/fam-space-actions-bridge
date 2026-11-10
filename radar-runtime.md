@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -85,8 +88,10 @@ image:
 sources:
   - title: "Département des Hautes-Alpes: viabilité hivernale, équipements et conditions C1 à C4"
     url: https://www.hautes-alpes.fr/nos-actions/mobilites/la-viabilite-hivernale/
-  - title: "Service-Public: pneus hiver et chaînes, obligations en zone montagneuse"
+  - title: "Service-Public: pneus hiver et chaînes, obligations 2026-2027"
     url: https://www.service-public.gouv.fr/particuliers/actualites/A14389
+  - title: "Sécurité routière: panneau B26 et équipements effectivement requis"
+    url: https://www.securite-routiere.gouv.fr/admin/content/sub_paragraph/29045
   - title: "Info Route 05: conditions des routes départementales et cols"
     url: https://inforoute.hautes-alpes.fr/
   - title: "Bison Futé: trafic et conditions de circulation sur le réseau routier national"
@@ -99,7 +104,7 @@ affiliate:
   destination: Gap
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/vie-pratique/(2026)/(10)/hautes-alpes-en-hiver-pneus-chaines-et-etat-des-routes-avant-de-partir/index.md
   targetSha: 0dd45eeaf15e842a9b431b84fd367e8eb9c73f34
@@ -127,32 +132,95 @@ radar:
       - routes Hautes-Alpes hiver enfants
 ---
 
-## Mission retenue
-Actualisation ciblée du guide de conduite hivernale dans les Hautes-Alpes, sans refonte.
+<!-- article-image-credit -->
+*Photo: [Raynaud Bannettes](https://commons.wikimedia.org/wiki/File:Chauffayer_sous_la_neige.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Signal GSC rapidDrop: 36 impressions du 23 au 25 octobre, 12 du 5 au 7 novembre; cause non établie. Lacune indépendante: l'article explique la loi Montagne et les niveaux C1-C4, mais ne distingue pas explicitement les panneaux de zone hivernale du panneau B26 imposant un équipement effectif sur route enneigée. La fiche Service-Public citée est désormais actualisée pour 2026-2027.
+Partir en voiture dans les **Hautes-Alpes** en hiver, que l’on habite Gap ou que l’on rejoigne Briançon, un village ou une station avec des enfants, demande deux vérifications distinctes: **le véhicule est-il équipé conformément à la réglementation et la route est-elle praticable au moment du trajet?** Être en règle avec la loi Montagne ne signifie pas qu’un col sera ouvert ni qu’un équipement suffira sur une chaussée très enneigée.
 
-## Décision du lecteur
-Reconnaître quand garder des chaînes à bord suffit, quand il faut effectivement équiper les roues, et quand renoncer à un itinéraire fermé ou trop dangereux.
+Dans ce département, l’obligation d’équipement hivernal concerne l’ensemble du réseau routier du **1er novembre au 31 mars**, même les jours sans neige. Pour la saison 2026-2027, elle s’étend donc du **1er novembre 2026 au 31 mars 2027**, selon la règle saisonnière rappelée par le [Département des Hautes-Alpes](https://www.hautes-alpes.fr/nos-actions/mobilites/la-viabilite-hivernale/).
 
-## Faits à traiter
-- Vérifier la réglementation 2026-2027 du 1er novembre au 31 mars, quatre pneus 3PMSF ou dispositifs amovibles pour deux roues motrices.
-- Expliquer sans confusion le panneau B26 et ses panonceaux: ne pas assimiler simple détention et montage exigé; vérifier précisément les exceptions pour pneus hiver et mention de chaînes exclusivement obligatoires.
-- Préserver les niveaux C1-C4, Info Route 05, Bison Futé, la préparation avec enfants, le contrôle des équipements de location, les quatre photographies et crédits, ainsi que le lien KAYAK.
-- Ne pas attribuer la chute d'impressions à cette lacune.
+## Pneus hiver ou chaînes: ce qui suffit pour une voiture
 
-## Sources de départ
-- Service-Public, obligations hiver 2026-2027: https://www.service-public.gouv.fr/particuliers/actualites/A14389
-- Sécurité routière, panneau B26: https://www.securite-routiere.gouv.fr/admin/content/sub_paragraph/29045
-- Département des Hautes-Alpes, viabilité hivernale: https://www.hautes-alpes.fr/nos-actions/mobilites/la-viabilite-hivernale/
-- Info Route 05: https://inforoute.hautes-alpes.fr/
+<!-- article-image-body:01 -->
 
-## Affiliation
-Maintenir le lien existant de comparaison de locations KAYAK à Gap et la vérification explicite des chaînes/pneus auprès du loueur. Aucune nouvelle offre non vérifiée.
+![Gros plan du symbole alpin 3PMSF sur le flanc d'un pneu hiver](/images/articles/2026/10/hautes-alpes-en-hiver-pneus-chaines-et-etat-des-routes-avant-de-partir-body-01.webp)
 
-## Continuations internes
-Aucune extension vers un guide de stations ou de séjours; conserver ce guide centré sur la décision routière.
+*Photo: [Arizonaman1](https://commons.wikimedia.org/wiki/File:Marquage_pneu_hiver.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Une voiture particulière doit, pendant cette période, répondre à **l’une des deux possibilités** suivantes:
+
+- Rouler avec **quatre pneus adaptés à l’hiver**, portant le symbole alpin **3PMSF** (une montagne à trois pics avec un flocon), en complément du marquage M+S, M.S ou M&S.
+- Transporter des **chaînes métalliques ou des chaussettes à neige** capables d’équiper **au moins deux roues motrices**.
+
+Il n’est donc pas exact de dire que quatre pneus neige sont obligatoires pour tout le monde. Les dispositifs amovibles constituent une autre solution réglementaire. Depuis le 1er novembre 2024, des pneus portant **seulement M+S**, sans symbole 3PMSF, ne remplacent plus à eux seuls les chaînes ou chaussettes à conserver à bord.
+
+Cette règle et ses exceptions, notamment pour les pneus à clous, sont confirmées pour la saison **2026-2027** par la [fiche officielle de Service-Public, actualisée le 20 octobre 2026](https://www.service-public.gouv.fr/particuliers/actualites/A14389).
+
+**Avant de choisir des chaînes ou chaussettes**, vérifiez les dimensions inscrites sur les pneus, les consignes du constructeur et l’espace disponible entre roue et carrosserie. Certains véhicules ne peuvent recevoir que des dispositifs particuliers. Entraînez-vous à les installer au sec: le bord d’une route enneigée, avec des enfants à bord, n’est pas l’endroit idéal pour découvrir la procédure.
+
+Un SUV ou une transmission intégrale ne dispense pas automatiquement des équipements réglementaires. Et même avec quatre pneus 3PMSF, une route peut exiger des précautions ou des dispositifs supplémentaires selon les conditions et la signalisation locale.
+
+## Panneaux de zone montagneuse et B26: faut-il monter les chaînes?
+
+Les **panneaux d’entrée de zone d’équipements hivernaux**, accompagnés de la période du 1er novembre au 31 mars, signalent l’obligation saisonnière: avec quatre pneus 3PMSF, vous êtes en règle; avec des pneus ordinaires, vous devez avoir des chaînes ou chaussettes adaptées **à bord**, même sur route sèche.
+
+Le **panneau rond bleu B26**, représentant une roue chaînée, est différent. Sur une route enneigée, il impose un **équipement effectivement utilisé**, pas seulement rangé dans le coffre. Selon la [Sécurité routière](https://www.securite-routiere.gouv.fr/admin/content/sub_paragraph/29045), les équipements admis par la réglementation montagne, notamment les pneus hiver conformes, satisfont normalement aussi à cette obligation. **Exception décisive:** si un panonceau précise que les **chaînes à neige sont exclusivement obligatoires**, les pneus hiver seuls ne suffisent pas. Lisez donc le panneau et son panonceau sur place avant de vous engager.
+
+Si l’itinéraire est fermé, ou si vous ne pouvez pas respecter la signalisation et circuler en sécurité, choisissez une autre route ouverte ou reportez le trajet.
+
+## Route dégagée, difficile ou impossible: lire les niveaux C1 à C4
+
+<!-- article-image-body:02 -->
+
+![Route départementale D205 enneigée à l'approche du col Agnel dans les Hautes-Alpes en fin d'hiver](/images/articles/2026/10/hautes-alpes-en-hiver-pneus-chaines-et-etat-des-routes-avant-de-partir-body-02.webp)
+
+*Photo: [TouN](https://commons.wikimedia.org/wiki/File:D205_route_Col_Agnel.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Le [Département des Hautes-Alpes](https://www.hautes-alpes.fr/nos-actions/mobilites/la-viabilite-hivernale/) utilise quatre niveaux pour décrire la circulation en hiver:
+
+- **C1, route dégagée:** chaussée sans neige ni verglas apparent. Les précautions ordinaires restent nécessaires.
+- **C2, circulation délicate:** plaques de neige ou de verglas localisées. Il faut ralentir, augmenter les distances et rester particulièrement attentif.
+- **C3, circulation difficile:** chaussée enneigée, trafic fortement ralenti et risque de blocage élevé. Les équipements adaptés aux conditions sont indispensables; sans eux, reportez le départ.
+- **C4, circulation impossible:** route impraticable. Il ne faut pas s’y engager, même avec un véhicule préparé.
+
+Cette échelle aide à comprendre pourquoi une voiture conforme à la réglementation peut malgré tout rester au garage. Sur un itinéraire vers un col ou une station, la situation peut changer en quelques heures. Une fermeture de route prime toujours sur l’équipement du véhicule.
+
+## Où vérifier les routes avant de partir?
+
+Pour les **routes départementales**, consultez la carte officielle [Info Route 05](https://inforoute.hautes-alpes.fr/). Elle réunit les conditions de circulation, les informations sur les cols, les accès d’altitude et les caméras. Le Département propose aussi un serveur vocal au **04 65 03 00 05**.
+
+Pour les **routes nationales**, consultez la [carte du trafic de Bison Futé](https://www.bison-fute.gouv.fr/maintenant.html), qui indique notamment les fermetures, restrictions et événements sur les grands axes. Si votre itinéraire emprunte aussi des routes départementales, consulter une seule carte ne suffit pas.
+
+Regardez d’abord l’itinéraire complet, puis les éventuels passages en altitude. Refaites le point **juste avant le départ** et lorsque vous pouvez vous arrêter en sécurité: une prévision météo favorable dans la vallée ne décrit pas nécessairement un col plus haut. Si la route annoncée est impraticable ou si les conditions dépassent votre équipement et votre expérience, différer le trajet reste la meilleure décision.
+
+## Voyager avec des enfants: préparer les imprévus sans surcharger la voiture
+
+<!-- article-image-body:03 -->
+
+![Chaînes à neige à câbles montées sur une roue de voiture, exemple de dispositif amovible](/images/articles/2026/10/hautes-alpes-en-hiver-pneus-chaines-et-etat-des-routes-avant-de-partir-body-03.webp)
+
+*Photo: [Steve Morgan](https://commons.wikimedia.org/wiki/File:Cable_chains_on_car_tire.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:03 -->
+
+Le plus utile est de limiter les difficultés si la progression ralentit ou si un détour devient nécessaire. Avant le départ, contrôlez la batterie, les essuie-glaces, les niveaux adaptés au froid et le dégivrage. Déneigez le toit, les vitres, les feux et les plaques; ne partez pas avec seulement une petite zone dégagée sur le pare-brise.
+
+À bord, gardez à portée de main **de l’eau, quelques aliments, des vêtements chauds, des couvertures et les médicaments habituels**. Un grattoir, des gants utilisables pour monter les chaînes et un téléphone chargé ont plus d’intérêt qu’une accumulation d’accessoires mal adaptés. Prévoyez une marge dans l’heure d’arrivée et des pauses possibles, surtout avec de jeunes enfants.
+
+Le [Département](https://www.hautes-alpes.fr/nos-actions/mobilites/la-viabilite-hivernale/) et la [préfecture](https://www.hautes-alpes.gouv.fr/Actualites/Viabilite-hivernale-les-services-de-l-Etat-prets-pour-la-saison-2025-2026) recommandent de vérifier l’état du véhicule, de prévoir des vêtements chauds et de consulter les conditions de circulation avant de prendre la route. Pour monter des chaînes, cherchez un emplacement autorisé et sécurisé: **jamais au milieu de la chaussée**.
+
+## Voiture de location: les questions à poser avant de réserver
+
+Une location peut être utile aux familles arrivant en train ou ne souhaitant pas utiliser leur véhicule personnel. Pour comparer les agences et les catégories de véhicules disponibles sur place, consultez les [voitures de location proposées à Gap sur KAYAK](https://www.kayak.fr/location-voiture-Gap.13772.cars.ksp). Mais ne supposez pas qu’une voiture louée à Gap dispose automatiquement de pneus 3PMSF ou de chaînes adaptées, y compris si le modèle annoncé est un SUV.
+
+Demandez au loueur, idéalement par écrit, **quel équipement sera effectivement fourni aux dates du séjour**. Faites préciser la taille des pneus, la possibilité d’utiliser des chaînes ou chaussettes sur le véhicule réservé, les éventuels suppléments et les consignes de montage. À la remise des clés, vérifiez que le matériel promis est présent et compatible.
+
+Avec des enfants, confirmez aussi **les sièges adaptés à leur âge et à leur taille**, leur disponibilité réelle, la place pour les bagages et l’emplacement accessible des équipements neige. Une formule de location affichée en ligne ne garantit pas, à elle seule, ces éléments.
 
 ## Article source exact à préserver et améliorer
 
