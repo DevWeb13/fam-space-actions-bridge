@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Ludothèque du Choletais: jouer sur place et emprunter en famille"
-subtitle: "Espaces d’éveil, jeux de construction ou parties entre générations: les repères pour découvrir ce lieu à Cholet."
-summary: À Cholet, la ludothèque permet de jouer en famille et d’emprunter pour la maison. Espaces, tarifs et conditions pour préparer une première visite.
+subtitle: "Tarifs, horaires, prêt de jeux et accès aux Arcades Rougé: préparer sa visite avec les enfants."
+summary: À Cholet, découvrez comment jouer à la ludothèque dès 5 € par famille, emprunter des jeux avec un abonnement et préparer votre venue.
 slug: ludotheque-du-choletais-jouer-sur-place-et-emprunter-en-famille
 status: published
 publishedAt: 2026-10-25T02:35:14+02:00
@@ -95,6 +98,10 @@ sources:
     url: https://ludotheque.cholet.fr/
   - title: "Cholet Agglomération: informations pratiques et inscription"
     url: https://www.cholet.fr/chaines/dossier_712_ludotheque%2Binfos%2Bpratiques.html
+  - title: "Ville de Cholet: Journées des droits de l'enfant, animations de novembre 2026"
+    url: https://www.cholet.fr/dossiers/dossier.php?id_dossier=5209
+  - title: "Ville de Cholet: guide de l'accessibilité des lieux culturels"
+    url: https://www.cholet.fr/download/down/20251103_culture%2Baccessible%2Btous%2Boct2025.pdf
   - title: "Fam Space: comparatif de Papageno, Dékal, Hilo et Pixies"
     url: https://www.fam-space.fr/cadeaux/guides/papageno-dekal-hilo-ou-pixies-quel-jeu-de-cartes-familial-choisir/
   - title: "Accor: localisation et chambres de l’ibis budget Cholet Centre"
@@ -107,7 +114,7 @@ affiliate:
   destination: Cholet
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/parentalite/(2026)/(10)/ludotheque-du-choletais-jouer-sur-place-et-emprunter-en-famille/index.md
   targetSha: 64317b399066a0df9ee943e6c43e415d8a55759e
@@ -134,33 +141,94 @@ radar:
       - ludothèque du choletais
       - horaires ludothèque cholet
       - ludotheqie
+reviewAt: 2026-11-14
 ---
 
-## Mission retenue
-Actualiser le guide de la Ludothèque du Choletais à Cholet, lieu de jeu sur place et de prêt de jeux.
+<!-- article-image-credit -->
+*Photo: [Gwendoland](https://commons.wikimedia.org/wiki/File:Cholet_-_Arcades_Roug%C3%A9s_P1000706.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-L'article a perdu sa visibilité récente, sans cause GSC démontrée. Une lacune pratique indépendante est vérifiée: la fiche officielle précise 1 h 30 de stationnement gratuit sur présentation du ticket, absent du guide. Le programme municipal annonce aussi deux séances motrices pour les 0-3 ans les 12 et 13 novembre, pertinentes pour les familles qui viennent cette semaine. Les deux premiers candidats du snapshot ont déjà des tarifs/conditions essentiels cohérents et ne présentent pas de lacune aussi utile confirmée.
+À Cholet, dans le Maine-et-Loire, la Ludothèque du Choletais accueille enfants et adultes pour jouer ensemble, explorer des univers de construction ou découvrir des jeux de société. Une visite ponctuelle coûte **5 € par famille pour une demi-journée**; l'abonnement permet aussi d'emporter des jeux chez soi pendant **quatre semaines**, parmi une [collection de plus de 7 000 jeux](https://www.cholet.fr/welcome/ludotheque.php).
 
-## Décision du lecteur
-Savoir quand venir, combien payer, si un abonnement est nécessaire et comment organiser une séance avec un tout-petit sans déplacement inutile.
+C'est une façon d'essayer un jeu avant de l'acheter, de varier les activités des enfants et de partager une partie entre générations.
 
-## Faits à traiter
-- Ajouter le stationnement de 1 h 30 gratuit sous condition de présentation du ticket, en précisant de vérifier les modalités sur place; ne pas le présenter comme un parking gratuit illimité.
-- Mentionner brièvement les ateliers de motricité des 12 et 13 novembre 2026 pour les 0-3 ans: le 12 à 10 h et 11 h sur inscription au 02 72 77 23 44; le 13 de 10 h à 12 h sans inscription. Bien distinguer ces séances exceptionnelles des horaires ordinaires et prévoir leur retrait après échéance.
-- Préserver horaires habituels, adresse, tarif ponctuel 5 € par famille/demi-journée, abonnements selon résidence, règles d'accompagnement, emprunt quatre semaines, réservation/prolongation, contact, images et crédits.
-- Ne pas attribuer la baisse d'impressions à ces lacunes.
+## Des espaces adaptés aux différents âges
 
-## Sources de départ
-- Ville de Cholet, informations pratiques: https://www.cholet.fr/chaines/dossier_712_ludotheque%20infos%20pratiques.html
-- Ville de Cholet, Journées des droits de l'enfant 2026: https://www.cholet.fr/dossiers/dossier.php?id_dossier=5209
-- Ludothèque, FAQ: https://ludotheque.cholet.fr/faq.aspx
+<!-- article-image-body:01 -->
 
-## Affiliation
-Conserver l'hébergement Booking existant sans ajouter d'offre artificielle.
+![Enfant jouant avec des blocs de construction en bois, illustration hors ludothèque de Cholet.](/images/articles/2026/10/ludotheque-du-choletais-jouer-sur-place-et-emprunter-en-famille-body-01.webp)
 
-## Continuations internes
-Conserver le renvoi vers le comparatif de jeux Fam Space, sans transformer ce guide local en sélection de produits.
+*Photo: [Ben+Sam](https://commons.wikimedia.org/wiki/File:Playing_with_blocks.jpg) - [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Les [espaces décrits par l'office de tourisme du Choletais](https://www.ot-cholet.fr/grand-public/decouvrir-et-visiter/ludotheque-cholet.html) répondent à plusieurs envies:
+
+- **Avec un tout-petit**, la salle d'éveil propose tapis, structures de motricité et jeux d'exploration.
+- **Avec une fratrie**, la mini-maison, les espaces à thème et les jeux de construction permettent de jouer ensemble sans maîtriser les mêmes règles.
+- **Entre générations**, l'espace de jeux de règles accueille enfants, parents et grands-parents autour de jeux de société.
+
+Pour demander conseil à l'équipe, indiquez l'âge des joueurs, leur nombre et la durée de partie souhaitée.
+
+**Avant 12 ans, les enfants doivent être accompagnés d'un adulte.** De 12 à 17 ans, ils peuvent venir seuls avec une carte d'adhérent à leur nom et une autorisation parentale signée à la ludothèque, selon la [FAQ officielle](https://ludotheque.cholet.fr/faq.aspx).
+
+### Les 12 et 13 novembre 2026: motricité pour les 0-3 ans
+
+Dans le cadre des Journées des droits de l'enfant, la ludothèque accueille le parcours « Petits aventuriers », avec tunnel, arche et éléments d'équilibre. La [Ville de Cholet précise les créneaux](https://www.cholet.fr/dossiers/dossier.php?id_dossier=5209):
+
+- **Jeudi 12 novembre**: séances de 10 h à 10 h 45 et de 11 h à 11 h 45, **sur inscription** au **02 72 77 23 44**.
+- **Vendredi 13 novembre**: de 10 h à 12 h, **sans inscription**.
+
+Ces animations exceptionnelles ne remplacent pas les horaires habituels de jeu sur place. Pour le 13 novembre notamment, renseignez-vous sur les modalités d'accueil de la journée avant de venir.
+
+## Ticket ponctuel ou abonnement: que choisir?
+
+Le **ticket à 5 € par famille pour une demi-journée** donne accès au jeu sur place sans abonnement, mais pas à l'emprunt. Il convient pour une première découverte ou une sortie occasionnelle.
+
+L'abonnement individuel annuel comprend le jeu sur place pour l'abonné et ses accompagnants, ainsi que l'emprunt d'**un jeu principal et d'un jeu bonus**. Il n'est donc pas nécessaire d'abonner chaque accompagnant.
+
+Les [tarifs officiels 2026](https://www.cholet.fr/tarifs_municipaux/agglo_11_ludotheque.pdf?2025=) varient selon le domicile:
+
+- **Habitants de Cholet Agglomération**: 22 € au tarif plein, 10 € au tarif réduit.
+- **Habitants extérieurs**: 45 € au tarif plein, 25 € au tarif réduit.
+
+Le tarif réduit concerne les moins de 18 ans, les étudiants, les demandeurs d'emploi, les bénéficiaires du RSA et les personnes handicapées. Si vous souhaitez emprunter régulièrement, l'abonnement est la formule adaptée.
+
+## Emprunter un jeu pour la maison
+
+<!-- article-image-body:02 -->
+
+![Partie du jeu de société Carcassonne Junior, photographie illustrative hors ludothèque de Cholet.](/images/articles/2026/10/ludotheque-du-choletais-jouer-sur-place-et-emprunter-en-famille-body-02.webp)
+
+*Photo: [El Pantera](https://commons.wikimedia.org/wiki/File:Playing_board_game_-_Play_773_1710173686272.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Le [catalogue de la ludothèque](https://ludotheque.cholet.fr/) comporte une rubrique « Les jeux en prêt ». Pour choisir, pensez au temps dont vous disposez et à l'âge des participants. Pour des idées de jeux de cartes, notre [comparatif de Papageno, Dékal, Hilo et Pixies](https://www.fam-space.fr/cadeaux/guides/papageno-dekal-hilo-ou-pixies-quel-jeu-de-cartes-familial-choisir/) détaille les âges conseillés et les mécanismes; vérifiez leur disponibilité au catalogue avant de vous déplacer.
+
+Avec un abonnement valide, les jeux se réservent en ligne ou à l'accueil, mais **pas pour une date précise**, selon la [FAQ sur les prêts](https://ludotheque.cholet.fr/faq.aspx). Gardez donc plusieurs titres en tête pour une occasion particulière.
+
+Pour prolonger un prêt, faites votre demande avant la date de retour, en ligne, par téléphone ou par courriel, avec un abonnement valide. Vérifiez les pièces au départ et au retour: en cas de perte ou de casse, la FAQ prévoit le remplacement des pièces, voire du jeu entier s'il ne fonctionne plus.
+
+## Horaires, adresse et stationnement aux Arcades Rougé
+
+La ludothèque se trouve **30 rue Bretonnaise, aux Arcades Rougé, à Cholet**. Les [horaires habituels](https://www.cholet.fr/chaines/dossier_712_ludotheque%2Binfos%2Bpratiques.html) sont:
+
+- Mardi: de 10 h à 12 h.
+- Mercredi et samedi: de 10 h à 18 h en continu.
+- Vendredi: de 10 h à 12 h et de 14 h à 18 h.
+
+Le portail annonce les mêmes horaires pendant les vacances scolaires. Vérifiez néanmoins les fermetures exceptionnelles avant le départ.
+
+**En voiture**, le parking des Arcades Rougé est proche. La Ville indique **1 h 30 de stationnement offerte**, avec présentation du ticket selon les modalités locales: conservez votre ticket et vérifiez sur place la procédure pour bénéficier de cette gratuité. Au-delà, le stationnement peut être payant. Le [guide municipal d'accessibilité](https://www.cholet.fr/download/down/20251103_culture%2Baccessible%2Btous%2Boct2025.pdf) mentionne aussi des places adaptées et des ascenseurs au parking; la ludothèque est de plain-pied, avec portes automatiques, circulations larges et sanitaires adaptés.
+
+Pour une première inscription, apportez un justificatif de domicile de moins de six mois et, si nécessaire, celui ouvrant droit au tarif réduit. L'adhésion se renouvelle à la date anniversaire. Pour une question pratique, appelez le **02 72 77 23 44**.
+
+## Prolonger un séjour à Cholet
+
+Si cette sortie s'inscrit dans un week-end, vous pouvez [consulter les chambres de l'ibis budget Cholet Centre](https://www.booking.com/hotel/fr/ibis-budget-cholet-centre.fr.html), situé dans le centre-ville, à quelques minutes à pied des Arcades Rougé. L'hôtel propose notamment des chambres triples avec lit double et lit superposé.
+
+Le [couchage en hauteur ne convient pas aux enfants de moins de 6 ans](https://www.entreprises.gouv.fr/espace-entreprises/s-informer-sur-la-reglementation/couchages-en-hauteur-lits-superposes). Indiquez l'âge des enfants pour vérifier la configuration, le prix total et les conditions d'annulation.
 
 ## Article source exact à préserver et améliorer
 
