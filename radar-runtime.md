@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -99,7 +102,7 @@ affiliate:
   destination: Cayres
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/activites/(2026)/(10)/lac-du-bouchet-en-famille-tour-du-lac-baignade-et-activites/index.md
   targetSha: 65c4236e32f0731fde75a424cc256ed56f61ddef
@@ -126,30 +129,111 @@ radar:
       - tour du lac du bouchet
 ---
 
-## Mission retenue
-Actualiser le guide familial du lac du Bouchet (Haute-Loire), sans changer son angle de promenade et de loisirs.
+---
+title: "Lac du Bouchet en famille: tour du lac, baignade et activités"
+subtitle: Une promenade gratuite autour d’un lac volcanique, avec des pauses et des activités selon la saison
+summary: Près de Cayres, le lac du Bouchet se découvre en famille sur une boucle de 3 km, entre forêt, jeux et baignade estivale. Voici ce qu’il faut savoir pour les poussettes et les activités.
+slug: lac-du-bouchet-en-famille-tour-du-lac-baignade-et-activites
+status: published
+publishedAt: 2026-10-24T14:58:55+02:00
+updatedAt: 2026-11-10T18:29:00+01:00
+category: activites
+readingTime: 4
+location:
+  city: Cayres
+  department: Haute-Loire
+  region: Auvergne-Rhône-Alpes
+topic:
+  key: activites|cayres|lac-du-bouchet-en-famille-tour-du-lac-baignade-et-activites|2026
+  keywords:
+    - lac du Bouchet en famille
+    - tour du lac du Bouchet
+    - lac du Bouchet poussette
+    - baignade lac du Bouchet
+image:
+  src: "/images/articles/2026/10/lac-du-bouchet-en-famille-tour-du-lac-baignade-et-activites.webp"
+  alt: "Vue panoramique du lac du Bouchet entouré de forêt en Haute-Loire"
+sources:
+  - title: My Haute-Loire - Sentier le Tour du Lac du Bouchet
+    url: https://www.myhauteloire.fr/activite-auvergne/sentier-le-tour-du-lac-du-bouchet/
+  - title: "My Haute-Loire - Lac du Bouchet: accès et équipements"
+    url: https://www.myhauteloire.fr/site-naturel/lac-du-bouchet/
+  - title: My Haute-Loire - Aire Respirando du lac du Bouchet
+    url: https://www.myhauteloire.fr/nature-sauvage/aires-et-stations-respirando/aire-respirando-du-lac-du-bouchet/
+  - title: Sud Haute-Loire Tourisme - Le lac du Bouchet
+    url: https://www.sudhauteloire-tourisme.fr/les-incontournables/le-lac-du-bouchet/
+  - title: Chalet du lac du Bouchet - Activités et restauration
+    url: https://www.lacdubouchet.fr/activites-lac-bouchet-cayres-43_fr.html
+  - title: Ministère de la Santé - Baignade lac du Bouchet 2026
+    url: https://baignades.sante.gouv.fr/baignades/consultSite.do?annee=2026&dptddass=043&impression=yes&isite=043001587&modeDetailImp=3&plv=04300153941&site=043001587
+  - title: Fédération de pêche de Haute-Loire - Lac du Bouchet 2026
+    url: https://www.pechehauteloire.fr/LacDuBouchet.php
+affiliate:
+  enabled: true
+  type: travel
+  destination: Cayres
+---
+<!-- article-image-credit -->
+*Photo: [Jérôme Pellé](https://commons.wikimedia.org/wiki/File:Lac_du_Bouchet_(24426648723).jpg) - [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Signal rapidDrop du snapshot: 30 impressions du 25 au 27 octobre, puis 3 du 5 au 7 novembre. Cause inconnue, sans requêtes comparables. Lacune indépendante vérifiée: l'article ne donne pas les dates officielles de la saison balnéaire 2026 ni les conditions de pêche, alors qu'il présente la baignade et les activités nautiques.
+À une vingtaine de kilomètres au sud du Puy-en-Velay, le lac du Bouchet forme un cercle d’eau au milieu de la forêt. On peut y venir pour une promenade gratuite, un pique-nique ou, en été, une après-midi au bord de l’eau. Avec des enfants, le choix est simple: faire le tour du lac s’ils aiment marcher, ou rester près de la plage et de l’aire de jeux pour une sortie plus courte.
 
-## Décision du lecteur
-Savoir ce qui est faisable selon la saison, si la plage convient aux besoins d'accessibilité de la famille, et comment pratiquer la pêche légalement sans confondre pêche et simple promenade.
+## Le tour du lac: 3 km à son rythme
 
-## Faits à traiter
-- La fiche sanitaire officielle indique une saison balnéaire du 15 juin au 13 septembre 2026, terminée; ne pas présenter ces dates comme celles de 2027. Elle distingue la plage aménagée, surveillée, équipée de toilettes et d'un poste de secours, mais non accessible PMR, de la portion de sentier décrite comme partiellement accessible.
-- Ajouter brièvement la pêche comme option distincte, sans la promettre gratuitement: carte de pêche départementale éligible et supplément spécifique au lac requis, y compris pour les mineurs selon les modalités de la Fédération; vérifier les saisons et tarifs 2026 avant publication, sans extrapoler 2027.
-- Préserver intégralement la boucle de 3 km, le conseil poussette, la géologie, les activités nautiques, jeux, pique-nique, restaurant, accès, météo, photographies et crédits, liens Booking/Abritel et maillage existant. Ne pas transformer le guide en article de pêche.
+Le [sentier du lac du Bouchet](https://www.myhauteloire.fr/activite-auvergne/sentier-le-tour-du-lac-du-bouchet/) forme une boucle d’environ **3 km**, annoncée facile et gratuite. Comptez une heure de marche ou davantage avec de jeunes enfants, sans inclure les arrêts. Les bancs autour du lac permettent de faire une pause face à l’eau.
 
-## Sources de départ
-- Ministère de la Santé, fiche 2026 Lac du Bouchet: https://baignades.sante.gouv.fr/baignades/consultSite.do?annee=2026&dptddass=043&impression=yes&isite=043001587&modeDetailImp=3&plv=04300153941&site=043001587
-- Fédération de pêche de Haute-Loire, règlement et tarifs 2026: https://www.pechehauteloire.fr/LacDuBouchet.php
-- My Haute-Loire, tour du lac: https://www.myhauteloire.fr/activite-auvergne/sentier-le-tour-du-lac-du-bouchet/
+Si les enfants marchent encore peu, inutile de s’engager sur toute la boucle. Une promenade aller-retour depuis le secteur de la plage laisse du temps pour jouer ou goûter sans devoir terminer les 3 km.
 
-## Affiliation
-Conserver les deux hébergements existants, sans ajout artificiel.
+## Poussette et fauteuil roulant: une accessibilité partielle à confirmer
 
-## Continuations internes
-Conserver le renvoi vers le guide du Puy-en-Velay. Ne pas détailler toute la réglementation de pêche: renvoyer à la Fédération pour les conditions complètes et à jour.
+Les informations touristiques ne sont pas tout à fait concordantes. La présentation de l’[Aire Respirando](https://www.myhauteloire.fr/nature-sauvage/aires-et-stations-respirando/aire-respirando-du-lac-du-bouchet/) décrit un sentier aménagé accessible aux poussettes et fauteuils roulants. En revanche, la fiche détaillée du tour du lac ne garantit explicitement l’accès aux personnes à mobilité réduite que **sur la portion entre l’hôtel-restaurant et la plage**.
+
+Pour une poussette citadine ou un fauteuil roulant, cette portion est donc le choix le plus prudent. Ne considérez pas l’ensemble de la boucle comme accessible sans confirmation de l’état du chemin, notamment après la pluie.
+
+## Un ancien volcan à découvrir en marchant
+
+Le lac occupe un **maar**, un cratère formé lorsqu’une remontée de magma a rencontré de l’eau souterraine et provoqué une explosion. [Sud Haute-Loire Tourisme](https://www.sudhauteloire-tourisme.fr/les-incontournables/le-lac-du-bouchet/) situe sa formation à environ **300 000 ans**.
+
+Des pupitres d’interprétation géologique sont signalés sur le site. Pour les enfants, la forme presque ronde du lac est déjà une bonne façon de comprendre qu’ils se promènent dans un ancien cratère.
+
+## Baignade et activités nautiques: vérifier la saison
+
+<!-- article-image-body:01 -->
+
+![Plage en herbe du lac du Bouchet avec le restaurant au fond, photographiée en 2010](/images/articles/2026/10/lac-du-bouchet-en-famille-tour-du-lac-baignade-et-activites-body-01.webp)
+
+*Photo: [Anthospace](https://commons.wikimedia.org/wiki/File:Plage_du_lac_du_Bouchet.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Le lac possède une plage en herbe et une zone de baignade surveillée en été, décrites dans la [fiche générale My Haute-Loire](https://www.myhauteloire.fr/site-naturel/lac-du-bouchet/). Les dates de surveillance peuvent varier d'une saison à l'autre: vérifiez les jours et horaires auprès de l'office de tourisme et sur place avant toute baignade. Selon la [fiche sanitaire officielle pour 2026](https://baignades.sante.gouv.fr/baignades/consultSite.do?annee=2026&dptddass=043&impression=yes&isite=043001587&modeDetailImp=3&plv=04300153941&site=043001587), la saison balnéaire allait du **15 juin au 13 septembre 2026**: elle est terminée. La plage aménagée disposait de toilettes et d'un poste de secours pendant la saison, mais la fiche la signale **non accessible aux personnes à mobilité réduite**. Cela ne remet pas en cause l'accessibilité partielle du sentier décrite plus haut. Les dates et horaires de surveillance de 2027 restent à confirmer.
+
+Le [Chalet du lac](https://www.lacdubouchet.fr/activites-lac-bouchet-cayres-43_fr.html) mentionne la location de pédalos, de paddles et de barques. Pour les pédalos et paddles, le contact affiché est le **06 32 22 49 75**. Ces activités dépendent de la saison et de l’exploitant: renseignez-vous sur les ouvertures, les tarifs et les conditions d’âge avant de prévoir une sortie sur l’eau.
+
+## Pêcher avec les enfants: carte et supplément obligatoires
+
+La pêche est une activité distincte de la promenade gratuite. Pour 2026, la [Fédération de pêche de Haute-Loire](https://www.pechehauteloire.fr/LacDuBouchet.php) exige une carte d'une AAPPMA réciprocitaire de Haute-Loire ou une carte interfédérale, **plus un supplément propre au lac**, y compris pour les mineurs. Pendant la saison classique du **14 mars au 16 septembre 2026**, ce supplément coûtait **15 € pour la saison, 10 € pour un mineur ou 5 € la journée**. La saison sportive d'automne, annoncée jusqu'au 31 décembre 2026, prévoit d'autres formules et règles. Ces montants s'ajoutent au prix de la carte de pêche; vérifiez les conditions de votre carte, les techniques autorisées et les dates actualisées directement auprès de la Fédération avant de pêcher. Ne transposez pas les tarifs 2026 à 2027.
+
+## Jeux, pique-nique et restauration
+
+Une **aire de jeux**, des tables de pique-nique et des **toilettes publiques** figurent parmi les [équipements recensés sur le site](https://www.myhauteloire.fr/site-naturel/lac-du-bouchet/). C’est pratique pour prolonger la promenade, mais certains services peuvent être moins disponibles hors saison.
+
+Le Chalet du lac propose également un restaurant et un bar-glacier avec vue sur l’eau. Son ouverture varie selon la période. En dehors de l’été, mieux vaut vérifier ses horaires avant de compter sur un repas sur place.
+
+## Comment accéder au lac et quand venir ?
+
+L’accès routier se fait par la **D312, entre Cayres et Le Bouchet-Saint-Nicolas**, avec un parking près du lac. Le site et le sentier sont annoncés accessibles toute l’année, sans droit d’entrée pour la promenade.
+
+À environ **1 200 m d’altitude**, les conditions changent vite selon la saison. En automne, la forêt est particulièrement colorée, mais le sentier peut être glissant. En hiver, neige et verglas peuvent rendre le tour impraticable même si le site reste officiellement ouvert. L’été est la période des activités nautiques, sous réserve de leur ouverture effective.
+
+## Où dormir pour découvrir le lac et ses environs ?
+
+Pour un week-end tout près du lac, [Le Flambeau au Bouchet-Saint-Nicolas sur Booking.com](https://www.booking.com/hotel/fr/le-flambeau.fr.html) propose des chambres familiales, une cuisine à disposition et des petits-déjeuners selon la formule choisie. L’hébergement indique se trouver à environ 1,5 km du lac.
+
+Pour une famille nombreuse qui préfère un logement entier, [ce gîte de deux chambres pour sept personnes à Cayres sur Abritel](https://www.abritel.fr/location-vacances/p2110660) dispose d’une cuisine et se trouve à quelques kilomètres du lac. Vérifiez la capacité réelle pour votre groupe, les disponibilités et les suppléments éventuels pour le linge.
+
+Si vous souhaitez compléter cette escapade par une visite de la ville, notre [guide du Puy-en-Velay avec des enfants](https://www.fam-space.fr/articles/voyages/le-puy-en-velay-avec-des-enfants-ou-dormir-pour-visiter-la-ville-a-pied/) propose des idées de parcours à pied et de logements dans le centre.
 
 ## Article source exact à préserver et améliorer
 
