@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261110-0300-sujet-preparer-une-maison-familiale-aux-fortes-chaleurs-dans-le-gard",
+  "lastProcessedCommit": "8c2426f6462a616829ef3b05e4b8c32b8704960b"
 }
