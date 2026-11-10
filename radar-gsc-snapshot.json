@@ -1,199 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-09T06:27:46+01:00",
+  "generatedAt": "2026-11-10T01:34:08+01:00",
   "dataThrough": "2026-11-07",
   "from": "2026-10-11",
   "refresh": [
-    {
-      "url": "/articles/parentalite/ludotheques-du-grand-nancy-ou-jouer-en-famille-et-emprunter-des-jeux/",
-      "title": "Ludothèques du Grand Nancy: où jouer en famille et emprunter des jeux",
-      "category": "parentalite",
-      "publishedAt": "2026-10-31T03:46:28+01:00",
-      "location": {
-        "city": "",
-        "department": "Meurthe-et-Moselle",
-        "region": "Grand Est"
-      },
-      "ageDays": 9,
-      "rapidDrop": true,
-      "peakStart": "2026-11-02",
-      "peakEnd": "2026-11-04",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
-      "peakImpressions": 107,
-      "recentImpressions": 3,
-      "score": 312,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 107 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0.055,
-      "focusQueries": [
-        "ludothèque nancy",
-        "ludothèque",
-        "ludothèque villers les nancy",
-        "ludotheque",
-        "ludothèque vandoeuvre les nancy"
-      ]
-    },
-    {
-      "url": "/articles/bons-plans/centre-spatial-guyanais-a-kourou-3-experiences-gratuites-et-un-musee-en-famille/",
-      "title": "Centre spatial guyanais à Kourou: 3 expériences gratuites et un musée en famille",
-      "category": "bons-plans",
-      "publishedAt": "2026-10-12T21:37:05+02:00",
-      "location": {
-        "city": "Kourou",
-        "department": "Guyane",
-        "region": "Guyane"
-      },
-      "ageDays": 28,
-      "rapidDrop": true,
-      "peakStart": "2026-10-28",
-      "peakEnd": "2026-10-30",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
-      "peakImpressions": 87,
-      "recentImpressions": 15,
-      "score": 216,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 87 impressions sur trois jours, puis 15 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0.3,
-      "focusQueries": [
-        "billets pour guyaspace expérience (ex-musée de l'espace)",
-        "centre spatial guyanais visite",
-        "qual a taxa?",
-        "visite centre spatial kourou tarif",
-        "visiter centre spatial kourou"
-      ]
-    },
-    {
-      "url": "/articles/parentalite/maison-des-parents-aux-pennes-mirabeau-ateliers-gratuits-et-accueil-des-familles/",
-      "title": "Maison des Parents aux Pennes-Mirabeau: ateliers gratuits et accueil des familles",
-      "category": "parentalite",
-      "publishedAt": "2026-10-16T14:09:03+02:00",
-      "location": {
-        "city": "Les Pennes-Mirabeau",
-        "department": "Bouches-du-Rhône",
-        "region": "Provence-Alpes-Côte d’Azur"
-      },
-      "ageDays": 24,
-      "rapidDrop": true,
-      "peakStart": "2026-10-18",
-      "peakEnd": "2026-10-20",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
-      "peakImpressions": 50,
-      "recentImpressions": 10,
-      "score": 120,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 50 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0.042,
-      "focusQueries": [
-        "espace famille les pennes mirabeau",
-        "espace famille les pennes-mirabeau",
-        "crèche les pennes mirabeau",
-        "espace famille pennes mirabeau",
-        "oui les 2"
-      ]
-    },
-    {
-      "url": "/articles/activites/snowworld-amneville-en-famille-luge-bouees-ou-ski/",
-      "title": "SnowWorld Amnéville en famille: luge, bouées ou ski ?",
-      "category": "activites",
-      "publishedAt": "2026-11-01T00:58:13+01:00",
-      "location": {
-        "city": "Amnéville",
-        "department": "Moselle",
-        "region": "Grand Est"
-      },
-      "ageDays": 8,
-      "rapidDrop": true,
-      "peakStart": "2026-11-02",
-      "peakEnd": "2026-11-04",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
-      "peakImpressions": 47,
-      "recentImpressions": 10,
-      "score": 111,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 47 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0.091,
-      "focusQueries": [
-        "luge amneville",
-        "snow hall amnéville",
-        "esf amneville",
-        "ski amneville prix",
-        "snowhall tarif"
-      ]
-    },
-    {
-      "url": "/articles/cuisine/moulin-du-mont-ramus-a-bessan-choisir-son-huile-d-olive-en-famille/",
-      "title": "Moulin du Mont Ramus à Bessan: choisir son huile d’olive en famille",
-      "category": "cuisine",
-      "publishedAt": "2026-10-24T23:14:34+02:00",
-      "location": {
-        "city": "Bessan",
-        "department": "Hérault",
-        "region": "Occitanie"
-      },
-      "ageDays": 16,
-      "rapidDrop": true,
-      "peakStart": "2026-10-25",
-      "peakEnd": "2026-10-27",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
-      "peakImpressions": 36,
-      "recentImpressions": 0,
-      "score": 108,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 36 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "avis sur moulin du mont ramus - huiles & olives - 100% producteur",
-        "moulin olive bessan",
-        "oliveraie bessan",
-        "moulin du mont ramus avis",
-        "moulin huile d'olive bessan"
-      ]
-    },
-    {
-      "url": "/articles/parentalite/laep-a-rennes-ou-jouer-gratuitement-avec-son-enfant/",
-      "title": "LAEP à Rennes: où jouer gratuitement avec son enfant?",
-      "category": "parentalite",
-      "publishedAt": "2026-10-20T16:09:21+02:00",
-      "location": {
-        "city": "Rennes",
-        "department": "Ille-et-Vilaine",
-        "region": "Bretagne"
-      },
-      "ageDays": 20,
-      "rapidDrop": true,
-      "peakStart": "2026-10-21",
-      "peakEnd": "2026-10-23",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
-      "peakImpressions": 38,
-      "recentImpressions": 2,
-      "score": 108,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 38 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "LAEP Rennes",
-        "lieu accueil enfants parents Rennes",
-        "sorties gratuites tout-petits Rennes"
-      ]
-    },
     {
       "url": "/articles/voyages/disneyland-paris-en-rer-a-avec-des-enfants-trajet-et-tickets-en-2026/",
       "title": "Disneyland Paris en RER A avec des enfants: trajet et tarifs 2026",
@@ -204,7 +14,7 @@
         "department": "Seine-et-Marne",
         "region": "Île-de-France"
       },
-      "ageDays": 9,
+      "ageDays": 10,
       "rapidDrop": true,
       "peakStart": "2026-11-01",
       "peakEnd": "2026-11-03",
@@ -213,15 +23,15 @@
       "peakImpressions": 35,
       "recentImpressions": 1,
       "score": 102,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 35 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 35 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "focusQueries": [
-        "RER A Disneyland Paris enfants",
-        "ticket RER Paris Disneyland 2026",
-        "Marne-la-Vallée Chessy en famille"
+        "ticket rer a disneyland paris",
+        "rer a disney",
+        "rer disneyland paris tarif"
       ]
     },
     {
@@ -234,7 +44,7 @@
         "department": "Vaucluse",
         "region": "Provence-Alpes-Côte d’Azur"
       },
-      "ageDays": 36,
+      "ageDays": 37,
       "rapidDrop": true,
       "peakStart": "2026-10-23",
       "peakEnd": "2026-10-25",
@@ -243,14 +53,17 @@
       "peakImpressions": 35,
       "recentImpressions": 5,
       "score": 90,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 35 impressions sur trois jours, puis 5 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 35 impressions sur trois jours, puis 5 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0.2,
       "focusQueries": [
-        "Grottes de Thouzon enfants",
-        "Grottes de Thouzon famille"
+        "grottes de thouzon",
+        "grotte de thouzon",
+        "grotte de thouzon tarif",
+        "les grottes de thouzon",
+        "faut il réserver"
       ]
     },
     {
@@ -263,7 +76,7 @@
         "department": "Maine-et-Loire",
         "region": "Pays de la Loire"
       },
-      "ageDays": 15,
+      "ageDays": 16,
       "rapidDrop": true,
       "peakStart": "2026-10-28",
       "peakEnd": "2026-10-30",
@@ -272,15 +85,17 @@
       "peakImpressions": 28,
       "recentImpressions": 0,
       "score": 84,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 28 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 28 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "focusQueries": [
-        "ludothèque du Choletais",
-        "jeux en famille à Cholet",
-        "emprunter des jeux"
+        "ludothèque",
+        "horaire ludothèque cholet",
+        "ludothèque du choletais",
+        "horaires ludothèque cholet",
+        "ludotheqie"
       ]
     },
     {
@@ -293,7 +108,7 @@
         "department": "Haut-Rhin",
         "region": "Grand Est"
       },
-      "ageDays": 21,
+      "ageDays": 22,
       "rapidDrop": true,
       "peakStart": "2026-10-21",
       "peakEnd": "2026-10-23",
@@ -302,14 +117,17 @@
       "peakImpressions": 40,
       "recentImpressions": 12,
       "score": 84,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 40 impressions sur trois jours, puis 12 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 40 impressions sur trois jours, puis 12 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 1.25,
       "focusQueries": [
-        "Colmar en famille quand il pleut",
-        "musées Colmar enfants tarifs"
+        "musée du jouet colmar tarif",
+        "colmar enfant",
+        "colmar sous la pluie",
+        "que faire à colmar quand il pleut",
+        "colmar enfants"
       ]
     },
     {
@@ -322,7 +140,7 @@
         "department": "Haute-Loire",
         "region": "Auvergne-Rhône-Alpes"
       },
-      "ageDays": 16,
+      "ageDays": 17,
       "rapidDrop": true,
       "peakStart": "2026-10-25",
       "peakEnd": "2026-10-27",
@@ -331,16 +149,15 @@
       "peakImpressions": 30,
       "recentImpressions": 3,
       "score": 81,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 30 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 30 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "focusQueries": [
-        "lac du Bouchet en famille",
-        "tour du lac du Bouchet",
-        "lac du Bouchet poussette",
-        "baignade lac du Bouchet"
+        "lac du bouchet",
+        "chalet lac du bouchet cayres",
+        "tour du lac du bouchet"
       ]
     },
     {
@@ -353,7 +170,7 @@
         "department": "Drôme",
         "region": "Auvergne-Rhône-Alpes"
       },
-      "ageDays": 13,
+      "ageDays": 14,
       "rapidDrop": true,
       "peakStart": "2026-10-28",
       "peakEnd": "2026-10-30",
@@ -383,7 +200,7 @@
         "department": "Paris",
         "region": "Île-de-France"
       },
-      "ageDays": 12,
+      "ageDays": 13,
       "rapidDrop": true,
       "peakStart": "2026-10-29",
       "peakEnd": "2026-10-31",
@@ -414,7 +231,7 @@
         "department": "Pyrénées-Orientales",
         "region": "Occitanie"
       },
-      "ageDays": 19,
+      "ageDays": 20,
       "rapidDrop": true,
       "peakStart": "2026-10-22",
       "peakEnd": "2026-10-24",
@@ -444,7 +261,7 @@
         "department": "Loire-Atlantique",
         "region": "Pays de la Loire"
       },
-      "ageDays": 13,
+      "ageDays": 14,
       "rapidDrop": true,
       "peakStart": "2026-10-29",
       "peakEnd": "2026-10-31",
@@ -463,6 +280,192 @@
         "Pass Nantes tarifs famille",
         "Pass Nantes visites incluses",
         "visiter Nantes avec enfants pas cher"
+      ]
+    },
+    {
+      "url": "/articles/sorties/aquarium-de-lyon-en-famille-nouveautes-ocean-360-tarifs-et-visite/",
+      "title": "Aquarium de Lyon en famille: nouveautés Océan 360°, tarifs et visite",
+      "category": "sorties",
+      "publishedAt": "2026-10-19T07:22:08+02:00",
+      "location": {
+        "city": "La Mulatière",
+        "department": "Rhône",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "ageDays": 22,
+      "rapidDrop": true,
+      "peakStart": "2026-10-25",
+      "peakEnd": "2026-10-27",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 34,
+      "recentImpressions": 10,
+      "score": 72,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 34 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Aquarium de Lyon en famille",
+        "Océan 360 tarifs Aquarium Lyon"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/hautes-alpes-en-hiver-pneus-chaines-et-etat-des-routes-avant-de-partir/",
+      "title": "Hautes-Alpes en hiver: pneus, chaînes et état des routes avant de partir",
+      "category": "vie-pratique",
+      "publishedAt": "2026-10-18T16:10:12+02:00",
+      "location": {
+        "city": "Gap",
+        "department": "Hautes-Alpes",
+        "region": "Provence-Alpes-Côte d’Azur"
+      },
+      "ageDays": 23,
+      "rapidDrop": true,
+      "peakStart": "2026-10-23",
+      "peakEnd": "2026-10-25",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 36,
+      "recentImpressions": 12,
+      "score": 72,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 36 impressions sur trois jours, puis 12 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "équipements hiver Hautes-Alpes 2026 2027",
+        "chaînes pneus neige Hautes-Alpes",
+        "Info Route 05 conditions circulation",
+        "routes Hautes-Alpes hiver enfants"
+      ]
+    },
+    {
+      "url": "/articles/parentalite/laep-a-bastia-et-en-balagne-deux-lieux-gratuits-pour-les-tout-petits/",
+      "title": "LAEP à Bastia et en Balagne: deux lieux gratuits pour les tout-petits",
+      "category": "parentalite",
+      "publishedAt": "2026-10-11T22:22:18+02:00",
+      "location": {
+        "city": "Bastia",
+        "department": "Haute-Corse",
+        "region": "Corse"
+      },
+      "ageDays": 30,
+      "rapidDrop": true,
+      "peakStart": "2026-11-02",
+      "peakEnd": "2026-11-04",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 27,
+      "recentImpressions": 4,
+      "score": 69,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 27 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "LAEP Bastia",
+        "LAEP Balagne",
+        "lieu accueil enfants parents Haute-Corse",
+        "A Casa Aperta",
+        "A Casa Zitellina"
+      ]
+    },
+    {
+      "url": "/articles/voyages/belle-ile-en-mer-en-famille-sans-voiture-ferry-et-deplacements/",
+      "title": "Belle-Île-en-Mer en famille sans voiture: ferry et déplacements",
+      "category": "voyages",
+      "publishedAt": "2026-10-23T23:04:55+02:00",
+      "location": {
+        "city": "Le Palais",
+        "department": "Morbihan",
+        "region": "Bretagne"
+      },
+      "ageDays": 18,
+      "rapidDrop": true,
+      "peakStart": "2026-10-25",
+      "peakEnd": "2026-10-27",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 25,
+      "recentImpressions": 2,
+      "score": 69,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 25 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Belle-Île-en-Mer en famille sans voiture",
+        "ferry Quiberon Le Palais",
+        "Belle-Île bus 2026",
+        "visiter Belle-Île avec enfants"
+      ]
+    },
+    {
+      "url": "/articles/maison/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/",
+      "title": "Meubles d'occasion en Meurthe-et-Moselle: où acheter, donner et réparer ?",
+      "category": "maison",
+      "publishedAt": "2026-10-29T00:59:22+01:00",
+      "location": {
+        "city": "",
+        "department": "Meurthe-et-Moselle",
+        "region": "Grand Est"
+      },
+      "ageDays": 12,
+      "rapidDrop": true,
+      "peakStart": "2026-10-30",
+      "peakEnd": "2026-11-01",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 23,
+      "recentImpressions": 1,
+      "score": 66,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 23 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "meubles occasion Meurthe-et-Moselle",
+        "ressourcerie Nancy",
+        "donner meubles 54",
+        "Repair Café Lorraine"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/ludotheques-autour-de-dinan-emprunter-des-jeux-pour-la-maison/",
+      "title": "Ludothèques autour de Dinan: emprunter des jeux pour la maison",
+      "category": "vie-pratique",
+      "publishedAt": "2026-10-30T11:31:33+01:00",
+      "location": {
+        "city": "",
+        "department": "Côtes-d'Armor",
+        "region": "Bretagne"
+      },
+      "ageDays": 11,
+      "rapidDrop": true,
+      "peakStart": "2026-10-31",
+      "peakEnd": "2026-11-02",
+      "recentStart": "2026-11-05",
+      "recentEnd": "2026-11-07",
+      "peakImpressions": 22,
+      "recentImpressions": 0,
+      "score": 66,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "ludothèques Dinan",
+        "emprunt de jeux",
+        "ludothèque Plancoët",
+        "ludothèque Plouër-sur-Rance",
+        "ludothèque Lanvallay"
       ]
     }
   ],
@@ -560,12 +563,9 @@
   ],
   "excluded": {
     "expired": 173,
-    "cooling": 20
+    "cooling": 26
   },
   "warnings": [
-    "GSC recherche web : 9953 lignes sur quatre semaines, réponses complètes (1984, 2395, 2788, 2786).",
-    "Catalogue Radar : 1003 articles et 200 entrées d'historique.",
-    "Diagnostics par requêtes réalisés pour 5 articles.",
     "Diagnostics par requêtes : 5/5.",
     "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement."
   ]
