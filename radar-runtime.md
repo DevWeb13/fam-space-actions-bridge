@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Grottes de Thouzon avec des enfants: préparer la visite sous terre"
-subtitle: À 13 °C toute l'année, cette grotte du Thor se découvre en 45 à 50 minutes et sans poussette
-summary: "Durée, température, poussette, réservation et services: les repères utiles pour visiter les Grottes de Thouzon en famille sans mauvaise surprise."
+subtitle: "Fermées après le 31 octobre 2026: tarifs par âge et conseils pour préparer une prochaine visite"
+summary: Les Grottes de Thouzon sont fermées pour la saison 2026. Retrouvez les derniers tarifs publiés, les conditions de réservation et les contraintes pour les familles.
 slug: grottes-de-thouzon-avec-des-enfants-preparer-la-visite-sous-terre
 status: published
 publishedAt: 2026-10-04T19:20:54+02:00
@@ -93,7 +96,7 @@ affiliate:
   destination: Thor
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/activites/(2026)/(10)/grottes-de-thouzon-avec-des-enfants-preparer-la-visite-sous-terre/index.md
   targetSha: 82836d46d19a2fb76cc3e2a6cce0daf55b76b7b3
@@ -122,31 +125,70 @@ radar:
       - faut il réserver
 ---
 
-## Mission retenue
-Actualiser le guide familial des Grottes de Thouzon au Thor, sans le transformer en nouvel article.
+<!-- article-image-credit -->
+*Photo: [Selmoval](https://commons.wikimedia.org/wiki/File:Grottes_de_Thouzon_Vaucluse_1.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC signale une baisse de 35 à 5 impressions sur deux fenêtres de trois jours, sans cause démontrée. Lacune indépendante vérifiée: l'article annonce une ouverture jusqu'au 1er novembre 2026, alors que l'accueil du site exploitant indique le 31 octobre inclus; au 10 novembre, le site est fermé pour la saison. La page n'explicite pas non plus les tarifs par âge, pourtant publiés officiellement.
+Au Thor, dans le Vaucluse, les Grottes de Thouzon se visitent avec un guide en **45 à 50 minutes**, dans une température constante de **13 °C**. C'est une sortie possible avec des enfants, mais pas avec une poussette.
 
-## Décision du lecteur
-Éviter un déplacement inutile hors saison, choisir un créneau lors de la prochaine saison confirmée et estimer précisément le coût familial.
+**Attention à la date:** les grottes sont **fermées pour la saison depuis le 31 octobre 2026**, selon l'annonce d'ouverture de l'[exploitant](https://www.grottes-thouzon.com/). Certaines mentions officielles divergent sur le dernier jour d'ouverture; si vous envisagez une visite à la limite de la saison, téléphonez au **04 90 33 93 65** avant de vous déplacer. Les dates de réouverture en 2027 ne sont pas encore confirmées ici.
 
-## Faits à traiter
-- Signaler clairement la fermeture saisonnière actuelle. Le site officiel annonce du 1er avril au 31 octobre **2026**; ne pas extrapoler les dates 2027. Les pages officielles affichent des mentions contradictoires (1er novembre dans certains bandeaux): demander confirmation à l'exploitant pour toute date limite.
-- Donner les tarifs publiés pour 2026: avril-juin et septembre-octobre: adultes 12 €, 12-17 ans 9,50 €, 3-11 ans 7 €, moins de 3 ans gratuit; juillet-août: respectivement 12,50 €, 10 €, 7,50 €, gratuit. Ne pas les présenter comme tarifs 2027.
-- Préserver durée 45-50 min, température 13 °C, vêtement chaud, impossibilité poussette/fauteuil, portage, réservation facultative mais conseillée en août, arrivée 15 min avant réservation, parking, pique-nique, restauration, adresse, trois photos et crédits, et lien Booking.
-- Conserver les horaires saisonniers seulement en les datant; éviter d'affirmer une ouverture actuelle.
+## À quoi ressemble la visite?
 
-## Sources de départ
-- Exploitant, accueil et ouverture saisonnière: https://www.grottes-thouzon.com/
-- Exploitant, tarifs et réductions: https://www.grottes-thouzon.com/tarifs/
-- Office régional du tourisme, dates divergentes à ne pas arbitrer sans l'exploitant: https://provence-alpes-cotedazur.com/que-faire/detente-et-loisirs/toutes-les-activites-detente-et-loisirs/grottes-de-thouzon-le-thor-fr-4125149/
+<!-- article-image-body:01 -->
 
-## Affiliation
-Conserver naturellement la Villa aux Cyprès bleu au Thor sur Booking pour les familles en séjour; ne pas inventer d'offre de billets.
+![Stalactites tubulaires au plafond des Grottes de Thouzon](/images/articles/2026/10/grottes-de-thouzon-avec-des-enfants-preparer-la-visite-sous-terre-body-01.webp)
 
-## Continuations internes
-Ne pas créer de nouvel article: enrichir uniquement la page existante. Ne pas supprimer les informations pratiques et crédits d'images.
+*Photo: [Paul66](https://commons.wikimedia.org/wiki/File:Macaroni_aan_planfond.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Le parcours guidé suit le lit fossile d'une ancienne rivière souterraine, avec notamment de fines stalactites fistuleuses. La [Ville du Thor](https://www.ville-lethor.fr/les-grottes-de-thouzon/) rappelle que la grotte a été découverte en 1902.
+
+La durée reste raisonnable pour une sortie familiale, mais un enfant doit pouvoir suivre un groupe pendant environ trois quarts d'heure. L'exploitant présente également un nouvel éclairage et un spectacle son et lumière.
+
+## Comment habiller les enfants?
+
+Sous terre, la température reste à **13 °C toute l'année**, y compris en juillet et août. Prévoyez un sweat ou une veste pour chacun et des chaussures confortables pour marcher. La fraîcheur peut être agréable lors des fortes chaleurs, mais le contraste avec l'extérieur est important.
+
+## Peut-on entrer avec une poussette?
+
+<!-- article-image-body:02 -->
+
+![Entrée extérieure des Grottes de Thouzon au Thor](/images/articles/2026/10/grottes-de-thouzon-avec-des-enfants-preparer-la-visite-sous-terre-body-02.webp)
+
+*Photo: [Paul66](https://commons.wikimedia.org/wiki/File:Entrance_Grottes_de_Thouzon.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+**Non.** La configuration de la grotte ne permet l'accès ni en poussette ni en fauteuil roulant. Pour un bébé ou un tout-petit, prévoyez un portage adapté et assurez-vous de pouvoir le maintenir pendant la visite.
+
+Les animaux sont admis uniquement s'ils sont portés pendant toute la visite, selon les [conditions de l'exploitant](https://www.grottes-thouzon.com/).
+
+## Quels étaient les tarifs familiaux en 2026?
+
+Voici les **tarifs individuels publiés pour la saison 2026**, à ne pas considérer comme des prix garantis pour 2027.
+
+- **Avril à juin et septembre à octobre:** adulte (18 ans et plus) 12 €; adolescent de 12 à 17 ans 9,50 €; enfant de 3 à 11 ans 7 €; moins de 3 ans gratuit.
+- **Juillet et août:** adulte 12,50 €; adolescent de 12 à 17 ans 10 €; enfant de 3 à 11 ans 7,50 €; moins de 3 ans gratuit.
+
+Par exemple, deux adultes et deux enfants de 6 et 8 ans payaient **38 € en basse saison** ou **40 € en juillet-août**. Une réduction de 1 € était annoncée pour les étudiants de moins de 25 ans, les personnes sans emploi et les personnes en situation de handicap, sur justificatif. Consultez la [grille officielle](https://www.grottes-thouzon.com/tarifs/) avant toute prochaine visite pour connaître les tarifs applicables.
+
+## Réservation et horaires: que vérifier?
+
+La réservation n'était **pas obligatoire en 2026**, des départs sans réservation étant proposés dans la journée. Elle était cependant conseillée, particulièrement en août, pour choisir un créneau. En cas de réservation en ligne, l'exploitant demandait d'arriver **au moins 15 minutes avant** l'heure choisie.
+
+Les horaires affichés pour **2026** étaient les suivants: d'avril à juin et en septembre-octobre, ouverture de 10 h à 18 h; en juillet-août, de 9 h 45 à 19 h, avec des visites toutes les 15 minutes de 10 h à 18 h. Les pages de l'exploitant divergent sur le dernier départ en basse saison (17 h ou 17 h 15). Vérifiez directement les horaires et départs de la prochaine saison sur le [site officiel](https://www.grottes-thouzon.com/) plutôt que de vous fier à ces anciens créneaux.
+
+## Parking, repas et adresse
+
+Les grottes se trouvent au **2083 route d'Orange, 84250 Le Thor**. Le site dispose d'un parking gratuit ombragé, d'une aire de pique-nique, d'une boutique et d'une offre de restauration rapide. Ces services permettent de prévoir une pause avec les enfants avant ou après la visite; vérifiez leur disponibilité à la réouverture.
+
+## Prolonger la sortie dans les Sorgues
+
+La visite souterraine peut s'intégrer à une demi-journée avec une promenade au Thor ou dans le secteur des Sorgues, sans multiplier les activités pour les plus jeunes.
+
+Pour les familles qui séjournent dans le secteur, [La Villa aux Cyprès bleu au Thor sur Booking.com](https://www.booking.com/hotel/fr/la-villa-aux-cypres-bleu.fr.html) présente quatre chambres, une cuisine équipée, une piscine extérieure et un parking sur place. Vérifiez les équipements et disponibilités aux dates de votre séjour.
 
 ## Article source exact à préserver et améliorer
 
