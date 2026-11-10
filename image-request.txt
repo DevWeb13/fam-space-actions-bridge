@@ -364,3 +364,4 @@ automation/image-hero-20261109-1845-chartres-dijon-laep|b27bb855f15fe663dcb3ab7d
 automation/image-hero-20261110-0049-balagne|c08823b570b43b9635344b44c817f08f5982cf78
 automation/image-hero-20261110-0049-balagne|6e6e43e5b41dcfbe4e0cc191a9e217aa0540faaa
 automation/image-hero-20261110-0647-bretagne-gard-montjoly|7f2f8148ed5db08db4e7e9609553063eace095ca
+automation/image-hero-20261110-0647-bretagne-gard-montjoly|47fafe3f64f9624c65cccf479f20e2390c2d198e
