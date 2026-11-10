@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261110-2257-chambly-kids-festival-2027-quatre-spectacles-pour-decouvrir-la-scene-a",
+  "lastProcessedCommit": "3508bcd45fe10d76ccc38ac22be91c99efead826"
 }
