@@ -371,3 +371,4 @@ automation/image-hero-20261110-1848-touraine-gironde-marne|3767e305f68764508039d
 automation/image-hero-20261110-1848-touraine-gironde-marne|d20013b7df66adc6eb785242c706c0068ff14aa0
 automation/image-hero-20261111-0045-propriano-doubs|711ffdfd11108cc98fd562f1e2ed630385b908b2
 automation/image-hero-20261111-0045-propriano-doubs|dd0ac6457b455e998ccbc9a0dd8a7a6e20eabd8b
+automation/image-hero-20261111-0647-chambly-finistere-mulhouse|c9ffd2a53c314d824c8c538283648eb2113de5c1
