@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 1/3
+# Radar Fam Space - Phase 2/3
 
 ## Mission
 
@@ -8,23 +8,22 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 1/3
+# Radar - Phase 2/3
 
-Tu es rédacteur en chef. Ta seule responsabilité est de choisir la meilleure mission du passage et de préparer un brief éditorial court. **Ne fais aucune plomberie Git et ne reconstruis aucune donnée GSC structurée.**
+Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
 
-Le snapshot GSC du jour est déjà prêt lorsque cette phase commence. Utilise le catalogue compact et l'historique du bridge fournis dans ce runtime, puis utilise le contexte des travaux en cours fourni dans ce runtime. Contrôle seulement les articles nécessaires sur `master`, sans relire tout le catalogue fichier par fichier.
+Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
 
-Examine **en premier** les articles `refresh`, en commençant par ceux marqués `rapidDrop: true`. Ils ont gagné des impressions, puis leur visibilité a fortement diminué en quelques jours. Les articles récents ne doivent pas être pénalisés par leur âge. Les autres pertes significatives viennent ensuite.
+Suis le diagnostic éditorial du brief:
+- `rank_loss`: réponds mieux aux intentions réellement en recul;
+- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
+- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
+- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
+- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
 
-Lis l'article source complet, ses sources et les requêtes GSC lorsqu'elles ont été diagnostiquées :
-- `rank_loss` : vérifier les intentions dont les positions ont réellement reculé ;
-- `coverage_loss` : examiner les recherches dont l'exposition diminue ;
-- `uncertain` ou `needs_query_check` : une chute d'impressions ne prouve pas la cause. Seule une lacune indépendante et vérifiée peut justifier une amélioration ;
-- `search_potential` : vérifier que la réponse et le titre correspondent réellement à l'intention.
+Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
 
-**Ne choisis pas un refresh pour changer une date ou forcer un `updatedAt`.** Identifie ce qui serait concrètement meilleur pour la famille, tout en conservant ce qui fonctionne déjà.
-
-**Seulement si aucun article existant n'est réellement améliorable**, cherche un événement exceptionnel avec un fort potentiel d'intérêt et éventuellement d'affiliation. Vérifie ses sources officielles et recherche les doublons de sujet sur `master`, en complément des articles proches déjà listés, ainsi que les contenus Publication/Destination en cours. Ne multiplie pas les nouveaux articles sur de petits événements gratuits.
+Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
 
 Applique directement les règles partenaires ci-dessous.
 
@@ -51,1003 +50,308 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
 
-Le brief doit rester court et contenir uniquement ce qui aidera la rédaction:
+Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
+
+Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
+
+Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
+
+## Candidat validé de la phase précédente
+
+---
+title: "Pass Nantes en famille en 2026: tarifs, visites incluses et alternatives gratuites"
+subtitle: Un guide pour choisir entre 24 h, 48 h, 72 h ou 7 jours sans payer pour des visites que vous ne ferez pas
+summary: "Pass Nantes en famille: prix 2026, Machines de l'île, musées, croisières, réservations et gratuités pour choisir la formule adaptée à votre séjour."
+slug: pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites
+status: published
+publishedAt: 2026-10-27T17:17:43+01:00
+updatedAt: null
+category: bons-plans
+readingTime: 7
+location:
+  city: Nantes
+  department: Loire-Atlantique
+  region: Pays de la Loire
+topic:
+  key: bons-plans|nantes|pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites|2026
+  keywords:
+    - Pass Nantes en famille 2026
+    - Pass Nantes tarifs famille
+    - Pass Nantes visites incluses
+    - visiter Nantes avec enfants pas cher
+image:
+  src: /images/articles/2026/10/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites.webp
+  alt: Le Grand Éléphant mécanique des Machines de l'île à Nantes, avec des visiteurs sur ses plateformes
+sources:
+  - title: Le Voyage à Nantes - Pass Nantes et activités incluses
+    url: https://www.levoyageanantes.fr/a-faire/pass-nantes/
+  - title: Le Voyage à Nantes - FAQ Pass Nantes, tarifs et réservations
+    url: https://www.levoyageanantes.fr/a-faire/pass-nantes/faq-pass-nantes/
+  - title: Naolib - Gratuité des transports en commun
+    url: https://naolib.fr/gratuite-des-transports-en-commun
+  - title: Musée d'arts de Nantes - Tarifs et gratuités
+    url: https://museedartsdenantes.nantesmetropole.fr/visiter/visiteurs-individuels/
+  - title: Musée d'arts de Nantes - Gratuité du premier dimanche
+    url: https://museedartsdenantes.nantesmetropole.fr/agenda/musee-gratuit-tous-les-1ers-dimanches-du-mois/
+  - title: Saint-Nazaire Tourisme - Pass Renversant et visites
+    url: https://www.saint-nazaire-tourisme.com/les-visites/les-bons-plans/
+affiliate:
+  enabled: true
+  type: travel
+  destination: Nantes
+radar:
+  schemaVersion: 1
+  phase: 1
+  mode: refresh
+  targetPath: src/routes/articles/bons-plans/(2026)/(10)/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites/index.md
+  targetSha: b106b02c80383149d459ea9181bc237486760387
+  targetUrl: /articles/bons-plans/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites/
+  decision: Décider, pour les âges et visites réellement prévus, si le Pass Nantes famille, des pass individuels ou des billets séparés coûtent le moins cher, puis réserver les activités accessibles aux dates du séjour.
+  affiliationPotential: Conserver le lien Tiqets vers le Pass Nantes et l'hébergement Booking existant, comparer le prix final et les conditions avec l'organisateur sans promettre de réduction partenaire.
+  gsc:
+    retrievedAt: 2026-11-11T02:29:19+01:00
+    dataThrough: 2026-11-08
+    signal: uncertain
+    basis: "Visibilité récente : 24 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante."
+    peakStart: 2026-10-29
+    peakEnd: 2026-10-31
+    recentStart: 2026-11-06
+    recentEnd: 2026-11-08
+    peakImpressions: 24
+    recentImpressions: 0
+    commonQueries: 0
+    positionDelta: null
+    impressionRatio: 0
+    focusQueries:
+      - pass famille nantes
+      - pass famille
+      - pass nantes prix
+---
 
 ## Mission retenue
-Le sujet et ce que c'est réellement.
+Actualiser le guide existant du Pass Nantes pour rendre son arbitrage financier familial réellement calculable, et fiabiliser les réservations des Machines de l'île.
 
 ## Pourquoi cette mission
-Pourquoi elle mérite une amélioration maintenant, ou pourquoi aucun article existant n'était utilement améliorable avant de retenir cet événement.
+Le snapshot GSC du 8 novembre montre 24 impressions du 29 au 31 octobre puis zéro du 6 au 8 novembre, sans diagnostic de requêtes comparable: la cause SEO est inconnue. Lacune éditoriale indépendante: le texte donne les tarifs et des conseils généraux mais ne chiffre pas les visites séparées pour des familles d'âges différents. La page officielle publie un exemple de coûts par activité et précise désormais que la réservation en ligne des Machines est possible tous les jours. Ce refresh doit aider à prendre une décision d'achat, pas seulement actualiser une date.
 
 ## Décision du lecteur
-Ce que la page doit permettre au lecteur de comprendre ou de choisir. Formule un résultat pour le lecteur, pas un titre ni un plan. Les consignes de maillage, d'anti-doublon ou d'organisation entre articles appartiennent à `Continuations internes`, pas à la décision.
+Comparer deux adultes et enfants de 4-17 ans, moins de 4 ans ou bénéficiant de gratuités, selon une ou deux journées et les prestations réellement ouvertes. Choisir le bon achat sans compter les transports gratuits du week-end comme une économie.
 
 ## Faits à traiter
-Les informations décisives à vérifier, actualiser ou ajouter, et les informations existantes importantes à préserver pour un refresh.
+- Vérifier les tarifs officiels 24 h/48 h/72 h/7 jours, la formule famille, les conditions du tarif réduit et la promotion de 10 % sur les seuls pleins tarifs jusqu'au 31 mars 2027.
+- Ajouter un ou deux calculs transparents à partir de prix individuels vérifiés: château, Galerie, Carrousel et éventuellement croisière, avec prix par âge et cas où les billets séparés sont préférables. Ne pas extrapoler des tarifs adultes aux enfants.
+- Vérifier la réservation en ligne quotidienne de la Galerie et du Carrousel au tarif porteur Pass, les réservations obligatoires pour croisières, Planétarium et expositions, et les activités saisonnières indisponibles en novembre.
+- Préserver le principe des heures consécutives, les gratuités Naolib du week-end et du musée d'Arts pour mineurs, l'exclusion du voyage en Grand Éléphant, la fermeture du Muséum, les trajets TER conditionnels, l'accessibilité pratique, toutes les photographies/crédits, les sources, les liens internes et les deux liens partenaires. Retirer l'exemple du dimanche 8 novembre devenu passé sans perdre les règles de gratuité.
 
 ## Sources de départ
-Les meilleures sources officielles ou directement responsables.
+- https://www.levoyageanantes.fr/a-faire/pass-nantes/
+- https://www.levoyageanantes.fr/a-faire/pass-nantes/faq-pass-nantes/
+- https://naolib.fr/gratuite-des-transports-en-commun
+- https://museedartsdenantes.nantesmetropole.fr/visiter/visiteurs-individuels/
 
 ## Affiliation
-Les pistes réellement vérifiées, ou l'absence d'affiliation naturelle.
+Lien Tiqets Pass Nantes déjà présent à préserver après contrôle des conditions; hébergement Adagio Nantes Centre sur Booking à conserver. Ne pas utiliser les partenaires pour valider les tarifs officiels.
 
 ## Continuations internes
-Deux ou trois pistes seulement si elles sont réellement utiles. Indique quand une page existante doit prendre le relais sur un sous-sujet afin d'éviter de le redévelopper dans le nouvel article.
+- Laisser les itinéraires et quartiers à la page Destination Nantes déjà liée.
+- Ne pas réécrire les événements saisonniers nantais couverts par leurs articles dédiés.
 
-Ensuite, soumets cette décision via le format `action: start` fourni plus bas dans ce runtime. Le modèle ne renseigne jamais le nom de branche, le SHA, `targetPath`, le slug technique d'une opportunity ni les métriques GSC détaillées déjà présentes dans le snapshot.
+## Article source exact à préserver et améliorer
 
-## Catégories éditoriales autorisées
+Chemin: src/routes/articles/bons-plans/(2026)/(10)/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites/index.md
 
-- sorties — Sorties: Des idées de sorties à partager en famille, près de chez vous.
-- voyages — Voyages: Des conseils et inspirations pour voyager sereinement en famille.
-- evenements — Événements: Les événements à découvrir et à préparer avec les enfants.
-- activites — Activités: Des activités simples et enrichissantes pour tous les âges.
-- vie-pratique — Vie pratique: Des repères concrets pour faciliter le quotidien des familles.
-- maison — Maison: Des solutions pratiques pour une maison familiale agréable.
-- cuisine — Cuisine: Des idées et conseils pour cuisiner simplement en famille.
-- parentalite — Parentalité: Des ressources bienveillantes pour accompagner la vie de famille.
-- bons-plans — Bons plans: Réductions, gratuités, pass et aides pratiques pour économiser en famille.
+---
+title: "Pass Nantes en famille en 2026: tarifs, visites incluses et alternatives gratuites"
+subtitle: Un guide pour choisir entre 24 h, 48 h, 72 h ou 7 jours sans payer pour des visites que vous ne ferez pas
+summary: "Pass Nantes en famille: prix 2026, Machines de l'île, musées, croisières, réservations et gratuités pour choisir la formule adaptée à votre séjour."
+slug: pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites
+status: published
+publishedAt: 2026-10-27T17:17:43+01:00
+updatedAt: null
+category: bons-plans
+readingTime: 7
+location:
+  city: Nantes
+  department: Loire-Atlantique
+  region: Pays de la Loire
+topic:
+  key: bons-plans|nantes|pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites|2026
+  keywords:
+    - Pass Nantes en famille 2026
+    - Pass Nantes tarifs famille
+    - Pass Nantes visites incluses
+    - visiter Nantes avec enfants pas cher
+image:
+  src: "/images/articles/2026/10/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites.webp"
+  alt: "Le Grand Éléphant mécanique des Machines de l'île à Nantes, avec des visiteurs sur ses plateformes"
+sources:
+  - title: Le Voyage à Nantes - Pass Nantes et activités incluses
+    url: https://www.levoyageanantes.fr/a-faire/pass-nantes/
+  - title: Le Voyage à Nantes - FAQ Pass Nantes, tarifs et réservations
+    url: https://www.levoyageanantes.fr/a-faire/pass-nantes/faq-pass-nantes/
+  - title: Naolib - Gratuité des transports en commun
+    url: https://naolib.fr/gratuite-des-transports-en-commun
+  - title: Musée d'arts de Nantes - Tarifs et gratuités
+    url: https://museedartsdenantes.nantesmetropole.fr/visiter/visiteurs-individuels/
+  - title: Musée d'arts de Nantes - Gratuité du premier dimanche
+    url: https://museedartsdenantes.nantesmetropole.fr/agenda/musee-gratuit-tous-les-1ers-dimanches-du-mois/
+  - title: Saint-Nazaire Tourisme - Pass Renversant et visites
+    url: https://www.saint-nazaire-tourisme.com/les-visites/les-bons-plans/
+affiliate:
+  enabled: true
+  type: travel
+  destination: Nantes
+---
+<!-- article-image-credit -->
+*Photo: [MHM55](https://commons.wikimedia.org/wiki/File:Grand_%C3%A9l%C3%A9phant,_Nantes-09.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Snapshot GSC préparé
+Pour découvrir Nantes avec des enfants, le Pass Nantes donne accès à une cinquantaine d'activités: musées, Machines de l'île, visites guidées, croisières et certains transports. Il peut simplifier un séjour chargé, mais n'est pas forcément le meilleur achat pour une famille qui souhaite surtout flâner, visiter un seul musée ou profiter des sorties gratuites. Le bon choix dépend des âges, des jours de visite et des activités réellement ouvertes.
 
-{
-  "schemaVersion": 1,
-  "generatedAt": "2026-11-11T02:29:19+01:00",
-  "dataThrough": "2026-11-08",
-  "from": "2026-10-12",
-  "refresh": [
-    {
-      "url": "/articles/cuisine/ateliers-de-cuisine-parent-enfant-a-toulouse-chocolat-patisserie-ou-menu-complet/",
-      "title": "Ateliers de cuisine parent-enfant à Toulouse: chocolat, pâtisserie ou menu complet ?",
-      "category": "cuisine",
-      "publishedAt": "2026-11-01T12:00:47+01:00",
-      "location": {
-        "city": "Toulouse",
-        "department": "Haute-Garonne",
-        "region": "Occitanie"
-      },
-      "ageDays": 10,
-      "rapidDrop": true,
-      "peakStart": "2026-11-03",
-      "peakEnd": "2026-11-05",
-      "recentStart": "2026-11-06",
-      "recentEnd": "2026-11-08",
-      "peakImpressions": 34,
-      "recentImpressions": 0,
-      "score": 102,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 34 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "atelier cuisine enfant toulouse",
-        "atelier cuisine ecole clae toulouse",
-        "cours de cuisine enfant toulouse",
-        "cours patisserie toulouse",
-        "stage patisserie toulouse"
-      ]
-    },
-    {
-      "url": "/articles/vie-pratique/hautes-alpes-en-hiver-pneus-chaines-et-etat-des-routes-avant-de-partir/",
-      "title": "Hautes-Alpes en hiver: pneus, chaînes et état des routes avant de partir",
-      "category": "vie-pratique",
-      "publishedAt": "2026-10-18T16:10:12+02:00",
-      "location": {
-        "city": "Gap",
-        "department": "Hautes-Alpes",
-        "region": "Provence-Alpes-Côte d’Azur"
-      },
-      "ageDays": 24,
-      "rapidDrop": true,
-      "peakStart": "2026-10-23",
-      "peakEnd": "2026-10-25",
-      "recentStart": "2026-11-06",
-      "recentEnd": "2026-11-08",
-      "peakImpressions": 36,
-      "recentImpressions": 11,
-      "score": 75,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 36 impressions sur trois jours, puis 11 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": []
-    },
-    {
-      "url": "/articles/voyages/banyuls-sur-mer-en-famille-aquarium-et-balade-hors-saison/",
-      "title": "Banyuls-sur-Mer en famille: aquarium et balade hors saison",
-      "category": "voyages",
-      "publishedAt": "2026-10-21T18:13:04+02:00",
-      "location": {
-        "city": "Banyuls-sur-Mer",
-        "department": "Pyrénées-Orientales",
-        "region": "Occitanie"
-      },
-      "ageDays": 21,
-      "rapidDrop": true,
-      "peakStart": "2026-10-22",
-      "peakEnd": "2026-10-24",
-      "recentStart": "2026-11-06",
-      "recentEnd": "2026-11-08",
-      "peakImpressions": 25,
-      "recentImpressions": 0,
-      "score": 75,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 25 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "aquarium banyuls prix",
-        "aquarium banyuls temps de visite",
-        "today"
-      ]
-    },
-    {
-      "url": "/articles/bons-plans/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites/",
-      "title": "Pass Nantes en famille en 2026: tarifs, visites incluses et alternatives gratuites",
-      "category": "bons-plans",
-      "publishedAt": "2026-10-27T17:17:43+01:00",
-      "location": {
-        "city": "Nantes",
-        "department": "Loire-Atlantique",
-        "region": "Pays de la Loire"
-      },
-      "ageDays": 15,
-      "rapidDrop": true,
-      "peakStart": "2026-10-29",
-      "peakEnd": "2026-10-31",
-      "recentStart": "2026-11-06",
-      "recentEnd": "2026-11-08",
-      "peakImpressions": 24,
-      "recentImpressions": 0,
-      "score": 72,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 24 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "pass famille nantes",
-        "pass famille",
-        "pass nantes prix"
-      ]
-    },
-    {
-      "url": "/articles/voyages/belle-ile-en-mer-en-famille-sans-voiture-ferry-et-deplacements/",
-      "title": "Belle-Île-en-Mer en famille sans voiture: ferry et déplacements",
-      "category": "voyages",
-      "publishedAt": "2026-10-23T23:04:55+02:00",
-      "location": {
-        "city": "Le Palais",
-        "department": "Morbihan",
-        "region": "Bretagne"
-      },
-      "ageDays": 19,
-      "rapidDrop": true,
-      "peakStart": "2026-10-25",
-      "peakEnd": "2026-10-27",
-      "recentStart": "2026-11-06",
-      "recentEnd": "2026-11-08",
-      "peakImpressions": 25,
-      "recentImpressions": 2,
-      "score": 69,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 25 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "bateau belle ile en mer voiture",
-        "belle ile en mer voiture ou pas",
-        "sans voiture"
-      ]
-    },
-    {
-      "url": "/articles/maison/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/",
-      "title": "Meubles d'occasion en Meurthe-et-Moselle: où acheter, donner et réparer ?",
-      "category": "maison",
-      "publishedAt": "2026-10-29T00:59:22+01:00",
-      "location": {
-        "city": "",
-        "department": "Meurthe-et-Moselle",
-        "region": "Grand Est"
-      },
-      "ageDays": 13,
-      "rapidDrop": true,
-      "peakStart": "2026-10-30",
-      "peakEnd": "2026-11-01",
-      "recentStart": "2026-11-06",
-      "recentEnd": "2026-11-08",
-      "peakImpressions": 23,
-      "recentImpressions": 1,
-      "score": 66,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 23 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "meubles occasion Meurthe-et-Moselle",
-        "ressourcerie Nancy",
-        "donner meubles 54",
-        "Repair Café Lorraine"
-      ]
-    },
-    {
-      "url": "/articles/vie-pratique/ludotheques-autour-de-dinan-emprunter-des-jeux-pour-la-maison/",
-      "title": "Ludothèques autour de Dinan: emprunter des jeux pour la maison",
-      "category": "vie-pratique",
-      "publishedAt": "2026-10-30T11:31:33+01:00",
-      "location": {
-        "city": "",
-        "department": "Côtes-d'Armor",
-        "region": "Bretagne"
-      },
-      "ageDays": 12,
-      "rapidDrop": true,
-      "peakStart": "2026-10-31",
-      "peakEnd": "2026-11-02",
-      "recentStart": "2026-11-06",
-      "recentEnd": "2026-11-08",
-      "peakImpressions": 22,
-      "recentImpressions": 0,
-      "score": 66,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "ludothèques Dinan",
-        "emprunt de jeux",
-        "ludothèque Plancoët",
-        "ludothèque Plouër-sur-Rance",
-        "ludothèque Lanvallay"
-      ]
-    },
-    {
-      "url": "/articles/voyages/visiter-la-cite-du-volcan-en-famille-a-la-reunion/",
-      "title": "Visiter la Cité du Volcan en famille à La Réunion",
-      "category": "voyages",
-      "publishedAt": "2026-10-23T23:45:04+02:00",
-      "location": {
-        "city": "Le Tampon",
-        "department": "La Réunion",
-        "region": "La Réunion"
-      },
-      "ageDays": 19,
-      "rapidDrop": true,
-      "peakStart": "2026-10-26",
-      "peakEnd": "2026-10-28",
-      "recentStart": "2026-11-06",
-      "recentEnd": "2026-11-08",
-      "peakImpressions": 22,
-      "recentImpressions": 0,
-      "score": 66,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Cité du Volcan en famille",
-        "La Réunion avec des enfants",
-        "Bourg-Murat"
-      ]
-    },
-    {
-      "url": "/articles/activites/forum-des-sciences-a-villeneuve-d-ascq-en-famille-que-choisir-selon-l-age/",
-      "title": "Forum des Sciences à Villeneuve-d'Ascq en famille: que choisir selon l'âge ?",
-      "category": "activites",
-      "publishedAt": "2026-11-02T00:03:12+01:00",
-      "location": {
-        "city": "Villeneuve-d'Ascq",
-        "department": "Nord",
-        "region": "Hauts-de-France"
-      },
-      "ageDays": 9,
-      "rapidDrop": true,
-      "peakStart": "2026-11-03",
-      "peakEnd": "2026-11-05",
-      "recentStart": "2026-11-06",
-      "recentEnd": "2026-11-08",
-      "peakImpressions": 30,
-      "recentImpressions": 9,
-      "score": 63,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 30 impressions sur trois jours, puis 9 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Forum des Sciences Villeneuve-d'Ascq en famille",
-        "planétarium Villeneuve-d'Ascq enfants",
-        "activités scientifiques enfants Nord"
-      ]
-    },
-    {
-      "url": "/articles/activites/visiter-le-nouveau-musee-m24-au-mans-en-famille-billets-parcours-et-circuit/",
-      "title": "Visiter le nouveau musée M24 au Mans en famille: billets, parcours et circuit",
-      "category": "activites",
-      "publishedAt": "2026-10-31T09:01:04+01:00",
-      "location": {
-        "city": "Le Mans",
-        "department": "Sarthe",
-        "region": "Pays de la Loire"
-      },
-      "ageDays": 11,
-      "rapidDrop": true,
-      "peakStart": "2026-11-01",
-      "peakEnd": "2026-11-03",
-      "recentStart": "2026-11-06",
-      "recentEnd": "2026-11-08",
-      "peakImpressions": 21,
-      "recentImpressions": 0,
-      "score": 63,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 21 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "musée M24 Le Mans en famille",
-        "musée sport automobile Le Mans enfants",
-        "visite circuit 24 Heures du Mans"
-      ]
-    },
-    {
-      "url": "/articles/maison/encombrants-a-limoges-donner-faire-enlever-ou-deposer-ses-meubles/",
-      "title": "Encombrants à Limoges: donner, faire enlever ou déposer ses meubles",
-      "category": "maison",
-      "publishedAt": "2026-10-23T15:06:38+02:00",
-      "location": {
-        "city": "Limoges",
-        "department": "Haute-Vienne",
-        "region": "Nouvelle-Aquitaine"
-      },
-      "ageDays": 19,
-      "rapidDrop": true,
-      "peakStart": "2026-10-24",
-      "peakEnd": "2026-10-26",
-      "recentStart": "2026-11-06",
-      "recentEnd": "2026-11-08",
-      "peakImpressions": 21,
-      "recentImpressions": 3,
-      "score": 54,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 21 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "encombrants Limoges",
-        "enlèvement meubles Limoges Métropole",
-        "déchèterie Limoges carte accès"
-      ]
-    },
-    {
-      "url": "/articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/",
-      "title": "Fête foraine de Dijon 2026: dates, horaires et budget avec les enfants",
-      "category": "evenements",
-      "publishedAt": "2026-10-25T17:34:53.615Z",
-      "location": {
-        "city": "Dijon",
-        "department": "Côte-d'Or",
-        "region": "Bourgogne-Franche-Comté"
-      },
-      "ageDays": 17,
-      "rapidDrop": true,
-      "peakStart": "2026-10-27",
-      "peakEnd": "2026-10-29",
-      "recentStart": "2026-11-06",
-      "recentEnd": "2026-11-08",
-      "peakImpressions": 1291,
-      "recentImpressions": 345,
-      "score": 2873,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 1291 impressions sur trois jours, puis 345 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "fête foraine Dijon 2026",
-        "manèges Dijon octobre novembre 2026",
-        "mail Général-Delaborde",
-        "foire aux manèges Dijon"
-      ]
-    },
-    {
-      "url": "/articles/evenements/luminescences-2026-2027-a-amneville-en-famille-soiree-seule-ou-zoo-et-lanternes/",
-      "title": "Luminescences 2026-2027 au zoo d'Amnéville: billets, tarifs et visite en famille",
-      "category": "evenements",
-      "publishedAt": "2026-10-22T09:37:18.454Z",
-      "location": {
-        "city": "Amnéville",
-        "department": "Moselle",
-        "region": "Grand Est"
-      },
-      "ageDays": 20,
-      "rapidDrop": true,
-      "peakStart": "2026-10-23",
-      "peakEnd": "2026-10-25",
-      "recentStart": "2026-11-06",
-      "recentEnd": "2026-11-08",
-      "peakImpressions": 348,
-      "recentImpressions": 94,
-      "score": 762,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 348 impressions sur trois jours, puis 94 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Luminescences Amnéville 2026 2027",
-        "festival lanternes zoo Amnéville enfants",
-        "Luminescences Amnéville tarifs",
-        "zoo Amnéville lanternes poussette"
-      ]
-    },
-    {
-      "url": "/articles/evenements/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget/",
-      "title": "Grand Noël 2026 à Vaux-le-Vicomte en famille: billets, offre enfant et animations",
-      "category": "evenements",
-      "publishedAt": "2026-10-20T22:29:05.320Z",
-      "location": {
-        "city": "Maincy",
-        "department": "Seine-et-Marne",
-        "region": "Île-de-France"
-      },
-      "ageDays": 22,
-      "rapidDrop": true,
-      "peakStart": "2026-10-22",
-      "peakEnd": "2026-10-24",
-      "recentStart": "2026-11-06",
-      "recentEnd": "2026-11-08",
-      "peakImpressions": 235,
-      "recentImpressions": 18,
-      "score": 651,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 235 impressions sur trois jours, puis 18 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Grand Noël Vaux-le-Vicomte 2026 famille",
-        "Vaux-le-Vicomte Noël 2026 billet enfant offert",
-        "Grand Noël Maincy patinoire Odyssée Nordique"
-      ]
-    },
-    {
-      "url": "/articles/evenements/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere/",
-      "title": "Lumières de Laval 2026 en famille: marchés, grande roue et croisière",
-      "category": "evenements",
-      "publishedAt": "2026-10-30T09:27:15.012Z",
-      "location": {
-        "city": "Laval",
-        "department": "Mayenne",
-        "region": "Pays de la Loire"
-      },
-      "ageDays": 12,
-      "rapidDrop": true,
-      "peakStart": "2026-11-01",
-      "peakEnd": "2026-11-03",
-      "recentStart": "2026-11-06",
-      "recentEnd": "2026-11-08",
-      "peakImpressions": 228,
-      "recentImpressions": 59,
-      "score": 507,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 228 impressions sur trois jours, puis 59 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Lumières de Laval 2026",
-        "Noël Laval 2026 famille",
-        "marchés de Noël Laval 2026",
-        "grande roue Laval enfants",
-        "croisière Lumières Laval tarif"
-      ]
-    }
-  ],
-  "strongPages": [
-    {
-      "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
-      "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
-      "category": "evenements",
-      "recentImpressions": 232,
-      "recentClicks": 13,
-      "recentPosition": 6.414,
-      "retention": 3.093
-    },
-    {
-      "url": "/articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/",
-      "title": "Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille",
-      "category": "evenements",
-      "recentImpressions": 179,
-      "recentClicks": 6,
-      "recentPosition": 8.14,
-      "retention": 1.598
-    },
-    {
-      "url": "/articles/evenements/alfest-2026-a-annecy-en-famille-horaires-jeux-et-braderie/",
-      "title": "ALFest 2026 à Annecy en famille: horaires, jeux et braderie",
-      "category": "evenements",
-      "recentImpressions": 49,
-      "recentClicks": 5,
-      "recentPosition": 5.327,
-      "retention": 1.531
-    },
-    {
-      "url": "/articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/",
-      "title": "Noël à Pau 2026 en famille: marchés, village et illuminations",
-      "category": "evenements",
-      "recentImpressions": 46,
-      "recentClicks": 4,
-      "recentPosition": 6.913,
-      "retention": 0.575
-    },
-    {
-      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
-      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
-      "category": "vie-pratique",
-      "recentImpressions": 216,
-      "recentClicks": 3,
-      "recentPosition": 5.241,
-      "retention": 2.038
-    },
-    {
-      "url": "/articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/",
-      "title": "Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers",
-      "category": "vie-pratique",
-      "recentImpressions": 129,
-      "recentClicks": 3,
-      "recentPosition": 5.225,
-      "retention": 1.554
-    },
-    {
-      "url": "/articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/",
-      "title": "Noël 2026 au château de Goulaine: dates, billets et conseils en famille",
-      "category": "evenements",
-      "recentImpressions": 81,
-      "recentClicks": 3,
-      "recentPosition": 6.025,
-      "retention": 0.544
-    },
-    {
-      "url": "/articles/evenements/festival-du-livre-de-colmar-2026-en-famille-dates-ateliers-et-acces/",
-      "title": "Festival du Livre de Colmar 2026 en famille: dates, horaires et animations jeunesse",
-      "category": "evenements",
-      "recentImpressions": 58,
-      "recentClicks": 3,
-      "recentPosition": 7.379,
-      "retention": 0.951
-    },
-    {
-      "url": "/articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/",
-      "title": "Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates",
-      "category": "evenements",
-      "recentImpressions": 116,
-      "recentClicks": 2,
-      "recentPosition": 9.888,
-      "retention": 0.518
-    },
-    {
-      "url": "/articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/",
-      "title": "Recycleries autour de Chartres: où donner et acheter d'occasion ?",
-      "category": "maison",
-      "recentImpressions": 105,
-      "recentClicks": 2,
-      "recentPosition": 10.229,
-      "retention": 0.814
-    }
-  ],
-  "excluded": {
-    "expired": 173,
-    "cooling": 33
-  },
-  "warnings": [
-    "Diagnostics par requêtes : 5/5.",
-    "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement."
-  ]
-}
+## Combien coûte le Pass Nantes en 2026 ?
 
-## Catalogue ciblé (doublons et publications récentes)
+Les tarifs du Pass Nantes en vigueur depuis le 1er avril 2026 sont les suivants:
 
-### Articles comparables et publications récentes
+- **24 h:** 30 € par adulte, 20 € au tarif réduit, 80 € en formule famille.
+- **48 h:** 40 € par adulte, 26 € au tarif réduit, 106 € en formule famille.
+- **72 h:** 49 € par adulte, 31 € au tarif réduit, 129 € en formule famille.
+- **7 jours:** 75 € par adulte, 45 € au tarif réduit, 195 € en formule famille.
 
-- /articles/cuisine/ateliers-de-cuisine-parent-enfant-a-toulouse-chocolat-patisserie-ou-menu-complet/ | Ateliers de cuisine parent-enfant à Toulouse: chocolat, pâtisserie ou menu complet ? | cuisine | Toulouse, Haute-Garonne, Occitanie
-- /articles/cuisine/atelier-cuisine-parent-enfant-a-nantes-gratuit-au-breil-ou-cours-prive/ | Ateliers cuisine parent-enfant à Nantes: où cuisiner ensemble? | cuisine | Nantes, Loire-Atlantique, Pays de la Loire
-- /articles/cuisine/ateliers-de-patisserie-parent-enfant-en-bretagne-quelle-formule-choisir/ | Ateliers de pâtisserie parent-enfant en Bretagne: quelle formule choisir? | cuisine | Bretagne
-- /articles/cuisine/ateliers-cuisine-parent-enfant-a-paris-lesquels-choisir-selon-l-age-et-le-budget/ | Ateliers cuisine parent-enfant à Paris: lesquels choisir selon l’âge et le budget ? | cuisine | Paris, Paris, Île-de-France
-- /articles/vie-pratique/hautes-alpes-en-hiver-pneus-chaines-et-etat-des-routes-avant-de-partir/ | Hautes-Alpes en hiver: pneus, chaînes et état des routes avant de partir | vie-pratique | Gap, Hautes-Alpes, Provence-Alpes-Côte d’Azur
-- /articles/activites/parc-animalier-de-serre-poncon-comment-organiser-la-visite-avec-des-enfants/ | Parc animalier de Serre-Ponçon: comment organiser la visite avec des enfants | activites | Le Sauze-du-Lac, Hautes-Alpes, Provence-Alpes-Côte d’Azur
-- /articles/evenements/festival-echo-mots-champsaur-2026/ | Festival L’Écho des mots 2026 dans le Champsaur: quatre jours de spectacles en famille | evenements | Saint-Jean-Saint-Nicolas, Hautes-Alpes, Provence-Alpes-Côte d'Azur
-- /articles/voyages/serre-poncon-en-famille-organiser-3-jours-entre-lac-plages-et-montagne/ | Serre-Ponçon en famille: organiser 3 jours entre lac, plages et montagne | voyages | Embrun, Hautes-Alpes, Provence-Alpes-Côte d’Azur
-- /articles/voyages/banyuls-sur-mer-en-famille-aquarium-et-balade-hors-saison/ | Banyuls-sur-Mer en famille: aquarium et balade hors saison | voyages | Banyuls-sur-Mer, Pyrénées-Orientales, Occitanie
-- /articles/sorties/ile-de-brehat-en-famille-hors-saison-bateau-balades-et-marees/ | Île de Bréhat en famille hors saison: bateau, balades et marées | sorties | Île-de-Bréhat, Côtes-d'Armor, Bretagne
-- /articles/voyages/la-parata-et-les-iles-sanguinaires-en-famille-balades-et-sortie-en-mer/ | La Parata et les îles Sanguinaires en famille: balades et sortie en mer | voyages | Ajaccio, Corse-du-Sud, Corse
-- /articles/activites/aquarium-de-touraine-en-famille-que-voir-avec-les-enfants/ | Aquarium de Touraine en famille: que voir avec les enfants ? | activites | Lussault-sur-Loire, Indre-et-Loire, Centre-Val de Loire
-- /articles/bons-plans/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites/ | Pass Nantes en famille en 2026: tarifs, visites incluses et alternatives gratuites | bons-plans | Nantes, Loire-Atlantique, Pays de la Loire
+Le tarif réduit concerne notamment les enfants de **4 à 17 ans**, les étudiants de moins de 26 ans et les titulaires d'une carte d'invalidité. Les enfants de moins de 4 ans n'ont pas besoin de pass. La formule famille correspond à **deux adultes et deux enfants de 4 à 17 ans**: elle offre, en pratique, le deuxième pass enfant.
+
+**Attention à la promotion:** l'organisateur annonce **10 % de réduction sur le tarif plein jusqu'au 31 mars 2027**, mais pas sur les tarifs réduits ou famille. Pour deux adultes et deux enfants de 4 à 17 ans, le Pass famille 24 h à 80 € reste plus avantageux que quatre pass séparés (94 € avec la remise sur les deux adultes). Le [Pass Nantes est également proposé sur Tiqets](https://www.tiqets.com/fr/activites-attractions-nantes-c66776/billets-pour-nantes-pass-p1048804/), pour 1, 2, 3 ou 7 jours. Ce revendeur indique un retrait du pass à l'accueil du Voyage à Nantes: vérifiez cette étape et comparez le prix final avec l'offre de l'organisateur.
+
+La durée se compte en **heures consécutives à partir de la première utilisation**, et non en journées calendaires. Un pass de 24 h activé le vendredi à 14 h reste valable jusqu'au samedi à 13 h 59. Pour un séjour de deux jours, l'heure de la première visite peut donc changer l'intérêt d'une formule 24 h ou 48 h.
+
+## Quelles visites plaisent vraiment aux enfants ?
+
+<!-- article-image-body:02 -->
+
+![Le Carrousel des Mondes Marins installé sur l'île de Nantes](/images/articles/2026/10/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites-body-02.webp)
+
+*Photo: [Duch](https://commons.wikimedia.org/wiki/File:Carrousel_des_Mondes_Marins_-_Nantes.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+<!-- article-image-body:01 -->
+
+![Vue de la Galerie des Machines sur l'île de Nantes](/images/articles/2026/10/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites-body-01.webp)
+
+*Photo: [Dr. Ronald Kunze](https://commons.wikimedia.org/wiki/File:La-Galerie-des-Machines.JPG) - [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Parmi les prestations annoncées dans le Pass Nantes, plusieurs se prêtent à une sortie familiale:
+
+- **La Galerie des Machines de l'île:** découverte des animaux mécaniques et de leur fonctionnement, sur l'île de Nantes.
+- **Le Carrousel des Mondes Marins:** univers de créatures marines mécaniques, également sur l'île de Nantes.
+- **Le château des ducs de Bretagne:** musée d'histoire de Nantes, dans le centre-ville, avec des expositions à choisir selon l'âge des enfants.
+- **Le musée d'Arts et le musée Jules Verne:** deux visites culturelles possibles, plutôt à adapter à la curiosité et à la fatigue de chacun.
+- **Une croisière sur l'Erdre ou la Loire:** une autre manière de découvrir la ville, à condition qu'un départ soit programmé et réservé.
+
+Le **voyage à bord du Grand Éléphant n'est pas inclus**, même si la Galerie des Machines l'est. Le Muséum d'histoire naturelle figure encore parmi les prestations présentées, mais il est **fermé pour travaux depuis novembre 2025**, avec une réouverture annoncée en 2029. Ne le comptez pas dans votre programme actuel.
+
+Le pass dépasse aussi Nantes: il couvre notamment des visites à **Clisson**, ville du vignoble nantais, et plusieurs sites de **Saint-Nazaire**, sur l'estuaire de la Loire, dont Escal'Atlantic et le sous-marin Espadon. Ces excursions demandent davantage de temps qu'une visite en centre-ville.
+
+## Trois façons de visiter sans courir
+
+<!-- article-image-body:03 -->
+
+![Douves et façades du château des ducs de Bretagne à Nantes](/images/articles/2026/10/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites-body-03.webp)
+
+*Photo: [sybarite48](https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_des_ducs_de_Bretagne_%C3%A0_Nantes.jpg) - [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:03 -->
+
+### Une journée concentrée sur Nantes
+
+En semaine, vous pouvez consacrer la matinée au château des ducs de Bretagne, faire une vraie pause déjeuner, puis rejoindre l'île de Nantes pour la Galerie des Machines ou le Carrousel. Pour organiser les déplacements et choisir le bon quartier, consultez aussi notre [guide de Nantes en famille](https://www.fam-space.fr/destinations/pays-de-la-loire/loire-atlantique/nantes/). C'est déjà une journée bien remplie avec de jeunes enfants. Le Pass 24 h devient intéressant si les entrées que vous avez effectivement choisies, et éventuellement vos transports, coûtent davantage que le pass. Inutile d'ajouter une croisière uniquement pour rentabiliser l'achat.
+
+### Deux jours avec une activité sur l'eau
+
+Le premier jour, prévoyez le château et une découverte des Machines de l'île. Le second, gardez du temps pour une croisière sur l'Erdre si elle est proposée, puis un musée ou une promenade. La formule 48 h peut convenir à ce programme, à condition de **réserver la croisière avant de bâtir toute la journée autour d'elle**. Les déplacements et les pauses prennent du temps: trois visites importantes par jour ne sont pas une obligation.
+
+### Un week-end à petit budget
+
+Si vous venez un samedi et un dimanche pour une promenade dans le centre, un musée et une seule activité payante, commencez par regarder les gratuités. Vous pourriez avoir davantage intérêt à acheter cette entrée séparément. Plusieurs musées métropolitains proposent une entrée gratuite certains dimanches, hors juillet et août. Vérifiez le calendrier précis plutôt que de présumer que chaque premier dimanche est concerné: le musée d'Arts annonce par exemple sa journée gratuite du **8 novembre 2026**. Ces gratuités peuvent modifier fortement le calcul.
+
+La formule 7 jours prend davantage de sens pour un séjour long, avec plusieurs sorties hors de Nantes. Un aller-retour en TER entre Nantes et Clisson est inclus sous conditions de réservation. En revanche, **le train vers Saint-Nazaire n'est pas librement inclus**: le trajet prévu avec le Pass 7 jours est lié à la croisière Estuaire et à sa date. Ne confondez pas ces deux avantages.
+
+## Les gratuités qui peuvent faire économiser plus qu'un pass
+
+<!-- article-image-body:04 -->
+
+![Vue du musée d'arts de Nantes, accessible lors de journées de gratuité](/images/articles/2026/10/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites-body-04.webp)
+
+*Photo: [GO69](https://commons.wikimedia.org/wiki/File:Nantes_(44)_Mus%C3%A9e_d%27arts_07.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:04 -->
+
+Selon [Naolib](https://naolib.fr/gratuite-des-transports-en-commun), les tramways, bus et navibus du réseau sont **gratuits pour tous le samedi et le dimanche**, à l'exception de la navette aéroport. Les enfants accompagnés de moins de 6 ans voyagent aussi gratuitement en semaine. Si votre programme se déroule entièrement le week-end, n'ajoutez donc pas artificiellement le prix des transports au coût de vos visites.
+
+Le [musée d'Arts de Nantes](https://museedartsdenantes.nantesmetropole.fr/visiter/visiteurs-individuels/) est **gratuit pour les moins de 18 ans**. Il propose également des gratuités pour tous, notamment lors de certaines nocturnes. Lors des [dimanches gratuits annoncés dans son agenda](https://museedartsdenantes.nantesmetropole.fr/agenda/musee-gratuit-tous-les-1ers-dimanches-du-mois/), généralement le premier dimanche du mois hors juillet et août, l'entrée est libre; un créneau reste conseillé pour certaines expositions temporaires. La gratuité concerne aussi d'autres musées métropolitains, sous réserve qu'ils soient ouverts ce jour-là.
+
+Pour une famille, cette différence est essentielle: une entrée gratuite pour l'enfant ne représente **aucune économie supplémentaire** grâce au Pass Nantes. Comparez séparément les besoins des adultes et des enfants avant de choisir la formule famille.
+
+Si vous passez surtout du temps à Saint-Nazaire, regardez aussi le [Pass Renversant proposé par l'office de tourisme](https://www.saint-nazaire-tourisme.com/les-visites/les-bons-plans/): il couvre quatre grands sites locaux, avec des tarifs annoncés à 30 € par adulte et 15 € pour les 4-17 ans. Il ne remplace pas le Pass Nantes pour les visites nantaises, mais peut mieux correspondre à un séjour centré sur Saint-Nazaire.
+
+## Réservations, fermetures et activation: les pièges à éviter
+
+Le Pass Nantes **n'est pas un coupe-file**. D'après les conditions de l'organisateur, les croisières et certaines visites guidées nécessitent une réservation, tout comme les séances du Planétarium. Pour les Machines de l'île, une réservation en ligne est possible en sélectionnant le tarif « porteur Pass Nantes »; le château demande notamment un créneau pour ses expositions temporaires. Les billets réservés peuvent être distincts du pass et ne figurent pas forcément dans son application.
+
+Les croisières, locations de vélos et activités nautiques dépendent de la saison. Les Machines de l'île connaissent également une fermeture annuelle entre les vacances de Noël et celles d'hiver. Vérifiez donc le calendrier de chaque activité **avant d'acheter**: une prestation incluse sur le papier peut être fermée pendant votre séjour.
+
+Après achat, vous recevez un e-pass avec QR code. Il s'active à la première entrée chez un partenaire ou lors de la première auto-validation des transports dans l'application Pass Nantes. Pour les transports, parkings-relais et la navette aéroport, il faut suivre les modalités d'association et d'auto-validation précisées dans la FAQ. La navette aéroport comprend un aller-retour pendant la validité du pass et nécessite un smartphone. Sans smartphone, une version imprimée du pass peut servir pour les visites, mais pas pour cette navette.
+
+Enfin, chaque site inclus ne peut généralement être visité **qu'une fois avec le même pass**. Si un lieu ferme ou qu'une prestation est indisponible après une utilisation partielle, le pass n'est pas remboursé pour ce motif.
+
+## Où dormir pour visiter Nantes sur deux jours ?
+
+Pour enchaîner le château, le centre-ville et les Machines de l'île sans changer d'hébergement, le secteur de la gare est pratique, notamment si vous arrivez en train. L'[Aparthotel Adagio Nantes Centre sur Booking.com](https://www.booking.com/hotel/fr/adagio-city-aparthotel-nantes-centre.fr.html) se trouve à environ 500 m de la gare et près du château. Certains studios peuvent accueillir jusqu'à quatre personnes et disposent d'une kitchenette avec réfrigérateur, plaques et micro-ondes, utile pour les repas des enfants. Vérifiez la capacité exacte du studio, le tarif total et les conditions d'annulation pour vos dates.
+
+## Contexte éditorial ciblé pour le maillage et les doublons
+
+### Articles proches préparés mécaniquement
+
 - /articles/maison/broyeur-de-vegetaux-a-nantes-metropole-acheter-a-plusieurs-ou-profiter-des-operations-gratuites/ | Broyeur de végétaux à Nantes Métropole: acheter à plusieurs ou profiter des opérations gratuites ? | maison | Nantes, Loire-Atlantique, Pays de la Loire
 - /articles/evenements/noel-a-nantes-2026-marche-gratuit-ou-visite-guidee-du-voyage-en-hiver/ | Noël à Nantes 2026: marché de Noël et Voyage en hiver en famille | evenements | Nantes, Loire-Atlantique, Pays de la Loire
 - /articles/evenements/utopiales-2026-a-nantes-en-famille-dates-billets-et-conseils-pour-preparer-la-visite/ | Utopiales 2026 à Nantes en famille: dates, billets et conseils pour préparer la visite | evenements | Nantes, Loire-Atlantique, Pays de la Loire
-- /articles/voyages/belle-ile-en-mer-en-famille-sans-voiture-ferry-et-deplacements/ | Belle-Île-en-Mer en famille sans voiture: ferry et déplacements | voyages | Le Palais, Morbihan, Bretagne
-- /articles/vie-pratique/bus-ou-voiture-a-la-reunion-organiser-ses-deplacements-en-famille/ | Bus ou voiture à La Réunion: organiser ses déplacements en famille | vie-pratique | La Réunion
-- /articles/vie-pratique/ouessant-avec-des-enfants-sans-voiture-ferry-bagages-et-deplacements/ | Ouessant avec des enfants sans voiture: ferry, bagages et déplacements | vie-pratique | Ouessant, Finistère, Bretagne
-- /articles/voyages/noirmoutier-avec-des-enfants-faut-il-garder-la-voiture-sur-l-ile/ | Noirmoutier avec des enfants: faut-il garder la voiture sur l'île? | voyages | Noirmoutier-en-l'Île, Vendée, Pays de la Loire
-- /articles/maison/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/ | Meubles d'occasion en Meurthe-et-Moselle: où acheter, donner et réparer ? | maison | Meurthe-et-Moselle, Grand Est
-- /articles/maison/donner-acheter-d-occasion-ou-reparer-dans-le-val-d-oise-cinq-adresses-utiles/ | Donner, acheter d’occasion ou réparer dans le Val-d’Oise: cinq adresses utiles | maison | Cergy, Val-d'Oise, Île-de-France
-- /articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/ | Recycleries autour de Chartres: où donner et acheter d'occasion ? | maison | Chartres, Eure-et-Loir, Centre-Val de Loire
-- /articles/maison/chambre-d-enfant-a-petit-budget-dans-le-var-ou-acheter-des-meubles-d-occasion/ | Chambre d'enfant à petit budget dans le Var: où acheter des meubles d'occasion? | maison | Toulon, Var, Provence-Alpes-Côte d’Azur
-- /articles/vie-pratique/ludotheques-autour-de-dinan-emprunter-des-jeux-pour-la-maison/ | Ludothèques autour de Dinan: emprunter des jeux pour la maison | vie-pratique | Côtes-d'Armor, Bretagne
-- /articles/vie-pratique/emprunter-des-jeux-a-tours-mirabeau-ou-la-maison-des-jeux/ | Emprunter des jeux à Tours: Mirabeau ou la Maison des Jeux? | vie-pratique | Tours, Indre-et-Loire, Centre-Val de Loire
-- /articles/parentalite/ludotheque-du-choletais-jouer-sur-place-et-emprunter-en-famille/ | Ludothèque du Choletais: jouer sur place et emprunter en famille | parentalite | Cholet, Maine-et-Loire, Pays de la Loire
-- /articles/vie-pratique/ludotheques-dans-le-gers-ou-jouer-et-emprunter-des-jeux-en-famille/ | Ludothèques dans le Gers: où jouer et emprunter des jeux en famille | vie-pratique | Auch, Gers, Occitanie
-- /articles/voyages/visiter-la-cite-du-volcan-en-famille-a-la-reunion/ | Visiter la Cité du Volcan en famille à La Réunion | voyages | Le Tampon, La Réunion, La Réunion
-- /articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/ | Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite | sorties | Paris, Paris, Île-de-France
-- /articles/sorties/cite-des-climats-a-beaune-en-famille-tarifs-parcours-enfants-et-billets/ | Cité des Climats à Beaune en famille: tarifs, parcours enfants et billets | sorties | Beaune, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/voyages/perouges-avec-des-enfants-dormir-dans-la-cite-ou-pres-de-la-gare/ | Pérouges avec des enfants: dormir dans la cité ou près de la gare? | voyages | Pérouges, Ain, Auvergne-Rhône-Alpes
-- /articles/activites/forum-des-sciences-a-villeneuve-d-ascq-en-famille-que-choisir-selon-l-age/ | Forum des Sciences à Villeneuve-d'Ascq en famille: que choisir selon l'âge ? | activites | Villeneuve-d'Ascq, Nord, Hauts-de-France
-- /articles/parentalite/espace-mendes-france-a-poitiers-en-famille-que-faire-selon-l-age/ | Espace Mendès France à Poitiers en famille: que faire selon l’âge ? | parentalite | Poitiers, Vienne, Nouvelle-Aquitaine
-- /articles/evenements/noel-d-autrefois-2026-au-musee-de-plein-air-quel-jour-venir-en-famille/ | Noël d’autrefois 2026 à Villeneuve-d’Ascq: dates, ateliers et accès en famille | evenements | Villeneuve-d'Ascq, Nord, Hauts-de-France
-- /articles/activites/port-aux-cerises-a-draveil-quelle-activite-choisir-selon-l-age-des-enfants/ | Port aux Cerises à Draveil: quelle activité choisir selon l'âge des enfants? | activites | Draveil, Essonne, Île-de-France
-- /articles/activites/visiter-le-nouveau-musee-m24-au-mans-en-famille-billets-parcours-et-circuit/ | Visiter le nouveau musée M24 au Mans en famille: billets, parcours et circuit | activites | Le Mans, Sarthe, Pays de la Loire
-- /articles/activites/musee-de-la-biere-a-stenay-en-famille-parcours-enfants-et-exposition-2026/ | Musée de la Bière à Stenay en famille: parcours enfants et exposition 2026 | activites | Stenay, Meuse, Grand Est
-- /articles/sorties/forteresse-de-salses-en-famille-ce-que-change-le-nouveau-parcours/ | Forteresse de Salses en famille: ce que change le nouveau parcours | sorties | Salses-le-Château, Pyrénées-Orientales, Occitanie
-- /articles/sorties/historial-de-la-vendee-le-nouveau-musee-des-enfants-vaut-il-la-sortie/ | Historial de la Vendée: le nouveau musée des enfants vaut-il la sortie? | sorties | Les Lucs-sur-Boulogne, Vendée, Pays de la Loire
-- /articles/maison/encombrants-a-limoges-donner-faire-enlever-ou-deposer-ses-meubles/ | Encombrants à Limoges: donner, faire enlever ou déposer ses meubles | maison | Limoges, Haute-Vienne, Nouvelle-Aquitaine
-- /articles/maison/canape-matelas-ou-electromenager-a-dijon-donner-faire-enlever-ou-aller-en-dechetterie/ | Canapé, matelas ou électroménager à Dijon: donner, faire enlever ou aller en déchetterie ? | maison | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/evenements/noel-a-limoges-2026-en-famille-marche-animations-et-idees-pour-un-week-end/ | Noël à Limoges 2026 en famille: marché, animations et idées pour un week-end | evenements | Limoges, Haute-Vienne, Nouvelle-Aquitaine
-- /articles/vie-pratique/trouver-un-mode-de-garde-a-limoges-par-ou-commencer/ | Trouver un mode de garde à Limoges: par où commencer | vie-pratique | Limoges, Haute-Vienne, Nouvelle-Aquitaine
-- /articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/ | Fête foraine de Dijon 2026: dates, horaires et budget avec les enfants | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/evenements/foire-de-dijon-2026-en-famille-dates-ateliers-animaux-et-gratuites/ | Foire de Dijon 2026 avec les enfants: gratuités, ateliers et Ferme Côte-d'Or | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/evenements/festival-des-petits-explorateurs-2026-a-dijon-quels-ateliers-choisir-en-famille/ | Festival des Petits Explorateurs 2026 à Dijon: ateliers, horaires et tarifs | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/ | Marché de Noël 100 % Côte-d’Or à Dijon 2026: horaires, spectacles et Père Noël | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/evenements/luminescences-2026-2027-a-amneville-en-famille-soiree-seule-ou-zoo-et-lanternes/ | Luminescences 2026-2027 au zoo d'Amnéville: billets, tarifs et visite en famille | evenements | Amnéville, Moselle, Grand Est
-- /articles/activites/snowworld-amneville-en-famille-luge-bouees-ou-ski/ | SnowWorld Amnéville en famille: luge, bouées ou ski ? | activites | Amnéville, Moselle, Grand Est
-- /articles/activites/zoo-de-martinique-en-famille-tarifs-poussette-et-visite-de-l-habitation-latouche/ | Zoo de Martinique en famille: tarifs, poussette et visite de l'Habitation Latouche | activites | Le Carbet, Martinique, Martinique
-- /articles/evenements/noel-a-metz-2026-en-famille-marches-et-sentier-des-lanternes/ | Noël à Metz 2026 en famille: marchés et Sentier des Lanternes | evenements | Metz, Moselle, Grand Est
-- /articles/evenements/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget/ | Grand Noël 2026 à Vaux-le-Vicomte en famille: billets, offre enfant et animations | evenements | Maincy, Seine-et-Marne, Île-de-France
-- /articles/evenements/toussaint-2026-a-vaux-le-vicomte-lampe-torche-ou-carnaval-des-animaux-avec-les-enfants/ | Toussaint 2026 à Vaux-le-Vicomte: les animations pour les enfants | evenements | Maincy, Seine-et-Marne, Île-de-France
-- /articles/evenements/noel-a-provins-2026-en-famille-marche-medieval-ou-visite-guidee/ | Noël à Provins 2026: marché médiéval, animations et visites en famille | evenements | Provins, Seine-et-Marne, Île-de-France
-- /articles/evenements/noel-2026-a-paris-la-defense-en-famille-marche-animations-ou-patinoire/ | Noël 2026 à Paris La Défense en famille: marché, animations et patinoire | evenements | Puteaux, Hauts-de-Seine, Île-de-France
-- /articles/evenements/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere/ | Lumières de Laval 2026 en famille: marchés, grande roue et croisière | evenements | Laval, Mayenne, Pays de la Loire
-- /articles/evenements/marche-de-noel-de-lille-2026-en-famille-village-grande-roue-et-infos-pratiques/ | Marché de Noël de Lille 2026 en famille: village, Grande Roue et infos pratiques | evenements | Lille, Nord, Hauts-de-France
-- /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | Marché de Noël de Reims 2026 en famille: horaires, grande roue et animations | evenements | Reims, Marne, Grand Est
-- /articles/evenements/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/ | Marchés de Noël de Tours 2026 en famille: lieux, dates et budget | evenements | Tours, Indre-et-Loire, Centre-Val de Loire
-- /articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/ | Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants | evenements | Le Mans, Sarthe, Pays de la Loire
-- /articles/voyages/le-mans-sans-voiture-avec-des-enfants-ou-dormir-et-comment-organiser-un-week-end/ | Le Mans sans voiture avec des enfants: où dormir et comment organiser un week-end | voyages | Le Mans, Sarthe, Pays de la Loire
-- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
-- /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | Marché de Noël d'Avignon 2026 en famille: horaires et accès | evenements | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
-- /articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/ | Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille | evenements | Nevers, Nièvre, Bourgogne-Franche-Comté
-- /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | Noël à Chartres 2026 en famille: marché et illuminations | evenements | Chartres, Eure-et-Loir, Centre-Val de Loire
-- /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | Noël à Caen 2026 en famille: marché de Noël et visite illuminée | evenements | Caen, Calvados, Normandie
-- /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
-- /articles/evenements/alfest-2026-a-annecy-en-famille-horaires-jeux-et-braderie/ | ALFest 2026 à Annecy en famille: horaires, jeux et braderie | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
-- /articles/evenements/court-circuit-2026-a-annecy-en-famille-spectacles-tarifs-et-conseils/ | Court Circuit 2026 à Annecy en famille: spectacles, tarifs et conseils | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
-- /articles/evenements/fete-du-lac-annecy-2026-en-famille/ | Fête du lac d’Annecy 2026: préparer la soirée avec des enfants | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
-- /articles/vie-pratique/bus-a-annecy-avec-des-enfants-quel-ticket-choisir-et-comment-eviter-les-galeres/ | Bus à Annecy avec des enfants: quel ticket choisir et comment éviter les galères | vie-pratique | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
-- /articles/evenements/noel-2026-a-rochefort-en-terre-avec-des-enfants-village-et-illuminations/ | Noël 2026 à Rochefort-en-Terre avec des enfants: village et illuminations | evenements | Rochefort-en-Terre, Morbihan, Bretagne
-- /articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/ | Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates | vie-pratique | Toulouse, Haute-Garonne, Occitanie
-- /articles/bons-plans/cantine-au-college-dans-l-herault-jusqu-a-3-60-d-aide-par-repas/ | Cantine au collège dans l'Hérault: jusqu'à 3,60 € d'aide par repas | bons-plans | Montpellier, Hérault, Occitanie
-- /articles/maison/moustique-tigre-en-haute-garonne-proteger-la-maison-et-le-jardin/ | Moustique tigre en Haute-Garonne: protéger la maison et le jardin | maison | Toulouse, Haute-Garonne, Occitanie
-- /articles/vie-pratique/cantine-au-college-en-deux-sevres-comment-s-inscrire-en-ligne-pour-2026-2027/ | Cantine au collège en Deux-Sèvres: comment s'inscrire en ligne pour 2026-2027 | vie-pratique | Niort, Deux-Sèvres, Nouvelle-Aquitaine
-- /articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/ | Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers | vie-pratique | Hénin-Beaumont, Pas-de-Calais, Hauts-de-France
-- /articles/vie-pratique/cantine-au-college-en-essonne-obtenir-son-tarif-2026-2027-sans-refaire-la-mauvaise-demarche/ | Cantine au collège en Essonne: obtenir son tarif 2026-2027 sans refaire la mauvaise démarche | vie-pratique | Évry-Courcouronnes, Essonne, Île-de-France
+- /articles/cuisine/atelier-cuisine-parent-enfant-a-nantes-gratuit-au-breil-ou-cours-prive/ | Ateliers cuisine parent-enfant à Nantes: où cuisiner ensemble? | cuisine | Nantes, Loire-Atlantique, Pays de la Loire
+- /articles/parentalite/laep-a-nantes-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | LAEP à Nantes: où aller avec un enfant de moins de 6 ans ? | parentalite | Nantes, Loire-Atlantique, Pays de la Loire
+- /articles/evenements/voyage-a-nantes-2026-en-famille/ | Voyage à Nantes 2026 en famille: parcours court et plan | evenements | Nantes, Loire-Atlantique, Pays de la Loire
+- /articles/vie-pratique/tarification-solidaire-naolib-a-nantes-combien-paie-une-famille-et-comment-faire-la-demande/ | Tarification solidaire Naolib à Nantes: combien paie une famille et comment faire la demande? | vie-pratique | Nantes, Loire-Atlantique, Pays de la Loire
+- /articles/evenements/festi-momes-2026-a-nantes-quelle-seance-choisir-selon-l-age-des-enfants/ | Festi'Mômes 2026 à Nantes: séances, spectacles et tarifs en famille | evenements | Nantes, Loire-Atlantique, Pays de la Loire
+- /articles/bons-plans/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites/ | Pass Nantes en famille en 2026: tarifs, visites incluses et alternatives gratuites | bons-plans | Nantes, Loire-Atlantique, Pays de la Loire
+- /articles/evenements/folie-plantes-nantes-2026-famille/ | Folie des plantes 2026 à Nantes: un week-end gratuit à découvrir en famille | evenements | Nantes, Loire-Atlantique, Pays de la Loire
 - /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | Noël 2026 au château de Goulaine: dates, billets et conseils en famille | evenements | Haute-Goulaine, Loire-Atlantique, Pays de la Loire
-- /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
-- /articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/ | Noël à Trévarez 2026 en famille: dates, horaires et réservation | evenements | Saint-Goazec, Finistère, Bretagne
-- /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | Noël des Siècles 2026 à Champs-sur-Marne: billets, budget et horaires en famille | evenements | Champs-sur-Marne, Seine-et-Marne, Île-de-France
-- /articles/evenements/festival-du-livre-de-colmar-2026-en-famille-dates-ateliers-et-acces/ | Festival du Livre de Colmar 2026 en famille: dates, horaires et animations jeunesse | evenements | Colmar, Haut-Rhin, Grand Est
-- /articles/evenements/festival-du-livre-jeunesse-de-rouen-2026-quel-jour-et-quelles-activites-choisir-avec-les-enfants/ | Festival du livre jeunesse de Rouen 2026: dates, tarifs et activités en famille | evenements | Rouen, Seine-Maritime, Normandie
-- /articles/evenements/foire-du-livre-de-brive-2026-en-famille-quel-jour-venir-avec-les-enfants/ | Foire du livre de Brive 2026 en famille: dates, auteurs jeunesse et conseils de visite | evenements | Brive-la-Gaillarde, Corrèze, Nouvelle-Aquitaine
-- /articles/evenements/salon-du-livre-jeunesse-de-montreuil-2026-billet-gratuit-et-visite-en-famille/ | Salon du livre jeunesse de Montreuil 2026: billets gratuits, horaires et visite en famille | evenements | Montreuil, Seine-Saint-Denis, Île-de-France
-- /articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/ | Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/salon-du-chocolat-paris-2026-avec-des-enfants-quel-billet-choisir-et-quels-ateliers-reserver/ | Salon du Chocolat Paris 2026 avec des enfants: quel billet choisir et quels ateliers réserver | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | Rencontres du ciel et de l’espace 2026 à Paris: ateliers, âges et billets en famille | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | Salon du Cheval de Paris 2026 en famille: animations, jumping et billets | evenements | Paris, Paris, Île-de-France
-- /articles/cuisine/apres-une-cueillette-en-eure-et-loir-5-recettes-faciles-a-faire-avec-les-enfants/ | Après une cueillette en Eure-et-Loir: 5 recettes faciles à faire avec les enfants | cuisine | Chartres, Eure-et-Loir, Centre-Val de Loire
-- /articles/vie-pratique/bibliotheques-de-la-marne-en-famille-livres-jeux-et-services-numeriques/ | Bibliothèques de la Marne en famille: livres, jeux et services numériques | vie-pratique | Marne, Grand Est
-- /articles/parentalite/parents-en-gironde-laep-relais-petite-enfance-ou-soutien-parental-ou-aller/ | Parents en Gironde: LAEP, relais petite enfance ou soutien parental, où aller ? | parentalite | Gironde, Nouvelle-Aquitaine
-- /articles/parentalite/aide-a-domicile-en-indre-et-loire-quel-soutien-pour-les-parents/ | Aide à domicile en Indre-et-Loire: quel soutien pour les parents ? | parentalite | Indre-et-Loire, Centre-Val de Loire
-- /articles/evenements/festival-tete-de-mioche-2027-a-l-horme-quels-spectacles-choisir-avec-les-enfants/ | Festival Tête de mioche 2027 à L'Horme: quels spectacles choisir avec les enfants ? | evenements | L'Horme, Loire, Auvergne-Rhône-Alpes
-- /articles/maison/maison-trop-chaude-dans-le-gard-garder-les-chambres-des-enfants-plus-fraiches/ | Maison trop chaude dans le Gard: garder les chambres des enfants plus fraîches | maison | Gard, Occitanie
-- /articles/sorties/sentier-des-salines-de-montjoly-en-famille-mangrove-oiseaux-et-plage/ | Sentier des Salines de Montjoly en famille: mangrove, oiseaux et plage | sorties | Rémire-Montjoly, Guyane, Guyane
+- /articles/sorties/ocearium-du-croisic-en-famille-animations-tarifs-et-visite/ | Océarium du Croisic en famille: animations, tarifs et visite | sorties | Le Croisic, Loire-Atlantique, Pays de la Loire
+- /articles/bons-plans/chateau-de-chateaubriant-en-famille-une-sortie-a-petit-budget/ | Château de Châteaubriant en famille, une sortie à petit budget | bons-plans | Châteaubriant, Loire-Atlantique, Pays de la Loire
+- /articles/activites/planete-sauvage-en-famille-tarifs-2026-duree-et-conseils-de-visite/ | Planète Sauvage en famille: tarifs 2026, durée et conseils de visite | activites | Port-Saint-Père, Loire-Atlantique, Pays de la Loire
+- /articles/evenements/festival-ete-continue-carquefou-2026-famille/ | Festival L’Été Continue 2026 à Carquefou: six jours gratuits en famille | evenements | Carquefou, Loire-Atlantique, Pays de la Loire
 - /articles/bons-plans/train-de-balagne-en-famille-arrets-plages-et-tarifs-entre-calvi-et-l-ile-rousse/ | Train de Balagne en famille: arrêts, plages et tarifs entre Calvi et L'Île-Rousse | bons-plans | Haute-Corse, Corse
-- /articles/parentalite/laep-en-maine-et-loire-ou-aller-avec-son-bebe-et-comment-se-passe-l-accueil/ | LAEP en Maine-et-Loire: où aller avec son bébé et comment se passe l'accueil ? | parentalite | Maine-et-Loire, Pays de la Loire
-- /articles/cuisine/chartres-en-famille-quelles-specialites-gourmandes-gouter-et-ou-les-trouver/ | Chartres en famille: quelles spécialités gourmandes goûter et où les trouver ? | cuisine | Chartres, Eure-et-Loir, Centre-Val de Loire
-- /articles/maison/electromenager-en-panne-a-dijon-reparer-ou-acheter-reconditionne/ | Électroménager en panne à Dijon: réparer ou acheter reconditionné | maison | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/vie-pratique/fort-de-france-trois-ilets-en-famille-quelle-navette-prendre-sans-voiture/ | Fort-de-France - Trois-Îlets en famille: quelle navette prendre sans voiture ? | vie-pratique | Martinique, Martinique
-- /articles/parentalite/maisons-des-1000-premiers-jours-a-paris-deux-adresses-pour-les-parents-et-les-bebes/ | Maisons des 1000 premiers jours à Paris: deux adresses pour les parents et les bébés | parentalite | Paris, Paris, Île-de-France
-- /articles/vie-pratique/lyon-saint-exupery-avec-des-enfants-preparer-le-trajet-les-controles-et-l-attente/ | Lyon-Saint-Exupéry avec des enfants: préparer le trajet, les contrôles et l’attente | vie-pratique | Colombier-Saugnieu, Rhône, Auvergne-Rhône-Alpes
-- /articles/cuisine/fete-de-la-truffe-2027-a-sarlat-en-famille-que-faire-et-que-gouter/ | Fête de la Truffe 2027 à Sarlat en famille: que faire et que goûter ? | cuisine | Sarlat-la-Canéda, Dordogne, Nouvelle-Aquitaine
-- /articles/evenements/festival-mini-kids-2027-aux-orres-trois-jours-pour-les-3-6-ans/ | Festival Mini Kids 2027 aux Orres, trois jours pour les 3-6 ans | evenements | Les Orres, Hautes-Alpes, Provence-Alpes-Côte d’Azur
-- /articles/vie-pratique/drome-sans-voiture-avec-des-enfants-train-cars-et-bus-pour-se-deplacer/ | Drôme sans voiture avec des enfants: train, cars et bus pour se déplacer | vie-pratique | Drôme, Auvergne-Rhône-Alpes
-- /articles/voyages/refuge-de-l-arche-en-famille-decouvrir-les-animaux-recueillis-et-preparer-sa-visite/ | Refuge de l’Arche en famille: découvrir les animaux recueillis et préparer sa visite | voyages | Château-Gontier-sur-Mayenne, Mayenne, Pays de la Loire
-- /articles/evenements/fete-du-citron-2027-a-menton-en-famille-que-voir-et-combien-prevoir/ | Fête du Citron 2027 à Menton en famille: que voir et combien prévoir ? | evenements | Menton, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
 - /articles/bons-plans/musees-a-la-reunion-en-famille-quel-pass-choisir-pour-economiser/ | Musées à La Réunion en famille: quel pass choisir pour économiser ? | bons-plans | La Réunion, La Réunion
-- /articles/sorties/aeroscopia-en-famille-quels-avions-visiter-avec-les-enfants/ | Aeroscopia en famille: quels avions visiter avec les enfants? | sorties | Blagnac, Haute-Garonne, Occitanie
-- /articles/parentalite/lieux-d-accueil-enfants-parents-dans-le-cher-ou-aller-avec-son-tout-petit/ | Lieux d’accueil enfants-parents dans le Cher: où aller avec son tout-petit ? | parentalite | Cher, Centre-Val de Loire
-- /articles/cuisine/maison-du-cacao-a-pointe-noire-decouvrir-le-chocolat-en-famille/ | Maison du Cacao à Pointe-Noire: découvrir le chocolat en famille | cuisine | Pointe-Noire, Guadeloupe, Guadeloupe
 - /articles/bons-plans/musees-de-niort-en-famille-le-donjon-et-bernard-d-agesci-a-petit-budget/ | Musées de Niort en famille: le Donjon et Bernard d’Agesci à petit budget | bons-plans | Niort, Deux-Sèvres, Nouvelle-Aquitaine
-- /articles/maison/saison-des-pluies-a-mayotte-preparer-sa-maison-en-famille/ | Saison des pluies à Mayotte: préparer sa maison en famille | maison | Mayotte, Mayotte
-- /articles/parentalite/rejouets-a-cerences-donner-completer-et-acheter-des-jouets-d-occasion/ | Rejouets à Cérences: donner, compléter et acheter des jouets d’occasion | parentalite | Cérences, Manche, Normandie
-- /articles/activites/corderie-royale-de-rochefort-en-famille-visite-tarifs-et-ateliers/ | Corderie Royale de Rochefort en famille: visite, tarifs et ateliers | activites | Rochefort, Charente-Maritime, Nouvelle-Aquitaine
-- /articles/cuisine/a-chiconi-decouvrir-la-cuisine-mahoraise-en-famille/ | À Chiconi, découvrir la cuisine mahoraise en famille | cuisine | Chiconi, Mayotte, Mayotte
-- /articles/evenements/carnaval-de-limoux-2027-en-famille-dates-fecos-et-conseils-pratiques/ | Carnaval de Limoux 2027 en famille: dates, Fécos et conseils pratiques | evenements | Limoux, Aude, Occitanie
-- /articles/voyages/la-vallee-des-saints-a-carnoet-visiter-les-geants-de-granit-en-famille/ | La Vallée des Saints à Carnoët: visiter les géants de granit en famille | voyages | Carnoët, Côtes-d'Armor, Bretagne
+- /articles/bons-plans/pass-cantal-2026-2027-quels-cheques-utiliser-pour-les-activites-des-enfants/ | PASS CANTAL 2026-2027: quels chèques utiliser pour les activités des enfants ? | bons-plans | Cantal, Auvergne-Rhône-Alpes
+- /articles/bons-plans/troyes-en-famille-a-petit-budget-musees-gratuites-et-balades-dans-le-centre/ | Troyes en famille à petit budget: musées, gratuités et balades dans le centre | bons-plans | Troyes, Aube, Grand Est
+- /articles/bons-plans/abbaye-de-saint-savin-en-famille-tarifs-gratuites-et-visite-avec-les-enfants/ | Abbaye de Saint-Savin en famille: tarifs, gratuités et visite avec les enfants | bons-plans | Saint-Savin, Vienne, Nouvelle-Aquitaine
+- /articles/bons-plans/albi-en-famille-a-petit-budget-deux-programmes-entre-patrimoine-et-musee/ | Albi en famille à petit budget: deux programmes entre patrimoine et musée | bons-plans | Albi, Tarn, Occitanie
 
 ### Historique Radar lié
 
-- opportunity | /articles/evenements/festival-des-petits-explorateurs-2026-a-dijon-quels-ateliers-choisir-en-famille/ | 2026-10-30T03:27:02.483Z
-- opportunity | /articles/evenements/festival-du-livre-de-colmar-2026-en-famille-dates-ateliers-et-acces/ | 2026-10-20T08:52:25.825Z
-- opportunity | /articles/evenements/festival-du-livre-jeunesse-de-rouen-2026-quel-jour-et-quelles-activites-choisir-avec-les-enfants/ | 2026-11-02T00:36:18.455Z
-- opportunity | /articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/ | 2026-10-25T17:34:53.718Z
-- opportunity | /articles/evenements/foire-de-dijon-2026-en-famille-dates-ateliers-animaux-et-gratuites/ | 2026-10-21T16:31:41.000Z
-- opportunity | /articles/evenements/foire-du-livre-de-brive-2026-en-famille-quel-jour-venir-avec-les-enfants/ | 2026-10-18T16:46:58.413Z
-- opportunity | /articles/evenements/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget/ | 2026-10-20T22:29:05.422Z
-- refresh | /articles/vie-pratique/hautes-alpes-en-hiver-pneus-chaines-et-etat-des-routes-avant-de-partir/ | 2026-11-11T00:29:24.040Z
-- refresh | /articles/parentalite/ludotheque-du-choletais-jouer-sur-place-et-emprunter-en-famille/ | 2026-11-10T03:33:47.847Z
-- opportunity | /articles/evenements/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere/ | 2026-10-30T09:27:15.122Z
-- opportunity | /articles/evenements/luminescences-2026-2027-a-amneville-en-famille-soiree-seule-ou-zoo-et-lanternes/ | 2026-10-22T09:37:18.560Z
-- opportunity | /articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/ | 2026-10-29T14:26:32.277Z
-- opportunity | /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | 2026-10-28T15:29:23.387Z
-- opportunity | /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | 2026-10-29T00:28:19.695Z
-- opportunity | /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | 2026-10-20T00:30:38.975Z
-- opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
-- opportunity | /articles/evenements/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/ | 2026-10-28T21:29:26.054Z
-- opportunity | /articles/evenements/noel-2026-a-paris-la-defense-en-famille-marche-animations-ou-patinoire/ | 2026-11-01T01:35:08.448Z
+- opportunity | /articles/evenements/festi-momes-2026-a-nantes-quelle-seance-choisir-selon-l-age-des-enfants/ | 2026-10-17T11:48:00.184Z
+- refresh | /articles/parentalite/laep-a-nantes-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | 2026-10-17T18:40:41.973Z
+- refresh | /articles/parentalite/laep-a-nantes-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | 2026-11-02T06:34:10.210Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | 2026-11-03T15:36:10.146Z
-- opportunity | /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | 2026-10-30T21:26:32.584Z
-- opportunity | /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | 2026-10-30T18:26:56.039Z
 - opportunity | /articles/evenements/noel-a-nantes-2026-marche-gratuit-ou-visite-guidee-du-voyage-en-hiver/ | 2026-10-24T15:27:41.430Z
-- opportunity | /articles/evenements/noel-a-provins-2026-en-famille-marche-medieval-ou-visite-guidee/ | 2026-10-24T03:31:56.628Z
-- opportunity | /articles/evenements/noel-d-autrefois-2026-au-musee-de-plein-air-quel-jour-venir-en-famille/ | 2026-10-29T17:29:29.382Z
-- opportunity | /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | 2026-10-26T18:32:56.730Z
-- opportunity | /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | 2026-11-04T05:34:42.508Z
-- opportunity | /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | 2026-10-22T04:59:04.773Z
-- opportunity | /articles/evenements/salon-du-livre-jeunesse-de-montreuil-2026-billet-gratuit-et-visite-en-famille/ | 2026-10-15T05:30:56.094Z
-- refresh | /articles/activites/snowworld-amneville-en-famille-luge-bouees-ou-ski/ | 2026-11-09T17:37:32.610Z
-- opportunity | /articles/evenements/toussaint-2026-a-vaux-le-vicomte-lampe-torche-ou-carnaval-des-animaux-avec-les-enfants/ | 2026-10-11T11:27:54.175Z
+- refresh | /articles/activites/planete-sauvage-en-famille-tarifs-2026-duree-et-conseils-de-visite/ | 2026-10-02T14:23:16.612Z
 
-## Travaux éditoriaux en cours
+### Phases 2 et 3
 
-### Publication en cours
+Écris `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet de l'article. **N'ajoute aucun bloc `radar`.** Le script reprend mécaniquement le bloc Radar de la phase précédente et incrémente la phase.
 
-- Branche: automation/publication-20261111-0705-titre-de-travail-bibliotheques-de-rouen-emprunter-gratuitement-des-obj
-- HEAD: publication: phase 3 20261111-0705-titre-de-travail-bibliotheques-de-rouen-emprunter-gratuitement-des-obj
+Pour un refresh, le script conserve de lui-même les champs protégés de l'article source. Pour une opportunity, il conserve la catégorie, le territoire et le slug choisis en phase 1.
 
----
-category: "vie-pratique"
-title: "Bibliothèques de Rouen: emprunter gratuitement outils, instruments et jeux"
-subtitle: "Les bonnes adresses pour découvrir, bricoler ou jardiner sans tout acheter"
-summary: "À Rouen, la carte des bibliothèques est gratuite même hors de la ville. Découvrez où trouver outils, instruments, kits nature et espaces pour enfants."
-keywords:
-  - "bibliothèques Rouen emprunt objets"
-  - "bricothèque Rouen gratuite"
-  - "bibliothèque Rouen enfants"
-location:
-  city: "Rouen"
-  department: "Seine-Maritime"
-  region: "Normandie"
-sources:
-  - title: "Bibliothèque Parment, inscription et bricothèque"
-    url: "https://rouen.fr/adresse/bibliotheque-municipale-roger-parment"
-  - title: "Bibliothèque de la Grand'Mare"
-    url: "https://www.rouen.fr/fr/adresse/bibliotheque-municipale-de-la-grandmare"
-  - title: "Bibliothèque Saint-Sever"
-    url: "https://rouen.fr/fr/adresse/bibliotheque-municipale-saint-sever"
-  - title: "Bibliothèque des Capucins"
-    url: "https://rouen.fr/index.php/fr/adresse/bibliotheque-municipale-des-capucins"
-  - title: "Bibliothèque Simone-de-Beauvoir"
-    url: "https://rouen.fr/adresse/bibliotheque-municipale-simone-de-beauvoir"
-  - title: "Bibliothèque du Châtelet"
-    url: "https://rouen.fr/fr/adresse/bibliotheque-municipale-du-chatelet"
-  - title: "Délibération municipale du 8 octobre 2026"
-    url: "https://rouen.fr/fr/deliberation/2026-10-08/1-29"
-  - title: "Catalogue Rouen Bibliothèques"
-    url: "https://bibliotheques.rouen.fr/"
----
-
-À Rouen, en Seine-Maritime, les bibliothèques municipales permettent de faire bien plus que choisir des livres. On peut y trouver des outils de bricolage, des instruments de musique, des kits pour observer les oiseaux ou des espaces de découverte pour les tout-petits. Pour les familles, c'est une façon d'essayer une activité sans acheter immédiatement tout le matériel. Et la carte du réseau est gratuite, même si l'on habite en dehors de Rouen.
-
-## Quelle bibliothèque choisir selon votre projet ?
-
-**Pour bricoler: Parment, en centre-ville.** Située au premier étage de l'Espace du Palais, au 8 allée Eugène-Delacroix, la [bibliothèque Parment](https://rouen.fr/adresse/bibliotheque-municipale-roger-parment) propose une bricothèque. Avant d'acheter un outil pour une réparation occasionnelle, demandez à l'équipe ce qui est disponible et sous quelles conditions vous pouvez l'emprunter. La bibliothèque est notamment accessible par le métro Palais de Justice - Gisèle Halimi.
-
-**Pour essayer la musique ou découvrir les oiseaux: la Grand'Mare.** Au centre André-Malraux, rue François-Couperin, la [bibliothèque de la Grand'Mare](https://www.rouen.fr/fr/adresse/bibliotheque-municipale-de-la-grandmare) dispose d'instruments de musique et de kits ornithologiques. Attention: la fiche municipale réserve les instruments aux adultes. Un parent peut donc se renseigner pour un projet musical familial, mais il ne faut pas supposer qu'un enfant peut emprunter lui-même un instrument. Le site est desservi par le T2, arrêt Couperin.
-
-**Pour apprendre la musique: Saint-Sever.** Au premier étage du centre commercial Saint-Sever, 65 avenue de Bretagne, la [bibliothèque Saint-Sever](https://rouen.fr/fr/adresse/bibliotheque-municipale-saint-sever) propose notamment partitions et méthodes d'apprentissage, ainsi que des espaces consacrés à la musique et aux jeux vidéo. C'est une piste intéressante pour découvrir un instrument avant de s'engager dans des cours ou un achat. Accès par le métro Saint-Sever.
-
-**Pour jardiner avec les enfants: les Capucins.** Au 21 rue des Capucins, la [bibliothèque des Capucins](https://rouen.fr/index.php/fr/adresse/bibliotheque-municipale-des-capucins) dispose d'une grainothèque pour échanger des graines, d'une bouturothèque et de bacs de jardinage. Ici, il s'agit surtout d'échange et de découverte, pas d'un prêt d'outils comparable à la bricothèque.
-
-**Pour les plus jeunes: Simone-de-Beauvoir.** Au pôle culturel Grammont, rue Henri-II-de-Plantagenêt, la [bibliothèque Simone-de-Beauvoir](https://rouen.fr/adresse/bibliotheque-municipale-simone-de-beauvoir) possède une marmothèque pour les enfants de 0 à 6 ans et leurs parents, ainsi que des kits ornithologiques. Son espace jeunesse permet une première visite même sans projet d'emprunt précis.
-
-Autre possibilité pour les familles attirées par le numérique: la [bibliothèque du Châtelet](https://rouen.fr/fr/adresse/bibliotheque-municipale-du-chatelet), place du Châtelet, propose des jeux vidéo et un espace de fabrication, le ChaMaLab. Les consoles de jeux vidéo y sont signalées comme réservées aux adultes.
-
-## Une carte gratuite, même sans habiter Rouen
-
-L'[inscription au réseau municipal](https://rouen.fr/adresse/bibliotheque-municipale-roger-parment) est gratuite pour tous et valable un an. Pour l'obtenir, il faut présenter:
-
-- une pièce d'identité, ou un livret de famille pour un enfant;
-- un justificatif de domicile de moins de six mois, ou une attestation sur l'honneur;
-- une autorisation parentale pour les moins de 16 ans.
-
-Une préinscription est possible depuis le [portail Rouen Bibliothèques](https://bibliotheques.rouen.fr/). Il reste préférable de confirmer auprès du personnel les conditions particulières applicables aux objets, notamment l'âge de l'emprunteur, les éventuels quotas et la durée de prêt.
-
-## Réserver et rendre: attention à la différence entre livres et objets
-
-Les documents peuvent être réservés, empruntés et rendus dans les différentes bibliothèques du réseau. **Les objets, eux, doivent être rapportés dans la bibliothèque où ils ont été empruntés**, précise la Ville. C'est un détail important si vous choisissez une bibliothèque éloignée de votre domicile.
-
-Avant de vous déplacer pour un instrument, un outil ou un kit, consultez le [catalogue du réseau](https://bibliotheques.rouen.fr/) ou contactez la bibliothèque concernée. Les fiches générales ne garantissent ni la présence immédiate d'un objet précis ni la possibilité de le réserver ou de prolonger son prêt. Faites aussi préciser le contenu du kit et les consignes de restitution.
-
-Les horaires varient selon les établissements et peuvent changer pendant les vacances scolaires. Vérifiez-les sur la fiche de la bibliothèque choisie, surtout pour une visite avec une poussette ou un déplacement en transport en commun.
-
-## Ce qui a changé à l'automne 2026
-
-Le conseil municipal a [modifié le règlement le 8 octobre 2026](https://rouen.fr/fr/deliberation/2026-10-08/1-29). Pour les familles, la règle à retenir est l'accompagnement des enfants de moins de six ans: ils doivent être accompagnés d'un adulte ou, au minimum, d'un frère ou d'une sœur âgé d'au moins 11 ans. Les parents restent responsables de leurs enfants.
-
-La nouvelle grille tarifaire, applicable depuis le 1er novembre 2026, prévoit également jusqu'à dix impressions ou photocopies gratuites par mois pour chaque usager inscrit. Elle ouvre par ailleurs l'emprunt à la bricothèque aux associations et structures rouennaises. Ces changements ne remettent pas en cause la gratuité de l'inscription.
-
-Pour préparer votre première visite, le plus utile est donc de choisir l'établissement selon l'activité envisagée, de vérifier la disponibilité du matériel et de demander les règles propres à son emprunt. Pour d'autres idées gratuites lors d'une journée à Rouen, consultez aussi notre [guide de Rouen en famille](https://www.fam-space.fr/destinations/normandie/seine-maritime/rouen/).
-
-
-### Destination en cours
-
-- Branche: automation/destination-20261010-0720-vincennes
-- HEAD: content: destination candidate Vincennes
-
----
-result: enriched
-kind: city
-name: "Vincennes"
-url: "/destinations/ile-de-france/val-de-marne/vincennes/"
-intro:
-  - "Vincennes est une base pratique pour visiter l'est parisien sans voiture : le château et le Parc floral se combinent à pied, tandis que le zoo de Paris mérite une sortie distincte."
-sections:
-  - title: "Une journée sur place : associer le château au Parc floral"
-    paragraphs:
-      - "Pour une journée mêlant découverte et temps de jeu, commencez par le château, puis rejoignez le Parc floral par l'esplanade du château. Comptez environ 1 h 30 à 2 h pour le monument avant de laisser les enfants profiter des aires de jeux du parc. Les pique-niques ne sont pas autorisés dans l'enceinte du château, mais le Parc floral dispose de tables de pique-nique, de points d'eau et de toilettes avec table à langer."
-      - "Avec de jeunes enfants qui supportent mal les visites intérieures, faites plutôt du Parc floral la sortie principale : ses jeux et ses jardins évitent de construire la journée autour du donjon et de ses escaliers. L'accès au Parc floral est gratuit d'octobre à mars et payant d'avril à septembre ; le château est un site distinct avec son propre billet."
-  - title: "Sur deux jours, garder le zoo pour une autre sortie"
-    paragraphs:
-      - "Le Parc zoologique de Paris se trouve du côté de la Porte Dorée, dans le 12e arrondissement, et non à côté du château ou à l'intérieur du Parc floral. Depuis le terminus Château de Vincennes du métro 1, le bus 46 permet de le rejoindre. Le zoo recommande au minimum deux heures de visite : avec le trajet et les pauses, mieux vaut lui réserver une seconde journée plutôt que de l'ajouter à la visite du château et du Parc floral."
-      - "Pour un séjour d'une seule journée, choisissez donc entre le duo château et Parc floral, facile à enchaîner à pied, et une visite du zoo avec trajet dédié. Ce choix évite de traverser inutilement le bois avec des enfants fatigués."
-  - title: "Métro ou RER avec une poussette : deux arrivées différentes"
-    paragraphs:
-      - "La ligne 1 arrive au pied du château, mais la station Château de Vincennes comporte de nombreuses marches entre les quais et la rue. La gare Vincennes du RER A est équipée d'un ascenseur et d'escalators ; elle se situe à environ dix minutes à pied du château. Avec une poussette lourde ou des difficultés à emprunter les escaliers, le RER A peut donc être plus pratique malgré la marche supplémentaire. Vérifiez l'état des équipements avant de partir."
-accommodation:
-  title: "Où dormir selon les sorties prévues ?"
-  paragraphs:
-    - "Si votre programme privilégie le château, le Parc floral et le départ du bus 46 vers le zoo, cherchez un hébergement vers l'avenue de Paris et le terminus Château de Vincennes. Si vous prévoyez aussi plusieurs allers-retours vers le centre de Paris, la proximité de la gare Vincennes du RER A est un autre choix pratique. Avec une poussette, comparez surtout la distance réelle à pied jusqu'à la gare ou au métro plutôt que de réserver simplement un logement annoncé à Vincennes."
-sources:
-  - title: "Fam Space - Destination Vincennes et ses deux articles"
-    url: "https://www.fam-space.fr/destinations/ile-de-france/val-de-marne/vincennes/"
-    accessedAt: "2026-10-10"
-  - title: "Fam Space - Château de Vincennes en famille"
-    url: "https://www.fam-space.fr/articles/sorties/chateau-de-vincennes-en-famille-tarifs-parcours-et-conseils-de-visite/"
-    accessedAt: "2026-10-10"
-  - title: "Fam Space - Monument jeu d'enfant 2026 au château de Vincennes"
-    url: "https://www.fam-space.fr/articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/"
-    accessedAt: "2026-10-10"
-  - title: "Ville de Paris - Parc floral de Paris"
-    url: "https://www.paris.fr/lieux/parc-floral-de-paris-1"
-    accessedAt: "2026-10-10"
-  - title: "Château de Vincennes - Informations pratiques"
-    url: "https://www.chateau-de-vincennes.fr/visiter/informations-pratiques"
-    accessedAt: "2026-10-10"
-  - title: "Château de Vincennes - Offre adaptée aux visiteurs en mobilité réduite"
-    url: "https://www.chateau-de-vincennes.fr/visiter/visiteurs-en-situation-de-handicap/offre-adaptee-aux-visiteurs-en-mobilite-reduite"
-    accessedAt: "2026-10-10"
-  - title: "Parc zoologique de Paris - Tarifs, horaires et accès"
-    url: "https://www.parczoologiquedeparis.fr/fr/tarifs-horaires-acces"
-    accessedAt: "2026-10-10"
-  - title: "Parc zoologique de Paris - Services et conseils de visite"
-    url: "https://www.parczoologiquedeparis.fr/fr/services-conseils-de-visite"
-    accessedAt: "2026-10-10"
----
-
-### Destination en cours
-
-- Branche: automation/destination-20261013-0112-haut-rhin
-- HEAD: content: destination Haut-Rhin enrichment candidate
-
----
-result: enriched
-kind: department
-name: "Haut-Rhin"
-url: "/destinations/grand-est/haut-rhin/"
-intro:
-  - "Colmar, Mulhouse et Ungersheim ne se visitent pas de la même manière en famille. Le choix de la base dépend des musées, des villages et de la possibilité de se déplacer sans voiture."
-sections:
-  - title: "Colmar pour les villages, Mulhouse pour les musées"
-    paragraphs:
-      - "Colmar convient à une journée dans le centre suivie d'une sortie vers Turckheim ou Munster, accessibles sur la ligne de train vers Metzeral. Pour Riquewihr, Kaysersberg ou Eguisheim, cette ligne ne suffit pas : il faut vérifier les bus ou prévoir une voiture."
-      - "Mulhouse est une meilleure base pour les musées techniques : la Cité du Train et Electropolis sont desservis par le tram 3, et le Musée national de l'Automobile par le tram 1. Si ces visites sont prioritaires, dormir à Mulhouse évite de revenir chaque soir depuis Colmar."
-  - title: "Deux parcs à Ungersheim : prévoir deux journées"
-    paragraphs:
-      - "Le Parc du Petit Prince et l'Écomusée d'Alsace sont proches, mais le premier recommande déjà cinq à sept heures de visite. Une famille qui souhaite découvrir les deux aura plus de temps pour profiter de chaque site en leur réservant une journée distincte."
-      - "Sans voiture, le train rejoint Bollwiller, puis il faut prévoir une navette à la demande vers les sites. Le Parc du Petit Prince indique le service Filéa ; l'Écomusée annonce une navette Soléa ou trente minutes de marche. Réservez et vérifiez le retour avant d'acheter les billets."
-  - title: "Ne pas confondre train et bus touristique"
-    paragraphs:
-      - "Le Kut'zig dessert en saison plusieurs villages viticoles depuis Colmar, mais ne circule pas toute l'année : sa saison 2026 s'est achevée le 11 octobre. Hors saison, la ligne ferroviaire vers Turckheim et Munster offre un autre choix de sortie, sous réserve des horaires du jour."
-accommodation:
-  title: "Où se baser dans le Haut-Rhin ?"
-  paragraphs:
-    - "Choisissez Colmar pour le centre historique, les villages et la vallée de Munster ; choisissez Mulhouse pour les musées et une excursion vers Ungersheim via Bollwiller. Si le séjour combine plusieurs jours dans chaque secteur, deux hébergements peuvent éviter des allers-retours répétés avec les enfants."
-sources:
-  - title: "Fam Space - Haut-Rhin"
-    url: "https://www.fam-space.fr/destinations/grand-est/haut-rhin/"
-    accessedAt: "2026-10-13"
-  - title: "Mulhouse Tourisme - Transports en commun"
-    url: "https://www.tourisme-mulhouse.com/en/what-to-do-in-mulhouse/getting-around-mulhouse-by-public-transport/"
-    accessedAt: "2026-10-13"
-  - title: "Parc du Petit Prince - Informations pratiques"
-    url: "https://parcdupetitprince.com/infos-pratiques"
-    accessedAt: "2026-10-13"
-  - title: "Écomusée d'Alsace - Accès"
-    url: "https://www.ecomusee.alsace/preparez-votre-visite/acces/"
-    accessedAt: "2026-10-13"
-  - title: "Ville de Turckheim - Accès"
-    url: "https://www.turckheim.fr/acces-et-plan/"
-    accessedAt: "2026-10-13"
-  - title: "Office de tourisme de Colmar - Kut'zig"
-    url: "https://www.tourisme-colmar.com/fr/pratique/se-deplacer/kut-zig-le-bus-touristique-cabriolet"
-    accessedAt: "2026-10-13"
----
-
-### Phase 1 - refresh
-
-Écris `radar-request.md` avec seulement la décision éditoriale:
-
-```yaml
----
-action: start
-mode: refresh
-targetUrl: "/articles/categorie/slug/"
-decision: "Décision précise du lecteur à mieux servir"
-affiliationPotential: "Offre existante à conserver, nouvelle action naturelle à vérifier, ou absence d'affiliation naturelle"
----
-
-Brief éditorial court demandé par la phase 1.
-```
-
-Ne fournis ni branche, ni SHA, ni `targetPath`, ni `commonQueries`, ni `positionDelta`, ni `impressionRatio`, ni `focusQueries`. Le script les prend dans Git et dans le snapshot.
-
-### Phase 1 - opportunity
-
-Écris le minimum éditorial nécessaire au futur article:
-
-```yaml
----
-action: start
-mode: opportunity
-title: "Titre de travail"
-subtitle: "Sous-titre utile"
-summary: "Résumé"
-category: sorties
-location:
-  city: "Ville"
-  department: "Département"
-  region: "Région"
-keywords:
-  - "mot-clé utile"
-sources:
-  - title: "Source officielle"
-    url: "https://..."
-gscSignal: strong_page
-gscSourceUrl: "/articles/categorie/page-forte/"
-decision: "Décision précise du lecteur"
-affiliationPotential: "Piste commerciale réellement vérifiée ou absence naturelle"
----
-
-Brief éditorial court demandé par la phase 1.
-```
-
-Le slug, la branche, le SHA et la provenance technique sont générés par le script. Pour `seasonal_opportunity`, utilise `gscSignal: seasonal_opportunity` et omets `gscSourceUrl`: la source officielle du frontmatter sert de preuve. Pour `strong_page`, `gscSourceUrl` reste obligatoire et doit correspondre à une page réellement présente dans `strongPages`.
+En phase 3 seulement, ajoute `radarReview` avec `summary`, `sources` et, pour un refresh, `regressionCheck`. Une seule correction factuelle vérifiée peut être suffisante.
 
 ## Écriture autorisée
 
