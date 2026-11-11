@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,94 +14,113 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Isère
 - Région: Auvergne-Rhône-Alpes
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Sujet :** Découvrir la cité médiévale de Crémieu en famille, en Isère.
-
-**Titre de travail :** « Crémieu en famille : balade médiévale gratuite, remparts et halle à découvrir »
-
-**Angle :** Construire une sortie familiale autonome, adaptable à l'âge des enfants, autour du parcours patrimonial gratuit, plutôt que présenter un simple inventaire de monuments. Crémieu est une cité médiévale du Nord-Isère ouverte à la promenade toute l'année : sa halle du XVe siècle, ses portes fortifiées, ses remparts et son couvent des Augustins donnent matière à une visite de 30 minutes à deux heures.
-
-## Besoin du lecteur
-
-Comprendre ce qu'il est possible de voir réellement avec des enfants, choisir une durée et un itinéraire adaptés, distinguer les monuments accessibles de ceux qui ne se visitent pas, préparer la balade (pentes, poussette, pauses, stationnement, météo) et éventuellement prolonger la découverte par un séjour.
-
-## Valeur éditoriale
-
-- Proposer deux formats de visite : courte boucle dans le centre ancien et parcours plus complet avec les hauteurs, en s'appuyant sur le plan gratuit de l'office de tourisme.
-- Expliquer simplement ce que les enfants peuvent observer à la halle (charpente et anciennes mesures à grains), aux portes fortifiées, au cloître et près des remparts ; ne pas promettre l'accès au château delphinal, privé et non visitable.
-- Préciser que l'office de tourisme conseille le porte-bébé plutôt que la poussette sur le parcours ; prévoir une alternative dans les rues basses.
-- Mentionner la fermeture temporaire de la montée Saint-Hippolyte **du lundi au vendredi jusqu'au 15 novembre 2026** pour travaux ; vérifier son statut au moment de la rédaction et avant toute visite.
-- Distinguer le parcours permanent, gratuit et accessible toute l'année des chasses au trésor ou animations ponctuelles qui ne sont pas nécessairement proposées aux dates choisies. La valeur ajoutée est un déroulé familial praticable, pas la répétition de la fiche touristique.
-
-## Affiliation
-
-- **Booking.com**, hébergements à Crémieu : https://www.booking.com/city/fr/cremieu.fr.html . Offre vérifiée : plusieurs hébergements sont référencés, dont **Pimprenelle maison de ville entière, atypique** et **Le terrier des sorciers** ; vérifier capacité familiale, prix et disponibilité pour les dates du lecteur. Proposition naturelle pour transformer la balade en week-end dans le Nord-Isère.
-- **Booking.com**, **Hôtel La Batisse**, présent sur cette même page de résultats à Crémieu : option d'hébergement secondaire à examiner, sans prétendre qu'il convient à toutes les configurations familiales.
-- **Billetterie / visites** : aucune offre de visite payante pertinente confirmée chez GetYourGuide, Tiqets ou Klook pour le parcours patrimonial gratuit ; ne pas substituer une activité sans lien. Les résultats des autres partenaires ne permettent pas de retenir une offre précise vérifiée à ce stade.
-
-## Sources de départ
-
-- Office de tourisme des Balcons du Dauphiné, parcours patrimonial (gratuité, plan, poussette, travaux) : https://www.balconsdudauphine-tourisme.com/equipement/parcours-patrimonial-de-cremieu/
-- Office de tourisme, présentation de la cité et monuments : https://www.balconsdudauphine-tourisme.com/site-culturel/cremieu-cite-medievale/
-- Office de tourisme, histoire et idées de visite : https://www.balconsdudauphine-tourisme.com/explorer/le-patrimoine-des-balcons/cites-medievales/cremieu/
-- Office de tourisme, remparts et fortifications : https://www.balconsdudauphine-tourisme.com/site-culturel/les-remparts-et-fortifications-de-cremieu/
-- Auvergne-Rhône-Alpes Tourisme, parcours gratuit et château non visitable : https://www.auvergnerhonealpes-tourisme.com/fiches/cremieu-cite-medievale/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "activites"
+title: "Crémieu en famille: balade gratuite dans la cité médiévale"
+subtitle: "Deux façons de découvrir la halle, les portes fortifiées et les remparts avec des enfants"
+summary: "À Crémieu, en Isère, découvrez une promenade médiévale gratuite en famille, avec un circuit court, une option sur les hauteurs et des conseils pratiques."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Crémieu en famille"
+  - "balade médiévale Crémieu"
+  - "sortie gratuite Isère"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Crémieu"
+  department: "Isère"
+  region: "Auvergne-Rhône-Alpes"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Office de tourisme des Balcons du Dauphiné - Parcours patrimonial de Crémieu"
+    url: "https://www.balconsdudauphine-tourisme.com/equipement/parcours-patrimonial-de-cremieu/"
+  - title: "Office de tourisme des Balcons du Dauphiné - Remparts et fortifications de Crémieu"
+    url: "https://www.balconsdudauphine-tourisme.com/site-culturel/les-remparts-et-fortifications-de-cremieu/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Crémieu, petite cité médiévale du Nord-Isère située à moins d'une heure de Lyon, les enfants peuvent explorer de vieilles portes fortifiées, observer une immense halle et chercher les traces des anciens remparts. Pas besoin de réserver une visite guidée: le parcours patrimonial se découvre librement et gratuitement, à son rythme.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Une petite balade dans le centre ancien
+
+Pour une première découverte avec de jeunes enfants, prévoyez environ 30 à 45 minutes, davantage si vous prenez le temps de vous arrêter. Commencez près de la place de la Nation, puis rejoignez la **halle médiévale**. Sous sa grande toiture de pierre, invitez les enfants à repérer la charpente et les anciennes mesures à grains: elles rappellent que l'on venait ici commercer bien avant l'existence des supermarchés.
+
+Continuez dans les rues anciennes vers une **porte fortifiée**, par exemple la porte de la Loi, pour imaginer comment les habitants entraient autrefois dans la ville. Selon l'envie et l'accessibilité du jour, complétez la promenade par les abords du **couvent des Augustins** et de son cloître. Ce petit circuit privilégie le centre plutôt que les montées raides; il ne garantit toutefois pas un cheminement intégralement accessible aux poussettes.
+
+L'[office de tourisme présente les principaux monuments et propose un plan gratuit](https://www.balconsdudauphine-tourisme.com/equipement/parcours-patrimonial-de-cremieu/), également téléchargeable depuis sa fiche. Utilisez-le pour adapter votre boucle, sans chercher à cocher chaque étape.
+
+## Pour les plus grands: prendre de la hauteur
+
+Avec des enfants qui marchent volontiers, prolongez la sortie vers les fortifications des collines Saint-Laurent et Saint-Hippolyte. Comptez plutôt 1 h 30 à 2 h pour une promenade avec des pauses, selon le trajet retenu et les conditions d'accès.
+
+Les [remparts de Crémieu](https://www.balconsdudauphine-tourisme.com/site-culturel/les-remparts-et-fortifications-de-cremieu/) s'étendent sur plus de deux kilomètres autour du centre historique. Inutile de vouloir tous les parcourir: quelques points de vue et une portion accessible suffisent à comprendre comment la cité était défendue. Les portes de la Loi et François Ier témoignent de cette histoire.
+
+Attention à une confusion fréquente: **le château delphinal est privé et ne se visite pas**. Il peut être observé depuis l'extérieur, mais ne doit pas être présenté aux enfants comme une étape avec entrée dans le château.
+
+**Travaux en cours au 11 novembre 2026:** l'office de tourisme signale la fermeture de la montée Saint-Hippolyte du lundi au vendredi, du 14 septembre au 15 novembre 2026. L'accès reste annoncé possible le samedi et le dimanche. Si vous venez pendant cette période, choisissez le circuit bas en semaine et vérifiez les informations officielles avant de partir. Après le 15 novembre, contrôlez la réouverture plutôt que de la supposer acquise.
+
+## Poussette, météo et pauses: ce qu'il faut prévoir
+
+Le charme de Crémieu tient aussi à ses rues anciennes et à son relief. Pour le parcours patrimonial complet, **l'office de tourisme recommande un porte-bébé plutôt qu'une poussette**. Avec une poussette, limitez la visite aux rues basses que vous jugez praticables sur place, sans prévoir la montée vers les fortifications. Les remparts ne sont pas accessibles en fauteuil roulant selon la fiche touristique.
+
+Prévoyez des chaussures qui tiennent bien aux pieds, particulièrement après la pluie: les pentes et les sols anciens demandent de l'attention. La halle est un bon repère pour faire une pause, mais elle ne remplace pas un abri chauffé par temps froid.
+
+La [fiche officielle du parcours](https://www.balconsdudauphine-tourisme.com/equipement/parcours-patrimonial-de-cremieu/) mentionne des parkings et des WC publics à proximité. Elle situe le départ dans le secteur de la place de la Nation, 38460 Crémieu. Pour éviter de chercher un stationnement au dernier moment, repérez les parkings sur le plan avant de venir.
+
+## Gratuit toute l'année, sans confondre avec les animations
+
+La promenade patrimoniale libre est annoncée **gratuite et accessible toute l'année**. Elle n'impose pas de billet ni de créneau de réservation. Cela ne signifie pas que l'intérieur de tous les bâtiments est ouvert à tout moment: les accès peuvent dépendre des usages des lieux.
+
+Crémieu propose parfois des visites accompagnées et des animations, mais elles sont distinctes de la balade autonome. Si une chasse au trésor ou une activité encadrée vous intéresse, consultez l'agenda de l'office de tourisme pour votre date précise; ne partez pas du principe qu'elle est proposée tous les jours.
+
+Pour les familles, le plus agréable est souvent de laisser les enfants choisir ce qu'ils observent: une meurtrière, une porte monumentale, les pierres des remparts ou les mesures à grains sous la halle. Une sortie d'une heure bien vécue vaut mieux qu'un parcours complet terminé dans la fatigue.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -130,4 +149,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
