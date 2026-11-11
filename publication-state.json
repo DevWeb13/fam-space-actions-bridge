@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261111-1059-sujet-decouvrir-la-cite-medievale-de-cremieu-en-famille-en-isere",
+  "lastProcessedCommit": "9a7ef4e393fdbc4f749c205172b7adc5a408464e"
 }
