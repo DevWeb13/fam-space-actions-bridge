@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -90,19 +93,21 @@ sources:
     url: https://www.biodiversarium.fr/fr/preparez-votre-visite/tarifs-individuels.html
   - title: Biodiversarium - Accès aux deux sites
     url: https://www.biodiversarium.fr/fr/preparez-votre-visite/acces2.html
-  - title: Biodiversarium - Programme des animations de Toussaint 2026
-    url: https://www.biodiversarium.fr/fr/plan-acces/print_article/5.html?flag=1&tmpl=component
   - title: Biodiversarium - Aquarium et jardin, deux sites complémentaires
     url: https://www.biodiversarium.fr/fr/biodiversarium.html
   - title: Office de tourisme de Banyuls-sur-Mer - Le sentier littoral
     url: https://www.banyuls-sur-mer.com/tourisme/decouvrir/banyuls-la-mer-et-ses-tresors/incontournables-de-la-mediterranee/le-sentier-littoral/
+  - title: Tourisme Occitanie - Aquarium, accessibilité et tarifs
+    url: https://www.tourisme-occitanie.com/fr/fiche/equipement/biodiversarium-aquarium-de-banyuls-sur-mer-banyuls-sur-mer_TFOLOILAR066FS0006H/
+  - title: Tourisme Occitanie - Jardin, durée et accessibilité
+    url: https://www.tourisme-occitanie.com/fr/fiche/patrimoine-culturel/biodiversarium-jardin-mediterraneen-du-mas-de-la-serre-banyuls-sur-mer_TFOPCULAR066V50O063/
 affiliate:
   enabled: true
   type: travel
   destination: Banyuls-sur-Mer
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/voyages/(2026)/(10)/banyuls-sur-mer-en-famille-aquarium-et-balade-hors-saison/index.md
   targetSha: 1ab61308fe1d125414947938a09906409d746c32
@@ -129,30 +134,65 @@ radar:
       - today
 ---
 
-## Mission retenue
-Actualiser les conseils pratiques de l'article existant sur l'aquarium du Biodiversarium et la promenade à Banyuls-sur-Mer hors saison.
+<!-- article-image-credit -->
+*Photo: [ComOOB](https://commons.wikimedia.org/wiki/File:OOB_batiments.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC montre 25 impressions du 22 au 24 octobre, puis aucune du 6 au 8 novembre; le signal est incertain et n'établit aucune cause SEO. L'article donne déjà les tarifs et les horaires, mais ne précise pas la durée indicative de visite ni la différence d'accessibilité entre l'aquarium et le jardin, utiles pour choisir une sortie avec de jeunes enfants.
+Sur la Côte Vermeille, près de la frontière espagnole, Banyuls-sur-Mer se découvre aussi hors de l'été. Dans cette ville des Pyrénées-Orientales, une famille peut associer la visite de l'aquarium scientifique du Biodiversarium à une promenade face à la Méditerranée. C'est une sortie qui se prête à l'automne et à l'hiver, sous réserve des jours d'ouverture.
 
-## Décision du lecteur
-Choisir un programme faisable en une demi-journée avec les enfants, sans acheter inutilement un billet couplé ni prévoir un itinéraire inadapté à une poussette.
+## Un aquarium qui raconte la Méditerranée
 
-## Faits à traiter
-Vérifier auprès des responsables la durée indicative de visite de l'aquarium (environ 1 h 30 selon la documentation touristique), son accessibilité aux poussettes, et les contraintes du jardin (escaliers, chemins en pierre, visite guidée sur réservation). Vérifier les catégories de tarifs réduits et justificatifs avant de les citer. Préserver horaires, fermetures de janvier 2027, tarifs familiaux, séparation des deux sites, itinéraire aménagé distinct du sentier littoral, accès TER/bus, photographies et crédits, ainsi que les deux hébergements. Les animations de Toussaint sont passées: ne pas les présenter comme encore disponibles.
+<!-- article-image-body:01 -->
 
-## Sources de départ
-- https://www.biodiversarium.fr/fr/preparez-votre-visite/horaires-d-ouvertures.html
-- https://www.biodiversarium.fr/fr/preparez-votre-visite/tarifs-individuels.html
-- https://www.biodiversarium.fr/fr/preparez-votre-visite/acces2.html
-- https://www.banyuls-sur-mer.com/tourisme/decouvrir/banyuls-la-mer-et-ses-tresors/incontournables-de-la-mediterranee/laquarium/
-- https://www.tourisme-occitanie.com/fr/fiche/equipement/biodiversarium-aquarium-de-banyuls-sur-mer-banyuls-sur-mer_TFOLOILAR066FS0006H/
+![Herbier de posidonies photographié sous l'eau à La Ciotat en 2021, exemple de milieu méditerranéen présenté au Biodiversarium sans montrer ses bassins](/images/articles/2026/10/banyuls-sur-mer-en-famille-aquarium-et-balade-hors-saison-body-01.webp)
 
-## Affiliation
-Conserver les hébergements Booking déjà intégrés; ne pas ajouter de partenaire pour le billet de l'aquarium sans offre vérifiée.
+*Photo: [Frédéric Ducarme](https://commons.wikimedia.org/wiki/File:Posidonia_oceanica_(L).jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
 
-## Continuations internes
-Conserver le lien vers la visite des anchois à Collioure pour une deuxième journée. Ne pas développer un guide complet de randonnée sur le sentier littoral.
+<!-- /article-image-body:01 -->
+
+Rattaché à l'Observatoire océanologique de Banyuls-sur-Mer, l'aquarium du Biodiversarium montre la vie marine à travers le regard des scientifiques. Ses bassins abritent environ 300 espèces méditerranéennes et évoquent les fonds sableux, les herbiers de posidonie et les milieux rocheux.
+
+Avec les enfants, on peut comparer les animaux des fonds sableux et ceux des rochers, puis découvrir l'utilité des herbiers sous-marins. Le circuit évoque aussi les recherches menées à l'observatoire; certains laboratoires sont visibles depuis le parcours. Le [Biodiversarium présente les différents espaces de l'aquarium](https://www.biodiversarium.fr/fr/biodiversarium/aquarium.html).
+
+## Adapter la journée aux enfants
+
+Comptez **environ 1 h 30 pour découvrir l'aquarium**, davantage si les enfants s'attardent devant les bassins et les dispositifs interactifs. La [fiche de Tourisme Occitanie](https://www.tourisme-occitanie.com/fr/fiche/equipement/biodiversarium-aquarium-de-banyuls-sur-mer-banyuls-sur-mer_TFOLOILAR066FS0006H/) confirme que le parcours est **accessible aux poussettes et aux personnes à mobilité réduite**. Avec de jeunes enfants, vous pouvez donc prévoir l'aquarium puis une courte balade près du port, sans chercher à remplir toute la journée. Avec des plus grands, consultez les animations ponctuelles annoncées par l'établissement avant de partir; les séances de Toussaint 2026 sont terminées.
+
+## Horaires et billets: éviter une mauvaise surprise
+
+**De septembre à juin**, l'aquarium ouvre normalement du mardi au dimanche, de **10h à 12h30** et de **14h à 18h30**. Le lundi est fermé, sauf pendant les vacances scolaires de la zone C. L'aquarium ferme également les 25 décembre et 1er janvier, ainsi que **du 4 au 29 janvier 2027 inclus**. La billetterie ferme 30 minutes avant le site. Vérifiez les [horaires officiels](https://www.biodiversarium.fr/fr/preparez-votre-visite/horaires-d-ouvertures.html) avant de partir, particulièrement pour un séjour hivernal.
+
+Pour l'aquarium seul, les [tarifs affichés](https://www.biodiversarium.fr/fr/preparez-votre-visite/tarifs-individuels.html) sont de **12 € par adulte**, **8,50 € de 13 à 17 ans** et **6 € de 3 à 12 ans**, avec entrée gratuite avant 3 ans. Comptez donc **36 € pour deux adultes et deux enfants de 3 à 12 ans**. Un **tarif réduit à 10 € pour l'aquarium** existe notamment pour les étudiants, enseignants de l'Éducation nationale, demandeurs d'emploi, bénéficiaires du RSA, personnes en situation de handicap et détenteurs du Pass Découverte en Pays Catalan. **Un justificatif est obligatoire**; la liste complète des bénéficiaires figure sur la page officielle des tarifs.
+
+Le Biodiversarium possède aussi un **Jardin méditerranéen du Mas de la Serre**, mais ce n'est pas une annexe attenante à l'aquarium: il se trouve sur un autre site, sur les hauteurs, et se visite **uniquement avec un guide, sur réservation**. Sa visite guidée dure **environ 2 h** et le terrain comporte **escaliers et chemins en pierre**, ce qui le rend inadapté aux poussettes et difficile pour les personnes à mobilité réduite, selon [Tourisme Occitanie](https://www.tourisme-occitanie.com/fr/fiche/patrimoine-culturel/biodiversarium-jardin-mediterraneen-du-mas-de-la-serre-banyuls-sur-mer_TFOPCULAR066V50O063/). Le jardin est habituellement fermé de novembre à mars. Il faut donc vérifier qu'une visite est effectivement proposée avant de choisir un billet couplé aquarium + jardin, facturé **14,50 € par adulte**, **11 € par adolescent** et **7,50 € par enfant de 3 à 12 ans**. Pour une sortie hivernale limitée à l'aquarium, ce supplément n'a pas d'intérêt. L'organisateur explique la [distinction entre ses deux sites](https://www.biodiversarium.fr/fr/biodiversarium.html).
+
+## Après l'aquarium, marcher sans surestimer le sentier côtier
+
+<!-- article-image-body:02 -->
+
+![Promenade aménagée du front de mer de Banyuls-sur-Mer bordée de palmiers, pins parasols et platanes en 2018](/images/articles/2026/10/banyuls-sur-mer-en-famille-aquarium-et-balade-hors-saison-body-02.webp)
+
+*Photo: [Zaloudock](https://commons.wikimedia.org/wiki/File:3_essences_d%27arbres_embl%C3%A9matiques_d%27ici_bordent_le_front_de_mer_de_Banyuls.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Pour une balade tranquille, restez près du front de mer, du port et des Allées Maillol. Vous pourrez écourter le parcours si le vent se lève.
+
+Le **sentier littoral** demande une autre préparation. Au départ de Banyuls, il longe notamment le port et les Allées Maillol avant de poursuivre dans la garrigue vers Cerbère, avec des portions plus sportives. L'[office de tourisme](https://www.banyuls-sur-mer.com/tourisme/decouvrir/banyuls-la-mer-et-ses-tresors/incontournables-de-la-mediterranee/le-sentier-littoral/) rappelle que le parcours côtier complet est une randonnée. Il répertorie aussi une traversée de Banyuls de 4 km, annoncée praticable avec poussette ou fauteuil roulant: cette indication concerne **cet itinéraire identifié**, pas l'ensemble des sentiers en bord de falaise.
+
+Avec une poussette ou de jeunes marcheurs, privilégiez les espaces aménagés en ville. Si vous envisagez un tronçon de randonnée, examinez le tracé, le dénivelé et l'état du terrain, et renoncez en cas de vent fort ou de pluie.
+
+## Venir et choisir entre une journée et une nuit sur place
+
+L'aquarium est situé au **1 avenue Pierre Fabre**. Selon les [indications d'accès du Biodiversarium](https://www.biodiversarium.fr/fr/preparez-votre-visite/acces2.html), la gare de Banyuls-sur-Mer se trouve à environ **15 minutes à pied**, avec des liaisons TER; la **ligne de bus 400** dessert également le secteur Perpignan-Cerbère. En voiture, l'accès se fait par la D914. Le parking voisin est indiqué comme payant du **1er avril au 30 octobre**. Le Jardin méditerranéen, si vous avez réservé une visite, se rejoint séparément au Mas Reig, route des Crêtes.
+
+Si vous prolongez la sortie en week-end, le choix entre hôtel et appartement dépend surtout du nombre de voyageurs et de la possibilité de préparer les repas. Comparez l'emplacement, la capacité réelle et les conditions de réservation; les équipements extérieurs peuvent être fermés hors saison.
+
+Pour une nuit à l'hôtel, [Le Catalan, à Banyuls-sur-Mer](https://www.booking.com/hotel/fr/le-catalan.fr.html) propose notamment des chambres triples, un restaurant et un parking. L'établissement est situé sur les hauteurs, à une dizaine de minutes à pied du centre. Vérifiez la capacité de la chambre retenue pour votre famille.
+
+Pour quatre voyageurs préférant disposer d'une cuisine, [cet appartement T3 à deux chambres près de la plage des Elmes](https://www.booking.com/hotel/fr/appartement-banyuls-sur-mer-2-pieces-4-personnes-fr-1-309-281.fr.html) constitue une autre option. Sa fiche annonce une caution de 500 € et des conditions de ménage à vérifier avant réservation. Les tarifs et disponibilités des deux hébergements dépendent des dates.
+
+Si vous passez une deuxième journée sur la Côte Vermeille, une [courte visite autour des anchois à Collioure](https://www.fam-space.fr/articles/cuisine/anchois-de-collioure-quelle-visite-choisir-avec-des-enfants/) peut compléter le programme, selon les jours d'ouverture des ateliers.
 
 ## Article source exact à préserver et améliorer
 
