@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Forum des Sciences à Villeneuve-d'Ascq en famille: que choisir selon l'âge ?"
-subtitle: "Planétarium, ateliers pour les petits et enquêtes scientifiques: les activités à choisir selon l'âge"
-summary: Près de Lille, le Forum des Sciences propose des expériences dès 2 ans, un planétarium et des enquêtes. Voici comment choisir les séances, prévoir le budget et réserver.
+subtitle: "Planétarium, expositions et enquêtes: choisir une séance adaptée et vérifier sa programmation"
+summary: Dès 2 ans, le Forum des Sciences près de Lille propose des ateliers, un planétarium et des enquêtes. Âges, durées, tarifs et réservation pour préparer la visite.
 slug: forum-des-sciences-a-villeneuve-d-ascq-en-famille-que-choisir-selon-l-age
 status: published
 publishedAt: 2026-11-02T00:03:12+01:00
@@ -90,6 +93,8 @@ sources:
     url: https://forumdepartementaldessciences.fr/activites/croque-couleurs/
   - title: Forum des Sciences - Tous à plumes !
     url: https://forumdepartementaldessciences.fr/activites/tous-a-plumes/
+  - title: Forum des Sciences - Boule de plumes
+    url: https://forumdepartementaldessciences.fr/evenements/boule-de-plumes/
   - title: Forum des Sciences - Enigma
     url: https://forumdepartementaldessciences.fr/activites/enigma/
   - title: Forum des Sciences - Ouverture et tarifs
@@ -98,13 +103,15 @@ sources:
     url: https://forumdepartementaldessciences.fr/informations-pratiques/quand-et-comment-venir/
   - title: Forum des Sciences - Accessibilité
     url: https://forumdepartementaldessciences.fr/informations-pratiques/accessibilite/
+  - title: Forum des Sciences - Accueil et état de la billetterie
+    url: https://forumdepartementaldessciences.fr/
 affiliate:
   enabled: true
   type: travel
   destination: Villeneuve-d'Ascq
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/activites/(2026)/(11)/forum-des-sciences-a-villeneuve-d-ascq-en-famille-que-choisir-selon-l-age/index.md
   targetSha: 4c54a61636efeb86e6edc8af7b200064bac51823
@@ -131,33 +138,75 @@ radar:
       - activités scientifiques enfants Nord
 ---
 
-## Mission retenue
-Actualisation ciblée du guide familial du Forum départemental des Sciences à Villeneuve-d'Ascq, surtout la disponibilité des ateliers et les modalités de réservation.
+À Villeneuve-d'Ascq, près de Lille, le Forum départemental des Sciences permet aux enfants d'explorer les couleurs, les oiseaux, l'astronomie ou des énigmes scientifiques. Certaines activités commencent dès 2 ans, d'autres demandent d'avoir 7, 9 ou 12 ans. Pour profiter de la sortie, choisissez une séance adaptée à l'âge des enfants **et vérifiez qu'elle est réellement programmée le jour de votre visite**: les ateliers ponctuels ne suivent pas forcément le calendrier des expositions.
 
-## Pourquoi cette mission
-Le snapshot GSC signale 30 impressions du 3 au 5 novembre puis 9 du 6 au 8 novembre, sans preuve de cause SEO. Lacune indépendante: l'article présente des horaires récurrents pour « Boule de plumes », tandis que la page événement officielle consultée décrit explicitement des séances du 20 octobre au 1er novembre 2026. Ne pas laisser croire que ces créneaux sont garantis toute l'année.
+## De 2 à 6 ans: trois expériences très différentes
 
-## Décision du lecteur
-Savoir quelles activités conviennent aux enfants de 2 à 12 ans, lesquelles sont disponibles le jour choisi, comment réserver et quel billet ou pass familial acheter.
+**De 2 à 4 ans, l'Espace d'Atom** invite les tout-petits à découvrir les couleurs avec un adulte. Après un temps collectif animé par une médiatrice, ils expérimentent dans de petits ateliers sensoriels à leur rythme. La séance dure **1 heure**, avec **16 participants maximum**. Cette activité est annoncée jusqu'au **17 janvier 2027**. [Découvrir l'Espace d'Atom](https://forumdepartementaldessciences.fr/activites/espace-datom/).
 
-## Faits à traiter
-- Vérifier si « Boule de plumes » continue après le 1er novembre et, faute de confirmation, retirer les créneaux présentés comme habituels; distinguer l'exposition « Tous à plumes ! » (annoncée jusqu'au 29 août 2027) de son atelier ponctuel.
-- Le site officiel présente des indications divergentes sur la billetterie: une page signale son indisponibilité, la page « Ouverture et tarifs » propose un lien de réservation. Conseiller de vérifier l'accès effectif et de réserver par téléphone au 03 59 73 96 00 si besoin, sans annoncer une réouverture non confirmée.
-- Préserver les âges, durées, prix, calculs du Pass tribu, autres ateliers, gratuités, accès PMR, photographie et sources, maillage interne et liens Booking. Ne corriger que les informations vérifiées; ne pas attribuer la baisse GSC à ces points.
+**De 3 à 6 ans, Croque Couleurs** propose une exposition interactive pour jouer avec les couleurs et comprendre comment on les perçoit. La visite est accompagnée par un médiateur, dure **1 h 15** et accueille **16 personnes** par séance. Elle est programmée jusqu'au **17 janvier 2027**. [Voir Croque Couleurs](https://forumdepartementaldessciences.fr/activites/croque-couleurs/).
 
-## Sources de départ
-- Forum, atelier « Boule de plumes »: https://forumdepartementaldessciences.fr/evenements/boule-de-plumes/
-- Forum, exposition « Tous à plumes ! »: https://forumdepartementaldessciences.fr/activites/tous-a-plumes/
-- Forum, réservation et tarifs: https://forumdepartementaldessciences.fr/informations-pratiques/ouverture-et-tarifs/
-- Forum, alerte billetterie: https://forumdepartementaldessciences.fr/visites-guidees/individuels/
-- Forum, activités et calendrier: https://forumdepartementaldessciences.fr/activites/
+**Tous à plumes !**, accessible à tous les âges, permet de découvrir les oiseaux en **1 h 15 environ**. L'exposition reste annoncée jusqu'au **29 août 2027**. Elle ne doit pas être confondue avec **Boule de plumes**, atelier sensoriel d'**1 heure** pour les **3 à 6 ans accompagnés**, limité à **16 personnes** et inclus dans le billet de l'exposition. La [programmation officielle de Boule de plumes](https://forumdepartementaldessciences.fr/evenements/boule-de-plumes/) indiquait des séances **du 20 octobre au 1er novembre 2026**: aucun créneau régulier après cette période n'est confirmé sur cette page. Vérifiez auprès de l'accueil si l'atelier est reprogrammé avant de compter dessus. [Découvrir Tous à plumes !](https://forumdepartementaldessciences.fr/activites/tous-a-plumes/).
 
-## Affiliation
-Maintenir les deux logements Booking déjà proposés; aucune offre de billets partenaires vérifiée.
+Pour un enfant qui découvre le lieu, une seule de ces activités peut suffire. Tous à plumes ! est particulièrement intéressant si les frères et sœurs n'ont pas le même âge.
 
-## Continuations internes
-- Conserver le lien existant vers la destination Lille sans dupliquer son contenu.
-- Ne pas transformer cette correction en nouvel article sur une animation ponctuelle.
+## Dès 3 ans: le planétarium
+
+Rénové en 2025, le **planétarium** projette le ciel étoilé sous un dôme immersif, avec l'accompagnement d'un médiateur. Le programme varie selon l'âge:
+
+- **3 à 6 ans:** « Le petit ciel étoilé », une découverte du ciel en **45 minutes**.
+- **Dès 6 ans:** « À la belle étoile », autour des constellations, en **1 heure**.
+- **Dès 9 ans:** « Le ciel ce soir », pour apprendre à reconnaître les astres, en **1 heure**.
+
+D'autres séances existent. Vérifiez celle proposée à la date choisie, car toutes ne conviennent pas aux plus jeunes. **L'accès est refusé après le début de la projection**: prévoyez d'arriver en avance. [Consulter les programmes du planétarium](https://forumdepartementaldessciences.fr/activites/le-planetarium/).
+
+## Dès 7 ans: résoudre une enquête Enigma
+
+Avec **Enigma**, les enfants observent, manipulent et raisonnent pour résoudre une investigation scientifique. Trois enquêtes alternent, **une seule étant proposée chaque semaine**:
+
+- **« Codes secrets »**, dès **7 ans**: messages chiffrés et cryptologie.
+- **« Illusions retrouvées »**, dès **9 ans**: vision, œil et cerveau.
+- **« En quête d'évolution »**, dès **12 ans**: biodiversité et évolution des espèces.
+
+Chaque enquête dure **1 h 15** et accueille au maximum **20 participants**. Les créneaux habituels sont **14 h 45 et 16 h 15** les jours d'ouverture au public. Le thème réellement programmé doit être confirmé auprès de l'accueil, surtout avec un enfant de moins de 12 ans. [Voir les enquêtes Enigma](https://forumdepartementaldessciences.fr/activites/enigma/).
+
+## Organiser la visite sans courir d'une séance à l'autre
+
+Le Forum accueille les visiteurs individuels **de 14 h à 18 h**. Entre les ateliers guidés, les projections et les enquêtes, il est difficile de tout combiner dans un même après-midi.
+
+Avec plusieurs enfants d'âges différents, vous pouvez choisir l'exposition Tous à plumes !, ouverte à tous, ou prévoir deux activités distinctes si plusieurs adultes peuvent accompagner les enfants. Pour ajouter un planétarium ou une enquête, faites confirmer les horaires et les places disponibles avant de réserver: certaines séances se chevauchent. Le [programme des activités](https://forumdepartementaldessciences.fr/activites/) permet de repérer les propositions du moment, mais l'accueil reste le meilleur contact pour confirmer une séance précise.
+
+## Tarifs: le Pass tribu est-il intéressant ?
+
+Les [tarifs officiels du Forum des Sciences](https://forumdepartementaldessciences.fr/informations-pratiques/ouverture-et-tarifs/) indiquent:
+
+- **Planétarium:** 9 € par adulte, 4 € par enfant jusqu'à 12 ans; tarif réduit de 8 € pour les 13-18 ans.
+- **Expositions et Enigma:** 8 € par adulte, gratuit jusqu'à 12 ans; 6 € pour les 13-18 ans.
+- **Espace d'Atom:** 5 € par adulte et 5 € par enfant.
+- **Pass tribu:** 25 € pour quatre personnes et une activité, ou 35 € pour quatre personnes et deux activités.
+
+**Exemple pour deux adultes et deux enfants de moins de 13 ans:** une exposition seule coûte **16 €** en billets individuels, contre **25 €** avec le Pass tribu. En ajoutant le planétarium pour les quatre, le total individuel atteint **42 €**, contre **35 €** pour le Pass tribu deux activités, si cette combinaison est bien applicable aux séances retenues. Le pass n'est donc pas toujours avantageux: faites confirmer le tarif exact avant de payer.
+
+Le Forum annonce également la **gratuité pour tous le premier dimanche de chaque mois**. Des gratuités existent sous conditions, notamment pour les bénéficiaires de certains minima sociaux et les personnes en situation de handicap, sur justificatif. Les activités pour les très jeunes enfants peuvent avoir des règles tarifaires particulières.
+
+## Réservation, horaires et accès
+
+**La billetterie en ligne fait l'objet d'indications contradictoires sur le site officiel:** la [page des tarifs](https://forumdepartementaldessciences.fr/informations-pratiques/ouverture-et-tarifs/) propose un lien de réservation, tandis que [l'accueil du Forum](https://forumdepartementaldessciences.fr/) annonce son indisponibilité. Ne présumez pas qu'elle fonctionne: pour confirmer le programme, les places et réserver, appelez le **03 59 73 96 00**. La réservation est particulièrement conseillée pour les ateliers limités à 16 places.
+
+Le Forum se situe **1 place François-Mitterrand, 59650 Villeneuve-d'Ascq**. En transports en commun, prenez la **ligne 1 du métro**, arrêt **Villeneuve-d'Ascq - Hôtel de Ville**. En voiture, l'accès indiqué passe par la **sortie 3 « Hôtel de Ville » de la RN 227**. [Voir les indications d'accès](https://forumdepartementaldessciences.fr/informations-pratiques/quand-et-comment-venir/).
+
+En période scolaire, le lieu ouvre **le mercredi, le week-end et les jours fériés de 14 h à 18 h**. Pendant les vacances scolaires, il ouvre **du mardi au dimanche de 14 h à 18 h**. Il ferme le lundi, ainsi que les **1er janvier, 1er mai et 25 décembre**.
+
+Les expositions sont annoncées accessibles aux personnes à mobilité réduite, avec un ascenseur dans le bâtiment. Le planétarium dispose de **quatre emplacements PMR**. Pour un besoin d'accueil particulier, contactez l'équipe avant la visite. [Consulter les informations d'accessibilité](https://forumdepartementaldessciences.fr/informations-pratiques/accessibilite/).
+
+## Un week-end à Villeneuve-d'Ascq ou à Lille ?
+
+Si vous venez de plus loin et souhaitez prolonger la sortie, deux types d'hébergement sont proposés sur Booking.com:
+
+- Pour un séjour à l'hôtel, le [B&B HOTEL Lille Villeneuve d'Ascq Grand Stade](https://www.booking.com/hotel/fr/b-amp-b-lille-grand-stade.fr.html) dispose notamment de chambres triples. Vérifiez la configuration nécessaire si vous voyagez à quatre.
+- Pour une famille de quatre personnes souhaitant cuisiner sur place, [L'Appart Lille Métropole Arena](https://www.booking.com/hotel/fr/appart-lille-metropole-arena.fr.html) propose un appartement de deux chambres avec cuisine équipée.
+
+Les capacités, tarifs et disponibilités dépendent des dates et de l'âge des enfants. Vous pouvez aussi préparer d'autres découvertes avec notre [guide de Lille en famille](https://www.fam-space.fr/destinations/hauts-de-france/nord/lille/).
 
 ## Article source exact à préserver et améliorer
 
