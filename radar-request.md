@@ -29,13 +29,13 @@ image:
 sources:
   - title: "Dinan Agglomération: ludothèque de Plancoët"
     url: https://www.dinan-agglomeration.fr/activites-et-loisirs/culture-et-pratiques-artistiques/culture/ludotheque/
-  - title: "Dinan Agglomération: annuaire de la ludothèque de Plancoët"
+  - title: "Dinan Agglomération: adresse officielle de la ludothèque de Plancoët"
     url: https://www.dinan-agglomeration.fr/annuaire/ludotheque-plancoet/
   - title: Catalogue et horaires de la ludothèque de Plancoët
     url: https://www.dyade-fr.com/WD150AWP/WD150Awp.exe/CONNECT/e-Kawa-Ludotheque?Ludotheque=PLANCOET
   - title: "Mairie de Plouër-sur-Rance: la ludothèque"
     url: https://www.plouer-sur-rance.fr/la-ludotheque/
-  - title: "Ludothèque plouëraise: présentation, horaires et tarifs"
+  - title: "Ludothèque plouëraise: présentation, horaires et tarifs de l’association"
     url: https://assoludoplouer.wixsite.com/my-site/about-1
   - title: "Ludothèque plouëraise: coordonnées"
     url: https://assoludoplouer.wixsite.com/my-site/contact-3
@@ -43,20 +43,17 @@ sources:
     url: https://www.lanvallay.fr/mes-loisirs/bibliotheque/
   - title: "Mairie de Lanvallay: permanence du 14 novembre 2026"
     url: https://www.lanvallay.fr/agenda/ludotheque-4/
-  - title: "Mairie de Lanvallay: agenda"
+  - title: "Mairie de Lanvallay: agenda des permanences"
     url: https://www.lanvallay.fr/mes-loisirs/agenda/
   - title: "Au Bois des Ludes: documentation du catalogue"
-    url: https://catalogue.auboisdesludes.com/documentation/
-reviewAt: 2026-11-15
+    url: https://catalogue.auboisdesludes.com/documentation/reviewAt: 2026-11-15
 radarReview:
-  summary: "Relecture finale anti-régression; vérification officielle de l'adresse 34 rue de la Madeleine à Plancoët, du forfait de prêt à 35 euros, des tarifs municipaux de Plouër et de la permanence du 14 novembre à Lanvallay. Conservation des informations pratiques et du maillage."
+  summary: "Relecture finale et comparaison avec la source: correction de l'adresse de Plancoët confirmée; permanence datée de Lanvallay maintenue; tarifs, horaires, prêts, accompagnement des enfants, photographie et liens internes préservés."
   sources:
     - https://www.dinan-agglomeration.fr/annuaire/ludotheque-plancoet/
-    - https://www.dinan-agglomeration.fr/activites-et-loisirs/culture-et-pratiques-artistiques/culture/ludotheque/
-    - https://www.plouer-sur-rance.fr/la-ludotheque/
+    - https://www.dinan-agglomeration.fr/linstitution/fonctionnement/annuaire-des-equipements/
     - https://www.lanvallay.fr/agenda/ludotheque-4/
-    - https://www.lanvallay.fr/mes-loisirs/agenda/
-  regressionCheck: "Comparaison intégrale source et phase 2: aucune donnée utile perdue; horaires, prix, conditions de prêt, adresses, téléphone, services aux jeunes enfants, réservation et lien interne conservés. Ancienne adresse 33 remplacée par 34 selon la fiche spécifique de la ludothèque; une autre page institutionnelle mentionne encore le 33 pour un accueil parental dans ses locaux, d'où la nécessité de vérifier avant visite. Date ponctuelle de Lanvallay maintenue avec reviewAt au 15 novembre."
+  regressionCheck: "Comparaison source/candidat: l'adresse 33 rue de la Madeleine est remplacée par le 34, conformément à la fiche officielle de la ludothèque; le 33 désigne également d'autres services. La date ponctuelle du 14 novembre est ajoutée, avec reviewAt au 15 novembre. Aucun détail familial utile de la source n'a été supprimé."
 ---
 
 Emprunter un jeu permet de le découvrir en famille, d’y rejouer quelques semaines, puis de changer sans encombrer les placards. Autour de Dinan, dans les Côtes-d’Armor, les ludothèques de Plancoët et de Plouër-sur-Rance ainsi que les permanences de Lanvallay proposent ce service, avec la possibilité de jouer sur place.
@@ -69,7 +66,7 @@ Leurs formules diffèrent: Plancoët comprend les prêts dans un forfait annuel,
 
 L’adhésion familiale coûte **35 € pour un an, de date à date**. Elle permet d’emporter jusqu’à **trois jeux pour trois semaines**. Le fonds compte plus de mille jeux et jouets, de l’imitation et de la construction aux jeux de règles.
 
-La [fiche officielle de la ludothèque](https://www.dinan-agglomeration.fr/annuaire/ludotheque-plancoet/) indique le **34 rue de la Madeleine, 22130 Plancoët**. D'autres services intercommunaux se trouvent au numéro 33, et une ancienne page consacrée à l'accueil parental mentionne également ce numéro: vérifiez l'accès en cas de doute. En période scolaire, les ouvertures annoncées sont les suivantes:
+La ludothèque se trouve au **34 rue de la Madeleine, 22130 Plancoët**, selon sa [fiche officielle dans l’annuaire de Dinan Agglomération](https://www.dinan-agglomeration.fr/annuaire/ludotheque-plancoet/). Attention à ne pas confondre avec le numéro 33, également utilisé par d’autres services intercommunaux. En période scolaire, les ouvertures annoncées sont les suivantes:
 
 - Mardi de 16 h 30 à 18 h.
 - Mercredi de 10 h à 12 h 30 et de 15 h à 18 h.
