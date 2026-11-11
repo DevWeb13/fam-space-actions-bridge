@@ -1,314 +1,39 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-10T01:34:08+01:00",
-  "dataThrough": "2026-11-07",
-  "from": "2026-10-11",
+  "generatedAt": "2026-11-11T02:29:19+01:00",
+  "dataThrough": "2026-11-08",
+  "from": "2026-10-12",
   "refresh": [
     {
-      "url": "/articles/voyages/disneyland-paris-en-rer-a-avec-des-enfants-trajet-et-tickets-en-2026/",
-      "title": "Disneyland Paris en RER A avec des enfants: trajet et tarifs 2026",
-      "category": "voyages",
-      "publishedAt": "2026-10-31T04:29:30.562Z",
+      "url": "/articles/cuisine/ateliers-de-cuisine-parent-enfant-a-toulouse-chocolat-patisserie-ou-menu-complet/",
+      "title": "Ateliers de cuisine parent-enfant à Toulouse: chocolat, pâtisserie ou menu complet ?",
+      "category": "cuisine",
+      "publishedAt": "2026-11-01T12:00:47+01:00",
       "location": {
-        "city": "Chessy",
-        "department": "Seine-et-Marne",
-        "region": "Île-de-France"
+        "city": "Toulouse",
+        "department": "Haute-Garonne",
+        "region": "Occitanie"
       },
       "ageDays": 10,
       "rapidDrop": true,
-      "peakStart": "2026-11-01",
-      "peakEnd": "2026-11-03",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
-      "peakImpressions": 35,
-      "recentImpressions": 1,
+      "peakStart": "2026-11-03",
+      "peakEnd": "2026-11-05",
+      "recentStart": "2026-11-06",
+      "recentEnd": "2026-11-08",
+      "peakImpressions": 34,
+      "recentImpressions": 0,
       "score": 102,
       "signal": "uncertain",
-      "basis": "Visibilité récente : 35 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "basis": "Visibilité récente : 34 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
       "commonQueries": 0,
       "positionDelta": null,
       "impressionRatio": 0,
       "focusQueries": [
-        "ticket rer a disneyland paris",
-        "rer a disney",
-        "rer disneyland paris tarif"
-      ]
-    },
-    {
-      "url": "/articles/activites/grottes-de-thouzon-avec-des-enfants-preparer-la-visite-sous-terre/",
-      "title": "Grottes de Thouzon avec des enfants: préparer la visite sous terre",
-      "category": "activites",
-      "publishedAt": "2026-10-04T19:20:54+02:00",
-      "location": {
-        "city": "Le Thor",
-        "department": "Vaucluse",
-        "region": "Provence-Alpes-Côte d’Azur"
-      },
-      "ageDays": 37,
-      "rapidDrop": true,
-      "peakStart": "2026-10-23",
-      "peakEnd": "2026-10-25",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
-      "peakImpressions": 35,
-      "recentImpressions": 5,
-      "score": 90,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 35 impressions sur trois jours, puis 5 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0.2,
-      "focusQueries": [
-        "grottes de thouzon",
-        "grotte de thouzon",
-        "grotte de thouzon tarif",
-        "les grottes de thouzon",
-        "faut il réserver"
-      ]
-    },
-    {
-      "url": "/articles/parentalite/ludotheque-du-choletais-jouer-sur-place-et-emprunter-en-famille/",
-      "title": "Ludothèque du Choletais: jouer sur place et emprunter en famille",
-      "category": "parentalite",
-      "publishedAt": "2026-10-25T02:35:14+02:00",
-      "location": {
-        "city": "Cholet",
-        "department": "Maine-et-Loire",
-        "region": "Pays de la Loire"
-      },
-      "ageDays": 16,
-      "rapidDrop": true,
-      "peakStart": "2026-10-28",
-      "peakEnd": "2026-10-30",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
-      "peakImpressions": 28,
-      "recentImpressions": 0,
-      "score": 84,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 28 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "ludothèque",
-        "horaire ludothèque cholet",
-        "ludothèque du choletais",
-        "horaires ludothèque cholet",
-        "ludotheqie"
-      ]
-    },
-    {
-      "url": "/articles/vie-pratique/colmar-avec-des-enfants-quand-il-pleut-quel-musee-choisir/",
-      "title": "Colmar avec des enfants quand il pleut: quel musée choisir ?",
-      "category": "vie-pratique",
-      "publishedAt": "2026-10-19T21:12:31+02:00",
-      "location": {
-        "city": "Colmar",
-        "department": "Haut-Rhin",
-        "region": "Grand Est"
-      },
-      "ageDays": 22,
-      "rapidDrop": true,
-      "peakStart": "2026-10-21",
-      "peakEnd": "2026-10-23",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
-      "peakImpressions": 40,
-      "recentImpressions": 12,
-      "score": 84,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 40 impressions sur trois jours, puis 12 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 1.25,
-      "focusQueries": [
-        "musée du jouet colmar tarif",
-        "colmar enfant",
-        "colmar sous la pluie",
-        "que faire à colmar quand il pleut",
-        "colmar enfants"
-      ]
-    },
-    {
-      "url": "/articles/activites/lac-du-bouchet-en-famille-tour-du-lac-baignade-et-activites/",
-      "title": "Lac du Bouchet en famille: tour du lac, baignade et activités",
-      "category": "activites",
-      "publishedAt": "2026-10-24T14:58:55+02:00",
-      "location": {
-        "city": "Cayres",
-        "department": "Haute-Loire",
-        "region": "Auvergne-Rhône-Alpes"
-      },
-      "ageDays": 17,
-      "rapidDrop": true,
-      "peakStart": "2026-10-25",
-      "peakEnd": "2026-10-27",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
-      "peakImpressions": 30,
-      "recentImpressions": 3,
-      "score": 81,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 30 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "lac du bouchet",
-        "chalet lac du bouchet cayres",
-        "tour du lac du bouchet"
-      ]
-    },
-    {
-      "url": "/articles/activites/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives/",
-      "title": "Palais idéal du facteur Cheval en famille: visite et conseils à Hauterives",
-      "category": "activites",
-      "publishedAt": "2026-10-27T02:02:18+01:00",
-      "location": {
-        "city": "Hauterives",
-        "department": "Drôme",
-        "region": "Auvergne-Rhône-Alpes"
-      },
-      "ageDays": 14,
-      "rapidDrop": true,
-      "peakStart": "2026-10-28",
-      "peakEnd": "2026-10-30",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
-      "peakImpressions": 29,
-      "recentImpressions": 2,
-      "score": 81,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 29 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Palais idéal du facteur Cheval en famille",
-        "visiter le Palais idéal avec des enfants",
-        "Hauterives Drôme sortie famille"
-      ]
-    },
-    {
-      "url": "/articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/",
-      "title": "Paris avec une poussette: métro, RER, bus ou tram, que choisir ?",
-      "category": "voyages",
-      "publishedAt": "2026-10-28T12:27:07.504Z",
-      "location": {
-        "city": "Paris",
-        "department": "Paris",
-        "region": "Île-de-France"
-      },
-      "ageDays": 13,
-      "rapidDrop": true,
-      "peakStart": "2026-10-29",
-      "peakEnd": "2026-10-31",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
-      "peakImpressions": 26,
-      "recentImpressions": 0,
-      "score": 78,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 26 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "métro Paris poussette ascenseur",
-        "RER Paris avec poussette",
-        "bus Paris poussette dépliée",
-        "itinéraire accessible poussette Paris"
-      ]
-    },
-    {
-      "url": "/articles/voyages/banyuls-sur-mer-en-famille-aquarium-et-balade-hors-saison/",
-      "title": "Banyuls-sur-Mer en famille: aquarium et balade hors saison",
-      "category": "voyages",
-      "publishedAt": "2026-10-21T18:13:04+02:00",
-      "location": {
-        "city": "Banyuls-sur-Mer",
-        "department": "Pyrénées-Orientales",
-        "region": "Occitanie"
-      },
-      "ageDays": 20,
-      "rapidDrop": true,
-      "peakStart": "2026-10-22",
-      "peakEnd": "2026-10-24",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
-      "peakImpressions": 25,
-      "recentImpressions": 0,
-      "score": 75,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 25 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Banyuls-sur-Mer en famille",
-        "aquarium Biodiversarium",
-        "Côte Vermeille hors saison"
-      ]
-    },
-    {
-      "url": "/articles/bons-plans/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites/",
-      "title": "Pass Nantes en famille en 2026: tarifs, visites incluses et alternatives gratuites",
-      "category": "bons-plans",
-      "publishedAt": "2026-10-27T17:17:43+01:00",
-      "location": {
-        "city": "Nantes",
-        "department": "Loire-Atlantique",
-        "region": "Pays de la Loire"
-      },
-      "ageDays": 14,
-      "rapidDrop": true,
-      "peakStart": "2026-10-29",
-      "peakEnd": "2026-10-31",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
-      "peakImpressions": 24,
-      "recentImpressions": 0,
-      "score": 72,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 24 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Pass Nantes en famille 2026",
-        "Pass Nantes tarifs famille",
-        "Pass Nantes visites incluses",
-        "visiter Nantes avec enfants pas cher"
-      ]
-    },
-    {
-      "url": "/articles/sorties/aquarium-de-lyon-en-famille-nouveautes-ocean-360-tarifs-et-visite/",
-      "title": "Aquarium de Lyon en famille: nouveautés Océan 360°, tarifs et visite",
-      "category": "sorties",
-      "publishedAt": "2026-10-19T07:22:08+02:00",
-      "location": {
-        "city": "La Mulatière",
-        "department": "Rhône",
-        "region": "Auvergne-Rhône-Alpes"
-      },
-      "ageDays": 22,
-      "rapidDrop": true,
-      "peakStart": "2026-10-25",
-      "peakEnd": "2026-10-27",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
-      "peakImpressions": 34,
-      "recentImpressions": 10,
-      "score": 72,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 34 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Aquarium de Lyon en famille",
-        "Océan 360 tarifs Aquarium Lyon"
+        "atelier cuisine enfant toulouse",
+        "atelier cuisine ecole clae toulouse",
+        "cours de cuisine enfant toulouse",
+        "cours patisserie toulouse",
+        "stage patisserie toulouse"
       ]
     },
     {
@@ -321,57 +46,80 @@
         "department": "Hautes-Alpes",
         "region": "Provence-Alpes-Côte d’Azur"
       },
-      "ageDays": 23,
+      "ageDays": 24,
       "rapidDrop": true,
       "peakStart": "2026-10-23",
       "peakEnd": "2026-10-25",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
+      "recentStart": "2026-11-06",
+      "recentEnd": "2026-11-08",
       "peakImpressions": 36,
-      "recentImpressions": 12,
-      "score": 72,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 36 impressions sur trois jours, puis 12 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "recentImpressions": 11,
+      "score": 75,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 36 impressions sur trois jours, puis 11 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
       "impressionRatio": null,
+      "focusQueries": []
+    },
+    {
+      "url": "/articles/voyages/banyuls-sur-mer-en-famille-aquarium-et-balade-hors-saison/",
+      "title": "Banyuls-sur-Mer en famille: aquarium et balade hors saison",
+      "category": "voyages",
+      "publishedAt": "2026-10-21T18:13:04+02:00",
+      "location": {
+        "city": "Banyuls-sur-Mer",
+        "department": "Pyrénées-Orientales",
+        "region": "Occitanie"
+      },
+      "ageDays": 21,
+      "rapidDrop": true,
+      "peakStart": "2026-10-22",
+      "peakEnd": "2026-10-24",
+      "recentStart": "2026-11-06",
+      "recentEnd": "2026-11-08",
+      "peakImpressions": 25,
+      "recentImpressions": 0,
+      "score": 75,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 25 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
       "focusQueries": [
-        "équipements hiver Hautes-Alpes 2026 2027",
-        "chaînes pneus neige Hautes-Alpes",
-        "Info Route 05 conditions circulation",
-        "routes Hautes-Alpes hiver enfants"
+        "aquarium banyuls prix",
+        "aquarium banyuls temps de visite",
+        "today"
       ]
     },
     {
-      "url": "/articles/parentalite/laep-a-bastia-et-en-balagne-deux-lieux-gratuits-pour-les-tout-petits/",
-      "title": "LAEP à Bastia et en Balagne: deux lieux gratuits pour les tout-petits",
-      "category": "parentalite",
-      "publishedAt": "2026-10-11T22:22:18+02:00",
+      "url": "/articles/bons-plans/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites/",
+      "title": "Pass Nantes en famille en 2026: tarifs, visites incluses et alternatives gratuites",
+      "category": "bons-plans",
+      "publishedAt": "2026-10-27T17:17:43+01:00",
       "location": {
-        "city": "Bastia",
-        "department": "Haute-Corse",
-        "region": "Corse"
+        "city": "Nantes",
+        "department": "Loire-Atlantique",
+        "region": "Pays de la Loire"
       },
-      "ageDays": 30,
+      "ageDays": 15,
       "rapidDrop": true,
-      "peakStart": "2026-11-02",
-      "peakEnd": "2026-11-04",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
-      "peakImpressions": 27,
-      "recentImpressions": 4,
-      "score": 69,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 27 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "peakStart": "2026-10-29",
+      "peakEnd": "2026-10-31",
+      "recentStart": "2026-11-06",
+      "recentEnd": "2026-11-08",
+      "peakImpressions": 24,
+      "recentImpressions": 0,
+      "score": 72,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 24 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "focusQueries": [
-        "LAEP Bastia",
-        "LAEP Balagne",
-        "lieu accueil enfants parents Haute-Corse",
-        "A Casa Aperta",
-        "A Casa Zitellina"
+        "pass famille nantes",
+        "pass famille",
+        "pass nantes prix"
       ]
     },
     {
@@ -384,25 +132,24 @@
         "department": "Morbihan",
         "region": "Bretagne"
       },
-      "ageDays": 18,
+      "ageDays": 19,
       "rapidDrop": true,
       "peakStart": "2026-10-25",
       "peakEnd": "2026-10-27",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
+      "recentStart": "2026-11-06",
+      "recentEnd": "2026-11-08",
       "peakImpressions": 25,
       "recentImpressions": 2,
       "score": 69,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 25 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 25 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "focusQueries": [
-        "Belle-Île-en-Mer en famille sans voiture",
-        "ferry Quiberon Le Palais",
-        "Belle-Île bus 2026",
-        "visiter Belle-Île avec enfants"
+        "bateau belle ile en mer voiture",
+        "belle ile en mer voiture ou pas",
+        "sans voiture"
       ]
     },
     {
@@ -415,12 +162,12 @@
         "department": "Meurthe-et-Moselle",
         "region": "Grand Est"
       },
-      "ageDays": 12,
+      "ageDays": 13,
       "rapidDrop": true,
       "peakStart": "2026-10-30",
       "peakEnd": "2026-11-01",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
+      "recentStart": "2026-11-06",
+      "recentEnd": "2026-11-08",
       "peakImpressions": 23,
       "recentImpressions": 1,
       "score": 66,
@@ -446,12 +193,12 @@
         "department": "Côtes-d'Armor",
         "region": "Bretagne"
       },
-      "ageDays": 11,
+      "ageDays": 12,
       "rapidDrop": true,
       "peakStart": "2026-10-31",
       "peakEnd": "2026-11-02",
-      "recentStart": "2026-11-05",
-      "recentEnd": "2026-11-07",
+      "recentStart": "2026-11-06",
+      "recentEnd": "2026-11-08",
       "peakImpressions": 22,
       "recentImpressions": 0,
       "score": 66,
@@ -467,6 +214,250 @@
         "ludothèque Plouër-sur-Rance",
         "ludothèque Lanvallay"
       ]
+    },
+    {
+      "url": "/articles/voyages/visiter-la-cite-du-volcan-en-famille-a-la-reunion/",
+      "title": "Visiter la Cité du Volcan en famille à La Réunion",
+      "category": "voyages",
+      "publishedAt": "2026-10-23T23:45:04+02:00",
+      "location": {
+        "city": "Le Tampon",
+        "department": "La Réunion",
+        "region": "La Réunion"
+      },
+      "ageDays": 19,
+      "rapidDrop": true,
+      "peakStart": "2026-10-26",
+      "peakEnd": "2026-10-28",
+      "recentStart": "2026-11-06",
+      "recentEnd": "2026-11-08",
+      "peakImpressions": 22,
+      "recentImpressions": 0,
+      "score": 66,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Cité du Volcan en famille",
+        "La Réunion avec des enfants",
+        "Bourg-Murat"
+      ]
+    },
+    {
+      "url": "/articles/activites/forum-des-sciences-a-villeneuve-d-ascq-en-famille-que-choisir-selon-l-age/",
+      "title": "Forum des Sciences à Villeneuve-d'Ascq en famille: que choisir selon l'âge ?",
+      "category": "activites",
+      "publishedAt": "2026-11-02T00:03:12+01:00",
+      "location": {
+        "city": "Villeneuve-d'Ascq",
+        "department": "Nord",
+        "region": "Hauts-de-France"
+      },
+      "ageDays": 9,
+      "rapidDrop": true,
+      "peakStart": "2026-11-03",
+      "peakEnd": "2026-11-05",
+      "recentStart": "2026-11-06",
+      "recentEnd": "2026-11-08",
+      "peakImpressions": 30,
+      "recentImpressions": 9,
+      "score": 63,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 30 impressions sur trois jours, puis 9 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Forum des Sciences Villeneuve-d'Ascq en famille",
+        "planétarium Villeneuve-d'Ascq enfants",
+        "activités scientifiques enfants Nord"
+      ]
+    },
+    {
+      "url": "/articles/activites/visiter-le-nouveau-musee-m24-au-mans-en-famille-billets-parcours-et-circuit/",
+      "title": "Visiter le nouveau musée M24 au Mans en famille: billets, parcours et circuit",
+      "category": "activites",
+      "publishedAt": "2026-10-31T09:01:04+01:00",
+      "location": {
+        "city": "Le Mans",
+        "department": "Sarthe",
+        "region": "Pays de la Loire"
+      },
+      "ageDays": 11,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-06",
+      "recentEnd": "2026-11-08",
+      "peakImpressions": 21,
+      "recentImpressions": 0,
+      "score": 63,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 21 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "musée M24 Le Mans en famille",
+        "musée sport automobile Le Mans enfants",
+        "visite circuit 24 Heures du Mans"
+      ]
+    },
+    {
+      "url": "/articles/maison/encombrants-a-limoges-donner-faire-enlever-ou-deposer-ses-meubles/",
+      "title": "Encombrants à Limoges: donner, faire enlever ou déposer ses meubles",
+      "category": "maison",
+      "publishedAt": "2026-10-23T15:06:38+02:00",
+      "location": {
+        "city": "Limoges",
+        "department": "Haute-Vienne",
+        "region": "Nouvelle-Aquitaine"
+      },
+      "ageDays": 19,
+      "rapidDrop": true,
+      "peakStart": "2026-10-24",
+      "peakEnd": "2026-10-26",
+      "recentStart": "2026-11-06",
+      "recentEnd": "2026-11-08",
+      "peakImpressions": 21,
+      "recentImpressions": 3,
+      "score": 54,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 21 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "encombrants Limoges",
+        "enlèvement meubles Limoges Métropole",
+        "déchèterie Limoges carte accès"
+      ]
+    },
+    {
+      "url": "/articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/",
+      "title": "Fête foraine de Dijon 2026: dates, horaires et budget avec les enfants",
+      "category": "evenements",
+      "publishedAt": "2026-10-25T17:34:53.615Z",
+      "location": {
+        "city": "Dijon",
+        "department": "Côte-d'Or",
+        "region": "Bourgogne-Franche-Comté"
+      },
+      "ageDays": 17,
+      "rapidDrop": true,
+      "peakStart": "2026-10-27",
+      "peakEnd": "2026-10-29",
+      "recentStart": "2026-11-06",
+      "recentEnd": "2026-11-08",
+      "peakImpressions": 1291,
+      "recentImpressions": 345,
+      "score": 2873,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 1291 impressions sur trois jours, puis 345 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "fête foraine Dijon 2026",
+        "manèges Dijon octobre novembre 2026",
+        "mail Général-Delaborde",
+        "foire aux manèges Dijon"
+      ]
+    },
+    {
+      "url": "/articles/evenements/luminescences-2026-2027-a-amneville-en-famille-soiree-seule-ou-zoo-et-lanternes/",
+      "title": "Luminescences 2026-2027 au zoo d'Amnéville: billets, tarifs et visite en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-22T09:37:18.454Z",
+      "location": {
+        "city": "Amnéville",
+        "department": "Moselle",
+        "region": "Grand Est"
+      },
+      "ageDays": 20,
+      "rapidDrop": true,
+      "peakStart": "2026-10-23",
+      "peakEnd": "2026-10-25",
+      "recentStart": "2026-11-06",
+      "recentEnd": "2026-11-08",
+      "peakImpressions": 348,
+      "recentImpressions": 94,
+      "score": 762,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 348 impressions sur trois jours, puis 94 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Luminescences Amnéville 2026 2027",
+        "festival lanternes zoo Amnéville enfants",
+        "Luminescences Amnéville tarifs",
+        "zoo Amnéville lanternes poussette"
+      ]
+    },
+    {
+      "url": "/articles/evenements/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget/",
+      "title": "Grand Noël 2026 à Vaux-le-Vicomte en famille: billets, offre enfant et animations",
+      "category": "evenements",
+      "publishedAt": "2026-10-20T22:29:05.320Z",
+      "location": {
+        "city": "Maincy",
+        "department": "Seine-et-Marne",
+        "region": "Île-de-France"
+      },
+      "ageDays": 22,
+      "rapidDrop": true,
+      "peakStart": "2026-10-22",
+      "peakEnd": "2026-10-24",
+      "recentStart": "2026-11-06",
+      "recentEnd": "2026-11-08",
+      "peakImpressions": 235,
+      "recentImpressions": 18,
+      "score": 651,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 235 impressions sur trois jours, puis 18 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Grand Noël Vaux-le-Vicomte 2026 famille",
+        "Vaux-le-Vicomte Noël 2026 billet enfant offert",
+        "Grand Noël Maincy patinoire Odyssée Nordique"
+      ]
+    },
+    {
+      "url": "/articles/evenements/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere/",
+      "title": "Lumières de Laval 2026 en famille: marchés, grande roue et croisière",
+      "category": "evenements",
+      "publishedAt": "2026-10-30T09:27:15.012Z",
+      "location": {
+        "city": "Laval",
+        "department": "Mayenne",
+        "region": "Pays de la Loire"
+      },
+      "ageDays": 12,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-06",
+      "recentEnd": "2026-11-08",
+      "peakImpressions": 228,
+      "recentImpressions": 59,
+      "score": 507,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 228 impressions sur trois jours, puis 59 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Lumières de Laval 2026",
+        "Noël Laval 2026 famille",
+        "marchés de Noël Laval 2026",
+        "grande roue Laval enfants",
+        "croisière Lumières Laval tarif"
+      ]
     }
   ],
   "strongPages": [
@@ -474,96 +465,96 @@
       "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
       "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
       "category": "evenements",
-      "recentImpressions": 228,
+      "recentImpressions": 232,
       "recentClicks": 13,
-      "recentPosition": 6.421,
-      "retention": 3.864
+      "recentPosition": 6.414,
+      "retention": 3.093
     },
     {
       "url": "/articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/",
       "title": "Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille",
       "category": "evenements",
-      "recentImpressions": 176,
-      "recentClicks": 7,
-      "recentPosition": 8.102,
-      "retention": 1.586
+      "recentImpressions": 179,
+      "recentClicks": 6,
+      "recentPosition": 8.14,
+      "retention": 1.598
     },
     {
       "url": "/articles/evenements/alfest-2026-a-annecy-en-famille-horaires-jeux-et-braderie/",
       "title": "ALFest 2026 à Annecy en famille: horaires, jeux et braderie",
       "category": "evenements",
-      "recentImpressions": 39,
-      "recentClicks": 4,
-      "recentPosition": 4.821,
-      "retention": 1.219
-    },
-    {
-      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
-      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
-      "category": "vie-pratique",
-      "recentImpressions": 224,
-      "recentClicks": 3,
-      "recentPosition": 5.312,
-      "retention": 2.113
-    },
-    {
-      "url": "/articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/",
-      "title": "Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers",
-      "category": "vie-pratique",
-      "recentImpressions": 143,
-      "recentClicks": 3,
-      "recentPosition": 5.168,
-      "retention": 2.043
-    },
-    {
-      "url": "/articles/evenements/foire-de-dijon-2026-en-famille-dates-ateliers-animaux-et-gratuites/",
-      "title": "Foire de Dijon 2026 avec les enfants: gratuités, ateliers et Ferme Côte-d'Or",
-      "category": "evenements",
-      "recentImpressions": 78,
-      "recentClicks": 3,
-      "recentPosition": 6.654,
-      "retention": 2.053
-    },
-    {
-      "url": "/articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/",
-      "title": "Soleils d'hiver 2026 à Angers en famille: marché, manèges et Père Noël",
-      "category": "evenements",
-      "recentImpressions": 65,
-      "recentClicks": 3,
-      "recentPosition": 6.462,
-      "retention": 0.657
-    },
-    {
-      "url": "/articles/evenements/festival-du-livre-de-colmar-2026-en-famille-dates-ateliers-et-acces/",
-      "title": "Festival du Livre de Colmar 2026 en famille: dates, horaires et animations jeunesse",
-      "category": "evenements",
-      "recentImpressions": 55,
-      "recentClicks": 3,
-      "recentPosition": 7.145,
-      "retention": 0.902
+      "recentImpressions": 49,
+      "recentClicks": 5,
+      "recentPosition": 5.327,
+      "retention": 1.531
     },
     {
       "url": "/articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/",
       "title": "Noël à Pau 2026 en famille: marchés, village et illuminations",
       "category": "evenements",
-      "recentImpressions": 44,
+      "recentImpressions": 46,
+      "recentClicks": 4,
+      "recentPosition": 6.913,
+      "retention": 0.575
+    },
+    {
+      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
+      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
+      "category": "vie-pratique",
+      "recentImpressions": 216,
       "recentClicks": 3,
-      "recentPosition": 6.5,
-      "retention": 0.55
+      "recentPosition": 5.241,
+      "retention": 2.038
+    },
+    {
+      "url": "/articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/",
+      "title": "Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers",
+      "category": "vie-pratique",
+      "recentImpressions": 129,
+      "recentClicks": 3,
+      "recentPosition": 5.225,
+      "retention": 1.554
+    },
+    {
+      "url": "/articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/",
+      "title": "Noël 2026 au château de Goulaine: dates, billets et conseils en famille",
+      "category": "evenements",
+      "recentImpressions": 81,
+      "recentClicks": 3,
+      "recentPosition": 6.025,
+      "retention": 0.544
+    },
+    {
+      "url": "/articles/evenements/festival-du-livre-de-colmar-2026-en-famille-dates-ateliers-et-acces/",
+      "title": "Festival du Livre de Colmar 2026 en famille: dates, horaires et animations jeunesse",
+      "category": "evenements",
+      "recentImpressions": 58,
+      "recentClicks": 3,
+      "recentPosition": 7.379,
+      "retention": 0.951
     },
     {
       "url": "/articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/",
       "title": "Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates",
       "category": "evenements",
-      "recentImpressions": 130,
+      "recentImpressions": 116,
       "recentClicks": 2,
-      "recentPosition": 9.754,
-      "retention": 0.58
+      "recentPosition": 9.888,
+      "retention": 0.518
+    },
+    {
+      "url": "/articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/",
+      "title": "Recycleries autour de Chartres: où donner et acheter d'occasion ?",
+      "category": "maison",
+      "recentImpressions": 105,
+      "recentClicks": 2,
+      "recentPosition": 10.229,
+      "retention": 0.814
     }
   ],
   "excluded": {
     "expired": 173,
-    "cooling": 26
+    "cooling": 33
   },
   "warnings": [
     "Diagnostics par requêtes : 5/5.",
