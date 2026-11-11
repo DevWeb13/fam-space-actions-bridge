@@ -41,7 +41,13 @@ affiliate:
   enabled: true
   type: travel
   destination: Gap
-
+radarReview:
+  summary: "Contrôle final des obligations 2026-2027, du panneau B26, des niveaux C1-C4 et de l'affiliation KAYAK; formulation B26 précisée."
+  sources:
+    - https://www.service-public.gouv.fr/particuliers/actualites/A14389
+    - https://www.securite-routiere.gouv.fr/admin/content/sub_paragraph/29045
+    - https://www.hautes-alpes.fr/nos-actions/mobilites/la-viabilite-hivernale/
+  regressionCheck: "Comparaison complète avec la source: aucune information utile supprimée. Quatre photos et crédits, niveaux C1-C4, Info Route 05 et téléphone, Bison Futé, conseils enfants, sièges auto et KAYAK conservés."
 ---
 
 <!-- article-image-credit -->
