@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,25 +59,18 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Aquarium de Lyon en famille: nouveautés Océan 360°, tarifs et visite"
-subtitle: À La Mulatière, des milieux marins renouvelés et un film immersif enrichissent la sortie depuis décembre 2025.
-summary: Découvrez les nouveaux espaces de l'Aquarium de Lyon et comparez les billets pour préparer une visite en famille sans mauvaise surprise.
+subtitle: À La Mulatière, bassins renouvelés, film immersif et billets à comparer selon l'âge et les réductions.
+summary: "Billets Malin, packs famille, tarifs préférentiels, handicap et pass annuels: préparez votre visite de l'Aquarium de Lyon avec les enfants."
 slug: aquarium-de-lyon-en-famille-nouveautes-ocean-360-tarifs-et-visite
 status: published
 publishedAt: 2026-10-19T07:22:08+02:00
 updatedAt: null
 category: sorties
-readingTime: 4
+readingTime: 5
 location:
   city: La Mulatière
   department: Rhône
@@ -105,7 +108,7 @@ affiliate:
   destination: La Mulatière
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/sorties/(2026)/(10)/aquarium-de-lyon-en-famille-nouveautes-ocean-360-tarifs-et-visite/index.md
   targetSha: 426f65bb5a2abf6359091e227b6fce1841311cb3
@@ -132,33 +135,63 @@ radar:
       - prix aquarium lyon
 ---
 
-## Mission retenue
-Actualiser de manière ciblée le guide de l'Aquarium de Lyon à La Mulatière, notamment les réductions officielles actuellement absentes du comparatif.
+<!-- article-image-credit -->
+*Photo: [Frachet](https://commons.wikimedia.org/wiki/File:La_Mulati%C3%A8re_029.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC signale une baisse de 34 à 11 impressions sur trois jours, mais aucune cause SEO n'est démontrée. Une lacune indépendante est vérifiée: le guide détaille les billets Malin, Liberté et packs famille, mais omet plusieurs réductions et moyens de paiement importants pour les familles.
+À La Mulatière, au sud de Lyon, l'Aquarium de Lyon fait découvrir aux familles des milieux aquatiques du monde entier, des eaux douces aux récifs coralliens. Depuis l'ouverture d'une extension en décembre 2025, de nouveaux écosystèmes et une projection immersive enrichissent la sortie. Pour choisir le billet le plus intéressant, il faut aussi regarder les réductions sur justificatif, pas seulement les packs famille.
 
-## Décision du lecteur
-Identifier le prix et le mode de réservation adaptés à sa famille, y compris avec une Lyon City Card, un justificatif ouvrant droit à réduction ou un enfant en situation de handicap.
+## Nouveaux bassins ou images projetées: que découvre-t-on ?
 
-## Faits à traiter
-- Vérifier et présenter sans alourdir: tarif préférentiel officiel à 16,50 € adulte, 12 € enfant 5-10 ans, 8 € enfant 3-4 ans, accessible notamment avec Lyon City Card, Pass éducation et autres justificatifs listés, pour le détenteur et trois personnes.
-- Mentionner les billets handicap à 12,50 € dès 11 ans et 8 € de 5 à 10 ans, et les pass annuels à 38,50 €, 30 € et 14 € selon l'âge, seulement si utiles à la décision.
-- Préciser que les chèques-vacances ANCV papier sont acceptés en caisse, et que les packs famille en ligne à 56 € ou 58 € concernent exactement deux plein tarif et deux tarifs réduits.
-- Ne pas résoudre artificiellement l'ambiguïté du tarif ordinaire à 11 ans: le tableau officiel indique « + de 11 ans » et « 5 à 10 ans », tandis que la ligne handicap précise « à partir de 11 ans ».
-- Préserver intégralement les informations utiles sur Océan 360° (film de 15 minutes), les bassins, la durée de visite, les horaires, la poussette, le snack, les transports, les photographies et crédits, les sources, les liens internes et les liens partenaires.
+<!-- article-image-body:01 -->
 
-## Sources de départ
-- Aquarium de Lyon, tarifs officiels: https://www.aquariumlyon.fr/tarifs/
-- Aquarium de Lyon, Océan 360°: https://www.aquariumlyon.fr/ocean-360/
-- Aquarium de Lyon, horaires et FAQ: https://www.aquariumlyon.fr/horaires/ et https://www.aquariumlyon.fr/questions-frequentes/
+![Bassin Méditerranée de l'Aquarium de Lyon, photographié en 2022 avant l'extension de 2025.](/images/articles/2026/10/aquarium-de-lyon-en-famille-nouveautes-ocean-360-tarifs-et-visite-body-01.webp)
 
-## Affiliation
-Conserver la piste Tiqets pour les conditions de réservation et Booking pour un séjour à Lyon; comparer honnêtement avec les billets et réductions de l'exploitant. Aucune nouvelle offre artificielle.
+*Photo: [CrlNvl](https://commons.wikimedia.org/wiki/File:AquariumLyon-BassinMediterran%C3%A9e-2022.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
 
-## Continuations internes
-- Garder le lien existant vers les sorties du Rhône.
-- Ne pas transformer ce guide en panorama général des activités lyonnaises.
+<!-- /article-image-body:01 -->
+
+L'extension de **1 400 m²** comprend « Les Lueurs marines », trois univers inspirés des profondeurs au large du Japon, des récifs de Bali et des forêts de kelps, ces grandes algues qui poussent notamment au large de la Bretagne. Les enfants passent ainsi d'un environnement sombre à des milieux très colorés, tout en observant des animaux aquatiques vivants.
+
+« Océan 360° » est une expérience différente: un **film numérique de 15 minutes**, projeté sur les murs et le sol. À bord du sous-marin fictif Subaqua Explorer, les visiteurs découvrent les grandes profondeurs, des animaux marins représentés à grande échelle et la question des déchets sous-marins. Les cachalots ou tortues géantes apparaissant à l'écran ne vivent donc pas dans les bassins.
+
+La fosse aux requins et les autres espaces de l'aquarium complètent le parcours. Avec de jeunes enfants, mieux vaut prendre le temps d'observer les bassins qui les captivent plutôt que d'essayer de s'attarder devant chaque espèce.
+
+## Durée de visite et confort avec des enfants
+
+Comptez **1 h 30 à 2 h** pour profiter du parcours. La dernière projection d'Océan 360° est annoncée à **17 h 45**; une arrivée tardive laisse peu de marge pour découvrir les salles.
+
+L'établissement dispose d'ascenseurs, accueille les poussettes et propose des assises. Un porte-bébé peut être prêté en caisse selon disponibilité. En revanche, il n'a **ni vestiaire ni consigne**. Le pique-nique est interdit à l'intérieur; le snack ouvre les mercredis, samedis et dimanches hors vacances, et tous les jours pendant les vacances scolaires de la zone A. Pour une visite avec de jeunes enfants, ces détails sont plus utiles à anticiper qu'un programme minuté.
+
+## Quel billet choisir selon votre famille ?
+
+Si la date est fixée, le **billet Malin**, acheté en ligne à l'avance pour un autre jour que celui de l'achat, coûte **17 € au plein tarif**, **12,50 € de 5 à 10 ans** et **7 € de 3 à 4 ans**. Il n'est ni modifiable ni remboursable.
+
+Le **billet Liberté**, valable pour une entrée dans une période de 180 jours, coûte **19,50 € au plein tarif**, **15 € de 5 à 10 ans** et **10 € de 3 à 4 ans**. L'entrée est gratuite pour les moins de 3 ans.
+
+Pour **deux personnes au plein tarif et deux au tarif réduit**, les packs famille en ligne coûtent **56 € en Malin** ou **58 € en Liberté**. Leur composition est précise: avec un enfant de 3 ou 4 ans, ou une autre répartition des âges, comparez plutôt le total des billets individuels.
+
+**Vous avez une carte ou un justificatif de réduction ?** L'[aquarium affiche des tarifs préférentiels](https://www.aquariumlyon.fr/tarifs/) de **16,50 € au plein tarif**, **12 € de 5 à 10 ans** et **8 € de 3 à 4 ans**. Ils concernent notamment les titulaires de la **Lyon City Card**, du **Pass éducation**, de la carte de loisirs ANCAV, des cartes seniors éligibles et les pompiers ou policiers, sur justificatif. L'avantage s'étend au détenteur **et à trois personnes maximum**. Il n'est pas systématiquement le moins cher: pour un enfant de 3 ou 4 ans, le billet Malin à 7 € est inférieur au tarif préférentiel à 8 €.
+
+Pour les visiteurs en situation de handicap, le billet spécifique est de **12,50 € à partir de 11 ans** et **8 € de 5 à 10 ans**, en ligne ou en caisse. Les conditions des accompagnants et des groupes sont à confirmer auprès de l'établissement selon la situation. Le **pass annuel nominatif** coûte **38,50 € à partir de 11 ans**, **30 € de 5 à 10 ans** et **14 € de 3 à 4 ans**. Il donne accès à des visites illimitées pendant un an et à certains avantages en boutique et au snack: il peut être intéressant pour des visites répétées.
+
+Les **étudiants post-bac** bénéficient également d'un billet à **16,50 € en caisse** avec justificatif. Les **chèques-vacances ANCV papier** sont acceptés en caisse, au snack et à la boutique. Les chèques bancaires et le Pass Région Jeunes ne le sont pas.
+
+Attention aux enfants de **11 ans**: la grille ordinaire indique « plus de 11 ans » et « 5 à 10 ans », tandis que les billets handicap et les pass annuels indiquent « à partir de 11 ans ». Demandez confirmation du tarif ordinaire applicable avant de payer.
+
+Pour une réservation avec davantage de souplesse, [Tiqets propose également un billet d'entrée pour l'Aquarium de Lyon](https://www.tiqets.com/fr/les-choses-a-faire-a-lyon-c66838/billets-pour-aquarium-de-lyon-p999488/). La fiche a indiqué une annulation ou reprogrammation jusqu'à **23 h 59 la veille de la visite**: revérifiez cette condition et le prix lors de l'achat. Les billets Malin, les packs et les tarifs préférentiels officiels peuvent être plus économiques.
+
+## Horaires et accès à l'Aquarium de Lyon
+
+L'adresse est **7 rue Stéphane Déchant, 69350 La Mulatière**. L'aquarium annonce une ouverture **tous les jours de 10 h 30 à 18 h 30**, sauf les **25 décembre et 1er janvier**, avec **dernière entrée à 17 h 30**. Vérifiez les informations actualisées avant de partir: certaines plateformes de vente affichent des horaires différents de ceux de l'exploitant.
+
+Depuis Lyon, les bus **C10, 36 ou 63** desservent notamment l'arrêt *Bastero Aquarium*. Le tram **T1** permet de rejoindre l'arrêt *Musée des Confluences*, puis de traverser le pont vers l'aquarium. Un **parking gratuit** est également disponible pour les visiteurs. Pour les billets individuels, il est possible de payer sur place sans réservation préalable.
+
+## Et pour un séjour de plusieurs jours à Lyon ?
+
+La visite ne nécessite pas de passer la nuit à proximité. Si elle fait partie d'un week-end comprenant d'autres découvertes lyonnaises, le [Novotel Lyon Centre-Confluence Bord de Saône, proposé sur Booking.com](https://www.booking.com/hotel/fr/novotel-lyon-confluence.fr.html), dispose de catégories de chambres avec canapé-lit, dont certaines peuvent accueillir deux adultes et deux enfants. Vérifiez la capacité exacte, les dates et le tarif avant de réserver.
+
+Pour compléter votre programme, retrouvez aussi [les idées de sorties dans le Rhône en famille](https://www.fam-space.fr/destinations/auvergne-rhone-alpes/rhone/).
 
 ## Article source exact à préserver et améliorer
 
