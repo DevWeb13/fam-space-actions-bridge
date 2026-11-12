@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261112-1105-musee-de-la-ceramique-de-desvres-en-famille-decouvrir-la-faience-et-me",
+  "lastProcessedCommit": "eebfec0570bc7f7d87745362a9aff89a4476b398"
 }
