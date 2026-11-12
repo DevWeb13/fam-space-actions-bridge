@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,88 +14,129 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Hérault
 - Région: Occitanie
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Ateliers de cuisine et pâtisserie avec des enfants à Montpellier: comment choisir selon leur âge?**
-
-Un guide pratique des ateliers culinaires réellement proposés à Montpellier et autour, entre ateliers parent-enfant des Maisons pour tous, pâtisserie encadrée et cours privés. Il explique les différences entre séance ponctuelle, atelier régulier et expérience à réserver, plutôt que de promouvoir une seule adresse.
-
-## Besoin du lecteur
-Identifier une activité où l'enfant cuisine vraiment, savoir si un parent doit accompagner, comparer les âges admis, le contenu, la durée, les frais et les inscriptions. Repérer les options accessibles et les précautions liées aux allergies, au matériel et à la disponibilité des séances.
-
-## Valeur éditoriale
-- La Maison pour tous Michel Colucci annonce « Drôle de Zébulon » le 9 décembre 2026, pour les 3-6 ans accompagnés d'un adulte, sur inscription et avec carte MPT enfant. Événement dans moins de 30 jours: le citer comme exemple de programmation à vérifier, sans en faire le sujet principal.
-- Les Maisons pour tous proposent aussi des séances gratuites ou sur inscription, mais leurs calendriers changent; distinguer clairement les dates passées et futures.
-- John G. Pâtisserie décrit des ateliers enfants avec réservation directe et conditions d'annulation; Les Ateliers Cuisine Cortese à Mauguio accueillent également les enfants. Les âges et disponibilités doivent être vérifiés atelier par atelier.
-- Une offre GetYourGuide de pâtisserie à Montpellier exclut les moins de 10 ans, distinction décisive pour les familles. L'article comparera les formats plutôt que de confondre tous les « cours de cuisine » avec des activités enfant.
-- Ne pas transformer l'article en annuaire exhaustif ni promettre des créneaux non vérifiés.
-
-## Affiliation
-- **GetYourGuide**, « Montpellier: atelier de pâtisserie avec une cheffe », expérience de 2 à 3 h, annoncée pour participants à partir de 10 ans (les moins de 10 ans sont exclus). Offre effectivement trouvée, vérifier dates, âge exact et disponibilité avant recommandation: https://www.getyourguide.com/tr-tr/montpellier-l2573/montpellier-sef-esliginde-pasta-atolyesi-t1073091/
-- **Booking.com**, hébergements à Montpellier pour les familles en séjour qui combinent atelier et visite de la ville: https://www.booking.com/city/fr/montpellier.fr.html . Besoin secondaire facultatif, sans disponibilité garantie.
-- Pas d'offre Tiqets ou Klook spécifique aux ateliers enfant suffisamment confirmée. Les ateliers municipaux et les réservations directes restent des ressources éditoriales non affiliées.
-
-## Sources de départ
-- Ville de Montpellier, atelier « Drôle de Zébulon », 9 décembre 2026, âges et conditions: https://mpt.eolas-58.montpellier.fr/evenement/drole-de-zebulon-atelier-cuisine
-- Ville de Montpellier, atelier « Drôle de Zébulon », 18 novembre 2026 (à ne pas promouvoir comme événement à venir au-delà de sa date): https://mpt.montpellier.fr/evenement/drole-de-zebulon-atelier-de-cuisine
-- Montpellier Tourisme, Ateliers Cuisine Cortese à Mauguio: https://www.montpellier-tourisme.fr/sejourner/loisirs-et-activites/tous-les-loisirs-et-activites/les-ateliers-cuisine-cortese-montpellier-mauguio-fr-4246867/
-- Organisateur, ateliers pâtisserie enfants John G.: https://www.johngpatisserie.fr/ateliers/ateliers-enfants
-- Organisateur, Les Ateliers Cuisine: https://www.les-ateliers-cuisine.com/
-- Organisateur, La Fabic, programmation de cours de cuisine et pâtisserie: https://lafabic.fr/cours-de-cuisine/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "cuisine"
+title: "Ateliers de cuisine pour enfants à Montpellier: où aller selon leur âge?"
+subtitle: "Maisons pour tous, pâtisserie parent-enfant et cours privés: les différences à connaître avant de réserver"
+summary: "À Montpellier et autour, découvrez comment choisir un atelier de cuisine adapté à l'âge de votre enfant, entre séances municipales et pâtisserie encadrée."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "atelier cuisine enfant Montpellier"
+  - "atelier pâtisserie parent enfant Montpellier"
+  - "cours cuisine famille Hérault"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Montpellier"
+  department: "Hérault"
+  region: "Occitanie"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Ville de Montpellier - Drôle de Zébulon, atelier cuisine"
+    url: "https://mpt.eolas-58.montpellier.fr/evenement/drole-de-zebulon-atelier-cuisine"
+  - title: "Ville de Montpellier - Gâteau de Noël, atelier de cuisine"
+    url: "https://mpt.eolas-58.montpellier.fr/evenement/gateau-de-noel-atelier-de-cuisine"
+  - title: "Ville de Montpellier - Agenda des Maisons pour tous"
+    url: "https://mpt.eolas-58.montpellier.fr/evenements"
+  - title: "John G. Pâtisserie - Ateliers enfants"
+    url: "https://www.johngpatisserie.fr/ateliers/ateliers-enfants"
+  - title: "Montpellier Tourisme - Les Ateliers Cuisine Cortese"
+    url: "https://www.montpellier-tourisme.fr/sejourner/loisirs-et-activites/tous-les-loisirs-et-activites/les-ateliers-cuisine-cortese-montpellier-mauguio-fr-4246867/"
+  - title: "Les Ateliers Cuisine Cortese - Site de l'organisateur"
+    url: "https://www.les-ateliers-cuisine.com/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Faire des biscuits, pétrir une pâte ou préparer un plat avec un chef: à Montpellier, dans l'Hérault, les enfants peuvent découvrir la cuisine dans les Maisons pour tous municipales ou dans des ateliers privés, notamment à Pérols et Mauguio. Mais les propositions ne s'adressent pas toutes aux mêmes âges. Certaines accueillent un enfant avec son parent, d'autres exigent davantage d'autonomie.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Dès 3 ans: privilégier les ateliers parent-enfant
+
+Pour les plus petits, le meilleur repère n'est pas la recette annoncée, mais la présence d'un adulte et la place réellement laissée à l'enfant pour manipuler les ingrédients.
+
+La Maison pour tous Michel Colucci, au 205 rue de Cheng-Du à Montpellier, annonce par exemple [« Drôle de Zébulon », un atelier cuisine le 9 décembre 2026](https://mpt.eolas-58.montpellier.fr/evenement/drole-de-zebulon-atelier-cuisine), de 10 h à 11 h, pour les 3 à 6 ans accompagnés d'un adulte. L'inscription est nécessaire et la carte Maison pour tous de l'enfant est demandée. Cette séance illustre le format court adapté aux maternelles; vérifiez sa disponibilité avant de vous déplacer.
+
+Pour les enfants un peu plus grands, la Maison pour tous Boris Vian propose aussi [un atelier « Gâteau de Noël » le 9 décembre 2026](https://mpt.eolas-58.montpellier.fr/evenement/gateau-de-noel-atelier-de-cuisine), de 10 h à 11 h 30, à partir de 6 ans avec un adulte. L'annonce précise que l'activité est gratuite et sur inscription. Les lieux et conditions varient selon les séances.
+
+Ces exemples sont datés: pour une autre période, consultez [l'agenda actualisé des Maisons pour tous](https://mpt.eolas-58.montpellier.fr/evenements) plutôt que de supposer qu'un atelier se répète chaque semaine. Attention également aux activités simplement intitulées « cuisine »: certaines sont réservées aux adultes.
+
+## Une vraie séance de pâtisserie à partager à Pérols
+
+À quelques kilomètres de Montpellier, [John G. Pâtisserie propose des ateliers parent-enfant](https://www.johngpatisserie.fr/ateliers/ateliers-enfants) dans son laboratoire situé chez Cook-shop, dans la ZAC du Fenouillet à Pérols. Le format présenté dure deux heures, accueille les enfants à partir de 3 ans avec un adulte accompagnateur et limite le groupe à six enfants.
+
+Ce petit effectif peut convenir à une première découverte plus approfondie: les enfants travaillent les textures, les gestes et les saveurs au fil d'une recette. L'organisateur propose également des formules privatisées pour les anniversaires.
+
+Point important avant de payer: la page de présentation affiche encore un exemple d'atelier daté de septembre 2025. Ce n'est donc pas une preuve de créneau actuellement réservable ni de tarif à jour. Consultez les séances proposées au moment de votre recherche et lisez les conditions d'annulation avant le paiement, qui confirme la réservation.
+
+## Pour les plus grands: explorer d'autres cuisines à Mauguio
+
+[Les Ateliers Cuisine Cortese](https://www.montpellier-tourisme.fr/sejourner/loisirs-et-activites/tous-les-loisirs-et-activites/les-ateliers-cuisine-cortese-montpellier-mauguio-fr-4246867/), au 82 rue Icare, ZAC Fréjorgues Ouest à Mauguio, proposent des cours autour des cuisines du monde et de la pâtisserie. Le principe est d'apprendre un plat avec un chef et de pouvoir le refaire à la maison.
+
+Leur [site officiel indique que les enfants sont les bienvenus](https://www.les-ateliers-cuisine.com/), sans pour autant fixer un âge minimum valable pour tous les cours. Demandez donc quel atelier accepte précisément l'âge de votre enfant, si un parent participe et si les gestes prévus sont adaptés. Le lieu dispose d'un parking selon Montpellier Tourisme; l'arrêt de tramway Boirargues se trouve à environ 2 km, ce qui mérite d'anticiper le dernier trajet avec de jeunes enfants.
+
+## Comment départager deux ateliers?
+
+**Pour les 3 à 6 ans**, recherchez d'abord une séance courte avec accompagnement obligatoire et gestes simples. Les Maisons pour tous sont une bonne piste, sous réserve des places et des conditions d'inscription.
+
+**À partir de 6 ans**, un atelier pâtisserie plus long peut être intéressant si l'enfant aime suivre une recette complète. Comparez la durée, la taille du groupe et le nombre d'adultes encadrants.
+
+**Pour les préados et adolescents**, regardez le contenu réel: pâtisserie technique, cuisine salée ou découverte de spécialités étrangères. Un cours annoncé « tout public » n'est pas automatiquement adapté aux enfants. Vérifiez l'âge minimum auprès de l'organisateur, surtout sur les plateformes de réservation d'expériences.
+
+Le tarif affiché ne raconte pas toujours toute l'histoire. Une séance municipale gratuite peut nécessiter une carte ou une inscription préalable. Dans le privé, vérifiez si le prix couvre un enfant seul ou un duo parent-enfant, les ingrédients, le matériel et les créations à emporter.
+
+## Les questions utiles avant de réserver
+
+Si votre enfant a une allergie alimentaire, contactez l'organisateur avant toute réservation: connaître la recette ne suffit pas à garantir l'absence de traces d'allergènes dans un laboratoire partagé. Demandez également si les enfants utilisent des couteaux, un four ou des plaques chauffantes, et qui les supervise.
+
+Pour un enfant qui n'aime pas rester longtemps debout ou qui découvre la cuisine, une séance d'une heure sera souvent plus accessible qu'un cours de plusieurs heures. Pour une famille avec poussette ou un participant ayant besoin d'un accès adapté, faites confirmer les conditions d'entrée et de circulation: les pages consultées ne permettent pas de garantir l'accessibilité de chaque salle.
+
+Enfin, réservez à partir de la fiche précise de la séance, pas seulement de la page générale de l'établissement. Vous connaîtrez ainsi la bonne adresse, l'âge accepté, la durée et les modalités applicables à la date choisie.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -124,4 +165,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
