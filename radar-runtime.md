@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Fête foraine de Dijon 2026: dates, horaires et budget avec les enfants"
-subtitle: Du 23 octobre au 15 novembre, des manèges derrière le Parc des expositions
-summary: Dates, horaires à confirmer, entrée gratuite, budget des attractions et accès à la fête foraine de Dijon en famille, sans la confondre avec la Foire gastronomique.
+subtitle: Jusqu'au 15 novembre, les derniers créneaux pour profiter des manèges derrière le Parc des expositions
+summary: "Derniers jours de la fête foraine de Dijon: horaires annoncés du 12 au 15 novembre, nocturnes, entrée libre, budget des manèges et accès en famille."
 category: evenements
 location:
   city: Dijon
@@ -71,18 +74,20 @@ image:
   src: /images/articles/2026/10/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget.webp
   alt: Vue de la place de la Libération à Dijon depuis la rue Vauban, sans rapport avec les manèges de la fête foraine.
 sources:
-  - title: Ville de Dijon - La fête foraine de retour à Dijon (24 octobre 2026)
+  - title: Ville de Dijon - La fête foraine de retour à Dijon
     url: https://www.dijon.fr/agenda/la-fete-foraine-de-retour-a-dijon/
-  - title: Foire internationale et gastronomique de Dijon - édition 2026
-    url: https://www.foirededijon.com/
+  - title: Jondi - Fête foraine de Dijon 2026, horaires détaillés citant Dijon Mag
+    url: https://jondi.fr/evenement/fete-foraine-de-dijon-2026/2026-11-13/14-00-00/
+  - title: Ville de Dijon - Dijon métropole à la Foire de Dijon, du 31 octobre au 11 novembre
+    url: https://www.dijon.fr/actualites/dijon-metropole-vous-donne-rendez-vous-a-la-foire-de-dijon/
   - title: Divia Mobilités - Parking Clemenceau et tram T1
     url: https://information.divia.fr/sinformer/voiture/parkings-en-ouvrage/clemenceau/
   - title: Dijon Bourgogne Events - accès au Parc des expositions
     url: https://dijonbourgogne-events.com/palais-et-parc/
-  - title: Adagio - Aparthotel Adagio Access Dijon République, équipements et capacités
+  - title: Adagio - Aparthotel Adagio Access Dijon République
     url: https://www.adagio-city.com/fr/hotel-8985-aparthotel-adagio-access-dijon-republique/index.shtml
 eventEndsAt: 2026-11-15
-reviewAt: 2026-10-30
+reviewAt: 2026-11-15
 topic:
   key: evenements|dijon|fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget|2026
   keywords:
@@ -101,7 +106,7 @@ affiliate:
   destination: Dijon
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/index.md
   targetSha: 3f0bff7eb3200192a0a4643124b842c1e6cbac6d
@@ -129,32 +134,61 @@ radar:
       - foire aux manèges Dijon
 ---
 
-## Mission retenue
-Actualiser utilement le guide de la fête foraine de Dijon, encore ouverte jusqu'au 15 novembre 2026.
+La **fête foraine de Dijon** se termine le **dimanche 15 novembre 2026**. Les manèges sont installés sur le **mail Général-Delaborde**, derrière le Parc des expositions et des congrès. L'entrée est libre, mais chaque attraction est payante. Pour les derniers jours, mieux vaut distinguer l'heure d'ouverture annoncée, les soirées prolongées et les horaires réels de chaque manège.
 
-## Pourquoi cette mission
-Le snapshot GSC signale 1 291 impressions sur trois jours puis 403, sans diagnostic par requête: ne pas attribuer la baisse à un recul de classement. À trois jours de la clôture, l'article laisse une incertitude concrète sur l'heure d'ouverture et ne distingue pas les jours de nocturne. La Foire gastronomique évoquée s'est terminée le 11 novembre.
+## À quelle heure venir du 12 au 15 novembre ?
 
-## Décision du lecteur
-Savoir à quelle heure venir les 12, 13, 14 ou 15 novembre avec des enfants, quand rentrer et quel budget prévoir, sans acheter par erreur un billet pour un événement distinct.
+La [Ville de Dijon](https://www.dijon.fr/agenda/la-fete-foraine-de-retour-a-dijon/) indique **14 h à 23 h**, avec des prolongations certains soirs jusqu'à **1 h du matin**. Son en-tête mentionne toutefois « à partir de 15 h »: **la contradiction entre 14 h et 15 h demeure sur la page officielle**. Pour arriver dès l'ouverture, mieux vaut vérifier auprès de l'organisateur ou sur place.
 
-## Faits à traiter
-- La Ville affiche encore « à partir de 15 h » dans son en-tête mais « 14 h à 23 h » dans les informations pratiques. L'agenda local Jondi, citant Dijon Mag d'octobre, précise 14 h tous les jours, jusqu'à 1 h les vendredis, samedis et veilles de jours fériés. Confronter au document municipal primaire si accessible; sinon conserver explicitement la contradiction sans inventer de confirmation.
-- Préciser que les 13 et 14 novembre sont les derniers vendredi et samedi, que le dimanche 15 clôt l'événement; éviter de promettre que chaque attraction reste ouverte jusqu'à la fermeture générale.
-- Actualiser le passage sur la Foire gastronomique: elle est terminée depuis le 11 novembre; ne pas la suggérer comme sortie encore combinable.
-- Préserver les dates et le lieu, l'entrée libre et les attractions payantes sans tarifs inventés, les restrictions d'âge/taille, les conseils poussette et sanitaires, le tram T1, le parking Clemenceau, les deux photos intégrées et leurs crédits/licences, le lien interne et l'hébergement Booking.com. Ne pas réécrire le reste inutilement.
+L'[agenda local Jondi](https://jondi.fr/evenement/fete-foraine-de-dijon-2026/2026-11-13/14-00-00/), qui cite le Dijon Mag d'octobre, détaille les créneaux suivants:
 
-## Sources de départ
-- Ville de Dijon, agenda officiel: https://www.dijon.fr/agenda/la-fete-foraine-de-retour-a-dijon/
-- Ville de Dijon, Dijon Mag octobre 2026 (horaires cités par Jondi): https://www.dijon.fr/
-- Agenda local Jondi, horaires détaillés: https://jondi.fr/evenement/fete-foraine-de-dijon-2026/2026-11-13/14-00-00/
-- Ville de Dijon, Foire gastronomique terminée le 11 novembre: https://www.dijon.fr/actualites/dijon-metropole-vous-donne-rendez-vous-a-la-foire-de-dijon/
+- **Jeudi 12 novembre:** 14 h à 23 h annoncées.
+- **Vendredi 13 et samedi 14 novembre:** 14 h à 1 h du matin annoncées, avec les deux dernières soirées prolongées du week-end.
+- **Dimanche 15 novembre:** 14 h à 23 h annoncées, dernier jour de la fête.
 
-## Affiliation
-Conserver l'Adagio Access Dijon République sur Booking.com pour un week-end à Dijon. Ne pas ajouter d'offre de billets pour les manèges.
+Ces plages concernent la fête dans son ensemble: **elles ne garantissent pas que chaque manège fonctionne jusqu'à l'heure de fermeture**. Avec de jeunes enfants, venir dans l'après-midi permet de profiter des attractions sans dépendre d'une nocturne. En soirée, les illuminations changent l'ambiance, mais les files d'attente peuvent rallonger la sortie.
 
-## Continuations internes
-Conserver le lien vers le guide distinct de la Foire de Dijon comme archive utile, en indiquant clairement qu'elle est achevée.
+## Combien prévoir pour les manèges ?
+
+**L'entrée à la fête est libre; chaque tour de manège est payant.** La mairie ne donne pas de tarifs par attraction, ni de forfait familial. Le coût dépend donc des manèges choisis et des prix affichés sur place.
+
+Vous pouvez, par exemple, fixer **20 € comme budget total de manèges** avant la visite: c'est un plafond choisi par la famille, **pas un tarif proposé par les forains**. Les boissons, friandises et stands de jeux sont à compter séparément.
+
+Avant de payer, vérifiez les **restrictions d'âge ou de taille** et si un adulte doit accompagner l'enfant. Il n'existe pas de liste officielle commune de ces conditions pour l'ensemble des attractions. Avec une poussette ou un bébé, prévoyez un parcours assez court; la présence de sanitaires adaptés ou d'un espace bébé n'est pas confirmée dans l'annonce municipale.
+
+## Où se trouve la fête et comment y aller ?
+
+<!-- article-image-body:01 -->
+
+![Station de tramway Auditorium à Dijon, sur la ligne T1 desservant le quartier du Parc des expositions.](/images/articles/2026/10/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget-body-01.webp)
+
+*Photo: [Chabe01](https://commons.wikimedia.org/wiki/File:Station_Tramway_Auditorium_-_Dijon_(FR21)_-_2022-04-16_-_4.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Les manèges sont installés **en plein air, derrière le Parc des expositions**, et non dans les halls.
+
+Depuis la gare de Dijon, le **tram T1** dessert le secteur, notamment les stations **Auditorium** et **Poincaré**. Vérifiez les horaires du réseau pour votre trajet retour, surtout après une soirée prolongée.
+
+En voiture, le **parking Clemenceau**, **1 avenue Marbotte**, dispose d'un accès piéton côté boulevard de Champagne, près de l'Auditorium. [Divia Mobilités](https://information.divia.fr/sinformer/voiture/parkings-en-ouvrage/clemenceau/) annonce une ouverture **24 h/24, 7 j/7** et un stationnement payant. Le parking indique aussi des places PMR; cela ne garantit pas l'accessibilité de chaque manège.
+
+## La Foire gastronomique est-elle encore ouverte ?
+
+<!-- article-image-body:02 -->
+
+![Bâtiment du Parc des expositions et des congrès de Dijon, distinct des manèges installés en plein air.](/images/articles/2026/10/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget-body-02.webp)
+
+*Photo: [NinoDu21](https://commons.wikimedia.org/wiki/File:Parc_des_expositions_de_Dijon.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+**Non.** La **Foire internationale et gastronomique de Dijon** s'est achevée le **11 novembre 2026**, comme le confirme la [Ville de Dijon](https://www.dijon.fr/actualites/dijon-metropole-vous-donne-rendez-vous-a-la-foire-de-dijon/). Elle se déroulait dans les halls du Parc des expositions, avec ses propres horaires et tarifs. **Aucun billet de la Foire n'est nécessaire pour accéder aux manèges**, qui restent présents jusqu'au 15 novembre.
+
+Pour retrouver les informations de cette édition désormais terminée, consultez notre [guide de la Foire de Dijon 2026 en famille](/articles/evenements/foire-de-dijon-2026-en-famille-dates-ateliers-animaux-et-gratuites/).
+
+## Dormir à Dijon pour prolonger la sortie
+
+Pour une famille qui passe le week-end à Dijon, l'[Aparthotel Adagio Access Dijon République sur Booking.com](https://www.booking.com/hotel/fr/aparthotel-adagio-access-dijon-republique.fr.html), **33 rue de Mulhouse**, propose notamment un **appartement d'une chambre pour quatre personnes**, avec cuisine équipée. Le logement permet de préparer des repas sur place et de rejoindre le quartier du Parc des expositions. Vérifiez la capacité correspondant à l'âge des enfants, les tarifs et les disponibilités pour vos dates.
 
 ## Article source exact à préserver et améliorer
 
