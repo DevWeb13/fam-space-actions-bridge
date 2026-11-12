@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,25 +59,18 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Visiter le nouveau musée M24 au Mans en famille: billets, parcours et circuit"
-subtitle: Voitures de légende, espace famille et conseils pour choisir entre musée et tribunes
-summary: Que voir au M24 avec des enfants ? Durée, tarifs, parcours famille, accès au circuit et conseils pour organiser une sortie au Mans sans mauvaise surprise.
+subtitle: "Musée, tribunes ou visite guidée: choisir le bon billet avec des enfants"
+summary: "Musée M24 au Mans en famille: tarifs 2026, forfaits, visites guidées, accès au circuit, moyens de paiement et conseils pratiques avec les enfants."
 slug: visiter-le-nouveau-musee-m24-au-mans-en-famille-billets-parcours-et-circuit
 status: published
 publishedAt: 2026-10-31T09:01:04+01:00
 updatedAt: null
 category: activites
-readingTime: 5
+readingTime: 6
 location:
   city: Le Mans
   department: Sarthe
@@ -100,7 +103,7 @@ affiliate:
   destination: Le Mans
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/activites/(2026)/(10)/visiter-le-nouveau-musee-m24-au-mans-en-famille-billets-parcours-et-circuit/index.md
   targetSha: 680ac8e3964e05f607fe6090e4bdf89519f76b98
@@ -125,32 +128,82 @@ radar:
       - musée automobile le mans tarif
 ---
 
-## Mission retenue
-Actualiser le guide familial du M24, Musée du Sport Automobile au Mans, sur les options de visite et les moyens de paiement.
+Au Mans, dans la Sarthe, le M24 - Musée du Sport Automobile accueille les familles à l'entrée du circuit des 24 Heures. Ouvert depuis le 28 mai 2026 après une transformation majeure, il raconte aussi bien la course mancelle que la Formule 1, le rallye, l'IndyCar ou la moto. Même sans connaître les pilotes, les enfants peuvent découvrir des voitures impressionnantes, manipuler des matériaux et suivre un parcours conçu pour eux. Pour choisir le bon billet, il faut distinguer la visite du musée, l'accès libre aux tribunes et les visites guidées des coulisses.
 
-## Pourquoi cette mission
-L'article figure parmi les baisses rapides du snapshot (21 puis 5 impressions sur trois jours), sans preuve de cause SEO. Lacune éditoriale indépendante vérifiée: les visites guidées, le pass annuel et les moyens de paiement officiels ne sont pas expliqués, alors qu'ils peuvent modifier le choix et le budget familial.
+## Ce qui peut plaire aux enfants
 
-## Décision du lecteur
-Savoir si le musée seul, le combiné circuit, ou une visite guidée vaut le coût pour sa famille; éviter de réserver une formule ou un mode de paiement inadapté.
+Le nouveau M24 réunit plus de 120 véhicules sur 8 600 m², selon l'[Automobile Club de l'Ouest](https://www.lemans.org/fr/actualites/aco/le-m24-musee-du-sport-automobile-est-inaugure-60617). Une première partie fait vivre les 24 Heures du Mans, du départ à l'arrivée en passant par la conduite de nuit et les arrêts aux stands. Une seconde présente d'autres disciplines du sport automobile.
 
-## Faits à traiter
-- Vérifier les trois visites guidées officielles à 25 € (24 Heures du Mans, sport automobile, circuit), leurs durées, contenus et éventuelles conditions enfants; ne pas les confondre avec la visite libre du circuit.
-- Mentionner si utile l'adhésion Passion à 60 € pour un an, sans la présenter comme avantageuse pour une seule visite.
-- Préciser les chèques-vacances papier acceptés et les chèques-vacances Connect, pass Culture et titres-restaurant refusés.
-- Préserver les tarifs musée/circuit/combiné, forfaits famille, gratuité des moins de 6 ans, accès conditionnel au circuit, horaires, transports, équipements bébé, photographies et crédits, liens internes et Booking.com. Ne pas attribuer la chute GSC à ces manques.
+Les enfants peuvent s'arrêter devant les monoplaces de Formule 1, les miniatures au 1/43 et les scènes de course reconstituées grandeur nature. La matériauthèque invite à découvrir certaines matières par le toucher. De grandes vitres permettent aussi d'observer l'atelier d'entretien des véhicules de collection. Ces espaces figurent dans le [parcours permanent du M24](https://www.m24-musee.com/parcours-permanent/).
 
-## Sources de départ
-- https://www.m24-musee.com/informations-pratiques/
-- https://www.m24-musee.com/visiter/particuliers/
-- https://ticket.m24-musee.com/
+Un espace famille complète la visite. Depuis un smartphone, l'application du musée propose un parcours destiné aux plus jeunes, distinct du parcours « Les incontournables ». L'entrée du musée comprend également l'exposition temporaire.
 
-## Affiliation
-Conserver le lien Booking.com existant si l'offre familiale reste pertinente; aucune offre de billet affiliée vérifiée.
+## Musée, circuit ou les deux: que choisir ?
 
-## Continuations internes
-- Garder le guide destination Le Mans comme relais pour la seconde journée.
-- Ne pas développer un nouveau guide autonome sur le circuit: compléter la distinction déjà présente dans l'article.
+<!-- article-image-body:01 -->
+
+![Ligne droite des stands et tribunes du circuit Bugatti au Mans, photographiées en 2013](/images/articles/2026/10/visiter-le-nouveau-musee-m24-au-mans-en-famille-billets-parcours-et-circuit-body-01.webp)
+
+*Photo: [Like tears in rain](https://commons.wikimedia.org/wiki/File:Stands_du_Circuit_Bugatti.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+**Le musée seul** est le choix le plus simple pour une première sortie avec de jeunes enfants ou par mauvais temps. Comptez environ 1 h 30 à 2 h selon votre rythme.
+
+**La visite libre du circuit** permet de rejoindre à pied les gradins et les tribunes pour voir notamment la ligne droite des stands. Comptez environ une heure. Elle est payante et n'ouvre pas les bâtiments, les paddocks ni les coulisses. Surtout, **le circuit n'est pas accessible en visite libre pendant les événements sportifs**: vérifiez sa disponibilité pour votre date.
+
+**Le billet combiné musée + circuit** convient aux familles qui veulent voir les voitures et les installations. Prévoyez environ 3 à 4 h avec les déplacements et une pause. L'application propose aussi un parcours famille sur le circuit.
+
+**Les visites guidées**, annoncées à **25 € par personne** sur la [page officielle des tarifs](https://www.m24-musee.com/informations-pratiques/), répondent à trois envies différentes:
+
+- **Espace 24 Heures du Mans:** environ 1 h 30 de commentaires en français sur la création de la course, ses moments marquants et ses voitures emblématiques. La [présentation du parcours](https://www.m24-musee.com/visiter/particuliers/) prévoit aussi l'accès libre aux autres espaces du musée et à l'exposition temporaire.
+- **Sport automobile:** une découverte commentée de la Formule 1, du rallye, de l'IndyCar et des grands championnats. Vérifiez la durée du créneau proposé lors de la réservation.
+- **Circuit:** deux heures à pied avec un guide, pour accéder notamment à la direction de course, au podium, à la salle du speaker et à des points de vue panoramiques. C'est une autre prestation que l'accès libre aux tribunes.
+
+Ces visites sont proposées sur des créneaux déterminés et partagés avec d'autres visiteurs: vérifiez les dates disponibles, la langue, le tarif applicable à chaque enfant et les conditions d'accès avant de payer. Pour les plus jeunes, la visite libre du musée peut être plus souple qu'une visite guidée de deux heures.
+
+## Tarifs et forfaits famille
+
+Voici les tarifs affichés par le [M24](https://www.m24-musee.com/informations-pratiques/), revérifiés le 12 novembre 2026:
+
+- **Musée seul:** 20 € par adulte, 12 € de 6 à 17 ans.
+- **Circuit seul en visite libre:** 7 € par adulte, 4 € de 6 à 17 ans.
+- **Musée + circuit:** 24 € par adulte, 14 € de 6 à 17 ans.
+- **Moins de 6 ans:** gratuit pour ces trois formules.
+
+Les forfaits famille coûtent **58 € pour le musée**, **20 € pour le circuit** et **72 € pour le combiné**. La [billetterie du M24](https://ticket.m24-musee.com/) les présente pour **deux adultes et deux jeunes de 6 à 17 ans**. Pour cette composition, le musée revient ainsi à 58 € au lieu de 64 € en billets individuels. Pour une autre composition familiale, comparez les billets avant de réserver.
+
+Un tarif adulte réduit, sur justificatif, est prévu notamment pour les étudiants, demandeurs d'emploi et personnes en situation de handicap: 15 € pour le musée, 6 € pour le circuit et 18 € pour le combiné. Les membres de l'ACO disposent de conditions spécifiques.
+
+Pour les visiteurs qui souhaitent revenir régulièrement, l'**adhésion Passion à 60 €** donne accès au musée de façon illimitée pendant un an à compter de l'achat, avec accès prioritaire à l'entrée. Au tarif adulte de 20 € la visite, elle devient intéressante à partir de la quatrième visite; elle ne remplace pas automatiquement les billets circuit ou les visites guidées.
+
+La réservation n'est pas obligatoire pour les visiteurs individuels, mais elle est recommandée lors des périodes chargées. Les billets sont datés, nominatifs et, dans les conditions ordinaires, ni échangeables ni remboursables. Une fois sorti du musée, on ne peut pas y rentrer de nouveau avec le même billet. Le passage à l'accueil reste nécessaire même après un achat en ligne, notamment pour les consignes d'accès au circuit.
+
+**Pour payer sur place**, le musée accepte la carte bancaire, les espèces et les **chèques-vacances ANCV papier**. Il refuse les chèques bancaires, **chèques-vacances Connect**, titres-restaurant et **pass Culture**, d'après sa [FAQ officielle](https://www.m24-musee.com/informations-pratiques/). Si vous comptez utiliser des chèques-vacances papier, prévoyez l'achat au guichet plutôt que de supposer leur utilisation possible en ligne.
+
+## Préparer la visite avec des enfants
+
+<!-- article-image-body:02 -->
+
+![Tramway du Mans près de la station Guetteloup - Pôle Santé Sud sur la ligne T1](/images/articles/2026/10/visiter-le-nouveau-musee-m24-au-mans-en-famille-billets-parcours-et-circuit-body-02.webp)
+
+*Photo: [IngolfBLN](https://commons.wikimedia.org/wiki/File:Flickr_-_IngolfBLN_-_Le_Mans_-_Tramway_-_Antar%C3%A8s-Guetteloup_(1).jpg) - [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Le M24 se trouve **9 place Luigi Chinetti, 72100 Le Mans**. Les horaires habituels sont de **10 h à 18 h du 1er octobre au 30 avril** et de **10 h à 19 h du 1er mai au 30 septembre**, avec une dernière entrée une heure avant la fermeture. Le musée ferme les **25 décembre et 1er janvier**. Les moins de 16 ans doivent être accompagnés d'un représentant légal, selon les [conditions de vente](https://www.m24-musee.com/conditions-generales-de-vente/).
+
+Sur place, le musée annonce des toilettes, des ascenseurs, un espace bébé, un espace détente et une cafétéria. Nourriture et boissons ne sont pas autorisées dans les salles d'exposition. Les espaces du musée et du circuit sont annoncés accessibles aux personnes en fauteuil roulant. Avec une poussette, tenez surtout compte de la marche supplémentaire si vous choisissez le circuit.
+
+**En voiture**, les parkings Chinetti et Rouge sont gratuits et à moins de cinq minutes à pied de l'entrée en conditions habituelles. **Sans voiture**, depuis la gare du Mans, prenez le tram T1 vers Antarès - Stade Marie-Marvingt, descendez à Guetteloup - Pôle Santé Sud et comptez encore une vingtaine de minutes de marche. Les bus 10A et 10B desservent aussi l'arrêt Les Raineries, à environ onze minutes à pied du musée.
+
+**Évitez si possible les grandes compétitions** comme les 24 Heures du Mans, les 24 Heures Motos ou Le Mans Classic. Le musée peut rester ouvert, mais les parkings, la circulation et les accès changent fortement. Consultez les [informations pratiques du M24](https://www.m24-musee.com/informations-pratiques/) avant le départ.
+
+## Prolonger la sortie par un week-end au Mans
+
+Pour dormir sur place, l'[Hotel Le Circuit Le Mans](https://www.booking.com/hotel/fr/le-green-7.fr.html) propose une chambre familiale pour quatre personnes, avec un lit double et deux lits simples. L'établissement dispose d'un parking gratuit et d'un restaurant. Il se situe à environ 4 km du circuit: prévoyez un trajet pour rejoindre le musée plutôt qu'un accès immédiat à pied. Vérifiez la disponibilité et la configuration de la chambre aux dates du séjour.
+
+Pour une deuxième journée, notre [guide du Mans en famille](https://www.fam-space.fr/destinations/pays-de-la-loire/sarthe/le-mans/) présente notamment la Cité Plantagenêt et l'Arche de la Nature, deux idées très différentes de l'univers automobile.
 
 ## Article source exact à préserver et améliorer
 
