@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 1/4
+# Publication automatique Fam Space - Phase 2/4
 
 ## Mission
 
-Tu es le rédacteur en chef de Fam Space.
+Tu es un journaliste web professionnel pour Fam Space.
 
-Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. Fam Space doit publier moins mais mieux: un sujet doit pouvoir devenir un article fiable, utile aux familles, agréable à lire et, lorsque c'est naturel, intéressant pour l'affiliation.
+Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
 
 ## Affectation courante
 
@@ -14,111 +14,86 @@ Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. 
 - Département: Bouches-du-Rhône
 - Région: Provence-Alpes-Côte d’Azur
 
-### Articles publiés récemment
-
-- 2026-11-03: Pont de Gau en famille en automne et en hiver: flamants roses et marais
-- 2026-10-31: Saint-Rémy-de-Provence en famille: Glanum, musées et entrées gratuites
-- 2026-10-31: Tous en Sons ! 2026 à Marseille: spectacles enfants, âges et tarifs
-- 2026-10-29: Carrières des Lumières avec des enfants: choisir son spectacle et préparer la visite
-- 2026-10-25: Arles en famille à petit budget: quelles visites et quel pass choisir?
-- 2026-10-25: Noël à Aix-en-Provence 2026 en famille: marchés, santons et manèges
-- 2026-10-23: Foire aux santons de Marseille 2026: dates, inauguration et visite en famille
-- 2026-10-16: Maison des Parents aux Pennes-Mirabeau: ateliers gratuits et accueil des familles
-- 2026-10-06: Fête de la mer 2026 à Marseille avec des enfants: quelle escale choisir?
-- 2026-10-04: Mucem à la Toussaint 2026: le programme En Ribambelle avec des enfants
-- 2026-10-03: Cosquer Méditerranée avec des enfants: que peut-on visiter selon leur âge?
-- 2026-09-26: Food tour à Aix-en-Provence avec des enfants: lequel choisir en 2026?
-- 2026-09-13: Déchets’tri mobile à Marseille: quoi apporter sans aller à la déchèterie?
-- 2026-09-11: Escale Borély avec des enfants: du David au Bowl à pied
-- 2026-09-06: Consigne à Marseille Saint-Charles avec des enfants: où laisser valises et poussette?
-- 2026-08-31: Préau des Accoules à Marseille: faut-il réserver avant de venir avec des enfants?
-- 2026-08-23: HeroFestival Marseille 2026 en famille: billets, gratuité enfants et conseils
-- 2026-08-13: Marseille en famille pendant 3 jours: itinéraire simple autour du Vieux-Port
-- 2026-08-08: Mucem Marseille en famille: tarifs 2026, billets et gratuités
-- 2026-07-26: Concert gratuit à Cassis le 13 août 2026
-- 2026-07-23: Musée du Calisson à Aix-en-Provence: une enquête gourmande pour les enfants en 2026
-- 2026-07-16: Que faire avec les enfants pendant l’Été Marseillais 2026 ?
-
-Ne reproduis pas les mêmes sujets.
-
-## Choisir un sujet qui mérite un article
-
-Respecte l'affectation. Pour une affectation locale, choisis un sujet concernant tout le département ou une commune ou un lieu de ce département.
-
-La liste « Articles publiés récemment » est fournie automatiquement. Utilise-la pour éviter les doublons de lieu, de sujet ou d'angle. Un titre différent ne suffit pas à rendre un article différent.
-
-Cherche plusieurs sujets avant de choisir. Pour les candidats sérieux, utilise la recherche web pour comprendre ce qui existe déjà, vérifier les faits essentiels, voir ce que les résultats Google répondent déjà et t'assurer que le sujet est réellement utile à publier maintenant. Si l'élément principal est fermé, hors saison, en maintenance ou temporairement indisponible au point de vider l'article de son intérêt, écarte ce candidat et choisis-en un autre.
-
-Choisis un sujet qui a une vraie matière éditoriale. Un lecteur qui ne connaît pas le sujet doit pouvoir comprendre ce que c'est, pourquoi cela peut l'intéresser et obtenir plusieurs informations utiles sans que l'article répète la même idée.
-
-L'angle sert à donner une direction et un titre intéressant. Il ne doit jamais enfermer tout l'article dans une micro-question comme un tarif, un pass, une poussette ou un calcul simple.
-
-Écarte un sujet si Fam Space ne ferait que réécrire une page officielle ou s'il n'y a pas assez de matière pour produire un bon article. Si aucun candidat ne reste suffisamment utile et actuel après une recherche sérieuse, ne force pas un sujet.
-
-## Penser aussi au potentiel d'affiliation
-
-La monétisation est un objectif important de Fam Space. Avant de choisir le sujet final, vérifie sérieusement les offres disponibles chez les partenaires suivants:
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-Applique la logique d'usage ci-dessus à chaque candidat sérieux et vérifie les offres avant de les retenir dans le brief.
-
-À qualité éditoriale comparable, privilégie clairement le sujet qui possède une piste d'affiliation naturelle et vérifiée. Ne choisis toutefois jamais un sujet médiocre uniquement parce qu'il est affiliable et n'invente jamais une offre sans rapport avec le lecteur.
-
-Si un excellent sujet n'a réellement aucune offre partenaire pertinente après vérification, il peut rester publiable. Le brief doit alors le dire clairement. L'absence d'affiliation ne doit jamais résulter d'une recherche superficielle.
-
-## Sujets à écarter
-
-Écarte les sujets politiques ou militants, les guerres et conflits armés, les contenus haineux, violents, sexuellement explicites, dangereux ou trompeurs, ainsi que les conseils médicaux, juridiques ou financiers personnalisés à risque élevé.
-
-Ne choisis pas comme sujet principal une maladie, un diagnostic, un traitement, une vaccination ou une urgence médicale ou psychiatrique.
-
-Pour un événement ponctuel, ne le retiens pas s'il commence dans moins de 30 jours. S'il a déjà commencé, il doit rester au moins 30 jours d'utilité réelle. Cette règle ne concerne pas les attractions permanentes, destinations durables ou activités disponibles sur une longue période.
-
-## Résultat attendu
-
-Prépare un brief court. Le fichier doit contenir exactement ces sections:
+## Brief du rédacteur en chef
 
 ## Sujet retenu
-Le sujet, un titre de travail et l'angle principal. Décris aussi en une ou deux phrases ce qu'est réellement le sujet afin que le journaliste parte avec le bon contexte.
+**Château d'If à Marseille en famille: traversée, visite et découverte du Comte de Monte-Cristo.**
+
+Une sortie en bateau depuis le Vieux-Port vers l'île fortifiée du château d'If, monument historique connu pour son lien avec le roman d'Alexandre Dumas. Angle: organiser une véritable demi-journée familiale, entre traversée maritime, exploration du château, histoire, paysages et contraintes concrètes avec enfants.
 
 ## Besoin du lecteur
-Ce que le lecteur doit comprendre, apprendre ou pouvoir faire après avoir lu l'article. Ne réduis pas ce besoin à une seule micro-question si le sujet mérite un traitement plus large.
+Comprendre ce que les enfants découvriront sur place, distinguer traversée et entrée au monument, choisir visite libre ou animation familiale, estimer le temps nécessaire et préparer une sortie adaptée à leur âge. Savoir quoi faire en cas de mer agitée, quelles restrictions s'appliquent aux poussettes et bagages et comment réserver les deux prestations.
 
 ## Valeur éditoriale
-Les quelques informations ou distinctions qui justifient l'article et ce que Fam Space peut apporter de mieux qu'une simple reprise des sources.
+- Distinguer billet de bateau, billet du château et visite familiale commentée; expliquer la gratuité des moins de 18 ans pour l'entrée ordinaire et les tarifs distincts de l'animation familiale.
+- Décrire l'histoire de la forteresse, l'univers du Comte de Monte-Cristo, les graffitis, les panoramas et l'intérêt concret pour les enfants.
+- Visite libre, introduction historique et animations dès 3 ans: quel format choisir et comment vérifier les prochaines dates (ne pas reprendre comme futures les dates d'octobre déjà passées).
+- Préparation réaliste: terrain irrégulier, marches, poussettes interdites dans le château, pas de baignade, traversées soumises à la météo. Le site a notamment annoncé une fermeture pour mer agitée le 11 novembre 2026: ne jamais promettre une ouverture quotidienne.
+- Le sujet n'est pas un doublon des articles Mucem, Cosquer ou de l'itinéraire général Marseille 3 jours: il porte sur une excursion maritime patrimoniale autonome.
 
 ## Affiliation
-Les pistes partenaires réellement vérifiées, avec partenaire, offre et URL exacte, y compris les besoins secondaires naturels. Si aucune offre pertinente n'existe réellement, indique-le clairement.
+- **GetYourGuide**, excursions en bateau autour du château d'If et du Frioul, dont « Set sail for Château d'If and the Frioul Islands » et « Boat to Le Frioul, Château d'If, and swim »: https://www.getyourguide.com/marseille-l292/day-trips-tc360/chateau-d-if-tl66053/ . **Attention**: offres de croisière et non billets d'accès au château; ne pas les présenter comme une traversée officielle avec visite du monument incluse. Vérifier les prestations et conditions pour enfants à la rédaction.
+- **Booking.com**, hébergements à Marseille pour les familles en séjour, notamment Hôtel Marsiho by Happyculture près du Vieux-Port: https://www.booking.com/city/fr/marseille.en.html . Piste secondaire pour prolonger la visite en week-end, non nécessaire pour les familles locales. Disponibilité et prix à vérifier selon dates et composition familiale.
+- Aucun billet partenaire d'entrée au château lui-même confirmé. Le tarif d'entrée et les horaires doivent venir du Centre des monuments nationaux, non des plateformes commerciales.
 
 ## Sources de départ
-Les meilleures sources officielles ou directement responsables pour lancer la rédaction, avec l'URL exacte de chaque page utile.
+- Centre des monuments nationaux, informations pratiques (horaires, tarifs, météo, restrictions, traversée): https://www.chateau-if.fr/visiter/informations-pratiques
+- Centre des monuments nationaux, visites et activités (visite libre, animation familiale, introduction historique): https://www.chateau-if.fr/visiter/visites-et-activites
+- Centre des monuments nationaux, animations « If en famille » et conditions de réservation: https://www.chateau-if.fr/agenda/if-en-famille
+- Centre des monuments nationaux, site officiel et annonces de fermeture: https://www.chateau-if.fr/
 
-Ne rédige pas le corps final de l'article pendant cette phase.
+## Écrire l'article
+
+Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
+
+Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
+
+Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
+
+Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
+
+Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
+
+Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+
+N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
+
+Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
+
+Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
+
+À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
+
+## Format du candidat
+
+Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
+
+```yaml
+---
+category: "<catégorie assignée>"
+title: "Titre direct et informatif"
+subtitle: "Précision différente du titre"
+summary: "Résumé de 90 à 180 caractères"
+keywords:
+  - "mot-clé principal"
+  - "mot-clé secondaire"
+location:
+  city: "Ville"
+  department: "Département assigné"
+  region: "Région assignée"
+sources:
+  - title: "Page officielle utilisée"
+    url: "https://..."
+---
+```
+
+La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+
+Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 1/4
+- Phase préparée mécaniquement: 2/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -131,30 +106,20 @@ Toute la plomberie technique est gérée mécaniquement. Ne cherche aucune branc
 
 Écris uniquement publication-request.md sur la branche main de DevWeb13/fam-space-actions-bridge avec le résultat éditorial demandé dans ce runtime. Le pipeline mécanique se charge de la phase, de la branche de travail, des commits, de la validation et de la suite du cycle.
 
-Si tu retiens un sujet, utilise:
+Utilise:
 
 ~~~yaml
 ---
-action: start
+action: advance
 ---
 
-<brief complet demandé ci-dessus>
+<article complet demandé ci-dessus, frontmatter compris>
 ~~~
 
-Si, après une recherche sérieuse, aucun sujet suffisamment utile et actuel ne mérite un article, utilise:
-
-~~~yaml
----
-action: skip
----
-
-<raison factuelle et courte>
-~~~
-
-Un échec technique n'est jamais une raison de skip. Une fois publication-request.md écrit, termine le passage.
+Rends toujours l'article complet, même si cette phase ne nécessite que peu de corrections. Une fois publication-request.md écrit, termine le passage.
 
 ## Rapport final
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les principaux sujets envisagés, les doublons écartés, le sujet retenu, pourquoi il mérite un article, les pistes d'affiliation réellement vérifiées et les principales sources. En cas de skip, explique simplement pourquoi aucun sujet suffisamment bon n'a été retenu.
+Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
