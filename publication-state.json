@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261112-2304-ateliers-de-cuisine-et-patisserie-avec-des-enfants-a-montpellier-comme",
+  "lastProcessedCommit": "53c8d3a4407ed1ebe17eb1e5fbbea2e539d602ff"
 }
