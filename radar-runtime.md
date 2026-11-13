@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Encombrants à Limoges: donner, faire enlever ou déposer ses meubles"
 subtitle: "Canapé, matelas, meuble d'enfant ou électroménager: les solutions de Limoges Métropole, avec ou sans véhicule"
-summary: À Limoges et dans sa métropole, découvrez comment donner un meuble, réserver l'enlèvement d'encombrants ou accéder aux déchèteries sans mauvaise surprise.
+summary: À Limoges et dans les 19 autres communes de la métropole, découvrez comment donner un meuble, réserver gratuitement une collecte adaptée à votre adresse ou accéder aux déchèteries.
 slug: encombrants-a-limoges-donner-faire-enlever-ou-deposer-ses-meubles
 status: published
 publishedAt: 2026-10-23T15:06:38+02:00
@@ -100,7 +103,7 @@ affiliate:
   destination: Limoges
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/maison/(2026)/(10)/encombrants-a-limoges-donner-faire-enlever-ou-deposer-ses-meubles/index.md
   targetSha: 928bceea1b7fd7cd8036ecf011de95c1d57a652a
@@ -126,29 +129,70 @@ radar:
       - encombrant mairie
 ---
 
-## Mission retenue
-Clarifier le fonctionnement réel de la collecte des encombrants à Limoges Métropole selon l'adresse, dans le guide existant.
+<!-- article-image-credit -->
+*Photo: [HendrixHammer](https://commons.wikimedia.org/wiki/File:Sperrm%C3%BCll_mit_Sofas_und_Betten.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC signale 21 puis 5 impressions sur deux périodes de trois jours, sans preuve d'une perte de classement. Lacune indépendante vérifiée: le guide explique la réservation, mais ne distingue pas assez clairement les rendez-vous proposés à Limoges des collectes semestrielles des 19 autres communes et de certains quartiers extra-boulevards. La métropole confirme aussi la gratuité et l'alternative d'inscription auprès des mairies selon la commune.
+Un canapé qui ne passe plus dans le salon, un lit d'enfant devenu trop petit ou un réfrigérateur à remplacer: à **Limoges**, en Haute-Vienne, plusieurs solutions existent pour se séparer d'objets volumineux. **Limoges Métropole** propose notamment un **enlèvement gratuit des encombrants pour les particuliers qui ne peuvent pas se rendre en déchèterie**. Mais le calendrier dépend de l'adresse: rendez-vous selon les créneaux du quartier à Limoges, collecte semestrielle dans les 19 autres communes. Avant de sortir un meuble, il faut impérativement inscrire sa demande.
 
-## Décision du lecteur
-Comprendre quel calendrier s'applique à son domicile, comment réserver au moins 72 heures avant, et comment éviter un dépôt non collecté.
+## Un meuble encore utilisable ? Chercher d'abord une seconde vie
 
-## Faits à traiter
-Préciser sans généraliser: rendez-vous à Limoges selon quartier et créneaux; collecte semestrielle dans les autres communes et certains quartiers extra-boulevards; inscription préalable obligatoire, via la plateforme ou la mairie lorsque ce canal est proposé localement. Service gratuit réservé aux particuliers ne pouvant se rendre en déchèterie. Les modalités exactes de la commune priment; éviter de promettre une collecte immédiate. Préserver intégralement les limites de trois objets, deux rendez-vous, 80 kg, 2 m³, dépôt la veille avec affichette, exclusions, don/réemploi, carte de déchèterie, accès sans véhicule, photos, licences, crédits et lien KAYAK.
+Une commode solide, une table ou un meuble d'enfant propre et en état peuvent intéresser une autre famille. Le don entre particuliers, une association ou une ressourcerie évitent de traiter comme déchet un objet qui peut encore servir. Pour un meuble volumineux, précisez ses dimensions et indiquez si la personne qui le récupère doit venir avec un véhicule et de l'aide pour le porter.
 
-## Sources de départ
-- Limoges Métropole, collecte et distinction des secteurs: https://www.limoges-metropole.fr/services/gestion-des-dechets-nos-missions/collecte-des-dechets-limoges-metropole
-- Limoges Métropole, réservation et objets acceptés: https://encombrants.limoges-metropole.fr/accueil
-- Le Métropol n°115, mars 2026, page 23, gratuité et secteurs: https://limoges-metropole.fr/fileadmin/1-LIMOGES_METROPOLE/6-Publications/2026/Le_Metropol/20260320_Document_LeMetropol_115_Site_internet_Limoges_Metropole.pdf
+Limoges Métropole recense des **associations de réemploi** et des espaces dédiés dans plusieurs déchèteries: **Kennedy, Lebon et Le Cavou à Limoges**, ainsi que **Couzeix et Panazol**. Les objets déposés dans ces espaces sont orientés vers des associations partenaires. Consultez la [page officielle sur le réemploi et les lieux concernés](https://www.limoges-metropole.fr/services/gestion-des-dechets-nos-missions/reduire-ses-dechets/reemploi-et-reparation-dobjets) avant de charger la voiture: tous les objets ne conviennent pas forcément à un don et les modalités peuvent évoluer.
 
-## Affiliation
-Conserver KAYAK uniquement si plusieurs meubles justifient la location d'un utilitaire. Pas d'hébergement pour cette démarche domestique.
+Si vous achetez un meuble ou un appareil neuf, renseignez-vous aussi sur la **reprise de l'ancien par le vendeur**. Elle peut éviter un trajet supplémentaire, surtout pour un matelas ou un gros électroménager. La [plateforme d'enlèvement de Limoges Métropole](https://encombrants.limoges-metropole.fr/accueil) présente cette reprise parmi les solutions alternatives au ramassage public.
 
-## Continuations internes
-- Faire consulter le calendrier officiel de sa commune et le créneau confirmé, plutôt que recopier des dates fragiles.
-- Ne pas transformer les perturbations ponctuelles de collecte des ordures ménagères en informations sur les encombrants.
+## Sans véhicule: quel enlèvement est prévu à votre adresse ?
+
+La [collecte gratuite à domicile de Limoges Métropole](https://www.limoges-metropole.fr/services/gestion-des-dechets-nos-missions/collecte-des-dechets-limoges-metropole) s'adresse aux particuliers ne pouvant se rendre en déchèterie. **Elle n'a pas le même calendrier partout**:
+
+- **Dans la ville de Limoges:** les habitants peuvent demander un rendez-vous selon leur quartier et les créneaux disponibles. Certains secteurs disposent de modalités spécifiques, notamment les quartiers prioritaires; ne supposez pas que tous les quartiers sont collectés les mêmes jours. La réservation peut passer par la [plateforme officielle](https://encombrants.limoges-metropole.fr/accueil) ou une mairie annexe.
+- **Dans les 19 autres communes de Limoges Métropole:** la collecte est **semestrielle**, à des dates fixées par le planning annuel. Il faut s'inscrire pour la date prévue, sur la plateforme ou par téléphone auprès de la mairie. Ce n'est pas un enlèvement immédiat à la date de son choix.
+- **Pour certaines adresses particulières de Limoges:** des collectes spécifiques peuvent s'appliquer. Vérifiez le dispositif correspondant à votre rue plutôt que de déduire le calendrier de celui d'un quartier voisin.
+
+Dans tous les cas, **inscrivez-vous au moins 72 heures avant la date de collecte**. Le [calendrier officiel 2026](https://www.limoges-metropole.fr/services/gestion-des-dechets-nos-missions/collecte-des-dechets-limoges-metropole) aide à repérer les dates, mais **seule la confirmation de votre demande** autorise à préparer le dépôt. À [Saint-Just-le-Martel](https://saintjustlemartel.fr/collecte-des-encombrants/), par exemple, la mairie annonce des collectes les deuxièmes mardis de mars et de septembre: un calendrier communal ne doit pas être généralisé aux autres adresses.
+
+### Réserver et préparer les objets sans refus
+
+Sur la [plateforme de réservation](https://encombrants.limoges-metropole.fr/accueil), indiquez votre commune et votre rue, consultez les disponibilités correspondant à votre adresse, puis validez votre demande. La confirmation communique un **numéro d'enregistrement** à afficher sur les objets.
+
+Les limites à respecter sont les suivantes:
+
+- **Trois encombrants maximum par rendez-vous**, dans la limite de **deux rendez-vous par an et par adresse**.
+- **80 kg maximum par pièce** et un **volume total limité à 2 m³**; les objets doivent pouvoir être chargés dans le camion.
+- Le point de collecte doit être **accessible à un poids lourd**.
+- Les objets sont à placer **sur le domaine public la veille du rendez-vous confirmé**, avec une **affichette portant le numéro d'enregistrement**.
+
+Un canapé, un matelas, une armoire ou un gros appareil électroménager figurent parmi les exemples admis. Attention au décompte: un gros meuble compte comme un encombrant, mais **un lot d'une à quatre chaises** peut aussi compter comme un seul. La [liste détaillée des objets acceptés et refusés](https://encombrants.limoges-metropole.fr/accueil) permet de préparer la demande.
+
+**Si vous vivez en étage**, le service ne descend pas le meuble de l'appartement. Prévoyez de l'aide pour le porter jusqu'au point de collecte ou recherchez une reprise avec enlèvement à l'intérieur du logement.
+
+Si votre rue n'apparaît pas ou si vous hésitez sur le calendrier, contactez la Direction de la prévention et de la gestion des déchets au **05 55 45 79 30**, du lundi au vendredi de **8h30 à 12h30 et de 13h30 à 17h**, selon les indications de la plateforme. **Ne laissez pas d'objet sur le trottoir sans demande confirmée.**
+
+## Avec un véhicule: choisir la bonne déchèterie
+
+<!-- article-image-body:01 -->
+
+![Entrée de la déchèterie d'Ampus dans le Var en septembre 2026, photographie illustrative ne montrant pas une déchèterie de Limoges.](/images/articles/2026/10/encombrants-a-limoges-donner-faire-enlever-ou-deposer-ses-meubles-body-01.webp)
+
+*Photo: [Sebleouf](https://commons.wikimedia.org/wiki/File:Ampus_-_D%C3%A9ch%C3%A8terie_(sept_2026).jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Les **onze déchèteries communautaires** reçoivent notamment du mobilier, de la literie, des cartons à plat et des objets encombrants. Elles acceptent aussi plusieurs déchets **refusés par la collecte à domicile**, comme les gravats, à condition de respecter les règles de tri et les limites applicables.
+
+Il faut une **carte d'accès**. Lors du premier apport, un habitant de Limoges Métropole peut en faire la demande directement en déchèterie avec **une pièce d'identité et un justificatif de domicile de moins de trois mois**. Le formulaire peut être préparé à l'avance. La [liste des onze sites, leurs horaires et les déchets acceptés](https://www.limoges-metropole.fr/services/gestion-des-dechets-nos-missions/espace-decheteries) est publiée par la métropole.
+
+À Limoges même, les sites **Lebon** (rue Philippe Lebon), **Kennedy** (70 avenue du Président John Kennedy) et **Le Cavou** (rue de Cavou, à Landouge) permettent de déposer des déchets volumineux. Vérifiez les horaires du site choisi: ils varient selon les jours et changent en période estivale ou de vigilance canicule.
+
+Si vous n'avez pas de voiture, **ne louez pas automatiquement un utilitaire** pour un seul objet. Une reprise par le commerçant, un don récupéré à domicile ou un rendez-vous d'enlèvement public peuvent être plus simples. Pour plusieurs meubles à transporter le même jour, vous pouvez [comparer les utilitaires proposés à Limoges sur KAYAK](https://www.kayak.fr/Limoges-Locations-de-Fourgonnette.5833.cvn.ksp) avant de réserver. Vérifiez le volume utile, le kilométrage compris, l'aide nécessaire pour charger et le coût total.
+
+## Ce qui ne doit pas partir avec les encombrants
+
+La collecte sur rendez-vous ne prend pas les **gravats, déchets verts, pneus, peintures, huiles, bonbonnes de gaz, batteries, pièces automobiles ou déchets professionnels**. Certains relèvent d'une filière spécifique en déchèterie; d'autres exigent une prise en charge particulière. Le bon réflexe est de consulter la [liste officielle des exclusions](https://encombrants.limoges-metropole.fr/accueil), puis les [consignes de la déchèterie](https://www.limoges-metropole.fr/services/gestion-des-dechets-nos-missions/espace-decheteries) avant tout déplacement.
+
+Déposer un meuble sans autorisation sur la voie publique, même près des poubelles, **n'équivaut pas à une demande d'enlèvement**. La métropole rappelle que les dépôts sauvages sont sanctionnables. Un créneau confirmé, un don organisé ou un apport dans la bonne filière évitent de laisser un objet sur le trottoir sans solution.
 
 ## Article source exact à préserver et améliorer
 
