@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Thoiry Lumières Sauvages 2026-2027: dates, billets et visite en famille"
-subtitle: "Pachamama: prix, horaires et parcours nocturne avec les enfants"
-summary: "Du 17 octobre 2026 au 7 mars 2027, préparez Thoiry Lumières Sauvages: billets soirée ou journée, tarifs enfants, budget familial et parcours."
+subtitle: "Pachamama: tarifs vérifiés, billets soirée ou journée et parcours avec les enfants"
+summary: "Du 17 octobre 2026 au 7 mars 2027, choisissez entre soirée lumineuse et journée safari à Thoiry: prix 2026 vérifiés, budgets et précautions pour 2027."
 category: evenements
 location:
   city: Thoiry
@@ -97,7 +100,7 @@ affiliate:
   destination: Thoiry
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/index.md
   targetSha: 0a9c31bbe5a87d2bb7e57902b9abf4511fe88c19
@@ -124,31 +127,67 @@ radar:
       - billet soirée ou journée Thoiry
 ---
 
-## Mission retenue
-Actualiser la comparaison des billets de Thoiry Lumières Sauvages 2026-2027, notamment le billet Futé et les budgets familiaux.
+<!-- article-image-credit -->
+*Photo: [Harmonia Amanda](https://commons.wikimedia.org/wiki/File:PA00087655-Thoiry088.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot montre 149 impressions du 26 au 28 octobre contre 18 du 8 au 10 novembre, sans diagnostic de classement: cette baisse ne prouve aucune cause SEO. Une lacune indépendante existe: l'article annonce un billet Futé à 30 € adulte / 21 € enfant, à réserver sept jours avant. La page officielle des tarifs consultée le 13 novembre affiche à la place une offre « Prolongez l'été » à 25 € avec trois jours d'anticipation, explicitement limitée aux achats du 7 septembre au 12 octobre et aux visites jusqu'au 15 octobre. Il faut donc contrôler les offres réellement achetables en novembre, sans recycler cette promotion expirée.
+Du **17 octobre 2026 au 7 mars 2027**, **Thoiry Lumières Sauvages** revient dans les Yvelines avec sa neuvième édition, *Sur les traces de Pachamama*. Le parcours nocturne rassemble plus de **3 000 sculptures lumineuses sur près de 3 km**. Les familles peuvent venir uniquement pour les illuminations ou visiter le safari et le zoo en journée avant de poursuivre le soir. **Le festival n'est pas ouvert tous les jours** de cette période.
 
-## Décision du lecteur
-Savoir combien coûtera réellement une soirée seule ou une journée safari + illuminations pour sa famille, quelles formules sont encore disponibles et à quelles dates, et éviter un achat inadapté.
+## Billet soirée ou journée: tarifs et conditions
 
-## Faits à traiter
-- Recontrôler directement la billetterie et les pages officielles pour la période 2026-2027: billets soirée, Liberté, Futé et Pack Famille, âges, conditions, date limite et inclusion des illuminations. Si le Futé à 30/21 € n'est plus proposé, le retirer ou l'indiquer comme indisponible, sans le remplacer par l'ancienne promotion estivale.
-- Recalculer seulement les budgets affectés par les tarifs réellement vérifiés; distinguer les prix 2026 de ceux non confirmés pour 2027. Vérifier aussi le calendrier du soir choisi.
-- Préserver les explications soirée/journée, le parcours Pachamama, les conseils poussette et accessibilité prudents, l'application, les pauses, les photos, licences, crédits, liens internes et partenaires.
+<!-- article-image-body:01 -->
 
-## Sources de départ
-- Tarifs officiels: https://www.thoiry.net/tarifs/
-- Festival: https://www.thoiry.net/thoiry-lumieres-sauvages/
-- Calendrier: https://www.thoiry.net/calendrier-et-horaires/
-- Conditions pratiques: https://www.thoiry.net/informations-pratiques/
+![Girafes et zèbres sur le circuit safari en voiture de Thoiry, photographiés en avril 2022, hors festival.](/images/articles/2026/10/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille-body-01.webp)
 
-## Affiliation
-Conserver l'offre Klook Safari Thoiry uniquement après vérification de son périmètre et de l'âge tarifaire, et l'hébergement Booking.com déjà présent; ne pas multiplier les offres.
+<!-- /article-image-body:01 -->
 
-## Continuations internes
-Laisser les détails du safari animalier au guide Wow Safari Thoiry déjà lié. Ne pas changer la date de mise à jour sans amélioration tarifaire effective.
+Pour les **illuminations seules**, le billet coûte **23 € à partir de 11 ans** et **19 € de 3 à 10 ans**. Du **19 décembre 2026 au 2 janvier 2027**, le prix adulte passe à **25 €**, sans changement pour les enfants. L'entrée est gratuite avant 3 ans sur justificatif. Le tarif spécifique pour une personne en situation de handicap est affiché à **18 € sur justificatif**; les contraintes du parcours sont à vérifier avant l'achat. Le billet soirée n'inclut ni le safari ni le zoo en journée. Le parc indique qu'il est possible de l'acheter en ligne ou sur place.
+
+Les **billets journée** comprennent le safari en voiture, le zoo à pied et les illuminations **si le festival est ouvert le soir de la visite**. Les offres figurant sur la [page officielle des tarifs de Thoiry](https://www.thoiry.net/tarifs/), vérifiée le **13 novembre 2026**, sont:
+
+- **Liberté: 34 € à partir de 11 ans, 25 € de 3 à 10 ans.** Utilisable les jours d'ouverture jusqu'au **31 décembre 2026**, sans réservation de date. Non remboursable, non échangeable et non modifiable; l'accès n'est pas garanti en cas de forte affluence.
+- **Futé: 30 € à partir de 11 ans, 21 € de 3 à 10 ans.** Cette formule figure toujours sur la page officielle, avec achat en ligne **au moins sept jours avant** et une visite possible le jour choisi ou le lendemain si le parc est ouvert. Non remboursable, non échangeable et non modifiable. Vérifiez sa disponibilité dans la billetterie pour votre date avant de compter sur ce prix.
+- **Pack Famille: 118 € pour exactement deux adultes et trois enfants de 3 à 10 ans.** Achat en ligne au moins la veille, billet daté valable uniquement le jour choisi. Ce n'est pas un forfait pour deux adultes et deux enfants.
+
+**Attention aux promotions expirées:** une ancienne offre Futé « Prolongez l'été » à **25 €** concernait uniquement les achats du 7 septembre au 12 octobre 2026 et les visites jusqu'au 15 octobre. **Elle ne s'applique pas aux visites de novembre** et ne remplace pas le Futé classique à 30/21 € affiché sur la page officielle.
+
+Le **Pass Annuel** comprend également les illuminations les soirs où elles ont lieu. Les prix des billets journée et du Pack Famille indiqués ici sont ceux affichés pour **2026**: ne les considérez pas comme garantis pour janvier, février ou mars **2027**. Pour ces dates, vérifiez la formule et son prix au moment de choisir votre visite.
+
+Pour une journée avec les animaux, [le billet Safari Thoiry sur Klook](https://www.klook.com/fr/activity/139228-safari-thoiry-ticket-in-france/) mentionne l'accès aux Lumières Sauvages en hiver. **Vérifiez que la date choisie et l'édition 2026-2027 sont bien couvertes avant de payer.** Le revendeur applique le tarif adulte **dès 12 ans**, alors que le parc l'applique **dès 11 ans**: comparez le prix final selon l'âge de vos enfants. Cette offre ne doit pas être confondue avec un billet pour les seules illuminations.
+
+## Combien coûte la sortie pour quatre personnes ?
+
+Pour **deux adultes et deux enfants de 3 à 10 ans**, hors trajet et repas, selon les tarifs officiels affichés au 13 novembre 2026:
+
+- **Soirée seule: 84 €**, ou **88 €** du 19 décembre au 2 janvier.
+- **Journée avec billets Futé et illuminations: 102 €**, sous réserve que la formule soit achetable pour la date retenue, que le délai de sept jours soit respecté et que le festival ouvre ce soir-là.
+- **Journée avec billets Liberté et illuminations: 118 €**, pour une visite avant fin 2026 lorsque le festival ouvre.
+
+Ces budgets sont des **calculs à partir des tarifs publiés**, pas une garantie de disponibilité en billetterie. Pour une visite en **2027**, refaites le calcul avec les prix proposés à votre date.
+
+Si les enfants souhaitent surtout voir les lumières, la soirée suffit. Si vous souhaitez aussi observer les animaux, le billet journée évite de payer une seconde entrée, mais implique une visite beaucoup plus longue. Pour **deux adultes et trois enfants de 3 à 10 ans**, le Pack Famille à **118 €** est moins cher que cinq billets Futé à **123 €**, si ces formules sont proposées à votre date.
+
+Les circuits animaliers, les aires de jeux, le camion brousse et l'organisation d'une journée entière sont détaillés dans notre [guide Wow Safari Thoiry en famille](/articles/activites/wow-safari-thoiry-en-famille-tarifs-duree-et-conseils-pour-organiser-la-visite/).
+
+## Quels jours et à quelle heure venir ?
+
+Le festival est programmé **du 17 octobre 2026 au 7 mars 2027**, mais **pas chaque soir**. Il ouvre généralement de **17 h à 21 h**, avec une **dernière entrée à 20 h**. Certaines soirées se terminent à **20 h** (dernière entrée à **19 h**) et d'autres commencent à **18 h**. Comptez **environ 1 h 30** pour la promenade.
+
+Vérifiez [le calendrier officiel](https://www.thoiry.net/calendrier-et-horaires/) et les éventuelles annonces de fermeture avant de partir, même si vous détenez un billet journée: les horaires et ouvertures peuvent changer, notamment avec la météo. Pour voir les animaux avant les lumières, arrivez suffisamment tôt. Le parc avertit qu'une arrivée **après 14 h** ne permet pas de parcourir intégralement ses deux circuits animaliers.
+
+## Le parcours Pachamama avec des enfants
+
+L'histoire suit un aventurier à travers les océans, le Groenland, la Mongolie, l'Inde et le Pérou, à la recherche d'un secret lié à **Pachamama**, figure de la Terre-Mère dans les cultures andines. Sculptures, lumières et ambiance sonore accompagnent la promenade.
+
+Le circuit se déroule **dehors, sur un chemin forestier non aménagé**. Des chaussures adaptées à un sol humide et une **poussette à grandes roues** sont préférables avec de jeunes enfants. **Attention à l'accessibilité:** la page officielle du festival évoque l'accès des fauteuils adaptés, mais la page des tarifs indique que le parcours forestier n'est **pas adapté aux personnes à mobilité réduite**. Ces deux indications ne permettent pas de garantir l'accessibilité dans toutes les situations. **Contactez le parc au 01 34 87 40 67 avant de réserver** si un membre de votre famille utilise un fauteuil ou rencontre des difficultés de déplacement.
+
+L'application gratuite **WOW Animal Explorer** déclenche des contenus sonores géolocalisés. Elle est **facultative**; pour l'utiliser sans connexion pendant la visite, téléchargez le parcours à l'avance et activez la localisation.
+
+Pour les pauses, le parc annonce des **boissons chaudes, crêpes, gaufres et snacks**, notamment dans un chalet, ainsi qu'une offre de restauration au **Café Delicio**. Des **toilettes, tables de pique-nique et espaces abrités** sont également indiqués sur le parcours.
+
+## Dormir à proximité après les illuminations
+
+Pour un séjour dans les Yvelines, [Thoiry Etoile Lodge, Sure Hotel Collection by Best Western, sur Booking.com](https://www.booking.com/hotel/fr/auberge-du-chac-teau.fr.html) se trouve à Thoiry et propose notamment des chambres familiales. Renseignez **le nombre et l'âge des enfants** pour vérifier la capacité réelle, les disponibilités et le prix aux dates de votre visite. L'hébergement ne comprend pas automatiquement les billets du festival.
 
 ## Article source exact à préserver et améliorer
 
