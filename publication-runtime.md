@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,87 +14,138 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Pyrénées-Atlantiques
 - Région: Nouvelle-Aquitaine
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Transport scolaire dans les Pyrénées-Atlantiques en 2026-2027: Txik Txak ou Région Nouvelle-Aquitaine, comment s'organiser en famille?**
-
-Angle: aider les parents à identifier le bon réseau selon leur commune et le trajet domicile-établissement, puis à comprendre les démarches, les tarifs, les réductions et les solutions en cours d'année. Dans le département, les transports scolaires ne relèvent pas partout du même organisateur: TXIK TXAK dessert notamment le Pays basque, tandis que la Région Nouvelle-Aquitaine organise d'autres circuits scolaires.
-
-## Besoin du lecteur
-Savoir à quel organisme s'adresser, différencier circuit scolaire et ligne régulière, vérifier l'éligibilité et les pièces nécessaires, estimer le budget familial, comprendre les règles pour plusieurs enfants, et trouver une aide si l'inscription est tardive ou si la situation familiale change. Ne pas présenter les dates d'inscription estivales comme encore à venir en novembre.
-
-## Valeur éditoriale
-- Comparer clairement les deux circuits de démarches, que les pages institutionnelles présentent séparément: simulateur par communes de TXIK TXAK d'un côté, inscription régionale de l'autre.
-- Expliquer que, sur le territoire TXIK TXAK, un circuit scolaire nécessite une inscription spécifique alors qu'une ligne régulière peut relever d'un abonnement jeune; vérifier le trajet exact avant d'orienter.
-- Présenter les tarifs régionaux 2026-2027 selon statut d'ayant droit, quotient familial et internat/demi-pension, les frais de dossier et les réductions pour fratries, en les distinguant des tarifs et aides locaux TXIK TXAK.
-- Donner un exemple concret d'aide communale: le CCAS de Saint-Jean-de-Luz module son aide aux transports scolaires selon les ressources; ne pas généraliser cette aide à tout le département.
-- Préciser les démarches pour les élèves en situation de handicap, sans promettre une prise en charge automatique.
-- Point de vigilance rédactionnel: confirmer auprès des organisateurs les modalités d'inscription tardive et les tarifs applicables à la date de publication. Le 2 août 2026 était la date limite annoncée pour les inscriptions TXIK TXAK ordinaires; la date de remboursement régional du 15 octobre 2026 est passée.
-
-## Affiliation
-Aucune offre pertinente et vérifiée chez les partenaires autorisés pour l'action principale (inscription à un transport scolaire public, abonnement ou aide sociale). Les partenaires de billetterie, hébergement, location de véhicule, transferts, vélos et voyages ne constituent pas une alternative naturelle à ce service quotidien. Aucun lien commercial à ajouter.
-
-## Sources de départ
-- TXIK TXAK, transport scolaire et outil d'orientation selon les communes: https://www.txiktxak.fr/le-transport-scolaire/
-- TXIK TXAK, tarification solidaire et conditions: https://www.txiktxak.fr/titres-et-tarifs/la-tarification-solidaire/
-- Région Nouvelle-Aquitaine, organisation et tarifs 2026-2027: https://transports.nouvelle-aquitaine.fr/transports-scolaires
-- Région Nouvelle-Aquitaine, inscription et réductions familles nombreuses: https://transports.nouvelle-aquitaine.fr/transports-scolaires/inscription
-- Ville de Saint-Jean-de-Luz, transports scolaires et aide CCAS: https://www.saintjeandeluz.fr/fr/vie-quotidienne/famille-et-scolarite/scolarite/les-transports-scolaires/
-- Commune de Bardos, distinction ligne scolaire / ligne régulière: https://www.bardos.fr/i
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "vie-pratique"
+title: "Transport scolaire dans les Pyrénées-Atlantiques: TXIK TXAK ou Région en 2026-2027?"
+subtitle: "Identifier le bon service, connaître les tarifs et gérer une inscription en cours d'année"
+summary: "Pays basque ou reste du département: trouvez le bon interlocuteur pour le transport scolaire, les tarifs 2026-2027 et les démarches tardives."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "transport scolaire Pyrénées-Atlantiques 2026-2027"
+  - "inscription TXIK TXAK Nouvelle-Aquitaine"
+  - "tarifs bus scolaire 64"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Pyrénées-Atlantiques"
+  region: "Nouvelle-Aquitaine"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "TXIK TXAK - Le transport scolaire"
+    url: "https://www.txiktxak.fr/le-transport-scolaire/"
+  - title: "TXIK TXAK - Inscription aux lignes scolaires"
+    url: "https://www.txiktxak.fr/le-transport-scolaire/inscription-lignes-scolaires/"
+  - title: "TXIK TXAK - Questions fréquentes sur le transport scolaire"
+    url: "https://www.txiktxak.fr/le-transport-scolaire/faq-transport-scolaire/"
+  - title: "TXIK TXAK - Tarification solidaire"
+    url: "https://www.txiktxak.fr/titres-et-tarifs/la-tarification-solidaire/"
+  - title: "Région Nouvelle-Aquitaine - Transports scolaires"
+    url: "https://transports.nouvelle-aquitaine.fr/transports-scolaires"
+  - title: "Région Nouvelle-Aquitaine - Inscription"
+    url: "https://transports.nouvelle-aquitaine.fr/transports-scolaires/inscription"
+  - title: "Région Nouvelle-Aquitaine - Tarification"
+    url: "https://transports.nouvelle-aquitaine.fr/transports-scolaires/tarification"
+  - title: "Saint-Jean-de-Luz - Transports scolaires et aide du CCAS"
+    url: "https://www.saintjeandeluz.fr/fr/vie-quotidienne/famille-et-scolarite/scolarite/les-transports-scolaires/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Dans les Pyrénées-Atlantiques, l'inscription au bus scolaire dépend du domicile et de l'établissement de l'enfant. Une famille du Pays basque peut relever de TXIK TXAK, tandis qu'ailleurs dans le département le transport est notamment organisé par la Région Nouvelle-Aquitaine. Avant de comparer les prix ou de créer un compte, il faut donc identifier **le service qui dessert réellement le trajet**.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Quel réseau contacter pour votre enfant?
+
+**Sur le territoire TXIK TXAK**, commencez par l'[outil d'orientation du transport scolaire](https://www.txiktxak.fr/le-transport-scolaire/): renseignez la commune de résidence et celle de l'établissement. Le résultat permet de savoir quelle démarche suivre. Ne partez pas du principe qu'un bus régulier et un car scolaire fonctionnent avec le même titre.
+
+Pour une **ligne scolaire TXIK TXAK**, l'enfant doit être inscrit et se voit attribuer une ligne précise. L'abonnement scolaire donne également accès aux lignes régulières du réseau, mais pas à n'importe quelle autre ligne scolaire. Les modalités figurent sur la [page des inscriptions aux lignes scolaires](https://www.txiktxak.fr/le-transport-scolaire/inscription-lignes-scolaires/).
+
+**Pour un trajet relevant de la Région**, utilisez le [portail régional des transports scolaires](https://transports.nouvelle-aquitaine.fr/transports-scolaires). L'éligibilité dépend notamment des critères du règlement scolaire et de l'établissement fréquenté. Un enfant non ayant droit peut parfois être transporté, mais à un tarif différent: mieux vaut vérifier le dossier plutôt que supposer une prise en charge.
+
+## S'inscrire ou modifier son dossier en novembre 2026
+
+Les dates ordinaires de rentrée sont passées: TXIK TXAK avait fixé la limite au **2 août 2026**. Sa [FAQ officielle](https://www.txiktxak.fr/le-transport-scolaire/faq-transport-scolaire/) précise que les demandes hors délai sont examinées **dans la limite des places disponibles**, sans garantie de délivrance immédiate de la carte. Pour un déménagement, une nouvelle scolarisation ou une inscription oubliée, contactez le réseau sans attendre. TXIK TXAK répond au **05 47 75 76 64**, du lundi au vendredi de 8 h 30 à 12 h et de 13 h 30 à 17 h.
+
+Pour une première inscription TXIK TXAK, préparez une photo d'identité numérique et les données fiscales demandées; la FAQ mentionne le numéro fiscal ou, à défaut, l'avis d'imposition correspondant. Le compte « famille » permet d'inscrire plusieurs enfants et de suivre les dossiers. En renouvellement, la photo et la carte peuvent être conservées.
+
+La [Région propose toujours sa page d'inscription 2026-2027](https://transports.nouvelle-aquitaine.fr/transports-scolaires/inscription), mais l'affichage d'un formulaire ouvert ne garantit ni une place ni les mêmes conditions financières qu'en période normale. Vérifiez les frais applicables et la disponibilité du circuit auprès du service avant paiement. Pour les familles qui n'utilisent pas internet, un formulaire papier est également proposé.
+
+## Quel budget prévoir?
+
+### Avec la Région Nouvelle-Aquitaine
+
+Pour l'année scolaire **2026-2027**, les [tarifs régionaux](https://transports.nouvelle-aquitaine.fr/transports-scolaires) des élèves **ayants droit** sont répartis en cinq tranches liées aux ressources:
+
+- **Demi-pensionnaires**: de **30,60 € à 171,30 €** par an.
+- **Internes**: de **24,60 € à 137,70 €** par an.
+- **Non ayants droit**: **223,50 €** pour un demi-pensionnaire et **171,30 €** pour un interne.
+
+La [page d'inscription régionale](https://transports.nouvelle-aquitaine.fr/transports-scolaires/inscription) indique en outre **24 € de frais de dossier**, en complément du tarif de transport. Une famille avec plusieurs enfants doit les déclarer **tous dès la saisie initiale** pour permettre le calcul de la dégressivité liée à la fratrie. Un oubli nécessite ensuite l'intervention d'un agent. Le quotient familial et les justificatifs fiscaux influencent également le montant retenu.
+
+La Région décrit plusieurs [modalités de paiement](https://transports.nouvelle-aquitaine.fr/transports-scolaires/tarification), dont le paiement en trois fois sans frais pour les demandes reçues au plus tard le 31 janvier de l'année scolaire en cours. Une aide individuelle au transport peut aussi être étudiée pour un élève ayant droit lorsqu'aucun service scolaire ou TER adapté n'existe.
+
+### Avec TXIK TXAK
+
+Ne transposez pas les montants régionaux au Pays basque. Les conditions du transport scolaire TXIK TXAK sont propres au réseau et varient selon la situation de l'élève et du foyer. La [FAQ scolaire](https://www.txiktxak.fr/le-transport-scolaire/faq-transport-scolaire/) indique notamment une tarification réduite pour les inscriptions **à partir du 1er janvier**: 60 € pour les dossiers imposables et 30 € pour les non imposables. Cette règle ne signifie pas qu'une inscription en novembre est automatiquement facturée au prorata.
+
+Si l'enfant emprunte **une ligne régulière** plutôt qu'un circuit scolaire, vérifiez l'abonnement adapté. La [tarification solidaire TXIK TXAK](https://www.txiktxak.fr/titres-et-tarifs/la-tarification-solidaire/) prévoit notamment un abonnement annuel « Solidaire -28 ans » à **54 €** (équivalent 4,50 € par mois), sous conditions. Ce titre de réseau régulier ne remplace pas à lui seul une inscription obligatoire sur une ligne scolaire dédiée.
+
+## Une aide supplémentaire selon la commune
+
+À **Saint-Jean-de-Luz**, le CCAS prévoit pour 2026-2027 une [aide municipale au transport scolaire](https://www.saintjeandeluz.fr/fr/vie-quotidienne/famille-et-scolarite/scolarite/les-transports-scolaires/) de **26 € à 78 €**, modulée selon les ressources. Les familles concernées peuvent se renseigner au **1 rue Augustin Chaho** ou au **05 59 51 61 40**. Il s'agit d'une aide locale: elle ne s'applique pas automatiquement à Bayonne, Pau ou au reste du département.
+
+## Garde alternée, handicap ou changement de trajet
+
+Pour une **garde alternée**, TXIK TXAK prévoit la possibilité de deux trajets correspondant aux domiciles parentaux, selon les conditions exposées dans sa [FAQ](https://www.txiktxak.fr/le-transport-scolaire/faq-transport-scolaire/). Signalez la situation avant de finaliser le dossier.
+
+Pour un **élève en situation de handicap**, une solution adaptée peut être étudiée par le Département des Pyrénées-Atlantiques. La [page TXIK TXAK](https://www.txiktxak.fr/le-transport-scolaire/) oriente vers **transports.autonomie@le64.fr** ou le **05 59 11 43 19**. La prise en charge dépend de l'examen de la situation; elle n'est pas automatique.
+
+Enfin, en cas de déménagement ou de changement d'établissement, faites vérifier la nouvelle ligne et les droits associés avant d'utiliser l'ancienne carte. Pour éviter une mauvaise surprise, retenez surtout cet ordre: **identifier l'organisateur, confirmer le trajet, puis vérifier le tarif et la place disponible**.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -123,4 +174,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
