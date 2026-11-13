@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Noël au château de Cheverny 2026: billets, mapping et visite en famille"
-subtitle: "Décors, illuminations, tarifs et horaires: préparer la sortie sans se tromper de billet"
-summary: Du 28 novembre 2026 au 10 janvier 2027, le château de Cheverny annonce des décors et un mapping de Noël. Tarifs des deux billets, jeu de piste, accès avec des enfants et horaires encore à confirmer.
+title: "Noël au château de Cheverny 2026: billets, mapping et animations en famille"
+subtitle: Visite complète ou illuminations seules, prix et dates du Père Noël, du jeu de piste et du spectacle équestre
+summary: Du 28 novembre 2026 au 10 janvier 2027, Cheverny propose décors, mapping et animations familiales. Comparez les billets à 15,50 € et 10,50 €, les dates du Père Noël et les conseils pratiques.
 category: evenements
 location:
   city: Cheverny
@@ -101,7 +104,7 @@ affiliate:
   destination: Cheverny
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/index.md
   targetSha: 803bf8aaeeed0632b687cd5f9643f8aebfe5e897
@@ -128,32 +131,72 @@ radar:
       - Cheverny jeu de piste Noël enfants
 ---
 
-## Mission retenue
-Actualiser l'article existant « Noël au château de Cheverny 2026 » pour refléter le programme officiel désormais détaillé, sans réécriture inutile.
+<!-- article-image-credit -->
+*Photo: [Rolf Kranz](https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Cheverny,_fa%C3%A7ade_sud_et_parc.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC consolidé au 10 novembre montre 102 puis 17 impressions sur deux fenêtres de trois jours, signal `needs_query_check`: aucune cause SEO n'est démontrée. En revanche, une lacune indépendante est vérifiée: l'article présente encore les informations 2026 comme incertaines et annonce un billet mapping à 9,50 €/8 €, alors que le château affiche désormais 10,50 €/9 € et publie les animations datées.
+Du **28 novembre 2026 au 10 janvier 2027**, le château de Cheverny, dans le Loir-et-Cher, se pare de décorations de Noël dans ses salles et jardins. À la tombée de la nuit, un **mapping lumineux anime sa façade**. Deux façons de profiter de la sortie: visiter le château puis rester pour les illuminations, ou venir seulement pour les lumières avec un billet spécifique. Le [programme officiel de Noël 2026](https://www.chateau-cheverny.fr/evenements/noel-chateau) précise désormais les animations et leurs dates.
 
-## Décision du lecteur
-Savoir quel billet acheter, combien dépenser et quand venir avec les enfants pour profiter du mapping, du jeu de piste, du Père Noël ou du spectacle équestre.
+## Visite complète ou mapping seul: quel billet choisir ?
 
-## Faits à traiter
-- Corriger le mapping seul: 10,50 € plein tarif et 9 € réduit; entrée possible après 16h30, ou 17h pendant les vacances. Recalculer le comparatif avec le billet château et jardins à 15,50 € adulte, 11,50 € réduit, gratuit avant 7 ans. Ne pas déduire une gratuité mapping non confirmée.
-- Remplacer les anciennes réserves liées au programme 2025: jeu de piste gratuit des 7-14 ans du 28 novembre 2026 au 10 janvier 2027; Père et Mère Noël les 6 et 13 décembre (programmes distincts); spectacle équestre du 25 décembre au 1er janvier à 15h, durée 45 min, supplément 8 € dès 3 ans, arrivée 15 min avant.
-- Mettre à jour les horaires de la maison du chocolat (16h-18h30 hors week-ends et vacances, 12h-18h30 pendant ceux-ci), l'Orangerie (12-13 décembre et vacances) et le kiosque (5-6 décembre). Le mapping commence à la tombée de la nuit, sans horaire fixe garanti.
-- Préserver impérativement les informations utiles sur les billets sur place sans réservation, accès Rémi et retour après mapping, parkings, poussettes, tables à langer, accessibilité, trois images avec licences et crédits, maillage vers Blois et Chambord et lien Booking.com.
+<!-- article-image-body:01 -->
 
-## Sources de départ
-- https://www.chateau-cheverny.fr/evenements/noel-chateau
-- https://www.chateau-cheverny.fr/evenements/journee-noel
-- https://www.chateau-cheverny.fr/informations-pratiques/tarifs
+![Salle à manger du château de Cheverny et panneau peint illustrant Don Quichotte, hors décorations de Noël](/images/articles/2026/10/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille-body-01.webp)
 
-## Affiliation
-Hébergement existant à Cour-Cheverny sur Booking.com à conserver avec vérification des caractéristiques de chambre; pas de lien de billetterie partenaire inventé.
+*Photo: [Fab5669](https://commons.wikimedia.org/wiki/File:Cheverny_-_ch%C3%A2teau,_int%C3%A9rieur_(03).jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
 
-## Continuations internes
-- Maintenir le renvoi vers le guide Blois sans voiture pour le trajet en transports.
-- Maintenir le renvoi vers Noël à Chambord, sans mélanger les programmes.
+<!-- /article-image-body:01 -->
+
+La visite **château et jardins dure environ 1 h 30 à 1 h 45**. La salle à manger présente une table de fête gourmande; dans les jardins, sapins, décors géants et tables illuminées prolongent la visite. Le billet classique comprend les illuminations: arriver en milieu d'après-midi permet de découvrir les intérieurs avant la nuit.
+
+Le billet **mapping seul**, moins cher, donne accès aux illuminations, **pas à la visite des salles**. Il est proposé **après 16 h 30**, ou **après 17 h pendant les vacances scolaires**. La dernière entrée pour visiter le château est fixée à **17 h**, ou **17 h 30 pendant les vacances**. Les illuminations commencent **à la tombée de la nuit**, sans heure de projection fixe garantie. Le château conseille de rester jusqu'à **18 h 30**.
+
+**Les billets s'achètent uniquement sur place, sans réservation en ligne.** Vérifiez les horaires de votre journée sur le [site du château](https://www.chateau-cheverny.fr/informations-pratiques/tarifs), surtout pendant les vacances.
+
+## Tarifs et exemples de budget familial
+
+- **Château et jardins, illuminations comprises:** 15,50 € par adulte, 11,50 € au tarif réduit, gratuit pour les moins de 7 ans.
+- **Mapping seul:** 10,50 € au plein tarif et 9 € au tarif réduit.
+
+Pour **deux adultes**, la visite complète coûte **31 €**, contre **21 €** pour le mapping seul, soit **10 € de différence**. Pour **deux adultes et un enfant de 7 à 14 ans bénéficiant du tarif réduit**, comptez **42,50 €** pour la visite complète ou **30 €** pour le mapping seul. Le tarif réduit concerne notamment les 7-14 ans, les lycéens, les étudiants de moins de 25 ans et certains autres publics avec justificatif.
+
+**Attention aux moins de 7 ans:** la gratuité est confirmée pour le billet château et jardins, mais le château ne précise pas explicitement le tarif de cet âge pour le mapping seul. Demandez-le à la billetterie avant de calculer votre budget. Pour le billet château et jardins, le site indique également la gratuité pour les titulaires de la carte d'invalidité, avec tarif normal pour l'accompagnateur; vérifiez les justificatifs et conditions applicables.
+
+## Quelles dates choisir avec les enfants ?
+
+<!-- article-image-body:02 -->
+
+![Bâtiment de l'Orangerie de Cheverny vu depuis l'allée du parc au printemps, sans décoration de Noël](/images/articles/2026/10/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille-body-02.webp)
+
+*Photo: [Telemaque MySon](https://commons.wikimedia.org/wiki/File:The_Orangerie_at_Cheverny.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Le **jeu de piste gratuit pour les 7-14 ans** se déroule du **28 novembre 2026 au 10 janvier 2027**: les enfants recherchent sept ingrédients magiques cachés dans le château. Il s'inscrit dans la visite des intérieurs, et non dans une sortie limitée au mapping.
+
+Les **6 et 13 décembre**, le Père Noël et la Mère Noël viennent au domaine. Le **6 décembre**, un chœur d'enfants chante à l'Orangerie de 15 h à 16 h, avant leur arrivée à 16 h; une danse en extérieur est prévue sous réserve de la météo, puis une distribution de cadeaux et des photos dans la salle des trophées. Le **13 décembre**, un piano roulant parcourt le domaine à **14 h 30, 15 h 30 et 16 h 30**, avec arrivée du Père Noël et de la Mère Noël annoncée à **16 h**, puis rencontre dans la salle des trophées. Consultez le [programme officiel des deux journées](https://www.chateau-cheverny.fr/evenements/journee-noel) pour les dernières précisions.
+
+Du **25 décembre au 1er janvier inclus**, un **spectacle équestre de 45 minutes** est prévu chaque jour à **15 h**. Le supplément est de **8 € par personne dès 3 ans**, en plus du billet d'entrée. Il faut arriver **15 minutes avant**. Pour deux adultes et un enfant de 7 à 14 ans au tarif réduit, la visite château et jardins avec ce spectacle revient ainsi à **66,50 €**.
+
+## Où prendre un goûter ou déjeuner ?
+
+La **maison du chocolat** et la boutique du village de Noël ouvrent de **16 h à 18 h 30 en semaine hors vacances**, et de **12 h à 18 h 30 les week-ends et pendant les vacances scolaires**. Chocolat chaud, crêpes et gaufres permettent une pause avant les illuminations.
+
+L'**Orangerie** ouvre les **12 et 13 décembre** ainsi que pendant les vacances de Noël, avec restauration légère ou déjeuner selon les jours. Le **kiosque près de l'Orangerie** est annoncé les **5 et 6 décembre**. Ne comptez donc pas sur ces deux points de restauration à toutes les dates.
+
+## Accès, poussettes et retour après les lumières
+
+Le château se trouve **avenue du Château, 41700 Cheverny**. Il dispose de **trois parkings gratuits**: le **P1** est le plus proche de l'entrée, le **P2** se situe à environ 250 m et le **P3**, également à 250 m, est **réservé aux camping-cars en journée**. Prévoyez des vêtements chauds pour les parties extérieures.
+
+Les **poussettes circulent dans les jardins**, mais **pas dans les salles du château**: elles sont gardées à l'entrée des intérieurs. Des **tables à langer** sont signalées aux toilettes du parking P1 et de l'Orangerie. Un **perron extérieur limite fortement l'accès au château en fauteuil roulant**; contactez le domaine pour connaître les possibilités adaptées à votre situation.
+
+**Sans voiture, vérifiez le retour avant de choisir le mapping.** Depuis septembre 2026, la **ligne Rémi 4** dessert Cheverny toute l'année. Le réseau annonce toutefois un passage de retour à l'arrêt **« l'Orme » vers 16 h 40**: ce départ ne permet pas d'assister au mapping puis de rentrer à Blois. Ne supposez pas qu'un autre car circule après les illuminations; contrôlez la fiche horaire du jour et organisez un retour adapté. Notre [guide de Blois sans voiture, avec Chambord et Cheverny](/articles/voyages/blois-sans-voiture-en-2026-3-jours-pour-chambord-cheverny-et-le-centre-ville/) aide à préparer les autres trajets du séjour.
+
+## Dormir près de Cheverny après les illuminations
+
+Si la visite s'inscrit dans un week-end, le [Relais des Trois Châteaux à Cour-Cheverny sur Booking.com](https://www.booking.com/hotel/fr/relais-des-trois-chac-teaux.fr.html) se situe à environ **800 m du château**. Il propose des **chambres familiales pour trois ou quatre personnes**, selon leur configuration. Vérifiez les lits, les conditions d'accueil des enfants, l'heure d'arrivée et les disponibilités pour vos dates: aucun prix ni hébergement disponible à Noël n'est garanti ici.
+
+Pour une autre sortie dans le même département, notre article sur [Noël à Chambord 2026 avec des enfants](/articles/evenements/noel-a-chambord-2026-avec-des-enfants-quand-venir-et-que-prevoir/) détaille un programme distinct, avec des animations surtout en décembre.
 
 ## Article source exact à préserver et améliorer
 
@@ -283,10 +326,10 @@ Pour une autre sortie dans le même département, notre article sur [Noël à Ch
 - /articles/sorties/chateau-de-chambord-en-famille-tarifs-2026-activites-et-conseils-de-visite/ | Château de Chambord en famille: tarifs 2026, activités et conseils de visite | sorties | Chambord, Loir-et-Cher, Centre-Val de Loire
 - /articles/evenements/noel-2026-au-chateau-royal-de-blois-decors-spectacles-et-visites-selon-l-age/ | Noël 2026 au château royal de Blois: décors, spectacles et tarifs en famille | evenements | Blois, Loir-et-Cher, Centre-Val de Loire
 - /articles/activites/chateau-de-bouges-en-famille-jardins-livret-jeu-et-ecuries/ | Château de Bouges en famille: jardins, livret-jeu et écuries | activites | Bouges-le-Château, Indre, Centre-Val de Loire
-- /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | Noël 2026 à Chantilly: Le Noël oublié, billets et séances en famille | evenements | Chantilly, Oise, Hauts-de-France
-- /articles/evenements/noel-2026-au-chateau-de-grignan-dates-tarifs-et-visite-en-famille/ | Noël 2026 au château de Grignan: dates, tarifs et visite en famille | evenements | Grignan, Drôme, Auvergne-Rhône-Alpes
-- /articles/sorties/halloween-2026-a-france-miniature-en-famille/ | Halloween 2026 à France Miniature avec des enfants: billets et visite | sorties | Élancourt, Yvelines, Île-de-France
-- /articles/voyages/blois-sans-voiture-en-2026-3-jours-pour-chambord-cheverny-et-le-centre-ville/ | Blois sans voiture en 2026: 3 jours pour Chambord, Cheverny et le centre-ville | voyages | Blois, Loir-et-Cher, Centre-Val de Loire
+- /articles/evenements/noel-2026-a-paris-la-defense-en-famille-marche-animations-ou-patinoire/ | Noël 2026 à Paris La Défense en famille: marché, animations et patinoire | evenements | Puteaux, Hauts-de-Seine, Île-de-France
+- /articles/evenements/noel-2026-a-quimper-en-famille-village-concert-ou-ateliers-gratuits/ | Noël 2026 à Quimper en famille: village, concert et animations gratuites | evenements | Quimper, Finistère, Bretagne
+- /articles/evenements/noel-a-provins-2026-en-famille-marche-medieval-ou-visite-guidee/ | Noël à Provins 2026: marché médiéval, animations et visites en famille | evenements | Provins, Seine-et-Marne, Île-de-France
+- /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | Marché de Noël de Bordeaux 2026 en famille: horaires, animations et budget | evenements | Bordeaux, Gironde, Nouvelle-Aquitaine
 - /articles/evenements/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/ | Noël au château de Cheverny 2026: billets, mapping et visite en famille | evenements | Cheverny, Loir-et-Cher, Centre-Val de Loire
 - /articles/parentalite/laep-dans-le-loir-et-cher-ou-rencontrer-d-autres-parents-avec-son-tout-petit/ | LAEP dans le Loir-et-Cher: où rencontrer d'autres parents avec son tout-petit ? | parentalite | Loir-et-Cher, Centre-Val de Loire
 - /articles/cuisine/ateliers-de-cuisine-en-famille-dans-le-loir-et-cher-chocolat-patisserie-ou-legumes/ | Ateliers de cuisine en famille dans le Loir-et-Cher: chocolat, pâtisserie ou légumes ? | cuisine | Loir-et-Cher, Centre-Val de Loire
@@ -296,7 +339,7 @@ Pour une autre sortie dans le même département, notre article sur [Noël à Ch
 - /articles/vie-pratique/transport-scolaire-remi-41-que-faire-apres-la-rentree/ | Transport scolaire Rémi 41: que faire après la rentrée ? | vie-pratique | Romorantin-Lanthenay, Loir-et-Cher, Centre-Val de Loire
 - /articles/activites/balade-en-bateau-a-saint-dye-sur-loire-journee-pique-nique-ou-crepuscule/ | Balade en bateau à Saint-Dyé-sur-Loire: journée, pique-nique ou crépuscule ? | activites | Saint-Dyé-sur-Loire, Loir-et-Cher, Centre-Val de Loire
 - /articles/evenements/noel-a-chambord-2026-avec-des-enfants-quand-venir-et-que-prevoir/ | Noël à Chambord 2026 avec des enfants: quand venir et que prévoir | evenements | Chambord, Loir-et-Cher, Centre-Val de Loire
-- /articles/voyages/beauval-a-la-toussaint-2026-billets-duree-de-visite-et-hebergement/ | Beauval à la Toussaint 2026: billets, durée de visite et hébergement | voyages | Saint-Aignan, Loir-et-Cher, Centre-Val de Loire
+- /articles/voyages/blois-sans-voiture-en-2026-3-jours-pour-chambord-cheverny-et-le-centre-ville/ | Blois sans voiture en 2026: 3 jours pour Chambord, Cheverny et le centre-ville | voyages | Blois, Loir-et-Cher, Centre-Val de Loire
 - /articles/evenements/chambly-kids-festival-2027-quatre-spectacles-pour-les-enfants-dates-et-ages/ | Chambly Kids Festival 2027: quatre spectacles pour les enfants, dates et âges | evenements | Chambly, Oise, Hauts-de-France
 - /articles/evenements/festival-tete-de-mioche-2027-a-l-horme-quels-spectacles-choisir-avec-les-enfants/ | Festival Tête de mioche 2027 à L'Horme: quels spectacles choisir avec les enfants ? | evenements | L'Horme, Loire, Auvergne-Rhône-Alpes
 - /articles/evenements/festival-mini-kids-2027-aux-orres-trois-jours-pour-les-3-6-ans/ | Festival Mini Kids 2027 aux Orres, trois jours pour les 3-6 ans | evenements | Les Orres, Hautes-Alpes, Provence-Alpes-Côte d’Azur
@@ -305,12 +348,13 @@ Pour une autre sortie dans le même département, notre article sur [Noël à Ch
 ### Historique Radar lié
 
 - opportunity | /articles/evenements/bd-boum-2026-a-blois-en-famille-ateliers-bd-expositions-et-cinema-selon-l-age/ | 2026-10-18T19:49:09.191Z
-- opportunity | /articles/sorties/halloween-2026-a-france-miniature-en-famille/ | 2026-10-08T18:25:52.752Z
+- opportunity | /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | 2026-10-21T07:36:18.372Z
 - opportunity | /articles/evenements/monstrozoo-2026-2027-a-beauval-enquete-libre-ou-visite-guidee-en-famille/ | 2026-10-22T15:49:20.816Z
-- opportunity | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-10-26T21:31:06.119Z
-- refresh | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-11-12T18:32:15.897Z
+- opportunity | /articles/evenements/noel-2026-a-paris-la-defense-en-famille-marche-animations-ou-patinoire/ | 2026-11-01T01:35:08.448Z
+- opportunity | /articles/evenements/noel-2026-a-quimper-en-famille-village-concert-ou-ateliers-gratuits/ | 2026-11-01T18:35:45.871Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/ | 2026-10-23T19:58:30.214Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-royal-de-blois-decors-spectacles-et-visites-selon-l-age/ | 2026-10-27T22:28:21.356Z
+- opportunity | /articles/evenements/noel-a-provins-2026-en-famille-marche-medieval-ou-visite-guidee/ | 2026-10-24T03:31:56.628Z
 
 ### Phases 2 et 3
 
