@@ -385,3 +385,4 @@ automation/image-hero-20261113-rattrapage-02|fe0b5114925f10ca32ea468f081176ae867
 automation/image-hero-20261113-rattrapage-03|cb35325b3ec05af019d9714602f74b4dddd74f9b
 automation/image-hero-20261113-rattrapage-03|3098cb6db4a35e3c5f57cc0058f7c4ff2c4a5e84
 automation/image-hero-20261113-rattrapage-04|ad4cdc5bee519fc29cd4feea5bd3bd0775f85667
+automation/image-hero-20261113-rattrapage-04|80bde81093409ec03717d1406c58c44709d900df
