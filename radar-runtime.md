@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Noël 2026 au château de Goulaine: dates, billets et conseils en famille"
-subtitle: "Un spectacle immersif d'environ une heure près de Nantes: poussettes, accessibilité et accès à vérifier avant la sortie"
-summary: Dates de Noël 2026, réservation, durée, contraintes avec les enfants, accessibilité, restauration et transports pour la Merveilleuse Histoire du Père Noël au château de Goulaine.
+subtitle: "Un spectacle immersif d'environ une heure près de Nantes: attention au dernier car pour rentrer après la séance"
+summary: "Noël 2026 au château de Goulaine: réservation, durée, poussettes, accessibilité et horaires du car Aléop 331 pour préparer le retour vers Nantes."
 category: evenements
 location:
   city: Haute-Goulaine
@@ -79,6 +82,10 @@ sources:
     url: https://www.goulaine-spectacles.com/
   - title: Placeminute - Billetterie 2026
     url: https://polaris-horslesmurs.placeminute.com/event/immersive-experience/polaris-presente-la-merveilleuse-histoire-du-pere-noel-2026-chateau-de-goulaine,47483.html
+  - title: Aléop - Rechercher un horaire
+    url: https://aleop.paysdelaloire.fr/je-recherche-un-horaire-aleop
+  - title: Horaires publiés ligne 331 à Allée du Château
+    url: https://hbus.fr/stop/allee-du-chateau-3-2d9b16dd-6fac-4362-b10c-e4bc195a12b5
 eventEndsAt: 2026-12-20
 topic:
   key: evenements|haute-goulaine|noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille|2026
@@ -97,7 +104,7 @@ affiliate:
   destination: Haute-Goulaine
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(11)/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/index.md
   targetSha: c664e1423dc8b4d27603f434820c1adee339eda3
@@ -126,29 +133,49 @@ radar:
       - noel haute goulaine
 ---
 
-## Mission retenue
-Actualiser uniquement les conseils de transport pour « La Merveilleuse Histoire du Père Noël » au château de Goulaine, près de Nantes.
+<!-- article-image-credit -->
+*Photo: [Selbymay](https://commons.wikimedia.org/wiki/File:Haute-Goulaine_-_Chateau_08.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC indique 192 impressions sur trois jours puis 1, sans cause SEO établie. Lacune indépendante et utile: l'article cite le car Aléop 331 mais n'avertit pas clairement qu'il ne dessert pas l'arrêt le dimanche et que les derniers retours vers Nantes précèdent les séances tardives. Le spectacle commence ce 13 novembre.
+Au château de Goulaine, près de Nantes, **La Merveilleuse Histoire du Père Noël** invite les familles à traverser des décors féériques avec des comédiens plutôt qu'à assister à un spectacle assis. Le parcours dure **environ une heure, à l'intérieur du château**. Avant de réserver, retenez deux contraintes importantes: **les poussettes doivent rester à l'accueil** et l'organisateur annonce un parcours **non accessible aux personnes à mobilité réduite**. Si vous venez de Nantes en car, vérifiez surtout votre retour: **la ligne 331 ne permet pas de rentrer après une séance du vendredi soir et ne circule pas le dimanche selon les horaires publiés**.
 
-## Décision du lecteur
-Déterminer si le trajet aller-retour en car est réalisable pour la séance choisie, sinon prévoir un autre transport ou renoncer à cette date.
+## Dates, séances et billets de Noël 2026
 
-## Faits à traiter
-Vérifier sur les horaires Aléop applicables aux dates de visite les dessertes de l'arrêt « Allée du Château » vers Nantes: absence de service dominical selon les horaires publiés et dernier passage théorique du samedi vers Nantes à 18 h 50, sous réserve de confirmation officielle. Le vendredi, vérifier aussi le dernier retour avant de conseiller une séance tardive. Ne pas présenter les plages d'ouverture du spectacle comme des départs de séance. Les dates contradictoires du site organisateur (13 novembre-20 décembre contre 14 novembre-21 décembre) restent à résoudre par la billetterie, sans inventer de calendrier. Préserver durée, contraintes poussettes/PMR, restauration, photographies, licences, crédits et affiliation existante.
+La [programmation générale de Polaris](https://www.goulaine-spectacles.com/) affiche **du 13 novembre au 20 décembre 2026**, mais certaines pages de présentation indiquent encore **du 14 novembre au 21 décembre**. Ces dates contradictoires proviennent du même organisateur: pour choisir une sortie, vérifiez les **séances effectivement proposées dans la billetterie 2026**, dont le lien figure dans les informations officielles.
 
-## Sources de départ
-- https://aleop.paysdelaloire.fr/je-recherche-un-horaire-aleop
-- https://hbus.fr/stop/allee-du-chateau-3-2d9b16dd-6fac-4362-b10c-e4bc195a12b5
-- https://www.goulaine-spectacles.com/
-- https://www.goulaine-spectacles.com/pratique
+Les horaires généraux communiqués sont le vendredi de 18 h 30 à 23 h, le samedi de 9 h à 23 h et le dimanche de 9 h à 21 h. **Ce sont des plages d'ouverture, pas les heures de départ de chaque séance.** Le tarif final et les éventuelles conditions selon l'âge doivent également être vérifiés lors du choix des billets: aucun tarif enfant ni accès gratuit pour les tout-petits n'a pu être confirmé de manière fiable.
 
-## Affiliation
-Conserver le lien Booking.com vers l'Hôtel de la Louée; aucune autre offre vérifiée.
+## À quoi s'attendre avec les enfants ?
 
-## Continuations internes
-Ne pas développer les animations de Nantes: renvoyer au guide Noël à Nantes déjà présent. Ne pas remplacer les horaires du transporteur par une estimation. Ne pas modifier d'autres articles.
+<!-- article-image-body:01 -->
+
+![Détail d'un plafond Renaissance à l'intérieur du château de Goulaine, hors spectacle de Noël](/images/articles/2026/11/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille-body-01.webp)
+
+*Photo: [Caugris](https://commons.wikimedia.org/wiki/File:Plafond_au_ch%C3%A2teau_de_Goulaine.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Le spectacle fait découvrir une dizaine de mises en scène autour de l'histoire du Père Noël, notamment des ateliers, des jouets, des lutins et des personnages costumés. C'est une formule à privilégier si vos enfants aiment avancer au fil d'une histoire vivante. Pour ceux qui supportent difficilement un parcours d'une heure, prenez en compte la durée avant d'acheter.
+
+**Avec un bébé**, un porte-bébé peut être utile: Polaris précise que les poussettes ne sont pas admises dans le spectacle et doivent être déposées à l'accueil. Les **toilettes sont annoncées à l'issue du parcours**; anticipez les besoins des enfants avant d'entrer. Aucun espace de change n'est confirmé dans les informations publiées.
+
+**Accessibilité:** l'organisateur indique expressément que le spectacle n'est pas accessible aux personnes à mobilité réduite. Si un membre de la famille rencontre des difficultés de déplacement, contactez Polaris avant de réserver. Aucun âge minimum n'est confirmé dans les informations officielles consultées.
+
+## Venir de Nantes: attention au dernier car 331
+
+Le château se trouve **allée du Château, 44115 Haute-Goulaine**, à environ quinze minutes de Nantes selon l'organisateur. Un parking est annoncé. Polaris mentionne le **car Aléop 331, arrêt « Allée du Château »**, mais la desserte ne convient pas à toutes les séances.
+
+Selon les [horaires théoriques publiés pour cet arrêt](https://hbus.fr/stop/allee-du-chateau-3-2d9b16dd-6fac-4362-b10c-e4bc195a12b5), les derniers passages **vers Nantes** sont à **17 h 20 du lundi au vendredi** et **18 h 50 le samedi**. **Aucun passage n'est indiqué le dimanche.** Cela exclut le retour en ligne 331 après une séance du vendredi soir et après les séances tardives du samedi. Même pour une séance du samedi en journée, comptez environ une heure de spectacle et le temps de rejoindre l'arrêt avant de choisir vos billets.
+
+Ces horaires sont théoriques et peuvent varier selon la date, les vacances et les perturbations. Avant toute réservation, contrôlez **l'aller et le retour** sur le [calculateur officiel Aléop](https://aleop.paysdelaloire.fr/je-recherche-un-horaire-aleop), pour le jour et l'heure de votre séance. Si aucun retour compatible n'est proposé, prévoyez un autre moyen de transport pour l'ensemble de la famille ou choisissez une autre séance; ne comptez pas sur un car après la fermeture du spectacle.
+
+Une **buvette et de la restauration** sont annoncées sur place. La présence d'un repas complet, d'une offre pour bébé ou de services particuliers n'est toutefois pas confirmée: mieux vaut en tenir compte pour une sortie à l'heure du dîner.
+
+Si vous passez la journée dans la région, notre [guide de Noël à Nantes 2026](https://www.fam-space.fr/articles/evenements/noel-a-nantes-2026-marche-gratuit-ou-visite-guidee-du-voyage-en-hiver/) présente les animations de la ville. Ce sont deux sorties différentes, avec un déplacement à organiser entre Nantes et Haute-Goulaine.
+
+## Dormir près du château
+
+Pour une famille qui vient de plus loin, l'[Hôtel de la Louée à Haute-Goulaine sur Booking.com](https://www.booking.com/hotel/fr/ha-tel-de-la-loua-c-e.fr.html) constitue une piste de séjour à examiner. Vérifiez la capacité réelle de la chambre selon le nombre et l'âge des enfants, les disponibilités et le prix pour vos dates: une chambre triple ne convient pas automatiquement à quatre personnes.
 
 ## Article source exact à préserver et améliorer
 
