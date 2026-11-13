@@ -1,71 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-12T03:33:45+01:00",
-  "dataThrough": "2026-11-09",
-  "from": "2026-10-13",
+  "generatedAt": "2026-11-13T03:30:25+01:00",
+  "dataThrough": "2026-11-10",
+  "from": "2026-10-14",
   "refresh": [
-    {
-      "url": "/articles/sorties/aquarium-de-lyon-en-famille-nouveautes-ocean-360-tarifs-et-visite/",
-      "title": "Aquarium de Lyon en famille: nouveautés Océan 360°, tarifs et visite",
-      "category": "sorties",
-      "publishedAt": "2026-10-19T07:22:08+02:00",
-      "location": {
-        "city": "La Mulatière",
-        "department": "Rhône",
-        "region": "Auvergne-Rhône-Alpes"
-      },
-      "ageDays": 24,
-      "rapidDrop": true,
-      "peakStart": "2026-10-25",
-      "peakEnd": "2026-10-27",
-      "recentStart": "2026-11-07",
-      "recentEnd": "2026-11-09",
-      "peakImpressions": 34,
-      "recentImpressions": 11,
-      "score": 69,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 34 impressions sur trois jours, puis 11 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 1,
-      "focusQueries": [
-        "ocean 360",
-        "aquarium tarif",
-        "prix aquarium lyon"
-      ]
-    },
-    {
-      "url": "/articles/maison/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/",
-      "title": "Meubles d'occasion en Meurthe-et-Moselle: où acheter, donner et réparer ?",
-      "category": "maison",
-      "publishedAt": "2026-10-29T00:59:22+01:00",
-      "location": {
-        "city": "",
-        "department": "Meurthe-et-Moselle",
-        "region": "Grand Est"
-      },
-      "ageDays": 14,
-      "rapidDrop": true,
-      "peakStart": "2026-10-30",
-      "peakEnd": "2026-11-01",
-      "recentStart": "2026-11-07",
-      "recentEnd": "2026-11-09",
-      "peakImpressions": 23,
-      "recentImpressions": 1,
-      "score": 66,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 23 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "achat vente meuble moselle",
-        "emmaüs meuble",
-        "magasin occasion meuble",
-        "depot meubles occasion",
-        "magasin de meuble de seconde main"
-      ]
-    },
     {
       "url": "/articles/voyages/visiter-la-cite-du-volcan-en-famille-a-la-reunion/",
       "title": "Visiter la Cité du Volcan en famille à La Réunion",
@@ -76,12 +14,12 @@
         "department": "La Réunion",
         "region": "La Réunion"
       },
-      "ageDays": 20,
+      "ageDays": 21,
       "rapidDrop": true,
       "peakStart": "2026-10-26",
       "peakEnd": "2026-10-28",
-      "recentStart": "2026-11-07",
-      "recentEnd": "2026-11-09",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
       "peakImpressions": 22,
       "recentImpressions": 2,
       "score": 60,
@@ -95,94 +33,6 @@
       ]
     },
     {
-      "url": "/articles/activites/visiter-le-nouveau-musee-m24-au-mans-en-famille-billets-parcours-et-circuit/",
-      "title": "Visiter le nouveau musée M24 au Mans en famille: billets, parcours et circuit",
-      "category": "activites",
-      "publishedAt": "2026-10-31T09:01:04+01:00",
-      "location": {
-        "city": "Le Mans",
-        "department": "Sarthe",
-        "region": "Pays de la Loire"
-      },
-      "ageDays": 12,
-      "rapidDrop": true,
-      "peakStart": "2026-11-01",
-      "peakEnd": "2026-11-03",
-      "recentStart": "2026-11-07",
-      "recentEnd": "2026-11-09",
-      "peakImpressions": 21,
-      "recentImpressions": 5,
-      "score": 48,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 21 impressions sur trois jours, puis 5 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "musée automobile le mans tarif"
-      ]
-    },
-    {
-      "url": "/articles/maison/encombrants-a-limoges-donner-faire-enlever-ou-deposer-ses-meubles/",
-      "title": "Encombrants à Limoges: donner, faire enlever ou déposer ses meubles",
-      "category": "maison",
-      "publishedAt": "2026-10-23T15:06:38+02:00",
-      "location": {
-        "city": "Limoges",
-        "department": "Haute-Vienne",
-        "region": "Nouvelle-Aquitaine"
-      },
-      "ageDays": 20,
-      "rapidDrop": true,
-      "peakStart": "2026-10-24",
-      "peakEnd": "2026-10-26",
-      "recentStart": "2026-11-07",
-      "recentEnd": "2026-11-09",
-      "peakImpressions": 21,
-      "recentImpressions": 5,
-      "score": 48,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 21 impressions sur trois jours, puis 5 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "encombrants limoges",
-        "encombrant mairie"
-      ]
-    },
-    {
-      "url": "/articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/",
-      "title": "Fête foraine de Dijon 2026: dates, horaires et budget avec les enfants",
-      "category": "evenements",
-      "publishedAt": "2026-10-25T17:34:53.615Z",
-      "location": {
-        "city": "Dijon",
-        "department": "Côte-d'Or",
-        "region": "Bourgogne-Franche-Comté"
-      },
-      "ageDays": 18,
-      "rapidDrop": true,
-      "peakStart": "2026-10-27",
-      "peakEnd": "2026-10-29",
-      "recentStart": "2026-11-07",
-      "recentEnd": "2026-11-09",
-      "peakImpressions": 1291,
-      "recentImpressions": 403,
-      "score": 2699,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 1291 impressions sur trois jours, puis 403 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "fête foraine Dijon 2026",
-        "manèges Dijon octobre novembre 2026",
-        "mail Général-Delaborde",
-        "foire aux manèges Dijon"
-      ]
-    },
-    {
       "url": "/articles/evenements/luminescences-2026-2027-a-amneville-en-famille-soiree-seule-ou-zoo-et-lanternes/",
       "title": "Luminescences 2026-2027 au zoo d'Amnéville: billets, tarifs et visite en famille",
       "category": "evenements",
@@ -192,25 +42,26 @@
         "department": "Moselle",
         "region": "Grand Est"
       },
-      "ageDays": 21,
+      "ageDays": 22,
       "rapidDrop": true,
       "peakStart": "2026-10-23",
       "peakEnd": "2026-10-25",
-      "recentStart": "2026-11-07",
-      "recentEnd": "2026-11-09",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
       "peakImpressions": 348,
-      "recentImpressions": 95,
-      "score": 759,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 348 impressions sur trois jours, puis 95 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "recentImpressions": 78,
+      "score": 810,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 348 impressions sur trois jours, puis 78 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "focusQueries": [
-        "Luminescences Amnéville 2026 2027",
-        "festival lanternes zoo Amnéville enfants",
-        "Luminescences Amnéville tarifs",
-        "zoo Amnéville lanternes poussette"
+        "billets pour festival luminescences",
+        "luminescence amnéville tarif",
+        "tarif luminescence amnéville",
+        "luminescence zoo amnéville 2026 2027",
+        "luminescence 2027"
       ]
     },
     {
@@ -223,24 +74,26 @@
         "department": "Seine-et-Marne",
         "region": "Île-de-France"
       },
-      "ageDays": 23,
+      "ageDays": 24,
       "rapidDrop": true,
       "peakStart": "2026-10-22",
       "peakEnd": "2026-10-24",
-      "recentStart": "2026-11-07",
-      "recentEnd": "2026-11-09",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
       "peakImpressions": 235,
-      "recentImpressions": 22,
-      "score": 639,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 235 impressions sur trois jours, puis 22 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "recentImpressions": 18,
+      "score": 651,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 235 impressions sur trois jours, puis 18 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "focusQueries": [
-        "Grand Noël Vaux-le-Vicomte 2026 famille",
-        "Vaux-le-Vicomte Noël 2026 billet enfant offert",
-        "Grand Noël Maincy patinoire Odyssée Nordique"
+        "vaux-le-vicomte noël tarif 2026",
+        "vaux le vicomte noel 2026",
+        "noel a vaux le vicomte 2026",
+        "noel vaux le vicomte 2026",
+        "vaux-le-vicomte noël 2026"
       ]
     },
     {
@@ -253,26 +106,26 @@
         "department": "Mayenne",
         "region": "Pays de la Loire"
       },
-      "ageDays": 13,
+      "ageDays": 14,
       "rapidDrop": true,
       "peakStart": "2026-11-01",
       "peakEnd": "2026-11-03",
-      "recentStart": "2026-11-07",
-      "recentEnd": "2026-11-09",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
       "peakImpressions": 228,
-      "recentImpressions": 39,
-      "score": 567,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 228 impressions sur trois jours, puis 39 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
+      "recentImpressions": 24,
+      "score": 612,
+      "signal": "coverage_loss",
+      "basis": "Visibilité récente : 228 impressions sur trois jours, puis 24 sur les trois derniers jours consolidés; cause non établie. Baisse d'exposition sur les requêtes visibles (ratio 0.125), sans recul de classement comparable établi.",
+      "commonQueries": 2,
+      "positionDelta": 0.394,
+      "impressionRatio": 0.125,
       "focusQueries": [
-        "Lumières de Laval 2026",
-        "Noël Laval 2026 famille",
-        "marchés de Noël Laval 2026",
-        "grande roue Laval enfants",
-        "croisière Lumières Laval tarif"
+        "date illumination laval 2026",
+        "illumination laval 2026",
+        "laval illumination 2026",
+        "illumination de noel laval 2026",
+        "theme illumination laval 2026"
       ]
     },
     {
@@ -285,54 +138,26 @@
         "department": "Loire-Atlantique",
         "region": "Pays de la Loire"
       },
-      "ageDays": 9,
+      "ageDays": 10,
       "rapidDrop": true,
       "peakStart": "2026-11-04",
       "peakEnd": "2026-11-06",
-      "recentStart": "2026-11-07",
-      "recentEnd": "2026-11-09",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
       "peakImpressions": 192,
-      "recentImpressions": 36,
-      "score": 468,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 192 impressions sur trois jours, puis 36 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "recentImpressions": 1,
+      "score": 573,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 192 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "focusQueries": [
-        "Merveilleuse Histoire du Père Noël Goulaine 2026",
-        "spectacle Noël château de Goulaine enfants",
-        "billets horaires Noël Haute-Goulaine"
-      ]
-    },
-    {
-      "url": "/articles/evenements/flottins-d-evian-2026-un-village-de-noel-en-bois-flotte-a-decouvrir-en-famille/",
-      "title": "Flottins d’Évian 2026: un village de Noël en bois flotté à découvrir en famille",
-      "category": "evenements",
-      "publishedAt": "2026-10-30T00:37:19+01:00",
-      "location": {
-        "city": "Évian-les-Bains",
-        "department": "Haute-Savoie",
-        "region": "Auvergne-Rhône-Alpes"
-      },
-      "ageDays": 13,
-      "rapidDrop": true,
-      "peakStart": "2026-11-01",
-      "peakEnd": "2026-11-03",
-      "recentStart": "2026-11-07",
-      "recentEnd": "2026-11-09",
-      "peakImpressions": 155,
-      "recentImpressions": 9,
-      "score": 438,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 155 impressions sur trois jours, puis 9 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Flottins Évian 2026",
-        "Fabuleux Village en famille",
-        "Noël Haute-Savoie"
+        "spectacle château de goulaine 2026",
+        "chateau de goulaine noel 2026",
+        "chateau de goulaine spectacle noel 2026",
+        "noel chateau de goulaine",
+        "noel haute goulaine"
       ]
     },
     {
@@ -345,17 +170,17 @@
         "department": "Yvelines",
         "region": "Île-de-France"
       },
-      "ageDays": 19,
+      "ageDays": 20,
       "rapidDrop": true,
       "peakStart": "2026-10-26",
       "peakEnd": "2026-10-28",
-      "recentStart": "2026-11-07",
-      "recentEnd": "2026-11-09",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
       "peakImpressions": 149,
-      "recentImpressions": 22,
-      "score": 381,
+      "recentImpressions": 18,
+      "score": 393,
       "signal": "needs_query_check",
-      "basis": "Visibilité récente : 149 impressions sur trois jours, puis 22 sur les trois derniers jours consolidés; cause non établie.",
+      "basis": "Visibilité récente : 149 impressions sur trois jours, puis 18 sur les trois derniers jours consolidés; cause non établie.",
       "commonQueries": null,
       "positionDelta": null,
       "impressionRatio": null,
@@ -375,17 +200,17 @@
         "department": "Oise",
         "region": "Hauts-de-France"
       },
-      "ageDays": 17,
+      "ageDays": 18,
       "rapidDrop": true,
       "peakStart": "2026-10-28",
       "peakEnd": "2026-10-30",
-      "recentStart": "2026-11-07",
-      "recentEnd": "2026-11-09",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
       "peakImpressions": 128,
-      "recentImpressions": 2,
-      "score": 378,
+      "recentImpressions": 3,
+      "score": 375,
       "signal": "needs_query_check",
-      "basis": "Visibilité récente : 128 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
+      "basis": "Visibilité récente : 128 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
       "commonQueries": null,
       "positionDelta": null,
       "impressionRatio": null,
@@ -405,17 +230,17 @@
         "department": "Seine-Saint-Denis",
         "region": "Île-de-France"
       },
-      "ageDays": 18,
+      "ageDays": 19,
       "rapidDrop": true,
       "peakStart": "2026-10-28",
       "peakEnd": "2026-10-30",
-      "recentStart": "2026-11-07",
-      "recentEnd": "2026-11-09",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
       "peakImpressions": 110,
-      "recentImpressions": 3,
-      "score": 356,
+      "recentImpressions": 2,
+      "score": 359,
       "signal": "needs_query_check",
-      "basis": "Visibilité récente : 110 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
+      "basis": "Visibilité récente : 110 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
       "commonQueries": null,
       "positionDelta": null,
       "impressionRatio": null,
@@ -424,6 +249,36 @@
         "programme MARMOE 2026 enfants",
         "spectacles enfants Montreuil novembre 2026",
         "ateliers gratuits MARMOE"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/",
+      "title": "Noël au château de Cheverny 2026: billets, mapping et visite en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-23T19:58:30.103Z",
+      "location": {
+        "city": "Cheverny",
+        "department": "Loir-et-Cher",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 21,
+      "rapidDrop": true,
+      "peakStart": "2026-10-25",
+      "peakEnd": "2026-10-27",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 102,
+      "recentImpressions": 17,
+      "score": 255,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 102 impressions sur trois jours, puis 17 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël château de Cheverny 2026",
+        "Cheverny mapping Noël billet",
+        "Cheverny jeu de piste Noël enfants"
       ]
     },
     {
@@ -436,12 +291,12 @@
         "department": "Calvados",
         "region": "Normandie"
       },
-      "ageDays": 13,
+      "ageDays": 14,
       "rapidDrop": true,
       "peakStart": "2026-11-01",
       "peakEnd": "2026-11-03",
-      "recentStart": "2026-11-07",
-      "recentEnd": "2026-11-09",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
       "peakImpressions": 84,
       "recentImpressions": 0,
       "score": 252,
@@ -455,6 +310,161 @@
         "marché de Noël Bayeux 2026",
         "Galopades de Noël Bayeux 2026"
       ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-a-chenonceau-quel-jour-decouvrir-les-decors-en-famille/",
+      "title": "Noël à Chenonceau 2026: décors, nocturnes et tarifs en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-24T12:31:27.718Z",
+      "location": {
+        "city": "Chenonceaux",
+        "department": "Indre-et-Loire",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 20,
+      "rapidDrop": true,
+      "peakStart": "2026-10-26",
+      "peakEnd": "2026-10-28",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 91,
+      "recentImpressions": 13,
+      "score": 234,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 91 impressions sur trois jours, puis 13 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël Chenonceau 2026",
+        "Noëls et traditions du monde Chenonceau",
+        "nocturne château de Chenonceau décembre 2026",
+        "château Chenonceau Noël tarifs enfants",
+        "horaires château Chenonceau décembre 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/monstrozoo-2026-2027-a-beauval-enquete-libre-ou-visite-guidee-en-famille/",
+      "title": "MonstroZoo 2026-2027 à Beauval: parcours inclus, visite guidée et tarifs",
+      "category": "evenements",
+      "publishedAt": "2026-10-22T15:49:20.710Z",
+      "location": {
+        "city": "Saint-Aignan",
+        "department": "Loir-et-Cher",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 22,
+      "rapidDrop": true,
+      "peakStart": "2026-10-28",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 60,
+      "recentImpressions": 12,
+      "score": 179,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 60 impressions sur trois jours, puis 12 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "MonstroZoo Beauval 2026 2027",
+        "MonstroZoo visite guidée enfants",
+        "MonstroZoo carnet enquête gratuit",
+        "MonstroZoo tarifs durée réservation"
+      ]
+    },
+    {
+      "url": "/articles/evenements/odyssee-lumineuse-2026-2027-au-parc-floral-de-paris-billet-date-ou-open-en-famille/",
+      "title": "Odyssée Lumineuse 2026-2027 à Paris: billets, dates et visite en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-26T15:30:14.193Z",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 18,
+      "rapidDrop": true,
+      "peakStart": "2026-10-27",
+      "peakEnd": "2026-10-29",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 69,
+      "recentImpressions": 10,
+      "score": 177,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 69 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Odyssée Lumineuse Paris 2026 2027",
+        "Parc Floral illuminations enfants",
+        "billets Odyssée Lumineuse daté Open",
+        "Odyssée Lumineuse jours fermeture"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-au-chateau-royal-d-amboise-visite-de-jour-ou-nocturne-aux-chandelles/",
+      "title": "Noël au château d'Amboise 2026: visite, nocturnes et tarifs en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-24T06:28:53.652Z",
+      "location": {
+        "city": "Amboise",
+        "department": "Indre-et-Loire",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 20,
+      "rapidDrop": true,
+      "peakStart": "2026-10-26",
+      "peakEnd": "2026-10-28",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 54,
+      "recentImpressions": 3,
+      "score": 153,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 54 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël château royal Amboise 2026",
+        "Noël royal des animaux Amboise",
+        "nocturne chandelles Amboise décembre 2026",
+        "château Amboise Noël tarifs enfants"
+      ]
+    },
+    {
+      "url": "/articles/evenements/marche-de-noel-de-saint-etienne-2026-en-famille-dates-horaires-et-acces/",
+      "title": "Marché de Noël de Saint-Étienne 2026 en famille: dates, horaires et accès",
+      "category": "evenements",
+      "publishedAt": "2026-10-28T18:37:08.909Z",
+      "location": {
+        "city": "Saint-Étienne",
+        "department": "Loire",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "ageDays": 16,
+      "rapidDrop": true,
+      "peakStart": "2026-10-31",
+      "peakEnd": "2026-11-02",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 60,
+      "recentImpressions": 12,
+      "score": 144,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 60 impressions sur trois jours, puis 12 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "marché de Noël Saint-Étienne 2026",
+        "marché de Noël Saint-Étienne horaires",
+        "Noël à Sainté avec enfants"
+      ]
     }
   ],
   "strongPages": [
@@ -462,96 +472,96 @@
       "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
       "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
       "category": "evenements",
-      "recentImpressions": 222,
+      "recentImpressions": 213,
       "recentClicks": 10,
-      "recentPosition": 6.266,
-      "retention": 1.965
+      "recentPosition": 6.286,
+      "retention": 1.411
+    },
+    {
+      "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
+      "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
+      "category": "evenements",
+      "recentImpressions": 133,
+      "recentClicks": 9,
+      "recentPosition": 3.526,
+      "retention": 1.583
     },
     {
       "url": "/articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/",
       "title": "Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille",
       "category": "evenements",
-      "recentImpressions": 152,
-      "recentClicks": 5,
-      "recentPosition": 7.987,
-      "retention": 1.152
-    },
-    {
-      "url": "/articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/",
-      "title": "Noël à Pau 2026 en famille: marchés, village et illuminations",
-      "category": "evenements",
-      "recentImpressions": 56,
-      "recentClicks": 4,
-      "recentPosition": 7.054,
-      "retention": 0.7
-    },
-    {
-      "url": "/articles/evenements/fetes-de-saint-nicolas-2026-a-nancy-en-famille-defile-dates-et-visite/",
-      "title": "Fêtes de Saint-Nicolas 2026 à Nancy en famille: défilé, villages et animations",
-      "category": "evenements",
-      "recentImpressions": 67,
-      "recentClicks": 3,
-      "recentPosition": 6.433,
-      "retention": 0.558
-    },
-    {
-      "url": "/articles/evenements/alfest-2026-a-annecy-en-famille-horaires-jeux-et-braderie/",
-      "title": "ALFest 2026 à Annecy en famille: horaires, jeux et braderie",
-      "category": "evenements",
-      "recentImpressions": 56,
-      "recentClicks": 3,
-      "recentPosition": 5.661,
-      "retention": 1.75
-    },
-    {
-      "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
-      "title": "Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite",
-      "category": "sorties",
-      "recentImpressions": 333,
-      "recentClicks": 2,
-      "recentPosition": 10.82,
-      "retention": 1.106
-    },
-    {
-      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
-      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
-      "category": "vie-pratique",
-      "recentImpressions": 191,
-      "recentClicks": 2,
-      "recentPosition": 5.361,
-      "retention": 1.752
-    },
-    {
-      "url": "/articles/vie-pratique/cantine-au-college-en-essonne-obtenir-son-tarif-2026-2027-sans-refaire-la-mauvaise-demarche/",
-      "title": "Cantine au collège en Essonne: obtenir son tarif 2026-2027 sans refaire la mauvaise démarche",
-      "category": "vie-pratique",
-      "recentImpressions": 187,
-      "recentClicks": 2,
-      "recentPosition": 8.588,
-      "retention": 2.75
-    },
-    {
-      "url": "/articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/",
-      "title": "Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates",
-      "category": "evenements",
-      "recentImpressions": 140,
-      "recentClicks": 2,
-      "recentPosition": 9.164,
-      "retention": 0.625
+      "recentImpressions": 144,
+      "recentClicks": 6,
+      "recentPosition": 7.757,
+      "retention": 1.059
     },
     {
       "url": "/articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/",
       "title": "Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers",
       "category": "vie-pratique",
-      "recentImpressions": 127,
-      "recentClicks": 2,
-      "recentPosition": 5.276,
-      "retention": 1.296
+      "recentImpressions": 116,
+      "recentClicks": 5,
+      "recentPosition": 5.241,
+      "retention": 0.967
+    },
+    {
+      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
+      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
+      "category": "vie-pratique",
+      "recentImpressions": 197,
+      "recentClicks": 4,
+      "recentPosition": 5.223,
+      "retention": 1.551
+    },
+    {
+      "url": "/articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/",
+      "title": "Où manger des fouées en famille autour de Saumur ?",
+      "category": "cuisine",
+      "recentImpressions": 179,
+      "recentClicks": 4,
+      "recentPosition": 10.888,
+      "retention": 0.579
+    },
+    {
+      "url": "/articles/evenements/fetes-de-saint-nicolas-2026-a-nancy-en-famille-defile-dates-et-visite/",
+      "title": "Fêtes de Saint-Nicolas 2026 à Nancy en famille: défilé, villages et animations",
+      "category": "evenements",
+      "recentImpressions": 63,
+      "recentClicks": 3,
+      "recentPosition": 6.333,
+      "retention": 0.525
+    },
+    {
+      "url": "/articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/",
+      "title": "Noël à Pau 2026 en famille: marchés, village et illuminations",
+      "category": "evenements",
+      "recentImpressions": 61,
+      "recentClicks": 3,
+      "recentPosition": 6.951,
+      "retention": 0.763
+    },
+    {
+      "url": "/articles/evenements/alfest-2026-a-annecy-en-famille-horaires-jeux-et-braderie/",
+      "title": "ALFest 2026 à Annecy en famille: horaires, jeux et braderie",
+      "category": "evenements",
+      "recentImpressions": 57,
+      "recentClicks": 3,
+      "recentPosition": 6.035,
+      "retention": 1.727
+    },
+    {
+      "url": "/articles/evenements/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants/",
+      "title": "Fontaines dansantes d'hiver à Metz 2026-2027: dates, horaires et conseils en famille",
+      "category": "evenements",
+      "recentImpressions": 35,
+      "recentClicks": 3,
+      "recentPosition": 5.143,
+      "retention": 1.129
     }
   ],
   "excluded": {
     "expired": 178,
-    "cooling": 40
+    "cooling": 44
   },
   "warnings": [
     "Diagnostics par requêtes : 5/5.",
