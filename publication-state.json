@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261113-1801-exposition-papillons-au-musee-des-confluences-a-lyon-preparer-une-visi",
+  "lastProcessedCommit": "e75f4279636b5f18b309d0a4a9cc6bc5e0f0578e"
 }
