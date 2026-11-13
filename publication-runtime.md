@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,88 +14,127 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Indre
 - Région: Centre-Val de Loire
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Sujet:** Se déplacer avec des enfants sans voiture à Châteauroux et dans son agglomération (Indre).
-**Titre de travail:** « Châteauroux en famille sans voiture: bus gratuits, trajets scolaires et déplacements pratiques »
-**Angle:** expliquer comment organiser les trajets familiaux du quotidien et les visites, en distinguant clairement les bus urbains Horizon, les transports scolaires et les cars régionaux Rémi. Horizon est le réseau de bus gratuit de Châteauroux Métropole, qui dessert plusieurs communes de l'agglomération; cette gratuité ne signifie pas que tous les transports du département sont gratuits.
-
-## Besoin du lecteur
-Comprendre quel réseau emprunter selon le trajet, vérifier lignes et horaires, préparer un déplacement avec enfants ou poussette, distinguer transport urbain et scolaire, connaître les formalités et limites éventuelles et prévoir les trajets du dimanche ou hors agglomération.
-
-## Valeur éditoriale
-- La gratuité du réseau Horizon depuis 2001 est confirmée par Châteauroux Métropole et SNCF Connect, sans titre ni validation pour les bus urbains.
-- Comparer déplacements urbains, dessertes dominicales, services particuliers et cars Rémi, sans confondre leurs conditions d'accès.
-- Pour les scolaires Rémi 2026-2027, expliquer la distinction entre gratuité du transport et forfait d'accès, les conditions d'éligibilité et la procédure d'inscription, avec renvoi à la réglementation officielle.
-- Proposer des cas concrets: école et activités, trajet avec petit enfant, arrivée en gare, sorties le week-end. Ne pas inventer de temps de trajet ni garantir l'accessibilité de tous les véhicules.
-- Les résultats existants répondent surtout séparément à la gratuité, aux plans de lignes ou à l'inscription scolaire. L'article réunira les décisions utiles aux familles, sans recopier une seule page institutionnelle.
-- Éviter les sujets récents déjà couverts: châteaux de Bouges et Valençay, Haute-Touche, journée touristique générale à Châteauroux.
-
-## Affiliation
-- **Abritel, location de vacances à Châteauroux:** https://www.abritel.fr/d/41637/chateauroux . Offre de maisons et appartements vérifiée; piste secondaire uniquement pour les familles de passage souhaitant séjourner dans l'agglomération et circuler sans voiture. Disponibilité selon dates à confirmer.
-- **Booking.com, hébergements à Châteauroux:** https://www.booking.com/accommodation/city/fr/chateauroux.fr.html . Page d'hébergements réellement accessible et pertinente pour les visiteurs; alternative à Abritel, ne pas multiplier les liens.
-- **Transport principal:** aucun achat partenaire pertinent pour le bus Horizon gratuit. Ne pas insérer de location de voiture, de billet ou de transfert artificiel.
-
-## Sources de départ
-- Châteauroux Métropole, mobilité, bus gratuits et transport scolaire: https://www.chateauroux-metropole.fr/vie-pratique/mobilite-et-stationnements/
-- SNCF Connect, présentation du réseau Horizon et conditions de gratuité: https://www.sncf-connect.com/catalogue/description/reseau-horizon
-- JVMalin, périmètre et services du réseau Horizon: https://www.jvmalin.fr/reseaux-partenaires/departement-de-lindre/reseau-horizon/
-- Région Centre-Val de Loire, inscription et conditions scolaires Rémi 2026-2027: https://www.remi-centrevaldeloire.fr/scolaire/inscription
-- Données officielles du réseau Horizon, mise à jour 2026: https://www.data.gouv.fr/datasets/reseau-de-bus-urbain-horizon
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "vie-pratique"
+title: "Châteauroux sans voiture avec des enfants: bus gratuits et transports scolaires"
+subtitle: "Horizon, Rémi, trajets du dimanche et déplacements avec une poussette: les bons réflexes selon votre destination."
+summary: "À Châteauroux, les bus Horizon sont gratuits. Voici comment préparer les trajets en famille et distinguer réseau urbain, cars régionaux et transports scolaires."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Châteauroux bus gratuit famille"
+  - "Horizon Châteauroux transports scolaires Rémi"
+  - "Châteauroux sans voiture enfants"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Châteauroux"
+  department: "Indre"
+  region: "Centre-Val de Loire"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Châteauroux Métropole - L'essentiel du territoire"
+    url: "https://www.chateauroux-metropole.fr/vivre-a-chateauroux/lessentiel-du-territoire/"
+  - title: "JVMalin - Réseau Horizon"
+    url: "https://www.jvmalin.fr/reseaux-partenaires/departement-de-lindre/reseau-horizon/"
+  - title: "JVMalin - Informations trafic"
+    url: "https://www.services.jvmalin.fr/fr/infos-trafic"
+  - title: "Rémi - Inscription scolaire 2026-2027"
+    url: "https://www.remi-centrevaldeloire.fr/scolaire/inscription"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Châteauroux, dans l'Indre, une famille peut rejoindre l'école, des activités ou le centre-ville en bus sans payer de ticket sur le réseau urbain Horizon. Cette gratuité s'étend à l'agglomération, mais pas automatiquement aux cars régionaux ni aux transports scolaires Rémi. Le premier réflexe est donc de choisir le bon réseau avant de consulter les horaires.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Horizon: des bus gratuits dans l'agglomération
+
+Le réseau Horizon dessert Châteauroux et les communes de Châteauroux Métropole. Les bus urbains sont gratuits depuis 2001: pas besoin d'acheter un ticket pour un trajet ordinaire sur ce réseau. La [présentation de Châteauroux Métropole](https://www.chateauroux-metropole.fr/vivre-a-chateauroux/lessentiel-du-territoire/) confirme cette gratuité, et [JVMalin détaille le périmètre et les services Horizon](https://www.jvmalin.fr/reseaux-partenaires/departement-de-lindre/reseau-horizon/).
+
+Pour aller à l'école, à une activité ou chez un proche, cherchez d'abord l'arrêt le plus proche de votre point de départ et celui de votre destination. Vérifiez ensuite le sens de circulation, l'horaire de retour et l'éventuelle correspondance. Un trajet gratuit n'est pas forcément direct, surtout entre deux communes périphériques.
+
+Les lignes régulières ne fonctionnent pas toutes aux mêmes heures. Le réseau comprend également des services spécifiques, notamment des lignes dominicales et des solutions de soirée. Ils ne remplacent pas nécessairement les lignes habituelles: vérifiez la desserte exacte avant de prévoir une sortie tardive ou le dimanche.
+
+## Arriver en train ou circuler avec une poussette
+
+Si vous arrivez à la gare de Châteauroux, consultez le plan Horizon pour identifier la correspondance vers votre hébergement ou votre destination. Ne présumez pas qu'une ligne dessert directement l'adresse recherchée: une correspondance ou un trajet à pied peut être nécessaire.
+
+Avec un bébé, privilégiez un itinéraire comportant peu de changements et regardez où se trouvent les arrêts par rapport aux trottoirs et aux passages piétons. La gratuité n'implique pas que chaque véhicule ou arrêt soit adapté à toutes les poussettes. Pour une poussette volumineuse, un fauteuil roulant ou un besoin particulier, demandez confirmation au réseau avant le départ. JVMalin mentionne aussi le service spécialisé Handibus, dont les conditions d'accès sont à vérifier auprès de l'exploitant.
+
+## Le dimanche et pendant les vacances: vérifier la bonne fiche horaire
+
+Pour une sortie en famille, le point délicat est souvent le retour. [JVMalin présente notamment les lignes dominicales 1D et 2D](https://www.jvmalin.fr/reseaux-partenaires/departement-de-lindre/reseau-horizon/), distinctes des lignes ordinaires. Vérifiez le calendrier applicable au jour choisi, les éventuels horaires de vacances et le dernier départ dans le bon sens.
+
+Les travaux peuvent modifier un arrêt ou un parcours. Les [informations trafic JVMalin](https://www.services.jvmalin.fr/fr/infos-trafic) signalent par exemple des perturbations sur les lignes 2 et 2D liées à des travaux annoncés du 22 octobre 2026 au 26 février 2027. Consultez les mises à jour peu avant de partir plutôt que de vous fier à un ancien plan.
+
+## Sortir de l'agglomération: ne pas confondre Horizon et Rémi
+
+Pour rejoindre une autre commune de l'Indre qui n'est pas desservie par Horizon, il faut examiner les lignes régionales Rémi, routières ou ferroviaires. **La gratuité Horizon ne s'applique pas automatiquement à ces trajets.** Avant de partir, recherchez l'itinéraire complet, vérifiez le tarif applicable à chaque voyageur et regardez si un retour est possible le même jour. Les dessertes régionales peuvent être moins fréquentes, notamment le week-end.
+
+Cette distinction compte aussi pour les familles installées dans une commune de l'agglomération: un déplacement à l'intérieur du périmètre Horizon et un trajet vers une ville plus éloignée ne relèvent pas forcément du même service.
+
+## Transport scolaire Rémi 2026-2027: gratuit, mais avec un forfait d'accès
+
+Le transport scolaire régional Rémi ne se confond pas avec un bus Horizon emprunté librement. Pour l'année scolaire 2026-2027, [la Région Centre-Val de Loire indique](https://www.remi-centrevaldeloire.fr/scolaire/inscription) que le transport scolaire est gratuit pour les élèves éligibles, mais qu'un **forfait d'accès de 27,50 € par enfant**, plafonné à **55 € par représentant légal**, reste à payer.
+
+Les inscriptions en ligne sans majoration étaient ouvertes du 10 juin au 17 juillet 2026 inclus; pour les dossiers papier, la date limite était le 10 juillet. Une inscription tardive entraîne normalement une majoration de 15 € par élève, plafonnée à 30 € par représentant légal, sous réserve des exceptions prévues par le règlement. Ces dates étant passées, consultez la procédure actuelle avant de déposer un dossier.
+
+L'éligibilité dépend notamment du domicile et de l'établissement scolaire. La Région précise qu'un élève domicilié et scolarisé dans une même agglomération ne relève pas, en principe, du dispositif scolaire régional en tant qu'ayant droit. Pour un enfant scolarisé à Châteauroux ou dans une commune voisine, vérifiez donc d'abord si son trajet dépend d'Horizon, d'un service scolaire local ou de Rémi. Ne supposez pas qu'un circuit scolaire est ouvert à tous les voyageurs.
+
+## Trois situations pour choisir rapidement
+
+**École ou activité dans Châteauroux Métropole:** commencez par Horizon. Repérez les arrêts, les correspondances et les horaires des deux sens, surtout si l'enfant doit être accompagné.
+
+**Sortie dominicale avec de jeunes enfants:** cherchez spécifiquement les lignes et horaires du dimanche. Contrôlez le dernier retour et les perturbations, puis choisissez un trajet compatible avec le rythme des enfants.
+
+**Collège ou lycée hors de l'agglomération:** vérifiez l'éligibilité scolaire Rémi et les formalités d'inscription. Pour un déplacement occasionnel hors trajet scolaire, consultez séparément les conditions de voyage et les tarifs des lignes régionales.
+
+Pour une question précise sur un arrêt, un service adapté ou une correspondance, l'[annuaire JVMalin du réseau Horizon](https://www.jvmalin.fr/reseaux-partenaires/departement-de-lindre/reseau-horizon/) donne les coordonnées de l'agence commerciale. C'est le bon interlocuteur lorsqu'un détail pratique risque de compromettre le déplacement.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -124,4 +163,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
