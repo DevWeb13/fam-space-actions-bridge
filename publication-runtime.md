@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,88 +14,123 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Seine-et-Marne
 - Région: Île-de-France
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-Moret-sur-Loing en famille sans voiture: cité médiévale, bords du Loing et escapade depuis Paris.
-
-Angle: construire une vraie journée de découverte à pied, avec un parcours adaptable à l'âge des enfants et la possibilité de prolonger en week-end. Moret-sur-Loing, au sein de Moret-Loing-et-Orvanne (Seine-et-Marne), est une cité médiévale au bord du Loing, connue pour ses portes anciennes, son pont, ses moulins, ses paysages peints par Alfred Sisley et son sucre d'orge.
-
-## Besoin du lecteur
-Savoir comment rejoindre Moret depuis Paris en train, gagner le centre depuis la gare, organiser une balade qui intéresse les enfants, choisir des étapes courtes, anticiper poussette, fatigue et météo, et décider si une journée suffit ou si un hébergement est utile.
-
-## Valeur éditoriale
-- Parcours historique libre et gratuit jalonné d'environ trente plaques: portes de Samois et de Bourgogne, église Notre-Dame, pont, moulins, façades et Maison du Sucre d'Orge.
-- Arrivée par la ligne R à Moret-Veneux-les-Sablons: environ 1,5 km et 15 à 20 minutes à pied jusqu'à l'office de tourisme selon l'office local; alternative bus 203 ou 208, arrêt Place de Samois, horaires à revérifier.
-- Mettre en scène deux rythmes de visite (petits enfants et plus grands), les pauses au bord de l'eau, les points d'intérêt historiques et le lien avec Sisley, sans promettre l'accessibilité intégrale ni encourager la baignade.
-- Distinguer visite libre, commerces ou musées aux horaires variables et activités saisonnières; vérifier les ouvertures et l'état des chemins à la date du séjour.
-- L'office de tourisme donne surtout les lieux et accès: Fam Space peut les transformer en itinéraire familial cohérent, avec solutions de repli et arbitrage journée/week-end.
-
-## Affiliation
-- Abritel, locations de vacances à Moret-sur-Loing: https://www.abritel.fr/d/22718/moret-sur-loing . Offre locale vérifiée, utile aux familles qui prolongent la visite en week-end; disponibilités à confirmer aux dates choisies.
-- Booking.com, hôtels et autres hébergements à Moret-sur-Loing, dont des appartements dans le centre historique: https://www.booking.com/city/fr/moret-sur-loing.fr.html . Page de destination et offres repérées, tarifs et disponibilités variables.
-- Expedia, hébergements pour un séjour dans le secteur: https://www.expedia.fr/Moret-Sur-Loing.dx6046432 . Alternative vérifiée, sans nécessité de multiplier les liens dans l'article.
-- Action principale: le parcours historique est en accès libre, sans billetterie partenaire nécessaire. Aucune visite payante directement pertinente confirmée chez GetYourGuide ou Tiqets pour ce parcours. Privilégier une seule offre d'hébergement réellement utile dans la rédaction.
-
-## Sources de départ
-- Office de tourisme départemental, parcours historique et étapes: https://www.tourisme-seine-et-marne.fr/visiter-decouvrir/4915079-parcours-historique-moret-sur-loing/
-- Office de tourisme départemental, histoire, patrimoine et bords du Loing: https://www.tourisme-seine-et-marne.fr/visiter-decouvrir/727355-moret-sur-loing/
-- Office de tourisme Moret Seine & Loing, accès ferroviaire et trajet gare-centre: https://www.msl-tourisme.fr/en/prepare-your-trip/come-and-get-around.html
-- Transilien, ligne R et informations de circulation à consulter avant le départ: https://www.transilien.com/fr/page-lignes/ligne-r
-- Île-de-France Mobilités, horaires et itinéraires des bus: https://www.iledefrance-mobilites.fr/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "voyages"
+title: "Moret-sur-Loing en famille sans voiture: une journée entre remparts et rivière"
+subtitle: "Depuis Paris, une escapade en train avec deux façons de parcourir la cité médiévale"
+summary: "Train depuis Paris, portes médiévales, moulins et balade au bord du Loing: un itinéraire familial à Moret-sur-Loing, adaptable aux petites jambes."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Moret-sur-Loing en famille"
+  - "Moret-sur-Loing sans voiture"
+  - "sortie en train depuis Paris"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Moret-sur-Loing"
+  department: "Seine-et-Marne"
+  region: "Île-de-France"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Office de tourisme Moret Seine & Loing, venir et se déplacer"
+    url: "https://msl-tourisme.fr/fr/preparer-votre-sejour/venir-et-se-deplacer-a-moret-seine-loing.html"
+  - title: "Transilien, ligne R"
+    url: "https://www.transilien.com/fr/page-lignes/ligne-r"
+  - title: "Île-de-France Mobilités, itinéraires et horaires"
+    url: "https://www.iledefrance-mobilites.fr/"
+  - title: "Seine-et-Marne Tourisme, parcours historique de Moret-sur-Loing"
+    url: "https://www.tourisme-seine-et-marne.fr/visiter-decouvrir/4915079-parcours-historique-moret-sur-loing/"
+  - title: "Seine-et-Marne Tourisme, sur les pas de Sisley"
+    url: "https://www.tourisme-seine-et-marne.fr/visiter-decouvrir/5750549-parcours-sur-pas-sisley/"
+  - title: "Seine-et-Marne Tourisme, porte de Bourgogne"
+    url: "https://www.tourisme-seine-et-marne.fr/visiter-decouvrir/4913849-porte-bourgogne/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Moret-sur-Loing, en Seine-et-Marne, les enfants passent d'une porte fortifiée à un vieux pont, puis découvrent des moulins au bord de la rivière. Cette ancienne cité médiévale, aujourd'hui intégrée à la commune de Moret-Loing-et-Orvanne, se visite facilement à pied. Depuis Paris, elle offre une sortie dépaysante sans voiture, à condition de prévoir la marche entre la gare et le centre.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Rejoindre Moret-sur-Loing en train
+
+Depuis Paris-Gare-de-Lyon, empruntez la **ligne R du Transilien** jusqu'à **Moret-Veneux-les-Sablons**. L'office de tourisme annonce environ 50 minutes de trajet depuis Paris, mais la durée dépend du train choisi. Vérifiez les dessertes et les travaux sur la [page officielle de la ligne R](https://www.transilien.com/fr/page-lignes/ligne-r) avant de partir, surtout le week-end.
+
+À l'arrivée, prenez la sortie **Moret-sur-Loing** pour rejoindre le centre par l'avenue de la Gare. Comptez environ **1,5 km, soit 15 à 20 minutes à pied** jusqu'à l'office de tourisme, au 4 bis place de Samois. Avec de jeunes enfants ou une poussette, prévoyez davantage.
+
+Autre possibilité indiquée par l'[office de tourisme Moret Seine & Loing](https://msl-tourisme.fr/fr/preparer-votre-sejour/venir-et-se-deplacer-a-moret-seine-loing.html): sortir côté Veneux-les-Sablons et prendre un bus **203 ou 208** jusqu'à **Place de Samois**. Ne comptez pas sur une correspondance automatique: contrôlez le passage réel du bus et le trajet retour sur [Île-de-France Mobilités](https://www.iledefrance-mobilites.fr/). Les tarifs et les titres de transport peuvent évoluer; vérifiez ceux qui s'appliquent à chaque membre de la famille.
+
+## Une promenade médiévale qui raconte quelque chose
+
+Commencez près de la **porte de Samois**, puis entrez dans les rues anciennes. Le [parcours historique officiel](https://www.tourisme-seine-et-marne.fr/visiter-decouvrir/4915079-parcours-historique-moret-sur-loing/) compte une trentaine de plaques et se découvre **librement, sans billet**. Inutile de toutes les lire: choisissez quelques arrêts et transformez la visite en jeu d'observation.
+
+La **porte de Bourgogne**, vestige des fortifications de la fin du XIIe siècle, permet de parler des villes protégées par des remparts. Elle s'admire de l'extérieur: la [fiche touristique](https://www.tourisme-seine-et-marne.fr/visiter-decouvrir/4913849-porte-bourgogne/) précise qu'elle n'est pas visitable. Continuez vers l'église Notre-Dame-de-la-Nativité, puis le pont et les moulins. Ce dernier secteur est souvent le moment préféré des enfants: les bâtiments semblent posés sur l'eau et offrent un tout autre décor que les ruelles.
+
+La **Maison du Sucre d'Orge** évoque une spécialité locale ancienne. Présentez-la comme une halte possible, et non comme une visite garantie: l'accès aux boutiques ou aux espaces intérieurs dépend de leurs jours et horaires d'ouverture.
+
+## Deux rythmes selon l'âge des enfants
+
+**Avec des petits**, gardez un programme court: une porte médiévale, quelques rues, puis le pont et la rivière. Prévoyez une pause pour manger ou goûter avant de repartir. Le trajet gare-centre représente déjà une marche non négligeable, à refaire au retour si vous ne prenez pas le bus. Une poussette peut soulager les plus jeunes, mais les pavés, les trottoirs et les abords de l'eau demandent de l'attention; l'ensemble du parcours n'est pas garanti accessible.
+
+**Avec des enfants plus grands**, ajoutez quelques plaques du parcours historique et lancez un défi: retrouver une ancienne porte, repérer les détails d'une façade ou imaginer à quoi servaient les moulins. Vous pouvez aussi suivre une partie du [parcours « Sur les pas de Sisley »](https://www.tourisme-seine-et-marne.fr/visiter-decouvrir/5750549-parcours-sur-pas-sisley/), consacré au peintre impressionniste Alfred Sisley, qui a représenté les paysages de Moret et de ses environs. L'idée n'est pas de tout voir, mais de comparer les points de vue avec ce qu'un peintre pouvait observer.
+
+## Profiter du Loing sans mauvaise surprise
+
+Le bord de rivière est une bonne pause visuelle, mais **ne prévoyez pas de baignade** sur la seule foi de cette promenade. Restez avec les enfants près de l'eau et vérifiez les conditions des chemins après de fortes pluies ou une montée du niveau du Loing.
+
+En cas de mauvais temps, réduisez la promenade aux rues et monuments les plus proches du centre. Une visite intérieure peut compléter la journée, mais renseignez-vous au préalable sur son ouverture: les commerces, musées et activités saisonnières ne suivent pas nécessairement les horaires du parcours extérieur.
+
+## Une journée ou un week-end?
+
+**Une journée suffit** pour découvrir les principales portes, les rues historiques, le pont et les moulins à un rythme raisonnable. Partir tôt permet de ménager une vraie pause au milieu de la visite, plutôt que d'accumuler les étapes.
+
+**Un week-end** peut être intéressant si vous souhaitez explorer davantage les environs ou associer Moret à une autre sortie en Seine-et-Marne. Ce n'est pas indispensable pour apprécier la cité elle-même. Avant de réserver un hébergement, vérifiez surtout sa distance réelle à pied depuis la gare ou le centre: « proche de Moret » ne signifie pas toujours pratique sans voiture.
+
+Pour préparer le départ, le plus utile reste de consulter les [accès et coordonnées de l'office de tourisme](https://msl-tourisme.fr/fr/preparer-votre-sejour/venir-et-se-deplacer-a-moret-seine-loing.html), puis de contrôler les horaires de train et, si nécessaire, de bus pour la date choisie.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -124,4 +159,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
