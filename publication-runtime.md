@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,86 +14,126 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Bas-Rhin
 - Région: Grand Est
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Titre de travail:** Lieux d'accueil enfants-parents dans le Bas-Rhin: où aller avec un tout-petit et comment se passe une première visite?
-
-Guide pratique des LAEP/LAPE, espaces d'accueil gratuits où les enfants de moins de 6 ans (parfois moins de 4 ans) jouent accompagnés d'un adulte et où les parents peuvent échanger. L'angle est de rendre ces lieux accessibles aux familles qui ne connaissent pas leur fonctionnement, avec des exemples concrets à Strasbourg et une méthode pour trouver un lieu ailleurs dans le Bas-Rhin.
-
-## Besoin du lecteur
-Comprendre la différence entre LAEP, crèche et atelier sur inscription; savoir qui peut venir, à quel âge, avec quel accompagnant, si une inscription ou un paiement est nécessaire, ce qui se passe sur place et comment vérifier horaires et fermetures avant de partir. Trouver un point d'accueil proche de chez soi, y compris hors Strasbourg, sans supposer que tous les lieux ont les mêmes âges et créneaux.
-
-## Valeur éditoriale
-- La CAF du Bas-Rhin décrit un accueil gratuit, des espaces de jeux et d'échanges pour les familles avec enfants de moins de 6 ans.
-- Strasbourg précise l'accueil anonyme sans rendez-vous, la présence obligatoire de l'adulte responsable et la diversité des lieux. Certains accueillent jusqu'à 4 ans seulement.
-- Exemples vérifiés: L'Ancrage, 19 quai des Bateliers, et L'Envolée, 76 avenue de la Forêt-Noire (0-4 ans); La Familière à l'Elsau. Les horaires diffèrent, et des fermetures exceptionnelles sont possibles.
-- Donner une marche à suivre concrète pour la première visite et renvoyer vers l'annuaire monenfant.fr pour le reste du département; vérifier les horaires auprès de chaque lieu plutôt que présenter une liste figée.
-- Ce sujet est distinct des ateliers de cuisine parent-enfant déjà publiés: il s'agit d'un accueil libre et non d'un cours.
-
-## Affiliation
-**Aucune offre partenaire pertinente vérifiée.** Les LAEP sont des services locaux gratuits, sans réservation marchande. Les offres d'attractions et de visites Tiqets à Strasbourg ainsi que les hébergements familiaux Booking.com existent, mais ne répondent pas au besoin d'une famille cherchant un lieu d'accueil de proximité: ne pas les insérer artificiellement. Les ateliers AGF de Sélestat et Benfeld impliquent des inscriptions et ne sont pas des équivalents commerciaux aux LAEP.
-
-## Sources de départ
-- CAF du Bas-Rhin, présentation des LAEP: https://caf.fr/allocataires/caf-du-bas-rhin/offre-de-service/vie-personnelle/les-lieux-d-accueil-enfants-parents-laep
-- Ville de Strasbourg, fonctionnement et annuaire LAPE: https://www.strasbourg.eu/lape/
-- Ville de Strasbourg, L'Ancrage: https://www.strasbourg.eu/lieu/-/entity/sig/2463_ENF_138/lieu-d-accueil-enfants-parents-laep-l-ancrage
-- Ville de Strasbourg, L'Envolée: https://www.strasbourg.eu/lieu/-/entity/sig/95_ENF_87/lieu-d-accueil-parents-enfants-lape-l-envolee
-- Ville de Strasbourg, La Familière: https://www.strasbourg.eu/lieu/-/entity/sig/96_ENF_88/lieu-d-accueil-enfants-parents-laep-la-familiere
-- Annuaire national orienté par la CAF: https://monenfant.fr/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "parentalite"
+title: "Lieux d'accueil enfants-parents dans le Bas-Rhin: où aller avec un tout-petit?"
+subtitle: "Des espaces gratuits pour jouer, rencontrer d'autres familles et prendre ses marques dès la première visite"
+summary: "À Strasbourg et ailleurs dans le Bas-Rhin, découvrez comment fonctionnent les LAEP, qui peut venir et où trouver un accueil adapté à votre enfant."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "LAEP Bas-Rhin"
+  - "lieu accueil enfants parents Strasbourg"
+  - "sortie bébé gratuite Bas-Rhin"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Bas-Rhin"
+  region: "Grand Est"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "CAF du Bas-Rhin - Les lieux d'accueil enfants-parents"
+    url: "https://caf.fr/allocataires/caf-du-bas-rhin/offre-de-service/vie-personnelle/les-lieux-d-accueil-enfants-parents-laep"
+  - title: "Ville de Strasbourg - Lieux d'accueil parents-enfants"
+    url: "https://www.strasbourg.eu/lape/"
+  - title: "Ville de Strasbourg - L'Envolée"
+    url: "https://www.strasbourg.eu/lieu/-/entity/sig/95_ENF_87/lieu-d-accueil-parents-enfants-l-envolee"
+  - title: "Ville de Strasbourg - Le Jardin magique"
+    url: "https://www.strasbourg.eu/lieu/-/entity/sig/101_ENF_93/lieu-d-accueil-parents-enfants-lape-le-jardin-magique"
+  - title: "Monenfant.fr - Annuaire des services aux familles"
+    url: "https://monenfant.fr/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Vous avez un bébé ou un jeune enfant et envie de sortir un peu, sans réserver une activité ni payer une entrée? Dans le Bas-Rhin, les lieux d'accueil enfants-parents (LAEP, parfois appelés LAPE à Strasbourg) proposent un espace de jeu pour les petits et un moment d'échange pour les adultes qui les accompagnent.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+Ce n'est ni une crèche ni un cours d'éveil. Vous restez avec votre enfant et vous profitez du lieu à votre rythme. La [CAF du Bas-Rhin](https://caf.fr/allocataires/caf-du-bas-rhin/offre-de-service/vie-personnelle/les-lieux-d-accueil-enfants-parents-laep) présente ces accueils gratuits comme des espaces de rencontre, de jeu et d'écoute pour les familles.
+
+## Comment se déroule une visite?
+
+À l'arrivée, une personne de l'équipe vous accueille et vous explique le fonctionnement du lieu. Votre enfant peut observer, explorer les jeux ou aller vers les autres, sans obligation de participer à une activité précise. De votre côté, vous pouvez échanger avec d'autres parents ou parler avec les accueillants de questions du quotidien.
+
+À Strasbourg, la [Ville précise](https://www.strasbourg.eu/lape/) que l'accueil est gratuit, anonyme, sans inscription et sans rendez-vous. Il n'est pas nécessaire d'habiter le quartier du lieu choisi. Un parent, un grand-parent ou un autre adulte référent peut accompagner l'enfant, mais cet adulte doit rester présent et responsable pendant toute la visite.
+
+C'est donc une formule intéressante pour un premier contact avec d'autres enfants, ou simplement pour rompre l'isolement quand on passe beaucoup de temps à la maison avec un tout-petit. On peut venir sans avoir de problème particulier à résoudre.
+
+## Quel âge doit avoir l'enfant?
+
+La plupart de ces lieux s'adressent aux enfants de moins de 6 ans, mais certains fixent une limite à 4 ans. Vérifiez ce point avant de vous déplacer, surtout avec un enfant de 4 ou 5 ans. Les futurs parents peuvent aussi être accueillis dans certains espaces selon les modalités locales.
+
+Un LAEP ne remplace pas un mode de garde: il ne s'agit pas de déposer son enfant pour revenir le chercher plus tard. C'est la présence partagée de l'enfant et de son accompagnant qui fait l'intérêt du dispositif.
+
+## Quelques adresses à Strasbourg
+
+La [liste municipale des LAPE](https://www.strasbourg.eu/lape/) couvre plusieurs quartiers de Strasbourg. Voici des points de départ pour choisir un lieu selon votre trajet, plutôt qu'un inventaire de tous les accueils.
+
+**L'Ancrage, centre-ville:** 19 quai des Bateliers. Ce lieu associatif est pratique pour les familles qui se déplacent dans le centre. Contact: 03 68 71 11 16.
+
+**L'Envolée, quartier des XV:** 76 avenue de la Forêt-Noire. Ce lieu accueille les enfants de 0 à 4 ans, selon sa [fiche municipale](https://www.strasbourg.eu/lieu/-/entity/sig/95_ENF_87/lieu-d-accueil-parents-enfants-l-envolee). Contact: 03 88 45 09 10.
+
+**La Familière, quartier de l'Elsau:** 6 rue Watteau. Un accueil associatif à considérer si vous habitez le sud-ouest de Strasbourg. Contact: 03 88 30 11 96.
+
+**Le Jardin magique, Neuhof:** 64A allée Reuss. Ce lieu accueille les enfants jusqu'à 6 ans. La [fiche officielle](https://www.strasbourg.eu/lieu/-/entity/sig/101_ENF_93/lieu-d-accueil-parents-enfants-lape-le-jardin-magique) indique notamment l'accès par le tram C, arrêt Neuhof Rodolphe Reuss. Contact: 03 68 98 91 79.
+
+Les horaires varient d'un lieu à l'autre et des fermetures exceptionnelles peuvent intervenir, notamment pendant les vacances. Un appel ou une vérification sur la fiche officielle avant de partir évite un déplacement inutile.
+
+## Trouver un LAEP ailleurs dans le Bas-Rhin
+
+Vous vivez à Sélestat, Haguenau, Saverne ou dans une commune plus petite? Il n'est pas nécessaire de vous rendre à Strasbourg pour commencer vos recherches. La CAF du Bas-Rhin renvoie vers [monenfant.fr](https://monenfant.fr/) pour identifier les lieux d'accueil proches de votre domicile.
+
+Cherchez les « lieux d'accueil enfants-parents » autour de votre commune, puis vérifiez directement auprès de la structure l'âge accepté, les jours d'ouverture et les éventuelles modalités particulières. Un atelier parent-enfant sur inscription, même organisé par une association familiale, n'est pas automatiquement un LAEP.
+
+## Avant une première visite
+
+Choisissez de préférence un créneau qui respecte le rythme de sommeil de votre enfant. Prévoyez simplement ses affaires habituelles, comme une couche de rechange ou de quoi boire selon son âge. Si vous venez avec une poussette ou si vous avez besoin d'un accès adapté, demandez au lieu quelles sont les possibilités sur place.
+
+Vous n'avez pas à préparer de questions ni à vous engager à revenir. Votre enfant peut rester près de vous pendant toute la séance. Pour beaucoup de familles, l'essentiel est justement de disposer d'un endroit où prendre le temps de découvrir les autres, sans programme imposé.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -122,4 +162,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
