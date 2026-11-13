@@ -379,3 +379,4 @@ automation/image-hero-20261111-1847-cremieu-marmande|748b897f1611de4b2eebb4e5c72
 automation/image-hero-20261111-1847-cremieu-marmande|c48e038e0b04a43adb830d76f5fb934f0aff5990
 automation/image-hero-20261111-1847-cremieu-marmande|c48e038e0b04a43adb830d76f5fb934f0aff5990
 automation/image-hero-20261113-rattrapage-01|1c37c3ac9689effc271612318d37408bae30ee0c
+automation/image-hero-20261113-rattrapage-01|40ee1b584a8e29a10591ffb85ec6680c81e4f70b
