@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Noël à Chenonceau 2026: décors, nocturnes et tarifs en famille"
-subtitle: "Du 28 novembre au 3 janvier: parcours de Noël, horaires, soirées spéciales et budget avec des enfants"
-summary: "Les décors de Noël 2026 de Chenonceau se visitent du 28 novembre au 3 janvier. Horaires de jour, nocturnes annoncées les 23 et 30 décembre, billets, tarifs famille et animations sur réservation: les points à vérifier avant de venir."
+subtitle: "Du 28 novembre au 3 janvier: visite libre, soirées spéciales et expériences guidées à réserver"
+summary: À Chenonceau, les décors de Noël 2026 se découvrent en visite classique, lors de nocturnes les 23 et 30 décembre ou avec des visites guidées payantes à dates fixes. Horaires, tarifs, réservations et conseils avec des enfants.
 category: evenements
 location:
   city: Chenonceaux
@@ -79,6 +82,14 @@ sources:
     url: https://www.chenonceau.com/infos-pratiques/tarifs/
   - title: Touraine Val de Loire - programme Noël au pays des châteaux 2026
     url: https://www.tourainevaldeloire.com/agenda/temps-forts/noel-au-pays-des-chateaux/
+  - title: Château de Chenonceau - parcours commenté de scénographie florale
+    url: https://www.chenonceau.com/agenda/parcours-commente-de-la-scenographie-floral/
+  - title: Château de Chenonceau - visites inédites du soir
+    url: https://www.chenonceau.com/agenda/visites-inedites/
+  - title: Château de Chenonceau - Parfums et Senteurs de Noël
+    url: https://www.chenonceau.com/agenda/visite-parfums-et-senteurs-de-noel/
+  - title: Château de Chenonceau - nocturnes
+    url: https://www.chenonceau.com/agenda/ouverture-exceptionnelle-en-nocturne/
   - title: Château de Chenonceau - masterclass d'art floral
     url: https://www.chenonceau.com/agenda/masterclass-art-floral/
   - title: Château de Chenonceau - services pour les familles
@@ -105,7 +116,7 @@ affiliate:
   destination: Chenonceaux
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/noel-2026-a-chenonceau-quel-jour-decouvrir-les-decors-en-famille/index.md
   targetSha: 1584c309795832d433ab4bc7744640bb480f6e42
@@ -134,33 +145,73 @@ radar:
       - horaires château Chenonceau décembre 2026
 ---
 
-## Mission retenue
-Actualisation ciblée de « Noël à Chenonceau 2026: décors, nocturnes et tarifs en famille », en particulier des prestations guidées payantes et de leur réservation.
+<!-- article-image-credit -->
+*Photo: [PBrieux](https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Chenonceau_dominant_le_Cher.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC passe de 91 à 13 impressions sur deux fenêtres de trois jours, sans diagnostic de classement démontré. Une lacune indépendante est toutefois vérifiée: l'article annonce les visites guidées de scénographie florale des 4 et 11 décembre à 45 €, alors que la billetterie officielle affiche désormais **55 € par personne**, entrée incluse. Elle propose également une visite « Parfums et Senteurs de Noël » les 19 et 20 décembre à 19 h, à 55 €, absente de l'article. Cette correction est utile avant les réservations de décembre, sans attribuer la baisse GSC à ces écarts.
+Du **28 novembre 2026 au 3 janvier 2027**, le château de Chenonceau présente « Noëls & traditions du monde ». Pour une sortie avec des enfants, la **visite libre en journée** est le choix le plus souple. Les familles qui souhaitent une expérience particulière peuvent aussi choisir une visite guidée sur réservation ou l'une des **nocturnes des 23 et 30 décembre**. Attention: ces formules n'ont pas toutes le même billet.
 
-## Décision du lecteur
-Comprendre ce qui est inclus dans le billet classique, ce qui exige un billet spécifique et quel budget prévoir pour les animations guidées selon l'âge des enfants.
+## Quels décors de Noël verra-t-on ?
 
-## Faits à traiter
-- Corriger uniquement après contrôle du panier officiel le prix des visites guidées de scénographie des 4 et 11 décembre: **55 €**, non 45 €; durée 2 h et entrée incluse.
-- Vérifier la visite guidée « Parfums et Senteurs de Noël » des 19 et 20 décembre à 19 h, annoncée à 55 €, et la distinguer des nocturnes des 23 et 30 décembre.
-- Le site officiel du château annonce les nocturnes des 23 et 30 décembre, animations dès 18 h 30, dernier accès 21 h 30 et fermeture 22 h; ne pas confondre avec les visites guidées à supplément.
-- Préserver tarifs d'entrée habituels, budget familial, horaires de visite, accès, poussettes, services bébé, photographies, licences, crédits, maillage vers le guide Chenonceau, Tiqets et Booking.com. Ne pas extrapoler l'adaptation des visites guidées aux enfants.
+<!-- article-image-body:02 -->
 
-## Sources de départ
-- Billetterie officielle: https://chateaudechenonceau.tickeasy.com/fr-FR/accueil
-- Agenda nocturnes officiel: https://www.chenonceau.com/agenda/ouverture-exceptionnelle-en-nocturne/
-- Agenda visites inédites: https://www.chenonceau.com/agenda/visites-inedites/
-- Programme territorial: https://www.tourainevaldeloire.com/agenda/temps-forts/noel-au-pays-des-chateaux/
+![Cuisines historiques du château de Chenonceau photographiées en 2019, hors période de Noël](/images/articles/2026/10/noel-2026-a-chenonceau-quel-jour-decouvrir-les-decors-en-famille-body-02.webp)
 
-## Affiliation
-Conserver les liens existants vers Tiqets (visite classique uniquement) et Booking.com (hébergement à proximité), sans en déduire l'accès aux événements spéciaux.
+*Photo: [Gzen92](https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Chenonceau_-_int%C3%A9rieur_-_cuisines_(Chenonceaux)_(1).jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
 
-## Continuations internes
-- Renvoyer au guide général « Château de Chenonceau en famille » pour TER, parking, accessibilité et services bébé.
-- Conserver les deux nocturnes et les visites guidées comme prestations distinctes, sans développer un nouvel article concurrent.
+<!-- /article-image-body:02 -->
+
+<!-- article-image-body:01 -->
+
+![Intérieur de la galerie du château de Chenonceau en 2018, sans décorations de Noël](/images/articles/2026/10/noel-2026-a-chenonceau-quel-jour-decouvrir-les-decors-en-famille-body-01.webp)
+
+*Photo: [Zairon](https://commons.wikimedia.org/wiki/File:Chenonceaux_Ch%C3%A2teau_de_Chenonceau_Innen_Galerie_2.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+L'Atelier Floral du château, dirigé par le scénographe Jean-François Boucher, évoque notamment les traditions de Grande-Bretagne, d'Allemagne, du Japon et d'Islande. La grande galerie au-dessus du Cher devient une salle de bal d'inspiration viennoise; les cuisines invitent à voyager de l'Inde à la Provence et à l'Alsace.
+
+Le parcours se découvre **dans les pièces historiques du château**. Ce n'est ni un marché de Noël ni une fête foraine. Avec des enfants, on peut chercher ensemble les pays et traditions représentés sans réserver d'animation supplémentaire.
+
+## Visite de jour: quels horaires ?
+
+Les plages suivantes correspondent au **dernier accès à la billetterie**, pas à l'heure de fermeture des salles:
+
+- **Du 28 novembre au 4 décembre**, puis **du 7 au 11** et **du 14 au 18 décembre**: 9 h 30-16 h 30.
+- **Les 5-6 et 12-13 décembre**: 9 h 30-17 h.
+- **Du 19 au 25 décembre**: 9 h 30-18 h.
+- **Du 26 au 31 décembre**: 9 h 30-18 h 30.
+- **Du 1er au 3 janvier 2027**: décors encore annoncés, horaires précis à reconfirmer avant le départ.
+
+Le château ferme 30 minutes après le dernier accès, puis les jardins 30 minutes plus tard. Avec des enfants, mieux vaut venir en matinée ou en début d'après-midi plutôt qu'à la dernière minute. Consultez les [horaires officiels](https://www.chenonceau.com/infos-pratiques/horaires/) avant votre visite.
+
+## Nocturnes ou visites guidées: quelle formule choisir ?
+
+**Les mercredis 23 et 30 décembre**, le château annonce des nocturnes avec animations dès **18 h 30**, dernier accès à **21 h 30** et fermeture du château à **22 h**. Rencontre avec le scénographe floral, chants de Noël et petite restauration au Snack des Dômes sont annoncés dans le [programme officiel des nocturnes](https://www.chenonceau.com/agenda/ouverture-exceptionnelle-en-nocturne/). Vérifiez les modalités d'entrée et les éventuels créneaux réservés à ces soirées avant d'acheter un billet.
+
+Les **vendredis 4 et 11 décembre à 10 h**, le **parcours commenté de la scénographie florale** dure près de **deux heures**. Le tarif officiel est de **55 € par personne, entrée comprise**, et non 45 €. Les places sont limitées et la réservation obligatoire. Il s'agit d'une visite commentée, pas d'un atelier pour enfants. Voir le [parcours commenté officiel](https://www.chenonceau.com/agenda/parcours-commente-de-la-scenographie-floral/).
+
+Les **samedi 19 et dimanche 20 décembre à 19 h**, la visite **« Parfums et Senteurs de Noël »** propose un parcours olfactif guidé de **deux heures**, suivi d'un temps libre dans les jardins illuminés. Le billet coûte **55 € par personne** et inclut l'entrée pour cette expérience en soirée, **mais pas une visite du château en journée**. L'organisateur présente cette découverte comme une expérience à partager en famille, sans préciser de tarif enfant: vérifiez les conditions et l'adaptation à l'âge des participants avant de réserver. Voir la [présentation officielle](https://www.chenonceau.com/agenda/visite-parfums-et-senteurs-de-noel/).
+
+Autre formule, les **visites inédites du soir** des **28 novembre, 5 et 12 décembre à 19 h** sont annoncées à **45 € par personne**, entrée incluse, avec promenade dans les jardins illuminés. Elles sont distinctes des parcours floraux du matin et des nocturnes des 23 et 30 décembre. Consultez l'[agenda des visites inédites](https://www.chenonceau.com/agenda/visites-inedites/).
+
+Enfin, les **masterclasses d'art floral** des **18, 23 et 30 décembre à 10 h** durent environ **deux heures** et coûtent **90 € par personne**, accès au château et aux jardins compris. Réservation obligatoire, places limitées: ce sont des cours d'art floral, pas des ateliers gratuits pour enfants.
+
+Pour toutes ces prestations guidées, choisissez la date et le billet spécifique sur la [billetterie officielle de Chenonceau](https://chateaudechenonceau.tickeasy.com/fr-FR/accueil). Ne supposez pas qu'un billet classique ou un billet partenaire donne accès à une animation particulière.
+
+## Quel budget prévoir en famille ?
+
+Pour la **visite classique avec brochure**, les tarifs officiels 2026 sont de **19 € par adulte**, **15 € de 7 à 18 ans** et **gratuit avant 7 ans**. Deux adultes et deux enfants payants dépensent **68 €**; avec deux enfants de moins de 7 ans, **38 €**. À partir de **trois enfants payants de 7 à 18 ans**, l'offre famille ramène le billet avec brochure à **15 € par membre de la même famille**: deux adultes et trois enfants concernés paient **75 € au lieu de 83 €**.
+
+L'audioguide a son propre tarif. Le château prévoit aussi la gratuité pour les personnes en situation de handicap sur présentation de la carte demandée, avec un tarif réduit de **16 € pour l'accompagnant** (visite avec brochure).
+
+Pour l'entrée habituelle, vous pouvez [consulter le billet du château de Chenonceau sur Tiqets](https://www.tiqets.com/fr/activites-attractions-chenonceaux-c262292/billets-pour-chateau-de-chenonceau-billet-d-entree-p977880/). L'offre concerne le château, les jardins et les galeries; **elle ne confirme pas l'accès aux nocturnes ou aux visites guidées spéciales**. Comparez le prix final, les dates et les conditions avant achat. Un billet classique est valable sur une **année calendaire**: pour une visite du **1er au 3 janvier 2027**, vérifiez expressément la validité du titre choisi.
+
+## Avec un bébé ou pour un week-end en Touraine
+
+En période de forte affluence, l'accès des **poussettes à l'intérieur du château peut être limité**; elles restent autorisées dans le parc et les jardins. Un porte-bébé peut être utile. Pour le TER, le parking, les aires de pique-nique, les services bébé, l'accessibilité et le temps à prévoir, notre [guide du château de Chenonceau en famille](/articles/sorties/chateau-de-chenonceau-en-famille-billets-duree-et-conseils-avec-des-enfants/) regroupe les détails pratiques.
+
+Pour prolonger la visite avec d'autres châteaux de Touraine, l'[Auberge du Bon Laboureur à Chenonceaux sur Booking.com](https://www.booking.com/hotel/fr/hotellebonlaboureur.fr.html) peut être un point de chute à proximité. L'établissement propose notamment une suite familiale: vérifiez la capacité selon l'âge des enfants, les couchages disponibles, les prix et les conditions à vos dates.
 
 ## Article source exact à préserver et améliorer
 
