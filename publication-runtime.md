@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,84 +14,133 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Hautes-Alpes
 - Région: Provence-Alpes-Côte d’Azur
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Titre de travail:** Maison familiale dans les Hautes-Alpes: améliorer le confort en hiver avant de lancer des travaux.
-
-**Angle:** Comment identifier les causes d'un logement froid, humide ou difficile à chauffer, puis trouver le bon interlocuteur local avant de décider d'isoler, de ventiler ou de changer de chauffage. Ce guide s'adresse aux familles qui vivent dans une maison ou un appartement des Hautes-Alpes, où altitude, bâti ancien et écarts climatiques rendent les choix de rénovation particulièrement concrets.
-
-## Besoin du lecteur
-Comprendre les différences entre isolation insuffisante, ventilation défaillante et chauffage inadapté; préparer un premier état des lieux sans diagnostic improvisé; savoir à qui demander un conseil neutre, quels documents réunir, et dans quel ordre envisager les démarches. Distinguer les situations du locataire et du propriétaire, sans promettre une aide ou un résultat technique.
-
-## Valeur éditoriale
-- Partir de situations familiales concrètes: chambres froides, condensation aux fenêtres, confort des enfants, pièces chauffées de manière inégale.
-- Expliquer pourquoi remplacer le chauffage sans examiner l'isolation et la ventilation peut être une mauvaise priorité.
-- Orienter vers la Maison de l'habitat des Hautes-Alpes, guichet France Rénov', l'ADIL 04-05 pour les questions de logement et le CAUE 05 pour les projets d'aménagement et de rénovation.
-- Proposer une préparation utile au rendez-vous: photos, factures, DPE s'il existe, description des pièces et problèmes observés; éviter les devis ou montants d'aides non vérifiés.
-- Ne pas transformer l'article en catalogue d'aides: leurs critères peuvent évoluer et doivent être confirmés au moment du projet.
-
-## Affiliation
-Aucune offre partenaire pertinente vérifiée pour l'action principale, qui consiste à obtenir un conseil neutre et préparer des travaux dans sa résidence. Les offres d'hébergement Abritel (https://www.abritel.fr/location-vacances/p1417148) et Booking.com (https://www.booking.com/hotel/fr/le-troll-hameau-des-chazals-nevache-hautes-alpes.fr.html) existent dans le département, mais sont écartées: elles concernent des séjours touristiques, pas l'amélioration du logement familial. Aucun lien commercial artificiel à insérer.
-
-## Sources de départ
-- Département des Hautes-Alpes, Maison de l'habitat et accompagnement France Rénov': https://www.hautes-alpes.fr/actualite/la-maison-de-lhabitat-le-bras-arme-de-france-renov/
-- CAUE 05, conseil gratuit aux particuliers: https://www.caue05.com/le-conseil-aux-particuliers
-- ADIL 05, missions et coordonnées officielles: https://lannuaire.service-public.gouv.fr/provence-alpes-cote-d-azur/hautes-alpes/64237db4-1886-46d8-9fd8-fd306ead93bb
-- France Rénov', choix des travaux et conditions des aides: https://france-renov.gouv.fr/aides/mpr
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "maison"
+title: "Maison froide dans les Hautes-Alpes: quels travaux envisager avant l'hiver?"
+subtitle: "Isolation, humidité, chauffage: les bons réflexes et les interlocuteurs pour préparer une rénovation"
+summary: "Chambres froides, condensation, factures élevées: comment comprendre les problèmes de confort et obtenir un conseil gratuit dans les Hautes-Alpes."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "rénovation énergétique Hautes-Alpes"
+  - "maison froide hiver"
+  - "Maison de l'habitat 05"
+  - "isolation ventilation chauffage"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Hautes-Alpes"
+  region: "Provence-Alpes-Côte d’Azur"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Département des Hautes-Alpes - Maison de l'habitat et France Rénov'"
+    url: "https://www.hautes-alpes.fr/actualite/la-maison-de-lhabitat-le-bras-arme-de-france-renov/"
+  - title: "Département des Hautes-Alpes - Annuaire Maison de l'habitat"
+    url: "https://www.hautes-alpes.fr/annuaire/maison-de-lhabitat-des-hautes-alpes/"
+  - title: "France Rénov' - Les travaux de rénovation énergétique"
+    url: "https://france-renov.gouv.fr/renovation/energetique"
+  - title: "CAUE 05 - Le conseil aux particuliers"
+    url: "https://www.caue05.com/le-conseil-aux-particuliers"
+  - title: "Service Public - ADIL des Hautes-Alpes"
+    url: "https://lannuaire.service-public.gouv.fr/provence-alpes-cote-d-azur/hautes-alpes/64237db4-1886-46d8-9fd8-fd306ead93bb"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Dans les Hautes-Alpes, une maison peut être agréable en journée et devenir difficile à chauffer dès que les températures chutent. À Gap, Briançon ou dans les villages d'altitude, une chambre glaciale, des vitres couvertes de buée ou des radiateurs qui tournent sans réchauffer les pièces ne réclament pas forcément les mêmes travaux. Avant de remplacer une chaudière ou de commander des fenêtres, il faut comprendre d'où vient l'inconfort.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Une chambre froide ne signifie pas forcément qu'il faut changer le chauffage
+
+Une pièce reste froide malgré le chauffage? Plusieurs explications sont possibles: une toiture ou des murs mal isolés, des infiltrations d'air, des fenêtres peu performantes, une mauvaise répartition de la chaleur ou un équipement inadapté. Une sensation de paroi froide près d'un mur extérieur peut aussi peser sur le confort, même lorsque le thermomètre affiche une température correcte.
+
+À l'inverse, de la condensation régulière sur les vitres, des odeurs de renfermé ou des traces d'humidité doivent conduire à examiner la ventilation et les éventuelles infiltrations d'eau. Une tache qui s'étend ou des moisissures récurrentes méritent une recherche de cause: repeindre ne règle pas le problème.
+
+L'[information de France Rénov' sur les travaux énergétiques](https://france-renov.gouv.fr/renovation/energetique) rappelle que l'isolation, le chauffage et la ventilation forment un ensemble. Remplacer un appareil de chauffage avant d'évaluer les déperditions peut conduire à choisir une puissance inadaptée ou à conserver les principales causes d'inconfort.
+
+## Repérer les problèmes sans improviser un diagnostic
+
+Pendant quelques jours froids, notez les pièces concernées, les moments où elles deviennent inconfortables et les signes visibles: courants d'air, buée persistante, traces d'eau, différence marquée entre étages. Des photos prises à différents moments seront utiles lors d'un rendez-vous.
+
+Regardez aussi ce que vous savez déjà du logement: année approximative de construction, travaux d'isolation antérieurs, type de chauffage, entretien de la ventilation et présence éventuelle d'un diagnostic de performance énergétique (DPE). Un DPE existant peut éclairer la discussion, mais ne remplace pas nécessairement une étude adaptée au projet.
+
+Ne bouchez pas les entrées d'air pour retenir la chaleur et ne démontez pas vous-même les équipements de ventilation ou de chauffage. En présence de moisissures importantes, d'une fuite ou d'un appareil présentant un risque, faites intervenir le professionnel compétent sans attendre un projet global de rénovation.
+
+## Dans les Hautes-Alpes, commencer par un conseil gratuit
+
+La [Maison de l'habitat des Hautes-Alpes](https://www.hautes-alpes.fr/actualite/la-maison-de-lhabitat-le-bras-arme-de-france-renov/) constitue une porte d'entrée pour les projets de rénovation. Le Département la présente comme un guichet de conseil neutre et gratuit, associé à France Rénov', qui peut orienter les ménages sur l'amélioration de leur logement, les démarches et les interlocuteurs adaptés.
+
+Elle est située au **66 boulevard Georges-Pompidou à Gap**. Le [Département publie ses coordonnées et horaires](https://www.hautes-alpes.fr/annuaire/maison-de-lhabitat-des-hautes-alpes/), notamment le **04 92 50 82 11**. Mieux vaut confirmer les modalités d'accueil avant de se déplacer, particulièrement depuis une commune éloignée.
+
+Pour un projet qui touche à la disposition des pièces, à la façade ou à la transformation d'un bâtiment ancien, le [CAUE 05 propose un conseil architectural gratuit](https://www.caue05.com/le-conseil-aux-particuliers). Ses permanences peuvent s'inscrire dans le cadre de la Maison de l'habitat, notamment lorsque la rénovation comporte un volet énergétique. Ce conseil intervient utilement avant de figer des plans ou de déposer une demande d'autorisation.
+
+## Propriétaire ou locataire: à qui revient la démarche?
+
+Un propriétaire occupant peut préparer un projet de travaux, demander un accompagnement et comparer ensuite les propositions d'entreprises. En copropriété, certaines interventions sur l'enveloppe ou les équipements communs nécessitent une démarche collective: il faut vérifier le périmètre des travaux avant de commander quoi que ce soit.
+
+Un locataire qui constate un logement très froid, humide ou dégradé a intérêt à documenter les désordres et à les signaler à son bailleur. Il ne doit pas engager de gros travaux à sa place sans accord. Pour comprendre les obligations respectives, les recours possibles ou les règles applicables à la location, l'[ADIL des Hautes-Alpes](https://lannuaire.service-public.gouv.fr/provence-alpes-cote-d-azur/hautes-alpes/64237db4-1886-46d8-9fd8-fd306ead93bb) délivre une information indépendante.
+
+L'ADIL reçoit également au **66 boulevard Georges-Pompidou à Gap**; son numéro indiqué dans l'annuaire officiel est le **04 92 21 05 98**. Elle peut orienter aussi bien les propriétaires que les locataires sur les questions juridiques, financières et pratiques liées au logement.
+
+## Préparer un rendez-vous qui débouche sur des décisions utiles
+
+Pour ne pas repartir avec une simple liste de travaux possibles, réunissez quelques éléments:
+
+- des photos des zones froides, des traces d'humidité et des équipements concernés;
+- les factures d'énergie disponibles et, si vous les avez, le DPE et les anciens devis;
+- les dates des rénovations connues et les caractéristiques du chauffage;
+- vos priorités familiales: chambre d'enfant inconfortable, condensation persistante, dépenses difficiles à maîtriser;
+- les contraintes du logement: copropriété, location, bâtiment ancien ou projet de modification extérieure.
+
+Demandez ensuite quels problèmes doivent être vérifiés en premier, si un audit énergétique est pertinent et quelles interventions doivent être coordonnées. Selon le bâtiment, l'isolation et la ventilation peuvent être prioritaires avant le dimensionnement d'un nouveau chauffage. L'ordre précis dépend du logement, pas d'une recette valable pour toutes les maisons de montagne.
+
+Les aides financières peuvent peser sur le calendrier et le montage du projet, mais leurs critères évoluent. Vérifiez les dispositifs et les conditions en vigueur auprès de France Rénov' avant de signer des devis ou d'engager des dépenses en pensant bénéficier d'une subvention.
+
+Le premier objectif n'est donc pas de choisir immédiatement un matériau ou une pompe à chaleur: c'est de repartir avec une compréhension plus fiable des problèmes du logement et une prochaine étape adaptée à votre situation.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -120,4 +169,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
