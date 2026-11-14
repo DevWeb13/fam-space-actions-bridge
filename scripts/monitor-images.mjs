@@ -36,8 +36,9 @@ const recentRuns = api(
 ).workflow_runs ?? [];
 const latest = recentRuns[0];
 const queuedRuns = api(
-  `repos/${BRIDGE}/actions/workflows/fam-space-images.yml/runs?status=queued&per_page=100`,
-).workflow_runs ?? [];
+  `repos/${BRIDGE}/actions/runs?status=queued&per_page=100`,
+).workflow_runs?.filter((run) =>
+  run.path === ".github/workflows/fam-space-images.yml") ?? [];
 const anomalies = [];
 
 const staleQueued = queuedRuns.filter((run) => ageHours(run.created_at) > 2);
