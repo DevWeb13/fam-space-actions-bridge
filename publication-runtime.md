@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,85 +14,131 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Savoie
 - Région: Auvergne-Rhône-Alpes
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Valmorel et Doucy sans ski avec des enfants: luges, snowtubing et séjour d'hiver 2026-2027.** Guide pratique d'un séjour familial à Valmorel et Doucy (Savoie), en distinguant les activités accessibles sans skis, leurs lieux, leurs conditions d'accès et leurs contraintes selon l'âge. Valmorel est une station de Tarentaise; Doucy propose notamment une longue piste de luge desservie par remontée mécanique.
-
-## Besoin du lecteur
-Choisir un programme de deux ou trois jours sans skier, distinguer les activités réellement adaptées aux petits et aux plus grands, anticiper remontées, matériel, réservations, météo, hébergement et budget, sans confondre gratuité de la piste et coûts d'accès.
-
-## Valeur éditoriale
-- Comparer la piste de luge Doucy Aventures (2,4 km; dès 3 ans accompagné; autonomie dès 10 ans et plus de 1,25 m; casque obligatoire; luge homologuée à louer; remontée payante) et le snowtubing de Valmorel (dès 1,25 m, gants obligatoires, casque conseillé).
-- Présenter des alternatives de rythme: espace luge de Valmorel, balades et raquettes accompagnées, cinéma, pauses au village, avec propositions par âge et par météo.
-- Vérifier les ouvertures 2026-2027 avant la rédaction: Doucy Aventures annoncée du 18 décembre 2026 au 10 avril 2027 sous réserve d'enneigement; snowtubing annoncé sur la même période à des jours et horaires spécifiques. Les tarifs de snowtubing trouvés sur une fiche touristique portent sur 2025-2026: ne pas les présenter comme tarifs 2026-2027.
-- Ne pas confondre Valmorel/Doucy avec l'article existant sur Les Menuires sans ski: stations, activités et logistique différentes. L'article doit proposer un véritable itinéraire de séjour, pas seulement une liste générique.
-
-## Affiliation
-- **Abritel, locations familiales à Valmorel:** https://www.abritel.fr/d/famille/31679/valmorel ; page de sélection réellement consultable, logements familiaux proposés, disponibilités et prix à vérifier selon les dates.
-- **Abritel, locations aux Avanchers-Valmorel:** https://www.abritel.fr/d/267290/les-avanchers-valmorel ; autre zone de recherche utile pour comparer l'emplacement du logement.
-- **Billetterie des activités:** aucune offre directe confirmée chez GetYourGuide, Tiqets ou Klook lors de la recherche; renvoyer vers les exploitants pour les remontées, luges et snowtubing. Ne pas inventer de lien partenaire pour ces activités.
-- L'hébergement est pertinent car le sujet porte sur un séjour de plusieurs jours. Une seule recommandation de location bien placée suffira dans l'article.
-
-## Sources de départ
-- Office de tourisme de Valmorel, activités hors ski: https://www.valmorel.com/les-activites-hors-ski/
-- Office de tourisme de Valmorel, piste Doucy Aventures (fiche en anglais): https://www.valmorel.com/en/doucy-aventures-toboggan-run/
-- Pays d'Albertville, snowtubing et calendrier 2026-2027: https://www.pays-albertville.com/fiches/snowtubing/
-- Auvergne-Rhône-Alpes Tourisme, snowtubing et précautions (tarifs anciens à ne pas reprendre): https://www.auvergnerhonealpes-tourisme.com/fiches/snowtubing/
-- Exploitant, ouverture et réservation snowtubing: https://skipass.valmorel.com/fr/snowtubing-hiver
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "voyages"
+title: "Valmorel et Doucy sans ski avec des enfants: luge, snowtubing et séjour d'hiver"
+subtitle: "Deux ou trois jours en Savoie, avec des activités adaptées à l'âge des enfants et un budget sans surprise"
+summary: "Piste de luge à Doucy, bouées sur neige à Valmorel, balades et cinéma: préparez un séjour familial sans skier, selon l'âge et la météo."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Valmorel sans ski avec enfants"
+  - "Doucy luge famille"
+  - "snowtubing Valmorel"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Les Avanchers-Valmorel"
+  department: "Savoie"
+  region: "Auvergne-Rhône-Alpes"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Valmorel - Piste de luge Gulli à Doucy"
+    url: "https://www.valmorel.com/piste-de-luge-doucy-aventures/"
+  - title: "Valmorel - Espace luge de Doucy"
+    url: "https://www.valmorel.com/espace-luge-de-doucy/"
+  - title: "Valmorel Le Grand Domaine - Snowtubing hiver"
+    url: "https://skipass.valmorel.com/fr/snowtubing-hiver"
+  - title: "Pays d'Albertville - Snowtubing"
+    url: "https://www.pays-albertville.com/fiches/snowtubing/"
+  - title: "Valmorel - Activités hors ski"
+    url: "https://www.valmorel.com/les-activites-hors-ski/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Pas besoin de chausser des skis pour profiter de la neige à Valmorel et à Doucy. Ces deux secteurs de montagne, en Savoie, permettent d'alterner descentes en luge, glissades en bouée, promenades et pauses au chaud. Ils ne proposent toutefois pas les mêmes activités ni les mêmes conditions d'accès. Pour un séjour avec des enfants, le bon programme dépend surtout de leur âge, de leur taille et de l'enneigement.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Doucy: une grande piste de luge, mais pas pour les tout-petits
+
+À Doucy, la piste de luge Gulli, également présentée sous le nom de Doucy Aventures, descend sur **2,4 km** depuis le sommet de la télécabine de Combelouvière. Le parcours mêle passages plus rapides et portions tranquilles. Il s'adresse aux enfants **dès 3 ans avec un adulte**; pour descendre seuls, ils doivent avoir **plus de 10 ans et mesurer plus de 1,25 m**. Deux personnes au maximum peuvent partager une luge.
+
+Le casque est obligatoire, tout comme l'utilisation d'une **luge homologuée louée auprès des commerçants**. L'accès à la piste est annoncé gratuit, mais cela ne signifie pas une sortie sans frais: il faut prévoir un **forfait piéton ou de ski pour la télécabine**, ainsi que la location du matériel. Les tarifs de ces prestations sont à vérifier avant de partir.
+
+La [fiche officielle de la piste Gulli](https://www.valmorel.com/piste-de-luge-doucy-aventures/) annonce une ouverture du **18 décembre 2026 au 10 avril 2027**, sous réserve d'enneigement. Ces dates ne garantissent donc pas l'ouverture chaque jour.
+
+Pour les plus jeunes, inutile de prévoir la grande descente: [l'espace luge de Doucy](https://www.valmorel.com/espace-luge-de-doucy/), au cœur de la station, constitue une alternative gratuite, avec une piste annoncée éclairée jusqu'à 20 h. Les enfants de moins de 3 ans peuvent ainsi profiter d'un espace distinct, sous la surveillance des adultes.
+
+## Valmorel: le snowtubing, à partir de 1,25 m
+
+Le snowtubing consiste à dévaler une pente aménagée dans une grosse bouée gonflable. À Valmorel, deux pistes sont installées **au sommet de la télécabine de Planchamp**, à environ 1 900 m d'altitude. Un tapis roulant permet de remonter pour enchaîner les descentes.
+
+La condition déterminante est la taille: **au moins 1,25 m**, quel que soit l'âge. Chaque participant occupe sa propre bouée, même si plusieurs bouées peuvent être reliées. Les **gants sont obligatoires** et le casque vivement conseillé. L'activité est interdite aux femmes enceintes.
+
+Pour l'hiver 2026-2027, l'[exploitant du domaine](https://skipass.valmorel.com/fr/snowtubing-hiver) affiche **16,80 € les 30 minutes**, ou **14,80 € par personne** pour un achat groupé d'au moins trois forfaits. Il propose également un ensemble **forfait piéton aller-retour et snowtubing à 27,50 € par personne**. Ces prix affichés peuvent évoluer: vérifiez le coût complet de la montée avant de payer.
+
+Attention aux dates: l'exploitant annonce le snowtubing **du 19 décembre 2026 au 31 mars 2027, du mercredi au dimanche, de 11 h à 16 h**, alors que la [fiche touristique du Pays d'Albertville](https://www.pays-albertville.com/fiches/snowtubing/) indique du **18 décembre 2026 au 10 avril 2027**. Les calendriers officiels ne concordent donc pas. Pour organiser une journée, privilégiez la confirmation de l'exploitant et consultez l'ouverture en temps réel, car une fermeture météo peut intervenir sans préavis.
+
+## Que faire si un enfant est trop petit, ou si la météo change?
+
+Pour une famille avec des enfants d'âges différents, mieux vaut ne pas construire tout le séjour autour du snowtubing. Un enfant de moins de 1,25 m ne pourra pas participer, même s'il aime déjà la luge.
+
+L'[office de tourisme de Valmorel](https://www.valmorel.com/les-activites-hors-ski/) propose aussi un espace luge dans la station, des balades, des sorties en raquettes accompagnées et le cinéma Le Studio. Les raquettes sont une option pour les enfants capables de marcher sur la neige, mais le parcours, la durée et l'âge minimum doivent être confirmés auprès de l'accompagnateur. Avec un bébé ou une poussette, renseignez-vous sur l'état des cheminements avant d'envisager une promenade: la neige et les pentes changent vite les conditions de circulation.
+
+Le cinéma est une solution de repli lorsque la visibilité ou le vent rendent les activités extérieures moins agréables. Consultez sa programmation plutôt que de compter sur une séance à heure fixe.
+
+## Un programme réaliste sur deux ou trois jours
+
+**Jour 1: installation et premières glissades.** Arrivez sans prévoir immédiatement une remontée mécanique. Repérez le village, les commerces de location et l'espace luge le plus proche de votre logement. Une courte sortie suffit pour tester le froid, les vêtements et l'envie des enfants de rester dehors.
+
+**Jour 2: l'activité phare, selon l'âge.** Si les enfants ont au moins 3 ans et souhaitent une longue descente, choisissez la piste Gulli à Doucy, avec casque, luge conforme et titre de remontée. Si tous les participants mesurent au moins 1,25 m, le snowtubing à Valmorel peut remplacer cette sortie. Il n'est pas nécessaire de cumuler les deux le même jour: chaque activité implique son propre lieu et son organisation.
+
+**Jour 3, si vous restez plus longtemps: montagne tranquille.** Prévoyez une balade adaptée ou une sortie accompagnée en raquettes. Gardez le cinéma et les pauses au village en réserve si la météo se dégrade. Ce troisième jour est aussi l'occasion de refaire l'activité préférée des enfants, si elle est ouverte.
+
+Ce programme n'impose aucun forfait de ski sur plusieurs jours. Il laisse de la place aux changements de météo et évite de payer des activités que les plus jeunes ne peuvent pas pratiquer.
+
+## Hébergement et budget: ce qui change vraiment la facture
+
+Avant de réserver, regardez **où se situe le logement**: dans le secteur de Valmorel, près des services et de Planchamp, ou à Doucy, plus pratique pour la grande piste de luge. Les deux secteurs ne sont pas interchangeables à pied pour toutes les activités. Vérifiez les trajets et les possibilités de déplacement hivernal, notamment si vous voyagez sans voiture.
+
+Le budget se joue sur quatre postes: hébergement, déplacements, remontées mécaniques et activités. Pour Doucy, ajoutez la location de luge homologuée et les casques si vous n'en possédez pas. Pour le snowtubing, comparez le billet d'activité seul et l'offre incluant la télécabine. Prévoyez aussi une marge pour un programme de remplacement si la météo ferme les installations.
+
+Avant le départ, vérifiez les conditions du jour sur les pages officielles, réservez les prestations qui le nécessitent et emportez vêtements chauds, chaussures adaptées, gants et vêtements de rechange. Un séjour sans ski peut être très simple à organiser, à condition de ne pas confondre **piste gratuite**, **remontée payante** et **activité soumise à une taille minimale**.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -121,4 +167,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
