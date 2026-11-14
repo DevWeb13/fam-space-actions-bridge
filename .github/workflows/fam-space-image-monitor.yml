@@ -1,14 +1,8 @@
 name: Fam Space surveillance images
 
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - .github/workflows/fam-space-image-monitor.yml
-      - scripts/monitor-images.mjs
   schedule:
-    - cron: "15 * * * *"
+    - cron: "15 7,19 * * *"
   workflow_dispatch:
 
 permissions:
