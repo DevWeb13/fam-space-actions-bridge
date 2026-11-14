@@ -392,3 +392,4 @@ automation/image-hero-20261114-0343-lascaux-txik|7824e0a0f728e7d99ce7f2969f97000
 automation/image-hero-20261114-0343-lascaux-txik|c148462f2b21fdcf1bac402fa3a185092c9bc735
 automation/image-hero-20261114-0949-colmar-pont|606f714939613857069256c88aa56a9b71b1da97
 automation/image-hero-20261114-0949-colmar-pont|821ccc6a414deeca3e99105a74eea0566f3a664d
+automation/image-hero-20261114-1546-nevers-narbonne|ea5d0f43734bc684c193c8b3392387266a13d96d
