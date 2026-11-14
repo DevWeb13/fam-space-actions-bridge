@@ -1,69 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-13T03:30:25+01:00",
+  "generatedAt": "2026-11-14T03:26:00+01:00",
   "dataThrough": "2026-11-10",
   "from": "2026-10-14",
   "refresh": [
-    {
-      "url": "/articles/voyages/visiter-la-cite-du-volcan-en-famille-a-la-reunion/",
-      "title": "Visiter la Cité du Volcan en famille à La Réunion",
-      "category": "voyages",
-      "publishedAt": "2026-10-23T23:45:04+02:00",
-      "location": {
-        "city": "Le Tampon",
-        "department": "La Réunion",
-        "region": "La Réunion"
-      },
-      "ageDays": 21,
-      "rapidDrop": true,
-      "peakStart": "2026-10-26",
-      "peakEnd": "2026-10-28",
-      "recentStart": "2026-11-08",
-      "recentEnd": "2026-11-10",
-      "peakImpressions": 22,
-      "recentImpressions": 2,
-      "score": 60,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "ferme à visiter"
-      ]
-    },
-    {
-      "url": "/articles/evenements/luminescences-2026-2027-a-amneville-en-famille-soiree-seule-ou-zoo-et-lanternes/",
-      "title": "Luminescences 2026-2027 au zoo d'Amnéville: billets, tarifs et visite en famille",
-      "category": "evenements",
-      "publishedAt": "2026-10-22T09:37:18.454Z",
-      "location": {
-        "city": "Amnéville",
-        "department": "Moselle",
-        "region": "Grand Est"
-      },
-      "ageDays": 22,
-      "rapidDrop": true,
-      "peakStart": "2026-10-23",
-      "peakEnd": "2026-10-25",
-      "recentStart": "2026-11-08",
-      "recentEnd": "2026-11-10",
-      "peakImpressions": 348,
-      "recentImpressions": 78,
-      "score": 810,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 348 impressions sur trois jours, puis 78 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "billets pour festival luminescences",
-        "luminescence amnéville tarif",
-        "tarif luminescence amnéville",
-        "luminescence zoo amnéville 2026 2027",
-        "luminescence 2027"
-      ]
-    },
     {
       "url": "/articles/evenements/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget/",
       "title": "Grand Noël 2026 à Vaux-le-Vicomte en famille: billets, offre enfant et animations",
@@ -74,7 +14,7 @@
         "department": "Seine-et-Marne",
         "region": "Île-de-France"
       },
-      "ageDays": 24,
+      "ageDays": 25,
       "rapidDrop": true,
       "peakStart": "2026-10-22",
       "peakEnd": "2026-10-24",
@@ -97,130 +37,6 @@
       ]
     },
     {
-      "url": "/articles/evenements/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere/",
-      "title": "Lumières de Laval 2026 en famille: marchés, grande roue et croisière",
-      "category": "evenements",
-      "publishedAt": "2026-10-30T09:27:15.012Z",
-      "location": {
-        "city": "Laval",
-        "department": "Mayenne",
-        "region": "Pays de la Loire"
-      },
-      "ageDays": 14,
-      "rapidDrop": true,
-      "peakStart": "2026-11-01",
-      "peakEnd": "2026-11-03",
-      "recentStart": "2026-11-08",
-      "recentEnd": "2026-11-10",
-      "peakImpressions": 228,
-      "recentImpressions": 24,
-      "score": 612,
-      "signal": "coverage_loss",
-      "basis": "Visibilité récente : 228 impressions sur trois jours, puis 24 sur les trois derniers jours consolidés; cause non établie. Baisse d'exposition sur les requêtes visibles (ratio 0.125), sans recul de classement comparable établi.",
-      "commonQueries": 2,
-      "positionDelta": 0.394,
-      "impressionRatio": 0.125,
-      "focusQueries": [
-        "date illumination laval 2026",
-        "illumination laval 2026",
-        "laval illumination 2026",
-        "illumination de noel laval 2026",
-        "theme illumination laval 2026"
-      ]
-    },
-    {
-      "url": "/articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/",
-      "title": "Noël 2026 au château de Goulaine: dates, billets et conseils en famille",
-      "category": "evenements",
-      "publishedAt": "2026-11-03T15:35:55.581Z",
-      "location": {
-        "city": "Haute-Goulaine",
-        "department": "Loire-Atlantique",
-        "region": "Pays de la Loire"
-      },
-      "ageDays": 10,
-      "rapidDrop": true,
-      "peakStart": "2026-11-04",
-      "peakEnd": "2026-11-06",
-      "recentStart": "2026-11-08",
-      "recentEnd": "2026-11-10",
-      "peakImpressions": 192,
-      "recentImpressions": 1,
-      "score": 573,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 192 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "spectacle château de goulaine 2026",
-        "chateau de goulaine noel 2026",
-        "chateau de goulaine spectacle noel 2026",
-        "noel chateau de goulaine",
-        "noel haute goulaine"
-      ]
-    },
-    {
-      "url": "/articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/",
-      "title": "Thoiry Lumières Sauvages 2026-2027: dates, billets et visite en famille",
-      "category": "evenements",
-      "publishedAt": "2026-10-24T19:30:32.602Z",
-      "location": {
-        "city": "Thoiry",
-        "department": "Yvelines",
-        "region": "Île-de-France"
-      },
-      "ageDays": 20,
-      "rapidDrop": true,
-      "peakStart": "2026-10-26",
-      "peakEnd": "2026-10-28",
-      "recentStart": "2026-11-08",
-      "recentEnd": "2026-11-10",
-      "peakImpressions": 149,
-      "recentImpressions": 18,
-      "score": 393,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 149 impressions sur trois jours, puis 18 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Thoiry Lumières Sauvages 2026 2027",
-        "Thoiry Pachamama tarifs enfants",
-        "billet soirée ou journée Thoiry"
-      ]
-    },
-    {
-      "url": "/articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/",
-      "title": "Noël 2026 à Chantilly: Le Noël oublié, billets et séances en famille",
-      "category": "evenements",
-      "publishedAt": "2026-10-26T21:31:06.019Z",
-      "location": {
-        "city": "Chantilly",
-        "department": "Oise",
-        "region": "Hauts-de-France"
-      },
-      "ageDays": 18,
-      "rapidDrop": true,
-      "peakStart": "2026-10-28",
-      "peakEnd": "2026-10-30",
-      "recentStart": "2026-11-08",
-      "recentEnd": "2026-11-10",
-      "peakImpressions": 128,
-      "recentImpressions": 3,
-      "score": 375,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 128 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Noël château de Chantilly 2026",
-        "Le Noël oublié spectacle équestre",
-        "billet spectacle Noël Chantilly famille"
-      ]
-    },
-    {
       "url": "/articles/evenements/festival-marmoe-2026-a-montreuil-spectacles-et-ateliers-selon-l-age-des-enfants/",
       "title": "Festival MARMOE 2026 à Montreuil: spectacles, ateliers et tarifs en famille",
       "category": "evenements",
@@ -230,7 +46,7 @@
         "department": "Seine-Saint-Denis",
         "region": "Île-de-France"
       },
-      "ageDays": 19,
+      "ageDays": 20,
       "rapidDrop": true,
       "peakStart": "2026-10-28",
       "peakEnd": "2026-10-30",
@@ -239,46 +55,17 @@
       "peakImpressions": 110,
       "recentImpressions": 2,
       "score": 359,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 110 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 110 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "focusQueries": [
-        "festival MARMOE Montreuil 2026",
-        "programme MARMOE 2026 enfants",
-        "spectacles enfants Montreuil novembre 2026",
-        "ateliers gratuits MARMOE"
-      ]
-    },
-    {
-      "url": "/articles/evenements/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/",
-      "title": "Noël au château de Cheverny 2026: billets, mapping et visite en famille",
-      "category": "evenements",
-      "publishedAt": "2026-10-23T19:58:30.103Z",
-      "location": {
-        "city": "Cheverny",
-        "department": "Loir-et-Cher",
-        "region": "Centre-Val de Loire"
-      },
-      "ageDays": 21,
-      "rapidDrop": true,
-      "peakStart": "2026-10-25",
-      "peakEnd": "2026-10-27",
-      "recentStart": "2026-11-08",
-      "recentEnd": "2026-11-10",
-      "peakImpressions": 102,
-      "recentImpressions": 17,
-      "score": 255,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 102 impressions sur trois jours, puis 17 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Noël château de Cheverny 2026",
-        "Cheverny mapping Noël billet",
-        "Cheverny jeu de piste Noël enfants"
+        "marmoe montreuil",
+        "marmoe montreuil 2026",
+        "marmoe",
+        "festival marmoe 2026",
+        "festival marmoe"
       ]
     },
     {
@@ -291,7 +78,7 @@
         "department": "Calvados",
         "region": "Normandie"
       },
-      "ageDays": 14,
+      "ageDays": 15,
       "rapidDrop": true,
       "peakStart": "2026-11-01",
       "peakEnd": "2026-11-03",
@@ -300,15 +87,14 @@
       "peakImpressions": 84,
       "recentImpressions": 0,
       "score": 252,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 84 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 84 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "focusQueries": [
-        "Noël Bayeux 2026",
-        "marché de Noël Bayeux 2026",
-        "Galopades de Noël Bayeux 2026"
+        "marche de noel bayeux 2026",
+        "galopades bayeux 2026"
       ]
     },
     {
@@ -321,7 +107,7 @@
         "department": "Indre-et-Loire",
         "region": "Centre-Val de Loire"
       },
-      "ageDays": 20,
+      "ageDays": 21,
       "rapidDrop": true,
       "peakStart": "2026-10-26",
       "peakEnd": "2026-10-28",
@@ -330,17 +116,16 @@
       "peakImpressions": 91,
       "recentImpressions": 13,
       "score": 234,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 91 impressions sur trois jours, puis 13 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 91 impressions sur trois jours, puis 13 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "focusQueries": [
-        "Noël Chenonceau 2026",
-        "Noëls et traditions du monde Chenonceau",
-        "nocturne château de Chenonceau décembre 2026",
-        "château Chenonceau Noël tarifs enfants",
-        "horaires château Chenonceau décembre 2026"
+        "chateau de chenonceau noel 2026",
+        "chateau chenonceau noel 2026",
+        "chenonceau noël 2026",
+        "horaires des nocturnes"
       ]
     },
     {
@@ -353,7 +138,7 @@
         "department": "Loir-et-Cher",
         "region": "Centre-Val de Loire"
       },
-      "ageDays": 22,
+      "ageDays": 23,
       "rapidDrop": true,
       "peakStart": "2026-10-28",
       "peakEnd": "2026-10-30",
@@ -362,16 +147,15 @@
       "peakImpressions": 60,
       "recentImpressions": 12,
       "score": 179,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 60 impressions sur trois jours, puis 12 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 60 impressions sur trois jours, puis 12 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 3.5,
       "focusQueries": [
-        "MonstroZoo Beauval 2026 2027",
-        "MonstroZoo visite guidée enfants",
-        "MonstroZoo carnet enquête gratuit",
-        "MonstroZoo tarifs durée réservation"
+        "monstrozoo",
+        "monstrozo",
+        "monstrozoo 2026"
       ]
     },
     {
@@ -384,7 +168,7 @@
         "department": "Paris",
         "region": "Île-de-France"
       },
-      "ageDays": 18,
+      "ageDays": 19,
       "rapidDrop": true,
       "peakStart": "2026-10-27",
       "peakEnd": "2026-10-29",
@@ -415,7 +199,7 @@
         "department": "Indre-et-Loire",
         "region": "Centre-Val de Loire"
       },
-      "ageDays": 20,
+      "ageDays": 21,
       "rapidDrop": true,
       "peakStart": "2026-10-26",
       "peakEnd": "2026-10-28",
@@ -446,7 +230,7 @@
         "department": "Loire",
         "region": "Auvergne-Rhône-Alpes"
       },
-      "ageDays": 16,
+      "ageDays": 17,
       "rapidDrop": true,
       "peakStart": "2026-10-31",
       "peakEnd": "2026-11-02",
@@ -464,6 +248,222 @@
         "marché de Noël Saint-Étienne 2026",
         "marché de Noël Saint-Étienne horaires",
         "Noël à Sainté avec enfants"
+      ]
+    },
+    {
+      "url": "/articles/evenements/festival-playground-2026-en-ile-de-france-quels-spectacles-de-danse-choisir-avec-les-enfants/",
+      "title": "Festival Playground 2026: spectacles de danse en famille, dates et tarifs",
+      "category": "evenements",
+      "publishedAt": "2026-10-26T06:30:10.109Z",
+      "location": {
+        "city": "Bagnolet",
+        "department": "Seine-Saint-Denis",
+        "region": "Île-de-France"
+      },
+      "ageDays": 19,
+      "rapidDrop": true,
+      "peakStart": "2026-10-27",
+      "peakEnd": "2026-10-29",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 37,
+      "recentImpressions": 1,
+      "score": 143,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 37 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "festival Playground 2026",
+        "spectacles danse enfants Île-de-France",
+        "Playground 2026 tarifs et dates",
+        "danse bébé Romainville novembre 2026",
+        "Little Villette A corpo libero"
+      ]
+    },
+    {
+      "url": "/articles/evenements/festival-enfantillages-2026-a-valbonne-spectacles-gratuits-et-cinema-selon-l-age/",
+      "title": "Festival Enfantillages 2026 à Valbonne: spectacles gratuits et cinéma en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-26T03:35:31.536Z",
+      "location": {
+        "city": "Valbonne",
+        "department": "Alpes-Maritimes",
+        "region": "Provence-Alpes-Côte d'Azur"
+      },
+      "ageDays": 19,
+      "rapidDrop": true,
+      "peakStart": "2026-10-26",
+      "peakEnd": "2026-10-28",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 40,
+      "recentImpressions": 5,
+      "score": 140,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 40 impressions sur trois jours, puis 5 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Festival Enfantillages Valbonne 2026",
+        "spectacles gratuits enfants Valbonne",
+        "cinéma jeune public Valbonne novembre 2026",
+        "Pré des Arts Enfantillages"
+      ]
+    },
+    {
+      "url": "/articles/evenements/les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille/",
+      "title": "Luminéales du Thabor 2026 à Rennes: tarifs, horaires et visite en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-31T19:33:18.221Z",
+      "location": {
+        "city": "Rennes",
+        "department": "Ille-et-Vilaine",
+        "region": "Bretagne"
+      },
+      "ageDays": 14,
+      "rapidDrop": true,
+      "peakStart": "2026-11-02",
+      "peakEnd": "2026-11-04",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 63,
+      "recentImpressions": 17,
+      "score": 138,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 63 impressions sur trois jours, puis 17 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Luminéales du Thabor Rennes 2026",
+        "Des Noëls dans le monde Rennes enfants",
+        "Luminéales Thabor tarif famille",
+        "parcours lumineux Thabor poussette"
+      ]
+    },
+    {
+      "url": "/articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/",
+      "title": "Traîneau flottant de Noël à Metz 2026: dates, horaires et embarquement",
+      "category": "evenements",
+      "publishedAt": "2026-11-03T03:34:06.455Z",
+      "location": {
+        "city": "Metz",
+        "department": "Moselle",
+        "region": "Grand Est"
+      },
+      "ageDays": 11,
+      "rapidDrop": true,
+      "peakStart": "2026-11-05",
+      "peakEnd": "2026-11-07",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 47,
+      "recentImpressions": 2,
+      "score": 135,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 47 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "traîneau flottant père Noël Metz 2026",
+        "bateau gratuit Noël Metz famille"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/",
+      "title": "Noël 2026 à Toulon en famille: marché, patinoire et horaires",
+      "category": "evenements",
+      "publishedAt": "2026-10-31T10:28:17.323Z",
+      "location": {
+        "city": "Toulon",
+        "department": "Var",
+        "region": "Provence-Alpes-Côte d’Azur"
+      },
+      "ageDays": 14,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 47,
+      "recentImpressions": 4,
+      "score": 129,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 47 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël Toulon 2026 famille",
+        "marché de Noël Toulon place de la Liberté",
+        "Village des Enfants Toulon place d'Armes",
+        "patinoire Toulon Noël 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/festival-de-la-sainte-barbe-2026-a-lens-lievin-quelle-soiree-choisir-avec-les-enfants/",
+      "title": "Festival de la Sainte-Barbe 2026 à Lens-Liévin: programme en famille du 4 au 6 décembre",
+      "category": "evenements",
+      "publishedAt": "2026-10-27T04:28:30.904Z",
+      "location": {
+        "city": "Lens",
+        "department": "Pas-de-Calais",
+        "region": "Hauts-de-France"
+      },
+      "ageDays": 18,
+      "rapidDrop": true,
+      "peakStart": "2026-10-28",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 43,
+      "recentImpressions": 2,
+      "score": 123,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 43 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "festival Sainte-Barbe Lens 2026",
+        "Sainte-Barbe Lens-Liévin en famille",
+        "spectacle feu Lens 4 décembre 2026",
+        "Sainte-Barbe Loos-en-Gohelle Oignies 5 décembre",
+        "Louvre-Lens Sainte-Barbe 6 décembre enfants"
+      ]
+    },
+    {
+      "url": "/articles/evenements/batiment-b-a-saint-denis-decouvrir-le-street-art-en-famille/",
+      "title": "Bâtiment B à Saint-Denis: découvrir le street art en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-28T00:11:04+01:00",
+      "location": {
+        "city": "Saint-Denis",
+        "department": "La Réunion",
+        "region": "La Réunion"
+      },
+      "ageDays": 17,
+      "rapidDrop": true,
+      "peakStart": "2026-10-29",
+      "peakEnd": "2026-10-31",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 41,
+      "recentImpressions": 1,
+      "score": 120,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 41 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Bâtiment B Réunion Graffiti",
+        "street art en famille",
+        "Saint-Denis La Réunion"
       ]
     }
   ],
@@ -561,7 +561,7 @@
   ],
   "excluded": {
     "expired": 178,
-    "cooling": 44
+    "cooling": 53
   },
   "warnings": [
     "Diagnostics par requêtes : 5/5.",
