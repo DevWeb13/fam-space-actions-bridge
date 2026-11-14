@@ -27,4 +27,5 @@ jobs:
       - name: Contrôler la progression des images et alerter
         env:
           GH_TOKEN: ${{ github.token }}
+          FAM_SPACE_TOKEN: ${{ secrets.FAM_SPACE_TOKEN }}
         run: node scripts/monitor-images.mjs
