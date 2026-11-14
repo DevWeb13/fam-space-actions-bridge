@@ -41,7 +41,12 @@ const queuedRuns = api(
   run.path === ".github/workflows/fam-space-images.yml") ?? [];
 const anomalies = [];
 
-const staleQueued = queuedRuns.filter((run) => ageHours(run.created_at) > 2);
+// Une exécution ancienne restée en file n'est plus bloquante si un run ultérieur a réussi.
+const latestSuccess = recentRuns.find((run) =>
+  run.status === "completed" && run.conclusion === "success");
+const staleQueued = queuedRuns.filter((run) =>
+  ageHours(run.created_at) > 2 &&
+  (!latestSuccess || Date.parse(run.created_at) > Date.parse(latestSuccess.updated_at)));
 if (staleQueued.length) {
   const oldest = staleQueued.reduce((a, b) =>
     Date.parse(a.created_at) < Date.parse(b.created_at) ? a : b);
