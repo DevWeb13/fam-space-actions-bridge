@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 3/3
+# Radar Fam Space - actualisation GSC
 
 ## Mission
 
@@ -8,386 +8,1117 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 3/3
-
-Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
-
-Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
-
-Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
-
-Ensuite:
-- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
-- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
-- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
-- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
-- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
-- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
-- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
-- ne force ni longueur ni affiliation.
-
-Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
-
-Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
-- `summary`: contrôles et corrections réellement effectués;
-- `sources`: URLs factuelles revérifiées;
-- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
-
-**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
-
-## Règles partenaires
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-## Candidat validé de la phase précédente
-
----
-title: "Grand Noël 2026 à Vaux-le-Vicomte en famille: billets, offre enfant et animations"
-subtitle: "Du 14 novembre au 3 janvier: comparer jardin seul et château, anticiper les suppléments et organiser le retour"
-summary: "Grand Noël 2026-2027 à Vaux-le-Vicomte: tarifs jardin seul et château, offre enfant des 14, 15, 21 et 22 novembre, animations, projection, accessibilité et navette en famille."
-category: evenements
-location:
-  city: Maincy
-  department: Seine-et-Marne
-  region: Île-de-France
-image:
-  src: /images/articles/2026/10/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget.webp
-  alt: Château de Vaux-le-Vicomte photographié en septembre 2010, sans les décorations du Grand Noël 2026.
-sources:
-  - title: Château de Vaux-le-Vicomte - Le Grand Noël 2026, programme, horaires et tarifs
-    url: https://vaux-le-vicomte.com/event/le-grand-noel-de-vaux-le-vicomte/
-  - title: Château de Vaux-le-Vicomte - Offre enfant gratuit les deux premiers week-ends, conditions
-    url: https://vaux-le-vicomte.com/en/news/grand-noel-at-vaux-le-vicomte-2026-free-child-ticket/
-  - title: Château de Vaux-le-Vicomte - Informations pratiques, navette Grand Noël et accueil des familles
-    url: https://vaux-le-vicomte.com/preparer-sa-visite-au-chateau-de-vaux-le-vicomte/informations-pratiques/
-  - title: Château de Vaux-le-Vicomte - Accès et transports
-    url: https://vaux-le-vicomte.com/preparer-ma-visite/acces-transports/
-  - title: Office de tourisme Melun Val de Seine - Le Grand Noël
-    url: https://www.melunvaldeseine-tourisme.com/fete-et-manifestation/le-grand-noel-au-chateau-de-vaux-le-vicomte
-  - title: ibis Styles Melun Rubelles - Chambres et suites
-    url: https://www.ibis-styles-melun-rubelles.com/chambres-et-suites
-eventEndsAt: 2027-01-03
-topic:
-  key: evenements|maincy|grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget|2026
-  keywords:
-    - Grand Noël Vaux-le-Vicomte 2026 famille
-    - Vaux-le-Vicomte Noël 2026 billet enfant offert
-    - Grand Noël Maincy patinoire Odyssée Nordique
-slug: grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget
-status: published
-publishedAt: 2026-10-20T22:29:05.320Z
-updatedAt: null
-readingTime: 7
-affiliate:
-  enabled: true
-  type: travel
-  destination: Maincy
-radar:
-  schemaVersion: 1
-  phase: 2
-  mode: refresh
-  targetPath: src/routes/articles/evenements/(2026)/(10)/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget/index.md
-  targetSha: 28ed76842cfc5b2de88bde6e74673c1cb00bccf8
-  targetUrl: /articles/evenements/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget/
-  decision: Permettre à une famille de comparer précisément jardin seul, château et jardin, offre enfant des 14, 15, 21 et 22 novembre, et transport retour, sans payer une prestation inaccessible ou manquer la projection.
-  affiliationPotential: Conserver l'hébergement Booking.com à Rubelles déjà présent; aucune billetterie partenaire de l'événement confirmée.
-  gsc:
-    retrievedAt: 2026-11-13T03:30:25+01:00
-    dataThrough: 2026-11-10
-    signal: uncertain
-    basis: "Visibilité récente : 235 impressions sur trois jours, puis 18 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante."
-    peakStart: 2026-10-22
-    peakEnd: 2026-10-24
-    recentStart: 2026-11-08
-    recentEnd: 2026-11-10
-    peakImpressions: 235
-    recentImpressions: 18
-    commonQueries: 0
-    positionDelta: null
-    impressionRatio: 0
-    focusQueries:
-      - vaux-le-vicomte noël tarif 2026
-      - vaux le vicomte noel 2026
-      - noel a vaux le vicomte 2026
-      - noel vaux le vicomte 2026
-      - vaux-le-vicomte noël 2026
----
-
-**Du 14 novembre 2026 au 3 janvier 2027**, le château de Vaux-le-Vicomte, à Maincy en Seine-et-Marne, propose son **Grand Noël**: salons décorés sur le thème du voyage, automates, jardin illuminé et projection sur la façade. Comptez **environ quatre heures, voire davantage**, pour une sortie familiale complète.
-
-Le choix principal est celui du billet: **jardin seul** pour les illuminations et animations extérieures, ou **château et jardin** pour ajouter les salons décorés. La réservation en ligne est obligatoire. La patinoire et le spectacle immersif se paient séparément.
-
-## Jardin seul ou château et jardin: quel budget?
-
-Le billet **château et jardin** coûte **25,90 € par adulte en semaine** et **à partir de 27,90 € les week-ends ou pendant les vacances scolaires**. Pour les **3-17 ans**, comptez **20,90 € en semaine** ou **à partir de 22,90 €** sur les périodes les plus demandées. Les moins de 3 ans entrent gratuitement, avec billet gratuit à réserver.
-
-Pour **deux adultes et deux enfants de 3 à 17 ans**, le total est de **93,60 € en semaine**, ou **au moins 101,60 €** les week-ends et vacances, hors suppléments. Les prix « à partir de » peuvent varier selon la date.
-
-Le **jardin seul** est affiché à **19 € en semaine** et **à partir de 20 € les week-ends et vacances**. Il donne accès aux illuminations, à la projection monumentale et aux animations extérieures incluses, **mais pas aux salons décorés du château**. Deux adultes paient donc **38 € en semaine** ou **au moins 40 € le week-end** pour cette formule. **Attention:** la grille officielle ne précise pas distinctement le tarif jardin seul des enfants de 3 à 17 ans. Impossible d'annoncer un budget fiable pour deux adultes et deux enfants avec ce billet sans consulter les tarifs proposés dans le panier. Ne présumez pas que le prix adulte de 19 ou 20 € s'applique à chaque enfant, ni qu'il existe une réduction enfant. Le tarif famille habituel hors événement n'est pas applicable au Grand Noël.
-
-Si votre priorité est la projection et les activités du jardin, la formule extérieure évite de payer la visite des salons. Si vous voulez voir les décors intérieurs, réservez **château et jardin** et respectez le créneau de visite du château.
-
-## L'offre enfant gratuit des deux premiers week-ends
-
-Les **14, 15, 21 et 22 novembre 2026**, l'offre de lancement permet d'acheter un billet **« 2 adultes + 1 enfant de 3 à 17 ans » à 55,80 €**, soit le prix de deux entrées adultes. Elle concerne uniquement **château et jardin**, avec deux adultes au plein tarif; elle ne s'applique ni aux tarifs réduits ni au jardin seul.
-
-Les trois visiteurs doivent venir ensemble et réserver en ligne pour l'une des quatre dates. Avec **deux enfants de 3 à 17 ans**, ajoutez un billet enfant au panier. Les moins de 3 ans entrent gratuitement, mais leur billet gratuit doit être réservé.
-
-Aux tarifs de base de week-end, **deux adultes et deux enfants** représentent **101,60 € sans promotion** contre **78,70 € avec l'offre et un second billet enfant à 22,90 €**: **22,90 € d'économie théorique**, à confirmer dans le panier. L'offre est donc particulièrement intéressante pour une famille qui souhaite visiter aussi le château. Un changement de date n'est possible qu'entre les quatre dates promotionnelles, au plus tard **cinq jours avant la date initiale**. Les [conditions de l'offre sont précisées par le château](https://vaux-le-vicomte.com/en/news/grand-noel-at-vaux-le-vicomte-2026-free-child-ticket/).
-
-## Animations comprises et projection du soir
-
-<!-- article-image-body:01 -->
-
-![Grand Salon du château de Vaux-le-Vicomte photographié en 2017, sans les décors du Grand Noël 2026](/images/articles/2026/10/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget-body-01.webp)
-
-*Photo: [Zairon](https://commons.wikimedia.org/wiki/File:Maincy_Ch%C3%A2teau_de_Vaux-le-Vicomte_Innen_Grand_Salon_7.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:01 -->
-
-Avec le billet château et jardin, la famille parcourt les salons transformés en escales autour du monde. Cette visite intérieure dure **environ une heure**, sur un **créneau réservé à respecter**.
-
-Dans le jardin, plusieurs activités sont comprises dans l'entrée: chasse au trésor du **« passeport du petit voyageur » dès 3 ans** (**10h30-18h30**), **veillée gourmande autour des guimauves** (**12h-18h30**), **bosquet des vœux** (**10h30-18h30**) et **fabrique postale solidaire** pour écrire à des personnes isolées.
-
-La **projection monumentale**, visible depuis le jardin, dure environ **huit minutes**. Les séances annoncées sont à **18h, 18h30 et 19h**, sauf **les 24 et 31 décembre**, avec une séance unique à **17h40**. Les soirées prolongées jusqu'à 21h comportent des projections supplémentaires: vérifiez les horaires propres à votre date sur le [programme officiel du Grand Noël](https://vaux-le-vicomte.com/event/le-grand-noel-de-vaux-le-vicomte/).
-
-## Patinoire et Odyssée Nordique: les suppléments
-
-La **patinoire en glace** ouvre en principe de **11h à 19h30**, sous réserve des jours où le domaine ferme plus tôt. Elle coûte **5 € par personne**, à régler **sur place**, sans réservation en ligne. Des aides à la glisse sont prévues pour les enfants, les gants sont fortement recommandés et les mineurs doivent être accompagnés d'un adulte. **Quatre patineurs ajoutent 20 €** au budget.
-
-Le spectacle déambulatoire **« L'Odyssée Nordique »**, dans le château, est proposé **dès 6 ans**. Prévoyez **environ une heure debout** et une **réservation en ligne séparée**. Les tarifs affichés sont **14,90 € à partir de 13 ans** et **10,90 € pour les moins de 12 ans**: le prix applicable à **12 ans** n'est pas explicité par cette grille, à vérifier lors de la réservation. L'activité est inaccessible aux fauteuils roulants et aux poussettes. **L'accès au dôme et la location de costumes** sont également en supplément.
-
-## Calendrier: quand venir avec des enfants?
-
-<!-- article-image-body:02 -->
-
-![Perspective des jardins à la française de Vaux-le-Vicomte en septembre 2010, de jour et sans illuminations de Noël](/images/articles/2026/10/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget-body-02.webp)
-
-<!-- /article-image-body:02 -->
-
-- **Du 14 novembre au 18 décembre**, ouverture principalement **du mercredi au dimanche de 10h30 à 20h**, dernier accès **19h**; les **5 et 12 décembre**, fermeture à **21h**.
-- **Du 19 décembre au 2 janvier**, ouverture généralement **de 10h30 à 21h**, avec exceptions.
-- **Les 24 et 31 décembre**, ouverture **10h30-18h**, dernier accès **16h**.
-- **Les 25 décembre et 1er janvier**, domaine **fermé**.
-- **Le 3 janvier**, ouverture **10h30-20h**.
-
-Arriver dans l'après-midi permet d'enchaîner les activités du jardin et la projection sans prolonger excessivement la soirée des plus jeunes. Prévoyez vêtements chauds et chaussures confortables: une bonne partie de la visite se fait dehors.
-
-## Venir sans voiture: surtout anticiper le retour
-
-Le domaine possède un **parking gratuit** à Maincy. Pour le Grand Noël, une **navette directe depuis Paris** est annoncée sur réservation, au départ de l'**avenue des Terroirs de France**, près du métro **Cour Saint-Émilion (ligne 14)**: départ de Paris à **14h**, retour du domaine à **19h**. **Les 24 et 31 décembre**, départ de Paris à **13h** et retour à **18h**.
-
-**La navette de 19h ne permet pas de regarder la projection de 19h.** La séance de **18h30** laisse très peu de marge; privilégiez **18h** en confirmant le temps nécessaire pour rejoindre le départ. Les **24 et 31 décembre**, la projection unique à **17h40** finit peu avant la navette de **18h**: ne comptez pas sur cet enchaînement sans validation de l'organisateur.
-
-Autre option: **ligne R depuis Paris-Gare-de-Lyon jusqu'à Melun**, puis taxi ou VTC, environ **10 à 15 minutes** jusqu'au château. Une navette depuis Melun est également évoquée par le domaine, mais **son horaire de retour pour le Grand Noël 2026 n'est pas confirmé ici**: ne vous appuyez pas sur des horaires d'années précédentes. Confirmez votre solution de retour avant d'acheter les billets.
-
-## Accessibilité, poussettes et repas
-
-Le jardin est annoncé accessible aux personnes en fauteuil roulant, mais ses **pavés et graviers** compliquent parfois les déplacements. Le château comporte **environ trente marches** à l'entrée: son parcours de Noël et **L'Odyssée Nordique** ne sont pas accessibles aux fauteuils roulants. Pour une famille concernée, le **jardin seul** peut donc être le choix adapté, sans promettre un cheminement entièrement facile. Des voiturettes électriques sont proposées à la location selon disponibilité.
-
-**Les poussettes ne sont pas admises dans le château**; un espace de stationnement est prévu dans la coursive. Le **Relais de l'Écureuil** propose une restauration en libre-service et un **menu enfant**; des **chaises hautes et micro-ondes** sont disponibles, mais les poussettes restent à l'extérieur du restaurant. Les **tables à langer** se trouvent dans les toilettes femmes de la Cour de l'Écureuil, à l'entrée. Le kiosque du jardin et le chalet de la patinoire offrent aussi des pauses rapides.
-
-## Prolonger la visite en Seine-et-Marne
-
-Pour éviter un retour tardif vers Paris, l'[**ibis Styles Melun à Rubelles sur Booking.com**](https://www.booking.com/hotel/fr/ibis-styles-melun.fr.html) propose notamment des **suites familiales pour quatre personnes**, selon la présentation de l'hôtel. Il se trouve à Rubelles, **pas dans le domaine**: organisez le trajet jusqu'à l'hébergement. Vérifiez **prix, disponibilité et configuration exacte des couchages** pour vos dates.
-
-Pour une autre sortie dans le département, consultez notre guide [**Parrot World en famille**](/articles/activites/parrot-world-en-famille-tarifs-2026-duree-et-conseils-pour-la-visite/).
-
-## Article source exact à préserver et améliorer
-
-Chemin: src/routes/articles/evenements/(2026)/(10)/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget/index.md
-
----
-title: "Grand Noël 2026 à Vaux-le-Vicomte en famille: billets, offre enfant et animations"
-subtitle: "Du 14 novembre au 3 janvier: quel jour venir, combien payer et comment profiter des illuminations?"
-summary: "Grand Noël 2026-2027 à Vaux-le-Vicomte: dates, offre enfant gratuit les deux premiers week-ends, prix des billets, activités incluses, patinoire, navette et conseils avec des enfants."
-category: evenements
-location:
-  city: Maincy
-  department: Seine-et-Marne
-  region: Île-de-France
-image:
-  src: "/images/articles/2026/10/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget.webp"
-  alt: "Château de Vaux-le-Vicomte photographié en septembre 2010, sans les décorations du Grand Noël 2026."
-sources:
-  - title: Château de Vaux-le-Vicomte - Le Grand Noël 2026, programme, horaires et tarifs
-    url: https://vaux-le-vicomte.com/event/le-grand-noel-de-vaux-le-vicomte/
-  - title: Château de Vaux-le-Vicomte - Offre enfant gratuit les deux premiers week-ends, conditions
-    url: https://vaux-le-vicomte.com/en/news/grand-noel-at-vaux-le-vicomte-2026-free-child-ticket/
-  - title: Château de Vaux-le-Vicomte - Informations pratiques, navette Grand Noël et accueil des familles
-    url: https://vaux-le-vicomte.com/preparer-sa-visite-au-chateau-de-vaux-le-vicomte/informations-pratiques/
-  - title: Office de tourisme Melun Val de Seine - Le Grand Noël
-    url: https://www.melunvaldeseine-tourisme.com/fete-et-manifestation/le-grand-noel-au-chateau-de-vaux-le-vicomte
-  - title: ibis Styles Melun Rubelles - Chambres et suites
-    url: https://www.ibis-styles-melun-rubelles.com/chambres-et-suites
-eventEndsAt: 2027-01-03
-topic:
-  key: evenements|maincy|grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget|2026
-  keywords:
-    - Grand Noël Vaux-le-Vicomte 2026 famille
-    - Vaux-le-Vicomte Noël 2026 billet enfant offert
-    - Grand Noël Maincy patinoire Odyssée Nordique
-slug: grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget
-status: published
-publishedAt: 2026-10-20T22:29:05.320Z
-updatedAt: null
-readingTime: 7
-affiliate:
-  enabled: true
-  type: travel
-  destination: Maincy
----
-
-**Du 14 novembre 2026 au 3 janvier 2027**, le château de Vaux-le-Vicomte, à Maincy en Seine-et-Marne, organise son **Grand Noël** autour d'un voyage à travers le monde: salons décorés, automates, jardin illuminé et projection sur la façade. Comptez **environ quatre heures, voire davantage**, pour en profiter en famille.
-
-Pour choisir votre date, deux points comptent particulièrement: **un billet enfant est offert sous conditions les 14, 15, 21 et 22 novembre**, et **la patinoire comme le spectacle immersif sont payants en plus de l'entrée**. La réservation en ligne est obligatoire.
-
-## L'offre enfant gratuit: pour quelles familles?
-
-Les **14, 15, 21 et 22 novembre 2026**, l'offre de lancement permet d'acheter un billet **« 2 adultes + 1 enfant de 3 à 17 ans » à 55,80 €**, soit le prix de deux entrées adultes. Elle concerne uniquement la formule **château et jardin**, avec deux adultes au plein tarif; elle ne s'applique ni aux billets réduits ni aux entrées jardin seul.
-
-Les trois personnes doivent venir ensemble et le billet doit être choisi **en ligne**, pour l'une des quatre dates. Avec **deux enfants de 3 à 17 ans**, il faut ajouter un billet enfant au panier. Les moins de 3 ans entrent gratuitement, mais **un billet gratuit doit tout de même être réservé** pour eux.
-
-À titre de comparaison, sur la base des **tarifs d'entrée de week-end annoncés à partir de 27,90 € par adulte et 22,90 € par enfant**, une famille de deux adultes et deux enfants paierait **101,60 € sans promotion**, contre **78,70 € avec l'offre et un second billet enfant au tarif de base**. L'économie théorique est donc de **22,90 €**, sous réserve des prix effectivement proposés pour votre date et votre panier. Les changements de date de l'offre sont limités aux quatre dates promotionnelles et doivent être demandés au plus tard **cinq jours avant la date initiale**.
-
-## Quels billets et quel budget en dehors de l'offre?
-
-Pour le Grand Noël, le billet **château et jardin** coûte **25,90 € par adulte en semaine** et **à partir de 27,90 € les week-ends ou pendant les vacances scolaires**. Pour les **3-17 ans**, il coûte **20,90 € en semaine**, ou **à partir de 22,90 €** sur les périodes les plus demandées. L'entrée est gratuite avant 3 ans.
-
-Pour **deux adultes et deux enfants payants**, cela représente **93,60 € en semaine** aux tarifs affichés, ou **au moins 101,60 €** en week-end et vacances, sans activité supplémentaire. Vérifiez le total à la réservation: les prix de week-end sont indiqués **« à partir de »**.
-
-Un billet **jardin seul** est également proposé à **19 € en semaine** ou **à partir de 20 €** en week-end et vacances. Il permet de profiter des animations du jardin et de la projection, **mais pas des salons décorés à l'intérieur du château**. Le tarif famille habituel des visites hors événement ne doit pas être utilisé pour calculer le budget du Grand Noël.
-
-## Que comprend l'entrée avec des enfants?
-
-<!-- article-image-body:01 -->
-
-![Grand Salon du château de Vaux-le-Vicomte photographié en 2017, sans les décors du Grand Noël 2026](/images/articles/2026/10/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget-body-01.webp)
-
-*Photo: [Zairon](https://commons.wikimedia.org/wiki/File:Maincy_Ch%C3%A2teau_de_Vaux-le-Vicomte_Innen_Grand_Salon_7.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:01 -->
-
-Avec le billet château et jardin, la famille traverse les salons transformés en escales du monde entier, avec lumières et automates. La visite intérieure dure **environ une heure** et son **créneau réservé doit être respecté**.
-
-Dans le jardin, plusieurs expériences sont **sans supplément**: la chasse au trésor du **« passeport du petit voyageur » dès 3 ans** (10h30-18h30), la **veillée gourmande autour des guimauves** (12h-18h30), le **bosquet des vœux** (10h30-18h30) et la **fabrique postale solidaire**, où l'on peut écrire à des personnes isolées.
-
-La **projection monumentale** sur la façade dure environ **huit minutes**. Le château annonce des séances à **18h, 18h30 et 19h**, avec une **séance unique à 17h40 les 24 et 31 décembre**. Les soirées prolongées jusqu'à 21h proposent des projections supplémentaires: contrôlez leur horaire précis pour la date retenue.
-
-## Patinoire ou spectacle immersif: quels suppléments?
-
-La **patinoire en glace** est annoncée de **11h à 19h30**, sous réserve des journées où le domaine ferme plus tôt. Son tarif est de **5 € par personne**, à payer **sur place**; il n'y a pas de réservation en ligne pour cette activité. Les enfants peuvent utiliser des aides à la glisse, les gants sont fortement recommandés et **les mineurs doivent être accompagnés d'un adulte**. Quatre personnes qui patinent ajoutent ainsi **20 €** au budget familial.
-
-**« L'Odyssée Nordique »** est un spectacle déambulatoire **dès 6 ans**, d'environ **une heure debout**, dans le château. Il exige une **réservation en ligne séparée**. Le château affiche **14,90 € à partir de 13 ans** et **10,90 € pour les moins de 12 ans**: la formulation officielle ne tranche pas le tarif d'un enfant de **12 ans**, à vérifier dans le panier. L'activité n'est accessible ni aux fauteuils roulants ni aux poussettes. L'accès au **dôme** et la **location de costumes** constituent aussi des suppléments.
-
-## Quelles dates et quels horaires choisir?
-
-<!-- article-image-body:02 -->
-
-![Perspective des jardins à la française de Vaux-le-Vicomte en septembre 2010, de jour et sans illuminations de Noël](/images/articles/2026/10/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget-body-02.webp)
-
-<!-- /article-image-body:02 -->
-
-Le calendrier varie au cours de la saison:
-
-- **Du 14 novembre au 18 décembre**, ouverture principalement **du mercredi au dimanche, de 10h30 à 20h**, avec **dernier accès à 19h**; **les 5 et 12 décembre**, fermeture à **21h**.
-- **Du 19 décembre au 2 janvier**, ouverture généralement **de 10h30 à 21h**, sauf exceptions.
-- **Les 24 et 31 décembre**, ouverture **10h30-18h**, dernier accès **16h**.
-- **Les 25 décembre et 1er janvier**, le domaine est **fermé**.
-- **Le dimanche 3 janvier**, ouverture **10h30-20h**.
-
-Pour une sortie avec de jeunes enfants, arriver dans l'après-midi laisse le temps de visiter les salons, de participer à la chasse au trésor et de rester jusqu'aux lumières du soir. Le parcours alterne intérieur et extérieur: prévoyez vêtements chauds et chaussures adaptées à la marche.
-
-## Venir sans voiture et repartir après les illuminations
-
-Le château dispose d'un **parking gratuit** à Maincy. Pour le Grand Noël, il annonce aussi une **navette directe depuis Paris**, sur réservation obligatoire, au départ de l'**avenue des Terroirs de France**, près du métro **Cour Saint-Émilion (ligne 14)**: départ de Paris à **14h**, retour du domaine à **19h**. **Les 24 et 31 décembre**, départ de Paris à **13h** et retour à **18h**. Ces deux jours, la projection de **17h40** ne laisse qu'une douzaine de minutes avant le départ: ne comptez pas pouvoir assister à cette séance et rejoindre la navette sans confirmation de l'organisateur.
-
-**Attention au retour de 19h**: il ne permet pas d'assister à la projection de **19h** et de prendre la navette en même temps. Pour celle de **18h30**, la marge est très faible; privilégiez la séance de **18h** si vous utilisez ce transport, en confirmant le temps de marche jusqu'au point de départ.
-
-Autre possibilité: **ligne R depuis Paris-Gare-de-Lyon jusqu'à Melun**, puis taxi ou VTC (environ **10 à 15 minutes** jusqu'au château). Le domaine décrit aussi une navette depuis la gare de Melun, mais **son horaire de retour applicable au Grand Noël n'est pas établi ici**: ne comptez pas dessus sans confirmation pour rentrer après la projection.
-
-## Poussette, repas et accessibilité
-
-L'accès aux salons du château nécessite de gravir **une trentaine de marches** et **les poussettes ne sont pas admises à l'intérieur**; un espace pour les stationner est prévu dans la coursive. Le parcours intérieur et **L'Odyssée Nordique** ne sont pas accessibles aux personnes en fauteuil roulant. Le jardin est accessible, mais les **pavés et graviers** peuvent compliquer les déplacements; des voiturettes électriques peuvent être louées selon disponibilité.
-
-Pour les repas, **Le Relais de l'Écureuil** propose une restauration en libre-service avec **menu enfant**. Des chaises hautes et des micro-ondes sont disponibles; les poussettes restent à l'extérieur du restaurant. Les **tables à langer** se trouvent dans les toilettes femmes de la Cour de l'Écureuil, à l'entrée. Le kiosque du jardin et le chalet de la patinoire permettent également une pause rapide.
-
-## Dormir dans le secteur pour prolonger la visite
-
-Pour une soirée sans trajet de retour vers Paris, l'[**ibis Styles Melun à Rubelles sur Booking.com**](https://www.booking.com/hotel/fr/ibis-styles-melun.fr.html) propose notamment des **suites familiales pour quatre personnes**, selon la description de l'hôtel. Il est situé à Rubelles, **pas dans le domaine du château**: prévoyez votre trajet entre l'hébergement et Vaux-le-Vicomte. **Prix, configuration des couchages et disponibilité aux dates du Grand Noël restent à vérifier** avant toute réservation.
-
-Si vous restez un jour de plus en Seine-et-Marne, notre guide [**Parrot World en famille**](/articles/activites/parrot-world-en-famille-tarifs-2026-duree-et-conseils-pour-la-visite/) aide à préparer une autre sortie dans le département.
-
-## Contexte éditorial ciblé pour le maillage et les doublons
-
-### Articles proches préparés mécaniquement
-
-- /articles/evenements/toussaint-2026-a-vaux-le-vicomte-lampe-torche-ou-carnaval-des-animaux-avec-les-enfants/ | Toussaint 2026 à Vaux-le-Vicomte: les animations pour les enfants | evenements | Maincy, Seine-et-Marne, Île-de-France
-- /articles/evenements/noel-a-provins-2026-en-famille-marche-medieval-ou-visite-guidee/ | Noël à Provins 2026: marché médiéval, animations et visites en famille | evenements | Provins, Seine-et-Marne, Île-de-France
-- /articles/evenements/noel-2026-a-paris-la-defense-en-famille-marche-animations-ou-patinoire/ | Noël 2026 à Paris La Défense en famille: marché, animations et patinoire | evenements | Puteaux, Hauts-de-Seine, Île-de-France
-- /articles/evenements/noel-2026-a-quimper-en-famille-village-concert-ou-ateliers-gratuits/ | Noël 2026 à Quimper en famille: village, concert et animations gratuites | evenements | Quimper, Finistère, Bretagne
-- /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | Marché de Noël d'Amiens 2026 en famille: horaires, Père Noël et patinoire | evenements | Amiens, Somme, Hauts-de-France
-- /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | Marché de Noël de Bordeaux 2026 en famille: horaires, animations et budget | evenements | Bordeaux, Gironde, Nouvelle-Aquitaine
-- /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | Marché de Noël de Reims 2026 en famille: horaires, grande roue et animations | evenements | Reims, Marne, Grand Est
-- /articles/evenements/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/ | Noël au château de Cheverny 2026: billets, mapping et animations en famille | evenements | Cheverny, Loir-et-Cher, Centre-Val de Loire
-- /articles/evenements/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget/ | Grand Noël 2026 à Vaux-le-Vicomte en famille: billets, offre enfant et animations | evenements | Maincy, Seine-et-Marne, Île-de-France
-- /articles/voyages/moret-sur-loing-en-famille-sans-voiture-une-journee-entre-remparts-et-riviere/ | Moret-sur-Loing en famille sans voiture: une journée entre remparts et rivière | voyages | Moret-sur-Loing, Seine-et-Marne, Île-de-France
-- /articles/sorties/musee-de-la-grande-guerre-a-meaux-avec-des-enfants-que-voir-selon-leur-age/ | Musée de la Grande Guerre à Meaux avec des enfants: que voir selon leur âge ? | sorties | Meaux, Seine-et-Marne, Île-de-France
-- /articles/voyages/chateau-de-fontainebleau-depuis-paris-en-famille-train-r-bus-3401-et-budget/ | Château de Fontainebleau depuis Paris en famille: train R, bus 3401 et budget | voyages | Fontainebleau, Seine-et-Marne, Île-de-France
-- /articles/voyages/disneyland-paris-en-rer-a-avec-des-enfants-trajet-et-tickets-en-2026/ | Disneyland Paris en RER A avec des enfants: trajet et tarifs 2026 | voyages | Chessy, Seine-et-Marne, Île-de-France
-- /articles/evenements/marie-antoinette-a-fontainebleau-2026-2027-exposition-ou-visite-guidee-avec-les-enfants/ | Marie-Antoinette à Fontainebleau 2026-2027: exposition, visites et tarifs en famille | evenements | Fontainebleau, Seine-et-Marne, Île-de-France
-- /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | Noël des Siècles 2026 à Champs-sur-Marne: billets, budget et horaires en famille | evenements | Champs-sur-Marne, Seine-et-Marne, Île-de-France
-- /articles/bons-plans/chateau-de-champs-sur-marne-en-famille-gratuites-tarifs-et-dates-a-eviter/ | Château de Champs-sur-Marne en famille: gratuités, tarifs et dates à éviter | bons-plans | Champs-sur-Marne, Seine-et-Marne, Île-de-France
-- /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille | evenements | Lumigny-Nesles-Ormeaux, Seine-et-Marne, Île-de-France
-- /articles/voyages/noel-2026-disneyland-paris-billet-2-parcs-arendelle/ | Noël 2026 à Disneyland Paris: faut-il un billet 2 parcs pour voir Arendelle? | voyages | Chessy, Seine-et-Marne, Île-de-France
-- /articles/evenements/exposition-papillons-a-lyon-visiter-le-musee-des-confluences-en-famille/ | Exposition Papillons à Lyon: visiter le musée des Confluences en famille | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/evenements/festival-du-court-metrage-de-clermont-ferrand-2027-en-famille-quelles-seances-choisir/ | Festival du court métrage de Clermont-Ferrand 2027 en famille: quelles séances choisir? | evenements | Clermont-Ferrand, Puy-de-Dôme, Auvergne-Rhône-Alpes
-- /articles/evenements/carnaval-de-guyane-2027-en-famille-preparer-ses-premieres-sorties/ | Carnaval de Guyane 2027 en famille: préparer ses premières sorties | evenements | Guyane
-- /articles/evenements/mondo-clowns-2027-a-marmande-dates-tarifs-et-conseils-en-famille/ | Mondo'Clowns 2027 à Marmande: dates, tarifs et conseils en famille | evenements | Marmande, Lot-et-Garonne, Nouvelle-Aquitaine
-
-### Historique Radar lié
-
-- refresh | /articles/bons-plans/chateau-de-champs-sur-marne-en-famille-gratuites-tarifs-et-dates-a-eviter/ | 2026-11-07T10:31:03.300Z
-- opportunity | /articles/voyages/chateau-de-fontainebleau-depuis-paris-en-famille-train-r-bus-3401-et-budget/ | 2026-10-31T16:31:36.357Z
-- opportunity | /articles/voyages/disneyland-paris-en-rer-a-avec-des-enfants-trajet-et-tickets-en-2026/ | 2026-10-31T04:29:30.633Z
-- refresh | /articles/voyages/disneyland-paris-en-rer-a-avec-des-enfants-trajet-et-tickets-en-2026/ | 2026-11-10T06:36:15.602Z
-- opportunity | /articles/evenements/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget/ | 2026-10-20T22:29:05.422Z
-- opportunity | /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | 2026-10-16T17:46:42.470Z
-- refresh | /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | 2026-11-07T00:30:17.397Z
-- opportunity | /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | 2026-10-19T13:54:07.745Z
-- opportunity | /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | 2026-10-21T07:36:18.372Z
-- opportunity | /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | 2026-10-20T00:30:38.975Z
-
-### Phases 2 et 3
-
-Écris `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet de l'article. **N'ajoute aucun bloc `radar`.** Le script reprend mécaniquement le bloc Radar de la phase précédente et incrémente la phase.
-
-Pour un refresh, le script conserve de lui-même les champs protégés de l'article source. Pour une opportunity, il conserve la catégorie, le territoire et le slug choisis en phase 1.
-
-En phase 3 seulement, ajoute `radarReview` avec `summary`, `sources` et, pour un refresh, `regressionCheck`. Une seule correction factuelle vérifiée peut être suffisante.
-
-## Écriture autorisée
-
-N'effectue aucune plomberie Git. Ne crée, ne nomme et ne supprime aucune branche Radar; ne choisis aucun SHA; ne modifie aucun fichier de DevWeb13/fam-space-qwik.
-
-Écris uniquement radar-request.md sur la branche main de DevWeb13/fam-space-actions-bridge selon le format fourni dans ce runtime. Le workflow GitHub se charge du reste. Une fois cette requête écrite, termine le passage.
+## Snapshot GSC quotidien
+
+Le cache compact est `radar-gsc-snapshot.json` sur `main` de `DevWeb13/fam-space-actions-bridge`. Il ne contient jamais les lignes GSC brutes.
+
+Cette tâche est séparée de la sélection éditoriale. **S'il n'existe aucune branche Radar active et que le snapshot doit être renouvelé, actualise uniquement le snapshot puis termine le passage. Ne choisis pas de mission dans la même exécution.** Le passage horaire suivant effectuera la phase 1 avec le snapshot prêt.
+
+Le snapshot est réutilisable lorsqu'il a `schemaVersion: 1`, a été généré le jour courant en Europe/Paris et que `dataThrough` n'a pas plus de sept jours de retard.
+
+Lorsqu'un nouveau snapshot est nécessaire, utilise Windsor.ai avec le compte `sc-domain:fam-space.fr`, connector `searchconsole`, `include_fresh_data: false`. **Chaque appel `get_data` Search Analytics doit filtrer explicitement `search_type = web` avec `filters: [["search_type","eq","web"]]`.** Récupère 28 jours jusqu'à la dernière journée consolidée:
+
+- une lecture `date, clicks, impressions` pour déterminer la fin réelle;
+- quatre lectures consécutives de sept jours `date, page, clicks, impressions, position`;
+- appelle `buildRadarShortlist(pageRows, catalog.articles, { now, siteRows, from, history: catalog.history })` pour identifier les cinq premiers candidats. Pour chacun, récupère les requêtes de sa page exacte sur les deux fenêtres `peakStart..peakEnd` et `recentStart..recentEnd`, avec `search_type = web` (dix appels de requêtes au maximum).
+- regroupe les réponses par article : `queryPairs = [{ url, peakQueries, recentQueries }]`. Appelle ensuite **`buildRadarSnapshot(pageRows, catalog.articles, { now, siteRows, from, history: catalog.history, warnings }, queryPairs)`**, du module embarqué. Écris son résultat directement dans `radar-gsc-snapshot.json`, sans recopier les métriques manuellement.
+- pour les autres articles, le diagnostic reste `needs_query_check` avec des mesures `null`. Si une lecture échoue, signale-le sans inventer de chiffres. Ne confonds jamais « pas de donnée » et zéro.
+
+Utilise uniquement le module Radar embarqué pour présélectionner les candidats et construire le snapshot. La fonction `buildRadarSnapshot` centralise la mise en forme et le diagnostic par article. Une réponse Windsor est considérée complète lorsque `status: done`, que `data` est un tableau et que `total_rows` correspond à `data.length`, sans indicateur explicite de troncature. **Un nombre rond de lignes, notamment 1 500, n'est jamais à lui seul une preuve de plafonnement et ne doit pas arrêter Radar.** Découpe seulement la période si Windsor signale réellement une réponse incomplète/tronquée, si `total_rows` ne correspond pas au nombre de lignes reçues, ou si `unwrapRows` refuse la réponse, notamment à son seuil conservateur de 5 000 lignes par réponse. Un 429, un refus d'accès ou un plafond réellement non résolu termine le passage. Maximum 50 appels `get_data`. Les réponses brutes restent temporaires.
+
+Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlist `refresh` avec ses diagnostics compacts, `strongPages`, `excluded` et les avertissements utiles.
+
+## Snapshot actuellement disponible
+
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-13T03:30:25+01:00",
+  "dataThrough": "2026-11-10",
+  "from": "2026-10-14",
+  "refresh": [
+    {
+      "url": "/articles/voyages/visiter-la-cite-du-volcan-en-famille-a-la-reunion/",
+      "title": "Visiter la Cité du Volcan en famille à La Réunion",
+      "category": "voyages",
+      "publishedAt": "2026-10-23T23:45:04+02:00",
+      "location": {
+        "city": "Le Tampon",
+        "department": "La Réunion",
+        "region": "La Réunion"
+      },
+      "ageDays": 21,
+      "rapidDrop": true,
+      "peakStart": "2026-10-26",
+      "peakEnd": "2026-10-28",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 22,
+      "recentImpressions": 2,
+      "score": 60,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "ferme à visiter"
+      ]
+    },
+    {
+      "url": "/articles/evenements/luminescences-2026-2027-a-amneville-en-famille-soiree-seule-ou-zoo-et-lanternes/",
+      "title": "Luminescences 2026-2027 au zoo d'Amnéville: billets, tarifs et visite en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-22T09:37:18.454Z",
+      "location": {
+        "city": "Amnéville",
+        "department": "Moselle",
+        "region": "Grand Est"
+      },
+      "ageDays": 22,
+      "rapidDrop": true,
+      "peakStart": "2026-10-23",
+      "peakEnd": "2026-10-25",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 348,
+      "recentImpressions": 78,
+      "score": 810,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 348 impressions sur trois jours, puis 78 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "billets pour festival luminescences",
+        "luminescence amnéville tarif",
+        "tarif luminescence amnéville",
+        "luminescence zoo amnéville 2026 2027",
+        "luminescence 2027"
+      ]
+    },
+    {
+      "url": "/articles/evenements/grand-noel-2026-a-vaux-le-vicomte-en-famille-billets-animations-et-budget/",
+      "title": "Grand Noël 2026 à Vaux-le-Vicomte en famille: billets, offre enfant et animations",
+      "category": "evenements",
+      "publishedAt": "2026-10-20T22:29:05.320Z",
+      "location": {
+        "city": "Maincy",
+        "department": "Seine-et-Marne",
+        "region": "Île-de-France"
+      },
+      "ageDays": 24,
+      "rapidDrop": true,
+      "peakStart": "2026-10-22",
+      "peakEnd": "2026-10-24",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 235,
+      "recentImpressions": 18,
+      "score": 651,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 235 impressions sur trois jours, puis 18 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "vaux-le-vicomte noël tarif 2026",
+        "vaux le vicomte noel 2026",
+        "noel a vaux le vicomte 2026",
+        "noel vaux le vicomte 2026",
+        "vaux-le-vicomte noël 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere/",
+      "title": "Lumières de Laval 2026 en famille: marchés, grande roue et croisière",
+      "category": "evenements",
+      "publishedAt": "2026-10-30T09:27:15.012Z",
+      "location": {
+        "city": "Laval",
+        "department": "Mayenne",
+        "region": "Pays de la Loire"
+      },
+      "ageDays": 14,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 228,
+      "recentImpressions": 24,
+      "score": 612,
+      "signal": "coverage_loss",
+      "basis": "Visibilité récente : 228 impressions sur trois jours, puis 24 sur les trois derniers jours consolidés; cause non établie. Baisse d'exposition sur les requêtes visibles (ratio 0.125), sans recul de classement comparable établi.",
+      "commonQueries": 2,
+      "positionDelta": 0.394,
+      "impressionRatio": 0.125,
+      "focusQueries": [
+        "date illumination laval 2026",
+        "illumination laval 2026",
+        "laval illumination 2026",
+        "illumination de noel laval 2026",
+        "theme illumination laval 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/",
+      "title": "Noël 2026 au château de Goulaine: dates, billets et conseils en famille",
+      "category": "evenements",
+      "publishedAt": "2026-11-03T15:35:55.581Z",
+      "location": {
+        "city": "Haute-Goulaine",
+        "department": "Loire-Atlantique",
+        "region": "Pays de la Loire"
+      },
+      "ageDays": 10,
+      "rapidDrop": true,
+      "peakStart": "2026-11-04",
+      "peakEnd": "2026-11-06",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 192,
+      "recentImpressions": 1,
+      "score": 573,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 192 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "spectacle château de goulaine 2026",
+        "chateau de goulaine noel 2026",
+        "chateau de goulaine spectacle noel 2026",
+        "noel chateau de goulaine",
+        "noel haute goulaine"
+      ]
+    },
+    {
+      "url": "/articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/",
+      "title": "Thoiry Lumières Sauvages 2026-2027: dates, billets et visite en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-24T19:30:32.602Z",
+      "location": {
+        "city": "Thoiry",
+        "department": "Yvelines",
+        "region": "Île-de-France"
+      },
+      "ageDays": 20,
+      "rapidDrop": true,
+      "peakStart": "2026-10-26",
+      "peakEnd": "2026-10-28",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 149,
+      "recentImpressions": 18,
+      "score": 393,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 149 impressions sur trois jours, puis 18 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Thoiry Lumières Sauvages 2026 2027",
+        "Thoiry Pachamama tarifs enfants",
+        "billet soirée ou journée Thoiry"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/",
+      "title": "Noël 2026 à Chantilly: Le Noël oublié, billets et séances en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-26T21:31:06.019Z",
+      "location": {
+        "city": "Chantilly",
+        "department": "Oise",
+        "region": "Hauts-de-France"
+      },
+      "ageDays": 18,
+      "rapidDrop": true,
+      "peakStart": "2026-10-28",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 128,
+      "recentImpressions": 3,
+      "score": 375,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 128 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël château de Chantilly 2026",
+        "Le Noël oublié spectacle équestre",
+        "billet spectacle Noël Chantilly famille"
+      ]
+    },
+    {
+      "url": "/articles/evenements/festival-marmoe-2026-a-montreuil-spectacles-et-ateliers-selon-l-age-des-enfants/",
+      "title": "Festival MARMOE 2026 à Montreuil: spectacles, ateliers et tarifs en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-25T23:35:17.753Z",
+      "location": {
+        "city": "Montreuil",
+        "department": "Seine-Saint-Denis",
+        "region": "Île-de-France"
+      },
+      "ageDays": 19,
+      "rapidDrop": true,
+      "peakStart": "2026-10-28",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 110,
+      "recentImpressions": 2,
+      "score": 359,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 110 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "festival MARMOE Montreuil 2026",
+        "programme MARMOE 2026 enfants",
+        "spectacles enfants Montreuil novembre 2026",
+        "ateliers gratuits MARMOE"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-au-chateau-de-cheverny-visite-ou-mapping-seul-en-famille/",
+      "title": "Noël au château de Cheverny 2026: billets, mapping et visite en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-23T19:58:30.103Z",
+      "location": {
+        "city": "Cheverny",
+        "department": "Loir-et-Cher",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 21,
+      "rapidDrop": true,
+      "peakStart": "2026-10-25",
+      "peakEnd": "2026-10-27",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 102,
+      "recentImpressions": 17,
+      "score": 255,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 102 impressions sur trois jours, puis 17 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël château de Cheverny 2026",
+        "Cheverny mapping Noël billet",
+        "Cheverny jeu de piste Noël enfants"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-a-bayeux-2026-en-famille-marche-ou-galopades/",
+      "title": "Noël à Bayeux 2026 en famille: marché et Galopades",
+      "category": "evenements",
+      "publishedAt": "2026-10-30T15:36:05.268Z",
+      "location": {
+        "city": "Bayeux",
+        "department": "Calvados",
+        "region": "Normandie"
+      },
+      "ageDays": 14,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 84,
+      "recentImpressions": 0,
+      "score": 252,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 84 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël Bayeux 2026",
+        "marché de Noël Bayeux 2026",
+        "Galopades de Noël Bayeux 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-a-chenonceau-quel-jour-decouvrir-les-decors-en-famille/",
+      "title": "Noël à Chenonceau 2026: décors, nocturnes et tarifs en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-24T12:31:27.718Z",
+      "location": {
+        "city": "Chenonceaux",
+        "department": "Indre-et-Loire",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 20,
+      "rapidDrop": true,
+      "peakStart": "2026-10-26",
+      "peakEnd": "2026-10-28",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 91,
+      "recentImpressions": 13,
+      "score": 234,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 91 impressions sur trois jours, puis 13 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël Chenonceau 2026",
+        "Noëls et traditions du monde Chenonceau",
+        "nocturne château de Chenonceau décembre 2026",
+        "château Chenonceau Noël tarifs enfants",
+        "horaires château Chenonceau décembre 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/monstrozoo-2026-2027-a-beauval-enquete-libre-ou-visite-guidee-en-famille/",
+      "title": "MonstroZoo 2026-2027 à Beauval: parcours inclus, visite guidée et tarifs",
+      "category": "evenements",
+      "publishedAt": "2026-10-22T15:49:20.710Z",
+      "location": {
+        "city": "Saint-Aignan",
+        "department": "Loir-et-Cher",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 22,
+      "rapidDrop": true,
+      "peakStart": "2026-10-28",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 60,
+      "recentImpressions": 12,
+      "score": 179,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 60 impressions sur trois jours, puis 12 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "MonstroZoo Beauval 2026 2027",
+        "MonstroZoo visite guidée enfants",
+        "MonstroZoo carnet enquête gratuit",
+        "MonstroZoo tarifs durée réservation"
+      ]
+    },
+    {
+      "url": "/articles/evenements/odyssee-lumineuse-2026-2027-au-parc-floral-de-paris-billet-date-ou-open-en-famille/",
+      "title": "Odyssée Lumineuse 2026-2027 à Paris: billets, dates et visite en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-26T15:30:14.193Z",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 18,
+      "rapidDrop": true,
+      "peakStart": "2026-10-27",
+      "peakEnd": "2026-10-29",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 69,
+      "recentImpressions": 10,
+      "score": 177,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 69 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Odyssée Lumineuse Paris 2026 2027",
+        "Parc Floral illuminations enfants",
+        "billets Odyssée Lumineuse daté Open",
+        "Odyssée Lumineuse jours fermeture"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-au-chateau-royal-d-amboise-visite-de-jour-ou-nocturne-aux-chandelles/",
+      "title": "Noël au château d'Amboise 2026: visite, nocturnes et tarifs en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-24T06:28:53.652Z",
+      "location": {
+        "city": "Amboise",
+        "department": "Indre-et-Loire",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 20,
+      "rapidDrop": true,
+      "peakStart": "2026-10-26",
+      "peakEnd": "2026-10-28",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 54,
+      "recentImpressions": 3,
+      "score": 153,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 54 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël château royal Amboise 2026",
+        "Noël royal des animaux Amboise",
+        "nocturne chandelles Amboise décembre 2026",
+        "château Amboise Noël tarifs enfants"
+      ]
+    },
+    {
+      "url": "/articles/evenements/marche-de-noel-de-saint-etienne-2026-en-famille-dates-horaires-et-acces/",
+      "title": "Marché de Noël de Saint-Étienne 2026 en famille: dates, horaires et accès",
+      "category": "evenements",
+      "publishedAt": "2026-10-28T18:37:08.909Z",
+      "location": {
+        "city": "Saint-Étienne",
+        "department": "Loire",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "ageDays": 16,
+      "rapidDrop": true,
+      "peakStart": "2026-10-31",
+      "peakEnd": "2026-11-02",
+      "recentStart": "2026-11-08",
+      "recentEnd": "2026-11-10",
+      "peakImpressions": 60,
+      "recentImpressions": 12,
+      "score": 144,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 60 impressions sur trois jours, puis 12 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "marché de Noël Saint-Étienne 2026",
+        "marché de Noël Saint-Étienne horaires",
+        "Noël à Sainté avec enfants"
+      ]
+    }
+  ],
+  "strongPages": [
+    {
+      "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
+      "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
+      "category": "evenements",
+      "recentImpressions": 213,
+      "recentClicks": 10,
+      "recentPosition": 6.286,
+      "retention": 1.411
+    },
+    {
+      "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
+      "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
+      "category": "evenements",
+      "recentImpressions": 133,
+      "recentClicks": 9,
+      "recentPosition": 3.526,
+      "retention": 1.583
+    },
+    {
+      "url": "/articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/",
+      "title": "Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille",
+      "category": "evenements",
+      "recentImpressions": 144,
+      "recentClicks": 6,
+      "recentPosition": 7.757,
+      "retention": 1.059
+    },
+    {
+      "url": "/articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/",
+      "title": "Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers",
+      "category": "vie-pratique",
+      "recentImpressions": 116,
+      "recentClicks": 5,
+      "recentPosition": 5.241,
+      "retention": 0.967
+    },
+    {
+      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
+      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
+      "category": "vie-pratique",
+      "recentImpressions": 197,
+      "recentClicks": 4,
+      "recentPosition": 5.223,
+      "retention": 1.551
+    },
+    {
+      "url": "/articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/",
+      "title": "Où manger des fouées en famille autour de Saumur ?",
+      "category": "cuisine",
+      "recentImpressions": 179,
+      "recentClicks": 4,
+      "recentPosition": 10.888,
+      "retention": 0.579
+    },
+    {
+      "url": "/articles/evenements/fetes-de-saint-nicolas-2026-a-nancy-en-famille-defile-dates-et-visite/",
+      "title": "Fêtes de Saint-Nicolas 2026 à Nancy en famille: défilé, villages et animations",
+      "category": "evenements",
+      "recentImpressions": 63,
+      "recentClicks": 3,
+      "recentPosition": 6.333,
+      "retention": 0.525
+    },
+    {
+      "url": "/articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/",
+      "title": "Noël à Pau 2026 en famille: marchés, village et illuminations",
+      "category": "evenements",
+      "recentImpressions": 61,
+      "recentClicks": 3,
+      "recentPosition": 6.951,
+      "retention": 0.763
+    },
+    {
+      "url": "/articles/evenements/alfest-2026-a-annecy-en-famille-horaires-jeux-et-braderie/",
+      "title": "ALFest 2026 à Annecy en famille: horaires, jeux et braderie",
+      "category": "evenements",
+      "recentImpressions": 57,
+      "recentClicks": 3,
+      "recentPosition": 6.035,
+      "retention": 1.727
+    },
+    {
+      "url": "/articles/evenements/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants/",
+      "title": "Fontaines dansantes d'hiver à Metz 2026-2027: dates, horaires et conseils en famille",
+      "category": "evenements",
+      "recentImpressions": 35,
+      "recentClicks": 3,
+      "recentPosition": 5.143,
+      "retention": 1.129
+    }
+  ],
+  "excluded": {
+    "expired": 178,
+    "cooling": 44
+  },
+  "warnings": [
+    "Diagnostics par requêtes : 5/5.",
+    "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement."
+  ]
+}
+
+## Module Radar embarqué
+
+Le code ci-dessous est fourni directement pour les calculs Radar nécessaires à ce passage. Ne va pas le relire dans un autre fichier.
+
+```javascript
+// Pure JavaScript: usable in Node or a connector orchestration runtime.
+const DAY = 86400000;
+const dayNumber = (date) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date ?? ""))
+    throw new Error("Date GSC invalide.");
+  const value = Date.parse(`${date}T00:00:00Z`);
+  if (
+    !Number.isFinite(value) ||
+    new Date(value).toISOString().slice(0, 10) !== date
+  )
+    throw new Error("Date GSC invalide.");
+  return value / DAY;
+};
+const isoDay = (value) => new Date(value * DAY).toISOString().slice(0, 10);
+const round = (value) => Math.round(value * 1000) / 1000;
+export function unwrapRows(response) {
+  const value = response?.structuredContent ?? response;
+  if (response?.isError || (value.status && value.status !== "done"))
+    throw new Error("GSC indisponible ou traitement incomplet.");
+  const rows = Array.isArray(value) ? value : value.data;
+  if (
+    !Array.isArray(rows) ||
+    value.truncated === true ||
+    value.has_more === true ||
+    (value.total_rows !== undefined && value.total_rows !== rows.length)
+  )
+    throw new Error("Réponse GSC absente ou tronquée.");
+  // Conservative per-response threshold, not a claimed Windsor plan limit.
+  // Concatenated arrays are allowed after each response has been checked.
+  if (!Array.isArray(value) && rows.length >= 5000)
+    throw new Error(
+      "Réponse GSC potentiellement plafonnée; découper la période.",
+    );
+  if (rows.some((row) => row.search_type && row.search_type !== "web"))
+    throw new Error(
+      "Le périmètre Radar doit contenir seulement la recherche web.",
+    );
+  return rows;
+}
+export function canonicalPage(value) {
+  // Some connector runtimes do not expose the URL global.
+  if (typeof value !== "string") return undefined;
+  const path = value.replace(/^https?:\/\/(?:www\.)?fam-space\.fr(?=\/)/i, "");
+  if (!/^\/articles\/[^/?#]+\/[^/?#]+\/$/.test(path)) return undefined;
+  if (path.split("/").some((part) => part === "." || part === ".."))
+    return undefined;
+  return path;
+}
+const metric = (row, name) => {
+  const value = Number(row[name]);
+  if (
+    row[name] === null ||
+    row[name] === undefined ||
+    !Number.isFinite(value) ||
+    value < 0
+  )
+    throw new Error(`Métrique GSC invalide: ${name}.`);
+  return value;
+};
+function addMetric(target, row) {
+  const impressions = metric(row, "impressions");
+  target.impressions += impressions;
+  target.clicks += metric(row, "clicks");
+  target.positionSum += impressions ? metric(row, "position") * impressions : 0;
+}
+const empty = () => ({ impressions: 0, clicks: 0, positionSum: 0 });
+const view = (sum, days = 7) => ({
+  impressions: round(sum.impressions),
+  clicks: round(sum.clicks),
+  impressionsPerDay: round(sum.impressions / days),
+  position: sum.impressions ? round(sum.positionSum / sum.impressions) : null,
+});
+function windowSum(days, start, end) {
+  const result = empty();
+  for (let date = start; date <= end; date++) {
+    const row = days.get(date);
+    if (row) for (const key of Object.keys(result)) result[key] += row[key];
+  }
+  return result;
+}
+export function buildRadarShortlist(
+  response,
+  catalog,
+  {
+    now = new Date().toISOString(),
+    siteRows,
+    from,
+    limit = 15,
+    history = [],
+  } = {},
+) {
+  const rows = unwrapRows(response);
+  const site = siteRows ? unwrapRows(siteRows) : rows;
+  if (!site.length)
+    throw new Error("GSC ne retourne aucune journée consolidée.");
+  const siteDays = site.map((row) => dayNumber(row.date));
+  const end = siteDays.reduce((max, date) => Math.max(max, date), -Infinity);
+  const observedStart = siteDays.reduce(
+    (min, date) => Math.min(min, date),
+    Infinity,
+  );
+  const today = dayNumber(now.slice(0, 10));
+  if (end > today || today - end > 7)
+    throw new Error(
+      "Données GSC trop anciennes ou datées dans le futur; aucun export historique de secours.",
+    );
+  // Never create comparison weeks before the first observed site day.
+  const start = from ? Math.max(dayNumber(from), observedStart) : observedStart;
+  if (!Number.isFinite(start) || end - start < 13)
+    throw new Error("Au moins 14 jours GSC sont nécessaires.");
+  const byPage = new Map();
+  for (const row of rows) {
+    const page = canonicalPage(row.page),
+      date = dayNumber(row.date);
+    if (!page || date < start || date > end) continue;
+    if (!byPage.has(page)) byPage.set(page, new Map());
+    const days = byPage.get(page);
+    if (!days.has(date)) days.set(date, empty());
+    addMetric(days.get(date), row);
+  }
+  const entries = [];
+  for (const article of catalog) {
+    const page = canonicalPage(article.url);
+    if (
+      !page ||
+      article.status === "draft" ||
+      Date.parse(article.publishedAt) > Date.parse(now)
+    )
+      continue;
+    const days = byPage.get(page) ?? new Map();
+    const publishedDay = dayNumber(article.publishedAt.slice(0, 10));
+    const firstDay = Math.max(start, publishedDay);
+    // Three days of growth followed by three consolidated days of decline
+    // can be detected before a new page has two full GSC weeks.
+    if (end - firstDay < 5) continue;
+    const recent = windowSum(days, end - 6, end);
+    const recent3 = windowSum(days, end - 2, end);
+    let peak3 = empty(), peak3Start = firstDay;
+    for (let first = firstDay; first + 2 < end - 2; first++) {
+      const sum = windowSum(days, first, first + 2);
+      if (sum.impressions > peak3.impressions) {
+        peak3 = sum;
+        peak3Start = first;
+      }
+    }
+    let peak7 = empty(), peak7Start = firstDay;
+    if (end - firstDay >= 13) {
+      for (let first = firstDay; first + 6 < end - 6; first++) {
+        const sum = windowSum(days, first, first + 6);
+        if (sum.impressions > peak7.impressions) {
+          peak7 = sum;
+          peak7Start = first;
+        }
+      }
+    }
+    const total = windowSum(days, firstDay, end);
+    const expired = Boolean(
+      article.eventEndsAt && article.eventEndsAt < now.slice(0, 10),
+    );
+    const reviewDue = Boolean(
+      article.reviewAt && article.reviewAt <= now.slice(0, 10),
+    );
+    const lastRefresh = history
+      .filter((item) => item.url === page && item.mode === "refresh")
+      .map((item) => item.publishedAt)
+      .sort()
+      .at(-1);
+    const cooling = Boolean(
+      lastRefresh && Date.parse(now) - Date.parse(lastRefresh) < 14 * DAY,
+    );
+    const ageDays = today - publishedDay;
+    const firstVisible = [...days]
+      .filter(([date, values]) => date >= firstDay && values.impressions > 0)
+      .map(([date]) => date)
+      .sort((a, b) => a - b)[0];
+    const newlyVisible =
+      ageDays <= 30 ||
+      (firstVisible !== undefined && firstVisible > start && end - firstVisible <= 21);
+    const rapidDrop =
+      newlyVisible &&
+      peak3.impressions >= 20 &&
+      peak3.impressions - recent3.impressions >= 15 &&
+      recent3.impressions <= peak3.impressions * 0.35;
+    const weeklyDecline = end - firstDay >= 13
+      ? Math.max(0, peak7.impressions - recent.impressions) *
+        Math.min(1, peak7.impressions / 35) *
+        Math.min(1, total.impressions / 50)
+      : 0;
+    const rapidScore = rapidDrop ? (peak3.impressions - recent3.impressions) * 3 : 0;
+    const recentPosition = recent.impressions
+      ? recent.positionSum / recent.impressions
+      : null;
+    const clickPotentialScore =
+      end - firstDay >= 13 && recentPosition !== null && recentPosition <= 10
+        ? Math.max(0, recent.impressions * 0.01 - recent.clicks) * 10
+        : 0;
+    const searchPotential =
+      !rapidDrop && clickPotentialScore > weeklyDecline && clickPotentialScore > 0;
+    const score =
+      expired || cooling
+        ? 0
+        : Math.max(rapidScore, weeklyDecline, clickPotentialScore) +
+          (reviewDue ? 35 : 0);
+    // Recent pages must use available, non-overlapping three-day windows.
+    const shortWindow = rapidDrop || end - firstDay < 13;
+    const peak = shortWindow ? peak3 : peak7;
+    const peakStart = shortWindow ? peak3Start : peak7Start;
+    const peakDays = shortWindow ? 3 : 7;
+    const comparedRecent = shortWindow ? recent3 : recent;
+    const comparedRecentStart = shortWindow ? end - 2 : end - 6;
+    const retention = peak.impressions
+      ? comparedRecent.impressions / peak.impressions
+      : 1;
+    entries.push({
+      url: page,
+      title: article.title,
+      category: article.category,
+      location: article.location,
+      keywords: article.keywords ?? article.topic?.keywords ?? [],
+      publishedAt: article.publishedAt,
+      eventEndsAt: article.eventEndsAt,
+      reviewAt: article.reviewAt,
+      expired,
+      cooling,
+      reviewDue,
+      ageDays,
+      rapidDrop,
+      peakStart: isoDay(peakStart),
+      peakEnd: isoDay(peakStart + peakDays - 1),
+      recentStart: isoDay(comparedRecentStart),
+      recentEnd: isoDay(end),
+      peak: view(peak, peakDays),
+      recent: view(comparedRecent, peakDays),
+      retention: round(retention),
+      score: round(score),
+      signal: searchPotential ? "search_potential" : "needs_query_check",
+      basis: rapidDrop
+        ? `Visibilité récente : ${round(peak3.impressions)} impressions sur trois jours, puis ${round(recent3.impressions)} sur les trois derniers jours consolidés; cause non établie.`
+        : "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      ...(searchPotential
+        ? {
+            basis: `Page visible avec ${round(recent.impressions)} impressions, ${round(recent.clicks)} clics et une position moyenne de ${round(recentPosition)} sur sept jours; intention de recherche à examiner.`,
+            commonQueries: null,
+            positionDelta: null,
+            impressionRatio: null,
+            focusQueries: (Array.isArray(article.keywords)
+              ? article.keywords
+              : Array.isArray(article.topic?.keywords)
+                ? article.topic.keywords
+                : []
+            ).slice(0, 5),
+          }
+        : {}),
+    });
+  }
+  return {
+    schemaVersion: 1,
+    retrievedAt: now,
+    dataThrough: isoDay(end),
+    from: isoDay(start),
+    caveat:
+      "Les lignes absentes valent zéro dans les données retournées. GSC peut masquer des requêtes; les signaux ne prouvent ni désindexation ni causalité.",
+    refresh: entries
+      .filter((item) => item.score > 0)
+      .sort((a, b) =>
+        Number(b.rapidDrop && b.category !== "evenements") -
+          Number(a.rapidDrop && a.category !== "evenements") ||
+        Number(b.rapidDrop) - Number(a.rapidDrop) ||
+        b.score - a.score ||
+        a.url.localeCompare(b.url))
+      .slice(0, limit),
+    strongPages: entries
+      .filter(
+        (item) =>
+          !item.expired &&
+          item.recent.impressions >= 35 &&
+          item.retention >= 0.5,
+      )
+      .sort(
+        (a, b) =>
+          b.recent.clicks - a.recent.clicks ||
+          b.recent.impressions - a.recent.impressions ||
+          a.url.localeCompare(b.url),
+      )
+      .slice(0, 10),
+    excluded: {
+      expired: entries.filter((item) => item.expired).length,
+      cooling: entries.filter((item) => item.cooling).length,
+    },
+  };
+}
+export function diagnoseQueries(peakResponse, recentResponse) {
+  const aggregate = (response) => {
+    const result = new Map();
+    for (const row of unwrapRows(response)) {
+      if (typeof row.query !== "string")
+        throw new Error("Requête GSC manquante.");
+      if (!result.has(row.query)) result.set(row.query, empty());
+      addMetric(result.get(row.query), row);
+    }
+    return result;
+  };
+  const peak = aggregate(peakResponse),
+    recent = aggregate(recentResponse);
+  const common = [...peak.keys()].filter(
+    (query) =>
+      peak.get(query).impressions >= 10 &&
+      (recent.get(query)?.impressions ?? 0) >= 3,
+  );
+  let weight = 0,
+    change = 0;
+  for (const query of common) {
+    const first = peak.get(query),
+      last = recent.get(query);
+    const w = Math.min(first.impressions, last.impressions);
+    weight += w;
+    change +=
+      w *
+      (last.positionSum / last.impressions -
+        first.positionSum / first.impressions);
+  }
+  const delta = weight ? change / weight : null;
+  const total = (values) =>
+    [...values.values()].reduce((sum, item) => sum + item.impressions, 0);
+  const ratio = total(peak) ? total(recent) / total(peak) : null;
+  return {
+    signal:
+      delta !== null && delta >= 3
+        ? "rank_loss"
+        : delta !== null &&
+            Math.abs(delta) <= 2 &&
+            ratio !== null &&
+            ratio <= 0.25
+          ? "coverage_loss"
+          : "uncertain",
+    commonQueries: common.length,
+    positionDelta: delta === null ? null : round(delta),
+    impressionRatio: ratio === null ? null : round(ratio),
+    queries: [...new Set([...peak.keys(), ...recent.keys()])]
+      .map((query) => ({
+        query,
+        peak: view(peak.get(query) ?? empty()),
+        recent: view(recent.get(query) ?? empty()),
+      }))
+      .sort((a, b) => b.peak.impressions - a.peak.impressions),
+    caveat:
+      "coverage_loss désigne une baisse d'exposition observée, pas une preuve de désindexation. Les requêtes masquées et la saisonnalité limitent le diagnostic.",
+  };
+}
+// The shortlist ranks pages; only per-page query rows can establish a diagnosis.
+export function attachRadarQueryDiagnosis(item, peakResponse, recentResponse) {
+  const diagnosis = diagnoseQueries(peakResponse, recentResponse);
+  const signal =
+    item.signal === "search_potential" && diagnosis.signal === "uncertain"
+      ? "search_potential"
+      : diagnosis.signal;
+  const priority = (query) => {
+    const lostImpressions = Math.max(0, query.peak.impressions - query.recent.impressions);
+    const lostPositions =
+      query.peak.position !== null && query.recent.position !== null
+        ? Math.max(0, query.recent.position - query.peak.position)
+        : 0;
+    if (signal === "rank_loss")
+      return query.peak.impressions >= 10 && query.recent.impressions >= 3
+        ? lostPositions * Math.min(query.peak.impressions, query.recent.impressions)
+        : 0;
+    if (signal === "search_potential") return query.recent.impressions;
+    return lostImpressions;
+  };
+  const relevantQueries = diagnosis.queries
+    .filter((query) => signal !== "rank_loss" || priority(query) > 0)
+    .sort((a, b) => priority(b) - priority(a) || b.peak.impressions - a.peak.impressions)
+    .slice(0, 5)
+    .map(({ query }) => query);
+  const basis =
+    item.basis + " " +
+    (signal === "rank_loss"
+      ? `Recul moyen de ${diagnosis.positionDelta} positions sur ${diagnosis.commonQueries} requête(s) comparable(s).`
+      : signal === "coverage_loss"
+        ? `Baisse d'exposition sur les requêtes visibles (ratio ${diagnosis.impressionRatio}), sans recul de classement comparable établi.`
+        : signal === "search_potential"
+          ? "Les requêtes visibles ne démontrent pas une perte de classement."
+          : `Diagnostic sur ${diagnosis.commonQueries} requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.`);
+  return {
+    ...item,
+    signal,
+    basis,
+    commonQueries: diagnosis.commonQueries,
+    positionDelta: diagnosis.positionDelta,
+    impressionRatio: diagnosis.impressionRatio,
+    focusQueries: relevantQueries.length ? relevantQueries : item.focusQueries ?? [],
+  };
+}
+
+
+/** Prepare one compact snapshot from one shortlist and per-page query responses. */
+export function buildRadarSnapshot(pageRows, catalog, options = {}, queryPairs = []) {
+  const shortlist = buildRadarShortlist(pageRows, catalog, options);
+  const pairs = new Map(queryPairs.map((pair) => [canonicalPage(pair.url), pair]));
+  const refresh = shortlist.refresh.map((candidate, index) => {
+    const pair = index < 5 ? pairs.get(candidate.url) : undefined;
+    const item = pair
+      ? attachRadarQueryDiagnosis(candidate, pair.peakQueries, pair.recentQueries)
+      : candidate;
+    return {
+      url: item.url,
+      title: item.title,
+      category: item.category,
+      publishedAt: item.publishedAt,
+      location: item.location,
+      ageDays: item.ageDays,
+      rapidDrop: item.rapidDrop,
+      peakStart: item.peakStart,
+      peakEnd: item.peakEnd,
+      recentStart: item.recentStart,
+      recentEnd: item.recentEnd,
+      peakImpressions: item.peak.impressions,
+      recentImpressions: item.recent.impressions,
+      score: item.score,
+      signal: item.signal,
+      basis: item.basis,
+      commonQueries: item.commonQueries ?? null,
+      positionDelta: item.positionDelta ?? null,
+      impressionRatio: item.impressionRatio ?? null,
+      focusQueries: item.focusQueries ?? item.keywords.slice(0, 5),
+    };
+  });
+  return {
+    schemaVersion: 1,
+    generatedAt: options.now ?? new Date().toISOString(),
+    dataThrough: shortlist.dataThrough,
+    from: shortlist.from,
+    refresh,
+    strongPages: shortlist.strongPages.map((item) => ({
+      url: item.url,
+      title: item.title,
+      category: item.category,
+      recentImpressions: item.recent.impressions,
+      recentClicks: item.recent.clicks,
+      recentPosition: item.recent.position,
+      retention: item.retention,
+    })),
+    excluded: shortlist.excluded,
+    warnings: [
+      ...(options.warnings ?? []),
+      `Diagnostics par requêtes : ${refresh.slice(0, 5).filter((item) => item.signal !== "needs_query_check" && item.commonQueries !== null).length}/${Math.min(5, refresh.length)}.`,
+      "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement.",
+    ],
+  };
+}
+
+const STOP = new Set(
+  "avec pour dans sans famille familles enfant enfants tarif tarifs duree conseil conseils visite visiter billet billets activite activites sortie sorties evenement evenements preparation pratique pratiques autour leur leurs aussi quoi comment quel quelle quelles quels quand faire partir 2026 2027".split(
+    " ",
+  ),
+);
+const words = (value) =>
+  new Set(
+    String(value)
+      .replace(/œ/g, "oe")
+      .normalize("NFD")
+      .replace(/\p{Diacritic}/gu, "")
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((word) => word.length >= 3 && !STOP.has(word)),
+  );
+export function probableDuplicates(subject, catalog, limit = 5) {
+  const terms = words(
+    [
+      subject.title,
+      ...(subject.keywords ?? subject.topic?.keywords ?? []),
+    ].join(" "),
+  );
+  return catalog
+    .filter(
+      (article) => canonicalPage(article.url) !== canonicalPage(subject.url),
+    )
+    .map((article) => {
+      const candidate = words(
+        [
+          article.title,
+          ...(article.keywords ?? article.topic?.keywords ?? []),
+        ].join(" "),
+      );
+      const shared = [...terms].filter((word) => candidate.has(word));
+      const sameCity = Boolean(
+        subject.location?.city &&
+          subject.location.city === article.location?.city,
+      );
+      const sameDepartment = Boolean(
+        subject.location?.department &&
+          subject.location.department === article.location?.department,
+      );
+      return {
+        url: article.url,
+        title: article.title,
+        location: article.location,
+        sharedTerms: shared,
+        score:
+          shared.length / Math.max(1, new Set([...terms, ...candidate]).size) +
+          (sameCity ? 0.2 : sameDepartment ? 0.1 : 0),
+      };
+    })
+    .filter(
+      (item) =>
+        item.sharedTerms.length >= 2 ||
+        (item.sharedTerms.length === 1 && item.sharedTerms[0].length >= 6),
+    )
+    .sort((a, b) => b.score - a.score || a.url.localeCompare(b.url))
+    .slice(0, limit);
+}
+```
+
+## Résultat attendu
+
+Actualise uniquement radar-gsc-snapshot.json sur la branche main de DevWeb13/fam-space-actions-bridge avec le snapshot compact décrit ci-dessus, puis termine ce passage. Ne choisis aucune mission Radar dans la même exécution et ne modifie aucun autre fichier interne.
