@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261114-1806-l-espace-des-sciences-a-rennes-avec-des-enfants-expositions-experience",
+  "lastProcessedCommit": "5b470b4dcd4a617ad78ac8f40c58658364578d12"
 }
