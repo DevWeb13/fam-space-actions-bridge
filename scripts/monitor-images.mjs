@@ -8,9 +8,15 @@ const TITLE = "[Surveillance] Images Fam Space bloquées";
 const now = Date.now();
 
 function api(path, ...args) {
+  // Le Bridge est public, le site est privé: utiliser le bon jeton pour chaque API.
+  const token = path.startsWith(`repos/${SITE}/`)
+    ? process.env.FAM_SPACE_TOKEN
+    : process.env.GH_TOKEN;
+  if (!token) throw new Error("Jeton GitHub manquant pour la surveillance Images.");
   const result = execFileSync("gh", ["api", path, ...args], {
     encoding: "utf8",
     maxBuffer: 5 * 1024 * 1024,
+    env: { ...process.env, GH_TOKEN: token },
   });
   return JSON.parse(result);
 }
