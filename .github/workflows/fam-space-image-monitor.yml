@@ -1,0 +1,30 @@
+name: Fam Space surveillance images
+
+on:
+  schedule:
+    - cron: "15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+  issues: write
+
+# Indépendant de fam-space-master-write: surveiller même si la file de publication est bloquée.
+concurrency:
+  group: fam-space-image-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24.22.1"
+      - name: Contrôler la progression des images et alerter
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/monitor-images.mjs
