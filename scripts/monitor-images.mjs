@@ -29,9 +29,23 @@ const recentRuns = api(
   `repos/${BRIDGE}/actions/workflows/fam-space-images.yml/runs?per_page=10`,
 ).workflow_runs ?? [];
 const latest = recentRuns[0];
+const queuedRuns = api(
+  `repos/${BRIDGE}/actions/workflows/fam-space-images.yml/runs?status=queued&per_page=100`,
+).workflow_runs ?? [];
 const anomalies = [];
 
-if (latest && latest.status !== "completed" && ageHours(latest.created_at) > 2) {
+const staleQueued = queuedRuns.filter((run) => ageHours(run.created_at) > 2);
+if (staleQueued.length) {
+  const oldest = staleQueued.reduce((a, b) =>
+    Date.parse(a.created_at) < Date.parse(b.created_at) ? a : b);
+  anomalies.push(
+    `${staleQueued.length} exécution(s) Images en file depuis plus de 2 h, ` +
+    `dont ${oldest.html_url} (${Math.floor(ageHours(oldest.created_at))} h).`,
+  );
+}
+
+if (latest && latest.status !== "completed" && latest.status !== "queued" &&
+    ageHours(latest.created_at) > 2) {
   anomalies.push(`Exécution GitHub en attente depuis plus de 2 h: ${latest.html_url}`);
 }
 if (latest && latest.status === "completed" &&
