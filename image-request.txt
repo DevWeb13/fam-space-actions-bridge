@@ -394,3 +394,4 @@ automation/image-hero-20261114-0949-colmar-pont|606f714939613857069256c88aa56a9b
 automation/image-hero-20261114-0949-colmar-pont|821ccc6a414deeca3e99105a74eea0566f3a664d
 automation/image-hero-20261114-1546-nevers-narbonne|ea5d0f43734bc684c193c8b3392387266a13d96d
 automation/image-hero-20261114-1546-nevers-narbonne|edf6b244f74eec36ad6482adcd1e79012ac95de6
+automation/image-hero-20261114-2144-puy-rennes-eure|5be8fbce6234ece0d8c3009393cb763ca999bbc9
