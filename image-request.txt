@@ -388,3 +388,4 @@ automation/image-hero-20261113-rattrapage-04|ad4cdc5bee519fc29cd4feea5bd3bd0775f
 automation/image-hero-20261113-rattrapage-04|80bde81093409ec03717d1406c58c44709d900df
 automation/image-hero-20261113-rattrapage-05|9bb0d2b216efa3022c71c6983e382d00d057eb8c
 automation/image-hero-20261113-rattrapage-05|67d31644f61faa9e5734e07e027d5c0526bfebc2
+automation/image-hero-20261114-0343-lascaux-txik|7824e0a0f728e7d99ce7f2969f9700063bb6c6e8
