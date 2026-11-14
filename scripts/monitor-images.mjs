@@ -95,7 +95,7 @@ if (anomalies.length) {
     "",
     ...anomalies.map((reason) => `- ${reason}`),
     "",
-    `État: phase ${state.phase}, branche active ${state.activeBranch || "aucune"}.`,
+    `État: phase ${state.phase}.`,
     "Vérifier la file GitHub Actions et le passage HERO/BODY avant toute relance.",
     "Cette issue sera fermée automatiquement dès que les symptômes contrôlés disparaîtront.",
   ].join("\n");
