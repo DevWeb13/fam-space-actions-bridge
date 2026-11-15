@@ -399,3 +399,4 @@ automation/image-hero-20261114-2144-puy-rennes-eure|743ead8452594d8e6142e953e8a8
 automation/image-hero-20261115-0348-nice-valmorel|8d64311e67015c06acd1f0bef5c6086b8406d703
 automation/image-hero-20261115-0348-nice-valmorel|0aa6c495c30a95c0baf420bd6685c4a20e8a9f63
 automation/image-hero-20261115-0941-angles-crest-niort|ac2cb854532fd8e80a3417ef2fd35393f1050328
+automation/image-hero-20261115-0941-angles-crest-niort|7fb373379a894a1d1e928de17ce1ce78cd9d2a2c
