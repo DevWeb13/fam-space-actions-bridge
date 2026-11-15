@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès"
-subtitle: "Quatre soirées gratuites du 5 au 8 décembre: choisir son soir et préparer une visite courte avec des enfants."
-summary: "Fête des Lumières 2026 à Lyon en famille: horaires des 5, 6, 7 et 8 décembre, accès, poussettes, gratuité et choix du parcours lorsque le programme sera publié."
+subtitle: Du 5 au 8 décembre, deux idées de parcours courts avec enfants, les œuvres 2026 et les accès à connaître.
+summary: "Fête des Lumières 2026 à Lyon en famille: horaires, œuvres interactives place Bellecour, visite au parc de la Tête d'or, poussette, transports et accès gratuits."
 category: evenements
 location:
   city: Lyon
@@ -71,8 +74,18 @@ image:
   src: /images/articles/2026/10/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours.webp
   alt: Statue équestre de Louis XIV sur la place Bellecour à Lyon, pendant la Fête des Lumières en 2019.
 sources:
+  - title: Fête des Lumières - programme officiel 2026
+    url: https://www.fetedeslumieres.lyon.fr/fr
   - title: Fête des Lumières - dates et horaires 2026
     url: https://www.fetedeslumieres.lyon.fr/fr/page/horaires-et-dates-fete-des-lumieres-2026
+  - title: Fête des Lumières - Twist & Shine
+    url: https://www.fetedeslumieres.lyon.fr/fr/oeuvre/twist-shine
+  - title: Fête des Lumières - Mission Lumignons, destination NGC2392
+    url: https://www.fetedeslumieres.lyon.fr/fr/oeuvre/mission-lumignons-destination-ngc2392?edition=2596
+  - title: Fête des Lumières - 1 000 K...Δ
+    url: https://www.fetedeslumieres.lyon.fr/fr/oeuvre/1-000-k-delta
+  - title: Fête des Lumières - parc de la Tête d'or
+    url: https://www.fetedeslumieres.lyon.fr/fr/lieu/parc-de-la-tete-dor
   - title: Fête des Lumières - foire aux questions
     url: https://www.fetedeslumieres.lyon.fr/fr/faq/foire-aux-questions
   - title: Fête des Lumières - handi-accueil
@@ -84,7 +97,7 @@ sources:
   - title: ibis Styles Lyon Centre Gare Part Dieu - chambres et localisation
     url: https://all.accor.com/hotel/7373/index.fr.shtml
 eventEndsAt: 2026-12-08
-reviewAt: 2026-11-05
+reviewAt: 2026-11-27
 topic:
   key: evenements|lyon|fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours|2026
   keywords:
@@ -102,7 +115,7 @@ affiliate:
   destination: Lyon
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/index.md
   targetSha: 221896fcce4a36a0b51196ce8cf076e5dd29f546
@@ -129,33 +142,80 @@ radar:
       - Fête des Lumières Lyon poussette parcours
 ---
 
-## Mission retenue
-Actualiser le guide familial de la Fête des Lumières de Lyon, du 5 au 8 décembre 2026, avec le programme officiel désormais publié.
+La **Fête des Lumières 2026 à Lyon** a lieu **du samedi 5 au mardi 8 décembre**. Ses **27 installations** sont désormais annoncées et **l'accès aux œuvres est gratuit**. Pour une sortie avec des enfants, mieux vaut choisir un seul secteur et une ou deux créations que traverser la ville dans la foule. Deux possibilités ressortent du [programme officiel 2026](https://www.fetedeslumieres.lyon.fr/fr): jouer avec la lumière place Bellecour ou découvrir une installation au parc de la Tête d'or, avec des accès plus contraints.
 
-## Pourquoi cette mission
-Le snapshot GSC signale 20 impressions sur trois jours puis 0, sans diagnostic de cause. L'article promet encore une programmation « à paraître début novembre » alors que l'organisateur présente maintenant les œuvres 2026: lacune concrète et indépendante du signal SEO.
+## Quel soir venir avec des enfants?
 
-## Décision du lecteur
-Permettre de choisir une ou deux œuvres adaptées au rythme des enfants, avec un trajet cohérent, plutôt qu'un parcours théorique fondé sur l'édition précédente.
+Les [horaires généraux officiels](https://www.fetedeslumieres.lyon.fr/fr/page/horaires-et-dates-fete-des-lumieres-2026) sont les suivants, sauf indication différente sur la fiche d'une œuvre:
 
-## Faits à traiter
-- Le site officiel présente le programme 2026 et annonce 27 installations: sélectionner seulement quelques œuvres et secteurs réellement pratiques pour une courte sortie familiale.
-- Le parc de la Tête d'or a des horaires et des accès spécifiques: ouverture à 18h les 5, 7 et 8 décembre, à 17h le 6; dernières entrées à 22h15 ou 21h15 selon le jour. Entrée boulevard des Belges par la Porte Tête d'Or; Porte des Enfants du Rhône réservée aux personnes en situation de handicap. Évacuation préalable du parc et fermeture possible selon la météo.
-- Vérifier les horaires particuliers de chaque œuvre avant de conseiller un parcours. Ne pas reprendre les fiches des éditions précédentes, dont certaines sont toujours indexées.
-- Préserver dates et horaires généraux, gratuité, conseils poussette et foule, transports, réserves sur les informations TCL anciennes, trois photographies et leurs crédits/licences, et lien Booking.com existant.
+- **Samedi 5 décembre:** 19h à 23h.
+- **Dimanche 6 décembre:** 18h à 22h.
+- **Lundi 7 décembre:** 19h à 23h.
+- **Mardi 8 décembre:** 19h à 23h.
 
-## Sources de départ
-- Programme officiel: https://www.fetedeslumieres.lyon.fr/fr
-- Dates et horaires: https://www.fetedeslumieres.lyon.fr/fr/page/horaires-et-dates-fete-des-lumieres-2026
-- Œuvre et accès au parc: https://www.fetedeslumieres.lyon.fr/fr/oeuvre/1-000-k-delta
-- FAQ: https://www.fetedeslumieres.lyon.fr/fr/faq/foire-aux-questions
-- Accessibilité: https://www.fetedeslumieres.lyon.fr/fr/page/handi-accueil
+Le **dimanche 6 décembre** est intéressant avec de jeunes enfants, car les installations commencent une heure plus tôt. Le samedi évite l'école le lendemain, mais il faut anticiper la foule. Le mardi 8 décembre, jour traditionnel des lumignons, n'est pas forcément une soirée calme.
 
-## Affiliation
-Conserver l'hôtel ibis Styles Lyon Centre Gare Part Dieu déjà lié via Booking.com; aucune billetterie payante pour les œuvres.
+## Un parcours facile: rester place Bellecour
 
-## Continuations internes
-Conserver le renvoi éventuel vers l'article Slava's Snowshow à Lyon uniquement pour les familles qui souhaitent une autre sortie, sans confondre les deux événements.
+<!-- article-image-body:01 -->
+
+![Musée des Beaux-Arts illuminé sur la place des Terreaux pendant la Fête des Lumières de Lyon en 2025.](/images/articles/2026/10/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours-body-01.webp)
+
+*Photo: [Corentin Eustacchi](https://commons.wikimedia.org/wiki/File:F%C3%AAte_des_Lumi%C3%A8res_(Lyon,_2025,_place_des_Terreaux).jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Pour éviter les longues marches, la **place Bellecour** permet de voir deux propositions 2026 dans un même secteur.
+
+- [**Twist & Shine**](https://www.fetedeslumieres.lyon.fr/fr/oeuvre/twist-shine) invite petits et grands à déplacer et assembler des sculptures lumineuses. Certaines sont manipulables par les enfants; les plus grandes nécessitent l'aide d'adultes. C'est une option particulièrement adaptée aux familles qui préfèrent participer plutôt que regarder longtemps une projection.
+- [**Mission Lumignons, destination NGC2392**](https://www.fetedeslumieres.lyon.fr/fr/oeuvre/mission-lumignons-destination-ngc2392?edition=2596) transforme la place en paysage de planètes et d'astres lumineux. Les lumignons participatifs soutiennent l'association Vivre aux Éclats; cette contribution solidaire est **facultative** et ne constitue pas un billet d'entrée.
+
+Les deux fiches annoncent les **horaires généraux de la Fête**. Vous pouvez commencer par une seule installation, puis décider sur place si les enfants ont encore envie de découvrir l'autre. Ce parcours limite les changements de quartier, mais pas les éventuelles attentes ni la densité de la foule.
+
+## Une autre soirée: le parc de la Tête d'or
+
+L'installation [**1 000 K...Δ**](https://www.fetedeslumieres.lyon.fr/fr/oeuvre/1-000-k-delta) mêle sculptures et projections lumineuses dans la végétation du parc. Le site propose également d'autres créations, mais il vaut mieux prévoir **une visite du parc comme sortie principale**, sans imposer ensuite un retour vers Bellecour.
+
+L'accès est strictement organisé:
+
+- **Samedi 5, lundi 7 et mardi 8 décembre:** ouverture du parc à 18h, œuvres de 19h à 23h, **dernière entrée à 22h15**.
+- **Dimanche 6 décembre:** ouverture à 17h, œuvres de 18h à 22h, **dernière entrée à 21h15**.
+- **Entrée habituelle de la Fête:** boulevard des Belges, **Porte Tête d'Or**, face à la rue Tête d'Or. La **Porte des Enfants du Rhône** est réservée aux personnes en situation de handicap.
+- Le parc est évacué l'après-midi avant la réouverture: de **15h30 à 18h les 4, 5, 7 et 8 décembre**, et de **14h30 à 17h le dimanche 6**. Il peut aussi fermer si la météo est défavorable.
+
+Les **bagages sont interdits** et l'organisateur recommande d'éviter les sacs pour faciliter les contrôles. Pour les transports, la [fiche du parc](https://www.fetedeslumieres.lyon.fr/fr/lieu/parc-de-la-tete-dor) mentionne notamment le métro A à Masséna, à environ huit minutes à pied de l'entrée. Vérifiez les dessertes du jour avant de partir.
+
+## Poussette, bruit et accessibilité: prévoir une sortie courte
+
+Avec un bébé, une poussette peut être utile, mais difficile à manœuvrer dans une foule dense; un porte-bébé peut être une alternative selon l'âge et le confort de chacun. Prévoyez des vêtements chauds, une protection contre la pluie et des chaussures de marche. **Une heure à une heure et demie sur place** est un objectif familial possible, pas une durée officielle: les files et les déplacements peuvent l'allonger.
+
+Les installations ne se ressemblent pas: certaines sont participatives, d'autres immersives ou accompagnées de sons et d'effets lumineux intenses. Choisissez selon la sensibilité de l'enfant, plutôt que de chercher à multiplier les œuvres.
+
+La [page handi-accueil officielle](https://www.fetedeslumieres.lyon.fr/fr/page/handi-accueil) précise les dispositifs adaptés, notamment des points d'accueil **place Bellecour, place Louis Pradel et Porte des Enfants du Rhône**. La [FAQ](https://www.fetedeslumieres.lyon.fr/fr/faq/foire-aux-questions) mentionne les aménagements sur présentation de la **carte mobilité inclusion (CMI)**. Un parcours adapté aux personnes à mobilité réduite n'est pas automatiquement le plus pratique pour une poussette: contrôlez le cheminement prévu.
+
+## Venir à Lyon: train, métro et périmètre piéton
+
+<!-- article-image-body:02 -->
+
+![Entrée côté Villette de la gare de Lyon-Part-Dieu photographiée de nuit en janvier 2026.](/images/articles/2026/10/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours-body-02.webp)
+
+*Photo: [TCY](https://commons.wikimedia.org/wiki/File:Gare_de_Lyon-Part-Dieu,_entr%C3%A9e_Vilette_de_nuit.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Les gares **Lyon Part-Dieu** et **Lyon-Perrache** permettent d'arriver sans voiture. Choisissez ensuite votre transport TCL en fonction de l'œuvre retenue. Pendant la Fête, l'hypercentre est habituellement soumis à un **périmètre piéton**, avec des restrictions de circulation, de stationnement et parfois de cheminement.
+
+Attention: la [page officielle consacrée aux déplacements](https://www.fetedeslumieres.lyon.fr/fr/page/se-deplacer-dans-lyon) comporte encore des indications anciennes, notamment une mention de gratuité TCL associée à un « lundi 8 décembre », alors que **le 8 décembre 2026 tombe un mardi**. Ne considérez donc pas ces tarifs, les horaires de stations ou les fermetures de parkings comme confirmés pour 2026 sans nouvelle vérification. Si vous venez en voiture, évitez de compter sur un parking situé dans le périmètre de la Fête. Si vous venez en train, gardez une marge pour rejoindre votre gare avant le dernier départ.
+
+## La Fête des Lumières est-elle payante?
+
+**Non, les installations sont gratuites et ne nécessitent pas de billet général.** Les dépenses éventuelles concernent les transports, les repas ou l'hébergement. Les **Lumignons du Cœur** sont une initiative solidaire distincte: y contribuer reste facultatif.
+
+## Où dormir si vous arrivez en train?
+
+Pour éviter un retour tardif avec les enfants, passer une nuit à Lyon peut être pratique. L'[**ibis Styles Lyon Centre - Gare Part Dieu sur Booking.com**](https://www.booking.com/hotel/fr/all-seasons-lyon-part-dieu.fr.html), au **54 rue de la Villette**, est proche de la gare Part-Dieu. L'hôtelier présente notamment une **chambre supérieure pour trois personnes**, avec lit double et lit simple, ainsi qu'une **junior suite pour quatre personnes maximum**, avec lit double et canapé-lit double. Vérifiez la capacité admise selon l'âge de chaque enfant, les disponibilités, le tarif final et les conditions de réservation. Cet emplacement facilite l'arrivée en train, mais ne garantit pas la proximité immédiate des œuvres choisies.
+
+Avant le départ, revérifiez la [programmation officielle](https://www.fetedeslumieres.lyon.fr/fr), les horaires propres aux installations et les éventuelles modifications d'accès liées à la météo ou à l'affluence.
 
 ## Article source exact à préserver et améliorer
 
