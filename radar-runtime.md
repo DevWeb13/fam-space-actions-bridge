@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 3/3
+# Radar Fam Space - Phase 1/3
 
 ## Mission
 
@@ -8,34 +8,25 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 3/3
+# Radar - Phase 1/3
 
-Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
+Tu es rédacteur en chef. Ta seule responsabilité est de choisir la meilleure mission du passage et de préparer un brief éditorial court. **Ne fais aucune plomberie Git et ne reconstruis aucune donnée GSC structurée.**
 
-Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
+Le snapshot GSC du jour est déjà prêt lorsque cette phase commence. Utilise le catalogue compact et l'historique du bridge fournis dans ce runtime, puis utilise le contexte des travaux en cours fourni dans ce runtime. Contrôle seulement les articles nécessaires sur `master`, sans relire tout le catalogue fichier par fichier.
 
-Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
+Examine **en premier** les articles `refresh`, en commençant par ceux marqués `rapidDrop: true`. Ils ont gagné des impressions, puis leur visibilité a fortement diminué en quelques jours. Les articles récents ne doivent pas être pénalisés par leur âge. Les autres pertes significatives viennent ensuite.
 
-Ensuite:
-- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
-- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
-- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
-- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
-- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
-- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
-- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
-- ne force ni longueur ni affiliation.
+Lis l'article source complet, ses sources et les requêtes GSC lorsqu'elles ont été diagnostiquées :
+- `rank_loss` : vérifier les intentions dont les positions ont réellement reculé ;
+- `coverage_loss` : examiner les recherches dont l'exposition diminue ;
+- `uncertain` ou `needs_query_check` : une chute d'impressions ne prouve pas la cause. Seule une lacune indépendante et vérifiée peut justifier une amélioration ;
+- `search_potential` : vérifier que la réponse et le titre correspondent réellement à l'intention.
 
-Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
+**Ne choisis pas un refresh pour changer une date ou forcer un `updatedAt`.** Identifie ce qui serait concrètement meilleur pour la famille, tout en conservant ce qui fonctionne déjà.
 
-Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
-- `summary`: contrôles et corrections réellement effectués;
-- `sources`: URLs factuelles revérifiées;
-- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+**Seulement si aucun article existant n'est réellement améliorable**, cherche un événement exceptionnel avec un fort potentiel d'intérêt et éventuellement d'affiliation. Vérifie ses sources officielles et recherche les doublons de sujet sur `master`, en complément des articles proches déjà listés, ainsi que les contenus Publication/Destination en cours. Ne multiplie pas les nouveaux articles sur de petits événements gratuits.
 
-**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
-
-## Règles partenaires
+Applique directement les règles partenaires ci-dessous.
 
 ### Partenaires disponibles
 
@@ -59,315 +50,1014 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-## Candidat validé de la phase précédente
-
----
-title: "Le PAL 2027 en famille: une ou deux journées entre animaux et attractions ?"
-subtitle: Billets, calendrier 2027, tailles d'accès et hébergements dans l'Allier
-summary: Une ou deux journées au PAL en 2027 ? Vérifiez les jours d'ouverture avec attractions, distinguez l'offre Été indien aux Lodges et préparez billets, enfants et hébergement.
-slug: le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions
-status: published
-publishedAt: 2026-11-05T13:02:56+01:00
-updatedAt: null
-category: activites
-readingTime: 4
-location:
-  city: Saint-Pourçain-sur-Besbre
-  department: Allier
-  region: Auvergne-Rhône-Alpes
-topic:
-  key: activites|saint-pourcain-sur-besbre|le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions|2026
-  keywords:
-    - Le PAL 2027 en famille
-    - visiter Le PAL avec enfants
-    - billets Le PAL 2027
-image:
-  src: /images/articles/2026/11/le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions.webp
-  alt: Éléphants photographiés dans le parc animalier Le PAL en 2016.
-sources:
-  - title: Le PAL - parc animalier et attractions
-    url: https://www.lepal.com/
-  - title: Le PAL - tarifs et billets
-    url: https://www.lepal.com/preparer-votre-visite/tarifs-et-achats-des-billets
-  - title: Le PAL - calendrier et horaires
-    url: https://www.lepal.com/preparer-votre-visite/calendrier-et-horaires
-  - title: Le PAL - accès et services
-    url: https://www.lepal.com/preparer-votre-visite/page/acces-et-services
-  - title: Le PAL - FAQ tout-petits
-    url: https://www.lepal.com/a-propos/faq/nos-tout-petits
-  - title: Le PAL - application
-    url: https://www.lepal.com/preparer-votre-visite/application
-  - title: Le PAL - séjours
-    url: https://www.lepal.com/sejours/toutes-les-offres
-affiliate:
-  enabled: true
-  type: travel
-  destination: Saint-Pourçain-sur-Besbre
-radar:
-  schemaVersion: 1
-  phase: 2
-  mode: refresh
-  targetPath: src/routes/articles/activites/(2026)/(11)/le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions/index.md
-  targetSha: 9df6488aeb9339b3a038b07b35b89903b8b5d6ee
-  targetUrl: /articles/activites/le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions/
-  decision: Choisir une date et une formule 2027 adaptées à une vraie visite du parc avec attractions, ou à un séjour animalier, sans confondre les deux.
-  affiliationPotential: Conserver les deux hébergements Booking.com déjà présents; comparer utilement avec les séjours officiels du PAL sans ajouter de partenaire artificiel.
-  gsc:
-    retrievedAt: 2026-11-15T10:29:35+01:00
-    dataThrough: 2026-11-13
-    signal: uncertain
-    basis: "Visibilité récente : 34 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante."
-    peakStart: 2026-11-06
-    peakEnd: 2026-11-08
-    recentStart: 2026-11-11
-    recentEnd: 2026-11-13
-    peakImpressions: 34
-    recentImpressions: 10
-    commonQueries: 0
-    positionDelta: null
-    impressionRatio: 0.083
-    focusQueries:
-      - le pal ouverture 2027
-      - ouverture le pal 2027
-      - ouverture pal 2027
-      - date ouverture le pal 2027
----
-
-<!-- article-image-credit -->
-*Photo: [Chabe01](https://commons.wikimedia.org/wiki/File:Le_Pal_-_2016.10.23_-_%C3%89l%C3%A9phants_3.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
-<!-- /article-image-credit -->
-
-Au PAL, dans l'Allier, une même sortie permet d'observer des girafes, de découvrir des animaux de cinq continents et de profiter de manèges. Situé à Saint-Pourçain-sur-Besbre, près de Dompierre-sur-Besbre, ce parc de 40 hectares réunit **31 attractions et environ 1 000 animaux**. Avec des enfants, faut-il prévoir une journée ou prolonger la visite ? Tout dépend de leurs tailles, de leurs envies, du trajet et surtout des dates choisies: **un séjour aux Lodges à l'automne n'équivaut pas à une journée classique avec attractions**.
-
-## Ouverture 2027: vérifier la formule avant de réserver
-
-Pour visiter à la fois le parc animalier et les attractions, choisissez un jour indiqué comme **parc ouvert** sur le [calendrier officiel 2027](https://www.lepal.com/preparer-votre-visite/calendrier-et-horaires). Consultez les horaires précis de vos dates, particulièrement si vous envisagez deux jours consécutifs. Ne déduisez pas une ouverture au public de la seule disponibilité d'un hébergement.
-
-Le PAL annonce également une **offre « Été indien » du 9 octobre au 6 novembre 2027** aux Lodges. Pendant cette période, les résidents bénéficient d'une expérience spécifique dans le **parc animalier réservé aux clients des Lodges**, avec des échanges autour des animaux. Ce n'est **ni un billet d'entrée classique ni une promesse d'accès aux manèges**. Les dates et prestations du séjour doivent être vérifiées sur la [page officielle des séjours](https://www.lepal.com/sejours/toutes-les-offres). Si les attractions sont essentielles à vos enfants, retenez uniquement des journées où le calendrier confirme l'ouverture habituelle du parc.
-
-## Animaux et attractions: comment organiser la visite ?
-
-<!-- article-image-body:01 -->
-
-![Montagnes russes Le Twist dans le parc d'attractions Le PAL.](/images/articles/2026/11/le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions-body-01.webp)
-
-*Photo: [Freddo](https://commons.wikimedia.org/wiki/File:Le_Twist_au_PAL.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:01 -->
-
-Pour une première journée, choisissez quelques attractions prioritaires avant d'arriver. Les plus jeunes apprécieront souvent d'alterner manèges adaptés et observation des animaux, tandis que les plus grands voudront parfois commencer par les attractions à sensations.
-
-Le parc propose aussi des présentations animalières et des animations pédagogiques, comprises dans le billet d'entrée classique. Consultez leurs horaires sur place: ils peuvent guider votre parcours sans vous obliger à traverser le parc plusieurs fois. Les [informations officielles du PAL](https://www.lepal.com/) présentent ses différents univers.
-
-L'[application du parc](https://www.lepal.com/preparer-votre-visite/application) affiche notamment les temps d'attente, les horaires d'animations, le plan et les tailles d'accès aux attractions. Elle aide à ajuster le programme en fonction de l'affluence.
 
-## La taille des enfants change les possibilités
-
-Les restrictions d'accès aux attractions reposent sur des tailles minimales ou maximales propres à chaque manège. Vérifiez-les avant la visite, surtout si un enfant attend avec impatience une attraction précise.
-
-**La taille sert aussi à calculer le tarif, mais selon des règles distinctes:**
-
-- Moins de 1 mètre, chaussures comprises: entrée gratuite.
-- À partir de 1 mètre et jusqu'à 9 ans inclus: tarif enfant.
-- Dès 10 ans: tarif adulte.
-
-Le parc décrit également un dispositif de **Babyswitch** pour les familles dont un enfant ne peut pas accéder à une attraction. Les conditions sont spécifiques: adressez-vous à l'opérateur avant de faire la queue, plutôt que de supposer que les deux adultes pourront se relayer automatiquement. La [FAQ officielle pour les tout-petits](https://www.lepal.com/a-propos/faq/nos-tout-petits) précise ce fonctionnement.
-
-## Une journée ou deux jours au PAL ?
-
-**Une journée** convient à une famille qui accepte de sélectionner ses activités. Commencez par les attractions les plus attendues, réservez du temps aux animaux et gardez des pauses pour les repas. Chercher à tout faire risque de transformer la visite en course.
-
-**Deux jours consécutifs** sont plus confortables si vous venez de loin, si les enfants ont des envies très différentes ou si vous souhaitez profiter pleinement des espaces animaliers et des manèges. Vous pouvez répartir les deux univers entre les journées, sans suivre un parcours rigide, à condition que **les deux dates soient ouvertes au public**.
-
-Pour dormir près du parc, deux adresses à Dompierre-sur-Besbre peuvent convenir selon la composition de la famille: [L'Auberge de l'Olive sur Booking.com](https://www.booking.com/searchresults.fr.html?ss=L%27Auberge%20de%20l%27Olive%20Dompierre-sur-Besbre), pour une chambre, et [la maison « Logement, idéal famille, amis, tout y est ! » sur Booking.com](https://www.booking.com/hotel/fr/maison-ideale-famille-amis-tout-y-est.fr.html), avec cuisine et plusieurs chambres. Vérifiez la fiche exacte, la capacité, le tarif et la disponibilité aux dates souhaitées en 2027.
-
-Le PAL dispose aussi de ses propres hébergements immersifs, les Lodges et l'hôtel Savana RESERVE. Les prestations et les billets éventuellement inclus varient selon la formule: comparez le coût total du séjour et **les accès effectivement compris**, notamment pour l'Été indien, avant de choisir.
-
-## Billets 2027: quelles différences de prix ?
-
-Les formules présentées par le parc permettent de comparer les choix suivants. **Les montants ci-dessous sont des repères publiés précédemment, pas des tarifs 2027 garantis**: la billetterie officielle annonce encore la mise en vente 2027 comme prochaine.
-
-- **Billet Malin, une journée datée**: à partir de 33 € par adulte et 28 € par enfant selon le tarif affiché précédemment. Achat en ligne au plus tard la veille de la visite.
-- **Billet Liberté, une journée non datée**: 41 € par adulte et 35 € par enfant au tarif caisse précédemment affiché.
-- **Billet Passion, deux jours consécutifs datés**: 59 € par adulte et 49 € par enfant au tarif en ligne précédemment affiché.
-
-À titre d'exemple sur ces montants, le billet Passion à 59 € revient moins cher que deux billets Liberté à 41 €, mais il impose deux journées consécutives. Le billet Malin peut être plus économique pour une visite fixée à l'avance, selon la date retenue.
-
-Consultez la [billetterie officielle](https://www.lepal.com/preparer-votre-visite/tarifs-et-achats-des-billets) pour les **prix, disponibilités et conditions réellement applicables en 2027**. Les billets de visite classique ne doivent pas être confondus avec l'offre réservée aux résidents des Lodges.
-
-## Poussette, repas et trajet: les points pratiques
-
-<!-- article-image-body:02 -->
-
-![Train touristique circulant dans le parc Le PAL.](/images/articles/2026/11/le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions-body-02.webp)
-
-*Photo: [Freddo](https://commons.wikimedia.org/wiki/File:Train_du_parc_Le_PAL.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:02 -->
-
-Le parc dispose d'aires de pique-nique, de restaurants et de parkings gratuits. Une poussette est proposée à la location pour **9 € par jour**, avec une empreinte bancaire de **50 €**, selon la FAQ officielle; vérifiez ces montants pour 2027. Des espaces de change sont installés dans les sanitaires, à l'exception de ceux de la Place de la Gaieté. Des bracelets d'identification gratuits pour les enfants sont disponibles à l'entrée.
-
-Le PAL se rejoint surtout en voiture. Pour venir en train, renseignez-vous sur les correspondances depuis la gare de Dompierre-Sept-Fons et sur les éventuelles navettes à la date de votre visite: leur fonctionnement n'est pas à présumer pour 2027. Retrouvez les renseignements sur la [page d'accès et de services](https://www.lepal.com/preparer-votre-visite/page/acces-et-services).
-
-Si vous prévoyez deux jours, choisissez d'abord les dates d'ouverture et le billet adapté, puis réservez votre nuit: cela évite de payer un hébergement pour une journée où le parc serait fermé.
-
-## Article source exact à préserver et améliorer
-
-Chemin: src/routes/articles/activites/(2026)/(11)/le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions/index.md
-
----
-title: "Le PAL 2027 en famille: une ou deux journées entre animaux et attractions ?"
-subtitle: Billets, tailles d'accès, parcours et hébergements dans l'Allier
-summary: Une journée ou deux au PAL en 2027 ? Comparez les billets, préparez les attractions selon la taille des enfants et trouvez où dormir près du parc.
-slug: le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions
-status: published
-publishedAt: 2026-11-05T13:02:56+01:00
-updatedAt: null
-category: activites
-readingTime: 4
-location:
-  city: Saint-Pourçain-sur-Besbre
-  department: Allier
-  region: Auvergne-Rhône-Alpes
-topic:
-  key: activites|saint-pourcain-sur-besbre|le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions|2026
-  keywords:
-    - Le PAL 2027 en famille
-    - visiter Le PAL avec enfants
-    - billets Le PAL 2027
-image:
-  src: "/images/articles/2026/11/le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions.webp"
-  alt: "Éléphants photographiés dans le parc animalier Le PAL en 2016."
-sources:
-  - title: Le PAL - parc animalier et attractions
-    url: https://www.lepal.com/
-  - title: Le PAL - tarifs et billets
-    url: https://www.lepal.com/preparer-votre-visite/tarifs-et-achats-des-billets
-  - title: Le PAL - calendrier et horaires
-    url: https://www.lepal.com/preparer-votre-visite/calendrier-et-horaires
-  - title: Le PAL - accès et services
-    url: https://www.lepal.com/preparer-votre-visite/page/acces-et-services
-  - title: Le PAL - FAQ tout-petits
-    url: https://www.lepal.com/a-propos/faq/nos-tout-petits
-  - title: Le PAL - application
-    url: https://www.lepal.com/preparer-votre-visite/application
-  - title: Le PAL - séjours
-    url: https://www.lepal.com/sejours/toutes-les-offres
-affiliate:
-  enabled: true
-  type: travel
-  destination: Saint-Pourçain-sur-Besbre
----
-<!-- article-image-credit -->
-*Photo: [Chabe01](https://commons.wikimedia.org/wiki/File:Le_Pal_-_2016.10.23_-_%C3%89l%C3%A9phants_3.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
-<!-- /article-image-credit -->
-
-Au PAL, dans l'Allier, une même sortie permet d'observer des girafes, de découvrir des animaux de cinq continents et de profiter de manèges. Situé à Saint-Pourçain-sur-Besbre, près de Dompierre-sur-Besbre, ce parc de 40 hectares réunit **31 attractions et environ 1 000 animaux**. Avec des enfants, faut-il prévoir une journée ou prolonger la visite ? Tout dépend de leurs tailles, de leurs envies et du trajet pour venir.
-
-## Animaux et attractions: comment organiser la visite ?
-
-<!-- article-image-body:01 -->
-
-![Montagnes russes Le Twist dans le parc d'attractions Le PAL.](/images/articles/2026/11/le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions-body-01.webp)
-
-*Photo: [Freddo](https://commons.wikimedia.org/wiki/File:Le_Twist_au_PAL.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:01 -->
-
-Pour une première journée, choisissez quelques attractions prioritaires avant d'arriver. Les plus jeunes apprécieront souvent d'alterner manèges adaptés et observation des animaux, tandis que les plus grands voudront parfois commencer par les attractions à sensations.
-
-Le parc propose aussi des présentations animalières et des animations pédagogiques, comprises dans le billet d'entrée. Consultez leurs horaires sur place: ils peuvent guider votre parcours sans vous obliger à traverser le parc plusieurs fois. Les [informations officielles du PAL](https://www.lepal.com/) présentent ses différents univers.
-
-L'[application du parc](https://www.lepal.com/preparer-votre-visite/application) affiche notamment les temps d'attente, les horaires d'animations, le plan et les tailles d'accès aux attractions. Elle aide à ajuster le programme en fonction de l'affluence.
-
-## La taille des enfants change les possibilités
-
-Les restrictions d'accès aux attractions reposent sur des tailles minimales ou maximales propres à chaque manège. Vérifiez-les avant la visite, surtout si un enfant attend avec impatience une attraction précise.
-
-**La taille sert aussi à calculer le tarif, mais selon des règles distinctes:**
-
-- Moins de 1 mètre, chaussures comprises: entrée gratuite.
-- À partir de 1 mètre et jusqu'à 9 ans inclus: tarif enfant.
-- Dès 10 ans: tarif adulte.
-
-Le parc décrit également un dispositif de **Babyswitch** pour les familles dont un enfant ne peut pas accéder à une attraction. Les conditions sont spécifiques: adressez-vous à l'opérateur avant de faire la queue, plutôt que de supposer que les deux adultes pourront se relayer automatiquement. La [FAQ officielle pour les tout-petits](https://www.lepal.com/a-propos/faq/nos-tout-petits) précise ce fonctionnement.
-
-## Une journée ou deux jours au PAL ?
-
-**Une journée** convient à une famille qui accepte de sélectionner ses activités. Commencez par les attractions les plus attendues, réservez du temps aux animaux et gardez des pauses pour les repas. Chercher à tout faire risque de transformer la visite en course.
-
-**Deux jours consécutifs** sont plus confortables si vous venez de loin, si les enfants ont des envies très différentes ou si vous souhaitez profiter pleinement des espaces animaliers et des manèges. Vous pouvez répartir les deux univers entre les journées, sans suivre un parcours rigide.
-
-Pour dormir près du parc, deux adresses à Dompierre-sur-Besbre peuvent convenir selon la composition de la famille: [L'Auberge de l'Olive sur Booking.com](https://www.booking.com/searchresults.fr.html?ss=L%27Auberge%20de%20l%27Olive%20Dompierre-sur-Besbre), pour une chambre, et [la maison « Logement, idéal famille, amis, tout y est ! » sur Booking.com](https://www.booking.com/hotel/fr/maison-ideale-famille-amis-tout-y-est.fr.html), avec cuisine et plusieurs chambres. Vérifiez la fiche exacte, la capacité, le tarif et la disponibilité aux dates souhaitées en 2027.
-
-Le PAL dispose aussi de ses propres hébergements immersifs, les Lodges et l'hôtel Savana RESERVE. Les prestations et les billets éventuellement inclus varient selon la formule: comparez le coût total du séjour avant de choisir.
-
-## Billets 2027: quelles différences de prix ?
-
-Les tarifs actuellement annoncés en ligne pour 2027 distinguent trois formules:
-
-- **Billet Malin, une journée datée**: dès 33 € par adulte et 28 € par enfant. Achat en ligne au plus tard la veille de la visite.
-- **Billet Liberté, une journée non datée**: 41 € par adulte et 35 € par enfant.
-- **Billet Passion, deux jours consécutifs datés**: 59 € par adulte et 49 € par enfant.
-
-Pour un adulte, le billet Passion à 59 € revient moins cher que deux billets Liberté à 41 €, mais il impose deux journées consécutives. Le billet Malin peut être plus économique pour une visite fixée à l'avance, selon la date retenue.
-
-Ces prix ne sont pas garantis pour toute la saison. Consultez la [billetterie officielle](https://www.lepal.com/preparer-votre-visite/tarifs-et-achats-des-billets) pour les conditions actualisées et le [calendrier 2027](https://www.lepal.com/preparer-votre-visite/calendrier-et-horaires) avant de réserver un hébergement: le parc n'est pas ouvert toute l'année.
-
-## Poussette, repas et trajet: les points pratiques
-
-<!-- article-image-body:02 -->
-
-![Train touristique circulant dans le parc Le PAL.](/images/articles/2026/11/le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions-body-02.webp)
-
-*Photo: [Freddo](https://commons.wikimedia.org/wiki/File:Train_du_parc_Le_PAL.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:02 -->
-
-Le parc dispose d'aires de pique-nique, de restaurants et de parkings gratuits. Une poussette est proposée à la location pour **9 € par jour**, avec une empreinte bancaire de **50 €**, selon la FAQ officielle. Des espaces de change sont installés dans les sanitaires, à l'exception de ceux de la Place de la Gaieté. Des bracelets d'identification gratuits pour les enfants sont disponibles à l'entrée.
-
-Le PAL se rejoint surtout en voiture. Pour venir en train, renseignez-vous sur les correspondances depuis la gare de Dompierre-Sept-Fons et sur les éventuelles navettes à la date de votre visite: leur fonctionnement n'est pas à présumer pour 2027. Retrouvez les renseignements sur la [page d'accès et de services](https://www.lepal.com/preparer-votre-visite/page/acces-et-services).
-
-Si vous prévoyez deux jours, choisissez d'abord les dates d'ouverture et le billet adapté, puis réservez votre nuit: cela évite de payer un hébergement pour une journée où le parc serait fermé.
-
-## Contexte éditorial ciblé pour le maillage et les doublons
-
-### Articles proches préparés mécaniquement
-
+Le brief doit rester court et contenir uniquement ce qui aidera la rédaction:
+
+## Mission retenue
+Le sujet et ce que c'est réellement.
+
+## Pourquoi cette mission
+Pourquoi elle mérite une amélioration maintenant, ou pourquoi aucun article existant n'était utilement améliorable avant de retenir cet événement.
+
+## Décision du lecteur
+Ce que la page doit permettre au lecteur de comprendre ou de choisir. Formule un résultat pour le lecteur, pas un titre ni un plan. Les consignes de maillage, d'anti-doublon ou d'organisation entre articles appartiennent à `Continuations internes`, pas à la décision.
+
+## Faits à traiter
+Les informations décisives à vérifier, actualiser ou ajouter, et les informations existantes importantes à préserver pour un refresh.
+
+## Sources de départ
+Les meilleures sources officielles ou directement responsables.
+
+## Affiliation
+Les pistes réellement vérifiées, ou l'absence d'affiliation naturelle.
+
+## Continuations internes
+Deux ou trois pistes seulement si elles sont réellement utiles. Indique quand une page existante doit prendre le relais sur un sous-sujet afin d'éviter de le redévelopper dans le nouvel article.
+
+Ensuite, soumets cette décision via le format `action: start` fourni plus bas dans ce runtime. Le modèle ne renseigne jamais le nom de branche, le SHA, `targetPath`, le slug technique d'une opportunity ni les métriques GSC détaillées déjà présentes dans le snapshot.
+
+## Catégories éditoriales autorisées
+
+- sorties — Sorties: Des idées de sorties à partager en famille, près de chez vous.
+- voyages — Voyages: Des conseils et inspirations pour voyager sereinement en famille.
+- evenements — Événements: Les événements à découvrir et à préparer avec les enfants.
+- activites — Activités: Des activités simples et enrichissantes pour tous les âges.
+- vie-pratique — Vie pratique: Des repères concrets pour faciliter le quotidien des familles.
+- maison — Maison: Des solutions pratiques pour une maison familiale agréable.
+- cuisine — Cuisine: Des idées et conseils pour cuisiner simplement en famille.
+- parentalite — Parentalité: Des ressources bienveillantes pour accompagner la vie de famille.
+- bons-plans — Bons plans: Réductions, gratuités, pass et aides pratiques pour économiser en famille.
+
+## Snapshot GSC préparé
+
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-15T10:29:35+01:00",
+  "dataThrough": "2026-11-13",
+  "from": "2026-10-17",
+  "refresh": [
+    {
+      "url": "/articles/activites/le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions/",
+      "title": "Le PAL 2027 en famille: une ou deux journées entre animaux et attractions ?",
+      "category": "activites",
+      "publishedAt": "2026-11-05T13:02:56+01:00",
+      "location": {
+        "city": "Saint-Pourçain-sur-Besbre",
+        "department": "Allier",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "ageDays": 10,
+      "rapidDrop": true,
+      "peakStart": "2026-11-06",
+      "peakEnd": "2026-11-08",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 34,
+      "recentImpressions": 10,
+      "score": 72,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 34 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0.083,
+      "focusQueries": [
+        "le pal ouverture 2027",
+        "ouverture le pal 2027",
+        "ouverture pal 2027",
+        "date ouverture le pal 2027"
+      ]
+    },
+    {
+      "url": "/articles/activites/grottes-de-sare-en-famille-visite-tarifs-et-conseils-pratiques/",
+      "title": "Grottes de Sare en famille: visite, tarifs et conseils pratiques",
+      "category": "activites",
+      "publishedAt": "2026-11-03T13:02:45+01:00",
+      "location": {
+        "city": "Sare",
+        "department": "Pyrénées-Atlantiques",
+        "region": "Nouvelle-Aquitaine"
+      },
+      "ageDays": 12,
+      "rapidDrop": true,
+      "peakStart": "2026-11-08",
+      "peakEnd": "2026-11-10",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 23,
+      "recentImpressions": 5,
+      "score": 54,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 23 impressions sur trois jours, puis 5 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0.429,
+      "focusQueries": [
+        "les grottes de sare",
+        "avis sur grottes de sare",
+        "visite tarif grotte de sare",
+        "billets pour grottes de sare",
+        "grottes de sare avis"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-a-rochefort-en-terre-avec-des-enfants-village-et-illuminations/",
+      "title": "Noël 2026 à Rochefort-en-Terre avec des enfants: village et illuminations",
+      "category": "evenements",
+      "publishedAt": "2026-10-22T00:03:36+02:00",
+      "location": {
+        "city": "Rochefort-en-Terre",
+        "department": "Morbihan",
+        "region": "Bretagne"
+      },
+      "ageDays": 24,
+      "rapidDrop": true,
+      "peakStart": "2026-10-24",
+      "peakEnd": "2026-10-26",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 173,
+      "recentImpressions": 58,
+      "score": 345,
+      "signal": "coverage_loss",
+      "basis": "Visibilité récente : 173 impressions sur trois jours, puis 58 sur les trois derniers jours consolidés; cause non établie. Baisse d'exposition sur les requêtes visibles (ratio 0.231), sans recul de classement comparable établi.",
+      "commonQueries": 1,
+      "positionDelta": 2,
+      "impressionRatio": 0.231,
+      "focusQueries": [
+        "rochefort en terre noel 2026",
+        "rochefort en terre noel",
+        "illumination rochefort en terre 2026",
+        "rochefort en terre a noel",
+        "date marche de noel rochefort en terre"
+      ]
+    },
+    {
+      "url": "/articles/evenements/monstrozoo-2026-2027-a-beauval-enquete-libre-ou-visite-guidee-en-famille/",
+      "title": "MonstroZoo 2026-2027 à Beauval: parcours inclus, visite guidée et tarifs",
+      "category": "evenements",
+      "publishedAt": "2026-10-22T15:49:20.710Z",
+      "location": {
+        "city": "Saint-Aignan",
+        "department": "Loir-et-Cher",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 24,
+      "rapidDrop": true,
+      "peakStart": "2026-10-28",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 60,
+      "recentImpressions": 9,
+      "score": 188,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 60 impressions sur trois jours, puis 9 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 4,
+      "focusQueries": [
+        "monstrozoo",
+        "monstrozoo 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille/",
+      "title": "Luminéales du Thabor 2026 à Rennes: tarifs, horaires et visite en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-31T19:33:18.221Z",
+      "location": {
+        "city": "Rennes",
+        "department": "Ille-et-Vilaine",
+        "region": "Bretagne"
+      },
+      "ageDays": 15,
+      "rapidDrop": true,
+      "peakStart": "2026-11-02",
+      "peakEnd": "2026-11-04",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 63,
+      "recentImpressions": 7,
+      "score": 168,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 63 impressions sur trois jours, puis 7 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "illumination thabor rennes 2026",
+        "les lumineales",
+        "illumination thabor 2026",
+        "ou"
+      ]
+    },
+    {
+      "url": "/articles/evenements/festival-enfantillages-2026-a-valbonne-spectacles-gratuits-et-cinema-selon-l-age/",
+      "title": "Festival Enfantillages 2026 à Valbonne: spectacles gratuits et cinéma en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-26T03:35:31.536Z",
+      "location": {
+        "city": "Valbonne",
+        "department": "Alpes-Maritimes",
+        "region": "Provence-Alpes-Côte d'Azur"
+      },
+      "ageDays": 20,
+      "rapidDrop": true,
+      "peakStart": "2026-10-26",
+      "peakEnd": "2026-10-28",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 40,
+      "recentImpressions": 4,
+      "score": 143,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 40 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Festival Enfantillages Valbonne 2026",
+        "spectacles gratuits enfants Valbonne",
+        "cinéma jeune public Valbonne novembre 2026",
+        "Pré des Arts Enfantillages"
+      ]
+    },
+    {
+      "url": "/articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/",
+      "title": "Traîneau flottant de Noël à Metz 2026: dates, horaires et embarquement",
+      "category": "evenements",
+      "publishedAt": "2026-11-03T03:34:06.455Z",
+      "location": {
+        "city": "Metz",
+        "department": "Moselle",
+        "region": "Grand Est"
+      },
+      "ageDays": 12,
+      "rapidDrop": true,
+      "peakStart": "2026-11-05",
+      "peakEnd": "2026-11-07",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 47,
+      "recentImpressions": 0,
+      "score": 141,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 47 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "traîneau flottant père Noël Metz 2026",
+        "bateau gratuit Noël Metz famille"
+      ]
+    },
+    {
+      "url": "/articles/evenements/festival-playground-2026-en-ile-de-france-quels-spectacles-de-danse-choisir-avec-les-enfants/",
+      "title": "Festival Playground 2026: spectacles de danse en famille, dates et tarifs",
+      "category": "evenements",
+      "publishedAt": "2026-10-26T06:30:10.109Z",
+      "location": {
+        "city": "Bagnolet",
+        "department": "Seine-Saint-Denis",
+        "region": "Île-de-France"
+      },
+      "ageDays": 20,
+      "rapidDrop": true,
+      "peakStart": "2026-10-27",
+      "peakEnd": "2026-10-29",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 37,
+      "recentImpressions": 2,
+      "score": 140,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 37 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "festival Playground 2026",
+        "spectacles danse enfants Île-de-France",
+        "Playground 2026 tarifs et dates",
+        "danse bébé Romainville novembre 2026",
+        "Little Villette A corpo libero"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/",
+      "title": "Noël 2026 à Toulon en famille: marché, patinoire et horaires",
+      "category": "evenements",
+      "publishedAt": "2026-10-31T10:28:17.323Z",
+      "location": {
+        "city": "Toulon",
+        "department": "Var",
+        "region": "Provence-Alpes-Côte d’Azur"
+      },
+      "ageDays": 15,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 47,
+      "recentImpressions": 2,
+      "score": 135,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 47 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël Toulon 2026 famille",
+        "marché de Noël Toulon place de la Liberté",
+        "Village des Enfants Toulon place d'Armes",
+        "patinoire Toulon Noël 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/",
+      "title": "Noël de Casse-Noisette 2026 à Pierrefonds: visites, dates et tarifs en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-27T07:35:50.368Z",
+      "location": {
+        "city": "Pierrefonds",
+        "department": "Oise",
+        "region": "Hauts-de-France"
+      },
+      "ageDays": 19,
+      "rapidDrop": true,
+      "peakStart": "2026-10-28",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 42,
+      "recentImpressions": 0,
+      "score": 126,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 42 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël Casse-Noisette Pierrefonds 2026",
+        "château de Pierrefonds Noël enfants",
+        "visites féérie Pierrefonds",
+        "Casse-Noisette aventure à jouer"
+      ]
+    },
+    {
+      "url": "/articles/evenements/festival-de-la-sainte-barbe-2026-a-lens-lievin-quelle-soiree-choisir-avec-les-enfants/",
+      "title": "Festival de la Sainte-Barbe 2026 à Lens-Liévin: programme en famille du 4 au 6 décembre",
+      "category": "evenements",
+      "publishedAt": "2026-10-27T04:28:30.904Z",
+      "location": {
+        "city": "Lens",
+        "department": "Pas-de-Calais",
+        "region": "Hauts-de-France"
+      },
+      "ageDays": 19,
+      "rapidDrop": true,
+      "peakStart": "2026-10-28",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 43,
+      "recentImpressions": 4,
+      "score": 117,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 43 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "festival Sainte-Barbe Lens 2026",
+        "Sainte-Barbe Lens-Liévin en famille",
+        "spectacle feu Lens 4 décembre 2026",
+        "Sainte-Barbe Loos-en-Gohelle Oignies 5 décembre",
+        "Louvre-Lens Sainte-Barbe 6 décembre enfants"
+      ]
+    },
+    {
+      "url": "/articles/evenements/batiment-b-a-saint-denis-decouvrir-le-street-art-en-famille/",
+      "title": "Bâtiment B à Saint-Denis: découvrir le street art en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-28T00:11:04+01:00",
+      "location": {
+        "city": "Saint-Denis",
+        "department": "La Réunion",
+        "region": "La Réunion"
+      },
+      "ageDays": 18,
+      "rapidDrop": true,
+      "peakStart": "2026-10-29",
+      "peakEnd": "2026-10-31",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 41,
+      "recentImpressions": 3,
+      "score": 114,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 41 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Bâtiment B Réunion Graffiti",
+        "street art en famille",
+        "Saint-Denis La Réunion"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-a-cannes-en-famille-marche-du-centre-ou-village-du-palm-beach/",
+      "title": "Noël 2026 à Cannes en famille: marché du centre et Palm Beach",
+      "category": "evenements",
+      "publishedAt": "2026-10-31T22:36:58.730Z",
+      "location": {
+        "city": "Cannes",
+        "department": "Alpes-Maritimes",
+        "region": "Provence-Alpes-Côte d’Azur"
+      },
+      "ageDays": 15,
+      "rapidDrop": true,
+      "peakStart": "2026-11-03",
+      "peakEnd": "2026-11-05",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 39,
+      "recentImpressions": 1,
+      "score": 114,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 39 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël Cannes 2026 famille",
+        "marché de Noël Cannes 2026",
+        "Village de Noël Palm Beach Cannes"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel/",
+      "title": "Noël 2026 à Chambéry en famille: marchés, parade et ateliers",
+      "category": "evenements",
+      "publishedAt": "2026-11-01T09:37:48.682Z",
+      "location": {
+        "city": "Chambéry",
+        "department": "Savoie",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "ageDays": 14,
+      "rapidDrop": true,
+      "peakStart": "2026-11-03",
+      "peakEnd": "2026-11-05",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 35,
+      "recentImpressions": 3,
+      "score": 96,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 35 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël Chambéry 2026 famille",
+        "marché de Noël Chambéry 2026 horaires",
+        "parade Père Noël Chambéry 27 novembre 2026",
+        "village de Noël Palais de Justice Chambéry",
+        "Fabrique de Noël Rubanox 12 décembre 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/",
+      "title": "Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès",
+      "category": "evenements",
+      "publishedAt": "2026-10-19T19:48:02.057Z",
+      "location": {
+        "city": "Lyon",
+        "department": "Rhône",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "ageDays": 27,
+      "rapidDrop": true,
+      "peakStart": "2026-10-20",
+      "peakEnd": "2026-10-22",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 20,
+      "recentImpressions": 0,
+      "score": 95,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 20 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Fête des Lumières Lyon 2026 famille",
+        "Fête des Lumières Lyon 2026 horaires enfants",
+        "Fête des Lumières Lyon poussette parcours"
+      ]
+    }
+  ],
+  "strongPages": [
+    {
+      "url": "/articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/",
+      "title": "Fête foraine de Dijon 2026: dates, horaires et budget avec les enfants",
+      "category": "evenements",
+      "recentImpressions": 1145,
+      "recentClicks": 20,
+      "recentPosition": 8.583,
+      "retention": 0.627
+    },
+    {
+      "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
+      "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
+      "category": "evenements",
+      "recentImpressions": 193,
+      "recentClicks": 14,
+      "recentPosition": 4.824,
+      "retention": 1.451
+    },
+    {
+      "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
+      "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
+      "category": "evenements",
+      "recentImpressions": 195,
+      "recentClicks": 11,
+      "recentPosition": 6.867,
+      "retention": 0.855
+    },
+    {
+      "url": "/articles/evenements/alfest-2026-a-annecy-en-famille-horaires-jeux-et-braderie/",
+      "title": "ALFest 2026 à Annecy en famille: horaires, jeux et braderie",
+      "category": "evenements",
+      "recentImpressions": 174,
+      "recentClicks": 8,
+      "recentPosition": 5.494,
+      "retention": 4.579
+    },
+    {
+      "url": "/articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/",
+      "title": "Où manger des fouées en famille autour de Saumur ?",
+      "category": "cuisine",
+      "recentImpressions": 186,
+      "recentClicks": 5,
+      "recentPosition": 11.167,
+      "retention": 0.602
+    },
+    {
+      "url": "/articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/",
+      "title": "Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille",
+      "category": "evenements",
+      "recentImpressions": 138,
+      "recentClicks": 5,
+      "recentPosition": 8.435,
+      "retention": 0.836
+    },
+    {
+      "url": "/articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/",
+      "title": "Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers",
+      "category": "vie-pratique",
+      "recentImpressions": 101,
+      "recentClicks": 5,
+      "recentPosition": 5.753,
+      "retention": 0.697
+    },
+    {
+      "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
+      "title": "Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite",
+      "category": "sorties",
+      "recentImpressions": 422,
+      "recentClicks": 4,
+      "recentPosition": 10.427,
+      "retention": 1.353
+    },
+    {
+      "url": "/articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/",
+      "title": "Soleils d'hiver 2026 à Angers en famille: marché, manèges et Père Noël",
+      "category": "evenements",
+      "recentImpressions": 169,
+      "recentClicks": 4,
+      "recentPosition": 8.367,
+      "retention": 0.944
+    },
+    {
+      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
+      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
+      "category": "vie-pratique",
+      "recentImpressions": 151,
+      "recentClicks": 4,
+      "recentPosition": 6.093,
+      "retention": 0.689
+    }
+  ],
+  "excluded": {
+    "expired": 182,
+    "cooling": 60
+  },
+  "warnings": [
+    "Diagnostics par requêtes : 5/5.",
+    "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement."
+  ]
+}
+
+## Catalogue ciblé (doublons et publications récentes)
+
+### Articles comparables et publications récentes
+
+- /articles/activites/le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions/ | Le PAL 2027 en famille: une ou deux journées entre animaux et attractions ? | activites | Saint-Pourçain-sur-Besbre, Allier, Auvergne-Rhône-Alpes
 - /articles/activites/le-pal-ou-touroparc-en-famille-quel-parc-choisir-en-2026/ | Le PAL ou Touroparc en famille: quel parc choisir en 2026? | activites
 - /articles/voyages/parc-asterix-en-famille-en-2026-une-ou-deux-journees-quel-hotel-et-quel-budget-prevoir/ | Parc Astérix en famille en 2026: une ou deux journées, quel hôtel et quel budget prévoir | voyages | Plailly, Oise, Hauts-de-France
 - /articles/sorties/sortie-ferme-pedagogique-en-famille/ | Ferme pédagogique en famille: comment choisir une visite adaptée aux enfants | sorties
-- /articles/voyages/azay-le-rideau-en-famille-une-journee-entre-chateau-et-troglodytes/ | Azay-le-Rideau en famille: une journée entre château et troglodytes | voyages | Azay-le-Rideau, Indre-et-Loire, Centre-Val de Loire
-- /articles/evenements/journees-europeennes-patrimoine-2026-en-famille/ | Journées du patrimoine 2026: choisir une visite adaptée aux enfants | evenements
-- /articles/evenements/festival-les-martinelles-2026-en-famille/ | Les Martinelles à Saint-Martin-de-Ré: deux journées gratuites pour les enfants | evenements | Saint-Martin-de-Ré, Charente-Maritime, Nouvelle-Aquitaine
-- /articles/bons-plans/albi-en-famille-a-petit-budget-deux-programmes-entre-patrimoine-et-musee/ | Albi en famille à petit budget: deux programmes entre patrimoine et musée | bons-plans | Albi, Tarn, Occitanie
-- /articles/evenements/journees-nationales-architecture-2026-en-famille/ | Journées de l’architecture 2026: visiter un chantier ou une agence avec des enfants | evenements
-- /articles/activites/le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions/ | Le PAL 2027 en famille: une ou deux journées entre animaux et attractions ? | activites | Saint-Pourçain-sur-Besbre, Allier, Auvergne-Rhône-Alpes
-- /articles/evenements/marche-de-noel-de-cusset-2026-en-famille-quel-jour-choisir/ | Marché de Noël de Cusset 2026 en famille: quel jour choisir? | evenements | Cusset, Allier, Auvergne-Rhône-Alpes
-- /articles/voyages/moulins-sans-voiture-avec-des-enfants-ou-dormir-et-comment-organiser-deux-jours/ | Moulins sans voiture avec des enfants: où dormir et comment organiser deux jours | voyages | Moulins, Allier, Auvergne-Rhône-Alpes
-- /articles/sorties/cncs-a-moulins-avec-des-enfants-gratuit-avant-12-ans-que-choisir-sur-place/ | CNCS à Moulins avec des enfants: gratuit avant 12 ans, que choisir sur place? | sorties | Moulins, Allier, Auvergne-Rhône-Alpes
-- /articles/voyages/vichy-en-famille-ou-dormir-selon-votre-programme/ | Où dormir à Vichy en famille: quartiers et hôtels selon votre programme | voyages | Vichy, Allier, Auvergne-Rhône-Alpes
+- /articles/activites/grottes-de-sare-en-famille-visite-tarifs-et-conseils-pratiques/ | Grottes de Sare en famille: visite, tarifs et conseils pratiques | activites | Sare, Pyrénées-Atlantiques, Nouvelle-Aquitaine
+- /articles/sorties/grottes-d-isturitz-et-d-oxocelhaya-avec-des-enfants-les-contraintes-a-connaitre-avant-la-visite/ | Grottes d'Isturitz et d'Oxocelhaya avec des enfants: les contraintes à connaître avant la visite | sorties | Saint-Martin-d'Arberoue, Pyrénées-Atlantiques, Nouvelle-Aquitaine
+- /articles/activites/grottes-de-thouzon-avec-des-enfants-preparer-la-visite-sous-terre/ | Grottes de Thouzon avec des enfants: préparer la visite sous terre | activites | Le Thor, Vaucluse, Provence-Alpes-Côte d’Azur
+- /articles/activites/grottes-de-saulges-en-famille-margot-ou-rochefort-selon-l-age/ | Grottes de Saulges en famille: découvrir Margot, Rochefort et le musée | activites | Thorigné-en-Charnie, Mayenne, Pays de la Loire
+- /articles/evenements/noel-2026-a-rochefort-en-terre-avec-des-enfants-village-et-illuminations/ | Noël 2026 à Rochefort-en-Terre avec des enfants: village et illuminations | evenements | Rochefort-en-Terre, Morbihan, Bretagne
+- /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
+- /articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/ | Noël 2026 à Toulon en famille: marché, patinoire et horaires | evenements | Toulon, Var, Provence-Alpes-Côte d’Azur
+- /articles/evenements/monstrozoo-2026-2027-a-beauval-enquete-libre-ou-visite-guidee-en-famille/ | MonstroZoo 2026-2027 à Beauval: parcours inclus, visite guidée et tarifs | evenements | Saint-Aignan, Loir-et-Cher, Centre-Val de Loire
+- /articles/voyages/beauval-a-la-toussaint-2026-billets-duree-de-visite-et-hebergement/ | Beauval à la Toussaint 2026: billets, durée de visite et hébergement | voyages | Saint-Aignan, Loir-et-Cher, Centre-Val de Loire
+- /articles/voyages/zooparc-de-beauval-en-famille-en-2026-un-ou-deux-jours-quel-hotel-et-quel-budget-prevoir/ | ZooParc de Beauval: billets, 1 ou 2 jours, hôtel et budget 2026 | voyages | Saint-Aignan, Loir-et-Cher, Centre-Val de Loire
+- /articles/sorties/festival-photo-la-gacilly-2026-en-famille/ | Festival Photo La Gacilly 2026: un parcours gratuit à hauteur d’enfant | sorties | La Gacilly, Morbihan, Bretagne
+- /articles/evenements/les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille/ | Luminéales du Thabor 2026 à Rennes: tarifs, horaires et visite en famille | evenements | Rennes, Ille-et-Vilaine, Bretagne
+- /articles/activites/balade-a-velo-autour-de-rennes-quel-parcours-choisir-avec-des-enfants/ | Balade à vélo autour de Rennes: quel parcours choisir avec des enfants? | activites | Rennes, Ille-et-Vilaine, Bretagne
+- /articles/vie-pratique/rennes-avec-des-enfants-les-transports-sont-gratuits-avant-12-ans-mais-pas-sans-carte/ | Rennes avec des enfants: transports gratuits avant 12 ans, comment ça marche? | vie-pratique | Rennes, Ille-et-Vilaine, Bretagne
+- /articles/sorties/espace-des-sciences-a-rennes-avec-des-enfants-expositions-experiences-et-planetarium/ | Espace des sciences à Rennes avec des enfants: expositions, expériences et planétarium | sorties | Rennes, Ille-et-Vilaine, Bretagne
+- /articles/evenements/festival-enfantillages-2026-a-valbonne-spectacles-gratuits-et-cinema-selon-l-age/ | Festival Enfantillages 2026 à Valbonne: spectacles gratuits et cinéma en famille | evenements | Valbonne, Alpes-Maritimes, Provence-Alpes-Côte d'Azur
+- /articles/evenements/festival-au-bonheur-des-momes-2026-en-famille/ | Au Bonheur des Mômes 2026: pass, spectacles et journée au Grand-Bornand | evenements | Le Grand-Bornand, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/evenements/festival-marmoe-2026-a-montreuil-spectacles-et-ateliers-selon-l-age-des-enfants/ | Festival MARMOE 2026 à Montreuil: spectacles, ateliers et sorties jusqu'au 29 novembre | evenements | Montreuil, Seine-Saint-Denis, Île-de-France
+- /articles/evenements/rue-enfants-montcuq-2026-famille/ | La Rue des Enfants 2026 à Montcuq: deux jours d’arts de rue en famille | evenements | Montcuq-en-Quercy-Blanc, Lot, Occitanie
+- /articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/ | Traîneau flottant de Noël à Metz 2026: dates, horaires et embarquement | evenements | Metz, Moselle, Grand Est
+- /articles/evenements/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants/ | Fontaines dansantes d'hiver à Metz 2026-2027: dates, horaires et conseils en famille | evenements | Metz, Moselle, Grand Est
+- /articles/evenements/noel-a-metz-2026-en-famille-marches-et-sentier-des-lanternes/ | Noël à Metz 2026 en famille: marchés et Sentier des Lanternes | evenements | Metz, Moselle, Grand Est
+- /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
+- /articles/evenements/festival-playground-2026-en-ile-de-france-quels-spectacles-de-danse-choisir-avec-les-enfants/ | Festival Playground 2026: spectacles de danse en famille, dates et tarifs | evenements | Bagnolet, Seine-Saint-Denis, Île-de-France
+- /articles/activites/visiter-le-stade-de-france-en-famille-coulisses-musee-et-conseils-pratiques/ | Visiter le Stade de France en famille: coulisses, musée et conseils pratiques | activites | Saint-Denis, Seine-Saint-Denis, Île-de-France
+- /articles/evenements/chambly-kids-festival-2027-quatre-spectacles-pour-les-enfants-dates-et-ages/ | Chambly Kids Festival 2027: quatre spectacles pour les enfants, dates et âges | evenements | Chambly, Oise, Hauts-de-France
+- /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | Marché de Noël d'Amiens 2026 en famille: horaires, Père Noël et patinoire | evenements | Amiens, Somme, Hauts-de-France
+- /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | Marché de Noël d'Avignon 2026 en famille: horaires et accès | evenements | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
+- /articles/vie-pratique/gare-de-toulon-avec-des-enfants-bagages-parking-et-correspondances/ | Gare de Toulon avec des enfants: bagages, parking et correspondances | vie-pratique | Toulon, Var, Provence-Alpes-Côte d’Azur
+- /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | Noël de Casse-Noisette 2026 à Pierrefonds: visites, dates et tarifs en famille | evenements | Pierrefonds, Oise, Hauts-de-France
+- /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | Pierrefonds à la Toussaint 2026: atelier lanterne et soirée d'Halloween | evenements | Pierrefonds, Oise, Hauts-de-France
+- /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | Noël 2026 à Chantilly: Le Noël oublié, billets et séances en famille | evenements | Chantilly, Oise, Hauts-de-France
+- /articles/evenements/noel-2026-au-chateau-de-grignan-dates-tarifs-et-visite-en-famille/ | Noël 2026 au château de Grignan: dates, tarifs et visite en famille | evenements | Grignan, Drôme, Auvergne-Rhône-Alpes
+- /articles/evenements/festival-de-la-sainte-barbe-2026-a-lens-lievin-quelle-soiree-choisir-avec-les-enfants/ | Festival de la Sainte-Barbe 2026 à Lens-Liévin: programme en famille du 4 au 6 décembre | evenements | Lens, Pas-de-Calais, Hauts-de-France
+- /articles/sorties/toussaint-2026-au-louvre-lens-quelle-activite-choisir-selon-l-age/ | Toussaint 2026 au Louvre-Lens: quelle activité choisir selon l'âge? | sorties | Lens, Pas-de-Calais, Hauts-de-France
+- /articles/maison/lens-lievin-jusqu-a-240-pour-recuperer-l-eau-de-pluie/ | Lens-Liévin: jusqu'à 240 € pour récupérer l'eau de pluie | maison | Lens, Pas-de-Calais, Hauts-de-France
+- /articles/evenements/cerfs-volants-de-berck-2027-organiser-sa-visite-en-famille/ | Cerfs-volants de Berck 2027: organiser sa visite en famille | evenements | Berck-sur-Mer, Pas-de-Calais, Hauts-de-France
+- /articles/evenements/batiment-b-a-saint-denis-decouvrir-le-street-art-en-famille/ | Bâtiment B à Saint-Denis: découvrir le street art en famille | evenements | Saint-Denis, La Réunion, La Réunion
+- /articles/voyages/dormir-a-saint-denis-pour-visiter-paris-avec-des-enfants-pleyel-ou-basilique/ | Dormir à Saint-Denis pour visiter Paris avec des enfants: Pleyel ou Basilique? | voyages | Saint-Denis, Seine-Saint-Denis, Île-de-France
+- /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | Monument jeu d'enfant 2026 à Saint-Denis: atelier Dagobert le 17 octobre | evenements | Saint-Denis, Seine-Saint-Denis, Île-de-France
+- /articles/evenements/noel-2026-a-cannes-en-famille-marche-du-centre-ou-village-du-palm-beach/ | Noël 2026 à Cannes en famille: marché du centre et Palm Beach | evenements | Cannes, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
+- /articles/evenements/marche-de-noel-de-lille-2026-en-famille-village-grande-roue-et-infos-pratiques/ | Marché de Noël de Lille 2026 en famille: village, Grande Roue et infos pratiques | evenements | Lille, Nord, Hauts-de-France
+- /articles/evenements/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel/ | Noël 2026 à Chambéry en famille: marchés, parade et ateliers | evenements | Chambéry, Savoie, Auvergne-Rhône-Alpes
+- /articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/ | Marché de Noël 100 % Côte-d’Or à Dijon 2026: horaires, spectacles et Père Noël | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
+- /articles/evenements/slava-s-snowshow-a-lyon-en-2026-quelle-seance-choisir-en-famille/ | Slava’s Snowshow à Lyon 2026: dates, tarifs et conseils en famille | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
+- /articles/evenements/exposition-papillons-a-lyon-visiter-le-musee-des-confluences-en-famille/ | Exposition Papillons à Lyon: visiter le musée des Confluences en famille | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
+- /articles/vie-pratique/location-de-voiture-a-lyon-avec-des-enfants-ce-qu-il-faut-verifier-avant-de-reserver/ | Location de voiture à Lyon avec des enfants: ce qu'il faut vérifier avant de réserver | vie-pratique | Lyon, Rhône, Auvergne-Rhône-Alpes
+- /articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/ | Fête foraine de Dijon 2026: dates, horaires et budget avec les enfants | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/evenements/foire-de-dijon-2026-en-famille-dates-ateliers-animaux-et-gratuites/ | Foire de Dijon 2026 avec les enfants: gratuités, ateliers et Ferme Côte-d'Or | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/evenements/festival-des-petits-explorateurs-2026-a-dijon-quels-ateliers-choisir-en-famille/ | Festival des Petits Explorateurs 2026 à Dijon: ateliers, horaires et tarifs | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/ | Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ? | evenements | Pyrénées-Orientales, Occitanie
+- /articles/parentalite/quel-laep-choisir-a-perpignan-selon-l-age-et-le-jour/ | Quel LAEP choisir à Perpignan selon l'âge et le jour ? | parentalite | Perpignan, Pyrénées-Orientales, Occitanie
 - /articles/activites/parc-animalier-des-angles-en-famille-quel-circuit-choisir-et-comment-preparer-la-visite/ | Parc animalier des Angles en famille: quel circuit choisir et comment préparer la visite ? | activites | Les Angles, Pyrénées-Orientales, Occitanie
+- /articles/bons-plans/musee-de-tautavel-moins-cher-avec-lio-le-bon-plan-a-connaitre/ | Musée de Tautavel moins cher avec liO: le bon plan à connaître | bons-plans | Tautavel, Pyrénées-Orientales, Occitanie
+- /articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/ | Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants | evenements | Le Mans, Sarthe, Pays de la Loire
+- /articles/voyages/le-mans-sans-voiture-avec-des-enfants-ou-dormir-et-comment-organiser-un-week-end/ | Le Mans sans voiture avec des enfants: où dormir et comment organiser un week-end | voyages | Le Mans, Sarthe, Pays de la Loire
+- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
+- /articles/evenements/alfest-2026-a-annecy-en-famille-horaires-jeux-et-braderie/ | ALFest 2026 à Annecy en famille: horaires, jeux et braderie | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/evenements/court-circuit-2026-a-annecy-en-famille-spectacles-tarifs-et-conseils/ | Court Circuit 2026 à Annecy en famille: spectacles, tarifs et conseils | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/evenements/fete-du-lac-annecy-2026-en-famille/ | Fête du lac d’Annecy 2026: préparer la soirée avec des enfants | evenements | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/vie-pratique/bus-a-annecy-avec-des-enfants-quel-ticket-choisir-et-comment-eviter-les-galeres/ | Bus à Annecy avec des enfants: quel ticket choisir et comment éviter les galères | vie-pratique | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/ | Où manger des fouées en famille autour de Saumur ? | cuisine | Saumur, Maine-et-Loire, Pays de la Loire
+- /articles/parentalite/laep-en-maine-et-loire-ou-aller-avec-son-bebe-et-comment-se-passe-l-accueil/ | LAEP en Maine-et-Loire: où aller avec son bébé et comment se passe l'accueil ? | parentalite | Maine-et-Loire, Pays de la Loire
+- /articles/sorties/chasse-tresor-galerie-david-angers-2026/ | Chasse au trésor à Angers: les 4 à 6 ans enquêtent à la Galerie David | sorties | Angers, Maine-et-Loire, Pays de la Loire
+- /articles/sorties/chateau-de-boutheon-avec-des-enfants-chateau-parc-ou-billet-couple/ | Château de Bouthéon avec des enfants: château, parc ou billet couplé? | sorties | Andrézieux-Bouthéon, Loire, Auvergne-Rhône-Alpes
+- /articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/ | Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille | evenements | Nevers, Nièvre, Bourgogne-Franche-Comté
+- /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | Noël à Chartres 2026 en famille: marché et illuminations | evenements | Chartres, Eure-et-Loir, Centre-Val de Loire
+- /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | Noël à Caen 2026 en famille: marché de Noël et visite illuminée | evenements | Caen, Calvados, Normandie
+- /articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/ | Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers | vie-pratique | Hénin-Beaumont, Pas-de-Calais, Hauts-de-France
+- /articles/bons-plans/cantine-au-college-dans-l-herault-jusqu-a-3-60-d-aide-par-repas/ | Cantine au collège dans l'Hérault: jusqu'à 3,60 € d'aide par repas | bons-plans | Montpellier, Hérault, Occitanie
+- /articles/vie-pratique/cantine-au-college-en-deux-sevres-comment-s-inscrire-en-ligne-pour-2026-2027/ | Cantine au collège en Deux-Sèvres: comment s'inscrire en ligne pour 2026-2027 | vie-pratique | Niort, Deux-Sèvres, Nouvelle-Aquitaine
+- /articles/vie-pratique/cantine-au-college-en-essonne-obtenir-son-tarif-2026-2027-sans-refaire-la-mauvaise-demarche/ | Cantine au collège en Essonne: obtenir son tarif 2026-2027 sans refaire la mauvaise démarche | vie-pratique | Évry-Courcouronnes, Essonne, Île-de-France
+- /articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/ | Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite | sorties | Paris, Paris, Île-de-France
+- /articles/activites/stages-de-science-a-la-cite-des-sciences-pendant-la-toussaint-2026-lequel-choisir-selon-l-age/ | Stages de science à la Cité des sciences à la Toussaint 2026: durées, âges et tarifs | activites | Paris, Paris, Île-de-France
+- /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | Rencontres du ciel et de l’espace 2026 à Paris: ateliers, âges et billets en famille | evenements | Paris, Paris, Île-de-France
+- /articles/sorties/vacances-de-la-toussaint-2026-a-la-cite-des-sciences-quels-ateliers-choisir-selon-l-age/ | Vacances de la Toussaint 2026 à la Cité des sciences: les ateliers numériques gratuits avec des enfants | sorties | Paris, Paris, Île-de-France
+- /articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/ | Soleils d'hiver 2026 à Angers en famille: marché, manèges et Père Noël | evenements | Angers, Maine-et-Loire, Pays de la Loire
+- /articles/maison/composteur-gratuit-a-angers-loire-metropole-qui-peut-le-demander/ | Composteur gratuit à Angers Loire Métropole: qui peut le demander? | maison | Angers, Maine-et-Loire, Pays de la Loire
+- /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | Monument Jeu d’Enfant au château d’Angers: dragons et ateliers le 17 octobre 2026 | evenements | Angers, Maine-et-Loire, Pays de la Loire
+- /articles/vie-pratique/garde-d-enfants-sur-horaires-atypiques-a-angers-qui-peut-demander-l-aide-du-ccas/ | Garde d'enfants sur horaires atypiques à Angers: qui peut demander l'aide du CCAS? | vie-pratique | Angers, Maine-et-Loire, Pays de la Loire
+- /articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/ | Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates | vie-pratique | Toulouse, Haute-Garonne, Occitanie
+- /articles/maison/moustique-tigre-en-haute-garonne-proteger-la-maison-et-le-jardin/ | Moustique tigre en Haute-Garonne: protéger la maison et le jardin | maison | Toulouse, Haute-Garonne, Occitanie
+- /articles/parentalite/parents-en-deux-sevres-ou-trouver-une-ecoute-et-un-accompagnement/ | Parents en Deux-Sèvres: où trouver une écoute et un accompagnement ? | parentalite | Deux-Sèvres, Nouvelle-Aquitaine
+- /articles/maison/a-crest-amenager-sa-maison-avec-la-chignole/ | À Crest, aménager sa maison avec La Chignole | maison | Crest, Drôme, Auvergne-Rhône-Alpes
+- /articles/voyages/valmorel-et-doucy-sans-ski-avec-des-enfants-luge-snowtubing-et-sejour-d-hiver/ | Valmorel et Doucy sans ski avec des enfants: luge, snowtubing et séjour d'hiver | voyages | Les Avanchers-Valmorel, Savoie, Auvergne-Rhône-Alpes
 - /articles/activites/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux/ | Parc Phoenix à Nice en famille: serre tropicale, animaux et jeux | activites | Nice, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
+- /articles/evenements/noel-2026-au-puy-du-fou-en-famille-spectacles-et-visite-en-hiver/ | Noël 2026 au Puy du Fou en famille: spectacles et visite en hiver | evenements | Les Epesses, Vendée, Pays de la Loire
+- /articles/vie-pratique/transport-scolaire-dans-l-eure-nomad-epn-ou-semo-quel-reseau-choisir/ | Transport scolaire dans l'Eure: NOMAD, EPN ou SEMO, quel réseau choisir ? | vie-pratique | Eure, Normandie
 - /articles/activites/les-z-accroches-pres-de-nevers-quel-accrobranche-choisir-avec-des-enfants/ | Les Z'Accrochés près de Nevers: quel accrobranche choisir avec des enfants? | activites | Sauvigny-les-Bois, Nièvre, Bourgogne-Franche-Comté
+- /articles/voyages/narbonne-en-famille-hors-saison-un-week-end-entre-romains-halles-et-canal/ | Narbonne en famille hors saison: un week-end entre Romains, Halles et canal | voyages | Narbonne, Aude, Occitanie
+- /articles/cuisine/atelier-chocolat-a-colmar-avec-des-enfants-fabriquer-sa-tablette-chez-choco-story/ | Atelier chocolat à Colmar avec des enfants: fabriquer sa tablette chez Choco-Story | cuisine | Colmar, Haut-Rhin, Grand Est
+- /articles/voyages/pont-d-espagne-en-hiver-avec-des-enfants-luge-raquettes-et-acces-depuis-cauterets/ | Pont d’Espagne en hiver avec des enfants: luge, raquettes et accès depuis Cauterets | voyages | Cauterets, Hautes-Pyrénées, Occitanie
+- /articles/sorties/lascaux-iv-en-famille-decouvrir-les-peintures-et-choisir-sa-visite/ | Lascaux IV en famille: découvrir les peintures et choisir sa visite | sorties | Montignac-Lascaux, Dordogne, Nouvelle-Aquitaine
+- /articles/vie-pratique/transport-scolaire-dans-les-pyrenees-atlantiques-txik-txak-ou-region-en-2026-2027/ | Transport scolaire dans les Pyrénées-Atlantiques: TXIK TXAK ou Région en 2026-2027? | vie-pratique | Pyrénées-Atlantiques, Nouvelle-Aquitaine
+- /articles/bons-plans/le-mont-saint-michel-en-famille-a-petit-prix-en-automne-et-en-hiver/ | Le Mont-Saint-Michel en famille à petit prix en automne et en hiver | bons-plans | Le Mont-Saint-Michel, Manche, Normandie
+- /articles/voyages/moret-sur-loing-en-famille-sans-voiture-une-journee-entre-remparts-et-riviere/ | Moret-sur-Loing en famille sans voiture: une journée entre remparts et rivière | voyages | Moret-sur-Loing, Seine-et-Marne, Île-de-France
+- /articles/maison/maison-froide-dans-les-hautes-alpes-quels-travaux-envisager-avant-l-hiver/ | Maison froide dans les Hautes-Alpes: quels travaux envisager avant l'hiver? | maison | Hautes-Alpes, Provence-Alpes-Côte d’Azur
+- /articles/parentalite/a-pamandzi-decouvrir-le-laep-avec-son-jeune-enfant/ | À Pamandzi, découvrir le LAEP avec son jeune enfant | parentalite | Pamandzi, Mayotte, Mayotte
+- /articles/vie-pratique/chateauroux-sans-voiture-avec-des-enfants-bus-gratuits-et-transports-scolaires/ | Châteauroux sans voiture avec des enfants: bus gratuits et transports scolaires | vie-pratique | Châteauroux, Indre, Centre-Val de Loire
+- /articles/parentalite/lieux-d-accueil-enfants-parents-dans-le-bas-rhin-ou-aller-avec-un-tout-petit/ | Lieux d'accueil enfants-parents dans le Bas-Rhin: où aller avec un tout-petit? | parentalite | Bas-Rhin, Grand Est
+- /articles/cuisine/cuisiner-la-banane-en-martinique-du-ti-nain-au-gouter-familial/ | Cuisiner la banane en Martinique: du ti-nain au goûter familial | cuisine | Martinique
+- /articles/cuisine/ateliers-de-cuisine-pour-enfants-a-montpellier-ou-aller-selon-leur-age/ | Ateliers de cuisine pour enfants à Montpellier: où aller selon leur âge? | cuisine | Montpellier, Hérault, Occitanie
+- /articles/maison/composter-a-la-reunion-avec-ou-sans-jardin/ | Composter à La Réunion, avec ou sans jardin | maison | La Réunion
+- /articles/maison/louer-une-maison-dans-les-landes-en-famille-ocean-lac-ou-foret/ | Louer une maison dans les Landes en famille: océan, lac ou forêt? | maison | Landes, Nouvelle-Aquitaine
+- /articles/evenements/festival-du-court-metrage-de-clermont-ferrand-2027-en-famille-quelles-seances-choisir/ | Festival du court métrage de Clermont-Ferrand 2027 en famille: quelles séances choisir? | evenements | Clermont-Ferrand, Puy-de-Dôme, Auvergne-Rhône-Alpes
 - /articles/activites/musee-de-la-ceramique-de-desvres-en-famille-visite-ateliers-et-tarifs/ | Musée de la Céramique de Desvres en famille: visite, ateliers et tarifs | activites | Desvres, Pas-de-Calais, Hauts-de-France
-- /articles/activites/lewarde-en-famille-decouvrir-la-mine-et-la-vie-des-mineurs/ | Lewarde en famille: découvrir la mine et la vie des mineurs | activites | Lewarde, Nord, Hauts-de-France
-- /articles/activites/cremieu-en-famille-balade-gratuite-dans-la-cite-medievale/ | Crémieu en famille: balade gratuite dans la cité médiévale | activites | Crémieu, Isère, Auvergne-Rhône-Alpes
-- /articles/activites/corderie-royale-de-rochefort-en-famille-visite-tarifs-et-ateliers/ | Corderie Royale de Rochefort en famille: visite, tarifs et ateliers | activites | Rochefort, Charente-Maritime, Nouvelle-Aquitaine
-- /articles/activites/musee-de-l-air-et-de-l-espace-au-bourget-quel-parcours-en-famille/ | Musée de l’Air et de l’Espace au Bourget: quel parcours en famille? | activites | Le Bourget, Seine-Saint-Denis, Île-de-France
-- /articles/activites/atelier-musical-gratuit-a-paris-le-18-novembre-2026-fabriquer-un-baton-de-pluie-des-6-ans/ | Atelier bâton de pluie gratuit à Paris le 18 novembre 2026: dès 6 ans | activites | Paris, Paris, Île-de-France
+- /articles/vie-pratique/changer-de-gare-a-paris-avec-des-enfants-preparer-sa-correspondance/ | Changer de gare à Paris avec des enfants: préparer sa correspondance | vie-pratique | Paris, Paris, Île-de-France
+- /articles/cuisine/ateliers-patisserie-en-essonne-ou-cuisiner-avec-ses-enfants/ | Ateliers pâtisserie en Essonne: où cuisiner avec ses enfants? | cuisine | Essonne, Île-de-France
+- /articles/sorties/chateau-d-if-a-marseille-en-famille-bateau-visite-et-tarifs/ | Château d'If à Marseille en famille: bateau, visite et tarifs | sorties | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d’Azur
 
 ### Historique Radar lié
 
-- opportunity | /articles/activites/atelier-musical-gratuit-a-paris-le-18-novembre-2026-fabriquer-un-baton-de-pluie-des-6-ans/ | 2026-11-06T12:30:50.449Z
+- opportunity | /articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/ | 2026-10-25T17:34:53.718Z
+- refresh | /articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/ | 2026-11-12T12:32:06.313Z
+- opportunity | /articles/evenements/foire-de-dijon-2026-en-famille-dates-ateliers-animaux-et-gratuites/ | 2026-10-21T16:31:41.000Z
+- opportunity | /articles/evenements/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants/ | 2026-11-03T06:32:33.600Z
+- refresh | /articles/activites/grottes-de-thouzon-avec-des-enfants-preparer-la-visite-sous-terre/ | 2026-11-10T09:32:01.095Z
+- opportunity | /articles/evenements/les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille/ | 2026-10-31T19:33:18.323Z
+- opportunity | /articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/ | 2026-10-29T14:26:32.277Z
+- opportunity | /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | 2026-10-19T13:54:07.745Z
+- opportunity | /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | 2026-10-28T15:29:23.387Z
+- opportunity | /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | 2026-10-29T00:28:19.695Z
+- opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
+- opportunity | /articles/evenements/monstrozoo-2026-2027-a-beauval-enquete-libre-ou-visite-guidee-en-famille/ | 2026-10-22T15:49:20.816Z
+- opportunity | /articles/evenements/monument-jeu-d-enfant-2026-a-la-basilique-saint-denis-atelier-dagobert-en-famille/ | 2026-10-13T09:50:29.435Z
+- opportunity | /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | 2026-10-10T08:38:56.921Z
+- opportunity | /articles/evenements/noel-2026-a-cannes-en-famille-marche-du-centre-ou-village-du-palm-beach/ | 2026-10-31T22:36:58.800Z
+- opportunity | /articles/evenements/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel/ | 2026-11-01T09:37:48.790Z
+- opportunity | /articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/ | 2026-10-31T10:28:17.432Z
+- opportunity | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-10-26T21:31:06.119Z
+- refresh | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-11-12T18:32:15.897Z
+- opportunity | /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | 2026-10-30T21:26:32.584Z
+- opportunity | /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | 2026-10-30T18:26:56.039Z
+- opportunity | /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | 2026-10-27T07:35:50.437Z
+- opportunity | /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | 2026-11-04T05:34:42.508Z
+- opportunity | /articles/evenements/slava-s-snowshow-a-lyon-en-2026-quelle-seance-choisir-en-famille/ | 2026-11-03T22:37:45.305Z
+- opportunity | /articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/ | 2026-10-30T12:36:12.349Z
+- opportunity | /articles/activites/stages-de-science-a-la-cite-des-sciences-pendant-la-toussaint-2026-lequel-choisir-selon-l-age/ | 2026-10-04T05:39:23.036Z
+- opportunity | /articles/evenements/toussaint-2026-au-chateau-de-pierrefonds-atelier-lanterne-ou-halloween-spirite/ | 2026-10-11T19:35:57.703Z
+- opportunity | /articles/sorties/toussaint-2026-au-louvre-lens-quelle-activite-choisir-selon-l-age/ | 2026-10-07T19:13:00.627Z
+- opportunity | /articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/ | 2026-11-03T03:34:06.534Z
+- opportunity | /articles/sorties/vacances-de-la-toussaint-2026-a-la-cite-des-sciences-quels-ateliers-choisir-selon-l-age/ | 2026-10-05T11:24:52.310Z
 
-### Phases 2 et 3
+## Travaux éditoriaux en cours
 
-Écris `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées et le corps complet de l'article. **Ne recopie pas les métadonnées inchangées et n'ajoute aucun bloc `radar`.** Le script normalise la syntaxe sûre de la requête, reprend mécaniquement les autres métadonnées et le bloc Radar de la phase précédente, puis incrémente la phase.
+### Publication en cours
 
-Pour un refresh, le script conserve de lui-même les champs protégés de l'article source. Pour une opportunity, il conserve la catégorie, le territoire et le slug choisis en phase 1.
+- Branche: automation/publication-20261115-1801-titre-de-travail-lieux-d-accueil-enfants-parents-dans-le-var-ou-jouer-
+- HEAD: publication: phase 2 20261115-1801-titre-de-travail-lieux-d-accueil-enfants-parents-dans-le-var-ou-jouer-
 
-En phase 3 seulement, ajoute `radarReview` avec `summary`, `sources` et, pour un refresh, `regressionCheck`. Une seule correction factuelle vérifiée peut être suffisante.
+---
+category: "parentalite"
+title: "Lieux d'accueil enfants-parents dans le Var: où aller avec son enfant ?"
+subtitle: "Des espaces de jeux et de rencontres, avec des adresses à Fréjus, Toulon, La Garde, La Farlède et La Seyne-sur-Mer"
+summary: "Découvrez comment fonctionnent les lieux d'accueil enfants-parents dans le Var, leurs conditions d'accès et plusieurs adresses pour une première visite."
+keywords:
+  - "lieu accueil enfants parents Var"
+  - "LAEP Var gratuit"
+  - "LAEP Fréjus Toulon"
+location:
+  department: "Var"
+  region: "Provence-Alpes-Côte d’Azur"
+sources:
+  - title: "Caf du Var - Lieux d'accueil enfants-parents"
+    url: "https://www.caf.fr/allocataires/caf-du-var/offre-de-service/vie-personnelle/je-suis-parent/lieu-d-accueil-enfants-parents-laep"
+  - title: "Département du Var - Espaces d'accueil enfants-parents"
+    url: "https://mdph.var.fr/web/departement-du-var/les-espaces-d-accueil-enfants-parents"
+  - title: "Ville de Fréjus - La Bulle"
+    url: "https://www.ville-frejus.fr/ma-ville/actualites/2026/05/la-bulle-la-ville-renforce-son-soutien-a-la-parentalite/"
+  - title: "Ville de Fréjus - Petite enfance"
+    url: "https://www.ville-frejus.fr/au-quotidien/enfance-et-education/petite-enfance-0-3-ans/"
+  - title: "Caf du Var - Relais petite enfance"
+    url: "https://www.caf.fr/allocataires/caf-du-var/offre-de-service/vie-personnelle/je-deviens-parent/relais-petite-enfance-rpe-ex-ram"
+---
+
+Un endroit où votre enfant peut jouer avec d'autres petits pendant que vous échangez avec d'autres parents, sans devoir réserver une activité: c'est le principe des lieux d'accueil enfants-parents (LAEP). Dans le Var, ces espaces accueillent les jeunes enfants accompagnés d'un adulte, notamment à Fréjus, Toulon et dans plusieurs communes de l'agglomération toulonnaise. Ils peuvent être utiles pour sortir de chez soi, rencontrer d'autres familles ou simplement découvrir un nouvel environnement avec son enfant.
+
+## Que se passe-t-il dans un LAEP ?
+
+L'enfant explore les jeux à son rythme, observe les autres, se rapproche d'eux ou préfère rester près de son parent. L'adulte reste sur place et peut discuter avec les accueillants ou d'autres familles. Il n'y a ni programme imposé ni obligation de participer à une activité.
+
+La [Caf du Var](https://www.caf.fr/allocataires/caf-du-var/offre-de-service/vie-personnelle/je-suis-parent/lieu-d-accueil-enfants-parents-laep) décrit des accueils libres, confidentiels et généralement gratuits. L'arrivée et le départ sont souples pendant les créneaux d'ouverture. La plupart des lieux ne demandent pas d'inscription, mais les conditions peuvent varier: mieux vaut les confirmer auprès du lieu choisi.
+
+Un LAEP n'est **pas une garderie**: l'adulte accompagnant reste avec l'enfant. Il ne remplace pas non plus une consultation médicale ou un accompagnement thérapeutique. L'intérêt est avant tout de partager un moment de jeu et de rencontre, sans pression sur le développement de l'enfant.
+
+## Où trouver un lieu d'accueil enfants-parents dans le Var ?
+
+Voici quelques adresses officielles, sans prétendre recenser tous les LAEP du département. Les âges et les créneaux diffèrent selon les structures. Les horaires ci-dessous sont ceux annoncés par leurs gestionnaires; vérifiez-les avant de partir, notamment pendant les vacances scolaires.
+
+### À Fréjus: La Bulle, au Pôle Enfance
+
+Ouvert en 2026, le LAEP municipal **La Bulle** se trouve au **92 impasse Via Roma**, dans le Pôle Enfance. Il reçoit les enfants de moins de 6 ans accompagnés d'un adulte, ainsi que les futurs parents. L'accès est gratuit, libre et sans inscription.
+
+La [Ville de Fréjus](https://www.ville-frejus.fr/ma-ville/actualites/2026/05/la-bulle-la-ville-renforce-son-soutien-a-la-parentalite/) annonce le lundi et le jeudi de **14h30 à 17h30**, et le samedi de **9h à 12h**. Contact: **04 83 12 08 98**, laep.labulle@ville-frejus.fr. La [page municipale Petite enfance](https://www.ville-frejus.fr/au-quotidien/enfance-et-education/petite-enfance-0-3-ans/) confirme ces coordonnées et répertorie aussi deux autres LAEP associatifs à Fréjus, Le Petit Pont d'EPAFA et Les Ateliers de l'Éducation, à contacter pour connaître leurs séances.
+
+### À Toulon: Mieux grandir
+
+Le [Département du Var](https://mdph.var.fr/web/departement-du-var/les-espaces-d-accueil-enfants-parents) présente **Mieux grandir** pour les enfants de **6 mois à 4 ans**, accompagnés d'un parent, sur deux sites:
+
+- **Toulon-Mayol**, traverse des Minimes: lundi de **9h à 11h30**, hors vacances scolaires.
+- **Sainte-Musse**, Maison des services publics, **527 boulevard des Armaris**: mardi de **9h à 11h30** et jeudi de **14h à 16h30**.
+
+Renseignements auprès de la PMI de Toulon: **04 83 95 23 53**. La mention « hors vacances scolaires » est explicitement indiquée pour Mayol; demandez confirmation pour Sainte-Musse.
+
+### À La Farlède et La Garde: une autre La Bulle
+
+Attention, **ce n'est pas le même établissement que La Bulle à Fréjus**. Le Département décrit ici un accueil pour les enfants de **3 mois à 3 ans** accompagnés d'un parent, sur deux sites:
+
+- **La Farlède**, chemin du Partegal: mardi de **9h à 12h**, hors vacances scolaires.
+- **La Garde**, **315 avenue Jean Bartolini**, site du RPE Les Loupiots: jeudi de **14h à 17h**, hors vacances scolaires.
+
+Contact: **04 83 95 39 50**. Ces informations figurent sur la [page départementale des espaces enfants-parents](https://mdph.var.fr/web/departement-du-var/les-espaces-d-accueil-enfants-parents).
+
+### À La Seyne-sur-Mer: La boîte à malices
+
+**La boîte à malices** accueille les futurs parents et les enfants de **3 ans et moins** accompagnés d'un parent. Adresse: **Tour C Agora, place Émile-Adjedj, 450 boulevard Jean-Rostand**. Le créneau indiqué est le mardi de **9h à 11h30**, hors vacances scolaires.
+
+Contact PMI: **04 83 95 49 00**. Adresse et horaires sont publiés par le [Département du Var](https://mdph.var.fr/web/departement-du-var/les-espaces-d-accueil-enfants-parents).
+
+## Comment préparer une première visite ?
+
+Vous pouvez commencer par une séance courte, surtout si votre enfant découvre les lieux collectifs. Laissez-le prendre ses marques: il n'a pas besoin de jouer immédiatement avec les autres. Vous pouvez rester à proximité et échanger avec les accueillants si vous en avez envie.
+
+Avant de vous déplacer, vérifiez trois points auprès de la structure: **l'âge accepté**, **le maintien de la séance ce jour-là** et **les modalités d'accès**. Si vous venez avec une poussette ou avez des besoins d'accessibilité particuliers, demandez également comment sont aménagés l'entrée et les locaux; ces renseignements ne sont pas précisés de façon uniforme dans les fiches consultées.
+
+Pour trouver un accueil plus proche de chez vous, la [Caf du Var propose une cartographie départementale des LAEP](https://www.caf.fr/allocataires/caf-du-var/offre-de-service/vie-personnelle/je-suis-parent/lieu-d-accueil-enfants-parents-laep). C'est le meilleur point de départ au-delà des exemples présentés ici.
+
+## LAEP ou relais petite enfance: lequel choisir ?
+
+Pour **jouer avec votre enfant et rencontrer d'autres familles**, cherchez un LAEP. Pour **vous renseigner sur les modes de garde**, les assistants maternels ou les démarches liées à l'accueil individuel, adressez-vous plutôt à un relais petite enfance (RPE). La [Caf du Var explique les missions des RPE](https://www.caf.fr/allocataires/caf-du-var/offre-de-service/vie-personnelle/je-deviens-parent/relais-petite-enfance-rpe-ex-ram), qui proposent des informations gratuites aux parents et futurs parents.
+
+Il n'est pas nécessaire de rencontrer une difficulté particulière pour pousser la porte d'un LAEP. Une simple envie de changer d'air et de partager un moment avec son enfant suffit.
+
+
+### Destination en cours
+
+- Branche: automation/destination-20261010-0720-vincennes
+- HEAD: content: destination candidate Vincennes
+
+---
+result: enriched
+kind: city
+name: "Vincennes"
+url: "/destinations/ile-de-france/val-de-marne/vincennes/"
+intro:
+  - "Vincennes est une base pratique pour visiter l'est parisien sans voiture : le château et le Parc floral se combinent à pied, tandis que le zoo de Paris mérite une sortie distincte."
+sections:
+  - title: "Une journée sur place : associer le château au Parc floral"
+    paragraphs:
+      - "Pour une journée mêlant découverte et temps de jeu, commencez par le château, puis rejoignez le Parc floral par l'esplanade du château. Comptez environ 1 h 30 à 2 h pour le monument avant de laisser les enfants profiter des aires de jeux du parc. Les pique-niques ne sont pas autorisés dans l'enceinte du château, mais le Parc floral dispose de tables de pique-nique, de points d'eau et de toilettes avec table à langer."
+      - "Avec de jeunes enfants qui supportent mal les visites intérieures, faites plutôt du Parc floral la sortie principale : ses jeux et ses jardins évitent de construire la journée autour du donjon et de ses escaliers. L'accès au Parc floral est gratuit d'octobre à mars et payant d'avril à septembre ; le château est un site distinct avec son propre billet."
+  - title: "Sur deux jours, garder le zoo pour une autre sortie"
+    paragraphs:
+      - "Le Parc zoologique de Paris se trouve du côté de la Porte Dorée, dans le 12e arrondissement, et non à côté du château ou à l'intérieur du Parc floral. Depuis le terminus Château de Vincennes du métro 1, le bus 46 permet de le rejoindre. Le zoo recommande au minimum deux heures de visite : avec le trajet et les pauses, mieux vaut lui réserver une seconde journée plutôt que de l'ajouter à la visite du château et du Parc floral."
+      - "Pour un séjour d'une seule journée, choisissez donc entre le duo château et Parc floral, facile à enchaîner à pied, et une visite du zoo avec trajet dédié. Ce choix évite de traverser inutilement le bois avec des enfants fatigués."
+  - title: "Métro ou RER avec une poussette : deux arrivées différentes"
+    paragraphs:
+      - "La ligne 1 arrive au pied du château, mais la station Château de Vincennes comporte de nombreuses marches entre les quais et la rue. La gare Vincennes du RER A est équipée d'un ascenseur et d'escalators ; elle se situe à environ dix minutes à pied du château. Avec une poussette lourde ou des difficultés à emprunter les escaliers, le RER A peut donc être plus pratique malgré la marche supplémentaire. Vérifiez l'état des équipements avant de partir."
+accommodation:
+  title: "Où dormir selon les sorties prévues ?"
+  paragraphs:
+    - "Si votre programme privilégie le château, le Parc floral et le départ du bus 46 vers le zoo, cherchez un hébergement vers l'avenue de Paris et le terminus Château de Vincennes. Si vous prévoyez aussi plusieurs allers-retours vers le centre de Paris, la proximité de la gare Vincennes du RER A est un autre choix pratique. Avec une poussette, comparez surtout la distance réelle à pied jusqu'à la gare ou au métro plutôt que de réserver simplement un logement annoncé à Vincennes."
+sources:
+  - title: "Fam Space - Destination Vincennes et ses deux articles"
+    url: "https://www.fam-space.fr/destinations/ile-de-france/val-de-marne/vincennes/"
+    accessedAt: "2026-10-10"
+  - title: "Fam Space - Château de Vincennes en famille"
+    url: "https://www.fam-space.fr/articles/sorties/chateau-de-vincennes-en-famille-tarifs-parcours-et-conseils-de-visite/"
+    accessedAt: "2026-10-10"
+  - title: "Fam Space - Monument jeu d'enfant 2026 au château de Vincennes"
+    url: "https://www.fam-space.fr/articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/"
+    accessedAt: "2026-10-10"
+  - title: "Ville de Paris - Parc floral de Paris"
+    url: "https://www.paris.fr/lieux/parc-floral-de-paris-1"
+    accessedAt: "2026-10-10"
+  - title: "Château de Vincennes - Informations pratiques"
+    url: "https://www.chateau-de-vincennes.fr/visiter/informations-pratiques"
+    accessedAt: "2026-10-10"
+  - title: "Château de Vincennes - Offre adaptée aux visiteurs en mobilité réduite"
+    url: "https://www.chateau-de-vincennes.fr/visiter/visiteurs-en-situation-de-handicap/offre-adaptee-aux-visiteurs-en-mobilite-reduite"
+    accessedAt: "2026-10-10"
+  - title: "Parc zoologique de Paris - Tarifs, horaires et accès"
+    url: "https://www.parczoologiquedeparis.fr/fr/tarifs-horaires-acces"
+    accessedAt: "2026-10-10"
+  - title: "Parc zoologique de Paris - Services et conseils de visite"
+    url: "https://www.parczoologiquedeparis.fr/fr/services-conseils-de-visite"
+    accessedAt: "2026-10-10"
+---
+
+### Destination en cours
+
+- Branche: automation/destination-20261013-0112-haut-rhin
+- HEAD: content: destination Haut-Rhin enrichment candidate
+
+---
+result: enriched
+kind: department
+name: "Haut-Rhin"
+url: "/destinations/grand-est/haut-rhin/"
+intro:
+  - "Colmar, Mulhouse et Ungersheim ne se visitent pas de la même manière en famille. Le choix de la base dépend des musées, des villages et de la possibilité de se déplacer sans voiture."
+sections:
+  - title: "Colmar pour les villages, Mulhouse pour les musées"
+    paragraphs:
+      - "Colmar convient à une journée dans le centre suivie d'une sortie vers Turckheim ou Munster, accessibles sur la ligne de train vers Metzeral. Pour Riquewihr, Kaysersberg ou Eguisheim, cette ligne ne suffit pas : il faut vérifier les bus ou prévoir une voiture."
+      - "Mulhouse est une meilleure base pour les musées techniques : la Cité du Train et Electropolis sont desservis par le tram 3, et le Musée national de l'Automobile par le tram 1. Si ces visites sont prioritaires, dormir à Mulhouse évite de revenir chaque soir depuis Colmar."
+  - title: "Deux parcs à Ungersheim : prévoir deux journées"
+    paragraphs:
+      - "Le Parc du Petit Prince et l'Écomusée d'Alsace sont proches, mais le premier recommande déjà cinq à sept heures de visite. Une famille qui souhaite découvrir les deux aura plus de temps pour profiter de chaque site en leur réservant une journée distincte."
+      - "Sans voiture, le train rejoint Bollwiller, puis il faut prévoir une navette à la demande vers les sites. Le Parc du Petit Prince indique le service Filéa ; l'Écomusée annonce une navette Soléa ou trente minutes de marche. Réservez et vérifiez le retour avant d'acheter les billets."
+  - title: "Ne pas confondre train et bus touristique"
+    paragraphs:
+      - "Le Kut'zig dessert en saison plusieurs villages viticoles depuis Colmar, mais ne circule pas toute l'année : sa saison 2026 s'est achevée le 11 octobre. Hors saison, la ligne ferroviaire vers Turckheim et Munster offre un autre choix de sortie, sous réserve des horaires du jour."
+accommodation:
+  title: "Où se baser dans le Haut-Rhin ?"
+  paragraphs:
+    - "Choisissez Colmar pour le centre historique, les villages et la vallée de Munster ; choisissez Mulhouse pour les musées et une excursion vers Ungersheim via Bollwiller. Si le séjour combine plusieurs jours dans chaque secteur, deux hébergements peuvent éviter des allers-retours répétés avec les enfants."
+sources:
+  - title: "Fam Space - Haut-Rhin"
+    url: "https://www.fam-space.fr/destinations/grand-est/haut-rhin/"
+    accessedAt: "2026-10-13"
+  - title: "Mulhouse Tourisme - Transports en commun"
+    url: "https://www.tourisme-mulhouse.com/en/what-to-do-in-mulhouse/getting-around-mulhouse-by-public-transport/"
+    accessedAt: "2026-10-13"
+  - title: "Parc du Petit Prince - Informations pratiques"
+    url: "https://parcdupetitprince.com/infos-pratiques"
+    accessedAt: "2026-10-13"
+  - title: "Écomusée d'Alsace - Accès"
+    url: "https://www.ecomusee.alsace/preparez-votre-visite/acces/"
+    accessedAt: "2026-10-13"
+  - title: "Ville de Turckheim - Accès"
+    url: "https://www.turckheim.fr/acces-et-plan/"
+    accessedAt: "2026-10-13"
+  - title: "Office de tourisme de Colmar - Kut'zig"
+    url: "https://www.tourisme-colmar.com/fr/pratique/se-deplacer/kut-zig-le-bus-touristique-cabriolet"
+    accessedAt: "2026-10-13"
+---
+
+### Phase 1 - refresh
+
+Écris `radar-request.md` avec seulement la décision éditoriale:
+
+```yaml
+---
+action: start
+mode: refresh
+targetUrl: "/articles/categorie/slug/"
+decision: "Décision précise du lecteur à mieux servir"
+affiliationPotential: "Offre existante à conserver, nouvelle action naturelle à vérifier, ou absence d'affiliation naturelle"
+---
+
+Brief éditorial court demandé par la phase 1.
+```
+
+Ne fournis ni branche, ni SHA, ni `targetPath`, ni `commonQueries`, ni `positionDelta`, ni `impressionRatio`, ni `focusQueries`. Le script les prend dans Git et dans le snapshot.
+
+### Phase 1 - opportunity
+
+Écris le minimum éditorial nécessaire au futur article:
+
+```yaml
+---
+action: start
+mode: opportunity
+title: "Titre de travail"
+subtitle: "Sous-titre utile"
+summary: "Résumé"
+category: sorties
+location:
+  city: "Ville"
+  department: "Département"
+  region: "Région"
+keywords:
+  - "mot-clé utile"
+sources:
+  - title: "Source officielle"
+    url: "https://..."
+gscSignal: strong_page
+gscSourceUrl: "/articles/categorie/page-forte/"
+decision: "Décision précise du lecteur"
+affiliationPotential: "Piste commerciale réellement vérifiée ou absence naturelle"
+---
+
+Brief éditorial court demandé par la phase 1.
+```
+
+Le slug, la branche, le SHA et la provenance technique sont générés par le script. Pour `seasonal_opportunity`, utilise `gscSignal: seasonal_opportunity` et omets `gscSourceUrl`: la source officielle du frontmatter sert de preuve. Pour `strong_page`, `gscSourceUrl` reste obligatoire et doit correspondre à une page réellement présente dans `strongPages`.
 
 ## Écriture autorisée
 
