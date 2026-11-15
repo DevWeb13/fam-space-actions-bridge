@@ -402,3 +402,4 @@ automation/image-hero-20261115-0941-angles-crest-niort|ac2cb854532fd8e80a3417ef2
 automation/image-hero-20261115-0941-angles-crest-niort|7fb373379a894a1d1e928de17ce1ce78cd9d2a2c
 automation/image-hero-20261115-1540-beaune-ardennes|327063dd0346f5157794b533d0e02b8ba8cc2e9c
 automation/image-hero-20261115-1540-beaune-ardennes|4ffddf08b009029918874052f830d9bfd6530fc2
+automation/image-hero-20261115-2045-niepce-finistere-var|1854f06f4192dcedb4b06f9d2d81c723d720f58d
