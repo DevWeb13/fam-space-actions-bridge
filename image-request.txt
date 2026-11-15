@@ -397,3 +397,4 @@ automation/image-hero-20261114-1546-nevers-narbonne|edf6b244f74eec36ad6482adcd1e
 automation/image-hero-20261114-2144-puy-rennes-eure|5be8fbce6234ece0d8c3009393cb763ca999bbc9
 automation/image-hero-20261114-2144-puy-rennes-eure|743ead8452594d8e6142e953e8a8f61ae2857e98
 automation/image-hero-20261115-0348-nice-valmorel|8d64311e67015c06acd1f0bef5c6086b8406d703
+automation/image-hero-20261115-0348-nice-valmorel|0aa6c495c30a95c0baf420bd6685c4a20e8a9f63
