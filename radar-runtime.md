@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Le PAL 2027 en famille: une ou deux journées entre animaux et attractions ?"
-subtitle: Billets, tailles d'accès, parcours et hébergements dans l'Allier
-summary: Une journée ou deux au PAL en 2027 ? Comparez les billets, préparez les attractions selon la taille des enfants et trouvez où dormir près du parc.
+subtitle: Billets, calendrier 2027, tailles d'accès et hébergements dans l'Allier
+summary: Une ou deux journées au PAL en 2027 ? Vérifiez les jours d'ouverture avec attractions, distinguez l'offre Été indien aux Lodges et préparez billets, enfants et hébergement.
 slug: le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions
 status: published
 publishedAt: 2026-11-05T13:02:56+01:00
@@ -102,7 +105,7 @@ affiliate:
   destination: Saint-Pourçain-sur-Besbre
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/activites/(2026)/(11)/le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions/index.md
   targetSha: 9df6488aeb9339b3a038b07b35b89903b8b5d6ee
@@ -130,30 +133,83 @@ radar:
       - date ouverture le pal 2027
 ---
 
-## Mission retenue
-Actualiser le guide familial du PAL 2027 sur la différence entre les journées de visite du parc et les séjours « Été indien » aux Lodges.
+<!-- article-image-credit -->
+*Photo: [Chabe01](https://commons.wikimedia.org/wiki/File:Le_Pal_-_2016.10.23_-_%C3%89l%C3%A9phants_3.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le signal GSC est incertain (34 puis 10 impressions sur trois jours), sans recul de classement démontré. Une lacune indépendante est vérifiée: le guide conseille de contrôler les jours d'ouverture mais ne distingue pas l'offre « Été indien » 2027, qui donne accès au parc animalier réservé aux résidents des Lodges, de la visite habituelle combinant animaux et attractions.
+Au PAL, dans l'Allier, une même sortie permet d'observer des girafes, de découvrir des animaux de cinq continents et de profiter de manèges. Situé à Saint-Pourçain-sur-Besbre, près de Dompierre-sur-Besbre, ce parc de 40 hectares réunit **31 attractions et environ 1 000 animaux**. Avec des enfants, faut-il prévoir une journée ou prolonger la visite ? Tout dépend de leurs tailles, de leurs envies, du trajet et surtout des dates choisies: **un séjour aux Lodges à l'automne n'équivaut pas à une journée classique avec attractions**.
 
-## Décision du lecteur
-Comprendre ce qu'il pourra réellement faire aux dates choisies, notamment en octobre-novembre, avant d'acheter billets et hébergement.
+## Ouverture 2027: vérifier la formule avant de réserver
 
-## Faits à traiter
-- Distinguer les dates et conditions du parc ordinaire de l'offre Lodges « Été indien » annoncée du 9 octobre au 6 novembre 2027; ne pas présenter cette dernière comme un billet d'entrée classique ni promettre l'accès aux attractions.
-- Rendre plus explicite le renvoi au calendrier officiel 2027 pour les recherches sur l'ouverture, sans inventer une date unique d'ouverture ni recopier des jours non vérifiés.
-- Préserver intégralement les comparaisons de billets 1/2 jours, les règles de taille, Babyswitch, poussettes, repas, accès, les deux liens Booking.com et les trois photos avec crédits et licences.
+Pour visiter à la fois le parc animalier et les attractions, choisissez un jour indiqué comme **parc ouvert** sur le [calendrier officiel 2027](https://www.lepal.com/preparer-votre-visite/calendrier-et-horaires). Consultez les horaires précis de vos dates, particulièrement si vous envisagez deux jours consécutifs. Ne déduisez pas une ouverture au public de la seule disponibilité d'un hébergement.
 
-## Sources de départ
-- Le PAL, calendrier 2027: https://www.lepal.com/preparer-votre-visite/calendrier-et-horaires
-- Le PAL, séjours et offre Été indien 2027: https://www.lepal.com/sejours/toutes-les-offres
-- Le PAL, billets: https://www.lepal.com/preparer-votre-visite/tarifs-et-achats-des-billets
+Le PAL annonce également une **offre « Été indien » du 9 octobre au 6 novembre 2027** aux Lodges. Pendant cette période, les résidents bénéficient d'une expérience spécifique dans le **parc animalier réservé aux clients des Lodges**, avec des échanges autour des animaux. Ce n'est **ni un billet d'entrée classique ni une promesse d'accès aux manèges**. Les dates et prestations du séjour doivent être vérifiées sur la [page officielle des séjours](https://www.lepal.com/sejours/toutes-les-offres). Si les attractions sont essentielles à vos enfants, retenez uniquement des journées où le calendrier confirme l'ouverture habituelle du parc.
 
-## Affiliation
-Conserver les offres Booking.com existantes, sans changement injustifié.
+## Animaux et attractions: comment organiser la visite ?
 
-## Continuations internes
-Ne pas développer une nouvelle page sur les séjours; rester centré sur la décision une ou deux journées et la bonne période de visite.
+<!-- article-image-body:01 -->
+
+![Montagnes russes Le Twist dans le parc d'attractions Le PAL.](/images/articles/2026/11/le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions-body-01.webp)
+
+*Photo: [Freddo](https://commons.wikimedia.org/wiki/File:Le_Twist_au_PAL.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Pour une première journée, choisissez quelques attractions prioritaires avant d'arriver. Les plus jeunes apprécieront souvent d'alterner manèges adaptés et observation des animaux, tandis que les plus grands voudront parfois commencer par les attractions à sensations.
+
+Le parc propose aussi des présentations animalières et des animations pédagogiques, comprises dans le billet d'entrée classique. Consultez leurs horaires sur place: ils peuvent guider votre parcours sans vous obliger à traverser le parc plusieurs fois. Les [informations officielles du PAL](https://www.lepal.com/) présentent ses différents univers.
+
+L'[application du parc](https://www.lepal.com/preparer-votre-visite/application) affiche notamment les temps d'attente, les horaires d'animations, le plan et les tailles d'accès aux attractions. Elle aide à ajuster le programme en fonction de l'affluence.
+
+## La taille des enfants change les possibilités
+
+Les restrictions d'accès aux attractions reposent sur des tailles minimales ou maximales propres à chaque manège. Vérifiez-les avant la visite, surtout si un enfant attend avec impatience une attraction précise.
+
+**La taille sert aussi à calculer le tarif, mais selon des règles distinctes:**
+
+- Moins de 1 mètre, chaussures comprises: entrée gratuite.
+- À partir de 1 mètre et jusqu'à 9 ans inclus: tarif enfant.
+- Dès 10 ans: tarif adulte.
+
+Le parc décrit également un dispositif de **Babyswitch** pour les familles dont un enfant ne peut pas accéder à une attraction. Les conditions sont spécifiques: adressez-vous à l'opérateur avant de faire la queue, plutôt que de supposer que les deux adultes pourront se relayer automatiquement. La [FAQ officielle pour les tout-petits](https://www.lepal.com/a-propos/faq/nos-tout-petits) précise ce fonctionnement.
+
+## Une journée ou deux jours au PAL ?
+
+**Une journée** convient à une famille qui accepte de sélectionner ses activités. Commencez par les attractions les plus attendues, réservez du temps aux animaux et gardez des pauses pour les repas. Chercher à tout faire risque de transformer la visite en course.
+
+**Deux jours consécutifs** sont plus confortables si vous venez de loin, si les enfants ont des envies très différentes ou si vous souhaitez profiter pleinement des espaces animaliers et des manèges. Vous pouvez répartir les deux univers entre les journées, sans suivre un parcours rigide, à condition que **les deux dates soient ouvertes au public**.
+
+Pour dormir près du parc, deux adresses à Dompierre-sur-Besbre peuvent convenir selon la composition de la famille: [L'Auberge de l'Olive sur Booking.com](https://www.booking.com/searchresults.fr.html?ss=L%27Auberge%20de%20l%27Olive%20Dompierre-sur-Besbre), pour une chambre, et [la maison « Logement, idéal famille, amis, tout y est ! » sur Booking.com](https://www.booking.com/hotel/fr/maison-ideale-famille-amis-tout-y-est.fr.html), avec cuisine et plusieurs chambres. Vérifiez la fiche exacte, la capacité, le tarif et la disponibilité aux dates souhaitées en 2027.
+
+Le PAL dispose aussi de ses propres hébergements immersifs, les Lodges et l'hôtel Savana RESERVE. Les prestations et les billets éventuellement inclus varient selon la formule: comparez le coût total du séjour et **les accès effectivement compris**, notamment pour l'Été indien, avant de choisir.
+
+## Billets 2027: quelles différences de prix ?
+
+Les formules présentées par le parc permettent de comparer les choix suivants. **Les montants ci-dessous sont des repères publiés précédemment, pas des tarifs 2027 garantis**: la billetterie officielle annonce encore la mise en vente 2027 comme prochaine.
+
+- **Billet Malin, une journée datée**: à partir de 33 € par adulte et 28 € par enfant selon le tarif affiché précédemment. Achat en ligne au plus tard la veille de la visite.
+- **Billet Liberté, une journée non datée**: 41 € par adulte et 35 € par enfant au tarif caisse précédemment affiché.
+- **Billet Passion, deux jours consécutifs datés**: 59 € par adulte et 49 € par enfant au tarif en ligne précédemment affiché.
+
+À titre d'exemple sur ces montants, le billet Passion à 59 € revient moins cher que deux billets Liberté à 41 €, mais il impose deux journées consécutives. Le billet Malin peut être plus économique pour une visite fixée à l'avance, selon la date retenue.
+
+Consultez la [billetterie officielle](https://www.lepal.com/preparer-votre-visite/tarifs-et-achats-des-billets) pour les **prix, disponibilités et conditions réellement applicables en 2027**. Les billets de visite classique ne doivent pas être confondus avec l'offre réservée aux résidents des Lodges.
+
+## Poussette, repas et trajet: les points pratiques
+
+<!-- article-image-body:02 -->
+
+![Train touristique circulant dans le parc Le PAL.](/images/articles/2026/11/le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions-body-02.webp)
+
+*Photo: [Freddo](https://commons.wikimedia.org/wiki/File:Train_du_parc_Le_PAL.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Le parc dispose d'aires de pique-nique, de restaurants et de parkings gratuits. Une poussette est proposée à la location pour **9 € par jour**, avec une empreinte bancaire de **50 €**, selon la FAQ officielle; vérifiez ces montants pour 2027. Des espaces de change sont installés dans les sanitaires, à l'exception de ceux de la Place de la Gaieté. Des bracelets d'identification gratuits pour les enfants sont disponibles à l'entrée.
+
+Le PAL se rejoint surtout en voiture. Pour venir en train, renseignez-vous sur les correspondances depuis la gare de Dompierre-Sept-Fons et sur les éventuelles navettes à la date de votre visite: leur fonctionnement n'est pas à présumer pour 2027. Retrouvez les renseignements sur la [page d'accès et de services](https://www.lepal.com/preparer-votre-visite/page/acces-et-services).
+
+Si vous prévoyez deux jours, choisissez d'abord les dates d'ouverture et le billet adapté, puis réservez votre nuit: cela évite de payer un hébergement pour une journée où le parc serait fermé.
 
 ## Article source exact à préserver et améliorer
 
