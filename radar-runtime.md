@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -110,7 +113,7 @@ affiliate:
   destination: Rochefort-en-Terre
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/noel-2026-a-rochefort-en-terre-avec-des-enfants-village-et-illuminations/index.md
   targetSha: bea73de6f13415abef4c4c2771e3840309e84f54
@@ -139,32 +142,87 @@ radar:
       - date marche de noel rochefort en terre
 ---
 
-## Mission retenue
-Actualiser le guide familial de Noël 2026 à Rochefort-en-Terre, notamment ses conditions d'accès et de stationnement désormais publiées pour 2026.
+<!-- article-image-credit -->
+*Photo: [Moreau.henri](https://commons.wikimedia.org/wiki/File:128_Rochefort-en-Terre.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot signale une baisse d'exposition (173 impressions au pic contre 58 récemment, signal coverage_loss), sans prouver une désindexation ou une perte de classement. Lacune indépendante vérifiée: l'article indique encore que les tarifs et documents de circulation disponibles datent de 2025, alors que l'office de tourisme publie désormais le plan de circulation et les tarifs 2026. Le changement doit servir concrètement la préparation du déplacement, pas seulement rafraîchir une date.
+À Rochefort-en-Terre, dans le Morbihan, les maisons anciennes et les ruelles pavées deviennent le décor d’une promenade de Noël. Du **27 novembre 2026 au 3 janvier 2027 inclus**, les [illuminations annoncées par l’office de tourisme](https://www.rochefortenterre-tourisme.bzh/explorer/la-magie-de-noel/illuminations-noel-rochefort-en-terre/) éclairent le village chaque soir. Avec des enfants, arriver de jour permet de découvrir les façades et les places, puis de les retrouver transformées à la nuit tombée.
 
-## Décision du lecteur
-Savoir quand venir, où se garer, comment rejoindre le village avec de jeunes enfants et choisir entre promenade libre et visite guidée.
+**L’accès est libre et gratuit.** Selon la [FAQ officielle](https://www.rochefortenterre-tourisme.bzh/explorer/la-magie-de-noel/faq-illuminations/), l’allumage intervient vers **17h30 à 17h45**, en fonction de la luminosité. Les lumières s’éteignent à 23h les vendredis et samedis, à 22h30 les autres jours.
 
-## Faits à traiter
-- Remplacer l'avertissement périmé du 21 octobre sur les tarifs 2025 par les informations 2026 vérifiées, avec renvoi au tarif officiel; ne pas inventer de montant si le document tarifaire n'est pas lisible.
-- Ajouter les horaires de piétonnisation 2026: vendredi 16h-21h; samedi, dimanche et vacances scolaires 14h-21h, et expliquer l'effet sur l'arrivée et la sortie.
-- Vérifier les dispositions PMR et le prêt de fauteuils, sans annoncer comme confirmés les horaires du poste de secours encore signalés provisoires.
-- Préserver les dates du 27 novembre au 3 janvier, allumage vers 17h30, gratuité, visite guidée dès 8 ans, tarifs, parcours patrimonial, contraintes de poussette, accès Moulin Neuf et conseils météo.
-- Conserver intégralement les images, crédits, licences, sources et affiliation existants. Ne pas annoncer le Père Noël ou le carrousel comme confirmés tant que l'organisateur ne l'a pas fait.
+## Venir assez tôt pour profiter du village
 
-## Sources de départ
-- Office de tourisme, accès, plan de circulation et tarifs 2026: https://www.rochefortenterre-tourisme.bzh/explorer/la-magie-de-noel/acces-et-stationnement-noel-a-rochefort-en-terre/
-- Office de tourisme, FAQ et animations confirmées: https://www.rochefortenterre-tourisme.bzh/explorer/la-magie-de-noel/faq-illuminations/
-- Office de tourisme, visite guidée et tarifs: https://www.rochefortenterre-tourisme.bzh/explorer/voyager-dans-le-temps/visites-guidees/magie-de-noel-rochefort-en-terre/
+<!-- article-image-body:01 -->
 
-## Affiliation
-Conserver le conseil de séjour au Domaine du Moulin Neuf et son lien Booking.com déjà intégré. Vérifier les conditions d'ouverture de janvier avant toute précision nouvelle.
+![Place du Puits à Rochefort-en-Terre photographiée en journée en juillet 2016, hors période des illuminations de Noël.](/images/articles/2026/10/noel-2026-a-rochefort-en-terre-avec-des-enfants-village-et-illuminations-body-01.webp)
 
-## Continuations internes
-Ne pas dupliquer un guide général du Morbihan ou les itinéraires de destination. Garder l'article centré sur le choix d'une soirée familiale et l'accès réel aux illuminations.
+*Photo: [Saga70](https://commons.wikimedia.org/wiki/File:Rochefort_en_terre.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Privilégiez un jour du lundi au jeudi, hors vacances scolaires, pour une promenade moins fréquentée. Les week-ends et les vacances attirent davantage de visiteurs. L’office conseille d’arriver **avant 15h** pour faciliter l’accès et le stationnement, sur sa [page pratique consacrée aux déplacements](https://www.rochefortenterre-tourisme.bzh/explorer/la-magie-de-noel/acces-et-stationnement-noel-a-rochefort-en-terre/).
+
+Avec les petits, cela laisse un long après-midi avant l’allumage: prévoyez quelques étapes et un goûter assis, plutôt qu’une marche continue.
+
+Le [Parcours Patrimoine](https://www.rochefortenterre-tourisme.bzh/parcours-patrimoine/) peut servir de fil conducteur. Ses quatorze étapes mêlent cartes postales anciennes et récits, avec des témoignages d’habitants à écouter par QR code. Vous pouvez simplement en retenir deux ou trois.
+
+## En promenade libre: des détails à chercher et une légende à raconter
+
+<!-- article-image-body:02 -->
+
+![Église Notre-Dame de la Tronchaye à Rochefort-en-Terre, photographiée en mai 2013.](/images/articles/2026/10/noel-2026-a-rochefort-en-terre-avec-des-enfants-village-et-illuminations-body-02.webp)
+
+*Photo: [Hadonos](https://commons.wikimedia.org/wiki/File:Rochefort-en-Terre_-_%C3%89glise_ND_01.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Commencez par la **place du Puits**. Les [maisons qui l’entourent](https://www.rochefortenterre-tourisme.bzh/parcours-patrimoine/place-du-puits/) datent pour la plupart du XVe au XVIIe siècle. Au ras du sol, cherchez leurs larges soupiraux, les ouvertures des caves en façade. Un petit jeu d’observation donne aux enfants une raison de regarder ces maisons autrement.
+
+Si les jambes suivent, poursuivez vers **l’église Notre-Dame de la Tronchaye**, en contrebas du centre. Selon la légende rapportée dans la [présentation officielle de l’église](https://www.rochefortenterre-tourisme.bzh/parcours-patrimoine/eglise-notre-dame-de-la-tronchaye/), une bergère aurait découvert une statue de la Vierge dans un tronc d’arbre. L’histoire peut se raconter en quelques phrases, même si vous restez à l’extérieur.
+
+Pour prolonger la découverte de jour, le **parc du château** conserve des remparts et un châtelet, l’ouvrage qui protégeait l’entrée de la forteresse médiévale. Proposez aux enfants de repérer ces vestiges autour du bâtiment plus récent. Le [parc est gratuit, avec une ouverture annoncée toute l’année de 10h à 18h30](https://www.rochefortenterre-tourisme.bzh/sorganiser/activites-et-loisirs/parc-du-chateau-de-rochefort-en-terre-rochefort-en-terre-fr-3586693/). L’intérieur du château ne se visite pas.
+
+Après le goûter, revenez vers les façades repérées l’après-midi pour les découvrir illuminées. Laissez les enfants choisir ce qu’ils veulent revoir et gardez une marge d’énergie pour rejoindre la voiture.
+
+## Dès 8 ans: les histoires d’une guide jusqu’aux illuminations
+
+La **visite guidée « Magie de Noël »** constitue une autre façon d’occuper l’après-midi. Son contenu est adapté à partir de 8 ans. Une guide locale raconte les lieux et les personnages du village, photographies anciennes à l’appui, pendant **1h30 sur environ 2 km**. Le départ à 16h conduit jusqu’à l’heure de l’allumage.
+
+Les **tarifs 2026** sont de **10 € par adulte et 6 € pour les enfants de 8 à 16 ans**. Les séances n’ont pas lieu tous les jours: consultez le [programme détaillé de la visite et réservez votre date](https://www.rochefortenterre-tourisme.bzh/explorer/voyager-dans-le-temps/visites-guidees/magie-de-noel-rochefort-en-terre/). Présentez-vous au moins cinq minutes avant le départ à l’office de tourisme, au 3 place des Halles, pour récupérer votre badge.
+
+Cette formule convient aux enfants prêts à marcher et à écouter pendant toute la visite. Prévoyez le goûter avant le rendez-vous et évitez de le faire précéder d’un parcours trop long.
+
+## Poussette et stationnement: anticiper les derniers mètres
+
+<!-- article-image-body:03 -->
+
+![Escalier en pierre dans le village de Rochefort-en-Terre, photographié en mai 2013, illustrant une difficulté possible pour les poussettes.](/images/articles/2026/10/noel-2026-a-rochefort-en-terre-avec-des-enfants-village-et-illuminations-body-03.webp)
+
+*Photo: [Hadonos](https://commons.wikimedia.org/wiki/File:Rochefort-en-Terre_-_escaliers_1.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:03 -->
+
+Les poussettes sont autorisées, mais les pavés, la foule et les escaliers compliquent certains passages. L’office conseille le porte-bébé pour les tout-petits dans sa [FAQ sur l’accessibilité](https://www.rochefortenterre-tourisme.bzh/explorer/la-magie-de-noel/faq-illuminations/). Le [plan officiel du village](https://www.rochefortenterre-tourisme.bzh/app/uploads/rochefort-en-terre/2025/11/Plan_patrimoine_Rochefort-en-Terre.pdf) permet de repérer les escaliers et les toilettes avant de choisir vos étapes.
+
+Des parkings payants se trouvent aux entrées du bourg, notamment aux Grées et place Saint-Michel, ainsi que dans les rues Graslin et Saint-Roch. L’office de tourisme met désormais à disposition les **tarifs des parkings et le plan de circulation 2026** sur sa [page officielle d’accès et de stationnement](https://www.rochefortenterre-tourisme.bzh/explorer/la-magie-de-noel/acces-et-stationnement-noel-a-rochefort-en-terre/): vérifiez le coût correspondant à votre durée de visite avant de partir.
+
+**Attention aux horaires de piétonnisation:** le vendredi, le village devient piéton de **16h à 21h**; les samedis, dimanches et pendant les vacances scolaires, de **14h à 21h**. Des restrictions de circulation et de stationnement s’appliquent également les week-ends dès le 27 novembre, puis chaque jour du 19 décembre au 3 janvier, selon les axes. En voiture, rejoignez un parking autorisé avant de poursuivre à pied; au retour, ne comptez pas traverser le centre avec votre véhicule pendant la fermeture. Consultez le plan 2026 pour choisir votre itinéraire et votre parking plutôt que de suivre aveuglément le GPS.
+
+Pour une personne à mobilité réduite, vérifiez avant la visite les places adaptées et les possibilités d’assistance directement auprès de l’office de tourisme au **02 97 26 56 00**. Les modalités de prêt de fauteuils mentionnées dans des informations d’éditions antérieures ne sont pas confirmées ici pour 2026.
+
+Le parking gratuit du **Moulin Neuf** se situe à environ **900 mètres, soit vingt minutes de marche du village**, selon l’office. Il se remplit rapidement. Le sentier forestier recommandé présente des pentes et un sol irrégulier, qui peut devenir boueux, glissant, voire impraticable par mauvais temps. Cette option demande donc davantage d’effort avec une poussette ou un enfant fatigué. L’office recommande d’emprunter le sentier plutôt que la route et d’emporter une lampe ainsi qu’un gilet réfléchissant pour les trajets à distance du bourg.
+
+Pour les promesses faites aux enfants, restez sur les lumières: le carrousel et la venue du Père Noël restent [en attente de confirmation pour cette édition](https://www.rochefortenterre-tourisme.bzh/explorer/la-magie-de-noel/faq-illuminations/).
+
+## Dormir à proximité pour prolonger la sortie
+
+Si vous transformez la visite en week-end, le **Domaine du Moulin Neuf**, à Malansac, propose des cottages avec cuisine près de Rochefort-en-Terre. Selon son gestionnaire Terres de France, certains logements disposent de deux chambres, avec un canapé-lit double dans le séjour pour les modèles accueillant six personnes. La cuisine permet de prévoir un repas au logement après les illuminations.
+
+Vous pouvez [consulter les cottages du Domaine du Moulin Neuf sur Booking.com](https://www.booking.com/hotel/fr/domaine-du-moulin-neuf-rochefort-en-terre.fr.html). Indiquez vos dates et l’âge des enfants pour vérifier la configuration proposée, le prix total, les suppléments éventuels et les conditions d’annulation.
+
+Le gestionnaire annonce une fermeture annuelle en janvier sans en préciser les dates sur sa page: **confirmez l’ouverture si vous visez la fin des illuminations**. La piscine extérieure est saisonnière et fermée pour ce séjour hivernal. Si vous arrivez après 18h, contactez aussi la réception à l’avance pour organiser la remise des clés. Enfin, prévoyez votre trajet après la promenade sans supposer que la proximité du domaine garantit un retour à pied facile en hiver.
+
+Si votre séjour comprend une étape à Vannes, nos repères pour [préparer un goûter breton aux Halles des Lices](https://www.fam-space.fr/articles/cuisine/gouter-breton-aux-halles-des-lices-a-vannes-quoi-acheter-et-quand-venir/) vous aideront à choisir quelques gourmandises et à venir aux bons horaires.
 
 ## Article source exact à préserver et améliorer
 
