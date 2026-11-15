@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,13 +59,6 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
@@ -77,12 +80,12 @@ sources:
     url: https://reservations.zoobeauval.com/visite-guidee-monstrozoo
   - title: ZooParc de Beauval - Prix des activités et visites guidées
     url: https://www.zoobeauval.com/billetterie/activites
-  - title: ZooParc de Beauval - Horaires du jour
+  - title: ZooParc de Beauval - Horaires et accès hivernal
     url: https://www.zoobeauval.com/preparez-votre-visite/horaires
-  - title: ZooParc de Beauval - MonstroZoo à la Toussaint et Halloween 2026
-    url: https://actus.zoobeauval.com/toussaint-monstrozoo-beauval-2026/
+  - title: ZooParc de Beauval - Noël 2026 et séances MonstroZoo
+    url: https://www.zoobeauval.com/noel-a-beauval
 eventEndsAt: 2027-03-08
-reviewAt: 2026-11-01
+reviewAt: 2026-12-18
 topic:
   key: evenements|saint-aignan|monstrozoo-2026-2027-a-beauval-enquete-libre-ou-visite-guidee-en-famille|2026
   keywords:
@@ -101,7 +104,7 @@ affiliate:
   destination: Saint-Aignan
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/monstrozoo-2026-2027-a-beauval-enquete-libre-ou-visite-guidee-en-famille/index.md
   targetSha: 145006db36962cde481bf4735f5346bb471dabcd
@@ -127,33 +130,53 @@ radar:
       - monstrozoo 2026
 ---
 
-## Mission retenue
-Actualiser le guide MonstroZoo 2026-2027 du ZooParc de Beauval pour les visites d'hiver et de Noël.
+Du **17 octobre 2026 au 8 mars 2027**, six créatures fantastiques, **Bloop, Pyrak, Vrix, Grundo, Böm et Octavia**, s'installent dans différents territoires du **ZooParc de Beauval**, à Saint-Aignan. Sculptures géantes, indices, effets sonores et jeux interactifs accompagnent la découverte des animaux.
 
-## Pourquoi cette mission
-Le snapshot montre une forte diminution récente des impressions (60 puis 9 sur les fenêtres comparées), sans établir une perte de classement. Une amélioration indépendante et vérifiée existe: l'accès au parc change dès le 16 novembre et les séances spéciales de Noël sont désormais détaillées officiellement. L'article actuel ne les indique pas.
+Deux façons d'en profiter: **une enquête libre comprise dans le billet d'entrée au zoo** et **une visite guidée de 1 h 30 payante, conseillée à partir de 6 ans**. Pour une visite cet hiver, il faut également anticiper le changement d'entrée du parc.
 
-## Décision du lecteur
-Savoir quelle formule convient à l'âge et au budget des enfants, comment rejoindre le parc sans se tromper d'entrée et quand réserver une visite guidée pendant les fêtes.
+## Le parcours libre et son carnet d'enquête
 
-## Faits à traiter
-- Du 16 novembre 2026 au 5 février 2027 inclus, entrée Sud fermée sauf exceptions: accès par l'entrée Nord près du Dôme Équatorial. Prévenir les familles hébergées aux hôtels du parc, pour lesquelles Beauval recommande la voiture.
-- Noël: séances guidées annoncées de 17h30 à 19h les 19-23 et 26-30 décembre 2026, puis le 2 janvier 2027. Vérifier les disponibilités sur la billetterie et distinguer les nocturnes et le dîner du Dôme de la visite guidée.
-- Conserver les distinctions essentielles: carnet et enquête libres inclus dans le billet du zoo, visite guidée payante sur réservation, 1h30, déconseillée aux moins de 6 ans, adulte obligatoire avec mineur, 12 € pour 6-10 ans et 14 € dès 11 ans, billet d'entrée distinct.
-- Réduire ou replacer les informations ponctuelles sur Halloween et la Toussaint 2026 désormais passées, sans supprimer les informations toujours utiles. Préserver photos, crédits, licences, liens internes et partenaires.
+<!-- article-image-body:01 -->
 
-## Sources de départ
-- https://www.zoobeauval.com/preparez-votre-visite/horaires
-- https://www.zoobeauval.com/noel-a-beauval
-- https://reservations.zoobeauval.com/visite-guidee-monstrozoo
-- https://www.zoobeauval.com/spectacles-et-activites/decouvrir-monstrozoo
+![Lion d'Afrique photographié au ZooParc de Beauval en 2019, secteur animalier sans installation MonstroZoo.](/images/articles/2026/10/monstrozoo-2026-2027-a-beauval-enquete-libre-ou-visite-guidee-en-famille-body-01.webp)
 
-## Affiliation
-Conserver l'offre Tiqets existante pour le billet du ZooParc et l'hôtel Les Pagodes de Beauval sur Booking.com; vérifier les conditions au moment de la rédaction.
+*Photo: [Gzen92](https://commons.wikimedia.org/wiki/File:Lion_d%27Afrique_(Panthera_leo).jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
 
-## Continuations internes
-- Renvoyer au guide Beauval général pour le choix entre un et deux jours, les tarifs globaux et les repas.
-- Conserver le renvoi vers l'article Toussaint 2026 seulement s'il apporte encore un contexte utile, sans le présenter comme une actualité à venir.
+<!-- /article-image-body:01 -->
+
+Le **carnet d'enquête MonstroZoo est gratuit**. Les familles peuvent suivre les indices pour retrouver les six monstres et leurs proches dans plusieurs secteurs, notamment vers le **Dôme Équatorial**, la **Terre des Lions** et l'espace des **singes dorés**.
+
+Le parcours est **inclus dans l'entrée ordinaire du ZooParc**: aucune réservation de visite guidée ni supplément MonstroZoo n'est nécessaire pour avancer à son rythme. **L'entrée au zoo reste payante** selon les conditions habituelles. Aucun âge minimum spécifique n'est annoncé pour l'enquête libre.
+
+Pour préparer l'accès, [Tiqets propose un billet d'entrée au ZooParc de Beauval](https://www.tiqets.com/fr/activites-attractions-saint-aignan-c178194/billets-pour-zooparc-de-beauval-billet-d-entree-p974727/). Ce billet permet de parcourir l'enquête libre, **mais ne comprend pas la visite guidée**. Vérifiez le tarif final, les âges et les conditions avant de payer: la fiche annonce un billet non remboursable et non reprogrammable.
+
+## La visite guidée « Sur la piste des monstres »
+
+Un instructeur accompagne les enquêteurs pendant **1 h 30**, en groupe de **15 participants maximum**. L'activité est proposée dès **6 ans**; la [billetterie officielle](https://reservations.zoobeauval.com/visite-guidee-monstrozoo) la déconseille aux moins de 6 ans, sans formuler une interdiction générale. **Tout mineur doit être accompagné d'un adulte.** La visite se déroule en français.
+
+Le supplément affiché est de **12 € pour les enfants de 6 à 10 ans** et de **14 € dès 11 ans, adultes compris**. Cela représente **26 € pour un adulte et un enfant de 6 à 10 ans**, ou **52 € pour deux adultes et deux enfants de cet âge**. Il faut ajouter les billets d'entrée au zoo, sauf si un ZooPass valide couvre déjà l'accès; celui-ci n'inclut pas automatiquement la visite guidée.
+
+**La réservation est obligatoire**, y compris le jour même, sous réserve de places restantes. L'activité est annoncée **non remboursable**. Le rendez-vous est fixé à **17 h 30 au Campement d'Alva, kiosque Grand Koudou, près du Dôme Équatorial**. Beauval annonce habituellement des séances tous les jours pendant les vacances scolaires et les samedis hors vacances: choisissez une date sur la billetterie pour connaître les créneaux réellement proposés.
+
+## Noël 2026: quelles séances réserver?
+
+Pour les fêtes, [Beauval annonce des visites guidées MonstroZoo](https://www.zoobeauval.com/noel-a-beauval) **de 17 h 30 à 19 h**, du **19 au 23 décembre 2026**, du **26 au 30 décembre 2026** et le **2 janvier 2027**. Ces dates constituent le programme annoncé, pas une garantie de places: réservez le créneau souhaité.
+
+Les illuminations de Noël sont annoncées **du 14 novembre 2026 au 4 janvier 2027**, de **16 h à 19 h 30**, avec une prolongation lors des Nocturnes de Beauval. **Les illuminations incluses dans l'entrée, la visite guidée payante et le dîner-buffet au restaurant Yasuni sont des propositions distinctes.** Les Nocturnes et le dîner ont leurs propres conditions de réservation et horaires.
+
+MonstroZoo comporte des **sculptures imposantes, sons, éclairages et projections**. Pour un enfant sensible aux bruits soudains ou aux décors impressionnants, l'enquête libre permet de s'éloigner ou de faire une pause sans suivre un groupe. Consultez les [horaires du jour](https://www.zoobeauval.com/preparez-votre-visite/horaires): l'accès aux territoires et les animations peuvent varier avec la saison et la météo.
+
+## Attention à l'entrée du zoo en hiver
+
+**Du 16 novembre 2026 au 5 février 2027 inclus**, Beauval annonce la **fermeture de l'entrée Sud, sauf exceptions**. Les visiteurs doivent passer par **l'entrée Nord, près du Dôme Équatorial**. Le parc recommande fortement la voiture aux familles qui séjournent dans ses hôtels pendant cette période. Vérifiez les consignes d'accès avant de partir, notamment si vous avez prévu un itinéraire vers l'entrée Sud.
+
+Les parkings du ZooParc sont gratuits. Pour les familles avec de jeunes enfants, les services habituels comprennent des espaces de change, des micro-ondes dans les lieux de restauration et la location de poussettes. Ces détails peuvent aider à organiser une journée d'hiver sans multiplier les allers-retours.
+
+## Billets du parc et séjour à Saint-Aignan
+
+Pour choisir **une ou deux journées au ZooParc**, estimer le budget des billets et organiser les repas ou les déplacements avec des enfants, consultez notre guide [ZooParc de Beauval en famille: billets, hôtel et budget](/articles/voyages/zooparc-de-beauval-en-famille-en-2026-un-ou-deux-jours-quel-hotel-et-quel-budget-prevoir/).
+
+Si la visite se prolonge en week-end, [Les Pagodes de Beauval à Saint-Aignan sur Booking.com](https://www.booking.com/hotel/fr/les-pagodes-de-beauval-st-aignan.fr.html) proposent des **chambres familiales** près du zoo. Vérifiez les couchages, le prix total, les disponibilités et l'annulation avant de réserver, ainsi que le trajet vers **l'entrée Nord** pendant la fermeture hivernale de l'entrée Sud.
 
 ## Article source exact à préserver et améliorer
 
