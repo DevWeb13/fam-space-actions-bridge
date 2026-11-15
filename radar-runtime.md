@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, le frontmatter éditorial utile, le corps complet et un bloc `radarReview`:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow GitHub crée le commit de phase 3, retrouve le HEAD réel et lance directement le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,25 +59,18 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, le frontmatter éditorial utile et le corps complet. **Ne recopie aucun bloc `radar` et ne fournis aucune branche ni aucun SHA.** La plomberie mécanique conserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Grottes de Sare en famille: visite, tarifs et conseils pratiques"
-subtitle: Une visite souterraine en son et lumière, complétée par un musée et un parc mégalithique au Pays basque
-summary: "Visiter les grottes de Sare avec des enfants: durée du parcours, tarifs 2026, horaires, réservation et précautions avec un bébé."
+subtitle: Une grotte en son et lumière au Pays basque, avec un parcours adapté à organiser à l'avance
+summary: "Grottes de Sare avec des enfants: visite, tarifs 2026, accessibilité partielle, réservation, paiement et conseils avec un bébé."
 slug: grottes-de-sare-en-famille-visite-tarifs-et-conseils-pratiques
 status: published
 publishedAt: 2026-11-03T13:02:45+01:00
 updatedAt: null
 category: activites
-readingTime: 4
+readingTime: 5
 location:
   city: Sare
   department: Pyrénées-Atlantiques
@@ -94,13 +97,15 @@ sources:
     url: https://www.grottesdesare.fr/accessibilite.php
   - title: Grottes de Sare - accès et stationnement
     url: https://www.grottesdesare.fr/acces.php
+  - title: Grottes de Sare - modalités de paiement
+    url: https://www.grottesdesare.fr/paiement.php
 affiliate:
   enabled: true
   type: travel
   destination: Sare
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/activites/(2026)/(11)/grottes-de-sare-en-famille-visite-tarifs-et-conseils-pratiques/index.md
   targetSha: 8d96aef3bdc54b690f69582460e7c7ebe0d95284
@@ -127,30 +132,62 @@ radar:
       - visite tarif grotte de sare
       - billets pour grottes de sare
       - grottes de sare avis
+reviewAt: 2027-01-04
 ---
 
-## Mission retenue
-Actualiser le guide des Grottes de Sare pour préciser les conditions d'accessibilité, les tarifs réduits et les modalités d'achat des billets.
+<!-- article-image-credit -->
+*Photo: [Harrieta171](https://commons.wikimedia.org/wiki/File:Sare_-_29.JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le signal GSC rapidDrop est incertain et ne démontre aucun recul de classement. Une lacune indépendante est vérifiée: le guide décrit l'accès partiel PMR et le délai de contact, mais omet les tarifs spécifiques et la gratuité de l'accompagnateur; il ne distingue pas clairement l'achat sur place sous réserve de places de la réservation préalable fortement recommandée.
+À Sare, au cœur du Pays basque, les familles peuvent explorer la grotte **Lezea** lors d'une visite guidée en son et lumière. Géologie, préhistoire et récits basques prennent vie sous terre, avant de prolonger la découverte dans un musée et un parc mégalithique. Avec des enfants, il faut surtout anticiper le créneau, les escaliers et, si nécessaire, l'organisation d'une visite adaptée.
 
-## Décision du lecteur
-Savoir si la visite convient à sa famille, combien elle coûtera réellement et comment réserver ou payer.
+## Que voit-on dans les grottes de Sare?
 
-## Faits à traiter
-La visite adaptée se limite à la partie basse et nécessite de contacter l'équipe au moins deux jours avant; tarifs officiels 2026 adaptés: 6,50 € adulte, 4 € enfant de 5 à 13 ans, 5,50 € adolescent ou étudiant, accompagnateur gratuit. Réservation préalable indispensable selon le site; achat physique possible sous réserve des places, paiement en ligne par carte, autres moyens sur place ou en office de tourisme. Préserver durée, température, marches, porte-bébé, horaires hivernaux, tarifs ordinaires, musée, parc mégalithique, accès, photos, crédits et hébergement.
+La visite débute par une présentation du site, puis le groupe suit un parcours éclairé dans la cavité. La narration et les jeux de lumière abordent la formation de la grotte, son occupation humaine, la mythologie et la culture basques.
 
-## Sources de départ
-- https://www.grottesdesare.fr/horaire_tarif.php
-- https://www.grottesdesare.fr/accessibilite.php
-- https://reservation.grottesdesare.fr/visite-fr
+Comptez **une heure de visite guidée, dont environ 45 minutes dans la grotte**. L'obscurité et les effets sonores peuvent impressionner les plus petits. La visite suit un rythme collectif, sans possibilité de s'arrêter ou de sortir librement. Le [site des Grottes de Sare décrit le parcours](https://www.grottesdesare.fr/site.php).
 
-## Affiliation
-Conserver le lien existant Booking.com vers le VVF à Sare; aucune nouvelle offre nécessaire.
+## Un musée et un parc mégalithique à découvrir
 
-## Continuations internes
-Conserver le renvoi vers le guide du Train de la Rhune sans développer cette excursion.
+Le billet comprend également l'accès au musée du site et au parc mégalithique. Ce dernier présente des **reconstitutions** de monuments et de pratiques funéraires préhistoriques: il ne s'agit pas de vestiges originaux découverts sur place. C'est une bonne façon de donner des images concrètes aux explications entendues sous terre. Le [parc est présenté sur le site officiel](https://www.grottesdesare.fr/parc.html).
+
+Attention à l'ordre de visite: **le musée et le parc ferment au départ de la dernière visite guidée**. Avec un billet pour le dernier créneau, découvrez-les donc avant la grotte. Le parc étant extérieur, prévoyez une tenue adaptée à la météo.
+
+## Visiter avec un bébé ou de jeunes enfants
+
+Il fait **environ 14 °C toute l'année** sous terre. Prévoyez un vêtement chaud et des chaussures confortables, même en été. Les poussettes, les animaux et les prises de photos ou vidéos ne sont pas autorisés dans la grotte. Un **porte-bébé** est conseillé pour les tout-petits.
+
+Le parcours complet représente **900 mètres sur deux niveaux**, avec environ 40 marches à monter et 30 à descendre. Les enfants doivent pouvoir suivre le groupe pendant toute la visite.
+
+## Accessibilité: quelle visite est possible en situation de handicap?
+
+Pour une personne en fauteuil roulant ou à mobilité réduite, **seule une partie aménagée du niveau inférieur** de la grotte est accessible: l'étage supérieur ne l'est pas. Une passerelle facilite l'entrée et un membre de l'équipe doit accompagner la personne sur une partie du parcours. **Appelez impérativement au moins deux jours avant la visite au 05 59 54 21 88** pour convenir des possibilités d'accueil. Sans ce contact, la visite adaptée peut être reportée ou refusée selon les conditions du jour.
+
+Quatre places de stationnement goudronnées sont prévues près de la billetterie. Le musée et le parc disposent de passerelles, mais une partie du parc est gravillonnée: mieux vaut être accompagné. Des toilettes de plain-pied sont disponibles près du bar, avec une clé à demander au personnel. Pour d'autres besoins ou des difficultés à suivre le rythme du groupe, demandez conseil avant de réserver. Consultez les [conditions d'accessibilité officielles](https://www.grottesdesare.fr/accessibilite.php).
+
+Les **tarifs individuels adaptés 2026** sont de **6,50 € pour un adulte**, **4 € pour un enfant de 5 à 13 ans** et **5,50 € pour un adolescent ou étudiant**, avec justificatif lorsque demandé. **L'accompagnateur bénéficie de la gratuité**. Confirmez avec l'équipe le créneau et les conditions de réservation adaptés avant de payer.
+
+## Tarifs 2026, horaires et achat des billets
+
+Les tarifs individuels ordinaires 2026 sont de **10 € par adulte**, **6 € de 5 à 13 ans inclus**, **8,50 € de 14 à 17 ans**, **8,50 € pour les étudiants sur présentation de la carte**, et **gratuit pour les moins de 5 ans**. Les tout-petits doivent néanmoins être inclus dans la réservation. Le **pass famille à 32 €** est réservé à deux adultes accompagnés de trois enfants payants âgés de 5 à 13 ans. Les habitants de Sare bénéficient de la gratuité sur justificatif.
+
+Pour la période **du 2 novembre 2026 au 3 janvier 2027**, les horaires d'ouverture annoncés sont de **14 h à 17 h du lundi au vendredi** et de **13 h à 17 h les week-ends et pendant les vacances scolaires**. Le site ferme les **24 et 25 décembre 2026** et le **1er janvier 2027**. Ces plages ne correspondent pas aux heures exactes de départ: choisissez un créneau disponible lors de la réservation.
+
+**Réserver à l'avance reste la solution sûre**, car les visites ont une capacité limitée; le site indique une réservation indispensable. Un achat à l'accueil des grottes reste possible **uniquement s'il reste des places**, ainsi que dans certains bureaux de l'office de tourisme du Pays basque. Le paiement en ligne se fait **par carte bancaire uniquement**; sur place ou en office de tourisme, d'autres moyens sont proposés, notamment espèces, chèques, chèques-vacances ANCV papier et Eusko selon les modalités indiquées. Vérifiez les [moyens de paiement et points de vente](https://www.grottesdesare.fr/paiement.php).
+
+Présentez-vous **20 minutes avant le départ**. Les billets achetés en ligne sont non modifiables et non remboursables. Consultez les [horaires et tarifs officiels](https://www.grottesdesare.fr/horaire_tarif.php), puis la [billetterie des Grottes de Sare](https://reservation.grottesdesare.fr/visite-fr) pour choisir le jour, la langue et l'horaire.
+
+## Accès, stationnement et repas
+
+Les grottes se situent à environ **20 km de Saint-Jean-de-Luz**, à l'écart du centre de Sare. **Trois parkings gratuits** sont disponibles. Des bus desservent le secteur depuis Saint-Jean-de-Luz et les communes voisines, notamment via le réseau Txik Txak: vérifiez les correspondances et horaires du jour, particulièrement hors saison. Retrouvez les indications sur la [page d'accès des Grottes de Sare](https://www.grottesdesare.fr/acces.php).
+
+Des toilettes, des tables de pique-nique et un espace café sont annoncés sur place. La restauration rapide est surtout proposée en été: pour une visite hivernale, mieux vaut prévoir son repas autrement.
+
+Pour profiter de la visite guidée, du musée et du parc sans courir, réservez **une demi-journée**. Si vous séjournez plusieurs jours dans le secteur, le [guide Fam Space du Train de la Rhune avec des enfants](https://www.fam-space.fr/articles/voyages/train-de-la-rhune-avec-des-enfants-billets-duree-et-conseils-en-2026/) donne une autre idée d'excursion, à organiser selon la saison d'ouverture du train.
+
+## Dormir à Sare pour prolonger le séjour
+
+Pour découvrir les villages et paysages basques sur plusieurs jours, le [VVF Pays Basque Sare La Rhune](https://www.booking.com/hotel/fr/vvf-villages-omordia.fr.html) dispose d'hébergements familiaux, d'un parking et de lits bébé gratuits sur demande, selon disponibilité. Il se trouve dans le village, à environ 6 km des grottes. Vérifiez les dates d'ouverture, la capacité du logement et les conditions de réservation avant de choisir votre séjour.
 
 ## Article source exact à préserver et améliorer
 
