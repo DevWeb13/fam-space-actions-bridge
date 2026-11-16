@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -102,7 +105,7 @@ affiliate:
   destination: Saint-Denis
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/batiment-b-a-saint-denis-decouvrir-le-street-art-en-famille/index.md
   targetSha: f0d5b7b8146711e3526fe07a895132d99bb03c56
@@ -129,32 +132,51 @@ radar:
       - Saint-Denis La Réunion
 ---
 
-## Mission retenue
-Actualiser le guide du Bâtiment B, musée éphémère de street art de Réunion Graffiti à Saint-Denis de La Réunion, ouvert jusqu'au 31 décembre 2026.
+<!-- article-image-credit -->
+*Photo: [Clémenceau Lauret](https://commons.wikimedia.org/wiki/File:Lit_caillouteux_de_la_rivi%C3%A8re_Saint-Denis_depuis_le_pont_-_Saint-Denis_La_R%C3%A9union.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot indique 41 impressions puis 3 sur les fenêtres comparées, sans diagnostic de perte de classement. L'article est déjà utile, mais la billetterie officielle apporte une précision décisive absente: les visites se font exclusivement avec un guide, en groupes de 40 personnes maximum, sous autorisation ERP temporaire. Cela explique concrètement pourquoi même les enfants gratuits doivent être réservés. Le premier candidat MonstroZoo a déjà été actualisé le 15 novembre; les autres candidats examinés n'apportaient pas de lacune indépendante aussi nette.
+À Saint-Denis, à La Réunion, le Bâtiment B est devenu un musée éphémère de street art. Sur près de 5 000 m², fresques, installations et œuvres immersives transforment le bâtiment lui-même en support de création. Pour les enfants, c’est une occasion de découvrir la peinture à une autre échelle. Le festival d’octobre est terminé, mais [Réunion Graffiti annonce des visites guidées le week-end jusqu’au **31 décembre 2026**](https://reuniongraffiti.re/edition-2026/).
 
-## Décision du lecteur
-Choisir le bon créneau familial et savoir combien de places réserver, même pour les enfants gratuits, avant d'organiser la sortie ou un atelier.
+## Des murs à regarder autrement
 
-## Faits à traiter
-- Expliquer que l'accès au musée se fait exclusivement en visite guidée, en groupes de 40 personnes maximum, avec réservation pour chaque personne, y compris les moins de 6 ans.
-- Préserver le tarif enfant réservé au créneau de 8 h: gratuit avant 6 ans, 10 € de 6 à 11 ans, 15 € dès 12 ans; les autres créneaux sont à 15 €.
-- Préserver la formule visite guidée et atelier dès 10 ans, les 40 € annoncés pour l'atelier sans inventer l'inclusion de la visite, les protections fournies et l'autorisation parentale.
-- Préserver les informations sur les œuvres, les artistes, le Village à programmation variable, l'adresse, l'accessibilité non documentée, les photographies et leurs licences, les liens utiles et l'hébergement existant.
-- Ne pas transformer la baisse d'impressions en affirmation de désindexation ou de perte de position.
+Les artistes ont peint directement sur les murs et créé des œuvres pour le lieu. On peut s’approcher pour observer un détail, puis reculer pour voir comment une composition occupe tout un espace.
 
-## Sources de départ
-- Organisateur, édition 2026: https://reuniongraffiti.re/edition-2026/
-- Billetterie directement responsable: https://my.weezevent.com/batiment-b
+Deux artistes présents au [programme 2026](https://reuniongraffiti.re/wp-content/uploads/2026/09/RG26-livret_A5.pdf) donnent des pistes pour aborder cette diversité. [Eko LSA](https://reuniongraffiti.re/eko-lsa/) explore la lettre, le mouvement et la couleur; ses personnages «Eko B boys» sont dessinés d’un seul trait. [Bonheur](https://reuniongraffiti.re/bonheur/) a fait d’un sourire multicolore sa signature. Deux façons d’expliquer aux enfants qu’un artiste peut se reconnaître à son geste comme à un motif récurrent.
 
-## Affiliation
-Conserver le lien Expedia vers Le Juliette Dodu et les précautions sur capacité, prix et annulation. Aucune billetterie affiliée pour le musée n'a été vérifiée.
+Pendant le parcours, proposez aux plus jeunes de choisir une couleur et de suivre ses apparitions. Avec les plus grands, comparez deux œuvres: laquelle semble en mouvement? Les lettres restent-elles lisibles? Quelques échanges suffisent à ouvrir la discussion, en laissant aussi chacun regarder à son rythme.
 
-## Continuations internes
-- Conserver le lien existant vers le guide de la Cité du Volcan comme étape culturelle distincte.
-- Ne pas étendre l'article à l'ensemble du festival d'octobre, déjà terminé.
+## Réserver une visite ou un atelier
+
+Le Bâtiment B se découvre **exclusivement en visite guidée**, sur des créneaux réservés à l'avance. La jauge est limitée à **40 personnes maximum par groupe** dans le cadre d'une autorisation temporaire d'accueil du public. **Chaque adulte et chaque enfant doit avoir sa propre réservation, même lorsqu'il bénéficie de la gratuité**: les enfants comptent dans les 40 places disponibles.
+
+Le tarif familial concerne uniquement la **visite de 8 h**:
+
+- moins de 6 ans: gratuit, avec réservation obligatoire;
+- de 6 à 11 ans: 10 €;
+- dès 12 ans, adultes compris: 15 €.
+
+Les autres créneaux sont affichés à **15 € par personne**. Consultez les dates disponibles avant d’organiser votre venue.
+
+Pour passer à la pratique, la formule **visite guidée + atelier graffiti** prévoit une initiation avec un artiste, **dès 10 ans**. La description mentionne **40 € pour l’atelier**, sans établir clairement si la visite est comprise. Faites confirmer le montant total avant paiement.
+
+Matériel et protections sont fournis. Prévoyez des vêtements qui peuvent être tachés et des chaussures adaptées. Pour un mineur, l’inscription implique l’autorisation du responsable légal.
+
+## Prolonger la découverte au Village
+
+Le Village Réunion Graffiti accompagne les visites avec un programme qui change chaque week-end: peinture en direct, rencontres, ateliers ou animations musicales. Les annonces paraissent progressivement sur les réseaux de l’organisateur, accessibles depuis la [page de l’événement](https://reuniongraffiti.re/edition-2026/). La présence d’un artiste en démonstration n’est donc pas garantie à chaque venue.
+
+Une formule avec brunch peut aussi être proposée selon les dates. Si elle vous intéresse, vérifiez son contenu et son horaire avant de réserver.
+
+## Préparer sa venue à Saint-Denis
+
+Le Bâtiment B se trouve au **13 rue de la Boulangerie, dans le quartier du Bas de la Rivière**.
+
+La durée des formules et les conditions de circulation en poussette ou en fauteuil ne sont pas détaillées dans la billetterie. Avant de réserver, faites préciser ces points grâce au [formulaire de contact de Réunion Graffiti](https://reuniongraffiti.re/edition-2026/), en bas de page.
+
+Pour dormir à Saint-Denis avant une visite matinale, **Le Juliette Dodu**, au **31 rue Juliette Dodu**, est une option à examiner. Vous pouvez [consulter les chambres du Juliette Dodu sur Expedia](https://www.expedia.fr/Saint-Denis-Hotel-Hotel-Le-Juliette-Dodu.h1468549.Description-Hotel) en renseignant vos dates et l’âge des enfants. Vérifiez la capacité des chambres proposées, le prix total et les conditions d’annulation pour votre famille.
+
+Vous poursuivez votre séjour sur l’île? Notre guide pour [visiter la Cité du Volcan en famille à Bourg-Murat](/articles/voyages/visiter-la-cite-du-volcan-en-famille-a-la-reunion/) propose une autre étape culturelle à préparer avec les enfants.
 
 ## Article source exact à préserver et améliorer
 
