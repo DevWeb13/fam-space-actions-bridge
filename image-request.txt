@@ -404,3 +404,4 @@ automation/image-hero-20261115-1540-beaune-ardennes|327063dd0346f5157794b533d0e0
 automation/image-hero-20261115-1540-beaune-ardennes|4ffddf08b009029918874052f830d9bfd6530fc2
 automation/image-hero-20261115-2045-niepce-finistere-var|1854f06f4192dcedb4b06f9d2d81c723d720f58d
 automation/image-hero-20261115-2045-niepce-finistere-var|894585e222a2b9e964ee050ca682dc99558ac5c6
+automation/image-hero-20261116-0348-bourges-cabanes93|8029c6e2aa77b53d07ebf0af4460f89a00481448
