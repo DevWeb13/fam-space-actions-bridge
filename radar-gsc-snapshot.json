@@ -1,104 +1,9 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-15T10:29:35+01:00",
+  "generatedAt": "2026-11-16T02:33:37+01:00",
   "dataThrough": "2026-11-13",
   "from": "2026-10-17",
   "refresh": [
-    {
-      "url": "/articles/activites/le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions/",
-      "title": "Le PAL 2027 en famille: une ou deux journées entre animaux et attractions ?",
-      "category": "activites",
-      "publishedAt": "2026-11-05T13:02:56+01:00",
-      "location": {
-        "city": "Saint-Pourçain-sur-Besbre",
-        "department": "Allier",
-        "region": "Auvergne-Rhône-Alpes"
-      },
-      "ageDays": 10,
-      "rapidDrop": true,
-      "peakStart": "2026-11-06",
-      "peakEnd": "2026-11-08",
-      "recentStart": "2026-11-11",
-      "recentEnd": "2026-11-13",
-      "peakImpressions": 34,
-      "recentImpressions": 10,
-      "score": 72,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 34 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0.083,
-      "focusQueries": [
-        "le pal ouverture 2027",
-        "ouverture le pal 2027",
-        "ouverture pal 2027",
-        "date ouverture le pal 2027"
-      ]
-    },
-    {
-      "url": "/articles/activites/grottes-de-sare-en-famille-visite-tarifs-et-conseils-pratiques/",
-      "title": "Grottes de Sare en famille: visite, tarifs et conseils pratiques",
-      "category": "activites",
-      "publishedAt": "2026-11-03T13:02:45+01:00",
-      "location": {
-        "city": "Sare",
-        "department": "Pyrénées-Atlantiques",
-        "region": "Nouvelle-Aquitaine"
-      },
-      "ageDays": 12,
-      "rapidDrop": true,
-      "peakStart": "2026-11-08",
-      "peakEnd": "2026-11-10",
-      "recentStart": "2026-11-11",
-      "recentEnd": "2026-11-13",
-      "peakImpressions": 23,
-      "recentImpressions": 5,
-      "score": 54,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 23 impressions sur trois jours, puis 5 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0.429,
-      "focusQueries": [
-        "les grottes de sare",
-        "avis sur grottes de sare",
-        "visite tarif grotte de sare",
-        "billets pour grottes de sare",
-        "grottes de sare avis"
-      ]
-    },
-    {
-      "url": "/articles/evenements/noel-2026-a-rochefort-en-terre-avec-des-enfants-village-et-illuminations/",
-      "title": "Noël 2026 à Rochefort-en-Terre avec des enfants: village et illuminations",
-      "category": "evenements",
-      "publishedAt": "2026-10-22T00:03:36+02:00",
-      "location": {
-        "city": "Rochefort-en-Terre",
-        "department": "Morbihan",
-        "region": "Bretagne"
-      },
-      "ageDays": 24,
-      "rapidDrop": true,
-      "peakStart": "2026-10-24",
-      "peakEnd": "2026-10-26",
-      "recentStart": "2026-11-11",
-      "recentEnd": "2026-11-13",
-      "peakImpressions": 173,
-      "recentImpressions": 58,
-      "score": 345,
-      "signal": "coverage_loss",
-      "basis": "Visibilité récente : 173 impressions sur trois jours, puis 58 sur les trois derniers jours consolidés; cause non établie. Baisse d'exposition sur les requêtes visibles (ratio 0.231), sans recul de classement comparable établi.",
-      "commonQueries": 1,
-      "positionDelta": 2,
-      "impressionRatio": 0.231,
-      "focusQueries": [
-        "rochefort en terre noel 2026",
-        "rochefort en terre noel",
-        "illumination rochefort en terre 2026",
-        "rochefort en terre a noel",
-        "date marche de noel rochefort en terre"
-      ]
-    },
     {
       "url": "/articles/evenements/monstrozoo-2026-2027-a-beauval-enquete-libre-ou-visite-guidee-en-famille/",
       "title": "MonstroZoo 2026-2027 à Beauval: parcours inclus, visite guidée et tarifs",
@@ -109,7 +14,7 @@
         "department": "Loir-et-Cher",
         "region": "Centre-Val de Loire"
       },
-      "ageDays": 24,
+      "ageDays": 25,
       "rapidDrop": true,
       "peakStart": "2026-10-28",
       "peakEnd": "2026-10-30",
@@ -138,7 +43,7 @@
         "department": "Ille-et-Vilaine",
         "region": "Bretagne"
       },
-      "ageDays": 15,
+      "ageDays": 16,
       "rapidDrop": true,
       "peakStart": "2026-11-02",
       "peakEnd": "2026-11-04",
@@ -169,7 +74,7 @@
         "department": "Alpes-Maritimes",
         "region": "Provence-Alpes-Côte d'Azur"
       },
-      "ageDays": 20,
+      "ageDays": 21,
       "rapidDrop": true,
       "peakStart": "2026-10-26",
       "peakEnd": "2026-10-28",
@@ -178,16 +83,14 @@
       "peakImpressions": 40,
       "recentImpressions": 4,
       "score": 143,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 40 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 40 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "focusQueries": [
-        "Festival Enfantillages Valbonne 2026",
-        "spectacles gratuits enfants Valbonne",
-        "cinéma jeune public Valbonne novembre 2026",
-        "Pré des Arts Enfantillages"
+        "enfantillage valbonne 2026",
+        "halloween 2026 valbonne"
       ]
     },
     {
@@ -200,7 +103,7 @@
         "department": "Moselle",
         "region": "Grand Est"
       },
-      "ageDays": 12,
+      "ageDays": 13,
       "rapidDrop": true,
       "peakStart": "2026-11-05",
       "peakEnd": "2026-11-07",
@@ -209,47 +112,12 @@
       "peakImpressions": 47,
       "recentImpressions": 0,
       "score": 141,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 47 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 47 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
       "impressionRatio": null,
-      "focusQueries": [
-        "traîneau flottant père Noël Metz 2026",
-        "bateau gratuit Noël Metz famille"
-      ]
-    },
-    {
-      "url": "/articles/evenements/festival-playground-2026-en-ile-de-france-quels-spectacles-de-danse-choisir-avec-les-enfants/",
-      "title": "Festival Playground 2026: spectacles de danse en famille, dates et tarifs",
-      "category": "evenements",
-      "publishedAt": "2026-10-26T06:30:10.109Z",
-      "location": {
-        "city": "Bagnolet",
-        "department": "Seine-Saint-Denis",
-        "region": "Île-de-France"
-      },
-      "ageDays": 20,
-      "rapidDrop": true,
-      "peakStart": "2026-10-27",
-      "peakEnd": "2026-10-29",
-      "recentStart": "2026-11-11",
-      "recentEnd": "2026-11-13",
-      "peakImpressions": 37,
-      "recentImpressions": 2,
-      "score": 140,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 37 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "festival Playground 2026",
-        "spectacles danse enfants Île-de-France",
-        "Playground 2026 tarifs et dates",
-        "danse bébé Romainville novembre 2026",
-        "Little Villette A corpo libero"
-      ]
+      "focusQueries": []
     },
     {
       "url": "/articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/",
@@ -261,7 +129,7 @@
         "department": "Var",
         "region": "Provence-Alpes-Côte d’Azur"
       },
-      "ageDays": 15,
+      "ageDays": 16,
       "rapidDrop": true,
       "peakStart": "2026-11-01",
       "peakEnd": "2026-11-03",
@@ -270,16 +138,13 @@
       "peakImpressions": 47,
       "recentImpressions": 2,
       "score": 135,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 47 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 47 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "focusQueries": [
-        "Noël Toulon 2026 famille",
-        "marché de Noël Toulon place de la Liberté",
-        "Village des Enfants Toulon place d'Armes",
-        "patinoire Toulon Noël 2026"
+        "marche noel toulon 2026"
       ]
     },
     {
@@ -292,7 +157,7 @@
         "department": "Oise",
         "region": "Hauts-de-France"
       },
-      "ageDays": 19,
+      "ageDays": 20,
       "rapidDrop": true,
       "peakStart": "2026-10-28",
       "peakEnd": "2026-10-30",
@@ -323,7 +188,7 @@
         "department": "Pas-de-Calais",
         "region": "Hauts-de-France"
       },
-      "ageDays": 19,
+      "ageDays": 20,
       "rapidDrop": true,
       "peakStart": "2026-10-28",
       "peakEnd": "2026-10-30",
@@ -355,7 +220,7 @@
         "department": "La Réunion",
         "region": "La Réunion"
       },
-      "ageDays": 18,
+      "ageDays": 19,
       "rapidDrop": true,
       "peakStart": "2026-10-29",
       "peakEnd": "2026-10-31",
@@ -385,7 +250,7 @@
         "department": "Alpes-Maritimes",
         "region": "Provence-Alpes-Côte d’Azur"
       },
-      "ageDays": 15,
+      "ageDays": 16,
       "rapidDrop": true,
       "peakStart": "2026-11-03",
       "peakEnd": "2026-11-05",
@@ -415,7 +280,7 @@
         "department": "Savoie",
         "region": "Auvergne-Rhône-Alpes"
       },
-      "ageDays": 14,
+      "ageDays": 15,
       "rapidDrop": true,
       "peakStart": "2026-11-03",
       "peakEnd": "2026-11-05",
@@ -447,7 +312,7 @@
         "department": "Rhône",
         "region": "Auvergne-Rhône-Alpes"
       },
-      "ageDays": 27,
+      "ageDays": 28,
       "rapidDrop": true,
       "peakStart": "2026-10-20",
       "peakEnd": "2026-10-22",
@@ -466,18 +331,131 @@
         "Fête des Lumières Lyon 2026 horaires enfants",
         "Fête des Lumières Lyon poussette parcours"
       ]
+    },
+    {
+      "url": "/articles/evenements/saint-nicolas-2026-a-carcassonne-marche-aux-flambeaux-ou-campements-medievaux-avec-les-enfants/",
+      "title": "Saint-Nicolas 2026 à Carcassonne: campements médiévaux et marche aux flambeaux en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-27T00:35:14.840Z",
+      "location": {
+        "city": "Carcassonne",
+        "department": "Aude",
+        "region": "Occitanie"
+      },
+      "ageDays": 20,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 33,
+      "recentImpressions": 3,
+      "score": 90,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 33 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Saint-Nicolas Carcassonne 2026",
+        "marche aux flambeaux Carcassonne 5 décembre",
+        "campements médiévaux Carcassonne enfants"
+      ]
+    },
+    {
+      "url": "/articles/evenements/foire-aux-santons-de-marseille-2026-en-famille-quand-venir-et-que-voir/",
+      "title": "Foire aux santons de Marseille 2026: dates, inauguration et visite en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-23T15:29:55.155Z",
+      "location": {
+        "city": "Marseille",
+        "department": "Bouches-du-Rhône",
+        "region": "Provence-Alpes-Côte d'Azur"
+      },
+      "ageDays": 24,
+      "rapidDrop": true,
+      "peakStart": "2026-10-24",
+      "peakEnd": "2026-10-26",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 37,
+      "recentImpressions": 8,
+      "score": 87,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 37 impressions sur trois jours, puis 8 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "foire aux santons Marseille 2026 enfants",
+        "foire aux santons Marseille horaires entrée gratuite",
+        "inauguration foire santons Marseille 15 novembre",
+        "atelier santon enfants Marseille 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/",
+      "title": "Noël à Chartres 2026 en famille: marché et illuminations",
+      "category": "evenements",
+      "publishedAt": "2026-10-30T18:26:55.934Z",
+      "location": {
+        "city": "Chartres",
+        "department": "Eure-et-Loir",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 17,
+      "rapidDrop": true,
+      "peakStart": "2026-11-02",
+      "peakEnd": "2026-11-04",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 32,
+      "recentImpressions": 3,
+      "score": 87,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 32 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël Chartres 2026",
+        "marché de Noël Chartres 2026",
+        "illuminations Chartres avec enfants",
+        "Chartres en lumières fête Noël 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/ville-de-noel-d-arras-2026-en-famille-grande-roue-patinoire-et-horaires/",
+      "title": "Ville de Noël d’Arras 2026 en famille: horaires, attractions et budget",
+      "category": "evenements",
+      "publishedAt": "2026-10-29T20:30:32.907Z",
+      "location": {
+        "city": "Arras",
+        "department": "Pas-de-Calais",
+        "region": "Hauts-de-France"
+      },
+      "ageDays": 18,
+      "rapidDrop": true,
+      "peakStart": "2026-10-31",
+      "peakEnd": "2026-11-02",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 37,
+      "recentImpressions": 10,
+      "score": 81,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 37 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Ville de Noël Arras 2026",
+        "marché de Noël Arras en famille",
+        "grande roue patinoire Arras Noël"
+      ]
     }
   ],
   "strongPages": [
-    {
-      "url": "/articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/",
-      "title": "Fête foraine de Dijon 2026: dates, horaires et budget avec les enfants",
-      "category": "evenements",
-      "recentImpressions": 1145,
-      "recentClicks": 20,
-      "recentPosition": 8.583,
-      "retention": 0.627
-    },
     {
       "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
       "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
@@ -495,15 +473,6 @@
       "recentClicks": 11,
       "recentPosition": 6.867,
       "retention": 0.855
-    },
-    {
-      "url": "/articles/evenements/alfest-2026-a-annecy-en-famille-horaires-jeux-et-braderie/",
-      "title": "ALFest 2026 à Annecy en famille: horaires, jeux et braderie",
-      "category": "evenements",
-      "recentImpressions": 174,
-      "recentClicks": 8,
-      "recentPosition": 5.494,
-      "retention": 4.579
     },
     {
       "url": "/articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/",
@@ -558,11 +527,29 @@
       "recentClicks": 4,
       "recentPosition": 6.093,
       "retention": 0.689
+    },
+    {
+      "url": "/articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/",
+      "title": "Déchets verts à Toulouse Métropole en 2027: collecte, broyage et évacuation des gros volumes",
+      "category": "maison",
+      "recentImpressions": 92,
+      "recentClicks": 4,
+      "recentPosition": 7.304,
+      "retention": 0.86
+    },
+    {
+      "url": "/articles/evenements/les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille/",
+      "title": "Féeries de Noël 2026 à Paris: parcours lumineux, billets et patinoire en famille",
+      "category": "evenements",
+      "recentImpressions": 131,
+      "recentClicks": 3,
+      "recentPosition": 7.725,
+      "retention": 1.701
     }
   ],
   "excluded": {
-    "expired": 182,
-    "cooling": 60
+    "expired": 187,
+    "cooling": 64
   },
   "warnings": [
     "Diagnostics par requêtes : 5/5.",
