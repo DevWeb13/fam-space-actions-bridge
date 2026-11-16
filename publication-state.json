@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261116-0603-titre-de-travail-madeleines-de-saint-yrieix-decouvrir-la-specialite-de",
+  "lastProcessedCommit": "d17fde984ebe12dd55a5beaf2bbebf25419178e2"
 }
