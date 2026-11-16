@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Noël 2026 à Toulon en famille: marché, patinoire et horaires"
 subtitle: "Place de la Liberté et place d'Armes: animations, horaires et budget à prévoir avec des enfants"
-summary: Du 27 novembre 2026 au 3 janvier 2027, Toulon prévoit un marché de Noël place de la Liberté et un Village des Enfants place d'Armes. Activités annoncées, horaires particuliers, sanitaires et frais encore à confirmer.
+summary: "Noël 2026 à Toulon, du 27 novembre au 3 janvier: deux places à visiter, tarifs de la patinoire et de la crèche, horaires du Père Noël et conseils avec des enfants."
 category: evenements
 location:
   city: Toulon
@@ -71,12 +74,14 @@ image:
   src: /images/articles/2026/10/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants.webp
   alt: Place de la Liberté à Toulon photographiée en été, lieu prévu pour le marché de Noël 2026
 sources:
-  - title: Ville de Toulon - règlement du marché de Noël 2026, dates, horaires et sanitaires
-    url: https://demarches.toulon.fr/media/uploads/2026/04/24/appel-a-candidature-et-reglement-interieur-marche-de-noel-toulon-2026-places-liberte-et-armes.pdf
-  - title: Ville de Toulon - programme prévu et chalet photo du Père Noël
-    url: https://demarches.toulon.fr/infos_demarches/appel-a-projets/appel-a-candidature-en-vue-dexploiter-une-stand-photo-avec-le-pere-noel-a-toulon-pour-les-festivites-de-noel-2026/
-  - title: Ville de Toulon - projet de restauration place Monsenergue
-    url: https://demarches.toulon.fr/infos_demarches/appel-a-projets/appel-a-candidatures-marche-de-noel-2026-place-monsenergue/
+  - title: Ville de Toulon - Marché de Noël et horaires du Père Noël
+    url: https://toulon.fr/agenda/marche-de-noel
+  - title: Ville de Toulon - Patinoire du Village des Enfants et tarifs
+    url: https://toulon.fr/agenda/village-des-enfants-la-patinoire
+  - title: Ville de Toulon - Crèche animée et tarifs
+    url: https://toulon.fr/agenda/la-creche-animee
+  - title: Ville de Toulon - Village des Enfants
+    url: https://toulon.fr/agenda/le-village-des-enfants
 eventEndsAt: 2027-01-03
 reviewAt: 2026-11-25
 topic:
@@ -97,7 +102,7 @@ affiliate:
   destination: Toulon
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/index.md
   targetSha: e50bf7a0d885e90591db8f9c473ce3d9997d1ca3
@@ -122,33 +127,68 @@ radar:
       - marche noel toulon 2026
 ---
 
-## Mission retenue
-Actualiser le guide familial des festivités de Noël 2026 à Toulon, du 27 novembre au 3 janvier, à partir des nouvelles fiches officielles de la Ville.
+<!-- article-image-credit -->
+*Photo: [Chabe01](https://commons.wikimedia.org/wiki/File:Place_Libert%C3%A9_Toulon_2.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC relève 47 puis 2 impressions sur deux fenêtres de trois jours, sans cause SEO établie. L'amélioration est indépendante: l'article du 31 octobre indique encore que les prix des attractions sont inconnus, alors que la Ville publie maintenant les tarifs de la patinoire et de la crèche animée.
+Du **27 novembre 2026 au 3 janvier 2027**, les fêtes de Noël à Toulon se découvrent principalement sur deux places proches du centre-ville. La **place de la Liberté** accueille le marché, le Père Noël et une crèche animée; la **place d'Armes** rassemble la patinoire et les manèges du Village des Enfants. Les deux peuvent se combiner lors d'une sortie, mais certaines activités sont payantes.
 
-## Décision du lecteur
-Permettre de composer une sortie entre marché, manèges, patinoire et crèche animée, en distinguant les animations gratuites des activités payantes, avec un budget et des horaires fiables.
+## Place de la Liberté: marché, crèche et Père Noël
 
-## Faits à traiter
-- Patinoire place d'Armes: 600 m², patinettes pour petits, 2,50 € les 30 minutes avec patins, 2,50 € l'heure sans location, formule à 5,50 € avec gants; gants obligatoires, casque recommandé avant 12 ans et disponible à l'accueil. Vérifier les conditions exactes avant rédaction.
-- Crèche animée place de la Liberté: spectacle de 26 minutes, 3 € adulte, 1 € pour les 6-12 ans, gratuit avant 6 ans.
-- Préciser les horaires de présence du Père Noël désormais publiés par la Ville et les horaires particuliers des 24, 25, 31 décembre et 1er janvier.
-- Préserver la distinction entre les deux places, les conseils toilettes/poussette/repas, le lien vers la gare, les deux photos et leurs crédits/licences, le lien Booking.com et le Mont Faron. Ne pas inventer de prix pour les manèges ou les photos.
+Le [marché de Noël annoncé par la Ville](https://toulon.fr/agenda/marche-de-noel) réunit une soixantaine de chalets d'artisanat et de gourmandises, une piste de luge, un sapin-manège et des décorations. Se promener entre les chalets ne nécessite pas de billet; le prix de la luge, du manège et des photos avec le Père Noël n'est pas indiqué dans les fiches municipales consultées.
 
-## Sources de départ
-- Ville de Toulon, patinoire: https://toulon.fr/agenda/village-des-enfants-la-patinoire
-- Ville de Toulon, crèche animée: https://toulon.fr/agenda/la-creche-animee
-- Ville de Toulon, marché et Père Noël: https://toulon.fr/agenda/marche-de-noel
-- Ville de Toulon, Village des Enfants: https://toulon.fr/agenda/le-village-des-enfants
+La **crèche provençale animée** propose un spectacle de **26 minutes** avec santons et décors. Selon la [fiche officielle](https://toulon.fr/agenda/la-creche-animee), l'entrée coûte **3 € par adulte**, **1 € pour les enfants de 6 à 12 ans** et reste **gratuite avant 6 ans**. Une famille de deux adultes et deux enfants de 6 à 12 ans paie donc **8 €** pour cette activité.
 
-## Affiliation
-Conserver l'hébergement Booking.com existant, utile pour les familles venues passer un week-end. Aucune autre offre vérifiée.
+Pour rencontrer le Père Noël au chalet de la place de la Liberté, la Ville annonce les créneaux suivants:
+- **Du 28 novembre au 18 décembre:** mercredi, samedi et dimanche de 13 h à 20 h; lundi, mardi, jeudi et vendredi de 17 h à 20 h.
+- **Du 18 au 24 décembre:** de 13 h à 20 h, avec fermeture à **18 h les 23 et 24 décembre**.
 
-## Continuations internes
-- Garder le guide de la gare de Toulon comme relais pour l'arrivée en train.
-- Garder le guide du Mont Faron comme idée de sortie complémentaire sans redévelopper ses informations.
+Le 18 décembre apparaît dans les deux plages du programme municipal, sans conséquence sur l'horaire de ce jour. Pour une photo, vérifiez sur place les conditions et le tarif.
+
+## Place d'Armes: patinoire et manèges
+
+Le [Village des Enfants](https://toulon.fr/agenda/le-village-des-enfants) annonce **cinq manèges** et **sept chalets gourmands** autour des attractions. Leurs tarifs et éventuelles restrictions d'âge ou de taille ne sont pas précisés dans la fiche officielle.
+
+La [patinoire de 600 m²](https://toulon.fr/agenda/village-des-enfants-la-patinoire) dispose de patinettes pour les plus jeunes. Ses tarifs publiés pour 2026 sont:
+- **2,50 € les 30 minutes**, location des patins incluse.
+- **2,50 € l'heure**, sans location des patins.
+- **5,50 € la formule** comprenant une entrée et une paire de gants.
+
+**Les gants sont obligatoires.** Avant 12 ans, le casque est recommandé et mis à disposition avec une charlotte à l'accueil. Pour deux enfants qui louent des patins pendant 30 minutes, comptez **5 € hors achat éventuel de gants**. La formule à 5,50 € peut être utile si vous n'en avez pas.
+
+## Horaires du 27 novembre au 3 janvier
+
+Les fiches officielles annoncent les horaires suivants pour le marché et le Village des Enfants:
+- **Du lundi au jeudi et le dimanche:** 10 h 30 à 21 h 30.
+- **Vendredi et samedi:** 10 h 30 à 22 h 30.
+- **Jeudi 24 décembre:** 10 h 30 à 18 h 30.
+- **Vendredi 25 décembre:** 15 h 30 à 20 h 30.
+- **Jeudi 31 décembre:** 10 h 30 à 18 h 30.
+- **Vendredi 1er janvier 2027:** 15 h 30 à 18 h 30.
+
+L'inauguration du **vendredi 27 novembre** est annoncée de 10 h 30 à 22 h 30. La Ville peut adapter ces horaires pour des motifs d'organisation, de sécurité ou de météo. Avec de jeunes enfants, arriver en fin d'après-midi permet de profiter des illuminations sans finir trop tard.
+
+## Toilettes, poussette et repas avec des enfants
+
+<!-- article-image-body:01 -->
+
+![Gare ferroviaire de Toulon, point d'arrivée des familles venant en train](/images/articles/2026/10/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants-body-01.webp)
+
+*Photo: [Chabe01](https://commons.wikimedia.org/wiki/File:Gare_Toulon_2.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Le règlement municipal prévoit des **toilettes pour les visiteurs**, nettoyées quotidiennement. Leur emplacement exact, les équipements de **change pour bébé** et les cheminements accessibles ne sont toutefois pas détaillés. Si vous venez avec une poussette, anticipez les zones de forte affluence autour des manèges.
+
+Des chalets gourmands sont annoncés sur les deux places. La Ville a également lancé un appel à candidatures pour des **food-trucks place Monsenergue**, près de la place d'Armes; leur présence effective et leurs horaires restent à vérifier. Pour un bébé, prévoyez le nécessaire pour le repas et le change plutôt que de compter sur des équipements non confirmés.
+
+Si vous arrivez en train, notre guide de la [gare de Toulon avec des enfants](https://www.fam-space.fr/articles/vie-pratique/gare-de-toulon-avec-des-enfants-bagages-parking-et-correspondances/) détaille les toilettes avec nurserie, les correspondances et la gestion des bagages.
+
+## Passer un week-end à Toulon
+
+Pour les familles venant de plus loin, un appartement avec cuisine peut faciliter le retour après les animations. L'[Appartement T3 climatisé, cœur de Toulon, sur Booking.com](https://www.booking.com/hotel/fr/appartement-t3-coeur-de-toulon.fr.html), près de la gare et de la place de la Liberté, annonce jusqu'à **quatre personnes** et une cuisine. Vérifiez la disposition des lits, présentée différemment selon les rubriques de l'annonce, ainsi que les tarifs et disponibilités pour votre séjour.
+
+Pour compléter la visite, notre guide du [Mont Faron en famille](https://www.fam-space.fr/articles/sorties/mont-faron-en-famille-telepherique-parc-animalier-et-conseils-2026/) présente cette autre sortie toulonnaise; contrôlez les horaires hivernaux du téléphérique avant de partir.
 
 ## Article source exact à préserver et améliorer
 
