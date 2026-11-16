@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,82 +14,133 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Haute-Vienne
 - Région: Nouvelle-Aquitaine
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Titre de travail:** « Madeleines de Saint-Yrieix: découvrir la spécialité de Haute-Vienne et la préparer avec les enfants ».
-
-**Angle:** partir d'une spécialité pâtissière locale pour proposer une activité de cuisine familiale réalisable à la maison, puis montrer où découvrir les madeleines artisanales à Saint-Yrieix-la-Perche et autour. La madeleine de Saint-Yrieix est une pâtisserie moelleuse liée à une tradition locale du XIXe siècle, notamment caractérisée par sa note d'amande amère selon l'office de tourisme.
-
-## Besoin du lecteur
-Comprendre l'origine et les particularités de cette spécialité, savoir préparer une version familiale accessible avec des enfants, adapter les gestes à leur âge et découvrir les artisans ou boutiques du territoire sans confondre recette maison et recette authentique d'un fabricant.
-
-## Valeur éditoriale
-- Expliquer la différence entre la madeleine locale et une madeleine générique, sans présenter une légende comme un fait historique certain.
-- Donner une recette familiale originale, testable et précise (quantités, temps de repos, cuisson), sans prétendre reproduire une recette artisanale secrète; contrôler les quantités à la rédaction.
-- Répartir les tâches selon les âges, avec manipulation du four exclusivement par un adulte et prudence sur les allergies aux œufs, au blé et aux amandes.
-- Proposer des pistes concrètes de découverte locale: Saint-Yrieix-la-Perche, boutiques citées par l'office de tourisme et madeleines Bébé de Saint-Maurice-les-Brousses, en distinguant ces spécialités.
-- Sujet durable, utile en novembre comme le reste de l'année; aucun doublon avec les cinq publications récentes communiquées.
-
-## Affiliation
-Recherche effectuée sur les offres des partenaires de visites et d'hébergement. Aucune billetterie ou activité de cuisine liée précisément aux madeleines de Saint-Yrieix n'a été confirmée chez GetYourGuide ou Tiqets. Booking.com présente des hébergements à Saint-Yrieix-la-Perche, notamment Résidence étoile, sur https://www.booking.com/booking-home/city/fr/saint-yrieix-la-perche.fr.html ; cependant un séjour n'est pas un besoin naturel pour une recette à réaliser chez soi. Ne pas ajouter de lien d'hébergement artificiel. Aucune offre d'affiliation pertinente retenue à ce stade.
-
-## Sources de départ
-- Office de tourisme Limousin, histoire, particularités, usages et boutiques des madeleines de Saint-Yrieix: https://www.visitlimousin.com/decouvrir/specialites-limousines-du-gout/la-madeleine-sinvite-a-votre-table/
-- Office de tourisme Limousin, ateliers de cuisine en famille à Nexon (autre candidat examiné, calendrier limité, non retenu): https://www.visitlimousin.com/sejourner/lagenda/tout-lagenda-manifestation-haute-vienne-limousin/ateliers-cuisine-en-famille-nexon-fr-6859688/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "cuisine"
+title: "Madeleines de Saint-Yrieix: une recette à faire avec les enfants"
+subtitle: "L'histoire d'une gourmandise de Haute-Vienne, une version maison et trois adresses pour la découvrir"
+summary: "Découvrez la madeleine de Saint-Yrieix, préparez une version familiale moelleuse et trouvez des artisans à visiter en Haute-Vienne."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "madeleine de Saint-Yrieix"
+  - "recette madeleines enfants"
+  - "spécialité Haute-Vienne"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Saint-Yrieix-la-Perche"
+  department: "Haute-Vienne"
+  region: "Nouvelle-Aquitaine"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "La madeleine s'invite à votre table - Limousin Nouveaux Horizons"
+    url: "https://www.visitlimousin.com/decouvrir/specialites-limousines-du-gout/la-madeleine-sinvite-a-votre-table/"
+  - title: "Madeleines à Saint-Yrieix - Limousin Nouveaux Horizons"
+    url: "https://www.visitlimousin.com/decouvrir/specialites-limousines-du-gout/madeleines-saint-yrieix-la-perche-fr-4130449/"
+  - title: "La Cerise sur le Gâteau - Limousin Nouveaux Horizons"
+    url: "https://www.visitlimousin.com/decouvrir/specialites-limousines-du-gout/madeleinier-la-cerise-sur-le-gateau-saint-yrieix-la-perche-fr-4130531/"
+  - title: "Boulangerie pâtisserie Gourdet - Limousin Nouveaux Horizons"
+    url: "https://www.visitlimousin.com/decouvrir/specialites-limousines-du-gout/madeleinier-boulangerie-patisserie-gourdet-magasin-saint-yrieix-saint-yrieix-la-perche-fr-4131045/"
+  - title: "Madeleinier Gilles Tigoulet - Limousin Nouveaux Horizons"
+    url: "https://www.visitlimousin.com/decouvrir/specialites-limousines-du-gout/madeleinier-gilles-tigoulet-saint-yrieix-la-perche-fr-4130497/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Saint-Yrieix-la-Perche, dans le sud de la Haute-Vienne, la madeleine est une spécialité locale: un petit gâteau en forme de coquille, apprécié pour sa texture moelleuse et sa note d'amande amère. On peut la goûter chez des pâtissiers de la ville, mais aussi s'en inspirer pour un atelier gourmand à la maison avec les enfants.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Une madeleine avec une histoire locale
+
+Selon [l'office de tourisme du Limousin](https://www.visitlimousin.com/decouvrir/specialites-limousines-du-gout/la-madeleine-sinvite-a-votre-table/), un compagnon pâtissier nommé Vidal aurait introduit la recette à Saint-Yrieix au milieu du XIXe siècle. Le conditionnel compte: il s'agit d'un récit transmis autour de la spécialité, pas d'une origine historique définitivement établie.
+
+Une autre légende relie la forme de coquille aux pèlerins de Saint-Jacques-de-Compostelle. Aujourd'hui, la ville accueille aussi bien des fabricants que des artisans qui proposent des madeleines nature ou parfumées, parfois au chocolat ou aux fruits, comme le présente [la sélection locale de l'office de tourisme](https://www.visitlimousin.com/decouvrir/specialites-limousines-du-gout/madeleines-saint-yrieix-la-perche-fr-4130449/).
+
+## Recette familiale: environ 12 madeleines
+
+Cette recette maison est une interprétation simple, **pas la recette d'un artisan de Saint-Yrieix**. Elle privilégie le beurre, le citron et la vanille. Pour rappeler la spécialité locale, un adulte peut ajouter un arôme alimentaire d'amande amère en respectant strictement la dose du fabricant; il reste facultatif.
+
+**Ingrédients**
+
+- 2 œufs
+- 90 g de sucre
+- 110 g de farine de blé
+- 5 g de levure chimique
+- 100 g de beurre
+- 1 pincée de sel
+- 1 cuillère à café de vanille ou un peu de zeste de citron non traité
+- Facultatif: arôme alimentaire d'amande amère, dosé selon l'étiquette
+
+**Préparation**
+
+1. Un adulte fait fondre le beurre, puis le laisse tiédir. Les enfants fouettent les œufs et le sucre jusqu'à obtenir un mélange homogène.
+2. Ajoutez la farine, la levure et le sel. Mélangez sans insister, puis incorporez le beurre tiédi et le parfum choisi.
+3. Couvrez la pâte et placez-la au réfrigérateur pendant au moins 1 heure. Pendant ce temps, préparez un moule à madeleines légèrement beurré si nécessaire.
+4. Un adulte préchauffe le four à **200 °C en chaleur traditionnelle**. Répartissez la pâte froide dans les empreintes, aux trois quarts environ.
+5. Enfournez **4 minutes à 200 °C**, puis baissez à **180 °C pour 5 à 7 minutes supplémentaires**. Surveillez dès la huitième minute totale: la durée varie selon le moule et le four. Les bords doivent être dorés et le centre cuit.
+6. L'adulte sort le moule du four. Laissez reposer quelques minutes avant de démouler sur une grille.
+
+Le repos au froid et le four bien chaud peuvent aider à former la bosse caractéristique, sans la garantir à chaque fournée. Si les madeleines colorent trop vite, adaptez la température et la durée au four utilisé.
+
+## Que peuvent faire les enfants?
+
+Les plus jeunes peuvent verser les ingrédients déjà pesés, mélanger avec une spatule et observer les empreintes en forme de coquille. Les enfants plus grands peuvent peser la farine, casser les œufs avec aide et répartir la pâte dans le moule.
+
+La fonte du beurre, le préchauffage, l'enfournement et la sortie du moule restent réservés à l'adulte. La pâte crue contenant des œufs et de la farine ne doit pas être goûtée. Vérifiez les allergies au blé, aux œufs et, si vous utilisez un parfum d'amande, sa composition et les éventuelles allergies concernées.
+
+## Où goûter des madeleines à Saint-Yrieix-la-Perche?
+
+Pour comparer une fournée maison avec les spécialités des pâtissiers, voici trois pistes documentées par l'office de tourisme:
+
+- **[La Cerise sur le Gâteau](https://www.visitlimousin.com/decouvrir/specialites-limousines-du-gout/madeleinier-la-cerise-sur-le-gateau-saint-yrieix-la-perche-fr-4130531/)**, 4 rue Grévy: madeleines maison et autres pâtisseries. La fiche touristique signale que le local n'est pas accessible aux personnes à mobilité réduite.
+- **[Boulangerie pâtisserie Gourdet](https://www.visitlimousin.com/decouvrir/specialites-limousines-du-gout/madeleinier-boulangerie-patisserie-gourdet-magasin-saint-yrieix-saint-yrieix-la-perche-fr-4131045/)**, 17 place du Marché: une interprétation artisanale de la madeleine, dans une boutique de centre-ville signalée comme accessible en poussette.
+- **[Gilles Tigoulet](https://www.visitlimousin.com/decouvrir/specialites-limousines-du-gout/madeleinier-gilles-tigoulet-saint-yrieix-la-perche-fr-4130497/)**, avenue du Général-de-Gaulle: madeleines maison nature ou aux trois chocolats, selon sa fiche touristique.
+
+Ces adresses sont des commerces, pas des ateliers de fabrication ouverts aux visiteurs. Les horaires affichés par les annuaires touristiques ne sont pas toujours garantis: vérifiez avant de vous déplacer, surtout pour une visite en famille. Une dégustation de plusieurs recettes permet de découvrir ce qui change réellement d'un artisan à l'autre: parfum, texture et garniture.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -118,4 +169,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
