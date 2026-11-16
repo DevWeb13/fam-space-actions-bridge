@@ -32,7 +32,8 @@ sources:
   - title: Festival de la Sainte-Barbe - stationnements par site
     url: https://festivaldelasaintebarbe.com/infos-pratiques/ou-se-garer/
   - title: Tadao - itinéraires et horaires des transports du bassin minier
-    url: https://www.tadao.fr/index.php/fr/  - title: Organisateur - Le Train fantôme au Louvre-Lens
+    url: https://www.tadao.fr/index.php/fr/
+  - title: Organisateur - Le Train fantôme au Louvre-Lens
     url: https://festivaldelasaintebarbe.com/manifestations/festival-de-la-sainte-barbe-le-train-fantome-au-louvre-lens/
 ---
 <!-- article-image-credit -->
