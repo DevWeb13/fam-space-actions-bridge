@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Noël de Casse-Noisette 2026 à Pierrefonds: visites, dates et tarifs en famille"
-subtitle: Décors en visite libre, conte dès 4 ans et aventure dès 7 ans au château
-summary: Du 28 novembre 2026 au 3 janvier 2027, le château de Pierrefonds propose des décors de Casse-Noisette en visite libre et deux animations à dates fixes. Âges, séances, tarifs, réservation et accès avec les enfants.
+subtitle: Visite libre, féerie dès 3 ans, marionnettes dès 4 ans et jeux dès 7 ans
+summary: Du 28 novembre 2026 au 3 janvier 2027, le château de Pierrefonds propose des décors de Casse-Noisette en visite libre et trois animations à dates fixes. Comparez les âges, séances, tarifs et modalités de réservation pour préparer votre sortie en famille.
 category: evenements
 location:
   city: Pierrefonds
@@ -73,10 +76,12 @@ image:
 sources:
   - title: Château de Pierrefonds - Le Noël de Casse-Noisette
     url: https://www.chateau-pierrefonds.fr/agenda/le-noel-de-casse-noisette
-  - title: Château de Pierrefonds - Les visites féérie
-    url: https://www.chateau-pierrefonds.fr/agenda/le-noel-de-casse-noisette/les-visites-feerie
-  - title: Château de Pierrefonds - Casse-Noisette, l'aventure à jouer
-    url: https://www.chateau-pierrefonds.fr/agenda/le-noel-de-casse-noisette/casse-noisette-l-aventure-a-jouer
+  - title: Château de Pierrefonds - Les visites féérie de Noël pour les enfants
+    url: https://www.chateau-pierrefonds.fr/agenda/le-noel-de-casse-noisette/les-visites-feerie-de-noel-pour-les-enfants
+  - title: Château de Pierrefonds - Spectacle pour enfants de marionnettes Casse-Noisette
+    url: https://www.chateau-pierrefonds.fr/agenda/le-noel-de-casse-noisette/spectacle-pour-enfants-de-marionnettes-casse-noisette
+  - title: Château de Pierrefonds - La visite à jouer en famille
+    url: https://www.chateau-pierrefonds.fr/agenda/le-noel-de-casse-noisette/casse-noisette-la-visite-a-jouer-en-famille
   - title: Château de Pierrefonds - Informations pratiques
     url: https://www.chateau-pierrefonds.fr/visiter/informations-pratiques
   - title: Château de Pierrefonds - Visiteurs en situation de handicap
@@ -102,7 +107,7 @@ affiliate:
   destination: Pierrefonds
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/index.md
   targetSha: 2d82e97305a286b5ecb10c8c3a2cc6a17076001d
@@ -130,32 +135,81 @@ radar:
       - Casse-Noisette aventure à jouer
 ---
 
-## Mission retenue
-Actualiser le guide familial du Noël de Casse-Noisette 2026 au château de Pierrefonds, du 28 novembre 2026 au 3 janvier 2027.
+<!-- article-image-credit -->
+*Photo: [Jean-Pol GRANDMONT](https://commons.wikimedia.org/wiki/File:0_Ch%C3%A2teau_de_Pierrefonds_(1).JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC signale 42 impressions puis 0 sur deux fenêtres de trois jours, sans cause SEO établie. Une lacune éditoriale indépendante est confirmée par le programme officiel actuel: l'article ne présente que deux animations, alors que le château annonce désormais un troisième spectacle de marionnettes. La tranche d'âge de la visite féerie et l'état de sa billetterie ont également évolué.
+Du **28 novembre 2026 au 3 janvier 2027**, le château de Pierrefonds, dans l'Oise, accueille le Noël de Casse-Noisette. Les décors se découvrent avec un billet d'entrée classique. Trois rendez-vous distincts complètent la visite: **féerie contée de 3 à 7 ans**, **marionnettes pour les 4-8 ans** et **visite à jouer dès 7 ans**. Le choix dépend surtout de l'âge des enfants et du jour de votre venue.
 
-## Décision du lecteur
-Savoir quelle formule réserver pour des enfants de 3 à 8 ans ou plus, à quelle date et pour quel prix, sans confondre la visite libre et les trois animations.
+## Voir les décors de Noël en visite libre
 
-## Faits à traiter
-- Ajouter le spectacle de marionnettes « Casse-Noisette » les dimanches 6, 13, 20 et 27 décembre à 15 h 30, pour les 4-8 ans, 11 € adulte et 7,50 € enfant de 7 à 18 ans; vérifier le tarif applicable aux 4-6 ans avant toute simulation de budget.
-- Corriger les visites « féerie de Noël »: le site officiel indique désormais 3-7 ans (et non « dès 4 ans »), un adulte accompagnateur par enfant, séances les 28 novembre, 5 et 19 décembre et 2 janvier à 14 h 30, et bouton « Acheter mon billet » actif sur la fiche; vérifier l'accès réel aux ventes avant de déclarer une réservation possible.
-- Préserver les dates et tarifs de la visite libre et de la visite à jouer dès 7 ans, les fermetures, l'accès, les conseils poussette/portage/PMR, les quatre photographies et leurs crédits/licences, le lien Abritel et le maillage vers Compiègne. Ne pas déduire une cause de la baisse GSC.
+<!-- article-image-body:01 -->
 
-## Sources de départ
-- Programme officiel: https://www.chateau-pierrefonds.fr/agenda/le-noel-de-casse-noisette
-- Marionnettes: https://www.chateau-pierrefonds.fr/agenda/le-noel-de-casse-noisette/spectacle-pour-enfants-de-marionnettes-casse-noisette
-- Féerie: https://www.chateau-pierrefonds.fr/agenda/le-noel-de-casse-noisette/les-visites-feerie-de-noel-pour-les-enfants
-- Visite à jouer: https://www.chateau-pierrefonds.fr/agenda/le-noel-de-casse-noisette/casse-noisette-la-visite-a-jouer-en-famille
+![Cheminée du salon de réception du château de Pierrefonds, hors décorations de Noël](/images/articles/2026/10/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer-body-01.webp)
 
-## Affiliation
-Garder l'hébergement Abritel existant, utile pour un week-end à Pierrefonds. Ne pas remplacer les billets officiels des animations par une offre non vérifiée.
+*Photo: [Fab5669](https://commons.wikimedia.org/wiki/File:Pierrefonds_-_ch%C3%A2teau,_int%C3%A9rieurs_(01).jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
 
-## Continuations internes
-- Conserver le lien vers le guide du château de Compiègne pour une seconde journée.
-- Vérifier la billetterie officielle et les tarifs pour les moins de 7 ans avant de présenter un budget familial du spectacle de marionnettes.
+<!-- /article-image-body:01 -->
+
+Les salles se parent de décors inspirés du conte. La **visite libre** permet de les découvrir à son rythme, sans réserver une animation: une solution souple avec de jeunes enfants ou lorsque les séances accompagnées ne correspondent pas à votre calendrier.
+
+Les décors sont **sans supplément au billet ordinaire**: **9 € par adulte**, gratuit pour les **moins de 18 ans**, soit **18 € pour deux adultes payants et deux enfants mineurs**. D'autres gratuités peuvent s'appliquer. L'entrée ordinaire est également gratuite le premier dimanche du mois selon les conditions du monument; cette gratuité ne vaut pas réservation d'une animation.
+
+## Visites « féerie de Noël »: de 3 à 7 ans
+
+Cassandre entraîne les enfants dans le royaume de la Fée Dragée, entre tableaux théâtralisés, lectures et musiques de Tchaïkovski. La [fiche officielle de la visite féerie](https://www.chateau-pierrefonds.fr/agenda/le-noel-de-casse-noisette/les-visites-feerie-de-noel-pour-les-enfants) précise désormais **de 3 à 7 ans**, avec **un adulte accompagnateur par enfant**.
+
+Séances à **14 h 30** les **28 novembre, 5 et 19 décembre 2026**, puis le **2 janvier 2027**. Tarifs annoncés: **9 € par adulte et 6 € par enfant de moins de 18 ans**, soit **30 € pour deux adultes et deux enfants** remplissant les conditions d'âge et d'accompagnement. La fiche affiche un bouton « Acheter mon billet », mais cela ne garantit ni l'aboutissement de l'achat ni la disponibilité des places: contrôlez la billetterie officielle avant le déplacement.
+
+## Spectacle de marionnettes « Casse-Noisette »: de 4 à 8 ans
+
+Ce spectacle raconte l'histoire de Clara et du casse-noisette à travers des marionnettes, d'après Alexandre Dumas, avec la musique de Tchaïkovski. Il constitue une troisième formule, différente de la visite contée et du parcours à jouer.
+
+Représentations les **dimanches 6, 13, 20 et 27 décembre 2026 à 15 h 30**. La [fiche officielle des marionnettes](https://www.chateau-pierrefonds.fr/agenda/le-noel-de-casse-noisette/spectacle-pour-enfants-de-marionnettes-casse-noisette) annonce **11 € par adulte** et **7,50 € pour les 7-18 ans**, mais **ne précise pas le tarif des 4-6 ans**. Pour une famille avec un enfant de cet âge, demandez le montant applicable au château avant de calculer le budget ou de réserver. Pour deux adultes et deux enfants de 7 à 8 ans, les tarifs affichés représentent **37 €**, sous réserve de places disponibles.
+
+## « La visite à jouer »: des défis dès 7 ans
+
+Dans les salles du donjon, les participants suivent Clara et le Prince Casse-Noisette au fil de **devinettes olfactives, jeux d'écoute et défis d'observation**. Cette visite guidée convient aux enfants qui préfèrent participer plutôt qu'écouter uniquement un récit.
+
+Séances à **14 h 30** les **21, 23, 26, 28 et 30 décembre 2026**, **dès 7 ans**. Tarifs: **11 € par adulte et 7,50 € pour les 7-18 ans**, soit **37 € pour deux adultes et deux enfants de 7 à 17 ans**. Vérifiez les places et les modalités de réservation sur la [fiche officielle de la visite à jouer](https://www.chateau-pierrefonds.fr/agenda/le-noel-de-casse-noisette/casse-noisette-la-visite-a-jouer-en-famille).
+
+Les billets des animations ne se confondent pas avec l'entrée libre et les gratuités habituelles ne s'y appliquent pas automatiquement. Les budgets cités n'incluent ni transport ni repas.
+
+## Horaires et fermetures pendant les fêtes
+
+Le programme court jusqu'au **3 janvier 2027**, mais le château est **fermé les 25 décembre et 1er janvier**. Les horaires habituels d'hiver sont de **10 h à 17 h 30**, avec **dernier accès à 16 h 30** et fermeture du parc **45 minutes avant celle du monument**. Une visite libre à une autre date ne donne pas accès aux animations programmées.
+
+## Poussette, accessibilité et repas
+
+<!-- article-image-body:03 -->
+
+![Grand escalier intérieur de l'aile des invités au château de Pierrefonds](/images/articles/2026/10/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer-body-03.webp)
+
+*Photo: [GO69](https://commons.wikimedia.org/wiki/File:Pierrefonds_(60)_Ch%C3%A2teau_-_Int%C3%A9rieur_-_Grand_escalier_de_l%27aile_des_invit%C3%A9s_-_04.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:03 -->
+
+<!-- article-image-body:02 -->
+
+![Cour d'honneur et galerie du château de Pierrefonds, sans les décors de Noël](/images/articles/2026/10/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer-body-02.webp)
+
+*Photo: [Jean-Pol GRANDMONT](https://commons.wikimedia.org/wiki/File:0_Ch%C3%A2teau_de_Pierrefonds_-_Galerie_et_grand-corps_de_logis_de_la_cour_d%27honneur_(1).JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Les **poussettes sont admises dans le parc, mais pas à l'intérieur du château**. Un espace de dépôt est prévu dans la cour d'honneur: avec un bébé, prévoyez le portage pendant la visite. Les cours pavées et les escaliers peuvent ralentir les déplacements. Des **sièges-cannes** sont disponibles et des **consignes** se trouvent à l'accueil.
+
+Pour les visiteurs à mobilité réduite, le château dispose de **deux places PMR** et d'un **dépose-minute sur l'esplanade**. Plusieurs espaces du rez-de-chaussée sont accessibles, mais **le premier étage ne l'est pas en fauteuil roulant**. Le parcours précis des animations de Noël n'étant pas détaillé sur ce point, contactez le monument avant de réserver si l'accessibilité des salles est déterminante.
+
+Pour déjeuner ou prendre un goûter, des restaurants et snacks se trouvent dans le village. Avec une animation à 14 h 30 ou un spectacle à 15 h 30, organisez la pause en conséquence.
+
+## Accès au château et séjour à proximité
+
+Le château se situe **rue Viollet-le-Duc, 60350 Pierrefonds**. Le **stationnement rue Sabatier est gratuit**, à environ **dix minutes à pied** selon le monument. Sans voiture, l'accès passe notamment par la **gare de Compiègne**, puis un bus: vérifiez les horaires de l'aller et du retour à la date choisie. En hiver, prévoyez aussi le froid pendant les trajets extérieurs.
+
+Pour les familles qui prolongent la sortie sur un week-end, ce [gîte de trois chambres pour six personnes à Pierrefonds sur Abritel](https://www.abritel.fr/location-vacances/p1964558) possède une cuisine et deux salles de bain. Il est annoncé à environ **3,2 km du château**, et non au pied de l'entrée. Comparez le prix total, les conditions et les disponibilités pour vos dates: aucun tarif de séjour pendant les fêtes n'est confirmé ici.
+
+Une autre visite patrimoniale peut compléter le séjour: notre [guide du château de Compiègne en famille](/articles/sorties/chateau-de-compiegne-en-famille-que-visiter-et-comment-organiser-la-journee/) détaille les espaces et leurs horaires pour organiser une journée distincte.
 
 ## Article source exact à préserver et améliorer
 
