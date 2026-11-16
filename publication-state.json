@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261116-0201-titre-de-travail-musee-de-la-musique-mecanique-aux-gets-en-famille-ins",
+  "lastProcessedCommit": "7b2d3392508b63ca7ec590d29df0a6281bf69f72"
 }
