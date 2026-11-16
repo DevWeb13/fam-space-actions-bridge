@@ -72,11 +72,12 @@ jobs:
         run: bash .github/scripts/render-radar-runtime.sh ../bridge/radar-gsc-snapshot.json ../bridge/radar-catalog.json "$RUNNER_TEMP/radar-runtime.md"
 
       - name: Remettre l'entrée Radar à zéro
-        if: always() && steps.ready.outputs.skip != 'true' && steps.process.outcome == 'success'
+        if: always() && steps.ready.outputs.skip != 'true'
         working-directory: bridge
         shell: bash
         env:
           TRIGGER_SHA: ${{ github.sha }}
+          PROCESS_OUTCOME: ${{ steps.process.outcome }}
         run: |
           set -euo pipefail
           git config user.name "github-actions[bot]"
@@ -89,8 +90,12 @@ jobs:
             exit 0
           fi
           git checkout -B radar-request-reset origin/main
-          printf '# Ready\n' > radar-request.md
-          git add radar-request.md
+          if [ "$PROCESS_OUTCOME" = "success" ]; then
+            printf '# Ready\n' > radar-request.md
+            git add radar-request.md
+          else
+            echo "Traitement Radar non abouti: requête conservée."
+          fi
           if [ -f "$RUNNER_TEMP/radar-runtime.md" ]; then
             cp "$RUNNER_TEMP/radar-runtime.md" radar-runtime.md
             git add radar-runtime.md
