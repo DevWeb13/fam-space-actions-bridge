@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261116-1805-sujet-le-chateau-de-la-motte-tilly-et-son-domaine-dans-l-aube",
+  "lastProcessedCommit": "55beefc7ae858c201319aab62cc6ee9b2ed80572"
 }
