@@ -406,3 +406,4 @@ automation/image-hero-20261115-2045-niepce-finistere-var|1854f06f4192dcedb4b06f9
 automation/image-hero-20261115-2045-niepce-finistere-var|894585e222a2b9e964ee050ca682dc99558ac5c6
 automation/image-hero-20261116-0348-bourges-cabanes93|8029c6e2aa77b53d07ebf0af4460f89a00481448
 automation/image-hero-20261116-0348-bourges-cabanes93|1f90e6017e9f298b2ead443671766c8870f565a8
+automation/image-hero-20261116-1043-madeleines-mariana-gets|9edae4b5b2d98869c46e5c148cec2c5be2cbd922
