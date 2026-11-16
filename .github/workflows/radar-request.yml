@@ -72,7 +72,7 @@ jobs:
         run: bash .github/scripts/render-radar-runtime.sh ../bridge/radar-gsc-snapshot.json ../bridge/radar-catalog.json "$RUNNER_TEMP/radar-runtime.md"
 
       - name: Remettre l'entrée Radar à zéro
-        if: always() && steps.ready.outputs.skip != 'true'
+        if: always() && steps.ready.outputs.skip != 'true' && steps.process.outcome == 'success'
         working-directory: bridge
         shell: bash
         env:
