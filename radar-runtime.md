@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -94,7 +97,7 @@ affiliate:
   destination: Rennes
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille/index.md
   targetSha: 5ea7ee2c52e9655395593418391a8a02728e3a36
@@ -122,32 +125,76 @@ radar:
       - ou
 ---
 
-## Mission retenue
-Actualiser le guide familial des Luminéales du Thabor à Rennes, balade lumineuse payante du 27 novembre 2026 au 3 janvier 2027.
+<!-- article-image-credit -->
+*Photo: [Ash\_Crow](https://commons.wikimedia.org/wiki/File:Rennes-Thabor-3.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot signale 63 impressions sur trois jours puis 7, sans preuve de perte de position. L'article est déjà solide, mais les FAQ officielles apportent des informations pratiques absentes, utiles avant l'ouverture.
+Du **27 novembre 2026 au 3 janvier 2027**, les **Luminéales du Thabor** proposent à Rennes une balade nocturne payante à travers dix escales lumineuses et musicales sur les traditions de Noël dans le monde. Cette première édition, « Des Noëls dans le monde », dure environ **1 h 15**. Ce n'est ni un marché de Noël ni un parc de manèges: on vient surtout marcher, observer les installations et écouter les chants, notamment ceux du duo Birds on a Wire.
 
-## Décision du lecteur
-Savoir quel tarif et quel mode de paiement choisir, si la promenade convient aux enfants et comment organiser le retour.
+Avec des enfants, trois points comptent avant d'acheter: le **tarif réellement applicable à chacun**, l'horaire du parcours et les conditions de circulation dans le parc.
 
-## Faits à traiter
-- Ajouter l'offre groupe à 10 € par personne dès dix visiteurs et la disponibilité sur Pass Culture, sans présumer de l'éligibilité individuelle.
-- Préciser que les chèques-vacances ne sont pas acceptés; au guichet, carte bancaire, espèces et chèque sont annoncés.
-- Mentionner que les chiens tenus en laisse sont autorisés, information pertinente pour les familles accompagnées d'un animal.
-- Conserver les tarifs famille, l'incertitude explicite pour les enfants de 5 ans, les horaires, la réservation obligatoire, la pluie, les conseils poussette/PMR, les toilettes, le repas bébé, le transport, les trois photographies et leurs crédits/licences.
-- Ne pas présenter la baisse GSC comme une désindexation ni modifier la date pour elle-même.
+## Quel billet choisir en famille ?
 
-## Sources de départ
-- Organisateur, tarifs et FAQ: https://leslumineales.fr/
-- Office de tourisme de Rennes: https://www.tourisme-rennes.com/sortir/les-lumineales-du-thabor-des-noels-dans-le-monde/
+La [grille officielle des Luminéales](https://leslumineales.fr/) annonce:
 
-## Affiliation
-Conserver le lien existant vers TY AR PARIZ T3 sur Booking.com, ainsi que les précautions sur la configuration des chambres et le lit bébé. Ne pas inventer de billetterie affiliée.
+- **15 €** au plein tarif;
+- **10 €** au tarif réduit pour les **6-17 ans**, les étudiants, les bénéficiaires du RSA, les demandeurs d'emploi et les personnes à mobilité réduite;
+- **5 €** avec le tarif **Sortir!**, sous conditions d'éligibilité;
+- **gratuit avant 5 ans**, mais avec un billet gratuit à réserver;
+- **10 € par personne** avec le pack famille, accessible à partir de quatre personnes;
+- **10 € par personne** avec l'offre groupe, à partir de dix personnes.
 
-## Continuations internes
-- Garder le renvoi au guide Fam Space des transports rennais pour la gratuité des enfants et la carte KorriGo.
-- Ne pas étendre le guide aux autres animations de Noël à Rennes.
+Les billets sont également annoncés comme disponibles sur **Pass Culture**, sans que cela signifie que chaque visiteur y soit éligible.
+
+Pour **deux adultes et deux enfants de 6 à 17 ans**, les billets individuels coûtent **50 €** (15 + 15 + 10 + 10), contre **40 €** avec le pack famille. Avec **deux enfants de moins de 5 ans**, les billets individuels des deux adultes reviennent à **30 €**, les enfants entrant gratuitement. Pour deux adultes et un enfant de 6 à 17 ans, comptez **40 €** en billets individuels.
+
+**Cas à vérifier: un enfant de 5 ans exactement.** La grille indique « moins de 5 ans » pour la gratuité et « 6 à 17 ans » pour la réduction, sans préciser clairement le cas des 5 ans. Demandez confirmation avant l'achat. Vérifiez aussi le montant final si plusieurs membres de la famille ont droit à des tarifs préférentiels. Des justificatifs sont demandés à l'entrée pour les tarifs réduits et gratuits.
+
+## Horaires, réservation et paiement
+
+<!-- article-image-body:01 -->
+
+![Grille d'entrée du parc du Thabor sur la place Saint-Melaine à Rennes, photographiée en journée](/images/articles/2026/10/les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille-body-01.webp)
+
+*Photo: [Fab5669](https://commons.wikimedia.org/wiki/File:Rennes_-_parc_du_Thabor_24.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Le parcours ouvre **à 19 h**, ferme **à minuit** et accepte les dernières entrées **à 22 h 30**. L'entrée se fait **place Saint-Mélaine**, à l'heure indiquée sur le billet. Le parc ferme au public à **18 h 30** pour l'installation: il n'est pas possible d'y attendre directement la séance du soir.
+
+Un créneau proche de **19 h** laisse davantage de marge pour les jeunes enfants, compte tenu des **1 h 15** de promenade puis du trajet de retour. Des billets sont vendus au guichet à partir de 19 h, mais un créneau épuisé en ligne est également complet sur place: mieux vaut réserver en amont.
+
+Au guichet, l'organisateur annonce le paiement par **carte bancaire, espèces ou chèque**. Les **chèques-vacances ne sont pas acceptés**.
+
+Les billets ne sont **ni échangeables ni remboursables**. La pluie ne donne pas droit à un remboursement, sauf annulation par l'organisateur. La visite se déroule dehors.
+
+## Poussettes, accessibilité, animaux et services pour les enfants
+
+<!-- article-image-body:02 -->
+
+![Cheminements et végétation du jardin paysager du parc du Thabor à Rennes en journée](/images/articles/2026/10/les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille-body-02.webp)
+
+*Photo: [Morio60](https://commons.wikimedia.org/wiki/File:Rennes_(Ille-et-Vilaine)_-_Parc_du_Thabor_-_Jardin_paysager.jpg) - [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+**Les poussettes sont autorisées.** Certains secteurs du Thabor comportent cependant des **pentes, dénivelés et passages en gravier**: l'autorisation ne garantit donc pas un cheminement entièrement facile. Pour les personnes en fauteuil roulant, l'organisateur recommande un accompagnant et répond aux questions particulières à **contact@leslumineales.fr**.
+
+Les [FAQ officielles](https://leslumineales.fr/) indiquent aussi que les **chiens et autres animaux sont autorisés dans le parc s'ils sont tenus en laisse**.
+
+Les **toilettes du parc seront ouvertes**. Un chalet proposera boissons chaudes et petite restauration. En revanche, aucune garantie publiée n'a été trouvée concernant une table à langer ou un équipement pour réchauffer un repas de bébé. La balade est surtout adaptée aux enfants capables de profiter d'une promenade extérieure après 19 h; elle ne comprend pas d'ateliers ou de manèges annoncés.
+
+## Venir au Thabor et prévoir le retour
+
+Les accès indiqués sont le **bus C5** (arrêt Thabor), les **bus C2, C3 et 12** (arrêt Fossés), ou le **métro Sainte-Anne** suivi d'une marche. Pour une séance tardive, contrôlez le dernier départ sur le [réseau STAR](https://www.star.fr/).
+
+Si vous venez avec des enfants, notre guide [des transports à Rennes en famille](https://www.fam-space.fr/articles/vie-pratique/rennes-avec-des-enfants-les-transports-sont-gratuits-avant-12-ans-mais-pas-sans-carte/) explique notamment la carte KorriGo nécessaire aux **5-11 ans** pour bénéficier de la gratuité.
+
+En voiture, le stationnement du centre-ville est limité. Le **parking Kléber**, à environ **600 m**, permet de sortir 24 h/24, mais ses horaires d'entrée varient. Les parcs-relais STAR peuvent convenir si leurs horaires correspondent à votre retour; certains ferment le dimanche et les jours fériés.
+
+## Dormir à Rennes après la visite
+
+Pour les familles qui transforment la sortie en week-end, l'[appartement TY AR PARIZ T3 près du Thabor sur Booking.com](https://www.booking.com/hotel/fr/ty-ar-pariz-t3-rennes-centre-parc-du-thabor.html) dispose d'une cuisine, d'un micro-ondes et de deux espaces nuit. **On accède à la seconde chambre par la première**, ce qui peut compter avec des enfants qui se couchent tôt. Un lit bébé est proposé sur demande et sous réserve de disponibilité; l'hôte précise qu'il faut apporter le linge de lit pour bébé. Vérifiez le prix total et la disponibilité aux dates choisies.
 
 ## Article source exact à préserver et améliorer
 
