@@ -411,3 +411,4 @@ automation/image-hero-20261116-1043-madeleines-mariana-gets|721e3a5ba6c7bfd93c86
 automation/image-hero-20261116-1600-tarn-der|332c72bd7079eadc1bf54434913f5e4c93e73086
 automation/image-hero-20261116-1600-tarn-der|97e9a2d35cf210d39572a7ac8df127eaa4967bd0
 automation/image-hero-20261116-2145-branfere-motte-tilly|3ccf1be21a57abb7965dd3f6777e8e13ae7d4600
+automation/image-hero-20261116-2145-branfere-motte-tilly|22e4cc40be878c4ff5ba3c87509401a9e5cb4564
