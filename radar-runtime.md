@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 3/3
+# Radar Fam Space - actualisation GSC
 
 ## Mission
 
@@ -8,380 +8,1118 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 3/3
-
-Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
-
-Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
-
-Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
-
-Ensuite:
-- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
-- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
-- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
-- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
-- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
-- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
-- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
-- ne force ni longueur ni affiliation.
-
-Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
-
-Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
-- `summary`: contrôles et corrections réellement effectués;
-- `sources`: URLs factuelles revérifiées;
-- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
-
-**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
-
-## Règles partenaires
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-## Candidat validé de la phase précédente
-
----
-title: "Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès"
-subtitle: Du 5 au 8 décembre, deux idées de parcours courts avec enfants, les œuvres 2026 et les accès à connaître.
-summary: "Fête des Lumières 2026 à Lyon en famille: horaires, œuvres interactives place Bellecour, visite au parc de la Tête d'or, poussette, transports et accès gratuits."
-category: evenements
-location:
-  city: Lyon
-  department: Rhône
-  region: Auvergne-Rhône-Alpes
-image:
-  src: /images/articles/2026/10/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours.webp
-  alt: Statue équestre de Louis XIV sur la place Bellecour à Lyon, pendant la Fête des Lumières en 2019.
-sources:
-  - title: Fête des Lumières - programme officiel 2026
-    url: https://www.fetedeslumieres.lyon.fr/fr
-  - title: Fête des Lumières - dates et horaires 2026
-    url: https://www.fetedeslumieres.lyon.fr/fr/page/horaires-et-dates-fete-des-lumieres-2026
-  - title: Fête des Lumières - Twist & Shine
-    url: https://www.fetedeslumieres.lyon.fr/fr/oeuvre/twist-shine
-  - title: Fête des Lumières - Mission Lumignons, destination NGC2392
-    url: https://www.fetedeslumieres.lyon.fr/fr/oeuvre/mission-lumignons-destination-ngc2392?edition=2596
-  - title: Fête des Lumières - 1 000 K...Δ
-    url: https://www.fetedeslumieres.lyon.fr/fr/oeuvre/1-000-k-delta
-  - title: Fête des Lumières - parc de la Tête d'or
-    url: https://www.fetedeslumieres.lyon.fr/fr/lieu/parc-de-la-tete-dor
-  - title: Fête des Lumières - foire aux questions
-    url: https://www.fetedeslumieres.lyon.fr/fr/faq/foire-aux-questions
-  - title: Fête des Lumières - handi-accueil
-    url: https://www.fetedeslumieres.lyon.fr/fr/page/handi-accueil
-  - title: Fête des Lumières - se déplacer dans Lyon
-    url: https://www.fetedeslumieres.lyon.fr/fr/page/se-deplacer-dans-lyon
-  - title: Office de tourisme de Lyon - Fête des Lumières
-    url: https://www.visiterlyon.com/sortir/l-agenda/fetes/fete-des-lumieres
-  - title: ibis Styles Lyon Centre Gare Part Dieu - chambres et localisation
-    url: https://all.accor.com/hotel/7373/index.fr.shtml
-eventEndsAt: 2026-12-08
-reviewAt: 2026-11-27
-topic:
-  key: evenements|lyon|fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours|2026
-  keywords:
-    - Fête des Lumières Lyon 2026 famille
-    - Fête des Lumières Lyon 2026 horaires enfants
-    - Fête des Lumières Lyon poussette parcours
-slug: fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours
-status: published
-publishedAt: 2026-10-19T19:48:02.057Z
-updatedAt: null
-readingTime: 5
-affiliate:
-  enabled: true
-  type: travel
-  destination: Lyon
-radar:
-  schemaVersion: 1
-  phase: 2
-  mode: refresh
-  targetPath: src/routes/articles/evenements/(2026)/(10)/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/index.md
-  targetSha: 221896fcce4a36a0b51196ce8cf076e5dd29f546
-  targetUrl: /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/
-  decision: Choisir un petit parcours réellement réalisable avec des enfants à partir des œuvres 2026 désormais publiées, en connaissant les accès, les horaires particuliers et les contraintes du parc de la Tête d'or.
-  affiliationPotential: Conserver l'hébergement familial ibis Styles Lyon Centre Gare Part Dieu sur Booking.com, vérifier capacité et disponibilité; l'accès aux œuvres reste gratuit.
-  gsc:
-    retrievedAt: 2026-11-15T10:29:35+01:00
-    dataThrough: 2026-11-13
-    signal: needs_query_check
-    basis: "Visibilité récente : 20 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie."
-    peakStart: 2026-10-20
-    peakEnd: 2026-10-22
-    recentStart: 2026-11-11
-    recentEnd: 2026-11-13
-    peakImpressions: 20
-    recentImpressions: 0
-    commonQueries: null
-    positionDelta: null
-    impressionRatio: null
-    focusQueries:
-      - Fête des Lumières Lyon 2026 famille
-      - Fête des Lumières Lyon 2026 horaires enfants
-      - Fête des Lumières Lyon poussette parcours
----
-
-La **Fête des Lumières 2026 à Lyon** a lieu **du samedi 5 au mardi 8 décembre**. Ses **27 installations** sont désormais annoncées et **l'accès aux œuvres est gratuit**. Pour une sortie avec des enfants, mieux vaut choisir un seul secteur et une ou deux créations que traverser la ville dans la foule. Deux possibilités ressortent du [programme officiel 2026](https://www.fetedeslumieres.lyon.fr/fr): jouer avec la lumière place Bellecour ou découvrir une installation au parc de la Tête d'or, avec des accès plus contraints.
-
-## Quel soir venir avec des enfants?
-
-Les [horaires généraux officiels](https://www.fetedeslumieres.lyon.fr/fr/page/horaires-et-dates-fete-des-lumieres-2026) sont les suivants, sauf indication différente sur la fiche d'une œuvre:
-
-- **Samedi 5 décembre:** 19h à 23h.
-- **Dimanche 6 décembre:** 18h à 22h.
-- **Lundi 7 décembre:** 19h à 23h.
-- **Mardi 8 décembre:** 19h à 23h.
-
-Le **dimanche 6 décembre** est intéressant avec de jeunes enfants, car les installations commencent une heure plus tôt. Le samedi évite l'école le lendemain, mais il faut anticiper la foule. Le mardi 8 décembre, jour traditionnel des lumignons, n'est pas forcément une soirée calme.
-
-## Un parcours facile: rester place Bellecour
-
-<!-- article-image-body:01 -->
-
-![Musée des Beaux-Arts illuminé sur la place des Terreaux pendant la Fête des Lumières de Lyon en 2025.](/images/articles/2026/10/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours-body-01.webp)
-
-*Photo: [Corentin Eustacchi](https://commons.wikimedia.org/wiki/File:F%C3%AAte_des_Lumi%C3%A8res_(Lyon,_2025,_place_des_Terreaux).jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:01 -->
-
-Pour éviter les longues marches, la **place Bellecour** permet de voir deux propositions 2026 dans un même secteur.
-
-- [**Twist & Shine**](https://www.fetedeslumieres.lyon.fr/fr/oeuvre/twist-shine) invite petits et grands à déplacer et assembler des sculptures lumineuses. Certaines sont manipulables par les enfants; les plus grandes nécessitent l'aide d'adultes. C'est une option particulièrement adaptée aux familles qui préfèrent participer plutôt que regarder longtemps une projection.
-- [**Mission Lumignons, destination NGC2392**](https://www.fetedeslumieres.lyon.fr/fr/oeuvre/mission-lumignons-destination-ngc2392?edition=2596) transforme la place en paysage de planètes et d'astres lumineux. Les lumignons participatifs soutiennent l'association Vivre aux Éclats; cette contribution solidaire est **facultative** et ne constitue pas un billet d'entrée.
-
-Les deux fiches annoncent les **horaires généraux de la Fête**. Vous pouvez commencer par une seule installation, puis décider sur place si les enfants ont encore envie de découvrir l'autre. Ce parcours limite les changements de quartier, mais pas les éventuelles attentes ni la densité de la foule.
-
-## Une autre soirée: le parc de la Tête d'or
-
-L'installation [**1 000 K...Δ**](https://www.fetedeslumieres.lyon.fr/fr/oeuvre/1-000-k-delta) mêle sculptures et projections lumineuses dans la végétation du parc. Le site propose également d'autres créations, mais il vaut mieux prévoir **une visite du parc comme sortie principale**, sans imposer ensuite un retour vers Bellecour.
-
-L'accès est strictement organisé:
-
-- **Samedi 5, lundi 7 et mardi 8 décembre:** ouverture du parc à 18h, œuvres de 19h à 23h, **dernière entrée à 22h15**.
-- **Dimanche 6 décembre:** ouverture à 17h, œuvres de 18h à 22h, **dernière entrée à 21h15**.
-- **Entrée habituelle de la Fête:** boulevard des Belges, **Porte Tête d'Or**, face à la rue Tête d'Or. La **Porte des Enfants du Rhône** est réservée aux personnes en situation de handicap.
-- Le parc est évacué l'après-midi avant la réouverture: de **15h30 à 18h les 4, 5, 7 et 8 décembre**, et de **14h30 à 17h le dimanche 6**. Il peut aussi fermer si la météo est défavorable.
-
-Les **bagages sont interdits** et l'organisateur recommande d'éviter les sacs pour faciliter les contrôles. Pour les transports, la [fiche du parc](https://www.fetedeslumieres.lyon.fr/fr/lieu/parc-de-la-tete-dor) mentionne notamment le métro A à Masséna, à environ huit minutes à pied de l'entrée. Vérifiez les dessertes du jour avant de partir.
-
-## Poussette, bruit et accessibilité: prévoir une sortie courte
-
-Avec un bébé, une poussette peut être utile, mais difficile à manœuvrer dans une foule dense; un porte-bébé peut être une alternative selon l'âge et le confort de chacun. Prévoyez des vêtements chauds, une protection contre la pluie et des chaussures de marche. **Une heure à une heure et demie sur place** est un objectif familial possible, pas une durée officielle: les files et les déplacements peuvent l'allonger.
-
-Les installations ne se ressemblent pas: certaines sont participatives, d'autres immersives ou accompagnées de sons et d'effets lumineux intenses. Choisissez selon la sensibilité de l'enfant, plutôt que de chercher à multiplier les œuvres.
-
-La [page handi-accueil officielle](https://www.fetedeslumieres.lyon.fr/fr/page/handi-accueil) précise les dispositifs adaptés, notamment des points d'accueil **place Bellecour, place Louis Pradel et Porte des Enfants du Rhône**. La [FAQ](https://www.fetedeslumieres.lyon.fr/fr/faq/foire-aux-questions) mentionne les aménagements sur présentation de la **carte mobilité inclusion (CMI)**. Un parcours adapté aux personnes à mobilité réduite n'est pas automatiquement le plus pratique pour une poussette: contrôlez le cheminement prévu.
-
-## Venir à Lyon: train, métro et périmètre piéton
-
-<!-- article-image-body:02 -->
-
-![Entrée côté Villette de la gare de Lyon-Part-Dieu photographiée de nuit en janvier 2026.](/images/articles/2026/10/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours-body-02.webp)
-
-*Photo: [TCY](https://commons.wikimedia.org/wiki/File:Gare_de_Lyon-Part-Dieu,_entr%C3%A9e_Vilette_de_nuit.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:02 -->
-
-Les gares **Lyon Part-Dieu** et **Lyon-Perrache** permettent d'arriver sans voiture. Choisissez ensuite votre transport TCL en fonction de l'œuvre retenue. Pendant la Fête, l'hypercentre est habituellement soumis à un **périmètre piéton**, avec des restrictions de circulation, de stationnement et parfois de cheminement.
-
-Attention: la [page officielle consacrée aux déplacements](https://www.fetedeslumieres.lyon.fr/fr/page/se-deplacer-dans-lyon) comporte encore des indications anciennes, notamment une mention de gratuité TCL associée à un « lundi 8 décembre », alors que **le 8 décembre 2026 tombe un mardi**. Ne considérez donc pas ces tarifs, les horaires de stations ou les fermetures de parkings comme confirmés pour 2026 sans nouvelle vérification. Si vous venez en voiture, évitez de compter sur un parking situé dans le périmètre de la Fête. Si vous venez en train, gardez une marge pour rejoindre votre gare avant le dernier départ.
-
-## La Fête des Lumières est-elle payante?
-
-**Non, les installations sont gratuites et ne nécessitent pas de billet général.** Les dépenses éventuelles concernent les transports, les repas ou l'hébergement. Les **Lumignons du Cœur** sont une initiative solidaire distincte: y contribuer reste facultatif.
-
-## Où dormir si vous arrivez en train?
-
-Pour éviter un retour tardif avec les enfants, passer une nuit à Lyon peut être pratique. L'[**ibis Styles Lyon Centre - Gare Part Dieu sur Booking.com**](https://www.booking.com/hotel/fr/all-seasons-lyon-part-dieu.fr.html), au **54 rue de la Villette**, est proche de la gare Part-Dieu. L'hôtelier présente notamment une **chambre supérieure pour trois personnes**, avec lit double et lit simple, ainsi qu'une **junior suite pour quatre personnes maximum**, avec lit double et canapé-lit double. Vérifiez la capacité admise selon l'âge de chaque enfant, les disponibilités, le tarif final et les conditions de réservation. Cet emplacement facilite l'arrivée en train, mais ne garantit pas la proximité immédiate des œuvres choisies.
-
-Avant le départ, revérifiez la [programmation officielle](https://www.fetedeslumieres.lyon.fr/fr), les horaires propres aux installations et les éventuelles modifications d'accès liées à la météo ou à l'affluence.
-
-## Article source exact à préserver et améliorer
-
-Chemin: src/routes/articles/evenements/(2026)/(10)/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/index.md
-
----
-title: "Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès"
-subtitle: "Quatre soirées gratuites du 5 au 8 décembre: choisir son soir et préparer une visite courte avec des enfants."
-summary: "Fête des Lumières 2026 à Lyon en famille: horaires des 5, 6, 7 et 8 décembre, accès, poussettes, gratuité et choix du parcours lorsque le programme sera publié."
-category: evenements
-location:
-  city: Lyon
-  department: Rhône
-  region: Auvergne-Rhône-Alpes
-image:
-  src: "/images/articles/2026/10/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours.webp"
-  alt: "Statue équestre de Louis XIV sur la place Bellecour à Lyon, pendant la Fête des Lumières en 2019."
-sources:
-  - title: Fête des Lumières - dates et horaires 2026
-    url: https://www.fetedeslumieres.lyon.fr/fr/page/horaires-et-dates-fete-des-lumieres-2026
-  - title: Fête des Lumières - foire aux questions
-    url: https://www.fetedeslumieres.lyon.fr/fr/faq/foire-aux-questions
-  - title: Fête des Lumières - handi-accueil
-    url: https://www.fetedeslumieres.lyon.fr/fr/page/handi-accueil
-  - title: Fête des Lumières - se déplacer dans Lyon
-    url: https://www.fetedeslumieres.lyon.fr/fr/page/se-deplacer-dans-lyon
-  - title: Office de tourisme de Lyon - Fête des Lumières
-    url: https://www.visiterlyon.com/sortir/l-agenda/fetes/fete-des-lumieres
-  - title: ibis Styles Lyon Centre Gare Part Dieu - chambres et localisation
-    url: https://all.accor.com/hotel/7373/index.fr.shtml
-eventEndsAt: 2026-12-08
-reviewAt: 2026-11-05
-topic:
-  key: evenements|lyon|fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours|2026
-  keywords:
-    - Fête des Lumières Lyon 2026 famille
-    - Fête des Lumières Lyon 2026 horaires enfants
-    - Fête des Lumières Lyon poussette parcours
-slug: fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours
-status: published
-publishedAt: 2026-10-19T19:48:02.057Z
-updatedAt: null
-readingTime: 5
-affiliate:
-  enabled: true
-  type: travel
-  destination: Lyon
----
-
-La **Fête des Lumières 2026 à Lyon** se déroule **du samedi 5 au mardi 8 décembre**. Pendant ces quatre soirées, les rues et les places de la ville accueillent projections et installations lumineuses. **L'accès aux œuvres est gratuit.** Avec des enfants, l'essentiel est de choisir un horaire compatible avec leur rythme et un secteur facile à rejoindre, sans chercher à tout voir.
-
-Le programme détaillé des œuvres 2026 doit être publié **début novembre**. Les œuvres et itinéraires de l'édition précédente ne permettent donc pas encore de définir un circuit fiable pour décembre.
-
-## Quel soir venir avec des enfants?
-
-Voici les [dates et horaires officiels pour 2026](https://www.fetedeslumieres.lyon.fr/fr/page/horaires-et-dates-fete-des-lumieres-2026), sauf horaire particulier mentionné sur la fiche d'une œuvre:
-
-- **Samedi 5 décembre:** de 19h à 23h.
-- **Dimanche 6 décembre:** de 18h à 22h.
-- **Lundi 7 décembre:** de 19h à 23h.
-- **Mardi 8 décembre:** de 19h à 23h.
-
-**Le dimanche 6 décembre** permet de commencer dès **18h**: un avantage pour des enfants qui se couchent tôt. Le samedi évite l'école le lendemain, mais la fréquentation peut être forte. Les lundi et mardi peuvent convenir aux familles déjà à Lyon; ne présumez pas que le mardi 8 décembre, date traditionnelle des lumignons, sera calme.
-
-## Comment choisir un parcours sans épuiser les enfants?
-
-<!-- article-image-body:01 -->
-
-![Musée des Beaux-Arts illuminé sur la place des Terreaux pendant la Fête des Lumières de Lyon en 2025.](/images/articles/2026/10/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours-body-01.webp)
-
-*Photo: [Corentin Eustacchi](https://commons.wikimedia.org/wiki/File:F%C3%AAte_des_Lumi%C3%A8res_(Lyon,_2025,_place_des_Terreaux).jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:01 -->
-
-La [FAQ officielle](https://www.fetedeslumieres.lyon.fr/fr/faq/foire-aux-questions) annonce un **programme numérique début novembre**, puis une version papier **fin novembre**. Dès sa sortie, choisissez **une ou deux installations proches**, de préférence accessibles depuis une même ligne de transport et sans longue marche entre deux quartiers.
-
-Pour une première découverte, **une heure à une heure et demie sur place** peut servir d'objectif familial souple: ce n'est **pas une durée officielle**, et les files, le déplacement entre les œuvres et la densité de la foule peuvent la prolonger. Une seule installation bien choisie suffit parfois pour une soirée réussie avec un petit enfant.
-
-Regardez aussi le descriptif des œuvres: certaines projections peuvent comporter des sons puissants ou des effets lumineux intenses. Si un enfant y est sensible, privilégiez une installation qui lui convient réellement, une fois son emplacement et son contenu confirmés.
-
-## Poussette et accessibilité: quels points vérifier?
-
-Une poussette facilite certaines sorties avec un bébé, mais peut être difficile à manœuvrer au milieu d'une foule compacte; un porte-bébé peut constituer une alternative selon l'âge de l'enfant et votre confort. Prévoyez des vêtements chauds, une protection contre la pluie et des chaussures adaptées à la marche.
-
-Selon la FAQ de la Fête, des **dispositifs d'accueil des personnes en situation de handicap** sont mis en œuvre **sur présentation de la carte mobilité inclusion (CMI)**, notamment des accès et parcours adaptés. La [page handi-accueil officielle](https://www.fetedeslumieres.lyon.fr/fr/page/handi-accueil) annonce des informations pratiques et des contacts **à partir du 4 novembre**. Vérifiez les aménagements effectivement disponibles pour 2026 avant de partir. Un parcours accessible aux personnes à mobilité réduite n'est pas nécessairement le plus commode pour chaque poussette.
-
-## Venir à Lyon: train, métro et périmètre piéton
-
-<!-- article-image-body:02 -->
-
-![Entrée côté Villette de la gare de Lyon-Part-Dieu photographiée de nuit en janvier 2026.](/images/articles/2026/10/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours-body-02.webp)
-
-*Photo: [TCY](https://commons.wikimedia.org/wiki/File:Gare_de_Lyon-Part-Dieu,_entr%C3%A9e_Vilette_de_nuit.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:02 -->
-
-Les gares **Lyon Part-Dieu** et **Lyon-Perrache** sont des points d'arrivée possibles pour les familles venant sans voiture. Vous pourrez ensuite choisir les transports TCL et la marche en fonction des installations retenues.
-
-Pendant la Fête des Lumières, un **périmètre piéton est habituellement établi dans l'hypercentre**, avec des restrictions pour les véhicules, les parkings et parfois les cheminements. Attention: la [page officielle « Se déplacer dans Lyon »](https://www.fetedeslumieres.lyon.fr/fr/page/se-deplacer-dans-lyon) mélange encore certaines informations anciennes avec les dates de 2026, notamment des indications de gratuité TCL faisant référence à un **lundi 8 décembre**, qui ne correspond pas au calendrier de 2026. **Ne reprenez ni ces tarifs, ni les horaires de fermeture des stations et parkings sans confirmation propre à l'édition 2026.**
-
-En voiture, évitez de miser sur un parking situé dans le périmètre de l'événement: les accès et les sorties peuvent être empêchés pendant les fermetures. En train, prévoyez une marge avant le dernier départ, car les déplacements à pied et l'accès aux stations peuvent prendre plus de temps.
-
-## La Fête des Lumières est-elle payante?
-
-**Non.** L'accès aux installations de la Fête des Lumières est gratuit, comme le précise l'organisateur. Il n'y a pas de billet général à réserver pour voir les œuvres. Les dépenses concernent plutôt les transports, une collation, le stationnement ou l'hébergement si vous venez de loin.
-
-Les **Lumignons du Cœur** constituent une opération solidaire distincte: contribuer est facultatif et n'est pas une condition pour assister à la Fête.
-
-## Où dormir si vous arrivez en train?
-
-Pour éviter un retour tardif avec les enfants, passer une nuit à Lyon peut être pratique. L'[**ibis Styles Lyon Centre - Gare Part Dieu sur Booking.com**](https://www.booking.com/hotel/fr/all-seasons-lyon-part-dieu.fr.html), au **54 rue de la Villette**, se trouve à proximité immédiate de la gare **Part-Dieu**.
-
-L'hôtelier présente notamment **une chambre supérieure de trois personnes** avec lit double et lit simple, ainsi qu'une **junior suite de quatre personnes maximum**, comprenant un lit double et un canapé-lit double. Il faut toutefois vérifier la capacité admise **en fonction de l'âge de chaque enfant**, le prix final, la disponibilité aux dates souhaitées et les conditions de réservation ou de garantie. Cette adresse est pratique pour la gare; elle n'est pas nécessairement voisine des œuvres, dont la carte 2026 reste à publier.
-
-Lorsque le programme sera disponible, utilisez le [site officiel de la Fête des Lumières](https://www.fetedeslumieres.lyon.fr/fr/faq/foire-aux-questions) pour choisir votre secteur de visite et contrôler les accès et les transports avant le départ.
-
-## Contexte éditorial ciblé pour le maillage et les doublons
-
-### Articles proches préparés mécaniquement
-
-- /articles/evenements/slava-s-snowshow-a-lyon-en-2026-quelle-seance-choisir-en-famille/ | Slava’s Snowshow à Lyon 2026: dates, tarifs et conseils en famille | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/evenements/exposition-papillons-a-lyon-visiter-le-musee-des-confluences-en-famille/ | Exposition Papillons à Lyon: visiter le musée des Confluences en famille | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/vie-pratique/location-de-voiture-a-lyon-avec-des-enfants-ce-qu-il-faut-verifier-avant-de-reserver/ | Location de voiture à Lyon avec des enfants: ce qu'il faut vérifier avant de réserver | vie-pratique | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/evenements/automne-des-gones-2026-a-lyon-quels-ateliers-gratuits-choisir-avec-les-enfants/ | Automne des gones 2026 à Lyon: ateliers et sorties gratuites en famille | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/evenements/toussaint-2026-au-musee-des-confluences-a-lyon-spectacles-et-ateliers-par-age/ | Toussaint 2026 au musée des Confluences: cinq rendez-vous pour les enfants | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/evenements/les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille/ | Luminéales du Thabor 2026 à Rennes: tarifs, horaires et visite en famille | evenements | Rennes, Ille-et-Vilaine, Bretagne
-- /articles/evenements/equita-lyon-2026-en-famille-village-enfants-billets-et-spectacles/ | Equita Lyon 2026 avec des enfants: billets, Village Enfants et spectacles | evenements | Chassieu, Rhône, Auvergne-Rhône-Alpes
-- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
-- /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | Festival Lumière 2026: Laurel & Hardy en famille le 17 octobre à Lyon | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/parentalite/cafe-papote-a-lyon-4e-ou-echanger-gratuitement-avec-d-autres-parents/ | Café Papote à Lyon 4e: où échanger gratuitement avec d'autres parents | parentalite | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/maison/decheteries-mobiles-a-lyon-que-peut-on-deposer-et-quand-preferer-une-decheterie-fixe/ | Déchèteries mobiles à Lyon: que peut-on déposer et quand préférer une déchèterie fixe? | maison | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/vie-pratique/lyon-saint-exupery-avec-des-enfants-preparer-le-trajet-les-controles-et-l-attente/ | Lyon-Saint-Exupéry avec des enfants: préparer le trajet, les contrôles et l’attente | vie-pratique | Colombier-Saugnieu, Rhône, Auvergne-Rhône-Alpes
-- /articles/voyages/week-end-dans-les-pierres-dorees-en-famille-oingt-jarnioux-et-balades/ | Week-end dans les Pierres Dorées en famille: Oingt, Jarnioux et balades | voyages | Rhône, Auvergne-Rhône-Alpes
-- /articles/evenements/halloween-2026-a-mini-world-lyon-la-chasse-aux-31-mechants-en-famille/ | Halloween 2026 à Mini World Lyon: la Chasse aux 31 Méchants en famille | evenements | Vaulx-en-Velin, Rhône, Auvergne-Rhône-Alpes
-- /articles/sorties/aquarium-de-lyon-en-famille-nouveautes-ocean-360-tarifs-et-visite/ | Aquarium de Lyon en famille: nouveautés Océan 360°, tarifs et visite | sorties | La Mulatière, Rhône, Auvergne-Rhône-Alpes
-- /articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/ | Mini World Lyon: quel billet choisir en famille et combien de temps prévoir ? | bons-plans | Vaulx-en-Velin, Rhône, Auvergne-Rhône-Alpes
-- /articles/cuisine/a-claveisolles-decouvrir-comment-le-lait-de-chevre-devient-fromage-avec-les-enfants/ | À Claveisolles, découvrir comment le lait de chèvre devient fromage avec les enfants | cuisine | Claveisolles, Rhône, Auvergne-Rhône-Alpes
-- /articles/evenements/noel-2026-au-puy-du-fou-en-famille-spectacles-et-visite-en-hiver/ | Noël 2026 au Puy du Fou en famille: spectacles et visite en hiver | evenements | Les Epesses, Vendée, Pays de la Loire
-- /articles/evenements/festival-du-court-metrage-de-clermont-ferrand-2027-en-famille-quelles-seances-choisir/ | Festival du court métrage de Clermont-Ferrand 2027 en famille: quelles séances choisir? | evenements | Clermont-Ferrand, Puy-de-Dôme, Auvergne-Rhône-Alpes
-- /articles/evenements/carnaval-de-guyane-2027-en-famille-preparer-ses-premieres-sorties/ | Carnaval de Guyane 2027 en famille: préparer ses premières sorties | evenements | Guyane
-- /articles/evenements/mondo-clowns-2027-a-marmande-dates-tarifs-et-conseils-en-famille/ | Mondo'Clowns 2027 à Marmande: dates, tarifs et conseils en famille | evenements | Marmande, Lot-et-Garonne, Nouvelle-Aquitaine
-
-### Historique Radar lié
-
-- refresh | /articles/sorties/aquarium-de-lyon-en-famille-nouveautes-ocean-360-tarifs-et-visite/ | 2026-11-12T06:40:05.780Z
-- opportunity | /articles/evenements/automne-des-gones-2026-a-lyon-quels-ateliers-gratuits-choisir-avec-les-enfants/ | 2026-10-23T09:31:27.871Z
-- opportunity | /articles/evenements/equita-lyon-2026-en-famille-village-enfants-billets-et-spectacles/ | 2026-10-21T10:43:46.144Z
-- opportunity | /articles/evenements/festival-lumiere-2026-a-lyon-quelles-seances-choisir-avec-des-enfants/ | 2026-10-10T15:40:28.185Z
-- opportunity | /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | 2026-10-19T19:48:02.164Z
-- opportunity | /articles/evenements/halloween-2026-a-mini-world-lyon-la-chasse-aux-31-mechants-en-famille/ | 2026-10-22T12:58:21.691Z
-- opportunity | /articles/evenements/les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille/ | 2026-10-31T19:33:18.323Z
-- opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
-- refresh | /articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/ | 2026-11-02T16:35:39.647Z
-- opportunity | /articles/evenements/slava-s-snowshow-a-lyon-en-2026-quelle-seance-choisir-en-famille/ | 2026-11-03T22:37:45.305Z
-
-### Phases 2 et 3
-
-Écris `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées et le corps complet de l'article. **Ne recopie pas les métadonnées inchangées et n'ajoute aucun bloc `radar`.** Le script normalise la syntaxe sûre de la requête, reprend mécaniquement les autres métadonnées et le bloc Radar de la phase précédente, puis incrémente la phase.
-
-Pour un refresh, le script conserve de lui-même les champs protégés de l'article source. Pour une opportunity, il conserve la catégorie, le territoire et le slug choisis en phase 1.
-
-En phase 3 seulement, ajoute `radarReview` avec `summary`, `sources` et, pour un refresh, `regressionCheck`. Une seule correction factuelle vérifiée peut être suffisante.
-
-## Écriture autorisée
-
-N'effectue aucune plomberie Git. Ne crée, ne nomme et ne supprime aucune branche Radar; ne choisis aucun SHA; ne modifie aucun fichier de DevWeb13/fam-space-qwik.
-
-Écris uniquement radar-request.md sur la branche main de DevWeb13/fam-space-actions-bridge selon le format fourni dans ce runtime. Le workflow GitHub se charge du reste. Une fois cette requête écrite, termine le passage.
+## Snapshot GSC quotidien
+
+Le cache compact est `radar-gsc-snapshot.json` sur `main` de `DevWeb13/fam-space-actions-bridge`. Il ne contient jamais les lignes GSC brutes.
+
+Cette tâche est séparée de la sélection éditoriale. **S'il n'existe aucune branche Radar active et que le snapshot doit être renouvelé, actualise uniquement le snapshot puis termine le passage. Ne choisis pas de mission dans la même exécution.** Le passage horaire suivant effectuera la phase 1 avec le snapshot prêt.
+
+Le snapshot est réutilisable lorsqu'il a `schemaVersion: 1`, a été généré le jour courant en Europe/Paris et que `dataThrough` n'a pas plus de sept jours de retard.
+
+Lorsqu'un nouveau snapshot est nécessaire, utilise Windsor.ai avec le compte `sc-domain:fam-space.fr`, connector `searchconsole`, `include_fresh_data: false`. **Chaque appel `get_data` Search Analytics doit filtrer explicitement `search_type = web` avec `filters: [["search_type","eq","web"]]`.** Récupère 28 jours jusqu'à la dernière journée consolidée:
+
+- une lecture `date, clicks, impressions` pour déterminer la fin réelle;
+- quatre lectures consécutives de sept jours `date, page, clicks, impressions, position`;
+- appelle `buildRadarShortlist(pageRows, catalog.articles, { now, siteRows, from, history: catalog.history })` pour identifier les cinq premiers candidats. Pour chacun, récupère les requêtes de sa page exacte sur les deux fenêtres `peakStart..peakEnd` et `recentStart..recentEnd`, avec `search_type = web` (dix appels de requêtes au maximum).
+- regroupe les réponses par article : `queryPairs = [{ url, peakQueries, recentQueries }]`. Appelle ensuite **`buildRadarSnapshot(pageRows, catalog.articles, { now, siteRows, from, history: catalog.history, warnings }, queryPairs)`**, du module embarqué. Écris son résultat directement dans `radar-gsc-snapshot.json`, sans recopier les métriques manuellement.
+- pour les autres articles, le diagnostic reste `needs_query_check` avec des mesures `null`. Si une lecture échoue, signale-le sans inventer de chiffres. Ne confonds jamais « pas de donnée » et zéro.
+
+Utilise uniquement le module Radar embarqué pour présélectionner les candidats et construire le snapshot. La fonction `buildRadarSnapshot` centralise la mise en forme et le diagnostic par article. Une réponse Windsor est considérée complète lorsque `status: done`, que `data` est un tableau et que `total_rows` correspond à `data.length`, sans indicateur explicite de troncature. **Un nombre rond de lignes, notamment 1 500, n'est jamais à lui seul une preuve de plafonnement et ne doit pas arrêter Radar.** Découpe seulement la période si Windsor signale réellement une réponse incomplète/tronquée, si `total_rows` ne correspond pas au nombre de lignes reçues, ou si `unwrapRows` refuse la réponse, notamment à son seuil conservateur de 5 000 lignes par réponse. Un 429, un refus d'accès ou un plafond réellement non résolu termine le passage. Maximum 50 appels `get_data`. Les réponses brutes restent temporaires.
+
+Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlist `refresh` avec ses diagnostics compacts, `strongPages`, `excluded` et les avertissements utiles.
+
+## Snapshot actuellement disponible
+
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-15T10:29:35+01:00",
+  "dataThrough": "2026-11-13",
+  "from": "2026-10-17",
+  "refresh": [
+    {
+      "url": "/articles/activites/le-pal-2027-en-famille-une-ou-deux-journees-entre-animaux-et-attractions/",
+      "title": "Le PAL 2027 en famille: une ou deux journées entre animaux et attractions ?",
+      "category": "activites",
+      "publishedAt": "2026-11-05T13:02:56+01:00",
+      "location": {
+        "city": "Saint-Pourçain-sur-Besbre",
+        "department": "Allier",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "ageDays": 10,
+      "rapidDrop": true,
+      "peakStart": "2026-11-06",
+      "peakEnd": "2026-11-08",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 34,
+      "recentImpressions": 10,
+      "score": 72,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 34 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0.083,
+      "focusQueries": [
+        "le pal ouverture 2027",
+        "ouverture le pal 2027",
+        "ouverture pal 2027",
+        "date ouverture le pal 2027"
+      ]
+    },
+    {
+      "url": "/articles/activites/grottes-de-sare-en-famille-visite-tarifs-et-conseils-pratiques/",
+      "title": "Grottes de Sare en famille: visite, tarifs et conseils pratiques",
+      "category": "activites",
+      "publishedAt": "2026-11-03T13:02:45+01:00",
+      "location": {
+        "city": "Sare",
+        "department": "Pyrénées-Atlantiques",
+        "region": "Nouvelle-Aquitaine"
+      },
+      "ageDays": 12,
+      "rapidDrop": true,
+      "peakStart": "2026-11-08",
+      "peakEnd": "2026-11-10",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 23,
+      "recentImpressions": 5,
+      "score": 54,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 23 impressions sur trois jours, puis 5 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0.429,
+      "focusQueries": [
+        "les grottes de sare",
+        "avis sur grottes de sare",
+        "visite tarif grotte de sare",
+        "billets pour grottes de sare",
+        "grottes de sare avis"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-a-rochefort-en-terre-avec-des-enfants-village-et-illuminations/",
+      "title": "Noël 2026 à Rochefort-en-Terre avec des enfants: village et illuminations",
+      "category": "evenements",
+      "publishedAt": "2026-10-22T00:03:36+02:00",
+      "location": {
+        "city": "Rochefort-en-Terre",
+        "department": "Morbihan",
+        "region": "Bretagne"
+      },
+      "ageDays": 24,
+      "rapidDrop": true,
+      "peakStart": "2026-10-24",
+      "peakEnd": "2026-10-26",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 173,
+      "recentImpressions": 58,
+      "score": 345,
+      "signal": "coverage_loss",
+      "basis": "Visibilité récente : 173 impressions sur trois jours, puis 58 sur les trois derniers jours consolidés; cause non établie. Baisse d'exposition sur les requêtes visibles (ratio 0.231), sans recul de classement comparable établi.",
+      "commonQueries": 1,
+      "positionDelta": 2,
+      "impressionRatio": 0.231,
+      "focusQueries": [
+        "rochefort en terre noel 2026",
+        "rochefort en terre noel",
+        "illumination rochefort en terre 2026",
+        "rochefort en terre a noel",
+        "date marche de noel rochefort en terre"
+      ]
+    },
+    {
+      "url": "/articles/evenements/monstrozoo-2026-2027-a-beauval-enquete-libre-ou-visite-guidee-en-famille/",
+      "title": "MonstroZoo 2026-2027 à Beauval: parcours inclus, visite guidée et tarifs",
+      "category": "evenements",
+      "publishedAt": "2026-10-22T15:49:20.710Z",
+      "location": {
+        "city": "Saint-Aignan",
+        "department": "Loir-et-Cher",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 24,
+      "rapidDrop": true,
+      "peakStart": "2026-10-28",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 60,
+      "recentImpressions": 9,
+      "score": 188,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 60 impressions sur trois jours, puis 9 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 4,
+      "focusQueries": [
+        "monstrozoo",
+        "monstrozoo 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille/",
+      "title": "Luminéales du Thabor 2026 à Rennes: tarifs, horaires et visite en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-31T19:33:18.221Z",
+      "location": {
+        "city": "Rennes",
+        "department": "Ille-et-Vilaine",
+        "region": "Bretagne"
+      },
+      "ageDays": 15,
+      "rapidDrop": true,
+      "peakStart": "2026-11-02",
+      "peakEnd": "2026-11-04",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 63,
+      "recentImpressions": 7,
+      "score": 168,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 63 impressions sur trois jours, puis 7 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "illumination thabor rennes 2026",
+        "les lumineales",
+        "illumination thabor 2026",
+        "ou"
+      ]
+    },
+    {
+      "url": "/articles/evenements/festival-enfantillages-2026-a-valbonne-spectacles-gratuits-et-cinema-selon-l-age/",
+      "title": "Festival Enfantillages 2026 à Valbonne: spectacles gratuits et cinéma en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-26T03:35:31.536Z",
+      "location": {
+        "city": "Valbonne",
+        "department": "Alpes-Maritimes",
+        "region": "Provence-Alpes-Côte d'Azur"
+      },
+      "ageDays": 20,
+      "rapidDrop": true,
+      "peakStart": "2026-10-26",
+      "peakEnd": "2026-10-28",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 40,
+      "recentImpressions": 4,
+      "score": 143,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 40 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Festival Enfantillages Valbonne 2026",
+        "spectacles gratuits enfants Valbonne",
+        "cinéma jeune public Valbonne novembre 2026",
+        "Pré des Arts Enfantillages"
+      ]
+    },
+    {
+      "url": "/articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/",
+      "title": "Traîneau flottant de Noël à Metz 2026: dates, horaires et embarquement",
+      "category": "evenements",
+      "publishedAt": "2026-11-03T03:34:06.455Z",
+      "location": {
+        "city": "Metz",
+        "department": "Moselle",
+        "region": "Grand Est"
+      },
+      "ageDays": 12,
+      "rapidDrop": true,
+      "peakStart": "2026-11-05",
+      "peakEnd": "2026-11-07",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 47,
+      "recentImpressions": 0,
+      "score": 141,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 47 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "traîneau flottant père Noël Metz 2026",
+        "bateau gratuit Noël Metz famille"
+      ]
+    },
+    {
+      "url": "/articles/evenements/festival-playground-2026-en-ile-de-france-quels-spectacles-de-danse-choisir-avec-les-enfants/",
+      "title": "Festival Playground 2026: spectacles de danse en famille, dates et tarifs",
+      "category": "evenements",
+      "publishedAt": "2026-10-26T06:30:10.109Z",
+      "location": {
+        "city": "Bagnolet",
+        "department": "Seine-Saint-Denis",
+        "region": "Île-de-France"
+      },
+      "ageDays": 20,
+      "rapidDrop": true,
+      "peakStart": "2026-10-27",
+      "peakEnd": "2026-10-29",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 37,
+      "recentImpressions": 2,
+      "score": 140,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 37 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "festival Playground 2026",
+        "spectacles danse enfants Île-de-France",
+        "Playground 2026 tarifs et dates",
+        "danse bébé Romainville novembre 2026",
+        "Little Villette A corpo libero"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/",
+      "title": "Noël 2026 à Toulon en famille: marché, patinoire et horaires",
+      "category": "evenements",
+      "publishedAt": "2026-10-31T10:28:17.323Z",
+      "location": {
+        "city": "Toulon",
+        "department": "Var",
+        "region": "Provence-Alpes-Côte d’Azur"
+      },
+      "ageDays": 15,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 47,
+      "recentImpressions": 2,
+      "score": 135,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 47 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël Toulon 2026 famille",
+        "marché de Noël Toulon place de la Liberté",
+        "Village des Enfants Toulon place d'Armes",
+        "patinoire Toulon Noël 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/",
+      "title": "Noël de Casse-Noisette 2026 à Pierrefonds: visites, dates et tarifs en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-27T07:35:50.368Z",
+      "location": {
+        "city": "Pierrefonds",
+        "department": "Oise",
+        "region": "Hauts-de-France"
+      },
+      "ageDays": 19,
+      "rapidDrop": true,
+      "peakStart": "2026-10-28",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 42,
+      "recentImpressions": 0,
+      "score": 126,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 42 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël Casse-Noisette Pierrefonds 2026",
+        "château de Pierrefonds Noël enfants",
+        "visites féérie Pierrefonds",
+        "Casse-Noisette aventure à jouer"
+      ]
+    },
+    {
+      "url": "/articles/evenements/festival-de-la-sainte-barbe-2026-a-lens-lievin-quelle-soiree-choisir-avec-les-enfants/",
+      "title": "Festival de la Sainte-Barbe 2026 à Lens-Liévin: programme en famille du 4 au 6 décembre",
+      "category": "evenements",
+      "publishedAt": "2026-10-27T04:28:30.904Z",
+      "location": {
+        "city": "Lens",
+        "department": "Pas-de-Calais",
+        "region": "Hauts-de-France"
+      },
+      "ageDays": 19,
+      "rapidDrop": true,
+      "peakStart": "2026-10-28",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 43,
+      "recentImpressions": 4,
+      "score": 117,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 43 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "festival Sainte-Barbe Lens 2026",
+        "Sainte-Barbe Lens-Liévin en famille",
+        "spectacle feu Lens 4 décembre 2026",
+        "Sainte-Barbe Loos-en-Gohelle Oignies 5 décembre",
+        "Louvre-Lens Sainte-Barbe 6 décembre enfants"
+      ]
+    },
+    {
+      "url": "/articles/evenements/batiment-b-a-saint-denis-decouvrir-le-street-art-en-famille/",
+      "title": "Bâtiment B à Saint-Denis: découvrir le street art en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-28T00:11:04+01:00",
+      "location": {
+        "city": "Saint-Denis",
+        "department": "La Réunion",
+        "region": "La Réunion"
+      },
+      "ageDays": 18,
+      "rapidDrop": true,
+      "peakStart": "2026-10-29",
+      "peakEnd": "2026-10-31",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 41,
+      "recentImpressions": 3,
+      "score": 114,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 41 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Bâtiment B Réunion Graffiti",
+        "street art en famille",
+        "Saint-Denis La Réunion"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-a-cannes-en-famille-marche-du-centre-ou-village-du-palm-beach/",
+      "title": "Noël 2026 à Cannes en famille: marché du centre et Palm Beach",
+      "category": "evenements",
+      "publishedAt": "2026-10-31T22:36:58.730Z",
+      "location": {
+        "city": "Cannes",
+        "department": "Alpes-Maritimes",
+        "region": "Provence-Alpes-Côte d’Azur"
+      },
+      "ageDays": 15,
+      "rapidDrop": true,
+      "peakStart": "2026-11-03",
+      "peakEnd": "2026-11-05",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 39,
+      "recentImpressions": 1,
+      "score": 114,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 39 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël Cannes 2026 famille",
+        "marché de Noël Cannes 2026",
+        "Village de Noël Palm Beach Cannes"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel/",
+      "title": "Noël 2026 à Chambéry en famille: marchés, parade et ateliers",
+      "category": "evenements",
+      "publishedAt": "2026-11-01T09:37:48.682Z",
+      "location": {
+        "city": "Chambéry",
+        "department": "Savoie",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "ageDays": 14,
+      "rapidDrop": true,
+      "peakStart": "2026-11-03",
+      "peakEnd": "2026-11-05",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 35,
+      "recentImpressions": 3,
+      "score": 96,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 35 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël Chambéry 2026 famille",
+        "marché de Noël Chambéry 2026 horaires",
+        "parade Père Noël Chambéry 27 novembre 2026",
+        "village de Noël Palais de Justice Chambéry",
+        "Fabrique de Noël Rubanox 12 décembre 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/",
+      "title": "Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès",
+      "category": "evenements",
+      "publishedAt": "2026-10-19T19:48:02.057Z",
+      "location": {
+        "city": "Lyon",
+        "department": "Rhône",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "ageDays": 27,
+      "rapidDrop": true,
+      "peakStart": "2026-10-20",
+      "peakEnd": "2026-10-22",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 20,
+      "recentImpressions": 0,
+      "score": 95,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 20 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Fête des Lumières Lyon 2026 famille",
+        "Fête des Lumières Lyon 2026 horaires enfants",
+        "Fête des Lumières Lyon poussette parcours"
+      ]
+    }
+  ],
+  "strongPages": [
+    {
+      "url": "/articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/",
+      "title": "Fête foraine de Dijon 2026: dates, horaires et budget avec les enfants",
+      "category": "evenements",
+      "recentImpressions": 1145,
+      "recentClicks": 20,
+      "recentPosition": 8.583,
+      "retention": 0.627
+    },
+    {
+      "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
+      "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
+      "category": "evenements",
+      "recentImpressions": 193,
+      "recentClicks": 14,
+      "recentPosition": 4.824,
+      "retention": 1.451
+    },
+    {
+      "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
+      "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
+      "category": "evenements",
+      "recentImpressions": 195,
+      "recentClicks": 11,
+      "recentPosition": 6.867,
+      "retention": 0.855
+    },
+    {
+      "url": "/articles/evenements/alfest-2026-a-annecy-en-famille-horaires-jeux-et-braderie/",
+      "title": "ALFest 2026 à Annecy en famille: horaires, jeux et braderie",
+      "category": "evenements",
+      "recentImpressions": 174,
+      "recentClicks": 8,
+      "recentPosition": 5.494,
+      "retention": 4.579
+    },
+    {
+      "url": "/articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/",
+      "title": "Où manger des fouées en famille autour de Saumur ?",
+      "category": "cuisine",
+      "recentImpressions": 186,
+      "recentClicks": 5,
+      "recentPosition": 11.167,
+      "retention": 0.602
+    },
+    {
+      "url": "/articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/",
+      "title": "Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille",
+      "category": "evenements",
+      "recentImpressions": 138,
+      "recentClicks": 5,
+      "recentPosition": 8.435,
+      "retention": 0.836
+    },
+    {
+      "url": "/articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/",
+      "title": "Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers",
+      "category": "vie-pratique",
+      "recentImpressions": 101,
+      "recentClicks": 5,
+      "recentPosition": 5.753,
+      "retention": 0.697
+    },
+    {
+      "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
+      "title": "Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite",
+      "category": "sorties",
+      "recentImpressions": 422,
+      "recentClicks": 4,
+      "recentPosition": 10.427,
+      "retention": 1.353
+    },
+    {
+      "url": "/articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/",
+      "title": "Soleils d'hiver 2026 à Angers en famille: marché, manèges et Père Noël",
+      "category": "evenements",
+      "recentImpressions": 169,
+      "recentClicks": 4,
+      "recentPosition": 8.367,
+      "retention": 0.944
+    },
+    {
+      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
+      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
+      "category": "vie-pratique",
+      "recentImpressions": 151,
+      "recentClicks": 4,
+      "recentPosition": 6.093,
+      "retention": 0.689
+    }
+  ],
+  "excluded": {
+    "expired": 182,
+    "cooling": 60
+  },
+  "warnings": [
+    "Diagnostics par requêtes : 5/5.",
+    "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement."
+  ]
+}
+
+## Module Radar embarqué
+
+Le code ci-dessous est fourni directement pour les calculs Radar nécessaires à ce passage. Ne va pas le relire dans un autre fichier.
+
+```javascript
+// Pure JavaScript: usable in Node or a connector orchestration runtime.
+const DAY = 86400000;
+const dayNumber = (date) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date ?? ""))
+    throw new Error("Date GSC invalide.");
+  const value = Date.parse(`${date}T00:00:00Z`);
+  if (
+    !Number.isFinite(value) ||
+    new Date(value).toISOString().slice(0, 10) !== date
+  )
+    throw new Error("Date GSC invalide.");
+  return value / DAY;
+};
+const isoDay = (value) => new Date(value * DAY).toISOString().slice(0, 10);
+const round = (value) => Math.round(value * 1000) / 1000;
+export function unwrapRows(response) {
+  const value = response?.structuredContent ?? response;
+  if (response?.isError || (value.status && value.status !== "done"))
+    throw new Error("GSC indisponible ou traitement incomplet.");
+  const rows = Array.isArray(value) ? value : value.data;
+  if (
+    !Array.isArray(rows) ||
+    value.truncated === true ||
+    value.has_more === true ||
+    (value.total_rows !== undefined && value.total_rows !== rows.length)
+  )
+    throw new Error("Réponse GSC absente ou tronquée.");
+  // Conservative per-response threshold, not a claimed Windsor plan limit.
+  // Concatenated arrays are allowed after each response has been checked.
+  if (!Array.isArray(value) && rows.length >= 5000)
+    throw new Error(
+      "Réponse GSC potentiellement plafonnée; découper la période.",
+    );
+  if (rows.some((row) => row.search_type && row.search_type !== "web"))
+    throw new Error(
+      "Le périmètre Radar doit contenir seulement la recherche web.",
+    );
+  return rows;
+}
+export function canonicalPage(value) {
+  // Some connector runtimes do not expose the URL global.
+  if (typeof value !== "string") return undefined;
+  const path = value.replace(/^https?:\/\/(?:www\.)?fam-space\.fr(?=\/)/i, "");
+  if (!/^\/articles\/[^/?#]+\/[^/?#]+\/$/.test(path)) return undefined;
+  if (path.split("/").some((part) => part === "." || part === ".."))
+    return undefined;
+  return path;
+}
+const metric = (row, name) => {
+  const value = Number(row[name]);
+  if (
+    row[name] === null ||
+    row[name] === undefined ||
+    !Number.isFinite(value) ||
+    value < 0
+  )
+    throw new Error(`Métrique GSC invalide: ${name}.`);
+  return value;
+};
+function addMetric(target, row) {
+  const impressions = metric(row, "impressions");
+  target.impressions += impressions;
+  target.clicks += metric(row, "clicks");
+  target.positionSum += impressions ? metric(row, "position") * impressions : 0;
+}
+const empty = () => ({ impressions: 0, clicks: 0, positionSum: 0 });
+const view = (sum, days = 7) => ({
+  impressions: round(sum.impressions),
+  clicks: round(sum.clicks),
+  impressionsPerDay: round(sum.impressions / days),
+  position: sum.impressions ? round(sum.positionSum / sum.impressions) : null,
+});
+function windowSum(days, start, end) {
+  const result = empty();
+  for (let date = start; date <= end; date++) {
+    const row = days.get(date);
+    if (row) for (const key of Object.keys(result)) result[key] += row[key];
+  }
+  return result;
+}
+export function buildRadarShortlist(
+  response,
+  catalog,
+  {
+    now = new Date().toISOString(),
+    siteRows,
+    from,
+    limit = 15,
+    history = [],
+  } = {},
+) {
+  const rows = unwrapRows(response);
+  const site = siteRows ? unwrapRows(siteRows) : rows;
+  if (!site.length)
+    throw new Error("GSC ne retourne aucune journée consolidée.");
+  const siteDays = site.map((row) => dayNumber(row.date));
+  const end = siteDays.reduce((max, date) => Math.max(max, date), -Infinity);
+  const observedStart = siteDays.reduce(
+    (min, date) => Math.min(min, date),
+    Infinity,
+  );
+  const today = dayNumber(now.slice(0, 10));
+  if (end > today || today - end > 7)
+    throw new Error(
+      "Données GSC trop anciennes ou datées dans le futur; aucun export historique de secours.",
+    );
+  // Never create comparison weeks before the first observed site day.
+  const start = from ? Math.max(dayNumber(from), observedStart) : observedStart;
+  if (!Number.isFinite(start) || end - start < 13)
+    throw new Error("Au moins 14 jours GSC sont nécessaires.");
+  const byPage = new Map();
+  for (const row of rows) {
+    const page = canonicalPage(row.page),
+      date = dayNumber(row.date);
+    if (!page || date < start || date > end) continue;
+    if (!byPage.has(page)) byPage.set(page, new Map());
+    const days = byPage.get(page);
+    if (!days.has(date)) days.set(date, empty());
+    addMetric(days.get(date), row);
+  }
+  const entries = [];
+  for (const article of catalog) {
+    const page = canonicalPage(article.url);
+    if (
+      !page ||
+      article.status === "draft" ||
+      Date.parse(article.publishedAt) > Date.parse(now)
+    )
+      continue;
+    const days = byPage.get(page) ?? new Map();
+    const publishedDay = dayNumber(article.publishedAt.slice(0, 10));
+    const firstDay = Math.max(start, publishedDay);
+    // Three days of growth followed by three consolidated days of decline
+    // can be detected before a new page has two full GSC weeks.
+    if (end - firstDay < 5) continue;
+    const recent = windowSum(days, end - 6, end);
+    const recent3 = windowSum(days, end - 2, end);
+    let peak3 = empty(), peak3Start = firstDay;
+    for (let first = firstDay; first + 2 < end - 2; first++) {
+      const sum = windowSum(days, first, first + 2);
+      if (sum.impressions > peak3.impressions) {
+        peak3 = sum;
+        peak3Start = first;
+      }
+    }
+    let peak7 = empty(), peak7Start = firstDay;
+    if (end - firstDay >= 13) {
+      for (let first = firstDay; first + 6 < end - 6; first++) {
+        const sum = windowSum(days, first, first + 6);
+        if (sum.impressions > peak7.impressions) {
+          peak7 = sum;
+          peak7Start = first;
+        }
+      }
+    }
+    const total = windowSum(days, firstDay, end);
+    const expired = Boolean(
+      article.eventEndsAt && article.eventEndsAt < now.slice(0, 10),
+    );
+    const reviewDue = Boolean(
+      article.reviewAt && article.reviewAt <= now.slice(0, 10),
+    );
+    const lastRefresh = history
+      .filter((item) => item.url === page && item.mode === "refresh")
+      .map((item) => item.publishedAt)
+      .sort()
+      .at(-1);
+    const cooling = Boolean(
+      lastRefresh && Date.parse(now) - Date.parse(lastRefresh) < 14 * DAY,
+    );
+    const ageDays = today - publishedDay;
+    const firstVisible = [...days]
+      .filter(([date, values]) => date >= firstDay && values.impressions > 0)
+      .map(([date]) => date)
+      .sort((a, b) => a - b)[0];
+    const newlyVisible =
+      ageDays <= 30 ||
+      (firstVisible !== undefined && firstVisible > start && end - firstVisible <= 21);
+    const rapidDrop =
+      newlyVisible &&
+      peak3.impressions >= 20 &&
+      peak3.impressions - recent3.impressions >= 15 &&
+      recent3.impressions <= peak3.impressions * 0.35;
+    const weeklyDecline = end - firstDay >= 13
+      ? Math.max(0, peak7.impressions - recent.impressions) *
+        Math.min(1, peak7.impressions / 35) *
+        Math.min(1, total.impressions / 50)
+      : 0;
+    const rapidScore = rapidDrop ? (peak3.impressions - recent3.impressions) * 3 : 0;
+    const recentPosition = recent.impressions
+      ? recent.positionSum / recent.impressions
+      : null;
+    const clickPotentialScore =
+      end - firstDay >= 13 && recentPosition !== null && recentPosition <= 10
+        ? Math.max(0, recent.impressions * 0.01 - recent.clicks) * 10
+        : 0;
+    const searchPotential =
+      !rapidDrop && clickPotentialScore > weeklyDecline && clickPotentialScore > 0;
+    const score =
+      expired || cooling
+        ? 0
+        : Math.max(rapidScore, weeklyDecline, clickPotentialScore) +
+          (reviewDue ? 35 : 0);
+    // Recent pages must use available, non-overlapping three-day windows.
+    const shortWindow = rapidDrop || end - firstDay < 13;
+    const peak = shortWindow ? peak3 : peak7;
+    const peakStart = shortWindow ? peak3Start : peak7Start;
+    const peakDays = shortWindow ? 3 : 7;
+    const comparedRecent = shortWindow ? recent3 : recent;
+    const comparedRecentStart = shortWindow ? end - 2 : end - 6;
+    const retention = peak.impressions
+      ? comparedRecent.impressions / peak.impressions
+      : 1;
+    entries.push({
+      url: page,
+      title: article.title,
+      category: article.category,
+      location: article.location,
+      keywords: article.keywords ?? article.topic?.keywords ?? [],
+      publishedAt: article.publishedAt,
+      eventEndsAt: article.eventEndsAt,
+      reviewAt: article.reviewAt,
+      expired,
+      cooling,
+      reviewDue,
+      ageDays,
+      rapidDrop,
+      peakStart: isoDay(peakStart),
+      peakEnd: isoDay(peakStart + peakDays - 1),
+      recentStart: isoDay(comparedRecentStart),
+      recentEnd: isoDay(end),
+      peak: view(peak, peakDays),
+      recent: view(comparedRecent, peakDays),
+      retention: round(retention),
+      score: round(score),
+      signal: searchPotential ? "search_potential" : "needs_query_check",
+      basis: rapidDrop
+        ? `Visibilité récente : ${round(peak3.impressions)} impressions sur trois jours, puis ${round(recent3.impressions)} sur les trois derniers jours consolidés; cause non établie.`
+        : "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      ...(searchPotential
+        ? {
+            basis: `Page visible avec ${round(recent.impressions)} impressions, ${round(recent.clicks)} clics et une position moyenne de ${round(recentPosition)} sur sept jours; intention de recherche à examiner.`,
+            commonQueries: null,
+            positionDelta: null,
+            impressionRatio: null,
+            focusQueries: (Array.isArray(article.keywords)
+              ? article.keywords
+              : Array.isArray(article.topic?.keywords)
+                ? article.topic.keywords
+                : []
+            ).slice(0, 5),
+          }
+        : {}),
+    });
+  }
+  return {
+    schemaVersion: 1,
+    retrievedAt: now,
+    dataThrough: isoDay(end),
+    from: isoDay(start),
+    caveat:
+      "Les lignes absentes valent zéro dans les données retournées. GSC peut masquer des requêtes; les signaux ne prouvent ni désindexation ni causalité.",
+    refresh: entries
+      .filter((item) => item.score > 0)
+      .sort((a, b) =>
+        Number(b.rapidDrop && b.category !== "evenements") -
+          Number(a.rapidDrop && a.category !== "evenements") ||
+        Number(b.rapidDrop) - Number(a.rapidDrop) ||
+        b.score - a.score ||
+        a.url.localeCompare(b.url))
+      .slice(0, limit),
+    strongPages: entries
+      .filter(
+        (item) =>
+          !item.expired &&
+          item.recent.impressions >= 35 &&
+          item.retention >= 0.5,
+      )
+      .sort(
+        (a, b) =>
+          b.recent.clicks - a.recent.clicks ||
+          b.recent.impressions - a.recent.impressions ||
+          a.url.localeCompare(b.url),
+      )
+      .slice(0, 10),
+    excluded: {
+      expired: entries.filter((item) => item.expired).length,
+      cooling: entries.filter((item) => item.cooling).length,
+    },
+  };
+}
+export function diagnoseQueries(peakResponse, recentResponse) {
+  const aggregate = (response) => {
+    const result = new Map();
+    for (const row of unwrapRows(response)) {
+      if (typeof row.query !== "string")
+        throw new Error("Requête GSC manquante.");
+      if (!result.has(row.query)) result.set(row.query, empty());
+      addMetric(result.get(row.query), row);
+    }
+    return result;
+  };
+  const peak = aggregate(peakResponse),
+    recent = aggregate(recentResponse);
+  const common = [...peak.keys()].filter(
+    (query) =>
+      peak.get(query).impressions >= 10 &&
+      (recent.get(query)?.impressions ?? 0) >= 3,
+  );
+  let weight = 0,
+    change = 0;
+  for (const query of common) {
+    const first = peak.get(query),
+      last = recent.get(query);
+    const w = Math.min(first.impressions, last.impressions);
+    weight += w;
+    change +=
+      w *
+      (last.positionSum / last.impressions -
+        first.positionSum / first.impressions);
+  }
+  const delta = weight ? change / weight : null;
+  const total = (values) =>
+    [...values.values()].reduce((sum, item) => sum + item.impressions, 0);
+  const ratio = total(peak) ? total(recent) / total(peak) : null;
+  return {
+    signal:
+      delta !== null && delta >= 3
+        ? "rank_loss"
+        : delta !== null &&
+            Math.abs(delta) <= 2 &&
+            ratio !== null &&
+            ratio <= 0.25
+          ? "coverage_loss"
+          : "uncertain",
+    commonQueries: common.length,
+    positionDelta: delta === null ? null : round(delta),
+    impressionRatio: ratio === null ? null : round(ratio),
+    queries: [...new Set([...peak.keys(), ...recent.keys()])]
+      .map((query) => ({
+        query,
+        peak: view(peak.get(query) ?? empty()),
+        recent: view(recent.get(query) ?? empty()),
+      }))
+      .sort((a, b) => b.peak.impressions - a.peak.impressions),
+    caveat:
+      "coverage_loss désigne une baisse d'exposition observée, pas une preuve de désindexation. Les requêtes masquées et la saisonnalité limitent le diagnostic.",
+  };
+}
+// The shortlist ranks pages; only per-page query rows can establish a diagnosis.
+export function attachRadarQueryDiagnosis(item, peakResponse, recentResponse) {
+  const diagnosis = diagnoseQueries(peakResponse, recentResponse);
+  const signal =
+    item.signal === "search_potential" && diagnosis.signal === "uncertain"
+      ? "search_potential"
+      : diagnosis.signal;
+  const priority = (query) => {
+    const lostImpressions = Math.max(0, query.peak.impressions - query.recent.impressions);
+    const lostPositions =
+      query.peak.position !== null && query.recent.position !== null
+        ? Math.max(0, query.recent.position - query.peak.position)
+        : 0;
+    if (signal === "rank_loss")
+      return query.peak.impressions >= 10 && query.recent.impressions >= 3
+        ? lostPositions * Math.min(query.peak.impressions, query.recent.impressions)
+        : 0;
+    if (signal === "search_potential") return query.recent.impressions;
+    return lostImpressions;
+  };
+  const relevantQueries = diagnosis.queries
+    .filter((query) => signal !== "rank_loss" || priority(query) > 0)
+    .sort((a, b) => priority(b) - priority(a) || b.peak.impressions - a.peak.impressions)
+    .slice(0, 5)
+    .map(({ query }) => query);
+  const basis =
+    item.basis + " " +
+    (signal === "rank_loss"
+      ? `Recul moyen de ${diagnosis.positionDelta} positions sur ${diagnosis.commonQueries} requête(s) comparable(s).`
+      : signal === "coverage_loss"
+        ? `Baisse d'exposition sur les requêtes visibles (ratio ${diagnosis.impressionRatio}), sans recul de classement comparable établi.`
+        : signal === "search_potential"
+          ? "Les requêtes visibles ne démontrent pas une perte de classement."
+          : `Diagnostic sur ${diagnosis.commonQueries} requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.`);
+  return {
+    ...item,
+    signal,
+    basis,
+    commonQueries: diagnosis.commonQueries,
+    positionDelta: diagnosis.positionDelta,
+    impressionRatio: diagnosis.impressionRatio,
+    focusQueries: relevantQueries.length ? relevantQueries : item.focusQueries ?? [],
+  };
+}
+
+
+/** Prepare one compact snapshot from one shortlist and per-page query responses. */
+export function buildRadarSnapshot(pageRows, catalog, options = {}, queryPairs = []) {
+  const shortlist = buildRadarShortlist(pageRows, catalog, options);
+  const pairs = new Map(queryPairs.map((pair) => [canonicalPage(pair.url), pair]));
+  const refresh = shortlist.refresh.map((candidate, index) => {
+    const pair = index < 5 ? pairs.get(candidate.url) : undefined;
+    const item = pair
+      ? attachRadarQueryDiagnosis(candidate, pair.peakQueries, pair.recentQueries)
+      : candidate;
+    return {
+      url: item.url,
+      title: item.title,
+      category: item.category,
+      publishedAt: item.publishedAt,
+      location: item.location,
+      ageDays: item.ageDays,
+      rapidDrop: item.rapidDrop,
+      peakStart: item.peakStart,
+      peakEnd: item.peakEnd,
+      recentStart: item.recentStart,
+      recentEnd: item.recentEnd,
+      peakImpressions: item.peak.impressions,
+      recentImpressions: item.recent.impressions,
+      score: item.score,
+      signal: item.signal,
+      basis: item.basis,
+      commonQueries: item.commonQueries ?? null,
+      positionDelta: item.positionDelta ?? null,
+      impressionRatio: item.impressionRatio ?? null,
+      focusQueries: item.focusQueries ?? item.keywords.slice(0, 5),
+    };
+  });
+  return {
+    schemaVersion: 1,
+    generatedAt: options.now ?? new Date().toISOString(),
+    dataThrough: shortlist.dataThrough,
+    from: shortlist.from,
+    refresh,
+    strongPages: shortlist.strongPages.map((item) => ({
+      url: item.url,
+      title: item.title,
+      category: item.category,
+      recentImpressions: item.recent.impressions,
+      recentClicks: item.recent.clicks,
+      recentPosition: item.recent.position,
+      retention: item.retention,
+    })),
+    excluded: shortlist.excluded,
+    warnings: [
+      ...(options.warnings ?? []),
+      `Diagnostics par requêtes : ${refresh.slice(0, 5).filter((item) => item.signal !== "needs_query_check" && item.commonQueries !== null).length}/${Math.min(5, refresh.length)}.`,
+      "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement.",
+    ],
+  };
+}
+
+const STOP = new Set(
+  "avec pour dans sans famille familles enfant enfants tarif tarifs duree conseil conseils visite visiter billet billets activite activites sortie sorties evenement evenements preparation pratique pratiques autour leur leurs aussi quoi comment quel quelle quelles quels quand faire partir 2026 2027".split(
+    " ",
+  ),
+);
+const words = (value) =>
+  new Set(
+    String(value)
+      .replace(/œ/g, "oe")
+      .normalize("NFD")
+      .replace(/\p{Diacritic}/gu, "")
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((word) => word.length >= 3 && !STOP.has(word)),
+  );
+export function probableDuplicates(subject, catalog, limit = 5) {
+  const terms = words(
+    [
+      subject.title,
+      ...(subject.keywords ?? subject.topic?.keywords ?? []),
+    ].join(" "),
+  );
+  return catalog
+    .filter(
+      (article) => canonicalPage(article.url) !== canonicalPage(subject.url),
+    )
+    .map((article) => {
+      const candidate = words(
+        [
+          article.title,
+          ...(article.keywords ?? article.topic?.keywords ?? []),
+        ].join(" "),
+      );
+      const shared = [...terms].filter((word) => candidate.has(word));
+      const sameCity = Boolean(
+        subject.location?.city &&
+          subject.location.city === article.location?.city,
+      );
+      const sameDepartment = Boolean(
+        subject.location?.department &&
+          subject.location.department === article.location?.department,
+      );
+      return {
+        url: article.url,
+        title: article.title,
+        location: article.location,
+        sharedTerms: shared,
+        score:
+          shared.length / Math.max(1, new Set([...terms, ...candidate]).size) +
+          (sameCity ? 0.2 : sameDepartment ? 0.1 : 0),
+      };
+    })
+    .filter(
+      (item) =>
+        item.sharedTerms.length >= 2 ||
+        (item.sharedTerms.length === 1 && item.sharedTerms[0].length >= 6),
+    )
+    .sort((a, b) => b.score - a.score || a.url.localeCompare(b.url))
+    .slice(0, limit);
+}
+```
+
+## Résultat attendu
+
+Actualise uniquement radar-gsc-snapshot.json sur la branche main de DevWeb13/fam-space-actions-bridge avec le snapshot compact décrit ci-dessus, puis termine ce passage. Ne choisis aucune mission Radar dans la même exécution et ne modifie aucun autre fichier interne.
