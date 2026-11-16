@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -103,6 +106,8 @@ sources:
     url: https://festivaldelasaintebarbe.com/infos-pratiques/ou-se-garer/
   - title: Tadao - itinéraires et horaires des transports du bassin minier
     url: https://www.tadao.fr/index.php/fr/
+  - title: Organisateur - Le Train fantôme au Louvre-Lens
+    url: https://festivaldelasaintebarbe.com/manifestations/festival-de-la-sainte-barbe-le-train-fantome-au-louvre-lens/
 eventEndsAt: 2026-12-06
 topic:
   key: evenements|lens|festival-de-la-sainte-barbe-2026-a-lens-lievin-quelle-soiree-choisir-avec-les-enfants|2026
@@ -123,7 +128,7 @@ affiliate:
   destination: Lens
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/festival-de-la-sainte-barbe-2026-a-lens-lievin-quelle-soiree-choisir-avec-les-enfants/index.md
   targetSha: 1f1a12c63e0ac89b89409577166d0e92dc3615d4
@@ -152,33 +157,88 @@ radar:
       - Louvre-Lens Sainte-Barbe 6 décembre enfants
 ---
 
-## Mission retenue
-Actualiser le guide familial du Festival de la Sainte-Barbe 2026 à Lens-Liévin, du 27 novembre au 6 décembre, avec les temps forts du 4 au 6 décembre.
+<!-- article-image-credit -->
+*Photo: [Velvet](https://commons.wikimedia.org/wiki/File:Oignies_fosses_9-9bis.JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC indique 43 impressions sur trois jours puis 4, sans preuve de recul de position. L'article est déjà détaillé, mais le programme officiel confirme une activité familiale supplémentaire le dimanche 6 décembre au Louvre-Lens: le Train fantôme interactif dès 16 h 30. Cette lacune vérifiée justifie seule le refresh.
+Le **Festival de la Sainte-Barbe** anime le bassin minier de Lens-Liévin du **27 novembre au 6 décembre 2026**. Ses grands spectacles de feu se concentrent les **vendredi 4, samedi 5 et dimanche 6 décembre**. Avec des enfants, le plus pratique est de choisir un site et un horaire de retour: Lens, Loos-en-Gohelle, Oignies et le Louvre-Lens ne forment pas un parcours unique à pied.
 
-## Décision du lecteur
-Choisir entre les animations de Lens le vendredi, de Loos-en-Gohelle ou Oignies le samedi et du Louvre-Lens le dimanche, selon l'âge, les horaires, le bruit et le trajet de retour.
+## Quel jour choisir avec les enfants ?
 
-## Faits à traiter
-- Ajouter au dimanche 6 décembre le Train fantôme de la compagnie Bitonio, entresort forain interactif avec jeux mécaniques et énigmes, au Louvre-Lens en continu dès 16 h 30. Vérifier les modalités d'accès sans inventer une réservation.
-- Conserver ToyToy à 15 h, La Frange à 16 h, La Frontale à 18 h 30, Nouveau monde à 19 h, l'atelier et le maquillage. Éviter de présenter le Train fantôme comme un spectacle pyrotechnique.
-- Conserver tous les horaires et lieux déjà vérifiés pour Lens, Loos-en-Gohelle et Oignies, les gratuités des grands spectacles, les transports, parkings, conseils de sécurité et limites d'accessibilité.
-- Préserver les quatre photographies (hero et trois images dans le corps), crédits et licences, le lien interne utile et l'hébergement Booking.com existant.
-- Ne pas transformer la baisse d'impressions en diagnostic SEO ni actualiser la date pour elle-même.
+- **Vendredi 4 à Lens:** *Tumulte* commence à **18 h**, tandis que les orgues à feu sont programmés à **20 h 45**. Deux horaires possibles selon l'heure de coucher.
+- **Samedi 5 à Loos-en-Gohelle:** *La Kermesse* se déroule de **15 h 30 à 21 h 30**, avec la possibilité de partir avant la soirée.
+- **Samedi 5 à Oignies:** atelier *Artifices* l'après-midi, puis *Swing & Fire* à **17 h 15, 18 h 15 ou 20 h** et un final pyrotechnique à **21 h**.
+- **Dimanche 6 au Louvre-Lens:** *ToyToy* à **15 h**, *Train fantôme* interactif dès **16 h 30**, fanfares et animations familiales, puis *Nouveau monde* à **19 h**.
 
-## Sources de départ
-- Programme officiel par date: https://festivaldelasaintebarbe.com/la-programmation/par-date/
-- Train fantôme au Louvre-Lens: https://festivaldelasaintebarbe.com/manifestations/festival-de-la-sainte-barbe-le-train-fantome-au-louvre-lens/
-- Journée familiale au Louvre-Lens: https://festivaldelasaintebarbe.com/manifestations/une-journee-grandiose-et-petillante/
+Il ne s'agit pas de tranches d'âge officielles. Les effets de feu, les détonations éventuelles et la foule peuvent impressionner certains enfants, même en début de soirée.
 
-## Affiliation
-Conserver Le Cottage du Louvre sur Booking.com et les précautions sur les chambres, l'arrivée et le trajet; ne pas inventer de billet affilié pour un spectacle gratuit.
+## Vendredi 4 décembre à Lens: deux temps forts
 
-## Continuations internes
-- Garder le lien vers le programme officiel pour les autres Étincelles plutôt que détailler tout le festival.
-- Ne pas étendre l'article à un guide général du Louvre-Lens.
+<!-- article-image-body:01 -->
+
+![Place Jean-Jaurès à Lens, photographiée en journée en dehors du festival](/images/articles/2026/10/festival-de-la-sainte-barbe-2026-a-lens-lievin-quelle-soiree-choisir-avec-les-enfants-body-01.webp)
+
+*Photo: [Guillaume Baviere from Copenhagen, Denmark](https://commons.wikimedia.org/wiki/File:Jean_Jaur%C3%A8s_square,_Lens.jpg) - [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+À **18 h**, *Tumulte* investit la **place Jean-Jaurès**. Ce spectacle de rue de la compagnie Karnavires, annoncé pour **45 minutes**, mêle machines, marionnettes mécaniques et pyrotechnie. C'est une option pour profiter du festival sans attendre la fin de soirée.
+
+Dès **18 h 30**, les **jardins de la faculté des sciences Jean-Perrin**, avenue Élie-Reumaux, accueillent notamment *Le Train fantôme*, *Radio cagette* et *Flamboyance passée*. À **20 h 45**, *Les Semeurs de Temps et les orgues à Feu* proposent un concert pyrotechnique d'environ **45 minutes**. Avec de jeunes enfants, rien n'oblige à assister aux deux spectacles.
+
+## Samedi 5 décembre: Loos-en-Gohelle ou Oignies
+
+<!-- article-image-body:02 -->
+
+![Terrils de la base 11/19 à Loos-en-Gohelle, photographiés hors festival](/images/articles/2026/10/festival-de-la-sainte-barbe-2026-a-lens-lievin-quelle-soiree-choisir-avec-les-enfants-body-02.webp)
+
+*Photo: [sybarite48](https://commons.wikimedia.org/wiki/File:Loos-en-Gohelle_terrils_11-19.jpg) - [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+**À Loos-en-Gohelle**, la **base 11/19**, rue de Bourgogne, accueille *La Kermesse* de **15 h 30 à 21 h 30**. La compagnie La Machine imagine une fête foraine insolite, avec jeux, gourmandises et effets de feu. **Bars et foodtrucks** sont annoncés sur place.
+
+Une **montée aux terrils** est aussi programmée à **17 h 30**. C'est une activité distincte de la kermesse, à la tombée de la nuit, avec une descente suivie d'un moment convivial. Vérifiez les conditions de participation et l'état du terrain si vous envisagez cette marche avec des enfants.
+
+**À Oignies**, le **9-9bis** et ses abords accueillent également des activités dès l'après-midi. L'atelier **Artifices**, rue Alain-Bashung, est annoncé de **15 h à 20 h**: les participants réalisent une carte de Sainte-Barbe. Hauts-de-France Tourisme l'indique **gratuit**; renseignez-vous sur l'accès et les places disponibles.
+
+Sur l'esplanade du 9-9bis, *Swing & Fire* associe cirque, danse, musique et feu à **17 h 15, 18 h 15 et 20 h**. À **21 h**, *Entre terre et ciel - Blast version* réunit danse et pyrotechnie pendant environ **25 minutes**. On peut donc choisir un spectacle plus tôt sans attendre le final.
+
+Les deux sites sont dans des communes différentes: évitez de prévoir les deux dans la même soirée sans avoir vérifié le trajet et le stationnement.
+
+## Dimanche 6 décembre au Louvre-Lens: spectacles et animations
+
+<!-- article-image-body:03 -->
+
+![Façade panoramique du musée du Louvre-Lens, photographiée hors festival](/images/articles/2026/10/festival-de-la-sainte-barbe-2026-a-lens-lievin-quelle-soiree-choisir-avec-les-enfants-body-03.webp)
+
+*Photo: [Easternpenguin](https://commons.wikimedia.org/wiki/File:Panorama_Louvre-Lens.jpeg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:03 -->
+
+Au **Louvre-Lens**, **99 rue Paul-Bert à Lens**, plusieurs rendez-vous permettent de composer une sortie à la carte:
+
+- **15 h:** *ToyToy*, concerto pour jouets à partager entre enfants et parents, au **Pavillon de verre**.
+- **16 h:** *La Frange*, fanfare pop dans le hall du musée, annoncée pour **1 h 45**.
+- **Dès 16 h 30, en continu:** *Le Train fantôme* de la compagnie Bitonio, entresort forain interactif avec automates, jeux mécaniques et énigmes à résoudre en équipe. Ce n'est pas un spectacle pyrotechnique. La [fiche de l'organisateur](https://festivaldelasaintebarbe.com/manifestations/festival-de-la-sainte-barbe-le-train-fantome-au-louvre-lens/) ne précise pas de réservation individuelle: vérifiez les conditions d'accès sur place.
+- **18 h 30:** *La Frontale*, fanfare étudiante.
+- **19 h:** *Nouveau monde*, spectacle de grandes marionnettes gonflables et de pyrotechnie des Plasticiens Volants.
+
+Un **atelier lié à l'exposition « Trop Mignon ! L'art du bonheur »** est annoncé dès **15 h**, ainsi qu'un **stand de maquillage de 15 h à 19 h**. Les conditions d'accès, les places et une éventuelle réservation pour l'atelier doivent être confirmées auprès du musée: ne présumez pas de la gratuité ou de l'accès libre de chaque activité annexe. Les familles qui préfèrent rentrer avant la nuit peuvent se concentrer sur *ToyToy* et les animations de l'après-midi.
+
+## Budget, accès et précautions pratiques
+
+Les **grands spectacles du festival sont annoncés gratuits**: aucun billet de spectacle n'est nécessaire pour ces rendez-vous. Prévoyez néanmoins un budget éventuel pour les repas, les boissons et les déplacements. Les autres animations et les « Étincelles » organisées dès le 27 novembre ont leurs propres modalités; consultez la [programmation officielle par date](https://festivaldelasaintebarbe.com/la-programmation/par-date/) si vous choisissez un autre jour.
+
+Pour venir en voiture, la [page des stationnements du festival](https://festivaldelasaintebarbe.com/infos-pratiques/ou-se-garer/) indique **place du Cantin ou place de la République** pour la faculté Jean-Perrin, **Cité des Provinces à Lens** pour la base 11/19 et les **parkings du 9-9bis, rue du Tordoir**, pour Oignies. Pour le **Louvre-Lens**, elle mentionne les parkings du musée **rue Paul-Bert à Lens** et **rue Mirabeau à Liévin**, ainsi que ceux du **stade Bollaert-Delelis**. Ce sont des indications d'accès, pas une garantie de place disponible.
+
+Sans voiture, vérifiez surtout les **derniers départs** sur le [réseau Tadao](https://www.tadao.fr/index.php/fr/) depuis le lieu choisi. Aucune navette spéciale 2026 ne doit être présumée sur la base des éditions précédentes.
+
+Les spectacles extérieurs se déroulent en décembre: chaussures adaptées, vêtements chauds et protection contre la pluie sont utiles. Une protection auditive peut aider les enfants sensibles au bruit. Respectez les périmètres de sécurité autour des installations. Pour les poussettes et les personnes à mobilité réduite, renseignez-vous sur les cheminements du site retenu, notamment aux terrils et lors des rassemblements nocturnes.
+
+## Passer le week-end à Lens
+
+Si vous venez de loin, [Le Cottage du Louvre à Lens sur Booking.com](https://www.booking.com/hotel/fr/le-cottage-du-louvre.fr.html) propose notamment des **appartements T3 avec deux chambres**, dont une configuration avec un lit double et deux lits simples. Vérifiez la capacité exacte, les couchages et le trajet jusqu'au spectacle choisi. L'arrivée est généralement indiquée **entre 15 h et 20 h**, avec une heure à communiquer à l'établissement: organisez la remise des clés avant un spectacle tardif. Les **prix et disponibilités des nuits du 4 au 6 décembre 2026** restent à vérifier pour votre famille.
 
 ## Article source exact à préserver et améliorer
 
