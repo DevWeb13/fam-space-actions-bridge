@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,13 +59,6 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
@@ -71,10 +74,12 @@ image:
   src: /images/articles/2026/10/marche-de-noel-de-clermont-ferrand-2026-en-famille-horaires-animations-et-acces.webp
   alt: Place de Jaude illuminée pour Noël en 2018, vue depuis la grande roue à Clermont-Ferrand
 sources:
-  - title: Marché de Noël de Clermont-Ferrand - dates et animations annoncées pour 2026
+  - title: Marché de Noël de Clermont-Ferrand - programme et animations 2026
     url: https://www.marche-noel-clermont.com/
   - title: Marché de Noël de Clermont-Ferrand - horaires et fermetures 2026
     url: https://www.marche-noel-clermont.com/les-horaires-douverture-du-marche-de-noel/
+  - title: Marché de Noël de Clermont-Ferrand - calendrier des animations 2026
+    url: https://www.marche-noel-clermont.com/animations/
   - title: Marché de Noël de Clermont-Ferrand - accès et transports
     url: https://www.marche-noel-clermont.com/comment-venir-au-marche-de-noel-de-clermont-ferrand/
   - title: Marché de Noël de Clermont-Ferrand - FAQ, gratuité et accessibilité
@@ -99,7 +104,7 @@ affiliate:
   destination: Clermont-Ferrand
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/marche-de-noel-de-clermont-ferrand-2026-en-famille-horaires-animations-et-acces/index.md
   targetSha: 671634165087891d44722c70c06683708f9d272d
@@ -127,33 +132,73 @@ radar:
       - animations marché de Noël Clermont-Ferrand 2026
 ---
 
-## Mission retenue
-Actualiser le guide du marché de Noël de Clermont-Ferrand 2026, place de Jaude, du 27 novembre au 27 décembre.
+<!-- article-image-credit -->
+*Photo: [Florian Pépellin](https://commons.wikimedia.org/wiki/File:Place_de_Jaude_de_Clermont-Ferrand_illumin%C3%A9e_vue_de_la_Grande_Roue_(2018)_1.JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot montre 30 puis 6 impressions sur des périodes de trois jours, sans preuve de cause SEO. Lacune éditoriale indépendante et vérifiée: l'article laisse l'heure d'ouverture du vendredi 27 novembre incertaine, alors que l'organisateur indique désormais 17 h-22 h. Son calendrier d'animations 2026 comporte aussi plusieurs rendez-vous familiaux absents du guide.
+Le **marché de Noël de Clermont-Ferrand 2026** se tient **place de Jaude du vendredi 27 novembre au dimanche 27 décembre**. L'entrée et les animations annoncées sont gratuites. **Le vendredi 27 novembre, l'ouverture exceptionnelle est fixée de 17 h à 22 h**. Pour choisir une visite avec les enfants, voici les horaires, les rendez-vous familiaux et les accès utiles.
 
-## Décision du lecteur
-Savoir quand venir avec les enfants pour voir la parade, participer aux animations gratuites ou simplement visiter les chalets, et éviter une arrivée avant l'ouverture exceptionnelle.
+## Dates et horaires: quand venir ?
 
-## Faits à traiter
-- Confirmer l'ouverture du vendredi 27 novembre de 17 h à 22 h, en supprimant l'ancienne incertitude; parade le même jour mais horaire de parade non confirmé.
-- Compléter sélectivement les animations familiales vérifiées: collecte de jouets des 27-29 novembre, distribution de papier cadeau avec Scoopy les 9 et 12 décembre, concert de cuivres le 16 décembre, soirée mascottes le 18 décembre. Conserver jeux en bois des 9 et 23 décembre et maquillage du 16 décembre; distinguer gratuité des animations et achats ou grande roue.
-- Conserver horaires réguliers, fermeture anticipée du 24 décembre à 17 h et fermeture du 25, transports, conseils poussette et bébés, photos et crédits/licences, liens internes et hôtel Booking.com.
-- Le dossier de presse 2026 comporte une divergence sur certaines dates de collecte et la fermeture du 24 décembre: privilégier les pages officielles actuelles dédiées aux horaires et animations, signaler toute incertitude persistante sans inventer.
+Selon [l'organisateur](https://www.marche-noel-clermont.com/les-horaires-douverture-du-marche-de-noel/), les horaires sont les suivants:
 
-## Sources de départ
-- Organisateur, horaires 2026: https://www.marche-noel-clermont.com/les-horaires-douverture-du-marche-de-noel/
-- Organisateur, calendrier des animations: https://www.marche-noel-clermont.com/animations/
-- Organisateur, programme général: https://www.marche-noel-clermont.com/
-- Dossier de presse 2026, à confronter aux pages actuelles: https://www.marche-noel-clermont.com/wp-content/uploads/2026/11/DossierDePresse_MDN2026_compressed.pdf
+- **Vendredi 27 novembre, ouverture:** 17 h à 22 h.
+- **Lundi:** 14 h à 20 h.
+- **Mardi, mercredi, jeudi et dimanche:** 10 h 30 à 20 h.
+- **Vendredi et samedi:** 10 h 30 à 22 h.
+- **Jeudi 24 décembre:** fermeture anticipée à **17 h**.
+- **Vendredi 25 décembre:** **fermé toute la journée**.
 
-## Affiliation
-Conserver le CIT'HÔTEL LE DAV sur Booking.com; ne pas promettre de disponibilité ni ajouter de billet payant pour l'entrée gratuite.
+Avec de jeunes enfants, une visite en journée évite de dépendre de l'affluence du soir; la fin d'après-midi permet aussi de voir les lumières. **Une à deux heures** peuvent suffire pour parcourir les chalets et prendre un goûter, hors animation particulière.
 
-## Continuations internes
-- Conserver le renvoi à la destination Clermont-Ferrand pour un séjour prolongé.
-- Conserver le guide du puy de Dôme pour la deuxième journée sans répéter ses détails.
+## Animations pour enfants annoncées en 2026
+
+<!-- article-image-body:01 -->
+
+![Chalets du marché de Noël de Clermont-Ferrand et cathédrale illuminés en 2018](/images/articles/2026/10/marche-de-noel-de-clermont-ferrand-2026-en-famille-horaires-animations-et-acces-body-01.webp)
+
+*Photo: [Florian Pépellin](https://commons.wikimedia.org/wiki/File:March%C3%A9_de_No%C3%ABl_et_cath%C3%A9drale_de_Clermont-Ferrand_de_nuit_(2018).JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Le [calendrier officiel des animations](https://www.marche-noel-clermont.com/animations/) annonce notamment:
+
+- **Vendredi 27 novembre:** parade de Noël (horaire non précisé) et collecte de jouets pour les Restos du Cœur de 17 h à 22 h. La collecte continue **samedi 28** de 10 h 30 à 22 h et **dimanche 29** de 10 h 30 à 20 h.
+- **Mercredi 9 décembre:** distribution de papier cadeau avec Scoopy de 14 h à 18 h et jeux géants en bois de 14 h 30 à 17 h 30.
+- **Samedi 12 décembre:** distribution de papier cadeau avec Scoopy de 14 h à 18 h.
+- **Mercredi 16 décembre:** maquillage pour enfants de 14 h 30 à 17 h 30 et concert de cuivres du Conservatoire Emmanuel Chabrier de 15 h 15 à 15 h 45.
+- **Vendredi 18 décembre:** soirée « Mascotte Party » de 18 h 30 à 22 h.
+- **Mercredi 23 décembre:** jeux géants en bois de 14 h 30 à 17 h 30.
+
+Autour du sapin et de la grande roue, les chalets proposent artisanat, cadeaux et spécialités gourmandes. **L'accès au marché et la participation aux animations annoncées sont gratuits**, mais les tours de grande roue, les achats et la restauration ne sont pas annoncés gratuits; leurs tarifs ne sont pas établis par cette programmation.
+
+Le **Père Noël** est évoqué sur le site, mais les horaires détaillés de rencontre proviennent d'une page ancienne. Ne les considérez pas comme confirmés pour 2026; si la rencontre motive la sortie, consultez le programme actualisé peu avant votre visite.
+
+## Accès, poussette et stationnement place de Jaude
+
+<!-- article-image-body:02 -->
+
+![Rame de tramway sur la place de Jaude à Clermont-Ferrand en 2007](/images/articles/2026/10/marche-de-noel-de-clermont-ferrand-2026-en-famille-horaires-animations-et-acces-body-02.webp)
+
+*Photo: [Fabien1309](https://commons.wikimedia.org/wiki/File:Clermont-tram-place-de-jaude.jpg) - [CC BY-SA 2.0 fr](https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Le plus direct en transports est le **tramway A, arrêt Jaude**. En voiture, l'organisateur mentionne les parcs relais **Les Pistes** et **Henri Dunant**, puis le tramway, ainsi que les parkings centraux **Cathédrale, Saint-Pierre et Vercingétorix**. Le stationnement automobile est payant. Pour les correspondances et perturbations, consultez [T2C](https://www.t2c.fr/).
+
+Le marché est annoncé **accessible aux personnes à mobilité réduite**. Cela ne garantit pas l'absence d'affluence entre les chalets: avec une poussette, un passage en journée peut être plus confortable.
+
+## Goûter et besoins des bébés
+
+Les stands proposent des plats salés, dont des spécialités auvergnates, ainsi que crêpes, gaufres et autres gourmandises. Une petite collation et de l'eau peuvent aider si l'enfant doit manger à heure fixe.
+
+**Toilettes, table à langer, micro-ondes, chauffe-biberon et espace bébé:** leur disponibilité précise pour 2026 n'est pas confirmée. Prévoyez le nécessaire de change et une solution autonome pour le repas ou le biberon. Un porte-bébé peut compléter la poussette en cas d'affluence. La visite étant en extérieur, prévoyez des vêtements chauds et de quoi vous protéger de la pluie.
+
+## Passer une nuit à Clermont-Ferrand
+
+Pour prolonger la visite, le [CIT'HÔTEL LE DAV sur Booking.com](https://www.booking.com/hotel/fr/dav-39-jaude.html), au **10 rue des Minimes**, est situé à environ **120 mètres de la place de Jaude**. Il propose des chambres familiales; les **lits bébé sont gratuits sur demande jusqu'à 2 ans**, selon le type de chambre et la disponibilité. Vérifiez la capacité et les couchages en indiquant l'âge de chaque enfant, ainsi que le tarif et les conditions d'annulation pour vos dates. L'hôtel se trouve dans une **rue piétonne inaccessible directement en voiture**.
+
+Pour organiser un séjour plus long, consultez [Clermont-Ferrand en famille](/destinations/auvergne-rhone-alpes/puy-de-dome/clermont-ferrand/). Une deuxième journée peut aussi être consacrée au [puy de Dôme en famille: train ou randonnée ?](/articles/sorties/puy-de-dome-en-famille-train-randonnee-ou-les-deux/), en vérifiant les horaires d'hiver et les conditions météorologiques.
 
 ## Article source exact à préserver et améliorer
 
