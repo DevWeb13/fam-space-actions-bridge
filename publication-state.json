@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261117-0601-sujet-la-ludotheque-intercommunale-ricochet-a-sainte-sigolene-haute-lo",
+  "lastProcessedCommit": "4120a6542ab0b1c4ea50b571cb22badbfcec939c"
 }
