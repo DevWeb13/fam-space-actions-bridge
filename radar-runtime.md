@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -99,7 +102,7 @@ affiliate:
   destination: Cannes
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/noel-2026-a-cannes-en-famille-marche-du-centre-ou-village-du-palm-beach/index.md
   targetSha: e5734d63102b0aa84189f1f4b745d4961c17bda3
@@ -125,32 +128,102 @@ radar:
       - marché de noël cannes 2026
 ---
 
-## Mission retenue
-Actualiser le guide des deux villages de Noël de Cannes 2026-2027, en priorité le marché municipal des Allées de la Liberté et ses animations familiales.
+subtitle: "Marché, patinoire, ateliers et Palm Beach: choisir sa sortie selon les dates et l'âge des enfants"
+summary: "À Cannes, le marché de Noël du centre ouvre du 27 novembre au 3 janvier avec 66 chalets et une patinoire à 5 €, gratuite le matin pour les 4-10 ans. Le Palm Beach accueille son village dès le 3 décembre, avec des jours de fermeture à connaître."
+sources:
+  - title: Office de tourisme de Cannes - Village de Noël 2026
+    url: https://www.palaisdesfestivals.com/offres/village-de-noel-cannes-fr-5232825/
+  - title: Office de tourisme de Cannes - Patinoire 2026
+    url: https://www.cannes-france.com/offres/patinoire-cannes-fr-5232826/
+  - title: Office de tourisme de Cannes - Programme Noël 2026
+    url: https://www.palaisdesfestivals.com/offres/noel-a-cannes-cannes-fr-5259878/
+  - title: Ville de Cannes - Village de Noël du Palm Beach
+    url: https://www.cannes.com/fr/agenda/annee-2026/decembre/village-de-noel-au-palm-beach.html
+  - title: Palm Beach Cannes - Village de Noël
+    url: https://palmbeach-cannes.com/fr/venues/christmas-village
+  - title: Ville de Cannes - Aménagements des Allées de la Liberté
+    url: https://www.cannes.com/fr/cadre-de-vie/travaux-en-cours/realisations/espace-vert-promenade/allees-de-la-liberte.html
+  - title: Ville de Cannes - Transports et Palm Impérial
+    url: https://www.cannes.com/fr/cadre-de-vie/transports/se-deplacer-dans-cannes/prendre-le-bus.html
+---
+<!-- article-image-credit -->
+*Photo: [Mister No](https://commons.wikimedia.org/wiki/File:Kiosque_%C3%A0_musique_des_All%C3%A9es_de_la_Libert%C3%A9-Charles-de-Gaulle_%C3%A0_Cannes.jpg) - [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC signale 39 puis 5 impressions sur deux périodes de trois jours, sans cause SEO établie. Une lacune indépendante est désormais vérifiée: l'article du 31 octobre indique encore que les horaires, la patinoire et ses tarifs ne sont pas confirmés, alors que l'office de tourisme a publié le programme le 2 novembre.
+Pour Noël 2026, Cannes propose deux sorties différentes: le **Village de Noël des Allées de la Liberté**, près de la gare, avec ses chalets, sa patinoire et des animations pour enfants, et le **Village de Noël du Palm Beach**, face à la mer. Le premier ouvre le 27 novembre, le second le 3 décembre. Voici comment choisir sans confondre horaires, gratuité d'entrée et prix des activités.
 
-## Décision du lecteur
-Permettre aux parents de choisir le lieu et le jour, prévoir un budget de patinage selon l'âge et éviter de manquer les ateliers ou le dernier transport.
+## Le marché du centre: chalets, patinoire et Père Noël
 
-## Faits à traiter
-- Marché municipal du 27 novembre au 3 janvier: 11 h-21 h du dimanche au jeudi, 11 h-22 h vendredi et samedi, accès libre, 66 chalets; inauguration le 27 novembre à 19 h.
-- Patinoire de 360 m²: 10 h-21 h, jusqu'à 22 h vendredi et samedi; 5 € normalement, gratuit pour les enfants de 4 à 10 ans de 10 h à 13 h, accompagnants payants. Distinguer les horaires du marché de ceux de la glace.
-- Programme officiel: vérifier les jours de présence du Père Noël, les contes et ateliers, la parade du 23 décembre à 17 h 30 et les animations de La Bocca; retenir seulement ce qui aide les familles.
-- Préserver les horaires et fermetures spécifiques du Palm Beach, les conseils de transport et de retour, les informations poussette, les trois photographies et leurs crédits/licences, ainsi que l'hébergement et les liens internes existants. Ne pas transformer l'entrée libre en gratuité de toutes les activités.
+Le marché municipal occupe les **Allées de la Liberté et le cours Félix-Faure du 27 novembre 2026 au 3 janvier 2027**. Ses **66 chalets** réunissent artisanat, cadeaux et gourmandises. L'accès au village est libre. L'inauguration est annoncée **vendredi 27 novembre à 19 h**.
 
-## Sources de départ
-- Office de tourisme de Cannes, Village de Noël: https://www.palaisdesfestivals.com/offres/village-de-noel-cannes-fr-5232825/
-- Office de tourisme de Cannes, Patinoire: https://www.cannes-france.com/offres/patinoire-cannes-fr-5232826/
-- Office de tourisme de Cannes, Noël à Cannes et programme détaillé: https://www.palaisdesfestivals.com/offres/noel-a-cannes-cannes-fr-5259878/
-- Ville de Cannes, Village de Noël du Palm Beach: https://www.cannes.com/fr/agenda/annee-2026/decembre/village-de-noel-au-palm-beach.html
+Selon la [fiche de l'office de tourisme](https://www.palaisdesfestivals.com/offres/village-de-noel-cannes-fr-5232825/), les horaires du marché sont **11 h à 21 h du dimanche au jeudi** et **11 h à 22 h les vendredis et samedis**. Attention: le texte détaillé du programme mentionne aussi une ouverture à 10 h, contrairement à la grille horaire de la fiche. Pour une visite dès 10 h, vérifiez l'ouverture des chalets auprès de l'organisateur.
 
-## Affiliation
-Conserver la proposition d'appart'hôtel à Cannes centre sur Booking.com, en contrôlant capacité, caution et disponibilité sans annoncer de prix garanti. Aucune billetterie partenaire utile établie pour le marché municipal.
+### Combien coûte la patinoire ?
 
-## Continuations internes
-Conserver le guide de Noël à Nice pour une autre sortie et celui des îles de Lérins pour une excursion distincte; ne pas développer ces sujets ici.
+La [patinoire officielle](https://www.cannes-france.com/offres/patinoire-cannes-fr-5232826/) de **360 m²** est annoncée de **10 h à 21 h du dimanche au jeudi**, et jusqu'à **22 h le vendredi et le samedi**. L'entrée coûte **5 €**, mais elle est **gratuite pour les enfants de 4 à 10 ans, chaque matin de 10 h à 13 h**. Les accompagnateurs restent payants. Par exemple, pour un enfant de 7 ans et un adulte qui patinent ensemble le matin, prévoyez 5 € d'entrée pour l'adulte, hors éventuels frais non précisés.
+
+Pour les familles, le créneau matinal est donc le plus intéressant pour la glace, même si les chalets peuvent ouvrir plus tard. Ne confondez pas l'entrée libre au marché avec la gratuité de la patinoire.
+
+### Quels jours venir pour les animations ?
+
+La fabrique du Père Noël, près de la patinoire, annonce des ateliers **de 14 h 30 à 18 h 30** les **28 et 29 novembre**, les **2, 5, 9, 12, 13 et 16 décembre**, puis **tous les jours du 19 décembre au 3 janvier**. Des contes sont annoncés à **15 h 30 et 17 h 30** les jours d'ouverture de cette animation. Les modalités de participation et les éventuels tarifs des ateliers restent à vérifier.
+
+Pour rencontrer le Père Noël, privilégiez **le 27 novembre de 17 h 30 à 20 h 30**, les **5, 6, 12 et 13 décembre de 14 h 30 à 18 h 30**, ou **du 19 au 24 décembre de 14 h 30 à 18 h 30**. La grande **parade lumineuse du mercredi 23 décembre** part de la rue Meynadier à **17 h 30** et rejoint les Allées de la Liberté; comptez environ **1 h 30** de déambulation. Les horaires et parcours proviennent du [programme officiel de Noël à Cannes](https://www.palaisdesfestivals.com/offres/noel-a-cannes-cannes-fr-5259878/).
+
+Autre possibilité pour les familles du quartier: **place Roubaud à La Bocca**, des ateliers et animations sont annoncés **du 19 au 24 décembre**, notamment le matin de 10 h 30 à 12 h et l'après-midi de 14 h 30 à 18 h 30. Cela permet une sortie sans forcément rejoindre le centre-ville.
+
+Les Allées réaménagées disposent d'une large promenade piétonne et de **toilettes publiques**. Une poussette y est envisageable, même si les chalets et la foule peuvent réduire la place disponible.
+
+## Le Palm Beach: un village de Noël face à la mer
+
+<!-- article-image-body:01 -->
+
+![Vue panoramique de la pointe du Palm Beach et de la baie de Cannes en 2016, hors période de Noël](/images/articles/2026/10/noel-2026-a-cannes-en-famille-marche-du-centre-ou-village-du-palm-beach-body-01.webp)
+
+*Photo: [Bernard DUPONT from FRANCE](https://commons.wikimedia.org/wiki/File:Baie_de_Cannes_-_Flickr_-_berniedup.jpg) - [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Le **Village de Noël du Palm Beach**, place Franklin-Roosevelt, ouvre du **3 décembre 2026 au 3 janvier 2027**. La [Ville de Cannes](https://www.cannes.com/fr/agenda/annee-2026/decembre/village-de-noel-au-palm-beach.html) distingue deux périodes:
+
+- **Du 3 au 16 décembre:** 15 h à 22 h, fermé les **7, 8, 14 et 15 décembre**.
+- **Du 17 décembre au 3 janvier:** 15 h à 22 h, tous les jours.
+
+L'entrée est libre. L'organisateur présente des chalets d'artisanat, des spécialités gourmandes, des concerts, des spectacles et des activités pour enfants. Les âges, les créneaux et les tarifs de chaque animation ne sont pas tous détaillés: **l'entrée gratuite ne rend pas nécessairement les activités et consommations gratuites**.
+
+En bord de mer, prévoyez une couche chaude pour le vent, surtout en fin de journée. Si vous venez avec un bébé ou une personne ayant des besoins d'accessibilité précis, vérifiez avant de partir les sanitaires, l'accès aux chalets et la présence éventuelle d'une table à langer: ces équipements ne sont pas confirmés dans la présentation générale.
+
+## Quel village choisir avec des enfants ?
+
+**Pour une sortie facile depuis la gare**, choisissez le marché du centre. **Pour patiner à moindre coût avec un enfant de 4 à 10 ans**, visez le matin, avant 13 h. **Pour les ateliers ou le Père Noël**, choisissez une date annoncée plutôt que de compter sur une présence quotidienne. **Pour une promenade au bord de la mer en fin d'après-midi**, le Palm Beach est une autre ambiance, mais attention aux quatre jours de fermeture de début décembre.
+
+## Venir sans voiture et anticiper le retour
+
+<!-- article-image-body:03 -->
+
+![Bus de la ligne Palm Impérial en direction du Palm Beach au terminus quai Laubeuf à Cannes en 2024](/images/articles/2026/10/noel-2026-a-cannes-en-famille-marche-du-centre-ou-village-du-palm-beach-body-03.webp)
+
+*Photo: [Manchesterunited1234](https://commons.wikimedia.org/wiki/File:Unvi_Urbis_B9TL_n%C2%B0006_(Palm_Imp%C3%A9rial_-_Ligne_8)_-_(Quai_Laubeuf,_Boulevard_Jean_Hibert)_-_(Cannes,_FR06)_-_24-07-2024_2.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:03 -->
+
+<!-- article-image-body:02 -->
+
+![Hall voyageurs modernisé de la gare SNCF de Cannes photographié en 2021](/images/articles/2026/10/noel-2026-a-cannes-en-famille-marche-du-centre-ou-village-du-palm-beach-body-02.webp)
+
+*Photo: [Horizon06](https://commons.wikimedia.org/wiki/File:20210701_093533_Gare_SNCF_de_Cannes.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Depuis la **gare SNCF de Cannes**, le marché du centre est accessible à pied en direction du Palais des Festivals. Pour le Palm Beach, le bus **Palm Impérial** relie le **quai Laubeuf** à la pointe de la Croisette: il **ne part pas directement de la gare**. La [Ville affiche](https://www.cannes.com/fr/cadre-de-vie/transports/se-deplacer-dans-cannes/prendre-le-bus.html) un billet aller-retour à **3,60 €** et un service de **9 h à 19 h**. Vérifiez les horaires et tarifs actualisés sur Palm Bus avant le départ: une fermeture du village à 22 h ne garantit pas de bus pour rentrer.
+
+Les navettes gratuites de plage sont estivales, pas une solution hivernale confirmée. En cas de pluie ou de vent fort, vérifiez aussi le maintien des animations.
+
+## Dormir près du marché pour prolonger la visite
+
+Pour un week-end sans voiture, le [Nemea Appart Hotel Cannes Palais sur Booking.com](https://www.booking.com/hotel/fr/cannes-palais.fr.html), au centre de Cannes, propose notamment des logements avec kitchenette et, selon la catégorie, une chambre et un canapé-lit. Indiquez **le nombre et l'âge des enfants** avant de réserver: la présence d'un canapé-lit ne garantit pas une capacité de quatre personnes. La fiche consultée précédemment mentionnait une **caution remboursable de 300 €** et **aucun lit bébé ni lit d'appoint**; contrôlez ces conditions, la capacité exacte, les frais et la disponibilité à vos dates.
+
+Pour une autre sortie de fêtes, découvrez notre [guide de Noël à Nice 2026 en famille](https://www.fam-space.fr/articles/evenements/noel-a-nice-2026-en-famille-village-spectacles-gratuits-et-creche-que-choisir/). Pour un séjour plus long, notre [guide des îles de Lérins en famille](https://www.fam-space.fr/articles/voyages/iles-de-lerins-en-famille-quelle-ile-choisir-et-comment-organiser-la-traversee/) aide à préparer une excursion, sous réserve des traversées et de la météo hivernale.
 
 ## Article source exact à préserver et améliorer
 
