@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,84 +14,127 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Yonne
 - Région: Bourgogne-Franche-Comté
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Parc du Moulin à Tan à Sens: une sortie nature gratuite en famille, même en hiver.**
-
-Le parc du Moulin à Tan est un jardin public de Sens (Yonne) avec espaces de promenade, jeux, parcours botanique et serres de collections tropicales. L'angle est de construire une véritable activité familiale d'observation de la nature, en distinguant ce qui se visite toute l'année des animations ponctuelles et des serres dont les conditions d'accès doivent être vérifiées.
-
-## Besoin du lecteur
-Savoir organiser une demi-journée gratuite avec des enfants: activités selon l'âge, promenade et observations saisonnières, jeux, pique-nique, horaires et équipements, puis éventuellement prolonger par une découverte de Sens. Comprendre que l'ouverture du parc ne garantit pas celle des serres ni la tenue d'ateliers.
-
-## Valeur éditoriale
-- Parc gratuit ouvert en novembre-décembre 2026 tous les jours de 8h à 17h30 selon l'office de tourisme; alternative pertinente aux attractions saisonnières fermées.
-- Proposer des mini-défis de découverte adaptés aux familles: chercher des traces d'animaux, reconnaître les feuillages, observer les oiseaux, comparer les plantes de saison, sans promettre d'animations encadrées.
-- Distinguer parc, serres tropicales, jardin botanique, aire de jeux et événements occasionnels; vérifier séparément les horaires des serres avant rédaction.
-- Donner un parcours souple avec option courte en cas de froid et conseils pratiques (toilettes, stationnement, pique-nique), sans inventer d'accessibilité détaillée.
-- Les résultats de recherche donnent surtout une fiche de lieu et des événements datés; un itinéraire familial concret, réutilisable et hivernal apporte une valeur supplémentaire.
-
-## Affiliation
-- **Activité principale:** parc gratuit; aucune billetterie à acheter. Aucune offre précise correspondante confirmée sur GetYourGuide ou Tiqets; ne pas ajouter de billet artificiel.
-- **Hébergement Booking.com:** « Le Laurencin Sens - Le Family - Cœur de ville », appartement familial de deux chambres à Sens (lit double et lits superposés), pour les familles qui prolongent la découverte de Sens sur un week-end. Offre consultable: https://www.booking.com/hotel/fr/le-family-sens.fr.html . Vérifier disponibilité et prix aux dates du séjour, non garantis.
-- Autre option examinée: « Appartement au centre ville de Sens » (Booking.com), https://www.booking.com/hotel/fr/appartement-au-centre-ville-de-sens.html ; moins ciblée que Le Family. Une seule recommandation d'hébergement suffit dans l'article.
-
-## Sources de départ
-- Office de tourisme Sens et Sénonais, fiche du parc, équipements, gratuité et horaires 2026: https://www.tourisme-sens.com/visite-musee/parc-du-moulin-a-tan-et-serres-de-collections-tropicales/
-- Office de tourisme, exemple d'animation naturaliste ponctuelle (28 octobre 2026, terminée; ne pas la présenter comme actuelle): https://www.tourisme-sens.com/agenda/suivre-les-traces-et-indices-de-la-faune/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "activites"
+title: "Parc du Moulin à Tan à Sens: une sortie nature gratuite en famille"
+subtitle: "Jeux, parcours d'orientation et serres tropicales pour profiter du jardin même en hiver"
+summary: "À Sens, le parc du Moulin à Tan se découvre gratuitement toute l'année. Idées de jeux nature, parcours en famille et informations pratiques pour l'hiver."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "parc du Moulin à Tan Sens famille"
+  - "sortie gratuite Yonne enfants"
+  - "serres tropicales Sens horaires"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Sens"
+  department: "Yonne"
+  region: "Bourgogne-Franche-Comté"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Sens et Sénonais Tourisme - Parc du Moulin à Tan et serres"
+    url: "https://www.tourisme-sens.com/visite-musee/parc-du-moulin-a-tan-et-serres-de-collections-tropicales/"
+  - title: "Ville de Sens - Parc du Moulin à Tan"
+    url: "https://www.ville-sens.fr/lieux-equipements/moulin-a-tan/"
+  - title: "Sens et Sénonais Tourisme - Aire de pique-nique"
+    url: "https://www.tourisme-sens.com/aire-pique-nique-et-transport/aire-de-pique-nique-du-parc-du-moulin-a-tan/"
+  - title: "Sens et Sénonais Tourisme - Présentation du parc et horaires des serres"
+    url: "https://en.tourisme-sens.com/visit-museum-park/parc-du-moulin-a-tan-et-serres-de-collections-tropicales/"
+  - title: "Ville de Sens - Réouverture des serres tropicales"
+    url: "https://www.ville-sens.fr/actualite/les-serres-tropicales-hommage-a-bernard-boissier/"
+  - title: "Ville de Sens - Animations nature en février 2026"
+    url: "https://www.ville-sens.fr/evenements-cpt/animations-nature-en-fevrier/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Sens, dans l'Yonne, le parc du Moulin à Tan offre une vraie pause nature sans billet d'entrée. Sur 16 hectares, ce jardin public mêle allées arborées, jeux pour enfants, espaces botaniques, animaux et serres tropicales. Même en hiver, il se prête à une sortie familiale d'une heure ou d'un après-midi, à condition de prévoir une promenade adaptée à la météo.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+Le lieu est installé au **28 chemin de Babie**, au sud de Sens. La [Ville de Sens présente son histoire et ses différents espaces](https://www.ville-sens.fr/lieux-equipements/moulin-a-tan/): son nom rappelle l'ancien moulin lié au travail des peaux, bien avant que le site devienne ce grand jardin labellisé « Jardin remarquable ».
+
+## Une promenade qui devient un jeu de découverte
+
+Inutile de prévoir une animation payante. Les enfants peuvent explorer les différents paysages du parc à leur rythme, en alternant marche et pauses aux aires de jeux.
+
+Pour les plus petits, proposez une chasse aux couleurs: trouver trois nuances de vert, une feuille tombée, une écorce rugueuse et un oiseau à observer sans l'approcher. En hiver, les arbres dégarnis permettent aussi de mieux distinguer les formes des branches et les nids, sans toucher à la végétation.
+
+Avec des enfants plus grands, transformez la promenade en enquête: quelles plantes gardent leurs feuilles, où les oiseaux se rassemblent-ils, quels indices trahissent le passage d'un animal? Les abords des zones humides et les espaces d'observation donnent matière à discuter, sans garantir qu'un animal sera visible à chaque visite. La [fiche touristique du parc](https://www.tourisme-sens.com/visite-musee/parc-du-moulin-a-tan-et-serres-de-collections-tropicales/) mentionne notamment un arboretum, des enclos animaliers, une roseraie et des oiseaux aquatiques.
+
+Pour varier, la Ville signale également des parcours permanents d'orientation. C'est une bonne option pour les enfants qui préfèrent chercher leur chemin plutôt que simplement se promener. Choisissez un circuit court si la température baisse ou si les plus jeunes fatiguent.
+
+## Les serres tropicales: le détour dépaysant
+
+À l'intérieur du parc, les serres de collections tropicales permettent de découvrir des plantes très différentes de celles des jardins de l'Yonne: orchidées, cactus, plantes carnivores, bananiers et végétaux aquatiques. La [Ville de Sens a annoncé leur réouverture après rénovation en 2026](https://www.ville-sens.fr/actualite/les-serres-tropicales-hommage-a-bernard-boissier/).
+
+Pour les enfants, le contraste entre les plantes tropicales et les arbres du parc est une excellente occasion de comparer feuilles, formes et milieux de vie. On peut chercher une plante à épines, une feuille particulièrement large ou une espèce utilisée dans l'alimentation.
+
+**Attention aux horaires distincts.** Selon la [présentation de l'office de tourisme](https://en.tourisme-sens.com/visit-museum-park/parc-du-moulin-a-tan-et-serres-de-collections-tropicales/), les serres ouvrent habituellement de 13h30 à 16h45 du lundi au vendredi, et de 14h à 17h le week-end d'octobre à mars. Ces horaires sont différents de ceux du parc et peuvent évoluer: vérifiez-les avant de vous déplacer spécialement pour les serres, notamment les jours fériés.
+
+## Quel programme prévoir avec les enfants?
+
+**Pour une heure dehors:** commencez par les allées proches de l'entrée, choisissez deux ou trois défis d'observation, puis terminez par l'aire de jeux. C'est la formule la plus souple par temps froid.
+
+**Pour deux heures ou davantage:** prenez le temps de parcourir les différents jardins, faites une pause aux jeux, puis ajoutez les serres si elles sont ouvertes. Un petit carnet permet aux enfants de dessiner leur plante préférée ou de noter leurs découvertes.
+
+**Pour une demi-journée aux beaux jours:** prolongez par un pique-nique et un parcours d'orientation. Le parc dispose de tables, mais la visite reste intéressante sans repas sur place.
+
+Des ateliers de découverte des oiseaux, de dessin ou de jeux de pleine nature sont parfois organisés par la Ville. Ils ne font toutefois pas partie de l'offre quotidienne: le [programme d'animations nature de février 2026](https://www.ville-sens.fr/evenements-cpt/animations-nature-en-fevrier/) en donne un exemple passé, et non un calendrier encore valable. Consultez l'agenda municipal pour les prochaines dates et les éventuelles inscriptions.
+
+## Horaires, accès et équipements
+
+L'entrée du parc est **gratuite**. D'après les [horaires publiés par Sens et Sénonais Tourisme](https://www.tourisme-sens.com/visite-musee/parc-du-moulin-a-tan-et-serres-de-collections-tropicales/), le parc ouvre tous les jours de **8h à 17h30 de novembre à février**, de 8h à 18h30 en mars et octobre, et de 8h à 20h30 d'avril à septembre. En hiver, mieux vaut donc commencer la sortie en début d'après-midi plutôt qu'en fin de journée.
+
+Le parking principal se trouve près de l'entrée du **28 chemin de Babie**. L'office de tourisme indique un accès pour les personnes à mobilité réduite près de l'arrêt de bus et deux places de stationnement réservées. Cela ne signifie pas que chaque allée ou chaque espace du parc présente les mêmes conditions d'accessibilité: pour un besoin particulier, renseignez-vous auprès du site avant la visite.
+
+La [fiche de l'aire de pique-nique](https://www.tourisme-sens.com/aire-pique-nique-et-transport/aire-de-pique-nique-du-parc-du-moulin-a-tan/) confirme la présence de tables, de toilettes publiques, d'eau potable et d'un abri pour les vélos à l'entrée. Les chiens sont admis en laisse. Pour une sortie hivernale, privilégiez des chaussures adaptées aux chemins humides et gardez la possibilité d'écourter la promenade.
+
+Si les enfants ont encore de l'énergie, cette sortie peut aussi servir de première étape avant une découverte du centre historique de Sens. Mais le Moulin à Tan se suffit à lui-même: c'est précisément son intérêt pour une activité familiale simple, gratuite et sans réservation pour la promenade.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -120,4 +163,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
