@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261117-1757-exposition-maurice-denis-collectionneur-a-saint-germain-en-laye-une-vi",
+  "lastProcessedCommit": "c06e2a23999b6f041e833933ffdb8adf01652ddb"
 }
