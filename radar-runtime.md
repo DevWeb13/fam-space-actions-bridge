@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Saint-Nicolas 2026 à Carcassonne: campements médiévaux et marche aux flambeaux en famille"
-subtitle: Les 5 et 6 décembre, une fête médiévale dans les lices et un cortège le samedi soir
-summary: "Les 5 et 6 décembre 2026, Carcassonne fête la Saint-Nicolas dans les lices de la Cité. Campements médiévaux en journée ou marche aux flambeaux le samedi à 18 h 30: horaires, budget, point de départ à confirmer et conseils pratiques avec les enfants."
+subtitle: Les 5 et 6 décembre, campements gratuits de 10 h à 18 h et cortège le samedi soir
+summary: Les 5 et 6 décembre 2026, les campements médiévaux de Carcassonne accueillent gratuitement les familles de 10 h à 18 h. Ateliers distincts, marche aux flambeaux du samedi, budget et départ encore divergent selon les offices de tourisme.
 category: evenements
 location:
   city: Carcassonne
@@ -93,7 +96,7 @@ affiliate:
   destination: Carcassonne
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/saint-nicolas-2026-a-carcassonne-marche-aux-flambeaux-ou-campements-medievaux-avec-les-enfants/index.md
   targetSha: bbae21b44f552258493e7309d65beed9bf150c8d
@@ -120,30 +123,63 @@ radar:
       - saint nicolas carcassonne
 ---
 
-## Mission retenue
-Actualiser le guide familial de la Saint-Nicolas 2026 à Carcassonne, sans créer de nouvel article.
+<!-- article-image-credit -->
+*Photo: [Jean-Christophe BENOIST](https://commons.wikimedia.org/wiki/File:Carcassonne_-_Cit%C3%A9_-_Remparts.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot montre 33 impressions au pic contre 3 récemment, sans cause SEO démontrée. Une lacune indépendante existe: la page officielle de l'office de tourisme présente désormais les ateliers médiévaux réguliers pour les 6-11 ans, de 45 minutes et à 7-12 €, alors que l'article ne permet pas de distinguer clairement ces ateliers payants de l'animation libre des campements du week-end.
+Les **samedi 5 et dimanche 6 décembre 2026**, la Cité médiévale de Carcassonne accueille la Saint-Nicolas dans ses lices. Les campements et leurs animations sont annoncés **de 10 h à 18 h, en entrée libre et gratuite**. Le samedi, une marche aux flambeaux au profit du Téléthon relie la Cité à la Bastide Saint-Louis. Avec de jeunes enfants, la visite des campements en journée est la formule la plus souple; le cortège implique une marche nocturne et un retour à organiser.
 
-## Décision du lecteur
-Permettre aux parents de prévoir une visite gratuite des campements ou une activité payante adaptée à l'âge, puis de décider si le cortège de nuit convient aux enfants.
+## Campements médiévaux: que faire gratuitement ?
 
-## Faits à traiter
-- Vérifier si les ateliers médiévaux payants à 7-12 € sont effectivement proposés les 5 et 6 décembre et préciser qu'il s'agit d'une offre distincte tant que leur intégration au campement n'est pas prouvée.
-- Préserver la divergence officielle sur le départ du cortège: place du Prado selon l'office de tourisme de Carcassonne, parvis du pont-levis/Porte Narbonnaise selon Grand Carcassonne. Ne pas trancher sans confirmation.
-- Conserver les horaires confirmés du cortège (rassemblement 17 h 30, départ 18 h 30, arrivée place Carnot vers 19 h 30-20 h), flambeaux à 4 €, torches électriques enfants à conditions inconnues, conseils poussette et retour depuis la Bastide.
-- Préserver toutes les images, crédits, licences, sources, le lien Booking.com et le maillage vers le guide Carcassonne.
+Les deux jours, des compagnies costumées font découvrir la vie quotidienne au Moyen Âge au pied des remparts: tentes, forge, travail du cuir, gravure, poterie, tressage d'osier, démonstrations de combats et initiations. Les enfants peuvent notamment découvrir les jeux en bois, les blasons et les animations annoncées autour de l'épée en mousse. Troubadours, spectacles de rue et marché d'artisans complètent l'ambiance; un autre marché de créateurs et producteurs est prévu au jardin du Prado.
 
-## Sources de départ
-- Office de tourisme de Carcassonne: https://www.tourisme-carcassonne.fr/temps-forts/la-magie-de-noel/
-- Grand Carcassonne Tourisme: https://www.grand-carcassonne-tourisme.fr/temps-fort/la-magie-de-noel/
+L'[office de tourisme de Carcassonne](https://www.tourisme-carcassonne.fr/temps-forts/la-magie-de-noel/) confirme l'accès gratuit aux campements de **10 h à 18 h**. Cela ne signifie pas que chaque achat ou activité supplémentaire soit offert: les conditions de participation aux différentes initiations du week-end ne sont pas détaillées individuellement. Le **dimanche 6 décembre** permet de profiter de cette fête sans attendre la marche du soir.
 
-## Affiliation
-Conserver l'hébergement familial existant, sans ajout commercial artificiel.
+## Ateliers médiévaux payants: une offre à distinguer de la fête
 
-## Continuations internes
-- Le guide Carcassonne en famille traite déjà les billets du château, les déplacements et le budget d'un séjour de deux jours.
+L'office de tourisme présente aussi des **ateliers médiévaux réguliers pour les 6-11 ans**, d'une durée de **45 minutes**, avec des tarifs de **7 à 12 €**. Parmi les propositions figurent le parcours du chevalier et de la chevaleresse et le tissage d'un bracelet. Les enfants restent sous la responsabilité de leurs accompagnants.
+
+Ces ateliers sont annoncés les mercredis, les week-ends et pendant les vacances scolaires, mais **leur tenue précise les 5 et 6 décembre, leurs créneaux et leurs places disponibles ne sont pas confirmés**. Il ne faut donc pas les confondre avec les animations en accès libre des campements ni compter sur une réservation sans vérification préalable auprès de l'[office de tourisme](https://www.tourisme-carcassonne.fr/temps-forts/la-magie-de-noel/).
+
+## Marche aux flambeaux du samedi 5 décembre: horaires et départ
+
+<!-- article-image-body:01 -->
+
+![Porte Narbonnaise à l'entrée de la Cité médiévale de Carcassonne, photographiée hors cortège](/images/articles/2026/10/saint-nicolas-2026-a-carcassonne-marche-aux-flambeaux-ou-campements-medievaux-avec-les-enfants-body-01.webp)
+
+*Photo: [Joe Mabel](https://commons.wikimedia.org/wiki/File:Carcassonne_-_Porte_Narbonnaise_06.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Les flambeaux sont vendus **4 € l'unité dès 16 h 30**, au profit du Téléthon. Le **rassemblement est prévu à 17 h 30**, le départ à **18 h 30** et l'arrivée **place Carnot vers 19 h 30 à 20 h**. Prévoyez environ une heure à une heure et demie de déambulation, sans compter l'attente avant le départ.
+
+**Le lieu précis du départ reste contradictoire dans les annonces officielles.** L'[office de tourisme de Carcassonne](https://www.tourisme-carcassonne.fr/temps-forts/la-magie-de-noel/) mentionne la **place du Prado**; [Grand Carcassonne Tourisme](https://www.grand-carcassonne-tourisme.fr/temps-fort/la-magie-de-noel/) indique le **parvis du pont-levis devant la Porte Narbonnaise**. Vérifiez le point de rendez-vous définitif avant de venir.
+
+Grand Carcassonne annonce également un spectacle de feu avant le départ et des **torches électriques pour les enfants**. Leur prix éventuel, leur distribution et les conditions d'âge ne sont pas précisés. Ne prévoyez pas de confier un flambeau enflammé à un enfant sans consignes explicites des organisateurs.
+
+## Quel budget prévoir en famille ?
+
+La visite des campements et la participation à l'ambiance de la fête ne nécessitent pas de billet pour le château comtal. Pour le cortège, **deux flambeaux coûtent 8 €**, quatre coûtent **16 €**; ces montants ne préjugent pas du prix des torches électriques. Les ateliers réguliers à 7-12 €, s'ils sont proposés et accessibles à vos dates, constituent une dépense distincte. Prévoyez également un budget libre pour les gourmandises et les achats au marché.
+
+## Poussette, froid et retour depuis la Bastide
+
+<!-- article-image-body:02 -->
+
+![Fontaine de Neptune sur la place Carnot à Carcassonne, lieu d'arrivée annoncé du cortège](/images/articles/2026/10/saint-nicolas-2026-a-carcassonne-marche-aux-flambeaux-ou-campements-medievaux-avec-les-enfants-body-02.webp)
+
+*Photo: [Didier Descouens](https://commons.wikimedia.org/wiki/File:Fontaine_monumentale_(Carcassonne).jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Les lices et les abords de la Cité ont des sols irréguliers: une poussette peut être peu pratique sur les pavés et dans la foule. Un porte-bébé peut convenir aux familles qui en utilisent déjà un. Chaussures adaptées et vêtements chauds sont utiles pour attendre et marcher après la tombée de la nuit.
+
+Le cortège **se termine place Carnot dans la Bastide**, et non près des remparts. Si votre véhicule est stationné près de la Cité, anticipez le trajet retour depuis la ville basse. Le parcours complet et ses aménagements pour poussettes ou fauteuils n'étant pas détaillés, renseignez-vous auprès des organisateurs si l'accessibilité conditionne votre venue.
+
+## Passer la nuit à Carcassonne
+
+Pour les familles venant de loin, dormir sur place permet de profiter des campements le dimanche sans reprendre la route après le cortège. L'[Hôtel du Pont Vieux](https://www.booking.com/hotel/fr/du-pont-vieux.fr.html), rue Trivalle au pied de la Cité, propose notamment une **chambre familiale standard pour quatre personnes**, avec un lit double et deux lits simples. Vérifiez prix, conditions et disponibilités pour les 5 et 6 décembre: aucune chambre n'est garantie.
+
+Pour compléter la sortie par le château comtal et organiser stationnement, repas et visite sur deux jours, consultez [Carcassonne en famille: 1 ou 2 jours, billets et budget à prévoir](/articles/voyages/carcassonne-en-famille-1-ou-2-jours-billets-et-budget-a-prevoir/).
 
 ## Article source exact à préserver et améliorer
 
