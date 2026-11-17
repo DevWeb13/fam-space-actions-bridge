@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,86 +14,123 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Haute-Loire
 - Région: Auvergne-Rhône-Alpes
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Sujet :** la ludothèque intercommunale Ricochet, à Sainte-Sigolène (Haute-Loire), comme solution concrète pour jouer en famille sans multiplier les achats.
-**Titre de travail :** « Ludothèque Ricochet à Sainte-Sigolène : tester, emprunter et partager des jeux en famille ».
-**Angle :** expliquer les usages du lieu, comment choisir entre jeu sur place et emprunt, et comment préparer une première visite selon l'âge des enfants. Ricochet est une ludothèque fixe et itinérante proposant jeux, jouets, conseils et animations, avec plus de 3 000 références selon la commune. Ce n'est ni une boutique de jouets ni un parc d'attractions.
-
-## Besoin du lecteur
-Comprendre ce qu'une ludothèque apporte au quotidien, quels jeux découvrir avec un bébé, un enfant ou un adolescent, comment fonctionne l'emprunt ou la location, à qui s'adresser et quelles conditions vérifier avant de venir. Savoir distinguer accueils réguliers, animations et anniversaires sur réservation, et éviter de se déplacer sur la base d'un horaire ancien.
-
-## Valeur éditoriale
-- Comparer concrètement les usages : tester sur place avant d'acheter, renouveler les jeux à la maison, jouer à plusieurs générations, organiser un anniversaire.
-- Présenter les familles de jeux annoncées par la commune : éveil sensoriel, imitation, construction, jeux de société, et le conseil des ludothécaires.
-- Donner les repères locaux : 14 avenue Marinéo à Sainte-Sigolène, tarifs famille affichés par l'office de tourisme (20 € pour les habitants de la CCMVR, 25 € hors CCMVR, à vérifier pour la période de publication), gratuité annoncée pour les moins d'un an.
-- Les horaires trouvés sur des fiches tierces ne sont pas tous datés de fin 2026 : vérifier les accueils en cours directement auprès de la structure avant d'affirmer des créneaux. Ne pas annoncer de soirée jeux passée comme événement à venir.
-- Apporter une vraie aide au choix et à la préparation plutôt qu'une simple reproduction de la fiche municipale.
-
-## Affiliation
-- **Abritel**, « Maison de vacances Kota Au Mont Des Autruches », à Sainte-Sigolène, jusqu'à cinq personnes selon l'annonce, avec cuisine, jardin et jouets : https://www.abritel.fr/location-vacances/p5796085a . Offre réellement repérée, mais **piste secondaire facultative uniquement** pour une famille déjà en séjour dans le secteur : ne pas suggérer qu'une nuitée est nécessaire pour aller à la ludothèque.
-- **Booking.com**, « La bonne adresse », hébergement à Sainte-Sigolène avec cuisine partagée et parking : https://www.booking.com/hotel/fr/la-bonne-adresse-sainte-sigolene.nl.html . Offre repérée, mais capacité familiale exacte à confirmer avant toute recommandation.
-- **Billetterie / activités :** recherche ciblée GetYourGuide et Tiqets sans offre correspondant à l'accès à Ricochet ; ne pas ajouter de billetterie artificielle.
-- L'activité principale est un service associatif local, sans réservation affiliée pertinente vérifiée. Privilégier l'information utile ; l'hébergement ne doit apparaître que si l'article développe naturellement un séjour dans le secteur.
-
-## Sources de départ
-- Ville de Sainte-Sigolène, présentation et usages de Ricochet : https://www.sainte-sigolene.fr/decouvrir-bouger/culture/ludotheque-ricochet/
-- Office de tourisme Gorges de la Loire, adresse, tarifs famille, modalités d'anniversaire et contact : https://www.gorgesdelaloire.fr/equipement/ludotheque-ricochet/
-- My Haute-Loire, fiche touristique et fermetures exceptionnelles 2026 : https://www.myhauteloire.fr/en/auvergne-activity/ricochet-game-library/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "vie-pratique"
+title: "Ludothèque Ricochet à Sainte-Sigolène: jouer et emprunter en famille"
+subtitle: "Jeux sur place, prêt de jouets, tarifs et conseils pour préparer sa première visite en Haute-Loire"
+summary: "À Sainte-Sigolène, la ludothèque Ricochet permet de découvrir des jeux, de les emprunter et de partager un moment en famille. Voici comment en profiter."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "ludothèque Ricochet Sainte-Sigolène"
+  - "emprunter jeux Haute-Loire"
+  - "ludothèque famille"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Sainte-Sigolène"
+  department: "Haute-Loire"
+  region: "Auvergne-Rhône-Alpes"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Ville de Sainte-Sigolène - Ludothèque Ricochet"
+    url: "https://www.sainte-sigolene.fr/decouvrir-bouger/culture/ludotheque-ricochet/"
+  - title: "Gorges de la Loire - Ludothèque Ricochet"
+    url: "https://www.gorgesdelaloire.fr/equipement/ludotheque-ricochet/"
+  - title: "My Haute-Loire - Ludothèque Ricochet"
+    url: "https://www.myhauteloire.fr/en/auvergne-activity/ricochet-game-library/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Sainte-Sigolène, en Haute-Loire, la ludothèque intercommunale Ricochet propose une autre façon de découvrir les jeux: les essayer sur place, en emprunter pour la maison et profiter des conseils de professionnels. Avec plus de 3 000 jeux et jouets annoncés par la [Ville de Sainte-Sigolène](https://www.sainte-sigolene.fr/decouvrir-bouger/culture/ludotheque-ricochet/), c'est une adresse utile pour varier les activités familiales sans acheter systématiquement de nouveaux jeux.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Jouer sur place ou emprunter: deux usages différents
+
+**Jouer sur place** est idéal pour découvrir un jeu de société avant de l'acheter, essayer une activité adaptée à un enfant ou partager une partie avec plusieurs générations. C'est aussi l'occasion de demander aux ludothécaires une explication des règles ou une suggestion lorsque l'on ne sait pas quoi choisir.
+
+**Emprunter ou louer un jeu** permet de renouveler les activités à la maison sans accumuler les boîtes. Cette formule peut notamment convenir aux jeux qui passionnent les enfants pendant quelques semaines, puis sont délaissés. Ricochet propose bien des jeux à emprunter, mais la durée des prêts, le nombre de jeux autorisés et les conditions d'adhésion sont à confirmer directement auprès de l'équipe avant le premier emprunt.
+
+La structure fonctionne à la fois dans un lieu fixe et de façon itinérante. Pour les interventions hors de Sainte-Sigolène, il faut demander le calendrier correspondant plutôt que supposer qu'un accueil est assuré chaque semaine.
+
+## Quels jeux selon l'âge des enfants ?
+
+Pour les tout-petits, l'espace de découvertes sensorielles permet d'explorer différentes formes, matières et manipulations. Les parents d'un bébé peuvent demander quels jeux conviennent à son stade de développement et lesquels nécessitent une surveillance particulière.
+
+Avec des enfants de maternelle ou de primaire, les jeux d'imitation et de construction offrent de nombreuses possibilités: inventer des histoires, bâtir ensemble, essayer des règles simples. Le meilleur choix n'est pas forcément le jeu affichant l'âge le plus élevé: un jeu facile à expliquer, mais plaisant à plusieurs, peut réunir frères, sœurs et parents.
+
+Pour les plus grands et les adolescents, les jeux de société sont une piste intéressante, notamment pour découvrir des mécaniques nouvelles sans investir dans une boîte coûteuse. La [présentation municipale](https://www.sainte-sigolene.fr/decouvrir-bouger/culture/ludotheque-ricochet/) confirme ces différentes familles de jeux et la présence de ludothécaires pour orienter les visiteurs. Elle ne garantit toutefois pas la disponibilité d'un titre précis: mieux vaut contacter Ricochet si l'on recherche un jeu particulier.
+
+## Anniversaires et animations: bien distinguer les formules
+
+Ricochet organise aussi des animations et propose des anniversaires **sur réservation**. Selon la [fiche de l'office de tourisme Gorges de la Loire](https://www.gorgesdelaloire.fr/equipement/ludotheque-ricochet/), plusieurs formules existent: anniversaire pendant un accueil tout public, après-midi de jeux privatisée ou formule découverte autour d'un escape game.
+
+Ces prestations ne doivent pas être confondues avec l'accueil ordinaire. Avant de promettre une fête à son enfant, il faut vérifier les disponibilités, l'âge conseillé, le nombre de participants, le prix et les modalités de réservation. Les soirées jeux et ateliers à thème sont également ponctuels: ils ne font pas partie des créneaux garantis chaque semaine.
+
+## Adresse, tarifs et horaires: ce qu'il faut vérifier
+
+La ludothèque se trouve **14 avenue Marinéo, 43600 Sainte-Sigolène**. La fiche touristique [Gorges de la Loire](https://www.gorgesdelaloire.fr/equipement/ludotheque-ricochet/) mentionne un parking et affiche les tarifs famille suivants:
+
+- **20 €** pour les familles résidant dans la communauté de communes Marches du Velay-Rochebaron (CCMVR).
+- **25 €** pour les familles hors CCMVR.
+- Une **gratuité pour les moins d'un an** est également annoncée.
+
+Ces montants sont ceux affichés sur la fiche consultée, sans confirmation directe de leur validité à la date de publication. Il faut demander à Ricochet ce qu'ils couvrent exactement, notamment l'accès sur place et l'emprunt, ainsi que les éventuelles conditions particulières pour les bébés.
+
+**Attention aux horaires:** certaines fiches touristiques publient encore des périodes d'ouverture anciennes ou partielles. Les créneaux réguliers de novembre 2026 n'ont pas pu être confirmés de façon suffisamment fiable pour être indiqués ici. Avant de partir, contactez la ludothèque au **04 71 58 47 70**, numéro communiqué par [My Haute-Loire](https://www.myhauteloire.fr/en/auvergne-activity/ricochet-game-library/), ou consultez les informations actualisées de la structure. Demandez également si l'accueil est ouvert pendant les vacances scolaires et si une inscription est nécessaire.
+
+## Préparer une première visite sans mauvaise surprise
+
+Pour une première découverte, il est plus simple de venir avec l'idée de tester quelques jeux que de chercher à parcourir tout le catalogue. Indiquez l'âge des enfants, leurs centres d'intérêt et le temps disponible: l'équipe pourra vous orienter vers des jeux réellement adaptés.
+
+Si votre objectif est d'emprunter, renseignez-vous d'abord sur les justificatifs demandés, les modalités de retour et les éventuelles pièces manquantes à signaler. Pour un bébé, vérifiez les conditions d'accueil et les équipements disponibles; l'accessibilité en poussette n'a pas été confirmée par les sources consultées.
+
+Ricochet peut ainsi servir autant pour une sortie familiale ponctuelle que pour renouveler régulièrement les jeux à la maison. Son intérêt principal tient au choix, à l'essai avant un éventuel achat et aux conseils sur place, plutôt qu'à une activité payante supplémentaire.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -122,4 +159,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
