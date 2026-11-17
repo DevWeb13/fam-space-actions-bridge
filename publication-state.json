@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261117-1402-roquefort-en-famille-decouvrir-les-caves-et-cuisiner-le-fromage-avec-l",
+  "lastProcessedCommit": "c7012c06ed7ef084a5eead4809103a1466b1e75b"
 }
