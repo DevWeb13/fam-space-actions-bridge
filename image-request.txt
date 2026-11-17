@@ -417,3 +417,4 @@ automation/image-hero-20261117-0349-epeautre-carnaval|6fe66bb09aad2e9415cd06326d
 automation/image-hero-20261117-0943-sens-ricochet|543889003fce3fe106c41e3fcaaf6710ad9bdca2
 automation/image-hero-20261117-0943-sens-ricochet|ef7904a00c57518bad52b371fdbcee1695d46547
 automation/image-hero-20261117-1547-cacao-chauvigny|b68bf3ae95dfd22351c043abf58f94edf5f886f9
+automation/image-hero-20261117-1547-cacao-chauvigny|fcd30a2716e000b42ee15214ded0c6c34343d16c
