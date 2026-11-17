@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 3/3
+# Radar Fam Space - actualisation GSC
 
 ## Mission
 
@@ -8,449 +8,1105 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 3/3
-
-Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
-
-Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
-
-Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
-
-Ensuite:
-- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
-- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
-- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
-- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
-- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
-- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
-- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
-- ne force ni longueur ni affiliation.
-
-Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
-
-Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
-- `summary`: contrôles et corrections réellement effectués;
-- `sources`: URLs factuelles revérifiées;
-- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
-
-**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
-
-## Règles partenaires
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-## Candidat validé de la phase précédente
-
----
-title: "Noël 2026 à Chambéry en famille: marchés, parade et ateliers"
-subtitle: Horaires spéciaux des marchés, parade du 27 novembre et bus gratuits avant Noël
-summary: Du 27 novembre 2026 au 3 janvier 2027, Chambéry accueille deux espaces de Noël, une parade, des animations familiales et la Fabrique de Noël. Horaires des fêtes, transports gratuits certains week-ends et conseils pratiques pour venir avec des enfants.
-category: evenements
-location:
-  city: Chambéry
-  department: Savoie
-  region: Auvergne-Rhône-Alpes
-image:
-  src: /images/articles/2026/11/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel.webp
-  alt: Chalets et illuminations du marché de Noël de Chambéry photographiés au crépuscule en décembre 2024, et non l’édition 2026.
-sources:
-  - title: Ville de Chambéry - Programme détaillé Noël 2026
-    url: https://www.chambery.fr/14-le-kiosque.htm?readFile=800
-  - title: Ville de Chambéry - Marché de Noël 2026
-    url: https://www.chambery.fr/agenda/3973/316-marche-de-noel-a-chambery.htm
-  - title: Ville de Chambéry - Transports gratuits et mesures de stationnement
-    url: https://www.chambery.fr/actualite/1705/9-la-ville-de-chambery-et-grand-chambery-deploient-un-plan-d-action-pour-soutenir-les-commercants.htm
-  - title: Ville de Chambéry - Marché et village de Noël 2026
-    url: https://www.chambery.fr/actualite/1695/9-le-marche-de-noel-revient-a-chambery-du-27-novembre-au-3-janvier.htm
-  - title: Ville de Chambéry - Noël 2026 et programmation
-    url: https://www.chambery.fr/493-noel.htm
-  - title: Ville de Chambéry - Parade et arrivée du Père Noël le 27 novembre
-    url: https://www.chambery.fr/agenda/3905/316-noel-a-chambery-lancement-des-illuminations-de-noel-rendez-vous-avec-le-pere-noel-grande-parade-lumineuse-en-centre-ville.htm
-  - title: Ville de Chambéry - Marché artisanal et Fabrique de Noël du 12 décembre
-    url: https://www.chambery.fr/agenda/3638/316-marche-de-noel-artisanal-fabrique-de-noel.htm
-  - title: Ville de Chambéry - Stationnement en centre-ville
-    url: https://www.chambery.fr/390-je-viens-en-centre-ville-en-voiture.htm
-  - title: Ville de Chambéry - Toilettes publiques
-    url: https://www.chambery.fr/307-proprete-et-entretien-de-la-ville.htm
-  - title: Kyriad Chambéry Centre - Curial - Chambres et services
-    url: https://chambery-centre-curial.kyriad.com/fr-fr/
-eventEndsAt: 2027-01-03
-reviewAt: 2026-11-24
-topic:
-  key: evenements|chambery|noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel|2026
-  keywords:
-    - Noël Chambéry 2026 famille
-    - marché de Noël Chambéry 2026 horaires
-    - parade Père Noël Chambéry 27 novembre 2026
-    - village de Noël Palais de Justice Chambéry
-    - Fabrique de Noël Rubanox 12 décembre 2026
-slug: noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel
-status: published
-publishedAt: 2026-11-01T09:37:48.682Z
-updatedAt: null
-readingTime: 4
-affiliate:
-  enabled: true
-  type: travel
-  destination: Chambéry
-radar:
-  schemaVersion: 1
-  phase: 2
-  mode: refresh
-  targetPath: src/routes/articles/evenements/(2026)/(11)/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel/index.md
-  targetSha: f57b4e33baed39e0756472c7b20f6cff5c1bab17
-  targetUrl: /articles/evenements/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel/
-  decision: Choisir le bon jour et le bon moyen de transport pour profiter des marchés et animations de Noël avec des enfants, sans se tromper sur les horaires spéciaux.
-  affiliationPotential: Conserver l'hébergement Kyriad Chambéry Centre - Curial sur Booking.com et ses précautions de capacité familiale; aucune billetterie partenaire pertinente vérifiée.
-  gsc:
-    retrievedAt: 2026-11-16T02:33:37+01:00
-    dataThrough: 2026-11-13
-    signal: needs_query_check
-    basis: "Visibilité récente : 35 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie."
-    peakStart: 2026-11-03
-    peakEnd: 2026-11-05
-    recentStart: 2026-11-11
-    recentEnd: 2026-11-13
-    peakImpressions: 35
-    recentImpressions: 3
-    commonQueries: null
-    positionDelta: null
-    impressionRatio: null
-    focusQueries:
-      - Noël Chambéry 2026 famille
-      - marché de Noël Chambéry 2026 horaires
-      - parade Père Noël Chambéry 27 novembre 2026
-      - village de Noël Palais de Justice Chambéry
-      - Fabrique de Noël Rubanox 12 décembre 2026
----
-
-<!-- article-image-credit -->
-*Photo: [Florian Pépellin](https://commons.wikimedia.org/wiki/File:March%C3%A9_de_No%C3%ABl_de_Chamb%C3%A9ry_(d%C3%A9cembre_2024).JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
-<!-- /article-image-credit -->
-
-Du **27 novembre 2026 au 3 janvier 2027**, Chambéry accueille deux espaces de Noël en centre-ville: un marché de **37 chalets** boulevard de la Colonne et un village gourmand place du Palais de Justice. Pour voir la parade et l'arrivée du Père Noël, retenez le **vendredi 27 novembre**. Pour profiter d'animations familiales et limiter les frais de déplacement, les mercredis et samedis après-midi ainsi que quatre week-ends de bus gratuits sont à regarder. Les familles qui préfèrent les créations artisanales ont aussi rendez-vous le **samedi 12 décembre** à Rubanox.
-
-## Le marché boulevard de la Colonne: chalets et Maison du Père Noël
-
-<!-- article-image-body:01 -->
-
-![Boulevard de la Colonne à Chambéry au printemps 2017, vue de l’emplacement du marché sans chalets de Noël.](/images/articles/2026/11/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel-body-01.webp)
-
-*Photo: [Florian Pépellin](https://commons.wikimedia.org/wiki/File:Boulevard_de_la_Colonne_de_Chamb%C3%A9ry_(avril_2017).JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:01 -->
-
-Entre la place du Centenaire et la place des Éléphants, **37 chalets en bois** présentent notamment des produits locaux et des savoir-faire alpins. La Ville annonce une **Maison du Père Noël** et un espace consacré aux enfants.
-
-D'après le [programme municipal détaillé](https://www.chambery.fr/14-le-kiosque.htm?readFile=800), le marché ouvre normalement **tous les jours de 11 h à 21 h**, sans prolongation générale les vendredis et samedis. Le **27 novembre**, l'inauguration est annoncée à **19 h**.
-
-Les jours particuliers:
-- **24 et 31 décembre:** fermeture à **18 h**;
-- **25 décembre et 1er janvier:** ouverture de **14 h à 18 h**;
-- **3 janvier:** fermeture à **19 h**.
-
-Les créneaux de rencontre avec le Père Noël dans sa maison ne sont pas précisés: sa présence annoncée ne garantit pas une rencontre à l'heure de votre visite. L'accès aux chalets est libre; achats et consommations restent payants.
-
-## Le village du Palais de Justice: restauration et animations
-
-<!-- article-image-body:02 -->
-
-![Place du Palais de Justice et façade du tribunal de Chambéry, avant l’installation du village de Noël.](/images/articles/2026/11/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel-body-02.webp)
-
-*Photo: [Patrick](https://commons.wikimedia.org/wiki/File:Chamb%C3%A9ry_(Savoie)_-_Place_du_Palais_de_Justice_-_Palais_de_Justice.jpg) - [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:02 -->
-
-Sur la **place du Palais de Justice-Robert Badinter**, le village réunit **sept chalets**, un chapiteau dédié à la restauration et aux animations, des concerts et une **Maison du Pain d'Épice**. Un **train enchanté** complète le programme; ses conditions d'accès et son éventuel tarif ne sont pas confirmés dans les informations consultées.
-
-Le village ouvre normalement **du dimanche au mercredi de 11 h à 22 h**, et **du jeudi au samedi de 11 h à 23 h**. Les exceptions publiées sont:
-- **24 décembre:** fermeture à **18 h**;
-- **25 décembre et 1er janvier:** ouverture de **14 h à 18 h**;
-- **31 décembre:** fermeture à **20 h**;
-- **3 janvier:** fermeture à **21 h**.
-
-La Ville annonce aussi des **ateliers et spectacles familiaux gratuits les mercredis et samedis après-midi**, ainsi qu'un calendrier de l'Avent géant et un jeu de piste. Les horaires individuels et les modalités de chaque animation restent à vérifier dans la [programmation de Noël](https://www.chambery.fr/493-noel.htm). Ne présumez pas que toutes les attractions sont gratuites.
-
-Les deux espaces se trouvent dans le centre-ville et peuvent se visiter au cours d'une même promenade.
-
-## Vendredi 27 novembre: la parade et l'arrivée du Père Noël
-
-<!-- article-image-body:03 -->
-
-![Façade de l’Hôtel de Ville de Chambéry, point annoncé pour l’arrivée du Père Noël le 27 novembre 2026.](/images/articles/2026/11/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel-body-03.webp)
-
-*Photo: [Original uploader was Florian Pépellin at fr.wikipedia](https://commons.wikimedia.org/wiki/File:H%C3%B4tel_de_Ville_Chamb%C3%A9ry.jpg) - [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:03 -->
-
-La Ville a publié le déroulé de l'ouverture des festivités, **en accès libre**:
-
-- **17 h:** rendez-vous dans la partie piétonne du faubourg Montmélian, près du gymnase Jules-Ferry, pour le lancement des illuminations;
-- **vers 17 h 15:** départ de la grande parade à travers le centre-ville;
-- **18 h:** arrivée annoncée du Père Noël depuis le clocher de l'Hôtel de Ville, place de l'Hôtel de Ville;
-- **vers 18 h 45:** final de la parade place du Palais de Justice-Robert Badinter, avant l'inauguration du marché à **19 h**.
-
-Avec de jeunes enfants, mieux vaut choisir un point du parcours plutôt que tenter de suivre tout le cortège.
-
-## Samedi 12 décembre: marché artisanal et Fabrique de Noël à Rubanox
-
-<!-- article-image-body:04 -->
-
-![Bâtiment principal de l’ancienne usine Rubanox à Chambéry photographié en 2016, lieu du marché artisanal.](/images/articles/2026/11/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel-body-04.webp)
-
-*Photo: [Florian Pépellin](https://commons.wikimedia.org/wiki/File:Ancienne_usine_Rubanox_de_Chamb%C3%A9ry_(1).JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:04 -->
-
-De **10 h à 18 h**, le collectif Wom'Bat réunit environ **50 artistes et artisans** à **Rubanox, 235 avenue Alsace-Lorraine**. Une buvette et des foodtrucks sont annoncés.
-
-La **Fabrique de Noël** propose des ateliers de macramé, poterie, marqueterie, aquarelle et décoration. **L'entrée au marché est libre; les ateliers sont payants et sur inscription.** Leurs tarifs, âges minimums et horaires individuels ne figurent pas dans la fiche municipale consultée. Confirmez ces éléments auprès de l'organisateur avant de compter sur une place pour votre enfant.
-
-Rubanox se trouve hors des deux places du centre: prévoyez-le comme une étape distincte, surtout avec une poussette.
-
-## Venir gratuitement en bus certains week-ends
-
-Les bus **Synchro Mobilités seront gratuits** pendant quatre week-ends avant Noël: **28-29 novembre, 5-6 décembre, 12-13 décembre et 19-20 décembre 2026**, selon la [Ville et Grand Chambéry](https://www.chambery.fr/actualite/1705/9-la-ville-de-chambery-et-grand-chambery-deploient-un-plan-d-action-pour-soutenir-les-commercants.htm). Cette gratuité ne doit pas être extrapolée aux autres dates.
-
-Depuis la gare de **Chambéry-Challes-les-Eaux**, le centre est accessible à pied en une quinzaine de minutes à titre indicatif, davantage avec des enfants ou des bagages. Des bus desservent également le centre.
-
-En voiture, les parkings **du Château et de la Falaise sont gratuits le samedi de 14 h à 19 h**. La Ville annonce également le **parking Ravet gratuit les samedis après-midi et les dimanches du 28 novembre à la fin de l'année**. Vérifiez les horaires précis, les dates et les conditions de sortie avant de stationner: ces mesures ne concernent pas tous les parkings.
-
-## Poussettes et pauses avec un bébé
-
-<!-- article-image-body:05 -->
-
-![Façade rénovée de la gare de Chambéry-Challes-les-Eaux en 2019, point d’arrivée pour rejoindre le centre à pied.](/images/articles/2026/11/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel-body-05.webp)
-
-*Photo: [Baptiste Barbier-Kezel](https://commons.wikimedia.org/wiki/File:Gare_de_Chamb%C3%A9ry-Challes-les-Eaux.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:05 -->
-
-Le centre-ville est en grande partie piéton. Les pavés de la vieille ville peuvent être irréguliers; l'affluence du 27 novembre peut également compliquer les déplacements en poussette. L'accessibilité précise du chapiteau et des ateliers de Rubanox n'est pas confirmée par les annonces consultées.
-
-La Ville recense **18 toilettes publiques** sur une [carte consultable en ligne](https://www.chambery.fr/307-proprete-et-entretien-de-la-ville.htm). En revanche, les annonces de Noël ne confirment pas de table à langer ni d'espace bébé dédié dans les installations temporaires.
-
-## Dormir à Chambéry si la sortie devient un week-end
-
-Le **Kyriad Chambéry Centre - Curial**, au **371 rue de la République**, annonce des **chambres familiales jusqu'à quatre personnes** et une **kitchenette dans chaque chambre**. Pour vérifier les couchages, les disponibilités et le tarif total à vos dates, [consultez le Kyriad Chambéry Centre - Curial sur Booking.com](https://www.booking.com/hotel/fr/kyriad-chambery-centre.fr.html) en indiquant l'âge des enfants. Toutes les catégories de chambres n'accueillent pas quatre personnes.
-
-Pour ajouter des visites à votre séjour sans les confondre avec les festivités temporaires, notre guide [Chambéry en famille: un week-end entre éléphants et sciences](/articles/voyages/chambery-en-famille-un-week-end-entre-elephants-et-sciences/) détaille la vieille ville, Eurêka et le Musée Savoisien.
-
-## Article source exact à préserver et améliorer
-
-Chemin: src/routes/articles/evenements/(2026)/(11)/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel/index.md
-
----
-title: "Noël 2026 à Chambéry en famille: marchés, parade et ateliers"
-subtitle: Horaires des deux marchés, arrivée du Père Noël le 27 novembre et Fabrique de Noël le 12 décembre
-summary: Du 27 novembre 2026 au 3 janvier 2027, Chambéry accueille un marché et un village de Noël. Une parade gratuite ouvre les festivités le 27 novembre; le 12 décembre, Rubanox propose un marché artisanal et des ateliers payants sur inscription. Les repères utiles avec des enfants.
-category: evenements
-location:
-  city: Chambéry
-  department: Savoie
-  region: Auvergne-Rhône-Alpes
-image:
-  src: "/images/articles/2026/11/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel.webp"
-  alt: "Chalets et illuminations du marché de Noël de Chambéry photographiés au crépuscule en décembre 2024, et non l’édition 2026."
-sources:
-  - title: Ville de Chambéry - Marché et village de Noël 2026
-    url: https://www.chambery.fr/actualite/1695/9-le-marche-de-noel-revient-a-chambery-du-27-novembre-au-3-janvier.htm
-  - title: Ville de Chambéry - Noël 2026 et programmation
-    url: https://www.chambery.fr/493-noel.htm
-  - title: Ville de Chambéry - Parade et arrivée du Père Noël le 27 novembre
-    url: https://www.chambery.fr/agenda/3905/316-noel-a-chambery-lancement-des-illuminations-de-noel-rendez-vous-avec-le-pere-noel-grande-parade-lumineuse-en-centre-ville.htm
-  - title: Ville de Chambéry - Marché artisanal et Fabrique de Noël du 12 décembre
-    url: https://www.chambery.fr/agenda/3638/316-marche-de-noel-artisanal-fabrique-de-noel.htm
-  - title: Ville de Chambéry - Stationnement en centre-ville
-    url: https://www.chambery.fr/390-je-viens-en-centre-ville-en-voiture.htm
-  - title: Ville de Chambéry - Toilettes publiques
-    url: https://www.chambery.fr/307-proprete-et-entretien-de-la-ville.htm
-  - title: Kyriad Chambéry Centre - Curial - Chambres et services
-    url: https://chambery-centre-curial.kyriad.com/fr-fr/
-eventEndsAt: 2027-01-03
-reviewAt: 2026-11-24
-topic:
-  key: evenements|chambery|noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel|2026
-  keywords:
-    - Noël Chambéry 2026 famille
-    - marché de Noël Chambéry 2026 horaires
-    - parade Père Noël Chambéry 27 novembre 2026
-    - village de Noël Palais de Justice Chambéry
-    - Fabrique de Noël Rubanox 12 décembre 2026
-slug: noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel
-status: published
-publishedAt: 2026-11-01T09:37:48.682Z
-updatedAt: null
-readingTime: 4
-affiliate:
-  enabled: true
-  type: travel
-  destination: Chambéry
----
-<!-- article-image-credit -->
-*Photo: [Florian Pépellin](https://commons.wikimedia.org/wiki/File:March%C3%A9_de_No%C3%ABl_de_Chamb%C3%A9ry_(d%C3%A9cembre_2024).JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
-<!-- /article-image-credit -->
-
-Du **27 novembre 2026 au 3 janvier 2027**, Chambéry accueille deux espaces de Noël en centre-ville: un marché de 37 chalets boulevard de la Colonne et un village gourmand place du Palais de Justice. Pour voir la parade et l'arrivée du Père Noël, retenez le **vendredi 27 novembre**. Les familles qui préfèrent les créations artisanales ont aussi rendez-vous le **samedi 12 décembre** à Rubanox.
-
-## Le marché boulevard de la Colonne: chalets et Maison du Père Noël
-
-<!-- article-image-body:01 -->
-
-![Boulevard de la Colonne à Chambéry au printemps 2017, vue de l’emplacement du marché sans chalets de Noël.](/images/articles/2026/11/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel-body-01.webp)
-
-*Photo: [Florian Pépellin](https://commons.wikimedia.org/wiki/File:Boulevard_de_la_Colonne_de_Chamb%C3%A9ry_(avril_2017).JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:01 -->
-
-Entre la place du Centenaire et la place des Éléphants, **37 chalets en bois** présentent notamment des produits locaux et des savoir-faire alpins. La Ville annonce une **Maison du Père Noël** et un espace consacré aux enfants.
-
-**Horaires:** tous les jours de **11 h à 21 h**, jusqu'à **22 h les vendredis et samedis**, du 27 novembre au 3 janvier. Les créneaux de rencontre avec le Père Noël dans sa maison ne sont pas encore précisés: sa présence annoncée ne garantit pas une rencontre à l'heure de votre visite.
-
-Aucune billetterie n'est annoncée pour parcourir les chalets. Les dépenses dépendent des achats et des consommations; leurs prix ne sont pas publiés dans le programme municipal.
-
-## Le village du Palais de Justice: restauration et animations
-
-<!-- article-image-body:02 -->
-
-![Place du Palais de Justice et façade du tribunal de Chambéry, avant l’installation du village de Noël.](/images/articles/2026/11/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel-body-02.webp)
-
-*Photo: [Patrick](https://commons.wikimedia.org/wiki/File:Chamb%C3%A9ry_(Savoie)_-_Place_du_Palais_de_Justice_-_Palais_de_Justice.jpg) - [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:02 -->
-
-Sur la **place du Palais de Justice-Robert Badinter**, le village réunit **sept chalets**, un chapiteau dédié à la restauration et aux animations, des concerts et une **Maison du pain d'épices**. C'est l'espace à privilégier pour une pause gourmande ou une sortie en début de soirée.
-
-**Horaires:** du 27 novembre au 3 janvier, tous les jours de **11 h à 21 h**, jusqu'à **23 h les vendredis et samedis**. Le marché du boulevard ferme une heure plus tôt ces deux soirs.
-
-La programmation détaillée des concerts et des autres animations reste à paraître. Les deux espaces sont dans le centre-ville et peuvent se visiter au cours d'une même promenade.
-
-## Vendredi 27 novembre: la parade et l'arrivée du Père Noël
-
-<!-- article-image-body:03 -->
-
-![Façade de l’Hôtel de Ville de Chambéry, point annoncé pour l’arrivée du Père Noël le 27 novembre 2026.](/images/articles/2026/11/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel-body-03.webp)
-
-*Photo: [Original uploader was Florian Pépellin at fr.wikipedia](https://commons.wikimedia.org/wiki/File:H%C3%B4tel_de_Ville_Chamb%C3%A9ry.jpg) - [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:03 -->
-
-La Ville a publié le déroulé de l'ouverture des festivités, **en accès libre**:
-
-- **17 h:** rendez-vous dans la partie piétonne du faubourg Montmélian, près du gymnase Jules-Ferry, pour le lancement des illuminations.
-- **Vers 17 h 15:** départ de la grande parade à travers le centre-ville.
-- **18 h:** arrivée annoncée du Père Noël depuis le clocher de l'Hôtel de Ville, place de l'Hôtel de Ville.
-- **Vers 18 h 45:** final de la parade place du Palais de Justice-Robert Badinter; inauguration du marché annoncée **à partir de 19 h environ**.
-
-Avec de jeunes enfants, mieux vaut choisir un point du parcours plutôt que tenter de suivre tout le cortège. Ces horaires concernent **le 27 novembre**, pas les rencontres habituelles à la Maison du Père Noël, dont les créneaux restent à préciser.
-
-## Samedi 12 décembre: marché artisanal et Fabrique de Noël à Rubanox
-
-<!-- article-image-body:04 -->
-
-![Bâtiment principal de l’ancienne usine Rubanox à Chambéry photographié en 2016, lieu du marché artisanal.](/images/articles/2026/11/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel-body-04.webp)
-
-*Photo: [Florian Pépellin](https://commons.wikimedia.org/wiki/File:Ancienne_usine_Rubanox_de_Chamb%C3%A9ry_(1).JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:04 -->
-
-De **10 h à 18 h**, le collectif Wom'Bat réunit environ **50 artistes et artisans** à **Rubanox, 235 avenue Alsace-Lorraine**. Une buvette et des foodtrucks sont annoncés.
-
-La **Fabrique de Noël** propose des ateliers de macramé, poterie, marqueterie, aquarelle et décoration. **L'entrée au marché est libre; les ateliers sont payants et sur inscription.** Leurs tarifs, âges minimums et horaires individuels ne figurent pas dans la fiche municipale consultée. Confirmez ces éléments auprès de l'organisateur avant de compter sur une place pour votre enfant.
-
-Rubanox se trouve hors des deux places du centre: prévoyez-le comme une étape distincte, surtout avec une poussette.
-
-## Accès, poussettes et pauses avec un bébé
-
-<!-- article-image-body:05 -->
-
-![Façade rénovée de la gare de Chambéry-Challes-les-Eaux en 2019, point d’arrivée pour rejoindre le centre à pied.](/images/articles/2026/11/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel-body-05.webp)
-
-*Photo: [Baptiste Barbier-Kezel](https://commons.wikimedia.org/wiki/File:Gare_de_Chamb%C3%A9ry-Challes-les-Eaux.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:05 -->
-
-Le centre-ville est en grande partie piéton. Les pavés de la vieille ville peuvent être irréguliers; l'affluence du 27 novembre peut également compliquer les déplacements en poussette. L'accessibilité précise du chapiteau et des ateliers de Rubanox n'est pas confirmée par les annonces consultées.
-
-Depuis la gare de **Chambéry-Challes-les-Eaux**, le centre est accessible à pied en une quinzaine de minutes à titre indicatif, davantage avec des enfants ou des bagages. Des bus desservent également le centre.
-
-En voiture, la Ville indique que les parkings **du Château et de la Falaise sont gratuits le samedi de 14 h à 19 h**. Cette gratuité ne s'applique pas à tous les parkings ni à toutes les heures: consultez les [conditions de stationnement de Chambéry](https://www.chambery.fr/390-je-viens-en-centre-ville-en-voiture.htm) pour votre visite.
-
-La Ville recense **18 toilettes publiques** sur une [carte consultable en ligne](https://www.chambery.fr/307-proprete-et-entretien-de-la-ville.htm). En revanche, les annonces de Noël ne confirment pas de table à langer ni d'espace bébé dédié dans les installations temporaires.
-
-## Dormir à Chambéry si la sortie devient un week-end
-
-Le **Kyriad Chambéry Centre - Curial**, au **371 rue de la République**, annonce des **chambres familiales jusqu'à quatre personnes** et une **kitchenette dans chaque chambre**. Pour vérifier les couchages, les disponibilités et le tarif total à vos dates, [consultez le Kyriad Chambéry Centre - Curial sur Booking.com](https://www.booking.com/hotel/fr/kyriad-chambery-centre.fr.html) en indiquant l'âge des enfants. Toutes les catégories de chambres n'accueillent pas quatre personnes.
-
-Pour ajouter des visites à votre séjour sans les confondre avec les festivités temporaires, notre guide [Chambéry en famille: un week-end entre éléphants et sciences](/articles/voyages/chambery-en-famille-un-week-end-entre-elephants-et-sciences/) détaille la vieille ville, Eurêka et le Musée Savoisien.
-
-## Contexte éditorial ciblé pour le maillage et les doublons
-
-### Articles proches préparés mécaniquement
-
-- /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | Marché de Noël d'Amiens 2026 en famille: horaires, Père Noël et patinoire | evenements | Amiens, Somme, Hauts-de-France
-- /articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/ | Marché de Noël 100 % Côte-d’Or à Dijon 2026: horaires, spectacles et Père Noël | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
-- /articles/maison/emprunter-un-broyeur-a-grand-chambery-electrique-ou-thermique-que-choisir/ | Emprunter un broyeur à Grand Chambéry: électrique ou thermique, que choisir? | maison | Chambéry, Savoie, Auvergne-Rhône-Alpes
-- /articles/voyages/chambery-en-famille-un-week-end-entre-elephants-et-sciences/ | Chambéry en famille: un week-end entre éléphants et sciences | voyages | Chambéry, Savoie, Auvergne-Rhône-Alpes
-- /articles/sorties/tresor-verney-chambery-enfants-2026/ | Le trésor du Verney à Chambéry: les séances 2026 sont terminées | sorties | Chambéry, Savoie, Auvergne-Rhône-Alpes
-- /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
-- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
-- /articles/evenements/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel/ | Noël 2026 à Chambéry en famille: marchés, parade et ateliers | evenements | Chambéry, Savoie, Auvergne-Rhône-Alpes
-- /articles/vie-pratique/carte-okay-savoie-2026-2027-comment-obtenir-et-utiliser-les-80-du-collegien/ | Carte OKAY Savoie 2026-2027: comment obtenir et utiliser les 80 € du collégien | vie-pratique | Chambéry, Savoie, Auvergne-Rhône-Alpes
-- /articles/voyages/valmorel-et-doucy-sans-ski-avec-des-enfants-luge-snowtubing-et-sejour-d-hiver/ | Valmorel et Doucy sans ski avec des enfants: luge, snowtubing et séjour d'hiver | voyages | Les Avanchers-Valmorel, Savoie, Auvergne-Rhône-Alpes
-- /articles/sorties/les-menuires-sans-ski-en-famille-luges-piscines-et-balades-en-hiver/ | Les Menuires sans ski en famille: luges, piscines et balades en hiver | sorties | Les Belleville, Savoie, Auvergne-Rhône-Alpes
-- /articles/bons-plans/ski-a-aussois-en-famille-en-2026-2027-forfaits-et-budget/ | Ski à Aussois en famille en 2026-2027: forfaits et budget | bons-plans | Aussois, Savoie, Auvergne-Rhône-Alpes
-- /articles/parentalite/montchavin-les-coches-avec-un-bebe-garderie-horaires-et-sejour-d-hiver/ | Montchavin-Les Coches avec un bébé: garderie, horaires et séjour d'hiver | parentalite | Montchavin-Les Coches, Savoie, Auvergne-Rhône-Alpes
-- /articles/cuisine/visiter-une-cooperative-de-beaufort-avec-des-enfants-a-val-cenis/ | Visiter une coopérative de Beaufort avec des enfants à Val Cenis | cuisine | Val Cenis, Savoie, Auvergne-Rhône-Alpes
-- /articles/activites/croisiere-a-chanaz-en-famille-tarifs-2026-duree-et-conseils/ | Croisière à Chanaz en famille: tarifs 2026, durée et conseils | activites | Chanaz, Savoie, Auvergne-Rhône-Alpes
-- /articles/evenements/grand-bivouac-2026-a-albertville-en-famille-preparer-sa-journee-au-festival/ | Grand Bivouac 2026 à Albertville en famille: préparer sa journée au festival | evenements | Albertville, Savoie, Auvergne-Rhône-Alpes
-- /articles/evenements/niepce-et-apres-une-exposition-photo-a-decouvrir-en-famille-a-chalon-sur-saone/ | Niépce, et après ? Une exposition photo à découvrir en famille à Chalon-sur-Saône | evenements | Chalon-sur-Saône, Saône-et-Loire, Bourgogne-Franche-Comté
-- /articles/evenements/noel-2026-au-puy-du-fou-en-famille-spectacles-et-visite-en-hiver/ | Noël 2026 au Puy du Fou en famille: spectacles et visite en hiver | evenements | Les Epesses, Vendée, Pays de la Loire
-- /articles/evenements/exposition-papillons-a-lyon-visiter-le-musee-des-confluences-en-famille/ | Exposition Papillons à Lyon: visiter le musée des Confluences en famille | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/evenements/festival-du-court-metrage-de-clermont-ferrand-2027-en-famille-quelles-seances-choisir/ | Festival du court métrage de Clermont-Ferrand 2027 en famille: quelles séances choisir? | evenements | Clermont-Ferrand, Puy-de-Dôme, Auvergne-Rhône-Alpes
-- /articles/evenements/carnaval-de-guyane-2027-en-famille-preparer-ses-premieres-sorties/ | Carnaval de Guyane 2027 en famille: préparer ses premières sorties | evenements | Guyane
-
-### Historique Radar lié
-
-- refresh | /articles/vie-pratique/carte-okay-savoie-2026-2027-comment-obtenir-et-utiliser-les-80-du-collegien/ | 2026-10-06T08:50:37.159Z
-- opportunity | /articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/ | 2026-10-29T14:26:32.277Z
-- opportunity | /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | 2026-10-19T13:54:07.745Z
-- opportunity | /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | 2026-10-29T00:28:19.695Z
-- opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
-- opportunity | /articles/evenements/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel/ | 2026-11-01T09:37:48.790Z
-- refresh | /articles/bons-plans/ski-a-aussois-en-famille-en-2026-2027-forfaits-et-budget/ | 2026-11-08T10:32:11.067Z
-
-### Phases 2 et 3
-
-Écris `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées et le corps complet de l'article. **Ne recopie pas les métadonnées inchangées et n'ajoute aucun bloc `radar`.** Le script normalise la syntaxe sûre de la requête, reprend mécaniquement les autres métadonnées et le bloc Radar de la phase précédente, puis incrémente la phase.
-
-Pour un refresh, le script conserve de lui-même les champs protégés de l'article source. Pour une opportunity, il conserve la catégorie, le territoire et le slug choisis en phase 1.
-
-En phase 3 seulement, ajoute `radarReview` avec `summary`, `sources` et, pour un refresh, `regressionCheck`. Une seule correction factuelle vérifiée peut être suffisante.
-
-## Écriture autorisée
-
-N'effectue aucune plomberie Git. Ne crée, ne nomme et ne supprime aucune branche Radar; ne choisis aucun SHA; ne modifie aucun fichier de DevWeb13/fam-space-qwik.
-
-Écris uniquement radar-request.md sur la branche main de DevWeb13/fam-space-actions-bridge selon le format fourni dans ce runtime. Le workflow GitHub se charge du reste. Une fois cette requête écrite, termine le passage.
+## Snapshot GSC quotidien
+
+Le cache compact est `radar-gsc-snapshot.json` sur `main` de `DevWeb13/fam-space-actions-bridge`. Il ne contient jamais les lignes GSC brutes.
+
+Cette tâche est séparée de la sélection éditoriale. **S'il n'existe aucune branche Radar active et que le snapshot doit être renouvelé, actualise uniquement le snapshot puis termine le passage. Ne choisis pas de mission dans la même exécution.** Le passage horaire suivant effectuera la phase 1 avec le snapshot prêt.
+
+Le snapshot est réutilisable lorsqu'il a `schemaVersion: 1`, a été généré le jour courant en Europe/Paris et que `dataThrough` n'a pas plus de sept jours de retard.
+
+Lorsqu'un nouveau snapshot est nécessaire, utilise Windsor.ai avec le compte `sc-domain:fam-space.fr`, connector `searchconsole`, `include_fresh_data: false`. **Chaque appel `get_data` Search Analytics doit filtrer explicitement `search_type = web` avec `filters: [["search_type","eq","web"]]`.** Récupère 28 jours jusqu'à la dernière journée consolidée:
+
+- une lecture `date, clicks, impressions` pour déterminer la fin réelle;
+- quatre lectures consécutives de sept jours `date, page, clicks, impressions, position`;
+- appelle `buildRadarShortlist(pageRows, catalog.articles, { now, siteRows, from, history: catalog.history })` pour identifier les cinq premiers candidats. Pour chacun, récupère les requêtes de sa page exacte sur les deux fenêtres `peakStart..peakEnd` et `recentStart..recentEnd`, avec `search_type = web` (dix appels de requêtes au maximum).
+- regroupe les réponses par article : `queryPairs = [{ url, peakQueries, recentQueries }]`. Appelle ensuite **`buildRadarSnapshot(pageRows, catalog.articles, { now, siteRows, from, history: catalog.history, warnings }, queryPairs)`**, du module embarqué. Écris son résultat directement dans `radar-gsc-snapshot.json`, sans recopier les métriques manuellement.
+- pour les autres articles, le diagnostic reste `needs_query_check` avec des mesures `null`. Si une lecture échoue, signale-le sans inventer de chiffres. Ne confonds jamais « pas de donnée » et zéro.
+
+Utilise uniquement le module Radar embarqué pour présélectionner les candidats et construire le snapshot. La fonction `buildRadarSnapshot` centralise la mise en forme et le diagnostic par article. Une réponse Windsor est considérée complète lorsque `status: done`, que `data` est un tableau et que `total_rows` correspond à `data.length`, sans indicateur explicite de troncature. **Un nombre rond de lignes, notamment 1 500, n'est jamais à lui seul une preuve de plafonnement et ne doit pas arrêter Radar.** Découpe seulement la période si Windsor signale réellement une réponse incomplète/tronquée, si `total_rows` ne correspond pas au nombre de lignes reçues, ou si `unwrapRows` refuse la réponse, notamment à son seuil conservateur de 5 000 lignes par réponse. Un 429, un refus d'accès ou un plafond réellement non résolu termine le passage. Maximum 50 appels `get_data`. Les réponses brutes restent temporaires.
+
+Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlist `refresh` avec ses diagnostics compacts, `strongPages`, `excluded` et les avertissements utiles.
+
+## Snapshot actuellement disponible
+
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-16T02:33:37+01:00",
+  "dataThrough": "2026-11-13",
+  "from": "2026-10-17",
+  "refresh": [
+    {
+      "url": "/articles/evenements/monstrozoo-2026-2027-a-beauval-enquete-libre-ou-visite-guidee-en-famille/",
+      "title": "MonstroZoo 2026-2027 à Beauval: parcours inclus, visite guidée et tarifs",
+      "category": "evenements",
+      "publishedAt": "2026-10-22T15:49:20.710Z",
+      "location": {
+        "city": "Saint-Aignan",
+        "department": "Loir-et-Cher",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 25,
+      "rapidDrop": true,
+      "peakStart": "2026-10-28",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 60,
+      "recentImpressions": 9,
+      "score": 188,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 60 impressions sur trois jours, puis 9 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 4,
+      "focusQueries": [
+        "monstrozoo",
+        "monstrozoo 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille/",
+      "title": "Luminéales du Thabor 2026 à Rennes: tarifs, horaires et visite en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-31T19:33:18.221Z",
+      "location": {
+        "city": "Rennes",
+        "department": "Ille-et-Vilaine",
+        "region": "Bretagne"
+      },
+      "ageDays": 16,
+      "rapidDrop": true,
+      "peakStart": "2026-11-02",
+      "peakEnd": "2026-11-04",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 63,
+      "recentImpressions": 7,
+      "score": 168,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 63 impressions sur trois jours, puis 7 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "illumination thabor rennes 2026",
+        "les lumineales",
+        "illumination thabor 2026",
+        "ou"
+      ]
+    },
+    {
+      "url": "/articles/evenements/festival-enfantillages-2026-a-valbonne-spectacles-gratuits-et-cinema-selon-l-age/",
+      "title": "Festival Enfantillages 2026 à Valbonne: spectacles gratuits et cinéma en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-26T03:35:31.536Z",
+      "location": {
+        "city": "Valbonne",
+        "department": "Alpes-Maritimes",
+        "region": "Provence-Alpes-Côte d'Azur"
+      },
+      "ageDays": 21,
+      "rapidDrop": true,
+      "peakStart": "2026-10-26",
+      "peakEnd": "2026-10-28",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 40,
+      "recentImpressions": 4,
+      "score": 143,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 40 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "enfantillage valbonne 2026",
+        "halloween 2026 valbonne"
+      ]
+    },
+    {
+      "url": "/articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/",
+      "title": "Traîneau flottant de Noël à Metz 2026: dates, horaires et embarquement",
+      "category": "evenements",
+      "publishedAt": "2026-11-03T03:34:06.455Z",
+      "location": {
+        "city": "Metz",
+        "department": "Moselle",
+        "region": "Grand Est"
+      },
+      "ageDays": 13,
+      "rapidDrop": true,
+      "peakStart": "2026-11-05",
+      "peakEnd": "2026-11-07",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 47,
+      "recentImpressions": 0,
+      "score": 141,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 47 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": []
+    },
+    {
+      "url": "/articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/",
+      "title": "Noël 2026 à Toulon en famille: marché, patinoire et horaires",
+      "category": "evenements",
+      "publishedAt": "2026-10-31T10:28:17.323Z",
+      "location": {
+        "city": "Toulon",
+        "department": "Var",
+        "region": "Provence-Alpes-Côte d’Azur"
+      },
+      "ageDays": 16,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 47,
+      "recentImpressions": 2,
+      "score": 135,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 47 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "marche noel toulon 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/",
+      "title": "Noël de Casse-Noisette 2026 à Pierrefonds: visites, dates et tarifs en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-27T07:35:50.368Z",
+      "location": {
+        "city": "Pierrefonds",
+        "department": "Oise",
+        "region": "Hauts-de-France"
+      },
+      "ageDays": 20,
+      "rapidDrop": true,
+      "peakStart": "2026-10-28",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 42,
+      "recentImpressions": 0,
+      "score": 126,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 42 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël Casse-Noisette Pierrefonds 2026",
+        "château de Pierrefonds Noël enfants",
+        "visites féérie Pierrefonds",
+        "Casse-Noisette aventure à jouer"
+      ]
+    },
+    {
+      "url": "/articles/evenements/festival-de-la-sainte-barbe-2026-a-lens-lievin-quelle-soiree-choisir-avec-les-enfants/",
+      "title": "Festival de la Sainte-Barbe 2026 à Lens-Liévin: programme en famille du 4 au 6 décembre",
+      "category": "evenements",
+      "publishedAt": "2026-10-27T04:28:30.904Z",
+      "location": {
+        "city": "Lens",
+        "department": "Pas-de-Calais",
+        "region": "Hauts-de-France"
+      },
+      "ageDays": 20,
+      "rapidDrop": true,
+      "peakStart": "2026-10-28",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 43,
+      "recentImpressions": 4,
+      "score": 117,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 43 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "festival Sainte-Barbe Lens 2026",
+        "Sainte-Barbe Lens-Liévin en famille",
+        "spectacle feu Lens 4 décembre 2026",
+        "Sainte-Barbe Loos-en-Gohelle Oignies 5 décembre",
+        "Louvre-Lens Sainte-Barbe 6 décembre enfants"
+      ]
+    },
+    {
+      "url": "/articles/evenements/batiment-b-a-saint-denis-decouvrir-le-street-art-en-famille/",
+      "title": "Bâtiment B à Saint-Denis: découvrir le street art en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-28T00:11:04+01:00",
+      "location": {
+        "city": "Saint-Denis",
+        "department": "La Réunion",
+        "region": "La Réunion"
+      },
+      "ageDays": 19,
+      "rapidDrop": true,
+      "peakStart": "2026-10-29",
+      "peakEnd": "2026-10-31",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 41,
+      "recentImpressions": 3,
+      "score": 114,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 41 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Bâtiment B Réunion Graffiti",
+        "street art en famille",
+        "Saint-Denis La Réunion"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-a-cannes-en-famille-marche-du-centre-ou-village-du-palm-beach/",
+      "title": "Noël 2026 à Cannes en famille: marché du centre et Palm Beach",
+      "category": "evenements",
+      "publishedAt": "2026-10-31T22:36:58.730Z",
+      "location": {
+        "city": "Cannes",
+        "department": "Alpes-Maritimes",
+        "region": "Provence-Alpes-Côte d’Azur"
+      },
+      "ageDays": 16,
+      "rapidDrop": true,
+      "peakStart": "2026-11-03",
+      "peakEnd": "2026-11-05",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 39,
+      "recentImpressions": 1,
+      "score": 114,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 39 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël Cannes 2026 famille",
+        "marché de Noël Cannes 2026",
+        "Village de Noël Palm Beach Cannes"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel/",
+      "title": "Noël 2026 à Chambéry en famille: marchés, parade et ateliers",
+      "category": "evenements",
+      "publishedAt": "2026-11-01T09:37:48.682Z",
+      "location": {
+        "city": "Chambéry",
+        "department": "Savoie",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "ageDays": 15,
+      "rapidDrop": true,
+      "peakStart": "2026-11-03",
+      "peakEnd": "2026-11-05",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 35,
+      "recentImpressions": 3,
+      "score": 96,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 35 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël Chambéry 2026 famille",
+        "marché de Noël Chambéry 2026 horaires",
+        "parade Père Noël Chambéry 27 novembre 2026",
+        "village de Noël Palais de Justice Chambéry",
+        "Fabrique de Noël Rubanox 12 décembre 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/",
+      "title": "Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès",
+      "category": "evenements",
+      "publishedAt": "2026-10-19T19:48:02.057Z",
+      "location": {
+        "city": "Lyon",
+        "department": "Rhône",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "ageDays": 28,
+      "rapidDrop": true,
+      "peakStart": "2026-10-20",
+      "peakEnd": "2026-10-22",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 20,
+      "recentImpressions": 0,
+      "score": 95,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 20 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Fête des Lumières Lyon 2026 famille",
+        "Fête des Lumières Lyon 2026 horaires enfants",
+        "Fête des Lumières Lyon poussette parcours"
+      ]
+    },
+    {
+      "url": "/articles/evenements/saint-nicolas-2026-a-carcassonne-marche-aux-flambeaux-ou-campements-medievaux-avec-les-enfants/",
+      "title": "Saint-Nicolas 2026 à Carcassonne: campements médiévaux et marche aux flambeaux en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-27T00:35:14.840Z",
+      "location": {
+        "city": "Carcassonne",
+        "department": "Aude",
+        "region": "Occitanie"
+      },
+      "ageDays": 20,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 33,
+      "recentImpressions": 3,
+      "score": 90,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 33 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Saint-Nicolas Carcassonne 2026",
+        "marche aux flambeaux Carcassonne 5 décembre",
+        "campements médiévaux Carcassonne enfants"
+      ]
+    },
+    {
+      "url": "/articles/evenements/foire-aux-santons-de-marseille-2026-en-famille-quand-venir-et-que-voir/",
+      "title": "Foire aux santons de Marseille 2026: dates, inauguration et visite en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-23T15:29:55.155Z",
+      "location": {
+        "city": "Marseille",
+        "department": "Bouches-du-Rhône",
+        "region": "Provence-Alpes-Côte d'Azur"
+      },
+      "ageDays": 24,
+      "rapidDrop": true,
+      "peakStart": "2026-10-24",
+      "peakEnd": "2026-10-26",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 37,
+      "recentImpressions": 8,
+      "score": 87,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 37 impressions sur trois jours, puis 8 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "foire aux santons Marseille 2026 enfants",
+        "foire aux santons Marseille horaires entrée gratuite",
+        "inauguration foire santons Marseille 15 novembre",
+        "atelier santon enfants Marseille 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/",
+      "title": "Noël à Chartres 2026 en famille: marché et illuminations",
+      "category": "evenements",
+      "publishedAt": "2026-10-30T18:26:55.934Z",
+      "location": {
+        "city": "Chartres",
+        "department": "Eure-et-Loir",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 17,
+      "rapidDrop": true,
+      "peakStart": "2026-11-02",
+      "peakEnd": "2026-11-04",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 32,
+      "recentImpressions": 3,
+      "score": 87,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 32 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël Chartres 2026",
+        "marché de Noël Chartres 2026",
+        "illuminations Chartres avec enfants",
+        "Chartres en lumières fête Noël 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/ville-de-noel-d-arras-2026-en-famille-grande-roue-patinoire-et-horaires/",
+      "title": "Ville de Noël d’Arras 2026 en famille: horaires, attractions et budget",
+      "category": "evenements",
+      "publishedAt": "2026-10-29T20:30:32.907Z",
+      "location": {
+        "city": "Arras",
+        "department": "Pas-de-Calais",
+        "region": "Hauts-de-France"
+      },
+      "ageDays": 18,
+      "rapidDrop": true,
+      "peakStart": "2026-10-31",
+      "peakEnd": "2026-11-02",
+      "recentStart": "2026-11-11",
+      "recentEnd": "2026-11-13",
+      "peakImpressions": 37,
+      "recentImpressions": 10,
+      "score": 81,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 37 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Ville de Noël Arras 2026",
+        "marché de Noël Arras en famille",
+        "grande roue patinoire Arras Noël"
+      ]
+    }
+  ],
+  "strongPages": [
+    {
+      "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
+      "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
+      "category": "evenements",
+      "recentImpressions": 193,
+      "recentClicks": 14,
+      "recentPosition": 4.824,
+      "retention": 1.451
+    },
+    {
+      "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
+      "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
+      "category": "evenements",
+      "recentImpressions": 195,
+      "recentClicks": 11,
+      "recentPosition": 6.867,
+      "retention": 0.855
+    },
+    {
+      "url": "/articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/",
+      "title": "Où manger des fouées en famille autour de Saumur ?",
+      "category": "cuisine",
+      "recentImpressions": 186,
+      "recentClicks": 5,
+      "recentPosition": 11.167,
+      "retention": 0.602
+    },
+    {
+      "url": "/articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/",
+      "title": "Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille",
+      "category": "evenements",
+      "recentImpressions": 138,
+      "recentClicks": 5,
+      "recentPosition": 8.435,
+      "retention": 0.836
+    },
+    {
+      "url": "/articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/",
+      "title": "Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers",
+      "category": "vie-pratique",
+      "recentImpressions": 101,
+      "recentClicks": 5,
+      "recentPosition": 5.753,
+      "retention": 0.697
+    },
+    {
+      "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
+      "title": "Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite",
+      "category": "sorties",
+      "recentImpressions": 422,
+      "recentClicks": 4,
+      "recentPosition": 10.427,
+      "retention": 1.353
+    },
+    {
+      "url": "/articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/",
+      "title": "Soleils d'hiver 2026 à Angers en famille: marché, manèges et Père Noël",
+      "category": "evenements",
+      "recentImpressions": 169,
+      "recentClicks": 4,
+      "recentPosition": 8.367,
+      "retention": 0.944
+    },
+    {
+      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
+      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
+      "category": "vie-pratique",
+      "recentImpressions": 151,
+      "recentClicks": 4,
+      "recentPosition": 6.093,
+      "retention": 0.689
+    },
+    {
+      "url": "/articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/",
+      "title": "Déchets verts à Toulouse Métropole en 2027: collecte, broyage et évacuation des gros volumes",
+      "category": "maison",
+      "recentImpressions": 92,
+      "recentClicks": 4,
+      "recentPosition": 7.304,
+      "retention": 0.86
+    },
+    {
+      "url": "/articles/evenements/les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille/",
+      "title": "Féeries de Noël 2026 à Paris: parcours lumineux, billets et patinoire en famille",
+      "category": "evenements",
+      "recentImpressions": 131,
+      "recentClicks": 3,
+      "recentPosition": 7.725,
+      "retention": 1.701
+    }
+  ],
+  "excluded": {
+    "expired": 187,
+    "cooling": 64
+  },
+  "warnings": [
+    "Diagnostics par requêtes : 5/5.",
+    "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement."
+  ]
+}
+
+## Module Radar embarqué
+
+Le code ci-dessous est fourni directement pour les calculs Radar nécessaires à ce passage. Ne va pas le relire dans un autre fichier.
+
+```javascript
+// Pure JavaScript: usable in Node or a connector orchestration runtime.
+const DAY = 86400000;
+const dayNumber = (date) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date ?? ""))
+    throw new Error("Date GSC invalide.");
+  const value = Date.parse(`${date}T00:00:00Z`);
+  if (
+    !Number.isFinite(value) ||
+    new Date(value).toISOString().slice(0, 10) !== date
+  )
+    throw new Error("Date GSC invalide.");
+  return value / DAY;
+};
+const isoDay = (value) => new Date(value * DAY).toISOString().slice(0, 10);
+const round = (value) => Math.round(value * 1000) / 1000;
+export function unwrapRows(response) {
+  const value = response?.structuredContent ?? response;
+  if (response?.isError || (value.status && value.status !== "done"))
+    throw new Error("GSC indisponible ou traitement incomplet.");
+  const rows = Array.isArray(value) ? value : value.data;
+  if (
+    !Array.isArray(rows) ||
+    value.truncated === true ||
+    value.has_more === true ||
+    (value.total_rows !== undefined && value.total_rows !== rows.length)
+  )
+    throw new Error("Réponse GSC absente ou tronquée.");
+  // Conservative per-response threshold, not a claimed Windsor plan limit.
+  // Concatenated arrays are allowed after each response has been checked.
+  if (!Array.isArray(value) && rows.length >= 5000)
+    throw new Error(
+      "Réponse GSC potentiellement plafonnée; découper la période.",
+    );
+  if (rows.some((row) => row.search_type && row.search_type !== "web"))
+    throw new Error(
+      "Le périmètre Radar doit contenir seulement la recherche web.",
+    );
+  return rows;
+}
+export function canonicalPage(value) {
+  // Some connector runtimes do not expose the URL global.
+  if (typeof value !== "string") return undefined;
+  const path = value.replace(/^https?:\/\/(?:www\.)?fam-space\.fr(?=\/)/i, "");
+  if (!/^\/articles\/[^/?#]+\/[^/?#]+\/$/.test(path)) return undefined;
+  if (path.split("/").some((part) => part === "." || part === ".."))
+    return undefined;
+  return path;
+}
+const metric = (row, name) => {
+  const value = Number(row[name]);
+  if (
+    row[name] === null ||
+    row[name] === undefined ||
+    !Number.isFinite(value) ||
+    value < 0
+  )
+    throw new Error(`Métrique GSC invalide: ${name}.`);
+  return value;
+};
+function addMetric(target, row) {
+  const impressions = metric(row, "impressions");
+  target.impressions += impressions;
+  target.clicks += metric(row, "clicks");
+  target.positionSum += impressions ? metric(row, "position") * impressions : 0;
+}
+const empty = () => ({ impressions: 0, clicks: 0, positionSum: 0 });
+const view = (sum, days = 7) => ({
+  impressions: round(sum.impressions),
+  clicks: round(sum.clicks),
+  impressionsPerDay: round(sum.impressions / days),
+  position: sum.impressions ? round(sum.positionSum / sum.impressions) : null,
+});
+function windowSum(days, start, end) {
+  const result = empty();
+  for (let date = start; date <= end; date++) {
+    const row = days.get(date);
+    if (row) for (const key of Object.keys(result)) result[key] += row[key];
+  }
+  return result;
+}
+export function buildRadarShortlist(
+  response,
+  catalog,
+  {
+    now = new Date().toISOString(),
+    siteRows,
+    from,
+    limit = 15,
+    history = [],
+  } = {},
+) {
+  const rows = unwrapRows(response);
+  const site = siteRows ? unwrapRows(siteRows) : rows;
+  if (!site.length)
+    throw new Error("GSC ne retourne aucune journée consolidée.");
+  const siteDays = site.map((row) => dayNumber(row.date));
+  const end = siteDays.reduce((max, date) => Math.max(max, date), -Infinity);
+  const observedStart = siteDays.reduce(
+    (min, date) => Math.min(min, date),
+    Infinity,
+  );
+  const today = dayNumber(now.slice(0, 10));
+  if (end > today || today - end > 7)
+    throw new Error(
+      "Données GSC trop anciennes ou datées dans le futur; aucun export historique de secours.",
+    );
+  // Never create comparison weeks before the first observed site day.
+  const start = from ? Math.max(dayNumber(from), observedStart) : observedStart;
+  if (!Number.isFinite(start) || end - start < 13)
+    throw new Error("Au moins 14 jours GSC sont nécessaires.");
+  const byPage = new Map();
+  for (const row of rows) {
+    const page = canonicalPage(row.page),
+      date = dayNumber(row.date);
+    if (!page || date < start || date > end) continue;
+    if (!byPage.has(page)) byPage.set(page, new Map());
+    const days = byPage.get(page);
+    if (!days.has(date)) days.set(date, empty());
+    addMetric(days.get(date), row);
+  }
+  const entries = [];
+  for (const article of catalog) {
+    const page = canonicalPage(article.url);
+    if (
+      !page ||
+      article.status === "draft" ||
+      Date.parse(article.publishedAt) > Date.parse(now)
+    )
+      continue;
+    const days = byPage.get(page) ?? new Map();
+    const publishedDay = dayNumber(article.publishedAt.slice(0, 10));
+    const firstDay = Math.max(start, publishedDay);
+    // Three days of growth followed by three consolidated days of decline
+    // can be detected before a new page has two full GSC weeks.
+    if (end - firstDay < 5) continue;
+    const recent = windowSum(days, end - 6, end);
+    const recent3 = windowSum(days, end - 2, end);
+    let peak3 = empty(), peak3Start = firstDay;
+    for (let first = firstDay; first + 2 < end - 2; first++) {
+      const sum = windowSum(days, first, first + 2);
+      if (sum.impressions > peak3.impressions) {
+        peak3 = sum;
+        peak3Start = first;
+      }
+    }
+    let peak7 = empty(), peak7Start = firstDay;
+    if (end - firstDay >= 13) {
+      for (let first = firstDay; first + 6 < end - 6; first++) {
+        const sum = windowSum(days, first, first + 6);
+        if (sum.impressions > peak7.impressions) {
+          peak7 = sum;
+          peak7Start = first;
+        }
+      }
+    }
+    const total = windowSum(days, firstDay, end);
+    const expired = Boolean(
+      article.eventEndsAt && article.eventEndsAt < now.slice(0, 10),
+    );
+    const reviewDue = Boolean(
+      article.reviewAt && article.reviewAt <= now.slice(0, 10),
+    );
+    const lastRefresh = history
+      .filter((item) => item.url === page && item.mode === "refresh")
+      .map((item) => item.publishedAt)
+      .sort()
+      .at(-1);
+    const cooling = Boolean(
+      lastRefresh && Date.parse(now) - Date.parse(lastRefresh) < 14 * DAY,
+    );
+    const ageDays = today - publishedDay;
+    const firstVisible = [...days]
+      .filter(([date, values]) => date >= firstDay && values.impressions > 0)
+      .map(([date]) => date)
+      .sort((a, b) => a - b)[0];
+    const newlyVisible =
+      ageDays <= 30 ||
+      (firstVisible !== undefined && firstVisible > start && end - firstVisible <= 21);
+    const rapidDrop =
+      newlyVisible &&
+      peak3.impressions >= 20 &&
+      peak3.impressions - recent3.impressions >= 15 &&
+      recent3.impressions <= peak3.impressions * 0.35;
+    const weeklyDecline = end - firstDay >= 13
+      ? Math.max(0, peak7.impressions - recent.impressions) *
+        Math.min(1, peak7.impressions / 35) *
+        Math.min(1, total.impressions / 50)
+      : 0;
+    const rapidScore = rapidDrop ? (peak3.impressions - recent3.impressions) * 3 : 0;
+    const recentPosition = recent.impressions
+      ? recent.positionSum / recent.impressions
+      : null;
+    const clickPotentialScore =
+      end - firstDay >= 13 && recentPosition !== null && recentPosition <= 10
+        ? Math.max(0, recent.impressions * 0.01 - recent.clicks) * 10
+        : 0;
+    const searchPotential =
+      !rapidDrop && clickPotentialScore > weeklyDecline && clickPotentialScore > 0;
+    const score =
+      expired || cooling
+        ? 0
+        : Math.max(rapidScore, weeklyDecline, clickPotentialScore) +
+          (reviewDue ? 35 : 0);
+    // Recent pages must use available, non-overlapping three-day windows.
+    const shortWindow = rapidDrop || end - firstDay < 13;
+    const peak = shortWindow ? peak3 : peak7;
+    const peakStart = shortWindow ? peak3Start : peak7Start;
+    const peakDays = shortWindow ? 3 : 7;
+    const comparedRecent = shortWindow ? recent3 : recent;
+    const comparedRecentStart = shortWindow ? end - 2 : end - 6;
+    const retention = peak.impressions
+      ? comparedRecent.impressions / peak.impressions
+      : 1;
+    entries.push({
+      url: page,
+      title: article.title,
+      category: article.category,
+      location: article.location,
+      keywords: article.keywords ?? article.topic?.keywords ?? [],
+      publishedAt: article.publishedAt,
+      eventEndsAt: article.eventEndsAt,
+      reviewAt: article.reviewAt,
+      expired,
+      cooling,
+      reviewDue,
+      ageDays,
+      rapidDrop,
+      peakStart: isoDay(peakStart),
+      peakEnd: isoDay(peakStart + peakDays - 1),
+      recentStart: isoDay(comparedRecentStart),
+      recentEnd: isoDay(end),
+      peak: view(peak, peakDays),
+      recent: view(comparedRecent, peakDays),
+      retention: round(retention),
+      score: round(score),
+      signal: searchPotential ? "search_potential" : "needs_query_check",
+      basis: rapidDrop
+        ? `Visibilité récente : ${round(peak3.impressions)} impressions sur trois jours, puis ${round(recent3.impressions)} sur les trois derniers jours consolidés; cause non établie.`
+        : "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      ...(searchPotential
+        ? {
+            basis: `Page visible avec ${round(recent.impressions)} impressions, ${round(recent.clicks)} clics et une position moyenne de ${round(recentPosition)} sur sept jours; intention de recherche à examiner.`,
+            commonQueries: null,
+            positionDelta: null,
+            impressionRatio: null,
+            focusQueries: (Array.isArray(article.keywords)
+              ? article.keywords
+              : Array.isArray(article.topic?.keywords)
+                ? article.topic.keywords
+                : []
+            ).slice(0, 5),
+          }
+        : {}),
+    });
+  }
+  return {
+    schemaVersion: 1,
+    retrievedAt: now,
+    dataThrough: isoDay(end),
+    from: isoDay(start),
+    caveat:
+      "Les lignes absentes valent zéro dans les données retournées. GSC peut masquer des requêtes; les signaux ne prouvent ni désindexation ni causalité.",
+    refresh: entries
+      .filter((item) => item.score > 0)
+      .sort((a, b) =>
+        Number(b.rapidDrop && b.category !== "evenements") -
+          Number(a.rapidDrop && a.category !== "evenements") ||
+        Number(b.rapidDrop) - Number(a.rapidDrop) ||
+        b.score - a.score ||
+        a.url.localeCompare(b.url))
+      .slice(0, limit),
+    strongPages: entries
+      .filter(
+        (item) =>
+          !item.expired &&
+          item.recent.impressions >= 35 &&
+          item.retention >= 0.5,
+      )
+      .sort(
+        (a, b) =>
+          b.recent.clicks - a.recent.clicks ||
+          b.recent.impressions - a.recent.impressions ||
+          a.url.localeCompare(b.url),
+      )
+      .slice(0, 10),
+    excluded: {
+      expired: entries.filter((item) => item.expired).length,
+      cooling: entries.filter((item) => item.cooling).length,
+    },
+  };
+}
+export function diagnoseQueries(peakResponse, recentResponse) {
+  const aggregate = (response) => {
+    const result = new Map();
+    for (const row of unwrapRows(response)) {
+      if (typeof row.query !== "string")
+        throw new Error("Requête GSC manquante.");
+      if (!result.has(row.query)) result.set(row.query, empty());
+      addMetric(result.get(row.query), row);
+    }
+    return result;
+  };
+  const peak = aggregate(peakResponse),
+    recent = aggregate(recentResponse);
+  const common = [...peak.keys()].filter(
+    (query) =>
+      peak.get(query).impressions >= 10 &&
+      (recent.get(query)?.impressions ?? 0) >= 3,
+  );
+  let weight = 0,
+    change = 0;
+  for (const query of common) {
+    const first = peak.get(query),
+      last = recent.get(query);
+    const w = Math.min(first.impressions, last.impressions);
+    weight += w;
+    change +=
+      w *
+      (last.positionSum / last.impressions -
+        first.positionSum / first.impressions);
+  }
+  const delta = weight ? change / weight : null;
+  const total = (values) =>
+    [...values.values()].reduce((sum, item) => sum + item.impressions, 0);
+  const ratio = total(peak) ? total(recent) / total(peak) : null;
+  return {
+    signal:
+      delta !== null && delta >= 3
+        ? "rank_loss"
+        : delta !== null &&
+            Math.abs(delta) <= 2 &&
+            ratio !== null &&
+            ratio <= 0.25
+          ? "coverage_loss"
+          : "uncertain",
+    commonQueries: common.length,
+    positionDelta: delta === null ? null : round(delta),
+    impressionRatio: ratio === null ? null : round(ratio),
+    queries: [...new Set([...peak.keys(), ...recent.keys()])]
+      .map((query) => ({
+        query,
+        peak: view(peak.get(query) ?? empty()),
+        recent: view(recent.get(query) ?? empty()),
+      }))
+      .sort((a, b) => b.peak.impressions - a.peak.impressions),
+    caveat:
+      "coverage_loss désigne une baisse d'exposition observée, pas une preuve de désindexation. Les requêtes masquées et la saisonnalité limitent le diagnostic.",
+  };
+}
+// The shortlist ranks pages; only per-page query rows can establish a diagnosis.
+export function attachRadarQueryDiagnosis(item, peakResponse, recentResponse) {
+  const diagnosis = diagnoseQueries(peakResponse, recentResponse);
+  const signal =
+    item.signal === "search_potential" && diagnosis.signal === "uncertain"
+      ? "search_potential"
+      : diagnosis.signal;
+  const priority = (query) => {
+    const lostImpressions = Math.max(0, query.peak.impressions - query.recent.impressions);
+    const lostPositions =
+      query.peak.position !== null && query.recent.position !== null
+        ? Math.max(0, query.recent.position - query.peak.position)
+        : 0;
+    if (signal === "rank_loss")
+      return query.peak.impressions >= 10 && query.recent.impressions >= 3
+        ? lostPositions * Math.min(query.peak.impressions, query.recent.impressions)
+        : 0;
+    if (signal === "search_potential") return query.recent.impressions;
+    return lostImpressions;
+  };
+  const relevantQueries = diagnosis.queries
+    .filter((query) => signal !== "rank_loss" || priority(query) > 0)
+    .sort((a, b) => priority(b) - priority(a) || b.peak.impressions - a.peak.impressions)
+    .slice(0, 5)
+    .map(({ query }) => query);
+  const basis =
+    item.basis + " " +
+    (signal === "rank_loss"
+      ? `Recul moyen de ${diagnosis.positionDelta} positions sur ${diagnosis.commonQueries} requête(s) comparable(s).`
+      : signal === "coverage_loss"
+        ? `Baisse d'exposition sur les requêtes visibles (ratio ${diagnosis.impressionRatio}), sans recul de classement comparable établi.`
+        : signal === "search_potential"
+          ? "Les requêtes visibles ne démontrent pas une perte de classement."
+          : `Diagnostic sur ${diagnosis.commonQueries} requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.`);
+  return {
+    ...item,
+    signal,
+    basis,
+    commonQueries: diagnosis.commonQueries,
+    positionDelta: diagnosis.positionDelta,
+    impressionRatio: diagnosis.impressionRatio,
+    focusQueries: relevantQueries.length ? relevantQueries : item.focusQueries ?? [],
+  };
+}
+
+
+/** Prepare one compact snapshot from one shortlist and per-page query responses. */
+export function buildRadarSnapshot(pageRows, catalog, options = {}, queryPairs = []) {
+  const shortlist = buildRadarShortlist(pageRows, catalog, options);
+  const pairs = new Map(queryPairs.map((pair) => [canonicalPage(pair.url), pair]));
+  const refresh = shortlist.refresh.map((candidate, index) => {
+    const pair = index < 5 ? pairs.get(candidate.url) : undefined;
+    const item = pair
+      ? attachRadarQueryDiagnosis(candidate, pair.peakQueries, pair.recentQueries)
+      : candidate;
+    return {
+      url: item.url,
+      title: item.title,
+      category: item.category,
+      publishedAt: item.publishedAt,
+      location: item.location,
+      ageDays: item.ageDays,
+      rapidDrop: item.rapidDrop,
+      peakStart: item.peakStart,
+      peakEnd: item.peakEnd,
+      recentStart: item.recentStart,
+      recentEnd: item.recentEnd,
+      peakImpressions: item.peak.impressions,
+      recentImpressions: item.recent.impressions,
+      score: item.score,
+      signal: item.signal,
+      basis: item.basis,
+      commonQueries: item.commonQueries ?? null,
+      positionDelta: item.positionDelta ?? null,
+      impressionRatio: item.impressionRatio ?? null,
+      focusQueries: item.focusQueries ?? item.keywords.slice(0, 5),
+    };
+  });
+  return {
+    schemaVersion: 1,
+    generatedAt: options.now ?? new Date().toISOString(),
+    dataThrough: shortlist.dataThrough,
+    from: shortlist.from,
+    refresh,
+    strongPages: shortlist.strongPages.map((item) => ({
+      url: item.url,
+      title: item.title,
+      category: item.category,
+      recentImpressions: item.recent.impressions,
+      recentClicks: item.recent.clicks,
+      recentPosition: item.recent.position,
+      retention: item.retention,
+    })),
+    excluded: shortlist.excluded,
+    warnings: [
+      ...(options.warnings ?? []),
+      `Diagnostics par requêtes : ${refresh.slice(0, 5).filter((item) => item.signal !== "needs_query_check" && item.commonQueries !== null).length}/${Math.min(5, refresh.length)}.`,
+      "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement.",
+    ],
+  };
+}
+
+const STOP = new Set(
+  "avec pour dans sans famille familles enfant enfants tarif tarifs duree conseil conseils visite visiter billet billets activite activites sortie sorties evenement evenements preparation pratique pratiques autour leur leurs aussi quoi comment quel quelle quelles quels quand faire partir 2026 2027".split(
+    " ",
+  ),
+);
+const words = (value) =>
+  new Set(
+    String(value)
+      .replace(/œ/g, "oe")
+      .normalize("NFD")
+      .replace(/\p{Diacritic}/gu, "")
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((word) => word.length >= 3 && !STOP.has(word)),
+  );
+export function probableDuplicates(subject, catalog, limit = 5) {
+  const terms = words(
+    [
+      subject.title,
+      ...(subject.keywords ?? subject.topic?.keywords ?? []),
+    ].join(" "),
+  );
+  return catalog
+    .filter(
+      (article) => canonicalPage(article.url) !== canonicalPage(subject.url),
+    )
+    .map((article) => {
+      const candidate = words(
+        [
+          article.title,
+          ...(article.keywords ?? article.topic?.keywords ?? []),
+        ].join(" "),
+      );
+      const shared = [...terms].filter((word) => candidate.has(word));
+      const sameCity = Boolean(
+        subject.location?.city &&
+          subject.location.city === article.location?.city,
+      );
+      const sameDepartment = Boolean(
+        subject.location?.department &&
+          subject.location.department === article.location?.department,
+      );
+      return {
+        url: article.url,
+        title: article.title,
+        location: article.location,
+        sharedTerms: shared,
+        score:
+          shared.length / Math.max(1, new Set([...terms, ...candidate]).size) +
+          (sameCity ? 0.2 : sameDepartment ? 0.1 : 0),
+      };
+    })
+    .filter(
+      (item) =>
+        item.sharedTerms.length >= 2 ||
+        (item.sharedTerms.length === 1 && item.sharedTerms[0].length >= 6),
+    )
+    .sort((a, b) => b.score - a.score || a.url.localeCompare(b.url))
+    .slice(0, limit);
+}
+```
+
+## Résultat attendu
+
+Actualise uniquement radar-gsc-snapshot.json sur la branche main de DevWeb13/fam-space-actions-bridge avec le snapshot compact décrit ci-dessus, puis termine ce passage. Ne choisis aucune mission Radar dans la même exécution et ne modifie aucun autre fichier interne.
