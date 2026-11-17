@@ -413,3 +413,4 @@ automation/image-hero-20261116-1600-tarn-der|97e9a2d35cf210d39572a7ac8df127eaa49
 automation/image-hero-20261116-2145-branfere-motte-tilly|3ccf1be21a57abb7965dd3f6777e8e13ae7d4600
 automation/image-hero-20261116-2145-branfere-motte-tilly|22e4cc40be878c4ff5ba3c87509401a9e5cb4564
 automation/image-hero-20261117-0349-epeautre-carnaval|2d287492058b462e3358c95abf70102a565f6313
+automation/image-hero-20261117-0349-epeautre-carnaval|6fe66bb09aad2e9415cd06326d540889b150b9d5
