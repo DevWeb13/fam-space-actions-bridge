@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -96,7 +99,7 @@ affiliate:
   destination: Blois
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/noel-2026-au-chateau-royal-de-blois-decors-spectacles-et-visites-selon-l-age/index.md
   targetSha: 7b73db207696ef18dde2c5bd2e585e78049089df
@@ -124,31 +127,89 @@ radar:
       - visite familiale Noël Blois tarifs
 ---
 
-## Mission retenue
-Actualiser le guide Noël 2026 au château royal de Blois, déjà très complet, en ajoutant les économies et aides pratiques vérifiées qui manquent.
+Du **28 novembre 2026 au 10 janvier 2027**, le château royal de Blois présente « Forêts Intérieures », des décors de Noël compris dans l'entrée classique. Pendant les vacances, les familles peuvent aussi choisir le spectacle « Antonietta » dès 7 ans, une visite guidée dès 6 ans ou une soirée dès 8 ans. Les dates, les suppléments et les réservations ne sont pas les mêmes.
 
-## Pourquoi cette mission
-Le snapshot signale 22 puis 7 impressions sur les périodes comparées, sans cause SEO établie. La page officielle du château confirme indépendamment des informations utiles absentes de l'article: tarif réduit pour bénéficiaires de minima sociaux et voyageurs Rémi, parcours famille sur audioguide. Ne pas attribuer la baisse à ces lacunes.
+## Décors de Noël: la visite libre et son prix
 
-## Décision du lecteur
-Savoir quel billet acheter et combien payer réellement selon les âges, les justificatifs et les activités choisies.
+<!-- article-image-body:01 -->
 
-## Faits à traiter
-- Préciser que le tarif réduit de 12 € concerne aussi les bénéficiaires de minima sociaux, étudiants, demandeurs d'emploi, enseignants et adultes de familles nombreuses sur justificatif; mentionner le tarif Rémi avec titre validé depuis moins de 24 h ou Pass Rémi Découverte valide, réduction obtenue à la billetterie.
-- Indiquer le parcours famille sur audioguide en français et anglais, supplément de 3 €, distinct de l'HistoPad inclus dans les entrées payantes; vérifier la coexistence et éviter de les confondre.
-- Préserver intégralement les tarifs et calculs familiaux, les décors, dates, spectacles, âges, réservations, horaires contradictoires du 3 janvier (ne pas trancher sans preuve), accessibilité, poussettes, trois photos avec crédits/licences, liens internes et partenaires.
-- Vérifier si les conditions de réductions s'appliquent aux billets combinés et aux réservations en ligne avant toute recommandation.
+![Salle des États du château royal de Blois, photographiée hors décorations de Noël](/images/articles/2026/10/noel-2026-au-chateau-royal-de-blois-decors-spectacles-et-visites-selon-l-age-body-01.webp)
 
-## Sources de départ
-- https://www.chateaudeblois.fr/2027-preparer-sa-visite.htm
-- https://www.chateaudeblois.fr/EvenementChateau/11893/2159-fiche-evenement.htm
+*Photo: [Christophe.Finot](https://commons.wikimedia.org/wiki/File:Ch%C3%A2teau_de_Blois_09.jpg) - [CC BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) via Wikimedia Commons (image redimensionnée).*
 
-## Affiliation
-Conserver Tiqets pour l'entrée classique et Booking.com pour le séjour; ne pas promettre les tarifs réduits sur une plateforme partenaire sans confirmation.
+<!-- /article-image-body:01 -->
 
-## Continuations internes
-- Conserver le lien vers le guide Blois sans voiture pour les transports et les excursions.
-- Conserver le renvoi vers Noël à Chambord plutôt que dupliquer son programme.
+Les créations végétales de « Forêts Intérieures » prennent place dans les salles historiques: arbres imaginaires, feuillages et sapins revisités. Aucun billet spécial n'est nécessaire pour voir ces décors pendant la visite habituelle.
+
+**Tarifs 2026 du château: 16 € par adulte, 12 € au tarif réduit sur justificatif, 8 € de 6 à 17 ans et gratuit avant 6 ans.** Le tarif réduit s'applique notamment aux étudiants, enseignants en visite individuelle, adultes des familles nombreuses, demandeurs d'emploi et **bénéficiaires de minima sociaux**, avec justificatif en cours de validité. Les voyageurs Rémi peuvent aussi obtenir le tarif réduit **directement à la billetterie**, en présentant un titre de transport validé depuis moins de 24 heures ou un Pass Rémi Découverte valide. Pour deux adultes au plein tarif et deux enfants de 6 à 17 ans, le total est de **48 €**; avec deux adultes éligibles au tarif réduit, il descend à **40 €**.
+
+L'HistoPad est compris dans les entrées payantes sous réserve de disponibilité; il coûte 4 € avec une entrée gratuite. **À ne pas confondre avec l'audioguide familial**, disponible en français et en anglais pour **3 € supplémentaires par personne**, à demander sur place selon disponibilité. Le château décrit également un parcours Audiopen familial conseillé de 6 à 12 ans, d'une durée de 1 h à 1 h 30. Prévoyez environ 1 h 30 à 2 h pour la visite selon le rythme des enfants.
+
+Le [billet d'entrée au château royal de Blois sur Tiqets](https://www.tiqets.com/fr/activites-attractions-blois-c67107/billets-pour-chateau-royal-de-blois-entree-spectacle-son-et-lumiere-en-option-p1008168/) permet de réserver la visite classique. **Il ne comprend pas les visites guidées.** Comparez le tarif final avant de payer et n'ajoutez pas l'option « Son et Lumière »: elle concerne un autre spectacle, hors programme de Noël.
+
+## Antonietta ou visite familiale: deux rendez-vous à 14 h 30
+
+**« Antonietta ou la forêt intérieure »** est un spectacle poétique et musical inspiré de *La Belle et la Bête*. Il dure **30 minutes**, convient **dès 7 ans**, est **inclus dans l'entrée** et ne demande **aucune réservation**. Il est annoncé **du 19 décembre 2026 au 3 janvier 2027 à 14 h 30 et 16 h**, sauf les 25 décembre et 1er janvier.
+
+**« À toi la vie de château ! »** est une visite guidée en français sur la vie des rois et des reines, **dès 6 ans** et pendant **1 h 15**. Elle est prévue **du 19 décembre au 2 janvier à 14 h 30**, sauf les 25 décembre et 1er janvier. Les enfants ayant leur entrée ne paient pas de supplément; les adultes ajoutent **5 € chacun**. Le budget est donc de **58 €** pour deux adultes au plein tarif et deux enfants de 6 à 17 ans. **Réservation conseillée au 02 54 90 33 33**, dans la limite des places.
+
+Les deux activités se chevauchent à **14 h 30**. La visite familiale se terminant théoriquement à 15 h 45, assister ensuite au spectacle de 16 h peut être envisageable, mais dépend de la circulation entre les salles et des places disponibles: demandez confirmation à l'accueil.
+
+## Visites nocturnes et insolites dès 8 ans
+
+<!-- article-image-body:02 -->
+
+![Escalier intérieur de l'aile Gaston d'Orléans du château de Blois, hors animation de Noël](/images/articles/2026/10/noel-2026-au-chateau-royal-de-blois-decors-spectacles-et-visites-selon-l-age-body-02.webp)
+
+*Photo: [Fab5669](https://commons.wikimedia.org/wiki/File:Blois_-_ch%C3%A2teau_royal,_aile_Gaston_d%27Orl%C3%A9ans,_int%C3%A9rieur_(04).jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+**« Murmures nocturnes de Noël »** propose une déambulation à la torche dans les appartements royaux et des espaces habituellement fermés. Les séances durent **2 heures**, les **21, 23, 28 et 30 décembre à 18 h 30**. Tarifs: **22 € par adulte, 16 € au tarif réduit et 12 € pour les 8-17 ans**. Pour deux adultes et deux enfants de 8 à 17 ans, comptez **68 €** pour cette visite. **Réservation obligatoire**, avec ouverture annoncée le **4 novembre 2026** sur la billetterie du château; ce n'est pas un supplément à ajouter au billet de journée.
+
+La **visite insolite** explore tours, combles et passages étroits **les dimanches de décembre à 10 h 30**. Elle dure **2 heures**, est réservée aux visiteurs **d'au moins 8 ans** et coûte, en plus de l'entrée, **7 € par adulte** et **4 € par enfant de 8 à 17 ans**. Réservation conseillée au **02 54 90 33 33**. Le parcours n'est pas adapté aux personnes à mobilité réduite, déficientes visuelles ou sujettes au vertige.
+
+Deux concerts **Candlelight**, les **5 et 19 décembre**, font aussi partie du programme. Ils nécessitent une réservation séparée; consultez le programme et les conditions d'âge avant de choisir une séance.
+
+## Château et Maison de la Magie: le combiné
+
+<!-- article-image-body:03 -->
+
+![Façade de la Maison de la Magie à Blois, photographiée en août 2025](/images/articles/2026/10/noel-2026-au-chateau-royal-de-blois-decors-spectacles-et-visites-selon-l-age-body-03.webp)
+
+*Photo: [Pymouss](https://commons.wikimedia.org/wiki/File:Blois_-_maison_de_la_Magie_20250820.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:03 -->
+
+En face du château, la Maison de la Magie ouvre **du 19 décembre 2026 au 3 janvier 2027**, sauf les **25 décembre et 1er janvier**, de **10 h à 12 h 30 et de 14 h à 18 h 30**. La visite dure environ **1 h 30 à 2 h** et comprend un spectacle de 30 minutes dans la limite des places disponibles.
+
+Pendant ces vacances, le spectacle **« Plume »** est annoncé à **11 h 15, 14 h 45, 16 h et 17 h 15**, sauf les **24 et 31 décembre et le 3 janvier**, où la séance de **17 h 15** n'a pas lieu. Les poussettes sont autorisées dans le parcours du musée, **mais pas dans la salle de spectacle**; un espace de stationnement se trouve devant le théâtre.
+
+Le **billet combiné château + Maison de la Magie** coûte **24 € par adulte, 19 € au tarif réduit, 12 € de 6 à 17 ans**, et reste gratuit avant 6 ans. La grille officielle inclut les bénéficiaires de minima sociaux parmi les publics éligibles au tarif réduit, **y compris pour les combinés**, sur justificatif. Soit **72 €** pour deux adultes au plein tarif et deux enfants de 6 à 17 ans, contre **96 €** pour les deux entrées achetées séparément; avec deux adultes éligibles au tarif réduit, le combiné revient à **62 €**. Le château annonce l'ouverture des réservations le **2 novembre 2026**. Ce combiné n'est intéressant que si vous visitez réellement les deux sites pendant leurs jours d'ouverture. Pour les tarifs réduits et le dispositif Rémi, faites confirmer l'application de la réduction et les justificatifs au guichet avant d'acheter en ligne: le château ne confirme pas leur disponibilité sur les plateformes partenaires.
+
+## Horaires, accès et services pour les familles
+
+Le château se trouve **6 place du Château, 41000 Blois**, à **8 minutes à pied de la gare Blois-Chambord** selon le monument. Pour organiser un séjour sans voiture et les déplacements vers les autres châteaux, consultez notre [guide de Blois, Chambord et Cheverny sans voiture](https://www.fam-space.fr/articles/voyages/blois-sans-voiture-en-2026-3-jours-pour-chambord-cheverny-et-le-centre-ville/).
+
+**Horaires de la période de Noël:**
+- Du **28 novembre au 18 décembre**: **10 h-17 h**.
+- Du **19 décembre au 2 janvier**: **10 h-18 h**, avec fermeture à **17 h les 24 et 31 décembre**.
+- Du **3 au 10 janvier**: **10 h-17 h** selon la page officielle de Noël.
+- **Fermé les 25 décembre et 1er janvier**; dernière entrée **30 minutes avant la fermeture**.
+
+**Attention au 3 janvier:** la page consacrée à Noël indique une fermeture à **17 h**, mais la page générale des horaires mentionne **18 h** pour ce jour. Cette divergence officielle n'est pas résolue: vérifiez directement auprès du château avant une visite en fin de journée.
+
+**Poussettes et bébés:** les poussettes sont interdites sur le circuit du château. Un garage gratuit **non surveillé** est disponible sous la galerie. Les porte-bébés dorsaux à armature métallique sont interdits. Le château dispose d'un **espace bébé** et prête un **chauffe-biberon**; la présence d'une table à langer n'est pas confirmée.
+
+**Accessibilité:** la cour, la chapelle, certaines salles du rez-de-chaussée et les extérieurs sont accessibles en fauteuil, mais pas l'ensemble des étages et visites. Le château prévoit la gratuité pour les visiteurs en situation de handicap et leur accompagnateur, sur justificatif. Demandez à l'accueil quelles salles décorées sont effectivement accessibles.
+
+**Repas et sacs:** le billet de journée permet de sortir déjeuner dans le centre puis de revenir. Seuls les petits sacs portés devant sont admis dans les salles; les bagages volumineux sont refusés.
+
+## Dormir près du château
+
+Pour prolonger la visite sur un week-end, [l'appartement Côté Château sur Booking.com](https://www.booking.com/hotel/fr/cote-chateau-blois.fr.html) se situe à environ **400 mètres du château**. Il dispose de **deux chambres**, d'une cuisine avec **micro-ondes** et propose sur demande un **lit parapluie** et une **chaise haute**. Point important avec des enfants: **l'appartement est au troisième étage sans ascenseur**. Vérifiez le tarif, la capacité exacte et les disponibilités à vos dates; aucun prix pour Noël n'est confirmé.
+
+Pour une autre journée de fêtes dans le Loir-et-Cher, notre article sur [Noël 2026 à Chambord en famille](https://www.fam-space.fr/articles/evenements/noel-a-chambord-2026-avec-des-enfants-quand-venir-et-que-prevoir/) présente un programme distinct.
 
 ## Article source exact à préserver et améliorer
 
