@@ -423,3 +423,4 @@ automation/image-hero-20261117-2140-roquefort-maurice-denis|044defe61f2fb0727a3e
 automation/image-hero-20261118-0346-langres-lille|e1c32a36b5ddd1ebf0d528e9636e86c5a13d13d0
 automation/image-hero-20261118-0346-langres-lille|7bb02104b4b95263ce8b0bade0b0e0288151cf69
 automation/image-hero-20261118-0940-meubles-montlouis-rousses|6b388cc8c13fd5879f3e83d5e9a36b2ac5acce96
+automation/image-hero-20261118-0940-meubles-montlouis-rousses|0bd59ef43e61e3802778f2f51163c3caa1ce431b
