@@ -421,3 +421,4 @@ automation/image-hero-20261117-1547-cacao-chauvigny|fcd30a2716e000b42ee15214ded0
 automation/image-hero-20261117-2140-roquefort-maurice-denis|5f2889b60e3ad3997bff5c24222de7561b9d3a20
 automation/image-hero-20261117-2140-roquefort-maurice-denis|044defe61f2fb0727a3e70f076e4b7f7d2d024d7
 automation/image-hero-20261118-0346-langres-lille|e1c32a36b5ddd1ebf0d528e9636e86c5a13d13d0
+automation/image-hero-20261118-0346-langres-lille|7bb02104b4b95263ce8b0bade0b0e0288151cf69
