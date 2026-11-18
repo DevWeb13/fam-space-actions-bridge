@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261118-1657-sujet-compostage-domestique-dans-le-gers-avec-ou-sans-jardin",
+  "lastProcessedCommit": "876dd771ffb3098c15f448fd8d3b752d7366c088"
 }
