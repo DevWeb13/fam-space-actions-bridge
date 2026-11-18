@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Walibi Rhône-Alpes en famille: attractions, tailles et billets en 2026"
-subtitle: Ce que les enfants peuvent vraiment faire, comment organiser la journée et quels billets comparer avant de partir
-summary: "Walibi Rhône-Alpes en famille en 2026: entrée gratuite sous 100 cm, tarifs par taille, attractions dès 90 cm, Baby Switch et billets à comparer."
+subtitle: Attractions selon la taille, programme de Noël 2026, horaires et billets pour une journée réussie
+summary: "Walibi Rhône-Alpes en famille: attractions selon la taille, tarifs 2026, Baby Switch et programme Merry ChristWAAAs du 19 décembre au 3 janvier."
 slug: walibi-rhone-alpes-en-famille-quel-billet-choisir-selon-la-taille-des-enfants
 status: published
 publishedAt: 2026-09-22T11:00:15+02:00
@@ -82,25 +85,27 @@ image:
   src: /images/articles/2026/09/walibi-rhone-alpes-en-famille-quel-billet-choisir-selon-la-taille-des-enfants.webp
   alt: Entrée du parc Walibi Rhône-Alpes aux Avenières
 sources:
-  - title: Billets pour Walibi Rhône-Alpes
-    url: https://www.walibi.fr/fr/nos-offres
+  - title: Billets et tarifs Walibi Rhône-Alpes
+    url: https://www.walibi.fr/fr/noel/nos-offres
   - title: Services et informations pratiques Walibi Rhône-Alpes
     url: https://www.walibi.fr/fr/preparer-ma-visite/services
-  - title: Attractions adaptées aux enfants à Walibi Rhône-Alpes
+  - title: Attractions adaptées aux enfants
     url: https://www.walibi.fr/fr/conseils/quelles-attractions-sont-adaptees-pour-les-petits-a-walibi
-  - title: Dates et horaires d'ouverture Walibi Rhône-Alpes
+  - title: Dates et horaires Walibi Rhône-Alpes
     url: https://www.walibi.fr/fr/conseils/quelles-sont-les-dates-et-horaires-douverture-des-parcs-walibi
-  - title: Halloween Walibi Rhône-Alpes
-    url: https://www.walibi.fr/fr/halloween
-  - title: Nocturnes Halloween 2026
-    url: https://www.walibi.fr/fr/halloween/nocturnes
+  - title: Programme Merry ChristWAAAs 2026
+    url: https://www.walibi.fr/fr/noel/programme
+  - title: Questions fréquentes Noël 2026
+    url: https://www.walibi.fr/fr/noel/foire-aux-questions
+  - title: Noël à Walibi Rhône-Alpes
+    url: https://www.walibi.fr/fr/noel
 affiliate:
   enabled: true
   type: travel
   destination: Les Avenières Veyrins-Thuellin
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/sorties/(2026)/(09)/walibi-rhone-alpes-en-famille-quel-billet-choisir-selon-la-taille-des-enfants/index.md
   targetSha: d3a775ed49691e2afa6a4d7f0166e432a6197a1a
@@ -126,34 +131,67 @@ radar:
       - tarifs Walibi 2026
 ---
 
-## Mission retenue
-Actualiser le guide familial Walibi Rhône-Alpes pour Merry ChristWAAAs, du 19 décembre 2026 au 3 janvier 2027, sans le transformer en second article consacré uniquement à Noël.
+<!-- article-image-credit -->
+*Photo: [Christophe Badoux](https://commons.wikimedia.org/wiki/File:Entr%C3%A9e_Walibi_Rh%C3%B4ne-Alpes.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot signale 291 impressions sur la période haute contre 43 récemment, sans diagnostic de classement établi. La lacune indépendante est réelle: le texte consacre encore une section à Halloween terminé le 11 novembre, tandis que le programme de Noël 2026, désormais publié par le parc, manque entièrement.
+Walibi Rhône-Alpes peut très bien fonctionner avec de jeunes enfants, même si les grandes montagnes russes occupent souvent les affiches du parc. Aux Avenières, en Isère, la journée alterne attractions familiales, manèges pour petits, aires de jeux, spectacles et sensations. Avant d'acheter, regardez surtout **la taille des enfants**: elle détermine le prix d'entrée et l'accès aux attractions.
 
-## Décision du lecteur
-Savoir si la sortie hivernale vaut le déplacement avec ses enfants, à quelle date venir, quelles activités seront accessibles et quel billet choisir sans payer pour une attraction indisponible.
+Pour les vacances de Noël, **Merry ChristWAAAs se tient du 19 décembre 2026 au 3 janvier 2027**, avec une sélection d'attractions, des spectacles et des activités hivernales. Toutes les attractions habituelles ne sont pas garanties ouvertes.
 
-## Faits à traiter
-- Noël du 19 décembre au 3 janvier, fermeture les 25 décembre et 1er janvier; horaires annoncés de 11 h à 18 h, 24 décembre jusqu'à 17 h, à revérifier sur calendrier.
-- 29 attractions annoncées sous réserve météo, deux spectacles Mission Noël et Winter Circus, patinoire synthétique, luge incluse, gants obligatoires pour patinoire, rencontre du Père Noël jusqu'au 24 décembre; contrôler les restrictions de taille propres aux activités et les divergences de dates sur la FAQ.
-- Offre de Noël dès 32 € annoncée jusqu'au 30 novembre, à présenter seulement avec conditions et disponibilité vérifiées; préserver les tarifs caisse par taille et le Baby Switch.
-- Remplacer les conseils Halloween périmés par un court repère historique si utile, sans supprimer les informations durables sur les attractions, services bébés, parking, accès, repas, photographies, crédits, licences, liens internes et affiliation existante.
+## Que peut faire un jeune enfant à Walibi?
 
-## Sources de départ
-- https://www.walibi.fr/fr/noel
-- https://www.walibi.fr/fr/noel/programme
-- https://www.walibi.fr/fr/noel/foire-aux-questions
-- https://www.walibi.fr/fr/noel/nos-offres
-- https://www.walibi.fr/fr/nos-offres
+Pour les plus petits, le parc propose notamment Melody Road, le Carrousel, Balloon Race, Les P'tits Chaudrons, le MonORail et des aires de jeux. Plusieurs expériences sont accessibles aux moins de 90 cm lorsqu'ils sont accompagnés d'un adulte.
 
-## Affiliation
-Vérifier les dates et conditions des liens Tiqets déjà présents pour l'entrée seule et le combiné Peaugres; ne pas affirmer une disponibilité non contrôlée. Pour un séjour familial, vérifier si un hébergement adapté à proximité a une utilité réelle, sans inventer d'offre.
+À partir de 90 cm avec un adulte, le choix s'élargit notamment à La Coccinelle, Gold River, Dock'N Roll et Surf Music. Bambooz River est accessible à partir d'un mètre avec un adulte, tandis que les grandes attractions imposent des seuils plus élevés: Mahuka demande 1,20 m et Mystic 1,30 m.
 
-## Continuations internes
-- Garder le guide Safari de Peaugres comme relais pour la seconde visite.
-- Ne pas créer de doublon Merry ChristWAAAs: intégrer seulement les informations nécessaires au choix de la visite dans ce guide.
+Ces seuils concernent les conditions générales d'accès, **pas la garantie d'ouverture un jour donné**. Vérifiez les restrictions propres à chaque attraction sur la [liste officielle des manèges adaptés aux enfants](https://www.walibi.fr/fr/conseils/quelles-attractions-sont-adaptees-pour-les-petits-a-walibi). Avec des enfants de tailles différentes, choisissez quelques attractions prioritaires plutôt que de vouloir tout faire.
+
+## Moins de 100 cm, 100 à 129 cm ou 130 cm et plus: combien coûte l'entrée?
+
+Au tarif caisse affiché pour la saison jusqu'au 3 janvier 2027:
+
+- **Moins de 100 cm**, mesuré chaussé à l'entrée: gratuit.
+- **100 à 129 cm**: Petit Visiteur, **36,50 €**.
+- **130 cm et plus**: Grand Visiteur, **44 €**.
+
+Un enfant de moins de 100 cm entre gratuitement, mais n'accède pas pour autant à tous les manèges. Si votre enfant est proche de 100 ou 130 cm, mesurez-le avec ses chaussures avant de réserver. Les billets web datés ou promotionnels peuvent être moins chers, mais leurs conditions et leur disponibilité changent selon les dates.
+
+## Merry ChristWAAAs: est-ce intéressant avec des enfants?
+
+Le [programme officiel de Noël 2026](https://www.walibi.fr/fr/noel/programme) annonce **29 attractions ouvertes sous réserve des conditions météorologiques**. Parmi les animations figurent les spectacles **Mission Noël** et **Winter Circus**, les rencontres avec les Lutimbrés et la Reine des glaces, une patinoire synthétique et trois pistes de luge synthétiques. L'accès à la patinoire, le prêt de patins, la luge et son prêt sont inclus dans l'entrée. **Les gants sont obligatoires sur la patinoire** et conseillés pour la luge.
+
+Le Père Noël reçoit les enfants jusqu'au **24 décembre inclus**. Attention: les pages du parc ne concordent pas entièrement sur son premier jour de présence (19 ou 20 décembre); si cette rencontre est votre priorité, confirmez la date auprès du parc avant de réserver. Un feu d'artifice est annoncé à la fermeture le 31 décembre.
+
+La [FAQ de Noël](https://www.walibi.fr/fr/noel/foire-aux-questions) indique que 24 attractions et expériences sont accessibles dès 90 cm, selon les restrictions de chacune. Cela ne signifie ni que toutes conviennent à un enfant de 90 cm ni que les 29 attractions seront accessibles en permanence: la météo peut limiter certaines ouvertures. Pour les plus petits, les spectacles et activités de glisse complètent les manèges, sous réserve des conditions d'accès propres à chaque activité.
+
+**Horaires annoncés:** 11 h à 18 h, sauf le 24 décembre (11 h à 17 h). **Fermeture les 25 décembre 2026 et 1er janvier 2027.** Vérifiez le calendrier avant le départ. La réservation préalable n'est pas nécessaire pour l'entrée ordinaire pendant Merry ChristWAAAs, mais un billet acheté chez un partenaire doit être valable pour la date retenue. Un billet déjà enregistré pour Halloween ne peut pas être réutilisé à Noël.
+
+## Quel billet choisir pour Noël 2026?
+
+Une offre anticipée **dès 32 €**, annoncée jusqu'au **30 novembre 2026**, figure sur le site du parc: c'est un prix d'appel soumis à disponibilité et aux conditions du billet, pas un tarif garanti pour toutes les familles ou toutes les dates. Comparez-le au prix réel affiché au moment de votre achat.
+
+Si votre date est certaine, privilégiez la comparaison des billets datés. Si elle peut changer, regardez les conditions d'un billet flexible ou non daté. Le **Ticket Liberté 2026** est annoncé valable pendant Merry ChristWAAAs jusqu'au 3 janvier 2027 selon le calendrier d'ouverture; contrôlez toujours la période exacte inscrite sur votre titre.
+
+Pour une entrée seule, [consultez le billet Walibi sur Tiqets](https://www.tiqets.com/fr/les-choses-a-faire-a-les-avenieres-veyrins-thuellin-c274087/billets-pour-walibi-rhone-alpes-billet-d-entree-p1103153/), puis vérifiez **explicitement** que la date de Noël souhaitée est proposée et que les conditions conviennent. Une page de vente ne prouve pas, à elle seule, la disponibilité d'un billet pendant l'événement.
+
+## Baby Switch, repas et pauses avec un petit
+
+Le **Baby Switch** permet aux adultes d'alterner sur une attraction à sensations lorsqu'un enfant n'a pas la taille requise, sans que le second adulte refasse toute la file. Signalez votre souhait à l'opérateur et suivez les consignes sur place. Ce service gratuit facilite la visite avec un bébé ou un jeune enfant.
+
+Le parc dispose de tables à langer, de micro-ondes dans plusieurs restaurants et d'un service de location de poussettes. Les poussettes personnelles sont autorisées. Pour organiser une journée sans épuiser les enfants, alternez manèges, pauses et spectacles; en hiver, prévoyez aussi des vêtements chauds et des gants.
+
+Le pique-nique est possible sous conditions: glacières rigides, verre et couteaux pointus sont interdits. Une aire de pique-nique est installée à l'extérieur face à l'entrée, avec possibilité de sortir puis de revenir dans le parc. À l'intérieur, des bancs permettent de manger hors des pelouses. Plusieurs restaurants disposent de micro-ondes pour les repas des bébés.
+
+## Accès et parking
+
+Walibi Rhône-Alpes se situe au **1380 route de la Corneille, Les Avenières Veyrins-Thuellin (Isère)**. Le parking visiteurs est gratuit. Le parc annonce environ une heure de route depuis Lyon ou Grenoble et une quarantaine de minutes depuis Chambéry, hors aléas de circulation. Vérifiez les horaires et l'itinéraire avant le départ, particulièrement pendant les vacances d'hiver.
+
+## Et si vous voulez aussi visiter le Safari de Peaugres?
+
+Si le Safari de Peaugres fait déjà partie de votre séjour, un [combiné Safari de Peaugres + Walibi sur Tiqets](https://alhambra.tiqets.com/fr/safari-de-peaugres-walibi-rhone-alpes-billet-d-entree-b283245/) peut mériter une comparaison. **Vérifiez les dates de validité des deux entrées**, surtout si vous comptez visiter Walibi à Noël: ne présumez pas que le combiné couvre cette période.
+
+Notre guide [Safari de Peaugres en famille](/articles/sorties/safari-de-peaugres-avec-enfants-quel-billet-choisir-et-comment-organiser-la-journee/) aide à prévoir les billets, la durée et l'organisation entre parcours voiture et visite à pied. Pour un séjour de plusieurs jours, comparez aussi les hébergements autour des Avenières ou sur votre itinéraire, sans réserver une nuit uniquement pour obtenir un billet combiné.
 
 ## Article source exact à préserver et améliorer
 
