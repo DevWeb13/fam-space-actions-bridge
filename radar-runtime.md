@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Parc Spirou avec de jeunes enfants: regardez la taille avant d'acheter les billets"
-subtitle: Les seuils accompagnés et solo changent beaucoup d'une attraction à l'autre, même quand l'entrée du plus petit est gratuite
-summary: Au Parc Spirou, la taille compte plus que l'âge pour choisir les attractions. Seuils, billets, pique-nique, poussette et accès à vérifier avant de partir.
+title: "Parc Spirou avec de jeunes enfants: tailles des attractions et billets 2027"
+subtitle: Le parc est fermé pour l'hiver; comparez les accès accompagnés et les offres 2027 avant d'acheter
+summary: "Parc Spirou à Monteux: fermeture hivernale, billets 2027, pass saison, tailles minimales avec adulte, poussette, pique-nique et accès en famille."
 slug: parc-spirou-avec-de-jeunes-enfants-regardez-la-taille-avant-d-acheter-les-billets
 status: published
 publishedAt: 2026-09-03T04:04:27+02:00
@@ -84,16 +87,20 @@ affiliate:
 sources:
   - title: Attractions et conditions de taille - Parc Spirou
     url: https://www.parc-spirou.com/les-attractions/
+  - title: Tarifs et fermeture - Parc Spirou
+    url: https://www.parc-spirou.com/
+  - title: Foire aux questions - Parc Spirou
+    url: https://www.parc-spirou.com/faq/
   - title: Billetterie officielle - Parc Spirou
-    url: https://ticket.parc-spirou.com/
-  - title: Calendrier d'ouverture - Parc Spirou
-    url: https://www.parc-spirou.com/calendrier/
+    url: https://ticket.parc-spirou.com/b2c
+  - title: Billetterie et paiements - Parc Spirou
+    url: https://application.parc-spirou.com/aide/billetterie-et-paiements
 image:
   src: /images/articles/2026/09/parc-spirou-avec-de-jeunes-enfants-regardez-la-taille-avant-d-acheter-les-billets.webp
   alt: Entrée du Parc Spirou à Monteux
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/sorties/(2026)/(09)/parc-spirou-avec-de-jeunes-enfants-regardez-la-taille-avant-d-acheter-les-billets/index.md
   targetSha: ce571a762a8cce7467642b16a377d0b9f25e2704
@@ -117,35 +124,62 @@ radar:
     focusQueries:
       - Parc Spirou enfants taille attractions
       - Parc Spirou billets famille
+reviewAt: 2027-02-15
 ---
 
-## Mission retenue
-Actualiser le guide Parc Spirou destiné aux familles avec de jeunes enfants pour la fermeture hivernale et les premières offres 2027, sans transformer ce guide pratique en promotion saisonnière.
+<!-- article-image-credit -->
+*Photo: [Marianne Casamance](https://commons.wikimedia.org/wiki/File:Parc_spirou.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-L'article conseille encore des billets 2026 et la réservation Halloween, alors que la saison s'est terminée le 11 novembre. Le site officiel annonce maintenant la fermeture jusqu'en 2027, des billets non datés 2027 à 35 € enfant et 40 € adulte, et un pass saison 2027 en offre de Noël à 90 € au lieu de 99 €. La baisse d'impressions GSC ne prouve pas un recul de classement: la lacune est éditoriale et indépendante.
+Le Parc Spirou, à Monteux dans le Vaucluse, est **fermé depuis le 11 novembre 2026** et annonce son retour en 2027, sans date précise de réouverture publiée à ce stade. Pour préparer une sortie avec de jeunes enfants, mieux vaut commencer par leur taille: certaines attractions acceptent un enfant accompagné bien avant qu'il puisse monter seul. Les nouveaux billets 2027 sont déjà annoncés, mais leur intérêt dépend du nombre d'attractions accessibles à chaque membre de la famille.
 
-## Décision du lecteur
-Déterminer si le parc convient aux tailles des enfants, éviter d'acheter un billet pour une période fermée, puis choisir entre billet 2027 et pass selon le nombre de visites envisagé.
+## Quelles attractions selon la taille des enfants?
 
-## Faits à traiter
-- Signaler clairement la fermeture depuis le 11 novembre 2026 et ne pas inventer de date de réouverture 2027.
-- Vérifier les conditions exactes des billets non datés 2027 et du pass de Noël, ainsi que la durée de l'offre; distinguer prix confirmés et conditions encore inconnues.
-- Retirer les consignes Halloween 2026 devenues inutiles et distinguer les anciens tarifs 2026 des nouvelles offres.
-- Revérifier les seuils d'accès aux attractions, notamment les conditions avec adulte, avant de les conserver comme actuels.
-- Préserver les conseils poussette, pique-nique, ANCV, accès, image et crédits, liens internes et affiliation Tiqets; ne pas promettre la validité 2027 d'une offre partenaire non confirmée.
+L'entrée reste annoncée gratuite pour les enfants de moins de **1 mètre**. Gratuité ne signifie pas accès à toutes les attractions: chaque équipement a ses propres seuils, parfois différents selon que l'enfant est accompagné ou non.
 
-## Sources de départ
-- Parc Spirou, accueil et offres 2027: https://www.parc-spirou.com/
-- Parc Spirou, calendrier 2026: https://www.parc-spirou.com/calendrier-2/
-- Parc Spirou, attractions: https://www.parc-spirou.com/les-attractions/
-- Billetterie officielle: https://ticket.parc-spirou.com/b2c
+Voici des exemples indiqués sur la [liste officielle des attractions](https://www.parc-spirou.com/les-attractions/):
 
-## Affiliation
-Le lien Tiqets existant est à conserver avec vérification de l'offre réellement réservable pour 2027. Ne pas substituer une promesse de disponibilité. Hébergement près de Monteux ou Avignon uniquement comme option de séjour utile.
+- **Palombie Secrète**: dès 85 cm accompagné; seul à partir de 1,10 m.
+- **Boule et Bill Déboulent**: dès 90 cm accompagné; seul à partir de 1,20 m.
+- **Rasengan Chakra Rotation**: dès 1 m accompagné; seul à partir de 1,20 m.
+- **Kyûbi Unchained**: dès 1,05 m accompagné; seul à partir de 1,30 m.
+- **Crash Blork et Zombillénium Tower**: 1,40 m en solo, sans seuil accompagné plus bas indiqué.
 
-## Continuations internes
-Conserver le guide centré sur les familles avec petits enfants et les seuils de taille; laisser les sorties à Avignon aux pages déjà liées.
+Ces exemples montrent pourquoi deux enfants du même âge ne profiteront pas forcément des mêmes manèges. Mesurez chacun avant l'achat, consultez les fiches des attractions qui les intéressent et revérifiez les restrictions lors de la réouverture: les conditions de sécurité peuvent évoluer. L'application officielle permet aussi de filtrer les attractions par taille.
+
+## Billets 2027 ou pass saison: que choisir?
+
+Sur son [site officiel](https://www.parc-spirou.com/), le parc affiche actuellement des **billets non datés 2027** à **35 € pour un enfant de 1 m à 10 ans inclus** et **40 € à partir de 11 ans**. Pour deux adultes et deux enfants payants de moins de 11 ans, cela représente **150 €** pour une visite, hors transport, parking et repas. Les anciens tarifs 2026 ne doivent plus servir à calculer le budget 2027.
+
+Le **pass saison 2027** est affiché en **offre de Noël à 90 € au lieu de 99 €**, tarif unique. À prix inchangés, il devient plus avantageux qu'une succession de billets individuels dès trois visites pour une même personne payante. La date de fin de la promotion, les éventuelles exclusions et les modalités détaillées de validité 2027 ne sont pas suffisamment précisées dans les informations consultées: vérifiez-les avant de payer.
+
+Le parc encourage la réservation en ligne pour les billets datés, mais sa [FAQ](https://www.parc-spirou.com/faq/) précise que les détenteurs de billets non datés n'ont normalement pas besoin de réserver. Les règles propres à la saison 2027 restent à confirmer. Sur place, le billet peut être présenté sur smartphone, pas simplement le courriel de confirmation.
+
+Les tarifs réduits pour certains publics (notamment étudiants, seniors et personnes en situation de handicap) sont proposés en caisse sous conditions et justificatifs. Les **chèques vacances ANCV papier** sont acceptés directement au parc, notamment en caisse. Vérifiez les conditions 2027 avant le départ.
+
+Vous pouvez également [consulter les offres Parc Spirou sur Tiqets](https://www.tiqets.com/fr/billets-parc-spirou-provence-l149738/), en contrôlant expressément la saison et les dates réellement couvertes: la présence d'une page de billetterie ne garantit pas la disponibilité de billets valables en 2027.
+
+## Poussette, pique-nique et services pour les petits
+
+Les **poussettes classiques** sont autorisées dans le parc, mais doivent rester hors des attractions. Les chariots et wagons destinés au transport d'enfants sont interdits selon la FAQ du parc. Pour les enfants qui se fatiguent vite, une poussette classique peut donc être utile.
+
+Les pique-niques et boissons sont autorisés; des aires ombragées permettent de déjeuner sans dépendre de la restauration. L'application officielle donne accès au plan interactif, aux temps d'attente et à la commande de repas. Le plan signale également les espaces de change bébé et les toilettes accessibles.
+
+## Comment rejoindre le Parc Spirou à Monteux?
+
+<!-- article-image-body:01 -->
+
+![Panneau de la rue Jean-Henri-Fabre à proximité du Parc Spirou à Monteux](/images/articles/2026/09/parc-spirou-avec-de-jeunes-enfants-regardez-la-taille-avant-d-acheter-les-billets-body-01.webp)
+
+<!-- /article-image-body:01 -->
+
+Le parc est situé au **1 rue Jean-Henri Fabre, 84170 Monteux**, le long de la D942 entre Avignon et Carpentras. Le parking voisin est **payant** et géré par la collectivité; le parc indique qu'il ne comporte pas de borne de recharge électrique.
+
+En transports en commun, la ligne régionale ZOU! 905 entre Avignon et Carpentras dessert l'arrêt Soleil. La gare TER de Monteux est desservie depuis Avignon et Carpentras, avec des correspondances locales possibles vers la zone du parc. Vérifiez les horaires de transport à la date de votre visite.
+
+Si vous prolongez la sortie sur deux jours, vous pouvez [chercher un hébergement à Avignon sur Booking.com](https://www.booking.com/city/fr/avignon.fr.html), puis préparer une autre visite grâce à notre [guide d'Avignon](/destinations/provence-alpes-cote-d-azur/vaucluse/avignon/). Pour les familles concernées, notre article sur la [gratuité du Palais des Papes et du Pont d'Avignon le week-end](/articles/bons-plans/avignonnais-palais-des-papes-et-pont-gratuits-le-week-end/) apporte un complément utile.
+
+Avant toute réservation, consultez le calendrier d'ouverture 2027 dès sa publication. Le parc n'ouvre pas nécessairement chaque jour hors vacances scolaires et haute saison.
 
 ## Article source exact à préserver et améliorer
 
@@ -249,14 +283,14 @@ Vérifiez enfin le calendrier d'ouverture du parc juste avant le départ: en deh
 
 ### Articles proches préparés mécaniquement
 
-- /articles/evenements/halloween-2026-au-parc-spirou-nocturnes-naruto-reservation-et-maison-hantee/ | Halloween 2026 au Parc Spirou: billets, nocturnes Naruto et maison hantée | evenements | Monteux, Vaucluse, Provence-Alpes-Côte d'Azur
-- /articles/activites/festyland-avec-de-jeunes-enfants-quelles-attractions-selon-leur-taille/ | Festyland avec de jeunes enfants: quelles attractions selon leur taille? | activites | Carpiquet, Calvados, Normandie
 - /articles/sorties/parc-bagatelle-en-famille-quelles-attractions-selon-la-taille-des-enfants/ | Parc Bagatelle en famille: quelles attractions selon la taille des enfants? | sorties | Merlimont, Pas-de-Calais, Hauts-de-France
-- /articles/maison/lit-superpose-ou-mezzanine-pour-un-enfant-les-verifications-avant-d-acheter/ | Lit superposé ou mezzanine pour un enfant: les vérifications avant d'acheter | maison
+- /articles/activites/festyland-avec-de-jeunes-enfants-quelles-attractions-selon-leur-taille/ | Festyland avec de jeunes enfants: quelles attractions selon leur taille? | activites | Carpiquet, Calvados, Normandie
+- /articles/evenements/halloween-2026-au-parc-spirou-nocturnes-naruto-reservation-et-maison-hantee/ | Halloween 2026 au Parc Spirou: billets, nocturnes Naruto et maison hantée | evenements | Monteux, Vaucluse, Provence-Alpes-Côte d'Azur
+- /articles/sorties/walibi-rhone-alpes-en-famille-quel-billet-choisir-selon-la-taille-des-enfants/ | Walibi Rhône-Alpes en famille: attractions, tailles et billets en 2026 | sorties | Les Avenières Veyrins-Thuellin, Isère, Auvergne-Rhône-Alpes
+- /articles/sorties/chateau-de-boutheon-avec-des-enfants-chateau-parc-ou-billet-couple/ | Château de Bouthéon avec des enfants: château, parc ou billet couplé? | sorties | Andrézieux-Bouthéon, Loire, Auvergne-Rhône-Alpes
+- /articles/sorties/musee-de-prehistoire-de-solutre-avec-des-enfants-musee-parc-et-roche/ | Musée de préhistoire de Solutré avec des enfants: musée, parc et Roche | sorties | Solutré-Pouilly, Saône-et-Loire, Bourgogne-Franche-Comté
+- /articles/sorties/parc-de-cleres-avec-des-enfants-le-pass-famille-vaut-il-le-coup/ | Parc de Clères avec des enfants: le pass famille vaut-il le coup? | sorties | Clères, Seine-Maritime, Normandie
 - /articles/activites/le-pal-ou-touroparc-en-famille-quel-parc-choisir-en-2026/ | Le PAL ou Touroparc en famille: quel parc choisir en 2026? | activites
-- /articles/sorties/parc-des-oiseaux-en-famille-billets-horaires-et-visite-avec-des-enfants/ | Parc des Oiseaux en famille: billets, horaires et visite avec des enfants | sorties | Villars-les-Dombes, Ain, Auvergne-Rhône-Alpes
-- /articles/activites/sherwood-parc-avec-des-enfants-quel-billet-choisir-avant-de-reserver/ | Sherwood Parc avec des enfants: quel billet choisir avant de réserver? | activites | Viarmes, Val-d'Oise, Île-de-France
-- /articles/maison/maison-de-vacances-avec-piscine-et-enfants-les-verifications-a-faire-avant-de-reserver/ | Maison de vacances avec piscine et enfants: les vérifications à faire avant de réserver | maison
 - /articles/sorties/parc-spirou-avec-de-jeunes-enfants-regardez-la-taille-avant-d-acheter-les-billets/ | Parc Spirou avec de jeunes enfants: regardez la taille avant d'acheter les billets | sorties | Monteux, Vaucluse, Provence-Alpes-Côte d’Azur
 - /articles/cuisine/petit-epeautre-du-ventoux-quatre-idees-pour-le-cuisiner-en-famille/ | Petit épeautre du Ventoux: quatre idées pour le cuisiner en famille | cuisine | Vaucluse, Provence-Alpes-Côte d’Azur
 - /articles/maison/logement-mal-isole-dans-le-vaucluse-comment-gagner-en-confort-ete-comme-hiver/ | Logement mal isolé dans le Vaucluse: comment gagner en confort été comme hiver ? | maison | Vaucluse, Provence-Alpes-Côte d’Azur
