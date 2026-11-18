@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -98,7 +101,7 @@ affiliate:
   destination: Marseille
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/foire-aux-santons-de-marseille-2026-en-famille-quand-venir-et-que-voir/index.md
   targetSha: 56f779c16ea224e79b2bc89d722b9b54263d58e5
@@ -126,33 +129,63 @@ radar:
       - foires aux santons 2026
 ---
 
-## Mission retenue
-Actualiser la 224e Foire aux santons de Marseille (14 novembre 2026 au 3 janvier 2027), déjà ouverte, sans en faire un nouvel article.
+title: "Foire aux santons de Marseille 2026: horaires et visite en famille"
+summary: "La 224e Foire aux santons de Marseille est ouverte gratuitement du 14 novembre 2026 au 3 janvier 2027. Attention aux horaires contradictoires du vendredi et du samedi; ateliers enfants à confirmer avant de venir."
+---
 
-## Pourquoi cette mission
-Le snapshot signale une baisse rapide d'impressions, mais sa cause SEO reste inconnue. Une lacune indépendante est vérifiée: l'article annonce 10 h-20 h les vendredis et samedis, tandis que la page d'accueil actuelle de l'organisateur affiche « Tous les jours: 10h - 19h ». Ce désaccord peut faire arriver des familles devant des stands fermés. L'inauguration du 15 novembre est désormais passée, mais le contenu doit surtout aider à organiser les visites restantes.
+La **224e Foire aux santons de Marseille** accueille les familles **du 14 novembre 2026 au 3 janvier 2027**, sur le **quai du Port, au Vieux-Port**. L'entrée est **gratuite**, sans billet ni réservation: on peut admirer les crèches et les figurines provençales sans rien acheter. Pour préparer une visite, deux points méritent une vérification: les horaires du soir et la tenue des ateliers pour enfants.
 
-## Décision du lecteur
-Savoir quand venir réellement avec des enfants et si un atelier de santon ou une animation folklorique sera proposé le jour choisi, sans confondre annonces générales et programme 2026 confirmé.
+## À quelle heure venir à la foire ?
 
-## Faits à traiter
-- Arbitrer les horaires contradictoires entre organisateur et Office de tourisme; si aucune confirmation définitive, signaler explicitement la divergence et recommander de vérifier avant une visite après 19 h. Ne jamais présenter 20 h comme certain.
-- Mettre les dates futures et l'organisation pratique au premier plan; conserver les faits historiques exacts sur l'inauguration, en les formulant au passé et sans les faire passer pour des rendez-vous à venir.
-- La page animations annonce atelier du santon le mercredi à 11 h, 14 h 30 et 16 h, groupes folkloriques et poste du Père Noël, mais ne porte pas de millésime explicite. Vérifier une confirmation 2026 avant d'affirmer des créneaux garantis; conserver sinon l'avertissement déjà présent.
-- Préserver dates, gratuité, accès métro, précautions poussette, histoire artisanale, label Fabrication Provence, photographies et crédits/licences, lien interne et hébergement Booking.com. Ne pas supprimer d'information encore vraie.
+La foire est annoncée **de 10 h à 19 h tous les jours** sur la [page d'accueil de l'organisateur](https://foire-aux-santons-de-marseille.fr/). Mais la [fiche de la 224e édition publiée par l'Office de tourisme](https://www.marseille-tourisme.com/vivez-marseille-blog/agenda/224e-foire-aux-santons-et-aux-creches-de-marseille-marseille-2eme-fr-6851848/) indique **10 h-20 h le vendredi et le samedi**, et 10 h-19 h les autres jours. La [page contact de l'organisateur](https://foire-aux-santons-de-marseille.fr/contact/) affiche également l'horaire de 20 h le vendredi et le samedi.
 
-## Sources de départ
-- Organisateur, accueil 2026 et horaires: https://foire-aux-santons-de-marseille.fr/
-- Organisateur, animations: https://foire-aux-santons-de-marseille.fr/les-animations/
-- Organisateur, accès: https://foire-aux-santons-de-marseille.fr/infos-pratiques/
-- Office de tourisme, fiche 224e édition: https://www.marseille-tourisme.com/en/vivez-marseille/events-in-marseille/224e-foire-aux-santons-et-aux-creches-de-marseille-marseille-2eme-en-6851848/
+**Ces informations se contredisent.** Pour éviter une mauvaise surprise avec des enfants, prévoyez de terminer votre visite **avant 19 h**. Si vous souhaitez venir après 19 h un vendredi ou un samedi, demandez confirmation directement à l'[organisateur](https://foire-aux-santons-de-marseille.fr/contact/). Les horaires des jours fériés ne sont pas précisés ici.
 
-## Affiliation
-Conserver le lien Staycity déjà présent comme possibilité de séjour à proximité; ne pas ajouter de billetterie pour cette foire gratuite.
+## Que découvrir avec les enfants ?
 
-## Continuations internes
-- Conserver le renvoi existant à l'itinéraire Marseille en trois jours pour les autres visites du Vieux-Port.
-- Éviter de développer un second guide général des marchés de Noël marseillais.
+<!-- article-image-body:01 -->
+
+![Moule ancien du santonnier marseillais Jean-Louis Lagnel, conservé dans la collection du musée Marcel Carbonel, illustration du travail artisanal.](/images/articles/2026/10/foire-aux-santons-de-marseille-2026-en-famille-quand-venir-et-que-voir-body-01.webp)
+
+*Photo: [Philippe Renoux-Carbonel](https://commons.wikimedia.org/wiki/File:Moule_de_Lagnel.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Fondée en **1803**, la foire rassemble des **artisans santonniers provençaux**. En parcourant les chalets, les enfants peuvent repérer les personnages de la crèche, les animaux, les métiers traditionnels et les petits décors. Sur certains stands, la mention **« Fabrication Provence »** signale l'engagement de l'artisan auprès de l'association organisatrice à fabriquer ses santons, crèches et accessoires en Provence.
+
+La [page des animations de l'organisateur](https://foire-aux-santons-de-marseille.fr/les-animations/) présente:
+
+- **Un atelier du santon**, où les enfants fabriquent une figurine à emporter, avec des séances indiquées le mercredi à **11 h, 14 h 30 et 16 h**.
+- **Des groupes de musique et de danse folklorique**, annoncés les mercredis et les week-ends.
+- **Une Poste du Père Noël**, pour écrire et déposer une lettre.
+
+**Attention: cette page ne précise pas explicitement que ces créneaux sont garantis pour l'édition 2026-2027.** L'âge minimum, les inscriptions, les places disponibles et un éventuel tarif de l'atelier ne sont pas détaillés. Si l'atelier est la raison principale de votre déplacement, faites confirmer la séance et ses conditions avant de partir. La gratuité annoncée concerne l'entrée de la foire, pas nécessairement toutes les activités.
+
+## L'inauguration du 15 novembre est passée
+
+La foire a ouvert ses stands le **samedi 14 novembre 2026**. Le programme de l'inauguration officielle du **dimanche 15 novembre** prévoyait une messe des santonniers en provençal à **10 h 30**, à l'église **Saint-Ferréol-les-Augustins**, puis la coupure symbolique du ruban vers **midi** et la visite des stands avec des groupes folkloriques. Ces rendez-vous ne sont plus à venir: une visite ordinaire permet désormais de découvrir les santons à son rythme.
+
+## Accès, poussette et budget
+
+<!-- article-image-body:02 -->
+
+![Entrée de la station de métro Vieux-Port à Marseille, photographiée en 2009, point d'accès au secteur de la foire.](/images/articles/2026/10/foire-aux-santons-de-marseille-2026-en-famille-quand-venir-et-que-voir-body-02.webp)
+
+*Photo: [Jun Kwang Han](https://commons.wikimedia.org/wiki/File:Entr%C3%A9e_Station_de_m%C3%A9tro_Vieux_Port.jpg) - [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Le **métro M1, station Vieux-Port**, permet de rejoindre facilement le quai du Port sans voiture. L'[organisateur détaille également les transports et parkings](https://foire-aux-santons-de-marseille.fr/infos-pratiques/). L'Office de tourisme classe la manifestation comme **accessible aux personnes en situation de handicap**, sans décrire précisément la circulation entre chaque stand.
+
+La foire se déroule **en extérieur**. Avec une poussette, le passage peut être moins confortable en période d'affluence; les équipements spécifiques pour les bébés ne sont pas documentés. Une visite en journée laisse davantage de marge pour avancer au rythme des plus petits.
+
+Le budget d'entrée peut rester à **0 €**. L'achat de santons, de décors ou de gourmandises est facultatif et les prix varient selon les artisans. Vérifiez séparément le tarif d'une animation si vous souhaitez y participer.
+
+## Prolonger la sortie autour du Vieux-Port
+
+Pour organiser d'autres découvertes sans multiplier les déplacements, consultez notre [itinéraire de trois jours à Marseille avec des enfants](/articles/voyages/marseille-en-famille-pendant-3-jours-itineraire-simple-autour-du-vieux-port/).
+
+Pour un séjour près du port, le [Staycity Aparthotels Marseille Centre Vieux Port sur Booking.com](https://www.booking.com/hotel/fr/staycity-aparthotels-centre-vieux-port.fr.html) propose des studios et appartements avec **kitchenette**, à environ **550 m du port**. Vérifiez la capacité du logement pour les adultes et les enfants, le prix total, les disponibilités et les conditions d'annulation avant de réserver.
 
 ## Article source exact à préserver et améliorer
 
