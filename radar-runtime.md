@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Maisons des 1000 premiers jours à Paris: deux adresses pour les parents et les bébés"
-subtitle: Accueil gratuit, ateliers et rencontres dans les 18e et 20e arrondissements
-summary: Deux lieux gratuits à Paris pour rencontrer d'autres parents, participer à des ateliers avec bébé et obtenir des informations. Adresses, horaires et accès.
+subtitle: Accueil libre, ateliers sur inscription et horaires dans les 18e et 20e
+summary: "Deux Maisons gratuites à Paris pour les futurs parents et les tout-petits: adresses, horaires, accueil libre, ateliers datés et réservations."
 slug: maisons-des-1000-premiers-jours-a-paris-deux-adresses-pour-les-parents-et-les-bebes
 status: published
 publishedAt: 2026-11-09T06:06:02+01:00
@@ -88,11 +91,19 @@ sources:
     url: https://www.paris.fr/lieux/maison-des-1000-premiers-jours-du-18eme-arrondissement-20653
   - title: Ville de Paris - Maison des 1000 premiers jours du 20e
     url: https://www.paris.fr/lieux/maison-des-1000-premiers-jours-du-20eme-arrondissement-20652
+  - title: Ville de Paris - Atelier santé environnement dans le 18e
+    url: https://www.paris.fr/evenements/mon-premier-atelier-sante-environnement-a-la-maison-des-1000-premiers-jours-du-18eme-116240
+  - title: Ville de Paris - Gestes qui sauvent pour bébé
+    url: https://www.paris.fr/evenements/gestes-qui-sauvent-maison-des-1000-premiers-jours-du-18eme-106067
+  - title: Ville de Paris - Ateliers créatifs parents-enfants
+    url: https://www.paris.fr/evenements/ateliers-creatifs-parents-enfants-maison-des-1000-jours-18eme-109749
+  - title: Ville de Paris - Ateliers santé environnement à Paris
+    url: https://www.paris.fr/evenements/mon-premier-atelier-sante-environnement-pour-bien-demarrer-avec-votre-bebe-101801
   - title: CAF de Paris - Les lieux d'accueil enfants-parents
     url: https://www.caf.fr/allocataires/caf-de-paris/offre-de-service/vie-personnelle/les-lieux-d-accueil-enfants-parents
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/parentalite/(2026)/(11)/maisons-des-1000-premiers-jours-a-paris-deux-adresses-pour-les-parents-et-les-bebes/index.md
   targetSha: 20bb1aa124160026c4432c9f9d17d8794fa143f2
@@ -118,38 +129,68 @@ radar:
       - maison des 1000 premiers jours paris
       - la maison des 1000 premiers jours paris
       - maison des 1000 premiers jours paris 18
+reviewAt: 2026-12-17
 ---
 
-## Mission retenue
-Actualiser le guide des deux Maisons des 1000 premiers jours de Paris (18e, 20e), lieux municipaux gratuits pour futurs parents et familles de tout-petits.
+<!-- article-image-credit -->
+*Photo: [Chabe01](https://commons.wikimedia.org/wiki/File:Passage_Tourelles_-_Paris_XX_(FR75)_-_2021-06-10_-_1.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Premier signal de baisse rapide du snapshot GSC: exposition en recul sur les recherches « maison des 1000 premiers jours paris », notamment 18e et 20e, sans preuve d'une perte de classement. Lacune éditoriale indépendante: l'article présente les ateliers seulement de manière générique alors que des séances datées, avec des modalités d'inscription différentes, sont confirmées par la Ville.
+À Paris, deux **Maisons des 1000 premiers jours** accueillent gratuitement les futurs parents, les familles de tout-petits et leurs proches, dans les 18e et 20e arrondissements. On peut y rencontrer d'autres parents, jouer avec son enfant, poser des questions sur la grossesse ou le développement de bébé et participer à des activités.
 
-## Décision du lecteur
-Savoir quelle Maison convient à sa famille, si une venue libre suffit ou si un atelier précis exige une réservation, et éviter un déplacement inutile.
+Ces lieux municipaux ne sont ni des crèches où laisser son enfant ni des cabinets de consultation médicale. La différence essentielle avant de se déplacer: **l'accueil libre ne nécessite pas de réservation, mais certains ateliers imposent une inscription**. Les places et les programmes peuvent changer.
 
-## Faits à traiter
-- Conserver adresses, horaires d'accueil, contacts, limites d'âge, accessibilité, tables à langer, fermetures et distinction accueil libre/atelier; revérifier les fiches officielles.
-- 18e: atelier santé environnement les 24 novembre et 22 décembre, 10 h-12 h, gratuit sur inscription; gestes qui sauvent les 26 novembre et 17 décembre, 10 h-12 h, inscription obligatoire auprès de la Maison.
-- 18e: ateliers créatifs parent-enfant les mercredis jusqu'au 16 décembre, 15 h 45-17 h 15, dès 6 mois, inscription par courriel et accès libre possible le jour même; distinguer ces conditions des ateliers sur réservation obligatoire.
-- 20e: atelier santé environnement les 19 novembre et 17 décembre, 17 h 30-19 h 30, sur inscription; vérifier l'accueil hors horaires habituels. Le programme mensuel change: orienter vers la fiche officielle plutôt que promettre une place.
-- Ne pas transformer le guide permanent en agenda exhaustif; conserver les deux photos, crédits et licences, ainsi que l'orientation vers les LAEP pour les enfants plus grands.
+## Dans le 18e: 16 rue Cavé
 
-## Sources de départ
-- https://www.paris.fr/lieux/maison-des-1000-premiers-jours-du-18eme-arrondissement-20653
-- https://www.paris.fr/lieux/maison-des-1000-premiers-jours-du-20eme-arrondissement-20652
-- https://www.paris.fr/evenements/mon-premier-atelier-sante-environnement-a-la-maison-des-1000-premiers-jours-du-18eme-116240
-- https://www.paris.fr/evenements/gestes-qui-sauvent-maison-des-1000-premiers-jours-du-18eme-106067
-- https://www.paris.fr/evenements/ateliers-creatifs-parents-enfants-maison-des-1000-jours-18eme-109749
-- https://www.paris.fr/pages/protegez-la-sante-de-votre-bebe-des-la-grossesse-avec-mon-premier-atelier-sante-31255
+<!-- article-image-body:01 -->
 
-## Affiliation
-Aucune: il s'agit de services gratuits de proximité.
+![Vue de la rue Cavé dans le 18e arrondissement de Paris, sans montrer la Maison](/images/articles/2026/11/maisons-des-1000-premiers-jours-a-paris-deux-adresses-pour-les-parents-et-les-bebes-body-01.webp)
 
-## Continuations internes
-- Garder le comparatif des deux adresses au cœur du guide, sans créer deux articles concurrents.
-- Conserver le relais vers les LAEP parisiens pour les 3-5 ans, sans développer un annuaire parallèle.
+*Photo: [Mbzt](https://commons.wikimedia.org/wiki/File:P1330182_Paris_XVIII_rue_Cave_rwk.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+La [Maison du 18e](https://www.paris.fr/lieux/maison-des-1000-premiers-jours-du-18eme-arrondissement-20653) se trouve au rez-de-chaussée du Pôle santé Goutte d'Or, près des métros La Chapelle et Barbès. Elle accueille principalement les futurs parents et les familles d'enfants de **0 à 2 ans**.
+
+**Accueil libre habituel:** mardi, mercredi et jeudi de **9 h 30 à 12 h 30** et de **14 h à 17 h 30**. Les autres jours dépendent du programme.
+
+**Attention aux exceptions:** jeudi **19 novembre 2026**, fermeture le matin et accueil uniquement de **14 h à 17 h**. Fermeture du **25 décembre 2026 au 1er janvier 2027 inclus**.
+
+**Contact:** 01 53 41 18 99 ou maison1000jours18@paris.fr. La Ville confirme toilettes, **table à langer** et accès aux personnes à mobilité réduite.
+
+### Quels ateliers réserver dans le 18e ?
+
+- **Santé environnement:** les **24 novembre et 22 décembre 2026**, de **10 h à 12 h**. Gratuit, **réservation obligatoire** via la [page de l'atelier municipal](https://www.paris.fr/evenements/mon-premier-atelier-sante-environnement-a-la-maison-des-1000-premiers-jours-du-18eme-116240). Destiné aux futurs parents et parents de nouveau-nés, il aborde notamment les produits d'hygiène, les jouets et les produits ménagers.
+- **Gestes qui sauvent pour bébé:** les **26 novembre et 17 décembre**, de **10 h à 12 h**. Gratuit, **inscription obligatoire auprès de la Maison**, selon la [fiche officielle](https://www.paris.fr/evenements/gestes-qui-sauvent-maison-des-1000-premiers-jours-du-18eme-106067).
+- **Ateliers créatifs parents-enfants:** les mercredis programmés jusqu'au **16 décembre**, de **15 h 45 à 17 h 15**, dès **6 mois** et jusqu'à l'entrée à l'école. Inscription par courriel à maison1000jours18@paris.fr; la [Ville précise qu'une participation libre le jour même est possible](https://www.paris.fr/evenements/ateliers-creatifs-parents-enfants-maison-des-1000-jours-18eme-109749). Ce n'est donc pas la même règle que pour les deux ateliers précédents.
+
+Les activités habituelles comprennent aussi comptines, rencontres et groupes de parole. Vérifiez le programme et les disponibilités avant de vous rendre à une séance précise.
+
+## Dans le 20e: 9 passage des Tourelles
+
+La [Maison du 20e](https://www.paris.fr/lieux/maison-des-1000-premiers-jours-du-20eme-arrondissement-20652), près du métro **Porte des Lilas**, s'adresse aux futurs parents et aux familles d'enfants de **moins de deux à trois ans**.
+
+**Accueil libre habituel:**
+- Lundi: **14 h à 17 h 30**.
+- Mardi, mercredi et jeudi: **9 h 30 à 12 h 30** et **14 h à 17 h 30**.
+- Vendredi: **9 h 30 à 12 h 30**.
+- Samedi et dimanche: fermé.
+
+**Fermeture de fin d'année:** la fiche municipale annonce une fermeture à partir du **28 décembre**, tandis que sa rubrique d'horaires exceptionnels indique une fermeture du **25 décembre 2026 au 1er janvier 2027**. Par prudence, vérifiez directement auprès de l'équipe pour cette période.
+
+**Contact:** 01 84 82 19 02 ou maison1000jours20@paris.fr. La Ville indique un fauteuil d'allaitement, des toilettes adultes et enfants, une **table à langer** et un accès aux personnes à mobilité réduite.
+
+Les familles peuvent y trouver comptines, peinture parent-bébé et rencontres thématiques. Pour l'atelier gratuit **santé environnement**, deux séances sont annoncées les **19 novembre et 17 décembre 2026**, de **17 h 30 à 19 h 30**, **sur inscription** via le [programme municipal](https://www.paris.fr/evenements/mon-premier-atelier-sante-environnement-pour-bien-demarrer-avec-votre-bebe-101801). Cet horaire est celui de l'atelier, **pas une extension garantie de l'accueil libre**. Consultez le planning mensuel sur la fiche de la Maison ou contactez l'équipe avant de venir.
+
+## Quelle Maison choisir avec bébé ?
+
+Pour une visite spontanée, choisissez d'abord celle qui est la plus proche et ouverte au moment voulu. Le **18e** propose un accueil libre du mardi au jeudi; le **20e** ajoute le lundi après-midi et le vendredi matin. Pour une activité spécifique, le programme, l'âge requis et la réservation comptent davantage que l'arrondissement.
+
+Les deux adresses disposent d'une table à langer et sont indiquées accessibles aux personnes à mobilité réduite. Les fiches ne détaillent pas toutes les conditions de circulation et de stationnement des poussettes: contactez l'équipe si vous avez une contrainte particulière.
+
+## Et si votre enfant a déjà 3 à 5 ans ?
+
+La [CAF de Paris recense 34 lieux d'accueil enfants-parents (LAEP)](https://www.caf.fr/allocataires/caf-de-paris/offre-de-service/vie-personnelle/les-lieux-d-accueil-enfants-parents). Ces espaces de jeu et de rencontre gratuits, sans inscription, accueillent les enfants de moins de 6 ans accompagnés d'un adulte. Ils peuvent être plus adaptés aux enfants qui dépassent l'âge habituellement accueilli dans les Maisons des 1000 premiers jours. Vérifiez les jours et horaires de chaque LAEP avant votre visite.
 
 ## Article source exact à préserver et améliorer
 
