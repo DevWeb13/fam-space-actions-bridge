@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261118-0201-titre-de-travail-a-montlouis-sur-loire-emprunter-des-objets-a-la-media",
+  "lastProcessedCommit": "3cf5cefa4e354a15dbdecab752e02d4d15beeef4"
 }
