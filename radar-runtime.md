@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -93,13 +96,15 @@ sources:
     url: https://miniworldlyon.com/questions-frequentes/
   - title: Le parc et les visites des coulisses
     url: https://miniworldlyon.com/le-parc/
+  - title: Aventure de Noël Les Sisters
+    url: https://miniworldlyon.com/sisters/
 affiliate:
   enabled: true
   type: travel
   destination: Vaulx-en-Velin
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/bons-plans/(2026)/(09)/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/index.md
   targetSha: 67c76be4f2c04cebdfbf669899ca57ecb563337e
@@ -123,31 +128,74 @@ radar:
     focusQueries:
       - Mini World Lyon en famille
       - Mini World Lyon tarifs
+reviewAt: 2027-01-16
 ---
 
-## Mission retenue
-Actualiser le guide Mini World Lyon pour l'aventure de Noël « Les Sisters », annoncée jusqu'au 15 janvier 2027, sans transformer le guide permanent en simple agenda.
+À Vaulx-en-Velin, au Carré de Soie, **Mini World Lyon** réunit plus de 3 000 m² de décors miniatures animés. On y explore cinq univers: ville, montagne, campagne, Lyon et Côte d'Azur, où les véhicules circulent et les lumières recréent le jour et la nuit. L'exposition temporaire est comprise dans l'entrée. Pour une famille, le choix du billet dépend surtout du nombre et de l'âge des enfants, mais aussi des réductions auxquelles les adultes peuvent prétendre.
 
-## Pourquoi cette mission
-Le snapshot GSC signale 574 puis 197 impressions sur deux semaines de sept jours, sans cause SEO établie. Une lacune indépendante est vérifiée: l'article ne présente pas le nouveau parcours de Noël, déjà en cours depuis novembre et inclus dans l'entrée.
+## Billets datés, pack famille ou billet liberté ?
 
-## Décision du lecteur
-Savoir si le parcours Les Sisters convient à ses enfants, s'il faut réserver une activité en plus et quel billet choisir pour une visite de deux heures ou davantage.
+Les **billets web datés** commencent à **16,90 € par adulte** et **11,90 € par enfant de 4 à 17 ans**. Ce sont des prix d'appel: le montant à payer dépend de la date choisie. Ces billets ne sont ni modifiables ni remboursables.
 
-## Faits à traiter
-Ajouter le livret d'énigmes, les scènes et l'espace Sisters, le coin lecture et le cadeau collector annoncé pour les enfants; indiquer que tout est inclus, sans réservation spécifique, recommandé dès 4 ans, et que la fin est annoncée au 15 janvier 2027. La page officielle mentionne deux débuts différents (11 et 14 novembre): éviter d'affirmer un jour de lancement. Vérifier les tarifs au moment de rédiger. Préserver le comparatif billets datés/pack/liberté, gratuité moins de 4 ans, réductions RSA et autres, City Card, durée, coulisses, accessibilité, photos, liens, crédits et hébergement. Ne pas déduire une causalité SEO de la baisse d'impressions.
+Le **pack famille daté** coûte **54 € pour deux adultes et deux enfants**, avec un tarif annoncé de **10,90 € par enfant supplémentaire**. À titre de comparaison, deux billets adultes et deux billets enfants aux prix web minimum totalisent 57,60 €: le pack fait alors économiser 3,60 €. Il faut néanmoins refaire le calcul si l'un des visiteurs bénéficie d'une réduction particulière ou si un enfant entre gratuitement.
 
-## Sources de départ
-- Mini World Lyon, Les Sisters: https://miniworldlyon.com/sisters/
-- Mini World Lyon, tarifs: https://miniworldlyon.com/tarifs/
-- Mini World Lyon, horaires: https://miniworldlyon.com/horaires/
+Les **0-3 ans inclus** ne paient pas l'entrée, mais leur billet gratuit doit être retiré en caisse. Le parc précise une limite de **trois enfants de cet âge par adulte payant**. Ne comptez donc pas un enfant de 3 ans comme un enfant payant dans un pack sans comparer les autres formules.
 
-## Affiliation
-Conserver et contrôler les liens Tiqets City Card et Booking.com déjà présents; aucune billetterie spécifique Sisters à ajouter.
+Si vous ne pouvez pas fixer la date, le **billet liberté non daté** coûte **20,90 € par adulte** et **15,90 € par enfant de 4 à 17 ans**. Il est annoncé sans limite de validité. Autre option: le tarif de **fin de journée**, applicable pendant les **1 h 30 avant la fermeture**, à **13,90 € par adulte** et **9,90 € par enfant**. Il est moins cher, mais laisse trop peu de temps pour une découverte complète.
 
-## Continuations internes
-- Garder le comparatif de billets comme cœur du guide permanent.
-- Traiter Les Sisters dans une section saisonnière concise, facilement retirable après le 15 janvier 2027.
+*Tarifs vérifiés le 18 novembre 2026, susceptibles de changer.*
+
+## Les réductions à vérifier avant d'acheter
+
+Certains tarifs ne sont accessibles **qu'en caisse, avec un justificatif en cours de validité**:
+
+- **15,90 € pour un adulte** demandeur d'emploi, bénéficiaire du RSA, enseignant, étudiant, senior d'au moins 65 ans, en situation de handicap ou habitant de Vaulx-en-Velin;
+- **10,90 € pour un enfant en situation de handicap**;
+- **10,90 € pour un adulte en fauteuil roulant**, et **gratuité pour un enfant de moins de 18 ans en fauteuil roulant**.
+
+Ces tarifs peuvent rendre des entrées individuelles plus intéressantes que le pack selon votre situation. Le parc ne précise pas de cumul entre réductions: ne l'anticipez pas dans votre calcul. Pour une famille ayant droit à un tarif réduit, comparez le coût de chaque formule **avant** d'acheter des billets datés non remboursables.
+
+## La Lyon City Card est-elle intéressante ?
+
+Pour **Mini World seul**, des billets individuels ou un pack sont généralement plus adaptés qu'un pass touristique. En revanche, si vous prévoyez plusieurs visites à Lyon et des déplacements en transports en commun, comparez le coût total avec la [Lyon City Card proposée sur Tiqets](https://www.tiqets.com/fr/les-choses-a-faire-a-lyon-c66838/billets-pour-lyon-city-card-p976069/).
+
+Mini World indique accepter les Lyon City Card actives de 24 h, 48 h, 72 h, 96 h et un an, **sans réservation préalable pour l'entrée au parc**. L'offre Tiqets consultée présente notamment les formules 24 h, 48 h et 72 h et mentionne Mini World parmi les visites incluses. Vérifiez les durées proposées et les activités réellement utiles à votre famille avant de choisir: une City Card n'est pas automatiquement rentable pour une seule attraction.
+
+## Noël 2026: l'aventure Les Sisters est-elle incluse ?
+
+**Jusqu'au 15 janvier 2027**, Mini World Lyon propose une aventure de Noël autour de Wendy et Marine, les héroïnes des *Sisters*. Les enfants suivent un **livret d'énigmes** à travers les mondes miniatures, repèrent des scènes cachées et la maison des deux sœurs, puis découvrent un espace dédié avec **coin lecture**, découverte de la BD et dessins animés. Un **cadeau collector** est annoncé pour les enfants à l'issue du parcours.
+
+D'après la [présentation officielle des Sisters](https://miniworldlyon.com/sisters/), **tout est compris dans l'entrée**, sans supplément ni réservation spécifique. Le jeu est **conseillé à partir de 4 ans** pour résoudre les énigmes; les plus jeunes peuvent accompagner leurs parents. Un billet normal, un pack famille ou une entrée admissible avec la City Card suffit: inutile de chercher une billetterie distincte pour cette animation.
+
+## Combien de temps rester avec des enfants ?
+
+<!-- article-image-body:01 -->
+
+![Décor miniature de l'Auditorium de Lyon éclairé pendant un cycle de nuit](/images/articles/2026/09/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite-body-01.webp)
+
+<!-- /article-image-body:01 -->
+
+Prévoyez **au moins deux heures**, et facilement **trois à quatre heures** si les enfants aiment chercher les personnages cachés et attendre les animations. Avec le livret Les Sisters, gardez une marge pour les énigmes. Ce n'est pas un parc de manèges: la visite consiste à observer de grands paysages animés à son rythme. Les tout-petits, dès 2 ans selon le parc, peuvent aussi apprécier les scènes.
+
+Les **poussettes sont autorisées**, mais leur circulation peut être moins facile dans certains passages étroits les jours d'affluence. Des **marchepieds** aident les petits à regarder les décors, les sanitaires disposent de **tables à langer** et des **casiers gratuits** sont prévus. Le parc est accessible aux personnes en situation de handicap; il recommande le début de journée pour circuler plus facilement.
+
+La nourriture et les boissons ne sont **pas autorisées dans les espaces de visite**. Un **tampon de réentrée** permet toutefois de sortir déjeuner puis de revenir le même jour. Les enfants de moins de 12 ans doivent être accompagnés d'un adulte responsable.
+
+## Faut-il ajouter la visite des coulisses ?
+
+La visite guidée des coulisses et de l'atelier dure environ **45 minutes**, en supplément du billet d'entrée. Le parc annonce des départs à **15 h et 16 h 30** les jours d'ouverture, avec **4 à 8 participants**: en dessous de quatre inscrits, la visite est annulée et les billets en ligne remboursés. Les **moins de 4 ans ne peuvent pas participer**.
+
+La page tarifs et le descriptif de la visite affichent **10 € par personne**, tandis que la FAQ mentionne encore **12 €**. Le prix de 10 € est donc le plus cohérent avec les pages dédiées, mais vérifiez-le lors de la réservation. Pour une première visite avec de jeunes enfants, ce supplément n'est pas indispensable pour profiter des cinq mondes.
+
+## Accès, horaires et séjour sur place
+
+Mini World Lyon se trouve au **3 avenue de Bohlen, 69120 Vaulx-en-Velin**, au bout du centre commercial Carré de Soie. Depuis l'arrêt **Vaulx-en-Velin La Soie** (métro A ou tram T3), comptez environ **cinq minutes à pied**. Les bus C8 et 52 desservent aussi l'arrêt « Carré de Soie ». En voiture, le centre commercial propose un **parking gratuit de 1 800 places**; l'adresse GPS conseillée est « Parking Centre Commercial Carré de Soie, 3 avenue de Bohlen ».
+
+Si vous venez en TER, le parc annonce aussi **3 € de réduction sur présentation en caisse d'un billet TER daté du jour**; les conditions de cumul avec d'autres réductions ne sont pas précisées.
+
+Le parc est **entièrement couvert**, mais ses jours et horaires d'ouverture varient, y compris pendant les fêtes. Consultez le [calendrier officiel](https://miniworldlyon.com/horaires/) avant de partir, surtout si vous envisagez un billet de fin de journée.
+
+Pour une sortie depuis Lyon, il n'est pas nécessaire de dormir sur place. Si vous venez de loin ou prolongez la visite en week-end, vous pouvez [comparer les hébergements à Vaulx-en-Velin sur Booking.com](https://www.booking.com/city/fr/vaulx-en-velin.fr.html), notamment autour du Carré de Soie où se trouve l'ibis Lyon Carré de Soie.
 
 ## Article source exact à préserver et améliorer
 
