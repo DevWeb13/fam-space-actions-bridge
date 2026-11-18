@@ -424,3 +424,4 @@ automation/image-hero-20261118-0346-langres-lille|e1c32a36b5ddd1ebf0d528e9636e86
 automation/image-hero-20261118-0346-langres-lille|7bb02104b4b95263ce8b0bade0b0e0288151cf69
 automation/image-hero-20261118-0940-meubles-montlouis-rousses|6b388cc8c13fd5879f3e83d5e9a36b2ac5acce96
 automation/image-hero-20261118-0940-meubles-montlouis-rousses|0bd59ef43e61e3802778f2f51163c3caa1ce431b
+automation/image-hero-20261118-1546-ardeche-laep|2dd265def3f666b617ed9155a507b279c11b0b63
