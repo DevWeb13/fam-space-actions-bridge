@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: Où manger des fouées en famille autour de Saumur ?
-subtitle: "Menus enfants, prix, visites et horaires: quatre adresses pour découvrir les fouées autour de Saumur."
-summary: Quatre restaurants de fouées autour de Saumur comparés pour leurs menus enfants, leurs horaires et les visites à faire en famille.
+subtitle: "Prix des menus enfants, budgets familiaux et horaires de Noël: quatre restaurants de fouées autour de Saumur."
+summary: "Comparez quatre restaurants de fouées près de Saumur: prix pour deux adultes avec enfants, jours d'ouverture en hiver, galeries et visites à réserver séparément."
 slug: ou-manger-des-fouees-en-famille-autour-de-saumur
 status: published
 publishedAt: 2026-10-11T18:36:52+02:00
@@ -111,7 +114,7 @@ affiliate:
   destination: Saumur
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/cuisine/(2026)/(10)/ou-manger-des-fouees-en-famille-autour-de-saumur/index.md
   targetSha: 1922fbdc25e129914dbf42c68de423e591270905
@@ -137,36 +140,75 @@ radar:
       - restaurant troglodytique Saumur
       - fouées en famille
       - restaurant famille Maine-et-Loire
+reviewAt: 2027-01-05
 ---
 
-## Mission retenue
-Actualiser le comparatif de quatre restaurants de fouées autour de Saumur pour les familles qui réservent un repas pendant l'hiver et les vacances de Noël.
+<!-- article-image-credit -->
+*Photo: [Romain Bréget](https://commons.wikimedia.org/wiki/File:Fou%C3%A9es_angevines_avec_rillettes.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-L'article figure parmi les pertes d'impressions du snapshot (309 puis 181 sur sept jours), mais la cause SEO n'est pas établie. Lacune indépendante: le calendrier spécifique des vacances de Noël de la Cave aux Moines, pourtant publié par le restaurant, n'est pas expliqué; les familles risquent d'écarter à tort une adresse en semaine. Les tarifs actuels de deux restaurants ont été revérifiés sur leurs cartes officielles.
+Autour de Saumur, les fouées sont de petits pains cuits au feu de bois et garnis de rillettes, champignons, mogettes ou fromage. Quatre restaurants permettent de les découvrir en famille, souvent dans des caves troglodytiques. Pour choisir, regardez autant le prix du menu enfant que le jour d'ouverture: en hiver, certains établissements ne servent pas tous les jours.
 
-## Décision du lecteur
-Comparer le coût réel d'un repas pour deux adultes et un ou deux enfants, savoir quels jours chaque adresse peut accueillir une famille et déterminer si la visite de galeries ou de champignonnière est comprise ou séparée.
+## Combien prévoir pour un repas en famille ?
 
-## Faits à traiter
-- Cave aux Moines: du 16 septembre au 14 juin, ouverture habituelle du vendredi soir au dimanche soir; pendant les vacances scolaires de Noël, midi et soir tous les jours sauf 24 au soir, 25, 31 et 1er janvier toute la journée. Vérifier les réservations et ne pas garantir de table. Carte actuelle: 26,50 € adulte, 11 € enfant jusqu'à 12 ans.
-- Cathédrales de la Saulaie: menu 27,90 € en semaine, +4 € le week-end et jours fériés, enfant 14 € de 3 à 12 ans. Les pages officielles donnent des indications saisonnières parfois divergentes: inviter à confirmer le service précis plutôt que trancher sans preuve.
-- Revérifier les deux autres adresses avant de toucher leurs prix ou horaires. Donner des exemples de budget familial seulement à partir de menus réellement comparables, en précisant boissons et limites d'âge.
-- Préserver les quatre établissements, leurs particularités, l'avertissement végétarien de Genevraie, la distinction repas/visite, l'accessibilité non confirmée, les photographies, crédits, sources, liens internes et hébergement existant.
+Voici des exemples calculés sur les menus affichés par les restaurants, pour **deux adultes et deux enfants éligibles au menu enfant**, sans supplément ni visite payante:
 
-## Sources de départ
-- https://www.cave-aux-moines.com/menu
-- https://www.cave-aux-moines.com/
-- https://lescathedralesdelasaulaie.com/menu/
-- https://lescathedralesdelasaulaie.com/
-- https://www.caves-genevraie.fr/menu-restaurant-troglodytique-doue-la-fontaine
-- https://www.les-nobles-fouees-restaurant-saumur.fr/la-carte-les-nobles-fouees-restaurant-saumur
+- **Les Caves de la Genevraie, à Louresse-Rochemenier:** 74 € (2 × 27 € + 2 × 10 €). Le menu adulte inclut apéritif, vin et café; les boissons des enfants sont comprises.
+- **La Cave aux Moines / Les Pieds Bleus, à Chênehutte-Trèves-Cunault:** 75 € (2 × 26,50 € + 2 × 11 €). Le menu adulte inclut 25 cl de vin et le café; le menu enfant, un sirop à l'eau.
+- **Les Cathédrales de la Saulaie, à Doué-en-Anjou:** 83,80 € en semaine (2 × 27,90 € + 2 × 14 €), ou **91,80 € le week-end et les jours fériés**. Le menu enfant comprend une boisson, mais les boissons adultes sont proposées séparément à la carte. Le menu enfant concerne les **3 à 12 ans**.
+- **Les Nobles Fouées, dans Saumur:** 73 € avec deux menus adultes à 22 € et deux menus Bambino à 14,50 €. Le Bambino concerne les enfants jusqu'à **12 ans**. En dehors des week-ends et jours fériés, une formule adulte à 19,50 € peut réduire ce total à **68 €**, sous réserve qu'elle soit proposée au service choisi.
 
-## Affiliation
-Maintenir Rocaminori Hôtel via Booking.com si les caractéristiques des chambres restent pertinentes pour une famille; ne pas ajouter de lien de réservation officiel concurrent à une offre partenaire disponible.
+Avec **un seul enfant**, les mêmes combinaisons représentent respectivement **64 €**, **64 €**, **69,80 € en semaine ou 77,80 € le week-end**, et **58,50 € aux Nobles Fouées** avec le menu adulte à 22 € (53,50 € avec la formule à 19,50 €). Les menus n'ont pas exactement le même contenu: ces budgets servent à préparer la dépense, pas à comparer des prestations identiques. Confirmez les tarifs et les conditions d'âge lors de la réservation.
 
-## Continuations internes
-- Conserver le lien existant vers l'hébergement et les sources officielles, sans transformer ce guide culinaire en guide général de Saumur.
+## Les Caves de la Genevraie: le four et les galeries pendant le repas
+
+À Rochemenier, à environ 5 km de Doué-en-Anjou, [Les Caves de la Genevraie](https://www.caves-genevraie.fr/) servent un menu de fouaces dans des caves troglodytiques. Le [menu à 27 €](https://www.caves-genevraie.fr/menu-restaurant-troglodytique-doue-la-fontaine) comprend notamment fouaces aux champignons, rillettes, mogettes et fromage. La visite du four et des galeries se déroule **pendant le repas**; ce n'est pas une visite de champignonnière à réserver à part.
+
+L'établissement annonce une ouverture toute l'année **du vendredi soir au dimanche midi**. En semaine, il accueille sur réservation à partir de **15 couverts**; en juillet et août, tous les jours sauf le lundi. Pour un petit groupe familial en semaine d'hiver, ne comptez donc pas sur une ouverture automatique.
+
+Attention au menu présenté comme « végétarien »: sa description officielle contient des **rillettes de poisson**. Demandez une adaptation réellement sans poisson si nécessaire.
+
+## La Cave aux Moines: une option en semaine pendant les vacances de Noël
+
+À Chênehutte-Trèves-Cunault, la [Cave aux Moines](https://www.cave-aux-moines.com/) abrite le restaurant Les Pieds Bleus et une ancienne champignonnière. Le site se présente comme de plain-pied. Le [Menu de la Cave à 26,50 €](https://www.cave-aux-moines.com/menu) comprend une assiette de spécialités locales, des **fouées chaudes à volonté**, du fromage, un dessert et un café. Les autres menus adultes sont affichés à 29,50 € et 32 €. Le menu enfant à **11 € jusqu'à 12 ans** comprend fouées à volonté, garnitures, fromage, dessert et sirop.
+
+**Horaires d'hiver:** du 16 septembre au 14 juin, le restaurant ouvre habituellement du **vendredi soir au dimanche soir**, avec possibilité de réservation en semaine. Mais **pendant les vacances scolaires de Noël**, il annonce une ouverture **tous les jours midi et soir**, sauf **le 24 décembre au soir, le 25 décembre, le 31 décembre et le 1er janvier toute la journée**. Vérifiez le service précis et réservez: cet horaire annoncé ne garantit pas qu'une table soit disponible.
+
+Du 15 juin au 15 septembre, le restaurant ouvre normalement midi et soir tous les jours sauf le lundi. Pour Pâques, les horaires sont à demander directement.
+
+La [visite de la champignonnière](https://www.cave-aux-moines.com/cave-champignonniere) permet de découvrir les galeries, le tuffeau et la culture des champignons. **Elle se prépare séparément du repas**: consultez ses horaires et tarifs, sans supposer qu'elle est comprise dans le menu. Les horaires de visite en hiver ne sont pas ceux du restaurant.
+
+## Les Cathédrales de la Saulaie: de grandes salles souterraines
+
+<!-- article-image-body:01 -->
+
+![Intérieur des Cathédrales de la Saulaie, espace troglodytique de Doué-la-Fontaine](/images/articles/2026/10/ou-manger-des-fouees-en-famille-autour-de-saumur-body-01.webp)
+
+<!-- /article-image-body:01 -->
+
+À Doué-en-Anjou, [Les Cathédrales de la Saulaie](https://lescathedralesdelasaulaie.com/) occupent de grandes salles creusées dans le falun. Les fouées sont cuites au feu de bois et le restaurant annonce un **parcours historique son et lumière après le repas**.
+
+Le [menu Fouée Troglodythe](https://lescathedralesdelasaulaie.com/menu/) coûte **27,90 € en semaine**, avec **4 € supplémentaires le week-end et les jours fériés**. Le menu enfant à **14 € pour les 3 à 12 ans** comprend notamment une boisson, des fouées, des rillettes, des rillauds, des pommes de terre et des garnitures sucrées.
+
+Les indications d'ouverture sur le site ne sont pas entièrement homogènes: la page d'accueil annonce des services du mardi au samedi midi et soir, ainsi que le dimanche midi; le pied de page mentionne une saison du **1er avril au 22 décembre**, puis une activité plus restreinte. **Demandez confirmation du service souhaité, particulièrement après le 22 décembre et pendant les fêtes.** Ne supposez pas que le parcours son et lumière est accessible indépendamment d'un repas.
+
+## Les Nobles Fouées: rester dans Saumur
+
+[Les Nobles Fouées](https://www.les-nobles-fouees-restaurant-saumur.fr/la-carte-les-nobles-fouees-restaurant-saumur), au **23 rue Fouquet à Saumur**, permettent de manger des fouées sans rejoindre une autre commune après une visite du centre ou du château.
+
+La [carte](https://www.les-nobles-fouees-restaurant-saumur.fr/la-carte-les-nobles-fouees-restaurant-saumur) affiche une formule à **19,50 € hors week-end et jours fériés**, un menu fouées à **22 €**, ainsi que les menus découverte et végétarien à **26 €**. Les fouées sont servies à volonté, avec des garnitures selon la formule. Le **menu Bambino à 14,50 €**, jusqu'à 12 ans, comprend boisson, fouées garnies, petite pizza sur base de fouée, mogettes, salade et dessert.
+
+La page de carte indique une ouverture **du mercredi au samedi midi et soir**, et **le dimanche midi**. Une autre page officielle donne cependant des horaires plus restreints certains soirs: vérifiez impérativement le créneau dans le système de réservation ou auprès du restaurant avant de vous déplacer, notamment pendant les fêtes.
+
+## Quelle adresse choisir et que vérifier avant de réserver ?
+
+Pour le menu enfant le moins cher, la **Genevraie (10 €)** et la **Cave aux Moines (11 €)** sont les premières pistes. Pour un repas **en semaine pendant les vacances de Noël**, la Cave aux Moines publie un calendrier exceptionnel particulièrement utile. Pour rester dans Saumur, privilégiez les Nobles Fouées; pour les grandes salles et le son et lumière, regardez les Cathédrales de la Saulaie.
+
+Un repas troglodytique ne signifie pas automatiquement que toutes les galeries sont ouvertes à la visite ni que la visite est incluse. Avant de réserver, demandez les horaires du repas et de l'éventuelle visite, ainsi que les conditions pour les **poussettes, chaises hautes et personnes à mobilité réduite**. L'accessibilité de chaque parcours souterrain n'est pas confirmée ici.
+
+## Prolonger la sortie avec une nuit à Rochemenier
+
+Pour un week-end dans le Saumurois, [le Rocaminori Hôtel à Louresse-Rochemenier](https://www.booking.com/hotel/fr/rocaminori.fr.html) est attenant aux Caves de la Genevraie. Il propose des chambres troglodytiques et des chambres triples. Vérifiez la configuration des couchages, les conditions d'accueil des enfants et les disponibilités correspondant à votre famille avant de réserver.
 
 ## Article source exact à préserver et améliorer
 
