@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Noël Gaulois 2026 au Parc Astérix: billets, glissades et spectacles en famille"
-subtitle: "Du 19 décembre au 3 janvier: tarifs, animations d'hiver et organisation avec des enfants"
-summary: "Billets Malin, Noël ou Flex, budget pour quatre, patinoire, glissades et spectacles: les informations utiles pour préparer Noël Gaulois au Parc Astérix."
+title: "Noël Gaulois 2026 au Parc Astérix: billets, spectacles et extras en famille"
+subtitle: "Du 19 décembre au 3 janvier: budget, nouveautés nocturnes et goûter du Père Noël"
+summary: "Billets et budget pour quatre, patinoire, spectacles nocturnes et goûter payant: préparer Noël Gaulois 2026 avec des enfants."
 category: evenements
 location:
   city: Plailly
@@ -91,6 +94,10 @@ sources:
     url: https://www.parcasterix.fr/spectacles/qui-veut-peau-du-pere-noel
   - title: Parc Astérix - Menhir Express fermé à Noël Gaulois
     url: https://www.parcasterix.fr/attractions/famille/menhir-express
+  - title: Parc Astérix - Communiqué Noël Gaulois du 16 novembre 2026
+    url: https://newsroom.parcasterix.fr/strongnoel-gaulois-une-parenthese-chaleureuse-en-famille-strongstrongdu-19-decembre-2026-au-3-janvier-2027strong-33783/?lang=en
+  - title: Parc Astérix - Buffet et Goûter du Père Noël
+    url: https://www.parcasterix.fr/restaurants/le-buffet-de-noel
 eventEndsAt: 2027-01-03T20:00:00+01:00
 topic:
   key: evenements|plailly|noel-gaulois-2026-au-parc-asterix-billet-malin-noel-ou-flex-en-famille|2026
@@ -110,7 +117,7 @@ affiliate:
   destination: Plailly
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/noel-gaulois-2026-au-parc-asterix-billet-malin-noel-ou-flex-en-famille/index.md
   targetSha: db689578fd93bb0129edc3e69b5c5be44378a5fb
@@ -137,34 +144,76 @@ radar:
       - parc asterix decembre
 ---
 
-## Mission retenue
-Actualiser Noël Gaulois 2026 au Parc Astérix, du 19 décembre 2026 au 3 janvier 2027, à la lumière du communiqué officiel publié le 16 novembre.
+Du **19 décembre 2026 au 3 janvier 2027**, le **Parc Astérix**, à Plailly dans l'Oise, accueille Noël Gaulois: attractions, patinoire, descente en bouée, spectacles et décors illuminés. Le programme 2026 ajoute notamment un spectacle de projections sur OzIris et un goûter avec les personnages. Les animations du parc sont comprises dans l'entrée, mais **le goûter et le buffet sont payants en supplément**. Le marché de Noël se visite lui aussi **à l'intérieur du parc payant**.
 
-## Pourquoi cette mission
-Article marqué rapidDrop (24 puis 4 impressions sur les périodes GSC comparées), mais diagnostic SEO incertain: ne pas attribuer la baisse à un classement perdu. Une amélioration éditoriale indépendante est vérifiée: le programme officiel du 16 novembre révèle des nouveautés et options payantes absentes de l'article.
+## Quels billets et quel budget pour Noël Gaulois ?
 
-## Décision du lecteur
-Comparer les billets et le budget réel d'une famille; choisir les animations de jour et du soir, sans confondre prestations comprises dans l'entrée et extras réservables.
+Le meilleur tarif dépend surtout de la date choisie et de la possibilité de la changer:
 
-## Faits à traiter
-- Ajouter la nouveauté « Les Merveilles de Cléopâtre », mapping nocturne sur OzIris, et « L'Île aux Vœux », spectacle final de huit minutes avec effets pyrotechniques; vérifier les horaires du jour sans inventer d'heure fixe.
-- Présenter le Goûter du Père Noël: 18,90 € par personne, gratuit avant 3 ans selon la fiche officielle, créneaux 16 h 30-17 h 30 et 17 h 30-18 h 30, en supplément du billet; préciser réservation et conditions. Buffet de Noël: 37,90 € adulte, 12,90 € enfant selon le communiqué, sans le confondre avec le goûter.
-- Mentionner « Les Comptoirs d'Épidemaïs » et, si utile, « C'est du Délire ! »; privilégier les nouveautés importantes plutôt qu'un catalogue exhaustif.
-- Conserver les comparatifs Malin/Noël/Futé/Flex et leurs réserves de disponibilité, gratuité avant 3 ans, parking, restrictions de taille, glissade, patinoire, spectacles existants, horaires 11 h-20 h (19 h les 24 et 31 décembre), accès et renvoi au guide général.
-- Préserver strictement les trois photos, crédits, licences, liens internes et liens partenaires. Contrôler les formulations ambiguës du site officiel, notamment la date limite du billet Noël, avant toute affirmation.
+- **Billet Malin: 49 €** par personne dès 3 ans. Il est daté, disponible sur certaines journées seulement et en quantité limitée, achetable jusqu'à la veille. Ni remboursement ni échange. **Sa disponibilité pendant Noël Gaulois n'est pas garantie**.
+- **Billet Noël 2026: 57 €** par personne dès 3 ans. Il est **non daté**, utilisable une journée entre le 19 décembre et le 3 janvier, mais non remboursable et non échangeable. Il permet de choisir le jour de visite au sein de cette période. La page officielle comporte une date limite d'achat manifestement incohérente avec la saison 2026-2027: vérifiez la possibilité réelle de commander avant de compter sur cette formule.
+- **Billet Liberté Flex: 68 €** à partir de 12 ans et **59 €** de 3 à 11 ans. Daté à l'achat, il peut être déplacé jusqu'à **une heure avant l'ouverture du parc**, uniquement si des places restent disponibles pour la nouvelle date. Un billet non utilisé après sa date est perdu.
 
-## Sources de départ
-- Communiqué officiel du 16 novembre 2026: https://newsroom.parcasterix.fr/strongnoel-gaulois-une-parenthese-chaleureuse-en-famille-strongstrongdu-19-decembre-2026-au-3-janvier-2027strong-33783/?lang=en
-- Programme officiel: https://www.parcasterix.fr/evenements/noel-gaulois
-- Billets: https://www.parcasterix.fr/offres/billets
-- Horaires: https://www.parcasterix.fr/faq?question=quels-sont-les-horaires-d-ouverture-du-parc-a-noel-gaulois
+Il existe aussi un **Billet Futé**, à partir de **56 € par adulte et 53 € par enfant de 3 à 11 ans**, à réserver au moins **sept jours à l'avance**. Le parc indique une validité jusqu'au 3 janvier 2027 selon son calendrier: comparez les dates et prix effectivement proposés, sans supposer que ce tarif d'appel s'applique à votre journée de Noël.
 
-## Affiliation
-Conserver le lien Klook pour comparer la billetterie, sous réserve de validité à Noël, et le B&B HOTEL Saint-Witz sur Booking.com pour les familles venant de loin. Ne pas inventer de disponibilité ou de tarif.
+**L'entrée est gratuite avant 3 ans.** Pour deux adultes et deux enfants de 3 à 11 ans, comptez **196 € en Malin**, **228 € en Noël** ou **254 € en Flex** pour les entrées, si les formules sont disponibles. Le plancher du Futé serait de **218 €**, mais son prix dépend de la date. Le **parking est affiché à 20 € par voiture et par jour** dans les tarifs officiels 2026, à ajouter aux repas et autres dépenses. Les jeux d'adresse sont exclus du billet.
 
-## Continuations internes
-- Garder le guide général Parc Astérix pour navette, tailles d'attractions et séjour de deux jours.
-- Ne pas créer un second article sur les nouveautés de Noël Gaulois.
+Pour comparer une autre billetterie, [Klook propose un billet non daté pour le Parc Astérix](https://www.klook.com/fr/activity/3305-asterix-park-entry-ticket-paris/) annoncé valable les jours d'ouverture jusqu'au 3 janvier 2027, hors nocturnes d'Halloween. Vérifiez le prix, les conditions applicables à **votre date de Noël** et la procédure d'échange du bon au guichet avant de l'acheter: cette formule n'est pas automatiquement plus avantageuse que les billets ci-dessus.
+
+## Patinoire, glissades et spectacles: que faire avec les enfants ?
+
+<!-- article-image-body:01 -->
+
+![Carrousel de César au Parc Astérix photographié en mai 2024, hors saison de Noël](/images/articles/2026/10/noel-gaulois-2026-au-parc-asterix-billet-malin-noel-ou-flex-en-famille-body-01.webp)
+
+*Photo: [Bernd van Delft](https://commons.wikimedia.org/wiki/File:Le_Carrousel_de_C%C3%A9sar.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+La **Patinoire Viking** est présentée comme familiale; les **patins sont prêtés gratuitement** et le parc conseille les gants. La **Glissade d'Obélix** se descend en bouée: **1,20 m est la taille indiquée pour y accéder seul**. Le parc ne précise pas sur cette page de seuil d'accès accompagné: renseignez-vous avant de promettre la descente à un enfant plus petit. Pour les personnes en fauteuil roulant, l'accès à la glissade passe par un ascenseur, mais il faut pouvoir quitter le fauteuil, s'asseoir et se tenir aux barres de sécurité.
+
+Les **Jardins merveilleux du Père Noël** proposent une promenade illuminée entre Bois enchanté, Vallée glacée et Village du Père Noël. Les rencontres avec les personnages et le marché de Noël complètent la visite sans imposer les grandes attractions.
+
+Pour faire une pause, trois spectacles sont annoncés:
+
+- **Quel Cirque !**: 20 minutes d'acrobaties, **assis en intérieur**.
+- **Chantons Noël**: 30 minutes de chants, **debout en intérieur**.
+- **Qui veut la peau du Père Noël ?**: 25 minutes de spectacle sur glace, **assis en extérieur**.
+
+Le programme officiel mentionne aussi la comédie musicale **C'est du Délire !**. Les horaires des représentations varient selon le jour. Toutes les attractions habituelles ne fonctionnent pas nécessairement pendant les fêtes: **Menhir Express est explicitement annoncé fermé durant Noël Gaulois**.
+
+## Les nouveautés 2026 et le spectacle du soir
+
+À la tombée de la nuit, **Les Merveilles de Cléopâtre** projette images et lumières sur la façade du temple égyptien d'**OzIris**, avec une ambiance sonore. Le **Défilé gaulois de Noël** réunit ensuite les personnages autour de cinq chars illuminés. **L'Île aux Vœux** propose un final de **huit minutes** mêlant sons, lumières et effets pyrotechniques au-dessus du lac.
+
+Ces animations font partie du programme annoncé dans le [communiqué officiel du 16 novembre 2026](https://newsroom.parcasterix.fr/strongnoel-gaulois-une-parenthese-chaleureuse-en-famille-strongstrongdu-19-decembre-2026-au-3-janvier-2027strong-33783/?lang=en). Le parc ne garantit pas une heure de représentation identique chaque jour: consultez le programme de votre date, particulièrement les 24 et 31 décembre où la fermeture est avancée. Les **Comptoirs d'Épidemaïs** constituent également une halte de restauration décorée pour les fêtes.
+
+## Goûter du Père Noël ou buffet: quel supplément prévoir ?
+
+Au **Buffet de Noël**, dans la zone Égypte, deux prestations distinctes sont proposées:
+
+- **Goûter du Père Noël: 18,90 € par personne**, adulte ou enfant, en plus de l'entrée. Une animation dans une usine de jouets se termine par un chocolat chaud, des douceurs et une rencontre avec les personnages. Deux créneaux sont annoncés: **16 h 30-17 h 30** et **17 h 30-18 h 30**. Pour quatre personnes payantes, prévoyez **75,60 €** en supplément. Le tarif et les conditions des moins de 3 ans doivent être confirmés à la réservation.
+- **Buffet de Noël à déjeuner: 37,90 € par adulte et 12,90 € par enfant**. Pour deux adultes et deux enfants au tarif enfant, cela représente **101,60 €**, hors billets et parking.
+
+Le [restaurant du Parc Astérix](https://www.parcasterix.fr/restaurants/le-buffet-de-noel) indique que le déjeuner et le goûter peuvent être réservés en prévente, dans l'application mobile le jour même ou sur place, selon les disponibilités. Ne confondez pas ces prestations avec les buffets spéciaux des réveillons, proposés à d'autres tarifs.
+
+## Horaires et organisation de la journée
+
+<!-- article-image-body:02 -->
+
+![Autobus de la navette du Parc Astérix à Roissypole en septembre 2024](/images/articles/2026/10/noel-gaulois-2026-au-parc-asterix-billet-malin-noel-ou-flex-en-famille-body-02.webp)
+
+*Photo: [Chabe01](https://commons.wikimedia.org/wiki/File:Bus_Navette_Parc_Ast%C3%A9rix_Roissypole_-_Tremblay-en-France_(FR93)_-_2024-09-08_-_1.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Le parc annonce une ouverture **de 11 h à 20 h**, sauf les **24 et 31 décembre, de 11 h à 19 h**. Pour une visite avec enfants, privilégiez les attractions et glissades en journée, puis réservez un créneau pour les illuminations et les spectacles nocturnes. Un spectacle intérieur peut offrir une pause à l'abri du froid. Si vous réservez le goûter, tenez compte de son heure pour ne pas manquer le programme du soir.
+
+Les restrictions de taille diffèrent d'une attraction à l'autre et la météo peut modifier certaines activités. Pour le trajet, la navette, les attractions selon la taille des enfants et l'intérêt d'une ou deux journées, consultez notre guide [Parc Astérix en famille: durée, hôtel et budget](/articles/voyages/parc-asterix-en-famille-en-2026-une-ou-deux-journees-quel-hotel-et-quel-budget-prevoir/), plutôt que de reprendre ici toute l'organisation d'une visite classique.
+
+## Passer la nuit près du parc
+
+Si vous venez de loin, le [B&B HOTEL Saint-Witz Roissy sur Booking.com](https://www.booking.com/hotel/fr/hotel-saint-witz.html), à proximité du parc, dispose de chambres familiales. Vérifiez la capacité exacte selon l'âge des enfants, le petit déjeuner, les conditions d'annulation et le prix aux dates choisies: **aucune disponibilité pour Noël 2026 n'est garantie**. Cette réservation d'hôtel seule **n'inclut pas les billets d'entrée**.
 
 ## Article source exact à préserver et améliorer
 
