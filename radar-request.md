@@ -1,4 +1,5 @@
 ---
+action: advance
 subtitle: Calendrier 2026 par rue, dernières collectes et solutions de réemploi
 summary: À Bourges, vérifiez les derniers passages de 2026 selon votre rue et votre logement, puis choisissez entre collecte, déchèterie et réemploi.
 radarReview:
