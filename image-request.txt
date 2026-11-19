@@ -428,3 +428,4 @@ automation/image-hero-20261118-1546-ardeche-laep|2dd265def3f666b617ed9155a507b27
 automation/image-hero-20261118-1546-ardeche-laep|f60ccde9dfc337b5ddcfa4b2603eb7f4ce1e9d19
 automation/image-hero-20261118-2149-reunion-gers-charente|78cbdf5a5e0900488b30a22f18b0cfc6a585d8fa
 automation/image-hero-20261118-2149-reunion-gers-charente|18b08ead7ec0492eb2e1946411cd994f85fcf2c0
+automation/image-hero-20261119-0347-valdoise-martinique|fe480f51c84943df5eae19968b2a5627e12ad106
