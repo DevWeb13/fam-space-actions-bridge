@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Réserve Africaine de Sigean: combien de temps prévoir entre safari et visite à pied ?"
-subtitle: "Safari, visite à pied ou Lumières d'Afrique: les bons horaires pour organiser la journée avec des enfants"
-summary: "Durée, tarifs, horaires d'automne, billets Lumières d'Afrique, poussette et repas: préparez une journée à la Réserve Africaine de Sigean."
+subtitle: "Safari, parcours à pied et Lumières d'Afrique: organiser sa visite familiale avec les horaires d'hiver"
+summary: Comptez 5 à 6 heures pour le safari et la visite à pied. Horaires d'hiver, tarifs, billets Lumières d'Afrique, poussette et repas à Sigean.
 slug: reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied
 status: published
 publishedAt: 2026-09-10T16:05:53+02:00
@@ -90,13 +93,13 @@ sources:
     accessedAt: 2026-10-02
   - title: Réserve Africaine de Sigean - Horaires
     url: https://www.reserveafricainesigean.fr/infos-pratiques/horaires/
-    accessedAt: 2026-10-02
+    accessedAt: 2026-11-19
   - title: Réserve Africaine de Sigean - Billetterie
     url: https://www.reserveafricainesigean.fr/billetterie/achat-de-billet/
-    accessedAt: 2026-10-02
+    accessedAt: 2026-11-19
   - title: Réserve Africaine de Sigean - Lumières d'Afrique
     url: https://www.reserveafricainesigean.fr/visitez-la-reserve/lumieres-d-afrique/
-    accessedAt: 2026-10-02
+    accessedAt: 2026-11-19
   - title: Réserve Africaine de Sigean - Application du parc
     url: https://www.reserveafricainesigean.fr/visitez-la-reserve/application-du-parc/
     accessedAt: 2026-10-02
@@ -111,7 +114,7 @@ sources:
     accessedAt: 2026-10-02
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/sorties/(2026)/(09)/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied/index.md
   targetSha: cc92588b45f110efbb6dcea17742f52896d21640
@@ -135,30 +138,85 @@ radar:
     focusQueries:
       - Réserve Africaine de Sigean avec enfants
       - durée visite Réserve Africaine Sigean
+reviewAt: 2027-01-18
 ---
 
-## Mission retenue
-Actualiser les horaires d'hiver de la Réserve Africaine de Sigean dans le guide familial déjà publié, en distinguant les horaires du safari, du parcours à pied et de Lumières d'Afrique.
+<!-- article-image-credit -->
+*Photo: [Sacamol](https://commons.wikimedia.org/wiki/File:Girafes_Sigean.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-L'article affirme « La Réserve ouvre tous les jours à 9 h », alors que le tableau officiel actuellement publié indique une ouverture à 10 h et, du 25 octobre 2026 au 27 mars 2027, une fermeture des caisses et du safari à 16 h, puis du parcours à pied à 17 h 30 (17 h pendant Lumières d'Afrique). C'est une erreur pratique indépendante de la baisse GSC, dont la cause reste inconnue.
+La Réserve Africaine de Sigean, entre Narbonne et Perpignan, se découvre en deux temps: un safari avec votre véhicule, puis un parcours à pied. Comptez environ **1 heure en voiture et 2 h 30 à 3 heures de marche**. Avec le déjeuner et les pauses, réservez plutôt **5 à 6 heures** pour profiter des animaux avec des enfants.
 
-## Décision du lecteur
-Savoir à quelle heure arriver pour voir les animaux sans perdre la visite à pied, et décider si le parcours lumineux vaut de prolonger la journée.
+En hiver, la Réserve ouvre **à 10 h, et non à 9 h**. Pour visiter les deux circuits sans courir, l'idéal est donc d'arriver vers 10 h. Certains jours, le festival Lumières d'Afrique permet aussi de prolonger la sortie jusqu'à 20 h.
 
-## Faits à traiter
-Vérifier et corriger l'ouverture à 10 h et la fermeture à pied avancée à 17 h les jours de Lumières d'Afrique; distinguer les dates du festival (week-ends et vacances jusqu'au 17 janvier 2027), le billet jour avec accès lumineux et le billet soirée sans animaux. Contrôler les tarifs avant toute réécriture. Conserver le safari en véhicule personnel, les durées, la règle de sortie définitive, les informations poussette et repas, les photos et crédits, les liens internes et l'hébergement existant. Ne pas transformer la page en article distinct sur le festival.
+## À quelle heure arriver pour faire le safari et la visite à pied?
 
-## Sources de départ
-- https://www.reserveafricainesigean.fr/infos-pratiques/horaires/
-- https://www.reserveafricainesigean.fr/billetterie/achat-de-billet/
-- https://www.reserveafricainesigean.fr/visitez-la-reserve/lumieres-d-afrique/
+La [FAQ officielle](https://www.reserveafricainesigean.fr/infos-pratiques/faq/) estime la durée du safari à environ 1 heure et celle du parcours à pied à 2 h 30 ou 3 heures. Ces durées ne comprennent pas le repas, les pauses avec un bébé ni les arrêts prolongés devant les animaux.
 
-## Affiliation
-L'hébergement Booking.com à Sigean reste utile après une visite jusqu'à 20 h. Pas d'autre offre partenaire vérifiée.
+Du **25 octobre 2026 au 27 mars 2027**, les [horaires officiels](https://www.reserveafricainesigean.fr/infos-pratiques/horaires/) sont les suivants:
 
-## Continuations internes
-Conserver le positionnement « durée safari + marche »; le festival reste un choix complémentaire, non un doublon éditorial. Vérifier la cohérence du conseil d'arrivée matinale avec l'ouverture officielle à 10 h.
+- Ouverture du parc à **10 h**.
+- Fermeture des caisses et du circuit safari en voiture à **16 h**.
+- Fermeture du parc à pied à **17 h 30**, avancée à **17 h les jours de Lumières d'Afrique**.
+
+Ce sont des heures de fermeture, pas des heures de début de visite. Arriver à 15 h ou 16 h ne permet pas de profiter sereinement des deux parcours. Pour une journée familiale, commencez vers 10 h par le safari, déjeunez, puis consacrez l'après-midi à la partie à pied.
+
+## Safari d'abord ou parc à pied?
+
+<!-- article-image-body:01 -->
+
+![Un rhinocéros au milieu de la voie réservée aux voitures dans la Réserve Africaine de Sigean](/images/articles/2026/09/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied-body-01.webp)
+
+*Photo: [Gordito1869](https://commons.wikimedia.org/wiki/File:R%C3%A9serve_Africaine_Nashorn_1.jpg) - [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Commencer par le safari est le plus simple avec des enfants: ils observent les animaux depuis la voiture avant de marcher à leur rythme. L'ordre inverse reste possible, notamment si vous souhaitez retourner sur le circuit voiture avant sa fermeture.
+
+Le safari se fait avec **votre propre voiture, camping-car ou bus**. Les motos, vélos et voitures décapotables ne sont pas admis. Une arrivée en taxi sans véhicule adapté ne suffit donc pas pour effectuer la visite complète.
+
+L'[application gratuite du parc](https://www.reserveafricainesigean.fr/visitez-la-reserve/application-du-parc/) aide à retrouver les animaux, les toilettes, les points de restauration et l'itinéraire. Elle permet aussi de choisir les zones à pied prioritaires lorsque les enfants fatiguent.
+
+## Faut-il prolonger avec Lumières d'Afrique?
+
+La troisième édition de [Lumières d'Afrique](https://www.reserveafricainesigean.fr/visitez-la-reserve/lumieres-d-afrique/) se déroule du **25 octobre 2026 au 17 janvier 2027**, uniquement les week-ends et pendant les vacances scolaires. Les lanternes sont allumées de **17 h 30 à 20 h**. Le parcours lumineux, long de plus d'un kilomètre, ne permet pas d'observer les animaux la nuit.
+
+Deux possibilités existent:
+
+- **Visite de jour + lumières:** le billet habituel du parc comprend le festival sans supplément les jours où celui-ci est organisé. Il faut rester dans l'enceinte du parc entre les deux visites.
+- **Lumières uniquement:** billet réservé au parcours nocturne, sans accès au safari ni au parc animalier. L'arrivée est possible de **17 h à 18 h 30**, sans entrée après 18 h 30.
+
+La **sortie du parc est définitive**: impossible de rentrer à l'hôtel ou de sortir dîner puis de revenir avec le même billet. Entre la fermeture du parcours à pied à 17 h et l'allumage des lanternes, le snack Serengeti propose notamment des boissons chaudes et des gourmandises, et l'aire de jeu Katavi reste accessible selon les indications du parc.
+
+Une journée de 10 h à 20 h peut être éprouvante pour de jeunes enfants. Si les animaux sont votre priorité, la visite de jour suffit largement; les lumières sont un complément à choisir selon leur énergie.
+
+## Quels tarifs prévoir?
+
+Selon la [billetterie officielle](https://www.reserveafricainesigean.fr/billetterie/achat-de-billet/), les tarifs de jour annoncés **jusqu'au 31 janvier 2027** sont de **34 € par adulte** et **24 € par enfant de 4 à 14 ans**. L'entrée est gratuite avant 4 ans. Le tarif pour une personne en situation de handicap est de **14,50 €**, sur présentation de la carte mobilité inclusion.
+
+Le **Pack Famille**, à partir de deux adultes et trois enfants de 4 à 14 ans dans le même véhicule, ramène le prix à **31 € par adulte** et **21 € par enfant**.
+
+Pour **Lumières d'Afrique uniquement**, les billets coûtent **17,90 € par adulte** et **14,50 € par enfant de 4 à 14 ans**. L'achat des billets en ligne est obligatoire pour le festival, avec un nombre d'entrées limité. Pour la visite de jour, choisissez également votre date et votre créneau d'arrivée lors de la réservation. Les chèques vacances ANCV font l'objet d'une procédure de réservation en ligne avec paiement sur place.
+
+Vérifiez les tarifs à nouveau pour une visite à partir de février 2027.
+
+## Poussette, bébé et repas
+
+Les chemins du circuit pédestre sont goudronnés, avec des pentes douces, et les poussettes sont autorisées. Le plan et l'application permettent de privilégier les passages les moins pentus.
+
+La [Réserve Africaine de Sigean](https://www.reserveafricainesigean.fr/) annonce un accueil bébé avec coin à langer, micro-ondes et chaises enfant.
+
+Vous pouvez apporter votre repas et utiliser les aires de pique-nique. La page [restauration et pique-nique](https://www.reserveafricainesigean.fr/infos-pratiques/restauration-pique-nique/) présente les possibilités sur place; les horaires des snacks peuvent varier selon la saison.
+
+Avec un jeune enfant, mieux vaut garder deux ou trois zones prioritaires du parcours pédestre plutôt que de transformer la promenade en course contre la montre.
+
+## Adresse et suite du séjour
+
+La Réserve se trouve **RD 6009, 19 chemin Hameau du Lac, 11130 Sigean**. La page [accès au parc](https://www.reserveafricainesigean.fr/infos-pratiques/acces-au-parc/) indique les itinéraires depuis les sorties d'autoroute de Sigean et Narbonne Sud. L'accueil est joignable au [04 68 48 20 20](tel:+33468482020).
+
+Après une visite prolongée jusqu'à 20 h, dormir à proximité peut éviter un long trajet avec des enfants. Vous pouvez [chercher un hébergement à Sigean sur Booking.com](https://www.booking.com/city/fr/sigean.fr.html).
+
+Pour organiser un séjour plus long dans l'Aude, découvrez [Narbonne en famille hors saison](/articles/voyages/narbonne-en-famille-hors-saison-un-week-end-entre-romains-halles-et-canal/) ou notre guide [Carcassonne en famille en 1 ou 2 jours](/articles/voyages/carcassonne-en-famille-1-ou-2-jours-billets-et-budget-a-prevoir/).
 
 ## Article source exact à préserver et améliorer
 
