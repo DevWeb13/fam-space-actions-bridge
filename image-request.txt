@@ -431,3 +431,4 @@ automation/image-hero-20261118-2149-reunion-gers-charente|18b08ead7ec0492eb2e194
 automation/image-hero-20261119-0347-valdoise-martinique|fe480f51c84943df5eae19968b2a5627e12ad106
 automation/image-hero-20261119-0347-valdoise-martinique|82bef85fe22735de7f325dd5716bc03e13daac90
 automation/image-hero-20261119-0945-musees04-laepmanche|f976405d1c6125a5a38efcefc71d69570c7ee0d3
+automation/image-hero-20261119-0945-musees04-laepmanche|8bd0aa3a27feca814d8c3e7a190f5a370c252efc
