@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261119-0903-chateau-de-sully-sur-loire-loiret-visite-familiale-durable-et-accessib",
+  "lastProcessedCommit": "d2e11c04380a8945943035af7ed41d3375c09a1c"
 }
