@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,17 +59,70 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Encombrants à Bourges: quand sortir meubles et gros objets"
+subtitle: Calendrier 2026 par rue, dernières collectes et solutions de réemploi
+summary: À Bourges, vérifiez les derniers passages de 2026 selon votre rue et votre logement, puis choisissez entre collecte, déchèterie et réemploi.
+slug: encombrants-a-bourges-quand-sortir-meubles-et-gros-objets
+status: published
+publishedAt: 2026-09-11T00:03:15+02:00
+updatedAt: 2026-10-03T03:24:30.225Z
+reviewAt: 2026-12-18
+category: maison
+readingTime: 5
+location:
+  city: Bourges
+  department: Cher
+  region: Centre-Val de Loire
+topic:
+  key: maison|bourges|encombrants-a-bourges-quand-sortir-meubles-et-gros-objets|2026
+  keywords:
+    - encombrants Bourges
+    - déchèterie Bourges
+image:
+  src: /images/articles/2026/09/encombrants-a-bourges-quand-sortir-meubles-et-gros-objets.webp
+  alt: Matelas et chaises déposés comme encombrants sur un trottoir
+sources:
+  - title: Bourges Plus - Ramassage des encombrants
+    url: https://www.agglo-bourgesplus.fr/site/vie-pratiquedechetsramassage-des-encombrants-monstres
+    accessedAt: 2026-11-19
+  - title: Bourges Plus - Planning encombrants 2026
+    url: https://www.agglo-bourgesplus.fr/web/medias/files/environnement/calendrier_encombrants.pdf
+    accessedAt: 2026-11-19
+  - title: Bourges Plus - Déchèteries
+    url: https://www.agglo-bourgesplus.fr/site/vie-pratique/dechets/decheteries-les-horaires-d-ouverture
+    accessedAt: 2026-11-19
+radar:
+  schemaVersion: 1
+  phase: 2
+  mode: refresh
+  targetPath: src/routes/articles/maison/(2026)/(09)/encombrants-a-bourges-quand-sortir-meubles-et-gros-objets/index.md
+  targetSha: 02bb44c32c626608887c2825e67cbf121cdc942c
+  targetUrl: /articles/maison/encombrants-a-bourges-quand-sortir-meubles-et-gros-objets/
+  decision: Permettre à un habitant de Bourges de déterminer sans erreur si sa rue bénéficie encore d'un ramassage en 2026, quand sortir son objet, et quelle solution choisir si la collecte est passée ou l'objet refusé.
+  affiliationPotential: Aucune affiliation naturelle pour un service public de collecte et de réemploi.
+  gsc:
+    retrievedAt: 2026-11-19T01:30:40+01:00
+    dataThrough: 2026-11-16
+    signal: needs_query_check
+    basis: Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.
+    peakStart: 2026-10-24
+    peakEnd: 2026-10-30
+    recentStart: 2026-11-10
+    recentEnd: 2026-11-16
+    peakImpressions: 149
+    recentImpressions: 45
+    commonQueries: null
+    positionDelta: null
+    impressionRatio: null
+    focusQueries:
+      - encombrants Bourges
+      - déchèterie Bourges
+---
+
+e: "Encombrants à Bourges: quand sortir meubles et gros objets"
 subtitle: Calendrier par rue, prochaines dates, objets acceptés et solutions de réemploi
 summary: À Bourges, retrouvez la date de collecte de votre rue et choisissez entre ramassage, déchèterie ou réemploi selon l'objet à évacuer.
 slug: encombrants-a-bourges-quand-sortir-meubles-et-gros-objets
@@ -91,57 +154,91 @@ sources:
   - title: Bourges Plus - Déchèteries
     url: https://www.agglo-bourgesplus.fr/site/vie-pratique/dechets/decheteries-les-horaires-d-ouverture
     accessedAt: 2026-10-03
-radar:
-  schemaVersion: 1
-  phase: 1
-  mode: refresh
-  targetPath: src/routes/articles/maison/(2026)/(09)/encombrants-a-bourges-quand-sortir-meubles-et-gros-objets/index.md
-  targetSha: 02bb44c32c626608887c2825e67cbf121cdc942c
-  targetUrl: /articles/maison/encombrants-a-bourges-quand-sortir-meubles-et-gros-objets/
-  decision: Permettre à un habitant de Bourges de déterminer sans erreur si sa rue bénéficie encore d'un ramassage en 2026, quand sortir son objet, et quelle solution choisir si la collecte est passée ou l'objet refusé.
-  affiliationPotential: Aucune affiliation naturelle pour un service public de collecte et de réemploi.
-  gsc:
-    retrievedAt: 2026-11-19T01:30:40+01:00
-    dataThrough: 2026-11-16
-    signal: needs_query_check
-    basis: Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.
-    peakStart: 2026-10-24
-    peakEnd: 2026-10-30
-    recentStart: 2026-11-10
-    recentEnd: 2026-11-16
-    peakImpressions: 149
-    recentImpressions: 45
-    commonQueries: null
-    positionDelta: null
-    impressionRatio: null
-    focusQueries:
-      - encombrants Bourges
-      - déchèterie Bourges
 ---
 
-## Mission retenue
-Actualiser le guide pratique sur la collecte des encombrants à Bourges, sans confondre la commune avec les autres communes de Bourges Plus.
+<!-- article-image-credit -->
+*Photo: [Jan Honvehlmann](https://commons.wikimedia.org/wiki/File:Bulky_waste_on_street_side_with_matress_and_chairs_-_HDR_off.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le guide présente encore comme prochaines dates les collectes des secteurs 14 à 17, terminées depuis octobre. Le calendrier officiel confirme le passage du secteur 18 le 19 novembre et celui du secteur 19 le 10 décembre. Une famille qui consulte aujourd'hui l'article a besoin d'une réponse immédiatement exploitable, pas d'une liste de dates périmées. La baisse GSC est de cause inconnue: elle ne justifie pas à elle seule le refresh.
+À Bourges, la date de ramassage d'un matelas, d'un canapé ou d'un autre objet volumineux dépend de la rue. Il faut d'abord retrouver son adresse dans le planning 2026 de Bourges Plus, puis vérifier la date et la couleur indiquées. Si le passage est déjà terminé ou si l'objet n'est pas accepté, la déchèterie ou le réemploi devient la solution adaptée.
 
-## Décision du lecteur
-Identifier sa rue et sa catégorie d'habitat dans le PDF officiel, vérifier si un passage reste possible, puis choisir entre collecte, déchèterie et réemploi avant de déplacer un meuble.
+## Comment trouver la date de collecte de sa rue?
 
-## Faits à traiter
-Retirer de la rubrique « prochaines dates » les dates d'octobre désormais échues; dater précisément le passage du secteur 18 (19 novembre) et du secteur 19 (10 décembre), tout en expliquant les dates complémentaires et la distinction particuliers/HLM. Ne pas présenter ces deux secteurs comme les seuls passages possibles sans contrôle rue par rue. Préciser qu'aucun calendrier 2027 n'a été confirmé et renvoyer vers la source officielle plutôt que supposer une reconduction. Préserver les horaires de dépôt (veille après 18 h, collecte dès 5 h), objets acceptés et exclus, accès aux déchèteries, réemploi, consignes pour enfants, téléphone, photographie et crédit.
+Ouvrez le [planning officiel des encombrants 2026](https://www.agglo-bourgesplus.fr/web/medias/files/environnement/calendrier_encombrants.pdf), puis recherchez votre rue. Le document répartit Bourges en 19 secteurs et distingue les dates destinées aux particuliers de celles qui concernent les logements HLM grâce à deux couleurs.
 
-## Sources de départ
-- Bourges Plus, calendrier officiel 2026: https://www.agglo-bourgesplus.fr/web/medias/files/environnement/calendrier_encombrants.pdf
-- Bourges Plus, ramassage des encombrants: https://www.agglo-bourgesplus.fr/site/vie-pratiquedechetsramassage-des-encombrants-monstres
-- Bourges Plus, déchèteries: https://www.agglo-bourgesplus.fr/site/vie-pratique/dechets/decheteries-les-horaires-d-ouverture
+Ne vous fiez donc pas uniquement au numéro du secteur. Une ligne peut comporter une date particulière selon le type d'habitat. Vérifiez la rue complète, la couleur de la date et l'année avant de sortir un objet.
 
-## Affiliation
-Aucune: le service public et le réemploi ne nécessitent pas de lien commercial.
+Au **19 novembre 2026**, les dates principales de fin d'année à vérifier sont:
 
-## Continuations internes
-- Conserver le lien vers le guide de tri des biodéchets pour les déchets courants, sans développer ce sujet.
-- Conserver le lien vers la carte famille de Bourges seulement s'il reste pertinent dans le contexte.
+- **secteur 18: jeudi 19 novembre**. Le dépôt devait être effectué le mercredi 18 novembre après 18 h: si vous consultez ce guide après le passage, ne déposez pas d'objet sans nouvelle confirmation de Bourges Plus;
+- **secteur 19: jeudi 10 décembre**. Pour les rues concernées et sous réserve de confirmation, dépôt à partir du mercredi 9 décembre à 18 h.
+
+Les collectes des secteurs 14 à 17, programmées en octobre, sont terminées. Ces dates sectorielles ne remplacent pas la vérification de votre rue et de votre type de logement dans le calendrier: des dates complémentaires peuvent concerner certains logements, notamment HLM.
+
+Aucun calendrier 2027 n'est confirmé ici. Pour une collecte après décembre 2026, consultez la version la plus récente publiée par Bourges Plus ou contactez le service clientèle plutôt que de reprendre les dates de 2026.
+
+Le calendrier montre aussi des dates complémentaires pour certaines lignes et certains logements. La [page de Bourges Plus consacrée au ramassage](https://www.agglo-bourgesplus.fr/site/vie-pratiquedechetsramassage-des-encombrants-monstres) prévient que les dates de quelques rues ont pu évoluer. Le PDF associé à votre rue reste donc la référence à contrôler juste avant le dépôt.
+
+## Quand faut-il sortir les objets?
+
+La collecte commence à **5 h du matin**. Bourges Plus autorise le dépôt la veille à partir de **18 h**, au droit de l'habitation.
+
+Placez les objets devant votre adresse sans constituer un point de regroupement avec le voisinage. Un dépôt effectué plusieurs jours trop tôt encombre l'espace public et peut ne pas correspondre au prochain passage de votre rue.
+
+Avant de descendre un meuble, faites ce contrôle rapide:
+
+1. retrouvez la rue exacte dans le planning;
+2. relevez la date et la couleur qui correspondent à votre situation;
+3. vérifiez que l'objet fait partie des encombrants acceptés;
+4. déposez-le seulement la veille après 18 h.
+
+## Quels objets sont acceptés comme encombrants?
+
+Bourges Plus cite notamment les sommiers, matelas, vieux vélos, chauffe-eau, canapés, moquettes, grillages enroulés, caisses et certains récipients vides.
+
+La collecte ne doit pas recevoir:
+
+- les ordures ménagères, en sacs ou en vrac;
+- les produits toxiques comme les pots de peinture ou les acides;
+- les cailloux, gravats et déchets de démolition;
+- les pneus.
+
+Les équipements électriques et électroniques ne doivent pas être déposés par défaut avec les encombrants. Bourges Plus demande de les remettre en priorité au vendeur, en déchèterie ou à une association comme Emmaüs.
+
+Pour les déchets alimentaires et végétaux du quotidien, notre guide sur le [tri des biodéchets à la maison](/articles/maison/tri-biodechets-maison-collecte-composteur-lombricomposteur/) permet de choisir entre collecte locale, composteur ou solution partagée.
+
+## Quand préférer la déchèterie?
+
+La déchèterie est plus pratique si la collecte de votre rue est passée, si vous devez évacuer plusieurs catégories de déchets ou si l'objet est refusé au ramassage. Bourges Plus gère six déchèteries dans l'agglomération, dont celle des 4 Vents à Bourges.
+
+Le [réseau des déchèteries de Bourges Plus](https://www.agglo-bourgesplus.fr/site/vie-pratique/dechets/decheteries-les-horaires-d-ouverture) est réservé aux particuliers qui résident dans l'agglomération et viennent avec un véhicule dont le poids total autorisé en charge est inférieur à 3,5 tonnes. Les professionnels n'y sont pas admis et les sites ferment les jours fériés.
+
+Les déchets acceptés et les horaires peuvent varier selon le site. Consultez la carte interactive officielle avant de charger le véhicule, surtout pour les gravats, appareils électriques, huiles, piles ou déchets spécifiques.
+
+## Venir en déchèterie avec des enfants
+
+Bourges Plus impose un gilet de haute visibilité aux enfants de moins de 12 ans présents en déchèterie. Les animaux doivent rester dans le véhicule.
+
+Triez les objets avant de partir afin de réduire le temps de déchargement. Sur place, roulez au pas, suivez le sens de circulation et les consignes du gardien. Il est interdit de monter dans les bennes ou de récupérer des objets et matériaux déjà déposés.
+
+## Donner ou réemployer un objet encore utilisable
+
+Un meuble ou un appareil en état de fonctionner ne doit pas forcément finir dans une benne. Des conteneurs Emmaüs sont installés dans les déchèteries des 4 Vents à Bourges et de Saint-Doulchard.
+
+Bourges Plus annonce également des zones de dépose et de reprise dans les déchèteries de La Chapelle-Saint-Ursin, Mehun-sur-Yèvre, Saint-Just et Trouy. Vérifiez l'état attendu et la disponibilité de l'espace avant le trajet.
+
+Le réemploi est particulièrement pertinent pour un meuble complet, de la vaisselle, un vélo réparable ou un petit équipement encore fonctionnel. Pour un appareil électrique acheté récemment, vérifiez aussi si le vendeur doit reprendre l'ancien matériel.
+
+## Qui appeler en cas de doute?
+
+Le service clientèle de Bourges Plus répond aux questions sur les jours de collecte, le tri, les déchèteries et les bacs au [0 800 897 730](tel:0800897730). L'appel est gratuit.
+
+Les horaires publiés sont:
+
+- lundi, mercredi, jeudi et vendredi de 9 h à 12 h et de 13 h 30 à 17 h;
+- mardi de 10 h à 12 h et de 13 h 30 à 17 h.
+
+Appelez avant le dépôt si votre rue est difficile à repérer dans le calendrier, si plusieurs dates apparaissent ou si l'objet ne correspond pas clairement aux listes officielles.
 
 ## Article source exact à préserver et améliorer
 
