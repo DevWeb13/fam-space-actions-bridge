@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Salon du Cheval de Paris 2026 en famille: animations, jumping et billets"
-subtitle: "Du 4 au 6 décembre à la Porte de Versailles: organiser la visite avec les enfants"
-summary: "Ateliers pour les enfants, jumping international, spectacles du soir, prix indicatifs et accès: les informations pratiques du Salon du Cheval de Paris 2026 en famille."
+title: "Salon du Cheval de Paris 2026 en famille: ateliers, jumping ou Nuit du Cheval?"
+subtitle: "Du 4 au 6 décembre: les activités des enfants, les billets et le spectacle du vendredi soir"
+summary: "Salon du Cheval de Paris 2026: ateliers en journée, jumping inclus ou payant, Nuit du Cheval avec Jean-François Pignon et Étienne Serclérat, tarifs et accès en famille."
 category: evenements
 location:
   city: Paris
@@ -81,6 +84,8 @@ sources:
     url: https://www.salon-cheval.fr/competitions
   - title: Salon du Cheval de Paris - La Nuit du Cheval
     url: https://www.salon-cheval.fr/la-nuit-du-cheval
+  - title: Salon du Cheval de Paris - Création de Jean-François Pignon et Étienne Serclérat
+    url: https://www.salon-cheval.fr/article/jean-fran%C3%A7ois-pignon-et-%C3%A9tienne-sercl%C3%A9rat-pr%C3%A9sentent-une-cr%C3%A9ation-originale-%C3%A0-paris
   - title: Salon du Cheval de Paris - La Nuit du Complet by Forestier
     url: https://www.salon-cheval.fr/la-nuit-du-complet-by-forestier
   - title: Salon du Cheval de Paris - Programme
@@ -105,7 +110,7 @@ affiliate:
   destination: Paris
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/index.md
   targetSha: 0f6ccb7817d52cc3c62cffa4fdd65a3b6d7aae7c
@@ -129,33 +134,85 @@ radar:
     focusQueries: []
 ---
 
-## Mission retenue
-Actualiser le guide familial du Salon du Cheval de Paris, du 4 au 6 décembre 2026, avec la programmation désormais détaillée de la Nuit du Cheval.
+<!-- article-image-credit -->
+*Photo: [Tttitoune](https://commons.wikimedia.org/wiki/File:Longines_master_2016_-_02.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC signale une chute rapide, sans cause SEO démontrée. Une lacune éditoriale indépendante est vérifiée: l'article indique que la programmation nominative de la Nuit du Cheval n'est pas détaillée, alors que l'organisateur annonce désormais les artistes et le déroulé. La première candidate, Féeries de Noël, reste sans billetterie Noël clairement confirmée sur son site officiel; pas de modification spéculative.
+Du **vendredi 4 au dimanche 6 décembre 2026**, le **Salon du Cheval de Paris** accueille les familles à Paris Expo Porte de Versailles. On peut venir en journée pour les ateliers et découvrir le jumping, ou choisir une soirée spectaculaire. Attention: **le billet Salon ne couvre pas toutes les compétitions ni les spectacles du soir**. Le bon choix dépend de l'âge des enfants, du programme souhaité et de l'heure de retour.
 
-## Décision du lecteur
-Savoir si une visite familiale en journée suffit ou si le spectacle du vendredi soir justifie un billet distinct et une fin à 23 h.
+## Découvrir les chevaux avec les enfants en journée
 
-## Faits à traiter
-- Nuit du Cheval vendredi 4 décembre, 21 h-23 h: ouverture par une épreuve de six barres, puis création originale de Jean-François Pignon avec ses chevaux en liberté et Étienne Serclérat avec chiens, brebis et canards.
-- Vérifier prix et conditions exactes du billet de soirée, gratuité enfant et accès aux halls avant de conseiller une réservation.
-- Préserver les ateliers familiaux, la distinction jumping inclus ou payant selon jour et épreuve, les horaires, tarifs indicatifs, transports, accessibilité, photographies, crédits et liens existants.
-- Ne pas attribuer la baisse GSC à une cause non démontrée.
+<!-- article-image-body:01 -->
 
-## Sources de départ
-- https://www.salon-cheval.fr/la-nuit-du-cheval
-- https://www.salon-cheval.fr/article/jean-fran%C3%A7ois-pignon-et-%C3%A9tienne-sercl%C3%A9rat-pr%C3%A9sentent-une-cr%C3%A9ation-originale-%C3%A0-paris
-- https://www.salon-cheval.fr/infos-pratiques
-- https://www.salon-cheval.fr/enfants
+![Cheval de trait du Nord monté lors d'une démonstration au Salon du cheval de Paris 2009 à Villepinte.](/images/articles/2026/10/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle-body-01.webp)
 
-## Affiliation
-Conserver les deux hôtels Booking.com déjà proposés pour une soirée tardive ou un séjour; aucune offre de billet partenaire vérifiée.
+*Photo: [Eponimm](https://commons.wikimedia.org/wiki/File:Trait_du_nord_monte.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
 
-## Continuations internes
-- Conserver le lien vers Equita Lyon comme comparaison, sans développer son programme.
-- Conserver le guide des options de transport et d'accès déjà présent dans le texte.
+<!-- /article-image-body:01 -->
+
+Les [animations familiales annoncées par le Salon](https://www.salon-cheval.fr/enfants) comprennent des ateliers de **pansage**, de **nutrition**, de **bien-être du cheval**, de théorie et des **quiz**. Les démonstrations permettent aussi de découvrir l'**Equifun**, l'équitation en amazone, le **cross shetland**, le western, le hunter, les **pony games** et le travail à pied.
+
+Au **hall 4**, les familles peuvent voir la carrière d'animation, le paddock de préparation des chevaux du jumping et un **pôle Santé** où rencontrer notamment vétérinaires et maréchaux-ferrants. Les **halls 4 et 6** rassemblent les exposants et les animations.
+
+L'organisateur ne précise pas pour chaque atelier l'âge minimum, les horaires, les réservations ni d'éventuels frais spécifiques. Consultez le [programme actualisé](https://www.salon-cheval.fr/programme) avant de promettre une activité précise aux enfants. Les présentations de poneys ne confirment pas, à elles seules, des baptêmes à poney.
+
+## Jumping international: les épreuves comprises dans l'entrée
+
+<!-- article-image-body:02 -->
+
+![Guillaume Canet avec Sweet Boy d'Alpa au concours CSI 2 étoiles des Longines Paris Masters 2017 à Villepinte.](/images/articles/2026/10/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle-body-02.webp)
+
+*Photo: [Eponimm](https://commons.wikimedia.org/wiki/File:SDC2017_Guillaume_Canet_CSI2.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+L'accès aux **tribunes** varie selon le créneau, comme l'explique l'[organisateur](https://www.salon-cheval.fr/article/salon-du-cheval-de-paris-2026-quel-billet-choisir-pour-votre-visite):
+
+- **Vendredi 4 décembre:** épreuves de la journée comprises dans le **billet Salon**, selon les places disponibles en tribunes.
+- **Samedi 5 et dimanche 6 décembre, le matin:** les **deux premières épreuves** sont comprises, sous réserve de places.
+- **Samedi et dimanche après-midi:** les grandes épreuves nécessitent la formule **Accès Salon + Jumping International**, avec **place assise en tribune en placement libre**.
+
+Pour une première découverte avec des enfants, le vendredi ou une matinée du week-end permet donc de voir du sport sans option jumping supplémentaire. L'épreuve du **jeudi 3 décembre** n'est **pas ouverte au public**.
+
+## Nuit du Cheval du vendredi: que verra-t-on vraiment?
+
+La **Nuit du Cheval**, le **vendredi 4 décembre de 21 h à 23 h**, propose désormais un programme détaillé. La soirée s'ouvre sur une **épreuve des six barres**, puis laisse place à une **création originale de Jean-François Pignon et Étienne Serclérat**.
+
+Jean-François Pignon présente ses **chevaux en liberté**; Étienne Serclérat intervient avec ses **chiens, brebis et canards**. Le spectacle fait se rencontrer les animaux et les deux approches des artistes, avant un final commun. C'est une soirée mêlant sport et spectacle vivant, et non deux heures d'ateliers destinés aux petits. Retrouvez le [déroulé officiel de la Nuit du Cheval](https://www.salon-cheval.fr/la-nuit-du-cheval) et la [présentation des artistes](https://www.salon-cheval.fr/article/jean-fran%C3%A7ois-pignon-et-%C3%A9tienne-sercl%C3%A9rat-pr%C3%A9sentent-une-cr%C3%A9ation-originale-%C3%A0-paris).
+
+Le spectacle a lieu au **hall 4**, avec **entrée par le hall 6**. Le **billet de soirée est distinct du billet Salon** et donne accès aux **halls 4 et 6 dès 18 h**. La FAQ affiche **80 € TTC à titre indicatif** pour la Nuit du Cheval: vérifiez la catégorie de place et le total au moment de réserver. La gratuité du Salon pour les moins de 6 ans **ne garantit pas la gratuité du spectacle**; aucun tarif enfant propre à cette soirée n'a été confirmé dans les informations officielles consultées.
+
+Le **samedi 5 décembre**, la **Nuit du Complet by Forestier** est une autre soirée, plus sportive et participative, de **21 h à 23 h**, avec accès à l'**After Party dès 23 h** pour ses détenteurs de billet. Pour des enfants qui se couchent tôt, mieux vaut généralement choisir les ateliers et les épreuves de journée plutôt qu'un retour après 23 h.
+
+## Billets: combien prévoir pour une famille?
+
+La [FAQ officielle](https://www.salon-cheval.fr/infos-pratiques) affiche des **prix TTC indicatifs**: **20 €** pour l'entrée Salon classique, **18 €** pour le jumping du samedi, **23 €** pour celui du dimanche et **80 €** pour la Nuit du Cheval. Les prix jumping cités ne sont **pas nécessairement le coût total de la formule Salon + jumping**: le tarif dépend du billet, des options et du profil.
+
+Le **Salon est gratuit pour les moins de 6 ans**, à condition de **retirer leur billet gratuit au guichet à l'arrivée**. Une **réduction famille** est annoncée lors du paiement, sans montant fixe publié. Pour les enfants plus âgés, indiquez l'âge exact dans la billetterie.
+
+À titre de repère, **deux adultes et un enfant de moins de 6 ans** représentent **40 € pour une visite Salon simple**, avant réduction éventuelle, repas et transport. Chaque billet n'est valable que pour **une seule entrée**. Les places sont limitées: contrôlez la formule et le montant final avant paiement, notamment pour les grandes épreuves ou la soirée du vendredi.
+
+## Horaires, transports et accessibilité
+
+<!-- article-image-body:03 -->
+
+![Entrée du parc des expositions de la porte de Versailles à Paris, photographiée en 2011.](/images/articles/2026/10/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle-body-03.webp)
+
+*Photo: [Mbzt](https://commons.wikimedia.org/wiki/File:P1050999_Paris_XV_pte_de_Versailles_entr%C3%A9e_du_parc_des_expositions_rwk.JPG) - [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:03 -->
+
+Le Salon se tient à **Paris Expo Porte de Versailles, pavillons 4 et 6**, au **1, place de la Porte de Versailles, 75015 Paris**. Il ouvre **de 9 h à 21 h vendredi et samedi**, puis **de 9 h à 18 h dimanche**.
+
+Pour venir, privilégiez le **métro 12 (Porte de Versailles)** ou les **tramways T2 et T3a**. Le **métro 8 (Balard)** et les **bus 80 et 39** sont d'autres possibilités selon votre trajet. Les places de parking sont **limitées en raison de travaux**.
+
+Les titulaires d'une **carte mobilité inclusion (CMI) avec mention « invalidité » ou « priorité »** peuvent retirer sur place des billets gratuits pour **le Salon et le jumping**. L'accompagnant bénéficie de la gratuité seulement si la carte indique **« accompagnant obligatoire »**. Les **soirées restent payantes**. L'organisateur indique des places adaptées **portes F et R**, une arrivée des navettes spécialisées **porte H** et un accès gratuit au **hall 4**. Vérifiez les modalités sur la [page d'informations pratiques](https://www.salon-cheval.fr/infos-pratiques).
+
+## Rester dormir après le spectacle
+
+Pour une soirée terminée à 23 h ou une visite sur deux jours, le [Novotel Paris Porte Versailles](https://www.booking.com/hotel/fr/novotel-paris-pte-versailles.fr.html), annoncé à environ **100 mètres de Paris Expo**, propose des **chambres familiales**. L'[Eklo Hotels Paris Porte de Versailles](https://www.booking.com/hotel/fr/eklo-paris-porte-de-versailles-vanves.fr.html), à **Vanves**, est situé à moins d'un kilomètre du parc et propose aussi des **chambres familiales** et un **restaurant**. Comparez les capacités, le prix total et les conditions d'annulation pour vos dates; la disponibilité n'est pas garantie.
+
+Pour comparer avec un autre grand rendez-vous équestre, notre guide d'[Equita Lyon 2026 en famille](/articles/evenements/equita-lyon-2026-en-famille-village-enfants-billets-et-spectacles/) détaille les activités et les billets de ce salon à Chassieu.
 
 ## Article source exact à préserver et améliorer
 
@@ -295,13 +352,13 @@ Si vous hésitez entre plusieurs rendez-vous équestres en France, notre guide d
 ### Articles proches préparés mécaniquement
 
 - /articles/evenements/salon-du-chocolat-paris-2026-avec-des-enfants-quel-billet-choisir-et-quels-ateliers-reserver/ | Salon du Chocolat Paris 2026 avec des enfants: quel billet choisir et quels ateliers réserver | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/ | Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/noel-2026-a-paris-la-defense-en-famille-marche-animations-ou-patinoire/ | Noël 2026 à Paris La Défense en famille: marché, animations et patinoire | evenements | Puteaux, Hauts-de-Seine, Île-de-France
-- /articles/evenements/equidays-2026-en-famille-dans-le-calvados-villages-gratuits-parade-et-animations/ | Équidays 2026 en famille dans le Calvados: villages gratuits, parade et animations | evenements | Caen, Calvados, Normandie
-- /articles/evenements/foire-d-automne-de-saint-jean-du-gard-2026-en-famille-animations-et-conseils/ | Foire d'Automne de Saint-Jean-du-Gard 2026 en famille: animations et conseils | evenements | Saint-Jean-du-Gard, Gard, Occitanie
-- /articles/evenements/noel-2026-a-quimper-en-famille-village-concert-ou-ateliers-gratuits/ | Noël 2026 à Quimper en famille: village, concert et animations gratuites | evenements | Quimper, Finistère, Bretagne
-- /articles/evenements/noel-a-provins-2026-en-famille-marche-medieval-ou-visite-guidee/ | Noël à Provins 2026: marché médiéval, animations et visites en famille | evenements | Provins, Seine-et-Marne, Île-de-France
+- /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
+- /articles/activites/ateliers-textiles-au-musee-bourdelle-a-paris-styliste-ou-broderie-en-famille-en-2026/ | Ateliers textiles au musée Bourdelle à Paris: styliste ou broderie en famille | activites | Paris, Paris, Île-de-France
+- /articles/cuisine/ateliers-cuisine-parent-enfant-a-paris-lesquels-choisir-selon-l-age-et-le-budget/ | Ateliers cuisine parent-enfant à Paris: lesquels choisir selon l’âge et le budget ? | cuisine | Paris, Paris, Île-de-France
+- /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | Rencontres du ciel et de l’espace 2026 à Paris: ateliers, âges et billets en famille | evenements | Paris, Paris, Île-de-France
+- /articles/sorties/vacances-de-la-toussaint-2026-a-la-cite-des-sciences-quels-ateliers-choisir-selon-l-age/ | Vacances de la Toussaint 2026 à la Cité des sciences: les ateliers numériques gratuits avec des enfants | sorties | Paris, Paris, Île-de-France
+- /articles/activites/musee-de-la-chalosse-en-famille-visite-jeux-et-ateliers/ | Musée de la Chalosse en famille: visite, jeux et ateliers | activites | Montfort-en-Chalosse, Landes, Nouvelle-Aquitaine
 - /articles/vie-pratique/changer-de-gare-a-paris-avec-des-enfants-preparer-sa-correspondance/ | Changer de gare à Paris avec des enfants: préparer sa correspondance | vie-pratique | Paris, Paris, Île-de-France
 - /articles/parentalite/maisons-des-1000-premiers-jours-a-paris-deux-adresses-pour-les-parents-et-les-bebes/ | Maisons des 1000 premiers jours à Paris: deux adresses pour les parents et les bébés | parentalite | Paris, Paris, Île-de-France
 - /articles/activites/atelier-musical-gratuit-a-paris-le-18-novembre-2026-fabriquer-un-baton-de-pluie-des-6-ans/ | Atelier bâton de pluie gratuit à Paris le 18 novembre 2026: dès 6 ans | activites | Paris, Paris, Île-de-France
@@ -322,13 +379,13 @@ Si vous hésitez entre plusieurs rendez-vous équestres en France, notre guide d
 - opportunity | /articles/activites/atelier-calder-gratuit-a-paris-le-14-novembre-2026-creer-un-mobile-des-5-ans/ | 2026-11-05T16:36:05.180Z
 - opportunity | /articles/activites/atelier-deco-de-noel-gratuit-a-paris-le-28-novembre-2026-creer-en-recup-art-des-8-ans/ | 2026-11-05T23:35:44.031Z
 - opportunity | /articles/activites/atelier-musical-gratuit-a-paris-le-18-novembre-2026-fabriquer-un-baton-de-pluie-des-6-ans/ | 2026-11-06T12:30:50.449Z
+- opportunity | /articles/activites/ateliers-textiles-au-musee-bourdelle-a-paris-styliste-ou-broderie-en-famille-en-2026/ | 2026-11-04T01:30:49.478Z
 - opportunity | /articles/activites/bricolages-de-noel-gratuits-a-paris-le-19-decembre-2026-creer-en-famille-des-4-ans/ | 2026-11-06T03:27:40.597Z
 - opportunity | /articles/evenements/contes-gratuits-a-paris-le-14-novembre-2026-quel-spectacle-choisir-selon-l-age/ | 2026-11-05T13:27:24.356Z
 - opportunity | /articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/ | 2026-10-23T06:21:12.326Z
 - opportunity | /articles/activites/lecture-d-hiver-gratuite-a-paris-le-12-decembre-2026-deux-seances-pour-les-1-3-ans/ | 2026-11-06T09:33:42.136Z
 - refresh | /articles/parentalite/maisons-des-1000-premiers-jours-a-paris-deux-adresses-pour-les-parents-et-les-bebes/ | 2026-11-18T05:37:16.469Z
-- opportunity | /articles/evenements/noel-2026-a-paris-la-defense-en-famille-marche-animations-ou-patinoire/ | 2026-11-01T01:35:08.448Z
-- opportunity | /articles/evenements/noel-2026-a-quimper-en-famille-village-concert-ou-ateliers-gratuits/ | 2026-11-01T18:35:45.871Z
+- opportunity | /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | 2026-10-09T14:37:47.734Z
 
 ### Phases 2 et 3
 
