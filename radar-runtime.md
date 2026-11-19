@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,24 +59,17 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Gastronomades 2026 à Angoulême en famille: faut-il prévoir le week-end ?"
-subtitle: Dates confirmées, intérêt avec des enfants et stratégie pour organiser la visite sans dépendre d'un programme 2026 encore incomplet
-summary: Les Gastronomades reviennent du 27 au 29 novembre 2026. Voici ce qui est déjà confirmé et comment décider d'y aller en famille.
+title: "Gastronomades 2026 à Angoulême en famille: Carat ou Halles, quel jour choisir ?"
+subtitle: Programme du 27 novembre au 5 décembre, tarifs, horaires et conseils pour une sortie avec des enfants
+summary: "Salon à 4 € à l’Espace Carat du 27 au 29 novembre, puis rendez-vous gratuit aux Halles les 4 et 5 décembre: comparez les animations, les accès et le budget familial."
 slug: gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end
 status: published
 publishedAt: 2026-09-19T22:56:58+02:00
 updatedAt: 2026-09-20T11:45:04+02:00
-eventEndsAt: 2026-11-29
+eventEndsAt: 2026-12-05
 category: evenements
 readingTime: 6
 location:
@@ -82,19 +85,23 @@ image:
   src: /images/articles/2026/09/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end.webp
   alt: Les Halles d’Angoulême
 sources:
-  - title: Gastronomades 2026 - Chambre de Métiers et de l'Artisanat Nouvelle-Aquitaine
-    url: https://www.metiers-art.com/Gastronomades-2026
-  - title: Site officiel des Gastronomades
-    url: https://gastronomades.fr/
-  - title: Espace Carat - site officiel
-    url: https://www.espace-carat.fr/
+  - title: Gastronomades 2026 - informations pratiques officielles
+    url: https://gastronomades.fr/infos-pratiques/
+  - title: Gastronomades 2026 - programme officiel à l'Espace Carat
+    url: https://gastronomades.fr/festival/carat/programme/
+  - title: Ville d'Angoulême - programme complet des Gastronomades
+    url: https://www.angouleme.fr/agenda/les-gastronomades-programme-complet/
+  - title: Ville d'Angoulême - Gastronomades aux Halles
+    url: https://www.angouleme.fr/agenda/les-gastronomades-aux-halles-dangouleme/
+  - title: Gastronomades - restauration à l'Espace Carat
+    url: https://gastronomades.fr/festival/carat/restauration/
 affiliate:
   enabled: true
   type: travel
   destination: Angoulême
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(09)/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/index.md
   targetSha: 1f57044e28b8639b7833265dc8d6ac2e35247753
@@ -123,34 +130,66 @@ radar:
       - gastronomade 2026
 ---
 
-## Mission retenue
-Actualiser le guide familial des Gastronomades 2026 à Angoulême, désormais doté d'un programme officiel complet et de deux lieux distincts.
+<!-- article-image-credit -->
+*Photo: [Remi Jouan](https://commons.wikimedia.org/wiki/File:Angouleme_-_Halles_(1).JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-L'article affirme encore que le programme 2026 est indisponible et que le tarif de 4 € n'est pas confirmé. Depuis, l'organisateur a publié les horaires, tarifs, accès et rendez-vous des 27-29 novembre à l'Espace Carat et des 4-5 décembre aux Halles. Amélioration indépendante de la baisse GSC, dont la cause reste incertaine.
+Les **Gastronomades 2026** se déroulent en deux temps à Angoulême: un salon de cuisine et de producteurs **du vendredi 27 au dimanche 29 novembre à l’Espace Carat**, puis des rencontres autour des cuisines du monde **les vendredi 4 et samedi 5 décembre aux Halles**. Le premier est payant pour les adultes, le second gratuit. Le [programme publié par la Ville d’Angoulême](https://www.angouleme.fr/agenda/les-gastronomades-programme-complet/) permet désormais de choisir sa sortie en fonction des enfants.
 
-## Décision du lecteur
-Choisir le lieu et le jour qui correspondent à l'âge et aux intérêts des enfants, estimer le budget et préparer un trajet réaliste.
+Pour une famille curieuse de voir des chefs cuisiner, des artisans travailler ou des produits se transformer, une demi-journée à Carat est un bon point de départ. Pour une promenade gourmande en centre-ville sans billet d’entrée, les Halles sont une autre option, à une semaine d’intervalle.
 
-## Faits à traiter
-- Espace Carat, 27-29 novembre: vendredi 10-19 h, samedi 10-22 h, dimanche 10-18 h; entrée 4 €, gratuite avant 14 ans; billetterie sur place.
-- Halles d'Angoulême, 4-5 décembre, 9-15 h: accès gratuit, cuisines du monde et recettes partagées; ne pas confondre les deux rendez-vous.
-- Programme daté des démonstrations, concours et activités familiales: sélectionner quelques temps forts sans inventer d'ateliers enfants ni de conditions d'inscription.
-- Accès Carat: parking gratuit et bus STGA ligne A, arrêt Parc Expo Carat. Vérifier les horaires de transport du jour.
-- Préserver photo et crédit Wikimedia, conseils de budget, prudence sur les jeunes enfants, lien destination Angoulême et hébergement Booking.com; corriger introduction, sous-titre, conclusion, date de fin d'événement et références périmées.
+## Carat ou Halles: quelle sortie choisir en famille ?
 
-## Sources de départ
-- Organisateur: https://gastronomades.fr/
-- Informations pratiques: https://gastronomades.fr/infos-pratiques/
-- Programme municipal publié le 12 novembre: https://www.angouleme.fr/agenda/les-gastronomades-programme-complet/
-- Halles, publication municipale du 17 novembre: https://www.angouleme.fr/agenda/les-gastronomades-aux-halles-dangouleme/
+**À l’Espace Carat, du 27 au 29 novembre**, on vient surtout pour les démonstrations, les concours, les stands de producteurs et les artisans, notamment autour des arts de la table. Les enfants assez grands pour suivre une préparation culinaire et poser des questions y trouveront davantage à observer. Ce n’est toutefois pas un parc de loisirs ni une programmation entièrement conçue pour eux: ne comptez pas sur un atelier enfant ou une garde d’enfants sans confirmation expresse.
 
-## Affiliation
-Conserver le Mercure Angoulême Hôtel de France via Booking.com pour les familles venues de loin; pas de lien d'achat officiel à ajouter dans le corps lorsque l'entrée est vendue sur place.
+**Aux Halles d’Angoulême, les 4 et 5 décembre**, les recettes et les histoires de familles sont à l’honneur. Des habitants accompagnés par les centres sociaux rejoignent les commerçants-restaurateurs pour partager leurs spécialités. Le **samedi 5 décembre**, la course des garçons de café ajoute un rendez-vous à observer. Ce format gratuit convient particulièrement à une sortie courte dans le centre, sans chercher à occuper toute une journée. Les deux rendez-vous ne se déroulent ni aux mêmes dates ni au même endroit.
 
-## Continuations internes
-- Renvoi à la destination Angoulême pour les autres visites familiales.
-- Éviter de créer un second article sur les Halles: les deux étapes relèvent de ce même festival.
+## Les horaires et les tarifs confirmés
+
+À **l’Espace Carat**, 54 avenue Jean-Mermoz, 16340 L’Isle-d’Espagnac:
+
+- Vendredi 27 novembre: **10 h à 19 h**.
+- Samedi 28 novembre: **10 h à 22 h**.
+- Dimanche 29 novembre: **10 h à 18 h**.
+- **Entrée: 4 € par personne, gratuite pour les moins de 14 ans**. Les billets s’achètent sur place à l’entrée.
+
+Une famille de deux adultes et deux enfants de moins de 14 ans paiera donc **8 € d’entrée**, hors repas, dégustations et achats. Si l’un des enfants a 14 ans ou plus, prévoyez le tarif d’entrée correspondant.
+
+Aux **Halles, en centre-ville d’Angoulême**, les rendez-vous ont lieu **vendredi 4 et samedi 5 décembre de 9 h à 15 h**, avec **entrée gratuite**. Les consommations et achats éventuels restent à prévoir séparément.
+
+Ces informations figurent sur la page des [horaires, tarifs et accès de l’organisateur](https://gastronomades.fr/infos-pratiques/).
+
+## Quels moments du programme privilégier ?
+
+Le **vendredi 27 novembre** met à l’honneur les apprentis et les métiers: concours de pâte feuilletée de **10 h à 10 h 45**, concours Croqu’en bûche de **11 h à 11 h 45**, puis démonstrations et défis culinaires. C’est une option intéressante pour les enfants qui aiment la pâtisserie et les gestes techniques.
+
+Le **samedi 28 novembre**, le salon reste ouvert jusqu’à **22 h**. Les démonstrations, les producteurs et les rencontres se poursuivent; mieux vaut choisir à l’avance un ou deux moments adaptés au rythme des enfants plutôt que prolonger la visite jusqu’au soir par principe. La Ville annonce également un buffet lié à l’initiative « Un festival, un quartier », à partir de 11 h, sans que cela garantisse une animation ouverte à tous les enfants.
+
+Le **dimanche 29 novembre**, on peut notamment suivre la découverte de la cuisine italienne de **10 h à 11 h**, la cornuelle revisitée de **16 h 45 à 17 h 30**, puis le défi du vide-frigo de **17 h 30 à 18 h 15**. Pour les plus jeunes, le créneau du matin évite une fin de journée tardive.
+
+Les horaires détaillés des démonstrations peuvent évoluer: consultez le [programme jour par jour](https://gastronomades.fr/festival/carat/programme/) avant de partir. Ces rendez-vous sont des spectacles et démonstrations annoncés, pas des ateliers pratiques garantis pour les enfants; aucune inscription ou tranche d’âge spécifique n’est à supposer.
+
+## Combien de temps rester et comment maîtriser le budget ?
+
+**Deux à quatre heures à Carat** permettent généralement de regarder quelques démonstrations, parcourir les stands et faire une pause. Avec de jeunes enfants, une visite plus courte peut être préférable, surtout aux heures d’affluence. Prévenez-les qu’il s’agit principalement d’un salon où l’on observe, goûte et échange, avec des espaces parfois animés et bruyants.
+
+En plus des billets, distinguez le budget **repas**, **dégustations** et **achats facultatifs**. Trois possibilités de restauration sont annoncées sur place: le marché des producteurs, la Guinguette et le Relais des Chefs, ce dernier proposant un service à table de **11 h 30 à 14 h 30**. Aucun tarif de repas ne doit être présumé; consultez les [options de restauration](https://gastronomades.fr/festival/carat/restauration/) et fixez une enveloppe avant la visite. Les créations en céramique, verre, bois ou autres arts de la table peuvent aussi susciter des envies d’achat: mieux vaut le prévoir.
+
+Aux Halles, une visite d’une à deux heures peut suffire pour profiter des échanges et découvrir des recettes, puis poursuivre librement la balade en ville.
+
+## Comment venir sans multiplier les trajets ?
+
+L’**Espace Carat** se situe **54 avenue Jean-Mermoz à L’Isle-d’Espagnac**, à l’extérieur du centre historique. Le **parking est gratuit**. Depuis la gare ou le centre-ville, la **ligne A du réseau STGA** dessert l’arrêt **Parc Expo Carat**. L’organisateur indique un trajet d’environ dix minutes depuis la gare et une fréquence habituelle de dix minutes, mais il faut vérifier les horaires réels du jour, particulièrement en soirée et le dimanche. [Itinéraire vers l’Espace Carat](https://www.google.com/maps/search/?api=1&query=Espace+Carat+54+avenue+Jean+Mermoz+16340+L%27Isle-d%27Espagnac).
+
+Les **Halles** sont au centre d’Angoulême et disposent d’un arrêt de bus **Les Halles**. Ne programmez pas les deux sites comme deux étapes obligatoires de la même journée: les animations des Halles sont organisées la semaine suivante.
+
+## Et si l’on vient de loin ?
+
+Une nuit n’est pas indispensable pour profiter des Gastronomades. Elle devient intéressante si vous souhaitez découvrir Angoulême en plus du salon, sans cumuler les trajets et la fatigue des enfants. Notre guide [Angoulême en famille](https://www.fam-space.fr/destinations/nouvelle-aquitaine/charente/angouleme/) aide à choisir d’autres visites. Pour compléter la sortie par une découverte de la bande dessinée, vous pouvez aussi consulter notre [guide du musée de la BD](https://www.fam-space.fr/articles/sorties/musee-de-la-bd-a-angouleme-en-famille-tarifs-horaires-et-conseils-de-visite/).
+
+Pour dormir au centre, le [Mercure Angoulême Hôtel de France sur Booking.com](https://www.booking.com/hotel/fr/angouleme-de-france.fr.html) est une piste à comparer: chambres familiales et parking privé sont indiqués sur la plateforme, sous réserve des conditions et disponibilités au moment de réserver. Ce choix est surtout pratique pour visiter le centre-ville, pas pour être à pied à l’Espace Carat. Notre article [où dormir à Angoulême avec des enfants](https://www.fam-space.fr/articles/voyages/ou-dormir-a-angouleme-avec-des-enfants-pour-visiter-la-ville-a-pied/) permet d’affiner le quartier.
+
+**Avant de partir**, choisissez un créneau précis dans le programme, vérifiez le bus ou le stationnement et gardez une marge pour les repas. Les deux temps du festival offrent des expériences différentes: nul besoin de tout faire pour passer un bon moment en famille.
 
 ## Article source exact à préserver et améliorer
 
@@ -273,14 +312,14 @@ C’est moins spectaculaire qu’une recommandation immédiate, mais beaucoup pl
 
 ### Articles proches préparés mécaniquement
 
-- /articles/voyages/ou-dormir-a-angouleme-avec-des-enfants-pour-visiter-la-ville-a-pied/ | Où dormir à Angoulême avec des enfants pour visiter la ville à pied | voyages | Angoulême, Charente, Nouvelle-Aquitaine
 - /articles/sorties/musee-de-la-bd-a-angouleme-en-famille-tarifs-horaires-et-conseils-de-visite/ | Musée de la BD à Angoulême en famille: tarifs, horaires et conseils de visite | sorties | Angoulême, Charente, Nouvelle-Aquitaine
-- /articles/voyages/bayeux-en-famille-1-ou-2-jours-et-quel-budget-prevoir/ | Bayeux en famille: 1 ou 2 jours et quel budget prévoir | voyages | Bayeux, Calvados, Normandie
+- /articles/voyages/ou-dormir-a-angouleme-avec-des-enfants-pour-visiter-la-ville-a-pied/ | Où dormir à Angoulême avec des enfants pour visiter la ville à pied | voyages | Angoulême, Charente, Nouvelle-Aquitaine
 - /articles/parentalite/decouvrir-la-bd-avec-ses-enfants-a-angouleme/ | Découvrir la BD avec ses enfants à Angoulême | parentalite | Angoulême, Charente, Nouvelle-Aquitaine
-- /articles/voyages/week-end-a-vallon-pont-d-arc-en-famille-quel-budget-prevoir/ | Week-end à Vallon-Pont-d'Arc en famille: quel budget prévoir? | voyages | Vallon-Pont-d'Arc, Ardèche, Auvergne-Rhône-Alpes
-- /articles/voyages/bourges-en-famille-ou-dormir-pour-visiter-sans-voiture/ | Bourges en famille: où dormir pour visiter sans voiture | voyages | Bourges, Cher, Centre-Val de Loire
-- /articles/voyages/mont-saint-michel-en-famille-en-2026-une-journee-ou-un-week-end-ou-dormir-et-quel-budget-prevoir/ | Mont-Saint-Michel en famille en 2026: une journée ou un week-end, où dormir et quel budget prévoir | voyages | Le Mont-Saint-Michel, Manche, Normandie
-- /articles/voyages/chateauroux-avec-des-enfants-une-journee-suffit-elle-ou-faut-il-dormir-sur-place/ | Châteauroux avec des enfants: une journée suffit-elle ou faut-il dormir sur place? | voyages | Châteauroux, Indre, Centre-Val de Loire
+- /articles/evenements/hop-hop-hop-festival-2026-en-famille-quel-jour-choisir/ | Hop Hop Hop Festival 2026 en famille: quel jour choisir? | evenements | Saint-Cirgues, Lot, Occitanie
+- /articles/evenements/marche-de-noel-de-cusset-2026-en-famille-quel-jour-choisir/ | Marché de Noël de Cusset 2026 en famille: quel jour choisir? | evenements | Cusset, Allier, Auvergne-Rhône-Alpes
+- /articles/evenements/festival-cite-en-jeux-2026-a-colomiers-quel-jour-choisir-avec-des-enfants/ | Festival Cité en Jeux 2026 à Colomiers: quel jour choisir avec des enfants | evenements | Colomiers, Haute-Garonne, Occitanie
+- /articles/evenements/habits-de-lumiere-a-epernay-avec-des-enfants-quel-jour-choisir-en-2026/ | Habits de Lumière à Épernay avec des enfants: quel jour choisir en 2026? | evenements | Épernay, Marne, Grand Est
+- /articles/parentalite/quel-laep-choisir-a-perpignan-selon-l-age-et-le-jour/ | Quel LAEP choisir à Perpignan selon l'âge et le jour ? | parentalite | Perpignan, Pyrénées-Orientales, Occitanie
 - /articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/ | Gastronomades 2026 à Angoulême en famille: faut-il prévoir le week-end ? | evenements | Angoulême, Charente, Nouvelle-Aquitaine
 - /articles/sorties/ete-actif-en-charente-2026-des-sorties-familiales-a-petit-prix-jusqu-au-29-aout/ | Été actif en Charente 2026: des sorties familiales à petit prix jusqu'au 29 août | sorties | Angoulême, Charente, Nouvelle-Aquitaine
 - /articles/vie-pratique/france-services-en-charente-ou-obtenir-de-l-aide-pour-ses-demarches-administratives/ | France services en Charente: où obtenir de l'aide pour ses démarches administratives ? | vie-pratique | Charente, Nouvelle-Aquitaine
