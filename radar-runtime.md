@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Rennes avec des enfants: transports gratuits avant 12 ans, comment ça marche?"
-subtitle: Pour les 5-11 ans, la gratuité passe par une carte KorriGo; un enfant de passage sans carte peut quand même voyager avec un titre payant sur ticket rechargeable.
-summary: "Métro et bus STAR avec des enfants: gratuité avant 12 ans, carte KorriGo, solution pour les visiteurs, Pass Pluriel et parc-relais."
+subtitle: De 5 à 11 ans, la carte KorriGo est indispensable pour voyager gratuitement; sans carte, un enfant de passage doit payer son titre.
+summary: "Carte KorriGo gratuite pour les 5-11 ans, ticket rechargeable pour les visiteurs, tarifs STAR et Pass Pluriel: préparer les trajets en famille à Rennes."
 slug: rennes-avec-des-enfants-les-transports-sont-gratuits-avant-12-ans-mais-pas-sans-carte
 status: published
 publishedAt: 2026-09-07T00:02:33+02:00
@@ -82,7 +85,7 @@ image:
   alt: Rame du métro de Rennes au terminus de La Poterie
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/vie-pratique/(2026)/(09)/rennes-avec-des-enfants-les-transports-sont-gratuits-avant-12-ans-mais-pas-sans-carte/index.md
   targetSha: fafcdc7f1128855e3c7ccb57942e1b5142207a3a
@@ -108,34 +111,63 @@ radar:
       - STAR Rennes moins de 12 ans
 ---
 
-## Mission retenue
-Actualiser le guide pratique des transports STAR à Rennes en famille, en renforçant les démarches concrètes pour les enfants de 5 à 11 ans et les visiteurs de passage.
+<!-- article-image-credit -->
+*Photo: [Pline](https://commons.wikimedia.org/wiki/File:Rame_VAL208_P1040082.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC signale une baisse d'impressions (105 à 27 sur deux semaines comparées), sans diagnostic causal établi: ne pas attribuer la baisse au contenu. Une information officielle publiée le 23 octobre 2026 précise désormais les étapes de commande et de chargement de la carte enfant, absentes du guide. Les événements récemment traités par Radar ne justifient pas un nouveau refresh immédiat.
+À [Rennes](/destinations/bretagne/ille-et-vilaine/rennes/), les bus et métros STAR sont gratuits pour les enfants de moins de 12 ans. Mais à partir de 5 ans, cette gratuité suppose une **carte KorriGo Services personnelle, avec un titre gratuit chargé, à valider à chaque trajet**. Sans cette carte, un enfant de passage peut voyager avec un titre payant.
 
-## Décision du lecteur
-Savoir avant le départ si l'enfant doit posséder une carte KorriGo, comment l'obtenir et la valider, quoi acheter sans carte et quel titre familial choisir selon le jour et le nombre de trajets.
+Avant une sortie familiale, vérifiez donc l'âge de chaque enfant, puis comparez les titres des adultes selon le nombre de déplacements et le jour choisi.
 
-## Faits à traiter
-- Pour 0-4 ans, aucun titre; pour 5-11 ans, carte KorriGo gratuite avec titre gratuit chargé et validation à chaque trajet. Détailler la commande en ligne, la pièce d'identité attestant l'âge, et l'alternative en agence ou à l'Espace KorriGo.
-- Pour un enfant de passage sans carte, titre payant sur ticket rechargeable. Préciser son coût de support de 0,10 € et où l'acheter. STAR autorise le voyage seul à partir de 8 ans, à mentionner uniquement si utile.
-- Préserver la comparaison existante: 1 voyage à 1,70 € pour 1 h, Pass 1 jour à 4,70 €, Pass Pluriel à 5 € pour 2 à 5 personnes les week-ends et jours fériés. Vérifier les conditions et distinguer la validité 24 h du Pass 1 jour de la validité jusqu'à fin de service du Pass Pluriel.
-- Conserver les deux photographies, leurs crédits/licences, les parcs-relais, les liens internes et les conseils de visite. Éviter de réécrire les sections déjà exactes.
+## De 0 à 4 ans: aucun titre à préparer
 
-## Sources de départ
-- STAR, actualité du 23 octobre 2026: https://www.star.fr/actualites/commandez-la-carte-korrigo-de-votre-enfant
-- STAR, gratuité 0-11 ans: https://www.star.fr/star-et-moi/parent-eleve-etudiant/gratuite-enfants
-- STAR, visiteurs de passage et titres: https://www.star.fr/star-et-moi/visiteur-touriste-de-passage/decouvrir-rennes
-- STAR, Pass Pluriel: https://www.star.fr/titres-et-tarifs/trouver-mon-tarif/pass-pluriel
-- STAR, Pass journée: https://www.star.fr/titres-et-tarifs/trouver-mon-tarif/pass-journee/pass-1-jour
+Les enfants de moins de 5 ans voyagent gratuitement sans carte KorriGo et sans titre de transport. Vous pouvez directement prendre le bus ou le métro avec eux.
 
-## Affiliation
-Aucune affiliation naturelle pour cette démarche de transports publics.
+## De 5 à 11 ans: obtenir la carte KorriGo gratuite
 
-## Continuations internes
-- Garder le lien existant vers la destination Rennes pour les idées de visites.
-- Garder le lien existant vers les balades à vélo pour les activités complémentaires; ne pas les développer ici.
+<!-- article-image-body:01 -->
+
+![Carte KorriGo utilisée dans les transports publics en Bretagne](/images/articles/2026/09/rennes-avec-des-enfants-les-transports-sont-gratuits-avant-12-ans-mais-pas-sans-carte-body-01.webp)
+
+*Photo: [Ssx`z](https://commons.wikimedia.org/wiki/File:Korrigo_card.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+STAR a détaillé la démarche le 23 octobre 2026 dans son [guide de commande de la carte KorriGo enfant](https://www.star.fr/actualites/commandez-la-carte-korrigo-de-votre-enfant):
+
+1. Rendez-vous sur **STAR.fr, rubrique Compte / e-boutique**, avec une pièce d'identité attestant l'âge de l'enfant.
+2. Commandez sa carte KorriGo Services gratuite: un **titre gratuit** est chargé sur la carte.
+3. Faites **valider la carte à chaque trajet**, y compris dans le métro pour franchir les portillons.
+
+Vous préférez une démarche sur place? Les agences STAR et l'Espace KorriGo peuvent créer la carte. Anticipez cette formalité avant le jour de visite plutôt que de découvrir l'obligation devant les portillons.
+
+## En visite sans KorriGo: quel billet acheter pour l'enfant?
+
+Pour un enfant de 5 à 11 ans sans carte KorriGo, STAR impose un **titre payant**: voyage ou pass chargé sur un **ticket rechargeable**. Ce support coûte **0,10 € au premier achat** et peut ensuite être réutilisé. Il est vendu notamment aux distributeurs du métro, dans les commerces agréés et auprès des agents de conduite pour les titres disponibles à bord. À la gare de Rennes, l'Espace KorriGo et les distributeurs de la station Gares permettent aussi de s'équiper.
+
+Le titre **1 voyage coûte 1,70 €** et donne droit à une heure de déplacements, correspondances comprises. Pour un programme plus chargé, comparez avec les pass. Les modalités de vente et de validation sont précisées par [STAR pour les visiteurs de passage](https://www.star.fr/star-et-moi/visiteur-touriste-de-passage/decouvrir-rennes).
+
+## Pour les adultes: ticket à l'heure ou Pass 1 jour?
+
+Le paiement sans contact par carte bancaire coûte **1,70 € pour une heure**, avec correspondances. Pour une visite compacte et peu de trajets distincts, deux validations séparées d'une heure reviennent à 3,40 € par adulte.
+
+Le [Pass 1 jour STAR](https://www.star.fr/titres-et-tarifs/trouver-mon-tarif/pass-journee/pass-1-jour) coûte **4,70 € par personne** et permet des déplacements illimités en bus et métro pendant **24 heures à partir de la première validation**, avec accès aux parcs-relais selon leurs conditions. Il peut être chargé sur une carte KorriGo ou un ticket rechargeable. Il devient intéressant si vous multipliez les déplacements, notamment à partir de trois périodes de voyage payantes.
+
+## Samedi, dimanche ou jour férié: comparez le Pass Pluriel
+
+Le [Pass Pluriel STAR](https://www.star.fr/titres-et-tarifs/trouver-mon-tarif/pass-pluriel) coûte **5 € pour un groupe de 2 à 5 personnes**. Il est valable les samedis, dimanches et jours fériés, sur bus, métro et parcs-relais, **du premier trajet jusqu'à la fin du service ce même jour**: contrairement au Pass 1 jour, il ne dure pas 24 heures glissantes.
+
+Il doit être chargé sur un **ticket rechargeable à 0,10 €**, disponible dans les agences STAR, chez les commerçants agréés et aux distributeurs du métro. Pour deux adultes, il peut être plus avantageux que deux pass individuels. Les enfants qui voyagent avec leur propre carte gratuite n'ont pas besoin d'un billet payant supplémentaire.
+
+## Venir en voiture: utiliser un parc-relais
+
+Rennes Métropole dispose de huit parcs-relais reliés au réseau STAR. Ils permettent de rejoindre le centre en bus ou en métro plutôt que de chercher un stationnement avec les enfants.
+
+Le stationnement suppose d'utiliser réellement le réseau: votre titre doit avoir été validé dans une station différente de celle du parc-relais et sert à la sortie. Ces parkings ne sont pas prévus pour laisser une voiture la nuit. Certains ferment le dimanche; consultez les [horaires et conditions des parcs-relais STAR](https://www.star.fr/reseau-star/parc-relais/fonctionnement).
+
+Si vous avez payé votre trajet par carte bancaire, STAR indique que la même carte validée dans l'heure peut être présentée à la borne de sortie.
+
+Pour prolonger la journée sans voiture, découvrez également nos [balades à vélo autour de Rennes](/articles/activites/balade-a-velo-autour-de-rennes-quel-parcours-choisir-avec-des-enfants/), avec plusieurs parcours adaptés aux familles.
 
 ## Article source exact à préserver et améliorer
 
