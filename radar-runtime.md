@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Féeries de Noël 2026 à Paris: parcours lumineux, billets et patinoire en famille"
-subtitle: "Au parc André-Citroën du 4 décembre au 2 janvier: durée, accès, poussettes et réservations"
-summary: "Les Féeries de Noël 2026 annoncent un parcours nocturne de 1,3 km au parc André-Citroën. Dates, durée, accessibilité, billets encore non confirmés et patinoire séparée: les informations utiles aux familles."
+title: "Féeries de Noël 2026 à Paris: billets, patinoire et parcours en famille"
+subtitle: "Au parc André-Citroën: deux activités à réserver séparément, tarifs 2026 et conseils avec enfants"
+summary: "Du 4 décembre 2026 au 2 janvier 2027, les Féeries de Noël proposent un parcours lumineux au parc André-Citroën. Billets désormais en vente, prix, horaires et patinoire Patins en Folie dès le 21 novembre: comment choisir et organiser sa sortie."
 category: evenements
 location:
   city: Paris
@@ -71,14 +74,14 @@ image:
   src: /images/articles/2026/10/les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille.webp
   alt: Vue du parc André-Citroën à Paris en journée, hors parcours lumineux de Noël
 sources:
-  - title: "Les Féeries de Noël: annonce officielle 2026, programme, dates, accès et FAQ"
+  - title: "Féeries de Noël: informations officielles, accès et FAQ"
     url: https://leparcenchante.fr/
-  - title: "Patins en Folie: site officiel affichant encore l'édition 2025 et la fermeture"
+  - title: "Féeries de Noël: billets et tarifs 2026-2027 sur Fever"
+    url: https://feverup.com/m/814646
+  - title: "Patins en Folie: horaires, tarifs et conditions 2026"
     url: https://patinsenfolie.com/
-  - title: "Fever: Le Parc de l'Étrange 2026, fiche Halloween actuellement liée au bouton de réservation"
-    url: https://feverup.com/m/769806
-  - title: "Fever: Patins en Folie, billetterie actuellement indisponible"
-    url: https://feverup.com/m/497312
+  - title: "Patins en Folie saison 3: billetterie Fever"
+    url: https://feverup.com/m/825958
 eventEndsAt: 2027-01-02
 topic:
   key: evenements|paris|les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille|2026
@@ -99,7 +102,7 @@ affiliate:
   destination: Paris
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille/index.md
   targetSha: e02b232b6c747806a2322971e8305b24598e0a02
@@ -124,32 +127,59 @@ radar:
       - les feeries de noel parc andre citroen
 ---
 
-## Mission retenue
-Actualiser les Féeries de Noël 2026 au parc André-Citroën et la patinoire Patins en Folie, deux expériences distinctes.
+<!-- article-image-credit -->
+*Photo: [Guilhem Vellut from Paris, France](https://commons.wikimedia.org/wiki/File:Parc_Andr%C3%A9_Citro%C3%ABn_@_Paris_(28133119066).jpg) - [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC signale une baisse récente de 91 à 30 impressions sur deux périodes de trois jours, sans cause démontrée. Lacune éditoriale indépendante vérifiée: l'article du 27 octobre affirme que Patins en Folie affiche encore l'édition 2025 et qu'aucun tarif 2026 n'est disponible, alors que son site officiel publie désormais la saison 2026, les horaires, les prix et les conditions pratiques.
+Au parc André-Citroën, dans le 15e arrondissement de Paris, deux sorties de fin d'année cohabitent: **les Féeries de Noël**, promenade-spectacle nocturne annoncée **du 4 décembre 2026 au 2 janvier 2027**, et **Patins en Folie**, patinoire extérieure dont l'ouverture est annoncée le **21 novembre 2026**. On peut choisir l'une, l'autre ou les deux. **Chaque activité possède sa billetterie**, même si des billets combinés sont proposés.
 
-## Décision du lecteur
-Comparer le parcours lumineux et la patinoire, savoir quand venir avec des enfants, prévoir le budget et réserver chaque activité séparément sans confusion.
+## Féeries de Noël: que découvre-t-on avec les enfants ?
 
-## Faits à traiter
-- Patins en Folie: ouverture annoncée le 21 novembre 2026, horaires selon les jours et vacances, 600 m² de glace, location des patins comprise, gants obligatoires, patinettes pour petites pointures. Vérifier le calendrier de vente.
-- Tarifs patinoire affichés selon séance et âge: avant 16 h 30, enfant moins de 8 ans 10 €, junior 12 €, adulte 13 €; après 16 h 30, respectivement 12 €, 13 € et 17 €. Le « pack famille » affiché à 11 € ou 14 € est ambigu (prix par personne ou total): ne pas calculer de budget pack sans confirmation. Vérifier les conditions de gratuité des moins de 3 ans et les limites d'âge.
-- Féeries de Noël: 4 décembre 2026 au 2 janvier 2027, 16 tableaux désormais décrits par le site de la patinoire; vérifier les horaires divergents entre les deux organisateurs (17 h 45-21 h 30 contre 18 h-22 h), le tarif et la vraie fiche de réservation avant toute affirmation.
-- Distinguer les entrées et billets des deux activités; ne pas présenter la billetterie Halloween comme Noël.
-- Préserver les conseils poussettes, bruit, météo, transports, les deux photographies et leurs crédits, les liens internes et l'hébergement Booking.com existant.
+L'ancien Parc Enchanté prend le nom de Féeries de Noël. Le spectacle raconte un voyage fantastique vers le Pôle Nord, avec installations lumineuses, personnages, comédiens et effets sonores. L'organisateur décrit un parcours de **1,3 km**, à effectuer en **environ une heure**. La [billetterie Fever des Féeries de Noël](https://feverup.com/m/814646) évoque pour sa part 1,5 km et 14 univers, tandis que le site de Patins en Folie parle de 16 tableaux: ces présentations divergent. Prévoyez une bonne heure de marche plutôt que de compter les scènes.
 
-## Sources de départ
-- https://patinsenfolie.com/ (édition 2026, tarifs, horaires, patins et FAQ)
-- https://leparcenchante.fr/ (Féeries de Noël, dates, parcours, accessibilité et FAQ)
+Tous les âges sont admis. Le parcours est annoncé accessible aux poussettes et fauteuils roulants, mais des **pentes et passages difficiles** restent possibles. Avec de jeunes enfants, prévoyez des chaussures adaptées, davantage de temps et une poussette maniable. Le spectacle se déroule dehors, parfois sur un terrain boueux, avec une sonorisation immersive et des effets pyrotechniques. Les enfants sensibles au bruit peuvent être surpris. La FAQ mentionne des feux d'artifice à 19 h 30 et 21 h, sans garantie que ces horaires soient maintenus pour chaque soirée de Noël: les effets peuvent changer selon la météo.
 
-## Affiliation
-Hébergement Booking.com déjà intégré, à conserver. Les billets sont indiqués chez Fever, sans offre partenaire vérifiée.
+## Dates, horaires et prix des Féeries de Noël
 
-## Continuations internes
-- Garder le guide transports parisiens pour les titres de transport.
-- Conserver le renvoi vers l'Odyssée Lumineuse au Parc Floral comme alternative, sans redévelopper son programme.
+L'[organisateur](https://leparcenchante.fr/) annonce **18 h à 22 h**, avec fermeture les lundis et mardis hors vacances scolaires ainsi que les **24, 25 et 31 décembre**. Le site de la patinoire indique plutôt 17 h 45 à 21 h 30. **Fiez-vous à l'horaire exact du créneau sélectionné sur le billet**, et non à une plage générale. L'organisateur précise que la dernière entrée intervient 30 minutes après le dernier créneau commercialisé.
+
+La billetterie dédiée à Noël est désormais accessible sur [Fever](https://feverup.com/m/814646), distincte de l'ancienne fiche Halloween « Parc de l'Étrange ». Les tarifs affichés pour une séance consultée sont **21,90 € plein tarif**, **16,90 € tarif réduit** (étudiants, moins de 26 ans, personnes en situation de handicap et accompagnateur), **26,90 € billet liberté plein tarif** et **21,90 € liberté réduit**. Un **pack groupe à partir de quatre billets** est affiché à **16,90 € par personne**, ou **21,90 € en liberté**. Les prix peuvent varier selon la date et le créneau. Les **moins de 3 ans entrent gratuitement**, avec justificatif demandé à l'entrée.
+
+À titre d'exemple, quatre billets au tarif groupe à 16,90 € représentent **67,60 €** pour la promenade, sous réserve que l'offre soit proposée pour le créneau choisi. Le billet daté impose une date et un horaire précis; l'option liberté permet de choisir le jour et l'heure selon ses conditions. Vérifiez les modalités de modification et les frais avant paiement.
+
+## Patins en Folie: combien coûte une séance ?
+
+La [patinoire Patins en Folie](https://patinsenfolie.com/) annonce **600 m² de vraie glace** et des séances d'environ **45 à 60 minutes**. Ses horaires habituels sont **12 h-19 h du mardi au jeudi**, **12 h-22 h le vendredi**, **10 h-22 h le samedi** et **10 h-20 h le dimanche**; ouverture quotidienne annoncée pendant les vacances, selon les séances disponibles à la vente.
+
+Les tarifs indicatifs publiés dans sa FAQ sont, **avant 16 h 30**, **10 € pour les enfants de moins de 8 ans**, **12 € pour les juniors** et **13 € pour les adultes**. **À partir de 16 h 30**, ils passent respectivement à **12 €, 13 € et 17 €**. Les âges limites sont formulés de façon variable entre FAQ et billetterie: contrôlez la catégorie affichée au moment de payer. Le « pack famille » est mentionné à 11 € ou 14 € dans la FAQ, mais cette présentation ne précise pas clairement l'unité du prix.
+
+La [billetterie Fever de Patins en Folie](https://feverup.com/m/825958) affiche des offres par séance, dont un **pack de quatre billets avec deux adultes maximum**. Pour une séance consultée, ce pack était à **42 €**; ce montant ne doit pas être considéré comme valable pour toutes les dates. La gratuité des moins de 3 ans est mentionnée dans la FAQ mais ses conditions doivent être confirmées lors de la réservation.
+
+**La location des patins est comprise**. Jusqu'à la pointure 28, des patinettes se fixent aux chaussures; des patins classiques sont proposés de la pointure 28 à 47. On peut aussi apporter ses propres patins. **Les gants sont obligatoires**, avec vente possible à l'accueil. La patinoire n'est pas surveillée: les enfants restent sous la responsabilité de leurs accompagnateurs. Une zone de premières glissades est annoncée.
+
+Pour combiner glace et lumières, vérifiez l'[offre combinée annoncée sur Fever](https://feverup.com/m/814646) et comparez son prix à deux réservations séparées. Le parcours lumineux débute le soir: une séance de patinage en journée suivie du premier créneau des Féeries peut être plus confortable avec de jeunes enfants. Prévoyez une pause et des vêtements chauds entre les deux.
+
+## Entrées, transports et services sur place
+
+<!-- article-image-body:01 -->
+
+![Panneau indiquant le parc André-Citroën à la station Balard du métro parisien](/images/articles/2026/10/les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille-body-01.webp)
+
+*Photo: [Chabe01](https://commons.wikimedia.org/wiki/File:Panneau_Parc_Andr%C3%A9_Citro%C3%ABn_Station_Balard_M%C3%A9tro_Paris_-_Paris_XV_(FR75)_-_2026-02-06_-_1.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+L'entrée des **Féeries de Noël** se situe à la grille à l'angle de la **rue Balard et de la rue de la Montagne de l'Espérou**, près du **56 rue Balard**. La sortie est prévue rue de la Montagne de la Fage. Pour **Patins en Folie**, l'accès habituel est indiqué au **2 rue Cauchy**; après **17 h 30**, les indications d'accès changent. Suivez les consignes figurant sur chaque billet, car les deux activités n'ont pas nécessairement la même entrée.
+
+Pour venir, l'organisateur indique le **métro 8 (Balard)**, le **métro 10 (Javel-André Citroën)**, le **RER C (Javel)** et le **tram T3a (Pont du Garigliano)**. Il n'y a pas de parking réservé aux Féeries et le stationnement alentour est limité. Notre [guide des transports parisiens avec des enfants](/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/) aide à choisir les titres selon les trajets.
+
+Des **chalets gourmands** proposent boissons chaudes et restauration, sans garantie de carte ni de prix pour chaque soirée. Les Féeries ne disposent **ni de vestiaire ni de consigne**; évitez les bagages. Les animaux ne sont pas admis au parcours. La pluie n'entraîne pas automatiquement une annulation, mais des vents violents ou un orage peuvent provoquer une fermeture de sécurité: consultez les annonces des organisateurs avant de partir.
+
+## Prolonger la sortie à Paris
+
+Pour les familles en séjour, l'[Aparthotel Adagio Paris Centre Tour Eiffel sur Booking.com](https://www.booking.com/hotel/fr/pierre-vacacnces-city-paris-tour-eiffel.fr.html) propose notamment des appartements d'une chambre avec canapé-lit, dont certaines catégories peuvent accueillir quatre personnes. Vérifiez les couchages, la capacité selon l'âge des enfants, le trajet jusqu'au parc et le prix total: aucune disponibilité n'est garantie pour votre date.
+
+Pour une autre promenade lumineuse, l'[Odyssée Lumineuse au Parc Floral](/articles/evenements/odyssee-lumineuse-2026-2027-au-parc-floral-de-paris-billet-date-ou-open-en-famille/) possède son propre programme et sa propre billetterie à Vincennes.
 
 ## Article source exact à préserver et améliorer
 
