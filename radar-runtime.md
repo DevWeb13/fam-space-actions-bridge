@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 1/3
+# Radar Fam Space - Phase 2/3
 
 ## Mission
 
@@ -8,23 +8,22 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 1/3
+# Radar - Phase 2/3
 
-Tu es rédacteur en chef. Ta seule responsabilité est de choisir la meilleure mission du passage et de préparer un brief éditorial court. **Ne fais aucune plomberie Git et ne reconstruis aucune donnée GSC structurée.**
+Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
 
-Le snapshot GSC du jour est déjà prêt lorsque cette phase commence. Utilise le catalogue compact et l'historique du bridge fournis dans ce runtime, puis utilise le contexte des travaux en cours fourni dans ce runtime. Contrôle seulement les articles nécessaires sur `master`, sans relire tout le catalogue fichier par fichier.
+Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
 
-Examine **en premier** les articles `refresh`, en commençant par ceux marqués `rapidDrop: true`. Ils ont gagné des impressions, puis leur visibilité a fortement diminué en quelques jours. Les articles récents ne doivent pas être pénalisés par leur âge. Les autres pertes significatives viennent ensuite.
+Suis le diagnostic éditorial du brief:
+- `rank_loss`: réponds mieux aux intentions réellement en recul;
+- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
+- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
+- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
+- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
 
-Lis l'article source complet, ses sources et les requêtes GSC lorsqu'elles ont été diagnostiquées :
-- `rank_loss` : vérifier les intentions dont les positions ont réellement reculé ;
-- `coverage_loss` : examiner les recherches dont l'exposition diminue ;
-- `uncertain` ou `needs_query_check` : une chute d'impressions ne prouve pas la cause. Seule une lacune indépendante et vérifiée peut justifier une amélioration ;
-- `search_potential` : vérifier que la réponse et le titre correspondent réellement à l'intention.
+Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
 
-**Ne choisis pas un refresh pour changer une date ou forcer un `updatedAt`.** Identifie ce qui serait concrètement meilleur pour la famille, tout en conservant ce qui fonctionne déjà.
-
-**Seulement si aucun article existant n'est réellement améliorable**, cherche un événement exceptionnel avec un fort potentiel d'intérêt et éventuellement d'affiliation. Vérifie ses sources officielles et recherche les doublons de sujet sur `master`, en complément des articles proches déjà listés, ainsi que les contenus Publication/Destination en cours. Ne multiplie pas les nouveaux articles sur de petits événements gratuits.
+Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
 
 Applique directement les règles partenaires ci-dessous.
 
@@ -51,986 +50,295 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
 
-Le brief doit rester court et contenir uniquement ce qui aidera la rédaction:
+Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
+
+Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
+
+Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
+
+## Candidat validé de la phase précédente
+
+---
+title: "Réserve Africaine de Sigean: combien de temps prévoir entre safari et visite à pied ?"
+subtitle: "Safari, visite à pied ou Lumières d'Afrique: les bons horaires pour organiser la journée avec des enfants"
+summary: "Durée, tarifs, horaires d'automne, billets Lumières d'Afrique, poussette et repas: préparez une journée à la Réserve Africaine de Sigean."
+slug: reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied
+status: published
+publishedAt: 2026-09-10T16:05:53+02:00
+updatedAt: 2026-10-02T18:25:59.863Z
+category: sorties
+readingTime: 6
+location:
+  city: Sigean
+  department: Aude
+  region: Occitanie
+topic:
+  key: sorties|sigean|reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied|2026
+  keywords:
+    - Réserve Africaine de Sigean avec enfants
+    - durée visite Réserve Africaine Sigean
+image:
+  src: /images/articles/2026/09/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied.webp
+  alt: Des girafes dans la Réserve Africaine de Sigean
+affiliate:
+  enabled: true
+  type: travel
+  destination: Sigean
+sources:
+  - title: Réserve Africaine de Sigean - FAQ
+    url: https://www.reserveafricainesigean.fr/infos-pratiques/faq/
+    accessedAt: 2026-10-02
+  - title: Réserve Africaine de Sigean - Horaires
+    url: https://www.reserveafricainesigean.fr/infos-pratiques/horaires/
+    accessedAt: 2026-10-02
+  - title: Réserve Africaine de Sigean - Billetterie
+    url: https://www.reserveafricainesigean.fr/billetterie/achat-de-billet/
+    accessedAt: 2026-10-02
+  - title: Réserve Africaine de Sigean - Lumières d'Afrique
+    url: https://www.reserveafricainesigean.fr/visitez-la-reserve/lumieres-d-afrique/
+    accessedAt: 2026-10-02
+  - title: Réserve Africaine de Sigean - Application du parc
+    url: https://www.reserveafricainesigean.fr/visitez-la-reserve/application-du-parc/
+    accessedAt: 2026-10-02
+  - title: Réserve Africaine de Sigean - Accueil
+    url: https://www.reserveafricainesigean.fr/
+    accessedAt: 2026-10-02
+  - title: Réserve Africaine de Sigean - Restauration et pique-nique
+    url: https://www.reserveafricainesigean.fr/infos-pratiques/restauration-pique-nique/
+    accessedAt: 2026-10-02
+  - title: Réserve Africaine de Sigean - Accès au parc
+    url: https://www.reserveafricainesigean.fr/infos-pratiques/acces-au-parc/
+    accessedAt: 2026-10-02
+radar:
+  schemaVersion: 1
+  phase: 1
+  mode: refresh
+  targetPath: src/routes/articles/sorties/(2026)/(09)/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied/index.md
+  targetSha: cc92588b45f110efbb6dcea17742f52896d21640
+  targetUrl: /articles/sorties/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied/
+  decision: Choisir une arrivée réaliste en hiver pour faire le safari et le parcours à pied, avec ou sans Lumières d'Afrique, sans se tromper sur l'heure d'ouverture.
+  affiliationPotential: Conserver le lien d'hébergement Booking.com à Sigean pour les familles qui prolongent la soirée; ne pas substituer un partenaire à la billetterie officielle.
+  gsc:
+    retrievedAt: 2026-11-19T01:30:40+01:00
+    dataThrough: 2026-11-16
+    signal: needs_query_check
+    basis: Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.
+    peakStart: 2026-10-23
+    peakEnd: 2026-10-29
+    recentStart: 2026-11-10
+    recentEnd: 2026-11-16
+    peakImpressions: 131
+    recentImpressions: 30
+    commonQueries: null
+    positionDelta: null
+    impressionRatio: null
+    focusQueries:
+      - Réserve Africaine de Sigean avec enfants
+      - durée visite Réserve Africaine Sigean
+---
 
 ## Mission retenue
-Le sujet et ce que c'est réellement.
+Actualiser les horaires d'hiver de la Réserve Africaine de Sigean dans le guide familial déjà publié, en distinguant les horaires du safari, du parcours à pied et de Lumières d'Afrique.
 
 ## Pourquoi cette mission
-Pourquoi elle mérite une amélioration maintenant, ou pourquoi aucun article existant n'était utilement améliorable avant de retenir cet événement.
+L'article affirme « La Réserve ouvre tous les jours à 9 h », alors que le tableau officiel actuellement publié indique une ouverture à 10 h et, du 25 octobre 2026 au 27 mars 2027, une fermeture des caisses et du safari à 16 h, puis du parcours à pied à 17 h 30 (17 h pendant Lumières d'Afrique). C'est une erreur pratique indépendante de la baisse GSC, dont la cause reste inconnue.
 
 ## Décision du lecteur
-Ce que la page doit permettre au lecteur de comprendre ou de choisir. Formule un résultat pour le lecteur, pas un titre ni un plan. Les consignes de maillage, d'anti-doublon ou d'organisation entre articles appartiennent à `Continuations internes`, pas à la décision.
+Savoir à quelle heure arriver pour voir les animaux sans perdre la visite à pied, et décider si le parcours lumineux vaut de prolonger la journée.
 
 ## Faits à traiter
-Les informations décisives à vérifier, actualiser ou ajouter, et les informations existantes importantes à préserver pour un refresh.
+Vérifier et corriger l'ouverture à 10 h et la fermeture à pied avancée à 17 h les jours de Lumières d'Afrique; distinguer les dates du festival (week-ends et vacances jusqu'au 17 janvier 2027), le billet jour avec accès lumineux et le billet soirée sans animaux. Contrôler les tarifs avant toute réécriture. Conserver le safari en véhicule personnel, les durées, la règle de sortie définitive, les informations poussette et repas, les photos et crédits, les liens internes et l'hébergement existant. Ne pas transformer la page en article distinct sur le festival.
 
 ## Sources de départ
-Les meilleures sources officielles ou directement responsables.
+- https://www.reserveafricainesigean.fr/infos-pratiques/horaires/
+- https://www.reserveafricainesigean.fr/billetterie/achat-de-billet/
+- https://www.reserveafricainesigean.fr/visitez-la-reserve/lumieres-d-afrique/
 
 ## Affiliation
-Les pistes réellement vérifiées, ou l'absence d'affiliation naturelle.
+L'hébergement Booking.com à Sigean reste utile après une visite jusqu'à 20 h. Pas d'autre offre partenaire vérifiée.
 
 ## Continuations internes
-Deux ou trois pistes seulement si elles sont réellement utiles. Indique quand une page existante doit prendre le relais sur un sous-sujet afin d'éviter de le redévelopper dans le nouvel article.
+Conserver le positionnement « durée safari + marche »; le festival reste un choix complémentaire, non un doublon éditorial. Vérifier la cohérence du conseil d'arrivée matinale avec l'ouverture officielle à 10 h.
 
-Ensuite, soumets cette décision via le format `action: start` fourni plus bas dans ce runtime. Le modèle ne renseigne jamais le nom de branche, le SHA, `targetPath`, le slug technique d'une opportunity ni les métriques GSC détaillées déjà présentes dans le snapshot.
+## Article source exact à préserver et améliorer
 
-## Catégories éditoriales autorisées
+Chemin: src/routes/articles/sorties/(2026)/(09)/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied/index.md
 
-- sorties — Sorties: Des idées de sorties à partager en famille, près de chez vous.
-- voyages — Voyages: Des conseils et inspirations pour voyager sereinement en famille.
-- evenements — Événements: Les événements à découvrir et à préparer avec les enfants.
-- activites — Activités: Des activités simples et enrichissantes pour tous les âges.
-- vie-pratique — Vie pratique: Des repères concrets pour faciliter le quotidien des familles.
-- maison — Maison: Des solutions pratiques pour une maison familiale agréable.
-- cuisine — Cuisine: Des idées et conseils pour cuisiner simplement en famille.
-- parentalite — Parentalité: Des ressources bienveillantes pour accompagner la vie de famille.
-- bons-plans — Bons plans: Réductions, gratuités, pass et aides pratiques pour économiser en famille.
+---
+title: "Réserve Africaine de Sigean: combien de temps prévoir entre safari et visite à pied ?"
+subtitle: "Safari, visite à pied ou Lumières d'Afrique: les bons horaires pour organiser la journée avec des enfants"
+summary: "Durée, tarifs, horaires d'automne, billets Lumières d'Afrique, poussette et repas: préparez une journée à la Réserve Africaine de Sigean."
+slug: reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied
+status: published
+publishedAt: 2026-09-10T16:05:53+02:00
+updatedAt: 2026-10-02T18:25:59.863Z
+category: sorties
+readingTime: 6
+location:
+  city: Sigean
+  department: Aude
+  region: Occitanie
+topic:
+  key: sorties|sigean|reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied|2026
+  keywords:
+    - Réserve Africaine de Sigean avec enfants
+    - durée visite Réserve Africaine Sigean
+image:
+  src: /images/articles/2026/09/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied.webp
+  alt: Des girafes dans la Réserve Africaine de Sigean
+affiliate:
+  enabled: true
+  type: travel
+  destination: Sigean
+sources:
+  - title: Réserve Africaine de Sigean - FAQ
+    url: https://www.reserveafricainesigean.fr/infos-pratiques/faq/
+    accessedAt: 2026-10-02
+  - title: Réserve Africaine de Sigean - Horaires
+    url: https://www.reserveafricainesigean.fr/infos-pratiques/horaires/
+    accessedAt: 2026-10-02
+  - title: Réserve Africaine de Sigean - Billetterie
+    url: https://www.reserveafricainesigean.fr/billetterie/achat-de-billet/
+    accessedAt: 2026-10-02
+  - title: Réserve Africaine de Sigean - Lumières d'Afrique
+    url: https://www.reserveafricainesigean.fr/visitez-la-reserve/lumieres-d-afrique/
+    accessedAt: 2026-10-02
+  - title: Réserve Africaine de Sigean - Application du parc
+    url: https://www.reserveafricainesigean.fr/visitez-la-reserve/application-du-parc/
+    accessedAt: 2026-10-02
+  - title: Réserve Africaine de Sigean - Accueil
+    url: https://www.reserveafricainesigean.fr/
+    accessedAt: 2026-10-02
+  - title: Réserve Africaine de Sigean - Restauration et pique-nique
+    url: https://www.reserveafricainesigean.fr/infos-pratiques/restauration-pique-nique/
+    accessedAt: 2026-10-02
+  - title: Réserve Africaine de Sigean - Accès au parc
+    url: https://www.reserveafricainesigean.fr/infos-pratiques/acces-au-parc/
+    accessedAt: 2026-10-02
+---
 
-## Snapshot GSC préparé
+<!-- article-image-credit -->
+*Photo: [Sacamol](https://commons.wikimedia.org/wiki/File:Girafes_Sigean.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-{
-  "schemaVersion": 1,
-  "generatedAt": "2026-11-19T01:30:40+01:00",
-  "dataThrough": "2026-11-16",
-  "from": "2026-10-20",
-  "refresh": [
-    {
-      "url": "/articles/evenements/les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille/",
-      "title": "Féeries de Noël 2026 à Paris: parcours lumineux, billets et patinoire en famille",
-      "category": "evenements",
-      "publishedAt": "2026-10-27T13:28:21.002Z",
-      "location": {
-        "city": "Paris",
-        "department": "Paris",
-        "region": "Île-de-France"
-      },
-      "ageDays": 23,
-      "rapidDrop": true,
-      "peakStart": "2026-11-11",
-      "peakEnd": "2026-11-13",
-      "recentStart": "2026-11-14",
-      "recentEnd": "2026-11-16",
-      "peakImpressions": 91,
-      "recentImpressions": 30,
-      "score": 183,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 91 impressions sur trois jours, puis 30 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "les feeries de noel parc andre citroen"
-      ]
-    },
-    {
-      "url": "/articles/evenements/festival-enfantillages-2026-a-valbonne-spectacles-gratuits-et-cinema-selon-l-age/",
-      "title": "Festival Enfantillages 2026 à Valbonne: spectacles gratuits et cinéma en famille",
-      "category": "evenements",
-      "publishedAt": "2026-10-26T03:35:31.536Z",
-      "location": {
-        "city": "Valbonne",
-        "department": "Alpes-Maritimes",
-        "region": "Provence-Alpes-Côte d'Azur"
-      },
-      "ageDays": 24,
-      "rapidDrop": true,
-      "peakStart": "2026-10-26",
-      "peakEnd": "2026-10-28",
-      "recentStart": "2026-11-14",
-      "recentEnd": "2026-11-16",
-      "peakImpressions": 40,
-      "recentImpressions": 6,
-      "score": 137,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 40 impressions sur trois jours, puis 6 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "enfantillage valbonne 2026",
-        "halloween 2026 valbonne"
-      ]
-    },
-    {
-      "url": "/articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/",
-      "title": "Salon du Cheval de Paris 2026 en famille: animations, jumping et billets",
-      "category": "evenements",
-      "publishedAt": "2026-10-22T04:59:04.689Z",
-      "location": {
-        "city": "Paris",
-        "department": "Paris",
-        "region": "Île-de-France"
-      },
-      "ageDays": 28,
-      "rapidDrop": true,
-      "peakStart": "2026-11-02",
-      "peakEnd": "2026-11-04",
-      "recentStart": "2026-11-14",
-      "recentEnd": "2026-11-16",
-      "peakImpressions": 31,
-      "recentImpressions": 10,
-      "score": 63,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 31 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": []
-    },
-    {
-      "url": "/articles/evenements/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/",
-      "title": "Écoute, je danse ! à Paris le 5 décembre 2026: spectacle gratuit dès 6 mois",
-      "category": "evenements",
-      "publishedAt": "2026-11-04T21:32:12.084Z",
-      "location": {
-        "city": "Paris",
-        "department": "Paris",
-        "region": "Île-de-France"
-      },
-      "ageDays": 15,
-      "rapidDrop": true,
-      "peakStart": "2026-11-09",
-      "peakEnd": "2026-11-11",
-      "recentStart": "2026-11-14",
-      "recentEnd": "2026-11-16",
-      "peakImpressions": 20,
-      "recentImpressions": 0,
-      "score": 60,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 20 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": []
-    },
-    {
-      "url": "/articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/",
-      "title": "Gastronomades 2026 à Angoulême en famille: faut-il prévoir le week-end ?",
-      "category": "evenements",
-      "publishedAt": "2026-09-19T22:56:58+02:00",
-      "location": {
-        "city": "Angoulême",
-        "department": "Charente",
-        "region": "Nouvelle-Aquitaine"
-      },
-      "ageDays": 61,
-      "rapidDrop": false,
-      "peakStart": "2026-11-03",
-      "peakEnd": "2026-11-09",
-      "recentStart": "2026-11-10",
-      "recentEnd": "2026-11-16",
-      "peakImpressions": 266,
-      "recentImpressions": 130,
-      "score": 136,
-      "signal": "uncertain",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer. Diagnostic sur 1 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 1,
-      "positionDelta": 0.159,
-      "impressionRatio": 0.282,
-      "focusQueries": [
-        "gastronomades 2026",
-        "gastronomades 2025",
-        "le détail des animations",
-        "les tarifs",
-        "gastronomade 2026"
-      ]
-    },
-    {
-      "url": "/articles/sorties/parc-spirou-avec-de-jeunes-enfants-regardez-la-taille-avant-d-acheter-les-billets/",
-      "title": "Parc Spirou avec de jeunes enfants: regardez la taille avant d'acheter les billets",
-      "category": "sorties",
-      "publishedAt": "2026-09-03T04:04:27+02:00",
-      "location": {
-        "city": "Monteux",
-        "department": "Vaucluse",
-        "region": "Provence-Alpes-Côte d’Azur"
-      },
-      "ageDays": 77,
-      "rapidDrop": false,
-      "peakStart": "2026-10-22",
-      "peakEnd": "2026-10-28",
-      "recentStart": "2026-11-10",
-      "recentEnd": "2026-11-16",
-      "peakImpressions": 141,
-      "recentImpressions": 18,
-      "score": 123,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Parc Spirou enfants taille attractions",
-        "Parc Spirou billets famille"
-      ]
-    },
-    {
-      "url": "/articles/activites/la-cite-de-la-mer-a-cherbourg-en-famille-tarifs-duree-et-conseils-de-visite/",
-      "title": "La Cité de la Mer à Cherbourg en famille: tarifs, visite et billets 2026",
-      "category": "activites",
-      "publishedAt": "2026-08-18T15:06:21+02:00",
-      "location": {
-        "city": "Cherbourg-en-Cotentin",
-        "department": "Manche",
-        "region": "Normandie"
-      },
-      "ageDays": 93,
-      "rapidDrop": false,
-      "peakStart": "2026-10-24",
-      "peakEnd": "2026-10-30",
-      "recentStart": "2026-11-10",
-      "recentEnd": "2026-11-16",
-      "peakImpressions": 109,
-      "recentImpressions": 37,
-      "score": 107,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Cité de la Mer Cherbourg famille",
-        "activité famille Manche"
-      ]
-    },
-    {
-      "url": "/articles/maison/encombrants-a-bourges-quand-sortir-meubles-et-gros-objets/",
-      "title": "Encombrants à Bourges: quand sortir meubles et gros objets",
-      "category": "maison",
-      "publishedAt": "2026-09-11T00:03:15+02:00",
-      "location": {
-        "city": "Bourges",
-        "department": "Cher",
-        "region": "Centre-Val de Loire"
-      },
-      "ageDays": 69,
-      "rapidDrop": false,
-      "peakStart": "2026-10-24",
-      "peakEnd": "2026-10-30",
-      "recentStart": "2026-11-10",
-      "recentEnd": "2026-11-16",
-      "peakImpressions": 149,
-      "recentImpressions": 45,
-      "score": 104,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "encombrants Bourges",
-        "déchèterie Bourges"
-      ]
-    },
-    {
-      "url": "/articles/sorties/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied/",
-      "title": "Réserve Africaine de Sigean: combien de temps prévoir entre safari et visite à pied ?",
-      "category": "sorties",
-      "publishedAt": "2026-09-10T16:05:53+02:00",
-      "location": {
-        "city": "Sigean",
-        "department": "Aude",
-        "region": "Occitanie"
-      },
-      "ageDays": 70,
-      "rapidDrop": false,
-      "peakStart": "2026-10-23",
-      "peakEnd": "2026-10-29",
-      "recentStart": "2026-11-10",
-      "recentEnd": "2026-11-16",
-      "peakImpressions": 131,
-      "recentImpressions": 30,
-      "score": 101,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Réserve Africaine de Sigean avec enfants",
-        "durée visite Réserve Africaine Sigean"
-      ]
-    },
-    {
-      "url": "/articles/vie-pratique/rennes-avec-des-enfants-les-transports-sont-gratuits-avant-12-ans-mais-pas-sans-carte/",
-      "title": "Rennes avec des enfants: transports gratuits avant 12 ans, comment ça marche?",
-      "category": "vie-pratique",
-      "publishedAt": "2026-09-07T00:02:33+02:00",
-      "location": {
-        "city": "Rennes",
-        "department": "Ille-et-Vilaine",
-        "region": "Bretagne"
-      },
-      "ageDays": 73,
-      "rapidDrop": false,
-      "peakStart": "2026-10-25",
-      "peakEnd": "2026-10-31",
-      "recentStart": "2026-11-10",
-      "recentEnd": "2026-11-16",
-      "peakImpressions": 105,
-      "recentImpressions": 27,
-      "score": 78,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Rennes transports enfants gratuits",
-        "STAR Rennes moins de 12 ans"
-      ]
-    },
-    {
-      "url": "/articles/sorties/parc-bagatelle-en-famille-quelles-attractions-selon-la-taille-des-enfants/",
-      "title": "Parc Bagatelle en famille: quelles attractions selon la taille des enfants?",
-      "category": "sorties",
-      "publishedAt": "2026-10-02T19:08:32+02:00",
-      "location": {
-        "city": "Merlimont",
-        "department": "Pas-de-Calais",
-        "region": "Hauts-de-France"
-      },
-      "ageDays": 48,
-      "rapidDrop": false,
-      "peakStart": "2026-10-25",
-      "peakEnd": "2026-10-31",
-      "recentStart": "2026-11-10",
-      "recentEnd": "2026-11-16",
-      "peakImpressions": 80,
-      "recentImpressions": 4,
-      "score": 76,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Parc Bagatelle en famille",
-        "attractions Bagatelle taille enfant"
-      ]
-    },
-    {
-      "url": "/articles/activites/zoo-de-martinique-en-famille-tarifs-poussette-et-visite-de-l-habitation-latouche/",
-      "title": "Zoo de Martinique en famille: tarifs, poussette et visite de l'Habitation Latouche",
-      "category": "activites",
-      "publishedAt": "2026-10-10T15:00:10+02:00",
-      "location": {
-        "city": "Le Carbet",
-        "department": "Martinique",
-        "region": "Martinique"
-      },
-      "ageDays": 40,
-      "rapidDrop": false,
-      "peakStart": "2026-10-24",
-      "peakEnd": "2026-10-30",
-      "recentStart": "2026-11-10",
-      "recentEnd": "2026-11-16",
-      "peakImpressions": 177,
-      "recentImpressions": 102,
-      "score": 75,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Zoo de Martinique en famille",
-        "Zoo du Carbet avec enfants",
-        "Habitation Latouche"
-      ]
-    },
-    {
-      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
-      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
-      "category": "vie-pratique",
-      "publishedAt": "2026-09-28T09:22:04+02:00",
-      "location": {
-        "city": "Toulouse",
-        "department": "Haute-Garonne",
-        "region": "Occitanie"
-      },
-      "ageDays": 52,
-      "rapidDrop": false,
-      "peakStart": "2026-11-01",
-      "peakEnd": "2026-11-07",
-      "recentStart": "2026-11-10",
-      "recentEnd": "2026-11-16",
-      "peakImpressions": 224,
-      "recentImpressions": 162,
-      "score": 62,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "aide restauration scolaire Haute-Garonne",
-        "aide cantine collège Haute-Garonne",
-        "ARS Haute-Garonne 2026-2027"
-      ]
-    },
-    {
-      "url": "/articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/",
-      "title": "Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates",
-      "category": "evenements",
-      "publishedAt": "2026-10-23T06:21:12.265Z",
-      "location": {
-        "city": "Paris",
-        "department": "Paris",
-        "region": "Île-de-France"
-      },
-      "ageDays": 27,
-      "rapidDrop": false,
-      "peakStart": "2026-10-24",
-      "peakEnd": "2026-10-30",
-      "recentStart": "2026-11-10",
-      "recentEnd": "2026-11-16",
-      "peakImpressions": 224,
-      "recentImpressions": 164,
-      "score": 60,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Créations et savoir-faire 2026 famille Paris",
-        "Salon créations savoir-faire billet Duo Famille",
-        "Journée Famille 22 novembre 2026 Paris",
-        "Ateliers enfants salon loisirs créatifs Porte de Versailles"
-      ]
-    },
-    {
-      "url": "/articles/sorties/cosquer-mediterranee-avec-des-enfants-age-poussette-tarifs/",
-      "title": "Cosquer Méditerranée avec des enfants: que peut-on visiter selon leur âge?",
-      "category": "sorties",
-      "publishedAt": "2026-10-03T11:22:17.704Z",
-      "location": {
-        "city": "Marseille",
-        "department": "Bouches-du-Rhône",
-        "region": "Provence-Alpes-Côte d'Azur"
-      },
-      "ageDays": 47,
-      "rapidDrop": false,
-      "peakStart": "2026-10-21",
-      "peakEnd": "2026-10-27",
-      "recentStart": "2026-11-10",
-      "recentEnd": "2026-11-16",
-      "peakImpressions": 82,
-      "recentImpressions": 24,
-      "score": 58,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Cosquer Méditerranée enfant",
-        "Cosquer Méditerranée moins de 3 ans",
-        "Cosquer Méditerranée poussette",
-        "Cosquer Méditerranée tarifs enfants",
-        "Cosquer Méditerranée durée visite"
-      ]
-    }
-  ],
-  "strongPages": [
-    {
-      "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
-      "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
-      "category": "evenements",
-      "recentImpressions": 245,
-      "recentClicks": 11,
-      "recentPosition": 7.4,
-      "retention": 1.056
-    },
-    {
-      "url": "/articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/",
-      "title": "Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille",
-      "category": "evenements",
-      "recentImpressions": 334,
-      "recentClicks": 10,
-      "recentPosition": 8.123,
-      "retention": 1.866
-    },
-    {
-      "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
-      "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
-      "category": "evenements",
-      "recentImpressions": 157,
-      "recentClicks": 10,
-      "recentPosition": 4.675,
-      "retention": 0.813
-    },
-    {
-      "url": "/articles/evenements/noel-2026-a-quimper-en-famille-village-concert-ou-ateliers-gratuits/",
-      "title": "Noël 2026 à Quimper en famille: village, concert et animations gratuites",
-      "category": "evenements",
-      "recentImpressions": 96,
-      "recentClicks": 8,
-      "recentPosition": 6.187,
-      "retention": 6
-    },
-    {
-      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
-      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
-      "category": "evenements",
-      "recentImpressions": 505,
-      "recentClicks": 7,
-      "recentPosition": 7.828,
-      "retention": 0.606
-    },
-    {
-      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
-      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
-      "category": "vie-pratique",
-      "recentImpressions": 162,
-      "recentClicks": 6,
-      "recentPosition": 6.796,
-      "retention": 0.723
-    },
-    {
-      "url": "/articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/",
-      "title": "Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers",
-      "category": "vie-pratique",
-      "recentImpressions": 115,
-      "recentClicks": 5,
-      "recentPosition": 5.722,
-      "retention": 0.793
-    },
-    {
-      "url": "/articles/evenements/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants/",
-      "title": "Fontaines dansantes d'hiver à Metz 2026-2027: dates, horaires et conseils en famille",
-      "category": "evenements",
-      "recentImpressions": 92,
-      "recentClicks": 5,
-      "recentPosition": 6.685,
-      "retention": 1.559
-    },
-    {
-      "url": "/articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/",
-      "title": "Soleils d'hiver 2026 à Angers en famille: marché, manèges et Père Noël",
-      "category": "evenements",
-      "recentImpressions": 183,
-      "recentClicks": 4,
-      "recentPosition": 10.552,
-      "retention": 0.953
-    },
-    {
-      "url": "/articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/",
-      "title": "Où manger des fouées en famille autour de Saumur ?",
-      "category": "cuisine",
-      "recentImpressions": 182,
-      "recentClicks": 4,
-      "recentPosition": 12.005,
-      "retention": 0.589
-    }
-  ],
-  "excluded": {
-    "expired": 189,
-    "cooling": 82
-  },
-  "warnings": [
-    "Diagnostics par requêtes : 5/5.",
-    "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement."
-  ]
-}
+La Réserve Africaine de Sigean, entre Narbonne et Perpignan, se visite en deux temps: un safari avec votre véhicule, puis un parc à pied. Comptez environ 1 heure en voiture et 2 h 30 à 3 heures de marche. Avec le repas et les pauses, la journée entière est le format le plus confortable avec des enfants.
 
-## Catalogue ciblé (doublons et publications récentes)
+À partir du 25 octobre 2026, un second choix s'ajoute: prolonger la visite avec **Lumières d'Afrique** ou acheter un billet pour ce parcours lumineux seulement. La formule du soir ne permet pas de voir les animaux et ne remplace donc pas le safari.
 
-### Articles comparables et publications récentes
+## Combien de temps faut-il prévoir pour visiter la Réserve de Sigean?
 
-- /articles/evenements/les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille/ | Féeries de Noël 2026 à Paris: billets, patinoire et parcours en famille | evenements | Paris, Paris, Île-de-France
-- /articles/activites/atelier-laine-cardee-de-noel-a-paris-le-2-decembre-2026-creer-ses-decorations-des-7-ans/ | Atelier laine cardée de Noël à Paris le 2 décembre 2026: décorations dès 7 ans | activites | Paris, Paris, Île-de-France
-- /articles/activites/jeux-nature-gratuits-au-parc-floral-de-paris-le-18-novembre-2026-quel-jeu-selon-l-age/ | Jeux nature gratuits au Parc floral de Paris le 18 novembre 2026 | activites | Paris, Paris, Île-de-France
-- /articles/evenements/odyssee-lumineuse-2026-2027-au-parc-floral-de-paris-billet-date-ou-open-en-famille/ | Odyssée Lumineuse 2026-2027 à Paris: billets, dates et visite en famille | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/festival-enfantillages-2026-a-valbonne-spectacles-gratuits-et-cinema-selon-l-age/ | Festival Enfantillages 2026 à Valbonne: spectacles gratuits et cinéma en famille | evenements | Valbonne, Alpes-Maritimes, Provence-Alpes-Côte d'Azur
-- /articles/evenements/festival-au-bonheur-des-momes-2026-en-famille/ | Au Bonheur des Mômes 2026: pass, spectacles et journée au Grand-Bornand | evenements | Le Grand-Bornand, Haute-Savoie, Auvergne-Rhône-Alpes
-- /articles/evenements/festival-marmoe-2026-a-montreuil-spectacles-et-ateliers-selon-l-age-des-enfants/ | Festival MARMOE 2026 à Montreuil: spectacles, ateliers et sorties jusqu'au 29 novembre | evenements | Montreuil, Seine-Saint-Denis, Île-de-France
-- /articles/evenements/rue-enfants-montcuq-2026-famille/ | La Rue des Enfants 2026 à Montcuq: deux jours d’arts de rue en famille | evenements | Montcuq-en-Quercy-Blanc, Lot, Occitanie
-- /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | Salon du Cheval de Paris 2026 en famille: ateliers, jumping et Nuit du Cheval | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/salon-du-chocolat-paris-2026-avec-des-enfants-quel-billet-choisir-et-quels-ateliers-reserver/ | Salon du Chocolat Paris 2026 avec des enfants: quel billet choisir et quels ateliers réserver | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/ | Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/ | Écoute, je danse ! à Paris le 5 décembre 2026: spectacle gratuit dès 6 mois | evenements | Paris, Paris, Île-de-France
-- /articles/activites/atelier-couture-gratuit-a-paris-le-28-novembre-2026-creer-en-famille-des-8-ans/ | Atelier couture gratuit à Paris le 28 novembre 2026: dès 8 ans | activites | Paris, Paris, Île-de-France
-- /articles/activites/pokemon-et-biodiversite-a-paris-le-28-novembre-2026-atelier-dessin-des-10-ans/ | Atelier Pokémon et biodiversité à Paris le 28 novembre 2026: dessin dès 10 ans | activites | Paris, Paris, Île-de-France
-- /articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/ | Gastronomades 2026 à Angoulême en famille: faut-il prévoir le week-end ? | evenements | Angoulême, Charente, Nouvelle-Aquitaine
-- /articles/voyages/ou-dormir-a-angouleme-avec-des-enfants-pour-visiter-la-ville-a-pied/ | Où dormir à Angoulême avec des enfants pour visiter la ville à pied | voyages | Angoulême, Charente, Nouvelle-Aquitaine
-- /articles/sorties/musee-de-la-bd-a-angouleme-en-famille-tarifs-horaires-et-conseils-de-visite/ | Musée de la BD à Angoulême en famille: tarifs, horaires et conseils de visite | sorties | Angoulême, Charente, Nouvelle-Aquitaine
-- /articles/voyages/bayeux-en-famille-1-ou-2-jours-et-quel-budget-prevoir/ | Bayeux en famille: 1 ou 2 jours et quel budget prévoir | voyages | Bayeux, Calvados, Normandie
-- /articles/sorties/parc-spirou-avec-de-jeunes-enfants-regardez-la-taille-avant-d-acheter-les-billets/ | Parc Spirou en famille: attractions selon la taille et billets 2027 | sorties | Monteux, Vaucluse, Provence-Alpes-Côte d’Azur
-- /articles/sorties/parc-bagatelle-en-famille-quelles-attractions-selon-la-taille-des-enfants/ | Parc Bagatelle en famille: quelles attractions selon la taille des enfants? | sorties | Merlimont, Pas-de-Calais, Hauts-de-France
-- /articles/activites/festyland-avec-de-jeunes-enfants-quelles-attractions-selon-leur-taille/ | Festyland avec de jeunes enfants: quelles attractions selon leur taille? | activites | Carpiquet, Calvados, Normandie
-- /articles/evenements/halloween-2026-au-parc-spirou-nocturnes-naruto-reservation-et-maison-hantee/ | Halloween 2026 au Parc Spirou: billets, nocturnes Naruto et maison hantée | evenements | Monteux, Vaucluse, Provence-Alpes-Côte d'Azur
-- /articles/activites/la-cite-de-la-mer-a-cherbourg-en-famille-tarifs-duree-et-conseils-de-visite/ | La Cité de la Mer à Cherbourg en famille: tarifs, visite et billets 2026 | activites | Cherbourg-en-Cotentin, Manche, Normandie
-- /articles/vie-pratique/spot50-2026-2027-dans-la-manche-75-d-activites-pour-5/ | SPOT50 2026/2027 dans la Manche: 75 € d'activités pour 5 € | vie-pratique | Saint-Lô, Manche, Normandie
-- /articles/parentalite/rejouets-a-cerences-donner-completer-et-acheter-des-jouets-d-occasion/ | Rejouets à Cérences: donner, compléter et acheter des jouets d’occasion | parentalite | Cérences, Manche, Normandie
-- /articles/parentalite/laep-dans-la-manche-ou-aller-avec-son-enfant-de-moins-de-6-ans/ | LAEP dans la Manche: où aller avec son enfant de moins de 6 ans ? | parentalite | Manche, Normandie
-- /articles/maison/encombrants-a-bourges-quand-sortir-meubles-et-gros-objets/ | Encombrants à Bourges: quand sortir meubles et gros objets | maison | Bourges, Cher, Centre-Val de Loire
-- /articles/voyages/bourges-en-famille-ou-dormir-pour-visiter-sans-voiture/ | Bourges en famille: où dormir pour visiter sans voiture | voyages | Bourges, Cher, Centre-Val de Loire
-- /articles/vie-pratique/carte-famille-de-bourges-qui-peut-l-obtenir-et-a-quoi-sert-elle/ | Carte famille de Bourges: qui peut l'obtenir et à quoi sert-elle? | vie-pratique | Bourges, Cher, Centre-Val de Loire
-- /articles/bons-plans/bourges-en-famille-a-petit-budget-musees-cathedrale-et-jardins/ | Bourges en famille à petit budget: musées, cathédrale et jardins | bons-plans | Bourges, Cher, Centre-Val de Loire
-- /articles/sorties/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied/ | Réserve Africaine de Sigean: combien de temps prévoir entre safari et visite à pied ? | sorties | Sigean, Aude, Occitanie
+La [FAQ officielle](https://www.reserveafricainesigean.fr/infos-pratiques/faq/) annonce environ 1 heure pour le safari et entre 2 h 30 et 3 heures pour la promenade à pied. La plupart des visiteurs restent la journée.
+
+Ces durées correspondent aux parcours eux-mêmes. Avec un déjeuner, les arrêts devant les animaux et les besoins d'un jeune enfant, prévoyez plutôt **5 à 6 heures sur place**. Arriver le matin évite de raccourcir la partie à pied et laisse une marge pour refaire le safari en fin de journée si des animaux se sont peu montrés au premier passage.
+
+## Safari d'abord ou parc à pied?
+
+<!-- article-image-body:01 -->
+
+![Un rhinocéros au milieu de la voie réservée aux voitures dans la Réserve Africaine de Sigean](/images/articles/2026/09/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied-body-01.webp)
+
+*Photo: [Gordito1869](https://commons.wikimedia.org/wiki/File:R%C3%A9serve_Africaine_Nashorn_1.jpg) - [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Avec une arrivée à l'ouverture, commencer par le safari est le déroulé le plus simple: les enfants découvrent les animaux depuis la voiture, puis la famille garde le reste de la journée pour marcher, déjeuner et faire des pauses. L'ordre inverse reste possible si vous voulez revenir au safari plus tard.
+
+Le circuit voiture se fait obligatoirement avec votre propre voiture, camping-car ou bus. Les motos, vélos et voitures décapotables ne sont pas admis. Ne prévoyez donc pas une arrivée en taxi suivie d'une visite complète sans solution pour le safari.
+
+L'[application gratuite du parc](https://www.reserveafricainesigean.fr/visitez-la-reserve/application-du-parc/) aide à repérer les animaux, les toilettes, les points de restauration et l'itinéraire conseillé. Elle est surtout utile pour décider quelles zones à pied garder si les enfants fatiguent.
+
+## Visite de jour et Lumières d'Afrique, ou soirée seule?
+
+La troisième édition de [Lumières d'Afrique](https://www.reserveafricainesigean.fr/visitez-la-reserve/lumieres-d-afrique/) est annoncée du **25 octobre 2026 au 17 janvier 2027**, uniquement les week-ends et pendant les vacances scolaires. Le parcours lumineux ouvre de 17 h 30 à 20 h.
+
+Deux formules sont proposées:
+
+- Le billet de jour permet de visiter les animaux puis d'accéder à Lumières d'Afrique sans supplément aux dates du festival.
+- Le billet soirée seule donne accès au parcours lumineux, mais pas au parc animalier. Les animaux du safari et du parc à pied ne sont pas visibles la nuit.
+
+Pour une première visite, choisissez la formule de jour si les animaux sont la priorité. La soirée seule convient plutôt à une famille qui connaît déjà la Réserve ou qui veut uniquement voir les lanternes. L'arrivée pour ce billet est possible de 17 h à 18 h 30.
+
+Rester du matin jusqu'à 20 h peut être long avec un petit enfant. Prévoyez une pause sur place avant 17 h 30. La sortie du parc étant définitive, il ne faut pas quitter le site en pensant revenir pour le parcours lumineux.
+
+## Quel budget prévoir?
+
+La [billetterie officielle](https://www.reserveafricainesigean.fr/billetterie/achat-de-billet/) affiche **34 € par adulte** et **24 € par enfant de 4 à 14 ans** pour la visite de jour. L'entrée est gratuite avant 4 ans. Le tarif pour une personne en situation de handicap est de 14,50 €, sur présentation de la carte mobilité inclusion.
+
+Le Pack Famille s'applique à partir de deux adultes et trois enfants de 4 à 14 ans dans le même véhicule. Il ramène le prix à **31 € par adulte** et **21 € par enfant**.
+
+Pour Lumières d'Afrique uniquement, le billet coûte **17,90 € par adulte** et **14,50 € par enfant de 4 à 14 ans**. L'achat en ligne est obligatoire pour cette formule et le nombre d'entrées est limité. Dans tous les cas, choisissez la date et le créneau d'arrivée avant de finaliser le programme.
+
+## Quels horaires prévoir en automne?
+
+La Réserve ouvre tous les jours à 9 h. Les [horaires officiels](https://www.reserveafricainesigean.fr/infos-pratiques/horaires/) changent selon la période:
+
+- Du 27 septembre au 24 octobre 2026, les caisses ferment à 16 h 30, le safari à 17 h 30 et le parc à pied à 18 h 30.
+- Du 25 octobre 2026 au 27 mars 2027, les caisses et le safari ferment à 16 h, puis le parc à pied à 17 h 30.
+
+Ces heures sont des limites de fermeture, pas des heures conseillées pour commencer. Une arrivée à 16 h ne laisse pas assez de temps pour enchaîner le safari et le parcours à pied. Pour une journée avec Lumières d'Afrique, arrivez le matin et gardez de l'énergie pour le parcours nocturne.
+
+## Poussette, bébé et repas
+
+Les chemins du circuit pédestre sont goudronnés, avec des pentes douces, et les poussettes sont autorisées. Le plan et l'application permettent de suivre un itinéraire qui évite les passages les plus pentus.
+
+La [Réserve Africaine de Sigean](https://www.reserveafricainesigean.fr/) annonce aussi un accueil bébé avec coin à langer, micro-ondes et chaises enfant.
+
+Les familles peuvent apporter leur repas et utiliser les aires de pique-nique. La page [restauration et pique-nique](https://www.reserveafricainesigean.fr/infos-pratiques/restauration-pique-nique/) indique aussi quels points sont ouverts le jour de la visite. Les horaires des snacks varient: vérifiez-les si vous comptez dîner ou prendre une collation avant Lumières d'Afrique.
+
+Le meilleur rythme consiste à faire le safari, déjeuner, puis parcourir la partie à pied sans chercher à tout enchaîner. Avec un petit enfant, mieux vaut garder deux ou trois zones prioritaires que transformer les 2 h 30 de marche en parcours forcé.
+
+## Adresse et suite du séjour
+
+La Réserve se trouve **RD 6009, 19 chemin Hameau du Lac, 11130 Sigean**. La page [accès au parc](https://www.reserveafricainesigean.fr/infos-pratiques/acces-au-parc/) détaille les itinéraires depuis les sorties d'autoroute de Sigean et Narbonne Sud. L'accueil est joignable au [04 68 48 20 20](tel:+33468482020).
+
+Après une visite prolongée jusqu'à 20 h, dormir à proximité peut éviter un long trajet avec des enfants. Vous pouvez [chercher un hébergement à Sigean sur Booking.com](https://www.booking.com/city/fr/sigean.fr.html).
+
+Pour poursuivre dans l'Aude, notre guide [Carcassonne en famille en 1 ou 2 jours](/articles/voyages/carcassonne-en-famille-1-ou-2-jours-billets-et-budget-a-prevoir/) aide à choisir la durée et le budget. Une autre journée peut aussi se préparer avec [le jeu de piste du petit archéologue à Puilaurens](/articles/sorties/petit-archeologue-puilaurens-famille-2026/).
+
+À retenir: prévoyez une vraie journée pour voir les animaux. Entre le 25 octobre et le 17 janvier, ajoutez Lumières d'Afrique seulement si les enfants peuvent tenir jusqu'à 20 h; sinon, gardez le safari et le parc à pied comme programme principal.
+
+## Contexte éditorial ciblé pour le maillage et les doublons
+
+### Articles proches préparés mécaniquement
+
 - /articles/voyages/paleosite-de-saint-cesaire-en-famille-combien-de-temps-prevoir-en-2026/ | Paléosite de Saint-Césaire en famille: combien de temps prévoir en 2026? | voyages | Saint-Césaire, Charente-Maritime, Nouvelle-Aquitaine
 - /articles/activites/micropolis-avec-de-jeunes-enfants-combien-de-temps-prevoir-et-quoi-emporter/ | Micropolis avec de jeunes enfants: combien de temps prévoir et quoi emporter? | activites | Saint-Léons, Aveyron, Occitanie
 - /articles/activites/vallee-des-singes-a-romagne-combien-de-temps-prevoir-pour-la-visite/ | Vallée des Singes à Romagne: combien de temps prévoir pour la visite? | activites | Romagne, Vienne, Nouvelle-Aquitaine
-- /articles/vie-pratique/rennes-avec-des-enfants-les-transports-sont-gratuits-avant-12-ans-mais-pas-sans-carte/ | Rennes avec des enfants: transports gratuits avant 12 ans, comment ça marche? | vie-pratique | Rennes, Ille-et-Vilaine, Bretagne
-- /articles/activites/balade-a-velo-autour-de-rennes-quel-parcours-choisir-avec-des-enfants/ | Balade à vélo autour de Rennes: quel parcours choisir avec des enfants? | activites | Rennes, Ille-et-Vilaine, Bretagne
-- /articles/evenements/les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille/ | Luminéales du Thabor 2026 à Rennes: tarifs, horaires et visite en famille | evenements | Rennes, Ille-et-Vilaine, Bretagne
-- /articles/sorties/espace-des-sciences-a-rennes-avec-des-enfants-expositions-experiences-et-planetarium/ | Espace des sciences à Rennes avec des enfants: expositions, expériences et planétarium | sorties | Rennes, Ille-et-Vilaine, Bretagne
-- /articles/activites/accrocamp-toulouse-avec-des-enfants-quel-pass-choisir-selon-leur-taille/ | AccroCamp Toulouse avec des enfants: quel pass choisir selon leur taille? | activites | Toulouse, Haute-Garonne, Occitanie
-- /articles/activites/zoo-de-martinique-en-famille-tarifs-poussette-et-visite-de-l-habitation-latouche/ | Zoo de Martinique en famille: tarifs, poussette et visite de l'Habitation Latouche | activites | Le Carbet, Martinique, Martinique
-- /articles/activites/habitation-clement-en-famille-sculptures-jardin-et-maison-creole/ | Habitation Clément en famille: sculptures, jardin et maison créole | activites | Le François, Martinique, Martinique
-- /articles/voyages/ou-loger-en-martinique-avec-des-enfants-sainte-luce-trois-ilets-ou-le-diamant/ | Où loger en Martinique avec des enfants: Sainte-Luce, Trois-Ilets ou Le Diamant? | voyages | Sainte-Luce, Martinique, Martinique
-- /articles/activites/parc-zoo-du-reynou-avec-des-enfants-billet-date-poussette-ou-journee-complete/ | Parc Zoo du Reynou avec des enfants: billet daté, poussette ou journée complète? | activites | Le Vigen, Haute-Vienne, Nouvelle-Aquitaine
-- /articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/ | Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates | vie-pratique | Toulouse, Haute-Garonne, Occitanie
-- /articles/bons-plans/cantine-au-college-dans-l-herault-jusqu-a-3-60-d-aide-par-repas/ | Cantine au collège dans l'Hérault: jusqu'à 3,60 € d'aide par repas | bons-plans | Montpellier, Hérault, Occitanie
-- /articles/maison/moustique-tigre-en-haute-garonne-proteger-la-maison-et-le-jardin/ | Moustique tigre en Haute-Garonne: protéger la maison et le jardin | maison | Toulouse, Haute-Garonne, Occitanie
-- /articles/vie-pratique/cantine-au-college-en-deux-sevres-comment-s-inscrire-en-ligne-pour-2026-2027/ | Cantine au collège en Deux-Sèvres: comment s'inscrire en ligne pour 2026-2027 | vie-pratique | Niort, Deux-Sèvres, Nouvelle-Aquitaine
-- /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | Rencontres du ciel et de l’espace 2026 à Paris: ateliers, âges et billets en famille | evenements | Paris, Paris, Île-de-France
-- /articles/sorties/cosquer-mediterranee-avec-des-enfants-age-poussette-tarifs/ | Cosquer Méditerranée avec des enfants: que peut-on visiter selon leur âge? | sorties | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d'Azur
-- /articles/vie-pratique/consigne-a-marseille-saint-charles-avec-des-enfants-ou-laisser-valises-et-poussette/ | Consigne à Marseille Saint-Charles avec des enfants: où laisser valises et poussette? | vie-pratique | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d’Azur
-- /articles/sorties/musee-de-la-grande-guerre-a-meaux-avec-des-enfants-que-voir-selon-leur-age/ | Musée de la Grande Guerre à Meaux avec des enfants: que voir selon leur âge ? | sorties | Meaux, Seine-et-Marne, Île-de-France
-- /articles/sorties/gouffre-de-padirac-en-famille-tarifs-poussette-et-conseils-pour-la-visite/ | Gouffre de Padirac avec des enfants: à partir de quel âge et tarifs 2026 | sorties | Padirac, Lot, Occitanie
-- /articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/ | Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants | evenements | Le Mans, Sarthe, Pays de la Loire
-- /articles/voyages/le-mans-sans-voiture-avec-des-enfants-ou-dormir-et-comment-organiser-un-week-end/ | Le Mans sans voiture avec des enfants: où dormir et comment organiser un week-end | voyages | Le Mans, Sarthe, Pays de la Loire
-- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
-- /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | Marché de Noël d'Avignon 2026 en famille: horaires, Père Noël et animations | evenements | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
-- /articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/ | Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille | evenements | Nevers, Nièvre, Bourgogne-Franche-Comté
-- /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | Noël à Chartres 2026 en famille: marché et illuminations | evenements | Chartres, Eure-et-Loir, Centre-Val de Loire
-- /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | Noël à Caen 2026 en famille: marché de Noël et visite illuminée | evenements | Caen, Calvados, Normandie
-- /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
-- /articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/ | Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ? | evenements | Pyrénées-Orientales, Occitanie
-- /articles/parentalite/quel-laep-choisir-a-perpignan-selon-l-age-et-le-jour/ | Quel LAEP choisir à Perpignan selon l'âge et le jour ? | parentalite | Perpignan, Pyrénées-Orientales, Occitanie
-- /articles/activites/parc-animalier-des-angles-en-famille-quel-circuit-choisir-et-comment-preparer-la-visite/ | Parc animalier des Angles en famille: quel circuit choisir et comment préparer la visite ? | activites | Les Angles, Pyrénées-Orientales, Occitanie
-- /articles/bons-plans/musee-de-tautavel-moins-cher-avec-lio-le-bon-plan-a-connaitre/ | Musée de Tautavel moins cher avec liO: le bon plan à connaître | bons-plans | Tautavel, Pyrénées-Orientales, Occitanie
-- /articles/evenements/noel-2026-a-quimper-en-famille-village-concert-ou-ateliers-gratuits/ | Noël 2026 à Quimper en famille: village, concert et animations gratuites | evenements | Quimper, Finistère, Bretagne
-- /articles/evenements/noel-2026-a-paris-la-defense-en-famille-marche-animations-ou-patinoire/ | Noël 2026 à Paris La Défense en famille: marché, animations et patinoire | evenements | Puteaux, Hauts-de-Seine, Île-de-France
-- /articles/evenements/noel-2026-a-rochefort-en-terre-avec-des-enfants-village-et-illuminations/ | Noël 2026 à Rochefort-en-Terre avec des enfants: village et illuminations | evenements | Rochefort-en-Terre, Morbihan, Bretagne
-- /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille | evenements | Lumigny-Nesles-Ormeaux, Seine-et-Marne, Île-de-France
-- /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | Thoiry Lumières Sauvages 2026-2027: dates, billets et visite en famille | evenements | Thoiry, Yvelines, Île-de-France
-- /articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/ | Planète Préhistorique à Bordeaux: dates, durée et tarifs en famille | sorties | Bordeaux, Gironde, Nouvelle-Aquitaine
-- /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/ | Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers | vie-pratique | Hénin-Beaumont, Pas-de-Calais, Hauts-de-France
-- /articles/vie-pratique/cantine-au-college-en-essonne-obtenir-son-tarif-2026-2027-sans-refaire-la-mauvaise-demarche/ | Cantine au collège en Essonne: obtenir son tarif 2026-2027 sans refaire la mauvaise démarche | vie-pratique | Évry-Courcouronnes, Essonne, Île-de-France
-- /articles/evenements/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants/ | Fontaines dansantes d'hiver à Metz 2026-2027: dates, horaires et conseils en famille | evenements | Metz, Moselle, Grand Est
-- /articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/ | Traîneau flottant de Noël à Metz 2026: dates, horaires et embarquement | evenements | Metz, Moselle, Grand Est
-- /articles/evenements/noel-a-metz-2026-en-famille-marches-et-sentier-des-lanternes/ | Noël à Metz 2026 en famille: marchés et Sentier des Lanternes | evenements | Metz, Moselle, Grand Est
-- /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | Noël 2026 au château de Goulaine: dates, billets et conseils en famille | evenements | Haute-Goulaine, Loire-Atlantique, Pays de la Loire
-- /articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/ | Soleils d'hiver 2026 à Angers en famille: marché, manèges et Père Noël | evenements | Angers, Maine-et-Loire, Pays de la Loire
-- /articles/maison/composteur-gratuit-a-angers-loire-metropole-qui-peut-le-demander/ | Composteur gratuit à Angers Loire Métropole: qui peut le demander? | maison | Angers, Maine-et-Loire, Pays de la Loire
-- /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | Monument Jeu d’Enfant au château d’Angers: dragons et ateliers le 17 octobre 2026 | evenements | Angers, Maine-et-Loire, Pays de la Loire
-- /articles/vie-pratique/garde-d-enfants-sur-horaires-atypiques-a-angers-qui-peut-demander-l-aide-du-ccas/ | Garde d'enfants sur horaires atypiques à Angers: qui peut demander l'aide du CCAS? | vie-pratique | Angers, Maine-et-Loire, Pays de la Loire
-- /articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/ | Où manger des fouées en famille autour de Saumur ? | cuisine | Saumur, Maine-et-Loire, Pays de la Loire
-- /articles/parentalite/laep-en-maine-et-loire-ou-aller-avec-son-bebe-et-comment-se-passe-l-accueil/ | LAEP en Maine-et-Loire: où aller avec son bébé et comment se passe l'accueil ? | parentalite | Maine-et-Loire, Pays de la Loire
-- /articles/sorties/chasse-tresor-galerie-david-angers-2026/ | Chasse au trésor à Angers: les 4 à 6 ans enquêtent à la Galerie David | sorties | Angers, Maine-et-Loire, Pays de la Loire
-- /articles/sorties/chateau-de-boutheon-avec-des-enfants-chateau-parc-ou-billet-couple/ | Château de Bouthéon avec des enfants: château, parc ou billet couplé? | sorties | Andrézieux-Bouthéon, Loire, Auvergne-Rhône-Alpes
-- /articles/bons-plans/passeport-des-musees-04-visiter-en-famille-a-prix-reduit/ | Passeport des musées 04: visiter en famille à prix réduit | bons-plans | Alpes-de-Haute-Provence, Provence-Alpes-Côte d’Azur
-- /articles/parentalite/laep-en-martinique-jouer-avec-son-tout-petit-et-rencontrer-d-autres-parents/ | LAEP en Martinique: jouer avec son tout-petit et rencontrer d’autres parents | parentalite | Martinique
-- /articles/cuisine/manger-local-dans-le-val-d-oise-paniers-fermes-et-repas-de-saison/ | Manger local dans le Val-d'Oise: paniers, fermes et repas de saison | cuisine | Val-d'Oise, Île-de-France
-- /articles/maison/composteur-gratuit-dans-le-gers-comment-en-obtenir-un-et-bien-demarrer/ | Composteur gratuit dans le Gers: comment en obtenir un et bien démarrer ? | maison | Gers, Occitanie
-- /articles/cuisine/cuisine-creole-en-famille-a-la-reunion-quel-atelier-choisir/ | Cuisine créole en famille à La Réunion: quel atelier choisir ? | cuisine | La Réunion
-- /articles/vie-pratique/france-services-en-charente-ou-obtenir-de-l-aide-pour-ses-demarches-administratives/ | France services en Charente: où obtenir de l'aide pour ses démarches administratives ? | vie-pratique | Charente, Nouvelle-Aquitaine
-- /articles/parentalite/ardeche-ou-trouver-un-lieu-d-accueil-enfants-parents-pres-de-chez-soi/ | Ardèche: où trouver un lieu d'accueil enfants-parents près de chez soi ? | parentalite | Ardèche, Auvergne-Rhône-Alpes
-- /articles/voyages/les-rousses-en-hiver-avec-des-enfants-ski-luge-et-sorties-sans-neige/ | Les Rousses en hiver avec des enfants: ski, luge et sorties sans neige | voyages | Jura, Bourgogne-Franche-Comté
-- /articles/maison/meubles-d-occasion-en-ile-de-france-ou-acheter-et-comment-les-transporter/ | Meubles d’occasion en Île-de-France: où acheter et comment les transporter | maison | Île-de-France
-- /articles/vie-pratique/montlouis-sur-loire-emprunter-jeux-liseuses-et-objets-a-la-mediatheque/ | Montlouis-sur-Loire: emprunter jeux, liseuses et objets à la médiathèque | vie-pratique | Montlouis-sur-Loire, Indre-et-Loire, Centre-Val de Loire
-- /articles/bons-plans/langres-en-famille-deux-musees-gratuits-le-premier-dimanche-du-mois/ | Langres en famille: deux musées gratuits le premier dimanche du mois | bons-plans | Langres, Haute-Marne, Grand Est
-- /articles/vie-pratique/aeroport-de-lille-avec-des-enfants-preparer-le-depart-jusqu-a-l-embarquement/ | Aéroport de Lille avec des enfants: préparer le départ jusqu’à l’embarquement | vie-pratique | Lesquin, Nord, Hauts-de-France
-- /articles/evenements/musee-maurice-denis-en-famille-decouvrir-les-nabis-a-saint-germain-en-laye/ | Musée Maurice Denis en famille: découvrir les Nabis à Saint-Germain-en-Laye | evenements | Saint-Germain-en-Laye, Yvelines, Île-de-France
-- /articles/cuisine/roquefort-en-famille-visiter-les-caves-et-le-cuisiner-avec-les-enfants/ | Roquefort en famille: visiter les caves et le cuisiner avec les enfants | cuisine | Roquefort-sur-Soulzon, Aveyron, Occitanie
-- /articles/activites/un-dimanche-a-cacao-en-famille-marche-hmong-insectes-et-poterie/ | Un dimanche à Cacao en famille: marché hmong, insectes et poterie | activites | Roura, Guyane, Guyane
+- /articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/ | Mini World Lyon: quel billet choisir en famille et combien de temps prévoir ? | bons-plans | Vaulx-en-Velin, Rhône, Auvergne-Rhône-Alpes
+- /articles/sorties/chateau-de-kerjean-avec-des-enfants-combien-de-temps-prevoir-et-quel-billet-choisir/ | Château de Kerjean avec des enfants: combien de temps prévoir et quel billet choisir? | sorties | Saint-Vougay, Finistère, Bretagne
+- /articles/activites/anatomik-park-a-cap-sciences-a-partir-de-quel-age-et-combien-de-temps-prevoir/ | Anatomik Park à Cap Sciences: à partir de quel âge et combien de temps prévoir? | activites | Bordeaux, Gironde, Nouvelle-Aquitaine
+- /articles/sorties/centre-historique-minier-de-lewarde-combien-de-temps-prevoir-avec-des-enfants/ | Centre Historique Minier de Lewarde: combien de temps prévoir avec des enfants | sorties | Lewarde, Nord, Hauts-de-France
+- /articles/voyages/carcassonne-en-famille-1-ou-2-jours-billets-et-budget-a-prevoir/ | Carcassonne en famille: 1 ou 2 jours, billets et budget à prévoir | voyages | Carcassonne, Aude, Occitanie
+- /articles/sorties/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied/ | Réserve Africaine de Sigean: combien de temps prévoir entre safari et visite à pied ? | sorties | Sigean, Aude, Occitanie
+- /articles/voyages/narbonne-en-famille-hors-saison-un-week-end-entre-romains-halles-et-canal/ | Narbonne en famille hors saison: un week-end entre Romains, Halles et canal | voyages | Narbonne, Aude, Occitanie
+- /articles/evenements/carnaval-de-limoux-2027-en-famille-dates-fecos-et-conseils-pratiques/ | Carnaval de Limoux 2027 en famille: dates, Fécos et conseils pratiques | evenements | Limoux, Aude, Occitanie
+- /articles/evenements/saint-nicolas-2026-a-carcassonne-marche-aux-flambeaux-ou-campements-medievaux-avec-les-enfants/ | Saint-Nicolas 2026 à Carcassonne: campements médiévaux et marche aux flambeaux en famille | evenements | Carcassonne, Aude, Occitanie
+- /articles/voyages/gouffre-geant-de-cabrespine-en-famille-quelle-visite-choisir-en-2026/ | Gouffre Géant de Cabrespine en famille: quelle visite choisir en 2026? | voyages | Cabrespine, Aude, Occitanie
+- /articles/sorties/petit-archeologue-puilaurens-famille-2026/ | Le petit archéologue à Puilaurens: un jeu de piste en famille | sorties | Puilaurens, Aude, Occitanie
 - /articles/sorties/chauvigny-en-famille-cite-medievale-et-deux-chasses-aux-tresors/ | Chauvigny en famille: cité médiévale et deux chasses aux trésors | sorties | Chauvigny, Vienne, Nouvelle-Aquitaine
-- /articles/vie-pratique/ludotheque-ricochet-a-sainte-sigolene-jouer-et-emprunter-en-famille/ | Ludothèque Ricochet à Sainte-Sigolène: jouer et emprunter en famille | vie-pratique | Sainte-Sigolène, Haute-Loire, Auvergne-Rhône-Alpes
-- /articles/activites/parc-du-moulin-a-tan-a-sens-une-sortie-nature-gratuite-en-famille/ | Parc du Moulin à Tan à Sens: une sortie nature gratuite en famille | activites | Sens, Yonne, Bourgogne-Franche-Comté
-- /articles/cuisine/petit-epeautre-du-ventoux-quatre-idees-pour-le-cuisiner-en-famille/ | Petit épeautre du Ventoux: quatre idées pour le cuisiner en famille | cuisine | Vaucluse, Provence-Alpes-Côte d’Azur
-- /articles/evenements/carnaval-de-guadeloupe-2027-preparer-une-premiere-sortie-avec-ses-enfants/ | Carnaval de Guadeloupe 2027: préparer une première sortie avec ses enfants | evenements | Guadeloupe
 - /articles/sorties/chateau-de-la-motte-tilly-en-famille-visite-jeu-de-piste-et-parc-gratuit/ | Château de La Motte-Tilly en famille: visite, jeu de piste et parc gratuit | sorties | La Motte-Tilly, Aube, Grand Est
-- /articles/activites/nuits-de-branfere-2026-preparer-une-sortie-en-famille-dans-le-morbihan/ | Nuits de Branféré 2026: préparer une sortie en famille dans le Morbihan | activites | Le Guerno, Morbihan, Bretagne
-- /articles/voyages/lac-du-der-en-famille-observer-les-grues-en-automne-et-en-hiver/ | Lac du Der en famille: observer les grues en automne et en hiver | voyages | Grand Est
-- /articles/parentalite/laep-dans-le-tarn-ou-aller-avec-son-enfant/ | LAEP dans le Tarn: où aller avec son enfant ? | parentalite | Tarn, Occitanie
-- /articles/cuisine/madeleines-de-saint-yrieix-une-recette-a-faire-avec-les-enfants/ | Madeleines de Saint-Yrieix: une recette à faire avec les enfants | cuisine | Saint-Yrieix-la-Perche, Haute-Vienne, Nouvelle-Aquitaine
 - /articles/sorties/musee-de-la-musique-mecanique-aux-gets-une-sortie-en-famille-qui-s-ecoute/ | Musée de la Musique Mécanique aux Gets: une sortie en famille qui s'écoute | sorties | Les Gets, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/sorties/mariana-en-famille-du-musee-aux-vestiges-de-la-cite-antique/ | Mariana en famille: du musée aux vestiges de la cité antique | sorties | Lucciana, Haute-Corse, Corse
-- /articles/vie-pratique/cabanes-des-1-000-premiers-jours-en-seine-saint-denis-ou-aller-avec-son-enfant/ | Cabanes des 1 000 premiers jours en Seine-Saint-Denis: où aller avec son enfant ? | vie-pratique | Seine-Saint-Denis, Île-de-France
+- /articles/sorties/espace-des-sciences-a-rennes-avec-des-enfants-expositions-experiences-et-planetarium/ | Espace des sciences à Rennes avec des enfants: expositions, expériences et planétarium | sorties | Rennes, Ille-et-Vilaine, Bretagne
+- /articles/sorties/lascaux-iv-en-famille-decouvrir-les-peintures-et-choisir-sa-visite/ | Lascaux IV en famille: découvrir les peintures et choisir sa visite | sorties | Montignac-Lascaux, Dordogne, Nouvelle-Aquitaine
+- /articles/sorties/chateau-d-if-a-marseille-en-famille-bateau-visite-et-tarifs/ | Château d'If à Marseille en famille: bateau, visite et tarifs | sorties | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d’Azur
+- /articles/sorties/cite-du-train-a-mulhouse-en-famille-que-voir-selon-l-age/ | Cité du Train à Mulhouse en famille: que voir selon l’âge ? | sorties | Mulhouse, Haut-Rhin, Grand Est
 
 ### Historique Radar lié
 
-- opportunity | /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | 2026-10-16T17:46:42.470Z
-- refresh | /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | 2026-11-07T00:30:17.397Z
-- opportunity | /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | 2026-10-28T15:29:23.387Z
-- refresh | /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | 2026-11-17T22:37:09.520Z
-- opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
-- opportunity | /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | 2026-10-10T08:38:56.921Z
-- opportunity | /articles/evenements/noel-2026-a-paris-la-defense-en-famille-marche-animations-ou-patinoire/ | 2026-11-01T01:35:08.448Z
-- opportunity | /articles/evenements/noel-2026-a-quimper-en-famille-village-concert-ou-ateliers-gratuits/ | 2026-11-01T18:35:45.871Z
-- refresh | /articles/evenements/noel-2026-a-rochefort-en-terre-avec-des-enfants-village-et-illuminations/ | 2026-11-15T12:33:21.761Z
-- opportunity | /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | 2026-11-03T15:36:10.146Z
-- refresh | /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | 2026-11-13T13:31:11.034Z
-- opportunity | /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | 2026-10-30T21:26:32.584Z
-- opportunity | /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | 2026-10-30T18:26:56.039Z
-- refresh | /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | 2026-11-17T09:28:43.094Z
-- opportunity | /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | 2026-10-09T14:37:47.734Z
-- opportunity | /articles/evenements/odyssee-lumineuse-2026-2027-au-parc-floral-de-paris-billet-date-ou-open-en-famille/ | 2026-10-26T15:30:14.299Z
-- refresh | /articles/evenements/odyssee-lumineuse-2026-2027-au-parc-floral-de-paris-billet-date-ou-open-en-famille/ | 2026-11-14T08:33:55.465Z
-- refresh | /articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/ | 2026-11-18T20:33:05.376Z
-- refresh | /articles/sorties/parc-spirou-avec-de-jeunes-enfants-regardez-la-taille-avant-d-acheter-les-billets/ | 2026-11-18T23:36:24.271Z
-- refresh | /articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/ | 2026-10-22T18:35:19.372Z
-- opportunity | /articles/activites/pokemon-et-biodiversite-a-paris-le-28-novembre-2026-atelier-dessin-des-10-ans/ | 2026-11-05T10:32:54.471Z
-- opportunity | /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | 2026-11-04T05:34:42.508Z
+- refresh | /articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/ | 2026-11-02T16:35:39.647Z
+- refresh | /articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/ | 2026-11-18T11:35:44.875Z
 - refresh | /articles/sorties/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied/ | 2026-10-02T18:25:59.965Z
-- opportunity | /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | 2026-10-22T04:59:04.773Z
-- refresh | /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | 2026-11-19T03:32:19.795Z
-- opportunity | /articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/ | 2026-10-30T12:36:12.349Z
-- opportunity | /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | 2026-10-24T19:30:32.700Z
-- refresh | /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | 2026-11-13T16:33:40.259Z
-- opportunity | /articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/ | 2026-11-03T03:34:06.534Z
-- refresh | /articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/ | 2026-11-16T08:38:53.929Z
+- opportunity | /articles/evenements/saint-nicolas-2026-a-carcassonne-marche-aux-flambeaux-ou-campements-medievaux-avec-les-enfants/ | 2026-10-27T00:35:14.931Z
+- refresh | /articles/evenements/saint-nicolas-2026-a-carcassonne-marche-aux-flambeaux-ou-campements-medievaux-avec-les-enfants/ | 2026-11-17T06:29:57.590Z
 
-## Travaux éditoriaux en cours
+### Phases 2 et 3
 
-### Publication en cours
+Écris `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées et le corps complet de l'article. **Ne recopie pas les métadonnées inchangées et n'ajoute aucun bloc `radar`.** Le script normalise la syntaxe sûre de la requête, reprend mécaniquement les autres métadonnées et le bloc Radar de la phase précédente, puis incrémente la phase.
 
-- Branche: automation/publication-20261119-1705-noel-a-brive-2026-en-famille-foret-enchantee-marche-gourmand-et-animat
-- HEAD: publication: phase 3 20261119-1705-noel-a-brive-2026-en-famille-foret-enchantee-marche-gourmand-et-animat
+Pour un refresh, le script conserve de lui-même les champs protégés de l'article source. Pour une opportunity, il conserve la catégorie, le territoire et le slug choisis en phase 1.
 
----
-category: "evenements"
-title: "Noël à Brive 2026 en famille: animations, dates et parcours"
-subtitle: "Forêt enchantée, train gratuit, Père Noël et marché gourmand dans le centre-ville"
-summary: "Du 28 novembre au 31 décembre 2026, préparez votre sortie de Noël à Brive avec les enfants: lieux, horaires, animations gratuites et temps forts."
-keywords:
-  - "Noël Brive 2026 famille"
-  - "animations Noël Brive-la-Gaillarde"
-  - "forêt enchantée Brive"
-location:
-  city: "Brive-la-Gaillarde"
-  department: "Corrèze"
-  region: "Nouvelle-Aquitaine"
-eventEndsAt: "2026-12-31"
-sources:
-  - title: "Brive Tourisme - Noël à Brive 2026"
-    url: "https://www.brive-tourisme.com/fr/agenda/grands-rendez-vous/noel/noel-brive/"
-  - title: "Brive Tourisme - Programme quotidien des animations"
-    url: "https://www.brive-tourisme.com/fr/agenda/grands-rendez-vous/noel/noel-brive/programme-quotidien-animations-brive/"
-  - title: "Brive Tourisme - Marché gourmand et concerts"
-    url: "https://www.brive-tourisme.com/fr/agenda/grands-rendez-vous/noel/noel-brive/le-marche-gourmand-de-brive-et-ses-concerts/"
-  - title: "Brive Tourisme - Train féerique et manèges"
-    url: "https://www.brive-tourisme.com/fr/agenda/grands-rendez-vous/noel/noel-brive/les-maneges-de-noel/"
-  - title: "Brive Tourisme - Rencontres avec le Père Noël"
-    url: "https://www.brive-tourisme.com/fr/agenda/grands-rendez-vous/noel/noel-brive/arrivee-pere-noel/"
----
-
-À Brive-la-Gaillarde, en Corrèze, les fêtes de Noël investissent le centre-ville à partir du 28 novembre 2026. On peut y partager un goûter au marché gourmand, découvrir une forêt illuminée, croiser le Père Noël ou monter à bord d'un petit train gratuit. L'intérêt pour une famille: composer une sortie de quelques heures sans devoir réserver une journée entière.
-
-## Où aller pour profiter de Noël à Brive?
-
-Trois secteurs concentrent l'essentiel de la promenade.
-
-**Place Charles-de-Gaulle**, près de la collégiale Saint-Martin et de la médiathèque, accueille le Village des Gourmands et le chalet du Père Noël. C'est un bon point de départ pour manger ou faire une pause.
-
-**Les jardins de la Guierle** accueillent la Forêt enchantée. Le rendez-vous est particulièrement intéressant à la tombée de la nuit: l'animation est annoncée de **16h à 22h**, avec accès gratuit.
-
-**La place du 14-Juillet** reçoit la fête foraine d'hiver à partir du 9 décembre. Le centre historique possède également un carrousel place du Civoire.
-
-Les dates et les lieux figurent dans le [programme officiel de Noël à Brive](https://www.brive-tourisme.com/fr/agenda/grands-rendez-vous/noel/noel-brive/). Il est préférable de le consulter le jour de la sortie, surtout pour les animations ponctuelles.
-
-## Avec de jeunes enfants: goûter, lumières et Père Noël
-
-Pour les petits, mieux vaut privilégier une promenade courte. Commencez par le Village des Gourmands en fin d'après-midi, puis rejoignez les jardins de la Guierle dès l'ouverture de la Forêt enchantée à 16h. Cette formule permet de voir les décorations sans attendre une soirée trop tardive.
-
-Le marché gourmand, installé **du 28 novembre au 31 décembre**, propose notamment crêpes, bretzels et boissons chaudes. Il ouvre généralement **de 11h à 19h**, mais **de 14h à 19h le lundi**; une prolongation jusqu'à 22h est possible selon l'affluence. Les chalets servent des produits payants, même si l'accès au marché est libre. Retrouvez les détails sur la [page du marché gourmand](https://www.brive-tourisme.com/fr/agenda/grands-rendez-vous/noel/noel-brive/le-marche-gourmand-de-brive-et-ses-concerts/).
-
-Pour rencontrer le Père Noël, notez son **arrivée annoncée le samedi 5 décembre à 18h** dans le centre-ville. Il sera ensuite dans son chalet place Charles-de-Gaulle, notamment ce soir-là de 19h à 21h et à d'autres dates jusqu'au 24 décembre. La rencontre est annoncée gratuite. Les créneaux précis sont indiqués dans le [calendrier des rencontres avec le Père Noël](https://www.brive-tourisme.com/fr/agenda/grands-rendez-vous/noel/noel-brive/arrivee-pere-noel/).
-
-## Avec des enfants plus grands: petit train et fête foraine
-
-Le **train féerique gratuit** permet de découvrir les décorations du centre-ville sans parcourir tout le circuit à pied. Il circule les **12 et 13 décembre**, puis **du 19 au 24 décembre**, de **10h à 13h et de 15h à 19h**. Il ne faut donc pas compter dessus dès l'ouverture des festivités.
-
-La fête foraine est annoncée **du 9 décembre 2026 au 3 janvier 2027**, place du 14-Juillet, de **14h30 à 19h en semaine**, et jusqu'à **20h selon les jours**. Les tarifs des manèges ne sont pas précisés sur la page consultée: prévoyez un budget distinct. Le [programme du train et des manèges](https://www.brive-tourisme.com/fr/agenda/grands-rendez-vous/noel/noel-brive/les-maneges-de-noel/) permet de vérifier les horaires avant de partir.
-
-Pour une sortie plus longue, combinez un tour de train en journée, une pause gourmande, puis la Forêt enchantée à partir de 16h. Évitez de multiplier les attractions si les enfants commencent à fatiguer.
-
-## Quelles dates choisir?
-
-**Le 28 novembre** marque le lancement: inauguration du Village des Gourmands annoncée à **19h** et Forêt enchantée de **16h à 22h**.
-
-**Le 5 décembre** est à privilégier pour l'arrivée du Père Noël, mais cette soirée peut attirer davantage de monde.
-
-**Le 20 décembre**, un **feu d'artifice est annoncé à 18h30**. Si vous venez avec un enfant sensible au bruit, choisissez plutôt une autre date ou éloignez-vous de la zone de tir.
-
-Pendant les vacances scolaires, le petit train, la fête foraine et les rencontres avec le Père Noël offrent davantage de combinaisons. Certaines activités à la médiathèque, comme les rendez-vous pour tout-petits ou les jeux de Noël, nécessitent une inscription préalable. Les spectacles de la scène nationale L'Empreinte peuvent être payants et ne conviennent pas nécessairement à tous les âges.
-
-Consultez le [programme jour par jour de Brive Tourisme](https://www.brive-tourisme.com/fr/agenda/grands-rendez-vous/noel/noel-brive/programme-quotidien-animations-brive/) pour choisir une date en fonction des animations réellement prévues, plutôt que de supposer qu'elles ont toutes lieu chaque jour.
-
-## Préparer une sortie agréable sans mauvaises surprises
-
-Le centre-ville se découvre à pied, mais la météo de décembre peut rendre l'attente pénible, notamment devant le chalet du Père Noël. Avec une poussette, privilégiez un circuit court et prévoyez une pause à l'abri. Les conditions précises d'accessibilité des attractions et du train ne sont pas détaillées dans les sources consultées: renseignez-vous auprès de l'organisateur si elles sont déterminantes pour votre visite.
-
-Pour limiter les dépenses, la Forêt enchantée, le train aux dates annoncées et plusieurs animations constituent une base gratuite. En revanche, repas, manèges et certains spectacles peuvent augmenter le budget. Les horaires et les éventuelles modifications de dernière minute restent à confirmer auprès de [Brive Tourisme](https://www.brive-tourisme.com/fr/agenda/grands-rendez-vous/noel/noel-brive/).
-
-## Dormir à Brive après les illuminations
-
-Pour profiter des animations du soir sans reprendre la route, deux logements du centre-ville permettent de prolonger la sortie en famille. L'[appartement de charme du centre historique](https://www.booking.com/hotel/fr/maison-hyper-centre-brive.fr.html), rue Saint-Joseph, dispose de trois chambres et d'une cuisine, pratique pour une famille nombreuse. L'[appartement Boulevard Jules Ferry](https://www.booking.com/hotel/fr/boulevard-jules-ferry.fr.html) propose deux chambres et une cuisine, à proximité de la médiathèque et du cœur des festivités.
-
-Vérifiez les disponibilités pour votre date, le nombre de voyageurs et les conditions d'accueil des enfants avant de réserver.
-
-
-### Destination en cours
-
-- Branche: automation/destination-20261010-0720-vincennes
-- HEAD: content: destination candidate Vincennes
-
----
-result: enriched
-kind: city
-name: "Vincennes"
-url: "/destinations/ile-de-france/val-de-marne/vincennes/"
-intro:
-  - "Vincennes est une base pratique pour visiter l'est parisien sans voiture : le château et le Parc floral se combinent à pied, tandis que le zoo de Paris mérite une sortie distincte."
-sections:
-  - title: "Une journée sur place : associer le château au Parc floral"
-    paragraphs:
-      - "Pour une journée mêlant découverte et temps de jeu, commencez par le château, puis rejoignez le Parc floral par l'esplanade du château. Comptez environ 1 h 30 à 2 h pour le monument avant de laisser les enfants profiter des aires de jeux du parc. Les pique-niques ne sont pas autorisés dans l'enceinte du château, mais le Parc floral dispose de tables de pique-nique, de points d'eau et de toilettes avec table à langer."
-      - "Avec de jeunes enfants qui supportent mal les visites intérieures, faites plutôt du Parc floral la sortie principale : ses jeux et ses jardins évitent de construire la journée autour du donjon et de ses escaliers. L'accès au Parc floral est gratuit d'octobre à mars et payant d'avril à septembre ; le château est un site distinct avec son propre billet."
-  - title: "Sur deux jours, garder le zoo pour une autre sortie"
-    paragraphs:
-      - "Le Parc zoologique de Paris se trouve du côté de la Porte Dorée, dans le 12e arrondissement, et non à côté du château ou à l'intérieur du Parc floral. Depuis le terminus Château de Vincennes du métro 1, le bus 46 permet de le rejoindre. Le zoo recommande au minimum deux heures de visite : avec le trajet et les pauses, mieux vaut lui réserver une seconde journée plutôt que de l'ajouter à la visite du château et du Parc floral."
-      - "Pour un séjour d'une seule journée, choisissez donc entre le duo château et Parc floral, facile à enchaîner à pied, et une visite du zoo avec trajet dédié. Ce choix évite de traverser inutilement le bois avec des enfants fatigués."
-  - title: "Métro ou RER avec une poussette : deux arrivées différentes"
-    paragraphs:
-      - "La ligne 1 arrive au pied du château, mais la station Château de Vincennes comporte de nombreuses marches entre les quais et la rue. La gare Vincennes du RER A est équipée d'un ascenseur et d'escalators ; elle se situe à environ dix minutes à pied du château. Avec une poussette lourde ou des difficultés à emprunter les escaliers, le RER A peut donc être plus pratique malgré la marche supplémentaire. Vérifiez l'état des équipements avant de partir."
-accommodation:
-  title: "Où dormir selon les sorties prévues ?"
-  paragraphs:
-    - "Si votre programme privilégie le château, le Parc floral et le départ du bus 46 vers le zoo, cherchez un hébergement vers l'avenue de Paris et le terminus Château de Vincennes. Si vous prévoyez aussi plusieurs allers-retours vers le centre de Paris, la proximité de la gare Vincennes du RER A est un autre choix pratique. Avec une poussette, comparez surtout la distance réelle à pied jusqu'à la gare ou au métro plutôt que de réserver simplement un logement annoncé à Vincennes."
-sources:
-  - title: "Fam Space - Destination Vincennes et ses deux articles"
-    url: "https://www.fam-space.fr/destinations/ile-de-france/val-de-marne/vincennes/"
-    accessedAt: "2026-10-10"
-  - title: "Fam Space - Château de Vincennes en famille"
-    url: "https://www.fam-space.fr/articles/sorties/chateau-de-vincennes-en-famille-tarifs-parcours-et-conseils-de-visite/"
-    accessedAt: "2026-10-10"
-  - title: "Fam Space - Monument jeu d'enfant 2026 au château de Vincennes"
-    url: "https://www.fam-space.fr/articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/"
-    accessedAt: "2026-10-10"
-  - title: "Ville de Paris - Parc floral de Paris"
-    url: "https://www.paris.fr/lieux/parc-floral-de-paris-1"
-    accessedAt: "2026-10-10"
-  - title: "Château de Vincennes - Informations pratiques"
-    url: "https://www.chateau-de-vincennes.fr/visiter/informations-pratiques"
-    accessedAt: "2026-10-10"
-  - title: "Château de Vincennes - Offre adaptée aux visiteurs en mobilité réduite"
-    url: "https://www.chateau-de-vincennes.fr/visiter/visiteurs-en-situation-de-handicap/offre-adaptee-aux-visiteurs-en-mobilite-reduite"
-    accessedAt: "2026-10-10"
-  - title: "Parc zoologique de Paris - Tarifs, horaires et accès"
-    url: "https://www.parczoologiquedeparis.fr/fr/tarifs-horaires-acces"
-    accessedAt: "2026-10-10"
-  - title: "Parc zoologique de Paris - Services et conseils de visite"
-    url: "https://www.parczoologiquedeparis.fr/fr/services-conseils-de-visite"
-    accessedAt: "2026-10-10"
----
-
-### Destination en cours
-
-- Branche: automation/destination-20261013-0112-haut-rhin
-- HEAD: content: destination Haut-Rhin enrichment candidate
-
----
-result: enriched
-kind: department
-name: "Haut-Rhin"
-url: "/destinations/grand-est/haut-rhin/"
-intro:
-  - "Colmar, Mulhouse et Ungersheim ne se visitent pas de la même manière en famille. Le choix de la base dépend des musées, des villages et de la possibilité de se déplacer sans voiture."
-sections:
-  - title: "Colmar pour les villages, Mulhouse pour les musées"
-    paragraphs:
-      - "Colmar convient à une journée dans le centre suivie d'une sortie vers Turckheim ou Munster, accessibles sur la ligne de train vers Metzeral. Pour Riquewihr, Kaysersberg ou Eguisheim, cette ligne ne suffit pas : il faut vérifier les bus ou prévoir une voiture."
-      - "Mulhouse est une meilleure base pour les musées techniques : la Cité du Train et Electropolis sont desservis par le tram 3, et le Musée national de l'Automobile par le tram 1. Si ces visites sont prioritaires, dormir à Mulhouse évite de revenir chaque soir depuis Colmar."
-  - title: "Deux parcs à Ungersheim : prévoir deux journées"
-    paragraphs:
-      - "Le Parc du Petit Prince et l'Écomusée d'Alsace sont proches, mais le premier recommande déjà cinq à sept heures de visite. Une famille qui souhaite découvrir les deux aura plus de temps pour profiter de chaque site en leur réservant une journée distincte."
-      - "Sans voiture, le train rejoint Bollwiller, puis il faut prévoir une navette à la demande vers les sites. Le Parc du Petit Prince indique le service Filéa ; l'Écomusée annonce une navette Soléa ou trente minutes de marche. Réservez et vérifiez le retour avant d'acheter les billets."
-  - title: "Ne pas confondre train et bus touristique"
-    paragraphs:
-      - "Le Kut'zig dessert en saison plusieurs villages viticoles depuis Colmar, mais ne circule pas toute l'année : sa saison 2026 s'est achevée le 11 octobre. Hors saison, la ligne ferroviaire vers Turckheim et Munster offre un autre choix de sortie, sous réserve des horaires du jour."
-accommodation:
-  title: "Où se baser dans le Haut-Rhin ?"
-  paragraphs:
-    - "Choisissez Colmar pour le centre historique, les villages et la vallée de Munster ; choisissez Mulhouse pour les musées et une excursion vers Ungersheim via Bollwiller. Si le séjour combine plusieurs jours dans chaque secteur, deux hébergements peuvent éviter des allers-retours répétés avec les enfants."
-sources:
-  - title: "Fam Space - Haut-Rhin"
-    url: "https://www.fam-space.fr/destinations/grand-est/haut-rhin/"
-    accessedAt: "2026-10-13"
-  - title: "Mulhouse Tourisme - Transports en commun"
-    url: "https://www.tourisme-mulhouse.com/en/what-to-do-in-mulhouse/getting-around-mulhouse-by-public-transport/"
-    accessedAt: "2026-10-13"
-  - title: "Parc du Petit Prince - Informations pratiques"
-    url: "https://parcdupetitprince.com/infos-pratiques"
-    accessedAt: "2026-10-13"
-  - title: "Écomusée d'Alsace - Accès"
-    url: "https://www.ecomusee.alsace/preparez-votre-visite/acces/"
-    accessedAt: "2026-10-13"
-  - title: "Ville de Turckheim - Accès"
-    url: "https://www.turckheim.fr/acces-et-plan/"
-    accessedAt: "2026-10-13"
-  - title: "Office de tourisme de Colmar - Kut'zig"
-    url: "https://www.tourisme-colmar.com/fr/pratique/se-deplacer/kut-zig-le-bus-touristique-cabriolet"
-    accessedAt: "2026-10-13"
----
-
-### Phase 1 - refresh
-
-Écris `radar-request.md` avec seulement la décision éditoriale:
-
-```yaml
----
-action: start
-mode: refresh
-targetUrl: "/articles/categorie/slug/"
-decision: "Décision précise du lecteur à mieux servir"
-affiliationPotential: "Offre existante à conserver, nouvelle action naturelle à vérifier, ou absence d'affiliation naturelle"
----
-
-Brief éditorial court demandé par la phase 1.
-```
-
-Ne fournis ni branche, ni SHA, ni `targetPath`, ni `commonQueries`, ni `positionDelta`, ni `impressionRatio`, ni `focusQueries`. Le script les prend dans Git et dans le snapshot.
-
-### Phase 1 - opportunity
-
-Écris le minimum éditorial nécessaire au futur article:
-
-```yaml
----
-action: start
-mode: opportunity
-title: "Titre de travail"
-subtitle: "Sous-titre utile"
-summary: "Résumé"
-category: sorties
-location:
-  city: "Ville"
-  department: "Département"
-  region: "Région"
-keywords:
-  - "mot-clé utile"
-sources:
-  - title: "Source officielle"
-    url: "https://..."
-gscSignal: strong_page
-gscSourceUrl: "/articles/categorie/page-forte/"
-decision: "Décision précise du lecteur"
-affiliationPotential: "Piste commerciale réellement vérifiée ou absence naturelle"
----
-
-Brief éditorial court demandé par la phase 1.
-```
-
-Le slug, la branche, le SHA et la provenance technique sont générés par le script. Pour `seasonal_opportunity`, utilise `gscSignal: seasonal_opportunity` et omets `gscSourceUrl`: la source officielle du frontmatter sert de preuve. Pour `strong_page`, `gscSourceUrl` reste obligatoire et doit correspondre à une page réellement présente dans `strongPages`.
+En phase 3 seulement, ajoute `radarReview` avec `summary`, `sources` et, pour un refresh, `regressionCheck`. Une seule correction factuelle vérifiée peut être suffisante.
 
 ## Écriture autorisée
 
