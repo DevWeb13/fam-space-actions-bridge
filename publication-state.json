@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261119-1705-noel-a-brive-2026-en-famille-foret-enchantee-marche-gourmand-et-animat",
+  "lastProcessedCommit": "ce36d65319fbd8be2cccca241719cfcfdfef70ed"
 }
