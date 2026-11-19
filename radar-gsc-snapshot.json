@@ -1,38 +1,35 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-18T00:34:26+01:00",
-  "dataThrough": "2026-11-15",
-  "from": "2026-10-19",
+  "generatedAt": "2026-11-19T01:30:40+01:00",
+  "dataThrough": "2026-11-16",
+  "from": "2026-10-20",
   "refresh": [
     {
-      "url": "/articles/parentalite/maisons-des-1000-premiers-jours-a-paris-deux-adresses-pour-les-parents-et-les-bebes/",
-      "title": "Maisons des 1000 premiers jours à Paris: deux adresses pour les parents et les bébés",
-      "category": "parentalite",
-      "publishedAt": "2026-11-09T06:06:02+01:00",
+      "url": "/articles/evenements/les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille/",
+      "title": "Féeries de Noël 2026 à Paris: parcours lumineux, billets et patinoire en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-27T13:28:21.002Z",
       "location": {
         "city": "Paris",
         "department": "Paris",
         "region": "Île-de-France"
       },
-      "ageDays": 9,
+      "ageDays": 23,
       "rapidDrop": true,
-      "peakStart": "2026-11-10",
-      "peakEnd": "2026-11-12",
-      "recentStart": "2026-11-13",
-      "recentEnd": "2026-11-15",
-      "peakImpressions": 64,
-      "recentImpressions": 13,
-      "score": 153,
-      "signal": "coverage_loss",
-      "basis": "Visibilité récente : 64 impressions sur trois jours, puis 13 sur les trois derniers jours consolidés; cause non établie. Baisse d'exposition sur les requêtes visibles (ratio 0.25), sans recul de classement comparable établi.",
-      "commonQueries": 1,
-      "positionDelta": 1,
-      "impressionRatio": 0.25,
+      "peakStart": "2026-11-11",
+      "peakEnd": "2026-11-13",
+      "recentStart": "2026-11-14",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 91,
+      "recentImpressions": 30,
+      "score": 183,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 91 impressions sur trois jours, puis 30 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
       "focusQueries": [
-        "maison des 1000 premiers jours paris 20",
-        "maison des 1000 premiers jours paris",
-        "la maison des 1000 premiers jours paris",
-        "maison des 1000 premiers jours paris 18"
+        "les feeries de noel parc andre citroen"
       ]
     },
     {
@@ -45,12 +42,12 @@
         "department": "Alpes-Maritimes",
         "region": "Provence-Alpes-Côte d'Azur"
       },
-      "ageDays": 23,
+      "ageDays": 24,
       "rapidDrop": true,
       "peakStart": "2026-10-26",
       "peakEnd": "2026-10-28",
-      "recentStart": "2026-11-13",
-      "recentEnd": "2026-11-15",
+      "recentStart": "2026-11-14",
+      "recentEnd": "2026-11-16",
       "peakImpressions": 40,
       "recentImpressions": 6,
       "score": 137,
@@ -65,65 +62,30 @@
       ]
     },
     {
-      "url": "/articles/evenements/foire-aux-santons-de-marseille-2026-en-famille-quand-venir-et-que-voir/",
-      "title": "Foire aux santons de Marseille 2026: dates, inauguration et visite en famille",
+      "url": "/articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/",
+      "title": "Salon du Cheval de Paris 2026 en famille: animations, jumping et billets",
       "category": "evenements",
-      "publishedAt": "2026-10-23T15:29:55.155Z",
+      "publishedAt": "2026-10-22T04:59:04.689Z",
       "location": {
-        "city": "Marseille",
-        "department": "Bouches-du-Rhône",
-        "region": "Provence-Alpes-Côte d'Azur"
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
       },
-      "ageDays": 26,
+      "ageDays": 28,
       "rapidDrop": true,
-      "peakStart": "2026-10-24",
-      "peakEnd": "2026-10-26",
-      "recentStart": "2026-11-13",
-      "recentEnd": "2026-11-15",
-      "peakImpressions": 37,
+      "peakStart": "2026-11-02",
+      "peakEnd": "2026-11-04",
+      "recentStart": "2026-11-14",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 31,
       "recentImpressions": 10,
-      "score": 81,
+      "score": 63,
       "signal": "uncertain",
-      "basis": "Visibilité récente : 37 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "basis": "Visibilité récente : 31 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
       "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "foire aux santons 2026",
-        "calendrier foire aux santons 2026",
-        "foire au santon 2026",
-        "foires aux santons 2026"
-      ]
-    },
-    {
-      "url": "/articles/evenements/noel-gaulois-2026-au-parc-asterix-billet-malin-noel-ou-flex-en-famille/",
-      "title": "Noël Gaulois 2026 au Parc Astérix: billets, glissades et spectacles en famille",
-      "category": "evenements",
-      "publishedAt": "2026-10-24T09:33:57.091Z",
-      "location": {
-        "city": "Plailly",
-        "department": "Oise",
-        "region": "Hauts-de-France"
-      },
-      "ageDays": 25,
-      "rapidDrop": true,
-      "peakStart": "2026-10-25",
-      "peakEnd": "2026-10-27",
-      "recentStart": "2026-11-13",
-      "recentEnd": "2026-11-15",
-      "peakImpressions": 24,
-      "recentImpressions": 4,
-      "score": 60,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 24 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "noel gaulois 2026",
-        "et le 1er janvier",
-        "parc asterix decembre"
-      ]
+      "impressionRatio": null,
+      "focusQueries": []
     },
     {
       "url": "/articles/evenements/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/",
@@ -135,171 +97,52 @@
         "department": "Paris",
         "region": "Île-de-France"
       },
-      "ageDays": 14,
+      "ageDays": 15,
       "rapidDrop": true,
       "peakStart": "2026-11-09",
       "peakEnd": "2026-11-11",
-      "recentStart": "2026-11-13",
-      "recentEnd": "2026-11-15",
+      "recentStart": "2026-11-14",
+      "recentEnd": "2026-11-16",
       "peakImpressions": 20,
-      "recentImpressions": 1,
-      "score": 57,
+      "recentImpressions": 0,
+      "score": 60,
       "signal": "uncertain",
-      "basis": "Visibilité récente : 20 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "basis": "Visibilité récente : 20 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
       "commonQueries": 0,
       "positionDelta": null,
       "impressionRatio": null,
       "focusQueries": []
     },
     {
-      "url": "/articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/",
-      "title": "Marché de Noël 100 % Côte-d’Or à Dijon 2026: horaires, spectacles et Père Noël",
+      "url": "/articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/",
+      "title": "Gastronomades 2026 à Angoulême en famille: faut-il prévoir le week-end ?",
       "category": "evenements",
-      "publishedAt": "2026-10-29T14:26:32.176Z",
+      "publishedAt": "2026-09-19T22:56:58+02:00",
       "location": {
-        "city": "Dijon",
-        "department": "Côte-d'Or",
-        "region": "Bourgogne-Franche-Comté"
+        "city": "Angoulême",
+        "department": "Charente",
+        "region": "Nouvelle-Aquitaine"
       },
-      "ageDays": 20,
-      "rapidDrop": true,
-      "peakStart": "2026-11-01",
-      "peakEnd": "2026-11-03",
-      "recentStart": "2026-11-13",
-      "recentEnd": "2026-11-15",
-      "peakImpressions": 22,
-      "recentImpressions": 7,
-      "score": 45,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 7 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "marché de Noël du Département Dijon 2026",
-        "marché de Noël 100 % Côte-d'Or 12 13 décembre",
-        "Jardins du Département Dijon Noël enfants",
-        "spectacles ateliers gratuits Père Noël Dijon"
-      ]
-    },
-    {
-      "url": "/articles/evenements/noel-2026-au-chateau-royal-de-blois-decors-spectacles-et-visites-selon-l-age/",
-      "title": "Noël 2026 au château royal de Blois: décors, spectacles et tarifs en famille",
-      "category": "evenements",
-      "publishedAt": "2026-10-27T22:28:21.257Z",
-      "location": {
-        "city": "Blois",
-        "department": "Loir-et-Cher",
-        "region": "Centre-Val de Loire"
-      },
-      "ageDays": 22,
-      "rapidDrop": true,
-      "peakStart": "2026-10-28",
-      "peakEnd": "2026-10-30",
-      "recentStart": "2026-11-13",
-      "recentEnd": "2026-11-15",
-      "peakImpressions": 22,
-      "recentImpressions": 7,
-      "score": 45,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 7 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Noël château de Blois 2026",
-        "Forêts Intérieures château royal de Blois",
-        "Antonietta ou la forêt intérieure",
-        "visite familiale Noël Blois tarifs"
-      ]
-    },
-    {
-      "url": "/articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/",
-      "title": "Mini World Lyon: quel billet choisir en famille et combien de temps prévoir ?",
-      "category": "bons-plans",
-      "publishedAt": "2026-09-25T06:00:59+02:00",
-      "location": {
-        "city": "Vaulx-en-Velin",
-        "department": "Rhône",
-        "region": "Auvergne-Rhône-Alpes"
-      },
-      "ageDays": 54,
+      "ageDays": 61,
       "rapidDrop": false,
-      "peakStart": "2026-10-19",
-      "peakEnd": "2026-10-25",
-      "recentStart": "2026-11-09",
-      "recentEnd": "2026-11-15",
-      "peakImpressions": 574,
-      "recentImpressions": 197,
-      "score": 377,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
+      "peakStart": "2026-11-03",
+      "peakEnd": "2026-11-09",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 266,
+      "recentImpressions": 130,
+      "score": 136,
+      "signal": "uncertain",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer. Diagnostic sur 1 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 1,
+      "positionDelta": 0.159,
+      "impressionRatio": 0.282,
       "focusQueries": [
-        "Mini World Lyon en famille",
-        "Mini World Lyon tarifs"
-      ]
-    },
-    {
-      "url": "/articles/sorties/walibi-rhone-alpes-en-famille-quel-billet-choisir-selon-la-taille-des-enfants/",
-      "title": "Walibi Rhône-Alpes en famille: attractions, tailles et billets en 2026",
-      "category": "sorties",
-      "publishedAt": "2026-09-22T11:00:15+02:00",
-      "location": {
-        "city": "Les Avenières Veyrins-Thuellin",
-        "department": "Isère",
-        "region": "Auvergne-Rhône-Alpes"
-      },
-      "ageDays": 57,
-      "rapidDrop": false,
-      "peakStart": "2026-10-24",
-      "peakEnd": "2026-10-30",
-      "recentStart": "2026-11-09",
-      "recentEnd": "2026-11-15",
-      "peakImpressions": 291,
-      "recentImpressions": 43,
-      "score": 248,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Walibi Rhône-Alpes en famille",
-        "tarifs Walibi 2026"
-      ]
-    },
-    {
-      "url": "/articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/",
-      "title": "Où manger des fouées en famille autour de Saumur ?",
-      "category": "cuisine",
-      "publishedAt": "2026-10-11T18:36:52+02:00",
-      "location": {
-        "city": "Saumur",
-        "department": "Maine-et-Loire",
-        "region": "Pays de la Loire"
-      },
-      "ageDays": 38,
-      "rapidDrop": false,
-      "peakStart": "2026-10-23",
-      "peakEnd": "2026-10-29",
-      "recentStart": "2026-11-09",
-      "recentEnd": "2026-11-15",
-      "peakImpressions": 309,
-      "recentImpressions": 181,
-      "score": 128,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "fouées Saumur",
-        "restaurant troglodytique Saumur",
-        "fouées en famille",
-        "restaurant famille Maine-et-Loire"
+        "gastronomades 2026",
+        "gastronomades 2025",
+        "le détail des animations",
+        "les tarifs",
+        "gastronomade 2026"
       ]
     },
     {
@@ -312,15 +155,15 @@
         "department": "Vaucluse",
         "region": "Provence-Alpes-Côte d’Azur"
       },
-      "ageDays": 76,
+      "ageDays": 77,
       "rapidDrop": false,
       "peakStart": "2026-10-22",
       "peakEnd": "2026-10-28",
-      "recentStart": "2026-11-09",
-      "recentEnd": "2026-11-15",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
       "peakImpressions": 141,
-      "recentImpressions": 17,
-      "score": 124,
+      "recentImpressions": 18,
+      "score": 123,
       "signal": "needs_query_check",
       "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
       "commonQueries": null,
@@ -329,35 +172,6 @@
       "focusQueries": [
         "Parc Spirou enfants taille attractions",
         "Parc Spirou billets famille"
-      ]
-    },
-    {
-      "url": "/articles/maison/encombrants-a-bourges-quand-sortir-meubles-et-gros-objets/",
-      "title": "Encombrants à Bourges: quand sortir meubles et gros objets",
-      "category": "maison",
-      "publishedAt": "2026-09-11T00:03:15+02:00",
-      "location": {
-        "city": "Bourges",
-        "department": "Cher",
-        "region": "Centre-Val de Loire"
-      },
-      "ageDays": 68,
-      "rapidDrop": false,
-      "peakStart": "2026-10-24",
-      "peakEnd": "2026-10-30",
-      "recentStart": "2026-11-09",
-      "recentEnd": "2026-11-15",
-      "peakImpressions": 149,
-      "recentImpressions": 40,
-      "score": 109,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "encombrants Bourges",
-        "déchèterie Bourges"
       ]
     },
     {
@@ -370,12 +184,12 @@
         "department": "Manche",
         "region": "Normandie"
       },
-      "ageDays": 92,
+      "ageDays": 93,
       "rapidDrop": false,
       "peakStart": "2026-10-24",
       "peakEnd": "2026-10-30",
-      "recentStart": "2026-11-09",
-      "recentEnd": "2026-11-15",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
       "peakImpressions": 109,
       "recentImpressions": 37,
       "score": 107,
@@ -390,6 +204,35 @@
       ]
     },
     {
+      "url": "/articles/maison/encombrants-a-bourges-quand-sortir-meubles-et-gros-objets/",
+      "title": "Encombrants à Bourges: quand sortir meubles et gros objets",
+      "category": "maison",
+      "publishedAt": "2026-09-11T00:03:15+02:00",
+      "location": {
+        "city": "Bourges",
+        "department": "Cher",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 69,
+      "rapidDrop": false,
+      "peakStart": "2026-10-24",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 149,
+      "recentImpressions": 45,
+      "score": 104,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "encombrants Bourges",
+        "déchèterie Bourges"
+      ]
+    },
+    {
       "url": "/articles/sorties/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied/",
       "title": "Réserve Africaine de Sigean: combien de temps prévoir entre safari et visite à pied ?",
       "category": "sorties",
@@ -399,15 +242,15 @@
         "department": "Aude",
         "region": "Occitanie"
       },
-      "ageDays": 69,
+      "ageDays": 70,
       "rapidDrop": false,
       "peakStart": "2026-10-23",
       "peakEnd": "2026-10-29",
-      "recentStart": "2026-11-09",
-      "recentEnd": "2026-11-15",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
       "peakImpressions": 131,
-      "recentImpressions": 31,
-      "score": 100,
+      "recentImpressions": 30,
+      "score": 101,
       "signal": "needs_query_check",
       "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
       "commonQueries": null,
@@ -416,6 +259,64 @@
       "focusQueries": [
         "Réserve Africaine de Sigean avec enfants",
         "durée visite Réserve Africaine Sigean"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/rennes-avec-des-enfants-les-transports-sont-gratuits-avant-12-ans-mais-pas-sans-carte/",
+      "title": "Rennes avec des enfants: transports gratuits avant 12 ans, comment ça marche?",
+      "category": "vie-pratique",
+      "publishedAt": "2026-09-07T00:02:33+02:00",
+      "location": {
+        "city": "Rennes",
+        "department": "Ille-et-Vilaine",
+        "region": "Bretagne"
+      },
+      "ageDays": 73,
+      "rapidDrop": false,
+      "peakStart": "2026-10-25",
+      "peakEnd": "2026-10-31",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 105,
+      "recentImpressions": 27,
+      "score": 78,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Rennes transports enfants gratuits",
+        "STAR Rennes moins de 12 ans"
+      ]
+    },
+    {
+      "url": "/articles/sorties/parc-bagatelle-en-famille-quelles-attractions-selon-la-taille-des-enfants/",
+      "title": "Parc Bagatelle en famille: quelles attractions selon la taille des enfants?",
+      "category": "sorties",
+      "publishedAt": "2026-10-02T19:08:32+02:00",
+      "location": {
+        "city": "Merlimont",
+        "department": "Pas-de-Calais",
+        "region": "Hauts-de-France"
+      },
+      "ageDays": 48,
+      "rapidDrop": false,
+      "peakStart": "2026-10-25",
+      "peakEnd": "2026-10-31",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 80,
+      "recentImpressions": 4,
+      "score": 76,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Parc Bagatelle en famille",
+        "attractions Bagatelle taille enfant"
       ]
     },
     {
@@ -428,15 +329,15 @@
         "department": "Martinique",
         "region": "Martinique"
       },
-      "ageDays": 39,
+      "ageDays": 40,
       "rapidDrop": false,
       "peakStart": "2026-10-24",
       "peakEnd": "2026-10-30",
-      "recentStart": "2026-11-09",
-      "recentEnd": "2026-11-15",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
       "peakImpressions": 177,
-      "recentImpressions": 96,
-      "score": 81,
+      "recentImpressions": 102,
+      "score": 75,
       "signal": "needs_query_check",
       "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
       "commonQueries": null,
@@ -447,6 +348,99 @@
         "Zoo du Carbet avec enfants",
         "Habitation Latouche"
       ]
+    },
+    {
+      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
+      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
+      "category": "vie-pratique",
+      "publishedAt": "2026-09-28T09:22:04+02:00",
+      "location": {
+        "city": "Toulouse",
+        "department": "Haute-Garonne",
+        "region": "Occitanie"
+      },
+      "ageDays": 52,
+      "rapidDrop": false,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-07",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 224,
+      "recentImpressions": 162,
+      "score": 62,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "aide restauration scolaire Haute-Garonne",
+        "aide cantine collège Haute-Garonne",
+        "ARS Haute-Garonne 2026-2027"
+      ]
+    },
+    {
+      "url": "/articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/",
+      "title": "Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates",
+      "category": "evenements",
+      "publishedAt": "2026-10-23T06:21:12.265Z",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 27,
+      "rapidDrop": false,
+      "peakStart": "2026-10-24",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 224,
+      "recentImpressions": 164,
+      "score": 60,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Créations et savoir-faire 2026 famille Paris",
+        "Salon créations savoir-faire billet Duo Famille",
+        "Journée Famille 22 novembre 2026 Paris",
+        "Ateliers enfants salon loisirs créatifs Porte de Versailles"
+      ]
+    },
+    {
+      "url": "/articles/sorties/cosquer-mediterranee-avec-des-enfants-age-poussette-tarifs/",
+      "title": "Cosquer Méditerranée avec des enfants: que peut-on visiter selon leur âge?",
+      "category": "sorties",
+      "publishedAt": "2026-10-03T11:22:17.704Z",
+      "location": {
+        "city": "Marseille",
+        "department": "Bouches-du-Rhône",
+        "region": "Provence-Alpes-Côte d'Azur"
+      },
+      "ageDays": 47,
+      "rapidDrop": false,
+      "peakStart": "2026-10-21",
+      "peakEnd": "2026-10-27",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 82,
+      "recentImpressions": 24,
+      "score": 58,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Cosquer Méditerranée enfant",
+        "Cosquer Méditerranée moins de 3 ans",
+        "Cosquer Méditerranée poussette",
+        "Cosquer Méditerranée tarifs enfants",
+        "Cosquer Méditerranée durée visite"
+      ]
     }
   ],
   "strongPages": [
@@ -454,96 +448,96 @@
       "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
       "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
       "category": "evenements",
-      "recentImpressions": 219,
+      "recentImpressions": 245,
       "recentClicks": 11,
-      "recentPosition": 7.283,
-      "retention": 0.944
-    },
-    {
-      "url": "/articles/evenements/noel-2026-a-quimper-en-famille-village-concert-ou-ateliers-gratuits/",
-      "title": "Noël 2026 à Quimper en famille: village, concert et animations gratuites",
-      "category": "evenements",
-      "recentImpressions": 99,
-      "recentClicks": 10,
-      "recentPosition": 5.919,
-      "retention": 99
-    },
-    {
-      "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
-      "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
-      "category": "evenements",
-      "recentImpressions": 176,
-      "recentClicks": 8,
-      "recentPosition": 5.614,
-      "retention": 1.023
-    },
-    {
-      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
-      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
-      "category": "evenements",
-      "recentImpressions": 475,
-      "recentClicks": 7,
-      "recentPosition": 7.855,
-      "retention": 0.54
+      "recentPosition": 7.4,
+      "retention": 1.056
     },
     {
       "url": "/articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/",
       "title": "Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille",
       "category": "evenements",
-      "recentImpressions": 251,
-      "recentClicks": 7,
-      "recentPosition": 8.283,
-      "retention": 1.402
+      "recentImpressions": 334,
+      "recentClicks": 10,
+      "recentPosition": 8.123,
+      "retention": 1.866
     },
     {
-      "url": "/articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/",
-      "title": "Où manger des fouées en famille autour de Saumur ?",
-      "category": "cuisine",
-      "recentImpressions": 181,
-      "recentClicks": 5,
-      "recentPosition": 12.309,
-      "retention": 0.586
-    },
-    {
-      "url": "/articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/",
-      "title": "Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers",
-      "category": "vie-pratique",
-      "recentImpressions": 102,
-      "recentClicks": 5,
-      "recentPosition": 5.873,
-      "retention": 0.703
-    },
-    {
-      "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
-      "title": "Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite",
-      "category": "sorties",
-      "recentImpressions": 484,
-      "recentClicks": 4,
-      "recentPosition": 12.659,
-      "retention": 1.551
-    },
-    {
-      "url": "/articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/",
-      "title": "Soleils d'hiver 2026 à Angers en famille: marché, manèges et Père Noël",
+      "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
+      "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
       "category": "evenements",
-      "recentImpressions": 163,
-      "recentClicks": 4,
-      "recentPosition": 9.319,
-      "retention": 0.849
+      "recentImpressions": 157,
+      "recentClicks": 10,
+      "recentPosition": 4.675,
+      "retention": 0.813
+    },
+    {
+      "url": "/articles/evenements/noel-2026-a-quimper-en-famille-village-concert-ou-ateliers-gratuits/",
+      "title": "Noël 2026 à Quimper en famille: village, concert et animations gratuites",
+      "category": "evenements",
+      "recentImpressions": 96,
+      "recentClicks": 8,
+      "recentPosition": 6.187,
+      "retention": 6
+    },
+    {
+      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
+      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
+      "category": "evenements",
+      "recentImpressions": 505,
+      "recentClicks": 7,
+      "recentPosition": 7.828,
+      "retention": 0.606
     },
     {
       "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
       "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
       "category": "vie-pratique",
-      "recentImpressions": 156,
+      "recentImpressions": 162,
+      "recentClicks": 6,
+      "recentPosition": 6.796,
+      "retention": 0.723
+    },
+    {
+      "url": "/articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/",
+      "title": "Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers",
+      "category": "vie-pratique",
+      "recentImpressions": 115,
+      "recentClicks": 5,
+      "recentPosition": 5.722,
+      "retention": 0.793
+    },
+    {
+      "url": "/articles/evenements/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants/",
+      "title": "Fontaines dansantes d'hiver à Metz 2026-2027: dates, horaires et conseils en famille",
+      "category": "evenements",
+      "recentImpressions": 92,
+      "recentClicks": 5,
+      "recentPosition": 6.685,
+      "retention": 1.559
+    },
+    {
+      "url": "/articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/",
+      "title": "Soleils d'hiver 2026 à Angers en famille: marché, manèges et Père Noël",
+      "category": "evenements",
+      "recentImpressions": 183,
       "recentClicks": 4,
-      "recentPosition": 6.981,
-      "retention": 0.696
+      "recentPosition": 10.552,
+      "retention": 0.953
+    },
+    {
+      "url": "/articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/",
+      "title": "Où manger des fouées en famille autour de Saumur ?",
+      "category": "cuisine",
+      "recentImpressions": 182,
+      "recentClicks": 4,
+      "recentPosition": 12.005,
+      "retention": 0.589
     }
   ],
   "excluded": {
-    "expired": 187,
-    "cooling": 75
+    "expired": 189,
+    "cooling": 82
   },
   "warnings": [
     "Diagnostics par requêtes : 5/5.",
