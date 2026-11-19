@@ -641,7 +641,7 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 
 ### Articles comparables et publications récentes
 
-- /articles/evenements/les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille/ | Féeries de Noël 2026 à Paris: parcours lumineux, billets et patinoire en famille | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille/ | Féeries de Noël 2026 à Paris: billets, patinoire et parcours en famille | evenements | Paris, Paris, Île-de-France
 - /articles/activites/atelier-laine-cardee-de-noel-a-paris-le-2-decembre-2026-creer-ses-decorations-des-7-ans/ | Atelier laine cardée de Noël à Paris le 2 décembre 2026: décorations dès 7 ans | activites | Paris, Paris, Île-de-France
 - /articles/activites/jeux-nature-gratuits-au-parc-floral-de-paris-le-18-novembre-2026-quel-jeu-selon-l-age/ | Jeux nature gratuits au Parc floral de Paris le 18 novembre 2026 | activites | Paris, Paris, Île-de-France
 - /articles/evenements/odyssee-lumineuse-2026-2027-au-parc-floral-de-paris-billet-date-ou-open-en-famille/ | Odyssée Lumineuse 2026-2027 à Paris: billets, dates et visite en famille | evenements | Paris, Paris, Île-de-France
@@ -649,10 +649,10 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 - /articles/evenements/festival-au-bonheur-des-momes-2026-en-famille/ | Au Bonheur des Mômes 2026: pass, spectacles et journée au Grand-Bornand | evenements | Le Grand-Bornand, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/evenements/festival-marmoe-2026-a-montreuil-spectacles-et-ateliers-selon-l-age-des-enfants/ | Festival MARMOE 2026 à Montreuil: spectacles, ateliers et sorties jusqu'au 29 novembre | evenements | Montreuil, Seine-Saint-Denis, Île-de-France
 - /articles/evenements/rue-enfants-montcuq-2026-famille/ | La Rue des Enfants 2026 à Montcuq: deux jours d’arts de rue en famille | evenements | Montcuq-en-Quercy-Blanc, Lot, Occitanie
-- /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | Salon du Cheval de Paris 2026 en famille: animations, jumping et billets | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | Salon du Cheval de Paris 2026 en famille: ateliers, jumping et Nuit du Cheval | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/salon-du-chocolat-paris-2026-avec-des-enfants-quel-billet-choisir-et-quels-ateliers-reserver/ | Salon du Chocolat Paris 2026 avec des enfants: quel billet choisir et quels ateliers réserver | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/ | Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/ | Écoute, je danse ! à Paris le 5 décembre 2026: spectacle gratuit dès 6 mois | evenements | Paris, Paris, Île-de-France
 - /articles/activites/atelier-couture-gratuit-a-paris-le-28-novembre-2026-creer-en-famille-des-8-ans/ | Atelier couture gratuit à Paris le 28 novembre 2026: dès 8 ans | activites | Paris, Paris, Île-de-France
 - /articles/activites/pokemon-et-biodiversite-a-paris-le-28-novembre-2026-atelier-dessin-des-10-ans/ | Atelier Pokémon et biodiversité à Paris le 28 novembre 2026: dessin dès 10 ans | activites | Paris, Paris, Île-de-France
@@ -660,14 +660,14 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 - /articles/voyages/ou-dormir-a-angouleme-avec-des-enfants-pour-visiter-la-ville-a-pied/ | Où dormir à Angoulême avec des enfants pour visiter la ville à pied | voyages | Angoulême, Charente, Nouvelle-Aquitaine
 - /articles/sorties/musee-de-la-bd-a-angouleme-en-famille-tarifs-horaires-et-conseils-de-visite/ | Musée de la BD à Angoulême en famille: tarifs, horaires et conseils de visite | sorties | Angoulême, Charente, Nouvelle-Aquitaine
 - /articles/voyages/bayeux-en-famille-1-ou-2-jours-et-quel-budget-prevoir/ | Bayeux en famille: 1 ou 2 jours et quel budget prévoir | voyages | Bayeux, Calvados, Normandie
-- /articles/sorties/parc-spirou-avec-de-jeunes-enfants-regardez-la-taille-avant-d-acheter-les-billets/ | Parc Spirou avec de jeunes enfants: regardez la taille avant d'acheter les billets | sorties | Monteux, Vaucluse, Provence-Alpes-Côte d’Azur
-- /articles/evenements/halloween-2026-au-parc-spirou-nocturnes-naruto-reservation-et-maison-hantee/ | Halloween 2026 au Parc Spirou: billets, nocturnes Naruto et maison hantée | evenements | Monteux, Vaucluse, Provence-Alpes-Côte d'Azur
-- /articles/activites/festyland-avec-de-jeunes-enfants-quelles-attractions-selon-leur-taille/ | Festyland avec de jeunes enfants: quelles attractions selon leur taille? | activites | Carpiquet, Calvados, Normandie
+- /articles/sorties/parc-spirou-avec-de-jeunes-enfants-regardez-la-taille-avant-d-acheter-les-billets/ | Parc Spirou en famille: attractions selon la taille et billets 2027 | sorties | Monteux, Vaucluse, Provence-Alpes-Côte d’Azur
 - /articles/sorties/parc-bagatelle-en-famille-quelles-attractions-selon-la-taille-des-enfants/ | Parc Bagatelle en famille: quelles attractions selon la taille des enfants? | sorties | Merlimont, Pas-de-Calais, Hauts-de-France
+- /articles/activites/festyland-avec-de-jeunes-enfants-quelles-attractions-selon-leur-taille/ | Festyland avec de jeunes enfants: quelles attractions selon leur taille? | activites | Carpiquet, Calvados, Normandie
+- /articles/evenements/halloween-2026-au-parc-spirou-nocturnes-naruto-reservation-et-maison-hantee/ | Halloween 2026 au Parc Spirou: billets, nocturnes Naruto et maison hantée | evenements | Monteux, Vaucluse, Provence-Alpes-Côte d'Azur
 - /articles/activites/la-cite-de-la-mer-a-cherbourg-en-famille-tarifs-duree-et-conseils-de-visite/ | La Cité de la Mer à Cherbourg en famille: tarifs, visite et billets 2026 | activites | Cherbourg-en-Cotentin, Manche, Normandie
 - /articles/vie-pratique/spot50-2026-2027-dans-la-manche-75-d-activites-pour-5/ | SPOT50 2026/2027 dans la Manche: 75 € d'activités pour 5 € | vie-pratique | Saint-Lô, Manche, Normandie
 - /articles/parentalite/rejouets-a-cerences-donner-completer-et-acheter-des-jouets-d-occasion/ | Rejouets à Cérences: donner, compléter et acheter des jouets d’occasion | parentalite | Cérences, Manche, Normandie
-- /articles/maison/renover-une-maison-dans-la-manche-dans-quel-ordre-demander-les-aides-en-2026/ | Rénover une maison dans la Manche: dans quel ordre demander les aides en 2026 ? | maison | Saint-Lô, Manche, Normandie
+- /articles/parentalite/laep-dans-la-manche-ou-aller-avec-son-enfant-de-moins-de-6-ans/ | LAEP dans la Manche: où aller avec son enfant de moins de 6 ans ? | parentalite | Manche, Normandie
 - /articles/maison/encombrants-a-bourges-quand-sortir-meubles-et-gros-objets/ | Encombrants à Bourges: quand sortir meubles et gros objets | maison | Bourges, Cher, Centre-Val de Loire
 - /articles/voyages/bourges-en-famille-ou-dormir-pour-visiter-sans-voiture/ | Bourges en famille: où dormir pour visiter sans voiture | voyages | Bourges, Cher, Centre-Val de Loire
 - /articles/vie-pratique/carte-famille-de-bourges-qui-peut-l-obtenir-et-a-quoi-sert-elle/ | Carte famille de Bourges: qui peut l'obtenir et à quoi sert-elle? | vie-pratique | Bourges, Cher, Centre-Val de Loire
@@ -681,7 +681,6 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 - /articles/evenements/les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille/ | Luminéales du Thabor 2026 à Rennes: tarifs, horaires et visite en famille | evenements | Rennes, Ille-et-Vilaine, Bretagne
 - /articles/sorties/espace-des-sciences-a-rennes-avec-des-enfants-expositions-experiences-et-planetarium/ | Espace des sciences à Rennes avec des enfants: expositions, expériences et planétarium | sorties | Rennes, Ille-et-Vilaine, Bretagne
 - /articles/activites/accrocamp-toulouse-avec-des-enfants-quel-pass-choisir-selon-leur-taille/ | AccroCamp Toulouse avec des enfants: quel pass choisir selon leur taille? | activites | Toulouse, Haute-Garonne, Occitanie
-- /articles/activites/ecopark-la-castille-avec-des-enfants-quel-parcours-choisir-selon-leur-taille/ | Ecopark La Castille avec des enfants: quel parcours choisir selon leur taille? | activites | Solliès-Ville, Var, Provence-Alpes-Côte d’Azur
 - /articles/activites/zoo-de-martinique-en-famille-tarifs-poussette-et-visite-de-l-habitation-latouche/ | Zoo de Martinique en famille: tarifs, poussette et visite de l'Habitation Latouche | activites | Le Carbet, Martinique, Martinique
 - /articles/activites/habitation-clement-en-famille-sculptures-jardin-et-maison-creole/ | Habitation Clément en famille: sculptures, jardin et maison créole | activites | Le François, Martinique, Martinique
 - /articles/voyages/ou-loger-en-martinique-avec-des-enfants-sainte-luce-trois-ilets-ou-le-diamant/ | Où loger en Martinique avec des enfants: Sainte-Luce, Trois-Ilets ou Le Diamant? | voyages | Sainte-Luce, Martinique, Martinique
@@ -728,6 +727,12 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 - /articles/parentalite/laep-en-maine-et-loire-ou-aller-avec-son-bebe-et-comment-se-passe-l-accueil/ | LAEP en Maine-et-Loire: où aller avec son bébé et comment se passe l'accueil ? | parentalite | Maine-et-Loire, Pays de la Loire
 - /articles/sorties/chasse-tresor-galerie-david-angers-2026/ | Chasse au trésor à Angers: les 4 à 6 ans enquêtent à la Galerie David | sorties | Angers, Maine-et-Loire, Pays de la Loire
 - /articles/sorties/chateau-de-boutheon-avec-des-enfants-chateau-parc-ou-billet-couple/ | Château de Bouthéon avec des enfants: château, parc ou billet couplé? | sorties | Andrézieux-Bouthéon, Loire, Auvergne-Rhône-Alpes
+- /articles/bons-plans/passeport-des-musees-04-visiter-en-famille-a-prix-reduit/ | Passeport des musées 04: visiter en famille à prix réduit | bons-plans | Alpes-de-Haute-Provence, Provence-Alpes-Côte d’Azur
+- /articles/parentalite/laep-en-martinique-jouer-avec-son-tout-petit-et-rencontrer-d-autres-parents/ | LAEP en Martinique: jouer avec son tout-petit et rencontrer d’autres parents | parentalite | Martinique
+- /articles/cuisine/manger-local-dans-le-val-d-oise-paniers-fermes-et-repas-de-saison/ | Manger local dans le Val-d'Oise: paniers, fermes et repas de saison | cuisine | Val-d'Oise, Île-de-France
+- /articles/maison/composteur-gratuit-dans-le-gers-comment-en-obtenir-un-et-bien-demarrer/ | Composteur gratuit dans le Gers: comment en obtenir un et bien démarrer ? | maison | Gers, Occitanie
+- /articles/cuisine/cuisine-creole-en-famille-a-la-reunion-quel-atelier-choisir/ | Cuisine créole en famille à La Réunion: quel atelier choisir ? | cuisine | La Réunion
+- /articles/vie-pratique/france-services-en-charente-ou-obtenir-de-l-aide-pour-ses-demarches-administratives/ | France services en Charente: où obtenir de l'aide pour ses démarches administratives ? | vie-pratique | Charente, Nouvelle-Aquitaine
 - /articles/parentalite/ardeche-ou-trouver-un-lieu-d-accueil-enfants-parents-pres-de-chez-soi/ | Ardèche: où trouver un lieu d'accueil enfants-parents près de chez soi ? | parentalite | Ardèche, Auvergne-Rhône-Alpes
 - /articles/voyages/les-rousses-en-hiver-avec-des-enfants-ski-luge-et-sorties-sans-neige/ | Les Rousses en hiver avec des enfants: ski, luge et sorties sans neige | voyages | Jura, Bourgogne-Franche-Comté
 - /articles/maison/meubles-d-occasion-en-ile-de-france-ou-acheter-et-comment-les-transporter/ | Meubles d’occasion en Île-de-France: où acheter et comment les transporter | maison | Île-de-France
@@ -750,17 +755,9 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 - /articles/sorties/musee-de-la-musique-mecanique-aux-gets-une-sortie-en-famille-qui-s-ecoute/ | Musée de la Musique Mécanique aux Gets: une sortie en famille qui s'écoute | sorties | Les Gets, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/sorties/mariana-en-famille-du-musee-aux-vestiges-de-la-cite-antique/ | Mariana en famille: du musée aux vestiges de la cité antique | sorties | Lucciana, Haute-Corse, Corse
 - /articles/vie-pratique/cabanes-des-1-000-premiers-jours-en-seine-saint-denis-ou-aller-avec-son-enfant/ | Cabanes des 1 000 premiers jours en Seine-Saint-Denis: où aller avec son enfant ? | vie-pratique | Seine-Saint-Denis, Île-de-France
-- /articles/parentalite/lieux-d-accueil-enfants-parents-dans-le-var-ou-aller-avec-son-enfant/ | Lieux d'accueil enfants-parents dans le Var: où aller avec son enfant ? | parentalite | Var, Provence-Alpes-Côte d’Azur
-- /articles/parentalite/cafes-parents-enfants-dans-le-finistere-deux-adresses-pour-jouer-et-faire-une-pause/ | Cafés parents-enfants dans le Finistère: deux adresses pour jouer et faire une pause | parentalite | Finistère, Bretagne
-- /articles/evenements/niepce-et-apres-une-exposition-photo-a-decouvrir-en-famille-a-chalon-sur-saone/ | Niépce, et après ? Une exposition photo à découvrir en famille à Chalon-sur-Saône | evenements | Chalon-sur-Saône, Saône-et-Loire, Bourgogne-Franche-Comté
-- /articles/voyages/voie-verte-sud-ardennes-en-famille-quelle-balade-a-velo-choisir/ | Voie verte Sud-Ardennes en famille: quelle balade à vélo choisir ? | voyages | Ardennes, Grand Est
-- /articles/cuisine/a-beaune-fabriquer-sa-moutarde-en-famille-et-l-utiliser-en-cuisine/ | À Beaune, fabriquer sa moutarde en famille et l’utiliser en cuisine | cuisine | Beaune, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/parentalite/parents-en-deux-sevres-ou-trouver-une-ecoute-et-un-accompagnement/ | Parents en Deux-Sèvres: où trouver une écoute et un accompagnement ? | parentalite | Deux-Sèvres, Nouvelle-Aquitaine
 
 ### Historique Radar lié
 
-- opportunity | /articles/evenements/les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille/ | 2026-10-31T19:33:18.323Z
-- refresh | /articles/evenements/les-lumineales-du-thabor-2026-a-rennes-tarifs-et-visite-en-famille/ | 2026-11-16T15:57:24.274Z
 - opportunity | /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | 2026-10-16T17:46:42.470Z
 - refresh | /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | 2026-11-07T00:30:17.397Z
 - opportunity | /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | 2026-10-28T15:29:23.387Z
@@ -779,11 +776,13 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 - opportunity | /articles/evenements/odyssee-lumineuse-2026-2027-au-parc-floral-de-paris-billet-date-ou-open-en-famille/ | 2026-10-26T15:30:14.299Z
 - refresh | /articles/evenements/odyssee-lumineuse-2026-2027-au-parc-floral-de-paris-billet-date-ou-open-en-famille/ | 2026-11-14T08:33:55.465Z
 - refresh | /articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/ | 2026-11-18T20:33:05.376Z
+- refresh | /articles/sorties/parc-spirou-avec-de-jeunes-enfants-regardez-la-taille-avant-d-acheter-les-billets/ | 2026-11-18T23:36:24.271Z
 - refresh | /articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/ | 2026-10-22T18:35:19.372Z
 - opportunity | /articles/activites/pokemon-et-biodiversite-a-paris-le-28-novembre-2026-atelier-dessin-des-10-ans/ | 2026-11-05T10:32:54.471Z
 - opportunity | /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | 2026-11-04T05:34:42.508Z
 - refresh | /articles/sorties/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied/ | 2026-10-02T18:25:59.965Z
 - opportunity | /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | 2026-10-22T04:59:04.773Z
+- refresh | /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | 2026-11-19T03:32:19.795Z
 - opportunity | /articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/ | 2026-10-30T12:36:12.349Z
 - opportunity | /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | 2026-10-24T19:30:32.700Z
 - refresh | /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | 2026-11-13T16:33:40.259Z
@@ -795,33 +794,71 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 ### Publication en cours
 
 - Branche: automation/publication-20261119-1303-titre-de-travail-poterie-a-dieulefit-en-famille-creer-des-objets-pour-
-- HEAD: publication: phase 1 titre-de-travail-poterie-a-dieulefit-en-famille-creer-des-objets-pour-
+- HEAD: publication: phase 2 20261119-1303-titre-de-travail-poterie-a-dieulefit-en-famille-creer-des-objets-pour-
 
-## Sujet retenu
-**Titre de travail :** « Poterie à Dieulefit en famille : créer des objets pour la maison et découvrir les artisans ».
+---
+category: "maison"
+title: "Poterie à Dieulefit en famille: ateliers et savoir-faire"
+subtitle: "Trois adresses pour découvrir la céramique, essayer le modelage et choisir des objets artisanaux pour la maison"
+summary: "À Dieulefit, dans la Drôme, découvrez la poterie avec les enfants: musée, atelier de modelage, boutique artisanale et conseils pour préparer la visite."
+keywords:
+  - "poterie Dieulefit famille"
+  - "atelier céramique Dieulefit"
+  - "Maison de la Céramique Dieulefit"
+location:
+  city: "Dieulefit"
+  department: "Drôme"
+  region: "Auvergne-Rhône-Alpes"
+sources:
+  - title: "Maison de la Céramique, informations pratiques"
+    url: "https://www.drome-cestmanature.com/fiches/maison-de-la-ceramique/"
+  - title: "L'Empreinte, atelier-boutique"
+    url: "https://www.drome-cestmanature.com/fiches/lempreinte-atelier-boutique/"
+  - title: "Stage de poterie L'Empreinte"
+    url: "https://www.drome-cestmanature.com/fiches/stage-de-poterie-atelier-lempreinte-tout-public/"
+  - title: "Poterie Dieulefit, atelier-boutique"
+    url: "https://www.poteriedieulefit.fr/"
+  - title: "Poterie Dieulefit, préparer sa visite"
+    url: "https://www.poteriedieulefit.fr/nous-rendre-visite"
+---
 
-Angle : une escapade créative dans la Drôme pour découvrir comment se fabriquent les objets du quotidien en céramique, observer des artisans et, selon les ateliers disponibles, modeler une pièce en famille. Dieulefit possède une tradition de terre vernissée et plusieurs ateliers-boutiques ; la Maison de la Céramique présente l'histoire de ce savoir-faire. Le sujet relève de la catégorie maison par l'artisanat d'objets utiles et décoratifs, plutôt que d'une simple sortie touristique.
+À Dieulefit, petite ville de la Drôme provençale, la poterie fait partie du paysage depuis des générations. On y découvre comment l'argile devient un bol, un plat ou un objet décoratif, et les familles peuvent même s'essayer au travail de la terre dans certains ateliers. Trois adresses permettent de composer une découverte sans confondre exposition, cours pratique et visite d'artisan.
 
-## Besoin du lecteur
-Savoir où découvrir la poterie locale, distinguer visite d'exposition, observation d'un atelier et initiation pratique, choisir une formule avec des enfants, comprendre les principales techniques (modelage, tournage, décor), anticiper réservation, durée, récupération ou expédition éventuelle des créations, et choisir une pièce artisanale adaptée à la maison.
+## Comprendre la poterie à la Maison de la Céramique
 
-## Valeur éditoriale
-- Comparer trois expériences complémentaires : Maison de la Céramique (collections et ateliers), L'Empreinte (modelage ou tournage sur rendez-vous, familles), Poterie Dieulefit (atelier-boutique de terre vernissée traditionnelle).
-- Donner un parcours réaliste à composer selon l'âge des enfants, les ouvertures et les réservations ; ne pas promettre que chaque activité est accessible sans réservation.
-- Expliquer les différences entre faïence vernissée, grès, modelage et tournage et les usages domestiques, sans présumer que toutes les pièces sont compatibles avec le contact alimentaire.
-- La Maison de la Céramique est annoncée ouverte jusqu'au 31 décembre selon la fiche touristique, mais une autre fiche ancienne comporte une mention « Annulé ou fermé » : vérifier directement l'ouverture effective et la programmation avant de recommander une visite. Ne pas reprendre sans contrôle les anciens tarifs.
+Au parc de la Baume, la **Maison de la Céramique** présente plus de 200 pièces retraçant l'histoire potière locale, de l'époque gallo-romaine au XXe siècle. Une bonne première étape pour comparer les formes, les couleurs et les usages des objets avant de rencontrer les artisans.
 
-## Affiliation
-- **Booking.com**, hébergements à Dieulefit : https://www.booking.com/accommodation/city/fr/dieulefit.fr.html . Offre vérifiée : L'escale, hébergement proche de la Maison de la Céramique avec chambres pouvant convenir à un séjour familial ; configuration exacte et disponibilité à vérifier selon les dates : https://www.booking.com/hotel/fr/escale-dieulefit.fr.html
-- **Booking.com**, location entière « Séjour provençal » à Dieulefit, avec cuisine, pour prolonger un atelier par un séjour : https://www.booking.com/hotel/fr/sejour-provencal.fr.html . Vérifier la capacité et la disponibilité selon la composition familiale.
-- Aucune réservation d'atelier de poterie vérifiée chez GetYourGuide, Tiqets ou Klook ; réserver directement auprès des artisans si nécessaire. L'hébergement est une option secondaire pour les familles venues de plus loin, pas une obligation.
+Selon la [fiche touristique actualisée pour 2026](https://www.drome-cestmanature.com/fiches/maison-de-la-ceramique/), l'exposition est ouverte du mercredi au dimanche, de 14 h à 18 h, entre septembre et décembre, hors jours fériés et le 25 décembre. L'entrée est annoncée à **4,50 € par adulte**, **3,50 € au tarif réduit**, et gratuite pour les moins de 12 ans. Le lieu dispose d'un parking, de toilettes et d'un ascenseur.
 
-## Sources de départ
-- Maison de la Céramique, fiche de l'office de tourisme : https://www.drome-cestmanature.com/fiches/maison-de-la-ceramique/
-- Maison de la Céramique du Pays de Dieulefit, fiche horaires et activités (à recouper car informations anciennes et ambiguës) : https://www.drome-cestmanature.com/fiches/maison-de-la-ceramique-du-pays-de-dieulefit-2/
-- Atelier L'Empreinte, fiche officielle : https://www.drome-cestmanature.com/fiches/lempreinte-atelier-boutique/
-- Stage de poterie L'Empreinte, fiche 2026 : https://www.drome-cestmanature.com/fiches/stage-de-poterie-atelier-lempreinte-tout-public/
-- Poterie Dieulefit, atelier-boutique et horaires : https://www.poteriedieulefit.fr/
+Des initiations au modelage sont également annoncées pendant les vacances scolaires, mais elles ne doivent pas être considérées comme quotidiennes sans confirmation. La programmation et l'ouverture effective méritent un appel au **04 75 50 20 98** avant le déplacement: une ancienne fiche touristique porte encore une mention contradictoire de fermeture et des tarifs dépassés.
+
+## Mettre les mains dans la terre à L'Empreinte
+
+Pour repartir avec l'expérience d'avoir façonné quelque chose soi-même, **L'Empreinte**, au 16 quai Roger Morin, propose des cours sur rendez-vous aux particuliers, aux familles et aux groupes. La céramiste pratique le modelage, le travail à la plaque ou au colombin, ainsi que le tournage.
+
+La [fiche des stages](https://www.drome-cestmanature.com/fiches/stage-de-poterie-atelier-lempreinte-tout-public/) indique une durée indicative de **2 heures pour le modelage** et **1 h 30 pour le tournage**, avec un travail de décor par empreintes ou gravures. La [présentation de l'atelier](https://www.drome-cestmanature.com/fiches/lempreinte-atelier-boutique/) précise que les cours sont proposés sur rendez-vous et que le tarif peut varier selon le nombre de participants.
+
+Avec de jeunes enfants, le modelage est souvent plus accessible que le tournage, qui demande davantage de coordination. Avant de réserver, demandez l'âge minimum accepté, le prix total pour la famille et ce qui est compris. Une pièce en argile doit généralement sécher puis être cuite: il faut donc aussi convenir de sa récupération ou d'une éventuelle expédition, plutôt que de prévoir de l'emporter immédiatement. Contact: **06 26 08 12 01**.
+
+## Voir la tradition de la terre vernissée chez Poterie Dieulefit
+
+Au **10 rue des Reymonds**, l'atelier-boutique [Poterie Dieulefit](https://www.poteriedieulefit.fr/) perpétue depuis plus de 50 ans le savoir-faire local de la terre vernissée. On y trouve des pièces façonnées à la main, avec des couleurs caractéristiques comme le miel, le vert émeraude, le jaune paille ou le bleu outremer.
+
+Cette adresse convient surtout pour découvrir les créations et discuter de leur fabrication, plutôt que pour réserver un cours: aucun atelier d'initiation familiale n'y est confirmé. Le [site de l'artisan](https://www.poteriedieulefit.fr/nous-rendre-visite) recommande de s'assurer de sa présence avant de venir. Les horaires varient selon la saison; les horaires d'été affichés sur une page ne doivent pas être appliqués à une visite en automne ou en hiver. Contact: **07 43 10 15 45**.
+
+## Faïence, grès, modelage: que regarder avec les enfants ?
+
+La **terre vernissée** désigne une tradition de poterie dont la surface reçoit une glaçure. La **faïence** est une céramique généralement poreuse avant émaillage, tandis que le **grès**, cuit à plus haute température, devient dense et peu poreux. Le **modelage** permet de former une pièce avec les mains, parfois à partir de colombins ou de plaques; le **tournage** utilise un tour pour créer des formes régulières.
+
+Pour relier la découverte à la maison, proposez aux enfants de repérer les objets qu'ils connaissent: bol, pichet, assiette, vase ou porte-savon. Une belle pièce décorative n'est pas automatiquement adaptée aux aliments, au four, au lave-vaisselle ou au micro-ondes. Demandez toujours au potier l'usage prévu et les conseils d'entretien.
+
+## Organiser une demi-journée sans mauvaise surprise
+
+Avec des enfants qui veulent surtout manipuler l'argile, **réservez d'abord un créneau à L'Empreinte**, puis ajoutez une visite de boutique si les horaires le permettent. Pour une découverte plus tranquille, commencez par la Maison de la Céramique et poursuivez avec Poterie Dieulefit. Les trois lieux n'offrent pas la même activité: la boutique n'est pas un cours, et les ateliers du musée dépendent de sa programmation.
+
+Prévoyez des vêtements qui ne craignent pas les traces d'argile. Pour un atelier, vérifiez également la durée réelle, le nombre de places, les modalités de cuisson et de remise des pièces. Les familles avec poussette ou ayant besoin d'un accès adapté peuvent demander directement aux ateliers les conditions d'accueil, qui ne sont pas toutes documentées en ligne.
+
+Dieulefit se prête ainsi à une découverte concrète des objets du quotidien: comprendre leur histoire, essayer un geste artisanal ou choisir une pièce dont on connaît la provenance et l'usage.
 
 
 ### Destination en cours
