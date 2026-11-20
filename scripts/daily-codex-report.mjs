@@ -33,17 +33,24 @@ export function escapeHtml(s) {
     "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;",
   })[c]);
 }
-export function runStatus(run,log="") {
+export function runStatus(run,log="",flow="") {
   if (["failure","timed_out"].includes(run.conclusion)) return "Échec";
   if (run.conclusion==="cancelled") return "Annulé";
   if (run.status!=="completed") return "En cours";
+  if (log===null) return "Journal inaccessible";
+  const status=[...log.matchAll(/CYCLE_STATUS:\s*([a-z_]+)/g)].at(-1)?.[1];
+  if (status==="published") return flow==="Publication Région" ? "En attente des images" : "Publié";
+  if (status==="paused") return "En pause (reprise ultérieure)";
+  if (status==="quota") return "Quota atteint, reprise automatique";
+  if (status==="skipped"||/Sujet écarté/i.test(log)) return "Sujet écarté";
+  if (status==="already_published"||status==="already_skipped"||
+    /Guide Jeux & cadeaux déjà publié|Créneau déjà publié|Position régionale .* déjà publiée|Publication régionale de la position .* déjà terminée/i.test(log)) return "Déjà traité";
   if (/Quota ChatGPT atteint|Quota Plus atteint|rate limit/i.test(log)) return "Quota atteint, reprise automatique";
-  if (/Sujet écarté|sujet écarté/i.test(log)) return "Sujet écarté";
-  if (/Guide Jeux & cadeaux déjà publié|Créneau déjà publié|Position régionale .* déjà publiée|Publication régionale de la position .* déjà terminée/i.test(log)) return "Déjà traité";
   if (/Réponse vide|reprise au prochain passage|Trois essais terminés/i.test(log)) return "Reprise ultérieure";
   return run.conclusion==="success" ? "Terminé (voir Summary GitHub)" : "À vérifier";
 }
 function phaseStatus(log,total) {
+  if (log===null) return "Journal inaccessible";
   if (/Article (?:régional )?publié\s*:/i.test(log)) return total+"/"+total+" validées";
   const known = new Set();
   for (const m of log.matchAll(/phase\s+([1-4])\s+(?:déjà\s+(?:validée|terminée)|validée)/gi))
@@ -77,7 +84,7 @@ function logReader(gh,token) {
   return async (id) => {
     const response=await gh.get("/actions/runs/"+id+"/jobs?per_page=10");
     const job=response.jobs?.find(j=>j.name==="editorial"||j.name.endsWith(" / editorial"));
-    if(!job) return "";
+    if(!job) return null;
     // Les journaux du dépôt privé ne quittent jamais ce sous-processus.
     return execFileSync("gh",["api","repos/"+REPO+"/actions/jobs/"+job.id+"/logs"],{
       env:{...process.env,GH_TOKEN:token}, encoding:"utf8",
@@ -95,33 +102,39 @@ export async function collect(day,gh,logs) {
     for(const run of all) {
       if(dayInParis(new Date(run.created_at))!==day) continue;
       let log="";
-      if(run.status==="completed") try {log=await logs(run.id)} catch {}
+      if(run.status==="completed") try {log=await logs(run.id)} catch {log=null}
       runs.push({number:run.run_number,url:"https://github.com/"+REPO+"/actions/runs/"+run.id,
-        state:runStatus(run,log),phases:phaseStatus(log,total),conclusion:run.conclusion});
+        state:runStatus(run,log,label),phases:phaseStatus(log,total),conclusion:run.conclusion});
     }
     groups.push({label,runs});
   }
-  const commits=await gh.pages("/commits?sha=master&since="+before+
-    "T00:00:00Z&until="+after+"T23:59:59Z");
-  const articles=[];
-  for(const c of commits){
-    const msg=c.commit?.message?.split("\n")[0]||"";
-    const type=msg.startsWith("content: publish regional ")?"Publication Région":
-      msg.startsWith("content: cadeaux ")?"Jeux & Cadeaux":null;
-    if(!type||dayInParis(new Date(c.commit.committer.date))!==day) continue;
+  // Ne récupérer que les commits touchant les articles, sans dépendre de leur message.
+  const commits=new Map();
+  for(const path of ["src/routes/articles","src/routes/(cadeaux)/cadeaux/guides"]){
+    const matches=await gh.pages("/commits?sha=master&path="+encodeURIComponent(path)+
+      "&since="+before+"T00:00:00Z&until="+after+"T23:59:59Z");
+    for(const commit of matches) commits.set(commit.sha,commit);
+  }
+  const articles=[],seen=new Set();
+  for(const c of commits.values()){
+    if(dayInParis(new Date(c.commit.committer.date))!==day) continue;
     const detail=await gh.get("/commits/"+c.sha);
-    const path=detail.files?.find(f=>f.status==="added"&&articleUrl(f.filename))?.filename;
-    if(!path) continue;
-    const url=articleUrl(path);
-    const fallback=path.split("/").at(-2).replaceAll("-"," ");
-    let title=fallback;
-    try{
-      const doc=await gh.get("/contents/"+path.split("/").map(encodeURIComponent).join("/")+"?ref="+c.sha);
-      const markdown=Buffer.from(doc.content,"base64").toString("utf8");
-      const front=markdown.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1];
-      title=(front?.match(/^title:\s*(.+)$/m)?.[1]?.trim().replace(/^["']|["']$/g,"")||fallback).slice(0,170);
-    }catch{}
-    articles.push({type,title,url});
+    for(const file of detail.files??[]){
+      if(file.status!=="added"||!articleUrl(file.filename)||seen.has(file.filename)) continue;
+      const path=file.filename;
+      seen.add(path);
+      const type=path.startsWith("src/routes/articles/")?"Articles éditoriaux":"Jeux & Cadeaux";
+      const url=articleUrl(path);
+      const fallback=path.split("/").at(-2).replaceAll("-"," ");
+      let title=fallback;
+      try{
+        const doc=await gh.get("/contents/"+path.split("/").map(encodeURIComponent).join("/")+"?ref="+c.sha);
+        const markdown=Buffer.from(doc.content,"base64").toString("utf8");
+        const front=markdown.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1];
+        title=(front?.match(/^title:\s*(.+)$/m)?.[1]?.trim().replace(/^["']|["']$/g,"")||fallback).slice(0,170);
+      }catch{}
+      articles.push({type,title,url});
+    }
   }
   return {day,groups,articles};
 }
@@ -133,7 +146,7 @@ export function render(report) {
   const text=[
     "Bilan Codex du "+day+" (heure de Paris)","",
     articles.length+" publication(s) sur master :",
-    ...(articles.length?articles.map(a=>"- "+a.type+" : "+a.title+"\n  "+a.url):["Aucune publication Codex."]),"",
+    ...(articles.length?articles.map(a=>"- "+a.type+" : "+a.title+"\n  "+a.url):["Aucun nouvel article sur master."]),"",
     ...stats.flatMap(g=>[g.label+" : "+g.runs.length+" passage(s), "+g.errors+
       " erreur(s), "+g.quotas+" quota(s) détecté(s)",
       ...(g.runs.length?g.runs.map(r=>"- #"+r.number+" : "+r.state+" · phases "+r.phases+"\n  "+r.url):["- Aucun passage"]), ""]),
