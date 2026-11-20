@@ -441,3 +441,4 @@ automation/image-hero-20261120-0341-cherbourg-ordilot|376b84aad60f8d882325100004
 automation/image-hero-20261120-0948-aisne-pau-saintnazaire|4a9b929c8b295bf0885250cbc3d4980b106ea207
 automation/image-hero-20261120-0948-aisne-pau-saintnazaire|4a9b929c8b295bf0885250cbc3d4980b106ea207
 automation/image-hero-20261120-0948-aisne-pau-saintnazaire|ea966d2530b6aac104d95bce489d640a901f4101
+automation/image-hero-20261120-0948-aisne-pau-saintnazaire|2292cdf012725b89ffe96df3671ca68e65cc1192
