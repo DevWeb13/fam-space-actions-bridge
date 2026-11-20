@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,91 +14,141 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Aisne
 - Région: Hauts-de-France
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Rénover sa maison dans l’Aisne en 2026-2027: par où commencer et qui peut accompagner les familles?**
-
-Angle: un parcours concret pour les foyers axonais qui souhaitent rendre leur logement plus confortable, moins énergivore ou plus adapté à leur vie quotidienne, sans se perdre entre diagnostics, travaux, aides et interlocuteurs. Dans l’Aisne, le Département et plusieurs intercommunalités organisent des services d’information France Rénov’, notamment avec SOLIHA Aisne; le bon interlocuteur dépend du lieu d’habitation.
-
-## Besoin du lecteur
-
-Comprendre comment définir les priorités de travaux (chauffage, isolation, humidité, adaptation), obtenir un conseil indépendant avant de signer un devis, identifier son espace conseil local, distinguer conseil gratuit et accompagnement approfondi, préparer les documents utiles et vérifier les aides en vigueur au moment du projet. Éviter les promesses de subvention automatique et les démarches précipitées.
-
-## Valeur éditoriale
-
-- Distinguer les travaux de confort, la rénovation énergétique globale, l’adaptation du logement et la réhabilitation d’un habitat dégradé, qui n’impliquent pas le même parcours.
-- Expliquer le maillage territorial: SOLIHA Aisne intervient pour le pacte départemental France Rénov’ hors territoires dotés de leur propre pacte (Chauny-Tergnier-La Fère, région de Château-Thierry, Champagne Picarde); aider le lecteur à trouver le bon conseiller selon sa commune.
-- Décrire les étapes pratiques: état des lieux, conseil, devis comparables, vérification des dispositifs et des conditions avant engagement, puis suivi des travaux.
-- Ne pas figer les barèmes de MaPrimeRénov’ ou d’autres aides: les contrôler à la rédaction sur les sites officiels. Apporter une vraie synthèse et des scénarios familiaux plutôt que recopier les pages administratives.
-- Sujet durable, particulièrement pertinent avant les travaux de l’hiver et les projets 2027, sans doublon avec les cinq publications récentes.
-
-## Affiliation
-
-Recherche effectuée parmi les partenaires hébergement/location (Booking.com, Abritel) et visites/ateliers (GetYourGuide, Tiqets). Des logements de vacances dans l’Aisne existent, mais n’ont aucun rapport direct avec la rénovation du domicile familial; aucune offre d’atelier de rénovation pertinente et réservable n’a été confirmée. **Aucune offre partenaire adaptée à retenir**. Ne pas ajouter de séjour artificiel.
-
-## Sources de départ
-
-- Conseil départemental de l’Aisne, « Améliorer l’habitat » (mise à jour 5 mars 2026, permanences France Rénov’ 2026): https://www.aisne.com/votre-service/habitat-logement/ameliorer-lhabitat
-- SOLIHA Aisne, périmètre et fonctionnement des Espaces Conseil France Rénov’: https://aisne.soliha.fr/nos-missions/espace-conseil-france-renov/
-- SOLIHA Aisne, accompagnement « Mon Accompagnateur Rénov’ »: https://aisne.soliha.fr/mon-accompagnateur-renov/
-- SOLIHA Aisne, panorama des aides: https://aisne.soliha.fr/les-aides/
-- Service-Public, espace conseil France Rénov’ de Laon, coordonnées et permanences: https://lannuaire.service-public.gouv.fr/hauts-de-france/aisne/ca74c962-0b24-4745-a472-a79c1952f071
-- France Rénov’, recherche du conseiller territorial: https://france-renov.gouv.fr/preparer-projet/trouver-conseiller
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "maison"
+title: "Rénover sa maison dans l’Aisne en 2026-2027: les démarches et les aides"
+subtitle: "Du premier conseil gratuit au choix des travaux, les bons interlocuteurs selon votre commune"
+summary: "Isolation, chauffage, humidité ou adaptation du logement: les étapes pour préparer ses travaux dans l’Aisne et trouver un conseiller France Rénov’."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "rénovation maison Aisne"
+  - "France Rénov Aisne"
+  - "aides rénovation 2026 2027"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Aisne"
+  region: "Hauts-de-France"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Conseil départemental de l’Aisne - Améliorer l’habitat"
+    url: "https://www.aisne.com/votre-service/habitat-logement/ameliorer-lhabitat"
+  - title: "SOLIHA Aisne - Espace Conseil France Rénov’"
+    url: "https://aisne.soliha.fr/nos-missions/espace-conseil-france-renov/"
+  - title: "France Rénov’ - Trouver un conseiller"
+    url: "https://france-renov.gouv.fr/preparer-projet/trouver-conseiller"
+  - title: "SOLIHA Aisne - Mon Accompagnateur Rénov’"
+    url: "https://aisne.soliha.fr/mon-accompagnateur-renov/"
+  - title: "SOLIHA Aisne - Opérations en cours"
+    url: "https://aisne.soliha.fr/accueil/les-operations-en-cours/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Une maison difficile à chauffer, des murs humides, une salle de bains devenue peu pratique: dans l’Aisne, les familles peuvent faire examiner leur projet de rénovation avant de choisir une entreprise. Le premier rendez-vous avec un conseiller France Rénov’ permet de comprendre quels travaux envisager, quelles aides vérifier et à qui s’adresser dans sa commune.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Commencer par le problème à résoudre, pas par le devis
+
+Les travaux les plus visibles ne sont pas toujours les plus urgents. Une chambre froide peut révéler une isolation insuffisante, mais aussi une ventilation défaillante ou un chauffage mal réglé. Si des traces d’humidité apparaissent, il faut d’abord en rechercher la cause: remplacer un revêtement sans traiter une infiltration ou une condensation risque de masquer le problème.
+
+Pour préparer un premier échange, notez les pièces concernées, les difficultés rencontrées en hiver comme en été, les travaux déjà réalisés et votre budget approximatif. Rassemblez, si vous les avez, le diagnostic de performance énergétique (DPE), les factures d’énergie et les anciens devis. Un conseiller pourra vous aider à hiérarchiser les interventions.
+
+Trois situations appellent des réponses différentes:
+
+- **Réduire les dépenses d’énergie:** examiner ensemble l’isolation, la ventilation et le chauffage plutôt que remplacer un équipement isolément.
+- **Adapter la maison à un handicap ou à une perte d’autonomie:** étudier les accès, la salle de bains et la circulation intérieure, avec des aides et un accompagnement spécifiques.
+- **Traiter un logement très dégradé:** faire évaluer l’état du bâti et les risques avant d’engager de simples travaux de décoration ou d'économie d'énergie.
+
+Le [Conseil départemental de l’Aisne](https://www.aisne.com/votre-service/habitat-logement/ameliorer-lhabitat) présente son action pour l’amélioration de l’habitat et les permanences de conseil organisées en 2026.
+
+## Où trouver le bon conseiller dans l’Aisne?
+
+Le service France Rénov’ est un point d’entrée pour obtenir une information et un conseil gratuits. Dans une grande partie du département, cette mission est assurée par **SOLIHA Aisne** dans le cadre du pacte territorial porté par le Département depuis 2025.
+
+Attention: trois intercommunalités disposent de leur propre pacte territorial, à savoir **Chauny-Tergnier-La Fère**, **la région de Château-Thierry** et **la Champagne Picarde**. Le dispositif d’accueil peut donc différer selon votre commune. Le [périmètre détaillé par SOLIHA Aisne](https://aisne.soliha.fr/nos-missions/espace-conseil-france-renov/) permet de comprendre cette répartition.
+
+Pour éviter un déplacement inutile, utilisez l’outil officiel [Trouver un conseiller France Rénov’](https://france-renov.gouv.fr/preparer-projet/trouver-conseiller) en indiquant votre lieu d’habitation. Il vous orientera vers le service compétent. Pour les secteurs relevant de SOLIHA Aisne, le Département indique également le **03 23 26 73 50** et des permanences territoriales dont il faut vérifier les dates avant de se déplacer.
+
+Ce premier contact sert à clarifier votre projet et à repérer les démarches utiles. Il ne constitue pas une promesse d’aide financière ni un devis de travaux.
+
+## Conseil gratuit et accompagnement complet: quelle différence?
+
+Une famille qui envisage quelques travaux ciblés peut commencer par un conseil d’orientation. Un chantier de rénovation énergétique important demande parfois une étude plus approfondie, des scénarios de travaux et un suivi administratif.
+
+Le dispositif **Mon Accompagnateur Rénov’** correspond à cette seconde démarche. [SOLIHA Aisne, agréée pour cette mission](https://aisne.soliha.fr/mon-accompagnateur-renov/), décrit notamment la visite technique, l’évaluation énergétique, l’examen des devis, la recherche de financements et le suivi des dossiers. Selon le parcours d’aide envisagé, cet accompagnement peut être obligatoire. Son coût et son éventuelle prise en charge doivent être confirmés avant tout engagement.
+
+Par exemple, une famille qui souhaite remplacer une chaudière défaillante n'a pas nécessairement le même parcours qu'une autre qui prévoit isolation, ventilation et chauffage dans une rénovation d’ensemble. Un conseil préalable permet de ne pas choisir une solution qui compliquerait la suite des travaux.
+
+## Quelles aides demander en 2026-2027?
+
+MaPrimeRénov’, les certificats d’économies d’énergie et certaines aides locales peuvent intervenir selon les travaux, le logement, les revenus du foyer et les règles en vigueur à la date de la demande. Ces dispositifs n'ont pas tous les mêmes conditions et ne sont pas automatiquement cumulables.
+
+Il serait trompeur de promettre un pourcentage de prise en charge sans connaître votre situation. Avant de signer, demandez au conseiller de vérifier:
+
+- l’éligibilité du logement et du ménage;
+- les travaux et les entreprises répondant aux critères du dispositif;
+- l’ordre des démarches, notamment la date à laquelle les travaux peuvent commencer;
+- les possibilités de cumul et le **reste à charge réel**, y compris les dépenses non subventionnées.
+
+Une particularité locale mérite d’être signalée: dans la **Communauté de communes du Val de l’Oise**, un dispositif territorial renforcé est annoncé jusqu’au **31 décembre 2027**, avec accompagnement et aide complémentaire sous conditions. [SOLIHA Aisne détaille cette opération](https://aisne.soliha.fr/accueil/les-operations-en-cours/). Ce soutien n’est pas généralisable à toutes les communes du département.
+
+Les barèmes nationaux et les enveloppes budgétaires peuvent évoluer en 2027. Vérifiez donc les règles actualisées au moment de monter le dossier, sans vous fier à une simulation ancienne.
+
+## Du premier rendez-vous au chantier
+
+Après le conseil initial, faites préciser les travaux recommandés et demandez plusieurs devis portant sur un périmètre comparable: matériaux, performances attendues, préparation du chantier, évacuation des déchets, délais et garanties. Pour les aides qui l’exigent, vérifiez les qualifications professionnelles nécessaires avant de choisir l’entreprise.
+
+Conservez les échanges, devis, justificatifs de revenus, décisions d’aide et factures. N'engagez pas les travaux sur la seule foi d'une estimation orale: certains financements imposent une demande ou une validation préalable.
+
+Une fois le chantier terminé, contrôlez les prestations réalisées et les documents remis avant de demander le versement du solde des aides. En cas de modification du devis ou de découverte imprévue pendant les travaux, vérifiez ses conséquences sur le dossier de financement.
+
+Le bon point de départ pour une famille axonaise reste donc simple: **décrire précisément les problèmes du logement, puis prendre conseil auprès de l’espace France Rénov’ compétent pour sa commune**, avant de retenir une solution technique ou financière.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -127,4 +177,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
