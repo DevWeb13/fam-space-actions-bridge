@@ -436,3 +436,4 @@ automation/image-hero-20261119-1548-ngouja-sully|44cb5fe1b53b6fcb3da15ad545f394f
 automation/image-hero-20261119-1548-ngouja-sully|dfdb44f59f154babbd2887284fb651dc1c0e375d
 automation/image-hero-20261119-2148-brive-dieulefit|0e8ac97238a0ffc5195db6a95a4fa4fe2716d722
 automation/image-hero-20261119-2148-brive-dieulefit|9e2eca316c01add022b1286d86121b3ca6640f7a
+automation/image-hero-20261120-0341-cherbourg-ordilot|bb6d05e7089ae19f3099bde0eed50f51f8f52472
