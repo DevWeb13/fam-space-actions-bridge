@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261120-1856-transaltitude-hiver-2026-2027-en-isere-organiser-une-sortie-a-la-neige",
+  "lastProcessedCommit": "ccd9ecfe4550151f4eca8f3d63f07b4eb5c2f018"
 }
