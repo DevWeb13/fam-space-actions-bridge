@@ -5,8 +5,8 @@ action: advance
 ---
 category: "evenements"
 title: "Natur’Armor 2027 à Paimpol: préparer sa visite en famille"
-subtitle: "Ateliers, biodiversité et sorties nature du 19 au 21 février 2027"
-summary: "Natur’Armor revient à Paimpol du 19 au 21 février 2027. Découvrez ce que le festival propose aux familles et les informations à vérifier avant de partir."
+subtitle: "Ateliers nature, découvertes de la biodiversité et informations pratiques pour le festival du 19 au 21 février"
+summary: "Natur’Armor revient à Paimpol du 19 au 21 février 2027. Voici ce que les familles pourront découvrir et les informations à vérifier avant de partir."
 keywords:
   - "Natur'Armor 2027 Paimpol"
   - "festival nature Bretagne famille"
@@ -23,44 +23,46 @@ sources:
     url: "https://www.cotesdarmor.com/fr/fiche/fetes-et-manifestations/festival-natur-armor-paimpol_TFOFMABRE022V53LIRV/"
   - title: "VivArmor Nature - Être bénévole à Natur’Armor"
     url: "https://www.vivarmor.fr/nos-actions/festival-naturarmor/etre-benevole-a-naturarmor/"
+  - title: "VivArmor Nature - Pause du festival en 2026"
+    url: "https://www.vivarmor.fr/2025/10/23/communique-natur-armor/"
   - title: "VivArmor Nature - Infos pratiques de l’édition 2025"
     url: "https://www.vivarmor.fr/nos-actions/festival-naturarmor/infos-pratiques/"
 ---
 
-Du **vendredi 19 au dimanche 21 février 2027**, Natur’Armor revient à Paimpol, dans les Côtes-d’Armor. Organisé par **VivArmor Nature**, ce festival invite petits et grands à découvrir la biodiversité bretonne à travers des stands, des rencontres et des animations. Pour une famille, c’est l’occasion de poser des questions à des naturalistes, d’observer des photographies animalières et d’explorer les milieux naturels de la région.
+Du **19 au 21 février 2027**, Natur’Armor revient à **Paimpol, dans les Côtes-d’Armor**, pour trois jours de découvertes consacrées à la biodiversité bretonne. Ce festival réunit des associations, des naturalistes et des passionnés qui présentent les animaux, les plantes et les milieux naturels de la région. Pour les enfants, l'intérêt est de pouvoir poser des questions, observer et participer à des ateliers plutôt que de parcourir une exposition classique.
 
-L’[organisateur confirme les dates et la ville](https://www.vivarmor.fr/nos-actions/festival-naturarmor/). Le programme détaillé de cette édition reste toutefois à consulter avant de choisir sa journée.
+Organisé par **VivArmor Nature**, le festival change de commune selon les éditions. Après une pause en 2026, son retour à Paimpol est [confirmé par l'association](https://www.vivarmor.fr/nos-actions/festival-naturarmor/). Le programme détaillé de 2027 reste toutefois à préciser.
 
-## Que découvrir avec les enfants?
+## Quelles activités découvrir avec les enfants?
 
-Natur’Armor réunit habituellement une soixantaine de stands consacrés à la protection de la nature, ainsi que des photographes, des artistes naturalistes et des éditeurs spécialisés. **Des ateliers pour enfants sont proposés sur la plupart des stands**, selon la présentation du festival par VivArmor Nature.
+Natur’Armor rassemble habituellement de nombreux stands consacrés à la nature bretonne, des expositions de photographies, des créations d'artistes naturalistes et des éditeurs spécialisés. Selon [VivArmor Nature](https://www.vivarmor.fr/nos-actions/festival-naturarmor/), la plupart des stands proposent des ateliers pour enfants.
 
-Cette diversité permet de visiter à son rythme: une famille peut s’attarder sur les oiseaux, les insectes ou les paysages bretons selon les thèmes effectivement représentés cette année-là. Les animations précises de chaque exposant ne sont pas encore garanties pour 2027.
+Les familles peuvent ainsi circuler entre différents sujets et s'arrêter là où la curiosité des enfants les mène. Les espèces présentées et les ateliers précis de l'édition 2027 ne sont pas encore tous annoncés.
 
-Le samedi et/ou le dimanche, le festival propose aussi habituellement un **coin des tout-petits**, des conférences, des siestes sonores et des sorties nature. Ces formats figurent sur la [fiche de Côtes d’Armor Destination](https://www.cotesdarmor.com/fr/fiche/fetes-et-manifestations/festival-natur-armor-paimpol_TFOFMABRE022V53LIRV/), mais leurs créneaux et conditions d’accès pour Paimpol restent à confirmer.
+Le samedi et/ou le dimanche, le format habituel prévoit aussi un **coin des tout-petits**, des conférences, des siestes sonores et des sorties nature, comme le rappelle la [fiche de Côtes d’Armor Destination](https://www.cotesdarmor.com/fr/fiche/fetes-et-manifestations/festival-natur-armor-paimpol_TFOFMABRE022V53LIRV/). Ces activités et leurs créneaux restent à confirmer pour Paimpol.
 
-## Quel parcours selon l’âge des enfants?
+## Une visite adaptée à l'âge des enfants
 
-**Avec des enfants de 1 à 6 ans**, privilégiez quelques stands et, si son ouverture est confirmée, le coin des tout-petits. VivArmor Nature décrit cet espace dans sa [présentation des missions bénévoles](https://www.vivarmor.fr/nos-actions/festival-naturarmor/etre-benevole-a-naturarmor/). Il est généralement animé le week-end. Une visite courte laisse davantage de liberté pour faire des pauses.
+**Avec des enfants en maternelle**, privilégiez quelques stands interactifs et une visite courte. Le coin des tout-petits, habituellement destiné aux enfants de **1 à 6 ans**, peut être une bonne étape si sa présence est confirmée. Les [informations destinées aux bénévoles](https://www.vivarmor.fr/nos-actions/festival-naturarmor/etre-benevole-a-naturarmor/) décrivent ce dispositif, sans constituer le programme définitif de 2027.
 
-**Avec des enfants plus grands**, commencez par les stands pour repérer un thème qui les intéresse, puis choisissez éventuellement une conférence ou une sortie nature adaptée à leur âge. Vérifiez le public visé, la durée, le lieu de rendez-vous et les éventuelles inscriptions. Les sorties peuvent dépendre de la météo et du nombre de places disponibles.
+**Avec des enfants plus grands**, laissez chacun choisir un thème à explorer: oiseaux, vie marine, insectes ou protection des habitats, selon les stands effectivement présents. Une conférence adaptée à leur âge ou une sortie accompagnée peut compléter la découverte.
 
-Le **vendredi 19 février** comporte notamment des animations scolaires prévues dans l’organisation du festival. Pour une visite familiale hors cadre scolaire, le samedi ou le dimanche peut être plus simple, sous réserve des horaires publics définitifs.
+Pour les sorties nature, vérifiez le lieu de rendez-vous, la durée, l'âge conseillé, la nécessité de réserver et les conditions météo. Toutes les conférences ne s'adressent pas forcément aux enfants.
 
 ## Dates, tarifs et accès: ce qui est confirmé
 
-Le festival est annoncé **du 19 au 21 février 2027 à Paimpol**. La fiche touristique indique une **entrée payante**, sans publier à ce stade de tarif détaillé pour les adultes et les enfants.
+Le festival est annoncé **du vendredi 19 au dimanche 21 février 2027 à Paimpol**. La [fiche touristique officielle](https://www.cotesdarmor.com/fr/fiche/fetes-et-manifestations/festival-natur-armor-paimpol_TFOFMABRE022V53LIRV/) mentionne une entrée payante, mais ne donne pas encore les tarifs détaillés.
 
-L’adresse exacte du lieu d’accueil, les conditions de réservation, les horaires définitifs et les modalités d’accessibilité propres à Paimpol doivent être revérifiés avant le départ. Les informations de bénévolat évoquent des horaires d’accueil, mais elles ne remplacent pas une fiche pratique définitive destinée aux visiteurs.
+Le vendredi comprend traditionnellement des animations pour les scolaires. Pour une sortie familiale, le samedi ou le dimanche sont donc les jours à examiner en priorité, sous réserve du programme public définitif.
 
-Attention: la page [« Infos pratiques » de VivArmor Nature](https://www.vivarmor.fr/nos-actions/festival-naturarmor/infos-pratiques/) décrit encore **l’édition 2025 à Quévert**. Ses prix, son adresse et ses indications d’accès ne doivent pas être appliqués automatiquement à l’édition 2027.
+**À vérifier avant de partir:** l'adresse exacte, les horaires d'ouverture au public, les prix adultes et enfants, les réservations éventuelles, l'accessibilité des espaces et les possibilités de restauration. Retrouvez les annonces sur le [site de VivArmor Nature](https://www.vivarmor.fr/nos-actions/festival-naturarmor/).
 
-Avant de partir, consultez les [annonces de VivArmor Nature](https://www.vivarmor.fr/nos-actions/festival-naturarmor/) pour confirmer le lieu, les tarifs, l’accès avec une poussette ou un fauteuil roulant et les activités nécessitant une inscription. Pour une sortie extérieure en février, prévoyez des vêtements adaptés à la pluie et au froid.
+Attention: la [page d'informations pratiques encore accessible](https://www.vivarmor.fr/nos-actions/festival-naturarmor/infos-pratiques/) indique des tarifs, horaires et conditions d'accès de **l'édition 2025 à Quévert**. Ces données ne doivent pas être appliquées à Paimpol en 2027.
 
-## Prolonger la sortie par un séjour à Paimpol
+## Une journée ou un week-end à Paimpol?
 
-Une journée peut suffire pour parcourir les stands. Si vous venez de loin ou souhaitez découvrir le port et le centre-ville, rester une nuit permet de profiter de Paimpol sans concentrer toutes les visites sur la même journée.
+Une journée peut suffire pour découvrir les stands et profiter de quelques animations. Si les activités qui vous intéressent sont réparties sur les deux jours du week-end, dormir à Paimpol peut être plus confortable, surtout avec de jeunes enfants.
 
-Pour quatre personnes, deux logements à examiner sont [Le coco(n) Paimpolais](https://www.booking.com/hotel/fr/le-coco-n-paimpolais-classe-2-etoiles.fr.html), avec deux chambres et une cuisine, et [Échappée Paimpolaise](https://www.booking.com/hotel/fr/echappee-paimpolaise.fr.html), avec une chambre et un canapé-lit. Ce dernier appartement se trouve au premier étage, avec un escalier non adapté aux personnes à mobilité réduite. **Les disponibilités, prix et conditions d’annulation pour février 2027 restent à vérifier** avant toute réservation.
+Pour un séjour en famille, deux hébergements à examiner sont [Le coco(n) Paimpolais](https://www.booking.com/hotel/fr/le-coco-n-paimpolais-classe-2-etoiles.fr.html), un appartement avec deux chambres et une cuisine, et [Échappée Paimpolaise](https://www.booking.com/hotel/fr/echappee-paimpolaise.fr.html), avec chambre et canapé-lit. Ce dernier est situé au premier étage et n'est pas adapté aux personnes à mobilité réduite. Vérifiez les disponibilités, le prix total et les conditions d'annulation pour les dates retenues, idéalement après la publication des informations pratiques du festival.
 
-Pour préparer d’autres découvertes dans la région, parcourez également [les idées de sorties en Bretagne sur Fam Space](https://www.fam-space.fr/destinations/bretagne/).
+Si vous restez une nuit, une promenade autour du port et dans le centre de Paimpol peut compléter le programme selon la météo. Vous pouvez aussi découvrir [d'autres idées de sorties en Bretagne sur Fam Space](https://www.fam-space.fr/destinations/bretagne/).
