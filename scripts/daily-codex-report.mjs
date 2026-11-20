@@ -141,14 +141,15 @@ export async function collect(day,gh,logs) {
 export function render(report) {
   const h=escapeHtml,{day,groups,articles}=report;
   const stats=groups.map(g=>({...g,errors:g.runs.filter(r=>["failure","timed_out"].includes(r.conclusion)).length,
-    quotas:g.runs.filter(r=>r.state.startsWith("Quota atteint")).length}));
+    quotas:g.runs.filter(r=>r.state.startsWith("Quota atteint")).length,
+    pauses:g.runs.filter(r=>r.state.startsWith("En pause")).length}));
   const subject="[Fam Space] Bilan Codex du "+day+" — "+articles.length+" article(s)";
   const text=[
     "Bilan Codex du "+day+" (heure de Paris)","",
     articles.length+" publication(s) sur master :",
     ...(articles.length?articles.map(a=>"- "+a.type+" : "+a.title+"\n  "+a.url):["Aucun nouvel article sur master."]),"",
     ...stats.flatMap(g=>[g.label+" : "+g.runs.length+" passage(s), "+g.errors+
-      " erreur(s), "+g.quotas+" quota(s) détecté(s)",
+      " erreur(s), "+g.quotas+" quota(s) détecté(s), "+g.pauses+" pause(s)",
       ...(g.runs.length?g.runs.map(r=>"- #"+r.number+" : "+r.state+" · phases "+r.phases+"\n  "+r.url):["- Aucun passage"]), ""]),
     "Le détail des phases et des erreurs se trouve dans les rapports GitHub privés.",
   ].join("\n");
@@ -156,9 +157,9 @@ export function render(report) {
     '<div style="font-family:Arial,system-ui,sans-serif;color:#173246;line-height:1.6;max-width:680px">',
     "<h1>Bilan Codex · "+h(day)+"</h1><p>"+articles.length+" article(s) publiés sur master.</p>",
     articles.length?"<ul>"+articles.map(a=>'<li>'+h(a.type)+
-      ' : <a href="'+h(a.url)+'">'+h(a.title)+"</a></li>").join("")+"</ul>":"<p>Aucune publication Codex.</p>",
+      ' : <a href="'+h(a.url)+'">'+h(a.title)+"</a></li>").join("")+"</ul>":"<p>Aucun nouvel article sur master.</p>",
     ...stats.map(g=>"<h2>"+h(g.label)+"</h2><p>"+g.runs.length+" passage(s) · "+
-      g.errors+" erreur(s) · "+g.quotas+" quota(s)</p><ul>"+
+      g.errors+" erreur(s) · "+g.quotas+" quota(s) · "+g.pauses+" pause(s)</p><ul>"+
       (g.runs.length?g.runs.map(r=>'<li><a href="'+h(r.url)+'">Exécution #'+r.number+
         "</a> : "+h(r.state)+" · "+h(r.phases)+"</li>").join(""):"<li>Aucun passage</li>")+"</ul>"),
     "<p>Phases détaillées consultables dans GitHub Actions (dépôt privé).</p></div>",
