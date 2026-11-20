@@ -438,3 +438,4 @@ automation/image-hero-20261119-2148-brive-dieulefit|0e8ac97238a0ffc5195db6a95a4f
 automation/image-hero-20261119-2148-brive-dieulefit|9e2eca316c01add022b1286d86121b3ca6640f7a
 automation/image-hero-20261120-0341-cherbourg-ordilot|bb6d05e7089ae19f3099bde0eed50f51f8f52472
 automation/image-hero-20261120-0341-cherbourg-ordilot|376b84aad60f8d882325100004a35fd3d56d1453
+automation/image-hero-20261120-0948-aisne-pau-saintnazaire|4a9b929c8b295bf0885250cbc3d4980b106ea207
