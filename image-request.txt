@@ -444,3 +444,4 @@ automation/image-hero-20261120-0948-aisne-pau-saintnazaire|ea966d2530b6aac104d95
 automation/image-hero-20261120-0948-aisne-pau-saintnazaire|2292cdf012725b89ffe96df3671ca68e65cc1192
 automation/image-hero-20261120-0948-aisne-pau-saintnazaire|83b47c11224818ae401ef015ea6d13ad5a254197
 automation/image-hero-20261120-1846-grasse-sigean-paimpol|a3bf509270b5cf8134f3eb37e516235b4e8b34c1
+automation/image-hero-20261120-1846-grasse-sigean-paimpol|58b152581d6fb8f65a4e591fd07bee0306162ebe
