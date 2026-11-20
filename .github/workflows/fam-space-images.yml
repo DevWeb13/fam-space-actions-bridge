@@ -80,7 +80,11 @@ jobs:
             exit 0
           fi
 
-          bash .github/scripts/publish-article-images.sh \
+          # Utiliser le correctif actuel même si la branche d'attente est plus ancienne.
+          publisher="$(mktemp)"
+          trap 'rm -f "$publisher"' EXIT
+          git show origin/master:.github/scripts/publish-article-images.sh > "$publisher"
+          bash "$publisher" \
             "$branch" \
             "$requested_commit" \
             "content-candidates/article-images.json"
