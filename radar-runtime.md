@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -102,7 +105,7 @@ sources:
     url: https://bibliotheques.rouen.fr/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/vie-pratique/(2026)/(11)/bibliotheques-de-rouen-emprunter-gratuitement-outils-instruments-et-jeux/index.md
   targetSha: 11499ff0d2f9790ba68ca5eba159a20de1a7fc4f
@@ -128,33 +131,64 @@ radar:
       - bibliothèque espace du palais rouen
 ---
 
-## Mission retenue
-Clarifier les conditions d'emprunt des objets, outils et jeux dans les bibliothèques de Rouen, sans transformer l'article en annuaire.
+title: "Bibliothèques de Rouen: quels jeux, instruments et outils emprunter?"
+subtitle: "Six bibliothèques pour jouer, bricoler et découvrir en famille"
+summary: "La carte des bibliothèques de Rouen est gratuite pour tous. Jeux et instruments se prêtent sans frais, tandis que la bricothèque réserve la gratuité à certains publics: adresses et conditions."
+readingTime: 4
+sources:
+  - title: Bibliothèque Parment, inscription et bricothèque
+    url: https://rouen.fr/adresse/bibliotheque-municipale-roger-parment
+  - title: Bibliothèque de la Grand'Mare
+    url: https://www.rouen.fr/fr/adresse/bibliotheque-municipale-de-la-grandmare
+  - title: Bibliothèque Saint-Sever
+    url: https://rouen.fr/fr/adresse/bibliotheque-municipale-saint-sever
+  - title: Bibliothèque des Capucins
+    url: https://rouen.fr/index.php/fr/adresse/bibliotheque-municipale-des-capucins
+  - title: Bibliothèque Simone-de-Beauvoir
+    url: https://rouen.fr/adresse/bibliotheque-municipale-simone-de-beauvoir
+  - title: Bibliothèque du Châtelet
+    url: https://rouen.fr/fr/adresse/bibliotheque-municipale-du-chatelet
+  - title: Délibération municipale du 8 octobre 2026 et annexes tarifaires
+    url: https://rouen.fr/fr/deliberation/2026-10-08/1-29
+  - title: Délibération municipale du 12 février 2026 sur les nouveaux noms
+    url: https://rouen.fr/fr/deliberation/2026-02-12/5-6
+  - title: Catalogue Rouen Bibliothèques
+    url: https://bibliotheques.rouen.fr/
+---
 
-## Pourquoi cette mission
-Le snapshot GSC montre 27 impressions au pic puis 0 sur les trois derniers jours, sans cause SEO établie. La lacune éditoriale est indépendante et vérifiable : l'article annonce l'emprunt gratuit d'outils, mais ne distingue pas la gratuité générale de la carte et les conditions tarifaires particulières de la bricothèque. La grille officielle 2025 sépare explicitement ces prêts et réserve la gratuité de l'outillage à certains publics. La délibération d'octobre 2026 annonce une nouvelle grille au 1er novembre : vérifier cette grille avant de formuler les règles actuelles. L'article mentionne des jeux vidéo sur place sans expliquer clairement quels jeux peuvent être empruntés.
+À Rouen, la carte des bibliothèques municipales est gratuite, même pour les familles qui n'habitent pas la ville. Elle permet d'emprunter des livres, mais aussi des jeux, des jeux vidéo et certains objets. **Attention toutefois aux outils de bricolage et de jardinage:** la bricothèque relève de conditions particulières. Voici comment choisir le bon établissement sans confondre prêt à domicile et activité sur place.
 
-## Décision du lecteur
-Identifier le service adapté à l'âge des enfants et au type d'objet, connaître le coût réel et les conditions du prêt avant de se déplacer.
+## Que peut-on emprunter gratuitement?
 
-## Faits à traiter
-- Vérifier dans la grille en vigueur depuis le 1er novembre 2026 les tarifs et exonérations du prêt d'outils de bricolage/jardinage, et corriger le titre, le résumé et les passages suggérant une gratuité universelle si nécessaire.
-- Distinguer jeux, jeux vidéo, consoles, instruments, outils et activités sur place; vérifier les limites d'âge, la durée, la réservation et les retours dans l'établissement d'origine. Ne pas promettre un prêt non documenté.
-- Préserver les six adresses, leurs noms anciens/nouveaux, l'inscription gratuite pour tous, les justificatifs, les règles d'accompagnement des moins de six ans et les dix impressions gratuites mensuelles.
-- Ne pas attribuer la chute GSC à ces lacunes sans preuve.
+Selon la [grille tarifaire adoptée en octobre 2026](https://rouen.fr/fr/deliberation/2026-10-08/1-29), la carte individuelle gratuite couvre les livres, revues, CD, DVD, jeux, jeux vidéo et objets comme les boîtes à histoires, liseuses, instruments de musique ou ustensiles de cuisine, **hors outillage et outils de jardinage**. La durée prévue pour ces prêts est d'un mois, renouvelable une fois. La présence d'une catégorie dans le règlement ne signifie pas que chaque bibliothèque possède tous ces objets.
 
-## Sources de départ
-- Ville de Rouen, délibération du 8 octobre 2026 et annexes tarifaires en vigueur au 1er novembre : https://rouen.fr/fr/deliberation/2026-10-08/1-29
-- Ville de Rouen, grille tarifaire 2025 (pour comparaison historique, non comme tarif actuel) : https://rouen.fr/sites/default/files/download/2025/grille_tarifaire_bibliotheques_2025.pdf
-- Ville de Rouen, bibliothèque Parment : https://rouen.fr/adresse/bibliotheque-municipale-roger-parment
-- Ville de Rouen, bibliothèque du Châtelet : https://rouen.fr/fr/adresse/bibliotheque-municipale-du-chatelet
-- Catalogue du réseau : https://bibliotheques.rouen.fr/
+Pour les outils de la bricothèque, la gratuité est réservée, sur justificatif, aux étudiants, aux moins de 26 ans, aux familles nombreuses, aux demandeurs d'emploi et aux bénéficiaires des minima sociaux (RSA, ASPA, AAH). Depuis le 1er novembre 2026, les établissements et associations rouennaises peuvent aussi en bénéficier. La grille ne précise pas de tarif alternatif pour les autres particuliers: **ne présumez donc pas que le prêt d'outils est gratuit pour tous** et demandez confirmation à Parment avant de vous déplacer. La durée indiquée pour la bricothèque est également d'un mois, renouvelable une fois.
 
-## Affiliation
-Aucune offre partenaire naturelle pour ce service municipal.
+## Six bibliothèques selon vos envies
 
-## Continuations internes
-- Conserver le lien vers la destination Rouen pour les autres sorties familiales, sans répéter son guide.
+**Bricoler: Parment, au centre-ville.** Au premier étage de l'Espace du Palais, 8 allée Eugène-Delacroix, la [bibliothèque Parment](https://rouen.fr/adresse/bibliotheque-municipale-roger-parment) abrite la bricothèque. Demandez quels outils sont disponibles et vérifiez votre éligibilité avant le prêt. Métro Palais de Justice - Gisèle Halimi.
+
+**Emprunter un instrument ou observer les oiseaux: Madeleine Riffaud (ancienne Grand'Mare).** Au centre André-Malraux, rue François-Couperin, cette [bibliothèque](https://www.rouen.fr/fr/adresse/bibliotheque-municipale-de-la-grandmare) propose des instruments de musique et des kits ornithologiques. Le prêt d'instruments est réservé aux adultes. T2, arrêt Couperin.
+
+**Écouter, apprendre et jouer sur place: Aretha Franklin (ancienne Saint-Sever).** Au premier étage du centre commercial Saint-Sever, 65 avenue de Bretagne, la [bibliothèque](https://rouen.fr/fr/adresse/bibliotheque-municipale-saint-sever) propose partitions, méthodes musicales, MusicLab et espace de jeux vidéo. L'espace de jeux vidéo est une activité sur place: pour emprunter un jeu précis, consultez le catalogue. Métro Saint-Sever.
+
+**Jardiner et échanger: Amélie Bosquet (ancienne Capucins).** Au 21 rue des Capucins, la [bibliothèque](https://rouen.fr/index.php/fr/adresse/bibliotheque-municipale-des-capucins) accueille une grainothèque, une bouturothèque et des bacs de jardinage. On y échange graines et plantes; il ne s'agit pas d'un prêt d'outillage.
+
+**Venir avec un tout-petit: Simone-de-Beauvoir.** Au pôle culturel Grammont, rue Henri-II-de-Plantagenêt, cette [bibliothèque](https://rouen.fr/adresse/bibliotheque-municipale-simone-de-beauvoir) dispose d'une marmothèque pour les 0 à 6 ans accompagnés et de kits ornithologiques.
+
+**Explorer le numérique: Émilie du Châtelet (ancienne Châtelet).** Place du Châtelet, la [bibliothèque](https://rouen.fr/fr/adresse/bibliotheque-municipale-du-chatelet) propose des jeux vidéo et le ChaMaLab, espace de fabrication. Les consoles sont réservées aux adultes: leur présence ne signifie pas qu'elles sont prêtées à domicile.
+
+Les quatre changements de noms ont été décidés en février 2026 pour application au 1er mars. Les anciens noms peuvent encore figurer sur les fiches municipales. [Consulter la délibération](https://rouen.fr/fr/deliberation/2026-02-12/5-6).
+
+## Inscription, réservation et retour: les précautions utiles
+
+La carte est valable un an. Pour l'obtenir, prévoyez une pièce d'identité (ou le livret de famille pour un enfant), un justificatif de domicile de moins de six mois ou une attestation sur l'honneur, et une autorisation parentale pour les moins de 16 ans. Une préinscription est possible sur le [portail Rouen Bibliothèques](https://bibliotheques.rouen.fr/).
+
+Avant d'emprunter un jeu, un instrument ou un kit, vérifiez sa disponibilité et les éventuelles limites d'âge auprès de la bibliothèque. La durée générale d'un mois renouvelable ne garantit ni qu'un exemplaire soit disponible ni qu'une réservation soit possible. **Les objets doivent être rapportés dans leur bibliothèque d'origine**, contrairement aux documents pouvant circuler dans le réseau.
+
+Les enfants de moins de six ans doivent être accompagnés d'un adulte ou d'un frère ou d'une sœur d'au moins 11 ans. Les parents restent responsables de leurs enfants. Depuis le 1er novembre 2026, chaque usager inscrit bénéficie aussi d'un maximum de dix impressions ou photocopies gratuites par mois, conformément à la [délibération municipale](https://rouen.fr/fr/deliberation/2026-10-08/1-29).
+
+Vérifiez les horaires avant votre visite, notamment pendant les vacances scolaires. Pour prolonger la sortie, retrouvez d'autres idées dans notre [guide de Rouen en famille](https://www.fam-space.fr/destinations/normandie/seine-maritime/rouen/).
 
 ## Article source exact à préserver et améliorer
 
