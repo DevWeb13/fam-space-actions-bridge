@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Soleils d'hiver 2026 à Angers en famille: marché, manèges et Père Noël"
-subtitle: Les lieux annoncés, ce qui reste à confirmer et les repères utiles avec des enfants.
-summary: "Soleils d'hiver débute le 25 novembre 2026 à Angers. Marché artisanal, village Santa Claus et maison du Père Noël: les activités annoncées, les lieux connus et les horaires ou tarifs encore attendus."
+title: "Soleils d'hiver 2026 à Angers en famille: horaires, manèges et Père Noël"
+subtitle: Marchés, village de Santa Claus, rencontres gratuites et horaires particuliers pour organiser sa sortie.
+summary: "À Angers, Soleils d'hiver se déroule du 25 novembre 2026 au 3 janvier 2027. Marché de Noël jusqu'au 30 décembre, manèges payants, Père Noël place Sainte-Croix et illuminations: les dates et horaires pour les familles."
 category: evenements
 location:
   city: Angers
@@ -71,11 +74,17 @@ image:
   src: /images/articles/2026/10/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus.webp
   alt: Chalets du marché de Noël d'une édition antérieure, place du Ralliement à Angers
 sources:
-  - title: Ville d'Angers - Soleils d'hiver 2026, présentation et date de lancement
-    url: https://www.angers.fr/vivre-a-angers/culture/arts-de-la-rue-arts-du-cirque/soleils-d-hiver/index.html
-  - title: Ville d'Angers - Ambassadeurs Soleils d'hiver 2026, lieux prévus
-    url: https://recrutement.angers.fr/emplois/postes-temporaires-fr/1947-ambassadeurs-soleils-dhiver-fr/
-  - title: Irigo - Ligne C du tramway, arrêts du centre-ville
+  - title: Ville d'Angers - Marchés de Noël 2026 et horaires
+    url: https://www.angers.fr/vivre-a-angers/culture/arts-de-la-rue-arts-du-cirque/soleils-d-hiver/les-marches-de-noel/index.html
+  - title: Ville d'Angers - Manèges et horaires 2026
+    url: https://www.angers.fr/vivre-a-angers/culture/arts-de-la-rue-arts-du-cirque/soleils-d-hiver/les-maneges/index.html
+  - title: Ville d'Angers - Programme de Soleils d'hiver 2026
+    url: https://www.angers.fr/vivre-a-angers/culture/arts-de-la-rue-arts-du-cirque/soleils-d-hiver/le-programme-de-soleils-d-hiver/index.html
+  - title: Ville d'Angers - Rencontrez le Père Noël
+    url: https://www.angers.fr/vivre-a-angers/culture/arts-de-la-rue-arts-du-cirque/soleils-d-hiver/rencontrez-le-pere-noel/index.html
+  - title: Ville d'Angers - Dossier de presse du 16 novembre 2026
+    url: https://presse.angers.fr/dossier/angers-fete-noel-soleils-dhiver-2026
+  - title: Irigo - Ligne C du tramway
     url: https://www.irigo.fr/se-deplacer/lignes-et-horaires/ligne-tram-c
 reviewAt: 2026-11-20
 topic:
@@ -96,7 +105,7 @@ affiliate:
   destination: Angers
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/index.md
   targetSha: af409f06637a170e46771255a97257ec6c2c2be5
@@ -122,37 +131,66 @@ radar:
       - marché de Noël Angers en famille
       - village Santa Claus Angers
       - maison du Père Noël place Sainte-Croix
+eventEndsAt: 2027-01-03
 ---
 
-## Mission retenue
-Actualiser le guide familial de Soleils d'hiver 2026 à Angers, avant l'ouverture du 25 novembre.
+<!-- article-image-credit -->
+*Photo: [Géraldine Pasquier](https://commons.wikimedia.org/wiki/File:March%C3%A9_de_No%C3%ABl_d%27Angers_2015.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-L'article du 30 octobre indique que le programme, les horaires et les dates de fin restent inconnus. Or la Ville a publié son programme le 16 novembre et détaille désormais les lieux, horaires et activités. C'est une lacune vérifiée, indépendante de la baisse GSC dont la cause reste inconnue.
+**Soleils d'hiver revient à Angers du 25 novembre 2026 au 3 janvier 2027**, mais toutes les installations ne ferment pas le même jour. Pour une promenade entre les chalets, une sortie avec manèges ou une rencontre avec le Père Noël, voici les bons lieux et créneaux, d'après le [programme municipal 2026](https://www.angers.fr/vivre-a-angers/culture/arts-de-la-rue-arts-du-cirque/soleils-d-hiver/le-programme-de-soleils-d-hiver/index.html).
 
-## Décision du lecteur
-Choisir entre une promenade au marché, les manèges et la rencontre avec le Père Noël, puis organiser sa venue au bon moment sans confondre les dates de fin.
+## Les chalets du marché: jusqu'au 30 décembre
 
-## Faits à traiter
-- Marché: place du Ralliement, rue Lenepveu, place du Pilori; du 25 novembre au 30 décembre, 11 h-20 h, vendredi jusqu'à 22 h, samedi jusqu'à 23 h; horaires particuliers les 24 et 25 décembre.
-- Village de Santa Claus au jardin du Mail et manèges jusqu'au 3 janvier 2027; Grande Roue et Sapin magique au Mail, Pomme place Lorraine, Carrousel 1900 place du Ralliement. Manèges payants; ne pas inventer de prix.
-- Père Noël place Sainte-Croix du 29 novembre au 24 décembre, mercredi/samedi/dimanche 15 h-19 h, le 24 décembre 13 h-17 h; arrivée gratuite le 28 novembre au jardin du Mail 15 h-15 h 45.
-- Illuminations du 25 novembre au 3 janvier, 17 h 30-23 h. Distinguer les horaires des illuminations de ceux des chalets.
-- Conserver les conseils poussette, tramway, précautions pour bébés, les trois crédits photographiques et le conseil d'hébergement Booking.com. Supprimer les mentions devenues fausses de programme « à venir » sans effacer les réserves toujours justifiées sur les services non confirmés.
+<!-- article-image-body:01 -->
 
-## Sources de départ
-- Ville d'Angers, programme officiel: https://www.angers.fr/vivre-a-angers/culture/arts-de-la-rue-arts-du-cirque/soleils-d-hiver/le-programme-de-soleils-d-hiver/index.html
-- Ville d'Angers, marchés et horaires: https://www.angers.fr/vivre-a-angers/culture/arts-de-la-rue-arts-du-cirque/soleils-d-hiver/les-marches-de-noel/index.html
-- Ville d'Angers, manèges: https://www.angers.fr/vivre-a-angers/culture/arts-de-la-rue-arts-du-cirque/soleils-d-hiver/les-maneges/index.html
-- Ville d'Angers, Père Noël: https://www.angers.fr/vivre-a-angers/culture/arts-de-la-rue-arts-du-cirque/soleils-d-hiver/rencontrez-le-pere-noel/index.html
-- Dossier de presse municipal du 16 novembre: https://presse.angers.fr/dossier/angers-fete-noel-soleils-dhiver-2026
+![Maison d'Adam au bord de la place Sainte-Croix à Angers, photographiée hors période de Noël](/images/articles/2026/10/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus-body-01.webp)
 
-## Affiliation
-Conserver le Novotel Angers Centre Gare sur Booking.com pour les familles en week-end; ne pas présenter les manèges municipaux comme réservables chez un partenaire.
+*Photo: [Nataloche](https://commons.wikimedia.org/wiki/File:Angers_place_Sainte-Croix-2015d.JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
 
-## Continuations internes
-- Conserver le lien vers Noël à Fontevraud 2026 pour une autre sortie dans le département.
-- Ne pas créer d'article distinct sur le village de Santa Claus: l'intégrer à ce guide.
+<!-- /article-image-body:01 -->
+
+Le grand marché de Noël occupe **la place du Ralliement, la rue Lenepveu et la place du Pilori** du mercredi 25 novembre au mercredi 30 décembre. Près d'une centaine d'exposants proposent artisanat, produits régionaux, cadeaux et gourmandises. C'est le choix le plus simple pour une promenade libre avec des enfants.
+
+Les chalets ouvrent **tous les jours de 11 h à 20 h**, jusqu'à **22 h le vendredi** et **23 h le samedi**. Attention aux exceptions: **24 décembre de 11 h à 17 h 30**, **25 décembre de 15 h à 20 h**. Ces horaires concernent les marchés, pas nécessairement toutes les animations de rue. Consultez les [horaires officiels des marchés](https://www.angers.fr/vivre-a-angers/culture/arts-de-la-rue-arts-du-cirque/soleils-d-hiver/les-marches-de-noel/index.html).
+
+## Le village de Santa Claus et les manèges: jusqu'au 3 janvier
+
+Au **jardin du Mail**, le village de Santa Claus réunit chalets gourmands, **Grande Roue** et **Sapin magique**. Deux autres attractions sont réparties dans le centre: **la Pomme place Lorraine** et **le Carrousel 1900 place du Ralliement**.
+
+Les manèges sont **payants**. La Ville n'indique pas de prix par tour sur sa [page dédiée](https://www.angers.fr/vivre-a-angers/culture/arts-de-la-rue-arts-du-cirque/soleils-d-hiver/les-maneges/index.html): prévoyez un budget distinct pour les attractions, les boissons et les achats. Vérifiez sur place les éventuelles restrictions d'âge ou de taille avant de promettre un tour aux plus petits.
+
+Les attractions sont annoncées **du 25 novembre au 3 janvier 2027**, de **11 h à 20 h**, avec nocturnes jusqu'à **22 h le vendredi** et **23 h le samedi** les week-ends précédant Noël. Les **24 et 25 décembre**, horaires particuliers: respectivement **11 h-17 h 30** et **15 h-20 h**. Le village du Mail suit également ces horaires annoncés par la Ville.
+
+## Quand rencontrer le Père Noël?
+
+La **maison du Père Noël, place Sainte-Croix**, accueille les familles **du 29 novembre au 24 décembre**, les **mercredis, samedis et dimanches de 15 h à 19 h**, et **le 24 décembre de 13 h à 17 h**. La rencontre est annoncée gratuite. Pour éviter une attente difficile avec un jeune enfant, privilégiez si possible un créneau moins fréquenté et prévoyez une marge avant la fermeture.
+
+Autre rendez-vous: **l'arrivée du Père Noël le samedi 28 novembre, de 15 h à 15 h 45, au jardin du Mail**, annoncée gratuite. Le programme prévoit aussi Madame Noël, des ateliers et des animations de rue: leurs horaires varient selon les activités, à consulter dans l'[agenda municipal](https://www.angers.fr/vivre-a-angers/culture/arts-de-la-rue-arts-du-cirque/soleils-d-hiver/le-programme-de-soleils-d-hiver/index.html). Ne confondez pas l'horaire d'une animation avec l'ouverture quotidienne des chalets.
+
+## Illuminations et promenade du soir
+
+Les **illuminations sont annoncées du 25 novembre au 3 janvier, de 17 h 30 à 23 h**. Elles permettent de prolonger la promenade après la tombée de la nuit, même lorsque certains chalets ont fermé. Avec des enfants fatigués, un passage au marché en fin d'après-midi suivi des lumières peut être plus facile qu'une longue soirée.
+
+## Venir en tramway et circuler avec bébé
+
+<!-- article-image-body:02 -->
+
+![Tramway de la ligne C rue de la Roë à Angers, à proximité de la place du Ralliement](/images/articles/2026/10/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus-body-02.webp)
+
+*Photo: [Dacia 1410 Sport](https://commons.wikimedia.org/wiki/File:Perdu_le_fil.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+La [ligne C du tramway Irigo](https://www.irigo.fr/se-deplacer/lignes-et-horaires/ligne-tram-c) dessert **Ralliement** et **Foch-Maison Bleue**, pratiques pour rejoindre les installations du centre. Vérifiez les horaires et perturbations du jour, surtout pour le retour après les illuminations.
+
+Avec une poussette, la foule peut compliquer les déplacements entre les places et le jardin du Mail. **Tables à langer, micro-ondes et espaces abrités sur les sites de Noël ne sont pas confirmés**: emportez le nécessaire pour les repas et le change. La Ville a évoqué un **espace de repos cognitif à l'Hôtel Godeline, rue Plantagenet**, mais ses conditions d'accès au public restent à vérifier auprès de l'organisateur avant de compter dessus.
+
+## Rester une nuit à Angers
+
+Pour une famille qui vient de plus loin, le [Novotel Angers Centre Gare](https://www.booking.com/hotel/fr/novotel-angers-centre-gare.fr.html) propose des chambres familiales et des lits bébé sur demande, selon les disponibilités. Vérifiez la capacité exacte, le tarif et les conditions pour vos dates avant de réserver.
+
+Pour une autre sortie dans le Maine-et-Loire, découvrez également [Noël à Fontevraud 2026 en famille](/articles/evenements/noel-a-fontevraud-2026-quel-jour-choisir-avec-les-enfants/), dont les animations suivent un calendrier différent.
 
 ## Article source exact à préserver et améliorer
 
@@ -251,15 +289,16 @@ Pour prolonger les sorties de Noël dans le Maine-et-Loire, notre guide [Noël �
 
 ### Articles proches préparés mécaniquement
 
+- /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | Marché de Noël d'Amiens 2026 en famille: horaires, Père Noël et patinoire | evenements | Amiens, Somme, Hauts-de-France
+- /articles/vie-pratique/garde-d-enfants-sur-horaires-atypiques-a-angers-qui-peut-demander-l-aide-du-ccas/ | Garde d'enfants sur horaires atypiques à Angers: qui peut demander l'aide du CCAS? | vie-pratique | Angers, Maine-et-Loire, Pays de la Loire
+- /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | Marché de Noël d'Avignon 2026 en famille: horaires, Père Noël et animations | evenements | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
+- /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
+- /articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/ | Noël 2026 à Toulon en famille: marché, patinoire et horaires | evenements | Toulon, Var, Provence-Alpes-Côte d’Azur
 - /articles/maison/composteur-gratuit-a-angers-loire-metropole-qui-peut-le-demander/ | Composteur gratuit à Angers Loire Métropole: qui peut le demander? | maison | Angers, Maine-et-Loire, Pays de la Loire
 - /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | Monument Jeu d’Enfant au château d’Angers: dragons et ateliers le 17 octobre 2026 | evenements | Angers, Maine-et-Loire, Pays de la Loire
-- /articles/vie-pratique/garde-d-enfants-sur-horaires-atypiques-a-angers-qui-peut-demander-l-aide-du-ccas/ | Garde d'enfants sur horaires atypiques à Angers: qui peut demander l'aide du CCAS? | vie-pratique | Angers, Maine-et-Loire, Pays de la Loire
 - /articles/evenements/fete-de-l-automne-2026-a-terra-botanica-journee-ou-terra-nocta-en-famille/ | Fête de l'Automne 2026 à Terra Botanica: animations et tarifs | evenements | Angers, Maine-et-Loire, Pays de la Loire
-- /articles/sorties/chasse-tresor-galerie-david-angers-2026/ | Chasse au trésor à Angers: les 4 à 6 ans enquêtent à la Galerie David | sorties | Angers, Maine-et-Loire, Pays de la Loire
-- /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | Marché de Noël d'Amiens 2026 en famille: horaires, Père Noël et patinoire | evenements | Amiens, Somme, Hauts-de-France
-- /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | Noël à Toulouse 2026 en famille: marchés, Père Noël et patinoire | evenements | Toulouse, Haute-Garonne, Occitanie
-- /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | Marché de Noël d'Avignon 2026 en famille: horaires, Père Noël et animations | evenements | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
 - /articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/ | Soleils d'hiver 2026 à Angers en famille: marché, manèges et Père Noël | evenements | Angers, Maine-et-Loire, Pays de la Loire
+- /articles/sorties/chasse-tresor-galerie-david-angers-2026/ | Chasse au trésor à Angers: les 4 à 6 ans enquêtent à la Galerie David | sorties | Angers, Maine-et-Loire, Pays de la Loire
 - /articles/parentalite/laep-en-maine-et-loire-ou-aller-avec-son-bebe-et-comment-se-passe-l-accueil/ | LAEP en Maine-et-Loire: où aller avec son bébé et comment se passe l'accueil ? | parentalite | Maine-et-Loire, Pays de la Loire
 - /articles/evenements/noel-a-fontevraud-2026-quel-jour-choisir-avec-les-enfants/ | Noël à Fontevraud 2026: patinoire, marché, dates et tarifs en famille | evenements | Fontevraud-l'Abbaye, Maine-et-Loire, Pays de la Loire
 - /articles/parentalite/ludotheque-du-choletais-jouer-sur-place-et-emprunter-en-famille/ | Ludothèque du Choletais: jouer sur place et emprunter en famille | parentalite | Cholet, Maine-et-Loire, Pays de la Loire
@@ -272,7 +311,6 @@ Pour prolonger les sorties de Noël dans le Maine-et-Loire, notre guide [Noël �
 - /articles/evenements/carnaval-de-guadeloupe-2027-preparer-une-premiere-sortie-avec-ses-enfants/ | Carnaval de Guadeloupe 2027: préparer une première sortie avec ses enfants | evenements | Guadeloupe
 - /articles/evenements/niepce-et-apres-une-exposition-photo-a-decouvrir-en-famille-a-chalon-sur-saone/ | Niépce, et après ? Une exposition photo à découvrir en famille à Chalon-sur-Saône | evenements | Chalon-sur-Saône, Saône-et-Loire, Bourgogne-Franche-Comté
 - /articles/evenements/noel-2026-au-puy-du-fou-en-famille-spectacles-et-visite-en-hiver/ | Noël 2026 au Puy du Fou en famille: spectacles et visite en hiver | evenements | Les Epesses, Vendée, Pays de la Loire
-- /articles/evenements/exposition-papillons-a-lyon-visiter-le-musee-des-confluences-en-famille/ | Exposition Papillons à Lyon: visiter le musée des Confluences en famille | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
 
 ### Historique Radar lié
 
@@ -281,11 +319,11 @@ Pour prolonger les sorties de Noël dans le Maine-et-Loire, notre guide [Noël �
 - opportunity | /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | 2026-10-19T13:54:07.745Z
 - opportunity | /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | 2026-10-28T15:29:23.387Z
 - refresh | /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | 2026-11-17T22:37:09.520Z
+- opportunity | /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | 2026-10-29T00:28:19.695Z
+- refresh | /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | 2026-11-17T19:34:24.194Z
 - opportunity | /articles/evenements/monument-jeu-d-enfant-2026-au-chateau-d-angers-quelle-animation-dragon-choisir/ | 2026-10-10T08:38:56.921Z
-- opportunity | /articles/evenements/noel-a-fontevraud-2026-quel-jour-choisir-avec-les-enfants/ | 2026-10-28T01:34:03.741Z
-- opportunity | /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | 2026-10-24T23:34:36.270Z
-- refresh | /articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/ | 2026-11-18T20:33:05.376Z
-- opportunity | /articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/ | 2026-10-30T12:36:12.349Z
+- opportunity | /articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/ | 2026-10-31T10:28:17.432Z
+- refresh | /articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/ | 2026-11-16T04:35:04.037Z
 
 ### Phases 2 et 3
 
