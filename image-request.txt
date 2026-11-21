@@ -448,3 +448,4 @@ automation/image-hero-20261120-1846-grasse-sigean-paimpol|58b152581d6fb8f65a4e59
 automation/image-hero-20261121-0046-transaltitude|231e7bfe28ac936d8b9670b373913e5d24d13618
 automation/image-hero-20261121-0046-transaltitude|91af007a930b9ecd68335c7cedf1641ded590eb7
 automation/image-hero-20261121-0648-dobree-lozere-crozant|56163944da3442c742a6d1b42de64b6b3e37cdb0
+automation/image-hero-20261121-0648-dobree-lozere-crozant|f07b3d6228f7e89fb0b77ebe35685b2da2550e22
