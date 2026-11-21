@@ -1,6 +1,5 @@
-action: advance
-
 ---
+action: advance
 subtitle: "Safari, parcours à pied et Lumières d'Afrique: organiser sa visite familiale avec les horaires d'hiver"
 summary: "Comptez 5 à 6 heures pour le safari et la visite à pied. Horaires d'hiver, tarifs, billets Lumières d'Afrique, poussette et repas à Sigean."
 reviewAt: 2027-01-18
