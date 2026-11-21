@@ -5,7 +5,7 @@ subtitle: "Safari, parcours à pied et Lumières d'Afrique: organiser sa visite 
 summary: "Comptez 5 à 6 heures pour le safari et la visite à pied. Horaires d'hiver, tarifs, billets Lumières d'Afrique, poussette et repas à Sigean."
 reviewAt: 2027-01-18
 radarReview:
-  summary: "Relecture finale, correction des horaires d'hiver, validation des tarifs et du festival; suppression de répétitions et des liens directs vers les pages de vente officielle."
+  summary: "Horaires hiver, prix et modalités Lumières d’Afrique revérifiés le 21 novembre 2026 sur les sources officielles; crédits et détails familiaux conservés; maillage ajouté vers le guide dédié aux lanternes."
   sources:
     - https://www.reserveafricainesigean.fr/infos-pratiques/horaires/
     - https://www.reserveafricainesigean.fr/billetterie/achat-de-billet/
@@ -60,7 +60,7 @@ Deux possibilités existent:
 
 La **sortie du parc est définitive**: impossible de rentrer à l'hôtel ou de sortir dîner puis de revenir avec le même billet. Entre la fermeture du parcours à pied à 17 h et l'allumage des lanternes, le snack Serengeti propose notamment des boissons chaudes et des gourmandises, et l'aire de jeu Katavi reste accessible selon les indications du parc.
 
-Une journée de 10 h à 20 h peut être éprouvante pour de jeunes enfants. Si les animaux sont votre priorité, la visite de jour suffit largement; les lumières sont un complément à choisir selon leur énergie.
+Une journée de 10 h à 20 h peut être éprouvante pour de jeunes enfants. Pour le détail des lanternes et des soirées, consultez notre guide [Lumières d'Afrique 2026-2027 en famille](/articles/evenements/lumieres-d-afrique-2026-2027-a-sigean-les-lanternes-en-famille/).
 
 ## Quels tarifs prévoir?
 
