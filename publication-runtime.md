@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,78 +14,117 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Mayenne
 - Région: Pays de la Loire
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Composter en famille à Laval Agglomération: une solution gratuite pour chaque logement.** Angle: choisir et démarrer une solution de compostage adaptée à une maison avec jardin, un appartement ou un habitat collectif. Laval Agglomération propose des composteurs individuels, lombricomposteurs et solutions partagées, avec accompagnement et formations. Sujet local durable, non limité à une distribution ponctuelle.
-
-## Besoin du lecteur
-Comprendre quelle solution convient à son habitat, comment obtenir le matériel gratuit, où se renseigner et se former, comment trier les biodéchets au quotidien avec les enfants, et éviter les erreurs fréquentes. Vérifier les conditions d'accès et les dates actualisées avant de se déplacer.
-
-## Valeur éditoriale
-Comparer concrètement les trois situations (jardin, appartement, pied d'immeuble), expliquer la différence entre collecte des déchets et compostage domestique, proposer des gestes familiaux simples et distinguer règles générales, modalités locales et calendrier des distributions. Laval Agglomération indique que les formations et distributions existent, mais les modalités d'inscription varient selon les sessions: ne pas promettre un accès sans réservation. La date du 7 novembre 2026 figurant encore sur la page de compostage est passée; vérifier les prochaines séances auprès de l'agglomération. Une fiche du tourisme départemental annonce notamment des distributions les 26 novembre et 17 décembre 2026, avec inscription et formation préalable: confirmer les places avant publication.
-
-## Affiliation
-Recherche d'offres de visites et ateliers de compostage locaux sur GetYourGuide, Tiqets et Klook: aucune offre pertinente confirmée à Laval. Booking.com propose notamment « Duplex Carlago - Centre-ville de Laval » (https://www.booking.com/hotel/fr/duplex-carlago-centre-ville-de-laval.fr.html), mais l'hébergement est sans rapport avec cette démarche domestique: ne pas l'intégrer. Aucun partenaire pertinent vérifié parmi les catégories disponibles; ne pas forcer l'affiliation.
-
-## Sources de départ
-- Laval Agglomération, compostage, dispositifs individuels et collectifs, consignes et formations: https://www.agglo-laval.fr/compostage
-- Laval Agglomération, outils, formulaires et carte des composteurs collectifs: https://www.agglo-laval.fr/utile-au-quotidien/dechets/le-tri-des-dechets/la-boite-a-outils
-- Laval Agglomération, collecte et carte des secteurs: https://www.agglo-laval.fr/utile-au-quotidien/dechets/la-collecte-des-dechets
-- Destination Mayenne, distributions de composteurs et prochaines dates annoncées: https://www.destination-mayenne.com/offres/distribution-composteurs-individuels-laval-fr-6836088/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "maison"
+title: "Composteur gratuit à Laval Agglomération: quelle solution pour votre logement ?"
+subtitle: "Jardin, appartement ou résidence collective: les démarches et les bons gestes pour commencer en famille."
+summary: "Laval Agglomération propose plusieurs solutions gratuites pour composter. Voici comment choisir, obtenir le matériel et démarrer sans mauvaise surprise."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "composteur gratuit Laval Agglomération"
+  - "lombricompostage Laval"
+  - "compostage partagé Mayenne"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Laval"
+  department: "Mayenne"
+  region: "Pays de la Loire"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Laval Agglomération - Le compostage"
+    url: "https://www.agglo-laval.fr/compostage"
+  - title: "Laval Agglomération - La boîte à outils"
+    url: "https://www.agglo-laval.fr/utile-au-quotidien/dechets/le-tri-des-dechets/la-boite-a-outils"
+  - title: "Destination Mayenne - Distribution de composteurs individuels"
+    url: "https://www.destination-mayenne.com/offres/distribution-composteurs-individuels-laval-fr-6836088/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Pas besoin d'un grand jardin pour composter ses épluchures. Dans les 34 communes de Laval Agglomération, en Mayenne, les habitants peuvent accéder gratuitement à différentes solutions: un composteur de jardin, un lombricomposteur pour l'intérieur ou une aire partagée dans leur quartier. L'intérêt pour une famille est concret: moins de déchets dans la poubelle et, selon la méthode choisie, du compost pour les plantes.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Jardin, appartement ou immeuble: que choisir ?
+
+**Vous avez un jardin.** Le composteur individuel est le choix le plus simple. Installé sur un sol accessible, il reçoit les déchets végétaux de cuisine et une partie des déchets du jardin. Le compost obtenu peut ensuite nourrir les plantations. Laval Agglomération distribue gratuitement des composteurs aux foyers éligibles.
+
+**Vous vivez en appartement.** Le lombricomposteur utilise des vers adaptés pour transformer certains déchets de cuisine dans un contenant compact. Il demande un peu de suivi: éviter les températures extrêmes, doser les apports et conserver suffisamment de matière sèche. Les vers ordinaires ramassés au jardin ne conviennent pas à cet usage.
+
+**Vous préférez une solution collective.** Les aires de compostage de quartier ou de pied d'immeuble permettent de déposer ses biodéchets sans installer de matériel chez soi. La [page compostage de Laval Agglomération](https://www.agglo-laval.fr/compostage) présente les trois dispositifs et une carte des aires collectives.
+
+Si aucune aire n'existe près de votre immeuble, il est possible de proposer un projet à l'agglomération. Il faut notamment un espace adapté, de la matière sèche, plusieurs foyers volontaires, au moins deux référents et l'accord du bailleur ou de la copropriété.
+
+## Comment obtenir gratuitement son composteur ?
+
+Deux conditions sont annoncées par Laval Agglomération: habiter l'une de ses 34 communes et ne pas avoir déjà bénéficié d'une aide ou d'un composteur ou lombricomposteur fourni par l'agglomération. La distribution dépend aussi des stocks disponibles. Prévoyez un justificatif de domicile.
+
+La remise du matériel s'accompagne d'un temps d'information obligatoire. Attention aux modalités: certaines séances sont annoncées sans inscription sur le site de l'agglomération, tandis que d'autres nécessitent une réservation. Il ne faut donc pas se présenter à une distribution sans vérifier la séance choisie.
+
+La fiche [Distribution de composteurs individuels de Destination Mayenne](https://www.destination-mayenne.com/offres/distribution-composteurs-individuels-laval-fr-6836088/) annonce deux rendez-vous à Laval, bâtiment 13, place du Général-Ferrié, **les jeudis 26 novembre et 17 décembre 2026, de 12 h 30 à 13 h 15**, avec inscription et information préalable. Ces dates et leurs places disponibles sont à confirmer auprès de l'organisateur avant de vous déplacer. Le site de Laval Agglomération affiche également une séance le 5 décembre au Palindrome, 25 rue Albert-Einstein, avec d'autres modalités. Les calendriers n'étant pas identiques, mieux vaut demander confirmation directement.
+
+Pour consulter les démarches et formulaires, rendez-vous dans la [boîte à outils de Laval Agglomération](https://www.agglo-laval.fr/utile-au-quotidien/dechets/le-tri-des-dechets/la-boite-a-outils), rubrique « Demander un composteur ». Le service déchets est joignable au **02 53 74 11 00** ou à **dechets@agglo-laval.fr**.
+
+## Les premiers gestes à adopter avec les enfants
+
+À la maison, un petit récipient réservé aux épluchures permet de collecter les déchets avant de les porter au compost. Les enfants peuvent participer au tri et observer, au fil des semaines, la transformation des matières. Un adulte garde la responsabilité du bon fonctionnement du bac.
+
+Pour un composteur de jardin, alternez déchets de cuisine et matières sèches comme les feuilles mortes ou le broyat. Mélangez de temps en temps et surveillez l'humidité: un tas détrempé et tassé se décompose mal. Évitez notamment les couches, les matériaux traités, les produits chimiques et les plantes montées en graines. Le [guide et les consignes de l'agglomération](https://www.agglo-laval.fr/compostage) détaillent les apports recommandés.
+
+Dans un lombricomposteur, les apports doivent être progressifs, avec suffisamment de matière sèche. Il n'est généralement pas nécessaire d'ajouter de l'eau. Placez le bac à l'abri du soleil direct, du gel et des fortes chaleurs.
+
+Sur une aire partagée, suivez les consignes affichées: après les biodéchets, ajoutez les copeaux ou le broyat prévus sur place et mélangez si cela est demandé. Les règles peuvent varier selon l'installation.
+
+## Compostage ou collecte des déchets: quelle différence ?
+
+Le compostage transforme localement les matières organiques; la collecte des ordures ménagères et des emballages suit d'autres circuits. Un emballage recyclable ne va pas au compost, même s'il a contenu des aliments. Pour retrouver les calendriers de collecte, les consignes de tri et la carte des composteurs collectifs, la [boîte à outils de l'agglomération](https://www.agglo-laval.fr/utile-au-quotidien/dechets/le-tri-des-dechets/la-boite-a-outils) centralise les ressources utiles.
+
+Pour démarrer sans acheter de matériel inutile, choisissez d'abord la solution adaptée à votre logement, puis vérifiez les conditions et la prochaine séance auprès du service déchets.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -114,4 +153,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
