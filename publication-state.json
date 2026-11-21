@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261121-0256-festival-contes-rencontres-2027-en-lozere-choisir-un-spectacle-a-parta",
+  "lastProcessedCommit": "509b320bef88bd93a2ad1e66545797f10a777eb2"
 }
