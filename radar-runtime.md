@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 3/3
+# Radar Fam Space - actualisation GSC
 
 ## Mission
 
@@ -8,398 +8,1093 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 3/3
-
-Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
-
-Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
-
-Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
-
-Ensuite:
-- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
-- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
-- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
-- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
-- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
-- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
-- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
-- ne force ni longueur ni affiliation.
-
-Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
-
-Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
-- `summary`: contrôles et corrections réellement effectués;
-- `sources`: URLs factuelles revérifiées;
-- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
-
-**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
-
-## Règles partenaires
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-## Candidat validé de la phase précédente
-
----
-title: "Réserve Africaine de Sigean: combien de temps prévoir entre safari et visite à pied ?"
-subtitle: "Safari, parcours à pied et Lumières d'Afrique: organiser sa visite familiale avec les horaires d'hiver"
-summary: Comptez 5 à 6 heures pour le safari et la visite à pied. Horaires d'hiver, tarifs, billets Lumières d'Afrique, poussette et repas à Sigean.
-slug: reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied
-status: published
-publishedAt: 2026-09-10T16:05:53+02:00
-updatedAt: 2026-10-02T18:25:59.863Z
-category: sorties
-readingTime: 6
-location:
-  city: Sigean
-  department: Aude
-  region: Occitanie
-topic:
-  key: sorties|sigean|reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied|2026
-  keywords:
-    - Réserve Africaine de Sigean avec enfants
-    - durée visite Réserve Africaine Sigean
-image:
-  src: /images/articles/2026/09/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied.webp
-  alt: Des girafes dans la Réserve Africaine de Sigean
-affiliate:
-  enabled: true
-  type: travel
-  destination: Sigean
-sources:
-  - title: Réserve Africaine de Sigean - FAQ
-    url: https://www.reserveafricainesigean.fr/infos-pratiques/faq/
-    accessedAt: 2026-10-02
-  - title: Réserve Africaine de Sigean - Horaires
-    url: https://www.reserveafricainesigean.fr/infos-pratiques/horaires/
-    accessedAt: 2026-11-19
-  - title: Réserve Africaine de Sigean - Billetterie
-    url: https://www.reserveafricainesigean.fr/billetterie/achat-de-billet/
-    accessedAt: 2026-11-19
-  - title: Réserve Africaine de Sigean - Lumières d'Afrique
-    url: https://www.reserveafricainesigean.fr/visitez-la-reserve/lumieres-d-afrique/
-    accessedAt: 2026-11-19
-  - title: Réserve Africaine de Sigean - Application du parc
-    url: https://www.reserveafricainesigean.fr/visitez-la-reserve/application-du-parc/
-    accessedAt: 2026-10-02
-  - title: Réserve Africaine de Sigean - Accueil
-    url: https://www.reserveafricainesigean.fr/
-    accessedAt: 2026-10-02
-  - title: Réserve Africaine de Sigean - Restauration et pique-nique
-    url: https://www.reserveafricainesigean.fr/infos-pratiques/restauration-pique-nique/
-    accessedAt: 2026-10-02
-  - title: Réserve Africaine de Sigean - Accès au parc
-    url: https://www.reserveafricainesigean.fr/infos-pratiques/acces-au-parc/
-    accessedAt: 2026-10-02
-radar:
-  schemaVersion: 1
-  phase: 2
-  mode: refresh
-  targetPath: src/routes/articles/sorties/(2026)/(09)/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied/index.md
-  targetSha: cc92588b45f110efbb6dcea17742f52896d21640
-  targetUrl: /articles/sorties/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied/
-  decision: Choisir une arrivée réaliste en hiver pour faire le safari et le parcours à pied, avec ou sans Lumières d'Afrique, sans se tromper sur l'heure d'ouverture.
-  affiliationPotential: Conserver le lien d'hébergement Booking.com à Sigean pour les familles qui prolongent la soirée; ne pas substituer un partenaire à la billetterie officielle.
-  gsc:
-    retrievedAt: 2026-11-19T01:30:40+01:00
-    dataThrough: 2026-11-16
-    signal: needs_query_check
-    basis: Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.
-    peakStart: 2026-10-23
-    peakEnd: 2026-10-29
-    recentStart: 2026-11-10
-    recentEnd: 2026-11-16
-    peakImpressions: 131
-    recentImpressions: 30
-    commonQueries: null
-    positionDelta: null
-    impressionRatio: null
-    focusQueries:
-      - Réserve Africaine de Sigean avec enfants
-      - durée visite Réserve Africaine Sigean
-reviewAt: 2027-01-18
----
-
-<!-- article-image-credit -->
-*Photo: [Sacamol](https://commons.wikimedia.org/wiki/File:Girafes_Sigean.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
-<!-- /article-image-credit -->
-
-La Réserve Africaine de Sigean, entre Narbonne et Perpignan, se découvre en deux temps: un safari avec votre véhicule, puis un parcours à pied. Comptez environ **1 heure en voiture et 2 h 30 à 3 heures de marche**. Avec le déjeuner et les pauses, réservez plutôt **5 à 6 heures** pour profiter des animaux avec des enfants.
-
-En hiver, la Réserve ouvre **à 10 h, et non à 9 h**. Pour visiter les deux circuits sans courir, l'idéal est donc d'arriver vers 10 h. Certains jours, le festival Lumières d'Afrique permet aussi de prolonger la sortie jusqu'à 20 h.
-
-## À quelle heure arriver pour faire le safari et la visite à pied?
-
-La [FAQ officielle](https://www.reserveafricainesigean.fr/infos-pratiques/faq/) estime la durée du safari à environ 1 heure et celle du parcours à pied à 2 h 30 ou 3 heures. Ces durées ne comprennent pas le repas, les pauses avec un bébé ni les arrêts prolongés devant les animaux.
-
-Du **25 octobre 2026 au 27 mars 2027**, les [horaires officiels](https://www.reserveafricainesigean.fr/infos-pratiques/horaires/) sont les suivants:
-
-- Ouverture du parc à **10 h**.
-- Fermeture des caisses et du circuit safari en voiture à **16 h**.
-- Fermeture du parc à pied à **17 h 30**, avancée à **17 h les jours de Lumières d'Afrique**.
-
-Ce sont des heures de fermeture, pas des heures de début de visite. Arriver à 15 h ou 16 h ne permet pas de profiter sereinement des deux parcours. Pour une journée familiale, commencez vers 10 h par le safari, déjeunez, puis consacrez l'après-midi à la partie à pied.
-
-## Safari d'abord ou parc à pied?
-
-<!-- article-image-body:01 -->
-
-![Un rhinocéros au milieu de la voie réservée aux voitures dans la Réserve Africaine de Sigean](/images/articles/2026/09/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied-body-01.webp)
-
-*Photo: [Gordito1869](https://commons.wikimedia.org/wiki/File:R%C3%A9serve_Africaine_Nashorn_1.jpg) - [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:01 -->
-
-Commencer par le safari est le plus simple avec des enfants: ils observent les animaux depuis la voiture avant de marcher à leur rythme. L'ordre inverse reste possible, notamment si vous souhaitez retourner sur le circuit voiture avant sa fermeture.
-
-Le safari se fait avec **votre propre voiture, camping-car ou bus**. Les motos, vélos et voitures décapotables ne sont pas admis. Une arrivée en taxi sans véhicule adapté ne suffit donc pas pour effectuer la visite complète.
-
-L'[application gratuite du parc](https://www.reserveafricainesigean.fr/visitez-la-reserve/application-du-parc/) aide à retrouver les animaux, les toilettes, les points de restauration et l'itinéraire. Elle permet aussi de choisir les zones à pied prioritaires lorsque les enfants fatiguent.
-
-## Faut-il prolonger avec Lumières d'Afrique?
-
-La troisième édition de [Lumières d'Afrique](https://www.reserveafricainesigean.fr/visitez-la-reserve/lumieres-d-afrique/) se déroule du **25 octobre 2026 au 17 janvier 2027**, uniquement les week-ends et pendant les vacances scolaires. Les lanternes sont allumées de **17 h 30 à 20 h**. Le parcours lumineux, long de plus d'un kilomètre, ne permet pas d'observer les animaux la nuit.
-
-Deux possibilités existent:
-
-- **Visite de jour + lumières:** le billet habituel du parc comprend le festival sans supplément les jours où celui-ci est organisé. Il faut rester dans l'enceinte du parc entre les deux visites.
-- **Lumières uniquement:** billet réservé au parcours nocturne, sans accès au safari ni au parc animalier. L'arrivée est possible de **17 h à 18 h 30**, sans entrée après 18 h 30.
-
-La **sortie du parc est définitive**: impossible de rentrer à l'hôtel ou de sortir dîner puis de revenir avec le même billet. Entre la fermeture du parcours à pied à 17 h et l'allumage des lanternes, le snack Serengeti propose notamment des boissons chaudes et des gourmandises, et l'aire de jeu Katavi reste accessible selon les indications du parc.
-
-Une journée de 10 h à 20 h peut être éprouvante pour de jeunes enfants. Si les animaux sont votre priorité, la visite de jour suffit largement; les lumières sont un complément à choisir selon leur énergie.
-
-## Quels tarifs prévoir?
-
-Selon la [billetterie officielle](https://www.reserveafricainesigean.fr/billetterie/achat-de-billet/), les tarifs de jour annoncés **jusqu'au 31 janvier 2027** sont de **34 € par adulte** et **24 € par enfant de 4 à 14 ans**. L'entrée est gratuite avant 4 ans. Le tarif pour une personne en situation de handicap est de **14,50 €**, sur présentation de la carte mobilité inclusion.
-
-Le **Pack Famille**, à partir de deux adultes et trois enfants de 4 à 14 ans dans le même véhicule, ramène le prix à **31 € par adulte** et **21 € par enfant**.
-
-Pour **Lumières d'Afrique uniquement**, les billets coûtent **17,90 € par adulte** et **14,50 € par enfant de 4 à 14 ans**. L'achat des billets en ligne est obligatoire pour le festival, avec un nombre d'entrées limité. Pour la visite de jour, choisissez également votre date et votre créneau d'arrivée lors de la réservation. Les chèques vacances ANCV font l'objet d'une procédure de réservation en ligne avec paiement sur place.
-
-Vérifiez les tarifs à nouveau pour une visite à partir de février 2027.
-
-## Poussette, bébé et repas
-
-Les chemins du circuit pédestre sont goudronnés, avec des pentes douces, et les poussettes sont autorisées. Le plan et l'application permettent de privilégier les passages les moins pentus.
-
-La [Réserve Africaine de Sigean](https://www.reserveafricainesigean.fr/) annonce un accueil bébé avec coin à langer, micro-ondes et chaises enfant.
-
-Vous pouvez apporter votre repas et utiliser les aires de pique-nique. La page [restauration et pique-nique](https://www.reserveafricainesigean.fr/infos-pratiques/restauration-pique-nique/) présente les possibilités sur place; les horaires des snacks peuvent varier selon la saison.
-
-Avec un jeune enfant, mieux vaut garder deux ou trois zones prioritaires du parcours pédestre plutôt que de transformer la promenade en course contre la montre.
-
-## Adresse et suite du séjour
-
-La Réserve se trouve **RD 6009, 19 chemin Hameau du Lac, 11130 Sigean**. La page [accès au parc](https://www.reserveafricainesigean.fr/infos-pratiques/acces-au-parc/) indique les itinéraires depuis les sorties d'autoroute de Sigean et Narbonne Sud. L'accueil est joignable au [04 68 48 20 20](tel:+33468482020).
-
-Après une visite prolongée jusqu'à 20 h, dormir à proximité peut éviter un long trajet avec des enfants. Vous pouvez [chercher un hébergement à Sigean sur Booking.com](https://www.booking.com/city/fr/sigean.fr.html).
-
-Pour organiser un séjour plus long dans l'Aude, découvrez [Narbonne en famille hors saison](/articles/voyages/narbonne-en-famille-hors-saison-un-week-end-entre-romains-halles-et-canal/) ou notre guide [Carcassonne en famille en 1 ou 2 jours](/articles/voyages/carcassonne-en-famille-1-ou-2-jours-billets-et-budget-a-prevoir/).
-
-## Article source exact à préserver et améliorer
-
-Chemin: src/routes/articles/sorties/(2026)/(09)/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied/index.md
-
----
-title: "Réserve Africaine de Sigean: combien de temps prévoir entre safari et visite à pied ?"
-subtitle: "Safari, visite à pied ou Lumières d'Afrique: les bons horaires pour organiser la journée avec des enfants"
-summary: "Durée, tarifs, horaires d'automne, billets Lumières d'Afrique, poussette et repas: préparez une journée à la Réserve Africaine de Sigean."
-slug: reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied
-status: published
-publishedAt: 2026-09-10T16:05:53+02:00
-updatedAt: 2026-10-02T18:25:59.863Z
-category: sorties
-readingTime: 6
-location:
-  city: Sigean
-  department: Aude
-  region: Occitanie
-topic:
-  key: sorties|sigean|reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied|2026
-  keywords:
-    - Réserve Africaine de Sigean avec enfants
-    - durée visite Réserve Africaine Sigean
-image:
-  src: /images/articles/2026/09/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied.webp
-  alt: Des girafes dans la Réserve Africaine de Sigean
-affiliate:
-  enabled: true
-  type: travel
-  destination: Sigean
-sources:
-  - title: Réserve Africaine de Sigean - FAQ
-    url: https://www.reserveafricainesigean.fr/infos-pratiques/faq/
-    accessedAt: 2026-10-02
-  - title: Réserve Africaine de Sigean - Horaires
-    url: https://www.reserveafricainesigean.fr/infos-pratiques/horaires/
-    accessedAt: 2026-10-02
-  - title: Réserve Africaine de Sigean - Billetterie
-    url: https://www.reserveafricainesigean.fr/billetterie/achat-de-billet/
-    accessedAt: 2026-10-02
-  - title: Réserve Africaine de Sigean - Lumières d'Afrique
-    url: https://www.reserveafricainesigean.fr/visitez-la-reserve/lumieres-d-afrique/
-    accessedAt: 2026-10-02
-  - title: Réserve Africaine de Sigean - Application du parc
-    url: https://www.reserveafricainesigean.fr/visitez-la-reserve/application-du-parc/
-    accessedAt: 2026-10-02
-  - title: Réserve Africaine de Sigean - Accueil
-    url: https://www.reserveafricainesigean.fr/
-    accessedAt: 2026-10-02
-  - title: Réserve Africaine de Sigean - Restauration et pique-nique
-    url: https://www.reserveafricainesigean.fr/infos-pratiques/restauration-pique-nique/
-    accessedAt: 2026-10-02
-  - title: Réserve Africaine de Sigean - Accès au parc
-    url: https://www.reserveafricainesigean.fr/infos-pratiques/acces-au-parc/
-    accessedAt: 2026-10-02
----
-
-<!-- article-image-credit -->
-*Photo: [Sacamol](https://commons.wikimedia.org/wiki/File:Girafes_Sigean.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
-<!-- /article-image-credit -->
-
-La Réserve Africaine de Sigean, entre Narbonne et Perpignan, se visite en deux temps: un safari avec votre véhicule, puis un parc à pied. Comptez environ 1 heure en voiture et 2 h 30 à 3 heures de marche. Avec le repas et les pauses, la journée entière est le format le plus confortable avec des enfants.
-
-À partir du 25 octobre 2026, un second choix s'ajoute: prolonger la visite avec **Lumières d'Afrique** ou acheter un billet pour ce parcours lumineux seulement. La formule du soir ne permet pas de voir les animaux et ne remplace donc pas le safari.
-
-## Combien de temps faut-il prévoir pour visiter la Réserve de Sigean?
-
-La [FAQ officielle](https://www.reserveafricainesigean.fr/infos-pratiques/faq/) annonce environ 1 heure pour le safari et entre 2 h 30 et 3 heures pour la promenade à pied. La plupart des visiteurs restent la journée.
-
-Ces durées correspondent aux parcours eux-mêmes. Avec un déjeuner, les arrêts devant les animaux et les besoins d'un jeune enfant, prévoyez plutôt **5 à 6 heures sur place**. Arriver le matin évite de raccourcir la partie à pied et laisse une marge pour refaire le safari en fin de journée si des animaux se sont peu montrés au premier passage.
-
-## Safari d'abord ou parc à pied?
-
-<!-- article-image-body:01 -->
-
-![Un rhinocéros au milieu de la voie réservée aux voitures dans la Réserve Africaine de Sigean](/images/articles/2026/09/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied-body-01.webp)
-
-*Photo: [Gordito1869](https://commons.wikimedia.org/wiki/File:R%C3%A9serve_Africaine_Nashorn_1.jpg) - [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:01 -->
-
-Avec une arrivée à l'ouverture, commencer par le safari est le déroulé le plus simple: les enfants découvrent les animaux depuis la voiture, puis la famille garde le reste de la journée pour marcher, déjeuner et faire des pauses. L'ordre inverse reste possible si vous voulez revenir au safari plus tard.
-
-Le circuit voiture se fait obligatoirement avec votre propre voiture, camping-car ou bus. Les motos, vélos et voitures décapotables ne sont pas admis. Ne prévoyez donc pas une arrivée en taxi suivie d'une visite complète sans solution pour le safari.
-
-L'[application gratuite du parc](https://www.reserveafricainesigean.fr/visitez-la-reserve/application-du-parc/) aide à repérer les animaux, les toilettes, les points de restauration et l'itinéraire conseillé. Elle est surtout utile pour décider quelles zones à pied garder si les enfants fatiguent.
-
-## Visite de jour et Lumières d'Afrique, ou soirée seule?
-
-La troisième édition de [Lumières d'Afrique](https://www.reserveafricainesigean.fr/visitez-la-reserve/lumieres-d-afrique/) est annoncée du **25 octobre 2026 au 17 janvier 2027**, uniquement les week-ends et pendant les vacances scolaires. Le parcours lumineux ouvre de 17 h 30 à 20 h.
-
-Deux formules sont proposées:
-
-- Le billet de jour permet de visiter les animaux puis d'accéder à Lumières d'Afrique sans supplément aux dates du festival.
-- Le billet soirée seule donne accès au parcours lumineux, mais pas au parc animalier. Les animaux du safari et du parc à pied ne sont pas visibles la nuit.
-
-Pour une première visite, choisissez la formule de jour si les animaux sont la priorité. La soirée seule convient plutôt à une famille qui connaît déjà la Réserve ou qui veut uniquement voir les lanternes. L'arrivée pour ce billet est possible de 17 h à 18 h 30.
-
-Rester du matin jusqu'à 20 h peut être long avec un petit enfant. Prévoyez une pause sur place avant 17 h 30. La sortie du parc étant définitive, il ne faut pas quitter le site en pensant revenir pour le parcours lumineux.
-
-## Quel budget prévoir?
-
-La [billetterie officielle](https://www.reserveafricainesigean.fr/billetterie/achat-de-billet/) affiche **34 € par adulte** et **24 € par enfant de 4 à 14 ans** pour la visite de jour. L'entrée est gratuite avant 4 ans. Le tarif pour une personne en situation de handicap est de 14,50 €, sur présentation de la carte mobilité inclusion.
-
-Le Pack Famille s'applique à partir de deux adultes et trois enfants de 4 à 14 ans dans le même véhicule. Il ramène le prix à **31 € par adulte** et **21 € par enfant**.
-
-Pour Lumières d'Afrique uniquement, le billet coûte **17,90 € par adulte** et **14,50 € par enfant de 4 à 14 ans**. L'achat en ligne est obligatoire pour cette formule et le nombre d'entrées est limité. Dans tous les cas, choisissez la date et le créneau d'arrivée avant de finaliser le programme.
-
-## Quels horaires prévoir en automne?
-
-La Réserve ouvre tous les jours à 9 h. Les [horaires officiels](https://www.reserveafricainesigean.fr/infos-pratiques/horaires/) changent selon la période:
-
-- Du 27 septembre au 24 octobre 2026, les caisses ferment à 16 h 30, le safari à 17 h 30 et le parc à pied à 18 h 30.
-- Du 25 octobre 2026 au 27 mars 2027, les caisses et le safari ferment à 16 h, puis le parc à pied à 17 h 30.
-
-Ces heures sont des limites de fermeture, pas des heures conseillées pour commencer. Une arrivée à 16 h ne laisse pas assez de temps pour enchaîner le safari et le parcours à pied. Pour une journée avec Lumières d'Afrique, arrivez le matin et gardez de l'énergie pour le parcours nocturne.
-
-## Poussette, bébé et repas
-
-Les chemins du circuit pédestre sont goudronnés, avec des pentes douces, et les poussettes sont autorisées. Le plan et l'application permettent de suivre un itinéraire qui évite les passages les plus pentus.
-
-La [Réserve Africaine de Sigean](https://www.reserveafricainesigean.fr/) annonce aussi un accueil bébé avec coin à langer, micro-ondes et chaises enfant.
-
-Les familles peuvent apporter leur repas et utiliser les aires de pique-nique. La page [restauration et pique-nique](https://www.reserveafricainesigean.fr/infos-pratiques/restauration-pique-nique/) indique aussi quels points sont ouverts le jour de la visite. Les horaires des snacks varient: vérifiez-les si vous comptez dîner ou prendre une collation avant Lumières d'Afrique.
-
-Le meilleur rythme consiste à faire le safari, déjeuner, puis parcourir la partie à pied sans chercher à tout enchaîner. Avec un petit enfant, mieux vaut garder deux ou trois zones prioritaires que transformer les 2 h 30 de marche en parcours forcé.
-
-## Adresse et suite du séjour
-
-La Réserve se trouve **RD 6009, 19 chemin Hameau du Lac, 11130 Sigean**. La page [accès au parc](https://www.reserveafricainesigean.fr/infos-pratiques/acces-au-parc/) détaille les itinéraires depuis les sorties d'autoroute de Sigean et Narbonne Sud. L'accueil est joignable au [04 68 48 20 20](tel:+33468482020).
-
-Après une visite prolongée jusqu'à 20 h, dormir à proximité peut éviter un long trajet avec des enfants. Vous pouvez [chercher un hébergement à Sigean sur Booking.com](https://www.booking.com/city/fr/sigean.fr.html).
-
-Pour poursuivre dans l'Aude, notre guide [Carcassonne en famille en 1 ou 2 jours](/articles/voyages/carcassonne-en-famille-1-ou-2-jours-billets-et-budget-a-prevoir/) aide à choisir la durée et le budget. Une autre journée peut aussi se préparer avec [le jeu de piste du petit archéologue à Puilaurens](/articles/sorties/petit-archeologue-puilaurens-famille-2026/).
-
-À retenir: prévoyez une vraie journée pour voir les animaux. Entre le 25 octobre et le 17 janvier, ajoutez Lumières d'Afrique seulement si les enfants peuvent tenir jusqu'à 20 h; sinon, gardez le safari et le parc à pied comme programme principal.
-
-## Contexte éditorial ciblé pour le maillage et les doublons
-
-### Articles proches préparés mécaniquement
-
-- /articles/evenements/lumieres-d-afrique-2026-2027-a-sigean-les-lanternes-en-famille/ | Lumières d’Afrique 2026-2027 à Sigean: les lanternes en famille | evenements | Sigean, Aude, Occitanie
-- /articles/voyages/paleosite-de-saint-cesaire-en-famille-combien-de-temps-prevoir-en-2026/ | Paléosite de Saint-Césaire en famille: combien de temps prévoir en 2026? | voyages | Saint-Césaire, Charente-Maritime, Nouvelle-Aquitaine
-- /articles/activites/micropolis-avec-de-jeunes-enfants-combien-de-temps-prevoir-et-quoi-emporter/ | Micropolis avec de jeunes enfants: combien de temps prévoir et quoi emporter? | activites | Saint-Léons, Aveyron, Occitanie
-- /articles/activites/vallee-des-singes-a-romagne-combien-de-temps-prevoir-pour-la-visite/ | Vallée des Singes à Romagne: combien de temps prévoir pour la visite? | activites | Romagne, Vienne, Nouvelle-Aquitaine
-- /articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/ | Mini World Lyon: quel billet choisir en famille et combien de temps prévoir ? | bons-plans | Vaulx-en-Velin, Rhône, Auvergne-Rhône-Alpes
-- /articles/sorties/chateau-de-kerjean-avec-des-enfants-combien-de-temps-prevoir-et-quel-billet-choisir/ | Château de Kerjean avec des enfants: combien de temps prévoir et quel billet choisir? | sorties | Saint-Vougay, Finistère, Bretagne
-- /articles/activites/anatomik-park-a-cap-sciences-a-partir-de-quel-age-et-combien-de-temps-prevoir/ | Anatomik Park à Cap Sciences: à partir de quel âge et combien de temps prévoir? | activites | Bordeaux, Gironde, Nouvelle-Aquitaine
-- /articles/sorties/centre-historique-minier-de-lewarde-combien-de-temps-prevoir-avec-des-enfants/ | Centre Historique Minier de Lewarde: combien de temps prévoir avec des enfants | sorties | Lewarde, Nord, Hauts-de-France
-- /articles/sorties/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied/ | Réserve Africaine de Sigean: combien de temps prévoir entre safari et visite à pied ? | sorties | Sigean, Aude, Occitanie
-- /articles/voyages/narbonne-en-famille-hors-saison-un-week-end-entre-romains-halles-et-canal/ | Narbonne en famille hors saison: un week-end entre Romains, Halles et canal | voyages | Narbonne, Aude, Occitanie
-- /articles/evenements/carnaval-de-limoux-2027-en-famille-dates-fecos-et-conseils-pratiques/ | Carnaval de Limoux 2027 en famille: dates, Fécos et conseils pratiques | evenements | Limoux, Aude, Occitanie
-- /articles/evenements/saint-nicolas-2026-a-carcassonne-marche-aux-flambeaux-ou-campements-medievaux-avec-les-enfants/ | Saint-Nicolas 2026 à Carcassonne: campements médiévaux et marche aux flambeaux en famille | evenements | Carcassonne, Aude, Occitanie
-- /articles/voyages/gouffre-geant-de-cabrespine-en-famille-quelle-visite-choisir-en-2026/ | Gouffre Géant de Cabrespine en famille: quelle visite choisir en 2026? | voyages | Cabrespine, Aude, Occitanie
-- /articles/voyages/carcassonne-en-famille-1-ou-2-jours-billets-et-budget-a-prevoir/ | Carcassonne en famille: 1 ou 2 jours, billets et budget à prévoir | voyages | Carcassonne, Aude, Occitanie
-- /articles/sorties/petit-archeologue-puilaurens-famille-2026/ | Le petit archéologue à Puilaurens: un jeu de piste en famille | sorties | Puilaurens, Aude, Occitanie
-- /articles/sorties/la-cite-de-la-mer-a-cherbourg-en-famille-preparer-sa-journee/ | La Cité de la Mer à Cherbourg en famille: préparer sa journée | sorties | Cherbourg-en-Cotentin, Manche, Normandie
-- /articles/sorties/chateau-de-sully-sur-loire-en-famille-visites-et-activites-pour-les-enfants/ | Château de Sully-sur-Loire en famille: visites et activités pour les enfants | sorties | Sully-sur-Loire, Loiret, Centre-Val de Loire
-- /articles/sorties/chauvigny-en-famille-cite-medievale-et-deux-chasses-aux-tresors/ | Chauvigny en famille: cité médiévale et deux chasses aux trésors | sorties | Chauvigny, Vienne, Nouvelle-Aquitaine
-- /articles/sorties/chateau-de-la-motte-tilly-en-famille-visite-jeu-de-piste-et-parc-gratuit/ | Château de La Motte-Tilly en famille: visite, jeu de piste et parc gratuit | sorties | La Motte-Tilly, Aube, Grand Est
-- /articles/sorties/musee-de-la-musique-mecanique-aux-gets-une-sortie-en-famille-qui-s-ecoute/ | Musée de la Musique Mécanique aux Gets: une sortie en famille qui s'écoute | sorties | Les Gets, Haute-Savoie, Auvergne-Rhône-Alpes
-- /articles/sorties/mariana-en-famille-du-musee-aux-vestiges-de-la-cite-antique/ | Mariana en famille: du musée aux vestiges de la cité antique | sorties | Lucciana, Haute-Corse, Corse
-- /articles/sorties/espace-des-sciences-a-rennes-avec-des-enfants-expositions-experiences-et-planetarium/ | Espace des sciences à Rennes avec des enfants: expositions, expériences et planétarium | sorties | Rennes, Ille-et-Vilaine, Bretagne
-
-### Historique Radar lié
-
-- refresh | /articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/ | 2026-11-02T16:35:39.647Z
-- refresh | /articles/bons-plans/mini-world-lyon-en-famille-tarifs-duree-et-conseils-pour-la-visite/ | 2026-11-18T11:35:44.875Z
-- refresh | /articles/sorties/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied/ | 2026-10-02T18:25:59.965Z
-- opportunity | /articles/evenements/saint-nicolas-2026-a-carcassonne-marche-aux-flambeaux-ou-campements-medievaux-avec-les-enfants/ | 2026-10-27T00:35:14.931Z
-- refresh | /articles/evenements/saint-nicolas-2026-a-carcassonne-marche-aux-flambeaux-ou-campements-medievaux-avec-les-enfants/ | 2026-11-17T06:29:57.590Z
-
-### Phases 2 et 3
-
-Écris `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées et le corps complet de l'article. **Ne recopie pas les métadonnées inchangées et n'ajoute aucun bloc `radar`.** Le script normalise la syntaxe sûre de la requête, reprend mécaniquement les autres métadonnées et le bloc Radar de la phase précédente, puis incrémente la phase.
-
-Pour un refresh, le script conserve de lui-même les champs protégés de l'article source. Pour une opportunity, il conserve la catégorie, le territoire et le slug choisis en phase 1.
-
-En phase 3 seulement, ajoute `radarReview` avec `summary`, `sources` et, pour un refresh, `regressionCheck`. Une seule correction factuelle vérifiée peut être suffisante.
-
-## Écriture autorisée
-
-N'effectue aucune plomberie Git. Ne crée, ne nomme et ne supprime aucune branche Radar; ne choisis aucun SHA; ne modifie aucun fichier de DevWeb13/fam-space-qwik.
-
-Écris uniquement radar-request.md sur la branche main de DevWeb13/fam-space-actions-bridge selon le format fourni dans ce runtime. Le workflow GitHub se charge du reste. Une fois cette requête écrite, termine le passage.
+## Snapshot GSC quotidien
+
+Le cache compact est `radar-gsc-snapshot.json` sur `main` de `DevWeb13/fam-space-actions-bridge`. Il ne contient jamais les lignes GSC brutes.
+
+Cette tâche est séparée de la sélection éditoriale. **S'il n'existe aucune branche Radar active et que le snapshot doit être renouvelé, actualise uniquement le snapshot puis termine le passage. Ne choisis pas de mission dans la même exécution.** Le passage horaire suivant effectuera la phase 1 avec le snapshot prêt.
+
+Le snapshot est réutilisable lorsqu'il a `schemaVersion: 1`, a été généré le jour courant en Europe/Paris et que `dataThrough` n'a pas plus de sept jours de retard.
+
+Lorsqu'un nouveau snapshot est nécessaire, utilise Windsor.ai avec le compte `sc-domain:fam-space.fr`, connector `searchconsole`, `include_fresh_data: false`. **Chaque appel `get_data` Search Analytics doit filtrer explicitement `search_type = web` avec `filters: [["search_type","eq","web"]]`.** Récupère 28 jours jusqu'à la dernière journée consolidée:
+
+- une lecture `date, clicks, impressions` pour déterminer la fin réelle;
+- quatre lectures consécutives de sept jours `date, page, clicks, impressions, position`;
+- appelle `buildRadarShortlist(pageRows, catalog.articles, { now, siteRows, from, history: catalog.history })` pour identifier les cinq premiers candidats. Pour chacun, récupère les requêtes de sa page exacte sur les deux fenêtres `peakStart..peakEnd` et `recentStart..recentEnd`, avec `search_type = web` (dix appels de requêtes au maximum).
+- regroupe les réponses par article : `queryPairs = [{ url, peakQueries, recentQueries }]`. Appelle ensuite **`buildRadarSnapshot(pageRows, catalog.articles, { now, siteRows, from, history: catalog.history, warnings }, queryPairs)`**, du module embarqué. Écris son résultat directement dans `radar-gsc-snapshot.json`, sans recopier les métriques manuellement.
+- pour les autres articles, le diagnostic reste `needs_query_check` avec des mesures `null`. Si une lecture échoue, signale-le sans inventer de chiffres. Ne confonds jamais « pas de donnée » et zéro.
+
+Utilise uniquement le module Radar embarqué pour présélectionner les candidats et construire le snapshot. La fonction `buildRadarSnapshot` centralise la mise en forme et le diagnostic par article. Une réponse Windsor est considérée complète lorsque `status: done`, que `data` est un tableau et que `total_rows` correspond à `data.length`, sans indicateur explicite de troncature. **Un nombre rond de lignes, notamment 1 500, n'est jamais à lui seul une preuve de plafonnement et ne doit pas arrêter Radar.** Découpe seulement la période si Windsor signale réellement une réponse incomplète/tronquée, si `total_rows` ne correspond pas au nombre de lignes reçues, ou si `unwrapRows` refuse la réponse, notamment à son seuil conservateur de 5 000 lignes par réponse. Un 429, un refus d'accès ou un plafond réellement non résolu termine le passage. Maximum 50 appels `get_data`. Les réponses brutes restent temporaires.
+
+Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlist `refresh` avec ses diagnostics compacts, `strongPages`, `excluded` et les avertissements utiles.
+
+## Snapshot actuellement disponible
+
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-19T01:30:40+01:00",
+  "dataThrough": "2026-11-16",
+  "from": "2026-10-20",
+  "refresh": [
+    {
+      "url": "/articles/evenements/les-feeries-de-noel-2026-au-parc-andre-citroen-a-paris-parcours-lumineux-ou-patinoire-en-famille/",
+      "title": "Féeries de Noël 2026 à Paris: parcours lumineux, billets et patinoire en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-27T13:28:21.002Z",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 23,
+      "rapidDrop": true,
+      "peakStart": "2026-11-11",
+      "peakEnd": "2026-11-13",
+      "recentStart": "2026-11-14",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 91,
+      "recentImpressions": 30,
+      "score": 183,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 91 impressions sur trois jours, puis 30 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "les feeries de noel parc andre citroen"
+      ]
+    },
+    {
+      "url": "/articles/evenements/festival-enfantillages-2026-a-valbonne-spectacles-gratuits-et-cinema-selon-l-age/",
+      "title": "Festival Enfantillages 2026 à Valbonne: spectacles gratuits et cinéma en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-26T03:35:31.536Z",
+      "location": {
+        "city": "Valbonne",
+        "department": "Alpes-Maritimes",
+        "region": "Provence-Alpes-Côte d'Azur"
+      },
+      "ageDays": 24,
+      "rapidDrop": true,
+      "peakStart": "2026-10-26",
+      "peakEnd": "2026-10-28",
+      "recentStart": "2026-11-14",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 40,
+      "recentImpressions": 6,
+      "score": 137,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 40 impressions sur trois jours, puis 6 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "enfantillage valbonne 2026",
+        "halloween 2026 valbonne"
+      ]
+    },
+    {
+      "url": "/articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/",
+      "title": "Salon du Cheval de Paris 2026 en famille: animations, jumping et billets",
+      "category": "evenements",
+      "publishedAt": "2026-10-22T04:59:04.689Z",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 28,
+      "rapidDrop": true,
+      "peakStart": "2026-11-02",
+      "peakEnd": "2026-11-04",
+      "recentStart": "2026-11-14",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 31,
+      "recentImpressions": 10,
+      "score": 63,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 31 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": []
+    },
+    {
+      "url": "/articles/evenements/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/",
+      "title": "Écoute, je danse ! à Paris le 5 décembre 2026: spectacle gratuit dès 6 mois",
+      "category": "evenements",
+      "publishedAt": "2026-11-04T21:32:12.084Z",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 15,
+      "rapidDrop": true,
+      "peakStart": "2026-11-09",
+      "peakEnd": "2026-11-11",
+      "recentStart": "2026-11-14",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 20,
+      "recentImpressions": 0,
+      "score": 60,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 20 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": []
+    },
+    {
+      "url": "/articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/",
+      "title": "Gastronomades 2026 à Angoulême en famille: faut-il prévoir le week-end ?",
+      "category": "evenements",
+      "publishedAt": "2026-09-19T22:56:58+02:00",
+      "location": {
+        "city": "Angoulême",
+        "department": "Charente",
+        "region": "Nouvelle-Aquitaine"
+      },
+      "ageDays": 61,
+      "rapidDrop": false,
+      "peakStart": "2026-11-03",
+      "peakEnd": "2026-11-09",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 266,
+      "recentImpressions": 130,
+      "score": 136,
+      "signal": "uncertain",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer. Diagnostic sur 1 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 1,
+      "positionDelta": 0.159,
+      "impressionRatio": 0.282,
+      "focusQueries": [
+        "gastronomades 2026",
+        "gastronomades 2025",
+        "le détail des animations",
+        "les tarifs",
+        "gastronomade 2026"
+      ]
+    },
+    {
+      "url": "/articles/sorties/parc-spirou-avec-de-jeunes-enfants-regardez-la-taille-avant-d-acheter-les-billets/",
+      "title": "Parc Spirou avec de jeunes enfants: regardez la taille avant d'acheter les billets",
+      "category": "sorties",
+      "publishedAt": "2026-09-03T04:04:27+02:00",
+      "location": {
+        "city": "Monteux",
+        "department": "Vaucluse",
+        "region": "Provence-Alpes-Côte d’Azur"
+      },
+      "ageDays": 77,
+      "rapidDrop": false,
+      "peakStart": "2026-10-22",
+      "peakEnd": "2026-10-28",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 141,
+      "recentImpressions": 18,
+      "score": 123,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Parc Spirou enfants taille attractions",
+        "Parc Spirou billets famille"
+      ]
+    },
+    {
+      "url": "/articles/activites/la-cite-de-la-mer-a-cherbourg-en-famille-tarifs-duree-et-conseils-de-visite/",
+      "title": "La Cité de la Mer à Cherbourg en famille: tarifs, visite et billets 2026",
+      "category": "activites",
+      "publishedAt": "2026-08-18T15:06:21+02:00",
+      "location": {
+        "city": "Cherbourg-en-Cotentin",
+        "department": "Manche",
+        "region": "Normandie"
+      },
+      "ageDays": 93,
+      "rapidDrop": false,
+      "peakStart": "2026-10-24",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 109,
+      "recentImpressions": 37,
+      "score": 107,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Cité de la Mer Cherbourg famille",
+        "activité famille Manche"
+      ]
+    },
+    {
+      "url": "/articles/maison/encombrants-a-bourges-quand-sortir-meubles-et-gros-objets/",
+      "title": "Encombrants à Bourges: quand sortir meubles et gros objets",
+      "category": "maison",
+      "publishedAt": "2026-09-11T00:03:15+02:00",
+      "location": {
+        "city": "Bourges",
+        "department": "Cher",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 69,
+      "rapidDrop": false,
+      "peakStart": "2026-10-24",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 149,
+      "recentImpressions": 45,
+      "score": 104,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "encombrants Bourges",
+        "déchèterie Bourges"
+      ]
+    },
+    {
+      "url": "/articles/sorties/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied/",
+      "title": "Réserve Africaine de Sigean: combien de temps prévoir entre safari et visite à pied ?",
+      "category": "sorties",
+      "publishedAt": "2026-09-10T16:05:53+02:00",
+      "location": {
+        "city": "Sigean",
+        "department": "Aude",
+        "region": "Occitanie"
+      },
+      "ageDays": 70,
+      "rapidDrop": false,
+      "peakStart": "2026-10-23",
+      "peakEnd": "2026-10-29",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 131,
+      "recentImpressions": 30,
+      "score": 101,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Réserve Africaine de Sigean avec enfants",
+        "durée visite Réserve Africaine Sigean"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/rennes-avec-des-enfants-les-transports-sont-gratuits-avant-12-ans-mais-pas-sans-carte/",
+      "title": "Rennes avec des enfants: transports gratuits avant 12 ans, comment ça marche?",
+      "category": "vie-pratique",
+      "publishedAt": "2026-09-07T00:02:33+02:00",
+      "location": {
+        "city": "Rennes",
+        "department": "Ille-et-Vilaine",
+        "region": "Bretagne"
+      },
+      "ageDays": 73,
+      "rapidDrop": false,
+      "peakStart": "2026-10-25",
+      "peakEnd": "2026-10-31",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 105,
+      "recentImpressions": 27,
+      "score": 78,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Rennes transports enfants gratuits",
+        "STAR Rennes moins de 12 ans"
+      ]
+    },
+    {
+      "url": "/articles/sorties/parc-bagatelle-en-famille-quelles-attractions-selon-la-taille-des-enfants/",
+      "title": "Parc Bagatelle en famille: quelles attractions selon la taille des enfants?",
+      "category": "sorties",
+      "publishedAt": "2026-10-02T19:08:32+02:00",
+      "location": {
+        "city": "Merlimont",
+        "department": "Pas-de-Calais",
+        "region": "Hauts-de-France"
+      },
+      "ageDays": 48,
+      "rapidDrop": false,
+      "peakStart": "2026-10-25",
+      "peakEnd": "2026-10-31",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 80,
+      "recentImpressions": 4,
+      "score": 76,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Parc Bagatelle en famille",
+        "attractions Bagatelle taille enfant"
+      ]
+    },
+    {
+      "url": "/articles/activites/zoo-de-martinique-en-famille-tarifs-poussette-et-visite-de-l-habitation-latouche/",
+      "title": "Zoo de Martinique en famille: tarifs, poussette et visite de l'Habitation Latouche",
+      "category": "activites",
+      "publishedAt": "2026-10-10T15:00:10+02:00",
+      "location": {
+        "city": "Le Carbet",
+        "department": "Martinique",
+        "region": "Martinique"
+      },
+      "ageDays": 40,
+      "rapidDrop": false,
+      "peakStart": "2026-10-24",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 177,
+      "recentImpressions": 102,
+      "score": 75,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Zoo de Martinique en famille",
+        "Zoo du Carbet avec enfants",
+        "Habitation Latouche"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
+      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
+      "category": "vie-pratique",
+      "publishedAt": "2026-09-28T09:22:04+02:00",
+      "location": {
+        "city": "Toulouse",
+        "department": "Haute-Garonne",
+        "region": "Occitanie"
+      },
+      "ageDays": 52,
+      "rapidDrop": false,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-07",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 224,
+      "recentImpressions": 162,
+      "score": 62,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "aide restauration scolaire Haute-Garonne",
+        "aide cantine collège Haute-Garonne",
+        "ARS Haute-Garonne 2026-2027"
+      ]
+    },
+    {
+      "url": "/articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/",
+      "title": "Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates",
+      "category": "evenements",
+      "publishedAt": "2026-10-23T06:21:12.265Z",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 27,
+      "rapidDrop": false,
+      "peakStart": "2026-10-24",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 224,
+      "recentImpressions": 164,
+      "score": 60,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Créations et savoir-faire 2026 famille Paris",
+        "Salon créations savoir-faire billet Duo Famille",
+        "Journée Famille 22 novembre 2026 Paris",
+        "Ateliers enfants salon loisirs créatifs Porte de Versailles"
+      ]
+    },
+    {
+      "url": "/articles/sorties/cosquer-mediterranee-avec-des-enfants-age-poussette-tarifs/",
+      "title": "Cosquer Méditerranée avec des enfants: que peut-on visiter selon leur âge?",
+      "category": "sorties",
+      "publishedAt": "2026-10-03T11:22:17.704Z",
+      "location": {
+        "city": "Marseille",
+        "department": "Bouches-du-Rhône",
+        "region": "Provence-Alpes-Côte d'Azur"
+      },
+      "ageDays": 47,
+      "rapidDrop": false,
+      "peakStart": "2026-10-21",
+      "peakEnd": "2026-10-27",
+      "recentStart": "2026-11-10",
+      "recentEnd": "2026-11-16",
+      "peakImpressions": 82,
+      "recentImpressions": 24,
+      "score": 58,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Cosquer Méditerranée enfant",
+        "Cosquer Méditerranée moins de 3 ans",
+        "Cosquer Méditerranée poussette",
+        "Cosquer Méditerranée tarifs enfants",
+        "Cosquer Méditerranée durée visite"
+      ]
+    }
+  ],
+  "strongPages": [
+    {
+      "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
+      "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
+      "category": "evenements",
+      "recentImpressions": 245,
+      "recentClicks": 11,
+      "recentPosition": 7.4,
+      "retention": 1.056
+    },
+    {
+      "url": "/articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/",
+      "title": "Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille",
+      "category": "evenements",
+      "recentImpressions": 334,
+      "recentClicks": 10,
+      "recentPosition": 8.123,
+      "retention": 1.866
+    },
+    {
+      "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
+      "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
+      "category": "evenements",
+      "recentImpressions": 157,
+      "recentClicks": 10,
+      "recentPosition": 4.675,
+      "retention": 0.813
+    },
+    {
+      "url": "/articles/evenements/noel-2026-a-quimper-en-famille-village-concert-ou-ateliers-gratuits/",
+      "title": "Noël 2026 à Quimper en famille: village, concert et animations gratuites",
+      "category": "evenements",
+      "recentImpressions": 96,
+      "recentClicks": 8,
+      "recentPosition": 6.187,
+      "retention": 6
+    },
+    {
+      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
+      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
+      "category": "evenements",
+      "recentImpressions": 505,
+      "recentClicks": 7,
+      "recentPosition": 7.828,
+      "retention": 0.606
+    },
+    {
+      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
+      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
+      "category": "vie-pratique",
+      "recentImpressions": 162,
+      "recentClicks": 6,
+      "recentPosition": 6.796,
+      "retention": 0.723
+    },
+    {
+      "url": "/articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/",
+      "title": "Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers",
+      "category": "vie-pratique",
+      "recentImpressions": 115,
+      "recentClicks": 5,
+      "recentPosition": 5.722,
+      "retention": 0.793
+    },
+    {
+      "url": "/articles/evenements/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants/",
+      "title": "Fontaines dansantes d'hiver à Metz 2026-2027: dates, horaires et conseils en famille",
+      "category": "evenements",
+      "recentImpressions": 92,
+      "recentClicks": 5,
+      "recentPosition": 6.685,
+      "retention": 1.559
+    },
+    {
+      "url": "/articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/",
+      "title": "Soleils d'hiver 2026 à Angers en famille: marché, manèges et Père Noël",
+      "category": "evenements",
+      "recentImpressions": 183,
+      "recentClicks": 4,
+      "recentPosition": 10.552,
+      "retention": 0.953
+    },
+    {
+      "url": "/articles/cuisine/ou-manger-des-fouees-en-famille-autour-de-saumur/",
+      "title": "Où manger des fouées en famille autour de Saumur ?",
+      "category": "cuisine",
+      "recentImpressions": 182,
+      "recentClicks": 4,
+      "recentPosition": 12.005,
+      "retention": 0.589
+    }
+  ],
+  "excluded": {
+    "expired": 189,
+    "cooling": 82
+  },
+  "warnings": [
+    "Diagnostics par requêtes : 5/5.",
+    "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement."
+  ]
+}
+
+## Module Radar embarqué
+
+Le code ci-dessous est fourni directement pour les calculs Radar nécessaires à ce passage. Ne va pas le relire dans un autre fichier.
+
+```javascript
+// Pure JavaScript: usable in Node or a connector orchestration runtime.
+const DAY = 86400000;
+const dayNumber = (date) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date ?? ""))
+    throw new Error("Date GSC invalide.");
+  const value = Date.parse(`${date}T00:00:00Z`);
+  if (
+    !Number.isFinite(value) ||
+    new Date(value).toISOString().slice(0, 10) !== date
+  )
+    throw new Error("Date GSC invalide.");
+  return value / DAY;
+};
+const isoDay = (value) => new Date(value * DAY).toISOString().slice(0, 10);
+const round = (value) => Math.round(value * 1000) / 1000;
+export function unwrapRows(response) {
+  const value = response?.structuredContent ?? response;
+  if (response?.isError || (value.status && value.status !== "done"))
+    throw new Error("GSC indisponible ou traitement incomplet.");
+  const rows = Array.isArray(value) ? value : value.data;
+  if (
+    !Array.isArray(rows) ||
+    value.truncated === true ||
+    value.has_more === true ||
+    (value.total_rows !== undefined && value.total_rows !== rows.length)
+  )
+    throw new Error("Réponse GSC absente ou tronquée.");
+  // Conservative per-response threshold, not a claimed Windsor plan limit.
+  // Concatenated arrays are allowed after each response has been checked.
+  if (!Array.isArray(value) && rows.length >= 5000)
+    throw new Error(
+      "Réponse GSC potentiellement plafonnée; découper la période.",
+    );
+  if (rows.some((row) => row.search_type && row.search_type !== "web"))
+    throw new Error(
+      "Le périmètre Radar doit contenir seulement la recherche web.",
+    );
+  return rows;
+}
+export function canonicalPage(value) {
+  // Some connector runtimes do not expose the URL global.
+  if (typeof value !== "string") return undefined;
+  const path = value.replace(/^https?:\/\/(?:www\.)?fam-space\.fr(?=\/)/i, "");
+  if (!/^\/articles\/[^/?#]+\/[^/?#]+\/$/.test(path)) return undefined;
+  if (path.split("/").some((part) => part === "." || part === ".."))
+    return undefined;
+  return path;
+}
+const metric = (row, name) => {
+  const value = Number(row[name]);
+  if (
+    row[name] === null ||
+    row[name] === undefined ||
+    !Number.isFinite(value) ||
+    value < 0
+  )
+    throw new Error(`Métrique GSC invalide: ${name}.`);
+  return value;
+};
+function addMetric(target, row) {
+  const impressions = metric(row, "impressions");
+  target.impressions += impressions;
+  target.clicks += metric(row, "clicks");
+  target.positionSum += impressions ? metric(row, "position") * impressions : 0;
+}
+const empty = () => ({ impressions: 0, clicks: 0, positionSum: 0 });
+const view = (sum, days = 7) => ({
+  impressions: round(sum.impressions),
+  clicks: round(sum.clicks),
+  impressionsPerDay: round(sum.impressions / days),
+  position: sum.impressions ? round(sum.positionSum / sum.impressions) : null,
+});
+function windowSum(days, start, end) {
+  const result = empty();
+  for (let date = start; date <= end; date++) {
+    const row = days.get(date);
+    if (row) for (const key of Object.keys(result)) result[key] += row[key];
+  }
+  return result;
+}
+export function buildRadarShortlist(
+  response,
+  catalog,
+  {
+    now = new Date().toISOString(),
+    siteRows,
+    from,
+    limit = 15,
+    history = [],
+  } = {},
+) {
+  const rows = unwrapRows(response);
+  const site = siteRows ? unwrapRows(siteRows) : rows;
+  if (!site.length)
+    throw new Error("GSC ne retourne aucune journée consolidée.");
+  const siteDays = site.map((row) => dayNumber(row.date));
+  const end = siteDays.reduce((max, date) => Math.max(max, date), -Infinity);
+  const observedStart = siteDays.reduce(
+    (min, date) => Math.min(min, date),
+    Infinity,
+  );
+  const today = dayNumber(now.slice(0, 10));
+  if (end > today || today - end > 7)
+    throw new Error(
+      "Données GSC trop anciennes ou datées dans le futur; aucun export historique de secours.",
+    );
+  // Never create comparison weeks before the first observed site day.
+  const start = from ? Math.max(dayNumber(from), observedStart) : observedStart;
+  if (!Number.isFinite(start) || end - start < 13)
+    throw new Error("Au moins 14 jours GSC sont nécessaires.");
+  const byPage = new Map();
+  for (const row of rows) {
+    const page = canonicalPage(row.page),
+      date = dayNumber(row.date);
+    if (!page || date < start || date > end) continue;
+    if (!byPage.has(page)) byPage.set(page, new Map());
+    const days = byPage.get(page);
+    if (!days.has(date)) days.set(date, empty());
+    addMetric(days.get(date), row);
+  }
+  const entries = [];
+  for (const article of catalog) {
+    const page = canonicalPage(article.url);
+    if (
+      !page ||
+      article.status === "draft" ||
+      Date.parse(article.publishedAt) > Date.parse(now)
+    )
+      continue;
+    const days = byPage.get(page) ?? new Map();
+    const publishedDay = dayNumber(article.publishedAt.slice(0, 10));
+    const firstDay = Math.max(start, publishedDay);
+    // Three days of growth followed by three consolidated days of decline
+    // can be detected before a new page has two full GSC weeks.
+    if (end - firstDay < 5) continue;
+    const recent = windowSum(days, end - 6, end);
+    const recent3 = windowSum(days, end - 2, end);
+    let peak3 = empty(), peak3Start = firstDay;
+    for (let first = firstDay; first + 2 < end - 2; first++) {
+      const sum = windowSum(days, first, first + 2);
+      if (sum.impressions > peak3.impressions) {
+        peak3 = sum;
+        peak3Start = first;
+      }
+    }
+    let peak7 = empty(), peak7Start = firstDay;
+    if (end - firstDay >= 13) {
+      for (let first = firstDay; first + 6 < end - 6; first++) {
+        const sum = windowSum(days, first, first + 6);
+        if (sum.impressions > peak7.impressions) {
+          peak7 = sum;
+          peak7Start = first;
+        }
+      }
+    }
+    const total = windowSum(days, firstDay, end);
+    const expired = Boolean(
+      article.eventEndsAt && article.eventEndsAt < now.slice(0, 10),
+    );
+    const reviewDue = Boolean(
+      article.reviewAt && article.reviewAt <= now.slice(0, 10),
+    );
+    const lastRefresh = history
+      .filter((item) => item.url === page && item.mode === "refresh")
+      .map((item) => item.publishedAt)
+      .sort()
+      .at(-1);
+    const cooling = Boolean(
+      lastRefresh && Date.parse(now) - Date.parse(lastRefresh) < 14 * DAY,
+    );
+    const ageDays = today - publishedDay;
+    const firstVisible = [...days]
+      .filter(([date, values]) => date >= firstDay && values.impressions > 0)
+      .map(([date]) => date)
+      .sort((a, b) => a - b)[0];
+    const newlyVisible =
+      ageDays <= 30 ||
+      (firstVisible !== undefined && firstVisible > start && end - firstVisible <= 21);
+    const rapidDrop =
+      newlyVisible &&
+      peak3.impressions >= 20 &&
+      peak3.impressions - recent3.impressions >= 15 &&
+      recent3.impressions <= peak3.impressions * 0.35;
+    const weeklyDecline = end - firstDay >= 13
+      ? Math.max(0, peak7.impressions - recent.impressions) *
+        Math.min(1, peak7.impressions / 35) *
+        Math.min(1, total.impressions / 50)
+      : 0;
+    const rapidScore = rapidDrop ? (peak3.impressions - recent3.impressions) * 3 : 0;
+    const recentPosition = recent.impressions
+      ? recent.positionSum / recent.impressions
+      : null;
+    const clickPotentialScore =
+      end - firstDay >= 13 && recentPosition !== null && recentPosition <= 10
+        ? Math.max(0, recent.impressions * 0.01 - recent.clicks) * 10
+        : 0;
+    const searchPotential =
+      !rapidDrop && clickPotentialScore > weeklyDecline && clickPotentialScore > 0;
+    const score =
+      expired || cooling
+        ? 0
+        : Math.max(rapidScore, weeklyDecline, clickPotentialScore) +
+          (reviewDue ? 35 : 0);
+    // Recent pages must use available, non-overlapping three-day windows.
+    const shortWindow = rapidDrop || end - firstDay < 13;
+    const peak = shortWindow ? peak3 : peak7;
+    const peakStart = shortWindow ? peak3Start : peak7Start;
+    const peakDays = shortWindow ? 3 : 7;
+    const comparedRecent = shortWindow ? recent3 : recent;
+    const comparedRecentStart = shortWindow ? end - 2 : end - 6;
+    const retention = peak.impressions
+      ? comparedRecent.impressions / peak.impressions
+      : 1;
+    entries.push({
+      url: page,
+      title: article.title,
+      category: article.category,
+      location: article.location,
+      keywords: article.keywords ?? article.topic?.keywords ?? [],
+      publishedAt: article.publishedAt,
+      eventEndsAt: article.eventEndsAt,
+      reviewAt: article.reviewAt,
+      expired,
+      cooling,
+      reviewDue,
+      ageDays,
+      rapidDrop,
+      peakStart: isoDay(peakStart),
+      peakEnd: isoDay(peakStart + peakDays - 1),
+      recentStart: isoDay(comparedRecentStart),
+      recentEnd: isoDay(end),
+      peak: view(peak, peakDays),
+      recent: view(comparedRecent, peakDays),
+      retention: round(retention),
+      score: round(score),
+      signal: searchPotential ? "search_potential" : "needs_query_check",
+      basis: rapidDrop
+        ? `Visibilité récente : ${round(peak3.impressions)} impressions sur trois jours, puis ${round(recent3.impressions)} sur les trois derniers jours consolidés; cause non établie.`
+        : "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      ...(searchPotential
+        ? {
+            basis: `Page visible avec ${round(recent.impressions)} impressions, ${round(recent.clicks)} clics et une position moyenne de ${round(recentPosition)} sur sept jours; intention de recherche à examiner.`,
+            commonQueries: null,
+            positionDelta: null,
+            impressionRatio: null,
+            focusQueries: (Array.isArray(article.keywords)
+              ? article.keywords
+              : Array.isArray(article.topic?.keywords)
+                ? article.topic.keywords
+                : []
+            ).slice(0, 5),
+          }
+        : {}),
+    });
+  }
+  return {
+    schemaVersion: 1,
+    retrievedAt: now,
+    dataThrough: isoDay(end),
+    from: isoDay(start),
+    caveat:
+      "Les lignes absentes valent zéro dans les données retournées. GSC peut masquer des requêtes; les signaux ne prouvent ni désindexation ni causalité.",
+    refresh: entries
+      .filter((item) => item.score > 0)
+      .sort((a, b) =>
+        Number(b.rapidDrop && b.category !== "evenements") -
+          Number(a.rapidDrop && a.category !== "evenements") ||
+        Number(b.rapidDrop) - Number(a.rapidDrop) ||
+        b.score - a.score ||
+        a.url.localeCompare(b.url))
+      .slice(0, limit),
+    strongPages: entries
+      .filter(
+        (item) =>
+          !item.expired &&
+          item.recent.impressions >= 35 &&
+          item.retention >= 0.5,
+      )
+      .sort(
+        (a, b) =>
+          b.recent.clicks - a.recent.clicks ||
+          b.recent.impressions - a.recent.impressions ||
+          a.url.localeCompare(b.url),
+      )
+      .slice(0, 10),
+    excluded: {
+      expired: entries.filter((item) => item.expired).length,
+      cooling: entries.filter((item) => item.cooling).length,
+    },
+  };
+}
+export function diagnoseQueries(peakResponse, recentResponse) {
+  const aggregate = (response) => {
+    const result = new Map();
+    for (const row of unwrapRows(response)) {
+      if (typeof row.query !== "string")
+        throw new Error("Requête GSC manquante.");
+      if (!result.has(row.query)) result.set(row.query, empty());
+      addMetric(result.get(row.query), row);
+    }
+    return result;
+  };
+  const peak = aggregate(peakResponse),
+    recent = aggregate(recentResponse);
+  const common = [...peak.keys()].filter(
+    (query) =>
+      peak.get(query).impressions >= 10 &&
+      (recent.get(query)?.impressions ?? 0) >= 3,
+  );
+  let weight = 0,
+    change = 0;
+  for (const query of common) {
+    const first = peak.get(query),
+      last = recent.get(query);
+    const w = Math.min(first.impressions, last.impressions);
+    weight += w;
+    change +=
+      w *
+      (last.positionSum / last.impressions -
+        first.positionSum / first.impressions);
+  }
+  const delta = weight ? change / weight : null;
+  const total = (values) =>
+    [...values.values()].reduce((sum, item) => sum + item.impressions, 0);
+  const ratio = total(peak) ? total(recent) / total(peak) : null;
+  return {
+    signal:
+      delta !== null && delta >= 3
+        ? "rank_loss"
+        : delta !== null &&
+            Math.abs(delta) <= 2 &&
+            ratio !== null &&
+            ratio <= 0.25
+          ? "coverage_loss"
+          : "uncertain",
+    commonQueries: common.length,
+    positionDelta: delta === null ? null : round(delta),
+    impressionRatio: ratio === null ? null : round(ratio),
+    queries: [...new Set([...peak.keys(), ...recent.keys()])]
+      .map((query) => ({
+        query,
+        peak: view(peak.get(query) ?? empty()),
+        recent: view(recent.get(query) ?? empty()),
+      }))
+      .sort((a, b) => b.peak.impressions - a.peak.impressions),
+    caveat:
+      "coverage_loss désigne une baisse d'exposition observée, pas une preuve de désindexation. Les requêtes masquées et la saisonnalité limitent le diagnostic.",
+  };
+}
+// The shortlist ranks pages; only per-page query rows can establish a diagnosis.
+export function attachRadarQueryDiagnosis(item, peakResponse, recentResponse) {
+  const diagnosis = diagnoseQueries(peakResponse, recentResponse);
+  const signal =
+    item.signal === "search_potential" && diagnosis.signal === "uncertain"
+      ? "search_potential"
+      : diagnosis.signal;
+  const priority = (query) => {
+    const lostImpressions = Math.max(0, query.peak.impressions - query.recent.impressions);
+    const lostPositions =
+      query.peak.position !== null && query.recent.position !== null
+        ? Math.max(0, query.recent.position - query.peak.position)
+        : 0;
+    if (signal === "rank_loss")
+      return query.peak.impressions >= 10 && query.recent.impressions >= 3
+        ? lostPositions * Math.min(query.peak.impressions, query.recent.impressions)
+        : 0;
+    if (signal === "search_potential") return query.recent.impressions;
+    return lostImpressions;
+  };
+  const relevantQueries = diagnosis.queries
+    .filter((query) => signal !== "rank_loss" || priority(query) > 0)
+    .sort((a, b) => priority(b) - priority(a) || b.peak.impressions - a.peak.impressions)
+    .slice(0, 5)
+    .map(({ query }) => query);
+  const basis =
+    item.basis + " " +
+    (signal === "rank_loss"
+      ? `Recul moyen de ${diagnosis.positionDelta} positions sur ${diagnosis.commonQueries} requête(s) comparable(s).`
+      : signal === "coverage_loss"
+        ? `Baisse d'exposition sur les requêtes visibles (ratio ${diagnosis.impressionRatio}), sans recul de classement comparable établi.`
+        : signal === "search_potential"
+          ? "Les requêtes visibles ne démontrent pas une perte de classement."
+          : `Diagnostic sur ${diagnosis.commonQueries} requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.`);
+  return {
+    ...item,
+    signal,
+    basis,
+    commonQueries: diagnosis.commonQueries,
+    positionDelta: diagnosis.positionDelta,
+    impressionRatio: diagnosis.impressionRatio,
+    focusQueries: relevantQueries.length ? relevantQueries : item.focusQueries ?? [],
+  };
+}
+
+
+/** Prepare one compact snapshot from one shortlist and per-page query responses. */
+export function buildRadarSnapshot(pageRows, catalog, options = {}, queryPairs = []) {
+  const shortlist = buildRadarShortlist(pageRows, catalog, options);
+  const pairs = new Map(queryPairs.map((pair) => [canonicalPage(pair.url), pair]));
+  const refresh = shortlist.refresh.map((candidate, index) => {
+    const pair = index < 5 ? pairs.get(candidate.url) : undefined;
+    const item = pair
+      ? attachRadarQueryDiagnosis(candidate, pair.peakQueries, pair.recentQueries)
+      : candidate;
+    return {
+      url: item.url,
+      title: item.title,
+      category: item.category,
+      publishedAt: item.publishedAt,
+      location: item.location,
+      ageDays: item.ageDays,
+      rapidDrop: item.rapidDrop,
+      peakStart: item.peakStart,
+      peakEnd: item.peakEnd,
+      recentStart: item.recentStart,
+      recentEnd: item.recentEnd,
+      peakImpressions: item.peak.impressions,
+      recentImpressions: item.recent.impressions,
+      score: item.score,
+      signal: item.signal,
+      basis: item.basis,
+      commonQueries: item.commonQueries ?? null,
+      positionDelta: item.positionDelta ?? null,
+      impressionRatio: item.impressionRatio ?? null,
+      focusQueries: item.focusQueries ?? item.keywords.slice(0, 5),
+    };
+  });
+  return {
+    schemaVersion: 1,
+    generatedAt: options.now ?? new Date().toISOString(),
+    dataThrough: shortlist.dataThrough,
+    from: shortlist.from,
+    refresh,
+    strongPages: shortlist.strongPages.map((item) => ({
+      url: item.url,
+      title: item.title,
+      category: item.category,
+      recentImpressions: item.recent.impressions,
+      recentClicks: item.recent.clicks,
+      recentPosition: item.recent.position,
+      retention: item.retention,
+    })),
+    excluded: shortlist.excluded,
+    warnings: [
+      ...(options.warnings ?? []),
+      `Diagnostics par requêtes : ${refresh.slice(0, 5).filter((item) => item.signal !== "needs_query_check" && item.commonQueries !== null).length}/${Math.min(5, refresh.length)}.`,
+      "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement.",
+    ],
+  };
+}
+
+const STOP = new Set(
+  "avec pour dans sans famille familles enfant enfants tarif tarifs duree conseil conseils visite visiter billet billets activite activites sortie sorties evenement evenements preparation pratique pratiques autour leur leurs aussi quoi comment quel quelle quelles quels quand faire partir 2026 2027".split(
+    " ",
+  ),
+);
+const words = (value) =>
+  new Set(
+    String(value)
+      .replace(/œ/g, "oe")
+      .normalize("NFD")
+      .replace(/\p{Diacritic}/gu, "")
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((word) => word.length >= 3 && !STOP.has(word)),
+  );
+export function probableDuplicates(subject, catalog, limit = 5) {
+  const terms = words(
+    [
+      subject.title,
+      ...(subject.keywords ?? subject.topic?.keywords ?? []),
+    ].join(" "),
+  );
+  return catalog
+    .filter(
+      (article) => canonicalPage(article.url) !== canonicalPage(subject.url),
+    )
+    .map((article) => {
+      const candidate = words(
+        [
+          article.title,
+          ...(article.keywords ?? article.topic?.keywords ?? []),
+        ].join(" "),
+      );
+      const shared = [...terms].filter((word) => candidate.has(word));
+      const sameCity = Boolean(
+        subject.location?.city &&
+          subject.location.city === article.location?.city,
+      );
+      const sameDepartment = Boolean(
+        subject.location?.department &&
+          subject.location.department === article.location?.department,
+      );
+      return {
+        url: article.url,
+        title: article.title,
+        location: article.location,
+        sharedTerms: shared,
+        score:
+          shared.length / Math.max(1, new Set([...terms, ...candidate]).size) +
+          (sameCity ? 0.2 : sameDepartment ? 0.1 : 0),
+      };
+    })
+    .filter(
+      (item) =>
+        item.sharedTerms.length >= 2 ||
+        (item.sharedTerms.length === 1 && item.sharedTerms[0].length >= 6),
+    )
+    .sort((a, b) => b.score - a.score || a.url.localeCompare(b.url))
+    .slice(0, limit);
+}
+```
+
+## Résultat attendu
+
+Actualise uniquement radar-gsc-snapshot.json sur la branche main de DevWeb13/fam-space-actions-bridge avec le snapshot compact décrit ci-dessus, puis termine ce passage. Ne choisis aucune mission Radar dans la même exécution et ne modifie aucun autre fichier interne.
