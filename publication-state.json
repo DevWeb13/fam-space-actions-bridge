@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261121-0703-la-ferme-des-chanteraines-en-famille-animaux-ateliers-nature-et-balade",
+  "lastProcessedCommit": "c77a2e20ae37ef136cb52dbb43f48ac57c1aefd7"
 }
