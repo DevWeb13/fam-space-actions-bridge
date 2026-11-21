@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,84 +14,127 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Hauts-de-Seine
 - Région: Île-de-France
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**La ferme des Chanteraines en famille: animaux, ateliers nature et balade dans le parc** (Villeneuve-la-Garenne, Hauts-de-Seine). Angle: préparer une vraie demi-journée de découverte, entre visite libre gratuite de la ferme, observation des animaux, potager et activités pédagogiques sur réservation. La ferme départementale est un lieu permanent au sein du parc des Chanteraines; ses ateliers sont ponctuels et soumis à calendrier.
-
-## Besoin du lecteur
-Comprendre ce que les enfants peuvent voir et faire selon leur âge, distinguer visite libre et ateliers encadrés, savoir quand venir, comment accéder au parc et comment organiser une sortie familiale sans confondre animations passées et programme à venir.
-
-## Valeur éditoriale
-- Ferme accessible gratuitement toute l'année selon les horaires publiés, avec animaux, potager, verger et bâtiments agricoles; vérifier les horaires avant départ.
-- Ateliers thématiques pour enfants, parfois dès 3 ans ou 6 ans selon la séance, avec accompagnement d'un adulte et inscription préalable; l'annonce du mercredi 2 décembre 2026 (pain d'épices dès 6 ans, boules de Noël dès 3 ans) est une illustration actuelle, pas une promesse de disponibilité.
-- Proposer un parcours souple combinant ferme et promenade dans le grand parc, en expliquant accès en transports, entrée des Hautes Bornes, météo et rythme des plus jeunes.
-- Ne pas reprendre les calendriers d'été ou d'octobre 2026 comme événements à venir; signaler les fermetures exceptionnelles possibles et distinguer la gratuité de la visite des conditions de chaque atelier.
-
-## Affiliation
-- **Action principale:** visite libre gratuite; aucune billetterie payante pertinente à proposer. Recherche de billets/visites chez GetYourGuide et Tiqets sans offre spécifique vérifiée pour cette ferme; ne pas ajouter un billet parisien sans rapport.
-- **Hébergement secondaire vérifié, Booking.com:** « Appartement rénové situé aux portes de Paris », 31 avenue Jean Moulin, Villeneuve-la-Garenne, appartement de 48 m², une chambre et canapé-lit, jusqu'à quatre personnes, cuisine. https://www.booking.com/hotel/fr/appartement-jean-moulin-villeneuve-la-garenne.ro.html
-- **Autre option vérifiée, Booking.com:** « Appartement moderne au centre-ville de Villeneuve La Garenne », 25 allée Saint-Paul, cuisine, lit bébé sur demande, parking payant. https://www.booking.com/hotel/fr/appartement-moderne-au-centre-ville-villeneuve-la-garenne1.html
-- À réserver seulement aux familles venant de plus loin ou combinant plusieurs sorties dans le nord parisien. Ne pas prétendre que ces logements jouxtent la ferme. Disponibilités et prix à contrôler pour les dates du séjour.
-
-## Sources de départ
-- Département, présentation de la ferme et ateliers actuels: https://www.hauts-de-seine.fr/le-parc-des-chanteraines/la-ferme-des-chanteraines
-- Office de tourisme départemental, ferme, gratuité et horaires: https://destination.hauts-de-seine.fr/cdt92/ferme-des-chanteraines-villeneuve-la-garenne.html
-- Office de tourisme départemental, ateliers et modalités (exemple été 2026, dates révolues): https://destination.hauts-de-seine.fr/ete-2026-ferme-des-chanteraines-villeneuve-la-garenne.html
-- Office de tourisme départemental, ateliers automne 2026 (dates révolues): https://destination.hauts-de-seine.fr/ateliers-automne-ferme-des-chanteraines.html
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "activites"
+title: "Ferme des Chanteraines en famille: animaux, ateliers et balade gratuite"
+subtitle: "À Villeneuve-la-Garenne, une sortie nature à organiser au rythme des enfants"
+summary: "Animaux, potager, ateliers sur réservation et promenade: comment profiter de la ferme des Chanteraines avec des enfants, sans mauvaise surprise."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "ferme des Chanteraines en famille"
+  - "ferme pédagogique Villeneuve-la-Garenne"
+  - "parc des Chanteraines enfants"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Villeneuve-la-Garenne"
+  department: "Hauts-de-Seine"
+  region: "Île-de-France"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Département des Hauts-de-Seine - La ferme des Chanteraines"
+    url: "https://www.hauts-de-seine.fr/le-parc-des-chanteraines/la-ferme-des-chanteraines"
+  - title: "Destination Hauts-de-Seine - Ferme des Chanteraines"
+    url: "https://destination.hauts-de-seine.fr/cdt92/ferme-des-chanteraines-villeneuve-la-garenne.html"
+  - title: "Département des Hauts-de-Seine - Décoration de l'arbre de Noël à la ferme"
+    url: "https://www.hauts-de-seine.fr/toutes-les-actualites/detail/decoration-de-larbre-de-noel-a-la-ferme-du-parc-departemental-des-chanteraines"
+  - title: "Département des Hauts-de-Seine - FAQ du parc des Chanteraines"
+    url: "https://www.hauts-de-seine.fr/faq-parc-departemental-des-chanteraines"
+  - title: "Département des Hauts-de-Seine - Parc des Chanteraines"
+    url: "https://www.hauts-de-seine.fr/le-parc-des-chanteraines"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À Villeneuve-la-Garenne, dans les Hauts-de-Seine, la ferme pédagogique des Chanteraines permet aux enfants de découvrir des animaux de ferme et un potager sans quitter la région parisienne. Installée dans le parc départemental des Chanteraines, elle se visite gratuitement. On peut y passer une petite heure ou prolonger la sortie par une promenade, sans obligation de réserver un atelier.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Des animaux à observer, un potager à découvrir
+
+Chèvres, moutons, vaches, ânes ou encore animaux de basse-cour font partie de l'univers de cette ferme. Les enfants peuvent observer les enclos, reconnaître les animaux et s'intéresser à leur alimentation ou au travail des soigneurs. Les bâtiments évoquent les fermes du Vexin, avec grange, poulailler, pigeonnier et clapiers.
+
+Le verger et le potager ajoutent une autre dimension à la visite: les plantations et les récoltes changent au fil des saisons. Pour les plus jeunes, l'intérêt est justement de pouvoir alterner quelques observations et des pauses, sans parcours imposé. La présence de chaque animal à un endroit donné n'est toutefois pas garantie.
+
+La [présentation officielle de la ferme](https://www.hauts-de-seine.fr/le-parc-des-chanteraines/la-ferme-des-chanteraines) détaille aussi son travail autour de l'éco-pâturage: des moutons et des chèvres participent à l'entretien des espaces verts du parc.
+
+## Visite libre ou atelier: deux expériences différentes
+
+**La visite libre est gratuite et ne nécessite pas d'inscription.** Elle convient bien à une sortie improvisée, sous réserve de vérifier l'ouverture avant de partir. Elle ne comprend pas automatiquement une rencontre encadrée avec les soigneurs ni la participation à une activité.
+
+Les **ateliers pédagogiques**, eux, ont des dates, des thèmes, des limites d'âge et un nombre de places propres à chaque séance. Certains accueillent des enfants dès 3 ans, d'autres à partir de 6 ans. Un parent ou responsable légal doit accompagner et surveiller l'enfant. Il faut consulter le programme et réserver auprès de la ferme plutôt que se présenter en supposant qu'un atelier a lieu.
+
+Par exemple, le [programme annoncé pour le mercredi 2 décembre 2026](https://www.hauts-de-seine.fr/toutes-les-actualites/detail/decoration-de-larbre-de-noel-a-la-ferme-du-parc-departemental-des-chanteraines) prévoit, à partir de 13 h 30, un atelier pain d'épices dès 6 ans (15 places), un atelier boules de Noël dès 3 ans (12 places), puis une décoration collective de l'arbre. Il s'agit d'une date précise, non d'une activité proposée chaque semaine; les places peuvent être épuisées.
+
+Pour connaître les prochaines séances et leurs conditions, contactez **fermedeschanteraines-reservations@hauts-de-seine.fr**. Les calendriers des vacances précédentes ne valent pas programme à venir.
+
+## Une demi-journée entre ferme et grand parc
+
+Pour une sortie simple avec de jeunes enfants, commencer par la ferme puis rejoindre les allées du parc est une bonne formule. En hiver, le week-end permet de visiter dès le matin; en semaine, la ferme n'ouvre qu'à partir de 13 h. Prévoyez du temps pour observer les animaux plutôt que de chercher à tout voir.
+
+Après la visite, le secteur des Hautes Bornes offre un cadre de promenade autour des espaces verts et de l'étang. Le parc comprend également d'autres secteurs, mais inutile de vouloir le traverser entièrement avec des petits. La [présentation du parc départemental](https://www.hauts-de-seine.fr/le-parc-des-chanteraines) permet de repérer ses différents espaces.
+
+Par temps humide, les chaussures adaptées et une tenue chaude rendent la visite plus agréable. En cas de vent violent ou d'alerte météo, le parc peut fermer exceptionnellement. Pour une poussette ou un besoin d'accessibilité particulier, mieux vaut demander à la ferme les conditions du parcours envisagé plutôt que présumer que tous les espaces sont accessibles.
+
+## Horaires, adresse et transports
+
+La ferme se trouve **entrée des Hautes Bornes, 89 boulevard Charles-de-Gaulle, 92390 Villeneuve-la-Garenne**.
+
+Selon la [page actuelle du Département](https://www.hauts-de-seine.fr/le-parc-des-chanteraines/la-ferme-des-chanteraines), les **horaires d'hiver** sont:
+- du lundi au vendredi: **13 h à 16 h 15**;
+- samedi et dimanche: **10 h à 16 h 15**.
+
+La [fiche de l'office de tourisme](https://destination.hauts-de-seine.fr/cdt92/ferme-des-chanteraines-villeneuve-la-garenne.html) affiche une fermeture légèrement différente, à 16 h 30 en hiver, et précise une évacuation avant la fermeture. Par prudence, retenez **16 h 15** et vérifiez l'horaire le jour de la visite, particulièrement les jours fériés.
+
+Le parc lui-même a ses propres horaires: **8 h à 17 h de novembre à janvier**, selon la [FAQ officielle](https://www.hauts-de-seine.fr/faq-parc-departemental-des-chanteraines). Ne confondez pas l'ouverture du parc avec celle de la ferme.
+
+Pour venir sans voiture, le **RER C, gare de Gennevilliers**, permet de rejoindre le parc à pied en le traversant. Le **bus 137** dessert le secteur; le **tramway T1** donne accès au parc côté Gennevilliers, avec davantage de marche selon l'entrée choisie. Vérifiez votre itinéraire jusqu'à l'entrée des Hautes Bornes, et non simplement jusqu'au parc.
+
+La sortie ne nécessite donc aucun billet pour la ferme. Si vous souhaitez participer à un atelier, c'est le programme et la confirmation de réservation qui déterminent les conditions de votre visite.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -120,4 +163,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
