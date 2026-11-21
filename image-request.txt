@@ -451,3 +451,4 @@ automation/image-hero-20261121-0648-dobree-lozere-crozant|56163944da3442c742a6d1
 automation/image-hero-20261121-0648-dobree-lozere-crozant|f07b3d6228f7e89fb0b77ebe35685b2da2550e22
 automation/image-hero-20261121-1243-chanteraines|513f78f9c0cc2a3e2f10b998cc9481c687696c6f
 automation/image-hero-20261121-1243-chanteraines|a66ef03401ed14a930f3e3aa0b698a33415b0cfe
+automation/image-hero-20261121-1841-cuisine-laval-littoral|e7f1856566943b5c428a78a29f3f6d1f2f3bd5eb
