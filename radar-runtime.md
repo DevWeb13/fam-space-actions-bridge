@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -100,7 +103,7 @@ affiliate:
   destination: Tours
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/index.md
   targetSha: d79d6e54db3e1ff4b4c7694d5ea2cc7d9ab7a123
@@ -129,28 +132,82 @@ radar:
       - Noël Tours en famille
 ---
 
-## Mission retenue
-Préciser les horaires exceptionnels des marchés municipaux de Noël de Tours 2026, distincts du Village Gourmand.
+<!-- article-image-credit -->
+*Photo: [ktanaka](https://commons.wikimedia.org/wiki/File:Place_de_la_resistance,_tours_-_panoramio.jpg) - [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot signale une baisse de 25 à 7 impressions sur trois jours, sans cause établie. L'article couvre déjà les trois sites, les prix et les attractions, mais ne donne pas les horaires exceptionnels des marchés municipaux les 24 et 25 décembre, alors que ceux du Village Gourmand y figurent. C'est une lacune pratique indépendante du signal GSC.
+À Tours, trois lieux permettent de profiter de Noël en famille, mais ils n'ouvrent pas tous aux mêmes dates. Les marchés municipaux du **boulevard Heurteloup** et de la **place de la Résistance** sont annoncés du **27 novembre au 27 décembre 2026**. Le **Village Gourmand**, place Anatole-France, accueille les visiteurs du **20 novembre 2026 au 3 janvier 2027**, avec restauration, grande roue et patinoire à rollers. Pour combiner les trois, choisissez une date entre le 27 novembre et le 27 décembre.
 
-## Décision du lecteur
-Savoir quel site visiter les 24 et 25 décembre, à quelle heure, et éviter de venir après la fermeture des chalets avec les enfants.
+## Quel marché choisir, et à quelle heure ?
 
-## Faits à traiter
-Vérifier auprès de la Ville de Tours ou de l'office de tourisme les horaires particuliers des chalets municipaux (24 décembre fermeture annoncée à 18 h; 25 décembre ouverture annoncée de 15 h à 20 h, éventuellement facultative selon les exposants). Ne pas attribuer ces horaires au Village Gourmand. Si les sources officielles ne confirment pas les exceptions, indiquer l'incertitude plutôt que les affirmer. Préserver les dates distinctes des trois sites, le tarif 5 €/4 €, les animations, le tram, l'hébergement Booking.com, les images et leurs crédits.
+Pour découvrir les étals et les idées cadeaux, privilégiez les deux marchés municipaux. L'[office de tourisme de Tours](https://www.tours-tourisme.fr/agenda/noel-a-tours-marche-de-noel/) annonce une ouverture **de 11 h à 20 h du dimanche au jeudi**, et **de 11 h à 21 h les vendredis et samedis**. Attention: sa fiche mentionne un début au 20 novembre pour l'ensemble du marché de Noël, alors que la [Ville de Tours](https://formulaires.services.tours.fr/animations-commerciales/candidature-au-marche-de-noel-tours/) fixe au **27 novembre** le début des marchés municipaux boulevard Heurteloup et place de la Résistance. Retenez donc le 27 novembre pour ces deux emplacements.
 
-## Sources de départ
-- Ville de Tours: https://formulaires.services.tours.fr/animations-commerciales/candidature-au-marche-de-noel-tours/
-- Office de tourisme: https://www.tours-tourisme.fr/agenda/noel-a-tours-marche-de-noel/
-- Organisateur Village Gourmand: https://levillagegourmand.fr/
+**Pour les 24 et 25 décembre, ne vous fiez pas aux horaires habituels des chalets municipaux.** Le cahier des charges 2026 de la Ville, [accessible depuis son formulaire de candidature](https://formulaires.services.tours.fr/animations-commerciales/candidature-au-marche-de-noel-tours/), est repris par plusieurs agendas locaux avec une **fermeture à 18 h le jeudi 24 décembre** et une **ouverture de 15 h à 20 h le vendredi 25 décembre, facultative pour les exposants**. La fiche publique de l'office de tourisme ne détaille pas ces exceptions: ces créneaux restent donc à **reconfirmer auprès de la Ville ou des exposants** avant un déplacement spécialement prévu pour Noël. Le 25, certains chalets peuvent rester fermés même pendant le créneau annoncé.
 
-## Affiliation
-Conserver le lien Booking.com existant, pertinent pour un séjour; ne pas ajouter d'offre artificielle.
+Pour manger sur place ou profiter des attractions, choisissez le **Village Gourmand**, place Anatole-France, au bout de la rue Nationale. Il rassemble une trentaine de chalets de restauration, une grande roue et une **patinoire roller, sans glace**. L'accès au village est **gratuit**, mais les repas et attractions sont payants.
 
-## Continuations internes
-- Conserver le renvoi vers l'article Noël au château d'Amboise sans répéter ses détails.
+Du **20 au 26 novembre**, seul le Village Gourmand est annoncé ouvert parmi ces trois lieux. Du **28 décembre au 3 janvier**, il reste également le seul à poursuivre la saison.
+
+## Animations à ne pas manquer avec les enfants
+
+Le [programme de l'organisateur](https://levillagegourmand.fr/) permet de choisir une date en fonction des animations plutôt que de compter sur la présence quotidienne du Père Noël:
+
+- **Dimanche 22 novembre:** musique et maquillage pour enfants.
+- **Dimanche 29 novembre:** maquillage dès **13 h** au Village Gourmand, puis nouvelle séance dès **16 h** à la patinoire; musique également au programme.
+- **Mercredi 2 décembre à 15 h 30:** rencontre annoncée avec le **Père Noël et sa lutine**.
+
+Ces rendez-vous sont datés et peuvent évoluer: consultez le calendrier de l'organisateur le jour de votre visite.
+
+## Grande roue et patinoire roller: combien prévoir ?
+
+<!-- article-image-body:01 -->
+
+![Vue nocturne sur Tours depuis une grande roue en décembre 2017](/images/articles/2026/10/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand-body-01.webp)
+
+*Photo: [GrandCelinien](https://commons.wikimedia.org/wiki/File:Tours_-_Vue_grande_roue.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Le tarif normal annoncé est de **5 € par personne et par attraction**. Pour quatre personnes, prévoyez **20 € pour la grande roue**, ou **40 € si les quatre font aussi la patinoire**, hors repas et transports.
+
+Un tarif réduit de **4 €** est annoncé **le mercredi pour les moins de 12 ans** et **les jeudis et vendredis pour les étudiants**, dans les deux cas **hors vacances scolaires**. Le pass saisonnier « Gliss » pour la patinoire coûte **49 €**: il s'adresse surtout aux visiteurs réguliers.
+
+L'âge minimum, les protections fournies et les conditions d'accompagnement des petits ne sont pas détaillés sur la page générale de l'organisateur. Demandez confirmation avant de promettre la patinoire à un jeune enfant. Une promenade entre les chalets reste possible sans acheter de billet.
+
+## Horaires du Village Gourmand et des attractions
+
+Le **Village Gourmand** ouvre normalement **de 12 h à 22 h**, jusqu'à **23 h les vendredis et samedis**. Les attractions ont leurs propres créneaux:
+
+- **Lundi à jeudi:** 13 h-22 h.
+- **Vendredi:** 13 h-23 h.
+- **Samedi, dimanche et vacances scolaires:** 11 h-23 h.
+
+Deux journées ont des horaires particuliers:
+
+- **25 décembre:** village de **15 h à 21 h**, attractions de **15 h à 23 h**.
+- **1er janvier:** village de **15 h à 22 h**, attractions de **15 h à 23 h**.
+
+Ces horaires sont ceux du **Village Gourmand et de ses attractions**, et non des marchés municipaux. Vérifiez les éventuels ajustements sur le [site de l'organisateur](https://levillagegourmand.fr/).
+
+## Tram, poussette et repas des plus petits
+
+<!-- article-image-body:02 -->
+
+![Rame du tramway de Tours sur la place Anatole-France en mai 2023](/images/articles/2026/10/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand-body-02.webp)
+
+*Photo: [Chabe01](https://commons.wikimedia.org/wiki/File:Rame_Tramway_Tours_Place_Anatole_France_-_Tours_(FR37)_-_2023-05-19_-_2.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Pour le Village Gourmand, prenez le **tram A jusqu'à Porte de Loire**. Depuis la gare de Tours, l'organisateur indique la direction **Vaucanson**. Les parkings **Anatole-France** et **Nationale** sont aussi signalés, sans garantie de disponibilité. Vérifiez les [horaires et perturbations de la ligne A sur Fil Bleu](https://www.filbleu.fr/horaires-et-trajets/toutes-les-lignes/ligne-a), surtout pour rentrer le soir.
+
+La place Anatole-France se situe au bout de la rue Nationale. La place de la Résistance et le boulevard Heurteloup constituent deux étapes distinctes. Avec une poussette, prévoyez plus de temps aux heures d'affluence. Les informations disponibles ne confirment ni table à langer, ni micro-ondes en libre accès, ni prêt de poussette: emportez le nécessaire pour changer et nourrir un bébé. Demandez aussi les conditions d'accès à la grande roue avec un bébé ou une poussette avant de faire la queue.
+
+## Prolonger les fêtes à Tours
+
+Pour une famille arrivant en train, le [Nemea Appart Hotel Quai Victor Tours Centre sur Booking.com](https://www.booking.com/hotel/fr/nemea-appart-39-residence-le-quai-victor.html) est une option près de la gare. Certains logements disposent d'une kitchenette avec **micro-ondes**, pratique pour les repas d'un bébé. Vérifiez la **capacité du logement réservé**, les couchages, les conditions pour les enfants et les éventuels frais ou dépôt de garantie: tous les studios ne conviennent pas à quatre personnes.
+
+Pour une excursion différente, notre guide de [Noël 2026 au château royal d'Amboise](/articles/evenements/noel-2026-au-chateau-royal-d-amboise-visite-de-jour-ou-nocturne-aux-chandelles/) détaille les visites décorées, les tarifs et les nocturnes sur réservation.
 
 ## Article source exact à préserver et améliorer
 
