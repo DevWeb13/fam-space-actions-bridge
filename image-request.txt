@@ -458,3 +458,4 @@ automation/image-hero-20261122-0049-ravioles-laep|218262c08ce0e3c9ebcfc738630cd3
 automation/image-hero-20261122-0645-auvergne-yonne-caf17|17b4f0c017973c0b4e5bcb5f2687a1869e71d176
 automation/image-hero-20261122-0645-auvergne-yonne-caf17|8bff12fc69f0533fa766b82cf8d3c117c208f513
 automation/image-hero-20261122-1247-saint-antonin|90a639e3877650eece8d99ddcaf0930a6be5e2a9
+automation/image-hero-20261122-1247-saint-antonin|4bd24215f7ba79154f575e39df8d24c36c32a908
