@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,89 +14,139 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Tarn-et-Garonne
 - Région: Occitanie
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Sujet :** Un week-end en famille à Saint-Antonin-Noble-Val et dans les gorges de l'Aveyron (Tarn-et-Garonne).
-**Titre de travail :** « Week-end à Saint-Antonin-Noble-Val en famille : village médiéval, gorges et activités nature ».
-**Angle :** Construire un séjour de deux jours modulable selon l'âge des enfants et la saison, entre découverte du village, balades, points de vue et activités nautiques quand elles sont ouvertes. Saint-Antonin-Noble-Val est une cité médiévale au bord de l'Aveyron, entourée de falaises et de paysages de gorges ; c'est une base de séjour pour explorer le secteur, notamment vers Penne et Bruniquel.
-
-## Besoin du lecteur
-Savoir comment répartir un week-end familial, que visiter sans réserver, quelles activités choisir selon l'âge, les capacités et la météo, où se poser pour pique-niquer, comment préparer les déplacements et quelles options de logement envisager. Distinguer les découvertes accessibles toute l'année des loisirs nautiques saisonniers.
-
-## Valeur éditoriale
-- Proposer un itinéraire concret de deux jours avec variantes « jeunes enfants / adolescents » et « hors saison / belle saison » plutôt qu'un inventaire de lieux.
-- Associer les ruelles et le marché dominical de Saint-Antonin-Noble-Val, les paysages des gorges et une excursion facultative vers Penne ou Bruniquel, sans surcharger le programme.
-- Expliquer les limites des activités nautiques : saison surtout de mai à septembre, nécessité de savoir nager et conditions d'âge variables selon les opérateurs ; ne jamais promettre une ouverture en novembre.
-- Comparer les formats de balade en canoë, de la courte descente à la journée, en renvoyant aux opérateurs pour tarifs et réservations actualisés.
-- Donner des conseils pratiques sur les trajets, la chaleur estivale, le stationnement et les alternatives par mauvais temps, à confirmer lors de la rédaction.
-- Sujet durable, distinct des articles récents sur le musée des Jouets de Montauban, le musée Fermat et le week-end gourmand à Moissac.
-
-## Affiliation
-- **Hébergement / location de vacances : Abritel.** Offre vérifiée : locations à Saint-Antonin-Noble-Val, notamment maisons et gîtes adaptés aux familles. URL exacte : https://www.abritel.fr/d/40954/saint-antonin-noble-val . Les dates et disponibilités restent à vérifier par le lecteur.
-- **Hébergement précis, option secondaire : Abritel.** « Le Patio - Maison 2 chambres - au cœur du village », une option pour un séjour dans le centre ancien. URL exacte : https://www.abritel.fr/location-vacances/p2679250 . Vérifier capacité, prix et disponibilité pour les dates envisagées avant toute recommandation définitive.
-- **Activité principale :** recherches ciblées effectuées sur GetYourGuide, Tiqets et Klook pour Saint-Antonin-Noble-Val ; aucune offre de canoë locale vérifiable trouvée. Ne pas inventer de billetterie partenaire : renvoyer aux prestataires locaux pour cette activité.
-- Pas de location de voiture, transfert ou city pass retenu faute d'offre spécifique vérifiée et de besoin assez central.
-
-## Sources de départ
-- Tarn-et-Garonne Tourisme, présentation du village et idées de séjour : https://www.tourisme-tarnetgaronne.fr/decouverte/nos-territoires/causses-et-gorges-de-laveyron/saint-antonin-noble-val/
-- Tourisme Occitanie, gorges de l'Aveyron et villages environnants : https://www.tourisme-occitanie.com/fr/fiche/patrimoine-naturel/gorges-de-l-aveyron-st-antonin-noble-val_TFOPNAMIP0820000024/
-- Tarn-et-Garonne Tourisme, descente des gorges en canoë : https://www.tarnetgaronne.wp.rc-prod.com/decouverte/nos-plus-belles-experiences/descendre-les-gorges-de-laveyron-en-canoe/
-- Tarn-et-Garonne Tourisme, Cap Canoë Aveyron, saisons et parcours : https://www.tourisme-tarnetgaronne.fr/equipement/cap-canoe-aveyron/
-- Acti Eaux Vives, prestataire de canoë et conditions d'âge : https://www.actieauxvives.fr/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "voyages"
+title: "Week-end à Saint-Antonin-Noble-Val en famille: village, gorges et canoë"
+subtitle: "Deux jours dans le Tarn-et-Garonne, entre marché médiéval, panoramas et activités selon la saison"
+summary: "Un itinéraire familial de deux jours à Saint-Antonin-Noble-Val, avec balades, marché du dimanche, canoë en saison et conseils pratiques."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "Saint-Antonin-Noble-Val en famille"
+  - "week-end gorges de l'Aveyron"
+  - "canoë Saint-Antonin-Noble-Val"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Saint-Antonin-Noble-Val"
+  department: "Tarn-et-Garonne"
+  region: "Occitanie"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Tarn-et-Garonne Tourisme: découvrir Saint-Antonin-Noble-Val"
+    url: "https://www.tourisme-tarnetgaronne.fr/decouverte/nos-territoires/causses-et-gorges-de-laveyron/saint-antonin-noble-val/"
+  - title: "Tarn-et-Garonne Tourisme: marché de Saint-Antonin"
+    url: "https://www.tourisme-tarnetgaronne.fr/causses-et-gorges-de-laveyron/les-pepites-des-causses-et-gorges-de-laveyron/le-marche-de-saint-antonin-noble-val/"
+  - title: "Tarn-et-Garonne Tourisme: aire de pique-nique de Roumégous"
+    url: "https://www.tourisme-tarnetgaronne.fr/en/equipement/aire-de-pique-nique-de-roumegous/"
+  - title: "Tarn-et-Garonne Tourisme: point de vue du Cirque de Bône"
+    url: "https://www.tourisme-tarnetgaronne.fr/patrimoine-naturel/point-de-vue-du-cirque-de-bone/"
+  - title: "Tarn-et-Garonne Tourisme: route de la Corniche"
+    url: "https://www.tourisme-tarnetgaronne.fr/patrimoine-naturel/point-de-vue-route-de-la-corniche/"
+  - title: "Tarn-et-Garonne Tourisme: Cap Canoë Aveyron"
+    url: "https://www.tourisme-tarnetgaronne.fr/equipement/cap-canoe-aveyron/"
+  - title: "Tourisme Occitanie: Les Pieds dans l'Eau"
+    url: "https://www.tourisme-occitanie.com/fr/fiche/equipement/les-pieds-dans-l-eau-saint-antonin-noble-val_TFOSITRA2_LOI_5848341/"
+  - title: "Tourisme Occitanie: Bastides et Gorges de l'Aveyron"
+    url: "https://www.tourisme-occitanie.com/destinations/incontournables/bastides-gorges-aveyron/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+À une quarantaine de kilomètres au nord-est de Montauban, Saint-Antonin-Noble-Val est une cité médiévale du Tarn-et-Garonne installée au bord de l'Aveyron. Ses ruelles anciennes débouchent sur une vallée bordée de falaises calcaires. En famille, on peut y passer un week-end sans multiplier les visites payantes: découvrir le village, prendre le temps d'un pique-nique, admirer les gorges et, aux beaux jours, descendre la rivière en canoë.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+Le programme fonctionne particulièrement bien du samedi au dimanche: le marché du dimanche matin donne un vrai rythme au séjour.
+
+## Samedi: ruelles médiévales et pause au bord de l'eau
+
+Commencez par le centre historique, à pied. Les maisons anciennes, les passages étroits et les petites places se prêtent à une promenade sans parcours imposé. Avec de jeunes enfants, mieux vaut prévoir une visite courte, ponctuée de pauses, plutôt qu'une longue chasse aux monuments. Les pavés et les irrégularités des ruelles peuvent rendre une poussette moins pratique qu'un porte-bébé.
+
+Le [site de Tarn-et-Garonne Tourisme](https://www.tourisme-tarnetgaronne.fr/decouverte/nos-territoires/causses-et-gorges-de-laveyron/saint-antonin-noble-val/) présente le patrimoine du village ainsi que les accès et parkings.
+
+Pour déjeuner dehors, l'[aire de pique-nique de Roumégous](https://www.tourisme-tarnetgaronne.fr/en/equipement/aire-de-pique-nique-de-roumegous/) est une option simple: près du centre ancien, elle offre des tables et un cadre au bord de l'Aveyron, face aux falaises. La proximité de la rivière impose une surveillance rapprochée des enfants; ce n'est pas une aire de baignade surveillée.
+
+### L'après-midi: un panorama sans grande randonnée
+
+Pour voir les gorges d'en haut, rejoignez en voiture le [point de vue du Cirque de Bône](https://www.tourisme-tarnetgaronne.fr/patrimoine-naturel/point-de-vue-du-cirque-de-bone/), à environ 5 km du village sur la D958. Le panorama sur les méandres de l'Aveyron est gratuit, avec une petite aire de stationnement et une table d'orientation. C'est une bonne alternative à une randonnée exigeante, même si l'accès exact au bord du point de vue doit être apprécié sur place avec de jeunes enfants.
+
+Avec des adolescents qui aiment marcher, vous pouvez consacrer davantage de temps à un sentier balisé au départ du secteur, après avoir vérifié distance, dénivelé et météo auprès de l'office de tourisme. Ne partez pas sur un chemin de falaise improvisé.
+
+## Dimanche: marché puis gorges ou village voisin
+
+Le [marché de Saint-Antonin-Noble-Val](https://www.tourisme-tarnetgaronne.fr/causses-et-gorges-de-laveyron/les-pepites-des-causses-et-gorges-de-laveyron/le-marche-de-saint-antonin-noble-val/) anime le centre le dimanche matin. Produits locaux, pain, fromages et artisanat permettent de composer un déjeuner à emporter. En été, mieux vaut arriver tôt: la fréquentation est importante.
+
+Pour l'après-midi, choisissez **une seule grande activité** selon la saison et l'énergie des enfants.
+
+**Aux beaux jours: une descente en canoë.** Les gorges se découvrent autrement depuis l'eau, mais ce n'est pas une sortie à improviser. [Cap Canoë Aveyron](https://www.tourisme-tarnetgaronne.fr/equipement/cap-canoe-aveyron/) présente notamment des parcours de 10 et 17 km; les durées, les prix et les modalités de navette doivent être confirmés avant réservation. Un parcours de 17 km peut prendre une bonne partie de la journée: dans ce cas, inversez le programme ou renoncez à une autre visite. [Les Pieds dans l'Eau](https://www.tourisme-occitanie.com/fr/fiche/equipement/les-pieds-dans-l-eau-saint-antonin-noble-val_TFOSITRA2_LOI_5848341/) annonce une activité de mai à septembre, sous réserve de météo et de conditions de rivière.
+
+Avant de réserver, vérifiez avec le loueur l'âge minimum, l'obligation de savoir nager, les gilets adaptés, la durée réelle sur l'eau et les possibilités d'annulation. Les conditions diffèrent selon les prestataires et les parcours. Une activité annoncée pour l'été ne doit pas être considérée comme ouverte en automne ou en hiver.
+
+**Hors saison ou avec de jeunes enfants: les panoramas et les villages.** La [route de la Corniche](https://www.tourisme-tarnetgaronne.fr/patrimoine-naturel/point-de-vue-route-de-la-corniche/), accessible depuis la D115 en direction de Bruniquel, permet d'admirer les paysages depuis une route sinueuse. Elle convient à une excursion en voiture, pas à une promenade en poussette sur la chaussée. Vous pouvez ensuite choisir Penne ou Bruniquel pour une courte découverte du village, sans vouloir visiter les deux. Le [guide régional des Bastides et Gorges de l'Aveyron](https://www.tourisme-occitanie.com/destinations/incontournables/bastides-gorges-aveyron/) présente ces villages perchés et leurs châteaux. Vérifiez les ouvertures des monuments séparément.
+
+## Quel programme selon l'âge des enfants ?
+
+**Avec des tout-petits**, privilégiez le village, Roumégous et un point de vue facile d'accès. Les ruelles anciennes et les abords de falaises demandent de l'attention; les activités nautiques ne sont pas automatiquement adaptées.
+
+**Avec des enfants plus grands**, le marché et une balade courte laissent du temps pour observer les paysages. Le canoë devient envisageable seulement si les conditions du loueur et les capacités de chaque participant le permettent.
+
+**Avec des adolescents**, une sortie en canoë ou une randonnée préparée peut devenir le temps fort du séjour. Il vaut mieux réserver une demi-journée entière à cette activité plutôt que d'enchaîner les visites.
+
+En cas de pluie persistante ou de forte chaleur, réduisez les parcours exposés. Une promenade abritée dans le village, une pause dans un café ou une visite culturelle ouverte ce jour-là sera plus agréable qu'une sortie sur l'eau forcée.
+
+## Accès, stationnement et nuit sur place
+
+La voiture facilite nettement les excursions entre Saint-Antonin-Noble-Val, les points de vue et les villages voisins. L'office de tourisme indique plusieurs [parkings gratuits](https://www.tourisme-tarnetgaronne.fr/decouverte/nos-territoires/causses-et-gorges-de-laveyron/saint-antonin-noble-val/) aux abords du centre, notamment au Pradel, aux Tilleuls, au Bessarel et à Roumégous. Les dimanches de marché, arrivez tôt et respectez les éventuelles restrictions temporaires.
+
+Sans voiture, il faut préparer précisément les correspondances: des gares existent notamment à Lexos et Laguépie, mais elles ne se trouvent pas dans le centre de Saint-Antonin. Les dessertes et le dernier kilomètre doivent être vérifiés avant de réserver le séjour.
+
+Pour une nuit, dormir dans le village permet de rejoindre les restaurants et le marché à pied. Un gîte en périphérie peut offrir davantage d'espace, mais rend la voiture plus utile. Comparez la capacité réelle, le stationnement, les équipements pour enfants et les conditions d'annulation avant de choisir.
+
+En juillet et août, prévoyez de l'eau, des protections solaires et des pauses à l'ombre. Le reste de l'année, ce week-end garde tout son intérêt pour les villages et les paysages, sans dépendre d'une descente en canoë.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -125,4 +175,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
