@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,82 +14,135 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Charente-Maritime
 - Région: Nouvelle-Aquitaine
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Titre de travail :** « Électroménager, meubles, ordinateur : quelles aides de la Caf en Charente-Maritime pour équiper sa famille ? »
-
-Guide pratique local consacré aux deux aides distinctes de la Caf de Charente-Maritime pour équiper un logement familial en biens essentiels et pour acquérir ou réparer un équipement informatique. L'angle est le parcours concret de la famille, de l'éligibilité à l'achat autorisé, sans confondre prêt remboursable et secours non remboursable.
-
-## Besoin du lecteur
-Savoir quelle aide correspond à son besoin (réfrigérateur, lit, bureau, ordinateur pour la scolarité), vérifier les critères locaux, comprendre les plafonds et les exceptions, constituer sa demande et éviter les achats non pris en charge. Comprendre que l'accord préalable est indispensable et que l'aide reste facultative, sous réserve des crédits disponibles.
-
-## Valeur éditoriale
-- Comparer deux dispositifs que les familles peuvent confondre : aide ménagère/mobilière (quotient familial jusqu'à 800 €, jusqu'à 1 000 € de prêt, voire 2 000 € dans certaines situations, avec part éventuelle de secours plafonnée à 600 €) et aide informatique (quotient familial jusqu'à 800 €, prêt jusqu'à 500 €, secours possible selon situations particulières).
-- Expliquer le parcours différent : électroménager via Envie 17 après notification d'accord, mobilier avec devis, informatique avec devis et paiement direct au fournisseur après accord.
-- Mettre en évidence les exclusions décisives : aucun achat avant accord ; pour l'aide ménagère/mobilière, pas d'achat entre particuliers ni sur Internet ; critères de résidence, situation familiale, plafonds par objet, délai entre deux aides.
-- Proposer des exemples de besoins familiaux et une checklist des pièces et étapes, sans promettre l'attribution. Vérifier les conditions et formulaires en vigueur à la rédaction.
-
-## Affiliation
-**Aucune offre partenaire pertinente retenue.** L'action principale est une demande d'aide sociale auprès de la Caf, avec achat encadré auprès de fournisseurs autorisés après accord. Les partenaires de voyage, hébergement, billetterie, mobilité et location disponibles ne proposent pas ce service. Pas de séjour, billet, produit ou lien commercial artificiel à insérer ; conserver les liens officiels Caf et Envie 17 le cas échéant.
-
-## Sources de départ
-- Caf de Charente-Maritime, aide à l'équipement ménager ou mobilier de première nécessité : https://www.caf.fr/allocataires/caf-de-la-charente-maritime/offre-de-service/logement/l-aide-l-equipement-menager-ou-mobilier-de-1ere-necessite
-- Caf de Charente-Maritime, aide à l'équipement informatique : https://www.caf.fr/allocataires/caf-de-la-charente-maritime/offre-de-service/vie-personnelle/l-aide-l-equipement-informatique
-- Caf de Charente-Maritime, panorama des aides logement : https://www.caf.fr/allocataires/caf-de-la-charente-maritime/offre-de-service/logement
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "vie-pratique"
+title: "Aides Caf en Charente-Maritime: financer meubles, électroménager et ordinateur"
+subtitle: "Deux dispositifs locaux, des plafonds différents et des démarches à faire avant tout achat"
+summary: "Réfrigérateur, lit ou ordinateur: découvrez les aides de la Caf de Charente-Maritime, leurs conditions, les montants possibles et comment déposer une demande."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "aide équipement Caf Charente-Maritime"
+  - "aide électroménager mobilier Caf 17"
+  - "aide ordinateur Caf Charente-Maritime"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Charente-Maritime"
+  region: "Nouvelle-Aquitaine"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Caf de Charente-Maritime: aide à l'équipement ménager ou mobilier de première nécessité"
+    url: "https://www.caf.fr/allocataires/caf-de-la-charente-maritime/offre-de-service/logement/l-aide-l-equipement-menager-ou-mobilier-de-1ere-necessite"
+  - title: "Caf de Charente-Maritime: aide à l'équipement informatique"
+    url: "https://www.caf.fr/allocataires/caf-de-la-charente-maritime/offre-de-service/vie-personnelle/l-aide-l-equipement-informatique"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Un réfrigérateur qui tombe en panne, un lit à acheter après une séparation ou un ordinateur devenu indispensable pour les devoirs: ces dépenses peuvent déséquilibrer le budget d'une famille. En Charente-Maritime, la Caf propose deux aides locales distinctes, l'une pour les équipements ménagers et le mobilier essentiel, l'autre pour l'informatique.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+**Le point à retenir avant de comparer les montants: il faut demander l'accord de la Caf avant d'acheter.** Ces aides ne sont pas automatiques et ne constituent pas nécessairement des subventions: elles prennent souvent la forme de prêts à rembourser.
+
+## Réfrigérateur, lit, bureau: l'aide ménagère et mobilière
+
+L'[aide à l'équipement ménager ou mobilier de première nécessité](https://www.caf.fr/allocataires/caf-de-la-charente-maritime/offre-de-service/logement/l-aide-l-equipement-menager-ou-mobilier-de-1ere-necessite) concerne les familles qui doivent acquérir, remplacer ou réparer des équipements essentiels de leur logement.
+
+Le **quotient familial doit être inférieur ou égal à 800 €** à la réception de la demande. L'aide peut atteindre **1 000 €**, sous forme de prêt remboursable, avec une éventuelle part de secours non remboursable limitée à **600 €**.
+
+Le plafond global peut monter à **2 000 €** dans quatre situations: première installation dans un logement autonome, séparation entraînant le partage des équipements, départ d'un logement meublé ou sortie d'un hébergement temporaire. Ce plafond exceptionnel ne signifie pas que toute la somme sera accordée.
+
+Pour le mobilier, la Caf fixe des prix maximums par article. Quelques exemples:
+- Bureau: 100 €.
+- Lit bébé: 100 €.
+- Matelas de 90 cm: 200 €.
+- Table: 350 €.
+- Meubles de rangement: 400 € pour un ensemble.
+
+Une participation à la livraison est prévue jusqu'à 50 €. Certains équipements ont des conditions particulières: les lits superposés et mezzanines sont réservés aux enfants de plus de 6 ans dans le cadre de cette aide. La liste complète des objets et plafonds figure sur la page de la Caf.
+
+### Où acheter après l'accord ?
+
+Pour **l'électroménager**, la Caf travaille avec **Envie 17**. Aucun devis préalable n'est demandé: il faut d'abord déposer le dossier, puis suivre les indications de la notification d'accord. Les tarifs préférentiels du partenariat ne sont pas ceux affichés en magasin.
+
+Pour **le mobilier**, la famille doit joindre des devis établis auprès d'une enseigne, hors promotion, et respecter les plafonds. La Caf exclut les achats entre particuliers et les achats sur Internet. L'aide est versée directement au fournisseur après les formalités prévues, et non à la famille pour rembourser un achat déjà réalisé.
+
+Une aide ne peut être accordée qu'une fois par famille et par article sur une période de **cinq ans**. En présence d'un dossier de surendettement déposé ou en cours, aucun prêt n'est accordé; un secours non remboursable d'au plus 600 € peut néanmoins être étudié.
+
+## Ordinateur, tablette, imprimante: une autre aide
+
+L'[aide à l'équipement informatique](https://www.caf.fr/allocataires/caf-de-la-charente-maritime/offre-de-service/vie-personnelle/l-aide-l-equipement-informatique) vise l'achat ou la réparation d'un ordinateur, d'une tablette ou d'une imprimante, notamment pour les démarches administratives en ligne ou l'accès d'un enfant scolarisé aux ressources numériques.
+
+Le quotient familial maximal est également de **800 €**, mais le montant et les règles diffèrent: **jusqu'à 500 € sous forme de prêt sans intérêt**, remboursé par retenues sur les prestations.
+
+Un **secours non remboursable** peut être envisagé dans certaines situations, notamment pour des familles accompagnées par une travailleuse sociale de la Caf, des bénéficiaires de la prime d'activité ayant au moins un enfant de plus de 6 ans à charge, ou des personnes en situation de surendettement reconnue par la Banque de France. La Caf examine chaque situation; ce n'est pas une attribution automatique.
+
+Cette aide est limitée à **une par famille tous les trois ans**. Il faut fournir un devis et respecter les prix plafonds détaillés dans le formulaire. Après accord, la Caf paie directement le magasin mentionné sur le devis. La facture doit lui parvenir dans le mois suivant le versement.
+
+## Qui peut déposer une demande ?
+
+Les dispositifs s'adressent aux familles résidant en **Charente-Maritime** et remplissant les conditions locales. Ils concernent notamment les allocataires percevant une prestation familiale liée à un enfant au foyer, ainsi que les parents accueillant leurs enfants en garde alternée ou ponctuelle.
+
+Une famille non allocataire peut aussi présenter une demande sous conditions, avec des justificatifs supplémentaires. Pour l'aide informatique, la Caf précise notamment la présence d'un enfant à charge de moins de 18 ans. Il ne faut donc pas considérer l'absence d'un dossier Caf actif comme un refus automatique.
+
+Le quotient familial peut être consulté dans l'espace **Mon Compte** sur [caf.fr](https://www.caf.fr/). Attention: le seuil de 800 € porte sur le quotient familial, pas sur le salaire mensuel.
+
+## Comment constituer le dossier sans se tromper ?
+
+1. **Choisir le bon dispositif** selon le besoin: meuble ou électroménager d'un côté, informatique de l'autre.
+2. **Vérifier son quotient familial** et télécharger le formulaire correspondant depuis la page officielle de la Caf.
+3. **Préparer les pièces demandées** dans le formulaire, notamment les devis lorsqu'ils sont nécessaires. Les non-allocataires peuvent devoir joindre une déclaration de situation, un RIB et leur dernier avis d'imposition.
+4. **Envoyer le dossier complet avant tout achat** et attendre la décision écrite.
+5. **Suivre les consignes de paiement et d'achat** figurant dans l'accord, puis transmettre la facture à la Caf dans le délai d'un mois suivant le versement.
+
+Les deux aides relèvent du budget d'action sociale de la Caf: elles sont **facultatives, examinées individuellement et accordées dans la limite des crédits disponibles**. La décision de la commission est notifiée par courrier. Les règles et formulaires peuvent évoluer: avant de déposer le dossier, consultez la page officielle de l'aide concernée.
+
+Pour une famille qui doit remplacer plusieurs équipements, mieux vaut présenter précisément les besoins et les devis recevables dès le départ plutôt que d'engager une dépense en espérant un remboursement ultérieur.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -118,4 +171,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
