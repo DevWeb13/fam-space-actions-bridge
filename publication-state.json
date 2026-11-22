@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261122-1905-sujet-les-ludotheques-du-val-de-marne-pour-jouer-sur-place-et-parfois-",
+  "lastProcessedCommit": "d58996eb6685b95bd6f4796ed7276bdd10b6a5bf"
 }
