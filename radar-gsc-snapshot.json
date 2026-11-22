@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-21T15:27:19+01:00",
+  "generatedAt": "2026-11-22T01:30:56+01:00",
   "dataThrough": "2026-11-19",
   "from": "2026-10-23",
   "refresh": [
@@ -14,7 +14,7 @@
         "department": "Paris",
         "region": "Île-de-France"
       },
-      "ageDays": 27,
+      "ageDays": 28,
       "rapidDrop": true,
       "peakStart": "2026-10-27",
       "peakEnd": "2026-10-29",
@@ -46,7 +46,7 @@
         "department": "Calvados",
         "region": "Normandie"
       },
-      "ageDays": 28,
+      "ageDays": 29,
       "rapidDrop": true,
       "peakStart": "2026-10-25",
       "peakEnd": "2026-10-27",
@@ -69,61 +69,35 @@
       ]
     },
     {
-      "url": "/articles/vie-pratique/bibliotheques-de-rouen-emprunter-gratuitement-outils-instruments-et-jeux/",
-      "title": "Bibliothèques de Rouen: emprunter gratuitement outils, instruments et jeux",
-      "category": "vie-pratique",
-      "publishedAt": "2026-11-11T10:06:28+01:00",
+      "url": "/articles/bons-plans/arles-en-famille-a-petit-budget-quelles-visites-et-quel-pass-choisir/",
+      "title": "Arles en famille à petit budget: quelles visites et quel pass choisir?",
+      "category": "bons-plans",
+      "publishedAt": "2026-10-25T09:51:23+01:00",
       "location": {
-        "city": "Rouen",
-        "department": "Seine-Maritime",
-        "region": "Normandie"
+        "city": "Arles",
+        "department": "Bouches-du-Rhône",
+        "region": "Provence-Alpes-Côte d’Azur"
       },
-      "ageDays": 10,
+      "ageDays": 28,
       "rapidDrop": true,
-      "peakStart": "2026-11-13",
-      "peakEnd": "2026-11-15",
+      "peakStart": "2026-10-27",
+      "peakEnd": "2026-10-29",
       "recentStart": "2026-11-17",
       "recentEnd": "2026-11-19",
-      "peakImpressions": 27,
+      "peakImpressions": 55,
       "recentImpressions": 0,
-      "score": 81,
+      "score": 165,
       "signal": "uncertain",
-      "basis": "Visibilité récente : 27 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "basis": "Visibilité récente : 55 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
       "commonQueries": 0,
       "positionDelta": null,
       "impressionRatio": 0,
       "focusQueries": [
-        "ludobulle rouen",
-        "bibliothèque espace du palais rouen"
-      ]
-    },
-    {
-      "url": "/articles/voyages/la-vallee-des-saints-a-carnoet-visiter-les-geants-de-granit-en-famille/",
-      "title": "La Vallée des Saints à Carnoët: visiter les géants de granit en famille",
-      "category": "voyages",
-      "publishedAt": "2026-11-07T14:01:00+01:00",
-      "location": {
-        "city": "Carnoët",
-        "department": "Côtes-d'Armor",
-        "region": "Bretagne"
-      },
-      "ageDays": 14,
-      "rapidDrop": true,
-      "peakStart": "2026-11-12",
-      "peakEnd": "2026-11-14",
-      "recentStart": "2026-11-17",
-      "recentEnd": "2026-11-19",
-      "peakImpressions": 21,
-      "recentImpressions": 0,
-      "score": 63,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 21 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "combien de temps faut il pour visiter la vallée des saints",
-        "la vallée des saints tarifs"
+        "pass visite arles",
+        "pass liberté arles",
+        "1",
+        "arles pass avantage",
+        "sortie en famille"
       ]
     },
     {
@@ -136,7 +110,7 @@
         "department": "Côte-d'Or",
         "region": "Bourgogne-Franche-Comté"
       },
-      "ageDays": 12,
+      "ageDays": 13,
       "rapidDrop": true,
       "peakStart": "2026-11-11",
       "peakEnd": "2026-11-13",
@@ -166,7 +140,7 @@
         "department": "Maine-et-Loire",
         "region": "Pays de la Loire"
       },
-      "ageDays": 22,
+      "ageDays": 23,
       "rapidDrop": true,
       "peakStart": "2026-11-01",
       "peakEnd": "2026-11-03",
@@ -175,16 +149,17 @@
       "peakImpressions": 99,
       "recentImpressions": 21,
       "score": 269,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 99 impressions sur trois jours, puis 21 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 99 impressions sur trois jours, puis 21 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0.122,
       "focusQueries": [
-        "Soleils d'hiver Angers 2026",
-        "marché de Noël Angers en famille",
-        "village Santa Claus Angers",
-        "maison du Père Noël place Sainte-Croix"
+        "soleil d'hiver angers 2026",
+        "soleil d hiver angers 2026",
+        "soleil d'hiver angers",
+        "soleils d'hiver angers",
+        "angers soleil d'hiver"
       ]
     },
     {
@@ -197,7 +172,7 @@
         "department": "Alpes-Maritimes",
         "region": "Provence-Alpes-Côte d'Azur"
       },
-      "ageDays": 26,
+      "ageDays": 27,
       "rapidDrop": true,
       "peakStart": "2026-10-26",
       "peakEnd": "2026-10-28",
@@ -228,7 +203,7 @@
         "department": "Indre-et-Loire",
         "region": "Centre-Val de Loire"
       },
-      "ageDays": 24,
+      "ageDays": 25,
       "rapidDrop": true,
       "peakStart": "2026-11-09",
       "peakEnd": "2026-11-11",
@@ -260,7 +235,7 @@
         "department": "Meurthe-et-Moselle",
         "region": "Grand Est"
       },
-      "ageDays": 19,
+      "ageDays": 20,
       "rapidDrop": true,
       "peakStart": "2026-11-10",
       "peakEnd": "2026-11-12",
@@ -290,7 +265,7 @@
         "department": "Morbihan",
         "region": "Bretagne"
       },
-      "ageDays": 16,
+      "ageDays": 17,
       "rapidDrop": true,
       "peakStart": "2026-11-07",
       "peakEnd": "2026-11-09",
@@ -320,7 +295,7 @@
         "department": "Côte-d'Or",
         "region": "Bourgogne-Franche-Comté"
       },
-      "ageDays": 23,
+      "ageDays": 24,
       "rapidDrop": true,
       "peakStart": "2026-11-01",
       "peakEnd": "2026-11-03",
@@ -351,7 +326,7 @@
         "department": "Paris",
         "region": "Île-de-France"
       },
-      "ageDays": 17,
+      "ageDays": 18,
       "rapidDrop": true,
       "peakStart": "2026-11-09",
       "peakEnd": "2026-11-11",
@@ -381,7 +356,7 @@
         "department": "Paris",
         "region": "Île-de-France"
       },
-      "ageDays": 84,
+      "ageDays": 85,
       "rapidDrop": false,
       "peakStart": "2026-10-24",
       "peakEnd": "2026-10-30",
@@ -410,7 +385,7 @@
         "department": "Seine-et-Marne",
         "region": "Île-de-France"
       },
-      "ageDays": 36,
+      "ageDays": 37,
       "rapidDrop": false,
       "peakStart": "2026-10-25",
       "peakEnd": "2026-10-31",
@@ -431,32 +406,62 @@
       ]
     },
     {
-      "url": "/articles/sorties/reserve-africaine-de-sigean-combien-de-temps-prevoir-entre-safari-et-visite-a-pied/",
-      "title": "Réserve Africaine de Sigean: combien de temps prévoir entre safari et visite à pied ?",
+      "url": "/articles/sorties/parc-bagatelle-en-famille-quelles-attractions-selon-la-taille-des-enfants/",
+      "title": "Parc Bagatelle en famille: quelles attractions selon la taille des enfants?",
       "category": "sorties",
-      "publishedAt": "2026-09-10T16:05:53+02:00",
+      "publishedAt": "2026-10-02T19:08:32+02:00",
       "location": {
-        "city": "Sigean",
-        "department": "Aude",
-        "region": "Occitanie"
+        "city": "Merlimont",
+        "department": "Pas-de-Calais",
+        "region": "Hauts-de-France"
       },
-      "ageDays": 72,
+      "ageDays": 51,
       "rapidDrop": false,
-      "peakStart": "2026-10-23",
-      "peakEnd": "2026-10-29",
+      "peakStart": "2026-10-25",
+      "peakEnd": "2026-10-31",
       "recentStart": "2026-11-13",
       "recentEnd": "2026-11-19",
-      "peakImpressions": 131,
-      "recentImpressions": 32,
-      "score": 99,
+      "peakImpressions": 80,
+      "recentImpressions": 5,
+      "score": 75,
       "signal": "needs_query_check",
       "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
       "commonQueries": null,
       "positionDelta": null,
       "impressionRatio": null,
       "focusQueries": [
-        "Réserve Africaine de Sigean avec enfants",
-        "durée visite Réserve Africaine Sigean"
+        "Parc Bagatelle en famille",
+        "attractions Bagatelle taille enfant"
+      ]
+    },
+    {
+      "url": "/articles/activites/zoo-de-martinique-en-famille-tarifs-poussette-et-visite-de-l-habitation-latouche/",
+      "title": "Zoo de Martinique en famille: tarifs, poussette et visite de l'Habitation Latouche",
+      "category": "activites",
+      "publishedAt": "2026-10-10T15:00:10+02:00",
+      "location": {
+        "city": "Le Carbet",
+        "department": "Martinique",
+        "region": "Martinique"
+      },
+      "ageDays": 43,
+      "rapidDrop": false,
+      "peakStart": "2026-10-24",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-13",
+      "recentEnd": "2026-11-19",
+      "peakImpressions": 177,
+      "recentImpressions": 111,
+      "score": 66,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Zoo de Martinique en famille",
+        "Zoo du Carbet avec enfants",
+        "Habitation Latouche"
       ]
     }
   ],
@@ -553,8 +558,8 @@
     }
   ],
   "excluded": {
-    "expired": 189,
-    "cooling": 84
+    "expired": 193,
+    "cooling": 83
   },
   "warnings": [
     "Diagnostics par requêtes : 5/5.",
