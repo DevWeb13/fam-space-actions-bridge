@@ -456,3 +456,4 @@ automation/image-hero-20261121-1841-cuisine-laval-littoral|aa5e0006c37bdeb8b940d
 automation/image-hero-20261122-0049-ravioles-laep|acee111cbd9bc03d4f9a7f083a2b11e8ec3cd6dd
 automation/image-hero-20261122-0049-ravioles-laep|218262c08ce0e3c9ebcfc738630cd3c943158ac3
 automation/image-hero-20261122-0645-auvergne-yonne-caf17|17b4f0c017973c0b4e5bcb5f2687a1869e71d176
+automation/image-hero-20261122-0645-auvergne-yonne-caf17|8bff12fc69f0533fa766b82cf8d3c117c208f513
