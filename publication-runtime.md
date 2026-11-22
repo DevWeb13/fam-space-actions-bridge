@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,82 +14,155 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Somme
 - Région: Hauts-de-France
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-**Ficelle picarde en famille : préparer les crêpes gratinées d'Amiens sans se compliquer la soirée.** Guide de cuisine familiale consacré à cette spécialité née à Amiens dans la Somme : des crêpes garnies de jambon et d'une duxelles de champignons aux échalotes, nappées de crème puis gratinées. Angle : recette fidèle à la tradition, organisation en plusieurs temps et participation adaptée des enfants.
-
-## Besoin du lecteur
-Comprendre ce qui distingue la ficelle picarde d'une crêpe au jambon ordinaire ; choisir les ingrédients et proportions pour un repas familial ; préparer les crêpes et la duxelles sans excès d'humidité ; assembler, gratiner et servir ; savoir ce qui peut être préparé à l'avance et quelles opérations confier aux enfants sous surveillance.
-
-## Valeur éditoriale
-- Expliquer l'origine amiénoise et la distinction entre crème fraîche traditionnelle et variantes à la béchamel, sans présenter les variantes comme interdites.
-- Proposer une recette complète, cohérente pour quatre personnes, avec étapes, quantités, durée réaliste et repères visuels pour la cuisson de la duxelles et le gratinage.
-- Donner un déroulé familial concret : préparer les crêpes en amont, réserver le hachage et les cuissons à l'adulte, laisser les enfants garnir et rouler lorsque les préparations ont refroidi.
-- Expliquer comment éviter une garniture détrempée, ajuster le nombre de ficelles à l'appétit et accompagner d'une salade. Ne pas simplement recopier la recette touristique déjà publiée.
-- Les résultats de recherche proposent déjà de nombreuses recettes, dont une explicitement familiale : l'intérêt différenciant doit donc résider dans une organisation réellement pratique et une rédaction vérifiée, pas dans une prétendue recette inédite.
-
-## Affiliation
-**Aucune offre partenaire pertinente pour l'action principale, qui est de cuisiner chez soi.** Recherche effectuée sur les offres de visites et activités culinaires à Amiens chez GetYourGuide et Tiqets : aucune prestation directement liée à la préparation de la ficelle picarde n'a été confirmée. Les hébergements ne répondent pas au besoin de cette recette à domicile : ne pas insérer d'hôtel ou de location de vacances. Une maison familiale à Saint-Valery-sur-Somme est visible sur Booking (https://www.booking.com/hotel/fr/les-flobarts.fr.html), mais elle est volontairement écartée car sans lien utile avec la préparation du plat.
-
-## Sources de départ
-- Office de tourisme Baie de Somme Ponthieu Marquenterre, origine, ingrédients et déroulé traditionnel : https://www.baiedesomme-ponthieumarquenterre.fr/specialite-culinaire-picardie.php?data_id=15&dbox_id=76&language=fr&page=1
-- Cuisine à la française, fiche patrimoniale et distinction crème/béchamel : https://cuisinealafrancaise.com/fr/dgal/produits/148-ficelle-picarde.html
-- Conseil départemental de la Somme, démonstration du chef Sébastien Porquet : https://www.youtube.com/watch?v=cqYBbf2pwZ8
-- Office de tourisme de la baie de Somme, panorama des spécialités et produits du terroir : https://www.tourisme-baiedesomme.fr/organiser/consommer-local/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "cuisine"
+title: "Ficelle picarde: la recette familiale des crêpes gratinées d'Amiens"
+subtitle: "Jambon, champignons et crème fraîche, avec une préparation facile à répartir sur deux temps"
+summary: "Préparez huit ficelles picardes pour quatre personnes: ingrédients, duxelles sans eau, gratinage et astuces pour cuisiner avec les enfants."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "ficelle picarde recette"
+  - "ficelle picarde familiale"
+  - "crêpes jambon champignons gratinées"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Amiens"
+  department: "Somme"
+  region: "Hauts-de-France"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Office de tourisme Baie de Somme Ponthieu Marquenterre: la ficelle picarde"
+    url: "https://www.baiedesomme-ponthieumarquenterre.fr/specialite-culinaire-picardie.php?data_id=15&dbox_id=76&language=fr&page=1"
+  - title: "Cuisine à la française: histoire et variantes de la ficelle picarde"
+    url: "https://cuisinealafrancaise.com/fr/dgal/produits/148-ficelle-picarde.html"
+  - title: "Office de tourisme du Pays du Coquelicot: recette de ficelle picarde"
+    url: "https://www.coquelicot-tourisme.com/mon-sejour/se-regaler/nos-specialites/ficelle-picarde"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+La ficelle picarde est une spécialité d'Amiens, dans la Somme: une crêpe fine garnie de jambon et de champignons cuisinés aux échalotes, roulée puis gratinée avec de la crème fraîche et du fromage. Elle peut faire une entrée généreuse ou, avec une salade, un dîner familial. Le secret n'est pas de compliquer la recette: il faut surtout laisser les champignons perdre leur eau avant de garnir les crêpes.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Une crêpe gratinée, mais pas une simple crêpe au jambon
+
+La garniture caractéristique est une **duxelles**, c'est-à-dire des champignons et des échalotes finement hachés puis cuits doucement. La ficelle picarde est associée à une création des années 1950 à Amiens, attribuée au cuisinier Marcel Lefèvre, comme le rappelle l'[office de tourisme Baie de Somme Ponthieu Marquenterre](https://www.baiedesomme-ponthieumarquenterre.fr/specialite-culinaire-picardie.php?data_id=15&dbox_id=76&language=fr&page=1).
+
+La version à la crème fraîche est celle que nous retenons ici. Il existe aussi des recettes à la béchamel, notamment dans certaines publications touristiques: ce sont des variantes, pas une raison de compliquer le repas. La fiche de [Cuisine à la française](https://cuisinealafrancaise.com/fr/dgal/produits/148-ficelle-picarde.html) décrit également cette diversité.
+
+## Ingrédients pour quatre personnes
+
+Cette recette donne **huit ficelles**, soit deux par personne pour un plat principal avec une salade. Pour une entrée, une seule peut suffire.
+
+**Pour huit crêpes fines:**
+- 150 g de farine
+- 3 œufs
+- 50 cl de lait
+- Une pincée de sel
+- Un peu de beurre pour la poêle
+
+**Pour la garniture et le gratin:**
+- 4 grandes tranches de jambon blanc, coupées en deux
+- 500 g de champignons de Paris
+- 2 à 3 échalotes
+- 25 g de beurre, plus un peu pour le plat
+- 25 cl de crème fraîche épaisse
+- 75 à 100 g d'emmental râpé
+- Poivre et un peu de sel
+
+Comptez **environ 1 h 15 à 1 h 30**, repos de la pâte et gratinage compris, selon votre aisance et la taille de la poêle. Vous pouvez réduire le travail du soir en préparant les crêpes et la duxelles plus tôt.
+
+## Préparation: les cinq étapes
+
+### 1. Préparer la pâte
+
+Mélangez la farine et le sel. Incorporez les œufs, puis versez progressivement le lait en fouettant pour éviter les grumeaux. Laissez reposer environ 20 minutes. La pâte doit être suffisamment fluide pour former des crêpes fines: ajoutez un petit trait de lait si elle est trop épaisse.
+
+### 2. Cuire les champignons sans détremper la garniture
+
+Hachez finement les échalotes et les champignons. Faites fondre le beurre dans une grande poêle, puis laissez les échalotes s'attendrir à feu doux sans les brûler. Ajoutez les champignons et poursuivez la cuisson en remuant.
+
+Au début, les champignons rendent de l'eau. Continuez jusqu'à ce que **le liquide visible ait disparu et que la préparation ne baigne plus dans son jus**. Cette étape peut prendre 15 à 25 minutes selon la poêle et la quantité. Poivrez, salez légèrement, puis ajoutez deux cuillères à soupe de crème hors du feu. Laissez tiédir.
+
+C'est le point à ne pas bâcler: une duxelles trop humide ramollit les crêpes et laisse du liquide au fond du plat.
+
+### 3. Cuire les crêpes
+
+Faites chauffer une poêle légèrement beurrée. Versez une petite louche de pâte, répartissez-la finement et cuisez chaque crêpe des deux côtés. Empilez-les sur une assiette. Inutile de les faire très dorer: elles passeront ensuite au four.
+
+### 4. Garnir et rouler
+
+Préchauffez le four à **200 °C**. Posez une demi-tranche de jambon sur chaque crêpe, répartissez la duxelles en huit portions puis roulez sans trop serrer. Déposez les rouleaux côte à côte dans un plat légèrement beurré, fermeture vers le bas.
+
+Étalez le reste de crème sur les ficelles et parsemez de fromage râpé. Une couche modérée suffit: on doit encore sentir les champignons et le jambon.
+
+### 5. Gratiner et servir
+
+Enfournez **10 à 15 minutes environ**, jusqu'à ce que la crème frémisse et que le fromage soit fondu et légèrement doré. Si le plat sort du réfrigérateur, il faudra parfois prolonger la cuisson pour que le centre soit bien chaud. Servez avec une salade verte et une vinaigrette légèrement relevée.
+
+L'[office de tourisme du Pays du Coquelicot](https://www.coquelicot-tourisme.com/mon-sejour/se-regaler/nos-specialites/ficelle-picarde) propose une autre version, avec béchamel, et confirme l'importance de faire évaporer l'eau des champignons avant le montage.
+
+## Cuisiner avec les enfants sans rallonger la soirée
+
+Le plus simple est de répartir les rôles. Un adulte s'occupe des couteaux, de la poêle chaude et du four. Quand les crêpes et la duxelles ont tiédi, les enfants peuvent déposer le jambon, répartir la garniture à la cuillère et rouler les ficelles. Les plus jeunes peuvent aussi disposer le fromage avant que l'adulte enfourne le plat.
+
+Pour éviter une longue préparation au moment du dîner, faites les crêpes et la duxelles à l'avance, laissez-les refroidir rapidement puis conservez-les au réfrigérateur dans des récipients fermés. Assemblez au dernier moment, ou gardez le plat monté au frais jusqu'à sa cuisson. Ne laissez pas les préparations au jambon et à la crème attendre plusieurs heures à température ambiante.
+
+## Trois ajustements utiles
+
+**Les champignons rendent encore de l'eau ?** Remettez la duxelles sur le feu quelques minutes avant de garnir. Ajouter de la farine pour masquer l'humidité n'est pas nécessaire.
+
+**Les enfants ont un petit appétit ?** Servez une ficelle avec une salade ou des crudités et gardez le reste pour un autre repas, en le réfrigérant rapidement.
+
+**Vous n'avez pas le temps de faire les crêpes ?** Des crêpes nature non sucrées peuvent dépanner. Vérifiez simplement qu'elles sont assez souples pour être roulées et qu'elles ne sont pas aromatisées au sucre ou à la vanille.
+
+La ficelle picarde est surtout agréable lorsqu'on la sert tout juste gratinée: le dessus est doré, la crêpe reste souple et la garniture aux champignons conserve sa texture.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -118,4 +191,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
