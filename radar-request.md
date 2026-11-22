@@ -29,7 +29,7 @@ Pour une pause au calme, deux séances du conte **« Des pas dans la neige »** 
 
 ![Basilique Saint-Nicolas-de-Port illuminée de nuit, photographiée hors des festivités de 2026.](/images/articles/2026/11/saint-nicolas-2026-a-saint-nicolas-de-port-village-defile-ou-procession-en-famille-body-01.webp)
 
-*Photo: [Antoine Taveneaux](https://commons.wikimedia.org/wiki/File:Basilique_Saint-Nicolas_de_Port_de_nuit_01.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+*Photo: [Antoine Taveneaux](https://commons.wikimedia.org/wiki/File:Basilique_Saint-Nicolas_de-Port_de_nuit_01.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
 
 <!-- /article-image-body:01 -->
 
