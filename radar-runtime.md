@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Saint-Nicolas-de-Port 2026 en famille: village, défilé et procession"
-subtitle: Le 5 décembre, les horaires confirmés et les repères pour venir avec les enfants
-summary: "Village gratuit de 14 h à 19 h, défilé de chars et procession aux flambeaux: les rendez-vous de la Saint-Nicolas 2026 à Saint-Nicolas-de-Port et les informations encore à confirmer."
+title: "Saint-Nicolas-de-Port 2026 en famille: horaires du défilé et de la procession"
+subtitle: Le 5 décembre, village dès 14 h, chars à 16 h 30 et flambeaux à 20 h 30
+summary: "Village et animations gratuites de 14 h à 19 h, défilé dès 16 h 30, spectacle à 17 h 45 et procession à 20 h 30: le programme confirmé et les conseils pour choisir avec les enfants."
 category: evenements
 location:
   city: Saint-Nicolas-de-Port
@@ -73,7 +76,9 @@ image:
 sources:
   - title: Ville de Saint-Nicolas-de-Port - Festivités de la Saint-Nicolas, 5 décembre 2026
     url: https://www.saintnicolasdeport.com/fr/ev/1263095/792846/festivites-de-la-saint-nicolas-1
-  - title: Ville de Saint-Nicolas-de-Port - Village de la Saint-Nicolas, 14 h à 19 h
+  - title: Ville de Saint-Nicolas-de-Port - Programme et plan officiels 2026 (PDF)
+    url: https://api.neopse.com/rest/site/files/download/2319394
+  - title: Ville de Saint-Nicolas-de-Port - Village de la Saint-Nicolas
     url: https://www.saintnicolasdeport.com/fr/nw/1263056/3010347/village-de-la-saint-nicolas-recherche-de-producteurs-et-artisans-en-gastronomie
   - title: Ville de Saint-Nicolas-de-Port - Se déplacer
     url: https://saintnicolasdeport.com/fr/rb/1023453/se-deplacer-19
@@ -95,7 +100,7 @@ affiliate:
   destination: Saint-Nicolas-de-Port
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(11)/saint-nicolas-2026-a-saint-nicolas-de-port-village-defile-ou-procession-en-famille/index.md
   targetSha: 308adb46f79678747d76656574ba696a4212844e
@@ -122,28 +127,53 @@ radar:
       - village Saint Nicolas de Port procession aux flambeaux
 ---
 
-## Mission retenue
-Actualiser le guide familial des festivités de la Saint-Nicolas 2026 à Saint-Nicolas-de-Port, le samedi 5 décembre.
+<!-- article-image-credit -->
+*Photo: [Antoine Taveneaux](https://commons.wikimedia.org/wiki/File:Procession-saint-nicolas4.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-L'article du 2 novembre indique que les horaires du défilé et de la procession restent inconnus. La Ville a désormais mis en ligne un programme détaillé 2026, un flyer et un plan sur sa page officielle. Lacune éditoriale vérifiable, indépendante de la baisse GSC (31 puis 9 impressions, cause non établie).
+Le **samedi 5 décembre 2026**, Saint-Nicolas-de-Port, en Meurthe-et-Moselle, célèbre la Saint-Nicolas. La Ville confirme **le village de 14 h à 19 h**, **le défilé de chars à 16 h 30**, **l'allocution de saint Nicolas et le spectacle son et lumière à 17 h 45**, puis **la procession aux flambeaux à 20 h 30** dans la basilique. **L'entrée aux festivités est libre**; achats et consommations restent à prévoir séparément. Pour une sortie familiale, ces horaires permettent de choisir entre un après-midi avec de jeunes enfants et une soirée plus longue.
 
-## Décision du lecteur
-Permettre aux parents de choisir le village de l'après-midi, le défilé ou la procession selon l'âge des enfants, l'attente, les déplacements et l'heure de retour.
+## Avec de jeunes enfants: village, contes et manèges l'après-midi
 
-## Faits à traiter
-Lire intégralement le programme municipal 2026 et son flyer; relever seulement les horaires, parcours, animations, accès, stationnement et éventuelles restrictions effectivement confirmés. Distinguer le début général à 14 h de l'heure du défilé. Conserver le village gratuit de 14 h à 19 h, les conseils poussette et froid, les lignes SUB 23/24 sous réserve des horaires du jour, la différence avec Nancy, les deux crédits photographiques et l'hébergement existant. Ne pas inventer les horaires manquants ni reprendre ceux de 2025.
+Le **Village de la Saint-Nicolas** s'installe **place des Droits de l'Homme de 14 h à 19 h**. Le [programme municipal 2026](https://api.neopse.com/rest/site/files/download/2319394) annonce près de 30 artisans et commerçants ainsi que des espaces pour goûter des produits locaux. Les consommations et achats sont payants; la Ville ne détaille pas les prix de chaque stand. Prévoyez une solution de repas de secours si nécessaire.
 
-## Sources de départ
-- Ville de Saint-Nicolas-de-Port, programme détaillé 2026, flyer et plan: https://saintnicolasdeport.com/fr/ev/1263095/792846/festivites-de-la-saint-nicolas-1
-- Ville, village de 14 h à 19 h: https://www.saintnicolasdeport.com/fr/nw/1263056/3010347/village-de-la-saint-nicolas-recherche-de-producteurs-et-artisans-en-gastronomie
+Pour les petits, **La cabane de jardin** (compagnie Toupine) accueille les enfants **de 6 mois à 6 ans, de 14 h à 17 h**, place de la République. **Le P'tit Manège fait main** est annoncé **de 14 h à 17 h, pour les 2 à 12 ans**, contre-allée Roland-Zambeau, avenue Jolain. Le **P'tit Ranch**, avec des chevaux à pédales ou à pousser pour les plus petits, se tient **de 14 h 30 à 16 h 30**, en bas de la rue Anatole-France. Le programme annonce l'entrée libre aux festivités, mais ne précise pas de tarif individuel pour ces manèges: vérifiez sur place.
 
-## Affiliation
-Conserver la maison d'hôtes Les Berges de l'Ô via Booking.com si les caractéristiques et conditions restent exactes; pas d'affiliation naturelle pour l'événement gratuit.
+Pour une pause au calme, deux séances du conte **« Des pas dans la neige »** sont prévues **à 14 h 30 et 15 h 30**, pendant 30 minutes, à la salle du Conseil de la mairie (4 bis place de la République). Les **« Racontines d'hiver »** sont annoncées **à 15 h et 16 h**, pendant 30 minutes, à la médiathèque (5 rue Bonnardel). Des ateliers créatifs et un stand de maquillage sont programmés **de 14 h à 17 h**, place de la République et place Camille-Croué-Friedman. Une borne photo gratuite fonctionne **de 14 h à 17 h** à la Maison de saint Nicolas.
 
-## Continuations internes
-- Garder le lien vers l'article distinct consacré aux fêtes de Saint-Nicolas à Nancy, sans mélanger les programmes.
-- Ne pas réécrire les informations générales déjà correctes sur les transports et la nuitée.
+## Pour voir les chars: le défilé commence à 16 h 30
+
+<!-- article-image-body:01 -->
+
+![Basilique Saint-Nicolas-de-Port illuminée de nuit, photographiée hors des festivités de 2026.](/images/articles/2026/11/saint-nicolas-2026-a-saint-nicolas-de-port-village-defile-ou-procession-en-famille-body-01.webp)
+
+*Photo: [Antoine Taveneaux](https://commons.wikimedia.org/wiki/File:Basilique_Saint-Nicolas_de_Port_de_nuit_01.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Le **défilé traditionnel de chars et de groupes musicaux débute à 16 h 30**. Selon le plan officiel, sa mise en place technique se fait rue George-Rémy; le cortège emprunte ensuite les rues Edmond-Prignet, Marie-Marvingt, des Mimosas et des Jonquilles, pour rejoindre **vers 17 h l'angle des rues des Jonquilles et Jolain**. Il arrive **vers 17 h 30 place des Droits de l'Homme**, avant de passer place de la République, rues Anatole-France et Laruelle, place Jean-Jaurès, puis rue Bonnardel. Ces heures de passage sont indicatives, contrairement à l'heure de départ annoncée.
+
+Les familles qui souhaitent surtout voir les chars peuvent rejoindre un point du parcours à l'avance plutôt que de suivre tout le cortège avec une poussette. **À 17 h 45**, place de la République, saint Nicolas prononcera son allocution, recevra les clefs de la ville et un **spectacle son et lumière** est prévu. Des déambulations complètent l'après-midi, notamment **Koï** de 15 h à 15 h 45 place des Droits de l'Homme, puis de 16 h 15 à 17 h rue Anatole-France.
+
+## La procession aux flambeaux: une sortie plus tardive
+
+La **780e procession ancestrale aux flambeaux commence à 20 h 30 dans la basilique Saint-Nicolas**. Le programme précise une **ouverture des portes à 19 h 30**. Il s'agit d'un office et d'un cortège aux flambeaux avec présentation des trésors de la basilique, distincts du défilé de chars en ville. Pour les familles avec de jeunes enfants, il faut compter avec l'attente avant l'entrée, la foule et le retour après la cérémonie. Sa durée de fin n'est pas précisée dans le programme.
+
+La Ville met à disposition le [flyer et le plan des animations](https://api.neopse.com/rest/site/files/download/2319394), utiles pour repérer la basilique, les places et les animations avant de partir. L'application « St Nicolas » est également signalée sur la [page officielle des festivités](https://www.saintnicolasdeport.com/fr/ev/1263095/792846/festivites-de-la-saint-nicolas-1).
+
+## Poussette, froid, accès et retour
+
+Le rassemblement attire de nombreux visiteurs. Un porte-bébé peut être plus pratique qu'une poussette au milieu du défilé, selon l'âge de l'enfant. Prévoyez des vêtements chauds, surtout pour la procession. Le plan municipal localise les animations, mais ne fournit pas de confirmation détaillée sur les toilettes, les tables à langer, l'accessibilité de chaque emplacement, les parkings disponibles ou toutes les rues fermées. Si l'un de ces points est indispensable, demandez confirmation à la Ville avant le déplacement.
+
+Saint-Nicolas-de-Port est **distincte de Nancy**. La Ville mentionne les **bus SUB 23 et 24**: la 23 dessert notamment Nancy (Artem) et la 24 notamment Laneuveville. La gare ferroviaire la plus proche se situe à **Varangéville**. Vérifiez les horaires du **samedi 5 décembre**, les derniers retours et les déviations éventuelles, particulièrement si vous restez jusqu'à la procession. En voiture, consultez les consignes de stationnement actualisées plutôt que de supposer qu'une place proche du parcours sera accessible.
+
+Les fêtes de Saint-Nicolas **à Nancy** ont leur propre programme: retrouvez les villages, illuminations et le défilé dans notre [guide des Fêtes de Saint-Nicolas 2026 à Nancy](https://www.fam-space.fr/articles/evenements/fetes-de-saint-nicolas-2026-a-nancy-en-famille-defile-dates-et-visite/).
+
+## Dormir à proximité après la soirée
+
+Pour une famille venant de loin, dormir sur place peut éviter un retour tardif. La maison d'hôtes [Les Berges de l'Ô sur Booking.com](https://www.booking.com/hotel/fr/les-berges-de-l-a.fr.html), au **10 ruelle du Moulin**, annonce des chambres familiales et un parking privé gratuit. L'arrivée est indiquée **de 17 h à 21 h**: organisez l'enregistrement avant les animations qui vous intéressent et confirmez ces conditions avec l'établissement.
+
+Les enfants y sont acceptés, mais **ceux de plus de 4 ans sont facturés au tarif adulte**. Un lit bébé est annoncé gratuit sur demande; les lits d'appoint sont payants et soumis à disponibilité. Indiquez les âges des enfants pour contrôler les couchages, les tarifs, les conditions d'annulation et la disponibilité pour la nuit **du 5 au 6 décembre 2026**.
 
 ## Article source exact à préserver et améliorer
 
@@ -240,11 +270,11 @@ L'établissement accepte les enfants, mais **ceux de plus de 4 ans sont facturé
 - /articles/evenements/fetes-de-saint-nicolas-2026-a-nancy-en-famille-defile-dates-et-visite/ | Fêtes de Saint-Nicolas 2026 à Nancy en famille: défilé, villages et animations | evenements | Nancy, Meurthe-et-Moselle, Grand Est
 - /articles/evenements/saint-nicolas-2026-a-carcassonne-marche-aux-flambeaux-ou-campements-medievaux-avec-les-enfants/ | Saint-Nicolas 2026 à Carcassonne: campements médiévaux et marche aux flambeaux en famille | evenements | Carcassonne, Aude, Occitanie
 - /articles/evenements/saint-nicolas-2026-a-epinal-en-famille-defile-du-5-decembre-ou-marche-de-noel/ | Saint-Nicolas 2026 à Épinal: cortège du 5 décembre et marché de Noël en famille | evenements | Épinal, Vosges, Grand Est
+- /articles/evenements/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel/ | Noël 2026 à Chambéry en famille: marchés, parade et ateliers | evenements | Chambéry, Savoie, Auvergne-Rhône-Alpes
+- /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | Marché de Noël d'Amiens 2026 en famille: horaires, Père Noël et patinoire | evenements | Amiens, Somme, Hauts-de-France
+- /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | Noël 2026 à Brest en famille: marché, projections et horaires | evenements | Brest, Finistère, Bretagne
 - /articles/activites/port-aux-cerises-a-draveil-quelle-activite-choisir-selon-l-age-des-enfants/ | Port aux Cerises à Draveil: quelle activité choisir selon l'âge des enfants? | activites | Draveil, Essonne, Île-de-France
-- /articles/evenements/noel-a-nice-2026-en-famille-village-spectacles-gratuits-et-creche-que-choisir/ | Noël à Nice 2026 en famille: village, spectacles et crèche | evenements | Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur
-- /articles/cuisine/foire-aux-harengs-de-dieppe-2026-quoi-gouter-et-comment-preparer-la-journee/ | Foire aux Harengs de Dieppe 2026: quoi goûter et comment préparer la journée | cuisine | Dieppe, Seine-Maritime, Normandie
-- /articles/voyages/saint-bertrand-de-comminges-avec-des-enfants-village-seul-ou-grande-boucle-a-pied/ | Saint-Bertrand-de-Comminges avec des enfants: village seul ou grande boucle à pied? | voyages | Saint-Bertrand-de-Comminges, Haute-Garonne, Occitanie
-- /articles/sorties/aquarium-de-vendee-en-famille-des-poissons-de-nos-cotes-aux-mers-tropicales/ | Aquarium de Vendée en famille: des poissons de nos côtes aux mers tropicales | sorties | Talmont-Saint-Hilaire, Vendée, Pays de la Loire
+- /articles/evenements/marche-de-noel-de-saint-etienne-2026-en-famille-dates-horaires-et-acces/ | Marché de Noël de Saint-Étienne 2026 en famille: trois places, horaires et accès | evenements | Saint-Étienne, Loire, Auvergne-Rhône-Alpes
 - /articles/evenements/saint-nicolas-2026-a-saint-nicolas-de-port-village-defile-ou-procession-en-famille/ | Saint-Nicolas-de-Port 2026 en famille: village, défilé et procession | evenements | Saint-Nicolas-de-Port, Meurthe-et-Moselle, Grand Est
 - /articles/cuisine/cuisiner-local-en-meurthe-et-moselle-producteurs-paniers-et-idees-de-repas/ | Cuisiner local en Meurthe-et-Moselle: producteurs, paniers et idées de repas | cuisine | Meurthe-et-Moselle, Grand Est
 - /articles/parentalite/ludotheques-du-grand-nancy-ou-jouer-en-famille-et-emprunter-des-jeux/ | Ludothèques du Grand Nancy: où jouer en famille et emprunter des jeux | parentalite | Meurthe-et-Moselle, Grand Est
@@ -264,12 +294,14 @@ L'établissement accepte les enfants, mais **ceux de plus de 4 ans sont facturé
 
 - opportunity | /articles/evenements/fetes-de-saint-nicolas-2026-a-nancy-en-famille-defile-dates-et-visite/ | 2026-10-19T16:47:56.278Z
 - refresh | /articles/parentalite/ludotheques-du-grand-nancy-ou-jouer-en-famille-et-emprunter-des-jeux/ | 2026-11-09T12:50:22.314Z
+- opportunity | /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | 2026-10-19T13:54:07.745Z
+- opportunity | /articles/evenements/marche-de-noel-de-saint-etienne-2026-en-famille-dates-horaires-et-acces/ | 2026-10-28T18:37:09.008Z
+- refresh | /articles/evenements/marche-de-noel-de-saint-etienne-2026-en-famille-dates-horaires-et-acces/ | 2026-11-14T19:29:50.155Z
 - refresh | /articles/maison/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/ | 2026-11-12T01:28:37.978Z
-- opportunity | /articles/evenements/noel-a-nice-2026-en-famille-village-spectacles-gratuits-et-creche-que-choisir/ | 2026-10-25T04:31:33.540Z
+- opportunity | /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | 2026-10-30T06:28:26.726Z
+- opportunity | /articles/evenements/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel/ | 2026-11-01T09:37:48.790Z
+- refresh | /articles/evenements/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel/ | 2026-11-17T01:29:09.873Z
 - opportunity | /articles/evenements/saint-nicolas-2026-a-carcassonne-marche-aux-flambeaux-ou-campements-medievaux-avec-les-enfants/ | 2026-10-27T00:35:14.931Z
-- refresh | /articles/evenements/saint-nicolas-2026-a-carcassonne-marche-aux-flambeaux-ou-campements-medievaux-avec-les-enfants/ | 2026-11-17T06:29:57.590Z
-- opportunity | /articles/evenements/saint-nicolas-2026-a-epinal-en-famille-defile-du-5-decembre-ou-marche-de-noel/ | 2026-11-01T21:31:28.158Z
-- opportunity | /articles/evenements/saint-nicolas-2026-a-saint-nicolas-de-port-village-defile-ou-procession-en-famille/ | 2026-11-02T23:31:49.432Z
 
 ### Phases 2 et 3
 
