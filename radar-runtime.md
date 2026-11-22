@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -91,13 +94,15 @@ sources:
     url: https://www.semainedugolfe.com/participating-towns-and-harbours-1786-0-0-0.html
   - title: "Tourisme Bretagne: la Semaine du Golfe"
     url: https://www.tourismebretagne.com/selon-mes-envies/culture-et-patrimoine-de-bretagne/les-grands-evenements/la-semaine-du-golfe/
+  - title: "Semaine du Golfe: les 13 flottilles"
+    url: https://www.semainedugolfe.com/flottilles-1650-0-0-0.html
 affiliate:
   enabled: true
   type: travel
   destination: Morbihan
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(11)/semaine-du-golfe-2027-en-famille-ou-voir-les-bateaux/index.md
   targetSha: f0c970241b453b1ed3462c31f6a73cd17236375d
@@ -124,29 +129,97 @@ radar:
       - Semaine du Golfe Morbihan enfants
 ---
 
-## Mission retenue
-Actualiser le guide de la Semaine du Golfe du Morbihan, du 3 au 9 mai 2027, en expliquant comment suivre les flottilles et choisir entre observation à quai et navigation.
+<!-- article-image-credit -->
+*Photo: [Broenberr](https://commons.wikimedia.org/wiki/File:Yole_de_Villefranche,_Semaine_du_Golfe_du_Morbihan.JPG) - [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot indique 29 impressions au pic contre 7 récemment, sans diagnostic causal: ne pas attribuer la baisse à un défaut SEO. Lacune indépendante: l'organisateur décrit désormais précisément 13 flottilles avec leurs types de bateaux et annonce les programmes 2027 à venir. L'article actuel ne donne pas cette méthode concrète de repérage.
+Du **3 au 9 mai 2027**, le golfe du Morbihan accueillera la **14e Semaine du Golfe**, une grande fête maritime où des voiliers traditionnels et des bateaux de toutes tailles naviguent entre les îles et font escale dans les ports. Pour les enfants, c'est l'occasion de découvrir de près des gréements impressionnants et l'ambiance des quais en fête.
 
-## Décision du lecteur
-Savoir consulter la bonne flottille et son escale officielle avant de choisir Vannes, Port-Navalo, Port-Blanc ou Saint-Goustan, en évitant un déplacement inutile avec des enfants.
+Mais attention: les bateaux ne restent pas tous au même endroit. Pour réussir sa sortie, il faut choisir entre **observer une flottille en navigation** et **profiter d'une escale à terre**, puis consulter le programme du jour.
 
-## Faits à traiter
-Expliquer simplement que les 13 flottilles sont réparties par types de bateaux et changent d'escale selon la navigation; orienter vers la page officielle des flottilles et le futur programme maritime 2027, sans inventer de parcours ni d'horaires. Les anciens programmes 2025 ne doivent jamais servir d'horaires 2027. Préserver dates confirmées, quatre ports, sécurité sur les quais, conseils poussette et météo, traversées, conchyliculture, images, crédits, sources et hébergements. Ne pas allonger artificiellement.
+## Voir les bateaux naviguer ou les découvrir à quai ?
 
-## Sources de départ
-- https://www.semainedugolfe.com/flottilles-1650-0-0-0.html
-- https://www.semainedugolfe.com/general-program-2376-0-0-0.html
-- https://www.semainedugolfe.com/participating-towns-and-harbours-1786-0-0-0.html
+<!-- article-image-body:01 -->
 
-## Affiliation
-Conserver les deux offres Booking.com déjà présentes, sans autre ajout artificiel.
+![Le Corbeau des mers à quai dans le port de Vannes lors de la Semaine du Golfe 2015](/images/articles/2026/11/semaine-du-golfe-2027-en-famille-ou-voir-les-bateaux-body-01.webp)
 
-## Continuations internes
-- Conserver la comparaison des quatre ports dans cette page plutôt que créer des doublons.
-- Vérifier le programme maritime 2027 avant toute précision de date ou d'escale.
+*Photo: [Fab5669](https://commons.wikimedia.org/wiki/File:Vannes,_semaine_du_golfe_2015_-_Corbeau_des_mers_(4).JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Pour voir les voiles déployées, commencez par la [liste officielle des 13 flottilles](https://www.semainedugolfe.com/flottilles-1650-0-0-0.html). Chaque flottille porte une lettre et un pavillon distinctif, et rassemble des bateaux d'un même type: par exemple les petits voiles-avirons (A), les yoles (B), les anciens bateaux de travail (C) ou les grands voiliers classiques (J). Choisissez celle que les enfants aimeraient découvrir, puis consultez son programme 2027 lorsqu'il sera publié pour connaître ses escales et ses navigations.
+
+Les flottilles circulent entre les ports selon les vents, les marées et les courants. Un beau point de vue ne garantit donc pas leur passage au moment de votre visite. **Avant de fixer un port et un jour**, croisez l'escale ou le parcours de la flottille choisie avec le [programme maritime officiel](https://www.semainedugolfe.com/general-program-2376-0-0-0.html). À ce jour, les programmes détaillés 2027 sont encore annoncés comme à venir: n'utilisez pas les horaires ou parcours de 2025 pour organiser la sortie.
+
+Une escale convient souvent mieux aux familles avec de jeunes enfants. On peut observer les bateaux amarrés, se promener et profiter des animations à terre. [Tourisme Bretagne](https://www.tourismebretagne.com/selon-mes-envies/culture-et-patrimoine-de-bretagne/les-grands-evenements/la-semaine-du-golfe/) présente notamment les expositions, la musique et les ateliers qui accompagnent traditionnellement la manifestation. Leur présence et leurs horaires en 2027 restent à confirmer.
+
+La grande parade, moment emblématique des éditions précédentes, peut attirer beaucoup de monde. Ne prévoyez pas son parcours ni son horaire sur la base d'une ancienne édition.
+
+## Quatre ports à envisager avec des enfants
+
+<!-- article-image-body:03 -->
+
+![Vue du port de Saint-Goustan à Auray, ses quais et ses maisons en 2010](/images/articles/2026/11/semaine-du-golfe-2027-en-famille-ou-voir-les-bateaux-body-03.webp)
+
+*Photo: [Myrabella](https://commons.wikimedia.org/wiki/File:Auray_port_de_Saint-Goustan.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:03 -->
+
+<!-- article-image-body:02 -->
+
+![Vue de Port-Navalo à Arzon depuis les eaux du golfe du Morbihan en 2016](/images/articles/2026/11/semaine-du-golfe-2027-en-famille-ou-voir-les-bateaux-body-02.webp)
+
+*Photo: [Fab5669](https://commons.wikimedia.org/wiki/File:Arzon_-_Port-Navalo_(03).jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+L'[organisateur présente les 19 ports et communes participants](https://www.semainedugolfe.com/participating-towns-and-harbours-1786-0-0-0.html). Parmi eux, quatre offrent des expériences différentes.
+
+**Vannes: une journée entre bateaux et centre-ville.** Le port est proche du cœur historique. C'est une base intéressante pour alterner découverte maritime, promenade et pauses avec les enfants. Vérifiez toutefois les bateaux et animations prévus le jour choisi.
+
+**Port-Navalo, à Arzon: des vues sur l'entrée du golfe.** À la pointe de la presqu'île de Rhuys, ce secteur est intéressant pour regarder vers le passage entre golfe et océan. Il faudra choisir le point d'observation selon le parcours officiel et les éventuelles restrictions d'accès.
+
+**Port-Blanc, à Baden: face à l'Île-aux-Moines.** Ce port permet d'observer l'activité maritime et, si vous le souhaitez, d'envisager une traversée vers l'île. Avec des enfants, vérifiez les départs et les conditions de réservation avant de combiner les deux activités.
+
+**Saint-Goustan, à Auray: un port ancien plein de caractère.** Quais, pont de pierre et maisons anciennes composent un joli décor pour une promenade. Les pavés et certaines pentes peuvent toutefois compliquer les déplacements en poussette.
+
+Aucun de ces lieux ne garantit à lui seul le passage des flottilles à une heure précise. Le meilleur choix dépendra du programme maritime publié pour votre date.
+
+## Organiser la visite selon l'âge des enfants
+
+**Avec un bébé ou de jeunes enfants**, préférez une escale à terre et un parcours court, avec possibilité de vous éloigner de la foule. Les quais demandent une vigilance constante près de l'eau et des amarres. Renseignez-vous sur les accès en poussette et les éventuelles zones fermées.
+
+**Avec des enfants plus grands**, l'observation d'une flottille en mouvement peut devenir le temps fort de la journée. Des jumelles peuvent être utiles lorsque les voiliers passent au large. Complétez éventuellement par une animation dans un port, sans multiplier les déplacements.
+
+**Pour deux jours**, consacrez idéalement chaque journée à un secteur du golfe. Passer d'une rive à l'autre en voiture peut demander un détour important, surtout lors d'un événement fréquenté.
+
+## Où dormir pour profiter de la fête sur deux jours ?
+
+Un hébergement proche du secteur que vous souhaitez explorer simplifie les déplacements et les repas des enfants.
+
+À Vannes, [l'Appart'City Confort Vannes](https://www.booking.com/hotel/fr/park-amp-suites-ela-c-gance-vannes.fr.html) propose des studios et appartements avec kitchenette. C'est une option à examiner pour profiter de Vannes et de ses environs.
+
+Sur la presqu'île de Rhuys, [les Appartements La Cigale à Arzon](https://www.booking.com/hotel/fr/residence-miramar-la-cigale.fr.html), au port du Crouesty, permettent de séjourner près du secteur de Port-Navalo. Certains logements disposent de plusieurs chambres.
+
+Vérifiez la capacité du logement, les conditions de réservation et les disponibilités pour vos dates entre le **3 et le 9 mai 2027**. Les tarifs ne sont pas garantis à ce stade.
+
+## Traversées, accès et météo: ce qu'il faut prévoir
+
+Le vent peut rendre l'attente fraîche sur les quais, même en mai. Prévoyez des vêtements coupe-vent et une solution de repli en cas de pluie ou de fatigue des enfants.
+
+La circulation, les parkings et d'éventuelles navettes peuvent être adaptés autour des ports les plus fréquentés. Consultez les informations locales à l'approche de la fête plutôt que de reprendre les dispositions d'une ancienne édition.
+
+Une traversée vers une île ou une sortie en mer est distincte de l'observation depuis la côte. Les horaires, tarifs, conditions d'embarquement et règles pour les jeunes enfants doivent être vérifiés auprès du transporteur. Aucune offre de traversée propre à l'édition 2027 n'est confirmée ici.
+
+## Les huîtres et la conchyliculture à l'honneur en 2027
+
+L'[annonce officielle de la 14e édition](https://www.semainedugolfe.com/news-j-365-le-compte-a-rebours-est-lance-1925-621-0-0.html) met à l'honneur les huîtres et la conchyliculture, c'est-à-dire l'élevage des coquillages. Dégustations, visites d'exploitations ostréicoles, présentations de bateaux de travail et rencontres sont évoquées. Une belle occasion de montrer aux enfants que le golfe est aussi un lieu de travail et de savoir-faire. Les lieux, horaires et modalités de participation restent à préciser.
+
+## Quand consulter le programme 2027 ?
+
+Au **22 novembre 2026**, le [programme général officiel](https://www.semainedugolfe.com/general-program-2376-0-0-0.html) annonce que les détails seront publiés ultérieurement. Les **dates du 3 au 9 mai 2027** sont confirmées, mais pas les horaires de passage des bateaux devant chaque port.
+
+Lorsque les horaires 2027 seront disponibles, vérifiez aussi les animations du port choisi et les conditions d'accès. Une dernière consultation avant le départ évitera de manquer une escale modifiée.
 
 ## Article source exact à préserver et améliorer
 
