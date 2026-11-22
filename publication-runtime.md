@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,98 +14,129 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Val-de-Marne
 - Région: Île-de-France
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-
-**Sujet :** les ludothèques du Val-de-Marne, pour jouer sur place et parfois emprunter des jeux sans acheter.
-
-**Titre de travail :** « Ludothèques du Val-de-Marne : où jouer en famille et emprunter des jeux ? »
-
-**Angle :** guide comparatif et pratique des solutions de jeu accessibles aux familles dans plusieurs communes du 94, en distinguant jeu libre, prêt à domicile, ateliers, conditions d'inscription et âge des enfants. Une ludothèque est un espace proposant jeux et jouets sur place, parfois aussi en prêt ; elle ne fonctionne pas partout comme une médiathèque.
-
-## Besoin du lecteur
-
-Identifier une ludothèque adaptée à l'âge de ses enfants, savoir si elle accepte les non-résidents, si les jeux sont empruntables, ce qui est gratuit ou soumis à adhésion et comment organiser une visite. Aider aussi les parents à choisir entre sortie ludique, découverte de jeux avant achat et emprunt régulier.
-
-## Valeur éditoriale
-
-- **Rungis :** ludothèque municipale au 8 bis rue Sainte-Geneviève ; environ 2 000 jeux ; accès et prêt gratuits pour les Rungissois, jusqu'à deux jeux pendant 28 jours selon les règles publiées. Ne pas étendre cette gratuité aux non-résidents sans vérification.
-- **Bonneuil-sur-Marne :** ludothèque intégrée à la médiathèque Bernard-Ywanne depuis mars 2025 ; séances de jeu sur place sans réservation, avec créneaux spécifiques ; inscription gratuite pour les résidents et certains publics du territoire GPSEA, autres inscriptions annoncées à 20 €.
-- **Fresnes :** ludothèque proposant jeu libre en fin d'après-midi, prêt de jeux avec carte et créneaux dédiés aux 0-3 ans accompagnés ; les ateliers peuvent être réservés aux adhérents.
-- **Créteil :** médiathèques avec jeux et animations, à distinguer d'une ludothèque dédiée.
-- **Comparaison utile :** accès sur place versus prêt, inscription versus entrée, conditions de résidence, autonomie des enfants, créneaux petite enfance et horaires modifiés pendant les vacances. Vérifier les informations juste avant publication : les calendriers changent.
-
-Le sujet est durable, utile en automne-hiver et ne reprend ni les visites du MAC VAL ni les autres lieux déjà traités récemment. Les pages municipales donnent chacune leurs propres conditions : Fam Space peut réellement faciliter la comparaison sans recopier une seule page officielle.
-
-## Affiliation
-
-Action principale : utiliser des services municipaux gratuits ou peu coûteux, sans réservation commerciale chez les partenaires.
-
-Recherches ciblées sur GetYourGuide, Tiqets et Klook pour les ludothèques et prêts de jeux du Val-de-Marne : **aucune prestation correspondante vérifiée**. Les city pass et les locations de vélos ou voitures ne répondent pas à ce besoin.
-
-Recherche secondaire Abritel : une maison pour quatre personnes à Bonneuil-sur-Marne est bien référencée (https://www.abritel.fr/location-vacances/p2556358), mais elle n'a pas de justification naturelle pour un guide de ludothèques de proximité ; **ne pas l'intégrer**. Aucun hébergement ni lien d'affiliation retenu. Le sujet reste éditorialement pertinent sans monétisation artificielle.
-
-## Sources de départ
-
-- Ludothèque de Rungis, accueil et offre : https://multitheque.ville-rungis.fr/index.php
-- Ludothèque de Rungis, accès et conditions de prêt : https://multitheque.ville-rungis.fr/ludotheque/venir
-- Bonneuil-sur-Marne, médiathèque-ludothèque Bernard-Ywanne : https://www.ville-bonneuil.fr/90/loisirs-citoyennete/culture/mediatheque-ludotheque-bernard-ywanne.htm
-- Fresnes, ludothèque municipale et créneaux : https://www.fresnes94.fr/vos-activites/culture/ludotheque/
-- BnF, médiathèque de l'Abbaye-Nelson Mandela à Créteil : https://ccfr.bnf.fr/portailccfr/ark%3A/16871/0026950
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "vie-pratique"
+title: "Ludothèques du Val-de-Marne: où jouer en famille et emprunter des jeux ?"
+subtitle: "Rungis, Bonneuil-sur-Marne et Fresnes: les différences à connaître avant de se déplacer"
+summary: "Jeux sur place, prêts à domicile, tarifs et créneaux petite enfance: trois adresses du Val-de-Marne pour choisir une ludothèque en famille."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "ludothèque Val-de-Marne"
+  - "prêt jeux famille 94"
+  - "ludothèque Rungis Bonneuil Fresnes"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Val-de-Marne"
+  region: "Île-de-France"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Multithèque de Rungis, ludothèque"
+    url: "https://multitheque.ville-rungis.fr/index.php"
+  - title: "Multithèque de Rungis, venir à la ludothèque"
+    url: "https://multitheque.ville-rungis.fr/ludotheque/venir"
+  - title: "Ville de Bonneuil-sur-Marne, médiathèque-ludothèque Bernard-Ywanne"
+    url: "https://www.ville-bonneuil.fr/90/loisirs-citoyennete/culture/mediatheque-ludotheque-bernard-ywanne.htm"
+  - title: "Ville de Fresnes, ludothèque La Ludochouette"
+    url: "https://www.fresnes94.fr/vos-activites/culture/ludotheque/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Envie de découvrir de nouveaux jeux sans remplir les placards ? Dans le Val-de-Marne, plusieurs ludothèques accueillent les familles pour jouer sur place, et certaines permettent aussi d'emprunter des jeux à domicile. Mais les règles varient beaucoup: accès libre, adhésion familiale, carte de prêt ou séances à horaires précis.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+Voici trois adresses aux fonctionnements différents, pour choisir selon l'âge des enfants et ce que vous souhaitez faire.
+
+## Rungis: un grand choix de jeux et des prêts pour les habitants
+
+Au **8 bis rue Sainte-Geneviève, à Rungis**, la ludothèque municipale annonce près de **2 000 jeux et 250 jouets**, pour différents âges. C'est une bonne piste pour essayer plusieurs styles de jeux avant d'en acheter un, ou simplement passer un moment ensemble.
+
+La [Multithèque de Rungis](https://multitheque.ville-rungis.fr/index.php) présente l'accès comme gratuit pour les Rungissois. Ses [conditions de visite et de prêt](https://multitheque.ville-rungis.fr/ludotheque/venir) prévoient également, pour les usagers concernés, l'emprunt de deux jeux pendant 28 jours. **Si vous habitez une autre commune, demandez confirmation des conditions d'accès et d'emprunt**: la gratuité annoncée pour les habitants ne signifie pas nécessairement qu'elle s'applique à tous.
+
+**Contact:** 01 79 61 61 26. Consultez les horaires sur le site avant de venir, notamment pendant les vacances scolaires.
+
+## Bonneuil-sur-Marne: des séances pour jouer sur place
+
+Depuis mars 2025, la ludothèque est installée dans la **médiathèque-ludothèque Bernard-Ywanne**, au **1 rue de la Commune, à Bonneuil-sur-Marne**. Le fonctionnement est particulièrement pratique pour une sortie: des séances de jeu sur place de **1 h 30**, rangement compris, sont proposées **sans réservation**.
+
+Selon la [ville de Bonneuil-sur-Marne](https://www.ville-bonneuil.fr/90/loisirs-citoyennete/culture/mediatheque-ludotheque-bernard-ywanne.htm), les créneaux de l'espace ludique sont:
+- Mardi, jeudi et vendredi: 14 h à 15 h 30, puis 16 h à 17 h 30.
+- Mercredi et samedi: 10 h à 11 h 30, puis 14 h à 15 h 30, 15 h 30 à 17 h et 17 h à 18 h 30.
+
+Ces horaires concernent les séances de jeux et ne doivent pas être confondus avec les heures d'ouverture générales de la médiathèque. Les modalités d'inscription sont gratuites pour les résidents ainsi que pour certains étudiants et personnes travaillant sur le territoire de Grand Paris Sud Est Avenir (GPSEA). La ville annonce **20 € pour les autres inscriptions**. Vérifiez auprès de l'établissement si une inscription est nécessaire pour la séance que vous visez, et si le jeu souhaité peut être emprunté: la page décrit surtout le jeu sur place.
+
+**Contact:** 01 41 94 89 31.
+
+## Fresnes: jeu libre, ateliers et emprunts avec carte
+
+La **Ludochouette**, au **23 bis rue Émile-Zola à Fresnes**, distingue nettement plusieurs usages. Le **jeu libre** est proposé du lundi au vendredi de **16 h 30 à 18 h 30**. Les enfants de moins de six ans doivent être accompagnés.
+
+Pour les familles adhérentes, la ludothèque prévoit aussi des **temps réservés aux 0-3 ans accompagnés**, les mardis et jeudis de **9 h 30 à 11 h 30** hors vacances, ainsi que des ateliers pour les plus grands. Ces activités nécessitent une préinscription, contrairement aux créneaux de jeu libre.
+
+Le prêt de jeux n'est pas inclus automatiquement dans une visite: il exige une **adhésion en cours et une carte de prêt**. La [ville de Fresnes](https://www.fresnes94.fr/vos-activites/culture/ludotheque/) affiche les tarifs annuels suivants:
+- **37 €** pour les familles de Fresnes ou des communes éligibles de Grand-Orly Seine Bièvre.
+- **67 €** pour les autres familles.
+- **28 €** pour une carte de dix prêts, soit **2,80 € par prêt**, en plus de l'adhésion.
+
+L'inscription s'effectue sur place pendant les heures de jeu libre, avec un justificatif de domicile. La mairie précise que les règlements se font **par chèque, sans carte bancaire**. Les horaires et activités évoluent pendant les vacances: consultez le programme avant de réserver un atelier.
+
+**Contact à jour:** 01 49 84 57 32. L'ancien numéro indiqué dans certains supports n'est plus valable.
+
+## Quelle ludothèque choisir ?
+
+**Pour essayer des jeux sans prévoir d'emprunt**, Bonneuil propose des séances clairement identifiées et sans réservation. Rungis offre un catalogue très fourni, particulièrement intéressant pour les habitants de la commune.
+
+**Pour emprunter régulièrement**, comparez d'abord les conditions de résidence et les frais. Rungis annonce un prêt gratuit pour les Rungissois, tandis que Fresnes fonctionne avec une adhésion et une carte spécifique. Ne supposez pas que toute ludothèque prête des jeux simplement parce qu'elle permet d'y jouer.
+
+**Avec un enfant de moins de trois ans**, les créneaux accompagnés de Fresnes constituent une option ciblée, sous réserve d'adhésion et de préinscription. Pour une sortie improvisée avec plusieurs âges, vérifiez plutôt les créneaux de jeu libre et les règles d'accompagnement.
+
+Enfin, avant de partir, contrôlez trois points sur le site de la structure ou par téléphone: **le créneau réellement ouvert, les conditions pour les non-résidents et la possibilité d'emprunter**. C'est ce qui évite le plus souvent un déplacement inutile.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -134,4 +165,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
