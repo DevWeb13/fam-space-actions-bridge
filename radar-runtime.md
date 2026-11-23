@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -88,13 +91,15 @@ sources:
     url: https://www.aquariumdetouraine.com/informations-pratiques/tarifs-et-reservations/toutes-les-offres
   - title: Aquarium de Touraine - Site officiel et calendrier
     url: https://www.aquariumdetouraine.com/
+  - title: Aquarium de Touraine - Ouverture les mercredis, samedis et dimanches (3 novembre 2026)
+    url: https://www.aquariumdetouraine.com/laquarium/actualites/ouverture-les-mercredis-samedis-et-dimanches
 affiliate:
   enabled: true
   type: travel
   destination: Lussault-sur-Loire
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/activites/(2026)/(11)/aquarium-de-touraine-en-famille-que-voir-avec-les-enfants/index.md
   targetSha: 556d2ad488f764226aded5799355c96a9a25d3fe
@@ -121,34 +126,78 @@ radar:
       - aquarium lussault sur loire
       - aquarium tours
       - grand aquarium de touraine
+reviewAt: 2026-12-18
 ---
 
-## Mission retenue
-Actualiser l'article existant sur l'Aquarium de Touraine à Lussault-sur-Loire, en priorité son calendrier d'ouverture de fin 2026.
+<!-- article-image-credit -->
+*Photo: [Bernard DUPONT from FRANCE](https://commons.wikimedia.org/wiki/File:European_Catfish_(Silurus_glanis)_(13532617795).jpg) - [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC montre 21 puis 6 impressions sur des fenêtres de trois jours, sans cause établie. Lacune indépendante vérifiée: l'article avertit seulement que l'aquarium n'est pas ouvert tous les jours, alors que l'organisateur a publié le 3 novembre une règle précise pour la période précédant les vacances de Noël.
+À Lussault-sur-Loire, près d'Amboise, l'Aquarium de Touraine invite les familles à passer des poissons de la Loire aux eaux tropicales, puis aux océans. Cette sortie entièrement en intérieur permet aux jeunes enfants de s'émerveiller devant les bassins et aux plus grands de découvrir des animaux vivant dans des milieux très différents. Comptez environ **1 h 30 de visite**, à adapter à leur rythme.
 
-## Décision du lecteur
-Choisir une date où l'aquarium accueille effectivement les familles et prévoir le billet et la durée adaptés.
+**Attention aux jours d'ouverture cet hiver:** selon l'[annonce officielle du 3 novembre 2026](https://www.aquariumdetouraine.com/laquarium/actualites/ouverture-les-mercredis-samedis-et-dimanches), l'aquarium accueille les visiteurs **uniquement les mercredis, samedis et dimanches jusqu'aux vacances de Noël**. Il annonce ensuite une ouverture **tous les jours pendant les vacances de Noël**, sous réserve des exceptions à vérifier sur son calendrier avant de réserver.
 
-## Faits à traiter
-- Jusqu'aux vacances de Noël, ouverture uniquement les mercredis, samedis et dimanches, selon l'annonce officielle du 3 novembre 2026; pendant les vacances de Noël, retour annoncé à une ouverture quotidienne. Vérifier les dates précises et exceptions au calendrier officiel avant d'énoncer un jour particulier comme garanti.
-- Conserver l'horaire général de 10 h à 18 h sur les jours ouverts, sous réserve des éventuelles exceptions, et la fin de saison au 3 janvier 2027.
-- Préserver les trois univers, la durée de visite de 1 h 30, les tarifs datés/non datés et pack Tribu, le jeu Mickey, l'accessibilité poussette, les équipements bébé, les photos, crédits, sources et les deux hébergements Booking.com.
-- Ne pas reprendre comme programme 2026 les animations de Noël 2025 encore visibles dans les archives du site.
+## Trois univers aquatiques à explorer
 
-## Sources de départ
-- Aquarium de Touraine, annonce du 3 novembre 2026: https://www.aquariumdetouraine.com/laquarium/actualites/ouverture-les-mercredis-samedis-et-dimanches
-- Aquarium de Touraine, calendrier et billetterie: https://www.aquariumdetouraine.com/
-- Aquarium de Touraine, visite avec des enfants: https://www.aquariumdetouraine.com/ma-visite/en-famille
+<!-- article-image-body:01 -->
 
-## Affiliation
-Conserver les offres d'hébergement Booking.com existantes pour les familles qui prolongent leur visite près d'Amboise. Aucune billetterie affiliée supplémentaire vérifiée.
+![Goujons photographiés dans un bassin de l'Aquarium de Touraine](/images/articles/2026/11/aquarium-de-touraine-en-famille-que-voir-avec-les-enfants-body-01.webp)
 
-## Continuations internes
-- Conserver le lien vers la destination Amboise pour prolonger le séjour.
-- Éviter de développer le Parc Mini-Châteaux, dont la saison 2026 s'est terminée le 1er novembre.
+*Photo: [Bernard DUPONT from FRANCE](https://commons.wikimedia.org/wiki/File:Gudgeons_(Gobio_gobio)_(13533313875).jpg) - [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+**Les eaux douces de la Loire** permettent de découvrir les poissons du fleuve et leurs particularités. C'est une bonne occasion de reconnaître des espèces locales et de comparer leurs formes et leurs déplacements.
+
+**Les eaux tropicales** changent le décor avec des poissons aux couleurs, silhouettes et comportements variés. Les enfants peuvent observer ce qui distingue ces animaux de ceux de la Loire.
+
+**Les eaux marines** prolongent le parcours vers les océans. Plutôt que de s'arrêter devant chaque bassin, laissez les enfants choisir les animaux qu'ils souhaitent observer plus longtemps.
+
+## Des découvertes adaptées aux enfants
+
+<!-- article-image-body:02 -->
+
+![Discus rouge photographié dans un aquarium tropical à Lussault-sur-Loire](/images/articles/2026/11/aquarium-de-touraine-en-famille-que-voir-avec-les-enfants-body-02.webp)
+
+*Photo: [Bernard DUPONT from FRANCE](https://commons.wikimedia.org/wiki/File:Discus_(Symphysodon_aequifasciatus)_red_hybrid_(13533123013).jpg) - [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Pour les tout-petits, la plupart des bassins sont suffisamment bas pour permettre une observation facile. Les enfants de 4 à 6 ans peuvent s'amuser à retrouver des couleurs ou à comparer les façons de nager. Avec les plus grands, on peut s'intéresser aux différences entre les trois milieux aquatiques.
+
+L'audioguide gratuit **Aquabalade** est accessible grâce aux QR codes présents sur le parcours, sans application à installer. Un téléphone suffit pour écouter les explications choisies.
+
+L'aquarium annonce également pour 2026 un **jeu de piste Mickey**, destiné aux enfants de plus de 6 ans, avec un support vendu 1,50 €. Vérifiez sa disponibilité le jour de la visite.
+
+## Poussette, biberons et repas: les équipements utiles
+
+Le parcours est **de plain-pied, sans escalier**, et accessible avec une poussette. Un micro-ondes près de l'accueil permet de réchauffer les biberons et les repas de bébé. Des espaces de change sont disponibles dans les toilettes hommes et femmes.
+
+Le parking est gratuit pendant les horaires d'ouverture. Une aire de pique-nique se trouve à l'extérieur, sur le parking: par temps froid ou pluvieux, prévoyez une autre solution pour déjeuner.
+
+## Tarifs 2026: quel billet choisir ?
+
+Le **billet daté** coûte 16 € à partir de 13 ans et 12 € pour les enfants de 3 à 12 ans inclus. L'entrée est gratuite pour les moins de 3 ans.
+
+Le **billet non daté** coûte 17,50 € par adulte et 13 € par enfant. Il permet de choisir un jour de visite, mais uniquement parmi les dates d'ouverture de la saison.
+
+Pour une famille de **deux adultes et trois enfants de 3 à 12 ans**, le **pack Tribu daté à 65 €** est plus avantageux que cinq billets datés séparés, qui coûteraient 68 €. Le pack Tribu non daté est annoncé à 70 €. Ces packs sont proposés en ligne. Des tarifs famille nombreuse existent également sous conditions.
+
+Les billets sont annoncés comme non échangeables, non modifiables et non remboursables. Vérifiez les conditions et surtout le jour d'ouverture sur le [calendrier officiel](https://www.aquariumdetouraine.com/) avant l'achat.
+
+Le billet combiné avec le **Parc Mini-Châteaux** ne convient pas à une visite de ce parc après le 1er novembre 2026, date de fin de validité indiquée pour sa saison 2026.
+
+## Dates et horaires: organiser sa visite jusqu'en janvier 2027
+
+La saison annoncée s'étend du **7 février 2026 au 3 janvier 2027**. Les horaires généraux sont de **10 h à 18 h les jours d'ouverture**. Pour la période de fin novembre à l'approche des vacances de Noël, privilégiez donc un mercredi, un samedi ou un dimanche. Pendant les vacances de Noël, l'organisateur annonce une ouverture quotidienne, mais ne précise pas dans son communiqué les éventuelles fermetures ou réductions d'horaires des jours fériés: **vérifiez la date précise sur le calendrier et la billetterie officiels**, notamment pour les 24, 25 et 31 décembre et le 1er janvier. Les annonces de Noël 2025 ne constituent pas un programme confirmé pour Noël 2026.
+
+L'adresse est **lieu-dit Les Hauts Bœufs, 37400 Lussault-sur-Loire**, à proximité d'Amboise.
+
+## Prolonger la sortie autour d'Amboise
+
+Si vous souhaitez visiter la région sur deux jours, le [Clos Lussault à Lussault-sur-Loire](https://www.booking.com/hotel/fr/clos-lussault-troglogite.fr.html) propose des maisons de vacances avec cuisine équipée et plusieurs chambres, pratiques pour les repas en famille. Le [Novotel Amboise](https://www.booking.com/hotel/fr/amboise.fr.html) constitue une autre option, avec des chambres familiales, un restaurant et une aire de jeux. Vérifiez la capacité du logement choisi et les disponibilités pour vos dates.
+
+Pour compléter votre séjour, découvrez aussi notre [guide d'Amboise en famille](https://www.fam-space.fr/destinations/centre-val-de-loire/indre-et-loire/amboise/).
 
 ## Article source exact à préserver et améliorer
 
