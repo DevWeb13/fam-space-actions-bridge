@@ -465,3 +465,4 @@ automation/image-hero-20261123-0049-chinon-ludotheques94|db03feebf058386618a018b
 automation/image-hero-20261123-0049-chinon-ludotheques94|8fadc945853acc0919bc6b2cc73ed330fb509e9f
 automation/image-hero-20261123-0642-lyon-ficelle-ulm|d746b88434157a635f81ecdeb1c3b8353b55fbfc
 automation/image-hero-20261123-0642-lyon-ficelle-ulm|e8ce7cd214e3b3d7f71cf3989ab40ed545238ed7
+automation/image-hero-20261123-1248-bergerac|63a7d3588eba2e712f614fa091dd491b3c6d1bcd
