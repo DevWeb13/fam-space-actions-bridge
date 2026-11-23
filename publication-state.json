@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261123-0259-musee-de-l-illusion-a-lyon-en-famille-experiences-ages-tarifs-et-conse",
+  "lastProcessedCommit": "153187c5d819fed624064c2566295db7869a268a"
 }
