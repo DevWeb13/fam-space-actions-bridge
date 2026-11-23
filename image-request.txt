@@ -469,3 +469,4 @@ automation/image-hero-20261123-1248-bergerac|63a7d3588eba2e712f614fa091dd491b3c6
 automation/image-hero-20261123-1248-bergerac|deca5ca9829d8251c2e5101b660c6acd5137f067
 automation/image-hero-20261123-1844-fougasse-cassis|03cc41a43511d88fb8ac1ea19dbfc08d56657a39
 automation/image-hero-20261123-1844-fougasse-cassis|3194caa87df7625005ced3c060a9d8e09755d23e
+automation/image-hero-20261124-0045-seraphine-cherrueix|158a0365b4be029625dec3fd37ae8a2a52df68c4
