@@ -462,3 +462,4 @@ automation/image-hero-20261122-1247-saint-antonin|4bd24215f7ba79154f575e39df8d24
 automation/image-hero-20261122-1840-ter-kig-vendee|953c8eaff4b34ea346313d245856bf06a21c38ce
 automation/image-hero-20261122-1840-ter-kig-vendee|bbdcb7ed88fb6c4f18b59962475c0927927f1ca7
 automation/image-hero-20261123-0049-chinon-ludotheques94|db03feebf058386618a018bea78341fa41884125
+automation/image-hero-20261123-0049-chinon-ludotheques94|8fadc945853acc0919bc6b2cc73ed330fb509e9f
