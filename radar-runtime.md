@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 3/3
+# Radar Fam Space - actualisation GSC
 
 ## Mission
 
@@ -8,378 +8,1115 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 3/3
-
-Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
-
-Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
-
-Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
-
-Ensuite:
-- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
-- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
-- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
-- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
-- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
-- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
-- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
-- ne force ni longueur ni affiliation.
-
-Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
-
-Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
-- `summary`: contrôles et corrections réellement effectués;
-- `sources`: URLs factuelles revérifiées;
-- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
-
-**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
-
-## Règles partenaires
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-## Candidat validé de la phase précédente
-
----
-title: "Marchés de Noël de Tours 2026 en famille: horaires, animations et budget"
-subtitle: "Deux marchés municipaux et le Village Gourmand: choisir le bon jour avec les enfants"
-summary: "Du 27 novembre au 27 décembre 2026, Tours accueille deux marchés municipaux, tandis que le Village Gourmand se prolonge jusqu'au 3 janvier 2027. Horaires, animations familiales, grande roue et patinoire roller: les repères pour organiser la visite."
-category: evenements
-location:
-  city: Tours
-  department: Indre-et-Loire
-  region: Centre-Val de Loire
-image:
-  src: /images/articles/2026/10/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand.webp
-  alt: Vue de la place de la Résistance à Tours hors période du marché de Noël
-sources:
-  - title: Ville de Tours - Marchés de Noël 2026, dates et emplacements
-    url: https://formulaires.services.tours.fr/animations-commerciales/candidature-au-marche-de-noel-tours/
-  - title: Office de tourisme de Tours - Noël à Tours, horaires des marchés
-    url: https://www.tours-tourisme.fr/agenda/noel-a-tours-marche-de-noel/
-  - title: Village Gourmand de Tours - Programme, horaires et tarifs 2026-2027
-    url: https://levillagegourmand.fr/
-  - title: Fil Bleu - Tramway ligne A et informations trafic
-    url: https://www.filbleu.fr/horaires-et-trajets/toutes-les-lignes/ligne-a
-eventEndsAt: 2027-01-03
-reviewAt: 2026-11-26
-topic:
-  key: evenements|tours|marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand|2026
-  keywords:
-    - marché de Noël Tours 2026
-    - Village Gourmand Tours 2026
-    - grande roue Tours Noël 2026
-    - patinoire roller Tours
-    - Noël Tours en famille
-slug: marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand
-status: published
-publishedAt: 2026-10-28T21:29:25.946Z
-updatedAt: 2026-11-22T03:33:27.799Z
-readingTime: 5
-affiliate:
-  enabled: true
-  type: travel
-  destination: Tours
-radar:
-  schemaVersion: 1
-  phase: 2
-  mode: refresh
-  targetPath: src/routes/articles/evenements/(2026)/(10)/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/index.md
-  targetSha: d79d6e54db3e1ff4b4c7694d5ea2cc7d9ab7a123
-  targetUrl: /articles/evenements/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/
-  decision: Choisir une date et un créneau réellement ouverts pour les marchés municipaux et le Village Gourmand, notamment les 24 et 25 décembre, sans confondre leurs horaires.
-  affiliationPotential: Conserver l'hébergement Booking.com existant pour les familles en séjour; aucune nouvelle offre payante nécessaire.
-  gsc:
-    retrievedAt: 2026-11-22T01:30:56+01:00
-    dataThrough: 2026-11-19
-    signal: needs_query_check
-    basis: "Visibilité récente : 25 impressions sur trois jours, puis 7 sur les trois derniers jours consolidés; cause non établie."
-    peakStart: 2026-11-09
-    peakEnd: 2026-11-11
-    recentStart: 2026-11-17
-    recentEnd: 2026-11-19
-    peakImpressions: 25
-    recentImpressions: 7
-    commonQueries: null
-    positionDelta: null
-    impressionRatio: null
-    focusQueries:
-      - marché de Noël Tours 2026
-      - Village Gourmand Tours 2026
-      - grande roue Tours Noël 2026
-      - patinoire roller Tours
-      - Noël Tours en famille
----
-
-<!-- article-image-credit -->
-*Photo: [ktanaka](https://commons.wikimedia.org/wiki/File:Place_de_la_resistance,_tours_-_panoramio.jpg) - [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) via Wikimedia Commons (image recadrée).*
-<!-- /article-image-credit -->
-
-À Tours, trois lieux permettent de profiter de Noël en famille, mais ils n'ouvrent pas tous aux mêmes dates. Les marchés municipaux du **boulevard Heurteloup** et de la **place de la Résistance** sont annoncés du **27 novembre au 27 décembre 2026**. Le **Village Gourmand**, place Anatole-France, accueille les visiteurs du **20 novembre 2026 au 3 janvier 2027**, avec restauration, grande roue et patinoire à rollers. Pour combiner les trois, choisissez une date entre le 27 novembre et le 27 décembre.
-
-## Quel marché choisir, et à quelle heure ?
-
-Pour découvrir les étals et les idées cadeaux, privilégiez les deux marchés municipaux. L'[office de tourisme de Tours](https://www.tours-tourisme.fr/agenda/noel-a-tours-marche-de-noel/) annonce une ouverture **de 11 h à 20 h du dimanche au jeudi**, et **de 11 h à 21 h les vendredis et samedis**. Attention: sa fiche mentionne un début au 20 novembre pour l'ensemble du marché de Noël, alors que la [Ville de Tours](https://formulaires.services.tours.fr/animations-commerciales/candidature-au-marche-de-noel-tours/) fixe au **27 novembre** le début des marchés municipaux boulevard Heurteloup et place de la Résistance. Retenez donc le 27 novembre pour ces deux emplacements.
-
-**Pour les 24 et 25 décembre, ne vous fiez pas aux horaires habituels des chalets municipaux.** Le cahier des charges 2026 de la Ville, [accessible depuis son formulaire de candidature](https://formulaires.services.tours.fr/animations-commerciales/candidature-au-marche-de-noel-tours/), est repris par plusieurs agendas locaux avec une **fermeture à 18 h le jeudi 24 décembre** et une **ouverture de 15 h à 20 h le vendredi 25 décembre, facultative pour les exposants**. La fiche publique de l'office de tourisme ne détaille pas ces exceptions: ces créneaux restent donc à **reconfirmer auprès de la Ville ou des exposants** avant un déplacement spécialement prévu pour Noël. Le 25, certains chalets peuvent rester fermés même pendant le créneau annoncé.
-
-Pour manger sur place ou profiter des attractions, choisissez le **Village Gourmand**, place Anatole-France, au bout de la rue Nationale. Il rassemble une trentaine de chalets de restauration, une grande roue et une **patinoire roller, sans glace**. L'accès au village est **gratuit**, mais les repas et attractions sont payants.
-
-Du **20 au 26 novembre**, seul le Village Gourmand est annoncé ouvert parmi ces trois lieux. Du **28 décembre au 3 janvier**, il reste également le seul à poursuivre la saison.
-
-## Animations à ne pas manquer avec les enfants
-
-Le [programme de l'organisateur](https://levillagegourmand.fr/) permet de choisir une date en fonction des animations plutôt que de compter sur la présence quotidienne du Père Noël:
-
-- **Dimanche 22 novembre:** musique et maquillage pour enfants.
-- **Dimanche 29 novembre:** maquillage dès **13 h** au Village Gourmand, puis nouvelle séance dès **16 h** à la patinoire; musique également au programme.
-- **Mercredi 2 décembre à 15 h 30:** rencontre annoncée avec le **Père Noël et sa lutine**.
-
-Ces rendez-vous sont datés et peuvent évoluer: consultez le calendrier de l'organisateur le jour de votre visite.
-
-## Grande roue et patinoire roller: combien prévoir ?
-
-<!-- article-image-body:01 -->
-
-![Vue nocturne sur Tours depuis une grande roue en décembre 2017](/images/articles/2026/10/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand-body-01.webp)
-
-*Photo: [GrandCelinien](https://commons.wikimedia.org/wiki/File:Tours_-_Vue_grande_roue.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:01 -->
-
-Le tarif normal annoncé est de **5 € par personne et par attraction**. Pour quatre personnes, prévoyez **20 € pour la grande roue**, ou **40 € si les quatre font aussi la patinoire**, hors repas et transports.
-
-Un tarif réduit de **4 €** est annoncé **le mercredi pour les moins de 12 ans** et **les jeudis et vendredis pour les étudiants**, dans les deux cas **hors vacances scolaires**. Le pass saisonnier « Gliss » pour la patinoire coûte **49 €**: il s'adresse surtout aux visiteurs réguliers.
-
-L'âge minimum, les protections fournies et les conditions d'accompagnement des petits ne sont pas détaillés sur la page générale de l'organisateur. Demandez confirmation avant de promettre la patinoire à un jeune enfant. Une promenade entre les chalets reste possible sans acheter de billet.
-
-## Horaires du Village Gourmand et des attractions
-
-Le **Village Gourmand** ouvre normalement **de 12 h à 22 h**, jusqu'à **23 h les vendredis et samedis**. Les attractions ont leurs propres créneaux:
-
-- **Lundi à jeudi:** 13 h-22 h.
-- **Vendredi:** 13 h-23 h.
-- **Samedi, dimanche et vacances scolaires:** 11 h-23 h.
-
-Deux journées ont des horaires particuliers:
-
-- **25 décembre:** village de **15 h à 21 h**, attractions de **15 h à 23 h**.
-- **1er janvier:** village de **15 h à 22 h**, attractions de **15 h à 23 h**.
-
-Ces horaires sont ceux du **Village Gourmand et de ses attractions**, et non des marchés municipaux. Vérifiez les éventuels ajustements sur le [site de l'organisateur](https://levillagegourmand.fr/).
-
-## Tram, poussette et repas des plus petits
-
-<!-- article-image-body:02 -->
-
-![Rame du tramway de Tours sur la place Anatole-France en mai 2023](/images/articles/2026/10/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand-body-02.webp)
-
-*Photo: [Chabe01](https://commons.wikimedia.org/wiki/File:Rame_Tramway_Tours_Place_Anatole_France_-_Tours_(FR37)_-_2023-05-19_-_2.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:02 -->
-
-Pour le Village Gourmand, prenez le **tram A jusqu'à Porte de Loire**. Depuis la gare de Tours, l'organisateur indique la direction **Vaucanson**. Les parkings **Anatole-France** et **Nationale** sont aussi signalés, sans garantie de disponibilité. Vérifiez les [horaires et perturbations de la ligne A sur Fil Bleu](https://www.filbleu.fr/horaires-et-trajets/toutes-les-lignes/ligne-a), surtout pour rentrer le soir.
-
-La place Anatole-France se situe au bout de la rue Nationale. La place de la Résistance et le boulevard Heurteloup constituent deux étapes distinctes. Avec une poussette, prévoyez plus de temps aux heures d'affluence. Les informations disponibles ne confirment ni table à langer, ni micro-ondes en libre accès, ni prêt de poussette: emportez le nécessaire pour changer et nourrir un bébé. Demandez aussi les conditions d'accès à la grande roue avec un bébé ou une poussette avant de faire la queue.
-
-## Prolonger les fêtes à Tours
-
-Pour une famille arrivant en train, le [Nemea Appart Hotel Quai Victor Tours Centre sur Booking.com](https://www.booking.com/hotel/fr/nemea-appart-39-residence-le-quai-victor.html) est une option près de la gare. Certains logements disposent d'une kitchenette avec **micro-ondes**, pratique pour les repas d'un bébé. Vérifiez la **capacité du logement réservé**, les couchages, les conditions pour les enfants et les éventuels frais ou dépôt de garantie: tous les studios ne conviennent pas à quatre personnes.
-
-Pour une excursion différente, notre guide de [Noël 2026 au château royal d'Amboise](/articles/evenements/noel-2026-au-chateau-royal-d-amboise-visite-de-jour-ou-nocturne-aux-chandelles/) détaille les visites décorées, les tarifs et les nocturnes sur réservation.
-
-## Article source exact à préserver et améliorer
-
-Chemin: src/routes/articles/evenements/(2026)/(10)/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/index.md
-
----
-title: "Marchés de Noël de Tours 2026 en famille: horaires, animations et budget"
-subtitle: "Deux marchés municipaux et le Village Gourmand: choisir le bon jour avec les enfants"
-summary: "Du 27 novembre au 27 décembre 2026, Tours accueille deux marchés municipaux, tandis que le Village Gourmand se prolonge jusqu'au 3 janvier 2027. Horaires, animations familiales, grande roue et patinoire roller: les repères pour organiser la visite."
-category: evenements
-location:
-  city: Tours
-  department: Indre-et-Loire
-  region: Centre-Val de Loire
-image:
-  src: /images/articles/2026/10/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand.webp
-  alt: Vue de la place de la Résistance à Tours hors période du marché de Noël
-sources:
-  - title: Ville de Tours - Marchés de Noël 2026, dates et emplacements
-    url: https://formulaires.services.tours.fr/animations-commerciales/candidature-au-marche-de-noel-tours/
-  - title: Office de tourisme de Tours - Noël à Tours, horaires des marchés
-    url: https://www.tours-tourisme.fr/agenda/noel-a-tours-marche-de-noel/
-  - title: Village Gourmand de Tours - Programme, horaires et tarifs 2026-2027
-    url: https://levillagegourmand.fr/
-  - title: Fil Bleu - Tramway ligne A et informations trafic
-    url: https://www.filbleu.fr/horaires-et-trajets/toutes-les-lignes/ligne-a
-eventEndsAt: 2027-01-03
-reviewAt: 2026-11-26
-topic:
-  key: evenements|tours|marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand|2026
-  keywords:
-    - marché de Noël Tours 2026
-    - Village Gourmand Tours 2026
-    - grande roue Tours Noël 2026
-    - patinoire roller Tours
-    - Noël Tours en famille
-slug: marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand
-status: published
-publishedAt: 2026-10-28T21:29:25.946Z
-updatedAt: 2026-11-22T03:33:27.799Z
-readingTime: 5
-affiliate:
-  enabled: true
-  type: travel
-  destination: Tours
----
-
-<!-- article-image-credit -->
-*Photo: [ktanaka](https://commons.wikimedia.org/wiki/File:Place_de_la_resistance,_tours_-_panoramio.jpg) - [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/) via Wikimedia Commons (image recadrée).*
-<!-- /article-image-credit -->
-
-À Tours, trois lieux permettent de profiter de Noël en famille, mais ils n'ouvrent pas tous aux mêmes dates. Les marchés municipaux du **boulevard Heurteloup** et de la **place de la Résistance** sont annoncés du **27 novembre au 27 décembre 2026**. Le **Village Gourmand**, place Anatole-France, accueille les visiteurs du **20 novembre 2026 au 3 janvier 2027**, avec restauration, grande roue et patinoire à rollers. Pour combiner les trois, choisissez une date entre le 27 novembre et le 27 décembre.
-
-## Quel marché choisir, et à quelle heure ?
-
-Pour découvrir les étals et les idées cadeaux, privilégiez les deux marchés municipaux. L'[office de tourisme de Tours](https://www.tours-tourisme.fr/agenda/noel-a-tours-marche-de-noel/) annonce une ouverture **de 11 h à 20 h du dimanche au jeudi**, et **de 11 h à 21 h les vendredis et samedis**. Attention: sa fiche mentionne un début au 20 novembre pour l'ensemble du marché de Noël, alors que la [Ville de Tours](https://formulaires.services.tours.fr/animations-commerciales/candidature-au-marche-de-noel-tours/) fixe au **27 novembre** le début des marchés municipaux boulevard Heurteloup et place de la Résistance. Retenez donc le 27 novembre pour ces deux emplacements et vérifiez les éventuelles exceptions avant de partir.
-
-Pour manger sur place ou profiter des attractions, choisissez le **Village Gourmand**, place Anatole-France, au bout de la rue Nationale. Il rassemble une trentaine de chalets de restauration, une grande roue et une **patinoire roller, sans glace**. L'accès au village est **gratuit**, mais les repas et attractions sont payants.
-
-Du **20 au 26 novembre**, seul le Village Gourmand est annoncé ouvert parmi ces trois lieux. Du **28 décembre au 3 janvier**, il reste également le seul à poursuivre la saison.
-
-## Animations à ne pas manquer avec les enfants
-
-Le [programme de l'organisateur](https://levillagegourmand.fr/) permet de choisir une date en fonction des animations plutôt que de compter sur la présence quotidienne du Père Noël:
-
-- **Dimanche 22 novembre:** musique et maquillage pour enfants.
-- **Dimanche 29 novembre:** maquillage dès **13 h** au Village Gourmand, puis nouvelle séance dès **16 h** à la patinoire; musique également au programme.
-- **Mercredi 2 décembre à 15 h 30:** rencontre annoncée avec le **Père Noël et sa lutine**.
-
-Ces rendez-vous sont datés et peuvent évoluer: consultez le calendrier de l'organisateur le jour de votre visite.
-
-## Grande roue et patinoire roller: combien prévoir ?
-
-<!-- article-image-body:01 -->
-
-![Vue nocturne sur Tours depuis une grande roue en décembre 2017](/images/articles/2026/10/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand-body-01.webp)
-
-*Photo: [GrandCelinien](https://commons.wikimedia.org/wiki/File:Tours_-_Vue_grande_roue.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:01 -->
-
-Le tarif normal annoncé est de **5 € par personne et par attraction**. Pour quatre personnes, prévoyez **20 € pour la grande roue**, ou **40 € si les quatre font aussi la patinoire**, hors repas et transports.
-
-Un tarif réduit de **4 €** est annoncé **le mercredi pour les moins de 12 ans** et **les jeudis et vendredis pour les étudiants**, dans les deux cas **hors vacances scolaires**. Le pass saisonnier « Gliss » pour la patinoire coûte **49 €**: il s'adresse surtout aux visiteurs réguliers.
-
-L'âge minimum, les protections fournies et les conditions d'accompagnement des petits ne sont pas détaillés sur la page générale de l'organisateur. Demandez confirmation avant de promettre la patinoire à un jeune enfant. Une promenade entre les chalets reste possible sans acheter de billet.
-
-## Horaires du Village Gourmand et des attractions
-
-Le **Village Gourmand** ouvre normalement **de 12 h à 22 h**, jusqu'à **23 h les vendredis et samedis**. Les attractions ont leurs propres créneaux:
-
-- **Lundi à jeudi:** 13 h-22 h.
-- **Vendredi:** 13 h-23 h.
-- **Samedi, dimanche et vacances scolaires:** 11 h-23 h.
-
-Deux journées ont des horaires particuliers:
-
-- **25 décembre:** village de **15 h à 21 h**, attractions de **15 h à 23 h**.
-- **1er janvier:** village de **15 h à 22 h**, attractions de **15 h à 23 h**.
-
-Ces horaires sont ceux du **Village Gourmand et de ses attractions**, et non des marchés municipaux. Vérifiez les éventuels ajustements sur le [site de l'organisateur](https://levillagegourmand.fr/).
-
-## Tram, poussette et repas des plus petits
-
-<!-- article-image-body:02 -->
-
-![Rame du tramway de Tours sur la place Anatole-France en mai 2023](/images/articles/2026/10/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand-body-02.webp)
-
-*Photo: [Chabe01](https://commons.wikimedia.org/wiki/File:Rame_Tramway_Tours_Place_Anatole_France_-_Tours_(FR37)_-_2023-05-19_-_2.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:02 -->
-
-Pour le Village Gourmand, prenez le **tram A jusqu'à Porte de Loire**. Depuis la gare de Tours, l'organisateur indique la direction **Vaucanson**. Les parkings **Anatole-France** et **Nationale** sont aussi signalés, sans garantie de disponibilité. Vérifiez les [horaires et perturbations de la ligne A sur Fil Bleu](https://www.filbleu.fr/horaires-et-trajets/toutes-les-lignes/ligne-a), surtout pour rentrer le soir.
-
-La place Anatole-France se situe au bout de la rue Nationale. La place de la Résistance et le boulevard Heurteloup constituent deux étapes distinctes. Avec une poussette, prévoyez plus de temps aux heures d'affluence. Les informations disponibles ne confirment ni table à langer, ni micro-ondes en libre accès, ni prêt de poussette: emportez le nécessaire pour changer et nourrir un bébé. Demandez aussi les conditions d'accès à la grande roue avec un bébé ou une poussette avant de faire la queue.
-
-## Prolonger les fêtes à Tours
-
-Pour une famille arrivant en train, le [Nemea Appart Hotel Quai Victor Tours Centre sur Booking.com](https://www.booking.com/hotel/fr/nemea-appart-39-residence-le-quai-victor.html) est une option près de la gare. Certains logements disposent d'une kitchenette avec **micro-ondes**, pratique pour les repas d'un bébé. Vérifiez la **capacité du logement réservé**, les couchages, les conditions pour les enfants et les éventuels frais ou dépôt de garantie: tous les studios ne conviennent pas à quatre personnes.
-
-Pour une excursion différente, notre guide de [Noël 2026 au château royal d'Amboise](/articles/evenements/noel-2026-au-chateau-royal-d-amboise-visite-de-jour-ou-nocturne-aux-chandelles/) détaille les visites décorées, les tarifs et les nocturnes sur réservation.
-
-## Contexte éditorial ciblé pour le maillage et les doublons
-
-### Articles proches préparés mécaniquement
-
-- /articles/evenements/ville-de-noel-d-arras-2026-en-famille-grande-roue-patinoire-et-horaires/ | Ville de Noël d’Arras 2026 en famille: horaires, attractions et budget | evenements | Arras, Pas-de-Calais, Hauts-de-France
-- /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | Marché de Noël de Reims 2026 en famille: horaires, grande roue et animations | evenements | Reims, Marne, Grand Est
-- /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | Marché de Noël d'Amiens 2026 en famille: horaires, Père Noël et patinoire | evenements | Amiens, Somme, Hauts-de-France
-- /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | Marché de Noël de Bordeaux 2026 en famille: horaires, animations et budget | evenements | Bordeaux, Gironde, Nouvelle-Aquitaine
-- /articles/evenements/marche-de-noel-de-lille-2026-en-famille-village-grande-roue-et-infos-pratiques/ | Marché de Noël de Lille 2026 en famille: village, Grande Roue et infos pratiques | evenements | Lille, Nord, Hauts-de-France
-- /articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/ | Noël 2026 à Toulon en famille: marché, patinoire et horaires | evenements | Toulon, Var, Provence-Alpes-Côte d’Azur
-- /articles/evenements/village-du-pere-noel-a-montbazon-2026-dates-activites-et-budget-en-famille/ | Village du Père Noël à Montbazon 2026: dates, activités et budget en famille | evenements | Montbazon, Indre-et-Loire, Centre-Val de Loire
-- /articles/evenements/noel-2026-a-paris-la-defense-en-famille-marche-animations-ou-patinoire/ | Noël 2026 à Paris La Défense en famille: marché, animations et patinoire | evenements | Puteaux, Hauts-de-Seine, Île-de-France
-- /articles/cuisine/halles-de-tours-en-famille-un-panier-d-automne-deux-repas-simples/ | Halles de Tours en famille: un panier d’automne, deux repas simples | cuisine | Tours, Indre-et-Loire, Centre-Val de Loire
-- /articles/evenements/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/ | Marchés de Noël de Tours 2026 en famille: horaires, animations et budget | evenements | Tours, Indre-et-Loire, Centre-Val de Loire
-- /articles/vie-pratique/emprunter-des-jeux-a-tours-mirabeau-ou-la-maison-des-jeux/ | Emprunter des jeux à Tours: Mirabeau ou la Maison des Jeux? | vie-pratique | Tours, Indre-et-Loire, Centre-Val de Loire
-- /articles/parentalite/laep-en-indre-et-loire-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | LAEP en Indre-et-Loire: où aller avec un enfant de moins de 6 ans | parentalite | Tours, Indre-et-Loire, Centre-Val de Loire
-- /articles/vie-pratique/transport-scolaire-remi-en-indre-et-loire-que-faire-apres-la-date-limite-2026/ | Transport scolaire Rémi en Indre-et-Loire: que faire après la date limite 2026 | vie-pratique | Tours, Indre-et-Loire, Centre-Val de Loire
-- /articles/vie-pratique/montlouis-sur-loire-emprunter-jeux-liseuses-et-objets-a-la-mediatheque/ | Montlouis-sur-Loire: emprunter jeux, liseuses et objets à la médiathèque | vie-pratique | Montlouis-sur-Loire, Indre-et-Loire, Centre-Val de Loire
-- /articles/parentalite/aide-a-domicile-en-indre-et-loire-quel-soutien-pour-les-parents/ | Aide à domicile en Indre-et-Loire: quel soutien pour les parents ? | parentalite | Indre-et-Loire, Centre-Val de Loire
-- /articles/activites/aquarium-de-touraine-en-famille-que-voir-avec-les-enfants/ | Aquarium de Touraine en famille: que voir avec les enfants ? | activites | Lussault-sur-Loire, Indre-et-Loire, Centre-Val de Loire
-- /articles/evenements/noel-2026-a-villandry-spectacles-et-ateliers-a-choisir-selon-l-age/ | Noël 2026 à Villandry: décors, spectacle d'ombres et ateliers en famille | evenements | Villandry, Indre-et-Loire, Centre-Val de Loire
-- /articles/evenements/noel-2026-a-chenonceau-quel-jour-decouvrir-les-decors-en-famille/ | Noël à Chenonceau 2026: décors, nocturnes et tarifs en famille | evenements | Chenonceaux, Indre-et-Loire, Centre-Val de Loire
-- /articles/evenements/festival-contes-et-rencontres-2027-en-lozere-quels-spectacles-voir-en-famille/ | Festival Contes et Rencontres 2027 en Lozère: quels spectacles voir en famille ? | evenements | Lozère, Occitanie
-- /articles/evenements/lumieres-d-afrique-2026-2027-a-sigean-les-lanternes-en-famille/ | Lumières d’Afrique 2026-2027 à Sigean: les lanternes en famille | evenements | Sigean, Aude, Occitanie
-- /articles/evenements/natur-armor-2027-a-paimpol-preparer-sa-visite-en-famille/ | Natur’Armor 2027 à Paimpol: préparer sa visite en famille | evenements | Paimpol, Côtes-d'Armor, Bretagne
-- /articles/evenements/noel-a-brive-2026-en-famille-animations-dates-et-parcours/ | Noël à Brive 2026 en famille: animations, dates et parcours | evenements | Brive-la-Gaillarde, Corrèze, Nouvelle-Aquitaine
-
-### Historique Radar lié
-
-- opportunity | /articles/evenements/marche-de-noel-d-amiens-2026-en-famille-village-du-pere-noel-patinoire-et-parades/ | 2026-10-19T13:54:07.745Z
-- opportunity | /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | 2026-10-21T07:36:18.372Z
-- opportunity | /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | 2026-10-20T00:30:38.975Z
-- opportunity | /articles/evenements/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/ | 2026-10-28T21:29:26.054Z
-- refresh | /articles/evenements/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/ | 2026-11-22T03:33:27.882Z
-- opportunity | /articles/evenements/noel-2026-a-chenonceau-quel-jour-decouvrir-les-decors-en-famille/ | 2026-10-24T12:31:27.784Z
-- refresh | /articles/evenements/noel-2026-a-chenonceau-quel-jour-decouvrir-les-decors-en-famille/ | 2026-11-13T22:32:33.388Z
-- opportunity | /articles/evenements/noel-2026-a-paris-la-defense-en-famille-marche-animations-ou-patinoire/ | 2026-11-01T01:35:08.448Z
-- opportunity | /articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/ | 2026-10-31T10:28:17.432Z
-- refresh | /articles/evenements/noel-2026-a-toulon-en-famille-marche-ou-village-des-enfants/ | 2026-11-16T04:35:04.037Z
-
-### Phases 2 et 3
-
-Écris `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées et le corps complet de l'article. **Ne recopie pas les métadonnées inchangées et n'ajoute aucun bloc `radar`.** Le script normalise la syntaxe sûre de la requête, reprend mécaniquement les autres métadonnées et le bloc Radar de la phase précédente, puis incrémente la phase.
-
-Pour un refresh, le script conserve de lui-même les champs protégés de l'article source. Pour une opportunity, il conserve la catégorie, le territoire et le slug choisis en phase 1.
-
-En phase 3 seulement, ajoute `radarReview` avec `summary`, `sources` et, pour un refresh, `regressionCheck`. Une seule correction factuelle vérifiée peut être suffisante.
-
-## Écriture autorisée
-
-N'effectue aucune plomberie Git. Ne crée, ne nomme et ne supprime aucune branche Radar; ne choisis aucun SHA; ne modifie aucun fichier de DevWeb13/fam-space-qwik.
-
-Écris uniquement radar-request.md sur la branche main de DevWeb13/fam-space-actions-bridge selon le format fourni dans ce runtime. Le workflow GitHub se charge du reste. Une fois cette requête écrite, termine le passage.
+## Snapshot GSC quotidien
+
+Le cache compact est `radar-gsc-snapshot.json` sur `main` de `DevWeb13/fam-space-actions-bridge`. Il ne contient jamais les lignes GSC brutes.
+
+Cette tâche est séparée de la sélection éditoriale. **S'il n'existe aucune branche Radar active et que le snapshot doit être renouvelé, actualise uniquement le snapshot puis termine le passage. Ne choisis pas de mission dans la même exécution.** Le passage horaire suivant effectuera la phase 1 avec le snapshot prêt.
+
+Le snapshot est réutilisable lorsqu'il a `schemaVersion: 1`, a été généré le jour courant en Europe/Paris et que `dataThrough` n'a pas plus de sept jours de retard.
+
+Lorsqu'un nouveau snapshot est nécessaire, utilise Windsor.ai avec le compte `sc-domain:fam-space.fr`, connector `searchconsole`, `include_fresh_data: false`. **Chaque appel `get_data` Search Analytics doit filtrer explicitement `search_type = web` avec `filters: [["search_type","eq","web"]]`.** Récupère 28 jours jusqu'à la dernière journée consolidée:
+
+- une lecture `date, clicks, impressions` pour déterminer la fin réelle;
+- quatre lectures consécutives de sept jours `date, page, clicks, impressions, position`;
+- appelle `buildRadarShortlist(pageRows, catalog.articles, { now, siteRows, from, history: catalog.history })` pour identifier les cinq premiers candidats. Pour chacun, récupère les requêtes de sa page exacte sur les deux fenêtres `peakStart..peakEnd` et `recentStart..recentEnd`, avec `search_type = web` (dix appels de requêtes au maximum).
+- regroupe les réponses par article : `queryPairs = [{ url, peakQueries, recentQueries }]`. Appelle ensuite **`buildRadarSnapshot(pageRows, catalog.articles, { now, siteRows, from, history: catalog.history, warnings }, queryPairs)`**, du module embarqué. Écris son résultat directement dans `radar-gsc-snapshot.json`, sans recopier les métriques manuellement.
+- pour les autres articles, le diagnostic reste `needs_query_check` avec des mesures `null`. Si une lecture échoue, signale-le sans inventer de chiffres. Ne confonds jamais « pas de donnée » et zéro.
+
+Utilise uniquement le module Radar embarqué pour présélectionner les candidats et construire le snapshot. La fonction `buildRadarSnapshot` centralise la mise en forme et le diagnostic par article. Une réponse Windsor est considérée complète lorsque `status: done`, que `data` est un tableau et que `total_rows` correspond à `data.length`, sans indicateur explicite de troncature. **Un nombre rond de lignes, notamment 1 500, n'est jamais à lui seul une preuve de plafonnement et ne doit pas arrêter Radar.** Découpe seulement la période si Windsor signale réellement une réponse incomplète/tronquée, si `total_rows` ne correspond pas au nombre de lignes reçues, ou si `unwrapRows` refuse la réponse, notamment à son seuil conservateur de 5 000 lignes par réponse. Un 429, un refus d'accès ou un plafond réellement non résolu termine le passage. Maximum 50 appels `get_data`. Les réponses brutes restent temporaires.
+
+Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlist `refresh` avec ses diagnostics compacts, `strongPages`, `excluded` et les avertissements utiles.
+
+## Snapshot actuellement disponible
+
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-22T01:30:56+01:00",
+  "dataThrough": "2026-11-19",
+  "from": "2026-10-23",
+  "refresh": [
+    {
+      "url": "/articles/bons-plans/navigo-liberte-en-famille-en-2026-tarif-enfant-passe-ou-telephone/",
+      "title": "Navigo Liberté+ en famille: tarifs enfants et choix du passe en 2026",
+      "category": "bons-plans",
+      "publishedAt": "2026-10-25T10:33:29.977Z",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 28,
+      "rapidDrop": true,
+      "peakStart": "2026-10-27",
+      "peakEnd": "2026-10-29",
+      "recentStart": "2026-11-17",
+      "recentEnd": "2026-11-19",
+      "peakImpressions": 173,
+      "recentImpressions": 44,
+      "score": 387,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 173 impressions sur trois jours, puis 44 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "passe navigo enfant 6 ans",
+        "navigo liberté + famille nombreuse",
+        "tarif liberté plus 2026",
+        "12 ans",
+        "liberté + enfant"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/ferry-ouistreham-portsmouth-en-famille-preparer-le-depart-et-la-traversee/",
+      "title": "Ferry Ouistreham-Portsmouth en famille: préparer le départ et la traversée",
+      "category": "vie-pratique",
+      "publishedAt": "2026-10-24T16:19:35+02:00",
+      "location": {
+        "city": "Ouistreham",
+        "department": "Calvados",
+        "region": "Normandie"
+      },
+      "ageDays": 29,
+      "rapidDrop": true,
+      "peakStart": "2026-10-25",
+      "peakEnd": "2026-10-27",
+      "recentStart": "2026-11-17",
+      "recentEnd": "2026-11-19",
+      "peakImpressions": 76,
+      "recentImpressions": 15,
+      "score": 183,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 76 impressions sur trois jours, puis 15 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "durée traversée ouistreham portsmouth",
+        "traversée ouistreham angleterre",
+        "bateau ouistreham angleterre",
+        "brittany ferries ouistreham",
+        "car ferry ouistreham"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/arles-en-famille-a-petit-budget-quelles-visites-et-quel-pass-choisir/",
+      "title": "Arles en famille à petit budget: quelles visites et quel pass choisir?",
+      "category": "bons-plans",
+      "publishedAt": "2026-10-25T09:51:23+01:00",
+      "location": {
+        "city": "Arles",
+        "department": "Bouches-du-Rhône",
+        "region": "Provence-Alpes-Côte d’Azur"
+      },
+      "ageDays": 28,
+      "rapidDrop": true,
+      "peakStart": "2026-10-27",
+      "peakEnd": "2026-10-29",
+      "recentStart": "2026-11-17",
+      "recentEnd": "2026-11-19",
+      "peakImpressions": 55,
+      "recentImpressions": 0,
+      "score": 165,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 55 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "pass visite arles",
+        "pass liberté arles",
+        "1",
+        "arles pass avantage",
+        "sortie en famille"
+      ]
+    },
+    {
+      "url": "/articles/maison/electromenager-en-panne-a-dijon-reparer-ou-acheter-reconditionne/",
+      "title": "Électroménager en panne à Dijon: réparer ou acheter reconditionné",
+      "category": "maison",
+      "publishedAt": "2026-11-09T13:09:07+01:00",
+      "location": {
+        "city": "Dijon",
+        "department": "Côte-d'Or",
+        "region": "Bourgogne-Franche-Comté"
+      },
+      "ageDays": 13,
+      "rapidDrop": true,
+      "peakStart": "2026-11-11",
+      "peakEnd": "2026-11-13",
+      "recentStart": "2026-11-17",
+      "recentEnd": "2026-11-19",
+      "peakImpressions": 20,
+      "recentImpressions": 1,
+      "score": 57,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 20 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "reparation four",
+        "réparation d'équipements électriques bourgogne-franche-comté",
+        "électroménager dijon"
+      ]
+    },
+    {
+      "url": "/articles/evenements/soleils-d-hiver-2026-a-angers-en-famille-marche-de-noel-ou-village-santa-claus/",
+      "title": "Soleils d'hiver 2026 à Angers en famille: marché, manèges et Père Noël",
+      "category": "evenements",
+      "publishedAt": "2026-10-30T12:36:12.248Z",
+      "location": {
+        "city": "Angers",
+        "department": "Maine-et-Loire",
+        "region": "Pays de la Loire"
+      },
+      "ageDays": 23,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-17",
+      "recentEnd": "2026-11-19",
+      "peakImpressions": 99,
+      "recentImpressions": 21,
+      "score": 269,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 99 impressions sur trois jours, puis 21 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0.122,
+      "focusQueries": [
+        "soleil d'hiver angers 2026",
+        "soleil d hiver angers 2026",
+        "soleil d'hiver angers",
+        "soleils d'hiver angers",
+        "angers soleil d'hiver"
+      ]
+    },
+    {
+      "url": "/articles/evenements/festival-enfantillages-2026-a-valbonne-spectacles-gratuits-et-cinema-selon-l-age/",
+      "title": "Festival Enfantillages 2026 à Valbonne: spectacles gratuits et cinéma en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-26T03:35:31.536Z",
+      "location": {
+        "city": "Valbonne",
+        "department": "Alpes-Maritimes",
+        "region": "Provence-Alpes-Côte d'Azur"
+      },
+      "ageDays": 27,
+      "rapidDrop": true,
+      "peakStart": "2026-10-26",
+      "peakEnd": "2026-10-28",
+      "recentStart": "2026-11-17",
+      "recentEnd": "2026-11-19",
+      "peakImpressions": 40,
+      "recentImpressions": 3,
+      "score": 146,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 40 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Festival Enfantillages Valbonne 2026",
+        "spectacles gratuits enfants Valbonne",
+        "cinéma jeune public Valbonne novembre 2026",
+        "Pré des Arts Enfantillages"
+      ]
+    },
+    {
+      "url": "/articles/evenements/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/",
+      "title": "Marchés de Noël de Tours 2026 en famille: lieux, dates et budget",
+      "category": "evenements",
+      "publishedAt": "2026-10-28T21:29:25.946Z",
+      "location": {
+        "city": "Tours",
+        "department": "Indre-et-Loire",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 25,
+      "rapidDrop": true,
+      "peakStart": "2026-11-09",
+      "peakEnd": "2026-11-11",
+      "recentStart": "2026-11-17",
+      "recentEnd": "2026-11-19",
+      "peakImpressions": 25,
+      "recentImpressions": 7,
+      "score": 89,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 25 impressions sur trois jours, puis 7 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "marché de Noël Tours 2026",
+        "Village Gourmand Tours 2026",
+        "grande roue Tours Noël 2026",
+        "patinoire roller Tours",
+        "Noël Tours en famille"
+      ]
+    },
+    {
+      "url": "/articles/evenements/saint-nicolas-2026-a-saint-nicolas-de-port-village-defile-ou-procession-en-famille/",
+      "title": "Saint-Nicolas-de-Port 2026 en famille: village, défilé et procession",
+      "category": "evenements",
+      "publishedAt": "2026-11-02T23:31:49.325Z",
+      "location": {
+        "city": "Saint-Nicolas-de-Port",
+        "department": "Meurthe-et-Moselle",
+        "region": "Grand Est"
+      },
+      "ageDays": 20,
+      "rapidDrop": true,
+      "peakStart": "2026-11-10",
+      "peakEnd": "2026-11-12",
+      "recentStart": "2026-11-17",
+      "recentEnd": "2026-11-19",
+      "peakImpressions": 31,
+      "recentImpressions": 9,
+      "score": 66,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 31 impressions sur trois jours, puis 9 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Saint-Nicolas-de-Port 5 décembre 2026 en famille",
+        "festivités Saint Nicolas de Port défilé 2026",
+        "village Saint Nicolas de Port procession aux flambeaux"
+      ]
+    },
+    {
+      "url": "/articles/evenements/semaine-du-golfe-2027-en-famille-ou-voir-les-bateaux/",
+      "title": "Semaine du Golfe 2027 en famille: où voir les bateaux ?",
+      "category": "evenements",
+      "publishedAt": "2026-11-05T09:02:11+01:00",
+      "location": {
+        "city": "",
+        "department": "Morbihan",
+        "region": "Bretagne"
+      },
+      "ageDays": 17,
+      "rapidDrop": true,
+      "peakStart": "2026-11-07",
+      "peakEnd": "2026-11-09",
+      "recentStart": "2026-11-17",
+      "recentEnd": "2026-11-19",
+      "peakImpressions": 29,
+      "recentImpressions": 7,
+      "score": 66,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 29 impressions sur trois jours, puis 7 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Semaine du Golfe 2027 en famille",
+        "où voir les bateaux Semaine du Golfe",
+        "Semaine du Golfe Morbihan enfants"
+      ]
+    },
+    {
+      "url": "/articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/",
+      "title": "Marché de Noël 100 % Côte-d’Or à Dijon 2026: horaires, spectacles et Père Noël",
+      "category": "evenements",
+      "publishedAt": "2026-10-29T14:26:32.176Z",
+      "location": {
+        "city": "Dijon",
+        "department": "Côte-d'Or",
+        "region": "Bourgogne-Franche-Comté"
+      },
+      "ageDays": 24,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-17",
+      "recentEnd": "2026-11-19",
+      "peakImpressions": 22,
+      "recentImpressions": 1,
+      "score": 63,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "marché de Noël du Département Dijon 2026",
+        "marché de Noël 100 % Côte-d'Or 12 13 décembre",
+        "Jardins du Département Dijon Noël enfants",
+        "spectacles ateliers gratuits Père Noël Dijon"
+      ]
+    },
+    {
+      "url": "/articles/evenements/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/",
+      "title": "Écoute, je danse ! à Paris le 5 décembre 2026: spectacle gratuit dès 6 mois",
+      "category": "evenements",
+      "publishedAt": "2026-11-04T21:32:12.084Z",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 18,
+      "rapidDrop": true,
+      "peakStart": "2026-11-09",
+      "peakEnd": "2026-11-11",
+      "recentStart": "2026-11-17",
+      "recentEnd": "2026-11-19",
+      "peakImpressions": 20,
+      "recentImpressions": 0,
+      "score": 60,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 20 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Écoute je danse Paris décembre 2026",
+        "spectacle gratuit bébé Paris 5 décembre",
+        "bibliothèque Gutenberg spectacle 6 mois 3 ans"
+      ]
+    },
+    {
+      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
+      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
+      "category": "voyages",
+      "publishedAt": "2026-08-29T00:00:45+02:00",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 85,
+      "rapidDrop": false,
+      "peakStart": "2026-10-24",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-13",
+      "recentEnd": "2026-11-19",
+      "peakImpressions": 3295,
+      "recentImpressions": 1592,
+      "score": 1703,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "transport Paris avec enfants",
+        "Paris Visite ou Navigo famille"
+      ]
+    },
+    {
+      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
+      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-16T17:46:42.359Z",
+      "location": {
+        "city": "Lumigny-Nesles-Ormeaux",
+        "department": "Seine-et-Marne",
+        "region": "Île-de-France"
+      },
+      "ageDays": 37,
+      "rapidDrop": false,
+      "peakStart": "2026-10-25",
+      "peakEnd": "2026-10-31",
+      "recentStart": "2026-11-13",
+      "recentEnd": "2026-11-19",
+      "peakImpressions": 833,
+      "recentImpressions": 512,
+      "score": 321,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Lumigny Safari de Lumières 2026 2027",
+        "Safari de Lumières Lumigny tarifs famille",
+        "Lumigny Safari de Lumières billet combiné"
+      ]
+    },
+    {
+      "url": "/articles/sorties/parc-bagatelle-en-famille-quelles-attractions-selon-la-taille-des-enfants/",
+      "title": "Parc Bagatelle en famille: quelles attractions selon la taille des enfants?",
+      "category": "sorties",
+      "publishedAt": "2026-10-02T19:08:32+02:00",
+      "location": {
+        "city": "Merlimont",
+        "department": "Pas-de-Calais",
+        "region": "Hauts-de-France"
+      },
+      "ageDays": 51,
+      "rapidDrop": false,
+      "peakStart": "2026-10-25",
+      "peakEnd": "2026-10-31",
+      "recentStart": "2026-11-13",
+      "recentEnd": "2026-11-19",
+      "peakImpressions": 80,
+      "recentImpressions": 5,
+      "score": 75,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Parc Bagatelle en famille",
+        "attractions Bagatelle taille enfant"
+      ]
+    },
+    {
+      "url": "/articles/activites/zoo-de-martinique-en-famille-tarifs-poussette-et-visite-de-l-habitation-latouche/",
+      "title": "Zoo de Martinique en famille: tarifs, poussette et visite de l'Habitation Latouche",
+      "category": "activites",
+      "publishedAt": "2026-10-10T15:00:10+02:00",
+      "location": {
+        "city": "Le Carbet",
+        "department": "Martinique",
+        "region": "Martinique"
+      },
+      "ageDays": 43,
+      "rapidDrop": false,
+      "peakStart": "2026-10-24",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-13",
+      "recentEnd": "2026-11-19",
+      "peakImpressions": 177,
+      "recentImpressions": 111,
+      "score": 66,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Zoo de Martinique en famille",
+        "Zoo du Carbet avec enfants",
+        "Habitation Latouche"
+      ]
+    }
+  ],
+  "strongPages": [
+    {
+      "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
+      "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
+      "category": "evenements",
+      "recentImpressions": 340,
+      "recentClicks": 18,
+      "recentPosition": 4.929,
+      "retention": 1.018
+    },
+    {
+      "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
+      "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
+      "category": "evenements",
+      "recentImpressions": 303,
+      "recentClicks": 17,
+      "recentPosition": 7.234,
+      "retention": 1.306
+    },
+    {
+      "url": "/articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/",
+      "title": "Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille",
+      "category": "evenements",
+      "recentImpressions": 443,
+      "recentClicks": 10,
+      "recentPosition": 7.925,
+      "retention": 2.475
+    },
+    {
+      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
+      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
+      "category": "evenements",
+      "recentImpressions": 512,
+      "recentClicks": 9,
+      "recentPosition": 7.787,
+      "retention": 0.615
+    },
+    {
+      "url": "/articles/evenements/festival-bd-colomiers-2026-en-famille-quel-jour-choisir-et-combien-prevoir/",
+      "title": "Festival BD Colomiers 2026 en famille: programme, tarifs et accès",
+      "category": "evenements",
+      "recentImpressions": 143,
+      "recentClicks": 6,
+      "recentPosition": 7.699,
+      "retention": 2.75
+    },
+    {
+      "url": "/articles/evenements/noel-2026-a-quimper-en-famille-village-concert-ou-ateliers-gratuits/",
+      "title": "Noël 2026 à Quimper en famille: village, concert et animations gratuites",
+      "category": "evenements",
+      "recentImpressions": 89,
+      "recentClicks": 6,
+      "recentPosition": 6.27,
+      "retention": 1.413
+    },
+    {
+      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
+      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
+      "category": "vie-pratique",
+      "recentImpressions": 182,
+      "recentClicks": 5,
+      "recentPosition": 6.374,
+      "retention": 0.813
+    },
+    {
+      "url": "/articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/",
+      "title": "Recycleries autour de Chartres: où donner et acheter d'occasion ?",
+      "category": "maison",
+      "recentImpressions": 98,
+      "recentClicks": 5,
+      "recentPosition": 10.092,
+      "retention": 0.76
+    },
+    {
+      "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
+      "title": "Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite",
+      "category": "sorties",
+      "recentImpressions": 468,
+      "recentClicks": 4,
+      "recentPosition": 12.353,
+      "retention": 1.185
+    },
+    {
+      "url": "/articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/",
+      "title": "Noël des Siècles 2026 à Champs-sur-Marne: billets, budget et horaires en famille",
+      "category": "evenements",
+      "recentImpressions": 63,
+      "recentClicks": 4,
+      "recentPosition": 5.54,
+      "retention": 1.8
+    }
+  ],
+  "excluded": {
+    "expired": 193,
+    "cooling": 83
+  },
+  "warnings": [
+    "Diagnostics par requêtes : 5/5.",
+    "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement."
+  ]
+}
+
+## Module Radar embarqué
+
+Le code ci-dessous est fourni directement pour les calculs Radar nécessaires à ce passage. Ne va pas le relire dans un autre fichier.
+
+```javascript
+// Pure JavaScript: usable in Node or a connector orchestration runtime.
+const DAY = 86400000;
+const dayNumber = (date) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date ?? ""))
+    throw new Error("Date GSC invalide.");
+  const value = Date.parse(`${date}T00:00:00Z`);
+  if (
+    !Number.isFinite(value) ||
+    new Date(value).toISOString().slice(0, 10) !== date
+  )
+    throw new Error("Date GSC invalide.");
+  return value / DAY;
+};
+const isoDay = (value) => new Date(value * DAY).toISOString().slice(0, 10);
+const round = (value) => Math.round(value * 1000) / 1000;
+export function unwrapRows(response) {
+  const value = response?.structuredContent ?? response;
+  if (response?.isError || (value.status && value.status !== "done"))
+    throw new Error("GSC indisponible ou traitement incomplet.");
+  const rows = Array.isArray(value) ? value : value.data;
+  if (
+    !Array.isArray(rows) ||
+    value.truncated === true ||
+    value.has_more === true ||
+    (value.total_rows !== undefined && value.total_rows !== rows.length)
+  )
+    throw new Error("Réponse GSC absente ou tronquée.");
+  // Conservative per-response threshold, not a claimed Windsor plan limit.
+  // Concatenated arrays are allowed after each response has been checked.
+  if (!Array.isArray(value) && rows.length >= 5000)
+    throw new Error(
+      "Réponse GSC potentiellement plafonnée; découper la période.",
+    );
+  if (rows.some((row) => row.search_type && row.search_type !== "web"))
+    throw new Error(
+      "Le périmètre Radar doit contenir seulement la recherche web.",
+    );
+  return rows;
+}
+export function canonicalPage(value) {
+  // Some connector runtimes do not expose the URL global.
+  if (typeof value !== "string") return undefined;
+  const path = value.replace(/^https?:\/\/(?:www\.)?fam-space\.fr(?=\/)/i, "");
+  if (!/^\/articles\/[^/?#]+\/[^/?#]+\/$/.test(path)) return undefined;
+  if (path.split("/").some((part) => part === "." || part === ".."))
+    return undefined;
+  return path;
+}
+const metric = (row, name) => {
+  const value = Number(row[name]);
+  if (
+    row[name] === null ||
+    row[name] === undefined ||
+    !Number.isFinite(value) ||
+    value < 0
+  )
+    throw new Error(`Métrique GSC invalide: ${name}.`);
+  return value;
+};
+function addMetric(target, row) {
+  const impressions = metric(row, "impressions");
+  target.impressions += impressions;
+  target.clicks += metric(row, "clicks");
+  target.positionSum += impressions ? metric(row, "position") * impressions : 0;
+}
+const empty = () => ({ impressions: 0, clicks: 0, positionSum: 0 });
+const view = (sum, days = 7) => ({
+  impressions: round(sum.impressions),
+  clicks: round(sum.clicks),
+  impressionsPerDay: round(sum.impressions / days),
+  position: sum.impressions ? round(sum.positionSum / sum.impressions) : null,
+});
+function windowSum(days, start, end) {
+  const result = empty();
+  for (let date = start; date <= end; date++) {
+    const row = days.get(date);
+    if (row) for (const key of Object.keys(result)) result[key] += row[key];
+  }
+  return result;
+}
+export function buildRadarShortlist(
+  response,
+  catalog,
+  {
+    now = new Date().toISOString(),
+    siteRows,
+    from,
+    limit = 15,
+    history = [],
+  } = {},
+) {
+  const rows = unwrapRows(response);
+  const site = siteRows ? unwrapRows(siteRows) : rows;
+  if (!site.length)
+    throw new Error("GSC ne retourne aucune journée consolidée.");
+  const siteDays = site.map((row) => dayNumber(row.date));
+  const end = siteDays.reduce((max, date) => Math.max(max, date), -Infinity);
+  const observedStart = siteDays.reduce(
+    (min, date) => Math.min(min, date),
+    Infinity,
+  );
+  const today = dayNumber(now.slice(0, 10));
+  if (end > today || today - end > 7)
+    throw new Error(
+      "Données GSC trop anciennes ou datées dans le futur; aucun export historique de secours.",
+    );
+  // Never create comparison weeks before the first observed site day.
+  const start = from ? Math.max(dayNumber(from), observedStart) : observedStart;
+  if (!Number.isFinite(start) || end - start < 13)
+    throw new Error("Au moins 14 jours GSC sont nécessaires.");
+  const byPage = new Map();
+  for (const row of rows) {
+    const page = canonicalPage(row.page),
+      date = dayNumber(row.date);
+    if (!page || date < start || date > end) continue;
+    if (!byPage.has(page)) byPage.set(page, new Map());
+    const days = byPage.get(page);
+    if (!days.has(date)) days.set(date, empty());
+    addMetric(days.get(date), row);
+  }
+  const entries = [];
+  for (const article of catalog) {
+    const page = canonicalPage(article.url);
+    if (
+      !page ||
+      article.status === "draft" ||
+      Date.parse(article.publishedAt) > Date.parse(now)
+    )
+      continue;
+    const days = byPage.get(page) ?? new Map();
+    const publishedDay = dayNumber(article.publishedAt.slice(0, 10));
+    const firstDay = Math.max(start, publishedDay);
+    // Three days of growth followed by three consolidated days of decline
+    // can be detected before a new page has two full GSC weeks.
+    if (end - firstDay < 5) continue;
+    const recent = windowSum(days, end - 6, end);
+    const recent3 = windowSum(days, end - 2, end);
+    let peak3 = empty(), peak3Start = firstDay;
+    for (let first = firstDay; first + 2 < end - 2; first++) {
+      const sum = windowSum(days, first, first + 2);
+      if (sum.impressions > peak3.impressions) {
+        peak3 = sum;
+        peak3Start = first;
+      }
+    }
+    let peak7 = empty(), peak7Start = firstDay;
+    if (end - firstDay >= 13) {
+      for (let first = firstDay; first + 6 < end - 6; first++) {
+        const sum = windowSum(days, first, first + 6);
+        if (sum.impressions > peak7.impressions) {
+          peak7 = sum;
+          peak7Start = first;
+        }
+      }
+    }
+    const total = windowSum(days, firstDay, end);
+    const expired = Boolean(
+      article.eventEndsAt && article.eventEndsAt < now.slice(0, 10),
+    );
+    const reviewDue = Boolean(
+      article.reviewAt && article.reviewAt <= now.slice(0, 10),
+    );
+    const lastRefresh = history
+      .filter((item) => item.url === page && item.mode === "refresh")
+      .map((item) => item.publishedAt)
+      .sort()
+      .at(-1);
+    const cooling = Boolean(
+      lastRefresh && Date.parse(now) - Date.parse(lastRefresh) < 14 * DAY,
+    );
+    const ageDays = today - publishedDay;
+    const firstVisible = [...days]
+      .filter(([date, values]) => date >= firstDay && values.impressions > 0)
+      .map(([date]) => date)
+      .sort((a, b) => a - b)[0];
+    const newlyVisible =
+      ageDays <= 30 ||
+      (firstVisible !== undefined && firstVisible > start && end - firstVisible <= 21);
+    const rapidDrop =
+      newlyVisible &&
+      peak3.impressions >= 20 &&
+      peak3.impressions - recent3.impressions >= 15 &&
+      recent3.impressions <= peak3.impressions * 0.35;
+    const weeklyDecline = end - firstDay >= 13
+      ? Math.max(0, peak7.impressions - recent.impressions) *
+        Math.min(1, peak7.impressions / 35) *
+        Math.min(1, total.impressions / 50)
+      : 0;
+    const rapidScore = rapidDrop ? (peak3.impressions - recent3.impressions) * 3 : 0;
+    const recentPosition = recent.impressions
+      ? recent.positionSum / recent.impressions
+      : null;
+    const clickPotentialScore =
+      end - firstDay >= 13 && recentPosition !== null && recentPosition <= 10
+        ? Math.max(0, recent.impressions * 0.01 - recent.clicks) * 10
+        : 0;
+    const searchPotential =
+      !rapidDrop && clickPotentialScore > weeklyDecline && clickPotentialScore > 0;
+    const score =
+      expired || cooling
+        ? 0
+        : Math.max(rapidScore, weeklyDecline, clickPotentialScore) +
+          (reviewDue ? 35 : 0);
+    // Recent pages must use available, non-overlapping three-day windows.
+    const shortWindow = rapidDrop || end - firstDay < 13;
+    const peak = shortWindow ? peak3 : peak7;
+    const peakStart = shortWindow ? peak3Start : peak7Start;
+    const peakDays = shortWindow ? 3 : 7;
+    const comparedRecent = shortWindow ? recent3 : recent;
+    const comparedRecentStart = shortWindow ? end - 2 : end - 6;
+    const retention = peak.impressions
+      ? comparedRecent.impressions / peak.impressions
+      : 1;
+    entries.push({
+      url: page,
+      title: article.title,
+      category: article.category,
+      location: article.location,
+      keywords: article.keywords ?? article.topic?.keywords ?? [],
+      publishedAt: article.publishedAt,
+      eventEndsAt: article.eventEndsAt,
+      reviewAt: article.reviewAt,
+      expired,
+      cooling,
+      reviewDue,
+      ageDays,
+      rapidDrop,
+      peakStart: isoDay(peakStart),
+      peakEnd: isoDay(peakStart + peakDays - 1),
+      recentStart: isoDay(comparedRecentStart),
+      recentEnd: isoDay(end),
+      peak: view(peak, peakDays),
+      recent: view(comparedRecent, peakDays),
+      retention: round(retention),
+      score: round(score),
+      signal: searchPotential ? "search_potential" : "needs_query_check",
+      basis: rapidDrop
+        ? `Visibilité récente : ${round(peak3.impressions)} impressions sur trois jours, puis ${round(recent3.impressions)} sur les trois derniers jours consolidés; cause non établie.`
+        : "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      ...(searchPotential
+        ? {
+            basis: `Page visible avec ${round(recent.impressions)} impressions, ${round(recent.clicks)} clics et une position moyenne de ${round(recentPosition)} sur sept jours; intention de recherche à examiner.`,
+            commonQueries: null,
+            positionDelta: null,
+            impressionRatio: null,
+            focusQueries: (Array.isArray(article.keywords)
+              ? article.keywords
+              : Array.isArray(article.topic?.keywords)
+                ? article.topic.keywords
+                : []
+            ).slice(0, 5),
+          }
+        : {}),
+    });
+  }
+  return {
+    schemaVersion: 1,
+    retrievedAt: now,
+    dataThrough: isoDay(end),
+    from: isoDay(start),
+    caveat:
+      "Les lignes absentes valent zéro dans les données retournées. GSC peut masquer des requêtes; les signaux ne prouvent ni désindexation ni causalité.",
+    refresh: entries
+      .filter((item) => item.score > 0)
+      .sort((a, b) =>
+        Number(b.rapidDrop && b.category !== "evenements") -
+          Number(a.rapidDrop && a.category !== "evenements") ||
+        Number(b.rapidDrop) - Number(a.rapidDrop) ||
+        b.score - a.score ||
+        a.url.localeCompare(b.url))
+      .slice(0, limit),
+    strongPages: entries
+      .filter(
+        (item) =>
+          !item.expired &&
+          item.recent.impressions >= 35 &&
+          item.retention >= 0.5,
+      )
+      .sort(
+        (a, b) =>
+          b.recent.clicks - a.recent.clicks ||
+          b.recent.impressions - a.recent.impressions ||
+          a.url.localeCompare(b.url),
+      )
+      .slice(0, 10),
+    excluded: {
+      expired: entries.filter((item) => item.expired).length,
+      cooling: entries.filter((item) => item.cooling).length,
+    },
+  };
+}
+export function diagnoseQueries(peakResponse, recentResponse) {
+  const aggregate = (response) => {
+    const result = new Map();
+    for (const row of unwrapRows(response)) {
+      if (typeof row.query !== "string")
+        throw new Error("Requête GSC manquante.");
+      if (!result.has(row.query)) result.set(row.query, empty());
+      addMetric(result.get(row.query), row);
+    }
+    return result;
+  };
+  const peak = aggregate(peakResponse),
+    recent = aggregate(recentResponse);
+  const common = [...peak.keys()].filter(
+    (query) =>
+      peak.get(query).impressions >= 10 &&
+      (recent.get(query)?.impressions ?? 0) >= 3,
+  );
+  let weight = 0,
+    change = 0;
+  for (const query of common) {
+    const first = peak.get(query),
+      last = recent.get(query);
+    const w = Math.min(first.impressions, last.impressions);
+    weight += w;
+    change +=
+      w *
+      (last.positionSum / last.impressions -
+        first.positionSum / first.impressions);
+  }
+  const delta = weight ? change / weight : null;
+  const total = (values) =>
+    [...values.values()].reduce((sum, item) => sum + item.impressions, 0);
+  const ratio = total(peak) ? total(recent) / total(peak) : null;
+  return {
+    signal:
+      delta !== null && delta >= 3
+        ? "rank_loss"
+        : delta !== null &&
+            Math.abs(delta) <= 2 &&
+            ratio !== null &&
+            ratio <= 0.25
+          ? "coverage_loss"
+          : "uncertain",
+    commonQueries: common.length,
+    positionDelta: delta === null ? null : round(delta),
+    impressionRatio: ratio === null ? null : round(ratio),
+    queries: [...new Set([...peak.keys(), ...recent.keys()])]
+      .map((query) => ({
+        query,
+        peak: view(peak.get(query) ?? empty()),
+        recent: view(recent.get(query) ?? empty()),
+      }))
+      .sort((a, b) => b.peak.impressions - a.peak.impressions),
+    caveat:
+      "coverage_loss désigne une baisse d'exposition observée, pas une preuve de désindexation. Les requêtes masquées et la saisonnalité limitent le diagnostic.",
+  };
+}
+// The shortlist ranks pages; only per-page query rows can establish a diagnosis.
+export function attachRadarQueryDiagnosis(item, peakResponse, recentResponse) {
+  const diagnosis = diagnoseQueries(peakResponse, recentResponse);
+  const signal =
+    item.signal === "search_potential" && diagnosis.signal === "uncertain"
+      ? "search_potential"
+      : diagnosis.signal;
+  const priority = (query) => {
+    const lostImpressions = Math.max(0, query.peak.impressions - query.recent.impressions);
+    const lostPositions =
+      query.peak.position !== null && query.recent.position !== null
+        ? Math.max(0, query.recent.position - query.peak.position)
+        : 0;
+    if (signal === "rank_loss")
+      return query.peak.impressions >= 10 && query.recent.impressions >= 3
+        ? lostPositions * Math.min(query.peak.impressions, query.recent.impressions)
+        : 0;
+    if (signal === "search_potential") return query.recent.impressions;
+    return lostImpressions;
+  };
+  const relevantQueries = diagnosis.queries
+    .filter((query) => signal !== "rank_loss" || priority(query) > 0)
+    .sort((a, b) => priority(b) - priority(a) || b.peak.impressions - a.peak.impressions)
+    .slice(0, 5)
+    .map(({ query }) => query);
+  const basis =
+    item.basis + " " +
+    (signal === "rank_loss"
+      ? `Recul moyen de ${diagnosis.positionDelta} positions sur ${diagnosis.commonQueries} requête(s) comparable(s).`
+      : signal === "coverage_loss"
+        ? `Baisse d'exposition sur les requêtes visibles (ratio ${diagnosis.impressionRatio}), sans recul de classement comparable établi.`
+        : signal === "search_potential"
+          ? "Les requêtes visibles ne démontrent pas une perte de classement."
+          : `Diagnostic sur ${diagnosis.commonQueries} requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.`);
+  return {
+    ...item,
+    signal,
+    basis,
+    commonQueries: diagnosis.commonQueries,
+    positionDelta: diagnosis.positionDelta,
+    impressionRatio: diagnosis.impressionRatio,
+    focusQueries: relevantQueries.length ? relevantQueries : item.focusQueries ?? [],
+  };
+}
+
+
+/** Prepare one compact snapshot from one shortlist and per-page query responses. */
+export function buildRadarSnapshot(pageRows, catalog, options = {}, queryPairs = []) {
+  const shortlist = buildRadarShortlist(pageRows, catalog, options);
+  const pairs = new Map(queryPairs.map((pair) => [canonicalPage(pair.url), pair]));
+  const refresh = shortlist.refresh.map((candidate, index) => {
+    const pair = index < 5 ? pairs.get(candidate.url) : undefined;
+    const item = pair
+      ? attachRadarQueryDiagnosis(candidate, pair.peakQueries, pair.recentQueries)
+      : candidate;
+    return {
+      url: item.url,
+      title: item.title,
+      category: item.category,
+      publishedAt: item.publishedAt,
+      location: item.location,
+      ageDays: item.ageDays,
+      rapidDrop: item.rapidDrop,
+      peakStart: item.peakStart,
+      peakEnd: item.peakEnd,
+      recentStart: item.recentStart,
+      recentEnd: item.recentEnd,
+      peakImpressions: item.peak.impressions,
+      recentImpressions: item.recent.impressions,
+      score: item.score,
+      signal: item.signal,
+      basis: item.basis,
+      commonQueries: item.commonQueries ?? null,
+      positionDelta: item.positionDelta ?? null,
+      impressionRatio: item.impressionRatio ?? null,
+      focusQueries: item.focusQueries ?? item.keywords.slice(0, 5),
+    };
+  });
+  return {
+    schemaVersion: 1,
+    generatedAt: options.now ?? new Date().toISOString(),
+    dataThrough: shortlist.dataThrough,
+    from: shortlist.from,
+    refresh,
+    strongPages: shortlist.strongPages.map((item) => ({
+      url: item.url,
+      title: item.title,
+      category: item.category,
+      recentImpressions: item.recent.impressions,
+      recentClicks: item.recent.clicks,
+      recentPosition: item.recent.position,
+      retention: item.retention,
+    })),
+    excluded: shortlist.excluded,
+    warnings: [
+      ...(options.warnings ?? []),
+      `Diagnostics par requêtes : ${refresh.slice(0, 5).filter((item) => item.signal !== "needs_query_check" && item.commonQueries !== null).length}/${Math.min(5, refresh.length)}.`,
+      "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement.",
+    ],
+  };
+}
+
+const STOP = new Set(
+  "avec pour dans sans famille familles enfant enfants tarif tarifs duree conseil conseils visite visiter billet billets activite activites sortie sorties evenement evenements preparation pratique pratiques autour leur leurs aussi quoi comment quel quelle quelles quels quand faire partir 2026 2027".split(
+    " ",
+  ),
+);
+const words = (value) =>
+  new Set(
+    String(value)
+      .replace(/œ/g, "oe")
+      .normalize("NFD")
+      .replace(/\p{Diacritic}/gu, "")
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((word) => word.length >= 3 && !STOP.has(word)),
+  );
+export function probableDuplicates(subject, catalog, limit = 5) {
+  const terms = words(
+    [
+      subject.title,
+      ...(subject.keywords ?? subject.topic?.keywords ?? []),
+    ].join(" "),
+  );
+  return catalog
+    .filter(
+      (article) => canonicalPage(article.url) !== canonicalPage(subject.url),
+    )
+    .map((article) => {
+      const candidate = words(
+        [
+          article.title,
+          ...(article.keywords ?? article.topic?.keywords ?? []),
+        ].join(" "),
+      );
+      const shared = [...terms].filter((word) => candidate.has(word));
+      const sameCity = Boolean(
+        subject.location?.city &&
+          subject.location.city === article.location?.city,
+      );
+      const sameDepartment = Boolean(
+        subject.location?.department &&
+          subject.location.department === article.location?.department,
+      );
+      return {
+        url: article.url,
+        title: article.title,
+        location: article.location,
+        sharedTerms: shared,
+        score:
+          shared.length / Math.max(1, new Set([...terms, ...candidate]).size) +
+          (sameCity ? 0.2 : sameDepartment ? 0.1 : 0),
+      };
+    })
+    .filter(
+      (item) =>
+        item.sharedTerms.length >= 2 ||
+        (item.sharedTerms.length === 1 && item.sharedTerms[0].length >= 6),
+    )
+    .sort((a, b) => b.score - a.score || a.url.localeCompare(b.url))
+    .slice(0, limit);
+}
+```
+
+## Résultat attendu
+
+Actualise uniquement radar-gsc-snapshot.json sur la branche main de DevWeb13/fam-space-actions-bridge avec le snapshot compact décrit ci-dessus, puis termine ce passage. Ne choisis aucune mission Radar dans la même exécution et ne modifie aucun autre fichier interne.
