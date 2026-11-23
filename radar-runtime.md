@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Festival Enfantillages 2026 à Valbonne: spectacles gratuits et cinéma en famille"
-subtitle: "Du 14 au 29 novembre: les séances selon l'âge, les lieux à ne pas confondre et les tarifs"
-summary: "Quatre spectacles gratuits sur réservation, neuf séances de cinéma et une journée pour les 0-12 ans: dates, âges, horaires et budget du festival Enfantillages 2026 à Valbonne."
+title: "Festival Enfantillages 2026 à Valbonne: dernières séances en famille"
+subtitle: "Du 25 au 29 novembre: deux spectacles gratuits à réserver et trois films selon l'âge"
+summary: "Les dernières sorties du festival Enfantillages à Valbonne: Ô le 25 novembre, Le Bal des questions qui dansent le 28 et trois films le 29. Âges, tarifs, réservations et accès."
 category: evenements
 location:
   city: Valbonne
@@ -103,7 +106,7 @@ affiliate:
   destination: Valbonne
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/festival-enfantillages-2026-a-valbonne-spectacles-gratuits-et-cinema-selon-l-age/index.md
   targetSha: a45ae106d303830a76640c3939250ab98ca08b9f
@@ -131,29 +134,52 @@ radar:
       - Pré des Arts Enfantillages
 ---
 
-## Mission retenue
-Actualiser le guide du festival Enfantillages 2026 à Valbonne, qui se termine le 29 novembre, pour rendre les dernières séances immédiatement utilisables.
+<!-- article-image-credit -->
+*Photo: [Olivier Cleynen](https://commons.wikimedia.org/wiki/File:Valbonne.jpg) - [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot signale une baisse de 40 à 2 impressions sur trois jours, sans cause SEO établie. Lacune indépendante: au 23 novembre, la page commence par plusieurs spectacles et films déjà passés, alors que les familles peuvent encore réserver le spectacle « Ô » du 25 novembre, « Le Bal des questions qui dansent » du 28 novembre et choisir les films du 29 novembre. L'amélioration doit porter sur la décision de sortie, pas sur un simple changement de date.
+Le festival **Enfantillages 2026** se termine le **dimanche 29 novembre** à Valbonne. Pour les familles qui cherchent encore une sortie, il reste **deux spectacles gratuits sur réservation**, les **25 et 28 novembre**, et **trois séances de cinéma payantes le 29 novembre**. Les rendez-vous précédents sont rappelés plus bas pour éviter de confondre les dates.
 
-## Décision du lecteur
-Savoir quelle séance reste possible selon l'âge, son coût, le lieu et les modalités de réservation, sans confondre spectacles gratuits et cinéma payant.
+## Mercredi 25 et samedi 28 novembre: deux spectacles gratuits
 
-## Faits à traiter
-Mettre en évidence les trois journées restantes: mercredi 25 novembre à 11 h « Ô » dès 4 ans, samedi 28 novembre à 11 h « Le Bal des questions qui dansent » dès 8 ans, dimanche 29 novembre les films à 10 h, 11 h et 15 h avec leurs âges et tarifs déjà détaillés. Vérifier à nouveau la billetterie municipale et les conditions des séances cinéma, sans prétendre connaître les places disponibles. Conserver le programme des dates passées comme archive clairement séparée si utile, les distinctions entre lieux, les prix, les photos, licences, crédits, accès et hébergement. Ne pas supprimer les informations encore exactes.
+Les deux spectacles se tiennent au **Pré des Arts, 20 avenue Saint-Roch à Valbonne**. Ils sont gratuits pour les enfants et les adultes accompagnants, **sur réservation** auprès de la [billetterie municipale](https://billetterie.ville-valbonne.fr/). La Ville confirme les dates, mais pas les places encore disponibles.
 
-## Sources de départ
-- Ville de Valbonne, programme officiel: https://www.ville-valbonne.fr/evenement/enfantillages-2/
-- Brochure officielle: https://www.ville-valbonne.fr/wp-content/uploads/sites/6/2026/10/Programme-enfantillages-2026-4.pdf
-- Pré des Arts et cinéma: https://www.ville-valbonne.fr/mes-loisirs/culture/les-equipements-culturels/le-pre-des-arts/
+- **Mercredi 25 novembre à 11 h: Ô**, dès **4 ans**, durée **45 minutes**. Marionnettes, bruitages et humour autour d'un lac disparu.
+- **Samedi 28 novembre à 11 h: Le Bal des questions qui dansent**, dès **8 ans**, durée **45 minutes**. Un spectacle de danse et de théâtre autour des questions des enfants.
 
-## Affiliation
-Conserver l'hôtel Les Armoiries sur Booking.com comme possibilité de séjour, sans disponibilité ni prix inventés. Aucune offre de billetterie partenaire pertinente pour ces spectacles gratuits.
+Pour un enfant de 4 à 7 ans, choisissez **Ô**; à partir de 8 ans, les deux spectacles correspondent à l'âge annoncé. Vérifiez la réservation avant de vous déplacer. La Ville prévoit aussi un accueil sur place le jour même **dans la limite des places disponibles**, sans garantie d'entrée. Si vous ne pouvez pas réserver en ligne, l'accueil de l'Hôtel de Ville reçoit le public du lundi au vendredi de **8 h 30 à 12 h 30** et de **13 h 30 à 17 h**.
 
-## Continuations internes
-- Ne pas développer un guide général de Valbonne dans cet article.
-- Conserver les liens et crédits d'images existants sans altération.
+## Dimanche 29 novembre: trois films au Pré des Arts
+
+Le cinéma du **Pré des Arts** accueille les dernières séances proposées par l'association **Les Visiteurs du Soir**. Ce sont des **billets payants**, distincts de la réservation municipale des spectacles.
+
+- **10 h: Dernier coup de chapeau pour Capelito**, dès **3 ans**, **40 minutes**.
+- **11 h: Shaun le mouton: La Bêêête d'Halloween**, dès **6 ans**, **1 h 20**.
+- **15 h: Muyi, la légende du village des femmes**, dès **7 ans**, **1 h 30**.
+
+**Tarifs:** **3 € par personne le matin**. À **15 h**, comptez **4 € pour les enfants, les moins de 25 ans et les adhérents**, **5,50 € pour les plus de 65 ans**, et **6,50 € au plein tarif**. Pour deux adultes au plein tarif et deux enfants, cela représente **12 € le matin** ou **21 € à 15 h**, hors frais éventuels. Vérifiez les modalités d'achat auprès du cinéma et de l'organisateur; les places disponibles ne sont pas connues en temps réel.
+
+## Accès et conseils pour venir avec des enfants
+
+Le **Pré des Arts**, au **20 avenue Saint-Roch**, accueille toutes les séances encore programmées. La Ville indique que la salle est **accessible aux personnes à mobilité réduite**. Un **parking gratuit** se trouve à proximité; le **parking de la Vignasse**, à cette même adresse, comprend des places PMR. Prévoyez un peu de marge avant la séance, surtout avec de jeunes enfants.
+
+Attention: la **médiathèque Colette** n'était concernée que par la représentation de *Nuage* du **18 novembre à 15 h 30**, au **1855 route des Dolines**, dans le secteur de Garbejaïre. **Aucune des séances restantes n'y a lieu.**
+
+## Les rendez-vous précédents du festival
+
+Pour retrouver le programme complet du **14 au 29 novembre 2026**, voici les propositions déjà passées au **23 novembre**:
+
+- **Samedi 14 novembre à 11 h: Au Bord du Temps**, dès **8 ans**, **55 minutes**, au Pré des Arts. Trois clowns et un guitariste embarquaient le public dans une aventure.
+- **Mercredi 18 novembre: Nuage**, dès **3 ans**, **35 minutes**, à **11 h au Pré des Arts** et à **15 h 30 à la médiathèque Colette**. Un récit musical et poétique autour de la pluie et des arcs-en-ciel.
+- **Dimanche 15 novembre, cinéma:** à **10 h, Gruffalo de père en fils**, dès 3 ans, **53 minutes**; à **11 h, Le Merveilleux Hiver de Tom le chat**, dès 3 ans, **1 h 02**; à **15 h, Le Corset**, dès 7 ans, **1 h 30**, suivi d'un **atelier bruitage d'une heure**, limité à **12 participants**.
+- **Dimanche 22 novembre, cinéma:** à **10 h, Un amour d'épouvantail**, dès 3 ans, **44 minutes**; à **11 h, Le Monde à l'envers**, dès 4 ans, **45 minutes**, suivi d'un **atelier ciné-philo de 45 minutes**; à **15 h, Le Mystère Lucy Lost**, dès 7 ans, **1 h 25**.
+- **Samedi 21 novembre, journée des droits de l'enfant**, de **9 h 30 à 17 h** au Pré des Arts, pour les **0-12 ans**: lectures et jeux de mains à **10 h**, mini-théâtre de marionnettes à **11 h**, kamishibaï à **14 h**, histoires à **15 h**, visites guidées familiales du village à **10 h et 15 h**, ateliers et défi photo. Les modalités de réservation pouvaient varier selon l'animation.
+
+Les horaires et les distinctions entre spectacles gratuits et cinéma payant sont détaillés dans le [programme officiel de la Ville](https://www.ville-valbonne.fr/evenement/enfantillages-2/) et sa [brochure du festival](https://www.ville-valbonne.fr/wp-content/uploads/sites/6/2026/10/Programme-enfantillages-2026-4.pdf).
+
+## Dormir à Valbonne pour le week-end
+
+Si vous venez de plus loin, l'[Hôtel Les Armoiries à Valbonne sur Booking.com](https://www.booking.com/hotel/fr/hotellesarmoiries.html), au cœur du village, propose notamment une **catégorie de chambre familiale**. Vérifiez les couchages, les conditions d'accueil des enfants, le trajet jusqu'au Pré des Arts et les conditions de réservation. Aucun prix ni aucune disponibilité ne sont garantis pour les dates du festival.
 
 ## Article source exact à préserver et améliorer
 
@@ -261,13 +287,13 @@ Pour les familles venant de plus loin, l'[Hotel les Armoiries à Valbonne sur Bo
 ### Articles proches préparés mécaniquement
 
 - /articles/evenements/festival-au-bonheur-des-momes-2026-en-famille/ | Au Bonheur des Mômes 2026: pass, spectacles et journée au Grand-Bornand | evenements | Le Grand-Bornand, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/evenements/festival-du-court-metrage-de-clermont-ferrand-2027-en-famille-quelles-seances-choisir/ | Festival du court métrage de Clermont-Ferrand 2027 en famille: quelles séances choisir? | evenements | Clermont-Ferrand, Puy-de-Dôme, Auvergne-Rhône-Alpes
 - /articles/evenements/festival-marmoe-2026-a-montreuil-spectacles-et-ateliers-selon-l-age-des-enfants/ | Festival MARMOE 2026 à Montreuil: spectacles, ateliers et sorties jusqu'au 29 novembre | evenements | Montreuil, Seine-Saint-Denis, Île-de-France
 - /articles/evenements/rue-enfants-montcuq-2026-famille/ | La Rue des Enfants 2026 à Montcuq: deux jours d’arts de rue en famille | evenements | Montcuq-en-Quercy-Blanc, Lot, Occitanie
-- /articles/evenements/tous-en-sons-2026-a-marseille-quel-spectacle-choisir-selon-l-age-des-enfants/ | Tous en Sons ! 2026 à Marseille: spectacles enfants, âges et tarifs | evenements | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d’Azur
+- /articles/evenements/metamorphoses-2026-au-quai-branly-quels-films-choisir-avec-des-enfants/ | Métamorphoses 2026 au quai Branly: séances gratuites et films par âge | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/festival-international-des-jeux-de-cannes-2027-en-famille-quel-jour-et-quel-billet-choisir/ | Festival des Jeux de Cannes 2027 en famille: billets, âges et visite | evenements | Cannes, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
 - /articles/evenements/noel-a-nice-2026-en-famille-village-spectacles-gratuits-et-creche-que-choisir/ | Noël à Nice 2026 en famille: village, spectacles et crèche | evenements | Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur
-- /articles/evenements/rues-barrees-auxerre-2026-famille/ | Rues Barrées 2026 à Auxerre: 53 spectacles gratuits en famille | evenements | Auxerre, Yonne, Bourgogne-Franche-Comté
-- /articles/evenements/festival-du-court-metrage-de-clermont-ferrand-2027-en-famille-quelles-seances-choisir/ | Festival du court métrage de Clermont-Ferrand 2027 en famille: quelles séances choisir? | evenements | Clermont-Ferrand, Puy-de-Dôme, Auvergne-Rhône-Alpes
+- /articles/evenements/tous-en-sons-2026-a-marseille-quel-spectacle-choisir-selon-l-age-des-enfants/ | Tous en Sons ! 2026 à Marseille: spectacles enfants, âges et tarifs | evenements | Marseille, Bouches-du-Rhône, Provence-Alpes-Côte d’Azur
 - /articles/evenements/festival-enfantillages-2026-a-valbonne-spectacles-gratuits-et-cinema-selon-l-age/ | Festival Enfantillages 2026 à Valbonne: spectacles gratuits et cinéma en famille | evenements | Valbonne, Alpes-Maritimes, Provence-Alpes-Côte d'Azur
 - /articles/vie-pratique/littoral-des-alpes-maritimes-en-famille-se-deplacer-sans-voiture/ | Littoral des Alpes-Maritimes en famille: se déplacer sans voiture | vie-pratique | Alpes-Maritimes, Provence-Alpes-Côte d’Azur
 - /articles/activites/ateliers-parfum-a-grasse-en-famille-lesquels-choisir-selon-l-age/ | Ateliers parfum à Grasse en famille: lesquels choisir selon l'âge ? | activites | Grasse, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
@@ -290,6 +316,7 @@ Pour les familles venant de plus loin, l'[Hotel les Armoiries à Valbonne sur Bo
 - opportunity | /articles/evenements/festival-marmoe-2026-a-montreuil-spectacles-et-ateliers-selon-l-age-des-enfants/ | 2026-10-25T23:35:17.860Z
 - refresh | /articles/evenements/festival-marmoe-2026-a-montreuil-spectacles-et-ateliers-selon-l-age-des-enfants/ | 2026-11-14T05:32:38.580Z
 - refresh | /articles/evenements/festival-marmoe-2026-a-montreuil-spectacles-et-ateliers-selon-l-age-des-enfants/ | 2026-11-14T22:34:11.752Z
+- opportunity | /articles/evenements/metamorphoses-2026-au-quai-branly-quels-films-choisir-avec-des-enfants/ | 2026-10-18T04:19:39.869Z
 - opportunity | /articles/evenements/noel-2026-a-cannes-en-famille-marche-du-centre-ou-village-du-palm-beach/ | 2026-10-31T22:36:58.800Z
 - refresh | /articles/evenements/noel-2026-a-cannes-en-famille-marche-du-centre-ou-village-du-palm-beach/ | 2026-11-17T13:33:26.086Z
 - opportunity | /articles/evenements/noel-a-nice-2026-en-famille-village-spectacles-gratuits-et-creche-que-choisir/ | 2026-10-25T04:31:33.540Z
