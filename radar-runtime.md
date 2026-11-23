@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,13 +59,6 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
@@ -73,6 +76,8 @@ image:
 sources:
   - title: Ville d’Arras - Ville de Noël 2026
     url: https://www.arras.fr/ville-de-noel
+  - title: Ville d’Arras - Inauguration de la Ville de Noël 2026
+    url: https://arras.fr/ville-de-noel/evenement/inauguration-de-la-ville-de-noel
   - title: Arras Pays d’Artois Tourisme - Dates et horaires 2026
     url: https://www.arraspaysdartois.com/agenda/ville-de-noel/
   - title: Ville d’Arras - Lieux emblématiques
@@ -100,7 +105,7 @@ affiliate:
   destination: Arras
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/ville-de-noel-d-arras-2026-en-famille-grande-roue-patinoire-et-horaires/index.md
   targetSha: 910144dfa46f7a53b356999ab24673981daff068
@@ -127,29 +132,78 @@ radar:
       - grande roue patinoire Arras Noël
 ---
 
-## Mission retenue
-Actualiser le guide de la Ville de Noël d'Arras 2026 à l'approche de son ouverture, sans réécrire ses informations déjà exactes.
+<!-- article-image-credit -->
+*Photo: [Marc Ryckaert](https://commons.wikimedia.org/wiki/File:Arras_March%C3%A9_de_No%C3%ABl_R01.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot GSC montre 37 puis 9 impressions sur des fenêtres de trois jours, sans cause établie. Lacune indépendante: l'article ne distingue pas la soirée inaugurale du vendredi 27 novembre (18 h-21 h, annoncée dans les informations événementielles) des horaires habituels à partir de midi, et ne propose pas de choix concret entre attractions confirmées et repères historiques. Vérifier l'inauguration auprès de la Ville avant de l'affirmer.
+La **Ville de Noël d’Arras se déroule du 27 novembre au 27 décembre 2026**, sur la Grand’Place et dans le centre historique. La promenade parmi les chalets et les illuminations ne nécessite pas de billet d’entrée. En famille, les principales dépenses viennent des attractions éventuelles et des pauses gourmandes.
 
-## Décision du lecteur
-Savoir quand venir avec des enfants, ce qui est gratuit et quelles attractions sont effectivement annoncées en 2026, sans prévoir un budget à partir de tarifs d'une édition passée.
+## Inauguration ou visite en journée: quel moment choisir?
 
-## Faits à traiter
-Confirmer auprès de l'organisateur l'inauguration du 27 novembre et son programme, les attractions réellement installées et leurs éventuels tarifs 2026; ne pas transformer les tarifs 2025 en tarifs actuels. Maintenir les dates du 27 novembre au 27 décembre, les horaires dimanche-jeudi 12 h-21 h, vendredi-samedi 12 h-22 h 30, fermeture à 17 h le 24 décembre et fermeture le 25 décembre. Préserver les déviations Artis, les conseils poussette et météo, le lien Cité Nature, les photographies, licences, crédits et l'hébergement Booking.com.
+**Vendredi 27 novembre 2026**, la Ville d’Arras annonce une **inauguration gratuite de 18 h à 21 h, place des Héros**, avec illuminations, animations et surprises. Le rendez-vous est annoncé **à 18 h**. Le détail des animations n’étant pas précisé, mieux vaut ne pas promettre un spectacle particulier. Retrouvez l’[annonce de l’inauguration par la Ville](https://arras.fr/ville-de-noel/evenement/inauguration-de-la-ville-de-noel).
 
-## Sources de départ
-- Ville d'Arras, programme et éventuelles précisions: https://www.arras.fr/ville-de-noel
-- Office de tourisme, dates et horaires: https://www.arraspaysdartois.com/agenda/ville-de-noel/
-- Réseau Artis, déviations: https://plan.bus-artis.fr/fr/traffic-infos
+Pour des enfants qui supportent mal la foule ou se couchent tôt, préférez une visite ordinaire en début d’après-midi. Pour vivre l'allumage festif et les animations inaugurales, choisissez le 27 novembre en soirée, en prévoyant des vêtements chauds et un trajet retour adapté.
 
-## Affiliation
-Conserver l'hébergement Booking.com existant. Ne pas inventer de billet partenaire pour la grande roue ou la patinoire.
+## Dates et horaires de la Ville de Noël 2026
 
-## Continuations internes
-- Maintenir le lien vers Cité Nature pour une solution de repli en intérieur.
-- Ne pas créer un autre article sur la même Ville de Noël.
+L’office de tourisme annonce les horaires suivants pour la période du marché:
+
+- **Du dimanche au jeudi: 12 h à 21 h.**
+- **Vendredi et samedi: 12 h à 22 h 30.**
+- **Jeudi 24 décembre: 12 h à 17 h.**
+- **Vendredi 25 décembre: fermé.**
+
+Ces horaires généraux ne doivent pas être confondus avec le créneau spécifique de l'inauguration. Avec de jeunes enfants, une visite d’une à deux heures permet de parcourir quelques chalets sans trop les fatiguer. Pour les illuminations, privilégiez la fin d’après-midi.
+
+## Grande roue, patinoire et Père Noël
+
+<!-- article-image-body:01 -->
+
+![Grande roue et manège sur la Grand-Place d'Arras pendant le marché de Noël 2025](/images/articles/2026/10/ville-de-noel-d-arras-2026-en-famille-grande-roue-patinoire-et-horaires-body-01.webp)
+
+*Photo: [Anthospace](https://commons.wikimedia.org/wiki/File:Arras,_Christmas_city_2025-Carousel,_Ferris_wheel_and_Lumi%C3%A8re_the_candelabra-_IDNSL.jpg) - [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+La Ville d’Arras cite parmi ses lieux emblématiques **la grande roue, la patinoire, le petit train touristique au départ de la gare et la maison du Père Noël, place d’Ipswich**. Le beffroi illuminé, le sapin et les chalets offrent aussi une promenade sans attraction payante.
+
+Cette présentation générale ne constitue toutefois **pas une confirmation du fonctionnement de chacune de ces attractions en 2026**. Les photos de 2025 illustrent l'édition précédente. Les dates, les prix, les limites d'âge et les éventuelles réservations des attractions restent à vérifier sur le [site de la Ville de Noël](https://www.arras.fr/ville-de-noel). Pour la patinoire, renseignez-vous sur l'âge admis, l'accompagnement et les équipements disponibles avant de promettre une séance aux enfants.
+
+## Quel budget prévoir avec les enfants?
+
+<!-- article-image-body:02 -->
+
+![Patinoire temporaire installée sur la Grand-Place d'Arras pour Noël 2025](/images/articles/2026/10/ville-de-noel-d-arras-2026-en-famille-grande-roue-patinoire-et-horaires-body-02.webp)
+
+*Photo: [Anthospace](https://commons.wikimedia.org/wiki/File:Arras,_city_of_Christmas_2025-_The_ice_rink_built_for_the_occasion-_IETF.jpg) - [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+**L’accès au marché et à l'inauguration est gratuit**, mais les attractions, les achats et les consommations peuvent être payants. Aucun tarif 2026 suffisamment vérifié ne permet ici de chiffrer un tour de grande roue ou une séance de patinage: n'utilisez pas les prix de 2025 pour préparer votre budget.
+
+Pour une sortie économique, profitez des chalets et des lumières, puis ne prévoyez qu'une seule attraction payante si elle est effectivement proposée et convient à l'âge des enfants.
+
+## Train, bus et stationnement: les accès à connaître
+
+Depuis la **gare d’Arras**, vous pouvez rejoindre à pied les places du centre, notamment la **Grand’Place, 62000 Arras**.
+
+Artis annonce des déviations **du 27 novembre au 27 décembre 2026**. Les lignes **9 et 10** ne desserviront notamment pas les arrêts Grand’Place, Cathédrale et Saint-Michel; des arrêts de report sont prévus, notamment à la Gare et à Gambetta. Sur la **Citadine 1**, les arrêts Les Places, Mairie d’Arras et Saint-Géry seront également perturbés. Consultez les [informations trafic Artis](https://plan.bus-artis.fr/fr/traffic-infos) avant votre départ.
+
+Les [navettes Ma Citadine](https://www.bus-artis.fr/bus/ma-citadine/) sont normalement **gratuites et accessibles aux poussettes**. Leur service habituel est annoncé **du lundi au samedi, de 7 h à 20 h, hors jours fériés**. Ne supposez pas que ces horaires s’appliqueront à d’éventuelles navettes spéciales de Noël: le dispositif 2026 reste à vérifier. En particulier, l'inauguration se prolonge au-delà des horaires habituels de ces navettes.
+
+En voiture, contrôlez les accès aux parkings et les restrictions de circulation avant de rejoindre le centre, surtout le week-end et le soir de l'inauguration.
+
+## Poussette, bébé et météo
+
+La visite se déroule dehors, sur plusieurs places et rues pavées. Une poussette peut aider avec un petit, mais les passages fréquentés ralentissent la circulation.
+
+Pour le change et les repas de bébé, prévoyez votre nécessaire: **la présence d’une table à langer, d’un micro-ondes et de toilettes accessibles sur le parcours n’est pas confirmée** dans les informations 2026 consultées.
+
+En cas de pluie, notre [guide de Cité Nature à Arras en famille](https://www.fam-space.fr/articles/sorties/cite-nature-a-arras-en-famille-quelles-expositions-choisir-cet-automne/) présente une sortie intérieure possible. Vérifiez ses jours et horaires d’ouverture avant de vous y rendre.
+
+## Passer une nuit à Arras
+
+Pour prolonger la visite, le [Mercure Arras Centre Gare sur Booking.com](https://www.booking.com/hotel/fr/mercure-atria-arras-centre.fr.html), face à la gare, dispose de **chambres familiales**. Des **lits bébé gratuits** sont proposés sur demande, sous réserve de disponibilité et selon la chambre retenue. Indiquez l’âge des enfants pour vérifier la configuration, le prix total et les conditions d’annulation. Aucune disponibilité n’est garantie pour les dates de Noël.
 
 ## Article source exact à préserver et améliorer
 
