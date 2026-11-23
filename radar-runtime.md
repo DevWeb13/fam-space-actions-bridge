@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,13 +59,6 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
@@ -77,6 +80,12 @@ sources:
     url: https://www.caenlamer-tourisme.fr/agenda-evenements/dans-la-ville-illuminee-en-partenariat-avec-caen-evenements-rdv-decouverte/
   - title: Hôtel Astrid - Chambres et tarifs
     url: https://www.hotelastrid.fr/fr/nos-chambres-et-tarifs
+  - title: Marché de Noël de Caen - Informations pratiques
+    url: https://www.marchenoelcaen.fr/content/practical-information
+  - title: Ville de Caen - Marché de Noël
+    url: https://caen.fr/evenement/le-grand-noel-caen-le-marche-de-noel
+  - title: Ville de Caen - Programme du Grand Noël
+    url: https://caen.fr/actualite/grand-noel-caen-parcourez-le-programme-des-festivites
 eventEndsAt: 2026-12-29
 reviewAt: 2026-11-20
 topic:
@@ -96,7 +105,7 @@ affiliate:
   destination: Caen
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/index.md
   targetSha: 92b7a92451f251d872391f0508d7ff080136b289
@@ -123,32 +132,65 @@ radar:
       - visite illuminations Caen décembre 2026
 ---
 
-## Mission retenue
-Actualiser le guide Noël à Caen 2026: marché de Noël gratuit du 28 novembre au 29 décembre et visites guidées des illuminations des 9 et 16 décembre.
+<!-- article-image-credit -->
+*Photo: [Rundvald](https://commons.wikimedia.org/wiki/File:Grande-roue-illuminations-Noel%E2%80%94Mairie-Caen14-byMmeRundvald.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Le snapshot signale 25 puis 7 impressions sur des fenêtres de trois jours, sans diagnostic causal. Lacune indépendante vérifiée: l'article indique que les horaires et animations 2026 ne sont pas encore publiés, alors que l'organisateur a désormais publié les horaires, les fermetures exceptionnelles et un programme.
+À Caen, le **marché de Noël se tient du 28 novembre au 29 décembre 2026**. Pour découvrir aussi la ville illuminée, deux visites commentées sont programmées les **9 et 16 décembre, de 17 h à 18 h 30**, sur réservation. Voici les informations utiles pour organiser la sortie avec des enfants, sans confondre la promenade libre au marché et la visite guidée payante.
 
-## Décision du lecteur
-Savoir quand venir avec des enfants, éviter un déplacement le 25 décembre et distinguer la balade libre des visites guidées payantes sur réservation.
+## Le marché de Noël: 56 chalets, accès libre et horaires 2026
 
-## Faits à traiter
-- Marché: 28 novembre au 29 décembre, place de la République et boulevard Maréchal-Leclerc, entrée libre; horaires 11 h-20 h, lundi 14 h-20 h, vendredi et samedi jusqu'à 21 h. Chalets gourmands parfois ouverts plus tard. Le 24 décembre fermeture à 16 h; fermé le 25 décembre.
-- Ville de Caen: 56 chalets. Ne pas reprendre sans précaution le nombre contradictoire « plus de 60 » dans une autre section du site organisateur.
-- Quelques animations utiles aux familles, vérifiées dans le programme: déambulation inaugurale du 28 novembre à 17 h 30 et arrivée du Père Noël le 5 décembre à 17 h; sélectionner sans recopier tout le calendrier.
-- Conserver les visites guidées des 9 et 16 décembre (17 h-18 h 30), tarifs 6-8 €, gratuit moins de 10 ans, réservation obligatoire, et les conseils poussette, météo, Twisto, photographie et crédits, ainsi que l'hébergement Booking.com.
+<!-- article-image-body:01 -->
 
-## Sources de départ
-- Organisateur, horaires et fermetures: https://www.marchenoelcaen.fr/content/practical-information
-- Organisateur, animations: https://www.marchenoelcaen.fr/sessions
-- Ville de Caen, programme et 56 chalets: https://caen.fr/actualite/grand-noel-caen-parcourez-le-programme-des-festivites
-- Office de tourisme, visites guidées: https://www.caenlamer-tourisme.fr/agenda-evenements/le-grand-noel-a-caen-dans-la-ville-illuminee/
+![Place de la République à Caen photographiée en été 2020, sans chalets de Noël](/images/articles/2026/10/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations-body-01.webp)
 
-## Affiliation
-Conserver le lien Booking.com existant vers l'Hôtel Astrid. Pas de réservation partenaire naturelle pour le marché gratuit ou la visite guidée organisée par l'office.
+*Photo: [Karldupart](https://commons.wikimedia.org/wiki/File:Caen_place_de_la_R%C3%A9publique_2020_(1).jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
 
-## Continuations internes
-Conserver le lien vers le guide Twisto de Caen pour le choix des titres de transport. Ne pas développer le marché de Bayeux, déjà traité dans son propre article.
+<!-- /article-image-body:01 -->
+
+La [Ville de Caen](https://caen.fr/evenement/le-grand-noel-caen-le-marche-de-noel) annonce **56 chalets**, place de la République et boulevard Maréchal-Leclerc: artisanat, décorations, jeux, spécialités locales et restauration. L'accès est **gratuit**, sans réservation. La promenade peut donc être raccourcie selon l'âge des enfants et la météo.
+
+Selon les [horaires de l'organisateur](https://www.marchenoelcaen.fr/content/practical-information), le marché ouvre **de 11 h à 20 h**, sauf le lundi **de 14 h à 20 h**; les vendredis et samedis, il ferme à **21 h**. Les chalets gourmands peuvent rester ouverts jusqu'à 21 h, ou 22 h les vendredis et samedis.
+
+**Attention aux fêtes:** le **24 décembre, le marché ferme à 16 h** (la fiche de l'office de tourisme indique une exception jusqu'à 18 h pour l'alimentation); **il est fermé le 25 décembre**. Pour une visite avec de jeunes enfants, privilégiez la journée plutôt qu'une arrivée tardive.
+
+Deux temps forts à noter: la **déambulation inaugurale du 28 novembre à 17 h 30** et l'**arrivée du Père Noël le 5 décembre à 17 h**. Le [programme de la Ville](https://caen.fr/actualite/grand-noel-caen-parcourez-le-programme-des-festivites) permet de vérifier les autres animations avant de partir.
+
+## La visite guidée « Dans la ville illuminée »: dates et prix
+
+L'Office de tourisme de Caen la mer propose une balade commentée parmi les places, hôtels particuliers, églises et abbayes éclairés pour les fêtes. **La visite se termine au marché de Noël, avec une boisson chaude offerte.**
+
+Les séances annoncées sont les **mercredis 9 et 16 décembre 2026, de 17 h à 18 h 30**. Les tarifs sont les suivants:
+
+- **8 €** au tarif plein;
+- **6 €** au tarif réduit, notamment pour les scolaires, étudiants, demandeurs d'emploi et personnes en situation de handicap;
+- **gratuit pour les moins de 10 ans**.
+
+Pour deux adultes au plein tarif et deux enfants de moins de 10 ans, le total est donc de **16 €**.
+
+**Réservation et paiement à l'avance obligatoires.** Les places sont limitées et il n'y a pas de billetterie sur place le jour de la visite. Les modalités et disponibilités figurent sur la fiche de Caen la mer Tourisme dans les sources de l'article. Le point de rendez-vous doit être vérifié au moment de réserver.
+
+## Avec un bébé, une poussette ou de jeunes enfants
+
+Le marché permet de raccourcir la sortie si un enfant a froid ou se fatigue. Pour un bébé, prévoyez les affaires de change et de repas nécessaires: les informations 2026 consultées ne confirment ni table à langer, ni micro-ondes, ni espace dédié.
+
+La visite guidée dure **1 h 30 en extérieur en fin de journée**. Elle intéressera surtout les enfants qui apprécient les anecdotes et peuvent suivre ce rythme. Avant de réserver avec une poussette ou en cas de besoin d'accessibilité, demandez à l'organisateur si le parcours convient: la gratuité des moins de 10 ans ne garantit pas un itinéraire adapté aux tout-petits.
+
+## Venir et repartir en bus ou en tram
+
+<!-- article-image-body:02 -->
+
+![Deux rames du tramway Twisto traversant la place Saint-Pierre à Caen en 2019](/images/articles/2026/10/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations-body-02.webp)
+
+*Photo: [Bmazerolles](https://commons.wikimedia.org/wiki/File:Tramway_Caen_1008_et_1022.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Les chalets sont annoncés dans le centre de Caen. Pour un retour après la visite de **18 h 30**, vérifiez les horaires de votre ligne Twisto à la date choisie. Notre guide [Quel ticket Twisto choisir à Caen avec des enfants ?](https://www.fam-space.fr/articles/vie-pratique/quel-ticket-twisto-choisir-a-caen-avec-des-enfants/) compare les titres famille, les tickets à durée limitée et les parkings relais.
+
+## Rester une nuit à Caen
+
+Pour une famille qui vient de loin, l'[Hôtel Astrid Caen Centre sur Booking.com](https://www.booking.com/hotel/fr/astrid.fr.html) peut servir de point de départ pour un court séjour. L'hôtel décrit une **chambre familiale avec deux lits doubles pour trois ou quatre personnes**. Comparez les disponibilités, le prix à vos dates, les couchages, les conditions d'annulation et l'accessibilité avant de réserver.
 
 ## Article source exact à préserver et améliorer
 
