@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -107,7 +110,7 @@ affiliate:
   destination: Meurthe-et-Moselle
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/parentalite/(2026)/(10)/ludotheques-du-grand-nancy-ou-jouer-en-famille-et-emprunter-des-jeux/index.md
   targetSha: 294062ccfb593c64ce8e7183aa00521bfc32ebb7
@@ -136,35 +139,83 @@ radar:
       - ludotheque nancy
 ---
 
-## Mission retenue
-Actualiser le guide des trois ludothèques du Grand Nancy.
+<!-- article-image-credit -->*Photo: [G.Garitan](https://commons.wikimedia.org/wiki/File:Cour_wresinsky_m%C3%A9diath%C3%A8que_Nancy_1100231.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Candidat rapidDrop prioritaire, cause SEO non établie. Le fichier master contient un deuxième bloc de métadonnées dans le corps, effectivement affiché sur la page publique, dont le sommaire indique zéro section. Le réseau Co-libris confirme aussi deux informations pratiques absentes du guide : renouvellement du prêt et collections adaptées.
+Découvrir un jeu avec son tout-petit, partager une partie avec les plus grands ou emprunter une boîte pour le week-end: les ludothèques permettent de varier les plaisirs sans multiplier les achats. À Nancy, Vandœuvre-lès-Nancy et Villers-lès-Nancy, en Meurthe-et-Moselle, voici trois adresses pour jouer en famille.
 
-## Décision du lecteur
-Savoir où jouer ou emprunter selon son budget, son âge et ses besoins, puis préparer une visite sans mauvaise surprise.
+**Le jeu sur place est gratuit à Nancy et à Villers, payant à Vandœuvre. Le prêt est possible à Nancy et à Vandœuvre, mais pas à Villers.** Les conditions d’inscription diffèrent aussi d’un établissement à l’autre.
 
-## Faits à traiter
-- Retirer uniquement le bloc de métadonnées dupliqué présent dans le corps, pas le véritable frontmatter ni les crédits ; rendre le corps Markdown propre avec ses sections.
-- À Saint-Nicolas, préciser que le prêt peut être prolongé sauf réservation par un autre usager, et que des jeux adaptés existent notamment pour le handicap visuel, mental ou psychique et les publics apprenant le français.
-- À Vandœuvre, signaler que la fiche municipale mentionne l'accompagnement jusqu'à 7 ans mais que le règlement intérieur indique qu'aucun mineur ne peut venir seul. Conseiller de confirmer les conditions avant d'envoyer un enfant seul. Préciser la capacité de 40 personnes et le risque de refus en cas d'affluence.
-- Retirer les exceptions horaires de novembre déjà passées ; conserver les horaires ordinaires, les fermetures de fin d'année encore utiles et toutes les informations vérifiées sur les trois établissements, tarifs, inscription, prêt, contacts, image et crédit.
+Pour préparer le trajet, notre guide pour [se déplacer à Nancy en famille](/articles/vie-pratique/se-deplacer-a-nancy-en-famille-gratuites-bus-et-parkings-relais/) détaille les gratuités, les bus avec une poussette et les parkings relais.
 
-## Sources de départ
-- https://www.nancy.fr/culture/bibliotheques-mediatheques-de-nancy/ludotheque-saint-nicolas
-- https://www.reseau-colibris.fr/iguana/www.main.cls?surl=ludotheque
-- https://www.nancy.fr/culture/bibliotheques-mediatheques-de-nancy/sinscrire
-- https://www.vandoeuvre.fr/fiche-annuaire/ludotheque/
-- https://www.vandoeuvre.fr/wp-content/uploads/2021/03/reglement-interieur-Ludotheque.pdf
-- https://www.ludotheque.vandoeuvre.net/pret-de-jeux/
-- https://www.villerslesnancy.fr/mon-quotidien/petite-enfance/la-ludotheque-jouer-sepanouir-ensemble
+## Trois lieux pour jouer sur place
 
-## Affiliation
-Conserver l'hébergement Booking.com existant sans en ajouter d'autre.
+### À Nancy, des espaces pour les tout-petits et les longues parties
 
-## Continuations internes
-Conserver le lien vers le guide des transports à Nancy, qui traite déjà les trajets en famille.
+La **ludothèque Saint-Nicolas se trouve au pôle culturel de la Manufacture, au 8 rue Baron-Louis**. Les enfants y jouent gratuitement, accompagnés d’un adulte.
+
+On y trouve un espace de jeu libre pour les découvertes sensorielles et la motricité des tout-petits, des tables de jeux de société et une salle à réserver pour les parties de plus de 45 minutes. La [page municipale de Saint-Nicolas](https://www.nancy.fr/culture/bibliotheques-mediatheques-de-nancy/ludotheque-saint-nicolas) permet d’accéder à cette réservation.
+
+Pour confirmer une réservation ou une ouverture exceptionnelle, contactez Saint-Nicolas au **03 83 85 31 96** ou à **ludotheque@nancy.fr**. Les horaires habituels sont du mardi au samedi, de **11 h à 18 h**, hors jours fériés. Consultez le [réseau Co-libris](https://www.reseau-colibris.fr/iguana/www.main.cls?surl=ludotheque) avant une visite exceptionnelle. Des jeux accessibles aux personnes ayant un handicap visuel, mental ou psychique, des jeux faciles à prendre en main et des supports pour apprendre le français sont également proposés.
+
+### À Vandœuvre, une entrée à la séance ou une adhésion familiale
+
+La ludothèque municipale accueille les enfants de tous âges au **1 rue Gabriel-Péri, place du Marché**. La Ville indique que les enfants doivent venir avec un adulte, quel que soit leur âge.
+
+Les [tarifs affichés par la Ville de Vandœuvre](https://www.vandoeuvre.fr/fiche-annuaire/ludotheque/) dépendent du domicile:
+
+- Famille domiciliée à Vandœuvre: **16,85 € par an**, ou **2,05 € par personne** pour une séance.
+- Famille domiciliée ailleurs: **69,70 € par an**, ou **7,05 € par personne** pour une séance.
+
+À la séance, chaque enfant et chaque adulte paient leur entrée. L’adhésion annuelle couvre les parents et leurs enfants. Une adhésion grands-parents et petits-enfants est également prévue, mais elle n’inclut pas les parents, selon le [règlement intérieur](https://www.vandoeuvre.fr/wp-content/uploads/2021/03/reglement-interieur-Ludotheque.pdf).
+
+Pour l’adhésion, le [site de la ludothèque](https://www.ludotheque.vandoeuvre.net/) demande une pièce d’identité, le livret de famille et un justificatif de domicile de moins de trois mois. Les tarifs sont révisables chaque année.
+
+Prévoyez environ une heure trente sur place. La Ville et le site de la ludothèque annoncent une séance par semaine, tandis que le règlement prévoit une à deux visites selon l’affluence. Faites confirmer cette possibilité par l’équipe avant de prévoir un second passage dans la semaine.
+
+L’accueil du public a lieu:
+
+- Les mardis et jeudis, de **9 h à 12 h et de 16 h à 18 h**.
+- Les mercredis et samedis, de **9 h à 12 h et de 14 h à 18 h**.
+
+**Le vendredi ne figure pas parmi les créneaux d’accueil familial publiés.** La réservation aux écoles et partenaires en période scolaire est signalée par la ludothèque; confirmez toute exception avant de vous déplacer. Pour les vacances scolaires, confirmez directement les créneaux auprès de la ludothèque au **03 83 55 12 08** ([coordonnées municipales](https://www.vandoeuvre.fr/fiche-annuaire/ludotheque/)).
+
+Le règlement interdit les nouvelles entrées dans les espaces de jeu pendant les 30 minutes précédant la fermeture. On se déchausse sur place, avec la possibilité d’apporter des chaussons. L’établissement ferme les jours fériés, quatre semaines en été et une semaine entre Noël et le Nouvel An, aux dates communiquées par la Ville.
+
+### À Villers, un accueil gratuit, sans prêt de jeux
+
+Au **centre socioculturel Olivier Airaud, 16 boulevard du Docteur-Cattenoz**, la ludothèque propose des jeux d’éveil, de construction, d’imitation et de société. L’accès et le jeu sur place sont gratuits.
+
+Les horaires publiés par la [Ville de Villers-lès-Nancy](https://www.villerslesnancy.fr/mon-quotidien/petite-enfance/la-ludotheque-jouer-sepanouir-ensemble) sont:
+
+- Le mercredi, de **9 h à 12 h 15 et de 14 h à 18 h**.
+- Le samedi, de **9 h à 12 h 15 et de 13 h 30 à 16 h**.
+
+Pour vérifier une séance, contactez le service petite enfance au **06 49 24 38 14** ou à **rpe.villers@villerslesnancy.fr**.
+
+Une **fermeture est annoncée du 19 décembre 2026 au 3 janvier 2027**. Pour les vacances scolaires, vérifiez les éventuelles adaptations sur la page municipale.
+
+Le [règlement intérieur](https://www.villerslesnancy.fr/fileadmin/user_upload/reglement.pdf) prévoit une fiche familiale à remplir dès la première visite et la présence d’un adulte durant toute la séance pour les moins de 11 ans. **Les chaussettes sont obligatoires**, car on se déchausse. Les poussettes restent dans l’entrée du centre. Les jeux ne peuvent pas être empruntés.
+
+## Emprunter des jeux à Nancy ou à Vandœuvre
+
+### À Saint-Nicolas, un jeu pour 28 jours
+
+Une carte des Bibliothèques de Nancy ou d’une médiathèque Co-libris permet d’emprunter **un jeu pour 28 jours**, avec retrait et retour uniquement à Saint-Nicolas. Cet accès avec la carte Co-libris ne s’étend pas automatiquement aux autres ludothèques, qui conservent leurs propres conditions, comme le précise le [réseau](https://www.reseau-colibris.fr/iguana/www.main.cls?surl=ludotheque).
+
+Vous pouvez prolonger le prêt sur place, par téléphone ou depuis votre compte, sauf si un autre usager a réservé le jeu.
+
+Si vous devez vous inscrire aux Bibliothèques de Nancy, prévoyez une pièce d’identité et, pour un mineur, une autorisation parentale. L’abonnement annuel est gratuit pour les Nancéiens, les moins de 26 ans, les étudiants et les bénéficiaires des minima sociaux, sur justificatif. Les autres adultes résidant hors Nancy paient **24 € par an**, selon les [modalités municipales d’inscription](https://www.nancy.fr/culture/bibliotheques-mediatheques-de-nancy/sinscrire).
+
+### À Vandœuvre, un prêt réservé aux adhérents
+
+Le prêt dure **15 jours maximum** et nécessite la signature d’une convention. L’équipe vérifie les boîtes avant le départ, puis en votre présence au retour: prévoyez du temps pour la restitution.
+
+Vous devez également contrôler le contenu chez vous avant de rapporter les jeux et signaler toute pièce manquante. En cas de perte ou de détérioration, un remplacement à l’identique ou un remboursement peut être demandé. La [page consacrée au prêt](https://www.ludotheque.vandoeuvre.net/pret-de-jeux/) détaille ces conditions. Apportez votre carte d’adhésion valide et un sac.
+
+## Pour un week-end à Nancy
+
+Une séance du samedi peut trouver sa place entre deux visites en ville. Pour un séjour avec des enfants, vous pouvez [réserver un appartement avec cuisine à l’Adagio Access Nancy Centre (Meurthe-et-Moselle)](https://www.booking.com/hotel/fr/adagio-access-nancy-centre.fr.html). L’établissement propose notamment des appartements pour quatre personnes, pratiques pour préparer un repas sur place. Indiquez le nombre d’enfants et leurs âges pour vérifier le logement disponible et les conditions à vos dates.
 
 ## Article source exact à préserver et améliorer
 
