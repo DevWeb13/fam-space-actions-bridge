@@ -1,14 +1,13 @@
 #!/usr/bin/env node
 // Bridge public, données et accès privés. Aucune information sensible dans stdout.
-import { execFileSync } from "node:child_process";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const REPO = "DevWeb13/fam-space-qwik";
 const REPORT_TO = "contact@fam-space.fr";
 const FLOWS = [
-  ["publication-region-codex.yml", "Publication Région", 4],
-  ["jeux-cadeaux-codex.yml", "Jeux & Cadeaux", 3],
+  ["publication-region-codex.yml", "Publication Région"],
+  ["jeux-cadeaux-codex.yml", "Jeux & Cadeaux"],
 ];
 
 export function dayInParis(date) {
@@ -49,21 +48,14 @@ export function runStatus(run,log="",flow="") {
   if (/Réponse vide|reprise au prochain passage|Trois essais terminés/i.test(log)) return "Reprise ultérieure";
   return run.conclusion==="success" ? "Terminé (voir Summary GitHub)" : "À vérifier";
 }
-function phaseStatus(log,total) {
-  if (log===null) return "Journal inaccessible";
-  if (/Article (?:régional )?publié\s*:/i.test(log)) return total+"/"+total+" validées";
-  const known = new Set();
-  for (const m of log.matchAll(/phase\s+([1-4])\s+(?:déjà\s+(?:validée|terminée)|validée)/gi))
-    if (+m[1]<=total) known.add(m[1]);
-  return known.size ? known.size+"/"+total+" observées" : "Voir Summary GitHub";
-}
 function ghClient(token) {
-  const get = async (path) => {
-    const res = await fetch("https://api.github.com/repos/"+REPO+path,{
+  const request = (path,options={}) => fetch("https://api.github.com/repos/"+REPO+path,{
       headers:{Authorization:"Bearer "+token,Accept:"application/vnd.github+json",
         "X-GitHub-Api-Version":"2022-11-28","User-Agent":"fam-space-daily-report"},
-      signal:AbortSignal.timeout(20000),
+      signal:AbortSignal.timeout(20000),...options,
     });
+  const get = async (path) => {
+    const res=await request(path);
     if (!res.ok) throw Error("GitHub HTTP "+res.status+" sur "+path.split("?")[0]);
     return res.json();
   };
@@ -78,33 +70,60 @@ function ghClient(token) {
     }
     throw Error("Plus de 1000 éléments, rapport incomplet");
   };
-  return {get,pages};
+  return {get,pages,request};
 }
-function logReader(gh,token) {
+function logReader(gh) {
   return async (id) => {
-    const response=await gh.get("/actions/runs/"+id+"/jobs?per_page=10");
+    const response=await gh.get("/actions/runs/"+id+"/jobs?per_page=100");
     const job=response.jobs?.find(j=>j.name==="editorial"||j.name.endsWith(" / editorial"));
-    if(!job) return null;
-    // Les journaux du dépôt privé ne quittent jamais ce sous-processus.
-    return execFileSync("gh",["api","repos/"+REPO+"/actions/jobs/"+job.id+"/logs"],{
-      env:{...process.env,GH_TOKEN:token}, encoding:"utf8",
-      timeout:20000,maxBuffer:4*1024*1024,stdio:["ignore","pipe","ignore"],
-    });
+    if(!job) throw Error("Job éditorial absent");
+    // Ne transmettre le jeton qu'à GitHub, jamais à l'URL temporaire de téléchargement.
+    let res=await gh.request("/actions/jobs/"+job.id+"/logs",{redirect:"manual"});
+    if(res.status>=300&&res.status<400){
+      const location=res.headers.get("location");
+      if(!location||new URL(location).protocol!=="https:") throw Error("Redirection invalide");
+      res=await fetch(location,{signal:AbortSignal.timeout(20000)});
+    }
+    if(!res.ok) throw Error("Journal HTTP "+res.status);
+    return res.text();
   };
+}
+function frontmatterField(front,key) {
+  return (front.match(new RegExp("^"+key+":[ \\t]*(.+)$","m"))?.[1]??"")
+    .trim().replace(/^["']|["']$/g,"");
+}
+export function classifyArticle(path,markdown,files) {
+  const front=markdown.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1]??"";
+  if(frontmatterField(front,"status")!=="published") return null;
+  const url=articleUrl(path);
+  if(!url) return null;
+  const region=path.startsWith("src/routes/articles/")&&frontmatterField(front,"publicationOrigin")==="region";
+  // Le guide Cadeaux et sa rotation sont publiés dans le même commit.
+  const gift=path.startsWith("src/routes/(cadeaux)/")&&
+    files.some(f=>f.filename==="content-data/jeux-cadeaux-partner-rotation.json");
+  if(!region&&!gift) return null;
+  const title=frontmatterField(front,"title")||path.split("/").at(-2).replaceAll("-"," ");
+  return {type:region?"Publication Région":"Jeux & Cadeaux",title,url};
 }
 export async function collect(day,gh,logs) {
   const before=dayOffset(day,-1),after=dayOffset(day,1);
   const groups=[];
-  for(const [file,label,total] of FLOWS){
+  for(const [file,label] of FLOWS){
     const all=await gh.pages("/actions/workflows/"+file+
       "/runs?branch=master&created="+before+".."+after,"workflow_runs");
     const runs=[];
     for(const run of all) {
       if(dayInParis(new Date(run.created_at))!==day) continue;
-      let log="";
-      if(run.status==="completed") try {log=await logs(run.id)} catch {log=null}
+      let log=null;
+      if(run.status==="completed"){
+        try{log=await logs(run.id)}catch(error){
+          const reason=String(error?.message??"").match(/HTTP \d{3}/)?.[0]??"lecture impossible";
+          console.warn("::warning::Bilan Codex : journal #"+run.run_number+" ("+reason+")");
+        }
+      }
+      const state=runStatus(run,log,label);
       runs.push({number:run.run_number,url:"https://github.com/"+REPO+"/actions/runs/"+run.id,
-        state:runStatus(run,log,label),phases:phaseStatus(log,total),conclusion:run.conclusion});
+        state,unchecked:run.status==="completed"&&(log===null||state==="Terminé (voir Summary GitHub)"||state==="À vérifier")});
     }
     groups.push({label,runs});
   }
@@ -123,46 +142,44 @@ export async function collect(day,gh,logs) {
       if(file.status!=="added"||!articleUrl(file.filename)||seen.has(file.filename)) continue;
       const path=file.filename;
       seen.add(path);
-      const type=path.startsWith("src/routes/articles/")?"Articles éditoriaux":"Jeux & Cadeaux";
-      const url=articleUrl(path);
-      const fallback=path.split("/").at(-2).replaceAll("-"," ");
-      let title=fallback;
-      try{
-        const doc=await gh.get("/contents/"+path.split("/").map(encodeURIComponent).join("/")+"?ref="+c.sha);
-        const markdown=Buffer.from(doc.content,"base64").toString("utf8");
-        const front=markdown.match(/^---\r?\n([\s\S]*?)\r?\n---/)?.[1];
-        title=(front?.match(/^title:\s*(.+)$/m)?.[1]?.trim().replace(/^["']|["']$/g,"")||fallback).slice(0,170);
-      }catch{}
-      articles.push({type,title,url});
+      const doc=await gh.get("/contents/"+path.split("/").map(encodeURIComponent).join("/")+"?ref="+c.sha);
+      if(doc.encoding!=="base64"||typeof doc.content!=="string") throw Error("Article illisible : "+path);
+      const article=classifyArticle(path,Buffer.from(doc.content,"base64").toString("utf8"),detail.files);
+      if(article) articles.push(article);
     }
   }
   return {day,groups,articles};
 }
 export function render(report) {
   const h=escapeHtml,{day,groups,articles}=report;
-  const stats=groups.map(g=>({...g,errors:g.runs.filter(r=>["failure","timed_out"].includes(r.conclusion)).length,
-    quotas:g.runs.filter(r=>r.state.startsWith("Quota atteint")).length,
-    pauses:g.runs.filter(r=>r.state.startsWith("En pause")).length}));
   const subject="[Fam Space] Bilan Codex du "+day+" — "+articles.length+" article(s)";
+  const sections=groups.map(g=>({
+    label:g.label,articles:articles.filter(a=>a.type===g.label),
+    incidents:g.runs.filter(r=>/^(Échec|Annulé|Quota atteint|En pause|Reprise ultérieure)/.test(r.state)),
+    unchecked:g.runs.filter(r=>r.unchecked).length,
+  }));
+  const incomplete=sections.reduce((n,g)=>n+g.unchecked,0);
+  const incidents=sections.flatMap(g=>g.incidents.map(r=>({...r,label:g.label})));
+  const noIncident=incomplete?"Aucun incident confirmé.":"Aucun incident détecté.";
+  const warning="Vérification incomplète : "+incomplete+" exécution(s) sans statut éditorial confirmé. Voir GitHub Actions.";
   const text=[
     "Bilan Codex du "+day+" (heure de Paris)","",
-    articles.length+" publication(s) sur master :",
-    ...(articles.length?articles.map(a=>"- "+a.type+" : "+a.title+"\n  "+a.url):["Aucun nouvel article sur master."]),"",
-    ...stats.flatMap(g=>[g.label+" : "+g.runs.length+" passage(s), "+g.errors+
-      " erreur(s), "+g.quotas+" quota(s) détecté(s), "+g.pauses+" pause(s)",
-      ...(g.runs.length?g.runs.map(r=>"- #"+r.number+" : "+r.state+" · phases "+r.phases+"\n  "+r.url):["- Aucun passage"]), ""]),
-    "Le détail des phases et des erreurs se trouve dans les rapports GitHub privés.",
+    articles.length+" article(s) publiés sur master.","",
+    ...sections.flatMap(g=>[g.label+" ("+g.articles.length+")",
+      ...(g.articles.length?g.articles.map(a=>"- "+a.title+"\n  "+a.url):["Aucune publication."]), ""]),
+    "Incidents",
+    ...(incidents.length?incidents.map(r=>"- "+r.label+" : "+r.state+" (#"+r.number+")\n  "+r.url):[noIncident]),
+    ...(incomplete?[warning]:[]),
   ].join("\n");
   const html=[
     '<div style="font-family:Arial,system-ui,sans-serif;color:#173246;line-height:1.6;max-width:680px">',
     "<h1>Bilan Codex · "+h(day)+"</h1><p>"+articles.length+" article(s) publiés sur master.</p>",
-    articles.length?"<ul>"+articles.map(a=>'<li>'+h(a.type)+
-      ' : <a href="'+h(a.url)+'">'+h(a.title)+"</a></li>").join("")+"</ul>":"<p>Aucun nouvel article sur master.</p>",
-    ...stats.map(g=>"<h2>"+h(g.label)+"</h2><p>"+g.runs.length+" passage(s) · "+
-      g.errors+" erreur(s) · "+g.quotas+" quota(s) · "+g.pauses+" pause(s)</p><ul>"+
-      (g.runs.length?g.runs.map(r=>'<li><a href="'+h(r.url)+'">Exécution #'+r.number+
-        "</a> : "+h(r.state)+" · "+h(r.phases)+"</li>").join(""):"<li>Aucun passage</li>")+"</ul>"),
-    "<p>Phases détaillées consultables dans GitHub Actions (dépôt privé).</p></div>",
+    ...sections.map(g=>"<h2>"+h(g.label)+" ("+g.articles.length+")</h2>"+
+      (g.articles.length?"<ul>"+g.articles.map(a=>'<li><a href="'+h(a.url)+'">'+h(a.title)+"</a></li>").join("")+"</ul>":"<p>Aucune publication.</p>")),
+    "<h2>Incidents</h2>",
+    incidents.length?"<ul>"+incidents.map(r=>'<li>'+h(r.label)+' : '+h(r.state)+' (<a href="'+h(r.url)+'">#'+r.number+"</a>)</li>").join("")+"</ul>":"<p>"+noIncident+"</p>",
+    ...(incomplete?["<p>"+h(warning)+"</p>"]:[]),
+    "</div>",
   ].join("\n");
   return {subject,text,html};
 }
@@ -178,7 +195,7 @@ export async function main() {
   const day=dayOffset(dayInParis(new Date()),-1);
   const token=process.env.FAM_SPACE_REPORT_TOKEN;
   const gh=ghClient(token);
-  const report=await collect(day,gh,logReader(gh,token));
+  const report=await collect(day,gh,logReader(gh));
   if(dry){
     console.log("Simulation "+day+" : "+report.articles.length+" article(s), "+
       report.groups.reduce((n,g)=>n+g.runs.length,0)+" passage(s). Aucun email.");
