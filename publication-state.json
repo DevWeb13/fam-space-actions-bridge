@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261124-2101-bordeaux-citypass-en-famille-organiser-un-week-end-culturel-sans-payer",
+  "lastProcessedCommit": "3d1a984d7318c25d3d7ebb7da330327aa9a5a768"
 }
