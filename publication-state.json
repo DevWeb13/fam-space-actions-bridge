@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261124-0801-sainte-chapelle-et-conciergerie-en-famille-a-paris-gratuites-billets-e",
+  "lastProcessedCommit": "508c188d41d307a32ca52f89152ce74b0dbafd70"
 }
