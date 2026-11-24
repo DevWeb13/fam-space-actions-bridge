@@ -471,3 +471,4 @@ automation/image-hero-20261123-1844-fougasse-cassis|03cc41a43511d88fb8ac1ea19dbf
 automation/image-hero-20261123-1844-fougasse-cassis|3194caa87df7625005ced3c060a9d8e09755d23e
 automation/image-hero-20261124-0045-seraphine-cherrueix|158a0365b4be029625dec3fd37ae8a2a52df68c4
 automation/image-hero-20261124-0045-seraphine-cherrueix|b816dd144466ab4c740cc410bcda33a263d232d4
+automation/image-20261124-hero-catchup-bfa1049|9d2c49ebcd29824a16890aecd391098d37037ca4
