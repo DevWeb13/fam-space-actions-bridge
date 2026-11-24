@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,78 +14,112 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Savoie
 - Région: Auvergne-Rhône-Alpes
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-Sculptures sur glace et neige à Valloire en janvier 2027 : préparer une sortie en famille. Deux concours internationaux d'art éphémère, du 12 au 15 janvier pour la glace aux Verneys et du 19 au 22 janvier pour la neige au centre du village. Angle : choisir sa visite selon les animations et l'évolution des œuvres.
-
-## Besoin du lecteur
-Comprendre la différence entre les deux concours, choisir les jours adaptés aux enfants, organiser les déplacements et prévoir un séjour éventuel sans obligation de skier.
-
-## Valeur éditoriale
-Comparer les deux sites et les temps forts : observation du travail des artistes, initiations à la glace, votes du jeune public, remises des prix et illuminations sous réserve de météo. Expliquer les navettes vers les Verneys, la fermeture temporaire du site le vendredi matin et la fragilité des œuvres. Vérifier les horaires et la gratuité auprès de l'organisateur, notamment les éventuelles divergences du programme. Le festival d'accordéon de Termignon a aussi été étudié mais Valloire offre davantage de participation directe aux enfants. Les sujets récents sur Chambéry, Valmorel et Les Menuires ne sont pas repris.
-
-## Affiliation
-Aucune billetterie pertinente identifiée chez GetYourGuide, Tiqets ou Klook pour ces concours en accès libre. Booking.com : Résidence Rochechateau, appartement deux pièces pour quatre personnes avec cuisine et lave-linge à Valloire, offre identifiée le 24 novembre 2026, disponibilités aux dates du séjour à vérifier par le lecteur : https://www.booking.com/hotel/fr/residence-rochechateau-2-pieces-4-personnes-expose-sud-est-mae-2653.fr.html
-L'hôtel du Centre est écarté car sa fiche française signale une fermeture des réservations. Pour le candidat Termignon, une offre d'appartement familial avec deux chambres a également été identifiée sur Booking.com, sans billetterie partenaire pertinente.
-
-## Sources de départ
-- https://www.valloire.net/decouvrirvalloire/incontournable/capitale-de-la-sculpture-ephemere/le-concours-international-de-sculptures-sur-glace-a-valloire/
-- https://www.valloire.net/actualites/concours-international-de-sculptures-sur-neige-351137/
-- https://www.maurienne-tourisme.com/fetes_et_manifestations/concours-international-de-sculpture-sur-glace-437187/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "evenements"
+title: "Sculptures sur glace et neige à Valloire en janvier 2027"
+subtitle: "Deux concours gratuits à découvrir avec les enfants, même sans skier"
+summary: "Du 12 au 22 janvier 2027, Valloire accueille deux concours de sculptures. Choisissez votre visite selon les animations, les œuvres et les accès."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "sculptures sur glace Valloire 2027"
+  - "sculptures sur neige Valloire"
+  - "sortie famille Savoie janvier"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  city: "Valloire"
+  department: "Savoie"
+  region: "Auvergne-Rhône-Alpes"
+eventEndsAt: "2027-01-22"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Valloire Tourisme: programme des sculptures sur glace"
+    url: "https://www.valloire.net/decouvrirvalloire/incontournable/capitale-de-la-sculpture-ephemere/le-concours-international-de-sculptures-sur-glace-a-valloire/"
+  - title: "Valloire Tourisme: accès et tarifs du concours sur glace"
+    url: "https://www.valloire.net/actualites/concours-international-de-sculpture-sur-glace-437187/"
+  - title: "Valloire Tourisme: concours de sculptures sur neige"
+    url: "https://www.valloire.net/actualites/concours-international-de-sculptures-sur-neige-351137/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+En janvier 2027, la station savoyarde de Valloire, dans la vallée de la Maurienne, accueille deux concours où des artistes transforment la glace puis la neige en sculptures monumentales. Les enfants peuvent observer les créations prendre forme, choisir leur œuvre préférée et, lors du premier concours, découvrir le geste du sculpteur. Les deux manifestations sont gratuites et ne nécessitent pas de forfait de ski.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Du 12 au 15 janvier: les sculptures sur glace aux Verneys
+
+Pour cette 35e édition, 18 artistes sont attendus. Le concours commence le mardi à 9 h. La transparence de la glace donne aux œuvres un aspect très différent selon la lumière, particulièrement intéressant à la tombée du jour.
+
+Du mardi au jeudi, les initiations sont annoncées de 10 h à midi puis de 15 h à 18 h. Pour observer les artistes, privilégiez la fin d'après-midi: selon la météo, les œuvres peuvent être couvertes pour les protéger, notamment entre 10 h et 15 h.
+
+Le vendredi 15 janvier, mieux vaut venir après le déjeuner. Le site ferme de 9 h à midi pour la fin de l'épreuve. Le vote des visiteurs, dont un prix réservé au jeune public, se termine à 16 h. Une initiation est prévue de 14 h à 16 h, avant la remise des récompenses à 17 h 30 et le feu d'artifice. Les œuvres devraient rester éclairées les deux nuits suivantes si le temps le permet.
+
+Le [programme officiel du concours sur glace](https://www.valloire.net/decouvrirvalloire/incontournable/capitale-de-la-sculpture-ephemere/le-concours-international-de-sculptures-sur-glace-a-valloire/) annonce un début du vote à 10 h malgré la fermeture matinale. Ne comptez donc pas sur un accès avant midi.
+
+### Comment rejoindre les Verneys ?
+
+Ce hameau se situe à trois kilomètres du centre de Valloire. L'[office de tourisme](https://www.valloire.net/actualites/concours-international-de-sculpture-sur-glace-437187/) indique que le stationnement y est gratuit et qu'une navette dessert le secteur. Le vendredi de clôture, des rotations supplémentaires sont prévues entre 16 h et 20 h. C'est une solution pratique pour éviter de reprendre la voiture après le spectacle.
+
+## Du 19 au 22 janvier: les sculptures sur neige au village
+
+La seconde semaine, le décor change. Des équipes de trois artistes travaillent la neige pour réaliser de grandes formes opaques, aux volumes parfois étonnants. Le site se trouve avenue de la Vallée d'Or, dans un espace piéton au cœur du village: une visite plus facile à fractionner avec de jeunes enfants.
+
+Le jeudi 21 constitue un bon compromis pour observer des œuvres déjà avancées tout en voyant les équipes travailler. Le vendredi, les sculptures doivent être achevées à midi. Les enfants pourront participer au choix du prix du jeune public jusqu'à 16 h, avant la cérémonie prévue à 17 h 30 et le feu d'artifice.
+
+Le [programme du concours sur neige](https://www.valloire.net/actualites/concours-international-de-sculptures-sur-neige-351137/) confirme la gratuité et précise que les horaires de clôture restent indicatifs.
+
+## Préparer la sortie avec les enfants
+
+Prévoyez des chaussures adaptées aux sols enneigés, des gants chauds et une pause à l'intérieur si vous restez jusqu'aux illuminations. Avec des petits, une visite courte en journée peut être plus agréable que l'attente de la cérémonie en plein froid.
+
+Les œuvres sont fragiles: observez-les sans les toucher et respectez les éventuels périmètres de protection. Si vous souhaitez participer à une initiation, renseignez-vous auprès de Valloire Tourisme au 04 79 59 03 96 sur l'âge minimum et les modalités d'inscription, qui ne sont pas précisés dans le programme consulté le 24 novembre 2026.
+
+Pour un séjour sans ski, privilégiez un hébergement au centre du village si vous venez pour la neige, ou à proximité d'un arrêt de navette si vous choisissez le concours sur glace. Vérifiez le programme et la météo avant votre départ: les conditions hivernales peuvent modifier les animations et la durée de conservation des sculptures.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -114,4 +148,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
