@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261125-1602-pass-chateaux-autour-de-blois-en-famille-pass-chateaux-du-loir-et-cher",
+  "lastProcessedCommit": "32f178b27b5ae76164cf1a4415d5e071a6790a56"
 }
