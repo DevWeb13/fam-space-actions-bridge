@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -96,7 +99,7 @@ affiliate:
   destination: Pointe-Noire
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/cuisine/(2026)/(11)/maison-du-cacao-a-pointe-noire-decouvrir-le-chocolat-en-famille/index.md
   targetSha: 401db8393b5dc5316b0dbf9ce883e7648e8bedda
@@ -125,31 +128,59 @@ radar:
       - maison cacao guadeloupe
 ---
 
-## Mission retenue
-Actualiser le guide Maison du Cacao et atelier Gwakako à Pointe-Noire, en distinguant précisément les deux lieux et leurs modalités.
+<!-- article-image-credit -->
+*Photo: [Alma Mulalic and Yann Fauché](https://commons.wikimedia.org/wiki/File:Cacao_fruits_on_tree_-_Guadeloupe.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Candidat rapidDrop. La cause de la baisse de visibilité demeure incertaine. Le premier candidat, LAEP Toulouse, a déjà été actualisé ce matin sur master. Le Parc floral d'Orléans a été actualisé le 8 novembre et son annonce hivernale confirme les dates et horaires publiés; pas de nouvelle correction établie. Gwakako affiche en revanche des jours différents de ceux de l'article, ainsi que des tranches d'âge tarifaires précises. Le lien depuis la Maison du Cacao vers l'atelier renvoie directement à Gwakako, pas à un troisième atelier.
+À Pointe-Noire, sur la côte sous le vent de la Guadeloupe, la Maison du Cacao invite les familles à découvrir d'où vient le chocolat. Dans une cacaoyère, les enfants voient les arbres et leurs cabosses, découvrent la transformation des fèves et terminent par une dégustation commentée. Une sortie gourmande qui permet de relier la tablette familière au fruit dont elle est issue.
 
-## Décision du lecteur
-Savoir quelle expérience réserver en fonction du jour, de l'âge des enfants et du budget, sans se tromper d'adresse.
+## Ce que les enfants découvrent à la Maison du Cacao
 
-## Faits à traiter
-- Gwakako: mardi à vendredi matin sur réservation, et non mercredi à samedi; 60 euros dès 12 ans, 30 euros de 3 à 11 ans, groupes de 6 à 20 constitués par l'organisateur, environ 2h30. Ne pas déduire un tarif ou une admission pour les moins de 3 ans. Enfants sous surveillance parentale. Atelier route des Plaines, distinct de l'écomusée.
-- La page Maison du Cacao renvoie à Gwakako pour la fabrication de tablette; supprimer l'ambiguïté d'un atelier supplémentaire non confirmé. Visite classique: mardi à samedi, 14 euros dès 12 ans, 7 euros de 3 à 11 ans, gratuit avant 3 ans, justificatif pour tarif enfant. Réservation conseillée et paiement sur place. Conserver l'écart de durée entre les pages officielles (1h à 1h30) et le conseil de prévoir 1h30. Pour deux adultes et deux enfants de 3 à 11 ans, comparer 42 euros pour la visite et 180 euros pour l'atelier.
-- Préserver le parcours pédagogique, la dégustation, les précautions allergies et poussette, les horaires d'accueil, les adresses, les images et leurs crédits. Actualiser uniquement les informations vérifiées.
+<!-- article-image-body:01 -->
 
-## Sources de départ
-- https://www.gwakako.com/
-- https://www.maisonducacao.fr/
-- https://www.maisonducacao.fr/contact
-- https://www.maisonducacao.fr/book-online
+![Fèves de cacao séchant à l'air libre en Colombie, illustration d'une étape de la fabrication du chocolat](/images/articles/2026/11/maison-du-cacao-a-pointe-noire-decouvrir-le-chocolat-en-famille-body-01.webp)
 
-## Affiliation
-Recherche GetYourGuide, Tiqets et Klook sans offre correspondant aux deux expériences. Conserver la Villa les Gallières sur Abritel (https://www.abritel.fr/location-vacances/p1735723), fiche confirmant Pointe-Noire, deux chambres, quatre personnes et piscine privée. Ne pas prétendre à une disponibilité pour des dates non renseignées.
+*Photo: [pipeafcr](https://commons.wikimedia.org/wiki/File:Cacao_Beans_Drying.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
 
-## Continuations internes
-Garder le guide centré sur ces deux expériences autour du cacao; le guide du jardin botanique de Deshaies peut servir de prolongement distinct si le lien est utile et vérifié sur master.
+<!-- /article-image-body:01 -->
+
+Le parcours traverse un jardin planté de cacaoyers, avec des explications sur la culture et l'histoire du cacao. On peut observer le travail du chocolat dans le laboratoire, puis assister à des démonstrations et à une dégustation commentée.
+
+C'est l'occasion de comprendre comment les fèves, une fois extraites des cabosses, sont fermentées, séchées, torréfiées et transformées. Les enfants peuvent comparer les saveurs du cacao et du chocolat, au-delà des tablettes sucrées qu'ils connaissent déjà. La [Maison du Cacao présente le déroulement de cette visite](https://www.maisonducacao.fr/).
+
+Les plus jeunes profiteront surtout de la promenade, des odeurs et de la découverte des fruits. Les plus grands pourront mieux suivre les étapes de fabrication.
+
+## Une visite ou un atelier pour fabriquer sa tablette?
+
+**La visite classique de la Maison du Cacao** comprend le jardin, les explications, les démonstrations et la dégustation. Pour fabriquer votre propre tablette, choisissez plutôt l'atelier Gwakako, vers lequel renvoie le site de la Maison du Cacao.
+
+**Gwakako**, autre adresse à Pointe-Noire, propose un atelier participatif à sa propre plantation. Les participants découvrent notamment la torréfaction, l'épluchage et le broyage, puis fabriquent une tablette à emporter. L'activité comprend aussi une visite de la plantation et des dégustations autour du cacao. Comptez environ 2 h 30. Il s'agit d'un établissement différent, avec une réservation séparée. Les détails figurent sur le [site de Gwakako](https://www.gwakako.com/).
+
+## Tarifs, horaires et réservations
+
+À la Maison du Cacao, les tarifs affichés sont de **14 € à partir de 12 ans**, **7 € de 3 à 11 ans** et **gratuit avant 3 ans**. Pour deux adultes et deux enfants de 3 à 11 ans, le total est de 42 €. Une preuve d'identité est demandée pour le tarif enfant.
+
+L'établissement indique une ouverture **du mardi au samedi, de 9 h 30 à 13 h 30 et de 14 h 30 à 17 h**. Ces plages correspondent aux horaires d'accueil, pas nécessairement aux heures de départ des visites. La réservation est fortement recommandée; elle peut se faire [en ligne, avec paiement sur place](https://www.maisonducacao.fr/book-online).
+
+La durée annoncée varie entre une heure sur la fiche de réservation et 1 h 30 dans les informations pratiques. Pour organiser votre journée, prévoyez environ 1 h 30 et vérifiez l'horaire de votre séance.
+
+Chez Gwakako, l'atelier se déroule **du mardi au vendredi matin, uniquement sur réservation**, à **60 € dès 12 ans et 30 € de 3 à 11 ans**. Pour deux adultes et deux enfants de 3 à 11 ans, comptez 180 €, contre 42 € pour la visite classique. Les groupes de 6 à 20 personnes sont constitués par l'organisateur. Les enfants restent sous la surveillance de leurs parents. Pour les moins de 3 ans, demandez les conditions d'accueil et le tarif avant de réserver.
+
+Si vous ne disposez que du samedi, privilégiez la Maison du Cacao. Pour l'atelier, fiez-vous aux créneaux annoncés directement par Gwakako, qui diffèrent de ceux mentionnés sur le site de la Maison du Cacao.
+
+Tarifs et horaires ont été revérifiés sur les sites des établissements le 25 novembre 2026; ils peuvent changer.
+
+## Préparer la sortie avec des enfants
+
+La Maison du Cacao se situe à **Grande Plaine, 97116 Pointe-Noire**. Une partie de la visite se déroule dans la cacaoyère: prévoyez des chaussures adaptées à la marche et une protection contre les averses. L'accessibilité complète du parcours, notamment avec une poussette, n'est pas confirmée; contactez l'établissement si ce point est important pour votre famille.
+
+En cas d'allergie alimentaire, demandez avant la visite la composition des produits proposés à la dégustation. Pour les enfants de moins de 3 ans, l'entrée gratuite ne signifie pas que toutes les dégustations sont adaptées.
+
+Pour Gwakako, vérifiez bien l'adresse de votre atelier: **route des Plaines, à la plantation Gwakako**, et non à la Maison du Cacao.
+
+## Prolonger la découverte sur la côte sous le vent
+
+Si cette visite s'inscrit dans des vacances en Basse-Terre, la [Villa les Gallières à Pointe-Noire sur Abritel](https://www.abritel.fr/location-vacances/p1735723) propose une formule de deux chambres climatisées pour quatre personnes, avec jardin et piscine privée. Les enfants sont acceptés. Vérifiez la disponibilité, le prix total et les conditions de sécurité autour de la piscine avant de réserver.
 
 ## Article source exact à préserver et améliorer
 
