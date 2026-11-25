@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261125-0558-metz-sans-voiture-en-famille-titre-de-travail-metz-en-famille-sans-voi",
+  "lastProcessedCommit": "afa00fa7f149953fabb3647d26a2d10fc7328b0f"
 }
