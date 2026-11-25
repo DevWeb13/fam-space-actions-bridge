@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261125-1157-se-deplacer-en-famille-en-haute-saone-cars-mobigo-bus-de-vesoul-et-voi",
+  "lastProcessedCommit": "68715daf87926af71ca84a7fe05efcf9d4cd45a3"
 }
