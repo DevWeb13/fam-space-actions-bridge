@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -92,7 +95,7 @@ sources:
     url: https://www.parents31.fr/detail-structure/lieu-daccueil-enfants-parents-laep-reynerie/
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/parentalite/(2026)/(11)/laep-a-toulouse-ou-jouer-gratuitement-avec-son-enfant-de-moins-de-6-ans/index.md
   targetSha: 067d7d3481c0024fb4790813f76333a213148b85
@@ -121,32 +124,53 @@ radar:
       - espace enfant
 ---
 
-## Mission retenue
-Actualiser le guide des trois LAEP toulousains (Borderouge, Fourtanier, Reynerie) en corrigeant les créneaux de Borderouge et en facilitant le choix par jour.
+<!-- article-image-credit -->
+*Photo: [Zairon](https://commons.wikimedia.org/wiki/File:Toulouse_Capitole_Ext%C3%A9rieure_Facade_1.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Premier candidat rapidDrop du snapshot du jour. La cause de la baisse de visibilité reste indéterminée, mais une erreur indépendante est vérifiée : la fiche municipale indique désormais le mercredi matin ouvert et le vendredi fermé, à l'inverse de l'article.
+À Toulouse, les lieux d'accueil enfants-parents (LAEP) proposent aux enfants de moins de six ans un espace pour jouer et rencontrer d'autres petits, tandis que leurs parents ou un adulte familier restent avec eux. Voici trois adresses gratuites, avec leurs horaires, pour choisir selon votre quartier et vos disponibilités.
 
-## Décision du lecteur
-Identifier un lieu accessible selon son quartier et sa disponibilité, comprendre qu'il faut rester avec son enfant et éviter une visite pendant une fermeture.
+## Que fait-on dans un LAEP?
 
-## Faits à traiter
-- Borderouge : la mairie affiche lundi et mercredi 8h45-12h15, mardi 14h30-18h, jeudi 8h45-12h15 puis 14h-17h30, vendredi et week-end fermés. Corriger précisément les deux jours erronés.
-- Fourtanier : la fiche municipale confirme les horaires actuels de l'article, notamment les deux créneaux du mercredi et le vendredi après-midi. Parents31 confirme Reynerie le samedi matin et ses fermetures pendant les vacances. Conserver ces données, les adresses, téléphones, accès et équipements vérifiés. Rendre le choix mercredi/vendredi/samedi immédiat sans répéter inutilement les horaires.
-- Préserver gratuité, anonymat, présence de l'accompagnant, conseils de première visite et avertissement sur les fermetures. La page CAF nationale renvoie actuellement une maintenance : conserver la référence et revérifier si possible, sans inventer de nouvelles conditions.
-- Conserver l'image et son crédit, le lien interne existant et les informations toujours utiles.
+L'enfant découvre des jeux à son rythme. Son accompagnant reste sur place et en garde la responsabilité: **ce n'est pas une crèche ni une halte-garderie** où l'on dépose son enfant. Des accueillants formés sont présents pour écouter et faciliter les échanges, sans imposer d'activité ni de discussion.
 
-## Sources de départ
-- https://metropole.toulouse.fr/annuaire/laep-borderouge-trois-cocus
-- https://metropole.toulouse.fr/annuaire/laep-fourtanier
-- https://www.parents31.fr/detail-structure/lieu-daccueil-enfants-parents-laep-reynerie/
-- https://www.caf.fr/allocataires/aides-et-demarches/thematique-libre/lieu-d-accueil-enfants-parents-laep
+On peut venir pour rencontrer d'autres parents, rompre l'isolement ou simplement partager un moment avec son bébé. L'accueil est anonyme. La [CAF explique le fonctionnement des LAEP](https://www.caf.fr/allocataires/aides-et-demarches/thematique-libre/lieu-d-accueil-enfants-parents-laep): l'accès est libre et sans inscription, même si certains lieux peuvent demander une petite participation pour une cotisation ou un goûter. Les trois adresses ci-dessous annoncent la gratuité. Pour en savoir plus, consultez notre [guide pratique des lieux d'accueil enfants-parents](https://www.fam-space.fr/articles/parentalite/laep-enfants-parents-gratuit-sans-inscription/).
 
-## Affiliation
-Aucune offre pertinente pour un accueil local gratuit ; ne pas ajouter d'hébergement ou de billetterie.
+## Trois adresses à Toulouse selon votre quartier et vos horaires
 
-## Continuations internes
-Conserver le renvoi vers /articles/parentalite/laep-enfants-parents-gratuit-sans-inscription/ pour le fonctionnement général des LAEP ; le guide local reste centré sur les adresses et créneaux de Toulouse.
+Si vous êtes disponible le mercredi, choisissez Borderouge ou Fourtanier. Parmi ces trois lieux, Fourtanier est le seul ouvert le vendredi et Reynerie le seul ouvert le samedi. Les horaires ci-dessous ont été vérifiés le 25 novembre 2026.
+
+### Borderouge / Trois Cocus: dans le nord de Toulouse
+
+Au **5 rue du Colonel Paul Paillole, 31200 Toulouse**, ce LAEP accueille les enfants de 0 à 6 ans accompagnés d'un parent. Un local poussette est disponible.
+
+**Horaires affichés:** lundi et mercredi de 8h45 à 12h15, mardi de 14h30 à 18h, jeudi de 8h45 à 12h15 et de 14h à 17h30. **Fermé le vendredi et le week-end.**
+
+Accès: métro B ou bus 41, arrêt Trois Cocus. Téléphone: **05 34 24 57 44**. Vérifiez les créneaux sur la [fiche municipale de Borderouge / Trois Cocus](https://metropole.toulouse.fr/annuaire/laep-borderouge-trois-cocus).
+
+### Fourtanier: plusieurs créneaux en centre-ville
+
+Le LAEP Fourtanier se trouve au **5 rue Fourtanier, 31000 Toulouse**. Il propose deux plages d'accueil le mercredi et dispose d'un local poussette.
+
+**Horaires affichés:** mardi de 13h45 à 17h15, mercredi de 9h à 12h30 et de 14h à 17h30, jeudi de 14h30 à 18h, vendredi de 13h45 à 17h15. Fermé du samedi au lundi.
+
+Accès: métro B, station François Verdier, ou bus 29, L1, L8 et L9, arrêt Saint-Georges. Téléphone: **07 61 01 66 02**. Consultez la [fiche municipale de Fourtanier](https://metropole.toulouse.fr/annuaire/laep-fourtanier) avant de partir.
+
+### Reynerie: une possibilité le samedi matin
+
+Au **23 rue Jean Gilles, 31100 Toulouse**, le LAEP Reynerie convient notamment aux familles indisponibles en semaine. L'accueil est gratuit, anonyme et sans inscription préalable.
+
+**Horaires affichés:** lundi de 14h à 18h30, mardi de 8h45 à 12h et de 14h à 18h30, jeudi de 14h à 18h30 et **samedi de 9h à 12h**.
+
+Le lieu annonce des fermetures entre Noël et le jour de l'An, quatre semaines en été et la deuxième semaine des vacances de Toussaint, d'hiver et de printemps. Téléphone: **07 71 21 93 74**. Vérifiez les créneaux sur la [fiche Reynerie de Parents31](https://www.parents31.fr/detail-structure/lieu-daccueil-enfants-parents-laep-reynerie/).
+
+## Comment se passe une première visite?
+
+Vous venez pendant une plage d'accueil avec votre enfant et restez auprès de lui. Il peut explorer les jeux ou prendre le temps d'observer. Vous n'avez pas à vous inscrire à une activité ni à expliquer votre situation familiale.
+
+Avec un bébé, prévoyez ses affaires habituelles et renseignez-vous sur les possibilités de change et de repas: les équipements varient selon les lieux. Borderouge et Fourtanier disposent d'un local poussette, ce qui ne garantit pas l'accessibilité de tous les espaces.
+
+**Avant de vous déplacer**, consultez la fiche du lieu ou appelez, notamment pendant les vacances scolaires: les horaires peuvent changer.
 
 ## Article source exact à préserver et améliorer
 
