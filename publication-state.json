@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261125-2103-titre-de-travail-halle-de-la-machine-et-envol-des-pionniers-une-journe",
+  "lastProcessedCommit": "4b13027255d399f3ce3dff9caf9596b23acfd975"
 }
