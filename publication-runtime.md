@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,82 +14,133 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Haute-Saône
 - Région: Bourgogne-Franche-Comté
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-« Se déplacer en famille en Haute-Saône : cars Mobigo, bus de Vesoul et voiture de location ». Guide départemental pour combiner transports collectifs et voiture ponctuelle, notamment pour les familles vivant dans une commune peu desservie ou arrivant en train à Vesoul.
-
-## Besoin du lecteur
-Choisir le réseau adapté au trajet, préparer les correspondances, réserver un transport à la demande, choisir les titres enfants et déterminer quand louer une voiture.
-
-## Valeur éditoriale
-Comparer trois situations : trajet urbain à Vesoul, déplacement entre communes et déplacement vers un village mal desservi. Vérifier tarifs enfants, horaires scolaires et vacances, conditions et périmètre du transport à la demande. La SNCF signale un accueil provisoire en bungalow à Vesoul après l'incendie de 2024 : reconfirmer. Les données Mobigo couvrent novembre 2026 à août 2027. Vérifier les conditions de retrait et restitution d'une voiture et les sièges enfants. Autre candidat étudié : emprunter des jeux auprès du CLUC de Gray, ludothèque itinérante permanente, sans offre partenaire naturelle. Écarter les doublons jeux de piste, Ronchamp, Mille Étangs et Villersexel.
-
-## Affiliation
-- KAYAK : comparaison de locations à Vesoul, agence Europcar avenue de la Gare référencée et offres visibles : https://www.kayak.fr/location-voiture-Vesoul.49864.cars.ksp . Vérifier une catégorie adaptée à quatre personnes et aux bagages ; ne pas garantir le prix ni la disponibilité.
-- Pas d'hébergement imposé pour ce sujet de mobilité quotidienne. Les tickets publics et transports à la demande restent liés aux opérateurs officiels faute d'équivalent partenaire.
-
-## Sources de départ
-- https://www.vesoul.fr/au-quotidien/vbus-transports-en-commun.html
-- https://tourisme-vesoul.fr/mobilites/
-- https://transport.data.gouv.fr/resources/84074
-- https://www.ter.sncf.com/grand-est/se-deplacer/gares/Vesoul-87185009
-- https://www.garesetconnexions.sncf/fr/gares-services/vesoul/intermodalites
-- https://www.garesetconnexions.sncf/fr/gares-services/vesoul/intermodalites/location-avis
-- https://www.europcar.fr/fr-fr/places/location-voiture-france/vesoul/vesoul-gare-meet-and-greet
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "vie-pratique"
+title: "Se déplacer en famille en Haute-Saône sans voiture au quotidien"
+subtitle: "Bus Moova, cars Mobigo et location ponctuelle pour les trajets difficiles"
+summary: "Bus de Vesoul, cars régionaux, transport sur réservation et location ponctuelle: choisissez la solution adaptée à vos déplacements en Haute-Saône."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "transport famille Haute-Saône"
+  - "cars Mobigo Haute-Saône"
+  - "bus Moova Vesoul"
+  - "transport à la demande Haute-Saône"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Haute-Saône"
+  region: "Bourgogne-Franche-Comté"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Ville de Vesoul: réseau Moova"
+    url: "https://www.vesoul.fr/au-quotidien/vbus-transports-en-commun.html"
+  - title: "Moova Mobilités"
+    url: "https://www.moova-mobilites.fr/"
+  - title: "Mobigo: horaires des cars de Haute-Saône"
+    url: "https://www.viamobigo.fr/fr/car-mobigo/71/haute-saone-fiche-horaires/284"
+  - title: "Mobigo: réseau régional et tarifs routiers"
+    url: "https://www.viamobigo.fr/fr/reseau-regional-mobigo/71/"
+  - title: "Mobigo: conditions du transport à la demande"
+    url: "https://tad.viamobigo.fr/MOBIGO/fr-fr/Account/CGU"
+  - title: "Région: transports scolaires de Haute-Saône"
+    url: "https://www.bourgognefranchecomte.fr/transports-scolaires-de-la-haute-saone"
+  - title: "Mobigo: tarif enfant en train"
+    url: "https://www.viamobigo.fr/fr/titres-et-tarifs/7/Fare/tarif-train-mobigo-enfant/297"
+  - title: "SNCF: gare de Vesoul"
+    url: "https://www.ter.sncf.com/grand-est/se-deplacer/gares/Vesoul-87185009"
+  - title: "Europcar: conditions de location à Vesoul"
+    url: "https://www.europcar.fr/fr-fr/places/location-voiture-france/vesoul/vesoul-gare-meet-and-greet"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+En Haute-Saône, rejoindre un rendez-vous à Vesoul, rendre visite à des proches à Gray ou passer une journée dans un village ne demande pas toujours de posséder une voiture. Le département dispose de cars régionaux, de liaisons ferroviaires et de services sur réservation. Le bon choix dépend surtout du point de départ, de l'heure du retour et du nombre d'enfants qui voyagent.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Dans l'agglomération de Vesoul: prendre Moova
+
+Le réseau urbain de Vesoul porte désormais le nom de **Moova**, et non plus Vbus. Pour un trajet vers le centre-ville ou une commune de l'agglomération, commencez par consulter les horaires et les tarifs sur le [site Moova Mobilités](https://www.moova-mobilites.fr/). Les titres urbains ne doivent pas être confondus avec ceux des cars régionaux. Vérifiez notamment les conditions de gratuité ou de réduction selon l'âge de vos enfants avant d'acheter les billets.
+
+Si votre commune ou votre quartier est mal desservi par les lignes régulières, le transport à la demande de Moova peut vous rapprocher du centre. Il relie des arrêts désignés au pôle multimodal ou à République, où vous pouvez poursuivre en bus.
+
+La [Ville de Vesoul](https://www.vesoul.fr/au-quotidien/vbus-transports-en-commun.html) indique que la réservation est possible jusqu'à 30 jours à l'avance, et jusqu'à deux heures avant le départ par téléphone au **0 800 09 99 39**. Le site et l'application permettent également de réserver. Indiquez le nombre de voyageurs et vérifiez les conditions de transport de la poussette si vous en avez une.
+
+## Entre communes: les cars régionaux Mobigo
+
+Les cars Mobigo desservent notamment les axes Gy-Vesoul (601), Gray-Combeaufontaine-Vesoul (602) et Saint-Loup-Luxeuil-Vesoul-Besançon (605). Les [fiches horaires de Haute-Saône](https://www.viamobigo.fr/fr/car-mobigo/71/haute-saone-fiche-horaires/284) présentent les services réguliers applicables depuis le 2 novembre 2026, ainsi que les lignes nécessitant une réservation.
+
+Pour un déplacement familial, repérez d'abord le dernier départ permettant de rentrer. Un car qui convient à l'aller ne garantit pas une correspondance au retour. Lisez les renvois des fiches horaires: certaines courses ne circulent qu'en période scolaire ou certains jours de la semaine.
+
+La [brochure tarifaire des cars Mobigo](https://www.viamobigo.fr/fr/reseau-regional-mobigo/71/) permet de comparer les billets occasionnels et les formules pour les déplacements fréquents. Les tarifs ferroviaires sont différents: par exemple, le [tarif enfant TRAIN Mobigo](https://www.viamobigo.fr/fr/titres-et-tarifs/7/Fare/tarif-train-mobigo-enfant/297) est affiché à 2 € pour les enfants de 4 à moins de 12 ans, sur les trajets éligibles. Ne transposez pas automatiquement ce prix aux cars.
+
+Pour les trajets domicile-école, consultez plutôt le [service régional des transports scolaires](https://www.bourgognefranchecomte.fr/transports-scolaires-de-la-haute-saone). La gratuité dépend de l'éligibilité de l'élève et nécessite une inscription.
+
+## Un village peu desservi: réserver le transport à la demande
+
+Les services régionaux sur réservation complètent les lignes régulières. Depuis le 2 novembre 2026, par exemple, les arrêts d'Amoncourt et de Chaux-lès-Port auparavant desservis par la ligne 606 sont reportés sur le transport à la demande 661 pour les voyageurs ordinaires.
+
+Contrairement à un taxi, ce service collectif suit des conditions de desserte et des horaires définis. Consultez la fiche de la ligne concernée, puis réservez l'aller et le retour. La centrale Mobigo est joignable au **03 80 11 29 29**, du lundi au samedi de 7 h à 20 h, hors jours fériés. La réservation en ligne est également possible selon les [conditions du service régional](https://tad.viamobigo.fr/MOBIGO/fr-fr/Account/CGU). Respectez le délai propre à votre ligne.
+
+Si aucun arrêt ne correspond à votre destination, envisagez une combinaison avec un proche qui peut vous récupérer à l'arrêt ou à la gare. Cela peut éviter de louer un véhicule pour toute la journée.
+
+## Arriver en train à Vesoul
+
+La gare se trouve place de la Gare. Elle permet de rejoindre les bus urbains et de poursuivre vers d'autres communes. La [fiche SNCF de Vesoul](https://www.ter.sncf.com/grand-est/se-deplacer/gares/Vesoul-87185009) signale encore un accueil provisoire à la suite de l'incendie du 14 septembre 2024: la vente des billets et l'accueil sont organisés dans un bungalow près de l'abri vélo. Vérifiez les conditions d'accès avant votre départ, notamment si vous avez besoin d'une assistance.
+
+## Quand louer une voiture pour une journée ?
+
+Une location ponctuelle devient intéressante lorsque plusieurs déplacements vers des villages doivent être enchaînés, ou lorsque les horaires de retour des transports publics ne conviennent pas. Des loueurs proposent des véhicules à Vesoul, dont [Europcar près de la gare](https://www.europcar.fr/fr-fr/places/location-voiture-france/vesoul/vesoul-gare-meet-and-greet).
+
+Pour quatre personnes avec des bagages, regardez les catégories compactes ou familiales en vérifiant la capacité réelle du coffre. Réservez les sièges enfants adaptés si vous ne transportez pas les vôtres et demandez confirmation de leur disponibilité.
+
+Avant de payer, comparez le coût complet: location, kilomètres inclus, carburant, sièges, assurance et éventuels frais de restitution hors horaires. Vérifiez aussi le montant de la caution et les cartes bancaires acceptées. Le conducteur devra disposer des documents et du moyen de paiement exigés par le loueur.
+
+Si vous arrivez en train, confirmez le lieu et l'heure de remise des clés: une agence référencée à la gare ne signifie pas nécessairement qu'un comptoir y est ouvert en permanence. Prévoyez une marge suffisante pour restituer le véhicule avant votre train de retour.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -118,4 +169,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
