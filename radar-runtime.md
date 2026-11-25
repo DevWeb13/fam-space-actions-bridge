@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 3/3
+# Radar Fam Space - Phase 1/3
 
 ## Mission
 
@@ -8,34 +8,25 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 3/3
+# Radar - Phase 1/3
 
-Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
+Tu es rédacteur en chef. Ta seule responsabilité est de choisir la meilleure mission du passage et de préparer un brief éditorial court. **Ne fais aucune plomberie Git et ne reconstruis aucune donnée GSC structurée.**
 
-Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
+Le snapshot GSC du jour est déjà prêt lorsque cette phase commence. Utilise le catalogue compact et l'historique du bridge fournis dans ce runtime, puis utilise le contexte des travaux en cours fourni dans ce runtime. Contrôle seulement les articles nécessaires sur `master`, sans relire tout le catalogue fichier par fichier.
 
-Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
+Examine **en premier** les articles `refresh`, en commençant par ceux marqués `rapidDrop: true`. Ils ont gagné des impressions, puis leur visibilité a fortement diminué en quelques jours. Les articles récents ne doivent pas être pénalisés par leur âge. Les autres pertes significatives viennent ensuite.
 
-Ensuite:
-- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
-- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
-- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
-- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
-- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
-- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
-- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
-- ne force ni longueur ni affiliation.
+Lis l'article source complet, ses sources et les requêtes GSC lorsqu'elles ont été diagnostiquées :
+- `rank_loss` : vérifier les intentions dont les positions ont réellement reculé ;
+- `coverage_loss` : examiner les recherches dont l'exposition diminue ;
+- `uncertain` ou `needs_query_check` : une chute d'impressions ne prouve pas la cause. Seule une lacune indépendante et vérifiée peut justifier une amélioration ;
+- `search_potential` : vérifier que la réponse et le titre correspondent réellement à l'intention.
 
-Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
+**Ne choisis pas un refresh pour changer une date ou forcer un `updatedAt`.** Identifie ce qui serait concrètement meilleur pour la famille, tout en conservant ce qui fonctionne déjà.
 
-Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
-- `summary`: contrôles et corrections réellement effectués;
-- `sources`: URLs factuelles revérifiées;
-- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+**Seulement si aucun article existant n'est réellement améliorable**, cherche un événement exceptionnel avec un fort potentiel d'intérêt et éventuellement d'affiliation. Vérifie ses sources officielles et recherche les doublons de sujet sur `master`, en complément des articles proches déjà listés, ainsi que les contenus Publication/Destination en cours. Ne multiplie pas les nouveaux articles sur de petits événements gratuits.
 
-**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
-
-## Règles partenaires
+Applique directement les règles partenaires ci-dessous.
 
 ### Partenaires disponibles
 
@@ -59,246 +50,1016 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-## Candidat validé de la phase précédente
 
----
-title: "LAEP à Toulouse: où jouer gratuitement avec son enfant de moins de 6 ans?"
-subtitle: Trois lieux d'accueil enfants-parents, leurs horaires et les conseils pour une première visite
-summary: À Toulouse, les LAEP offrent aux tout-petits un espace de jeu et aux parents un lieu d'échange. Découvrez trois adresses gratuites et leurs horaires.
-slug: laep-a-toulouse-ou-jouer-gratuitement-avec-son-enfant-de-moins-de-6-ans
-status: published
-publishedAt: 2026-11-11T22:03:01+01:00
-updatedAt: null
-category: parentalite
-readingTime: 3
-location:
-  city: Toulouse
-  department: Haute-Garonne
-  region: Occitanie
-topic:
-  key: parentalite|toulouse|laep-a-toulouse-ou-jouer-gratuitement-avec-son-enfant-de-moins-de-6-ans|2026
-  keywords:
-    - LAEP Toulouse
-    - lieux accueil enfants parents Toulouse
-    - sortie gratuite bébé Toulouse
-image:
-  src: /images/articles/2026/11/laep-a-toulouse-ou-jouer-gratuitement-avec-son-enfant-de-moins-de-6-ans.webp
-  alt: Façade du Capitole à Toulouse, ville où plusieurs lieux d'accueil enfants-parents sont proposés
-sources:
-  - title: CAF - Lieu d'accueil enfants-parents
-    url: https://www.caf.fr/allocataires/aides-et-demarches/thematique-libre/lieu-d-accueil-enfants-parents-laep
-  - title: Toulouse Métropole - LAEP Borderouge, Trois Cocus
-    url: https://metropole.toulouse.fr/annuaire/laep-borderouge-trois-cocus
-  - title: Toulouse Métropole - LAEP Fourtanier
-    url: https://metropole.toulouse.fr/annuaire/laep-fourtanier
-  - title: Parents31 - LAEP Reynerie
-    url: https://www.parents31.fr/detail-structure/lieu-daccueil-enfants-parents-laep-reynerie/
-radar:
-  schemaVersion: 1
-  phase: 2
-  mode: refresh
-  targetPath: src/routes/articles/parentalite/(2026)/(11)/laep-a-toulouse-ou-jouer-gratuitement-avec-son-enfant-de-moins-de-6-ans/index.md
-  targetSha: 067d7d3481c0024fb4790813f76333a213148b85
-  targetUrl: /articles/parentalite/laep-a-toulouse-ou-jouer-gratuitement-avec-son-enfant-de-moins-de-6-ans/
-  decision: Choisir un LAEP gratuit à Toulouse selon son quartier et le jour disponible, sans déplacement inutile.
-  affiliationPotential: Aucune affiliation naturelle pour ce service local gratuit de parentalité.
-  gsc:
-    retrievedAt: 2026-11-25T07:30:00+01:00
-    dataThrough: 2026-11-23
-    signal: uncertain
-    basis: "Visibilité récente : 86 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante."
-    peakStart: 2026-11-17
-    peakEnd: 2026-11-19
-    recentStart: 2026-11-21
-    recentEnd: 2026-11-23
-    peakImpressions: 86
-    recentImpressions: 3
-    commonQueries: 0
-    positionDelta: null
-    impressionRatio: 0
-    focusQueries:
-      - laep toulouse
-      - laep
-      - laep borderouge
-      - laep fourtanier
-      - espace enfant
----
+Le brief doit rester court et contenir uniquement ce qui aidera la rédaction:
 
-<!-- article-image-credit -->
-*Photo: [Zairon](https://commons.wikimedia.org/wiki/File:Toulouse_Capitole_Ext%C3%A9rieure_Facade_1.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
-<!-- /article-image-credit -->
+## Mission retenue
+Le sujet et ce que c'est réellement.
 
-À Toulouse, les lieux d'accueil enfants-parents (LAEP) proposent aux enfants de moins de six ans un espace pour jouer et rencontrer d'autres petits, tandis que leurs parents ou un adulte familier restent avec eux. Voici trois adresses gratuites, avec leurs horaires, pour choisir selon votre quartier et vos disponibilités.
+## Pourquoi cette mission
+Pourquoi elle mérite une amélioration maintenant, ou pourquoi aucun article existant n'était utilement améliorable avant de retenir cet événement.
 
-## Que fait-on dans un LAEP?
+## Décision du lecteur
+Ce que la page doit permettre au lecteur de comprendre ou de choisir. Formule un résultat pour le lecteur, pas un titre ni un plan. Les consignes de maillage, d'anti-doublon ou d'organisation entre articles appartiennent à `Continuations internes`, pas à la décision.
 
-L'enfant découvre des jeux à son rythme. Son accompagnant reste sur place et en garde la responsabilité: **ce n'est pas une crèche ni une halte-garderie** où l'on dépose son enfant. Des accueillants formés sont présents pour écouter et faciliter les échanges, sans imposer d'activité ni de discussion.
+## Faits à traiter
+Les informations décisives à vérifier, actualiser ou ajouter, et les informations existantes importantes à préserver pour un refresh.
 
-On peut venir pour rencontrer d'autres parents, rompre l'isolement ou simplement partager un moment avec son bébé. L'accueil est anonyme. La [CAF explique le fonctionnement des LAEP](https://www.caf.fr/allocataires/aides-et-demarches/thematique-libre/lieu-d-accueil-enfants-parents-laep): l'accès est libre et sans inscription, même si certains lieux peuvent demander une petite participation pour une cotisation ou un goûter. Les trois adresses ci-dessous annoncent la gratuité. Pour en savoir plus, consultez notre [guide pratique des lieux d'accueil enfants-parents](https://www.fam-space.fr/articles/parentalite/laep-enfants-parents-gratuit-sans-inscription/).
+## Sources de départ
+Les meilleures sources officielles ou directement responsables.
 
-## Trois adresses à Toulouse selon votre quartier et vos horaires
+## Affiliation
+Les pistes réellement vérifiées, ou l'absence d'affiliation naturelle.
 
-Si vous êtes disponible le mercredi, choisissez Borderouge ou Fourtanier. Parmi ces trois lieux, Fourtanier est le seul ouvert le vendredi et Reynerie le seul ouvert le samedi. Les horaires ci-dessous ont été vérifiés le 25 novembre 2026.
+## Continuations internes
+Deux ou trois pistes seulement si elles sont réellement utiles. Indique quand une page existante doit prendre le relais sur un sous-sujet afin d'éviter de le redévelopper dans le nouvel article.
 
-### Borderouge / Trois Cocus: dans le nord de Toulouse
+Ensuite, soumets cette décision via le format `action: start` fourni plus bas dans ce runtime. Le modèle ne renseigne jamais le nom de branche, le SHA, `targetPath`, le slug technique d'une opportunity ni les métriques GSC détaillées déjà présentes dans le snapshot.
 
-Au **5 rue du Colonel Paul Paillole, 31200 Toulouse**, ce LAEP accueille les enfants de 0 à 6 ans accompagnés d'un parent. Un local poussette est disponible.
+## Catégories éditoriales autorisées
 
-**Horaires affichés:** lundi et mercredi de 8h45 à 12h15, mardi de 14h30 à 18h, jeudi de 8h45 à 12h15 et de 14h à 17h30. **Fermé le vendredi et le week-end.**
+- sorties — Sorties: Des idées de sorties à partager en famille, près de chez vous.
+- voyages — Voyages: Des conseils et inspirations pour voyager sereinement en famille.
+- evenements — Événements: Les événements à découvrir et à préparer avec les enfants.
+- activites — Activités: Des activités simples et enrichissantes pour tous les âges.
+- vie-pratique — Vie pratique: Des repères concrets pour faciliter le quotidien des familles.
+- maison — Maison: Des solutions pratiques pour une maison familiale agréable.
+- cuisine — Cuisine: Des idées et conseils pour cuisiner simplement en famille.
+- parentalite — Parentalité: Des ressources bienveillantes pour accompagner la vie de famille.
+- bons-plans — Bons plans: Réductions, gratuités, pass et aides pratiques pour économiser en famille.
 
-Accès: métro B ou bus 41, arrêt Trois Cocus. Téléphone: **05 34 24 57 44**. Vérifiez les créneaux sur la [fiche municipale de Borderouge / Trois Cocus](https://metropole.toulouse.fr/annuaire/laep-borderouge-trois-cocus).
+## Snapshot GSC préparé
 
-### Fourtanier: plusieurs créneaux en centre-ville
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-25T07:30:00+01:00",
+  "dataThrough": "2026-11-23",
+  "from": "2026-10-27",
+  "refresh": [
+    {
+      "url": "/articles/parentalite/laep-a-toulouse-ou-jouer-gratuitement-avec-son-enfant-de-moins-de-6-ans/",
+      "title": "LAEP à Toulouse: où jouer gratuitement avec son enfant de moins de 6 ans?",
+      "category": "parentalite",
+      "publishedAt": "2026-11-11T22:03:01+01:00",
+      "location": {
+        "city": "Toulouse",
+        "department": "Haute-Garonne",
+        "region": "Occitanie"
+      },
+      "ageDays": 14,
+      "rapidDrop": true,
+      "peakStart": "2026-11-17",
+      "peakEnd": "2026-11-19",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 86,
+      "recentImpressions": 3,
+      "score": 249,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 86 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "laep toulouse",
+        "laep",
+        "laep borderouge",
+        "laep fourtanier",
+        "espace enfant"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/",
+      "title": "Parc floral d’Orléans gratuit en hiver: horaires et sortie avec les enfants",
+      "category": "bons-plans",
+      "publishedAt": "2026-10-26T22:02:51+01:00",
+      "location": {
+        "city": "Orléans",
+        "department": "Loiret",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 30,
+      "rapidDrop": true,
+      "peakStart": "2026-10-30",
+      "peakEnd": "2026-11-01",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 69,
+      "recentImpressions": 3,
+      "score": 198,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 69 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "parc floral gratuit",
+        "parc floral de la source gratuit"
+      ]
+    },
+    {
+      "url": "/articles/cuisine/maison-du-cacao-a-pointe-noire-decouvrir-le-chocolat-en-famille/",
+      "title": "Maison du Cacao à Pointe-Noire: découvrir le chocolat en famille",
+      "category": "cuisine",
+      "publishedAt": "2026-11-08T06:04:50+01:00",
+      "location": {
+        "city": "Pointe-Noire",
+        "department": "Guadeloupe",
+        "region": "Guadeloupe"
+      },
+      "ageDays": 17,
+      "rapidDrop": true,
+      "peakStart": "2026-11-16",
+      "peakEnd": "2026-11-18",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 43,
+      "recentImpressions": 10,
+      "score": 99,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 43 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0.308,
+      "focusQueries": [
+        "la maison du cacao",
+        "maison du cacao en guadeloupe",
+        "maison du cacao guadeloupe",
+        "la maison du cacao guadeloupe",
+        "maison cacao guadeloupe"
+      ]
+    },
+    {
+      "url": "/articles/voyages/disneyland-paris-en-rer-a-avec-des-enfants-trajet-et-tickets-en-2026/",
+      "title": "Disneyland Paris en RER A avec des enfants: trajet et tarifs 2026",
+      "category": "voyages",
+      "publishedAt": "2026-10-31T04:29:30.562Z",
+      "location": {
+        "city": "Chessy",
+        "department": "Seine-et-Marne",
+        "region": "Île-de-France"
+      },
+      "ageDays": 25,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 35,
+      "recentImpressions": 4,
+      "score": 93,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 35 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "ticket rer a disneyland paris",
+        "rer a disney",
+        "rer disneyland paris tarif"
+      ]
+    },
+    {
+      "url": "/articles/activites/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives/",
+      "title": "Palais idéal du facteur Cheval en famille: visite et conseils à Hauterives",
+      "category": "activites",
+      "publishedAt": "2026-10-27T02:02:18+01:00",
+      "location": {
+        "city": "Hauterives",
+        "department": "Drôme",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "ageDays": 29,
+      "rapidDrop": true,
+      "peakStart": "2026-10-28",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 29,
+      "recentImpressions": 0,
+      "score": 87,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 29 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "conseils de réservation",
+        "hauterive cheval",
+        "palais du facteur cheval",
+        "visiter le palais du facteur cheval"
+      ]
+    },
+    {
+      "url": "/articles/cuisine/ateliers-patisserie-en-essonne-ou-cuisiner-avec-ses-enfants/",
+      "title": "Ateliers pâtisserie en Essonne: où cuisiner avec ses enfants?",
+      "category": "cuisine",
+      "publishedAt": "2026-11-12T10:04:02+01:00",
+      "location": {
+        "city": "",
+        "department": "Essonne",
+        "region": "Île-de-France"
+      },
+      "ageDays": 13,
+      "rapidDrop": true,
+      "peakStart": "2026-11-18",
+      "peakEnd": "2026-11-20",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 30,
+      "recentImpressions": 3,
+      "score": 81,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 30 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "atelier pâtisserie enfant Essonne",
+        "atelier cuisine parent enfant Essonne",
+        "pâtisserie famille Orsay Yerres"
+      ]
+    },
+    {
+      "url": "/articles/cuisine/ateliers-de-cuisine-parent-enfant-a-toulouse-chocolat-patisserie-ou-menu-complet/",
+      "title": "Ateliers de cuisine parent-enfant à Toulouse: chocolat, pâtisserie ou menu complet ?",
+      "category": "cuisine",
+      "publishedAt": "2026-11-01T12:00:47+01:00",
+      "location": {
+        "city": "Toulouse",
+        "department": "Haute-Garonne",
+        "region": "Occitanie"
+      },
+      "ageDays": 24,
+      "rapidDrop": true,
+      "peakStart": "2026-11-03",
+      "peakEnd": "2026-11-05",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 34,
+      "recentImpressions": 9,
+      "score": 75,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 34 impressions sur trois jours, puis 9 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "atelier cuisine parent enfant Toulouse",
+        "cours pâtisserie enfant Toulouse",
+        "atelier chocolat en famille Toulouse"
+      ]
+    },
+    {
+      "url": "/articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/",
+      "title": "Paris avec une poussette: métro, RER, bus ou tram, que choisir ?",
+      "category": "voyages",
+      "publishedAt": "2026-10-28T12:27:07.504Z",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 28,
+      "rapidDrop": true,
+      "peakStart": "2026-10-29",
+      "peakEnd": "2026-10-31",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 26,
+      "recentImpressions": 1,
+      "score": 75,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 26 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "métro Paris poussette ascenseur",
+        "RER Paris avec poussette",
+        "bus Paris poussette dépliée",
+        "itinéraire accessible poussette Paris"
+      ]
+    },
+    {
+      "url": "/articles/activites/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux/",
+      "title": "Parc Phoenix à Nice en famille: serre tropicale, animaux et jeux",
+      "category": "activites",
+      "publishedAt": "2026-11-15T00:25:33+01:00",
+      "location": {
+        "city": "Nice",
+        "department": "Alpes-Maritimes",
+        "region": "Provence-Alpes-Côte d’Azur"
+      },
+      "ageDays": 10,
+      "rapidDrop": true,
+      "peakStart": "2026-11-16",
+      "peakEnd": "2026-11-18",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 22,
+      "recentImpressions": 0,
+      "score": 66,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Parc Phoenix en famille",
+        "activité avec enfants à Nice",
+        "serre tropicale Nice"
+      ]
+    },
+    {
+      "url": "/articles/parentalite/laep-a-colmar-ou-aller-gratuitement-avec-un-enfant-de-0-a-6-ans/",
+      "title": "LAEP à Colmar: où aller gratuitement avec un enfant de 0 à 6 ans",
+      "category": "parentalite",
+      "publishedAt": "2026-08-15T16:36:50+02:00",
+      "location": {
+        "city": "Colmar",
+        "department": "Haut-Rhin",
+        "region": "Grand Est"
+      },
+      "ageDays": 102,
+      "rapidDrop": true,
+      "peakStart": "2026-11-10",
+      "peakEnd": "2026-11-12",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 25,
+      "recentImpressions": 8,
+      "score": 51,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 25 impressions sur trois jours, puis 8 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "LAEP Colmar",
+        "parent enfant Colmar gratuit"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-a-besancon-en-famille-contes-gratuits-marche-solidaire-ou-artisans/",
+      "title": "Noël 2026 à Besançon en famille: contes, marché solidaire et artisans",
+      "category": "evenements",
+      "publishedAt": "2026-11-01T06:27:50.750Z",
+      "location": {
+        "city": "Besançon",
+        "department": "Doubs",
+        "region": "Bourgogne-Franche-Comté"
+      },
+      "ageDays": 24,
+      "rapidDrop": true,
+      "peakStart": "2026-11-03",
+      "peakEnd": "2026-11-05",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 28,
+      "recentImpressions": 7,
+      "score": 63,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 28 impressions sur trois jours, puis 7 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël Besançon 2026 enfants",
+        "contes gratuits Musée du Temps décembre 2026",
+        "marché solidaire Noël Chamars 2026",
+        "marché artisanal Besançon 5 6 décembre 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/",
+      "title": "Écoute, je danse ! à Paris le 5 décembre 2026: spectacle gratuit dès 6 mois",
+      "category": "evenements",
+      "publishedAt": "2026-11-04T21:32:12.084Z",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 21,
+      "rapidDrop": true,
+      "peakStart": "2026-11-09",
+      "peakEnd": "2026-11-11",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 20,
+      "recentImpressions": 0,
+      "score": 60,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 20 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Écoute je danse Paris décembre 2026",
+        "spectacle gratuit bébé Paris 5 décembre",
+        "bibliothèque Gutenberg spectacle 6 mois 3 ans"
+      ]
+    },
+    {
+      "url": "/articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/",
+      "title": "Marché de Noël 100 % Côte-d’Or à Dijon 2026: horaires, spectacles et Père Noël",
+      "category": "evenements",
+      "publishedAt": "2026-10-29T14:26:32.176Z",
+      "location": {
+        "city": "Dijon",
+        "department": "Côte-d'Or",
+        "region": "Bourgogne-Franche-Comté"
+      },
+      "ageDays": 27,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 22,
+      "recentImpressions": 4,
+      "score": 54,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "marché de Noël du Département Dijon 2026",
+        "marché de Noël 100 % Côte-d'Or 12 13 décembre",
+        "Jardins du Département Dijon Noël enfants",
+        "spectacles ateliers gratuits Père Noël Dijon"
+      ]
+    },
+    {
+      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
+      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
+      "category": "voyages",
+      "publishedAt": "2026-08-29T00:00:45+02:00",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 88,
+      "rapidDrop": false,
+      "peakStart": "2026-10-27",
+      "peakEnd": "2026-11-02",
+      "recentStart": "2026-11-17",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 2410,
+      "recentImpressions": 1618,
+      "score": 792,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "transport Paris avec enfants",
+        "Paris Visite ou Navigo famille"
+      ]
+    },
+    {
+      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
+      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-16T17:46:42.359Z",
+      "location": {
+        "city": "Lumigny-Nesles-Ormeaux",
+        "department": "Seine-et-Marne",
+        "region": "Île-de-France"
+      },
+      "ageDays": 40,
+      "rapidDrop": false,
+      "peakStart": "2026-10-27",
+      "peakEnd": "2026-11-02",
+      "recentStart": "2026-11-17",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 751,
+      "recentImpressions": 474,
+      "score": 277,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Lumigny Safari de Lumières 2026 2027",
+        "Safari de Lumières Lumigny tarifs famille",
+        "Lumigny Safari de Lumières billet combiné"
+      ]
+    }
+  ],
+  "strongPages": [
+    {
+      "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
+      "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
+      "category": "evenements",
+      "recentImpressions": 373,
+      "recentClicks": 20,
+      "recentPosition": 6.952,
+      "retention": 1.522
+    },
+    {
+      "url": "/articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/",
+      "title": "Gastronomades 2026 à Angoulême en famille: programme, tarifs et conseils",
+      "category": "evenements",
+      "recentImpressions": 357,
+      "recentClicks": 10,
+      "recentPosition": 6.213,
+      "retention": 1.231
+    },
+    {
+      "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
+      "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
+      "category": "evenements",
+      "recentImpressions": 280,
+      "recentClicks": 10,
+      "recentPosition": 3.943,
+      "retention": 0.697
+    },
+    {
+      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
+      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
+      "category": "voyages",
+      "recentImpressions": 1618,
+      "recentClicks": 8,
+      "recentPosition": 8.321,
+      "retention": 0.671
+    },
+    {
+      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
+      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
+      "category": "evenements",
+      "recentImpressions": 474,
+      "recentClicks": 7,
+      "recentPosition": 7.58,
+      "retention": 0.631
+    },
+    {
+      "url": "/articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/",
+      "title": "Recycleries autour de Chartres: où donner et acheter d'occasion ?",
+      "category": "maison",
+      "recentImpressions": 103,
+      "recentClicks": 7,
+      "recentPosition": 9.913,
+      "retention": 0.844
+    },
+    {
+      "url": "/articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/",
+      "title": "Noël à Trévarez 2026 en famille: dates, horaires et réservation",
+      "category": "evenements",
+      "recentImpressions": 1269,
+      "recentClicks": 5,
+      "recentPosition": 8.765,
+      "retention": 5.93
+    },
+    {
+      "url": "/articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/",
+      "title": "Noël 2026 au château de Goulaine: dates, billets et conseils en famille",
+      "category": "evenements",
+      "recentImpressions": 264,
+      "recentClicks": 5,
+      "recentPosition": 7.36,
+      "retention": 1.148
+    },
+    {
+      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
+      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
+      "category": "vie-pratique",
+      "recentImpressions": 214,
+      "recentClicks": 5,
+      "recentPosition": 5.308,
+      "retention": 0.955
+    },
+    {
+      "url": "/articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/",
+      "title": "Salon du Cheval de Paris 2026 en famille: ateliers, jumping et Nuit du Cheval",
+      "category": "evenements",
+      "recentImpressions": 124,
+      "recentClicks": 5,
+      "recentPosition": 7.629,
+      "retention": 2.531
+    }
+  ],
+  "excluded": {
+    "expired": 198,
+    "cooling": 76
+  },
+  "warnings": [
+    "Diagnostics par requêtes : 5/5.",
+    "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement."
+  ]
+}
 
-Le LAEP Fourtanier se trouve au **5 rue Fourtanier, 31000 Toulouse**. Il propose deux plages d'accueil le mercredi et dispose d'un local poussette.
+## Catalogue ciblé (doublons et publications récentes)
 
-**Horaires affichés:** mardi de 13h45 à 17h15, mercredi de 9h à 12h30 et de 14h à 17h30, jeudi de 14h30 à 18h, vendredi de 13h45 à 17h15. Fermé du samedi au lundi.
+### Articles comparables et publications récentes
 
-Accès: métro B, station François Verdier, ou bus 29, L1, L8 et L9, arrêt Saint-Georges. Téléphone: **07 61 01 66 02**. Consultez la [fiche municipale de Fourtanier](https://metropole.toulouse.fr/annuaire/laep-fourtanier) avant de partir.
-
-### Reynerie: une possibilité le samedi matin
-
-Au **23 rue Jean Gilles, 31100 Toulouse**, le LAEP Reynerie convient notamment aux familles indisponibles en semaine. L'accueil est gratuit, anonyme et sans inscription préalable.
-
-**Horaires affichés:** lundi de 14h à 18h30, mardi de 8h45 à 12h et de 14h à 18h30, jeudi de 14h à 18h30 et **samedi de 9h à 12h**.
-
-Le lieu annonce des fermetures entre Noël et le jour de l'An, quatre semaines en été et la deuxième semaine des vacances de Toussaint, d'hiver et de printemps. Téléphone: **07 71 21 93 74**. Vérifiez les créneaux sur la [fiche Reynerie de Parents31](https://www.parents31.fr/detail-structure/lieu-daccueil-enfants-parents-laep-reynerie/).
-
-## Comment se passe une première visite?
-
-Vous venez pendant une plage d'accueil avec votre enfant et restez auprès de lui. Il peut explorer les jeux ou prendre le temps d'observer. Vous n'avez pas à vous inscrire à une activité ni à expliquer votre situation familiale.
-
-Avec un bébé, prévoyez ses affaires habituelles et renseignez-vous sur les possibilités de change et de repas: les équipements varient selon les lieux. Borderouge et Fourtanier disposent d'un local poussette, ce qui ne garantit pas l'accessibilité de tous les espaces.
-
-**Avant de vous déplacer**, consultez la fiche du lieu ou appelez, notamment pendant les vacances scolaires: les horaires peuvent changer.
-
-## Article source exact à préserver et améliorer
-
-Chemin: src/routes/articles/parentalite/(2026)/(11)/laep-a-toulouse-ou-jouer-gratuitement-avec-son-enfant-de-moins-de-6-ans/index.md
-
----
-title: "LAEP à Toulouse: où jouer gratuitement avec son enfant de moins de 6 ans?"
-subtitle: Trois lieux d'accueil enfants-parents, leurs horaires et les conseils pour une première visite
-summary: À Toulouse, les LAEP offrent aux tout-petits un espace de jeu et aux parents un lieu d'échange. Découvrez trois adresses gratuites et leurs horaires.
-slug: laep-a-toulouse-ou-jouer-gratuitement-avec-son-enfant-de-moins-de-6-ans
-status: published
-publishedAt: 2026-11-11T22:03:01+01:00
-updatedAt: null
-category: parentalite
-readingTime: 3
-location:
-  city: Toulouse
-  department: Haute-Garonne
-  region: Occitanie
-topic:
-  key: parentalite|toulouse|laep-a-toulouse-ou-jouer-gratuitement-avec-son-enfant-de-moins-de-6-ans|2026
-  keywords:
-    - LAEP Toulouse
-    - lieux accueil enfants parents Toulouse
-    - sortie gratuite bébé Toulouse
-image:
-  src: "/images/articles/2026/11/laep-a-toulouse-ou-jouer-gratuitement-avec-son-enfant-de-moins-de-6-ans.webp"
-  alt: "Façade du Capitole à Toulouse, ville où plusieurs lieux d'accueil enfants-parents sont proposés"
-sources:
-  - title: CAF - Lieu d'accueil enfants-parents
-    url: https://www.caf.fr/allocataires/aides-et-demarches/thematique-libre/lieu-d-accueil-enfants-parents-laep
-  - title: Toulouse Métropole - LAEP Borderouge, Trois Cocus
-    url: https://metropole.toulouse.fr/annuaire/laep-borderouge-trois-cocus
-  - title: Toulouse Métropole - LAEP Fourtanier
-    url: https://metropole.toulouse.fr/annuaire/laep-fourtanier
-  - title: Parents31 - LAEP Reynerie
-    url: https://www.parents31.fr/detail-structure/lieu-daccueil-enfants-parents-laep-reynerie/
----
-<!-- article-image-credit -->
-*Photo: [Zairon](https://commons.wikimedia.org/wiki/File:Toulouse_Capitole_Ext%C3%A9rieure_Facade_1.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
-<!-- /article-image-credit -->
-
-À Toulouse, les lieux d'accueil enfants-parents (LAEP) proposent aux enfants de moins de six ans un espace pour jouer et rencontrer d'autres petits, tandis que leurs parents ou un adulte familier restent avec eux. Voici trois adresses gratuites, avec leurs horaires, pour choisir selon votre quartier et vos disponibilités.
-
-## Que fait-on dans un LAEP?
-
-L'enfant découvre des jeux à son rythme. Son accompagnant reste sur place et en garde la responsabilité: **ce n'est pas une crèche ni une halte-garderie** où l'on dépose son enfant. Des accueillants formés sont présents pour écouter et faciliter les échanges, sans imposer d'activité ni de discussion.
-
-On peut venir pour rencontrer d'autres parents, rompre l'isolement ou simplement partager un moment avec son bébé. L'accueil est anonyme. La [CAF explique le fonctionnement des LAEP](https://www.caf.fr/allocataires/aides-et-demarches/thematique-libre/lieu-d-accueil-enfants-parents-laep): l'accès est libre et sans inscription, même si certains lieux peuvent demander une petite participation pour une cotisation ou un goûter. Les trois adresses ci-dessous annoncent la gratuité. Pour en savoir plus, consultez notre [guide pratique des lieux d'accueil enfants-parents](https://www.fam-space.fr/articles/parentalite/laep-enfants-parents-gratuit-sans-inscription/).
-
-## Trois adresses à Toulouse selon votre quartier et vos horaires
-
-### Borderouge / Trois Cocus: dans le nord de Toulouse
-
-Au **5 rue du Colonel Paul Paillole, 31200 Toulouse**, ce LAEP accueille les enfants de 0 à 6 ans accompagnés d'un parent. Un local poussette est disponible.
-
-**Horaires affichés:** lundi de 8h45 à 12h15, mardi de 14h30 à 18h, jeudi de 8h45 à 12h15 et de 14h à 17h30, vendredi de 14h à 17h30. **Fermé le mercredi et le week-end.**
-
-Accès: métro B ou bus 41, arrêt Trois Cocus. Téléphone: **05 34 24 57 44**. Vérifiez les créneaux sur la [fiche municipale de Borderouge / Trois Cocus](https://metropole.toulouse.fr/annuaire/laep-borderouge-trois-cocus).
-
-### Fourtanier: plusieurs créneaux en centre-ville
-
-Le LAEP Fourtanier se trouve au **5 rue Fourtanier, 31000 Toulouse**. Il propose deux plages d'accueil le mercredi et dispose d'un local poussette.
-
-**Horaires affichés:** mardi de 13h45 à 17h15, mercredi de 9h à 12h30 et de 14h à 17h30, jeudi de 14h30 à 18h, vendredi de 13h45 à 17h15. Fermé du samedi au lundi.
-
-Accès: métro B, station François Verdier, ou bus 29, L1, L8 et L9, arrêt Saint-Georges. Téléphone: **07 61 01 66 02**. Consultez la [fiche municipale de Fourtanier](https://metropole.toulouse.fr/annuaire/laep-fourtanier) avant de partir.
-
-### Reynerie: une possibilité le samedi matin
-
-Au **23 rue Jean Gilles, 31100 Toulouse**, le LAEP Reynerie convient notamment aux familles indisponibles en semaine. L'accueil est gratuit, anonyme et sans inscription préalable.
-
-**Horaires affichés:** lundi de 14h à 18h30, mardi de 8h45 à 12h et de 14h à 18h30, jeudi de 14h à 18h30 et **samedi de 9h à 12h**.
-
-Le lieu annonce des fermetures entre Noël et le jour de l'An, quatre semaines en été et la deuxième semaine des vacances de Toussaint, d'hiver et de printemps. Téléphone: **07 71 21 93 74**. Vérifiez les créneaux sur la [fiche Reynerie de Parents31](https://www.parents31.fr/detail-structure/lieu-daccueil-enfants-parents-laep-reynerie/).
-
-## Comment se passe une première visite?
-
-Vous venez pendant une plage d'accueil avec votre enfant et restez auprès de lui. Il peut explorer les jeux ou prendre le temps d'observer. Vous n'avez pas à vous inscrire à une activité ni à expliquer votre situation familiale.
-
-Avec un bébé, prévoyez ses affaires habituelles et renseignez-vous sur les possibilités de change et de repas: les équipements varient selon les lieux. Borderouge et Fourtanier disposent d'un local poussette, ce qui ne garantit pas l'accessibilité de tous les espaces.
-
-**Avant de vous déplacer**, consultez la fiche du lieu ou appelez, notamment pendant les vacances scolaires: les horaires peuvent changer.
-
-## Contexte éditorial ciblé pour le maillage et les doublons
-
-### Articles proches préparés mécaniquement
-
+- /articles/parentalite/laep-a-toulouse-ou-jouer-gratuitement-avec-son-enfant-de-moins-de-6-ans/ | LAEP à Toulouse: où jouer gratuitement avec son enfant de moins de 6 ans? | parentalite | Toulouse, Haute-Garonne, Occitanie
 - /articles/parentalite/laep-dans-l-orne-ou-jouer-gratuitement-avec-son-tout-petit/ | LAEP dans l'Orne: où jouer gratuitement avec son tout-petit ? | parentalite | Orne, Normandie
 - /articles/parentalite/laep-dans-le-tarn-ou-aller-avec-son-enfant/ | LAEP dans le Tarn: où aller avec son enfant ? | parentalite | Tarn, Occitanie
 - /articles/parentalite/laep-a-rennes-ou-jouer-gratuitement-avec-son-enfant/ | LAEP à Rennes: où jouer gratuitement avec son enfant? | parentalite | Rennes, Ille-et-Vilaine, Bretagne
-- /articles/parentalite/laep-dans-la-manche-ou-aller-avec-son-enfant-de-moins-de-6-ans/ | LAEP dans la Manche: où aller avec son enfant de moins de 6 ans ? | parentalite | Manche, Normandie
-- /articles/parentalite/laep-a-nantes-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | LAEP à Nantes: où aller avec un enfant de moins de 6 ans ? | parentalite | Nantes, Loire-Atlantique, Pays de la Loire
-- /articles/parentalite/laep-en-martinique-jouer-avec-son-tout-petit-et-rencontrer-d-autres-parents/ | LAEP en Martinique: jouer avec son tout-petit et rencontrer d’autres parents | parentalite | Martinique
-- /articles/parentalite/lieux-d-accueil-enfants-parents-dans-le-bas-rhin-ou-aller-avec-un-tout-petit/ | Lieux d'accueil enfants-parents dans le Bas-Rhin: où aller avec un tout-petit? | parentalite | Bas-Rhin, Grand Est
-- /articles/parentalite/laep-a-grenoble-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | LAEP à Grenoble: où aller avec un enfant de moins de 6 ans? | parentalite | Grenoble, Isère, Auvergne-Rhône-Alpes
-- /articles/parentalite/laep-a-toulouse-ou-jouer-gratuitement-avec-son-enfant-de-moins-de-6-ans/ | LAEP à Toulouse: où jouer gratuitement avec son enfant de moins de 6 ans? | parentalite | Toulouse, Haute-Garonne, Occitanie
+- /articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/ | Parc floral d’Orléans gratuit en hiver: horaires et sortie avec les enfants | bons-plans | Orléans, Loiret, Centre-Val de Loire
+- /articles/maison/composteur-gratuit-a-orleans-metropole-comment-en-profiter-en-2026/ | Composteur gratuit à Orléans Métropole: comment en profiter en 2026 | maison | Orléans, Loiret, Centre-Val de Loire
+- /articles/sorties/chasse-motifs-loire-orleans-famille-2026/ | Chasse aux motifs de Loire à Orléans: une balade gratuite pour les 6 à 12 ans | sorties | Orléans, Loiret, Centre-Val de Loire
+- /articles/activites/mobe-d-orleans-en-famille-fossiles-jeux-et-biodiversite/ | MOBE d’Orléans en famille: fossiles, jeux et biodiversité | activites | Orléans, Loiret, Centre-Val de Loire
+- /articles/cuisine/maison-du-cacao-a-pointe-noire-decouvrir-le-chocolat-en-famille/ | Maison du Cacao à Pointe-Noire: découvrir le chocolat en famille | cuisine | Pointe-Noire, Guadeloupe, Guadeloupe
+- /articles/activites/a-pointe-noire-decouvrir-la-riviere-en-famille-avec-l-aquarando-d-acomat/ | À Pointe-Noire, découvrir la rivière en famille avec l’aquarando d’Acomat | activites | Pointe-Noire, Guadeloupe, Guadeloupe
+- /articles/maison/saison-cyclonique-en-guadeloupe-comment-preparer-sa-maison-en-famille/ | Saison cyclonique en Guadeloupe: comment préparer sa maison en famille | maison | Basse-Terre, Guadeloupe, Guadeloupe
+- /articles/cuisine/cuisiner-creole-avec-son-enfant-a-saint-francois/ | Cuisiner créole avec son enfant à Saint-François | cuisine | Saint-François, Guadeloupe, Guadeloupe
+- /articles/voyages/disneyland-paris-en-rer-a-avec-des-enfants-trajet-et-tickets-en-2026/ | Disneyland Paris en RER A avec des enfants: trajet et tarifs 2026 | voyages | Chessy, Seine-et-Marne, Île-de-France
+- /articles/voyages/halloween-2026-a-disneyland-paris-en-famille-billets-hotel-et-duree-du-sejour/ | Halloween 2026 à Disneyland Paris en famille: billets, hôtel et durée du séjour | voyages | Chessy, Seine-et-Marne, Île-de-France
+- /articles/voyages/disneyland-paris-en-famille-en-2026-combien-de-jours-quel-hotel-et-quel-budget-prevoir/ | Disneyland Paris en famille en 2026: combien de jours, quel hôtel et quel budget prévoir | voyages | Chessy, Seine-et-Marne, Île-de-France
+- /articles/voyages/noel-2026-disneyland-paris-billet-2-parcs-arendelle/ | Noël 2026 à Disneyland Paris: faut-il un billet 2 parcs pour voir Arendelle? | voyages | Chessy, Seine-et-Marne, Île-de-France
+- /articles/activites/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives/ | Palais idéal du facteur Cheval en famille: visite et conseils à Hauterives | activites | Hauterives, Drôme, Auvergne-Rhône-Alpes
+- /articles/vie-pratique/drome-sans-voiture-avec-des-enfants-train-cars-et-bus-pour-se-deplacer/ | Drôme sans voiture avec des enfants: train, cars et bus pour se déplacer | vie-pratique | Drôme, Auvergne-Rhône-Alpes
+- /articles/parentalite/premier-week-end-a-avignon-avec-un-bebe-ou-dormir-et-quoi-prevoir/ | Avignon avec un bébé: poussette, Palais des Papes et où dormir | parentalite | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
+- /articles/bons-plans/avignonnais-palais-des-papes-et-pont-gratuits-le-week-end/ | Avignonnais: Palais des Papes et Pont gratuits le week-end | bons-plans | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
+- /articles/cuisine/ateliers-patisserie-en-essonne-ou-cuisiner-avec-ses-enfants/ | Ateliers pâtisserie en Essonne: où cuisiner avec ses enfants? | cuisine | Essonne, Île-de-France
+- /articles/cuisine/atelier-cuisine-parent-enfant-a-nantes-gratuit-au-breil-ou-cours-prive/ | Ateliers cuisine parent-enfant à Nantes: où cuisiner ensemble? | cuisine | Nantes, Loire-Atlantique, Pays de la Loire
 - /articles/cuisine/ateliers-de-cuisine-parent-enfant-a-toulouse-chocolat-patisserie-ou-menu-complet/ | Ateliers de cuisine parent-enfant à Toulouse: chocolat, pâtisserie ou menu complet ? | cuisine | Toulouse, Haute-Garonne, Occitanie
-- /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | Noël à Toulouse 2026 en famille: marchés, Père Noël et patinoire | evenements | Toulouse, Haute-Garonne, Occitanie
-- /articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/ | Déchets verts à Toulouse Métropole en 2027: collecte, broyage et évacuation des gros volumes | maison | Toulouse, Haute-Garonne, Occitanie
+- /articles/cuisine/ateliers-de-cuisine-pour-enfants-a-montpellier-ou-aller-selon-leur-age/ | Ateliers de cuisine pour enfants à Montpellier: où aller selon leur âge? | cuisine | Montpellier, Hérault, Occitanie
+- /articles/cuisine/ateliers-de-patisserie-parent-enfant-en-bretagne-quelle-formule-choisir/ | Ateliers de pâtisserie parent-enfant en Bretagne: quelle formule choisir? | cuisine | Bretagne
+- /articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/ | Paris avec une poussette: métro, RER, bus ou tram, que choisir ? | voyages | Paris, Paris, Île-de-France
+- /articles/activites/atelier-des-lumieres-avec-un-enfant-quel-programme-choisir-et-peut-on-venir-avec-une-poussette/ | Atelier des Lumières avec un enfant: quel programme choisir et peut-on venir avec une poussette ? | activites | Paris, Paris, Île-de-France
+- /articles/evenements/salon-du-chocolat-paris-2026-avec-des-enfants-quel-billet-choisir-et-quels-ateliers-reserver/ | Salon du Chocolat Paris 2026 avec des enfants: quel billet choisir et quels ateliers réserver | evenements | Paris, Paris, Île-de-France
+- /articles/bons-plans/sainte-chapelle-et-conciergerie-en-famille-a-paris-quels-billets-choisir/ | Sainte-Chapelle et Conciergerie en famille à Paris: quels billets choisir ? | bons-plans | Paris, Paris, Île-de-France
+- /articles/activites/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux/ | Parc Phoenix à Nice en famille: serre tropicale, animaux et jeux | activites | Nice, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
+- /articles/activites/le-pal-ou-touroparc-en-famille-quel-parc-choisir-en-2026/ | Le PAL ou Touroparc en famille: quel parc choisir en 2026? | activites
+- /articles/activites/parc-de-l-auxois-avec-des-enfants-comment-combiner-animaux-maneges-et-piscine/ | Parc de l'Auxois avec des enfants: comment combiner animaux, manèges et piscine | activites | Arnay-sous-Vitteaux, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/activites/parc-animalier-d-auvergne-en-famille-billets-animaux-et-conseils-de-visite/ | Parc animalier d'Auvergne en famille: billets, animaux et conseils de visite | activites | Ardes, Puy-de-Dôme, Auvergne-Rhône-Alpes
+- /articles/parentalite/laep-a-colmar-ou-aller-gratuitement-avec-un-enfant-de-0-a-6-ans/ | LAEP à Colmar: où aller gratuitement avec un enfant de 0 à 6 ans | parentalite | Colmar, Haut-Rhin, Grand Est
+- /articles/evenements/repto-terra-expo-a-colmar-faut-il-y-aller-avec-des-enfants/ | Repto Terra Expo à Colmar: faut-il y aller avec des enfants? | evenements | Colmar, Haut-Rhin, Grand Est
+- /articles/vie-pratique/colmar-avec-des-enfants-quand-il-pleut-quel-musee-choisir/ | Colmar avec des enfants quand il pleut: quel musée choisir ? | vie-pratique | Colmar, Haut-Rhin, Grand Est
+- /articles/evenements/festival-du-livre-de-colmar-2026-en-famille-dates-ateliers-et-acces/ | Festival du Livre de Colmar 2026 en famille: dates, horaires et animations jeunesse | evenements | Colmar, Haut-Rhin, Grand Est
+- /articles/evenements/noel-2026-a-besancon-en-famille-contes-gratuits-marche-solidaire-ou-artisans/ | Noël 2026 à Besançon en famille: contes, marché solidaire et artisans | evenements | Besançon, Doubs, Bourgogne-Franche-Comté
+- /articles/sorties/vital-ete-besancon-2026-famille/ | Vital’Été Besançon 2026: inscription et activités gratuites | sorties | Besançon, Doubs, Bourgogne-Franche-Comté
+- /articles/voyages/week-end-dans-le-doubs-en-famille-quel-budget-pour-3-grandes-sorties-en-2026/ | Week-end dans le Doubs en famille: quel budget pour 3 grandes sorties en 2026 | voyages | Besançon, Doubs, Bourgogne-Franche-Comté
+- /articles/vie-pratique/bus-et-tram-a-besancon-en-famille-tarifs-et-gratuites-ginko-en-2026/ | Bus et tram à Besançon en famille: tarifs et gratuités Ginko en 2026 | vie-pratique | Besançon, Doubs, Bourgogne-Franche-Comté
+- /articles/evenements/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/ | Écoute, je danse ! à Paris le 5 décembre 2026: spectacle gratuit dès 6 mois | evenements | Paris, Paris, Île-de-France
+- /articles/activites/atelier-couture-gratuit-a-paris-le-28-novembre-2026-creer-en-famille-des-8-ans/ | Atelier couture gratuit à Paris le 28 novembre 2026: dès 8 ans | activites | Paris, Paris, Île-de-France
+- /articles/activites/atelier-laine-cardee-de-noel-a-paris-le-2-decembre-2026-creer-ses-decorations-des-7-ans/ | Atelier laine cardée de Noël à Paris le 2 décembre 2026: décorations dès 7 ans | activites | Paris, Paris, Île-de-France
+- /articles/activites/pokemon-et-biodiversite-a-paris-le-28-novembre-2026-atelier-dessin-des-10-ans/ | Atelier Pokémon et biodiversité à Paris le 28 novembre 2026: dessin dès 10 ans | activites | Paris, Paris, Île-de-France
+- /articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/ | Marché de Noël 100 % Côte-d’Or à Dijon 2026: horaires, spectacles et Père Noël | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/evenements/festival-des-petits-explorateurs-2026-a-dijon-quels-ateliers-choisir-en-famille/ | Festival des Petits Explorateurs 2026 à Dijon: ateliers, horaires et tarifs | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/evenements/foire-de-dijon-2026-en-famille-dates-ateliers-animaux-et-gratuites/ | Foire de Dijon 2026 avec les enfants: gratuités, ateliers et Ferme Côte-d'Or | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/vie-pratique/frais-scolaires-en-cote-d-or-quelles-aides-demander-au-departement/ | Frais scolaires en Côte-d'Or: quelles aides demander au Département? | vie-pratique | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/ | Transports à Paris avec des enfants: quel titre choisir pour payer juste? | voyages | Paris, Paris, Île-de-France
+- /articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/ | Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite | sorties | Paris, Paris, Île-de-France
+- /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | Mondial de l’Auto 2026 avec des enfants: billets, horaires et créneaux | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille | evenements | Lumigny-Nesles-Ormeaux, Seine-et-Marne, Île-de-France
+- /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | Thoiry Lumières Sauvages 2026-2027: dates, billets et visite en famille | evenements | Thoiry, Yvelines, Île-de-France
+- /articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/ | Planète Préhistorique à Bordeaux: dates, durée et tarifs en famille | sorties | Bordeaux, Gironde, Nouvelle-Aquitaine
+- /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
+- /articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/ | Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants | evenements | Le Mans, Sarthe, Pays de la Loire
+- /articles/voyages/le-mans-sans-voiture-avec-des-enfants-ou-dormir-et-comment-organiser-un-week-end/ | Le Mans sans voiture avec des enfants: où dormir et comment organiser un week-end | voyages | Le Mans, Sarthe, Pays de la Loire
+- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
+- /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | Marché de Noël d'Avignon 2026 en famille: horaires, Père Noël et animations | evenements | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
+- /articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/ | Gastronomades 2026 à Angoulême en famille: programme, tarifs et conseils | evenements | Angoulême, Charente, Nouvelle-Aquitaine
+- /articles/sorties/musee-de-la-bd-a-angouleme-en-famille-tarifs-horaires-et-conseils-de-visite/ | Musée de la BD à Angoulême en famille: tarifs, horaires et conseils de visite | sorties | Angoulême, Charente, Nouvelle-Aquitaine
+- /articles/voyages/ou-dormir-a-angouleme-avec-des-enfants-pour-visiter-la-ville-a-pied/ | Où dormir à Angoulême avec des enfants pour visiter la ville à pied | voyages | Angoulême, Charente, Nouvelle-Aquitaine
+- /articles/parentalite/decouvrir-la-bd-avec-ses-enfants-a-angouleme/ | Découvrir la BD avec ses enfants à Angoulême | parentalite | Angoulême, Charente, Nouvelle-Aquitaine
+- /articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/ | Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ? | evenements | Pyrénées-Orientales, Occitanie
+- /articles/parentalite/quel-laep-choisir-a-perpignan-selon-l-age-et-le-jour/ | Quel LAEP choisir à Perpignan selon l'âge et le jour ? | parentalite | Perpignan, Pyrénées-Orientales, Occitanie
+- /articles/activites/parc-animalier-des-angles-en-famille-quel-circuit-choisir-et-comment-preparer-la-visite/ | Parc animalier des Angles en famille: quel circuit choisir et comment préparer la visite ? | activites | Les Angles, Pyrénées-Orientales, Occitanie
+- /articles/bons-plans/musee-de-tautavel-moins-cher-avec-lio-le-bon-plan-a-connaitre/ | Musée de Tautavel moins cher avec liO: le bon plan à connaître | bons-plans | Tautavel, Pyrénées-Orientales, Occitanie
+- /articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/ | Recycleries autour de Chartres: où donner et acheter d'occasion ? | maison | Chartres, Eure-et-Loir, Centre-Val de Loire
+- /articles/cuisine/apres-une-cueillette-en-eure-et-loir-5-recettes-faciles-a-faire-avec-les-enfants/ | Après une cueillette en Eure-et-Loir: 5 recettes faciles à faire avec les enfants | cuisine | Chartres, Eure-et-Loir, Centre-Val de Loire
+- /articles/maison/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/ | Meubles d'occasion en Meurthe-et-Moselle: où acheter, donner et réparer ? | maison | Meurthe-et-Moselle, Grand Est
+- /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | Noël à Chartres 2026 en famille: marché et illuminations | evenements | Chartres, Eure-et-Loir, Centre-Val de Loire
+- /articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/ | Noël à Trévarez 2026 en famille: dates, horaires et réservation | evenements | Saint-Goazec, Finistère, Bretagne
+- /articles/evenements/train-de-noel-de-la-haute-somme-2026-en-famille-dates-tarifs-et-reservation/ | Train de Noël de la Haute Somme 2026 en famille: dates, tarifs et réservation | evenements | La Neuville-les-Bray, Somme, Hauts-de-France
+- /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | Noël 2026 à Brest en famille: marché, projections et horaires | evenements | Brest, Finistère, Bretagne
+- /articles/evenements/train-du-pere-noel-a-toucy-2026-horaires-tarifs-et-reservation/ | Train du Père Noël à Toucy 2026: horaires, tarifs et réservation | evenements | Toucy, Yonne, Bourgogne-Franche-Comté
+- /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | Noël 2026 au château de Goulaine: dates, billets et conseils en famille | evenements | Haute-Goulaine, Loire-Atlantique, Pays de la Loire
+- /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
+- /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | Noël des Siècles 2026 à Champs-sur-Marne: billets, budget et horaires en famille | evenements | Champs-sur-Marne, Seine-et-Marne, Île-de-France
 - /articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/ | Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates | vie-pratique | Toulouse, Haute-Garonne, Occitanie
-- /articles/activites/accrocamp-toulouse-avec-des-enfants-quel-pass-choisir-selon-leur-taille/ | AccroCamp Toulouse avec des enfants: quel pass choisir selon leur taille? | activites | Toulouse, Haute-Garonne, Occitanie
-- /articles/sorties/aeroscopia-en-famille-quels-avions-visiter-avec-les-enfants/ | Aeroscopia en famille: quels avions visiter avec les enfants? | sorties | Blagnac, Haute-Garonne, Occitanie
-- /articles/evenements/festival-bd-colomiers-2026-en-famille-quel-jour-choisir-et-combien-prevoir/ | Festival BD Colomiers 2026 en famille: programme, tarifs et accès | evenements | Colomiers, Haute-Garonne, Occitanie
-- /articles/evenements/festival-cite-en-jeux-2026-a-colomiers-quel-jour-choisir-avec-des-enfants/ | Festival Cité en Jeux 2026 à Colomiers: quel jour choisir avec des enfants | evenements | Colomiers, Haute-Garonne, Occitanie
-- /articles/voyages/saint-bertrand-de-comminges-avec-des-enfants-village-seul-ou-grande-boucle-a-pied/ | Saint-Bertrand-de-Comminges avec des enfants: village seul ou grande boucle à pied? | voyages | Saint-Bertrand-de-Comminges, Haute-Garonne, Occitanie
+- /articles/bons-plans/cantine-au-college-dans-l-herault-jusqu-a-3-60-d-aide-par-repas/ | Cantine au collège dans l'Hérault: jusqu'à 3,60 € d'aide par repas | bons-plans | Montpellier, Hérault, Occitanie
+- /articles/maison/moustique-tigre-en-haute-garonne-proteger-la-maison-et-le-jardin/ | Moustique tigre en Haute-Garonne: protéger la maison et le jardin | maison | Toulouse, Haute-Garonne, Occitanie
+- /articles/vie-pratique/cantine-au-college-en-deux-sevres-comment-s-inscrire-en-ligne-pour-2026-2027/ | Cantine au collège en Deux-Sèvres: comment s'inscrire en ligne pour 2026-2027 | vie-pratique | Niort, Deux-Sèvres, Nouvelle-Aquitaine
+- /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | Salon du Cheval de Paris 2026 en famille: ateliers, jumping et Nuit du Cheval | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/ | Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
+- /articles/sorties/le-sourou-a-roura-en-famille-une-journee-entre-pirogue-kayak-et-foret/ | Le Sourou à Roura en famille: une journée entre pirogue, kayak et forêt | sorties | Roura, Guyane, Guyane
+- /articles/evenements/sculptures-sur-glace-et-neige-a-valloire-en-janvier-2027/ | Sculptures sur glace et neige à Valloire en janvier 2027 | evenements | Valloire, Savoie, Auvergne-Rhône-Alpes
+- /articles/voyages/cherrueix-en-famille-decouvrir-le-char-a-voile-dans-la-baie-du-mont-saint-michel/ | Cherrueix en famille: découvrir le char à voile dans la baie du Mont-Saint-Michel | voyages | Cherrueix, Ille-et-Vilaine, Bretagne
+- /articles/evenements/seraphine-louis-a-metz-decouvrir-l-exposition-avec-les-enfants/ | Séraphine Louis à Metz: découvrir l’exposition avec les enfants | evenements | Metz, Moselle, Grand Est
+- /articles/voyages/cassis-en-famille-hors-saison-calanques-en-bateau-et-balades/ | Cassis en famille hors saison: calanques en bateau et balades | voyages | Cassis, Bouches-du-Rhône, Provence-Alpes-Côte d’Azur
+- /articles/cuisine/fougasse-d-aigues-mortes-recette-moelleuse-a-faire-en-famille/ | Fougasse d’Aigues-Mortes: recette moelleuse à faire en famille | cuisine | Aigues-Mortes, Gard, Occitanie
 - /articles/parentalite/parents-et-jeunes-enfants-a-bergerac-trois-lieux-pour-jouer-et-echanger/ | Parents et jeunes enfants à Bergerac: trois lieux pour jouer et échanger | parentalite | Bergerac, Dordogne, Nouvelle-Aquitaine
+- /articles/activites/musee-de-l-illusion-a-lyon-en-famille-que-voir-et-combien-coute-la-visite/ | Musée de l'Illusion à Lyon en famille: que voir et combien coûte la visite ? | activites | Lyon, Rhône, Auvergne-Rhône-Alpes
+- /articles/voyages/pres-de-saint-florent-decouvrir-la-corse-en-ulm-avec-un-ado/ | Près de Saint-Florent, découvrir la Corse en ULM avec un ado | voyages | Haute-Corse, Corse
+- /articles/cuisine/ficelle-picarde-la-recette-familiale-des-crepes-gratinees-d-amiens/ | Ficelle picarde: la recette familiale des crêpes gratinées d'Amiens | cuisine | Amiens, Somme, Hauts-de-France
+- /articles/sorties/forteresse-royale-de-chinon-en-famille-tours-histoire-et-jeux/ | Forteresse royale de Chinon en famille: tours, histoire et jeux | sorties | Chinon, Indre-et-Loire, Centre-Val de Loire
+- /articles/vie-pratique/ludotheques-du-val-de-marne-ou-jouer-en-famille-et-emprunter-des-jeux/ | Ludothèques du Val-de-Marne: où jouer en famille et emprunter des jeux ? | vie-pratique | Val-de-Marne, Île-de-France
 - /articles/parentalite/lieux-d-accueil-enfants-parents-en-vendee-ou-aller-avec-un-tout-petit/ | Lieux d'accueil enfants-parents en Vendée: où aller avec un tout-petit ? | parentalite | Vendée, Pays de la Loire
+- /articles/cuisine/kig-ha-farz-en-famille-recette-et-organisation-d-un-repas-breton/ | Kig ha farz en famille: recette et organisation d'un repas breton | cuisine | Finistère, Bretagne
+- /articles/bons-plans/bretagne-en-ter-avec-des-enfants-quels-billets-choisir-pour-payer-moins/ | Bretagne en TER avec des enfants: quels billets choisir pour payer moins? | bons-plans | Bretagne
+- /articles/voyages/week-end-a-saint-antonin-noble-val-en-famille-village-gorges-et-canoe/ | Week-end à Saint-Antonin-Noble-Val en famille: village, gorges et canoë | voyages | Saint-Antonin-Noble-Val, Tarn-et-Garonne, Occitanie
+- /articles/vie-pratique/aides-caf-en-charente-maritime-financer-meubles-electromenager-et-ordinateur/ | Aides Caf en Charente-Maritime: financer meubles, électroménager et ordinateur | vie-pratique | Charente-Maritime, Nouvelle-Aquitaine
 - /articles/parentalite/parents-d-ados-dans-l-yonne-contacter-la-maison-des-adolescents/ | Parents d’ados dans l’Yonne: contacter la Maison des adolescents | parentalite | Yonne, Bourgogne-Franche-Comté
-- /articles/parentalite/ardeche-ou-trouver-un-lieu-d-accueil-enfants-parents-pres-de-chez-soi/ | Ardèche: où trouver un lieu d'accueil enfants-parents près de chez soi ? | parentalite | Ardèche, Auvergne-Rhône-Alpes
+- /articles/cuisine/ravioles-du-dauphine-trois-repas-simples-en-famille/ | Ravioles du Dauphiné: trois repas simples en famille | cuisine | Auvergne-Rhône-Alpes
+- /articles/cuisine/cuisiner-local-en-meurthe-et-moselle-producteurs-paniers-et-idees-de-repas/ | Cuisiner local en Meurthe-et-Moselle: producteurs, paniers et idées de repas | cuisine | Meurthe-et-Moselle, Grand Est
+- /articles/maison/composteur-gratuit-a-laval-agglomeration-quelle-solution-pour-votre-logement/ | Composteur gratuit à Laval Agglomération: quelle solution pour votre logement ? | maison | Laval, Mayenne, Pays de la Loire
+- /articles/vie-pratique/littoral-des-alpes-maritimes-en-famille-se-deplacer-sans-voiture/ | Littoral des Alpes-Maritimes en famille: se déplacer sans voiture | vie-pratique | Alpes-Maritimes, Provence-Alpes-Côte d’Azur
+- /articles/activites/ferme-des-chanteraines-en-famille-animaux-ateliers-et-balade-gratuite/ | Ferme des Chanteraines en famille: animaux, ateliers et balade gratuite | activites | Villeneuve-la-Garenne, Hauts-de-Seine, Île-de-France
+- /articles/evenements/festival-contes-et-rencontres-2027-en-lozere-quels-spectacles-voir-en-famille/ | Festival Contes et Rencontres 2027 en Lozère: quels spectacles voir en famille ? | evenements | Lozère, Occitanie
+- /articles/activites/musee-dobree-en-famille-a-nantes-jeux-et-parcours-selon-l-age/ | Musée Dobrée en famille à Nantes: jeux et parcours selon l’âge | activites | Nantes, Loire-Atlantique, Pays de la Loire
+- /articles/voyages/crozant-en-famille-un-week-end-dans-la-vallee-des-peintres/ | Crozant en famille: un week-end dans la Vallée des Peintres | voyages | Crozant, Creuse, Nouvelle-Aquitaine
 
 ### Historique Radar lié
 
-- refresh | /articles/cuisine/ateliers-de-cuisine-parent-enfant-a-toulouse-chocolat-patisserie-ou-menu-complet/ | 2026-11-11T05:36:32.395Z
-- refresh | /articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/ | 2026-11-08T04:30:49.530Z
-- opportunity | /articles/evenements/festival-bd-colomiers-2026-en-famille-quel-jour-choisir-et-combien-prevoir/ | 2026-10-29T23:28:55.064Z
-- refresh | /articles/parentalite/laep-a-nantes-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | 2026-10-17T18:40:41.973Z
-- refresh | /articles/parentalite/laep-a-nantes-ou-aller-avec-un-enfant-de-moins-de-6-ans/ | 2026-11-02T06:34:10.210Z
-- refresh | /articles/parentalite/laep-a-rennes-ou-jouer-gratuitement-avec-son-enfant/ | 2026-11-09T04:33:48.646Z
-- opportunity | /articles/evenements/noel-a-toulouse-2026-quel-marche-choisir-avec-les-enfants-et-combien-coute-la-patinoire/ | 2026-10-24T23:34:36.270Z
+- opportunity | /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | 2026-10-16T17:46:42.470Z
+- refresh | /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | 2026-11-07T00:30:17.397Z
+- opportunity | /articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/ | 2026-10-29T14:26:32.277Z
+- opportunity | /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | 2026-10-28T15:29:23.387Z
+- refresh | /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | 2026-11-17T22:37:09.520Z
+- opportunity | /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | 2026-10-29T00:28:19.695Z
+- refresh | /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | 2026-11-17T19:34:24.194Z
+- opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
+- refresh | /articles/maison/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/ | 2026-11-12T01:28:37.978Z
+- opportunity | /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | 2026-10-06T19:20:39.093Z
+- opportunity | /articles/evenements/noel-2026-a-besancon-en-famille-contes-gratuits-marche-solidaire-ou-artisans/ | 2026-11-01T06:27:50.817Z
+- opportunity | /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | 2026-10-30T06:28:26.726Z
+- opportunity | /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | 2026-11-03T15:36:10.146Z
+- refresh | /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | 2026-11-13T13:31:11.034Z
+- opportunity | /articles/voyages/noel-2026-disneyland-paris-billet-2-parcs-arendelle/ | 2026-10-02T21:22:46.733Z
+- opportunity | /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | 2026-10-30T18:26:56.039Z
+- refresh | /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | 2026-11-17T09:28:43.094Z
+- opportunity | /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | 2026-10-26T18:32:56.730Z
+- opportunity | /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | 2026-10-09T14:37:47.734Z
+- refresh | /articles/activites/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives/ | 2026-11-10T15:36:17.613Z
+- refresh | /articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/ | 2026-11-08T07:28:43.032Z
+- opportunity | /articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/ | 2026-10-28T12:27:07.569Z
+- refresh | /articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/ | 2026-11-10T21:35:54.089Z
+- refresh | /articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/ | 2026-10-22T18:35:19.372Z
+- opportunity | /articles/activites/pokemon-et-biodiversite-a-paris-le-28-novembre-2026-atelier-dessin-des-10-ans/ | 2026-11-05T10:32:54.471Z
+- opportunity | /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | 2026-10-22T04:59:04.773Z
+- refresh | /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | 2026-11-19T03:32:19.795Z
+- opportunity | /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | 2026-10-24T19:30:32.700Z
+- refresh | /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | 2026-11-13T16:33:40.259Z
+- refresh | /articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/ | 2026-11-06T21:35:30.246Z
 
-### Phases 2 et 3
+## Travaux éditoriaux en cours
 
-Écris `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées et le corps complet de l'article. **Ne recopie pas les métadonnées inchangées et n'ajoute aucun bloc `radar`.** Le script normalise la syntaxe sûre de la requête, reprend mécaniquement les autres métadonnées et le bloc Radar de la phase précédente, puis incrémente la phase.
+### Publication en cours
 
-Pour un refresh, le script conserve de lui-même les champs protégés de l'article source. Pour une opportunity, il conserve la catégorie, le territoire et le slug choisis en phase 1.
+- Branche: automation/publication-20261125-0558-metz-sans-voiture-en-famille-titre-de-travail-metz-en-famille-sans-voi
+- HEAD: publication: phase 3 20261125-0558-metz-sans-voiture-en-famille-titre-de-travail-metz-en-famille-sans-voi
 
-En phase 3 seulement, ajoute `radarReview` avec `summary`, `sources` et, pour un refresh, `regressionCheck`. Une seule correction factuelle vérifiée peut être suffisante.
+---
+category: "vie-pratique"
+title: "Metz en famille sans voiture: train, bus et bagages"
+subtitle: "Quels tickets choisir, où laisser ses valises et comment se déplacer facilement"
+summary: "Pass Famille, Tribu, METTIS et consignes près de la gare: les solutions pratiques pour visiter Metz avec des enfants sans voiture."
+keywords:
+  - "Metz en famille sans voiture"
+  - "transport famille Metz"
+  - "Pass Famille LE MET"
+  - "consigne bagages Metz gare"
+location:
+  city: "Metz"
+  department: "Moselle"
+  region: "Grand Est"
+sources:
+  - title: "LE MET': titres occasionnels"
+    url: "https://www.lemet.fr/titres-occasionnels/"
+  - title: "LE MET': choisir un tarif"
+    url: "https://www.lemet.fr/quel-tarif-choisir/"
+  - title: "LE MET': questions fréquentes"
+    url: "https://www.lemet.fr/faq/"
+  - title: "LE MET': points de vente"
+    url: "https://www.lemet.fr/les-points-de-vente/"
+  - title: "LE MET': réseau à Metz"
+    url: "https://www.lemet.fr/metz/"
+  - title: "SNCF TER Grand Est: gare de Metz-Ville"
+    url: "https://www.ter.sncf.com/grand-est/se-deplacer/gares/metz-ville-87192039"
+  - title: "SNCF Gares & Connexions: accessibilité de la gare de Metz"
+    url: "https://www.garesetconnexions.sncf/fr/gares-services/metz/accessibilite"
+  - title: "SNCF Gares & Connexions: consignes partenaires près de Metz"
+    url: "https://www.garesetconnexions.sncf/fr/gares-services/metz/services-commerces/consignes-partenaires"
+---
+
+À Metz, en Moselle, on peut arriver en train, parcourir le centre historique à pied et rejoindre les quartiers plus éloignés en bus ou en METTIS, les deux lignes de transport à haut niveau de service du réseau LE MET'. Pour une famille, le principal choix n'est pas forcément l'itinéraire: c'est le ticket adapté au nombre de voyageurs et de déplacements, surtout avec de jeunes enfants.
+
+## Quel ticket LE MET' choisir en famille ?
+
+Le réseau propose des titres pour un trajet, un aller-retour ou une journée de déplacements illimités. Les prix ci-dessous sont ceux affichés lors de la consultation du 25 novembre 2026, sur une grille officielle portant la mention « Tarifs au 1er juillet 2025 ». Vérifiez les [tarifs en vigueur sur LE MET'](https://www.lemet.fr/titres-occasionnels/) avant l'achat.
+
+### Un seul aller-retour: le Pass Famille
+
+À **5,40 €**, le Pass Famille couvre un aller-retour dans la journée pour **cinq personnes maximum voyageant ensemble**, dans les compositions prévues par le réseau: deux adultes et jusqu'à trois enfants, ou un adulte et jusqu'à quatre enfants de moins de 18 ans.
+
+C'est une solution simple si vous prenez le bus une fois pour rejoindre un lieu, puis une fois pour rentrer. Le titre n'est pas une formule de trajets illimités: si vous multipliez les arrêts et les déplacements au cours de la journée, regardez plutôt le Tribu.
+
+### Plusieurs trajets dans la journée: le Tribu
+
+À **8,70 €**, le ticket Tribu permet à **cinq personnes maximum** de voyager ensemble de façon illimitée sur LE MET', de sa première validation jusqu'à minuit. Il évite d'acheter de nouveaux tickets après une visite, un repas ou un changement de quartier. Une validation par groupe reste nécessaire à chaque montée, y compris en correspondance. Les conditions figurent dans le [comparateur de titres LE MET'](https://www.lemet.fr/quel-tarif-choisir/).
+
+### Un parent et un très jeune enfant: les tickets individuels peuvent suffire
+
+Les **moins de 6 ans voyagent gratuitement**, accompagnés d'un adulte, dans la limite de **deux enfants de cet âge par adulte**. Dès 6 ans, un titre valide est nécessaire. Cette règle est rappelée dans la [FAQ officielle LE MET'](https://www.lemet.fr/faq/).
+
+Par exemple, pour un adulte accompagné d'un enfant de 4 ans qui fait seulement un aller-retour, un ticket deux voyages à **3,40 €** peut revenir moins cher que le Pass Famille. Pour deux adultes accompagnés d'enfants plus âgés, le pass collectif peut au contraire être nettement plus intéressant.
+
+Le ticket unitaire coûte **1,90 €** aux distributeurs et **2 €** en dépannage à bord d'un bus classique. Le titre deux voyages est affiché à **3,40 €** aux points de vente habituels. Pour les familles qui empruntent régulièrement le réseau, les abonnements enfants et adultes, le post-paiement ou les tarifs réduits méritent une comparaison distincte.
+
+## Arriver en train et trouver son bus
+
+La [gare de Metz-Ville](https://www.ter.sncf.com/grand-est/se-deplacer/gares/metz-ville-87192039) se trouve place du Général-de-Gaulle. À la sortie, repérez votre arrêt et le sens de circulation avant d'acheter le ticket: certains quartiers et sites d'intérêt peuvent se rejoindre directement à pied, sans trajet supplémentaire.
+
+Les lignes **METTIS A et B** relient différents secteurs de l'agglomération. Elles complètent les bus classiques et les lignes LIANES. Consultez le [plan et les informations du réseau à Metz](https://www.lemet.fr/metz/) pour choisir l'arrêt le plus proche de votre destination plutôt que de supposer qu'un seul METTIS dessert tous les lieux.
+
+Pour acheter ou recharger un ticket, des distributeurs sont présents dans toutes les stations METTIS et à certains arrêts autour de la gare. L'Espace Mobilité est situé place de la République, au 1 avenue Robert-Schuman. Des dépositaires existent également, notamment dans le secteur de la gare. La [liste des points de vente LE MET'](https://www.lemet.fr/les-points-de-vente/) permet de vérifier les emplacements.
+
+**Attention aux validations:** présentez le ticket ou la carte au valideur à chaque montée, même en correspondance. Dans un METTIS, il n'est pas possible d'acheter son titre auprès du conducteur. Si vous n'en avez pas, passez par un distributeur avant de monter.
+
+## Où laisser les valises avant de visiter Metz ?
+
+Quand l'arrivée en train précède l'heure d'accès au logement, une consigne peut éviter de traverser la ville avec les bagages et une poussette.
+
+SNCF Gares & Connexions signale des [consignes partenaires à proximité de la gare](https://www.garesetconnexions.sncf/fr/gares-services/metz/services-commerces/consignes-partenaires), accessibles après réservation en ligne. Ce ne sont pas des casiers de libre-service situés automatiquement à l'intérieur du bâtiment: le dépôt des bagages s'effectue à l'adresse du partenaire choisi.
+
+Parmi les possibilités, [Radical Storage propose un point de dépôt près de la gare de Metz](https://radicalstorage.com/fr/consigne-a-bagages/metz/vieille-ville/consigne-bagages-gare-metz), dans un établissement partenaire, avec réservation préalable. La fiche annonce une ouverture 24 h/24, mais vérifiez impérativement **le créneau réellement disponible**, le lieu communiqué lors de la réservation, les conditions d'acceptation des bagages et **le prix total pour toute la famille** avant de payer. Il s'agit d'un service extérieur à la gare, non d'une consigne SNCF.
+
+Si vous voyagez avec une poussette, ne supposez pas qu'elle sera acceptée partout: demandez confirmation au lieu de dépôt ou vérifiez les restrictions affichées avant réservation.
+
+## Poussette, fauteuil roulant et correspondances
+
+La gare de Metz dispose d'ascenseurs, d'escaliers mécaniques, de toilettes accessibles et d'un service d'assistance aux personnes handicapées ou à mobilité réduite. L'état des équipements peut évoluer. Avant un trajet nécessitant un ascenseur, consultez la [page d'accessibilité en temps réel de la gare](https://www.garesetconnexions.sncf/fr/gares-services/metz/accessibilite).
+
+Pour une famille avec poussette, prévoyez une marge entre l'arrivée du train, la récupération des bagages et le départ du bus. Le chemin piéton vers l'arrêt et la place disponible dans le véhicule comptent autant que le temps de trajet annoncé. Si une assistance ferroviaire est nécessaire, organisez-la auprès de la SNCF selon les conditions de ce service.
+
+## Deux façons simples d'organiser la journée
+
+**Sans bagages:** à l'arrivée en gare, partez à pied vers le centre si votre destination est accessible. Gardez les trajets LE MET' pour rejoindre un quartier plus éloigné ou rentrer en fin de journée. Selon les âges et le nombre de voyageurs, un billet individuel ou le Pass Famille peut suffire.
+
+**Avec bagages et plusieurs déplacements:** réservez d'abord une consigne près de la gare en vérifiant ses horaires, puis planifiez le retrait avant votre train. Si vous comptez utiliser plusieurs bus ou METTIS entre les visites et le retour, le ticket Tribu peut être plus confortable que des billets séparés.
+
+Pour les familles qui habitent Metz et répètent ces trajets chaque semaine, le bon calcul change: les abonnements et les éventuelles réductions sont souvent plus pertinents qu'un pass journée. Consultez les [offres d'abonnement LE MET'](https://www.lemet.fr/abonnements/) selon l'âge et la situation de chaque voyageur.
+
+Pour les familles qui restent une nuit ou davantage, [La Cabane, appartement à Metz pour quatre personnes sur Booking.com](https://www.booking.com/hotel/fr/la-cabane-appartement-classe-3-etoiles-jusqu-a-4-personnes.fr.html), propose deux chambres et une cuisine équipée, à proximité du secteur de la gare. Vérifiez les disponibilités, le trajet exact depuis la gare et les éventuels suppléments selon la composition familiale avant de réserver.
+
+Pour préparer les visites une fois les déplacements réglés, notre guide [Metz en famille](https://www.fam-space.fr/destinations/grand-est/moselle/metz/) présente des promenades, musées et pauses adaptées aux enfants.
+
+
+### Destination en cours
+
+- Branche: automation/destination-20261010-0720-vincennes
+- HEAD: content: destination candidate Vincennes
+
+---
+result: enriched
+kind: city
+name: "Vincennes"
+url: "/destinations/ile-de-france/val-de-marne/vincennes/"
+intro:
+  - "Vincennes est une base pratique pour visiter l'est parisien sans voiture : le château et le Parc floral se combinent à pied, tandis que le zoo de Paris mérite une sortie distincte."
+sections:
+  - title: "Une journée sur place : associer le château au Parc floral"
+    paragraphs:
+      - "Pour une journée mêlant découverte et temps de jeu, commencez par le château, puis rejoignez le Parc floral par l'esplanade du château. Comptez environ 1 h 30 à 2 h pour le monument avant de laisser les enfants profiter des aires de jeux du parc. Les pique-niques ne sont pas autorisés dans l'enceinte du château, mais le Parc floral dispose de tables de pique-nique, de points d'eau et de toilettes avec table à langer."
+      - "Avec de jeunes enfants qui supportent mal les visites intérieures, faites plutôt du Parc floral la sortie principale : ses jeux et ses jardins évitent de construire la journée autour du donjon et de ses escaliers. L'accès au Parc floral est gratuit d'octobre à mars et payant d'avril à septembre ; le château est un site distinct avec son propre billet."
+  - title: "Sur deux jours, garder le zoo pour une autre sortie"
+    paragraphs:
+      - "Le Parc zoologique de Paris se trouve du côté de la Porte Dorée, dans le 12e arrondissement, et non à côté du château ou à l'intérieur du Parc floral. Depuis le terminus Château de Vincennes du métro 1, le bus 46 permet de le rejoindre. Le zoo recommande au minimum deux heures de visite : avec le trajet et les pauses, mieux vaut lui réserver une seconde journée plutôt que de l'ajouter à la visite du château et du Parc floral."
+      - "Pour un séjour d'une seule journée, choisissez donc entre le duo château et Parc floral, facile à enchaîner à pied, et une visite du zoo avec trajet dédié. Ce choix évite de traverser inutilement le bois avec des enfants fatigués."
+  - title: "Métro ou RER avec une poussette : deux arrivées différentes"
+    paragraphs:
+      - "La ligne 1 arrive au pied du château, mais la station Château de Vincennes comporte de nombreuses marches entre les quais et la rue. La gare Vincennes du RER A est équipée d'un ascenseur et d'escalators ; elle se situe à environ dix minutes à pied du château. Avec une poussette lourde ou des difficultés à emprunter les escaliers, le RER A peut donc être plus pratique malgré la marche supplémentaire. Vérifiez l'état des équipements avant de partir."
+accommodation:
+  title: "Où dormir selon les sorties prévues ?"
+  paragraphs:
+    - "Si votre programme privilégie le château, le Parc floral et le départ du bus 46 vers le zoo, cherchez un hébergement vers l'avenue de Paris et le terminus Château de Vincennes. Si vous prévoyez aussi plusieurs allers-retours vers le centre de Paris, la proximité de la gare Vincennes du RER A est un autre choix pratique. Avec une poussette, comparez surtout la distance réelle à pied jusqu'à la gare ou au métro plutôt que de réserver simplement un logement annoncé à Vincennes."
+sources:
+  - title: "Fam Space - Destination Vincennes et ses deux articles"
+    url: "https://www.fam-space.fr/destinations/ile-de-france/val-de-marne/vincennes/"
+    accessedAt: "2026-10-10"
+  - title: "Fam Space - Château de Vincennes en famille"
+    url: "https://www.fam-space.fr/articles/sorties/chateau-de-vincennes-en-famille-tarifs-parcours-et-conseils-de-visite/"
+    accessedAt: "2026-10-10"
+  - title: "Fam Space - Monument jeu d'enfant 2026 au château de Vincennes"
+    url: "https://www.fam-space.fr/articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/"
+    accessedAt: "2026-10-10"
+  - title: "Ville de Paris - Parc floral de Paris"
+    url: "https://www.paris.fr/lieux/parc-floral-de-paris-1"
+    accessedAt: "2026-10-10"
+  - title: "Château de Vincennes - Informations pratiques"
+    url: "https://www.chateau-de-vincennes.fr/visiter/informations-pratiques"
+    accessedAt: "2026-10-10"
+  - title: "Château de Vincennes - Offre adaptée aux visiteurs en mobilité réduite"
+    url: "https://www.chateau-de-vincennes.fr/visiter/visiteurs-en-situation-de-handicap/offre-adaptee-aux-visiteurs-en-mobilite-reduite"
+    accessedAt: "2026-10-10"
+  - title: "Parc zoologique de Paris - Tarifs, horaires et accès"
+    url: "https://www.parczoologiquedeparis.fr/fr/tarifs-horaires-acces"
+    accessedAt: "2026-10-10"
+  - title: "Parc zoologique de Paris - Services et conseils de visite"
+    url: "https://www.parczoologiquedeparis.fr/fr/services-conseils-de-visite"
+    accessedAt: "2026-10-10"
+---
+
+### Destination en cours
+
+- Branche: automation/destination-20261013-0112-haut-rhin
+- HEAD: content: destination Haut-Rhin enrichment candidate
+
+---
+result: enriched
+kind: department
+name: "Haut-Rhin"
+url: "/destinations/grand-est/haut-rhin/"
+intro:
+  - "Colmar, Mulhouse et Ungersheim ne se visitent pas de la même manière en famille. Le choix de la base dépend des musées, des villages et de la possibilité de se déplacer sans voiture."
+sections:
+  - title: "Colmar pour les villages, Mulhouse pour les musées"
+    paragraphs:
+      - "Colmar convient à une journée dans le centre suivie d'une sortie vers Turckheim ou Munster, accessibles sur la ligne de train vers Metzeral. Pour Riquewihr, Kaysersberg ou Eguisheim, cette ligne ne suffit pas : il faut vérifier les bus ou prévoir une voiture."
+      - "Mulhouse est une meilleure base pour les musées techniques : la Cité du Train et Electropolis sont desservis par le tram 3, et le Musée national de l'Automobile par le tram 1. Si ces visites sont prioritaires, dormir à Mulhouse évite de revenir chaque soir depuis Colmar."
+  - title: "Deux parcs à Ungersheim : prévoir deux journées"
+    paragraphs:
+      - "Le Parc du Petit Prince et l'Écomusée d'Alsace sont proches, mais le premier recommande déjà cinq à sept heures de visite. Une famille qui souhaite découvrir les deux aura plus de temps pour profiter de chaque site en leur réservant une journée distincte."
+      - "Sans voiture, le train rejoint Bollwiller, puis il faut prévoir une navette à la demande vers les sites. Le Parc du Petit Prince indique le service Filéa ; l'Écomusée annonce une navette Soléa ou trente minutes de marche. Réservez et vérifiez le retour avant d'acheter les billets."
+  - title: "Ne pas confondre train et bus touristique"
+    paragraphs:
+      - "Le Kut'zig dessert en saison plusieurs villages viticoles depuis Colmar, mais ne circule pas toute l'année : sa saison 2026 s'est achevée le 11 octobre. Hors saison, la ligne ferroviaire vers Turckheim et Munster offre un autre choix de sortie, sous réserve des horaires du jour."
+accommodation:
+  title: "Où se baser dans le Haut-Rhin ?"
+  paragraphs:
+    - "Choisissez Colmar pour le centre historique, les villages et la vallée de Munster ; choisissez Mulhouse pour les musées et une excursion vers Ungersheim via Bollwiller. Si le séjour combine plusieurs jours dans chaque secteur, deux hébergements peuvent éviter des allers-retours répétés avec les enfants."
+sources:
+  - title: "Fam Space - Haut-Rhin"
+    url: "https://www.fam-space.fr/destinations/grand-est/haut-rhin/"
+    accessedAt: "2026-10-13"
+  - title: "Mulhouse Tourisme - Transports en commun"
+    url: "https://www.tourisme-mulhouse.com/en/what-to-do-in-mulhouse/getting-around-mulhouse-by-public-transport/"
+    accessedAt: "2026-10-13"
+  - title: "Parc du Petit Prince - Informations pratiques"
+    url: "https://parcdupetitprince.com/infos-pratiques"
+    accessedAt: "2026-10-13"
+  - title: "Écomusée d'Alsace - Accès"
+    url: "https://www.ecomusee.alsace/preparez-votre-visite/acces/"
+    accessedAt: "2026-10-13"
+  - title: "Ville de Turckheim - Accès"
+    url: "https://www.turckheim.fr/acces-et-plan/"
+    accessedAt: "2026-10-13"
+  - title: "Office de tourisme de Colmar - Kut'zig"
+    url: "https://www.tourisme-colmar.com/fr/pratique/se-deplacer/kut-zig-le-bus-touristique-cabriolet"
+    accessedAt: "2026-10-13"
+---
+
+### Phase 1 - refresh
+
+Écris `radar-request.md` avec seulement la décision éditoriale:
+
+```yaml
+---
+action: start
+mode: refresh
+targetUrl: "/articles/categorie/slug/"
+decision: "Décision précise du lecteur à mieux servir"
+affiliationPotential: "Offre existante à conserver, nouvelle action naturelle à vérifier, ou absence d'affiliation naturelle"
+---
+
+Brief éditorial court demandé par la phase 1.
+```
+
+Ne fournis ni branche, ni SHA, ni `targetPath`, ni `commonQueries`, ni `positionDelta`, ni `impressionRatio`, ni `focusQueries`. Le script les prend dans Git et dans le snapshot.
+
+### Phase 1 - opportunity
+
+Écris le minimum éditorial nécessaire au futur article:
+
+```yaml
+---
+action: start
+mode: opportunity
+title: "Titre de travail"
+subtitle: "Sous-titre utile"
+summary: "Résumé"
+category: sorties
+location:
+  city: "Ville"
+  department: "Département"
+  region: "Région"
+keywords:
+  - "mot-clé utile"
+sources:
+  - title: "Source officielle"
+    url: "https://..."
+gscSignal: strong_page
+gscSourceUrl: "/articles/categorie/page-forte/"
+decision: "Décision précise du lecteur"
+affiliationPotential: "Piste commerciale réellement vérifiée ou absence naturelle"
+---
+
+Brief éditorial court demandé par la phase 1.
+```
+
+Le slug, la branche, le SHA et la provenance technique sont générés par le script. Pour `seasonal_opportunity`, utilise `gscSignal: seasonal_opportunity` et omets `gscSourceUrl`: la source officielle du frontmatter sert de preuve. Pour `strong_page`, `gscSourceUrl` reste obligatoire et doit correspondre à une page réellement présente dans `strongPages`.
 
 ## Écriture autorisée
 
