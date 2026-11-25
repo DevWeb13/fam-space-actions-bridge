@@ -480,3 +480,4 @@ automation/image-hero-20261125-metz-090617b|c6d7ae10af4121cc25b38053af12733f5472
 automation/image-hero-20261125-fables-haute-saone-00ed7fa|97fa43eb4229fd4bc3ed2c9a681b002afb397245
 automation/image-hero-20261125-fables-haute-saone-00ed7fa|5e5863ebb63c8ab0f9b65fdd910fd21e964673f8
 automation/image-hero-20261125-chambord-613636e|c37004459c21c988f0e85fcbd12f891c2309955f
+automation/image-hero-20261125-chambord-613636e|71c16369e3df1c2f947d7508fb432ad211b5e6e5
