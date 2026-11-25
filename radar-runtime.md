@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -85,8 +88,12 @@ sources:
     url: https://tzen4.iledefrance-mobilites.fr/titres-et-tarifs/supports/passe-navigo-easy
   - title: Île-de-France Mobilités - Titres compatibles sur Navigo Easy
     url: https://www.iledefrance-mobilites.fr/aide-et-contacts/passe-navigo-easy/quels-titres-de-transports-puis-je-charger-sur-mon-passe-navigo-easy
-  - title: Île-de-France Mobilités - Voyager en famille avec Navigo Easy et iPhone
-    url: https://www.iledefrance-mobilites.fr/aide-et-contacts/passe-navigo-easy/voyage-groupe-famille
+  - title: Île-de-France Mobilités - Cartes Navigo et services Google
+    url: https://www.iledefrance-mobilites.fr/aide-et-contacts/decouvrir-achat-de-titres-sur-telephone/decouvrir-google-wallet-titres-navigo
+  - title: Île-de-France Mobilités - Sélection des cartes Navigo sur iPhone et Android
+    url: https://www.iledefrance-mobilites.fr/aide-et-contacts/valider-avec-son-telephone/choisir-cartes-navigo-iphone-android-montre-connectee
+  - title: Île-de-France Mobilités - Communiqué du 13 novembre 2026 sur le multicartes Android
+    url: https://presse.iledefrance-mobilites.fr/le-multicartes-arrive-sur-android-avec-google-wallet/?lang=fr
   - title: RATP - État des ascenseurs en direct
     url: https://www.ratp.fr/services/etat-equipement
   - title: RATP - Information trafic RER A
@@ -111,7 +118,7 @@ affiliate:
   destination: Chessy
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/voyages/(2026)/(10)/disneyland-paris-en-rer-a-avec-des-enfants-trajet-et-tickets-en-2026/index.md
   targetSha: a69a593f4267e03b6d97961190b3590f1dbf3558
@@ -138,33 +145,86 @@ radar:
       - rer disneyland paris tarif
 ---
 
-## Mission retenue
-Actualiser le guide RER A vers Disneyland Paris pour intégrer le multicartes Navigo sur Android avec les services Google.
+<!-- article-image-credit -->
+*Photo: [Idris2000](https://commons.wikimedia.org/wiki/File:Marne-la-Vall%C3%A9e_-_Chessy_RER_2020_04.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Candidat rapidDrop dont la cause de la baisse reste inconnue. Les guides LAEP Toulouse et Maison du Cacao sont déjà actualisés aujourd'hui sur master; l'annonce hivernale du Parc floral confirme ses dates et horaires déjà traités. Le guide RER a été actualisé le 10 novembre, avant le changement documenté le 12 novembre par Île-de-France Mobilités: sa consigne imposant un appareil Android par voyageur ou un passe physique est désormais trop restrictive.
+Depuis Paris, le **RER A direction Marne-la-Vallée-Chessy** vous dépose devant Disneyland Paris, sans navette supplémentaire. Disneyland Paris annonce environ **35 minutes depuis Nation**. En famille, pensez à compter non seulement les tickets, mais aussi les éventuels supports de validation: ils peuvent changer le budget de départ.
 
-## Décision du lecteur
-Choisir entre des passes physiques et des cartes virtuelles individuelles sur un téléphone compatible, acheter les bons tarifs et valider chaque voyageur sans erreur.
+## Quel RER prendre et où descendre ?
 
-## Faits à traiter
-- Sur Android avec services Google compatibles, plusieurs cartes Navigo virtuelles sont désormais possibles sur un seul téléphone. L'application Google Wallet elle-même n'est pas obligatoire. Dans l'application IDFM, Titres > Sur mon téléphone, ajouter une carte virtuelle par voyageur payant, acheter le titre adapté, puis sélectionner chaque carte et Valider avant chaque passage. Présenter les cartes utilisées au contrôle. Ne jamais faire croire qu'une seule carte ou un seul titre suffit pour plusieurs personnes. Conserver les instructions iPhone et la solution des passes physiques pour les appareils incompatibles.
-- La FAQ ancienne sur le voyage en groupe contredit encore la documentation Google du 12 novembre: privilégier les deux fiches récentes et le communiqué officiel, en précisant la compatibilité requise.
-- Les tarifs 2026 officiels restent 2,55 euros plein tarif et 1,30 euro réduit. Conserver les règles d'âge, le calcul familial de 15,40 euros aller-retour, 23,40 euros avec quatre passes neufs et l'économie possible de 8 euros avec un smartphone compatible et quatre cartes distinctes. Ne pas annoncer de tarif 2027 non confirmé.
-- Conserver la destination du train, les correspondances, la poussette, le retour, le maillage, les images et leurs crédits. Le billet de parc reste distinct du transport.
+<!-- article-image-body:01 -->
 
-## Sources de départ
-- https://www.iledefrance-mobilites.fr/aide-et-contacts/decouvrir-achat-de-titres-sur-telephone/decouvrir-google-wallet-titres-navigo
-- https://www.iledefrance-mobilites.fr/aide-et-contacts/valider-avec-son-telephone/choisir-cartes-navigo-iphone-android-montre-connectee
-- https://presse.iledefrance-mobilites.fr/le-multicartes-arrive-sur-android-avec-google-wallet/?lang=fr
-- https://www.iledefrance-mobilites.fr/tarifs-titre-de-transport-en-commun-2026
-- Conserver les autres sources officielles utiles de l'article.
+![Quai du RER A en direction de Marne-la-Vallée-Chessy à Val de Fontenay](/images/articles/2026/10/disneyland-paris-en-rer-a-avec-des-enfants-trajet-et-tickets-en-2026-body-01.webp)
 
-## Affiliation
-Billet 1 jour 1 parc Tiqets vérifié: https://www.tiqets.com/fr/activites-attractions-marne-la-vallee-c702/billets-pour-disneyland-r-paris-billet-1-jour-1-parc-p975463/ . Remplacer l'offre d'entrée Booking par ce partenaire billetterie prévu au runtime, sans annoncer de prix fixe ni disponibilité; ne pas imposer un billet deux parcs. L'hébergement Staycity reste pertinent: https://www.booking.com/hotel/fr/staycity-aparthotels-paris-marne-la-vallee.fr.html ; la fiche indexée confirme cuisine et navette gratuite, l'accès direct oppose une vérification robot, ne pas garantir de disponibilité. Conserver la distinction entre Bailly-Romainvilliers et la gare de Chessy.
+*Photo: [Chabe01](https://commons.wikimedia.org/wiki/File:Gare_Val_Fontenay_RER_A_Fontenay_Bois_10.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
 
-## Continuations internes
-Conserver les renvois existants vers les guides transports à Paris, poussette et séjour Disneyland pour les choix plus larges, sans les modifier durant ce passage.
+<!-- /article-image-body:01 -->
+
+À Paris, le RER A dessert notamment Charles-de-Gaulle-Étoile, Auber, Châtelet-Les Halles, Gare de Lyon et Nation. Selon votre départ, rejoignez l'une de ces gares directement ou par correspondance.
+
+**Vérifiez la destination affichée: Marne-la-Vallée-Chessy.** Tous les RER A ne vont pas à Disneyland: la ligne possède plusieurs branches, dont celle de Boissy-Saint-Léger. Descendez au terminus et suivez les indications vers les parcs. Les 35 minutes annoncées concernent Nation, pas l'ensemble d'un trajet depuis n'importe quelle adresse parisienne.
+
+## Quel budget pour deux adultes et deux enfants en 2026 ?
+
+Le **ticket Métro-Train-RER** permet de rejoindre Chessy depuis Paris sans supplément de zone. Les [tarifs officiels 2026](https://www.iledefrance-mobilites.fr/tarifs-titre-de-transport-en-commun-2026), par personne et par trajet, sont les suivants:
+
+- **À partir de 10 ans: 2,55 €**, soit 5,10 € aller-retour.
+- **De 4 ans à moins de 10 ans: 1,30 €**, soit 2,60 € aller-retour.
+- **Moins de 4 ans: gratuit**, sans ticket, avec un justificatif d'âge à pouvoir présenter.
+
+Pour **deux adultes et deux enfants de 6 et 8 ans**, comptez **15,40 € aller-retour en tickets**: 10,20 € pour les adultes et 5,20 € pour les enfants. Mais si aucun des quatre voyageurs payants ne possède de support et que vous achetez **quatre passes Navigo Easy neufs à 2 €**, ajoutez **8 €**, soit **23,40 € à débourser** pour cet aller-retour et les supports réutilisables.
+
+Ces 8 € ne sont **pas un supplément obligatoire à chaque voyage**: un passe Navigo Easy déjà possédé peut être rechargé, et quatre cartes virtuelles sur un smartphone compatible permettent d'éviter ces 8 € de frais de support. Si vous prévoyez plusieurs déplacements parisiens, comparez les forfaits dans notre guide [Transports à Paris avec des enfants: quel titre choisir pour payer juste ?](https://www.fam-space.fr/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/).
+
+## Acheter et valider les tickets en famille
+
+<!-- article-image-body:02 -->
+
+![Passe de transport Navigo Easy utilisable sur les réseaux franciliens](/images/articles/2026/10/disneyland-paris-en-rer-a-avec-des-enfants-trajet-et-tickets-en-2026-body-02.webp)
+
+*Photo: [James Tamim](https://commons.wikimedia.org/wiki/File:Navigo_Easy.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Chaque voyageur payant doit avoir **son propre titre sur une carte distincte, physique ou virtuelle**. Un passe Navigo Easy physique ne permet pas de faire passer plusieurs personnes à la suite. Il ne peut pas non plus contenir simultanément des tickets Métro-Train-RER plein tarif et réduit: prévoyez des supports distincts pour les adultes et les enfants.
+
+### Un seul téléphone pour plusieurs voyageurs
+
+Depuis novembre 2026, le multicartes Navigo fonctionne aussi sur Android avec les services Google compatibles, comme l'explique [Île-de-France Mobilités](https://www.iledefrance-mobilites.fr/aide-et-contacts/decouvrir-achat-de-titres-sur-telephone/decouvrir-google-wallet-titres-navigo). L'installation de l'application Google Wallet n'est pas indispensable.
+
+- **Sur Android compatible:** ouvrez l'application Île-de-France Mobilités, puis Titres > Sur mon téléphone. Créez une carte virtuelle distincte pour chaque voyageur payant et chargez les tickets correspondant à son âge. Avant chaque passage, sélectionnez la carte de la personne concernée, utilisez le bouton de validation puis présentez le téléphone au portique. En cas de contrôle, affichez successivement les cartes utilisées.
+- **Sur iPhone compatible:** dans l'application Cartes, ajoutez une carte Navigo pour chaque voyageur (Cartes > + > Carte de transport > France/Navigo), puis achetez les titres. Sélectionnez la carte appropriée avant chaque passage, notamment avec la double pression sur le bouton latéral. Le mode Transport Express ne change pas automatiquement de carte entre deux voyageurs.
+
+Consultez les [instructions de sélection des cartes Navigo](https://www.iledefrance-mobilites.fr/aide-et-contacts/valider-avec-son-telephone/choisir-cartes-navigo-iphone-android-montre-connectee). Si votre téléphone ne permet pas de créer plusieurs cartes, utilisez des appareils compatibles distincts ou des passes Navigo Easy individuels. Un téléphone partagé ne dispense jamais d'acheter un titre pour chaque personne payante.
+
+Le ticket Métro-Train-RER couvre les correspondances **métro, train et RER pendant deux heures à compter de la première validation**, sans sortir du réseau. Il ne couvre **ni bus ni tramway**: si vous commencez par un bus, prévoyez un autre titre. Le retour de Chessy vers Paris nécessite un nouveau ticket.
+
+## Avec une poussette ou un bébé
+
+<!-- article-image-body:03 -->
+
+![Hall intérieur de la gare de Marne-la-Vallée-Chessy à proximité de Disneyland Paris](/images/articles/2026/10/disneyland-paris-en-rer-a-avec-des-enfants-trajet-et-tickets-en-2026-body-03.webp)
+
+<!-- /article-image-body:03 -->
+
+La gare de Chessy se trouve devant les parcs, mais les accès aux quais et les correspondances parisiennes peuvent comporter des escaliers ou des ascenseurs hors service. Vérifiez les équipements au départ, à l'arrivée et à chaque changement sur la page RATP [État des ascenseurs](https://www.ratp.fr/services/etat-equipement).
+
+Pour un enfant de moins de 4 ans en poussette, Île-de-France Mobilités prévoit de **demander au guichet l'ouverture des portes latérales** aux portiques. Si vous ne pouvez pas porter la poussette, examinez l'itinéraire complet avant de choisir votre correspondance. Notre guide [Paris avec une poussette: métro, RER, bus ou tram ?](https://www.fam-space.fr/articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/) détaille les alternatives.
+
+## Préparer le retour après le spectacle nocturne
+
+Avant de rester jusqu'au dernier spectacle, vérifiez les **horaires des derniers RER A vers Paris**, les travaux et les interruptions à votre date sur [l'information trafic RER A de la RATP](https://www.ratp.fr/infos-trafic/rer-transilien/a). Contrôlez aussi la dernière correspondance si votre hébergement n'est pas directement desservi par le RER A.
+
+Un horaire habituel ne garantit pas qu'un train circule un soir de travaux. Avec de jeunes enfants, prévoyez une marge entre la sortie du parc, l'accès à la gare et le dernier départ utile.
+
+## Billet d'entrée et nuit près des parcs
+
+**Le ticket de RER ne comprend pas l'entrée à Disneyland Paris.** Si vous souhaitez passer la journée dans un seul parc, le [billet Disneyland Paris 1 jour 1 parc sur Tiqets](https://www.tiqets.com/fr/activites-attractions-marne-la-vallee-c702/billets-pour-disneyland-r-paris-billet-1-jour-1-parc-p975463/) permet de choisir entre le Parc Disneyland et Disney Adventure World. Pour visiter les deux, choisissez une formule adaptée. Vérifiez les dates, les âges, les conditions d'annulation et les prestations incluses. Le trajet en RER est à payer séparément.
+
+Si vous préférez éviter le RER tard le soir, [Staycity Aparthotels near Disneyland Paris sur Booking.com](https://www.booking.com/hotel/fr/staycity-aparthotels-paris-marne-la-vallee.fr.html) propose des appartements avec cuisine et une navette gratuite vers les parcs. L'établissement est situé à **Bailly-Romainvilliers**, et non à la sortie de la gare de Chessy. Vérifiez les horaires de navette, la capacité du logement et les disponibilités aux dates de votre séjour.
+
+Pour comparer une journée depuis Paris à un séjour sur place, consultez notre guide [Disneyland Paris en famille en 2026: combien de jours, quel hôtel et quel budget prévoir ?](https://www.fam-space.fr/articles/voyages/disneyland-paris-en-famille-en-2026-combien-de-jours-quel-hotel-et-quel-budget-prevoir/).
 
 ## Article source exact à préserver et améliorer
 
