@@ -1,130 +1,71 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-25T07:30:00+01:00",
+  "generatedAt": "2026-11-26T07:29:00+01:00",
   "dataThrough": "2026-11-23",
   "from": "2026-10-27",
   "refresh": [
     {
-      "url": "/articles/parentalite/laep-a-toulouse-ou-jouer-gratuitement-avec-son-enfant-de-moins-de-6-ans/",
-      "title": "LAEP à Toulouse: où jouer gratuitement avec son enfant de moins de 6 ans?",
-      "category": "parentalite",
-      "publishedAt": "2026-11-11T22:03:01+01:00",
+      "url": "/articles/vie-pratique/ludotheques-autour-de-dinan-emprunter-des-jeux-pour-la-maison/",
+      "title": "Ludothèques autour de Dinan: emprunter des jeux pour la maison",
+      "category": "vie-pratique",
+      "publishedAt": "2026-10-30T11:31:33+01:00",
       "location": {
-        "city": "Toulouse",
-        "department": "Haute-Garonne",
-        "region": "Occitanie"
+        "city": "",
+        "department": "Côtes-d'Armor",
+        "region": "Bretagne"
       },
-      "ageDays": 14,
+      "ageDays": 27,
       "rapidDrop": true,
-      "peakStart": "2026-11-17",
-      "peakEnd": "2026-11-19",
+      "peakStart": "2026-10-31",
+      "peakEnd": "2026-11-02",
       "recentStart": "2026-11-21",
       "recentEnd": "2026-11-23",
-      "peakImpressions": 86,
-      "recentImpressions": 3,
-      "score": 249,
+      "peakImpressions": 22,
+      "recentImpressions": 1,
+      "score": 98,
       "signal": "uncertain",
-      "basis": "Visibilité récente : 86 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
       "commonQueries": 0,
       "positionDelta": null,
       "impressionRatio": 0,
       "focusQueries": [
-        "laep toulouse",
-        "laep",
-        "laep borderouge",
-        "laep fourtanier",
-        "espace enfant"
+        "ludothèque plancoët",
+        "ludotheque plancoet",
+        "ludothèque plancoet",
+        "ludothèque plouer sur rance",
+        "horaire ludothèque"
       ]
     },
     {
-      "url": "/articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/",
-      "title": "Parc floral d’Orléans gratuit en hiver: horaires et sortie avec les enfants",
-      "category": "bons-plans",
-      "publishedAt": "2026-10-26T22:02:51+01:00",
+      "url": "/articles/activites/forum-des-sciences-a-villeneuve-d-ascq-en-famille-que-choisir-selon-l-age/",
+      "title": "Forum des Sciences à Villeneuve-d'Ascq en famille: que choisir selon l'âge ?",
+      "category": "activites",
+      "publishedAt": "2026-11-02T00:03:12+01:00",
       "location": {
-        "city": "Orléans",
-        "department": "Loiret",
-        "region": "Centre-Val de Loire"
+        "city": "Villeneuve-d'Ascq",
+        "department": "Nord",
+        "region": "Hauts-de-France"
       },
-      "ageDays": 30,
+      "ageDays": 24,
       "rapidDrop": true,
-      "peakStart": "2026-10-30",
-      "peakEnd": "2026-11-01",
+      "peakStart": "2026-11-04",
+      "peakEnd": "2026-11-06",
       "recentStart": "2026-11-21",
       "recentEnd": "2026-11-23",
-      "peakImpressions": 69,
-      "recentImpressions": 3,
-      "score": 198,
+      "peakImpressions": 37,
+      "recentImpressions": 5,
+      "score": 96,
       "signal": "uncertain",
-      "basis": "Visibilité récente : 69 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "basis": "Visibilité récente : 37 impressions sur trois jours, puis 5 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
       "commonQueries": 0,
       "positionDelta": null,
       "impressionRatio": 0,
       "focusQueries": [
-        "parc floral gratuit",
-        "parc floral de la source gratuit"
-      ]
-    },
-    {
-      "url": "/articles/cuisine/maison-du-cacao-a-pointe-noire-decouvrir-le-chocolat-en-famille/",
-      "title": "Maison du Cacao à Pointe-Noire: découvrir le chocolat en famille",
-      "category": "cuisine",
-      "publishedAt": "2026-11-08T06:04:50+01:00",
-      "location": {
-        "city": "Pointe-Noire",
-        "department": "Guadeloupe",
-        "region": "Guadeloupe"
-      },
-      "ageDays": 17,
-      "rapidDrop": true,
-      "peakStart": "2026-11-16",
-      "peakEnd": "2026-11-18",
-      "recentStart": "2026-11-21",
-      "recentEnd": "2026-11-23",
-      "peakImpressions": 43,
-      "recentImpressions": 10,
-      "score": 99,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 43 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0.308,
-      "focusQueries": [
-        "la maison du cacao",
-        "maison du cacao en guadeloupe",
-        "maison du cacao guadeloupe",
-        "la maison du cacao guadeloupe",
-        "maison cacao guadeloupe"
-      ]
-    },
-    {
-      "url": "/articles/voyages/disneyland-paris-en-rer-a-avec-des-enfants-trajet-et-tickets-en-2026/",
-      "title": "Disneyland Paris en RER A avec des enfants: trajet et tarifs 2026",
-      "category": "voyages",
-      "publishedAt": "2026-10-31T04:29:30.562Z",
-      "location": {
-        "city": "Chessy",
-        "department": "Seine-et-Marne",
-        "region": "Île-de-France"
-      },
-      "ageDays": 25,
-      "rapidDrop": true,
-      "peakStart": "2026-11-01",
-      "peakEnd": "2026-11-03",
-      "recentStart": "2026-11-21",
-      "recentEnd": "2026-11-23",
-      "peakImpressions": 35,
-      "recentImpressions": 4,
-      "score": 93,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 35 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "ticket rer a disneyland paris",
-        "rer a disney",
-        "rer disneyland paris tarif"
+        "forum departemental des sciences villeneuve d'ascq",
+        "forum des sciences",
+        "forum des sciences lille",
+        "forum des sciences villeneuve d'ascq",
+        "forum sciences lille"
       ]
     },
     {
@@ -137,7 +78,7 @@
         "department": "Drôme",
         "region": "Auvergne-Rhône-Alpes"
       },
-      "ageDays": 29,
+      "ageDays": 30,
       "rapidDrop": true,
       "peakStart": "2026-10-28",
       "peakEnd": "2026-10-30",
@@ -168,7 +109,7 @@
         "department": "Essonne",
         "region": "Île-de-France"
       },
-      "ageDays": 13,
+      "ageDays": 14,
       "rapidDrop": true,
       "peakStart": "2026-11-18",
       "peakEnd": "2026-11-20",
@@ -177,16 +118,12 @@
       "peakImpressions": 30,
       "recentImpressions": 3,
       "score": 81,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 30 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 30 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
       "impressionRatio": null,
-      "focusQueries": [
-        "atelier pâtisserie enfant Essonne",
-        "atelier cuisine parent enfant Essonne",
-        "pâtisserie famille Orsay Yerres"
-      ]
+      "focusQueries": []
     },
     {
       "url": "/articles/cuisine/ateliers-de-cuisine-parent-enfant-a-toulouse-chocolat-patisserie-ou-menu-complet/",
@@ -198,7 +135,7 @@
         "department": "Haute-Garonne",
         "region": "Occitanie"
       },
-      "ageDays": 24,
+      "ageDays": 25,
       "rapidDrop": true,
       "peakStart": "2026-11-03",
       "peakEnd": "2026-11-05",
@@ -207,15 +144,17 @@
       "peakImpressions": 34,
       "recentImpressions": 9,
       "score": 75,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 34 impressions sur trois jours, puis 9 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 34 impressions sur trois jours, puis 9 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "focusQueries": [
-        "atelier cuisine parent enfant Toulouse",
-        "cours pâtisserie enfant Toulouse",
-        "atelier chocolat en famille Toulouse"
+        "atelier cuisine enfant toulouse",
+        "atelier cuisine ecole clae toulouse",
+        "cours de cuisine enfant toulouse",
+        "cours patisserie toulouse",
+        "stage patisserie toulouse"
       ]
     },
     {
@@ -228,7 +167,7 @@
         "department": "Paris",
         "region": "Île-de-France"
       },
-      "ageDays": 28,
+      "ageDays": 29,
       "rapidDrop": true,
       "peakStart": "2026-10-29",
       "peakEnd": "2026-10-31",
@@ -259,7 +198,7 @@
         "department": "Alpes-Maritimes",
         "region": "Provence-Alpes-Côte d’Azur"
       },
-      "ageDays": 10,
+      "ageDays": 11,
       "rapidDrop": true,
       "peakStart": "2026-11-16",
       "peakEnd": "2026-11-18",
@@ -280,6 +219,68 @@
       ]
     },
     {
+      "url": "/articles/bons-plans/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites/",
+      "title": "Pass Nantes en famille en 2026: tarifs, visites incluses et alternatives gratuites",
+      "category": "bons-plans",
+      "publishedAt": "2026-10-27T17:17:43+01:00",
+      "location": {
+        "city": "Nantes",
+        "department": "Loire-Atlantique",
+        "region": "Pays de la Loire"
+      },
+      "ageDays": 30,
+      "rapidDrop": true,
+      "peakStart": "2026-10-29",
+      "peakEnd": "2026-10-31",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 24,
+      "recentImpressions": 2,
+      "score": 66,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 24 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Pass Nantes en famille 2026",
+        "Pass Nantes tarifs famille",
+        "Pass Nantes visites incluses",
+        "visiter Nantes avec enfants pas cher"
+      ]
+    },
+    {
+      "url": "/articles/maison/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/",
+      "title": "Meubles d'occasion en Meurthe-et-Moselle: où acheter, donner et réparer ?",
+      "category": "maison",
+      "publishedAt": "2026-10-29T00:59:22+01:00",
+      "location": {
+        "city": "",
+        "department": "Meurthe-et-Moselle",
+        "region": "Grand Est"
+      },
+      "ageDays": 28,
+      "rapidDrop": true,
+      "peakStart": "2026-10-30",
+      "peakEnd": "2026-11-01",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 23,
+      "recentImpressions": 4,
+      "score": 57,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 23 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "meubles occasion Meurthe-et-Moselle",
+        "ressourcerie Nancy",
+        "donner meubles 54",
+        "Repair Café Lorraine"
+      ]
+    },
+    {
       "url": "/articles/parentalite/laep-a-colmar-ou-aller-gratuitement-avec-un-enfant-de-0-a-6-ans/",
       "title": "LAEP à Colmar: où aller gratuitement avec un enfant de 0 à 6 ans",
       "category": "parentalite",
@@ -289,7 +290,7 @@
         "department": "Haut-Rhin",
         "region": "Grand Est"
       },
-      "ageDays": 102,
+      "ageDays": 103,
       "rapidDrop": true,
       "peakStart": "2026-11-10",
       "peakEnd": "2026-11-12",
@@ -318,7 +319,7 @@
         "department": "Doubs",
         "region": "Bourgogne-Franche-Comté"
       },
-      "ageDays": 24,
+      "ageDays": 25,
       "rapidDrop": true,
       "peakStart": "2026-11-03",
       "peakEnd": "2026-11-05",
@@ -349,7 +350,7 @@
         "department": "Paris",
         "region": "Île-de-France"
       },
-      "ageDays": 21,
+      "ageDays": 22,
       "rapidDrop": true,
       "peakStart": "2026-11-09",
       "peakEnd": "2026-11-11",
@@ -379,7 +380,7 @@
         "department": "Côte-d'Or",
         "region": "Bourgogne-Franche-Comté"
       },
-      "ageDays": 27,
+      "ageDays": 28,
       "rapidDrop": true,
       "peakStart": "2026-11-01",
       "peakEnd": "2026-11-03",
@@ -410,7 +411,7 @@
         "department": "Paris",
         "region": "Île-de-France"
       },
-      "ageDays": 88,
+      "ageDays": 89,
       "rapidDrop": false,
       "peakStart": "2026-10-27",
       "peakEnd": "2026-11-02",
@@ -439,7 +440,7 @@
         "department": "Seine-et-Marne",
         "region": "Île-de-France"
       },
-      "ageDays": 40,
+      "ageDays": 41,
       "rapidDrop": false,
       "peakStart": "2026-10-27",
       "peakEnd": "2026-11-02",
@@ -554,7 +555,7 @@
   ],
   "excluded": {
     "expired": 198,
-    "cooling": 76
+    "cooling": 73
   },
   "warnings": [
     "Diagnostics par requêtes : 5/5.",
