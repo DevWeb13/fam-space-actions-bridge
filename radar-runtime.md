@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -99,16 +102,16 @@ sources:
     url: https://assoludoplouer.wixsite.com/my-site/contact-3
   - title: "Mairie de Lanvallay: bibliothèque et ludothèque"
     url: https://www.lanvallay.fr/mes-loisirs/bibliotheque/
-  - title: "Mairie de Lanvallay: permanence du 14 novembre 2026"
-    url: https://www.lanvallay.fr/agenda/ludotheque-4/
+  - title: "Mairie de Lanvallay: permanence du 2 décembre 2026"
+    url: https://www.lanvallay.fr/agenda/ludotheque-7/
   - title: "Mairie de Lanvallay: agenda des permanences"
     url: https://www.lanvallay.fr/mes-loisirs/agenda/
   - title: "Au Bois des Ludes: documentation du catalogue"
     url: https://catalogue.auboisdesludes.com/documentation/
-reviewAt: 2026-11-15
+reviewAt: 2026-12-03
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/vie-pratique/(2026)/(10)/ludotheques-autour-de-dinan-emprunter-des-jeux-pour-la-maison/index.md
   targetSha: c01efa4bee85e69afa83695e1b3c946f3d0fd575
@@ -137,34 +140,68 @@ radar:
       - horaire ludothèque
 ---
 
-## Mission retenue
-Améliorer le guide des trois ludothèques autour de Dinan, notamment Plancoët, Plouër-sur-Rance et Lanvallay.
+Emprunter un jeu permet de le découvrir en famille, d’y rejouer quelques semaines, puis de changer sans encombrer les placards. Autour de Dinan, dans les Côtes-d’Armor, les ludothèques de Plancoët et de Plouër-sur-Rance ainsi que les permanences de Lanvallay proposent ce service, avec la possibilité de jouer sur place.
 
-## Pourquoi cette mission
-Premier candidat rapidDrop, cause non établie. Les recherches concernent notamment les horaires de Plancoët et Plouër. Lacunes vérifiées indépendamment: le guide omet les samedis des semaines paires et les horaires de vacances publiés par Dinan Agglomération; il présente une permanence de Lanvallay déjà passée comme prochaine. La comparaison financière reste à expliciter pour les familles.
+Leurs formules diffèrent: Plancoët comprend les prêts dans un forfait annuel, tandis que Plouër-sur-Rance et Lanvallay facturent chaque jeu en plus de l’adhésion. Les durées d’emprunt vont de deux à quatre semaines.
 
-## Décision du lecteur
-Choisir selon le nombre de jeux empruntés dans l'année, les jours réellement accessibles et la durée du prêt.
+## Plancoët: jusqu’à trois jeux pour trois semaines
 
-## Faits à traiter
-- Plancoët: préciser les samedis des semaines paires, les horaires de vacances (mardi 15h-18h, mercredi 10h-12h30 et 15h-18h, vendredi 15h-18h30) et le téléphone 02 96 89 40 37. Les pages officielles divergent sur le 33/34 rue de la Madeleine; préserver cette réserve et conseiller de confirmer l'entrée.
-- Lanvallay: remplacer la permanence passée par celle du mercredi 2 décembre 2026 de 10h30 à 12h, officiellement annoncée; conserver le rythme indicatif et le lien agenda. Ajouter le contact bibliothèque et éventuellement Ludolire (dès 4 ans, gratuit, sur inscription), distinct des prêts.
-- Comparer les coûts annuels à nombre égal d'emprunts: à 12 prêts, 35 € à Plancoët, 32 € à Lanvallay, 44 € à Plouër si tarif associatif de 32 € confirmé; à 24 prêts, respectivement 35 €, 44 €, 56 €. À Lanvallay, égalité à 15 prêts, Plancoët moins cher à partir de 16. Ne pas assimiler les durées de prêt ou le nombre de jeux simultanés. Préserver les divergences de tarifs et horaires de Plouër, la première visite gratuite et les informations déjà utiles; les pages de l'association n'ont pas pu être rouvertes lors de ce passage, donc ne pas présenter le tarif de 32 € comme nouvellement confirmé.
-- Conserver les conseils de réservation et retour, les données de catalogue, la distinction carte bibliothèque/adhésion ludothèque, l'image et les crédits existants.
+À la [ludothèque de Dinan Agglomération](https://www.dinan-agglomeration.fr/activites-et-loisirs/culture-et-pratiques-artistiques/culture/ludotheque/), le jeu sur place est **gratuit et ouvert à tous**.
 
-## Sources de départ
-- https://www.dinan-agglomeration.fr/activites-et-loisirs/culture-et-pratiques-artistiques/culture/ludotheque/
-- https://www.dinan-agglomeration.fr/annuaire/ludotheque-plancoet/
-- https://www.plouer-sur-rance.fr/ludotheque/
-- https://www.lanvallay.fr/agenda/ludotheque-7/
-- https://www.lanvallay.fr/mes-loisirs/bibliotheque/
-- https://www.lanvallay.fr/mes-loisirs/agenda/
+L’adhésion familiale coûte **35 € pour un an, de date à date**. Elle permet d’emporter jusqu’à **trois jeux pour trois semaines**. Le fonds compte plus de mille jeux et jouets, de l’imitation et de la construction aux jeux de règles.
 
-## Affiliation
-Pas d'offre partenaire naturelle pour un service local de prêt de jeux. Ne pas ajouter d'hébergement artificiellement.
+La ludothèque se trouve au **34 rue de la Madeleine, 22130 Plancoët**, selon sa [fiche officielle](https://www.dinan-agglomeration.fr/annuaire/ludotheque-plancoet/). La page générale du service indique le numéro 33 et le 02 96 89 40 37, tandis que l’annuaire indique le 34 et le 02 96 87 40 39. Confirmez l’entrée si vous venez pour la première fois. En période scolaire, les ouvertures annoncées sont les suivantes:
 
-## Continuations internes
-Conserver le guide Jeux & Cadeaux déjà lié pour les familles qui veulent comparer les jeux de logique.
+- Mardi de 16 h 30 à 18 h.
+- Mercredi de 10 h à 12 h 30 et de 15 h à 18 h.
+- Vendredi de 16 h 30 à 18 h 30.
+- Le samedi des semaines paires, de 10 h à 12 h 30.
+
+Pendant les vacances scolaires, les créneaux annoncés sont le mardi de 15 h à 18 h, le mercredi de 10 h à 12 h 30 puis de 15 h à 18 h, et le vendredi de 15 h à 18 h 30. Aucun samedi régulier n’est indiqué pour cette période. Le [catalogue de Plancoët](https://www.dyade-fr.com/WD150AWP/WD150Awp.exe/CONNECT/e-Kawa-Ludotheque?Ludotheque=PLANCOET) permet de rechercher les jeux disponibles et de demander une réservation. Vérifiez les éventuelles fermetures avant de vous déplacer.
+
+## Plouër-sur-Rance: des matinées pour les tout-petits
+
+La ludothèque plouëraise accueille notamment les plus jeunes sur des créneaux « ludo pitchounes », présentés sur la [page municipale](https://www.plouer-sur-rance.fr/la-ludotheque/). **Les enfants de moins de huit ans doivent être accompagnés.**
+
+La première visite est gratuite, puis une entrée sans abonnement coûte **2 € par personne**. La mairie affiche une adhésion familiale annuelle de **30 €**; le tarif de **32 € pour 365 jours** précédemment affiché par [l’association](https://assoludoplouer.wixsite.com/my-site/about-1) n’a pas pu être confirmé à nouveau. Demandez le tarif en vigueur avant de vous inscrire. Le prêt coûte **1 € par jeu pour deux semaines**, en supplément de l’adhésion.
+
+Les horaires indiqués par la mairie sont:
+
+- Mardi, jeudi et vendredi de 10 h à 11 h 30.
+- Mercredi de 10 h à 12 h et de 15 h à 18 h.
+- Samedi de 10 h 30 à 12 h.
+
+L’association avait également publié une fin de matinée à 11 h 45 du mardi au vendredi. Ces horaires n’ont pas pu être vérifiés à nouveau sur son site: confirmez votre créneau, notamment pendant les vacances.
+
+La ludothèque se situe au **9 rue du Four à Chaux**. Vous pouvez joindre l’équipe au **02 96 86 88 94**, indiqué sur sa [page de contact](https://assoludoplouer.wixsite.com/my-site/contact-3).
+
+## Lanvallay: quatre semaines de prêt lors des permanences
+
+À Lanvallay, Au Bois des Ludes intervient **deux fois par mois à la bibliothèque**. Le jeu sur place est gratuit pendant ces rendez-vous. L’adhésion familiale coûte **20 € par an**, auxquels s’ajoute **1 € par jeu emprunté pour quatre semaines**, selon la [présentation municipale](https://www.lanvallay.fr/mes-loisirs/bibliotheque/).
+
+Cette durée laisse davantage de temps entre deux emprunts, mais les visites doivent tenir compte des permanences. L’ouverture de la bibliothèque ne signifie pas que la ludothèque est présente.
+
+Une [permanence est annoncée le mercredi 2 décembre 2026](https://www.lanvallay.fr/agenda/ludotheque-7/), de 10 h 30 à 12 h, à la bibliothèque du **9 rue de Saint James**. Pour les autres dates, consultez [l’agenda municipal](https://www.lanvallay.fr/mes-loisirs/agenda/) ou contactez la bibliothèque au 02 96 85 90 72.
+
+La bibliothèque propose aussi Ludolire, une animation qui associe histoires et jeux pour les enfants dès 4 ans accompagnés d’un adulte. Elle est gratuite, sur inscription, et distincte des permanences de prêt.
+
+**La carte gratuite de la bibliothèque et du réseau Lirici ne remplace pas l’adhésion nécessaire pour emprunter les jeux.**
+
+Le catalogue d’Au Bois des Ludes permet aux adhérents de consulter les collections et de réserver des jeux. Pour y accéder, le compte doit être créé par l’équipe, comme l’explique la [documentation du catalogue](https://catalogue.auboisdesludes.com/documentation/). Demandez sa mise en place lors de votre adhésion.
+
+## Quelle formule coûte le moins cher sur un an ?
+
+Pour comparer les trois adhésions, comptez chaque jeu emprunté séparément, et non chaque déplacement. Avec douze prêts dans l’année, le budget est de 35 € à Plancoët, 32 € à Lanvallay et 42 à 44 € à Plouër-sur-Rance selon le tarif d’adhésion confirmé. Pour vingt-quatre prêts, il atteint respectivement 35 €, 44 € et 54 à 56 €.
+
+À Lanvallay, quinze prêts reviennent au même prix que le forfait de Plancoët; à partir du seizième, Plancoët est moins cher à nombre de prêts égal. Mais quatre semaines de prêt à Lanvallay peuvent éviter des trajets supplémentaires, tandis que les matinées de Plouër sont pratiques pour les jeunes enfants. Tenez compte du temps de trajet, des dates de permanence et du nombre de jeux que vous souhaitez garder en même temps.
+
+## Choisir le premier jeu à emporter
+
+Indiquez à l’équipe l’âge des enfants, le nombre de joueurs habituel et le temps dont vous disposez pour une partie. Avec une fratrie, essayez quelques tours sur place pour voir si le plus jeune peut participer.
+
+Pour explorer différents types de jeux avec des enfants de 6 à 8 ans, notre [comparatif de Bandido, Chabyrinthe et Kameleo](https://www.fam-space.fr/cadeaux/guides/bandido-chabyrinthe-ou-kameleo-quel-jeu-de-logique-choisir-de-6-a-8-ans/) distingue coopération, compétition et défis en solo. La présence de ces titres dans la ludothèque choisie reste à vérifier.
+
+Avant de repartir, faites préciser la date de retour et les consignes si une pièce manque ou se casse. Si vous avez réservé une référence, attendez la confirmation de sa mise à disposition avant de vous déplacer spécialement.
 
 ## Article source exact à préserver et améliorer
 
