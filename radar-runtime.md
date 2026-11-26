@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 3/3
+# Radar Fam Space - actualisation GSC
 
 ## Mission
 
@@ -8,388 +8,1110 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 3/3
-
-Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
-
-Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
-
-Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
-
-Ensuite:
-- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
-- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
-- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
-- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
-- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
-- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
-- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
-- ne force ni longueur ni affiliation.
-
-Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
-
-Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
-- `summary`: contrôles et corrections réellement effectués;
-- `sources`: URLs factuelles revérifiées;
-- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
-
-**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
-
-## Règles partenaires
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-## Candidat validé de la phase précédente
-
----
-title: "Palais idéal du facteur Cheval en famille: visite et conseils à Hauterives"
-subtitle: Animaux sculptés, jeu d'observation et informations pratiques pour découvrir ce monument de la Drôme avec des enfants
-summary: "À Hauterives, explorez le Palais idéal avec les enfants: sculptures à observer, histoire de Ferdinand Cheval, durée, tarifs, abonnements et accès."
-slug: palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives
-status: published
-publishedAt: 2026-10-27T02:02:18+01:00
-updatedAt: 2026-11-10T15:36:17.548Z
-category: activites
-readingTime: 6
-location:
-  city: Hauterives
-  department: Drôme
-  region: Auvergne-Rhône-Alpes
-topic:
-  key: activites|hauterives|palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives|2026
-  keywords:
-    - Palais idéal du facteur Cheval en famille
-    - visiter le Palais idéal avec des enfants
-    - Hauterives Drôme sortie famille
-image:
-  src: /images/articles/2026/10/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives.webp
-  alt: Sculptures d'animaux et arches de pierre du Palais idéal du facteur Cheval à Hauterives
-sources:
-  - title: Palais idéal du facteur Cheval - Histoire
-    url: https://www.facteurcheval.com/histoire/
-  - title: Office de tourisme Porte de DrômArdèche - L'histoire du Palais idéal
-    url: https://www.autour-du-palais-ideal.fr/decouvrir/palais-ideal-du-facteur-cheval/lhistoire-du-palais-ideal/
-  - title: Palais idéal du facteur Cheval - Informations pratiques et tarifs
-    url: https://www.facteurcheval.com/infos-pratiques/
-  - title: Palais idéal du facteur Cheval - Abonnement
-    url: https://www.facteurcheval.com/abonnement/
-  - title: Palais idéal du facteur Cheval - Conditions générales de vente et d'accès
-    url: https://www.facteurcheval.com/mentions-legales/
-  - title: Palais idéal du facteur Cheval - Réservation conseillée
-    url: https://www.facteurcheval.com/reservation-conseillee/
-  - title: Auvergne-Rhône-Alpes Tourisme - Visite du Palais idéal
-    url: https://legrandtour.auvergnerhonealpes-tourisme.com/incontournables/le-palais-ideal-du-facteur-cheval/
-  - title: Palais idéal du facteur Cheval - Exposition Juliana Dorso
-    url: https://www.facteurcheval.com/programmation/evenements/juliana-dorso/
-  - title: Palais idéal du facteur Cheval - Actualités
-    url: https://www.facteurcheval.com/actualites/
-  - title: Cars Région Drôme - Ligne D03
-    url: https://www.laregionvoustransporte.fr/cars-region/cars-region-de-la-drome/ligne/d03-le-grand-serre-hauterives-saint-vallier/
-  - title: Cars Région Drôme - Ligne D12
-    url: https://www.laregionvoustransporte.fr/cars-region/cars-region-de-la-drome/ligne/d12-romans-le-grand-serre-beuarepaire/
-  - title: Palais idéal du facteur Cheval - Visite en famille et supports pédagogiques
-    url: https://www.facteurcheval.com/visitez-le-palais/seul-ou-en-famille/
-affiliate:
-  enabled: true
-  type: travel
-  destination: Hauterives
-reviewAt: 2027-04-19
-radar:
-  schemaVersion: 1
-  phase: 2
-  mode: refresh
-  targetPath: src/routes/articles/activites/(2026)/(10)/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives/index.md
-  targetSha: bc6836b78a535c47af4bd151f6c7b8dcf0d36581
-  targetUrl: /articles/activites/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives/
-  decision: Choisir une visite adaptée à l'âge des enfants, préparer les supports de jeu et connaître les réductions et conditions d'accès avant de réserver.
-  affiliationPotential: Conserver le gîte familial Abritel vérifié à Hauterives; aucun billet partenaire direct identifié.
-  gsc:
-    retrievedAt: 2026-11-25T07:30:00+01:00
-    dataThrough: 2026-11-23
-    signal: uncertain
-    basis: "Visibilité récente : 29 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante."
-    peakStart: 2026-10-28
-    peakEnd: 2026-10-30
-    recentStart: 2026-11-21
-    recentEnd: 2026-11-23
-    peakImpressions: 29
-    recentImpressions: 0
-    commonQueries: 0
-    positionDelta: null
-    impressionRatio: 0
-    focusQueries:
-      - conseils de réservation
-      - hauterive cheval
-      - palais du facteur cheval
-      - visiter le palais du facteur cheval
----
-
-Un palais construit par un facteur, sans architecte, et peuplé d'animaux de pierre: à Hauterives, dans le nord de la Drôme, le Palais idéal de Ferdinand Cheval se découvre en famille comme un monde imaginaire grandeur nature. Entre façades sculptées, passages autorisés et espace muséographique, les enfants peuvent chercher des créatures, reconnaître des bâtiments et découvrir l'histoire d'un homme qui a consacré 33 ans à son rêve. Ce n'est ni un château meublé ni un parc d'attractions.
-
-## Un jeu d'observation parmi les sculptures
-
-<!-- article-image-body:01 -->
-
-![Détail des sculptures de la façade est du Palais idéal du facteur Cheval à Hauterives](/images/articles/2026/10/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives-body-01.webp)
-
-*Photo: [Chbesset](https://commons.wikimedia.org/wiki/File:D%C3%A9tail_fa%C3%A7ade_est.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:01 -->
-
-Commencez par la façade est, là où Ferdinand Cheval a entrepris son œuvre. Autour de la « Source de Vie », cherchez le lion et le chien. Repérez ensuite les trois géants, les temples et les formes qui évoquent un conte. Le bestiaire du Palais comprend notamment une pieuvre, un caïman, un éléphant, un pélican et un ours. La façade ouest fait voyager entre des architectures imaginées à partir de différents pays, dont un chalet suisse.
-
-**Le petit défi Fam Space:** chaque enfant choisit trois détails à retrouver, par exemple un animal, un personnage et un bâtiment. Les plus grands peuvent aussi comparer les façades ou inventer une histoire à partir d'une sculpture. C'est une proposition de jeu libre, pas une chasse au trésor organisée par le monument.
-
-Pour préparer la visite, le Palais propose un **imagier dès 3 ans** et un **quiz dès 8 ans**, à récupérer dans les [supports de visite officiels](https://www.facteurcheval.com/visitez-le-palais/seul-ou-en-famille/). L'imagier invite à retrouver les figures sculptées; le quiz aborde aussi les architectures et les cultures du monde.
-
-La présentation historique officielle décrit les façades et leurs figures. L'[office de tourisme](https://www.autour-du-palais-ideal.fr/decouvrir/palais-ideal-du-facteur-cheval/lhistoire-du-palais-ideal/) présente également les espaces à découvrir. Certaines parties peuvent être inaccessibles selon les conditions de visite: respectez les protections et les indications sur place.
-
-## L'histoire du facteur Cheval à raconter aux enfants
-
-<!-- article-image-body:02 -->
-
-![Tombeau construit par Ferdinand Cheval dans le cimetière communal d'Hauterives, distinct du Palais idéal](/images/articles/2026/10/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives-body-02.webp)
-
-*Photo: [Bleugrenouille](https://commons.wikimedia.org/wiki/File:La_tombe_du_facteur_Cheval.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:02 -->
-
-En 1879, Ferdinand Cheval, facteur rural, trébuche sur une pierre étonnante pendant sa tournée. Elle réveille une idée: construire un palais dans son jardin. Il collecte des pierres au fil de ses trajets, les transporte notamment avec une brouette et poursuit son chantier pendant **33 ans**, jusqu'en 1912.
-
-On peut le raconter simplement: « Il distribuait le courrier et, pendant son temps libre, construisait le palais qu'il avait imaginé. » Son œuvre, qui n'était pas destinée à être habitée, a été classée monument historique en 1969.
-
-Un détail mérite d'être expliqué: le tombeau égyptien sculpté dans le Palais n'est pas sa sépulture. Ferdinand Cheval a ensuite construit un autre tombeau, au cimetière d'Hauterives, où il repose aujourd'hui. Le site du Palais distingue bien ces deux réalisations.
-
-## Quelle durée de visite prévoir ?
-
-Comptez **environ 1 h 30**, selon l'[estimation d'Auvergne-Rhône-Alpes Tourisme](https://legrandtour.auvergnerhonealpes-tourisme.com/incontournables/le-palais-ideal-du-facteur-cheval/). Le monument indique une heure pour le palais et son musée, compris dans le billet. Prévoyez davantage de temps si les enfants utilisent les jeux d'observation.
-
-Avec de jeunes enfants, privilégiez les façades et quelques sculptures faciles à reconnaître. Avec des enfants plus grands, prenez le temps de comparer les architectures, de lire certaines inscriptions et de visiter l'espace muséographique. Le parcours réel dépend aussi de l'affluence et des zones ouvertes. Des commentaires guidés de 20 minutes sont proposés sans supplément en avril, mai, juin et septembre à 15 h, ainsi qu'en juillet et août à 11 h et 16 h 30. Vérifiez leur maintien pour votre date.
-
-## Horaires, billets et abonnements en 2026
-
-Le Palais idéal se situe **8 rue du Palais, 26390 Hauterives**. Les horaires officiels indiquent une ouverture de **9 h 30 à 17 h 30 en octobre et novembre**, puis de **9 h 30 à 16 h 30 en décembre**. Le monument est fermé le 25 décembre et le 1er janvier. Le calendrier général annonce également une fermeture du 15 au 30 janvier inclus. Vérifiez les dates de réouverture et les tarifs 2027 avant de préparer une visite l'année prochaine.
-
-Les **tarifs individuels 2026** sont de **10,50 € par adulte** et **6,50 € de 6 à 16 ans inclus**; l'entrée est gratuite avant 6 ans et pour les enfants en situation de handicap jusqu'à 16 ans. Le tarif réduit de 7,50 € concerne les étudiants de moins de 26 ans, les demandeurs d'emploi, les personnes en situation de handicap et leurs accompagnants, sur justificatif. Un audioguide est proposé à 2 €. Consultez les [conditions tarifaires officielles](https://www.facteurcheval.com/infos-pratiques/). La réservation en ligne réduit chaque billet payant de 1 €. Pour deux adultes et deux enfants de 6 à 16 ans, cela représente **34 € sur place contre 30 € en ligne** pour une visite, hors réductions particulières.
-
-Si vous pensez revenir, le Palais propose aussi un **abonnement annuel à 15 € par adulte et 9 € par enfant de 6 à 16 ans**. Deux visites au tarif individuel sur place coûteraient 21 € par adulte et 13 € par enfant, contre 15 € et 9 € en abonnement. Pour cette même famille de quatre personnes, deux visites reviennent à 68 € sur place ou 60 € avec des billets en ligne, contre **48 € en abonnements annuels**. Ces abonnements sont individuels et nominatifs, non coupe-file, valables un an pour les visites de journée et ne dispensent pas de réserver un créneau à chaque venue; les événements spéciaux ne sont pas inclus. Vérifiez les conditions de l'abonnement et sa disponibilité avant achat. La réduction de 1 € sur les billets en ligne ne doit pas être présumée applicable à l'abonnement.
-
-**Réserver à l'avance est fortement conseillé**, notamment pendant les vacances. L'accès est soumis à une jauge et seule la réservation garantit l'entrée au créneau choisi, selon l'annonce officielle. Même un enfant de moins de 6 ans doit avoir son billet gratuit. Les conditions de vente précisent que les billets ne sont ni échangeables ni remboursables et qu'ils peuvent être présentés sur téléphone.
-
-## Poussette, sacs à dos, repas et accès sans voiture
-
-Le site comprend des passages extérieurs et des différences de niveau. Un accueil adapté est annoncé, mais **toutes les terrasses et tous les passages ne sont pas nécessairement praticables en poussette ou en fauteuil**. Pour connaître le parcours accessible à votre famille, contactez le monument au **04 75 68 81 19**. La [fiche touristique régionale](https://legrandtour.auvergnerhonealpes-tourisme.com/incontournables/le-palais-ideal-du-facteur-cheval/) détaille les aménagements signalés.
-
-**Les sacs à dos doivent être déposés dans les consignes sécurisées prévues à cet effet**, selon les informations pratiques du monument. Ils ne sont pas admis pendant la visite; vous pouvez donc venir avec un sac, mais devrez le laisser en consigne. Les pique-niques et la restauration sont interdits dans l'enceinte. Les animaux ne sont pas admis, sauf chiens d'assistance. Prévoyez le repas dans le village, avant ou après la visite. Des toilettes et des parkings sont signalés à proximité.
-
-**En transports en commun**, les cars Région [D03, notamment depuis Saint-Vallier](https://www.laregionvoustransporte.fr/cars-region/cars-region-de-la-drome/ligne/d03-le-grand-serre-hauterives-saint-vallier/) et [D12, sur l'axe Romans-sur-Isère et Beaurepaire](https://www.laregionvoustransporte.fr/cars-region/cars-region-de-la-drome/ligne/d12-romans-le-grand-serre-beuarepaire/), desservent l'arrêt « Place de la Galaure » à Hauterives. Vérifiez les jours de circulation, les correspondances et surtout l'horaire du retour avant de réserver vos billets d'entrée.
-
-## Exposition temporaire et travaux: les points d'actualité
-
-Du **19 septembre 2026 au 18 avril 2027**, l'exposition **« 140 ans et un jour » de Juliana Dorso** fait dialoguer l'univers du facteur Cheval avec celui de Madame de Sévigné à travers quinze peintures. Pour les enfants attirés par le dessin, c'est l'occasion de comparer les œuvres exposées aux sculptures du Palais. Il ne s'agit pas d'un atelier familial permanent. Consultez la [présentation de l'exposition](https://www.facteurcheval.com/programmation/evenements/juliana-dorso/).
-
-Le monument annonçait également des **travaux sur la façade sud et le sommet du tombeau égyptien jusqu'au 6 novembre 2026**. L'annonce toujours visible dans les actualités officielles ne confirme pas expressément que toutes les restrictions ont été levées. Si ces parties motivent votre venue, demandez leur état à l'accueil avant de partir.
-
-## Dormir à Hauterives pour prolonger la découverte
-
-Pour les familles qui viennent de loin, une nuit sur place évite de repartir juste après la visite. La [maison La Parenthèse sur Booking.com](https://www.booking.com/hotel/fr/la-parenthese-a-hauterives.fr.html), à environ trois minutes à pied du Palais, dispose de trois chambres, d'une cuisine et d'un jardin pour accueillir jusqu'à sept personnes. Autre possibilité, le [gîte de la Taillanderie sur Abritel](https://www.abritel.fr/location-vacances/p1823668) accueille jusqu'à six personnes dans trois chambres, avec cuisine et terrasse, à environ trois minutes à pied du monument selon l'annonce. Vérifiez les disponibilités et les conditions pour vos dates.
-
-Si vous souhaitez organiser une seconde sortie dans la Drôme, notre [guide de la Cité du Chocolat Valrhona en famille](https://www.fam-space.fr/articles/sorties/cite-du-chocolat-valrhona-en-famille-tarifs-duree-et-conseils-de-visite/) propose une visite différente, à Tain-l'Hermitage.
-
-## Article source exact à préserver et améliorer
-
-Chemin: src/routes/articles/activites/(2026)/(10)/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives/index.md
-
----
-title: "Palais idéal du facteur Cheval en famille: visite et conseils à Hauterives"
-subtitle: Animaux sculptés, jeu d'observation et informations pratiques pour découvrir ce monument de la Drôme avec des enfants
-summary: "À Hauterives, explorez le Palais idéal avec les enfants: sculptures à observer, histoire de Ferdinand Cheval, durée, tarifs, abonnements et accès."
-slug: palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives
-status: published
-publishedAt: 2026-10-27T02:02:18+01:00
-updatedAt: 2026-11-10T15:36:17.548Z
-category: activites
-readingTime: 6
-location:
-  city: Hauterives
-  department: Drôme
-  region: Auvergne-Rhône-Alpes
-topic:
-  key: activites|hauterives|palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives|2026
-  keywords:
-    - Palais idéal du facteur Cheval en famille
-    - visiter le Palais idéal avec des enfants
-    - Hauterives Drôme sortie famille
-image:
-  src: /images/articles/2026/10/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives.webp
-  alt: Sculptures d'animaux et arches de pierre du Palais idéal du facteur Cheval à Hauterives
-sources:
-  - title: Palais idéal du facteur Cheval - Histoire
-    url: https://www.facteurcheval.com/histoire/
-  - title: Office de tourisme Porte de DrômArdèche - L'histoire du Palais idéal
-    url: https://www.autour-du-palais-ideal.fr/decouvrir/palais-ideal-du-facteur-cheval/lhistoire-du-palais-ideal/
-  - title: Palais idéal du facteur Cheval - Informations pratiques et tarifs
-    url: https://www.facteurcheval.com/infos-pratiques/
-  - title: Palais idéal du facteur Cheval - Abonnement
-    url: https://www.facteurcheval.com/abonnement/
-  - title: Palais idéal du facteur Cheval - Conditions générales de vente et d'accès
-    url: https://www.facteurcheval.com/mentions-legales/
-  - title: Palais idéal du facteur Cheval - Réservation conseillée
-    url: https://www.facteurcheval.com/reservation-conseillee/
-  - title: Auvergne-Rhône-Alpes Tourisme - Visite du Palais idéal
-    url: https://legrandtour.auvergnerhonealpes-tourisme.com/incontournables/le-palais-ideal-du-facteur-cheval/
-  - title: Palais idéal du facteur Cheval - Exposition Juliana Dorso
-    url: https://www.facteurcheval.com/programmation/evenements/juliana-dorso/
-  - title: Palais idéal du facteur Cheval - Actualités
-    url: https://www.facteurcheval.com/actualites/
-  - title: Cars Région Drôme - Ligne D03
-    url: https://www.laregionvoustransporte.fr/cars-region/cars-region-de-la-drome/ligne/d03-le-grand-serre-hauterives-saint-vallier/
-  - title: Cars Région Drôme - Ligne D12
-    url: https://www.laregionvoustransporte.fr/cars-region/cars-region-de-la-drome/ligne/d12-romans-le-grand-serre-beuarepaire/
-affiliate:
-  enabled: true
-  type: travel
-  destination: Hauterives
-reviewAt: 2027-04-19
----
-
-Un palais construit par un facteur, sans architecte, et peuplé d'animaux de pierre: à Hauterives, dans le nord de la Drôme, le Palais idéal de Ferdinand Cheval se découvre en famille comme un monde imaginaire grandeur nature. Entre façades sculptées, passages autorisés et espace muséographique, les enfants peuvent chercher des créatures, reconnaître des bâtiments et découvrir l'histoire d'un homme qui a consacré 33 ans à son rêve. Ce n'est ni un château meublé ni un parc d'attractions.
-
-## Un jeu d'observation parmi les sculptures
-
-<!-- article-image-body:01 -->
-
-![Détail des sculptures de la façade est du Palais idéal du facteur Cheval à Hauterives](/images/articles/2026/10/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives-body-01.webp)
-
-*Photo: [Chbesset](https://commons.wikimedia.org/wiki/File:D%C3%A9tail_fa%C3%A7ade_est.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:01 -->
-
-Commencez par la façade est, là où Ferdinand Cheval a entrepris son œuvre. Autour de la « Source de Vie », cherchez le lion et le chien. Repérez ensuite les trois géants, les temples et les formes qui évoquent un conte. Le bestiaire du Palais comprend notamment une pieuvre, un caïman, un éléphant, un pélican et un ours. La façade ouest fait voyager entre des architectures imaginées à partir de différents pays, dont un chalet suisse.
-
-**Le petit défi Fam Space:** chaque enfant choisit trois détails à retrouver, par exemple un animal, un personnage et un bâtiment. Les plus grands peuvent aussi comparer les façades ou inventer une histoire à partir d'une sculpture. C'est une proposition de jeu libre, pas une chasse au trésor organisée par le monument.
-
-La présentation historique officielle décrit les façades et leurs figures. L'[office de tourisme](https://www.autour-du-palais-ideal.fr/decouvrir/palais-ideal-du-facteur-cheval/lhistoire-du-palais-ideal/) présente également les espaces à découvrir. Certaines parties peuvent être inaccessibles selon les conditions de visite: respectez les protections et les indications sur place.
-
-## L'histoire du facteur Cheval à raconter aux enfants
-
-<!-- article-image-body:02 -->
-
-![Tombeau construit par Ferdinand Cheval dans le cimetière communal d'Hauterives, distinct du Palais idéal](/images/articles/2026/10/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives-body-02.webp)
-
-*Photo: [Bleugrenouille](https://commons.wikimedia.org/wiki/File:La_tombe_du_facteur_Cheval.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
-
-<!-- /article-image-body:02 -->
-
-En 1879, Ferdinand Cheval, facteur rural, trébuche sur une pierre étonnante pendant sa tournée. Elle réveille une idée: construire un palais dans son jardin. Il collecte des pierres au fil de ses trajets, les transporte notamment avec une brouette et poursuit son chantier pendant **33 ans**, jusqu'en 1912.
-
-On peut le raconter simplement: « Il distribuait le courrier et, pendant son temps libre, construisait le palais qu'il avait imaginé. » Son œuvre, qui n'était pas destinée à être habitée, a été classée monument historique en 1969.
-
-Un détail mérite d'être expliqué: le tombeau égyptien sculpté dans le Palais n'est pas sa sépulture. Ferdinand Cheval a ensuite construit un autre tombeau, au cimetière d'Hauterives, où il repose aujourd'hui. Le site du Palais distingue bien ces deux réalisations.
-
-## Quelle durée de visite prévoir ?
-
-Comptez **environ 1 h 30**, selon l'[estimation d'Auvergne-Rhône-Alpes Tourisme](https://legrandtour.auvergnerhonealpes-tourisme.com/incontournables/le-palais-ideal-du-facteur-cheval/). Cette durée reste indicative.
-
-Avec de jeunes enfants, privilégiez les façades et quelques sculptures faciles à reconnaître. Avec des enfants plus grands, prenez le temps de comparer les architectures, de lire certaines inscriptions et de visiter l'espace muséographique. Le parcours réel dépend aussi de l'affluence et des zones ouvertes.
-
-## Horaires, billets et abonnements en 2026
-
-Le Palais idéal se situe **8 rue du Palais, 26390 Hauterives**. Les horaires officiels indiquent une ouverture de **9 h 30 à 17 h 30 en octobre et novembre**, puis de **9 h 30 à 16 h 30 en décembre**. Le monument est fermé le 25 décembre et le 1er janvier. Pour janvier 2027 et les autres dates futures, consultez le calendrier actualisé: les fermetures exceptionnelles affichées pour janvier 2026 ne permettent pas de déduire celles de 2027.
-
-Les **tarifs individuels 2026** sont de **10,50 € par adulte** et **6,50 € de 6 à 16 ans inclus**; l'entrée est gratuite avant 6 ans. La réservation en ligne réduit chaque billet payant de 1 €. Pour deux adultes et deux enfants de 6 à 16 ans, cela représente **34 € sur place contre 30 € en ligne** pour une visite, hors réductions particulières.
-
-Si vous pensez revenir, le Palais propose aussi un **abonnement annuel à 15 € par adulte et 9 € par enfant de 6 à 16 ans**. Deux visites au tarif individuel sur place coûteraient 21 € par adulte et 13 € par enfant, contre 15 € et 9 € en abonnement. Pour cette même famille de quatre personnes, deux visites reviennent à 68 € sur place ou 60 € avec des billets en ligne, contre **48 € en abonnements annuels**. Ces abonnements sont individuels et nominatifs, non coupe-file, valables un an pour les visites de journée et ne dispensent pas de réserver un créneau à chaque venue; les événements spéciaux ne sont pas inclus. Vérifiez les conditions de l'abonnement et sa disponibilité avant achat. La réduction de 1 € sur les billets en ligne ne doit pas être présumée applicable à l'abonnement.
-
-**Réserver à l'avance est fortement conseillé**, notamment pendant les vacances. L'accès est soumis à une jauge et seule la réservation garantit l'entrée au créneau choisi, selon l'annonce officielle. Même un enfant de moins de 6 ans doit avoir son billet gratuit. Les conditions de vente précisent que les billets ne sont ni échangeables ni remboursables et qu'ils peuvent être présentés sur téléphone.
-
-## Poussette, sacs à dos, repas et accès sans voiture
-
-Le site comprend des passages extérieurs et des différences de niveau. Un accueil adapté est annoncé, mais **toutes les terrasses et tous les passages ne sont pas nécessairement praticables en poussette ou en fauteuil**. Pour connaître le parcours accessible à votre famille, contactez le monument au **04 75 68 81 19**. La [fiche touristique régionale](https://legrandtour.auvergnerhonealpes-tourisme.com/incontournables/le-palais-ideal-du-facteur-cheval/) détaille les aménagements signalés.
-
-**Les sacs à dos doivent être déposés dans les consignes sécurisées prévues à cet effet**, selon les informations pratiques du monument. Ils ne sont pas admis pendant la visite; vous pouvez donc venir avec un sac, mais devrez le laisser en consigne. Les pique-niques et la restauration sont interdits dans l'enceinte. Les animaux ne sont pas admis, sauf chiens d'assistance. Prévoyez le repas dans le village, avant ou après la visite. Des toilettes et des parkings sont signalés à proximité.
-
-**En transports en commun**, les cars Région [D03, notamment depuis Saint-Vallier](https://www.laregionvoustransporte.fr/cars-region/cars-region-de-la-drome/ligne/d03-le-grand-serre-hauterives-saint-vallier/) et [D12, sur l'axe Romans-sur-Isère et Beaurepaire](https://www.laregionvoustransporte.fr/cars-region/cars-region-de-la-drome/ligne/d12-romans-le-grand-serre-beuarepaire/), desservent l'arrêt « Place de la Galaure » à Hauterives. Vérifiez les jours de circulation, les correspondances et surtout l'horaire du retour avant de réserver vos billets d'entrée.
-
-## Exposition temporaire et travaux: les points d'actualité
-
-Du **19 septembre 2026 au 18 avril 2027**, l'exposition **« 140 ans et un jour » de Juliana Dorso** fait dialoguer l'univers du facteur Cheval avec celui de Madame de Sévigné à travers quinze peintures. Pour les enfants attirés par le dessin, c'est l'occasion de comparer les œuvres exposées aux sculptures du Palais. Il ne s'agit pas d'un atelier familial permanent. Présentation officielle de l'exposition.
-
-Le monument annonçait également des **travaux sur la façade sud et le sommet du tombeau égyptien jusqu'au 23 octobre 2026**. L'annonce toujours visible dans les actualités officielles ne confirme pas expressément que toutes les restrictions ont été levées. Si ces parties motivent votre venue, demandez leur état à l'accueil avant de partir.
-
-## Dormir à Hauterives pour prolonger la découverte
-
-Pour les familles qui viennent de loin, une nuit sur place évite de repartir juste après la visite. La [maison La Parenthèse sur Booking.com](https://www.booking.com/hotel/fr/la-parenthese-a-hauterives.fr.html), à environ trois minutes à pied du Palais, dispose de trois chambres, d'une cuisine et d'un jardin pour accueillir jusqu'à sept personnes. Autre possibilité, le [gîte de la Taillanderie sur Abritel](https://www.abritel.fr/location-vacances/p1823668) accueille jusqu'à six personnes dans trois chambres, avec cuisine et terrasse, à environ 150 mètres du monument. Vérifiez les disponibilités et les conditions pour vos dates.
-
-Si vous souhaitez organiser une seconde sortie dans la Drôme, notre [guide de la Cité du Chocolat Valrhona en famille](https://www.fam-space.fr/articles/sorties/cite-du-chocolat-valrhona-en-famille-tarifs-duree-et-conseils-de-visite/) propose une visite différente, à Tain-l'Hermitage.
-
-## Contexte éditorial ciblé pour le maillage et les doublons
-
-### Articles proches préparés mécaniquement
-
-- /articles/vie-pratique/drome-sans-voiture-avec-des-enfants-train-cars-et-bus-pour-se-deplacer/ | Drôme sans voiture avec des enfants: train, cars et bus pour se déplacer | vie-pratique | Drôme, Auvergne-Rhône-Alpes
-- /articles/parentalite/premier-week-end-a-avignon-avec-un-bebe-ou-dormir-et-quoi-prevoir/ | Avignon avec un bébé: poussette, Palais des Papes et où dormir | parentalite | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
-- /articles/bons-plans/avignonnais-palais-des-papes-et-pont-gratuits-le-week-end/ | Avignonnais: Palais des Papes et Pont gratuits le week-end | bons-plans | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
-- /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | Salon du Cheval de Paris 2026 en famille: ateliers, jumping et Nuit du Cheval | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/equidays-2026-en-famille-dans-le-calvados-villages-gratuits-parade-et-animations/ | Équidays 2026 en famille dans le Calvados: villages gratuits, parade et animations | evenements | Caen, Calvados, Normandie
-- /articles/voyages/belle-ile-en-mer-en-famille-sans-voiture-ferry-et-deplacements/ | Belle-Île-en-Mer en famille sans voiture: ferry et déplacements | voyages | Le Palais, Morbihan, Bretagne
-- /articles/evenements/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel/ | Noël 2026 à Chambéry en famille: marchés, parade et ateliers | evenements | Chambéry, Savoie, Auvergne-Rhône-Alpes
-- /articles/sorties/palais-roure-avignon-famille-2026/ | Palais du Roure à Avignon en famille: retour sur les rendez-vous gratuits d'août 2026 | sorties | Avignon, Vaucluse, Provence-Alpes-Côte d'Azur
-- /articles/activites/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives/ | Palais idéal du facteur Cheval en famille: visite et conseils à Hauterives | activites | Hauterives, Drôme, Auvergne-Rhône-Alpes
-- /articles/maison/poterie-a-dieulefit-en-famille-ateliers-et-savoir-faire/ | Poterie à Dieulefit en famille: ateliers et savoir-faire | maison | Dieulefit, Drôme, Auvergne-Rhône-Alpes
-- /articles/maison/a-crest-amenager-sa-maison-avec-la-chignole/ | À Crest, aménager sa maison avec La Chignole | maison | Crest, Drôme, Auvergne-Rhône-Alpes
-- /articles/evenements/noel-2026-au-chateau-de-grignan-dates-tarifs-et-visite-en-famille/ | Noël 2026 au château de Grignan: dates, tarifs et visite en famille | evenements | Grignan, Drôme, Auvergne-Rhône-Alpes
-- /articles/activites/cite-du-chocolat-valrhona-a-la-toussaint-2026-quel-atelier-choisir-selon-l-age/ | Cité du Chocolat Valrhona à la Toussaint 2026: animations et ateliers avec des enfants | activites | Tain-l'Hermitage, Drôme, Auvergne-Rhône-Alpes
-- /articles/voyages/canoe-a-saillans-en-famille-3-6-9-ou-14-km/ | Canoë à Saillans en famille: 3, 6, 9 ou 14 km ? | voyages | Saillans, Drôme, Auvergne-Rhône-Alpes
-- /articles/sorties/ferme-aux-crocodiles-a-pierrelatte-faut-il-prevoir-une-demi-journee/ | Ferme aux Crocodiles à Pierrelatte: faut-il prévoir une demi-journée ? | sorties | Pierrelatte, Drôme, Auvergne-Rhône-Alpes
-- /articles/bons-plans/carte-top-dep-art-comment-utiliser-les-45-et-les-4-sorties-offertes-dans-la-drome/ | Carte Top Dép'Art: comment utiliser les 45 € et les 4 sorties offertes dans la Drôme | bons-plans | Valence, Drôme, Auvergne-Rhône-Alpes
-- /articles/parentalite/promeneurs-du-net-parentalite-dans-la-drome-a-qui-parler-en-ligne-quand-on-est-parent/ | Promeneurs du Net Parentalité dans la Drôme: à qui parler en ligne quand on est parent? | parentalite | Valence, Drôme, Auvergne-Rhône-Alpes
-- /articles/cuisine/week-end-gourmand-a-nyons-en-famille-marche-olives-et-bonnes-adresses/ | Week-end gourmand à Nyons en famille: marché, olives et bonnes adresses | cuisine | Nyons, Drôme, Auvergne-Rhône-Alpes
-- /articles/activites/a-pointe-noire-decouvrir-la-riviere-en-famille-avec-l-aquarando-d-acomat/ | À Pointe-Noire, découvrir la rivière en famille avec l’aquarando d’Acomat | activites | Pointe-Noire, Guadeloupe, Guadeloupe
-- /articles/activites/musee-de-l-illusion-a-lyon-en-famille-que-voir-et-combien-coute-la-visite/ | Musée de l'Illusion à Lyon en famille: que voir et combien coûte la visite ? | activites | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/activites/parc-animalier-d-auvergne-en-famille-billets-animaux-et-conseils-de-visite/ | Parc animalier d'Auvergne en famille: billets, animaux et conseils de visite | activites | Ardes, Puy-de-Dôme, Auvergne-Rhône-Alpes
-- /articles/activites/ferme-des-chanteraines-en-famille-animaux-ateliers-et-balade-gratuite/ | Ferme des Chanteraines en famille: animaux, ateliers et balade gratuite | activites | Villeneuve-la-Garenne, Hauts-de-Seine, Île-de-France
-
-### Historique Radar lié
-
-- refresh | /articles/voyages/belle-ile-en-mer-en-famille-sans-voiture-ferry-et-deplacements/ | 2026-11-11T14:37:08.889Z
-- opportunity | /articles/activites/cite-du-chocolat-valrhona-a-la-toussaint-2026-quel-atelier-choisir-selon-l-age/ | 2026-10-05T14:27:51.219Z
-- opportunity | /articles/evenements/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel/ | 2026-11-01T09:37:48.790Z
-- refresh | /articles/evenements/noel-2026-a-chambery-en-famille-marche-village-ou-fabrique-de-noel/ | 2026-11-17T01:29:09.873Z
-- refresh | /articles/activites/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives/ | 2026-11-10T15:36:17.613Z
-- opportunity | /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | 2026-10-22T04:59:04.773Z
-- refresh | /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | 2026-11-19T03:32:19.795Z
-
-### Phases 2 et 3
-
-Écris `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées et le corps complet de l'article. **Ne recopie pas les métadonnées inchangées et n'ajoute aucun bloc `radar`.** Le script normalise la syntaxe sûre de la requête, reprend mécaniquement les autres métadonnées et le bloc Radar de la phase précédente, puis incrémente la phase.
-
-Pour un refresh, le script conserve de lui-même les champs protégés de l'article source. Pour une opportunity, il conserve la catégorie, le territoire et le slug choisis en phase 1.
-
-En phase 3 seulement, ajoute `radarReview` avec `summary`, `sources` et, pour un refresh, `regressionCheck`. Une seule correction factuelle vérifiée peut être suffisante.
-
-## Écriture autorisée
-
-N'effectue aucune plomberie Git. Ne crée, ne nomme et ne supprime aucune branche Radar; ne choisis aucun SHA; ne modifie aucun fichier de DevWeb13/fam-space-qwik.
-
-Écris uniquement radar-request.md sur la branche main de DevWeb13/fam-space-actions-bridge selon le format fourni dans ce runtime. Le workflow GitHub se charge du reste. Une fois cette requête écrite, termine le passage.
+## Snapshot GSC quotidien
+
+Le cache compact est `radar-gsc-snapshot.json` sur `main` de `DevWeb13/fam-space-actions-bridge`. Il ne contient jamais les lignes GSC brutes.
+
+Cette tâche est séparée de la sélection éditoriale. **S'il n'existe aucune branche Radar active et que le snapshot doit être renouvelé, actualise uniquement le snapshot puis termine le passage. Ne choisis pas de mission dans la même exécution.** Le passage horaire suivant effectuera la phase 1 avec le snapshot prêt.
+
+Le snapshot est réutilisable lorsqu'il a `schemaVersion: 1`, a été généré le jour courant en Europe/Paris et que `dataThrough` n'a pas plus de sept jours de retard.
+
+Lorsqu'un nouveau snapshot est nécessaire, utilise Windsor.ai avec le compte `sc-domain:fam-space.fr`, connector `searchconsole`, `include_fresh_data: false`. **Chaque appel `get_data` Search Analytics doit filtrer explicitement `search_type = web` avec `filters: [["search_type","eq","web"]]`.** Récupère 28 jours jusqu'à la dernière journée consolidée:
+
+- une lecture `date, clicks, impressions` pour déterminer la fin réelle;
+- quatre lectures consécutives de sept jours `date, page, clicks, impressions, position`;
+- appelle `buildRadarShortlist(pageRows, catalog.articles, { now, siteRows, from, history: catalog.history })` pour identifier les cinq premiers candidats. Pour chacun, récupère les requêtes de sa page exacte sur les deux fenêtres `peakStart..peakEnd` et `recentStart..recentEnd`, avec `search_type = web` (dix appels de requêtes au maximum).
+- regroupe les réponses par article : `queryPairs = [{ url, peakQueries, recentQueries }]`. Appelle ensuite **`buildRadarSnapshot(pageRows, catalog.articles, { now, siteRows, from, history: catalog.history, warnings }, queryPairs)`**, du module embarqué. Écris son résultat directement dans `radar-gsc-snapshot.json`, sans recopier les métriques manuellement.
+- pour les autres articles, le diagnostic reste `needs_query_check` avec des mesures `null`. Si une lecture échoue, signale-le sans inventer de chiffres. Ne confonds jamais « pas de donnée » et zéro.
+
+Utilise uniquement le module Radar embarqué pour présélectionner les candidats et construire le snapshot. La fonction `buildRadarSnapshot` centralise la mise en forme et le diagnostic par article. Une réponse Windsor est considérée complète lorsque `status: done`, que `data` est un tableau et que `total_rows` correspond à `data.length`, sans indicateur explicite de troncature. **Un nombre rond de lignes, notamment 1 500, n'est jamais à lui seul une preuve de plafonnement et ne doit pas arrêter Radar.** Découpe seulement la période si Windsor signale réellement une réponse incomplète/tronquée, si `total_rows` ne correspond pas au nombre de lignes reçues, ou si `unwrapRows` refuse la réponse, notamment à son seuil conservateur de 5 000 lignes par réponse. Un 429, un refus d'accès ou un plafond réellement non résolu termine le passage. Maximum 50 appels `get_data`. Les réponses brutes restent temporaires.
+
+Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlist `refresh` avec ses diagnostics compacts, `strongPages`, `excluded` et les avertissements utiles.
+
+## Snapshot actuellement disponible
+
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-25T07:30:00+01:00",
+  "dataThrough": "2026-11-23",
+  "from": "2026-10-27",
+  "refresh": [
+    {
+      "url": "/articles/parentalite/laep-a-toulouse-ou-jouer-gratuitement-avec-son-enfant-de-moins-de-6-ans/",
+      "title": "LAEP à Toulouse: où jouer gratuitement avec son enfant de moins de 6 ans?",
+      "category": "parentalite",
+      "publishedAt": "2026-11-11T22:03:01+01:00",
+      "location": {
+        "city": "Toulouse",
+        "department": "Haute-Garonne",
+        "region": "Occitanie"
+      },
+      "ageDays": 14,
+      "rapidDrop": true,
+      "peakStart": "2026-11-17",
+      "peakEnd": "2026-11-19",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 86,
+      "recentImpressions": 3,
+      "score": 249,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 86 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "laep toulouse",
+        "laep",
+        "laep borderouge",
+        "laep fourtanier",
+        "espace enfant"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/",
+      "title": "Parc floral d’Orléans gratuit en hiver: horaires et sortie avec les enfants",
+      "category": "bons-plans",
+      "publishedAt": "2026-10-26T22:02:51+01:00",
+      "location": {
+        "city": "Orléans",
+        "department": "Loiret",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 30,
+      "rapidDrop": true,
+      "peakStart": "2026-10-30",
+      "peakEnd": "2026-11-01",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 69,
+      "recentImpressions": 3,
+      "score": 198,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 69 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "parc floral gratuit",
+        "parc floral de la source gratuit"
+      ]
+    },
+    {
+      "url": "/articles/cuisine/maison-du-cacao-a-pointe-noire-decouvrir-le-chocolat-en-famille/",
+      "title": "Maison du Cacao à Pointe-Noire: découvrir le chocolat en famille",
+      "category": "cuisine",
+      "publishedAt": "2026-11-08T06:04:50+01:00",
+      "location": {
+        "city": "Pointe-Noire",
+        "department": "Guadeloupe",
+        "region": "Guadeloupe"
+      },
+      "ageDays": 17,
+      "rapidDrop": true,
+      "peakStart": "2026-11-16",
+      "peakEnd": "2026-11-18",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 43,
+      "recentImpressions": 10,
+      "score": 99,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 43 impressions sur trois jours, puis 10 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0.308,
+      "focusQueries": [
+        "la maison du cacao",
+        "maison du cacao en guadeloupe",
+        "maison du cacao guadeloupe",
+        "la maison du cacao guadeloupe",
+        "maison cacao guadeloupe"
+      ]
+    },
+    {
+      "url": "/articles/voyages/disneyland-paris-en-rer-a-avec-des-enfants-trajet-et-tickets-en-2026/",
+      "title": "Disneyland Paris en RER A avec des enfants: trajet et tarifs 2026",
+      "category": "voyages",
+      "publishedAt": "2026-10-31T04:29:30.562Z",
+      "location": {
+        "city": "Chessy",
+        "department": "Seine-et-Marne",
+        "region": "Île-de-France"
+      },
+      "ageDays": 25,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 35,
+      "recentImpressions": 4,
+      "score": 93,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 35 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "ticket rer a disneyland paris",
+        "rer a disney",
+        "rer disneyland paris tarif"
+      ]
+    },
+    {
+      "url": "/articles/activites/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives/",
+      "title": "Palais idéal du facteur Cheval en famille: visite et conseils à Hauterives",
+      "category": "activites",
+      "publishedAt": "2026-10-27T02:02:18+01:00",
+      "location": {
+        "city": "Hauterives",
+        "department": "Drôme",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "ageDays": 29,
+      "rapidDrop": true,
+      "peakStart": "2026-10-28",
+      "peakEnd": "2026-10-30",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 29,
+      "recentImpressions": 0,
+      "score": 87,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 29 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "conseils de réservation",
+        "hauterive cheval",
+        "palais du facteur cheval",
+        "visiter le palais du facteur cheval"
+      ]
+    },
+    {
+      "url": "/articles/cuisine/ateliers-patisserie-en-essonne-ou-cuisiner-avec-ses-enfants/",
+      "title": "Ateliers pâtisserie en Essonne: où cuisiner avec ses enfants?",
+      "category": "cuisine",
+      "publishedAt": "2026-11-12T10:04:02+01:00",
+      "location": {
+        "city": "",
+        "department": "Essonne",
+        "region": "Île-de-France"
+      },
+      "ageDays": 13,
+      "rapidDrop": true,
+      "peakStart": "2026-11-18",
+      "peakEnd": "2026-11-20",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 30,
+      "recentImpressions": 3,
+      "score": 81,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 30 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "atelier pâtisserie enfant Essonne",
+        "atelier cuisine parent enfant Essonne",
+        "pâtisserie famille Orsay Yerres"
+      ]
+    },
+    {
+      "url": "/articles/cuisine/ateliers-de-cuisine-parent-enfant-a-toulouse-chocolat-patisserie-ou-menu-complet/",
+      "title": "Ateliers de cuisine parent-enfant à Toulouse: chocolat, pâtisserie ou menu complet ?",
+      "category": "cuisine",
+      "publishedAt": "2026-11-01T12:00:47+01:00",
+      "location": {
+        "city": "Toulouse",
+        "department": "Haute-Garonne",
+        "region": "Occitanie"
+      },
+      "ageDays": 24,
+      "rapidDrop": true,
+      "peakStart": "2026-11-03",
+      "peakEnd": "2026-11-05",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 34,
+      "recentImpressions": 9,
+      "score": 75,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 34 impressions sur trois jours, puis 9 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "atelier cuisine parent enfant Toulouse",
+        "cours pâtisserie enfant Toulouse",
+        "atelier chocolat en famille Toulouse"
+      ]
+    },
+    {
+      "url": "/articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/",
+      "title": "Paris avec une poussette: métro, RER, bus ou tram, que choisir ?",
+      "category": "voyages",
+      "publishedAt": "2026-10-28T12:27:07.504Z",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 28,
+      "rapidDrop": true,
+      "peakStart": "2026-10-29",
+      "peakEnd": "2026-10-31",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 26,
+      "recentImpressions": 1,
+      "score": 75,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 26 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "métro Paris poussette ascenseur",
+        "RER Paris avec poussette",
+        "bus Paris poussette dépliée",
+        "itinéraire accessible poussette Paris"
+      ]
+    },
+    {
+      "url": "/articles/activites/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux/",
+      "title": "Parc Phoenix à Nice en famille: serre tropicale, animaux et jeux",
+      "category": "activites",
+      "publishedAt": "2026-11-15T00:25:33+01:00",
+      "location": {
+        "city": "Nice",
+        "department": "Alpes-Maritimes",
+        "region": "Provence-Alpes-Côte d’Azur"
+      },
+      "ageDays": 10,
+      "rapidDrop": true,
+      "peakStart": "2026-11-16",
+      "peakEnd": "2026-11-18",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 22,
+      "recentImpressions": 0,
+      "score": 66,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Parc Phoenix en famille",
+        "activité avec enfants à Nice",
+        "serre tropicale Nice"
+      ]
+    },
+    {
+      "url": "/articles/parentalite/laep-a-colmar-ou-aller-gratuitement-avec-un-enfant-de-0-a-6-ans/",
+      "title": "LAEP à Colmar: où aller gratuitement avec un enfant de 0 à 6 ans",
+      "category": "parentalite",
+      "publishedAt": "2026-08-15T16:36:50+02:00",
+      "location": {
+        "city": "Colmar",
+        "department": "Haut-Rhin",
+        "region": "Grand Est"
+      },
+      "ageDays": 102,
+      "rapidDrop": true,
+      "peakStart": "2026-11-10",
+      "peakEnd": "2026-11-12",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 25,
+      "recentImpressions": 8,
+      "score": 51,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 25 impressions sur trois jours, puis 8 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "LAEP Colmar",
+        "parent enfant Colmar gratuit"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-a-besancon-en-famille-contes-gratuits-marche-solidaire-ou-artisans/",
+      "title": "Noël 2026 à Besançon en famille: contes, marché solidaire et artisans",
+      "category": "evenements",
+      "publishedAt": "2026-11-01T06:27:50.750Z",
+      "location": {
+        "city": "Besançon",
+        "department": "Doubs",
+        "region": "Bourgogne-Franche-Comté"
+      },
+      "ageDays": 24,
+      "rapidDrop": true,
+      "peakStart": "2026-11-03",
+      "peakEnd": "2026-11-05",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 28,
+      "recentImpressions": 7,
+      "score": 63,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 28 impressions sur trois jours, puis 7 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël Besançon 2026 enfants",
+        "contes gratuits Musée du Temps décembre 2026",
+        "marché solidaire Noël Chamars 2026",
+        "marché artisanal Besançon 5 6 décembre 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/",
+      "title": "Écoute, je danse ! à Paris le 5 décembre 2026: spectacle gratuit dès 6 mois",
+      "category": "evenements",
+      "publishedAt": "2026-11-04T21:32:12.084Z",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 21,
+      "rapidDrop": true,
+      "peakStart": "2026-11-09",
+      "peakEnd": "2026-11-11",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 20,
+      "recentImpressions": 0,
+      "score": 60,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 20 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Écoute je danse Paris décembre 2026",
+        "spectacle gratuit bébé Paris 5 décembre",
+        "bibliothèque Gutenberg spectacle 6 mois 3 ans"
+      ]
+    },
+    {
+      "url": "/articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/",
+      "title": "Marché de Noël 100 % Côte-d’Or à Dijon 2026: horaires, spectacles et Père Noël",
+      "category": "evenements",
+      "publishedAt": "2026-10-29T14:26:32.176Z",
+      "location": {
+        "city": "Dijon",
+        "department": "Côte-d'Or",
+        "region": "Bourgogne-Franche-Comté"
+      },
+      "ageDays": 27,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-21",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 22,
+      "recentImpressions": 4,
+      "score": 54,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "marché de Noël du Département Dijon 2026",
+        "marché de Noël 100 % Côte-d'Or 12 13 décembre",
+        "Jardins du Département Dijon Noël enfants",
+        "spectacles ateliers gratuits Père Noël Dijon"
+      ]
+    },
+    {
+      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
+      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
+      "category": "voyages",
+      "publishedAt": "2026-08-29T00:00:45+02:00",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 88,
+      "rapidDrop": false,
+      "peakStart": "2026-10-27",
+      "peakEnd": "2026-11-02",
+      "recentStart": "2026-11-17",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 2410,
+      "recentImpressions": 1618,
+      "score": 792,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "transport Paris avec enfants",
+        "Paris Visite ou Navigo famille"
+      ]
+    },
+    {
+      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
+      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-16T17:46:42.359Z",
+      "location": {
+        "city": "Lumigny-Nesles-Ormeaux",
+        "department": "Seine-et-Marne",
+        "region": "Île-de-France"
+      },
+      "ageDays": 40,
+      "rapidDrop": false,
+      "peakStart": "2026-10-27",
+      "peakEnd": "2026-11-02",
+      "recentStart": "2026-11-17",
+      "recentEnd": "2026-11-23",
+      "peakImpressions": 751,
+      "recentImpressions": 474,
+      "score": 277,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Lumigny Safari de Lumières 2026 2027",
+        "Safari de Lumières Lumigny tarifs famille",
+        "Lumigny Safari de Lumières billet combiné"
+      ]
+    }
+  ],
+  "strongPages": [
+    {
+      "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
+      "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
+      "category": "evenements",
+      "recentImpressions": 373,
+      "recentClicks": 20,
+      "recentPosition": 6.952,
+      "retention": 1.522
+    },
+    {
+      "url": "/articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/",
+      "title": "Gastronomades 2026 à Angoulême en famille: programme, tarifs et conseils",
+      "category": "evenements",
+      "recentImpressions": 357,
+      "recentClicks": 10,
+      "recentPosition": 6.213,
+      "retention": 1.231
+    },
+    {
+      "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
+      "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
+      "category": "evenements",
+      "recentImpressions": 280,
+      "recentClicks": 10,
+      "recentPosition": 3.943,
+      "retention": 0.697
+    },
+    {
+      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
+      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
+      "category": "voyages",
+      "recentImpressions": 1618,
+      "recentClicks": 8,
+      "recentPosition": 8.321,
+      "retention": 0.671
+    },
+    {
+      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
+      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
+      "category": "evenements",
+      "recentImpressions": 474,
+      "recentClicks": 7,
+      "recentPosition": 7.58,
+      "retention": 0.631
+    },
+    {
+      "url": "/articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/",
+      "title": "Recycleries autour de Chartres: où donner et acheter d'occasion ?",
+      "category": "maison",
+      "recentImpressions": 103,
+      "recentClicks": 7,
+      "recentPosition": 9.913,
+      "retention": 0.844
+    },
+    {
+      "url": "/articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/",
+      "title": "Noël à Trévarez 2026 en famille: dates, horaires et réservation",
+      "category": "evenements",
+      "recentImpressions": 1269,
+      "recentClicks": 5,
+      "recentPosition": 8.765,
+      "retention": 5.93
+    },
+    {
+      "url": "/articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/",
+      "title": "Noël 2026 au château de Goulaine: dates, billets et conseils en famille",
+      "category": "evenements",
+      "recentImpressions": 264,
+      "recentClicks": 5,
+      "recentPosition": 7.36,
+      "retention": 1.148
+    },
+    {
+      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
+      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
+      "category": "vie-pratique",
+      "recentImpressions": 214,
+      "recentClicks": 5,
+      "recentPosition": 5.308,
+      "retention": 0.955
+    },
+    {
+      "url": "/articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/",
+      "title": "Salon du Cheval de Paris 2026 en famille: ateliers, jumping et Nuit du Cheval",
+      "category": "evenements",
+      "recentImpressions": 124,
+      "recentClicks": 5,
+      "recentPosition": 7.629,
+      "retention": 2.531
+    }
+  ],
+  "excluded": {
+    "expired": 198,
+    "cooling": 76
+  },
+  "warnings": [
+    "Diagnostics par requêtes : 5/5.",
+    "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement."
+  ]
+}
+
+## Module Radar embarqué
+
+Le code ci-dessous est fourni directement pour les calculs Radar nécessaires à ce passage. Ne va pas le relire dans un autre fichier.
+
+```javascript
+// Pure JavaScript: usable in Node or a connector orchestration runtime.
+const DAY = 86400000;
+const dayNumber = (date) => {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date ?? ""))
+    throw new Error("Date GSC invalide.");
+  const value = Date.parse(`${date}T00:00:00Z`);
+  if (
+    !Number.isFinite(value) ||
+    new Date(value).toISOString().slice(0, 10) !== date
+  )
+    throw new Error("Date GSC invalide.");
+  return value / DAY;
+};
+const isoDay = (value) => new Date(value * DAY).toISOString().slice(0, 10);
+const round = (value) => Math.round(value * 1000) / 1000;
+export function unwrapRows(response) {
+  const value = response?.structuredContent ?? response;
+  if (response?.isError || (value.status && value.status !== "done"))
+    throw new Error("GSC indisponible ou traitement incomplet.");
+  const rows = Array.isArray(value) ? value : value.data;
+  if (
+    !Array.isArray(rows) ||
+    value.truncated === true ||
+    value.has_more === true ||
+    (value.total_rows !== undefined && value.total_rows !== rows.length)
+  )
+    throw new Error("Réponse GSC absente ou tronquée.");
+  // Conservative per-response threshold, not a claimed Windsor plan limit.
+  // Concatenated arrays are allowed after each response has been checked.
+  if (!Array.isArray(value) && rows.length >= 5000)
+    throw new Error(
+      "Réponse GSC potentiellement plafonnée; découper la période.",
+    );
+  if (rows.some((row) => row.search_type && row.search_type !== "web"))
+    throw new Error(
+      "Le périmètre Radar doit contenir seulement la recherche web.",
+    );
+  return rows;
+}
+export function canonicalPage(value) {
+  // Some connector runtimes do not expose the URL global.
+  if (typeof value !== "string") return undefined;
+  const path = value.replace(/^https?:\/\/(?:www\.)?fam-space\.fr(?=\/)/i, "");
+  if (!/^\/articles\/[^/?#]+\/[^/?#]+\/$/.test(path)) return undefined;
+  if (path.split("/").some((part) => part === "." || part === ".."))
+    return undefined;
+  return path;
+}
+const metric = (row, name) => {
+  const value = Number(row[name]);
+  if (
+    row[name] === null ||
+    row[name] === undefined ||
+    !Number.isFinite(value) ||
+    value < 0
+  )
+    throw new Error(`Métrique GSC invalide: ${name}.`);
+  return value;
+};
+function addMetric(target, row) {
+  const impressions = metric(row, "impressions");
+  target.impressions += impressions;
+  target.clicks += metric(row, "clicks");
+  target.positionSum += impressions ? metric(row, "position") * impressions : 0;
+}
+const empty = () => ({ impressions: 0, clicks: 0, positionSum: 0 });
+const view = (sum, days = 7) => ({
+  impressions: round(sum.impressions),
+  clicks: round(sum.clicks),
+  impressionsPerDay: round(sum.impressions / days),
+  position: sum.impressions ? round(sum.positionSum / sum.impressions) : null,
+});
+function windowSum(days, start, end) {
+  const result = empty();
+  for (let date = start; date <= end; date++) {
+    const row = days.get(date);
+    if (row) for (const key of Object.keys(result)) result[key] += row[key];
+  }
+  return result;
+}
+export function buildRadarShortlist(
+  response,
+  catalog,
+  {
+    now = new Date().toISOString(),
+    siteRows,
+    from,
+    limit = 15,
+    history = [],
+  } = {},
+) {
+  const rows = unwrapRows(response);
+  const site = siteRows ? unwrapRows(siteRows) : rows;
+  if (!site.length)
+    throw new Error("GSC ne retourne aucune journée consolidée.");
+  const siteDays = site.map((row) => dayNumber(row.date));
+  const end = siteDays.reduce((max, date) => Math.max(max, date), -Infinity);
+  const observedStart = siteDays.reduce(
+    (min, date) => Math.min(min, date),
+    Infinity,
+  );
+  const today = dayNumber(now.slice(0, 10));
+  if (end > today || today - end > 7)
+    throw new Error(
+      "Données GSC trop anciennes ou datées dans le futur; aucun export historique de secours.",
+    );
+  // Never create comparison weeks before the first observed site day.
+  const start = from ? Math.max(dayNumber(from), observedStart) : observedStart;
+  if (!Number.isFinite(start) || end - start < 13)
+    throw new Error("Au moins 14 jours GSC sont nécessaires.");
+  const byPage = new Map();
+  for (const row of rows) {
+    const page = canonicalPage(row.page),
+      date = dayNumber(row.date);
+    if (!page || date < start || date > end) continue;
+    if (!byPage.has(page)) byPage.set(page, new Map());
+    const days = byPage.get(page);
+    if (!days.has(date)) days.set(date, empty());
+    addMetric(days.get(date), row);
+  }
+  const entries = [];
+  for (const article of catalog) {
+    const page = canonicalPage(article.url);
+    if (
+      !page ||
+      article.status === "draft" ||
+      Date.parse(article.publishedAt) > Date.parse(now)
+    )
+      continue;
+    const days = byPage.get(page) ?? new Map();
+    const publishedDay = dayNumber(article.publishedAt.slice(0, 10));
+    const firstDay = Math.max(start, publishedDay);
+    // Three days of growth followed by three consolidated days of decline
+    // can be detected before a new page has two full GSC weeks.
+    if (end - firstDay < 5) continue;
+    const recent = windowSum(days, end - 6, end);
+    const recent3 = windowSum(days, end - 2, end);
+    let peak3 = empty(), peak3Start = firstDay;
+    for (let first = firstDay; first + 2 < end - 2; first++) {
+      const sum = windowSum(days, first, first + 2);
+      if (sum.impressions > peak3.impressions) {
+        peak3 = sum;
+        peak3Start = first;
+      }
+    }
+    let peak7 = empty(), peak7Start = firstDay;
+    if (end - firstDay >= 13) {
+      for (let first = firstDay; first + 6 < end - 6; first++) {
+        const sum = windowSum(days, first, first + 6);
+        if (sum.impressions > peak7.impressions) {
+          peak7 = sum;
+          peak7Start = first;
+        }
+      }
+    }
+    const total = windowSum(days, firstDay, end);
+    const expired = Boolean(
+      article.eventEndsAt && article.eventEndsAt < now.slice(0, 10),
+    );
+    const reviewDue = Boolean(
+      article.reviewAt && article.reviewAt <= now.slice(0, 10),
+    );
+    const lastRefresh = history
+      .filter((item) => item.url === page && item.mode === "refresh")
+      .map((item) => item.publishedAt)
+      .sort()
+      .at(-1);
+    const cooling = Boolean(
+      lastRefresh && Date.parse(now) - Date.parse(lastRefresh) < 14 * DAY,
+    );
+    const ageDays = today - publishedDay;
+    const firstVisible = [...days]
+      .filter(([date, values]) => date >= firstDay && values.impressions > 0)
+      .map(([date]) => date)
+      .sort((a, b) => a - b)[0];
+    const newlyVisible =
+      ageDays <= 30 ||
+      (firstVisible !== undefined && firstVisible > start && end - firstVisible <= 21);
+    const rapidDrop =
+      newlyVisible &&
+      peak3.impressions >= 20 &&
+      peak3.impressions - recent3.impressions >= 15 &&
+      recent3.impressions <= peak3.impressions * 0.35;
+    const weeklyDecline = end - firstDay >= 13
+      ? Math.max(0, peak7.impressions - recent.impressions) *
+        Math.min(1, peak7.impressions / 35) *
+        Math.min(1, total.impressions / 50)
+      : 0;
+    const rapidScore = rapidDrop ? (peak3.impressions - recent3.impressions) * 3 : 0;
+    const recentPosition = recent.impressions
+      ? recent.positionSum / recent.impressions
+      : null;
+    const clickPotentialScore =
+      end - firstDay >= 13 && recentPosition !== null && recentPosition <= 10
+        ? Math.max(0, recent.impressions * 0.01 - recent.clicks) * 10
+        : 0;
+    const searchPotential =
+      !rapidDrop && clickPotentialScore > weeklyDecline && clickPotentialScore > 0;
+    const score =
+      expired || cooling
+        ? 0
+        : Math.max(rapidScore, weeklyDecline, clickPotentialScore) +
+          (reviewDue ? 35 : 0);
+    // Recent pages must use available, non-overlapping three-day windows.
+    const shortWindow = rapidDrop || end - firstDay < 13;
+    const peak = shortWindow ? peak3 : peak7;
+    const peakStart = shortWindow ? peak3Start : peak7Start;
+    const peakDays = shortWindow ? 3 : 7;
+    const comparedRecent = shortWindow ? recent3 : recent;
+    const comparedRecentStart = shortWindow ? end - 2 : end - 6;
+    const retention = peak.impressions
+      ? comparedRecent.impressions / peak.impressions
+      : 1;
+    entries.push({
+      url: page,
+      title: article.title,
+      category: article.category,
+      location: article.location,
+      keywords: article.keywords ?? article.topic?.keywords ?? [],
+      publishedAt: article.publishedAt,
+      eventEndsAt: article.eventEndsAt,
+      reviewAt: article.reviewAt,
+      expired,
+      cooling,
+      reviewDue,
+      ageDays,
+      rapidDrop,
+      peakStart: isoDay(peakStart),
+      peakEnd: isoDay(peakStart + peakDays - 1),
+      recentStart: isoDay(comparedRecentStart),
+      recentEnd: isoDay(end),
+      peak: view(peak, peakDays),
+      recent: view(comparedRecent, peakDays),
+      retention: round(retention),
+      score: round(score),
+      signal: searchPotential ? "search_potential" : "needs_query_check",
+      basis: rapidDrop
+        ? `Visibilité récente : ${round(peak3.impressions)} impressions sur trois jours, puis ${round(recent3.impressions)} sur les trois derniers jours consolidés; cause non établie.`
+        : "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      ...(searchPotential
+        ? {
+            basis: `Page visible avec ${round(recent.impressions)} impressions, ${round(recent.clicks)} clics et une position moyenne de ${round(recentPosition)} sur sept jours; intention de recherche à examiner.`,
+            commonQueries: null,
+            positionDelta: null,
+            impressionRatio: null,
+            focusQueries: (Array.isArray(article.keywords)
+              ? article.keywords
+              : Array.isArray(article.topic?.keywords)
+                ? article.topic.keywords
+                : []
+            ).slice(0, 5),
+          }
+        : {}),
+    });
+  }
+  return {
+    schemaVersion: 1,
+    retrievedAt: now,
+    dataThrough: isoDay(end),
+    from: isoDay(start),
+    caveat:
+      "Les lignes absentes valent zéro dans les données retournées. GSC peut masquer des requêtes; les signaux ne prouvent ni désindexation ni causalité.",
+    refresh: entries
+      .filter((item) => item.score > 0)
+      .sort((a, b) =>
+        Number(b.rapidDrop && b.category !== "evenements") -
+          Number(a.rapidDrop && a.category !== "evenements") ||
+        Number(b.rapidDrop) - Number(a.rapidDrop) ||
+        b.score - a.score ||
+        a.url.localeCompare(b.url))
+      .slice(0, limit),
+    strongPages: entries
+      .filter(
+        (item) =>
+          !item.expired &&
+          item.recent.impressions >= 35 &&
+          item.retention >= 0.5,
+      )
+      .sort(
+        (a, b) =>
+          b.recent.clicks - a.recent.clicks ||
+          b.recent.impressions - a.recent.impressions ||
+          a.url.localeCompare(b.url),
+      )
+      .slice(0, 10),
+    excluded: {
+      expired: entries.filter((item) => item.expired).length,
+      cooling: entries.filter((item) => item.cooling).length,
+    },
+  };
+}
+export function diagnoseQueries(peakResponse, recentResponse) {
+  const aggregate = (response) => {
+    const result = new Map();
+    for (const row of unwrapRows(response)) {
+      if (typeof row.query !== "string")
+        throw new Error("Requête GSC manquante.");
+      if (!result.has(row.query)) result.set(row.query, empty());
+      addMetric(result.get(row.query), row);
+    }
+    return result;
+  };
+  const peak = aggregate(peakResponse),
+    recent = aggregate(recentResponse);
+  const common = [...peak.keys()].filter(
+    (query) =>
+      peak.get(query).impressions >= 10 &&
+      (recent.get(query)?.impressions ?? 0) >= 3,
+  );
+  let weight = 0,
+    change = 0;
+  for (const query of common) {
+    const first = peak.get(query),
+      last = recent.get(query);
+    const w = Math.min(first.impressions, last.impressions);
+    weight += w;
+    change +=
+      w *
+      (last.positionSum / last.impressions -
+        first.positionSum / first.impressions);
+  }
+  const delta = weight ? change / weight : null;
+  const total = (values) =>
+    [...values.values()].reduce((sum, item) => sum + item.impressions, 0);
+  const ratio = total(peak) ? total(recent) / total(peak) : null;
+  return {
+    signal:
+      delta !== null && delta >= 3
+        ? "rank_loss"
+        : delta !== null &&
+            Math.abs(delta) <= 2 &&
+            ratio !== null &&
+            ratio <= 0.25
+          ? "coverage_loss"
+          : "uncertain",
+    commonQueries: common.length,
+    positionDelta: delta === null ? null : round(delta),
+    impressionRatio: ratio === null ? null : round(ratio),
+    queries: [...new Set([...peak.keys(), ...recent.keys()])]
+      .map((query) => ({
+        query,
+        peak: view(peak.get(query) ?? empty()),
+        recent: view(recent.get(query) ?? empty()),
+      }))
+      .sort((a, b) => b.peak.impressions - a.peak.impressions),
+    caveat:
+      "coverage_loss désigne une baisse d'exposition observée, pas une preuve de désindexation. Les requêtes masquées et la saisonnalité limitent le diagnostic.",
+  };
+}
+// The shortlist ranks pages; only per-page query rows can establish a diagnosis.
+export function attachRadarQueryDiagnosis(item, peakResponse, recentResponse) {
+  const diagnosis = diagnoseQueries(peakResponse, recentResponse);
+  const signal =
+    item.signal === "search_potential" && diagnosis.signal === "uncertain"
+      ? "search_potential"
+      : diagnosis.signal;
+  const priority = (query) => {
+    const lostImpressions = Math.max(0, query.peak.impressions - query.recent.impressions);
+    const lostPositions =
+      query.peak.position !== null && query.recent.position !== null
+        ? Math.max(0, query.recent.position - query.peak.position)
+        : 0;
+    if (signal === "rank_loss")
+      return query.peak.impressions >= 10 && query.recent.impressions >= 3
+        ? lostPositions * Math.min(query.peak.impressions, query.recent.impressions)
+        : 0;
+    if (signal === "search_potential") return query.recent.impressions;
+    return lostImpressions;
+  };
+  const relevantQueries = diagnosis.queries
+    .filter((query) => signal !== "rank_loss" || priority(query) > 0)
+    .sort((a, b) => priority(b) - priority(a) || b.peak.impressions - a.peak.impressions)
+    .slice(0, 5)
+    .map(({ query }) => query);
+  const basis =
+    item.basis + " " +
+    (signal === "rank_loss"
+      ? `Recul moyen de ${diagnosis.positionDelta} positions sur ${diagnosis.commonQueries} requête(s) comparable(s).`
+      : signal === "coverage_loss"
+        ? `Baisse d'exposition sur les requêtes visibles (ratio ${diagnosis.impressionRatio}), sans recul de classement comparable établi.`
+        : signal === "search_potential"
+          ? "Les requêtes visibles ne démontrent pas une perte de classement."
+          : `Diagnostic sur ${diagnosis.commonQueries} requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.`);
+  return {
+    ...item,
+    signal,
+    basis,
+    commonQueries: diagnosis.commonQueries,
+    positionDelta: diagnosis.positionDelta,
+    impressionRatio: diagnosis.impressionRatio,
+    focusQueries: relevantQueries.length ? relevantQueries : item.focusQueries ?? [],
+  };
+}
+
+
+/** Prepare one compact snapshot from one shortlist and per-page query responses. */
+export function buildRadarSnapshot(pageRows, catalog, options = {}, queryPairs = []) {
+  const shortlist = buildRadarShortlist(pageRows, catalog, options);
+  const pairs = new Map(queryPairs.map((pair) => [canonicalPage(pair.url), pair]));
+  const refresh = shortlist.refresh.map((candidate, index) => {
+    const pair = index < 5 ? pairs.get(candidate.url) : undefined;
+    const item = pair
+      ? attachRadarQueryDiagnosis(candidate, pair.peakQueries, pair.recentQueries)
+      : candidate;
+    return {
+      url: item.url,
+      title: item.title,
+      category: item.category,
+      publishedAt: item.publishedAt,
+      location: item.location,
+      ageDays: item.ageDays,
+      rapidDrop: item.rapidDrop,
+      peakStart: item.peakStart,
+      peakEnd: item.peakEnd,
+      recentStart: item.recentStart,
+      recentEnd: item.recentEnd,
+      peakImpressions: item.peak.impressions,
+      recentImpressions: item.recent.impressions,
+      score: item.score,
+      signal: item.signal,
+      basis: item.basis,
+      commonQueries: item.commonQueries ?? null,
+      positionDelta: item.positionDelta ?? null,
+      impressionRatio: item.impressionRatio ?? null,
+      focusQueries: item.focusQueries ?? item.keywords.slice(0, 5),
+    };
+  });
+  return {
+    schemaVersion: 1,
+    generatedAt: options.now ?? new Date().toISOString(),
+    dataThrough: shortlist.dataThrough,
+    from: shortlist.from,
+    refresh,
+    strongPages: shortlist.strongPages.map((item) => ({
+      url: item.url,
+      title: item.title,
+      category: item.category,
+      recentImpressions: item.recent.impressions,
+      recentClicks: item.recent.clicks,
+      recentPosition: item.recent.position,
+      retention: item.retention,
+    })),
+    excluded: shortlist.excluded,
+    warnings: [
+      ...(options.warnings ?? []),
+      `Diagnostics par requêtes : ${refresh.slice(0, 5).filter((item) => item.signal !== "needs_query_check" && item.commonQueries !== null).length}/${Math.min(5, refresh.length)}.`,
+      "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement.",
+    ],
+  };
+}
+
+const STOP = new Set(
+  "avec pour dans sans famille familles enfant enfants tarif tarifs duree conseil conseils visite visiter billet billets activite activites sortie sorties evenement evenements preparation pratique pratiques autour leur leurs aussi quoi comment quel quelle quelles quels quand faire partir 2026 2027".split(
+    " ",
+  ),
+);
+const words = (value) =>
+  new Set(
+    String(value)
+      .replace(/œ/g, "oe")
+      .normalize("NFD")
+      .replace(/\p{Diacritic}/gu, "")
+      .toLowerCase()
+      .split(/[^a-z0-9]+/)
+      .filter((word) => word.length >= 3 && !STOP.has(word)),
+  );
+export function probableDuplicates(subject, catalog, limit = 5) {
+  const terms = words(
+    [
+      subject.title,
+      ...(subject.keywords ?? subject.topic?.keywords ?? []),
+    ].join(" "),
+  );
+  return catalog
+    .filter(
+      (article) => canonicalPage(article.url) !== canonicalPage(subject.url),
+    )
+    .map((article) => {
+      const candidate = words(
+        [
+          article.title,
+          ...(article.keywords ?? article.topic?.keywords ?? []),
+        ].join(" "),
+      );
+      const shared = [...terms].filter((word) => candidate.has(word));
+      const sameCity = Boolean(
+        subject.location?.city &&
+          subject.location.city === article.location?.city,
+      );
+      const sameDepartment = Boolean(
+        subject.location?.department &&
+          subject.location.department === article.location?.department,
+      );
+      return {
+        url: article.url,
+        title: article.title,
+        location: article.location,
+        sharedTerms: shared,
+        score:
+          shared.length / Math.max(1, new Set([...terms, ...candidate]).size) +
+          (sameCity ? 0.2 : sameDepartment ? 0.1 : 0),
+      };
+    })
+    .filter(
+      (item) =>
+        item.sharedTerms.length >= 2 ||
+        (item.sharedTerms.length === 1 && item.sharedTerms[0].length >= 6),
+    )
+    .sort((a, b) => b.score - a.score || a.url.localeCompare(b.url))
+    .slice(0, limit);
+}
+```
+
+## Résultat attendu
+
+Actualise uniquement radar-gsc-snapshot.json sur la branche main de DevWeb13/fam-space-actions-bridge avec le snapshot compact décrit ci-dessus, puis termine ce passage. Ne choisis aucune mission Radar dans la même exécution et ne modifie aucun autre fichier interne.
