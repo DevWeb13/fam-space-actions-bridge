@@ -481,3 +481,4 @@ automation/image-hero-20261125-fables-haute-saone-00ed7fa|97fa43eb4229fd4bc3ed2c
 automation/image-hero-20261125-fables-haute-saone-00ed7fa|5e5863ebb63c8ab0f9b65fdd910fd21e964673f8
 automation/image-hero-20261125-chambord-613636e|c37004459c21c988f0e85fcbd12f891c2309955f
 automation/image-hero-20261125-chambord-613636e|71c16369e3df1c2f947d7508fb432ad211b5e6e5
+automation/image-hero-20261126-maido-toulouse-09cec78|e1fd808db7595691a7668c8949b2b7a26bfad185
