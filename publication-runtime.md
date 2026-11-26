@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,78 +14,127 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Landes
 - Région: Nouvelle-Aquitaine
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-« Pastis landais maison: réussir la brioche traditionnelle pour le goûter des enfants ». Le pastis bourrit est une spécialité pâtissière des Landes à pâte levée, distincte de la boisson anisée. Proposer une recette familiale sans alcool ajouté, adaptée à un four domestique, en expliquant les différences avec les variantes traditionnelles.
-
-## Besoin du lecteur
-Comprendre la texture recherchée, choisir les ingrédients et les parfums, prévoir les temps de pousse et de cuisson, répartir les tâches avec les enfants et utiliser les restes.
-
-## Valeur éditoriale
-Comparer le pastis levé traditionnel et la version rapide à levure chimique du livret des collèges landais, sans les confondre. Retenir une recette à levure boulangère dont les proportions seront vérifiées auprès d'une source de recette directe en phase 2; préférer fleur d'oranger sans alcool et vanille sans alcool, ne pas prétendre que la cuisson élimine tout alcool. Expliquer les signes de pousse et de cuisson plutôt que promettre des durées universelles. Prévoir un goûter de vacances d'hiver et une idée de récupération façon pain perdu. La tourtière aux pommes a aussi été envisagée, mais son feuilletage traditionnel est plus délicat pour une première préparation familiale; la salade landaise aux asperges est moins adaptée à novembre. Écarter la garbure déjà publiée le 14 août. Ne pas transformer le sujet en visite du Musée de la Chalosse, déjà traité le 17 octobre. Les visites gourmandes datées de Souprosse repérées sont passées; ne pas les présenter comme réservables.
-
-## Affiliation
-Recherches web ciblées sur GetYourGuide, Tiqets, Klook, WegoTrip et KKday pour les ateliers de cuisine et pâtisserie landaise, pastis et tourtière: résultats hors territoire ou sans rapport, aucune offre pertinente confirmée. L'action principale est de cuisiner à domicile, non de voyager; aucun hébergement ou transport touristique justifié. Ne pas inventer de lien marchand.
-
-## Sources de départ
-- Tourisme Landes, histoire, ingrédients, usages et liens vers recettes de pastis: https://www.tourismelandes.com/pastis-le-gateau-landais/
-- Département des Landes, livret des recettes des collèges, recette de pastis page 42 (variante à levure chimique et alcool, à distinguer de la recette retenue): https://www.landes.fr/sites/default/files/content/publications/2023/2023_livret-recettes_colleges.pdf
-- Tourisme Landes, contexte gastronomique et distinction avec la tourtière: https://www.tourismelandes.com/decouvrir-la-destination/atmospheres-landaises/gastronomie-landaise/la-gastronomie-landaise/
-- Tourisme Landes, fiche artisan de Souprosse ouverte toute l'année, pour contextualiser le savoir-faire sans promettre une visite: https://www.tourismelandes.com/degustation/au-bon-pastis-landais-degaqu040fs00072/
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "cuisine"
+title: "Pastis landais maison: la recette du goûter sans alcool ajouté"
+subtitle: "Une pâte levée parfumée à la fleur d'oranger, à préparer en famille"
+summary: "Préparez un pastis landais à la fleur d'oranger avec les enfants, en suivant les deux temps de pousse et les repères de cuisson."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "recette pastis landais"
+  - "pastis bourrit sans alcool ajouté"
+  - "goûter landais"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Landes"
+  region: "Nouvelle-Aquitaine"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Tourisme Landes: Pastis, le gâteau landais"
+    url: "https://www.tourismelandes.com/pastis-le-gateau-landais/"
+  - title: "Recette de Landes Attractivité publiée dans Ma Campagne"
+    url: "https://www.macampagne-magazine.fr/recettes/le-pastis-landais"
+  - title: "Terres de Chalosse Tourisme: origine du pastis landais"
+    url: "https://www.chalosse.fr/les-bonnes-choses/les-specialites/pastis-landais/"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Dans les Landes, le pastis est aussi un gâteau. Rien à voir avec l'apéritif du même nom: le pastis bourrit est une spécialité gasconne à pâte levée, dont la mie tendre et relativement serrée rappelle celle d'une brioche. Sa croûte dorée et ses parfums en font un goûter particulièrement agréable à partager pendant les vacances.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+Autrefois préparé pour les grandes fêtes familiales, ce gâteau connaît plusieurs variantes locales. Comme l'explique [Terres de Chalosse Tourisme](https://www.chalosse.fr/les-bonnes-choses/les-specialites/pastis-landais/), les différences tiennent notamment aux arômes choisis. Pour cette recette familiale, nous privilégions la fleur d'oranger plutôt que le rhum ou l'armagnac.
+
+## Les ingrédients pour six personnes
+
+Les proportions et les deux levées s'appuient sur la [recette de Landes Attractivité publiée dans Ma Campagne](https://www.macampagne-magazine.fr/recettes/le-pastis-landais). Prévoyez un moule à brioche ou un moule rond à bords hauts.
+
+- 300 g de farine de blé
+- 100 g de beurre, plus un peu pour le moule
+- 100 g de sucre
+- 4 œufs
+- 10 cl de lait
+- 15 g de levure fraîche de boulanger
+- 2 cuillères à soupe d'eau de fleur d'oranger sans alcool
+- Une pincée de sel
+- Un peu de sucre glace pour la finition
+
+Vérifiez la composition de l'arôme de fleur d'oranger: certains arômes liquides contiennent de l'alcool. Si vous préférez la vanille, utilisez les graines d'une gousse plutôt qu'un extrait alcoolisé.
+
+La levure boulangère est importante ici. Elle donne à la pâte le temps de fermenter et de développer sa texture. Une préparation à la levure chimique peut donner un bon gâteau, mais elle ne suit pas le même procédé que le pastis bourrit.
+
+## Préparer la pâte le matin pour le goûter
+
+Comptez environ 20 minutes de préparation, deux heures de repos au minimum selon la température de la pièce et près de 50 minutes de cuisson. En hiver, commencez suffisamment tôt pour laisser la pâte lever sans précipitation.
+
+1. Faites fondre le beurre et laissez-le tiédir. Dans un grand saladier, émiettez la levure dans le lait légèrement tiède, surtout pas brûlant.
+2. Incorporez les œufs, le beurre, le sucre, le sel et la fleur d'oranger. Ajoutez la farine petit à petit en travaillant le mélange jusqu'à ce qu'il soit uniforme.
+3. Protégez le saladier avec un linge propre et placez-le à l'abri des courants d'air. Attendez environ une heure, ou davantage si nécessaire, jusqu'à ce que la pâte ait nettement gonflé.
+4. Mélangez brièvement pour faire retomber la pâte, puis transférez-la dans le moule beurré. Laissez-la reprendre du volume pendant environ une heure. Ne remplissez pas le moule à ras bord: la pâte doit avoir de la place pour monter.
+5. Préchauffez le four à 180 °C. Faites cuire environ 50 minutes en surveillant la coloration vers la fin. Une lame fine plantée au centre doit ressortir sans pâte crue. Si le dessus brunit trop tôt, protégez-le avec une feuille d'aluminium.
+6. Laissez tiédir avant de démouler sur une grille, puis ajoutez le sucre glace.
+
+La pâte est plus souple et collante que celle d'un pain classique. Évitez de rajouter beaucoup de farine simplement pour pouvoir la façonner à la main: vous risqueriez d'obtenir un gâteau sec. Les temps de pousse sont des repères, pas des échéances fixes.
+
+## Que peuvent faire les enfants ?
+
+Les plus jeunes peuvent peser le sucre, verser la farine déjà mesurée et parfumer la pâte. Les plus grands peuvent participer au mélange et préparer le moule. Un adulte se charge du beurre chaud, du four et du démoulage.
+
+Pendant la première levée, prenez une photo du saladier ou repérez le niveau de la pâte sur sa paroi. Les enfants pourront observer la différence avant de passer à la suite. Évitez de goûter la pâte crue, qui contient des œufs et de la farine non cuite.
+
+## Déguster le pastis et utiliser les restes
+
+Servez-le tiède ou refroidi, en tranches épaisses, avec une compote de pommes ou un fruit de saison. Pour retrouver l'aspect de certaines versions traditionnelles, vous pouvez remplacer le sucre glace par du sucre perlé ajouté avant la cuisson.
+
+Une fois refroidi, conservez le gâteau dans une boîte fermée et dégustez-le de préférence dans les deux jours. Vous pouvez aussi congeler des tranches pour un prochain goûter.
+
+Si le pastis a perdu de son moelleux, reprenez l'idée du pain perdu proposée par [Tourisme Landes](https://www.tourismelandes.com/pastis-le-gateau-landais/): trempez rapidement les tranches dans un mélange d'œuf battu et de lait, puis faites-les dorer à la poêle dans un peu de beurre, jusqu'à ce que l'œuf soit bien cuit. Une façon de profiter du gâteau une seconde fois, sans préparer une nouvelle pâte.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -114,4 +163,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
