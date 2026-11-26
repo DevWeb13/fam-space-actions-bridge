@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261126-2356-musee-des-beaux-arts-de-draguignan-en-famille-gratuites-ateliers-et-bo",
+  "lastProcessedCommit": "0fb75f64d492a39c83da8cb5bde0662f0f25ecd7"
 }
