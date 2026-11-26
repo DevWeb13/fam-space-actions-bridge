@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261126-1805-pastis-landais-maison-reussir-la-brioche-traditionnelle-pour-le-gouter",
+  "lastProcessedCommit": "a6b2e88817847fd40e1fb43e480f2d3281cb34d0"
 }
