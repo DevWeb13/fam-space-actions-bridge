@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Ateliers de cuisine parent-enfant à Toulouse: chocolat, pâtisserie ou menu complet ?"
-subtitle: Deux ateliers, des cours à 70 ou 76 € le duo et des réservations à vérifier selon l'âge
-summary: "À Toulouse, comparez les ateliers parent-enfant de L’atelier Gourmand et de L’atelier des Chefs: recettes, prix par duo, durée, âge, dates et inscription."
+subtitle: Deux adresses, des cours à 70 ou 76 € le duo, des desserts à emporter ou un déjeuner sur place.
+summary: "Comparez les ateliers parent-enfant à Toulouse selon l'âge, le budget, la durée et les recettes: macarons, chocolat, menu de Noël ou déjeuner sur place."
 slug: ateliers-de-cuisine-parent-enfant-a-toulouse-chocolat-patisserie-ou-menu-complet
 status: published
 publishedAt: 2026-11-01T12:00:47+01:00
@@ -88,22 +91,28 @@ sources:
     url: https://www.atelier-gourmand.fr/nos-ateliers/cours-cuisine-toulouse/programme/details/adulteenfant-1-inscription-par-binome-les-macarons-extraordinaires-sapin-et-bonhomme-de-neige-115416
   - title: L’atelier Gourmand - atelier Tout choco !
     url: https://www.atelier-gourmand.fr/nos-ateliers/cours-cuisine-toulouse/programme/details/adulteenfant-1-inscription-par-binome-tout-choco-71496
+  - title: L’atelier Gourmand - Mon délicieux repas 6-12 ans
+    url: https://www.atelier-gourmand.fr/nos-ateliers/cours-cuisine-toulouse/programme/details/adulte-enfant-6-12-ans-mon-delicieux-repas-71807
   - title: L’atelier Gourmand Toulouse - accès et contact
     url: https://www.atelier-gourmand.fr/nos-ateliers/cours-cuisine-toulouse/contact
-  - title: L’atelier des Chefs - séance du 25 novembre 2026
-    url: https://www.atelierdeschefs.fr/cours-de-cuisine/343738/parents-enfants-5-12-ans/
-  - title: L’atelier des Chefs - programme spécial Noël
+  - title: L’atelier des Chefs - Noël, créneau de 16 h 30
     url: https://www.atelierdeschefs.fr/cours-de-cuisine/344124/parent-enfant-special-noel/
+  - title: L’atelier des Chefs - Noël, créneau de 18 h 30
+    url: https://www.atelierdeschefs.fr/cours-de-cuisine/345120/parent-enfant-special-noel/
+  - title: L’atelier des Chefs - déjeuner du 30 décembre 2026
+    url: https://www.atelierdeschefs.fr/cours-de-cuisine/344722/dejeuner-facon-fast-food-sain-5-10-ans/
   - title: L’atelier des Chefs - Toulouse François Verdier, accès et contact
     url: https://www.atelierdeschefs.fr/ateliers/46/toulouse-francois-verdier/
+  - title: Toulouse Tourisme - Appart Hôtel Clément Ader
+    url: https://www.toulouse-tourisme.com/hebergement/appart-hotel-clement-ader/
 affiliate:
   enabled: true
   type: travel
   destination: Toulouse
-reviewAt: 2026-12-14
+reviewAt: 2026-12-31
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/cuisine/(2026)/(11)/ateliers-de-cuisine-parent-enfant-a-toulouse-chocolat-patisserie-ou-menu-complet/index.md
   targetSha: 5debdf1e3e3dd4b968e6a62d6104fb666cb64317
@@ -132,35 +141,71 @@ radar:
       - stage patisserie toulouse
 ---
 
-## Mission retenue
-Actualiser le comparatif des ateliers de cuisine parent-enfant à Toulouse.
+Envie de pâtisser avec votre enfant ou de préparer ensemble le repas du midi ? À Toulouse, L’atelier Gourmand et L’atelier des Chefs proposent des cours à quatre mains. Selon la séance, vous repartez avec vos préparations ou vous partagez le repas sur place. Les programmes de décembre permettent notamment de choisir entre une pâtisserie de Noël et un déjeuner en duo.
 
-## Pourquoi cette mission
-Les quatre candidats rapidDrop précédents ont déjà été actualisés le 26 novembre sur master. Pour Toulouse, le signal GSC est uncertain; aucune perte de classement démontrée. Lacune indépendante vérifiée: les dates du 11, 22 et 25 novembre sont passées et le guide ne distingue pas les créneaux de Noël complets des alternatives réellement proposées, notamment un déjeuner à déguster sur place le 30 décembre, contrairement aux exemples actuels à emporter.
+## L’atelier Gourmand: chocolat, macarons ou cuisine salée pendant 2 h
 
-## Décision du lecteur
-Choisir un cours selon l'âge, le coût du duo, le menu, les horaires et le mode de dégustation, puis vérifier son inscription.
+<!-- article-image-body:01 -->
 
-## Faits à traiter
-- Atelier Gourmand: programme adulte-enfant 70 € le binôme pour 2 h; repas 6-12 ans; macarons de Noël le 29 décembre de 14 h à 16 h, deux torchons. Retirer les dates passées de Tout choco mais conserver les recettes et les contenants demandés comme exemples de cette formule, sans promettre une séance future. Préserver accès, parking gratuit, arrêt Tissié et gare du TOEC; confirmer les âges selon le thème.
-- Atelier des Chefs: remplacer l'exemple du 25 novembre par des séances futures. Fiches officielles du 13 décembre: spécial Noël 16 h 30-18 h affiché complet et autre créneau 18 h 30-20 h affichant une place au contrôle; même menu à emporter, 76 €/duo, 5-10 ans. Le 30 décembre, 12 h-13 h 30, déjeuner façon fast-food maison avec dégustation sur place, 76 €/duo, 5-10 ans, préinscription proposée. Ne pas garantir les disponibilités; distinguer préinscription et confirmation. Recontrôler les fiches en rédaction, ne pas annoncer un nombre de places durable.
-- Conserver les deux images et crédits, les tarifs, durées, adresses, la distinction adulte + enfant, les précautions allergies et alcool selon les recettes effectivement retenues et les conseils de transport des plats. Signaler les éventuelles divergences d'âge sur les fiches. Adapter reviewAt aux dernières dates temporaires retenues.
+![Coques de macarons photographiées pendant une préparation de pâtisserie, sans lien avec l’établissement toulousain.](/images/articles/2026/11/ateliers-de-cuisine-parent-enfant-a-toulouse-chocolat-patisserie-ou-menu-complet-body-01.webp)
 
-## Sources de départ
-- https://www.atelier-gourmand.fr/nos-ateliers/cours-cuisine-toulouse/programme/adulte/enfant-634
-- https://www.atelier-gourmand.fr/nos-ateliers/cours-cuisine-toulouse/programme/details/adulteenfant-1-inscription-par-binome-les-macarons-extraordinaires-sapin-et-bonhomme-de-neige-115416
-- https://www.atelier-gourmand.fr/nos-ateliers/cours-cuisine-toulouse/programme/details/adulteenfant-1-inscription-par-binome-tout-choco-71496
-- https://www.atelier-gourmand.fr/nos-ateliers/cours-cuisine-toulouse/contact
-- https://www.atelierdeschefs.fr/cours-de-cuisine/344124/parent-enfant-special-noel/
-- https://www.atelierdeschefs.fr/cours-de-cuisine/345120/parent-enfant-special-noel/
-- https://www.atelierdeschefs.fr/cours-de-cuisine/344722/dejeuner-facon-fast-food-sain-5-10-ans/
-- https://www.atelierdeschefs.fr/ateliers/46/toulouse-francois-verdier/
+*Photo: [Hcallas](https://commons.wikimedia.org/wiki/File:French_Macaron.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
 
-## Affiliation
-Conserver https://www.booking.com/hotel/fr/privilege-appart-clement-ader.fr.html pour les familles en séjour. La fiche Booking renvoie actuellement un contrôle antibot; ne pas ajouter de nouvelles caractéristiques sans confirmation. Aucun billet direct des deux ateliers identifié chez les partenaires; ne pas substituer une activité sans rapport.
+<!-- /article-image-body:01 -->
 
-## Continuations internes
-Conserver le guide de destination Toulouse déjà présent pour les autres activités du séjour.
+À Lardenne, le [programme adulte-enfant de L’atelier Gourmand](https://www.atelier-gourmand.fr/nos-ateliers/cours-cuisine-toulouse/programme/adulte/enfant-634) propose des cours de **2 h à 70 € par binôme**, soit un adulte et un enfant. Selon la programmation, vous pouvez apprendre à préparer des cupcakes, des macarons, des sushis ou des makis. La formule [« Mon délicieux repas »](https://www.atelier-gourmand.fr/nos-ateliers/cours-cuisine-toulouse/programme/details/adulte-enfant-6-12-ans-mon-delicieux-repas-71807) a également été proposée aux **6-12 ans**; demandez si elle sera reconduite. Pour les autres thèmes, confirmez l'âge admis auprès de l'atelier.
+
+Deux séances illustrent les possibilités de pâtisserie:
+
+- **Mardi 29 décembre 2026, de 14 h à 16 h:** [macarons de Noël](https://www.atelier-gourmand.fr/nos-ateliers/cours-cuisine-toulouse/programme/details/adulteenfant-1-inscription-par-binome-les-macarons-extraordinaires-sapin-et-bonhomme-de-neige-115416), en forme de sapin et de bonhomme de neige. Apportez deux torchons.
+- **Mercredi 17 février 2027, de 15 h à 17 h:** [atelier « Tout choco ! »](https://www.atelier-gourmand.fr/nos-ateliers/cours-cuisine-toulouse/programme/details/adulteenfant-1-inscription-par-binome-tout-choco-71496), avec un gâteau coulant, une tartelette au caramel et une confiserie maison. La fiche actuelle demande deux ramequins et des boîtes hermétiques; vérifiez leur nombre et leur capacité avant de venir.
+
+Les créneaux sont annoncés sur le site de l'organisateur, sous réserve de disponibilité lors de l'inscription.
+
+**Accès:** 1 impasse de Lisieux, 31300 Toulouse. Parking privé gratuit, bus ligne 3 (arrêt Tissié) et gare du TOEC selon la [page de contact](https://www.atelier-gourmand.fr/nos-ateliers/cours-cuisine-toulouse/contact). Téléphone: 06 29 88 12 42.
+
+## L’atelier des Chefs: un menu en duo en 1 h 30
+
+<!-- article-image-body:02 -->
+
+![Mousse au chocolat maison préparée avec des blancs d’œufs en neige, illustration d’un dessert proposé dans les menus.](/images/articles/2026/11/ateliers-de-cuisine-parent-enfant-a-toulouse-chocolat-patisserie-ou-menu-complet-body-02.webp)
+
+*Photo: [Thesupermat](https://commons.wikimedia.org/wiki/File:Mousse_au_chocolat_-_Patisserie_-_005.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+Près de François-Verdier, L’atelier des Chefs propose des cours de **1 h 30 à 76 € par duo**. Les séances suivantes sont annoncées pour un parent et un enfant de **5 à 10 ans**.
+
+### Dimanche 13 décembre 2026: un menu de Noël à emporter
+
+Vous préparez un parmentier de canard aux patates douces, une bûche associant marrons et poire et un chocolat chaud parfumé à la vanille. Deux horaires sont proposés:
+
+- [16 h 30 à 18 h](https://www.atelierdeschefs.fr/cours-de-cuisine/344124/parent-enfant-special-noel/): liste d'attente lors de la vérification du 26 novembre.
+- [18 h 30 à 20 h](https://www.atelierdeschefs.fr/cours-de-cuisine/345120/parent-enfant-special-noel/): réservation proposée lors de cette même vérification.
+
+Les préparations sont à emporter pour les déguster après le cours. Vérifiez la disponibilité réelle de chaque créneau avant de vous organiser.
+
+### Mercredi 30 décembre 2026: cuisiner puis déjeuner sur place
+
+De **12 h à 13 h 30**, le [cours de déjeuner façon fast-food maison](https://www.atelierdeschefs.fr/cours-de-cuisine/344722/dejeuner-facon-fast-food-sain-5-10-ans/) prévoit notamment du poisson pané aux céréales, des pommes de terre, un fondant chocolaté relevé au piment d'Espelette et une citronnade au miel.
+
+Cette fois, la **dégustation sur place** est annoncée. C'est donc une option pour partager le repas plutôt que de transporter les plats chez soi. La fiche propose une préinscription; attendez la confirmation de l'organisateur.
+
+**Accès:** 5 rue Idrac, 31000 Toulouse. Téléphone: 05 61 47 71 23. La [fiche de l'établissement](https://www.atelierdeschefs.fr/ateliers/46/toulouse-francois-verdier/) permet de consulter les coordonnées et le programme.
+
+## Les vérifications utiles avant de réserver
+
+Si votre enfant préfère les desserts, privilégiez une séance de pâtisserie. Pour un repas ensemble, vérifiez que la dégustation sur place est explicitement annoncée et pas seulement la préparation d'un menu.
+
+Les prix indiqués couvrent un seul adulte et un seul enfant. Pour venir avec plusieurs enfants, demandez à l'établissement combien de binômes inscrire. Vérifiez aussi l'âge dans le descriptif: certaines fiches peuvent afficher des tranches différentes dans leur titre et dans leur présentation, notamment pour les 11-12 ans.
+
+En cas d'allergie, examinez les ingrédients avec l'organisateur. Les recettes peuvent notamment contenir du poisson, du lait, des œufs ou des fruits à coque. Demandez si une adaptation est possible, y compris sans alcool lorsqu'une recette en contient, sans supposer que celle-ci est prévue. Pour les plats à emporter, confirmez le matériel demandé et prévoyez un transport au frais si nécessaire.
+
+## Prolonger la sortie par un séjour à Toulouse
+
+Pour les familles venant de plus loin, l'[Appart Hôtel Clément Ader sur Booking.com](https://www.booking.com/hotel/fr/privilege-appart-clement-ader.fr.html), au 23 rue de Bayard, propose des appartements avec cuisine équipée et micro-ondes, dont des logements adaptés aux familles. Vérifiez leur capacité et leur disponibilité pour vos dates. L'adresse est centrale, mais pas à proximité immédiate des deux ateliers.
+
+Pour compléter le week-end, retrouvez d'autres idées de visites dans notre [guide de Toulouse en famille](https://www.fam-space.fr/destinations/occitanie/haute-garonne/toulouse/).
 
 ## Article source exact à préserver et améliorer
 
