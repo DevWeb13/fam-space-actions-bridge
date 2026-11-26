@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Ateliers pâtisserie en Essonne: où cuisiner avec ses enfants?"
-subtitle: Trois pistes à Orsay, Yerres et Grigny, pour un atelier en famille ou une activité de groupe.
-summary: "Atelier familial gratuit à Orsay, pâtisserie parent-enfant à Yerres ou cuisine du jardin en groupe à Grigny: adresses, tarifs connus et réservations."
+subtitle: Atelier gratuit, cours en duo, animation de groupe ou anniversaire à Orsay, Yerres et Grigny.
+summary: "Quatre façons de cuisiner en famille en Essonne: atelier gratuit à Orsay, duo à Yerres, groupe ou anniversaire à Grigny, avec tarifs et réservations."
 slug: ateliers-patisserie-en-essonne-ou-cuisiner-avec-ses-enfants
 status: published
 publishedAt: 2026-11-12T10:04:02+01:00
@@ -92,13 +95,15 @@ sources:
     url: https://entremetsetmerveilles.fr/contact/
   - title: Ferme Saint-Lazare - Informations pratiques
     url: https://lafermesaintlazare.etudesetchantiers.org/infos-pratiques/
+  - title: Ferme Saint-Lazare - Anniversaires
+    url: https://lafermesaintlazare.etudesetchantiers.org/964-2/
 affiliate:
   enabled: true
   type: travel
   destination: Essonne
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/cuisine/(2026)/(11)/ateliers-patisserie-en-essonne-ou-cuisiner-avec-ses-enfants/index.md
   targetSha: 877dc9a96f34980dd10c229e32781adec0db3ea3
@@ -122,35 +127,61 @@ radar:
     focusQueries: []
 ---
 
-## Mission retenue
-Actualiser le guide des ateliers de pâtisserie et de cuisine familiale en Essonne (Orsay, Yerres, Grigny).
+<!-- article-image-credit -->
+*Photo: [Chabe01](https://commons.wikimedia.org/wiki/File:Mairie_-_Orsay_(FR91)_-_2026-01-17_-_2.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Les trois premiers candidats rapidDrop ont été actualisés aujourd'hui sur master. Ce quatrième candidat présente une lacune indépendante vérifiée: la ferme Saint-Lazare propose aussi une formule anniversaire personnalisable avec atelier cuisine, distincte de l'animation collective à 150 euros déjà décrite. Le signal GSC reste uncertain, sans cause établie.
+Faire des biscuits avec son enfant, apprendre les gestes de la pâtisserie ou préparer une recette à partir du potager: plusieurs structures en Essonne proposent de cuisiner ensemble. Le bon choix dépend surtout du format recherché. À Orsay, l'atelier familial est gratuit; à Yerres, on pâtisse en duo; à Grigny, la ferme accueille des groupes et peut personnaliser un anniversaire autour de la cuisine.
 
-## Décision du lecteur
-Distinguer atelier familial gratuit, cours en duo, animation de groupe et anniversaire; choisir selon le coût, la durée et les conditions réelles d'inscription.
+## Orsay: un atelier pâtisserie familial gratuit
 
-## Faits à traiter
-- Grigny: la page officielle Anniversaires confirme un créneau de 3 heures à partir de 15 euros par enfant selon l'effectif, avec atelier cuisine possible sur demande. Ne pas garantir une recette de pâtisserie ni un âge minimum; préciser la personnalisation et les accessoires de table annoncés. Conserver le tarif de groupe à partir de 150 euros pour 25 personnes et les ateliers familiaux gratuits ponctuels.
-- Distinguer les visites ordinaires de la ferme des ateliers: 2,50 euros par personne, gratuit avant 3 ans, mercredi 14 h-16 h 30 en période scolaire, lundi à jeudi aux mêmes horaires pendant les vacances, paiement par carte non accepté selon la page officielle. Vérifier les fermetures particulières avant déplacement.
-- Orsay: gratuit sur inscription, un mercredi par mois de 10 h 30 à midi, parents et grands-parents avec ou sans enfants. Le calendrier affiché reste incohérent pour fin 2026; ne pas annoncer de date sans confirmation.
-- Yerres: le descriptif indexé confirme l'atelier enfants-parents et la pâtisserie fine; la page complète n'a pas pu être ouverte à nouveau. Vérifier les conditions exactes (âge, durée, tarif par duo) avant d'en publier; ne pas les supposer.
-- Préserver les coordonnées, accès, conseils sur les allergies et transport des préparations, les crédits de l'image, le lien interne utile et l'hébergement existant.
+À la **MJC-CS Jacques Tati**, parents et grands-parents, **avec ou sans enfants**, confectionnent une recette sucrée avec la référente famille. La séance est annoncée **gratuite, sur inscription**, à raison d'environ **un mercredi par mois de 10 h 30 à 12 h**. Cookies, biscuits de Noël et galettes figurent parmi les thèmes présentés.
 
-## Sources de départ
-- https://www.mjctati.fr/atelier-patisserie/
-- https://entremetsetmerveilles.fr/ateliers/
-- https://entremetsetmerveilles.fr/contact/
-- https://www.yerres.fr/annuaire-pros/entremets-et-merveilles/
-- https://lafermesaintlazare.etudesetchantiers.org/infos-pratiques/
-- https://lafermesaintlazare.etudesetchantiers.org/964-2/
+Attention au calendrier: la [page de l'atelier](https://www.mjctati.fr/atelier-patisserie/) affiche des dates et des jours qui ne concordent pas tous avec l'année annoncée. **Ne retenez aucune date sans confirmation de la MJC**. Aucun âge minimum n'est indiqué; demandez si votre enfant peut participer et si des places restent disponibles.
 
-## Affiliation
-Aucune offre directe des ateliers cités confirmée sur GetYourGuide, Tiqets ou Klook; ne pas substituer des ateliers parisiens. Conserver le lien Booking.com existant (page Orsay vérifiée), éventuellement préciser le gîte de 4 à 5 personnes proche RER https://www.booking.com/hotel/fr/abritel-orsay.fr.html si pertinent pour un séjour et après contrôle de la fiche.
+**Inscription:** referente.famille@mjctati.fr. **Téléphone:** 01 69 82 60 00. **Adresse:** 14 bis avenue Saint-Laurent, 91400 Orsay.
 
-## Continuations internes
-Conserver le lien vers le guide des ateliers de pâtisserie en Gironde seulement comme prolongement de lecture, sans redévelopper les autres régions.
+## Yerres: un cours de pâtisserie à partager avec son enfant
+
+**Entremets & Merveilles** distingue deux propositions. L'**atelier enfants-parents** est conçu pour pâtisser ensemble et apprendre les premiers gestes. L'**atelier de pâtisserie fine**, notamment autour d'une tarte de saison, vise les personnes qui souhaitent approfondir leurs techniques; ne le considérez pas automatiquement comme adapté aux plus jeunes.
+
+La [présentation des ateliers](https://entremetsetmerveilles.fr/ateliers/) comporte des liens d'inscription, mais les **âges acceptés, tarifs par duo, durées et prochaines disponibilités** ne sont pas suffisamment établis pour être annoncés ici. Demandez ces précisions et la recette prévue avant de vous engager.
+
+**Adresse:** 64 rue Paul-Doumer, 91330 Yerres. **Téléphone:** 06 61 22 75 76, indiqué sur la [page contact](https://entremetsetmerveilles.fr/contact/). Les créneaux de retrait des gâteaux ne sont pas les horaires des cours.
+
+## Grigny: atelier de groupe ou anniversaire à la ferme
+
+La **Ferme pédagogique Saint-Lazare** propose plusieurs expériences bien distinctes.
+
+### Cuisine du jardin pour les groupes
+
+L'animation **« cuisine du jardin »** permet notamment aux écoles, centres de loisirs et autres groupes de relier les aliments à leur culture. D'après les [informations pratiques de la ferme](https://lafermesaintlazare.etudesetchantiers.org/infos-pratiques/), une animation à la demi-journée commence à **150 € pour un groupe de 25 personnes**. Il s'agit d'un tarif de groupe, **pas d'un prix d'inscription individuelle**. L'équipe étudie les demandes de réservation.
+
+### Un anniversaire personnalisable, avec cuisine possible
+
+Autre formule, distincte de l'animation collective: la ferme propose un [anniversaire sur mesure](https://lafermesaintlazare.etudesetchantiers.org/964-2/) sur un **créneau de 3 heures**, **à partir de 15 € par enfant**, selon le nombre de participants. Un **atelier cuisine** peut être prévu sur demande, au même titre que d'autres animations. Il faut donc convenir du contenu avec l'équipe: ni une recette de pâtisserie précise ni un âge minimum ne sont annoncés.
+
+La ferme indique mettre à disposition **bougies, couverts, assiettes, verres et serviettes**. Vérifiez ce qui est inclus pour le goûter et le gâteau d'anniversaire avant de confirmer le devis.
+
+### Visiter la ferme sans réserver un atelier
+
+Une **visite ordinaire** n'est pas un cours de cuisine. Elle coûte **2,50 € par personne**, avec **gratuité pour les moins de 3 ans**. La ferme annonce une ouverture aux familles le **mercredi de 14 h à 16 h 30 en période scolaire**, puis du **lundi au jeudi aux mêmes horaires pendant les vacances**. **La carte bancaire n'est pas acceptée** selon la page pratique: prévoyez un autre moyen de paiement et vérifiez les fermetures particulières avant de venir.
+
+Des **ateliers familiaux gratuits** sont également proposés ponctuellement. Ils ne portent pas systématiquement sur la cuisine; consultez la programmation pour connaître leur thème.
+
+**Adresse:** 21 rue du Port, 91350 Grigny. **Contact animations et anniversaires:** 06 18 62 56 64 ou ferme.pedagogique@etudesetchantiers.org. **Accès:** RER D, gare Grigny-Centre, puis environ **15 minutes à pied**, selon la ferme.
+
+## Les vérifications utiles avant l'inscription
+
+Pour comparer les propositions, vérifiez **le prix pour votre composition familiale**, plutôt qu'un tarif qui ne concernerait qu'un enfant ou tout un groupe. Demandez l'âge accepté, la présence obligatoire ou non d'un adulte, les ingrédients et le matériel fournis, ainsi que les conditions de report ou d'annulation.
+
+Signalez les **allergies alimentaires** en amont. Si les préparations sont à emporter, demandez s'il faut une boîte ou un sac isotherme. Un adulte doit encadrer l'utilisation des couteaux, du four et des préparations chaudes.
+
+Pour prolonger l'activité à la maison, refaire des biscuits simples permet aux enfants de retrouver les gestes appris. Si vous cherchez des formules différentes, en duo ou pour enfant seul, notre guide des [ateliers de pâtisserie en Gironde](https://www.fam-space.fr/articles/cuisine/ateliers-de-patisserie-en-gironde-en-duo-ou-enfant-seul/) donne d'autres exemples.
+
+## Profiter d'un séjour en famille autour d'Orsay
+
+Pour une famille qui visite aussi Orsay et le plateau de Saclay, il est possible de [comparer les hébergements à Orsay](https://www.booking.com/city/fr/orsay.fr.html). Confirmez d'abord la séance de pâtisserie avant de réserver un séjour.
 
 ## Article source exact à préserver et améliorer
 
