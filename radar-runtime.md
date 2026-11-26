@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -104,6 +107,8 @@ sources:
     url: https://www.laregionvoustransporte.fr/cars-region/cars-region-de-la-drome/ligne/d03-le-grand-serre-hauterives-saint-vallier/
   - title: Cars Région Drôme - Ligne D12
     url: https://www.laregionvoustransporte.fr/cars-region/cars-region-de-la-drome/ligne/d12-romans-le-grand-serre-beuarepaire/
+  - title: Palais idéal du facteur Cheval - Visite en famille et supports pédagogiques
+    url: https://www.facteurcheval.com/visitez-le-palais/seul-ou-en-famille/
 affiliate:
   enabled: true
   type: travel
@@ -111,7 +116,7 @@ affiliate:
 reviewAt: 2027-04-19
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/activites/(2026)/(10)/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives/index.md
   targetSha: bc6836b78a535c47af4bd151f6c7b8dcf0d36581
@@ -139,30 +144,77 @@ radar:
       - visiter le palais du facteur cheval
 ---
 
-## Mission retenue
-Refresh du Palais idéal du facteur Cheval à Hauterives.
+Un palais construit par un facteur, sans architecte, et peuplé d'animaux de pierre: à Hauterives, dans le nord de la Drôme, le Palais idéal de Ferdinand Cheval se découvre en famille comme un monde imaginaire grandeur nature. Entre façades sculptées, passages autorisés et espace muséographique, les enfants peuvent chercher des créatures, reconnaître des bâtiments et découvrir l'histoire d'un homme qui a consacré 33 ans à son rêve. Ce n'est ni un château meublé ni un parc d'attractions.
 
-## Pourquoi cette mission
-Baisse rapide de visibilité, cause non établie. Lacune indépendante: la page ne mentionne ni les supports de visite officiels par âge (imagier et quiz), ni la gratuité pour les enfants en situation de handicap jusqu'à 16 ans, ni les tarifs réduits. L'annonce de travaux indique désormais le 6 novembre, non le 23 octobre. Toulouse, Cacao et Disneyland ont été rafraîchis aujourd'hui; Orléans couvre déjà les informations hivernales vérifiées.
+## Un jeu d'observation parmi les sculptures
 
-## Décision du lecteur
-Choisir une visite adaptée à l'âge des enfants et préparer les supports de jeu, le budget et les conditions d'accès.
+<!-- article-image-body:01 -->
 
-## Faits à traiter
-Ajouter l'imagier dès 3 ans, le quiz dès 8 ans, leur téléchargement officiel, le musée inclus et les visites commentées gratuites de 20 minutes uniquement aux mois et horaires annoncés. Compléter les tarifs réduits et la gratuité handicap jusqu'à 16 ans; préciser le calendrier des fermetures sans extrapoler les tarifs 2027. Rectifier la date annoncée des travaux sans affirmer leur achèvement. Préserver histoire, jeu libre, durée, tarifs et comparatifs abonnements, réservation y compris billet gratuit, consignes, accès cars D03/D12, exposition, images et crédits, hébergements pertinents.
+![Détail des sculptures de la façade est du Palais idéal du facteur Cheval à Hauterives](/images/articles/2026/10/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives-body-01.webp)
 
-## Sources de départ
-- https://www.facteurcheval.com/visitez-le-palais/seul-ou-en-famille/
-- https://www.facteurcheval.com/infos-pratiques/
-- https://www.facteurcheval.com/actualites/
-- https://www.facteurcheval.com/reservation-conseillee/
-- https://www.facteurcheval.com/programmation/evenements/juliana-dorso/
+*Photo: [Chbesset](https://commons.wikimedia.org/wiki/File:D%C3%A9tail_fa%C3%A7ade_est.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
 
-## Affiliation
-Pas de billet direct identifié chez Tiqets/GetYourGuide/Klook. Conserver le gîte Abritel https://www.abritel.fr/location-vacances/p1823668 (6 personnes, 3 chambres, cuisine, 3 min à pied selon la fiche). Booking La Parenthèse: page inaccessible à la vérification automatique, contrôler avant toute modification.
+<!-- /article-image-body:01 -->
 
-## Continuations internes
-Conserver le lien Cité du Chocolat Valrhona pour une autre sortie; utiliser le guide Drôme sans voiture pour les déplacements généraux si utile.
+Commencez par la façade est, là où Ferdinand Cheval a entrepris son œuvre. Autour de la « Source de Vie », cherchez le lion et le chien. Repérez ensuite les trois géants, les temples et les formes qui évoquent un conte. Le bestiaire du Palais comprend notamment une pieuvre, un caïman, un éléphant, un pélican et un ours. La façade ouest fait voyager entre des architectures imaginées à partir de différents pays, dont un chalet suisse.
+
+**Le petit défi Fam Space:** chaque enfant choisit trois détails à retrouver, par exemple un animal, un personnage et un bâtiment. Les plus grands peuvent aussi comparer les façades ou inventer une histoire à partir d'une sculpture. C'est une proposition de jeu libre, pas une chasse au trésor organisée par le monument.
+
+Pour préparer la visite, le Palais propose un **imagier dès 3 ans** et un **quiz dès 8 ans**, à récupérer dans les [supports de visite officiels](https://www.facteurcheval.com/visitez-le-palais/seul-ou-en-famille/). L'imagier invite à retrouver les figures sculptées; le quiz aborde aussi les architectures et les cultures du monde.
+
+La présentation historique officielle décrit les façades et leurs figures. L'[office de tourisme](https://www.autour-du-palais-ideal.fr/decouvrir/palais-ideal-du-facteur-cheval/lhistoire-du-palais-ideal/) présente également les espaces à découvrir. Certaines parties peuvent être inaccessibles selon les conditions de visite: respectez les protections et les indications sur place.
+
+## L'histoire du facteur Cheval à raconter aux enfants
+
+<!-- article-image-body:02 -->
+
+![Tombeau construit par Ferdinand Cheval dans le cimetière communal d'Hauterives, distinct du Palais idéal](/images/articles/2026/10/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives-body-02.webp)
+
+*Photo: [Bleugrenouille](https://commons.wikimedia.org/wiki/File:La_tombe_du_facteur_Cheval.jpg) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+En 1879, Ferdinand Cheval, facteur rural, trébuche sur une pierre étonnante pendant sa tournée. Elle réveille une idée: construire un palais dans son jardin. Il collecte des pierres au fil de ses trajets, les transporte notamment avec une brouette et poursuit son chantier pendant **33 ans**, jusqu'en 1912.
+
+On peut le raconter simplement: « Il distribuait le courrier et, pendant son temps libre, construisait le palais qu'il avait imaginé. » Son œuvre, qui n'était pas destinée à être habitée, a été classée monument historique en 1969.
+
+Un détail mérite d'être expliqué: le tombeau égyptien sculpté dans le Palais n'est pas sa sépulture. Ferdinand Cheval a ensuite construit un autre tombeau, au cimetière d'Hauterives, où il repose aujourd'hui. Le site du Palais distingue bien ces deux réalisations.
+
+## Quelle durée de visite prévoir ?
+
+Comptez **environ 1 h 30**, selon l'[estimation d'Auvergne-Rhône-Alpes Tourisme](https://legrandtour.auvergnerhonealpes-tourisme.com/incontournables/le-palais-ideal-du-facteur-cheval/). Le monument indique une heure pour le palais et son musée, compris dans le billet. Prévoyez davantage de temps si les enfants utilisent les jeux d'observation.
+
+Avec de jeunes enfants, privilégiez les façades et quelques sculptures faciles à reconnaître. Avec des enfants plus grands, prenez le temps de comparer les architectures, de lire certaines inscriptions et de visiter l'espace muséographique. Le parcours réel dépend aussi de l'affluence et des zones ouvertes. Des commentaires guidés de 20 minutes sont proposés sans supplément en avril, mai, juin et septembre à 15 h, ainsi qu'en juillet et août à 11 h et 16 h 30. Vérifiez leur maintien pour votre date.
+
+## Horaires, billets et abonnements en 2026
+
+Le Palais idéal se situe **8 rue du Palais, 26390 Hauterives**. Les horaires officiels indiquent une ouverture de **9 h 30 à 17 h 30 en octobre et novembre**, puis de **9 h 30 à 16 h 30 en décembre**. Le monument est fermé le 25 décembre et le 1er janvier. Le calendrier général annonce également une fermeture du 15 au 30 janvier inclus. Vérifiez les dates de réouverture et les tarifs 2027 avant de préparer une visite l'année prochaine.
+
+Les **tarifs individuels 2026** sont de **10,50 € par adulte** et **6,50 € de 6 à 16 ans inclus**; l'entrée est gratuite avant 6 ans et pour les enfants en situation de handicap jusqu'à 16 ans. Le tarif réduit de 7,50 € concerne les étudiants de moins de 26 ans, les demandeurs d'emploi, les personnes en situation de handicap et leurs accompagnants, sur justificatif. Un audioguide est proposé à 2 €. Consultez les [conditions tarifaires officielles](https://www.facteurcheval.com/infos-pratiques/). La réservation en ligne réduit chaque billet payant de 1 €. Pour deux adultes et deux enfants de 6 à 16 ans, cela représente **34 € sur place contre 30 € en ligne** pour une visite, hors réductions particulières.
+
+Si vous pensez revenir, le Palais propose aussi un **abonnement annuel à 15 € par adulte et 9 € par enfant de 6 à 16 ans**. Deux visites au tarif individuel sur place coûteraient 21 € par adulte et 13 € par enfant, contre 15 € et 9 € en abonnement. Pour cette même famille de quatre personnes, deux visites reviennent à 68 € sur place ou 60 € avec des billets en ligne, contre **48 € en abonnements annuels**. Ces abonnements sont individuels et nominatifs, non coupe-file, valables un an pour les visites de journée et ne dispensent pas de réserver un créneau à chaque venue; les événements spéciaux ne sont pas inclus. Vérifiez les conditions de l'abonnement et sa disponibilité avant achat. La réduction de 1 € sur les billets en ligne ne doit pas être présumée applicable à l'abonnement.
+
+**Réserver à l'avance est fortement conseillé**, notamment pendant les vacances. L'accès est soumis à une jauge et seule la réservation garantit l'entrée au créneau choisi, selon l'annonce officielle. Même un enfant de moins de 6 ans doit avoir son billet gratuit. Les conditions de vente précisent que les billets ne sont ni échangeables ni remboursables et qu'ils peuvent être présentés sur téléphone.
+
+## Poussette, sacs à dos, repas et accès sans voiture
+
+Le site comprend des passages extérieurs et des différences de niveau. Un accueil adapté est annoncé, mais **toutes les terrasses et tous les passages ne sont pas nécessairement praticables en poussette ou en fauteuil**. Pour connaître le parcours accessible à votre famille, contactez le monument au **04 75 68 81 19**. La [fiche touristique régionale](https://legrandtour.auvergnerhonealpes-tourisme.com/incontournables/le-palais-ideal-du-facteur-cheval/) détaille les aménagements signalés.
+
+**Les sacs à dos doivent être déposés dans les consignes sécurisées prévues à cet effet**, selon les informations pratiques du monument. Ils ne sont pas admis pendant la visite; vous pouvez donc venir avec un sac, mais devrez le laisser en consigne. Les pique-niques et la restauration sont interdits dans l'enceinte. Les animaux ne sont pas admis, sauf chiens d'assistance. Prévoyez le repas dans le village, avant ou après la visite. Des toilettes et des parkings sont signalés à proximité.
+
+**En transports en commun**, les cars Région [D03, notamment depuis Saint-Vallier](https://www.laregionvoustransporte.fr/cars-region/cars-region-de-la-drome/ligne/d03-le-grand-serre-hauterives-saint-vallier/) et [D12, sur l'axe Romans-sur-Isère et Beaurepaire](https://www.laregionvoustransporte.fr/cars-region/cars-region-de-la-drome/ligne/d12-romans-le-grand-serre-beuarepaire/), desservent l'arrêt « Place de la Galaure » à Hauterives. Vérifiez les jours de circulation, les correspondances et surtout l'horaire du retour avant de réserver vos billets d'entrée.
+
+## Exposition temporaire et travaux: les points d'actualité
+
+Du **19 septembre 2026 au 18 avril 2027**, l'exposition **« 140 ans et un jour » de Juliana Dorso** fait dialoguer l'univers du facteur Cheval avec celui de Madame de Sévigné à travers quinze peintures. Pour les enfants attirés par le dessin, c'est l'occasion de comparer les œuvres exposées aux sculptures du Palais. Il ne s'agit pas d'un atelier familial permanent. Consultez la [présentation de l'exposition](https://www.facteurcheval.com/programmation/evenements/juliana-dorso/).
+
+Le monument annonçait également des **travaux sur la façade sud et le sommet du tombeau égyptien jusqu'au 6 novembre 2026**. L'annonce toujours visible dans les actualités officielles ne confirme pas expressément que toutes les restrictions ont été levées. Si ces parties motivent votre venue, demandez leur état à l'accueil avant de partir.
+
+## Dormir à Hauterives pour prolonger la découverte
+
+Pour les familles qui viennent de loin, une nuit sur place évite de repartir juste après la visite. La [maison La Parenthèse sur Booking.com](https://www.booking.com/hotel/fr/la-parenthese-a-hauterives.fr.html), à environ trois minutes à pied du Palais, dispose de trois chambres, d'une cuisine et d'un jardin pour accueillir jusqu'à sept personnes. Autre possibilité, le [gîte de la Taillanderie sur Abritel](https://www.abritel.fr/location-vacances/p1823668) accueille jusqu'à six personnes dans trois chambres, avec cuisine et terrasse, à environ trois minutes à pied du monument selon l'annonce. Vérifiez les disponibilités et les conditions pour vos dates.
+
+Si vous souhaitez organiser une seconde sortie dans la Drôme, notre [guide de la Cité du Chocolat Valrhona en famille](https://www.fam-space.fr/articles/sorties/cite-du-chocolat-valrhona-en-famille-tarifs-duree-et-conseils-de-visite/) propose une visite différente, à Tain-l'Hermitage.
 
 ## Article source exact à préserver et améliorer
 
