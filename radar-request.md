@@ -1,30 +1,30 @@
 ---
 action: advance
 sources:
-  - title: Palais idéal du facteur Cheval - Histoire
-    url: https://www.facteurcheval.com/histoire/
-  - title: Office de tourisme Porte de DrômArdèche - L'histoire du Palais idéal
-    url: https://www.autour-du-palais-ideal.fr/decouvrir/palais-ideal-du-facteur-cheval/lhistoire-du-palais-ideal/
-  - title: Palais idéal du facteur Cheval - Informations pratiques et tarifs
-    url: https://www.facteurcheval.com/infos-pratiques/
-  - title: Palais idéal du facteur Cheval - Abonnement
-    url: https://www.facteurcheval.com/abonnement/
-  - title: Palais idéal du facteur Cheval - Conditions générales de vente et d'accès
-    url: https://www.facteurcheval.com/mentions-legales/
-  - title: Palais idéal du facteur Cheval - Réservation conseillée
-    url: https://www.facteurcheval.com/reservation-conseillee/
-  - title: Auvergne-Rhône-Alpes Tourisme - Visite du Palais idéal
-    url: https://legrandtour.auvergnerhonealpes-tourisme.com/incontournables/le-palais-ideal-du-facteur-cheval/
-  - title: Palais idéal du facteur Cheval - Exposition Juliana Dorso
-    url: https://www.facteurcheval.com/programmation/evenements/juliana-dorso/
-  - title: Palais idéal du facteur Cheval - Actualités
-    url: https://www.facteurcheval.com/actualites/
-  - title: Cars Région Drôme - Ligne D03
-    url: https://www.laregionvoustransporte.fr/cars-region/cars-region-de-la-drome/ligne/d03-le-grand-serre-hauterives-saint-vallier/
-  - title: Cars Région Drôme - Ligne D12
-    url: https://www.laregionvoustransporte.fr/cars-region/cars-region-de-la-drome/ligne/d12-romans-le-grand-serre-beuarepaire/  - title: Palais idéal du facteur Cheval - Visite en famille et supports pédagogiques
-    url: https://www.facteurcheval.com/visitez-le-palais/seul-ou-en-famille/
-
+  - title: "Palais idéal du facteur Cheval - Histoire"
+    url: "https://www.facteurcheval.com/histoire/"
+  - title: "Office de tourisme Porte de DrômArdèche - L'histoire du Palais idéal"
+    url: "https://www.autour-du-palais-ideal.fr/decouvrir/palais-ideal-du-facteur-cheval/lhistoire-du-palais-ideal/"
+  - title: "Palais idéal du facteur Cheval - Informations pratiques et tarifs"
+    url: "https://www.facteurcheval.com/infos-pratiques/"
+  - title: "Palais idéal du facteur Cheval - Abonnement"
+    url: "https://www.facteurcheval.com/abonnement/"
+  - title: "Palais idéal du facteur Cheval - Conditions générales de vente et d'accès"
+    url: "https://www.facteurcheval.com/mentions-legales/"
+  - title: "Palais idéal du facteur Cheval - Réservation conseillée"
+    url: "https://www.facteurcheval.com/reservation-conseillee/"
+  - title: "Auvergne-Rhône-Alpes Tourisme - Visite du Palais idéal"
+    url: "https://legrandtour.auvergnerhonealpes-tourisme.com/incontournables/le-palais-ideal-du-facteur-cheval/"
+  - title: "Palais idéal du facteur Cheval - Exposition Juliana Dorso"
+    url: "https://www.facteurcheval.com/programmation/evenements/juliana-dorso/"
+  - title: "Palais idéal du facteur Cheval - Actualités"
+    url: "https://www.facteurcheval.com/actualites/"
+  - title: "Cars Région Drôme - Ligne D03"
+    url: "https://www.laregionvoustransporte.fr/cars-region/cars-region-de-la-drome/ligne/d03-le-grand-serre-hauterives-saint-vallier/"
+  - title: "Cars Région Drôme - Ligne D12"
+    url: "https://www.laregionvoustransporte.fr/cars-region/cars-region-de-la-drome/ligne/d12-romans-le-grand-serre-beuarepaire/"
+  - title: "Palais idéal du facteur Cheval - Visite en famille et supports pédagogiques"
+    url: "https://www.facteurcheval.com/visitez-le-palais/seul-ou-en-famille/"
 ---
 
 Un palais construit par un facteur, sans architecte, et peuplé d'animaux de pierre: à Hauterives, dans le nord de la Drôme, le Palais idéal de Ferdinand Cheval se découvre en famille comme un monde imaginaire grandeur nature. Entre façades sculptées, passages autorisés et espace muséographique, les enfants peuvent chercher des créatures, reconnaître des bâtiments et découvrir l'histoire d'un homme qui a consacré 33 ans à son rêve. Ce n'est ni un château meublé ni un parc d'attractions.
