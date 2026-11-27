@@ -732,6 +732,11 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 - /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | Salon du Cheval de Paris 2026 en famille: ateliers, jumping et Nuit du Cheval | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/ | Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
+- /articles/activites/seaquarium-du-grau-du-roi-en-famille-decouvrir-la-vie-marine-hors-saison/ | Seaquarium du Grau-du-Roi en famille: découvrir la vie marine hors saison | activites | Le Grau-du-Roi, Gard, Occitanie
+- /articles/vie-pratique/mediatheques-escales-dans-les-vosges-emprunter-des-livres-et-des-jeux-en-famille/ | Médiathèques Escales dans les Vosges: emprunter des livres et des jeux en famille | vie-pratique | Vosges, Grand Est
+- /articles/voyages/alligator-bay-en-famille-decouvrir-les-reptiles-et-preparer-sa-visite/ | Alligator Bay en famille: découvrir les reptiles et préparer sa visite | voyages | Beauvoir, Manche, Normandie
+- /articles/bons-plans/musee-des-beaux-arts-de-draguignan-en-famille-gratuites-et-ateliers/ | Musée des Beaux-Arts de Draguignan en famille: gratuités et ateliers | bons-plans | Draguignan, Var, Provence-Alpes-Côte d’Azur
+- /articles/cuisine/pastis-landais-maison-la-recette-du-gouter-sans-alcool-ajoute/ | Pastis landais maison: la recette du goûter sans alcool ajouté | cuisine | Landes, Nouvelle-Aquitaine
 - /articles/maison/composter-en-famille-dans-la-metropole-lilloise-avec-ou-sans-jardin/ | Composter en famille dans la métropole lilloise: avec ou sans jardin | maison | Nord, Hauts-de-France
 - /articles/sorties/petit-cocotier-au-morne-rouge-decouvrir-la-vanille-en-famille/ | Petit Cocotier au Morne-Rouge: découvrir la vanille en famille | sorties | Le Morne-Rouge, Martinique, Martinique
 - /articles/voyages/samoens-en-famille-cet-hiver-un-premier-sejour-a-la-neige-avec-ou-sans-ski/ | Samoëns en famille cet hiver: un premier séjour à la neige avec ou sans ski | voyages | Samoëns, Haute-Savoie, Auvergne-Rhône-Alpes
@@ -755,15 +760,9 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 - /articles/activites/musee-de-l-illusion-a-lyon-en-famille-que-voir-et-combien-coute-la-visite/ | Musée de l'Illusion à Lyon en famille: que voir et combien coûte la visite ? | activites | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/voyages/pres-de-saint-florent-decouvrir-la-corse-en-ulm-avec-un-ado/ | Près de Saint-Florent, découvrir la Corse en ULM avec un ado | voyages | Haute-Corse, Corse
 - /articles/cuisine/ficelle-picarde-la-recette-familiale-des-crepes-gratinees-d-amiens/ | Ficelle picarde: la recette familiale des crêpes gratinées d'Amiens | cuisine | Amiens, Somme, Hauts-de-France
-- /articles/sorties/forteresse-royale-de-chinon-en-famille-tours-histoire-et-jeux/ | Forteresse royale de Chinon en famille: tours, histoire et jeux | sorties | Chinon, Indre-et-Loire, Centre-Val de Loire
-- /articles/vie-pratique/ludotheques-du-val-de-marne-ou-jouer-en-famille-et-emprunter-des-jeux/ | Ludothèques du Val-de-Marne: où jouer en famille et emprunter des jeux ? | vie-pratique | Val-de-Marne, Île-de-France
-- /articles/parentalite/lieux-d-accueil-enfants-parents-en-vendee-ou-aller-avec-un-tout-petit/ | Lieux d'accueil enfants-parents en Vendée: où aller avec un tout-petit ? | parentalite | Vendée, Pays de la Loire
-- /articles/cuisine/kig-ha-farz-en-famille-recette-et-organisation-d-un-repas-breton/ | Kig ha farz en famille: recette et organisation d'un repas breton | cuisine | Finistère, Bretagne
-- /articles/bons-plans/bretagne-en-ter-avec-des-enfants-quels-billets-choisir-pour-payer-moins/ | Bretagne en TER avec des enfants: quels billets choisir pour payer moins? | bons-plans | Bretagne
 
 ### Historique Radar lié
 
-- refresh | /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | 2026-11-17T19:34:24.194Z
 - opportunity | /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | 2026-10-20T00:30:38.975Z
 - opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
 - refresh | /articles/maison/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/ | 2026-11-12T01:28:37.978Z
@@ -782,6 +781,7 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 - opportunity | /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | 2026-10-26T18:32:56.730Z
 - opportunity | /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | 2026-10-09T14:37:47.734Z
 - refresh | /articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/ | 2026-11-08T07:28:43.032Z
+- refresh | /articles/activites/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux/ | 2026-11-27T09:00:22.858Z
 - refresh | /articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/ | 2026-10-22T18:35:19.372Z
 - opportunity | /articles/activites/pokemon-et-biodiversite-a-paris-le-28-novembre-2026-atelier-dessin-des-10-ans/ | 2026-11-05T10:32:54.471Z
 - opportunity | /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | 2026-11-04T05:34:42.508Z
@@ -795,71 +795,6 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 - refresh | /articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/ | 2026-11-06T21:35:30.246Z
 
 ## Travaux éditoriaux en cours
-
-### Publication en cours
-
-- Branche: automation/publication-20261127-1102-transports-scolaires-optymo-dans-le-territoire-de-belfort-choisir-la-c
-- HEAD: publication: phase 3 20261127-1102-transports-scolaires-optymo-dans-le-territoire-de-belfort-choisir-la-c
-
----
-category: "vie-pratique"
-title: "Transports scolaires Optymo dans le Territoire de Belfort: quelle carte choisir ?"
-subtitle: "Les trajets gratuits du collège et du lycée et les déplacements en dehors des cours"
-summary: "Carte restreinte ou Pass Ado: découvrez les tarifs Optymo, les conditions de gratuité et les démarches pour organiser les trajets scolaires de votre enfant."
-keywords:
-  - "transports scolaires Optymo"
-  - "Pass Ado Belfort"
-  - "carte scolaire Optymo"
-  - "bus scolaires Territoire de Belfort"
-location:
-  department: "Territoire de Belfort"
-  region: "Bourgogne-Franche-Comté"
-sources:
-  - title: "Optymo - Transports scolaires"
-    url: "https://www.optymo.fr/bus/transports-scolaires/"
-  - title: "Optymo - Tarifs"
-    url: "https://www.optymo.fr/pass-tickets/pass-optymo/tarifs/"
-  - title: "Optymo - Demande de pass"
-    url: "https://www.optymo.fr/pass-tickets/pass-optymo/demande-de-pass/"
-  - title: "Optymo - Règlement du transport scolaire"
-    url: "https://www.optymo.fr/wp-content/uploads/2023/07/2023_SMTC-reglement_scolaire.pdf"
----
-
-Dans le Territoire de Belfort, le réseau de bus Optymo permet aux collégiens et lycéens de rejoindre leur établissement avec une carte de transport scolaire. Deux formules permettent de bénéficier de trajets gratuits les jours de cours. Le choix dépend surtout des déplacements que votre enfant effectue en dehors de l'école.
-
-## Carte restreinte ou Pass Ado ?
-
-Le dispositif scolaire prévoit deux déplacements gratuits par jour de cours, du lundi au samedi jusqu'à 13 h. Cette gratuité ne s'applique pas le dimanche ni pendant les vacances scolaires.
-
-- La carte restreinte convient aux élèves qui utilisent uniquement les deux déplacements quotidiens autorisés. Elle ne permet pas de voyager au-delà de ces conditions.
-- Le Pass Ado conserve cette gratuité et permet aussi de prendre les bus urbains et suburbains pour 1 € par déplacement supplémentaire. La facturation est limitée à 13 € par mois.
-
-Le Pass Ado est destiné aux jeunes qui habitent et étudient dans le département. Retrouvez les conditions sur la [page des tarifs Optymo](https://www.optymo.fr/pass-tickets/pass-optymo/tarifs/).
-
-Si votre adolescent rentre directement à la maison après les cours, la carte restreinte peut suffire. S'il prend régulièrement le bus pour rejoindre son club sportif, retrouver ses amis le samedi après-midi ou se déplacer pendant les vacances, le Pass Ado lui donne davantage d'autonomie. Pour trouver des idées de loisirs en dehors des cours, consultez aussi nos [sorties en famille à Belfort](https://www.fam-space.fr/destinations/bourgogne-franche-comte/territoire-de-belfort/belfort/).
-
-## Comment demander sa carte ?
-
-Optymo propose une [demande de pass en ligne](https://www.optymo.fr/pass-tickets/pass-optymo/demande-de-pass/), ainsi qu'un formulaire à télécharger et à remettre en agence. Si vous souhaitez uniquement la carte scolaire restreinte, précisez votre besoin auprès du réseau afin de choisir le titre adapté.
-
-À Belfort, les familles peuvent se rendre à l'Espace Optymo, au 13 rue de Madrid, ou à l'agence du 1 boulevard Carnot. Les horaires des deux accueils figurent sur la page de demande.
-
-Même lorsque le déplacement est gratuit, l'élève doit valider sa carte en montant dans le véhicule. En cas d'oubli ou de perte, il doit disposer d'un autre titre valable. Le [règlement scolaire](https://www.optymo.fr/wp-content/uploads/2023/07/2023_SMTC-reglement_scolaire.pdf) prévoit également la délivrance d'un duplicata payant en cas de perte. Demandez le tarif actuel à l'agence.
-
-## Trouver le bon bus pour son collège ou son lycée
-
-Les dessertes scolaires sont organisées en fonction de la commune de départ et de l'établissement desservi. La [rubrique des transports scolaires Optymo](https://www.optymo.fr/bus/transports-scolaires/) rassemble les fiches applicables depuis le 1er septembre 2026.
-
-Cherchez d'abord l'établissement de votre enfant, puis repérez les arrêts et les horaires correspondant à son emploi du temps. Certains déplacements sont assurés par les lignes ordinaires plutôt que par un service scolaire dédié. Consultez donc aussi les horaires réguliers et le calculateur d'itinéraires accessibles depuis cette rubrique, notamment pour un retour anticipé le mercredi.
-
-Si le trajet nécessite un abonnement SNCF ou évolitY, les demandes de prise en charge doivent être adressées directement au Syndicat mixte des transports en commun (SMTC), au 03 84 90 99 25.
-
-## Et pour les enfants qui ne sont pas encore au collège ?
-
-Les services scolaires Optymo peuvent également être empruntés par des voyageurs qui ne sont ni collégiens ni lycéens, avec un titre adapté. Pour les moins de 18 ans domiciliés dans le département, le Pass Optymo à tarif réduit offre un plafond mensuel de 13 € pour les bus.
-
-Ce tarif réduit ne doit pas être confondu avec le Pass Ado et ses déplacements scolaires gratuits. Pour un enfant en primaire, renseignez-vous auprès du réseau sur le titre correspondant à son âge et à son trajet avant de demander une carte.
-
 
 ### Destination en cours
 
