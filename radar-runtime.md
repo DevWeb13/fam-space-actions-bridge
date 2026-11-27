@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Fontaines dansantes d'hiver à Metz 2026-2027: dates, horaires et conseils en famille"
 subtitle: Au Lac aux Cygnes, un spectacle de jets d'eau, de musique et de lumières pour les fêtes
-summary: Du 20 novembre 2026 au 3 janvier 2027, Metz accueille ses premières fontaines dansantes hivernales. Plusieurs représentations sont annoncées chaque jour entre 17 h et 21 h, sans horaires de séances détaillés à ce jour.
+summary: "Du 20 novembre 2026 au 3 janvier 2027, profitez des fontaines dansantes d'hiver à Metz: spectacle gratuit toutes les 30 minutes de 17 h à 21 h, accès et conseils avec les enfants."
 category: evenements
 location:
   city: Metz
@@ -71,6 +74,10 @@ image:
   src: /images/articles/2026/11/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants.webp
   alt: Vue du plan d'eau de Metz, secteur du lac aux Cygnes, hors spectacle des fontaines hivernales
 sources:
+  - title: Ville de Metz - Fontaines dansantes d'hiver
+    url: https://metz.fr/agenda/fiche-42622.php
+  - title: Inspire Metz - Les fontaines dansantes d'hiver
+    url: https://www.tourisme-metz.com/fr/details/838175564-les-fontaines-dansantes-d-hiver
   - title: Ville de Metz - Noël à Metz 2026
     url: https://metz.fr/actus/2026/261102_noel_a_metz_2026_magie_tradition_et_reverie.php
   - title: Ville de Metz - Marchés de Noël 2026 et accès
@@ -92,7 +99,7 @@ affiliate:
   destination: Metz
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(11)/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants/index.md
   targetSha: b28e99deadb772d8aeca418376b23c772ff27cdd
@@ -121,29 +128,41 @@ radar:
       - fontaine dansante metz horaires
 ---
 
-## Mission retenue
-Actualiser les fontaines dansantes hivernales au Lac aux Cygnes de Metz.
+Les **fontaines dansantes de Metz** reviennent pour la première fois en hiver, du **20 novembre 2026 au 3 janvier 2027**. Au Lac aux Cygnes, les jets d'eau s'animent au rythme de la musique et des lumières sur le thème de Noël. Le spectacle est gratuit.
 
-## Pourquoi cette mission
-Chute rapide d'impressions, cause non établie. Lacune indépendante confirmée: la fiche municipale précise désormais la gratuité et la cadence des représentations, alors que l'article les laisse incertaines. Laval a déjà été actualisé sur master aujourd'hui.
+## Dates et horaires: quand venir ?
 
-## Décision du lecteur
-Savoir à quel moment venir avec les enfants, combien attendre entre deux séances et si un budget d'entrée est nécessaire.
+L'[agenda officiel de la Ville de Metz](https://metz.fr/agenda/fiche-42622.php) annonce une représentation **toutes les 30 minutes, chaque jour de 17 h à 21 h**.
 
-## Faits à traiter
-La fiche municipale annonce une représentation toutes les 30 minutes entre 17 h et 21 h, chaque jour du 20 novembre au 3 janvier, gratuitement. Actualiser le résumé et les passages qui présentaient ces informations comme inconnues. Ne pas confondre intervalle et durée du spectacle, cette dernière restant non confirmée. L'exception du 21 novembre est passée. Préciser le quai des Régates. Conserver les conseils de sécurité au bord de l'eau, de froid, de poussette, les réserves sur l'accessibilité et la météo ainsi que les informations de transport encore valides. Ne pas déduire d'autres modalités de réservation sans preuve.
+Avec de jeunes enfants, privilégiez le début de soirée et prévoyez jusqu'à une demi-heure d'attente si vous manquez une séance. Les 30 minutes correspondent à l'intervalle entre les représentations, et non à la durée du spectacle, qui n'est pas précisée. Il ne s'agit pas non plus d'un spectacle continu de quatre heures.
 
-## Sources de départ
-- Ville de Metz, fiche dédiée: https://metz.fr/agenda/fiche-42622.php
-- Office de tourisme, gratuité, dates et accès: https://www.tourisme-metz.com/fr/details/838175564-les-fontaines-dansantes-d-hiver
-- Ville de Metz, programme et transports: https://metz.fr/actus/2026/261102_noel_a_metz_2026_magie_tradition_et_reverie.php
-- https://metz.fr/decouvrir-partager/evenements/marches-noel.php
+Consultez l'agenda municipal avant de partir pour vérifier les éventuels changements d'horaires.
 
-## Affiliation
-Spectacle gratuit. Conserver https://www.booking.com/hotel/fr/ibis-styles-metz-centre.fr.html pour les familles séjournant à Metz. Une chambre familiale pour quatre est référencée; capacité et disponibilités à vérifier aux dates choisies, sans promettre de tarif.
+## Où voir le spectacle avec les enfants ?
 
-## Continuations internes
-Conserver le renvoi au guide Noël à Metz, qui traite les marchés et le Sentier des Lanternes. Le guide Metz en famille sans voiture peut compléter les accès sans redévelopper les transports.
+<!-- article-image-body:01 -->
+
+![Vue du lac aux Cygnes à Metz en juin 2014, hors spectacle hivernal](/images/articles/2026/11/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants-body-01.webp)
+
+*Photo: [JuJu939](https://commons.wikimedia.org/wiki/File:Lac_aux_cygnes_-_Metz_57.JPG) - [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Le rendez-vous se situe **quai des Régates, au Lac aux Cygnes**, dans le secteur du Plan d'eau de Metz, comme l'indique la [fiche de l'office de tourisme](https://www.tourisme-metz.com/fr/details/838175564-les-fontaines-dansantes-d-hiver).
+
+Le spectacle se déroule dehors, au bord de l'eau: gardez les petits près de vous et prévoyez des vêtements chauds. En poussette, arrivez suffisamment tôt pour repérer un point de vue dégagé.
+
+Les informations officielles consultées ne précisent pas les conditions d'accessibilité propres aux fontaines hivernales, les adaptations éventuelles en cas de mauvais temps ni les modalités particulières de réservation. En cas de besoin spécifique, renseignez-vous auprès de l'organisateur avant votre déplacement.
+
+## Accès et autres animations de Noël
+
+Pour venir en voiture, les parkings-relais du réseau LE MET' peuvent faciliter l'accès au centre. Dans son [programme des fêtes](https://metz.fr/actus/2026/261102_noel_a_metz_2026_magie_tradition_et_reverie.php), la Ville annonce la **gratuité des bus et parkings-relais les samedis et dimanches du 21 novembre au 20 décembre 2026**. Vérifiez les conditions de déplacement sur sa [page pratique](https://metz.fr/decouvrir-partager/evenements/marches-noel.php).
+
+Les fontaines sont distinctes du Sentier des Lanternes, installé au square Boufflers, et du traîneau flottant du père Noël, qui propose une balade en bateau. Pour organiser ces autres étapes et les marchés, consultez notre [guide de Noël à Metz en famille](/articles/evenements/noel-a-metz-2026-en-famille-marches-et-sentier-des-lanternes/).
+
+## Dormir à Metz pour prolonger le séjour
+
+Si vous venez de loin, l'[ibis Styles Metz Centre sur Booking](https://www.booking.com/hotel/fr/ibis-styles-metz-centre.fr.html), rue Haute-Seille, propose notamment une chambre familiale avec un lit double et un canapé-lit pour deux personnes. Vérifiez sa disponibilité, la capacité adaptée à votre famille, les possibilités de lit bébé et les conditions de réservation pour vos dates.
 
 ## Article source exact à préserver et améliorer
 
