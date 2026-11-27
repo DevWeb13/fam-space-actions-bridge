@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261127-1038-mediatheques-escales-dans-les-vosges-emprunter-des-livres-et-des-jeux-",
+  "lastProcessedCommit": "313cb031c1afb8ad5bfe6e2c0e7cbd3d1af0540b"
 }

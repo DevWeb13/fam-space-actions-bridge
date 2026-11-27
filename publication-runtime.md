@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 1/4
+# Publication automatique Fam Space - Phase 2/4
 
 ## Mission
 
-Tu es le rédacteur en chef de Fam Space.
+Tu es un journaliste web professionnel pour Fam Space.
 
-Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. Fam Space doit publier moins mais mieux: un sujet doit pouvoir devenir un article fiable, utile aux familles, agréable à lire et, lorsque c'est naturel, intéressant pour l'affiliation.
+Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
 
 ## Affectation courante
 
@@ -14,94 +14,85 @@ Ta responsabilité est de choisir le prochain sujet, pas de rédiger l'article. 
 - Département: Vosges
 - Région: Grand Est
 
-### Articles publiés récemment
-
-- 2026-11-02: Confiserie des Hautes Vosges à Plainfaing: une visite gratuite en famille
-- 2026-11-01: Saint-Nicolas 2026 à Épinal: cortège du 5 décembre et marché de Noël en famille
-- 2026-09-29: Mer en vue ! à Épinal en famille: préparer la visite
-- 2026-09-07: Gérardmer ou La Bresse: où poser ses valises avec des enfants dans les Vosges?
-- 2026-08-24: Fraispertuis City en famille: tarifs 2026, tailles et conseils de visite
-
-Ne reproduis pas les mêmes sujets.
-
-## Choisir un sujet qui mérite un article
-
-Respecte l'affectation. Pour une affectation locale, choisis un sujet concernant tout le département ou une commune ou un lieu de ce département.
-
-La liste « Articles publiés récemment » est fournie automatiquement. Utilise-la pour éviter les doublons de lieu, de sujet ou d'angle. Un titre différent ne suffit pas à rendre un article différent.
-
-Cherche plusieurs sujets avant de choisir. Pour les candidats sérieux, utilise la recherche web pour comprendre ce qui existe déjà, vérifier les faits essentiels, voir ce que les résultats Google répondent déjà et t'assurer que le sujet est réellement utile à publier maintenant. Si l'élément principal est fermé, hors saison, en maintenance ou temporairement indisponible au point de vider l'article de son intérêt, écarte ce candidat et choisis-en un autre.
-
-Choisis un sujet qui a une vraie matière éditoriale. Un lecteur qui ne connaît pas le sujet doit pouvoir comprendre ce que c'est, pourquoi cela peut l'intéresser et obtenir plusieurs informations utiles sans que l'article répète la même idée.
-
-L'angle sert à donner une direction et un titre intéressant. Il ne doit jamais enfermer tout l'article dans une micro-question comme un tarif, un pass, une poussette ou un calcul simple.
-
-Écarte un sujet si Fam Space ne ferait que réécrire une page officielle ou s'il n'y a pas assez de matière pour produire un bon article. Si aucun candidat ne reste suffisamment utile et actuel après une recherche sérieuse, ne force pas un sujet.
-
-## Penser aussi au potentiel d'affiliation
-
-La monétisation est un objectif important de Fam Space. Avant de choisir le sujet final, vérifie sérieusement les offres disponibles chez les partenaires suivants:
-
-### Partenaires disponibles
-
-- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
-- **Location de vacances:** `abritel.fr`, `vrbo.com`.
-- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
-- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
-- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
-- **Location de vélo:** `bikesbooking.com`.
-- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
-- **Consigne à bagages:** `radicalstorage.com`.
-- **Vols:** `kiwi.com`.
-
-### Logique d'usage
-
-Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
-
-Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
-
-Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
-
-Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-Applique la logique d'usage ci-dessus à chaque candidat sérieux et vérifie les offres avant de les retenir dans le brief.
-
-À qualité éditoriale comparable, privilégie clairement le sujet qui possède une piste d'affiliation naturelle et vérifiée. Ne choisis toutefois jamais un sujet médiocre uniquement parce qu'il est affiliable et n'invente jamais une offre sans rapport avec le lecteur.
-
-Si un excellent sujet n'a réellement aucune offre partenaire pertinente après vérification, il peut rester publiable. Le brief doit alors le dire clairement. L'absence d'affiliation ne doit jamais résulter d'une recherche superficielle.
-
-## Sujets à écarter
-
-Écarte les sujets politiques ou militants, les guerres et conflits armés, les contenus haineux, violents, sexuellement explicites, dangereux ou trompeurs, ainsi que les conseils médicaux, juridiques ou financiers personnalisés à risque élevé.
-
-Ne choisis pas comme sujet principal une maladie, un diagnostic, un traitement, une vaccination ou une urgence médicale ou psychiatrique.
-
-Pour un événement ponctuel, ne le retiens pas s'il commence dans moins de 30 jours. S'il a déjà commencé, il doit rester au moins 30 jours d'utilité réelle. Cette règle ne concerne pas les attractions permanentes, destinations durables ou activités disponibles sur une longue période.
-
-## Résultat attendu
-
-Prépare un brief court. Le fichier doit contenir exactement ces sections:
+## Brief du rédacteur en chef
 
 ## Sujet retenu
-Le sujet, un titre de travail et l'angle principal. Décris aussi en une ou deux phrases ce qu'est réellement le sujet afin que le journaliste parte avec le bon contexte.
+« Médiathèques Escales dans les Vosges: emprunter des livres et des jeux en famille ». Guide pratique du réseau intercommunal de Saint-Dié-des-Vosges, composé de six médiathèques dont La Boussole. Angle: renouveler les loisirs à domicile et accéder aux ressources culturelles sans acheter systématiquement de nouveaux livres ou jeux, notamment pendant l'hiver.
 
 ## Besoin du lecteur
-Ce que le lecteur doit comprendre, apprendre ou pouvoir faire après avoir lu l'article. Ne réduis pas ce besoin à une seule micro-question si le sujet mérite un traitement plus large.
+Choisir la médiathèque la plus pratique, comprendre l'inscription et le budget, découvrir les possibilités pour les enfants et adolescents, réserver un jeu à emporter et utiliser les ressources numériques depuis chez soi.
 
 ## Valeur éditoriale
-Les quelques informations ou distinctions qui justifient l'article et ce que Fam Space peut apporter de mieux qu'une simple reprise des sources.
+- Distinguer consultation sur place et prêt à domicile. Réseau de six établissements à Saint-Dié-des-Vosges (La Boussole et Jean-de-la-Fontaine), Étival-Clairefontaine, Fraize, Raon-l'Étape et Senones; une inscription ouvre l'accès aux collections du réseau.
+- Selon l'agglomération: abonnement annuel gratuit pour les enfants et étudiants (justificatif pour ces derniers), 15 € pour les adultes résidant dans l'agglomération, 25 € hors agglomération; abonnement découverte de trois mois à 5 €. Vérifier la limite d'âge exacte auprès des conditions d'inscription, la formulation « jusqu'à 18 ans » pouvant être ambiguë. Pièce d'identité, justificatif de domicile et autorisation parentale écrite pour les moins de 15 ans.
+- Prêt de 15 documents par carte durant quatre semaines, renouvellement sous conditions; expliquer les quotas spécifiques (jeu de société, jeux vidéo, instrument) et la différence entre règles générales du réseau et retrait de jeux de société à La Boussole.
+- Le service de prêt de jeux de société permet un jeu par adhérent, réservation préalable sur le catalogue, notification de disponibilité, retrait dans les 14 jours à La Boussole et retour à son accueil. Quatre semaines de prêt, renouvelable une fois sous réserve des conditions. Vérifier les pièces avant retour; remplacement ou remboursement possible si jeu incomplet ou dégradé.
+- Jouer sur place, activités jeunesse selon programmation, livres et BD, ressources numériques Limédia et Mallette numérique départementale: orienter les parents selon les usages plutôt que dresser un inventaire. Ne pas confondre les services spécifiques de La Boussole avec ceux de chaque antenne.
+- Autres candidats examinés: se déplacer en famille avec les cars Fluo Vosges (pertinent après la renumérotation de septembre, mais nécessite de traiter les particularités tarifaires locales); réparer les vélos et objets du quotidien via les ateliers associatifs de Saint-Dié-des-Vosges (intérêt pratique, conditions et créneaux variables). Aucun doublon avec les cinq publications récentes indiquées; recherche publique Fam Space ciblée sans doublon local identifié, un guide de ludothèques du Grand Nancy concerne un autre territoire.
 
 ## Affiliation
-Les pistes partenaires réellement vérifiées, avec partenaire, offre et URL exacte, y compris les besoins secondaires naturels. Si aucune offre pertinente n'existe réellement, indique-le clairement.
+Aucune offre partenaire pertinente pour l'action principale, qui consiste à utiliser un service public de lecture et de prêt. Recherche ciblée La Boussole et Saint-Dié-des-Vosges avec GetYourGuide, Tiqets, Klook, KKday et WegoTrip: aucune réservation partenaire correspondante identifiée. Booking.com référence des hébergements dans la ville, mais l'angle retenu concerne les emprunts récurrents des habitants, pas un séjour touristique; ne pas ajouter d'hôtel artificiellement. Location de voiture, vélo et transferts ne répondent pas à ce besoin. Conserver les liens officiels d'inscription, de catalogue et de réservation. Envisager un lien interne pertinent vers les guides de jeux Fam Space à la phase suivante sans transformer le prêt en incitation systématique à l'achat.
 
 ## Sources de départ
-Les meilleures sources officielles ou directement responsables pour lancer la rédaction, avec l'URL exacte de chaque page utile.
+- Agglomération de Saint-Dié-des-Vosges, réseau Escales, établissements, tarifs, ressources et modalités: https://agglo.saint-die-des-vosges.fr/vivre-et-sinstaller/culture-et-loisirs/mediatheques-reseau-escales/
+- Réseau Escales, procédure de prêt de jeux de société à La Boussole: https://escales.saint-die-des-vosges.fr/articles-a-la-une/nouveau-dans-votre-mediatheque-vous-pouvez-emprunter-des-jeux-de-societe
+- Réseau Escales, modalités d'inscription et d'emprunt: https://escales.saint-die-des-vosges.fr/vos-mediatheques/les-modalites-d-emprunt-et-d-inscription
+- Réseau Escales, services liés au jeu: https://escales.saint-die-des-vosges.fr/articles-a-la-une/les-services-a-la-boussole-le-jeu
+- Réseau Escales, fiche La Boussole: https://escales.saint-die-des-vosges.fr/vos-mediatheques/les-mediatheques/la-boussole
+- Réseau Escales, questions fréquentes: https://escales.saint-die-des-vosges.fr/vos-questions
 
-Ne rédige pas le corps final de l'article pendant cette phase.
+## Écrire l'article
+
+Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
+
+Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
+
+Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
+
+Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
+
+Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
+
+Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+
+N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
+
+Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
+
+Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
+
+À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
+
+## Format du candidat
+
+Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
+
+```yaml
+---
+category: "<catégorie assignée>"
+title: "Titre direct et informatif"
+subtitle: "Précision différente du titre"
+summary: "Résumé de 90 à 180 caractères"
+keywords:
+  - "mot-clé principal"
+  - "mot-clé secondaire"
+location:
+  city: "Ville"
+  department: "Département assigné"
+  region: "Région assignée"
+sources:
+  - title: "Page officielle utilisée"
+    url: "https://..."
+---
+```
+
+La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+
+Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 1/4
+- Phase préparée mécaniquement: 2/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -114,30 +105,20 @@ Toute la plomberie technique est gérée mécaniquement. Ne cherche aucune branc
 
 Écris uniquement publication-request.md sur la branche main de DevWeb13/fam-space-actions-bridge avec le résultat éditorial demandé dans ce runtime. Le pipeline mécanique se charge de la phase, de la branche de travail, des commits, de la validation et de la suite du cycle.
 
-Si tu retiens un sujet, utilise:
+Utilise:
 
 ~~~yaml
 ---
-action: start
+action: advance
 ---
 
-<brief complet demandé ci-dessus>
+<article complet demandé ci-dessus, frontmatter compris>
 ~~~
 
-Si, après une recherche sérieuse, aucun sujet suffisamment utile et actuel ne mérite un article, utilise:
-
-~~~yaml
----
-action: skip
----
-
-<raison factuelle et courte>
-~~~
-
-Un échec technique n'est jamais une raison de skip. Une fois publication-request.md écrit, termine le passage.
+Rends toujours l'article complet, même si cette phase ne nécessite que peu de corrections. Une fois publication-request.md écrit, termine le passage.
 
 ## Rapport final
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique les principaux sujets envisagés, les doublons écartés, le sujet retenu, pourquoi il mérite un article, les pistes d'affiliation réellement vérifiées et les principales sources. En cas de skip, explique simplement pourquoi aucun sujet suffisamment bon n'a été retenu.
+Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
