@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -83,6 +86,12 @@ sources:
     url: https://www.laval-tourisme.com/offres/croisiere-des-lumieres-2026-laval-fr-6854586/
   - title: Laval Agglomération - Réseau TUL
     url: https://www.agglo-laval.fr/utile-au-quotidien/transports-et-mobilites/tul
+  - title: Ville de Laval - Programme des Lumières 2026
+    url: https://www.laval.fr/fileadmin/Galeries_photos_et_videos/Actualit%C3%A9_Agenda/2026/EVENEMENTS/LUMIERES_DE_LAVAL_2026/Lumieres_de_Laval_2026_-_tout_un_programme.pdf
+  - title: Ville de Laval - Lumières de Laval 2026
+    url: https://www.laval.fr/lumieres-de-laval
+  - title: Ville de Laval - Croisières et dîners sur la Mayenne
+    url: https://www.laval.fr/autre/actualites/croisieres-et-diners-sur-la-mayenne-14267
 eventEndsAt: 2027-01-10
 reviewAt: 2026-11-18
 topic:
@@ -104,7 +113,7 @@ affiliate:
   destination: Laval
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere/index.md
   targetSha: f3e0be13d74d728adb53f7d5dab68c82343fd075
@@ -133,32 +142,106 @@ radar:
       - illumination de noel laval 2026
 ---
 
-## Mission retenue
-Actualiser les Lumières de Laval 2026, déjà commencées.
+Les **Lumières de Laval 2026** se déroulent du **21 novembre 2026 au 3 janvier 2027** sur le thème du « Grand Bal de Noël ». Pour profiter de la fête avec les enfants, **la promenade entre les décors lumineux ne nécessite aucun billet**. La grande roue reste installée jusqu'au **10 janvier 2027**; marchés et croisières ont leurs propres dates.
 
-## Pourquoi cette mission
-Candidat rapidDrop à forte perte d'exposition, cause inconnue. Le Parc Phoenix vient d'être actualisé sur master; ne pas le reprendre. Laval présente une correction indépendante vérifiée: la page municipale indique désormais 17h30 pour le pont Aristide-Briand, contre 17h dans l'article. Le programme municipal apporte aussi les modalités d'embarquement absentes du guide.
+## Où voir gratuitement les illuminations avec les enfants ?
 
-## Décision du lecteur
-Choisir un soir et une formule gratuite ou payante sans arriver trop tôt ni manquer le bateau.
+La [Ville de Laval présente les installations du parcours](https://www.agglo-laval.fr/lagglo-mon-territoire/laval-agglo/les-34-communes/lactu-de-nos-communes/installations-lumineuses-14262). Pour une balade familiale, voici les principaux arrêts à choisir selon le temps et l'envie des enfants:
 
-## Faits à traiter
-- Corriger l'heure du pont à 17h30 selon la page des installations et vérifier les exceptions des 24 et 31 décembre dans le programme; signaler les divergences si nécessaire. L'ouverture du 21 novembre est passée, ne plus la présenter au futur.
-- Programme municipal: embarquement quinze minutes avant le départ, face au Cinéville; réservation obligatoire dix jours avant annoncée dans le programme, vérifier les modalités actuelles auprès de l'office. Calendrier détaillé de la croisière actualisé, ne pas présumer des places. Préserver durée, tarifs, gratuités, conditions d'échange et distinction des dîners.
-- Ajouter si utile le Solstice du Quarante gratuit le 19 décembre (10h-18h), et la course des lucioles du 11 décembre, en vérifiant les modalités. Conserver les marchés, la roue, les budgets, l'accessibilité, les transports et les crédits des images.
+- **Place du 11-Novembre:** les *lanternes fantastiques* forment un jardin de contes avec animaux géants, papillons, fleurs et champignons lumineux.
+- **Grande Rue, dans le Vieux-Laval:** lustres, robes et miroirs composent un grand bal d'hiver.
+- **Rue des Orfèvres:** ballons et éclairages multicolores rappellent un bal populaire.
+- **Rue du Pin-Doré:** des sphères irisées suspendues créent le *Bal des bulles*.
+- **Pont Aristide-Briand:** une voûte de guirlandes et de lustres lumineux habille le passage au-dessus de la Mayenne.
+- **Esplanade du Château-Neuf, place de la Trémoille:** boule à facettes géante, bonshommes de neige lumineux et jukebox interactif pour choisir la musique.
 
-## Sources de départ
-- https://www.agglo-laval.fr/lagglo-mon-territoire/laval-agglo/les-34-communes/lactu-de-nos-communes/installations-lumineuses-14262
-- https://www.agglo-laval.fr/autres/actualites/le-grand-bal-de-noel-invite-la-ville-a-entrer-dans-la-danse-14261
-- https://www.laval.fr/fileadmin/Galeries_photos_et_videos/Actualit%C3%A9_Agenda/2026/EVENEMENTS/LUMIERES_DE_LAVAL_2026/Lumieres_de_Laval_2026_-_tout_un_programme.pdf
-- https://www.laval-tourisme.com/offres/croisiere-des-lumieres-2026-laval-fr-6854586/
-- https://www.laval-tourisme.com/sortez-vibrez/le-plein-d-evenements/les-lumieres-de-laval/
+Il n'est pas nécessaire de parcourir tous ces lieux: pour de jeunes enfants, les lanternes et le Château-Neuf constituent déjà deux haltes marquantes.
 
-## Affiliation
-Conserver et revérifier https://www.booking.com/hotel/fr/marin-laval.fr.html ; aucune offre de croisière partenaire identifiée, ne pas substituer une prestation différente.
+**Horaires à distinguer:** la Ville annonce désormais un allumage à **17 h 30**, notamment sur le pont Aristide-Briand et au Château-Neuf, jusqu'à **22 h du dimanche au mercredi** et **minuit du jeudi au samedi**. Pour les lanternes et les éventuelles prolongations des 24 et 31 décembre, vérifiez les horaires particuliers auprès de la Ville avant de prévoir une sortie tardive.
 
-## Continuations internes
-Conserver les guides existants sur les transports en Mayenne et le séjour de trois jours.
+La soirée inaugurale du 21 novembre est passée. Les décors restent accessibles chaque soir jusqu'au 3 janvier, sans attendre une animation particulière. Avec de jeunes enfants, privilégiez le début de soirée.
+
+## Les trois marchés de Noël: dates et horaires
+
+<!-- article-image-body:01 -->
+
+![Place du 11-Novembre à Laval après son réaménagement, lieu des marchés de Noël](/images/articles/2026/10/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere-body-01.webp)
+
+*Photo: [Onca53](https://commons.wikimedia.org/wiki/File:Place_du_11-Novembre_(2026)_1.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+- **25 au 29 novembre, place du 11-Novembre:** premier marché de Noël, avec environ 20 exposants.
+- **4 au 6 décembre, place du 11-Novembre:** marché des Lumières, avec une trentaine d'artisans-créateurs.
+- **9 au 13 décembre, square de Boston:** second marché de Noël, avec environ 50 exposants, près de la grande roue.
+
+Les deux marchés de Noël (25-29 novembre et 9-13 décembre) annoncent les mêmes horaires: **11 h-20 h le mercredi et le jeudi**, **11 h-23 h le vendredi et le samedi**, puis **10 h-20 h le dimanche**.
+
+Le marché des créateurs ouvre **vendredi 4 décembre de 12 h à 22 h**, **samedi 5 de 9 h 30 à 22 h** et **dimanche 6 de 11 h à 20 h**.
+
+Pour associer marché, roue et illuminations, les **5-6 décembre** ou les **12-13 décembre** sont de bons choix. Les 12 et 13 décembre, le marché se trouve directement à côté de la roue. **Les 7 et 8 décembre, aucun de ces trois marchés n'est annoncé**: les illuminations et la grande roue restent toutefois accessibles selon leurs horaires.
+
+## Grande roue: tarifs et conditions pour les enfants
+
+<!-- article-image-body:02 -->
+
+![Kiosque du square de Boston à Laval, où est installée la grande roue de Noël](/images/articles/2026/10/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere-body-02.webp)
+
+*Photo: [Fab5669](https://commons.wikimedia.org/wiki/File:Laval_-_square_de_Boston_01.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:02 -->
+
+La grande roue du **square de Boston** fonctionne du **21 novembre au 10 janvier**. Elle ouvre tous les jours:
+
+- **Hors vacances scolaires:** 14 h-22 h, jusqu'à minuit les vendredis et samedis.
+- **Pendant les vacances scolaires:** 11 h-23 h, jusqu'à minuit les vendredis et samedis.
+
+En cabine classique ou PMR, les tarifs annoncés sont de **6 € par adulte**, **4 € par enfant de moins de 10 ans** et **gratuit pour les moins de 2 ans**. Les moins de 10 ans doivent être accompagnés d'un adulte. Pour voir la ville illuminée depuis la roue, choisissez un créneau après 17 h 30.
+
+La présence d'une cabine PMR est confirmée, mais les modalités concrètes d'embarquement sont à vérifier selon les besoins de la personne.
+
+## Croisière des Lumières: horaires, prix et réservation
+
+La croisière promenade sur le **Vallis Guidonis** part du **25 quai André-Pinçon**. Elle dure **1 h 15, de 16 h 45 à 18 h**, avec les commentaires du capitaine. Présentez-vous à **16 h 30**, devant le Cinéville: le programme municipal demande une arrivée quinze minutes avant le départ.
+
+La période annoncée va du **25 novembre au 30 décembre**, mais les départs ne sont **pas quotidiens**. La [fiche de réservation de Laval Tourisme](https://www.laval-tourisme.com/offres/croisiere-des-lumieres-2026-laval-fr-6854586/) détaille notamment les **27-28 novembre**, **2-3, 5-6, 9, 12-13, 16-17, 20, 23 et 26-27 décembre**. Tous les jours jusqu'au 30 décembre n'y sont pas encore détaillés. Les **24 et 25 décembre sont exclus**: contrôlez le départ effectivement proposé avant d'organiser la journée. Le programme municipal prévoit une réservation obligatoire dix jours à l'avance auprès de Laval Tourisme. Pour un départ plus proche, demandez à l'office si une réservation reste possible; le calendrier affiché ne garantit pas de places libres.
+
+Le tarif est de **12 € par personne**, gratuit pour les **moins de 2 ans**. Les billets sont annoncés **non repris et non échangés**. Il faut donc choisir la date avec soin.
+
+Ne confondez pas cette promenade avec les **dîners-croisières**, proposés à partir de **58 € par adulte et 30 € par enfant de moins de 12 ans**, ou les soirées musicales à **73 € et 37 €**: ce sont des prestations et des horaires différents.
+
+## Quel budget pour une famille de quatre personnes ?
+
+Pour **2 adultes et 2 enfants de 6 et 9 ans**, hors repas, achats au marché et transport:
+
+- **Promenade dans les rues illuminées:** sans billet d'entrée pour la promenade.
+- **Grande roue:** **20 €** pour les quatre.
+- **Croisière promenade:** **48 €** pour les quatre.
+- **Grande roue et croisière:** **68 €** au total.
+
+Le **samedi 12 décembre** permet en principe de combiner le marché du square de Boston, la roue et un départ de croisière annoncé, **à condition qu'il reste des places**. Pour une sortie plus souple avec de jeunes enfants, la promenade et éventuellement la roue évitent l'horaire fixe du bateau.
+
+## Accès, poussette et besoins des bébés
+
+Les principaux points de repère sont la **place du 11-Novembre** pour les marchés de novembre et des créateurs, le **square de Boston** pour la roue et le marché du 9 au 13 décembre, et le **quai André-Pinçon** pour la croisière.
+
+Le réseau **TUL** annonce la **gratuité des transports les mercredis, week-ends et jours fériés**. Sa navette gratuite de centre-ville circule du lundi au samedi, mais n'est pas annoncée le dimanche. Vérifiez les horaires du retour si vous restez après les illuminations. Pour les déplacements au-delà de Laval, consultez notre [guide pour se déplacer en Mayenne avec des enfants sans voiture](/articles/vie-pratique/se-deplacer-en-mayenne-avec-des-enfants-sans-voiture-bus-tad-et-ter/).
+
+La foule peut compliquer la circulation avec une poussette aux heures les plus fréquentées. Pour le **bateau**, les conditions d'embarquement et de rangement d'une poussette, ainsi que l'accessibilité, doivent être confirmées auprès de l'organisateur. Aucun micro-ondes public ni espace à langer propre à l'événement n'a été confirmé: prévoyez une solution pour le repas et le change du bébé.
+
+## Où dormir pour profiter des Lumières ?
+
+<!-- article-image-body:03 -->
+
+![Façade de la gare ferroviaire de Laval, près des hébergements du centre-ville](/images/articles/2026/10/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere-body-03.webp)
+
+*Photo: [Fab5669](https://commons.wikimedia.org/wiki/File:Laval_-_gare_01.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:03 -->
+
+Pour une famille arrivant en train ou restant le week-end, l'[Hôtel et Apparts Marin à Laval](https://www.booking.com/hotel/fr/marin-laval.fr.html), près de la gare, propose des chambres et des appartements, dont certains avec cuisine. La fiche de réservation mentionne un lit bébé sur demande pour les 0 à 2 ans, mais comporte aussi une indication contradictoire sur sa disponibilité: faites confirmer cet équipement avant de réserver. Vérifiez la capacité du logement, la confirmation de l'équipement, le tarif et les conditions d'annulation pour vos dates; aucune disponibilité n'est présumée.
+
+Si vous prolongez votre séjour, notre [itinéraire de trois jours en Mayenne avec des enfants](/articles/voyages/mayenne-en-famille-pendant-3-jours-laval-sainte-suzanne-et-chateau-gontier/) propose aussi Sainte-Suzanne et Château-Gontier-sur-Mayenne.
 
 ## Article source exact à préserver et améliorer
 
