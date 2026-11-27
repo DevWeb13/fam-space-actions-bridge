@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 3/3
+# Radar Fam Space - Phase 1/3
 
 ## Mission
 
@@ -8,34 +8,25 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 3/3
+# Radar - Phase 1/3
 
-Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
+Tu es rédacteur en chef. Ta seule responsabilité est de choisir la meilleure mission du passage et de préparer un brief éditorial court. **Ne fais aucune plomberie Git et ne reconstruis aucune donnée GSC structurée.**
 
-Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
+Le snapshot GSC du jour est déjà prêt lorsque cette phase commence. Utilise le catalogue compact et l'historique du bridge fournis dans ce runtime, puis utilise le contexte des travaux en cours fourni dans ce runtime. Contrôle seulement les articles nécessaires sur `master`, sans relire tout le catalogue fichier par fichier.
 
-Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
+Examine **en premier** les articles `refresh`, en commençant par ceux marqués `rapidDrop: true`. Ils ont gagné des impressions, puis leur visibilité a fortement diminué en quelques jours. Les articles récents ne doivent pas être pénalisés par leur âge. Les autres pertes significatives viennent ensuite.
 
-Ensuite:
-- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
-- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
-- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
-- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
-- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
-- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
-- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
-- ne force ni longueur ni affiliation.
+Lis l'article source complet, ses sources et les requêtes GSC lorsqu'elles ont été diagnostiquées :
+- `rank_loss` : vérifier les intentions dont les positions ont réellement reculé ;
+- `coverage_loss` : examiner les recherches dont l'exposition diminue ;
+- `uncertain` ou `needs_query_check` : une chute d'impressions ne prouve pas la cause. Seule une lacune indépendante et vérifiée peut justifier une amélioration ;
+- `search_potential` : vérifier que la réponse et le titre correspondent réellement à l'intention.
 
-Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
+**Ne choisis pas un refresh pour changer une date ou forcer un `updatedAt`.** Identifie ce qui serait concrètement meilleur pour la famille, tout en conservant ce qui fonctionne déjà.
 
-Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
-- `summary`: contrôles et corrections réellement effectués;
-- `sources`: URLs factuelles revérifiées;
-- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+**Seulement si aucun article existant n'est réellement améliorable**, cherche un événement exceptionnel avec un fort potentiel d'intérêt et éventuellement d'affiliation. Vérifie ses sources officielles et recherche les doublons de sujet sur `master`, en complément des articles proches déjà listés, ainsi que les contenus Publication/Destination en cours. Ne multiplie pas les nouveaux articles sur de petits événements gratuits.
 
-**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
-
-## Règles partenaires
+Applique directement les règles partenaires ci-dessous.
 
 ### Partenaires disponibles
 
@@ -59,345 +50,980 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-## Candidat validé de la phase précédente
-
----
-title: "Parc Phoenix à Nice en famille: serre tropicale, animaux et jeux"
-subtitle: Deux heures de découverte ou une demi-journée avec pique-nique, au rythme des enfants
-summary: "Serre tropicale, animaux et jeux au Parc Phoenix à Nice: tarifs familiaux, équipements pour les tout-petits, accrobranche et conseils pour préparer la visite."
-slug: parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux
-status: published
-publishedAt: 2026-11-15T00:25:33+01:00
-updatedAt: null
-category: activites
-readingTime: 4
-publicationOrigin: region
-location:
-  city: Nice
-  department: Alpes-Maritimes
-  region: Provence-Alpes-Côte d’Azur
-topic:
-  key: activites|nice|parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux|2026
-  keywords:
-    - Parc Phoenix en famille
-    - activité avec enfants à Nice
-    - serre tropicale Nice
-image:
-  src: /images/articles/2026/11/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux.webp
-  alt: La grande serre tropicale du Parc Phœnix à Nice
-sources:
-  - title: Ville de Nice - Parc Phoenix
-    url: https://www.nice.fr/lieux/parc-phoenix/
-  - title: Parc Phoenix - Présentation
-    url: https://www.parc-phoenix.org/le-parc/presentation/
-  - title: Parc Phoenix - La serre
-    url: https://www.parc-phoenix.org/la-flore/la-serre/
-  - title: Parc Phoenix - Informations pratiques
-    url: https://www.parc-phoenix.org/le-parc/infos-pratiques/
-  - title: Parc Phoenix - Accrobranche
-    url: https://www.parc-phoenix.org/activites-pedagogie/accrobranche/
-  - title: Parc Phoenix - Accueil et informations de visite
-    url: https://www.parc-phoenix.org/
-  - title: B&B HOTELS - Nice Aéroport Arenas
-    url: https://www.hotel-bb.com/fr/hotel/nice-aeroport-arenas
-  - title: Parc Phoenix - Services
-    url: https://www.parc-phoenix.org/le-parc/services/
-  - title: Nissa’venture - Accueil
-    url: https://nissaventure-accrobranche.fr/
-  - title: Nissa’venture - Nos parcours
-    url: https://nissaventure-accrobranche.fr/nos-parcours/
-  - title: Nissa’venture - Tarifs et horaires
-    url: https://nissaventure-accrobranche.fr/tarifs-horaires/
-  - title: Office de tourisme Nice Côte d’Azur - Parc Phoenix
-    url: https://www.explorenicecotedazur.com/culture/parc-phoenix/
-  - title: French Riviera Pass - Parc Phoenix
-    url: https://www.frenchrivierapass.com/activite/parc-phoenix-entree/
-  - title: French Riviera Pass - FAQ
-    url: https://www.frenchrivierapass.com/faq/
-affiliate:
-  enabled: true
-  type: travel
-  destination: Nice
-radar:
-  schemaVersion: 1
-  phase: 2
-  mode: refresh
-  targetPath: src/routes/articles/activites/(2026)/(11)/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux/index.md
-  targetSha: 25904066a3fe508de3d5526da7be82eb92abb412
-  targetUrl: /articles/activites/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux/
-  decision: Organiser une visite adaptée à l'âge des enfants et au budget familial, en sachant quels équipements sont disponibles pour les tout-petits et quand ajouter une activité payante.
-  affiliationPotential: Conserver le lien Booking.com du B&B HOTEL Nice Aéroport Arenas, dont la fiche hôtel officielle confirme l'offre familiale; aucun billet direct partenaire pour le parc confirmé, pass Klook épuisé.
-  gsc:
-    retrievedAt: 2026-11-27T09:15:00+01:00
-    dataThrough: 2026-11-25
-    signal: uncertain
-    basis: "Visibilité récente : 22 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante."
-    peakStart: 2026-11-16
-    peakEnd: 2026-11-18
-    recentStart: 2026-11-23
-    recentEnd: 2026-11-25
-    peakImpressions: 22
-    recentImpressions: 0
-    commonQueries: 0
-    positionDelta: null
-    impressionRatio: 0
-    focusQueries:
-      - avis sur parc phœnix
-      - nice phoenix
-      - oui
-      - parc phenix nice
-      - parc pheonix
----
-
-À l’ouest de Nice, face à l’aéroport, le Parc Phoenix réunit sur sept hectares un jardin botanique, une grande serre tropicale, des espaces animaliers et des jeux pour enfants. Pour une famille, son intérêt tient à cette variété: on peut observer les plantes et les animaux, puis laisser les enfants se dépenser, sans changer de lieu.
-
-Prévoyez environ deux heures pour quelques étapes choisies, ou une demi-journée avec un pique-nique et de longues pauses aux jeux. Ces durées sont des suggestions pour organiser votre sortie, à adapter à l’âge et aux envies des enfants.
-
-## La serre, pour regarder les plantes autrement
-
-<!-- article-image-body:01 -->
-
-![Végétation tropicale à l'intérieur de la serre du Parc Phoenix à Nice](/images/articles/2026/11/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux-body-01.webp)
-
-<!-- /article-image-body:01 -->
 
-Le « Diamant vert », une serre pyramidale haute de 25 mètres, constitue un bon premier objectif. Sur 7 000 m², elle rassemble six climats tropicaux et subtropicaux, avec notamment des orchidées, des fougères arborescentes et un jardin d’Afrique australe.
-
-Pour accompagner la découverte, proposez une petite recherche: trouver une feuille plus grande que sa main, comparer deux silhouettes de palmiers ou repérer une plante dont la forme étonne.
-
-Dans la partie centrale, les végétaux sont regroupés selon leurs besoins, notamment en eau et en lumière, comme l’explique la [page officielle consacrée à la serre](https://www.parc-phoenix.org/la-flore/la-serre/). Une piste intéressante pour les plus grands: des plantes venues de continents différents peuvent avoir besoin des mêmes conditions pour pousser. Les floraisons de cette partie sont surtout présentes au printemps et en été.
-
-## Des animaux à observer, un refuge à découvrir
-
-<!-- article-image-body:02 -->
-
-![Flamants roses photographiés dans le Parc Phoenix à Nice](/images/articles/2026/11/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux-body-02.webp)
-
-<!-- /article-image-body:02 -->
-
-La petite ferme offre un point de départ familier aux plus jeunes. Les enfants attirés par la faune exotique pourront consacrer davantage de temps aux autres espaces animaliers. Devant un animal, quelques minutes d’observation permettent parfois de découvrir une façon de se déplacer, de manger ou d’utiliser ses pattes que l’on aurait manquée en passant.
-
-Le lieu a aussi une mission moins visible. Selon sa [présentation officielle](https://www.parc-phoenix.org/le-parc/presentation/), le Parc Phoenix est un éco-refuge depuis 2020: il accueille et protège des animaux sauvages exotiques en détresse, notamment issus de saisies douanières ou d’abandons. Cette dimension permet d’aborder avec les enfants les besoins de ces animaux et les difficultés que pose leur détention chez un particulier.
-
-## Deux façons de composer la sortie
-
-<!-- article-image-body:03 -->
-
-![Plantes succulentes du jardin aride du Parc Phoenix à Nice](/images/articles/2026/11/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux-body-03.webp)
-
-<!-- /article-image-body:03 -->
-
-**Pour une visite courte, autour de deux heures**, choisissez la serre, un espace animalier selon les envies des enfants, puis une pause aux jeux. Si les animaux sont leur motivation principale, inversez les deux premières étapes. Les jardins feront la liaison entre ces temps forts.
-
-**Pour une demi-journée**, ajoutez une promenade dans les jardins et un déjeuner sur place. Les collections méditerranéennes, les plantes succulentes et les plantes aromatiques permettent de poursuivre la découverte après la serre, en comparant les formes et les feuillages. Le pique-nique est autorisé.
-
-Les aires de jeux sont comprises dans l’entrée. La [Ville de Nice signale également une aire inclusive et un accès pour les personnes à mobilité réduite](https://www.nice.fr/lieux/parc-phoenix/).
-
-## Avec un bébé ou un jeune enfant
-
-Deux espaces permettent de changer un bébé: dans les sanitaires du jardin d’enfants et dans ceux situés près du snack. Le parc dispose de toilettes accessibles et peut prêter une poussette ou un fauteuil roulant si du matériel est disponible. Consultez les [services du parc](https://www.parc-phoenix.org/le-parc/services/) avant votre venue.
-
-Si vous ne souhaitez pas emporter le déjeuner, le snack Côté Jardin accueille les visiteurs toute l’année pendant les heures d’ouverture du parc. Vous pouvez aussi apporter votre repas.
-
-## Accrobranche: quel parcours selon l’âge ?
-
-Nissa’venture propose une activité indépendante à partir de 3 ans. Les quatre circuits Kid demandent au total environ 45 minutes à une heure, avec un adulte qui suit l’enfant depuis le sol. Le circuit Kid+ est accessible dès 8 ans et 1,30 m minimum; prévoyez 30 à 45 minutes supplémentaires si vous le choisissez, avec un accompagnement adulte au sol ou sur le parcours. Retrouvez les [conditions des parcours](https://nissaventure-accrobranche.fr/nos-parcours/).
-
-Le prix de l’accrobranche s’ajoute à celui de l’entrée du Parc Phoenix. Consultez les [tarifs et le calendrier de Nissa’venture](https://nissaventure-accrobranche.fr/tarifs-horaires/) selon l’âge et la taille de l’enfant. D’après les [consignes du parc](https://www.parc-phoenix.org/activites-pedagogie/accrobranche/), la réservation n’est pas nécessaire pour moins de dix personnes, sauf groupes et anniversaires. Des chaussures fermées adaptées au sport sont nécessaires. L’activité peut être interrompue en cas de mauvais temps.
-
-## Budget, horaires et arrivée sans voiture
-
-Les [informations pratiques du parc](https://www.parc-phoenix.org/le-parc/infos-pratiques/) indiquent:
-
-- **Plein tarif:** 5,50 €. Le tarif réduit de 3,20 € concerne les 12 à 18 ans, les étudiants et les titulaires du Pass Musées de Nice, sur justificatif selon le tarif.
-- **Moins de 12 ans:** gratuit pour trois enfants maximum par adulte payant, puis 3,20 € par enfant supplémentaire.
-- **Horaires:** de 9h30 à 18h du 1er octobre au 31 mars, et de 9h30 à 19h30 du 1er avril au 30 septembre. Fermeture les 25 décembre et 1er janvier. La billetterie ferme une heure avant le parc.
-- **Sans voiture:** tramway ligne 2, arrêt Parc Phœnix, ou train jusqu’à la gare de Nice Saint-Augustin.
-- **Entrée:** au 405 promenade des Anglais, exclusivement du côté du tramway. L’ancienne entrée Arénas est fermée. En voiture, plusieurs parkings publics payants se trouvent à proximité, dont Indigo Arénas et Interparking Nouvel’R.
-
-Deux adultes et deux enfants de moins de 12 ans paient ainsi 11 € au total pour le parc, ou 14,20 € si l’un des enfants a entre 12 et 18 ans. Pour un adulte avec quatre enfants de moins de 12 ans, comptez 8,70 €. Ces exemples excluent l’accrobranche, le transport et les repas. L’abonnement annuel ordinaire coûte 44,10 € (hors expositions et manifestations diverses).
-
-Les habitants de la métropole Nice Côte d’Azur bénéficient de la gratuité le premier week-end complet de chaque mois, avec un justificatif de domicile de moins de trois mois et une pièce d’identité par personne. Une gratuité est aussi prévue pour les visiteurs handicapés sur présentation de la carte d’invalidité, ainsi que pour leur accompagnateur.
-
-Pour les billets, prévoyez un achat sur place: l’[accueil officiel](https://www.parc-phoenix.org/) annonce une billetterie en ligne indisponible, malgré des liens de réservation encore affichés sur le site.
-
-Si vous disposez déjà d’un French Riviera Pass, l’entrée du Parc Phoenix est incluse, mais pas l’accrobranche, selon l’[office de tourisme](https://www.explorenicecotedazur.com/culture/parc-phoenix/). Pour cette seule sortie, le billet ordinaire est plus pertinent. Le pass n’ayant pas de tarif spécifique pour les enfants, comparez le coût des autres visites envisagées avant de l’acheter, en tenant compte des gratuités.
-
-## Une sortie surtout en plein air
-
-La serre apporte une étape abritée, mais les déplacements, les jardins et les jeux se déroulent dehors. Par temps d’averses, un parcours court sera plus facile à adapter qu’une demi-journée avec pique-nique.
-
-Le parc annonce une [fermeture en cas de vigilance orange pour précipitations ou vent violent](https://www.parc-phoenix.org/le-parc/infos-pratiques/), ainsi qu’en cas de force majeure. Lorsque la météo se dégrade, vérifiez les annonces officielles avant de partir.
-
-## Une nuit dans l’Arénas pour prolonger la visite
-
-Si la sortie s’intègre à un week-end niçois, le [B&B HOTEL Nice Aéroport Arenas, près du Parc Phoenix](https://www.booking.com/hotel/fr/b-amp-b-nice-aeroport.fr.html), propose des chambres quadruples avec un grand lit double et deux lits simples. Sa proximité permet de rejoindre le parc à pied. Renseignez vos dates et l’âge des enfants pour vérifier les disponibilités, le tarif total et les conditions d’annulation.
-
-Pour préparer les autres étapes du séjour, consultez notre [guide de Nice en famille](https://www.fam-space.fr/destinations/provence-alpes-cote-d-azur/alpes-maritimes/nice/).
-
-## Article source exact à préserver et améliorer
-
-Chemin: src/routes/articles/activites/(2026)/(11)/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux/index.md
-
----
-title: "Parc Phoenix à Nice en famille: serre tropicale, animaux et jeux"
-subtitle: Deux heures de découverte ou une demi-journée avec pique-nique, au rythme des enfants
-summary: "Serre tropicale, animaux, jardins et jeux: nos conseils pour visiter le Parc Phoenix à Nice avec des enfants, prévoir les pauses et venir en tramway."
-slug: parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux
-status: published
-publishedAt: 2026-11-15T00:25:33+01:00
-updatedAt: null
-category: activites
-readingTime: 4
-publicationOrigin: region
-location:
-  city: Nice
-  department: Alpes-Maritimes
-  region: Provence-Alpes-Côte d’Azur
-topic:
-  key: activites|nice|parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux|2026
-  keywords:
-    - Parc Phoenix en famille
-    - activité avec enfants à Nice
-    - serre tropicale Nice
-image:
-  src: "/images/articles/2026/11/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux.webp"
-  alt: "La grande serre tropicale du Parc Phœnix à Nice"
-sources:
-  - title: Ville de Nice - Parc Phoenix
-    url: https://www.nice.fr/lieux/parc-phoenix/
-  - title: Parc Phoenix - Présentation
-    url: https://www.parc-phoenix.org/le-parc/presentation/
-  - title: Parc Phoenix - La serre
-    url: https://www.parc-phoenix.org/la-flore/la-serre/
-  - title: Parc Phoenix - Informations pratiques
-    url: https://www.parc-phoenix.org/le-parc/infos-pratiques/
-  - title: Parc Phoenix - Accrobranche
-    url: https://www.parc-phoenix.org/activites-pedagogie/accrobranche/
-  - title: Parc Phoenix - Accueil et informations de visite
-    url: https://www.parc-phoenix.org/
-  - title: B&B HOTELS - Nice Aéroport Arenas
-    url: https://www.hotel-bb.com/fr/hotel/nice-aeroport-arenas
-affiliate:
-  enabled: true
-  type: travel
-  destination: Nice
----
-
-À l’ouest de Nice, face à l’aéroport, le Parc Phoenix réunit sur sept hectares un jardin botanique, une grande serre tropicale, des espaces animaliers et des jeux pour enfants. Pour une famille, son intérêt tient à cette variété: on peut observer les plantes et les animaux, puis laisser les enfants se dépenser, sans changer de lieu.
-
-Prévoyez environ deux heures pour quelques étapes choisies, ou une demi-journée avec un pique-nique et de longues pauses aux jeux. Ces durées sont des suggestions pour organiser votre sortie, à adapter à l’âge et aux envies des enfants.
-
-## La serre, pour regarder les plantes autrement
-
-<!-- article-image-body:01 -->
-
-![Végétation tropicale à l'intérieur de la serre du Parc Phoenix à Nice](/images/articles/2026/11/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux-body-01.webp)
-
-<!-- /article-image-body:01 -->
-
-Le « Diamant vert », une serre pyramidale haute de 25 mètres, constitue un bon premier objectif. Sur 7 000 m², elle rassemble six climats tropicaux et subtropicaux, avec notamment des orchidées, des fougères arborescentes et un jardin d’Afrique australe.
-
-Pour accompagner la découverte, proposez une petite recherche: trouver une feuille plus grande que sa main, comparer deux silhouettes de palmiers ou repérer une plante dont la forme étonne.
-
-Dans la partie centrale, les végétaux sont regroupés selon leurs besoins, notamment en eau et en lumière, comme l’explique la [page officielle consacrée à la serre](https://www.parc-phoenix.org/la-flore/la-serre/). Une piste intéressante pour les plus grands: des plantes venues de continents différents peuvent avoir besoin des mêmes conditions pour pousser. Les floraisons de cette partie sont surtout présentes au printemps et en été.
-
-## Des animaux à observer, un refuge à découvrir
-
-<!-- article-image-body:02 -->
-
-![Flamants roses photographiés dans le Parc Phoenix à Nice](/images/articles/2026/11/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux-body-02.webp)
-
-<!-- /article-image-body:02 -->
-
-La petite ferme offre un point de départ familier aux plus jeunes. Les enfants attirés par la faune exotique pourront consacrer davantage de temps aux autres espaces animaliers. Devant un animal, quelques minutes d’observation permettent parfois de découvrir une façon de se déplacer, de manger ou d’utiliser ses pattes que l’on aurait manquée en passant.
-
-Le lieu a aussi une mission moins visible. Selon sa [présentation officielle](https://www.parc-phoenix.org/le-parc/presentation/), le Parc Phoenix est un éco-refuge depuis 2020: il accueille et protège des animaux sauvages exotiques en détresse, notamment issus de saisies douanières ou d’abandons. Cette dimension permet d’aborder avec les enfants les besoins de ces animaux et les difficultés que pose leur détention chez un particulier.
-
-## Deux façons de composer la sortie
-
-<!-- article-image-body:03 -->
-
-![Plantes succulentes du jardin aride du Parc Phoenix à Nice](/images/articles/2026/11/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux-body-03.webp)
-
-<!-- /article-image-body:03 -->
-
-**Pour une visite courte, autour de deux heures**, choisissez la serre, un espace animalier selon les envies des enfants, puis une pause aux jeux. Si les animaux sont leur motivation principale, inversez les deux premières étapes. Les jardins feront la liaison entre ces temps forts.
-
-**Pour une demi-journée**, ajoutez une promenade dans les jardins et un déjeuner sur place. Les collections méditerranéennes, les plantes succulentes et les plantes aromatiques permettent de poursuivre la découverte après la serre, en comparant les formes et les feuillages. Le pique-nique est autorisé.
-
-Les aires de jeux sont comprises dans l’entrée. La [Ville de Nice signale également une aire inclusive et un accès pour les personnes à mobilité réduite](https://www.nice.fr/lieux/parc-phoenix/).
-
-L’accrobranche est une activité indépendante, payante en supplément. Ses horaires varient: consultez les conditions de l’exploitant depuis la [page officielle consacrée à l’accrobranche](https://www.parc-phoenix.org/activites-pedagogie/accrobranche/) avant de l’intégrer au programme.
-
-## Budget, horaires et arrivée sans voiture
-
-Les [informations pratiques du parc](https://www.parc-phoenix.org/le-parc/infos-pratiques/) indiquent:
-
-- **Plein tarif:** 5,50 €. Pour les jeunes de 12 à 18 ans, le tarif réduit est de 3,20 €.
-- **Moins de 12 ans:** gratuit pour trois enfants maximum par adulte payant, puis 3,20 € par enfant supplémentaire.
-- **Horaires:** de 9h30 à 18h du 1er octobre au 31 mars, et de 9h30 à 19h30 du 1er avril au 30 septembre. Fermeture les 25 décembre et 1er janvier. La billetterie ferme une heure avant le parc.
-- **Sans voiture:** tramway ligne 2, arrêt Parc Phœnix, ou train jusqu’à la gare de Nice Saint-Augustin.
-- **Entrée:** exclusivement côté tramway. L’ancienne entrée Arénas est fermée.
-
-Les habitants de la métropole Nice Côte d’Azur bénéficient de la gratuité le premier week-end complet de chaque mois, avec un justificatif de domicile de moins de trois mois et une pièce d’identité par personne. Une gratuité est aussi prévue pour les visiteurs handicapés sur présentation de la carte d’invalidité, ainsi que pour leur accompagnateur.
-
-Pour les billets, prévoyez un achat sur place: l’[accueil officiel](https://www.parc-phoenix.org/) annonce une billetterie en ligne indisponible, malgré des liens de réservation encore affichés sur le site.
-
-## Une sortie surtout en plein air
-
-La serre apporte une étape abritée, mais les déplacements, les jardins et les jeux se déroulent dehors. Par temps d’averses, un parcours court sera plus facile à adapter qu’une demi-journée avec pique-nique.
-
-Le parc annonce une [fermeture en cas de vigilance orange pour précipitations ou vent violent](https://www.parc-phoenix.org/le-parc/infos-pratiques/), ainsi qu’en cas de force majeure. Lorsque la météo se dégrade, vérifiez les annonces officielles avant de partir.
-
-## Une nuit dans l’Arénas pour prolonger la visite
-
-Si la sortie s’intègre à un week-end niçois, le [B&B HOTEL Nice Aéroport Arenas, près du Parc Phoenix](https://www.booking.com/hotel/fr/b-amp-b-nice-aeroport.fr.html), propose des chambres quadruples avec un grand lit double et deux lits simples. Sa proximité permet de rejoindre le parc à pied. Renseignez vos dates et l’âge des enfants pour vérifier les disponibilités, le tarif total et les conditions d’annulation.
-
-Pour préparer les autres étapes du séjour, consultez notre [guide de Nice en famille](https://www.fam-space.fr/destinations/provence-alpes-cote-d-azur/alpes-maritimes/nice/).
-
-## Contexte éditorial ciblé pour le maillage et les doublons
-
-### Articles proches préparés mécaniquement
-
+Le brief doit rester court et contenir uniquement ce qui aidera la rédaction:
+
+## Mission retenue
+Le sujet et ce que c'est réellement.
+
+## Pourquoi cette mission
+Pourquoi elle mérite une amélioration maintenant, ou pourquoi aucun article existant n'était utilement améliorable avant de retenir cet événement.
+
+## Décision du lecteur
+Ce que la page doit permettre au lecteur de comprendre ou de choisir. Formule un résultat pour le lecteur, pas un titre ni un plan. Les consignes de maillage, d'anti-doublon ou d'organisation entre articles appartiennent à `Continuations internes`, pas à la décision.
+
+## Faits à traiter
+Les informations décisives à vérifier, actualiser ou ajouter, et les informations existantes importantes à préserver pour un refresh.
+
+## Sources de départ
+Les meilleures sources officielles ou directement responsables.
+
+## Affiliation
+Les pistes réellement vérifiées, ou l'absence d'affiliation naturelle.
+
+## Continuations internes
+Deux ou trois pistes seulement si elles sont réellement utiles. Indique quand une page existante doit prendre le relais sur un sous-sujet afin d'éviter de le redévelopper dans le nouvel article.
+
+Ensuite, soumets cette décision via le format `action: start` fourni plus bas dans ce runtime. Le modèle ne renseigne jamais le nom de branche, le SHA, `targetPath`, le slug technique d'une opportunity ni les métriques GSC détaillées déjà présentes dans le snapshot.
+
+## Catégories éditoriales autorisées
+
+- sorties — Sorties: Des idées de sorties à partager en famille, près de chez vous.
+- voyages — Voyages: Des conseils et inspirations pour voyager sereinement en famille.
+- evenements — Événements: Les événements à découvrir et à préparer avec les enfants.
+- activites — Activités: Des activités simples et enrichissantes pour tous les âges.
+- vie-pratique — Vie pratique: Des repères concrets pour faciliter le quotidien des familles.
+- maison — Maison: Des solutions pratiques pour une maison familiale agréable.
+- cuisine — Cuisine: Des idées et conseils pour cuisiner simplement en famille.
+- parentalite — Parentalité: Des ressources bienveillantes pour accompagner la vie de famille.
+- bons-plans — Bons plans: Réductions, gratuités, pass et aides pratiques pour économiser en famille.
+
+## Snapshot GSC préparé
+
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-27T09:15:00+01:00",
+  "dataThrough": "2026-11-25",
+  "from": "2026-10-29",
+  "refresh": [
+    {
+      "url": "/articles/activites/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux/",
+      "title": "Parc Phoenix à Nice en famille: serre tropicale, animaux et jeux",
+      "category": "activites",
+      "publishedAt": "2026-11-15T00:25:33+01:00",
+      "location": {
+        "city": "Nice",
+        "department": "Alpes-Maritimes",
+        "region": "Provence-Alpes-Côte d’Azur"
+      },
+      "ageDays": 12,
+      "rapidDrop": true,
+      "peakStart": "2026-11-16",
+      "peakEnd": "2026-11-18",
+      "recentStart": "2026-11-23",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 22,
+      "recentImpressions": 0,
+      "score": 66,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "avis sur parc phœnix",
+        "nice phoenix",
+        "oui",
+        "parc phenix nice",
+        "parc pheonix"
+      ]
+    },
+    {
+      "url": "/articles/maison/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/",
+      "title": "Meubles d'occasion en Meurthe-et-Moselle: où acheter, donner et réparer ?",
+      "category": "maison",
+      "publishedAt": "2026-10-29T00:59:22+01:00",
+      "location": {
+        "city": "",
+        "department": "Meurthe-et-Moselle",
+        "region": "Grand Est"
+      },
+      "ageDays": 29,
+      "rapidDrop": true,
+      "peakStart": "2026-10-30",
+      "peakEnd": "2026-11-01",
+      "recentStart": "2026-11-23",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 23,
+      "recentImpressions": 2,
+      "score": 63,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 23 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "achat vente meuble moselle",
+        "emmaüs meuble",
+        "magasin occasion meuble",
+        "depot meubles occasion",
+        "magasin de meuble de seconde main"
+      ]
+    },
+    {
+      "url": "/articles/activites/pokemon-et-biodiversite-a-paris-le-28-novembre-2026-atelier-dessin-des-10-ans/",
+      "title": "Atelier Pokémon et biodiversité à Paris le 28 novembre 2026: dessin dès 10 ans",
+      "category": "activites",
+      "publishedAt": "2026-11-05T10:32:54.370Z",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 22,
+      "rapidDrop": true,
+      "peakStart": "2026-11-17",
+      "peakEnd": "2026-11-19",
+      "recentStart": "2026-11-23",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 23,
+      "recentImpressions": 8,
+      "score": 45,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 23 impressions sur trois jours, puis 8 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": []
+    },
+    {
+      "url": "/articles/evenements/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere/",
+      "title": "Lumières de Laval 2026 en famille: balade gratuite, marchés, roue et croisière",
+      "category": "evenements",
+      "publishedAt": "2026-10-30T09:27:15.012Z",
+      "location": {
+        "city": "Laval",
+        "department": "Mayenne",
+        "region": "Pays de la Loire"
+      },
+      "ageDays": 28,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-23",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 228,
+      "recentImpressions": 14,
+      "score": 677,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 228 impressions sur trois jours, puis 14 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "date illumination laval 2026",
+        "illumination laval 2026",
+        "illuminations laval 2026",
+        "laval illumination 2026",
+        "illumination de noel laval 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants/",
+      "title": "Fontaines dansantes d'hiver à Metz 2026-2027: dates, horaires et conseils en famille",
+      "category": "evenements",
+      "publishedAt": "2026-11-03T06:32:33.518Z",
+      "location": {
+        "city": "Metz",
+        "department": "Moselle",
+        "region": "Grand Est"
+      },
+      "ageDays": 24,
+      "rapidDrop": true,
+      "peakStart": "2026-11-20",
+      "peakEnd": "2026-11-22",
+      "recentStart": "2026-11-23",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 320,
+      "recentImpressions": 112,
+      "score": 624,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 320 impressions sur trois jours, puis 112 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 1 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 1,
+      "positionDelta": -1.659,
+      "impressionRatio": 0.846,
+      "focusQueries": [
+        "fontaine dansante metz 2026",
+        "fontaines dansantes metz",
+        "fontaines dansantes metz 2026",
+        "combien de temps ça dure ?",
+        "fontaine dansante metz horaires"
+      ]
+    },
+    {
+      "url": "/articles/evenements/flottins-d-evian-2026-un-village-de-noel-en-bois-flotte-a-decouvrir-en-famille/",
+      "title": "Flottins d’Évian 2026: un village de Noël en bois flotté à découvrir en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-30T00:37:19+01:00",
+      "location": {
+        "city": "Évian-les-Bains",
+        "department": "Haute-Savoie",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "ageDays": 28,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-23",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 155,
+      "recentImpressions": 33,
+      "score": 366,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 155 impressions sur trois jours, puis 33 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Flottins Évian 2026",
+        "Fabuleux Village en famille",
+        "Noël Haute-Savoie"
+      ]
+    },
+    {
+      "url": "/articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/",
+      "title": "Marché de Noël 100 % Côte-d’Or à Dijon 2026: horaires, spectacles et Père Noël",
+      "category": "evenements",
+      "publishedAt": "2026-10-29T14:26:32.176Z",
+      "location": {
+        "city": "Dijon",
+        "department": "Côte-d'Or",
+        "region": "Bourgogne-Franche-Comté"
+      },
+      "ageDays": 29,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-23",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 22,
+      "recentImpressions": 2,
+      "score": 60,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "marché de Noël du Département Dijon 2026",
+        "marché de Noël 100 % Côte-d'Or 12 13 décembre",
+        "Jardins du Département Dijon Noël enfants",
+        "spectacles ateliers gratuits Père Noël Dijon"
+      ]
+    },
+    {
+      "url": "/articles/evenements/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/",
+      "title": "Écoute, je danse ! à Paris le 5 décembre 2026: spectacle gratuit dès 6 mois",
+      "category": "evenements",
+      "publishedAt": "2026-11-04T21:32:12.084Z",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 23,
+      "rapidDrop": true,
+      "peakStart": "2026-11-09",
+      "peakEnd": "2026-11-11",
+      "recentStart": "2026-11-23",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 20,
+      "recentImpressions": 1,
+      "score": 57,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 20 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Écoute je danse Paris décembre 2026",
+        "spectacle gratuit bébé Paris 5 décembre",
+        "bibliothèque Gutenberg spectacle 6 mois 3 ans"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/",
+      "title": "Noël 2026 à Chantilly: Le Noël oublié, billets et séances en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-26T21:31:06.019Z",
+      "location": {
+        "city": "Chantilly",
+        "department": "Oise",
+        "region": "Hauts-de-France"
+      },
+      "ageDays": 32,
+      "rapidDrop": false,
+      "peakStart": "2026-10-29",
+      "peakEnd": "2026-11-04",
+      "recentStart": "2026-11-19",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 278,
+      "recentImpressions": 36,
+      "score": 242,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël château de Chantilly 2026",
+        "Le Noël oublié spectacle équestre",
+        "billet spectacle Noël Chantilly famille"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/carte-avantage-adulte-sncf-quand-est-elle-interessante-avec-des-enfants/",
+      "title": "Carte Avantage Adulte SNCF: quand est-elle intéressante avec des enfants?",
+      "category": "bons-plans",
+      "publishedAt": "2026-08-29T16:41:39+02:00",
+      "ageDays": 90,
+      "rapidDrop": false,
+      "peakStart": "2026-11-11",
+      "peakEnd": "2026-11-17",
+      "recentStart": "2026-11-19",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 572,
+      "recentImpressions": 407,
+      "score": 165,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Carte Avantage Adulte SNCF",
+        "réduction train famille"
+      ]
+    },
+    {
+      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
+      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-16T17:46:42.359Z",
+      "location": {
+        "city": "Lumigny-Nesles-Ormeaux",
+        "department": "Seine-et-Marne",
+        "region": "Île-de-France"
+      },
+      "ageDays": 42,
+      "rapidDrop": false,
+      "peakStart": "2026-10-29",
+      "peakEnd": "2026-11-04",
+      "recentStart": "2026-11-19",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 600,
+      "recentImpressions": 451,
+      "score": 149,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Lumigny Safari de Lumières 2026 2027",
+        "Safari de Lumières Lumigny tarifs famille",
+        "Lumigny Safari de Lumières billet combiné"
+      ]
+    },
+    {
+      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
+      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
+      "category": "voyages",
+      "publishedAt": "2026-08-29T00:00:45+02:00",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 90,
+      "rapidDrop": false,
+      "peakStart": "2026-10-29",
+      "peakEnd": "2026-11-04",
+      "recentStart": "2026-11-19",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 1599,
+      "recentImpressions": 1470,
+      "score": 129,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "transport Paris avec enfants",
+        "Paris Visite ou Navigo famille"
+      ]
+    },
+    {
+      "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
+      "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
+      "category": "evenements",
+      "publishedAt": "2026-11-05T05:04:01+01:00",
+      "location": {
+        "city": "",
+        "department": "Pyrénées-Orientales",
+        "region": "Occitanie"
+      },
+      "ageDays": 22,
+      "rapidDrop": false,
+      "peakStart": "2026-11-10",
+      "peakEnd": "2026-11-16",
+      "recentStart": "2026-11-19",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 402,
+      "recentImpressions": 284,
+      "score": 118,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Fêtes de l’Ours 2027",
+        "Fête de l’Ours Pyrénées-Orientales en famille",
+        "Haut-Vallespir carnaval"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/",
+      "title": "Parc floral d’Orléans gratuit en hiver: horaires et sortie avec les enfants",
+      "category": "bons-plans",
+      "publishedAt": "2026-10-26T22:02:51+01:00",
+      "location": {
+        "city": "Orléans",
+        "department": "Loiret",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 32,
+      "rapidDrop": false,
+      "peakStart": "2026-10-29",
+      "peakEnd": "2026-11-04",
+      "recentStart": "2026-11-19",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 117,
+      "recentImpressions": 13,
+      "score": 104,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Parc floral Orléans gratuit hiver 2026 2027",
+        "Parc floral de La Source enfants",
+        "sortie gratuite famille Loiret"
+      ]
+    },
+    {
+      "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
+      "title": "Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite",
+      "category": "sorties",
+      "publishedAt": "2026-08-23T10:46:58+02:00",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 96,
+      "rapidDrop": false,
+      "peakStart": "2026-11-09",
+      "peakEnd": "2026-11-15",
+      "recentStart": "2026-11-19",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 484,
+      "recentImpressions": 404,
+      "score": 80,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Cité des sciences en famille",
+        "Cité des enfants Paris"
+      ]
+    }
+  ],
+  "strongPages": [
+    {
+      "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
+      "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
+      "category": "evenements",
+      "recentImpressions": 379,
+      "recentClicks": 18,
+      "recentPosition": 7.158,
+      "retention": 1.349
+    },
+    {
+      "url": "/articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/",
+      "title": "Gastronomades 2026 à Angoulême en famille: programme, tarifs et conseils",
+      "category": "evenements",
+      "recentImpressions": 584,
+      "recentClicks": 16,
+      "recentPosition": 5.993,
+      "retention": 2.014
+    },
+    {
+      "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
+      "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
+      "category": "evenements",
+      "recentImpressions": 284,
+      "recentClicks": 11,
+      "recentPosition": 3.641,
+      "retention": 0.706
+    },
+    {
+      "url": "/articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/",
+      "title": "Noël 2026 au château de Goulaine: dates, billets et conseils en famille",
+      "category": "evenements",
+      "recentImpressions": 352,
+      "recentClicks": 8,
+      "recentPosition": 7.236,
+      "retention": 1.53
+    },
+    {
+      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
+      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
+      "category": "evenements",
+      "recentImpressions": 451,
+      "recentClicks": 7,
+      "recentPosition": 7.506,
+      "retention": 0.752
+    },
+    {
+      "url": "/articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/",
+      "title": "Déchets verts à Toulouse Métropole en 2027: collecte, broyage et évacuation des gros volumes",
+      "category": "maison",
+      "recentImpressions": 101,
+      "recentClicks": 7,
+      "recentPosition": 6.198,
+      "retention": 0.935
+    },
+    {
+      "url": "/articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/",
+      "title": "Noël à Trévarez 2026 en famille: dates, horaires et réservation",
+      "category": "evenements",
+      "recentImpressions": 1371,
+      "recentClicks": 6,
+      "recentPosition": 8.699,
+      "retention": 5.193
+    },
+    {
+      "url": "/articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/",
+      "title": "Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille",
+      "category": "evenements",
+      "recentImpressions": 439,
+      "recentClicks": 6,
+      "recentPosition": 6.923,
+      "retention": 1.035
+    },
+    {
+      "url": "/articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/",
+      "title": "Salon du Cheval de Paris 2026 en famille: ateliers, jumping et Nuit du Cheval",
+      "category": "evenements",
+      "recentImpressions": 144,
+      "recentClicks": 6,
+      "recentPosition": 7.451,
+      "retention": 2.939
+    },
+    {
+      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
+      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
+      "category": "voyages",
+      "recentImpressions": 1470,
+      "recentClicks": 5,
+      "recentPosition": 8.401,
+      "retention": 0.919
+    }
+  ],
+  "excluded": {
+    "expired": 198,
+    "cooling": 71
+  },
+  "warnings": [
+    "Diagnostics par requêtes : 5/5.",
+    "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement."
+  ]
+}
+
+## Catalogue ciblé (doublons et publications récentes)
+
+### Articles comparables et publications récentes
+
+- /articles/activites/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux/ | Parc Phoenix à Nice en famille: serre tropicale, animaux et jeux | activites | Nice, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
 - /articles/activites/le-pal-ou-touroparc-en-famille-quel-parc-choisir-en-2026/ | Le PAL ou Touroparc en famille: quel parc choisir en 2026? | activites
 - /articles/activites/parc-de-l-auxois-avec-des-enfants-comment-combiner-animaux-maneges-et-piscine/ | Parc de l'Auxois avec des enfants: comment combiner animaux, manèges et piscine | activites | Arnay-sous-Vitteaux, Côte-d'Or, Bourgogne-Franche-Comté
 - /articles/activites/parc-animalier-d-auvergne-en-famille-billets-animaux-et-conseils-de-visite/ | Parc animalier d'Auvergne en famille: billets, animaux et conseils de visite | activites | Ardes, Puy-de-Dôme, Auvergne-Rhône-Alpes
-- /articles/activites/parc-animalier-de-serre-poncon-comment-organiser-la-visite-avec-des-enfants/ | Parc animalier de Serre-Ponçon: comment organiser la visite avec des enfants | activites | Le Sauze-du-Lac, Hautes-Alpes, Provence-Alpes-Côte d’Azur
-- /articles/activites/biotropica-en-famille-a-val-de-reuil-animaux-tarifs-et-visite-par-temps-de-pluie/ | Biotropica en famille à Val-de-Reuil: animaux, tarifs et visite par temps de pluie | activites | Val-de-Reuil, Eure, Normandie
-- /articles/activites/ferme-des-chanteraines-en-famille-animaux-ateliers-et-balade-gratuite/ | Ferme des Chanteraines en famille: animaux, ateliers et balade gratuite | activites | Villeneuve-la-Garenne, Hauts-de-Seine, Île-de-France
-- /articles/activites/jeux-nature-gratuits-au-parc-floral-de-paris-le-18-novembre-2026-quel-jeu-selon-l-age/ | Jeux nature gratuits au Parc floral de Paris le 18 novembre 2026 | activites | Paris, Paris, Île-de-France
-- /articles/sorties/ete-oh-parcs-grenoble-2026-famille/ | L’Été Oh! Parcs Grenoble 2026: horaires et activités gratuites | sorties | Grenoble, Isère, Auvergne-Rhône-Alpes
-- /articles/activites/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux/ | Parc Phoenix à Nice en famille: serre tropicale, animaux et jeux | activites | Nice, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
-- /articles/evenements/noel-a-nice-2026-en-famille-village-spectacles-gratuits-et-creche-que-choisir/ | Noël à Nice 2026 en famille: village, spectacles et crèche | evenements | Nice, Alpes-Maritimes, Provence-Alpes-Côte d'Azur
-- /articles/bons-plans/musee-national-du-sport-a-nice-en-famille-combien-coute-vraiment-la-visite/ | Musée National du Sport à Nice en famille: que voir et préparer la visite | bons-plans | Nice, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
-- /articles/cuisine/atelier-de-cuisine-nicoise-a-nice-faut-il-reserver-avec-des-enfants/ | Atelier de cuisine niçoise à Nice: faut-il réserver avec des enfants? | cuisine | Nice, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
-- /articles/maison/renovation-energetique-dans-les-alpes-maritimes-jusqu-a-25-400-d-aide/ | Rénovation énergétique dans les Alpes-Maritimes: jusqu'à 25 400 € d'aide | maison | Nice, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
-- /articles/vie-pratique/location-de-voiture-a-nice-avec-des-enfants-ce-qu-il-faut-verifier-avant-de-reserver/ | Location de voiture à Nice avec des enfants: ce qu'il faut vérifier avant de réserver | vie-pratique | Nice, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
-- /articles/vie-pratique/littoral-des-alpes-maritimes-en-famille-se-deplacer-sans-voiture/ | Littoral des Alpes-Maritimes en famille: se déplacer sans voiture | vie-pratique | Alpes-Maritimes, Provence-Alpes-Côte d’Azur
-- /articles/activites/ateliers-parfum-a-grasse-en-famille-lesquels-choisir-selon-l-age/ | Ateliers parfum à Grasse en famille: lesquels choisir selon l'âge ? | activites | Grasse, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
-- /articles/evenements/fete-du-citron-2027-a-menton-en-famille-que-voir-et-combien-prevoir/ | Fête du Citron 2027 à Menton en famille: que voir et combien prévoir ? | evenements | Menton, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
-- /articles/evenements/noel-2026-a-cannes-en-famille-marche-du-centre-ou-village-du-palm-beach/ | Noël 2026 à Cannes en famille: marché du centre et Palm Beach | evenements | Cannes, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
+- /articles/maison/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/ | Meubles d'occasion en Meurthe-et-Moselle: où acheter, donner et réparer ? | maison | Meurthe-et-Moselle, Grand Est
+- /articles/maison/donner-acheter-d-occasion-ou-reparer-dans-le-val-d-oise-cinq-adresses-utiles/ | Donner, acheter d’occasion ou réparer dans le Val-d’Oise: cinq adresses utiles | maison | Cergy, Val-d'Oise, Île-de-France
+- /articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/ | Recycleries autour de Chartres: où donner et acheter d'occasion ? | maison | Chartres, Eure-et-Loir, Centre-Val de Loire
+- /articles/cuisine/cuisiner-local-en-meurthe-et-moselle-producteurs-paniers-et-idees-de-repas/ | Cuisiner local en Meurthe-et-Moselle: producteurs, paniers et idées de repas | cuisine | Meurthe-et-Moselle, Grand Est
+- /articles/activites/pokemon-et-biodiversite-a-paris-le-28-novembre-2026-atelier-dessin-des-10-ans/ | Atelier Pokémon et biodiversité à Paris le 28 novembre 2026: dessin dès 10 ans | activites | Paris, Paris, Île-de-France
+- /articles/activites/atelier-calder-gratuit-a-paris-le-14-novembre-2026-creer-un-mobile-des-5-ans/ | Atelier Calder à Paris le 14 novembre 2026: fabriquer un mobile dès 5 ans | activites | Paris, Paris, Île-de-France
+- /articles/activites/atelier-couture-gratuit-a-paris-le-28-novembre-2026-creer-en-famille-des-8-ans/ | Atelier couture gratuit à Paris le 28 novembre 2026: dès 8 ans | activites | Paris, Paris, Île-de-France
+- /articles/activites/atelier-omamori-gratuit-a-paris-le-21-novembre-2026-creer-une-amulette-japonaise-des-7-ans/ | Atelier omamori gratuit à Paris le 21 novembre 2026: créer une amulette dès 7 ans | activites | Paris, Paris, Île-de-France
+- /articles/evenements/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere/ | Lumières de Laval 2026 en famille: balade gratuite, marchés, roue et croisière | evenements | Laval, Mayenne, Pays de la Loire
+- /articles/sorties/exposition-trafic-especes-laval-famille-2026/ | Trafic d’espèces à Laval: une enquête gratuite à vivre en famille | sorties | Laval, Mayenne, Pays de la Loire
+- /articles/evenements/marche-de-noel-de-lille-2026-en-famille-village-grande-roue-et-infos-pratiques/ | Marché de Noël de Lille 2026 en famille: village, Grande Roue et infos pratiques | evenements | Lille, Nord, Hauts-de-France
+- /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | Marché de Noël de Reims 2026 en famille: horaires, grande roue et animations | evenements | Reims, Marne, Grand Est
+- /articles/evenements/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants/ | Fontaines dansantes d'hiver à Metz 2026-2027: dates, horaires et conseils en famille | evenements | Metz, Moselle, Grand Est
+- /articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/ | Traîneau flottant de Noël à Metz 2026: dates, horaires et embarquement | evenements | Metz, Moselle, Grand Est
+- /articles/evenements/noel-a-metz-2026-en-famille-marches-et-sentier-des-lanternes/ | Noël à Metz 2026 en famille: marchés et Sentier des Lanternes | evenements | Metz, Moselle, Grand Est
+- /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | Noël 2026 au château de Goulaine: dates, billets et conseils en famille | evenements | Haute-Goulaine, Loire-Atlantique, Pays de la Loire
+- /articles/evenements/flottins-d-evian-2026-un-village-de-noel-en-bois-flotte-a-decouvrir-en-famille/ | Flottins d’Évian 2026: un village de Noël en bois flotté à découvrir en famille | evenements | Évian-les-Bains, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/voyages/evian-les-bains-en-famille-pendant-3-jours-lac-balades-et-activites-faciles/ | Évian-les-Bains en famille pendant 3 jours: lac, balades et activités faciles | voyages | Évian-les-Bains, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/maison/renovation-energetique-en-haute-savoie-jusqu-a-3-000-d-aide-departementale/ | Rénovation énergétique en Haute-Savoie: jusqu'à 3 000 € d'aide départementale | maison | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/cuisine/ferme-du-petit-mont-a-bellevaux-en-famille-quelle-formule-choisir/ | Ferme du Petit Mont à Bellevaux en famille: quelle formule choisir ? | cuisine | Bellevaux, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/ | Marché de Noël 100 % Côte-d’Or à Dijon 2026: horaires, spectacles et Père Noël | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/evenements/festival-des-petits-explorateurs-2026-a-dijon-quels-ateliers-choisir-en-famille/ | Festival des Petits Explorateurs 2026 à Dijon: ateliers, horaires et tarifs | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/evenements/foire-de-dijon-2026-en-famille-dates-ateliers-animaux-et-gratuites/ | Foire de Dijon 2026 avec les enfants: gratuités, ateliers et Ferme Côte-d'Or | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/vie-pratique/frais-scolaires-en-cote-d-or-quelles-aides-demander-au-departement/ | Frais scolaires en Côte-d'Or: quelles aides demander au Département? | vie-pratique | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/evenements/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/ | Écoute, je danse ! à Paris le 5 décembre 2026: spectacle gratuit dès 6 mois | evenements | Paris, Paris, Île-de-France
+- /articles/activites/atelier-laine-cardee-de-noel-a-paris-le-2-decembre-2026-creer-ses-decorations-des-7-ans/ | Atelier laine cardée de Noël à Paris le 2 décembre 2026: décorations dès 7 ans | activites | Paris, Paris, Île-de-France
+- /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | Noël 2026 à Chantilly: Le Noël oublié, billets et séances en famille | evenements | Chantilly, Oise, Hauts-de-France
+- /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | Halloween 2026 au Château de Chantilly avec des enfants: ateliers, nocturnes et spectacle | sorties | Chantilly, Oise, Hauts-de-France
+- /articles/cuisine/atelier-de-creme-chantilly-avec-des-enfants-a-partir-de-quel-age-et-comment-reserver/ | Atelier de crème Chantilly avec des enfants: à partir de quel âge et comment réserver | cuisine | Chantilly, Oise, Hauts-de-France
+- /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | Noël de Casse-Noisette 2026 à Pierrefonds: visites, dates et tarifs en famille | evenements | Pierrefonds, Oise, Hauts-de-France
+- /articles/bons-plans/carte-avantage-adulte-sncf-quand-est-elle-interessante-avec-des-enfants/ | Carte Avantage Adulte SNCF: quand est-elle intéressante avec des enfants? | bons-plans
+- /articles/bons-plans/carte-familles-nombreuses-reductions-demarches/ | Carte Familles Nombreuses: réductions, conditions et demande en ligne | bons-plans
+- /articles/voyages/sarlat-sans-voiture-avec-des-enfants-est-ce-realiste-pour-un-week-end/ | Sarlat sans voiture avec des enfants: est-ce réaliste pour un week-end? | voyages | Sarlat-la-Canéda, Dordogne, Nouvelle-Aquitaine
+- /articles/voyages/train-de-la-rhune-avec-des-enfants-billets-duree-et-conseils-en-2026/ | Train de la Rhune avec des enfants: billets, durée et conseils en 2026 | voyages | Sare, Pyrénées-Atlantiques, Nouvelle-Aquitaine
+- /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille | evenements | Lumigny-Nesles-Ormeaux, Seine-et-Marne, Île-de-France
+- /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | Thoiry Lumières Sauvages 2026-2027: dates, billets et visite en famille | evenements | Thoiry, Yvelines, Île-de-France
+- /articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/ | Planète Préhistorique à Bordeaux: dates, durée et tarifs en famille | sorties | Bordeaux, Gironde, Nouvelle-Aquitaine
+- /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
+- /articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/ | Transports à Paris avec des enfants: quel titre choisir pour payer juste? | voyages | Paris, Paris, Île-de-France
+- /articles/evenements/salon-du-chocolat-paris-2026-avec-des-enfants-quel-billet-choisir-et-quels-ateliers-reserver/ | Salon du Chocolat Paris 2026 avec des enfants: quel billet choisir et quels ateliers réserver | evenements | Paris, Paris, Île-de-France
+- /articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/ | Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite | sorties | Paris, Paris, Île-de-France
+- /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | Mondial de l’Auto 2026 avec des enfants: billets, horaires et créneaux | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/ | Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ? | evenements | Pyrénées-Orientales, Occitanie
+- /articles/parentalite/quel-laep-choisir-a-perpignan-selon-l-age-et-le-jour/ | Quel LAEP choisir à Perpignan selon l'âge et le jour ? | parentalite | Perpignan, Pyrénées-Orientales, Occitanie
+- /articles/activites/parc-animalier-des-angles-en-famille-quel-circuit-choisir-et-comment-preparer-la-visite/ | Parc animalier des Angles en famille: quel circuit choisir et comment préparer la visite ? | activites | Les Angles, Pyrénées-Orientales, Occitanie
+- /articles/bons-plans/musee-de-tautavel-moins-cher-avec-lio-le-bon-plan-a-connaitre/ | Musée de Tautavel moins cher avec liO: le bon plan à connaître | bons-plans | Tautavel, Pyrénées-Orientales, Occitanie
+- /articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/ | Parc floral d’Orléans gratuit en hiver: horaires et sortie avec les enfants | bons-plans | Orléans, Loiret, Centre-Val de Loire
+- /articles/maison/composteur-gratuit-a-orleans-metropole-comment-en-profiter-en-2026/ | Composteur gratuit à Orléans Métropole: comment en profiter en 2026 | maison | Orléans, Loiret, Centre-Val de Loire
+- /articles/sorties/chasse-motifs-loire-orleans-famille-2026/ | Chasse aux motifs de Loire à Orléans: une balade gratuite pour les 6 à 12 ans | sorties | Orléans, Loiret, Centre-Val de Loire
+- /articles/activites/mobe-d-orleans-en-famille-fossiles-jeux-et-biodiversite/ | MOBE d’Orléans en famille: fossiles, jeux et biodiversité | activites | Orléans, Loiret, Centre-Val de Loire
+- /articles/activites/stages-de-science-a-la-cite-des-sciences-pendant-la-toussaint-2026-lequel-choisir-selon-l-age/ | Stages de science à la Cité des sciences à la Toussaint 2026: durées, âges et tarifs | activites | Paris, Paris, Île-de-France
+- /articles/evenements/cite-immersive-des-fables-a-paris-decouvrir-la-fontaine-en-famille/ | Cité immersive des Fables à Paris: découvrir La Fontaine en famille | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | Rencontres du ciel et de l’espace 2026 à Paris: ateliers, âges et billets en famille | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/ | Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants | evenements | Le Mans, Sarthe, Pays de la Loire
+- /articles/voyages/le-mans-sans-voiture-avec-des-enfants-ou-dormir-et-comment-organiser-un-week-end/ | Le Mans sans voiture avec des enfants: où dormir et comment organiser un week-end | voyages | Le Mans, Sarthe, Pays de la Loire
+- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
+- /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | Marché de Noël d'Avignon 2026 en famille: horaires, Père Noël et animations | evenements | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
+- /articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/ | Gastronomades 2026 à Angoulême en famille: programme, tarifs et conseils | evenements | Angoulême, Charente, Nouvelle-Aquitaine
+- /articles/sorties/musee-de-la-bd-a-angouleme-en-famille-tarifs-horaires-et-conseils-de-visite/ | Musée de la BD à Angoulême en famille: tarifs, horaires et conseils de visite | sorties | Angoulême, Charente, Nouvelle-Aquitaine
+- /articles/voyages/ou-dormir-a-angouleme-avec-des-enfants-pour-visiter-la-ville-a-pied/ | Où dormir à Angoulême avec des enfants pour visiter la ville à pied | voyages | Angoulême, Charente, Nouvelle-Aquitaine
+- /articles/parentalite/decouvrir-la-bd-avec-ses-enfants-a-angouleme/ | Découvrir la BD avec ses enfants à Angoulême | parentalite | Angoulême, Charente, Nouvelle-Aquitaine
+- /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
+- /articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/ | Noël à Trévarez 2026 en famille: dates, horaires et réservation | evenements | Saint-Goazec, Finistère, Bretagne
+- /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | Noël des Siècles 2026 à Champs-sur-Marne: billets, budget et horaires en famille | evenements | Champs-sur-Marne, Seine-et-Marne, Île-de-France
+- /articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/ | Déchets verts à Toulouse Métropole en 2027: collecte, broyage et évacuation des gros volumes | maison | Toulouse, Haute-Garonne, Occitanie
+- /articles/activites/accrocamp-toulouse-avec-des-enfants-quel-pass-choisir-selon-leur-taille/ | AccroCamp Toulouse avec des enfants: quel pass choisir selon leur taille? | activites | Toulouse, Haute-Garonne, Occitanie
+- /articles/bons-plans/halle-de-la-machine-et-envol-des-pionniers-quels-billets-choisir-en-famille/ | Halle de la Machine et Envol des Pionniers: quels billets choisir en famille ? | bons-plans | Toulouse, Haute-Garonne, Occitanie
+- /articles/voyages/cite-de-l-espace-a-toulouse-en-famille-en-2026-une-journee-suffit-elle-et-ou-dormir/ | Cité de l'espace à Toulouse en famille en 2026: une journée suffit-elle et où dormir | voyages | Toulouse, Haute-Garonne, Occitanie
+- /articles/evenements/train-de-noel-de-la-haute-somme-2026-en-famille-dates-tarifs-et-reservation/ | Train de Noël de la Haute Somme 2026 en famille: dates, tarifs et réservation | evenements | La Neuville-les-Bray, Somme, Hauts-de-France
+- /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | Noël 2026 à Brest en famille: marché, projections et horaires | evenements | Brest, Finistère, Bretagne
+- /articles/evenements/train-du-pere-noel-a-toucy-2026-horaires-tarifs-et-reservation/ | Train du Père Noël à Toucy 2026: horaires, tarifs et réservation | evenements | Toucy, Yonne, Bourgogne-Franche-Comté
+- /articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/ | Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille | evenements | Nevers, Nièvre, Bourgogne-Franche-Comté
+- /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | Noël à Chartres 2026 en famille: marché et illuminations | evenements | Chartres, Eure-et-Loir, Centre-Val de Loire
+- /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | Noël à Caen 2026 en famille: marché de Noël et visite illuminée | evenements | Caen, Calvados, Normandie
+- /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
+- /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | Salon du Cheval de Paris 2026 en famille: ateliers, jumping et Nuit du Cheval | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/ | Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
+- /articles/maison/composter-en-famille-dans-la-metropole-lilloise-avec-ou-sans-jardin/ | Composter en famille dans la métropole lilloise: avec ou sans jardin | maison | Nord, Hauts-de-France
+- /articles/sorties/petit-cocotier-au-morne-rouge-decouvrir-la-vanille-en-famille/ | Petit Cocotier au Morne-Rouge: découvrir la vanille en famille | sorties | Le Morne-Rouge, Martinique, Martinique
+- /articles/voyages/samoens-en-famille-cet-hiver-un-premier-sejour-a-la-neige-avec-ou-sans-ski/ | Samoëns en famille cet hiver: un premier séjour à la neige avec ou sans ski | voyages | Samoëns, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/voyages/honfleur-en-famille-hors-saison-que-faire-le-temps-d-un-week-end/ | Honfleur en famille hors saison: que faire le temps d'un week-end ? | voyages | Honfleur, Calvados, Normandie
 - /articles/activites/accrobranche-au-maido-en-famille-preparer-sa-sortie-a-enler-pied-bois/ | Accrobranche au Maïdo en famille: préparer sa sortie à Enlèr Pied’Bois | activites | Saint-Paul, La Réunion, La Réunion
+- /articles/bons-plans/pass-chateaux-du-loir-et-cher-quelles-economies-en-famille/ | Pass châteaux du Loir-et-Cher: quelles économies en famille ? | bons-plans | Loir-et-Cher, Centre-Val de Loire
+- /articles/vie-pratique/se-deplacer-en-famille-en-haute-saone-sans-voiture-au-quotidien/ | Se déplacer en famille en Haute-Saône sans voiture au quotidien | vie-pratique | Haute-Saône, Bourgogne-Franche-Comté
+- /articles/vie-pratique/metz-en-famille-sans-voiture-train-bus-et-bagages/ | Metz en famille sans voiture: train, bus et bagages | vie-pratique | Metz, Moselle, Grand Est
+- /articles/voyages/musee-de-l-illusion-a-lille-une-visite-a-partager-en-famille/ | Musée de l’Illusion à Lille: une visite à partager en famille | voyages | Lille, Nord, Hauts-de-France
+- /articles/bons-plans/bordeaux-citypass-en-famille-quel-pass-choisir-pour-economiser/ | Bordeaux CityPass en famille: quel pass choisir pour économiser ? | bons-plans | Bordeaux, Gironde, Nouvelle-Aquitaine
+- /articles/sorties/le-sourou-a-roura-en-famille-une-journee-entre-pirogue-kayak-et-foret/ | Le Sourou à Roura en famille: une journée entre pirogue, kayak et forêt | sorties | Roura, Guyane, Guyane
+- /articles/evenements/sculptures-sur-glace-et-neige-a-valloire-en-janvier-2027/ | Sculptures sur glace et neige à Valloire en janvier 2027 | evenements | Valloire, Savoie, Auvergne-Rhône-Alpes
+- /articles/bons-plans/sainte-chapelle-et-conciergerie-en-famille-a-paris-quels-billets-choisir/ | Sainte-Chapelle et Conciergerie en famille à Paris: quels billets choisir ? | bons-plans | Paris, Paris, Île-de-France
 - /articles/activites/a-pointe-noire-decouvrir-la-riviere-en-famille-avec-l-aquarando-d-acomat/ | À Pointe-Noire, découvrir la rivière en famille avec l’aquarando d’Acomat | activites | Pointe-Noire, Guadeloupe, Guadeloupe
+- /articles/vie-pratique/ludotheques-en-sarthe-ou-jouer-et-emprunter-des-jeux-avec-les-enfants/ | Ludothèques en Sarthe: où jouer et emprunter des jeux avec les enfants ? | vie-pratique | Sarthe, Pays de la Loire
+- /articles/voyages/cherrueix-en-famille-decouvrir-le-char-a-voile-dans-la-baie-du-mont-saint-michel/ | Cherrueix en famille: découvrir le char à voile dans la baie du Mont-Saint-Michel | voyages | Cherrueix, Ille-et-Vilaine, Bretagne
+- /articles/evenements/seraphine-louis-a-metz-decouvrir-l-exposition-avec-les-enfants/ | Séraphine Louis à Metz: découvrir l’exposition avec les enfants | evenements | Metz, Moselle, Grand Est
+- /articles/voyages/cassis-en-famille-hors-saison-calanques-en-bateau-et-balades/ | Cassis en famille hors saison: calanques en bateau et balades | voyages | Cassis, Bouches-du-Rhône, Provence-Alpes-Côte d’Azur
+- /articles/cuisine/fougasse-d-aigues-mortes-recette-moelleuse-a-faire-en-famille/ | Fougasse d’Aigues-Mortes: recette moelleuse à faire en famille | cuisine | Aigues-Mortes, Gard, Occitanie
+- /articles/parentalite/parents-et-jeunes-enfants-a-bergerac-trois-lieux-pour-jouer-et-echanger/ | Parents et jeunes enfants à Bergerac: trois lieux pour jouer et échanger | parentalite | Bergerac, Dordogne, Nouvelle-Aquitaine
 - /articles/activites/musee-de-l-illusion-a-lyon-en-famille-que-voir-et-combien-coute-la-visite/ | Musée de l'Illusion à Lyon en famille: que voir et combien coûte la visite ? | activites | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/activites/musee-dobree-en-famille-a-nantes-jeux-et-parcours-selon-l-age/ | Musée Dobrée en famille à Nantes: jeux et parcours selon l’âge | activites | Nantes, Loire-Atlantique, Pays de la Loire
+- /articles/voyages/pres-de-saint-florent-decouvrir-la-corse-en-ulm-avec-un-ado/ | Près de Saint-Florent, découvrir la Corse en ULM avec un ado | voyages | Haute-Corse, Corse
+- /articles/cuisine/ficelle-picarde-la-recette-familiale-des-crepes-gratinees-d-amiens/ | Ficelle picarde: la recette familiale des crêpes gratinées d'Amiens | cuisine | Amiens, Somme, Hauts-de-France
+- /articles/sorties/forteresse-royale-de-chinon-en-famille-tours-histoire-et-jeux/ | Forteresse royale de Chinon en famille: tours, histoire et jeux | sorties | Chinon, Indre-et-Loire, Centre-Val de Loire
+- /articles/vie-pratique/ludotheques-du-val-de-marne-ou-jouer-en-famille-et-emprunter-des-jeux/ | Ludothèques du Val-de-Marne: où jouer en famille et emprunter des jeux ? | vie-pratique | Val-de-Marne, Île-de-France
+- /articles/parentalite/lieux-d-accueil-enfants-parents-en-vendee-ou-aller-avec-un-tout-petit/ | Lieux d'accueil enfants-parents en Vendée: où aller avec un tout-petit ? | parentalite | Vendée, Pays de la Loire
+- /articles/cuisine/kig-ha-farz-en-famille-recette-et-organisation-d-un-repas-breton/ | Kig ha farz en famille: recette et organisation d'un repas breton | cuisine | Finistère, Bretagne
+- /articles/bons-plans/bretagne-en-ter-avec-des-enfants-quels-billets-choisir-pour-payer-moins/ | Bretagne en TER avec des enfants: quels billets choisir pour payer moins? | bons-plans | Bretagne
 
 ### Historique Radar lié
 
-- refresh | /articles/activites/biotropica-en-famille-a-val-de-reuil-animaux-tarifs-et-visite-par-temps-de-pluie/ | 2026-11-07T21:36:00.316Z
-- opportunity | /articles/activites/jeux-nature-gratuits-au-parc-floral-de-paris-le-18-novembre-2026-quel-jeu-selon-l-age/ | 2026-11-04T12:35:19.125Z
-- opportunity | /articles/evenements/noel-2026-a-cannes-en-famille-marche-du-centre-ou-village-du-palm-beach/ | 2026-10-31T22:36:58.800Z
-- refresh | /articles/evenements/noel-2026-a-cannes-en-famille-marche-du-centre-ou-village-du-palm-beach/ | 2026-11-17T13:33:26.086Z
-- opportunity | /articles/evenements/noel-a-nice-2026-en-famille-village-spectacles-gratuits-et-creche-que-choisir/ | 2026-10-25T04:31:33.540Z
+- refresh | /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | 2026-11-17T19:34:24.194Z
+- opportunity | /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | 2026-10-20T00:30:38.975Z
+- opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
+- refresh | /articles/maison/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/ | 2026-11-12T01:28:37.978Z
+- opportunity | /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | 2026-10-06T19:20:39.093Z
+- opportunity | /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | 2026-10-30T06:28:26.726Z
+- opportunity | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-10-26T21:31:06.119Z
+- refresh | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-11-12T18:32:15.897Z
+- opportunity | /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | 2026-11-03T15:36:10.146Z
+- refresh | /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | 2026-11-13T13:31:11.034Z
+- opportunity | /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | 2026-10-30T21:26:32.584Z
+- refresh | /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | 2026-11-23T07:35:53.457Z
+- opportunity | /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | 2026-10-30T18:26:56.039Z
+- refresh | /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | 2026-11-17T09:28:43.094Z
+- opportunity | /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | 2026-10-27T07:35:50.437Z
+- refresh | /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | 2026-11-16T12:48:08.556Z
+- opportunity | /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | 2026-10-26T18:32:56.730Z
+- opportunity | /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | 2026-10-09T14:37:47.734Z
+- refresh | /articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/ | 2026-11-08T07:28:43.032Z
+- refresh | /articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/ | 2026-10-22T18:35:19.372Z
+- opportunity | /articles/activites/pokemon-et-biodiversite-a-paris-le-28-novembre-2026-atelier-dessin-des-10-ans/ | 2026-11-05T10:32:54.471Z
+- opportunity | /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | 2026-11-04T05:34:42.508Z
+- opportunity | /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | 2026-10-22T04:59:04.773Z
+- refresh | /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | 2026-11-19T03:32:19.795Z
+- opportunity | /articles/activites/stages-de-science-a-la-cite-des-sciences-pendant-la-toussaint-2026-lequel-choisir-selon-l-age/ | 2026-10-04T05:39:23.036Z
+- opportunity | /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | 2026-10-24T19:30:32.700Z
+- refresh | /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | 2026-11-13T16:33:40.259Z
+- opportunity | /articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/ | 2026-11-03T03:34:06.534Z
+- refresh | /articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/ | 2026-11-16T08:38:53.929Z
+- refresh | /articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/ | 2026-11-06T21:35:30.246Z
 
-### Phases 2 et 3
+## Travaux éditoriaux en cours
 
-Écris `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées et le corps complet de l'article. **Ne recopie pas les métadonnées inchangées et n'ajoute aucun bloc `radar`.** Le script normalise la syntaxe sûre de la requête, reprend mécaniquement les autres métadonnées et le bloc Radar de la phase précédente, puis incrémente la phase.
+### Publication en cours
 
-Pour un refresh, le script conserve de lui-même les champs protégés de l'article source. Pour une opportunity, il conserve la catégorie, le territoire et le slug choisis en phase 1.
+- Branche: automation/publication-20261126-2356-musee-des-beaux-arts-de-draguignan-en-famille-gratuites-ateliers-et-bo
+- HEAD: publication: phase 3 20261126-2356-musee-des-beaux-arts-de-draguignan-en-famille-gratuites-ateliers-et-bo
 
-En phase 3 seulement, ajoute `radarReview` avec `summary`, `sources` et, pour un refresh, `regressionCheck`. Une seule correction factuelle vérifiée peut être suffisante.
+---
+category: "bons-plans"
+title: "Musée des Beaux-Arts de Draguignan en famille: gratuités et ateliers"
+subtitle: "Les bons plans pour découvrir les collections avec les enfants dans le Var"
+summary: "Entrées gratuites, tarifs réduits et ateliers créatifs: préparez une visite en famille au musée des Beaux-Arts de Draguignan sans dépasser votre budget."
+keywords:
+  - "musée des Beaux-Arts de Draguignan"
+  - "musée gratuit Var"
+  - "sortie famille Draguignan"
+  - "atelier enfants musée"
+location:
+  city: "Draguignan"
+  department: "Var"
+  region: "Provence-Alpes-Côte d’Azur"
+sources:
+  - title: "Musée des Beaux-Arts - Exposition permanente"
+    url: "https://mba-draguignan.fr/expositions/un-parcours-de-visite-reinvente-2/"
+  - title: "Musée des Beaux-Arts - Infos pratiques"
+    url: "https://mba-draguignan.fr/venir-au-musee/venir-au-musee/"
+  - title: "Billetterie culturelle de la Dracénie - Billet d'entrée"
+    url: "https://billetterieculture.dracenie.com/billet-d-entree.html"
+  - title: "Musée des Beaux-Arts - Visites et ateliers familles"
+    url: "https://mba-draguignan.fr/venir-au-musee/visites-et-ateliers-familles/"
+  - title: "Ville de Draguignan - Programme de la Fête de la glisse 2026"
+    url: "https://www.ville-draguignan.fr/wp-content/uploads/2026/11/Programme-FDG-2026-1.pdf"
+  - title: "Musée des Beaux-Arts - Accessibilité"
+    url: "https://mba-draguignan.fr/venir-au-musee/accessibilite/"
+  - title: "Musée des Beaux-Arts - Horaires et tarifs"
+    url: "https://mba-draguignan.fr/informations-pratiques/horaires-et-tarifs-du-musee/"
+---
+
+Au cœur de Draguignan, dans le Var, le musée des Beaux-Arts réunit tableaux, sculptures et objets parfois insolites. Les enfants peuvent y découvrir des univers très différents au fil des salles, et les parents profiter de plusieurs formules économiques pour organiser une sortie culturelle.
+
+## Quand peut-on visiter le musée gratuitement ?
+
+Le billet ordinaire coûte 6 € et les visiteurs de moins de 26 ans ne paient pas l'entrée. Pour les adultes, le tarif réduit de 4 € concerne notamment les familles nombreuses et les plus de 65 ans. D'autres gratuités existent, en particulier pour les demandeurs d'emploi, les bénéficiaires de minima sociaux et les personnes en situation de handicap accompagnées.
+
+Le bon plan pour toute la famille reste le premier dimanche de chaque mois, où l'accès est gratuit pour tous. Une famille de passage peut ainsi consacrer son budget à une autre activité ou à un goûter en ville.
+
+Les habitants qui souhaitent revenir régulièrement peuvent aussi choisir un abonnement annuel à 15 € pour une personne ou 25 € pour deux. Retrouvez les conditions sur la [page des informations pratiques du musée](https://mba-draguignan.fr/venir-au-musee/venir-au-musee/) et les billets sur la [billetterie culturelle de la Dracénie](https://billetterieculture.dracenie.com/billet-d-entree.html).
+
+## Une visite libre qui ne ressemble pas à un cours d'histoire de l'art
+
+Le [parcours permanent](https://mba-draguignan.fr/expositions/un-parcours-de-visite-reinvente-2/) rassemble notamment plus de 150 œuvres restaurées. Au rez-de-chaussée, les peintures permettent d'observer les personnages, les paysages et les manières de représenter le monde au fil des siècles. À l'étage, les cabinets thématiques offrent un changement de décor, jusqu'au cabinet de curiosités.
+
+Avec de jeunes enfants, mieux vaut choisir quelques œuvres qui attirent leur regard plutôt que vouloir tout voir. On peut chercher un animal dans un tableau, inventer l'histoire d'un personnage ou comparer deux portraits. Les plus grands pourront imaginer à quoi servait un objet avant de lire son cartel.
+
+Prévoyez une heure environ pour une première découverte, quitte à prolonger la visite si les enfants accrochent. Les audioguides et les textes de salles permettent d'approfondir les œuvres qui intéressent chacun.
+
+## Les ateliers du mercredi pour passer de l'observation à la création
+
+Les familles qui préfèrent une activité accompagnée peuvent consulter la [programmation des visites et ateliers](https://mba-draguignan.fr/venir-au-musee/visites-et-ateliers-familles/). Les ateliers du mercredi associent découverte des collections et pratique artistique, avec des sujets qui changent au fil du calendrier.
+
+Le [programme municipal de décembre 2026](https://www.ville-draguignan.fr/wp-content/uploads/2026/11/Programme-FDG-2026-1.pdf#page=12) précise que ces rendez-vous durent deux heures et accueillent les enfants dès 6 ans avec un adulte. Il annonce un tarif habituel de 3 € par enfant en 2026, puis de 4 € à compter du 1er janvier 2027, contre 6 € par adulte.
+
+Ces ateliers se font sur réservation auprès du musée (mba@ville-draguignan.fr). Certaines animations de vacances bénéficient de gratuités ponctuelles: vérifiez le prix applicable au créneau choisi au moment de réserver. Pour les moins de 6 ans, surveillez les visites spécialement destinées aux tout-petits, proposées selon la programmation.
+
+## Préparer sa sortie dans le centre de Draguignan
+
+Le musée se trouve au 9 rue de la République. Il est ouvert de 10 h à 18 h, sauf le mardi et les 1er janvier, 1er mai, 1er novembre et 25 décembre. La [page des horaires et tarifs](https://mba-draguignan.fr/informations-pratiques/horaires-et-tarifs-du-musee/) indique également les éventuels horaires particuliers, notamment le 31 décembre.
+
+Les espaces d'exposition sont desservis par un ascenseur. Des sièges pliants et un fauteuil roulant sont disponibles à l'accueil; des reproductions tactiles permettent aussi de découvrir certaines œuvres autrement. Les familles peuvent consulter les [conditions d'accessibilité](https://mba-draguignan.fr/venir-au-musee/accessibilite/) avant leur venue et contacter le musée au 04 98 10 26 85 pour toute question particulière.
+
+Si vous arrivez en voiture, les informations pratiques du musée donnent accès à une carte des parkings voisins. Sa situation en centre-ville permet de prolonger la sortie par une promenade et une pause gourmande sans reprendre la voiture entre deux activités.
+
+## Prolonger la visite par un week-end dans le Var
+
+Pour passer une nuit à Draguignan sans multiplier les trajets, l'[Hôtel du Parc - Bastide provençale](https://www.booking.com/hotel/fr/du-parc-draguignan.fr.html) propose des chambres familiales pour quatre personnes en centre-ville. Comparez le prix et les disponibilités pour vos dates, notamment si vous venez pour le dimanche gratuit du musée. Pour compléter le séjour, retrouvez nos [idées de sorties en famille dans le Var](https://www.fam-space.fr/destinations/provence-alpes-cote-d-azur/var/).
+
+
+### Destination en cours
+
+- Branche: automation/destination-20261010-0720-vincennes
+- HEAD: content: destination candidate Vincennes
+
+---
+result: enriched
+kind: city
+name: "Vincennes"
+url: "/destinations/ile-de-france/val-de-marne/vincennes/"
+intro:
+  - "Vincennes est une base pratique pour visiter l'est parisien sans voiture : le château et le Parc floral se combinent à pied, tandis que le zoo de Paris mérite une sortie distincte."
+sections:
+  - title: "Une journée sur place : associer le château au Parc floral"
+    paragraphs:
+      - "Pour une journée mêlant découverte et temps de jeu, commencez par le château, puis rejoignez le Parc floral par l'esplanade du château. Comptez environ 1 h 30 à 2 h pour le monument avant de laisser les enfants profiter des aires de jeux du parc. Les pique-niques ne sont pas autorisés dans l'enceinte du château, mais le Parc floral dispose de tables de pique-nique, de points d'eau et de toilettes avec table à langer."
+      - "Avec de jeunes enfants qui supportent mal les visites intérieures, faites plutôt du Parc floral la sortie principale : ses jeux et ses jardins évitent de construire la journée autour du donjon et de ses escaliers. L'accès au Parc floral est gratuit d'octobre à mars et payant d'avril à septembre ; le château est un site distinct avec son propre billet."
+  - title: "Sur deux jours, garder le zoo pour une autre sortie"
+    paragraphs:
+      - "Le Parc zoologique de Paris se trouve du côté de la Porte Dorée, dans le 12e arrondissement, et non à côté du château ou à l'intérieur du Parc floral. Depuis le terminus Château de Vincennes du métro 1, le bus 46 permet de le rejoindre. Le zoo recommande au minimum deux heures de visite : avec le trajet et les pauses, mieux vaut lui réserver une seconde journée plutôt que de l'ajouter à la visite du château et du Parc floral."
+      - "Pour un séjour d'une seule journée, choisissez donc entre le duo château et Parc floral, facile à enchaîner à pied, et une visite du zoo avec trajet dédié. Ce choix évite de traverser inutilement le bois avec des enfants fatigués."
+  - title: "Métro ou RER avec une poussette : deux arrivées différentes"
+    paragraphs:
+      - "La ligne 1 arrive au pied du château, mais la station Château de Vincennes comporte de nombreuses marches entre les quais et la rue. La gare Vincennes du RER A est équipée d'un ascenseur et d'escalators ; elle se situe à environ dix minutes à pied du château. Avec une poussette lourde ou des difficultés à emprunter les escaliers, le RER A peut donc être plus pratique malgré la marche supplémentaire. Vérifiez l'état des équipements avant de partir."
+accommodation:
+  title: "Où dormir selon les sorties prévues ?"
+  paragraphs:
+    - "Si votre programme privilégie le château, le Parc floral et le départ du bus 46 vers le zoo, cherchez un hébergement vers l'avenue de Paris et le terminus Château de Vincennes. Si vous prévoyez aussi plusieurs allers-retours vers le centre de Paris, la proximité de la gare Vincennes du RER A est un autre choix pratique. Avec une poussette, comparez surtout la distance réelle à pied jusqu'à la gare ou au métro plutôt que de réserver simplement un logement annoncé à Vincennes."
+sources:
+  - title: "Fam Space - Destination Vincennes et ses deux articles"
+    url: "https://www.fam-space.fr/destinations/ile-de-france/val-de-marne/vincennes/"
+    accessedAt: "2026-10-10"
+  - title: "Fam Space - Château de Vincennes en famille"
+    url: "https://www.fam-space.fr/articles/sorties/chateau-de-vincennes-en-famille-tarifs-parcours-et-conseils-de-visite/"
+    accessedAt: "2026-10-10"
+  - title: "Fam Space - Monument jeu d'enfant 2026 au château de Vincennes"
+    url: "https://www.fam-space.fr/articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/"
+    accessedAt: "2026-10-10"
+  - title: "Ville de Paris - Parc floral de Paris"
+    url: "https://www.paris.fr/lieux/parc-floral-de-paris-1"
+    accessedAt: "2026-10-10"
+  - title: "Château de Vincennes - Informations pratiques"
+    url: "https://www.chateau-de-vincennes.fr/visiter/informations-pratiques"
+    accessedAt: "2026-10-10"
+  - title: "Château de Vincennes - Offre adaptée aux visiteurs en mobilité réduite"
+    url: "https://www.chateau-de-vincennes.fr/visiter/visiteurs-en-situation-de-handicap/offre-adaptee-aux-visiteurs-en-mobilite-reduite"
+    accessedAt: "2026-10-10"
+  - title: "Parc zoologique de Paris - Tarifs, horaires et accès"
+    url: "https://www.parczoologiquedeparis.fr/fr/tarifs-horaires-acces"
+    accessedAt: "2026-10-10"
+  - title: "Parc zoologique de Paris - Services et conseils de visite"
+    url: "https://www.parczoologiquedeparis.fr/fr/services-conseils-de-visite"
+    accessedAt: "2026-10-10"
+---
+
+### Destination en cours
+
+- Branche: automation/destination-20261013-0112-haut-rhin
+- HEAD: content: destination Haut-Rhin enrichment candidate
+
+---
+result: enriched
+kind: department
+name: "Haut-Rhin"
+url: "/destinations/grand-est/haut-rhin/"
+intro:
+  - "Colmar, Mulhouse et Ungersheim ne se visitent pas de la même manière en famille. Le choix de la base dépend des musées, des villages et de la possibilité de se déplacer sans voiture."
+sections:
+  - title: "Colmar pour les villages, Mulhouse pour les musées"
+    paragraphs:
+      - "Colmar convient à une journée dans le centre suivie d'une sortie vers Turckheim ou Munster, accessibles sur la ligne de train vers Metzeral. Pour Riquewihr, Kaysersberg ou Eguisheim, cette ligne ne suffit pas : il faut vérifier les bus ou prévoir une voiture."
+      - "Mulhouse est une meilleure base pour les musées techniques : la Cité du Train et Electropolis sont desservis par le tram 3, et le Musée national de l'Automobile par le tram 1. Si ces visites sont prioritaires, dormir à Mulhouse évite de revenir chaque soir depuis Colmar."
+  - title: "Deux parcs à Ungersheim : prévoir deux journées"
+    paragraphs:
+      - "Le Parc du Petit Prince et l'Écomusée d'Alsace sont proches, mais le premier recommande déjà cinq à sept heures de visite. Une famille qui souhaite découvrir les deux aura plus de temps pour profiter de chaque site en leur réservant une journée distincte."
+      - "Sans voiture, le train rejoint Bollwiller, puis il faut prévoir une navette à la demande vers les sites. Le Parc du Petit Prince indique le service Filéa ; l'Écomusée annonce une navette Soléa ou trente minutes de marche. Réservez et vérifiez le retour avant d'acheter les billets."
+  - title: "Ne pas confondre train et bus touristique"
+    paragraphs:
+      - "Le Kut'zig dessert en saison plusieurs villages viticoles depuis Colmar, mais ne circule pas toute l'année : sa saison 2026 s'est achevée le 11 octobre. Hors saison, la ligne ferroviaire vers Turckheim et Munster offre un autre choix de sortie, sous réserve des horaires du jour."
+accommodation:
+  title: "Où se baser dans le Haut-Rhin ?"
+  paragraphs:
+    - "Choisissez Colmar pour le centre historique, les villages et la vallée de Munster ; choisissez Mulhouse pour les musées et une excursion vers Ungersheim via Bollwiller. Si le séjour combine plusieurs jours dans chaque secteur, deux hébergements peuvent éviter des allers-retours répétés avec les enfants."
+sources:
+  - title: "Fam Space - Haut-Rhin"
+    url: "https://www.fam-space.fr/destinations/grand-est/haut-rhin/"
+    accessedAt: "2026-10-13"
+  - title: "Mulhouse Tourisme - Transports en commun"
+    url: "https://www.tourisme-mulhouse.com/en/what-to-do-in-mulhouse/getting-around-mulhouse-by-public-transport/"
+    accessedAt: "2026-10-13"
+  - title: "Parc du Petit Prince - Informations pratiques"
+    url: "https://parcdupetitprince.com/infos-pratiques"
+    accessedAt: "2026-10-13"
+  - title: "Écomusée d'Alsace - Accès"
+    url: "https://www.ecomusee.alsace/preparez-votre-visite/acces/"
+    accessedAt: "2026-10-13"
+  - title: "Ville de Turckheim - Accès"
+    url: "https://www.turckheim.fr/acces-et-plan/"
+    accessedAt: "2026-10-13"
+  - title: "Office de tourisme de Colmar - Kut'zig"
+    url: "https://www.tourisme-colmar.com/fr/pratique/se-deplacer/kut-zig-le-bus-touristique-cabriolet"
+    accessedAt: "2026-10-13"
+---
+
+### Phase 1 - refresh
+
+Écris `radar-request.md` avec seulement la décision éditoriale:
+
+```yaml
+---
+action: start
+mode: refresh
+targetUrl: "/articles/categorie/slug/"
+decision: "Décision précise du lecteur à mieux servir"
+affiliationPotential: "Offre existante à conserver, nouvelle action naturelle à vérifier, ou absence d'affiliation naturelle"
+---
+
+Brief éditorial court demandé par la phase 1.
+```
+
+Ne fournis ni branche, ni SHA, ni `targetPath`, ni `commonQueries`, ni `positionDelta`, ni `impressionRatio`, ni `focusQueries`. Le script les prend dans Git et dans le snapshot.
+
+### Phase 1 - opportunity
+
+Écris le minimum éditorial nécessaire au futur article:
+
+```yaml
+---
+action: start
+mode: opportunity
+title: "Titre de travail"
+subtitle: "Sous-titre utile"
+summary: "Résumé"
+category: sorties
+location:
+  city: "Ville"
+  department: "Département"
+  region: "Région"
+keywords:
+  - "mot-clé utile"
+sources:
+  - title: "Source officielle"
+    url: "https://..."
+gscSignal: strong_page
+gscSourceUrl: "/articles/categorie/page-forte/"
+decision: "Décision précise du lecteur"
+affiliationPotential: "Piste commerciale réellement vérifiée ou absence naturelle"
+---
+
+Brief éditorial court demandé par la phase 1.
+```
+
+Le slug, la branche, le SHA et la provenance technique sont générés par le script. Pour `seasonal_opportunity`, utilise `gscSignal: seasonal_opportunity` et omets `gscSourceUrl`: la source officielle du frontmatter sert de preuve. Pour `strong_page`, `gscSourceUrl` reste obligatoire et doit correspondre à une page réellement présente dans `strongPages`.
 
 ## Écriture autorisée
 
