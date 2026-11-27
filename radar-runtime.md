@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Parc Phoenix à Nice en famille: serre tropicale, animaux et jeux"
 subtitle: Deux heures de découverte ou une demi-journée avec pique-nique, au rythme des enfants
-summary: "Serre tropicale, animaux, jardins et jeux: nos conseils pour visiter le Parc Phoenix à Nice avec des enfants, prévoir les pauses et venir en tramway."
+summary: "Serre tropicale, animaux et jeux au Parc Phoenix à Nice: tarifs familiaux, équipements pour les tout-petits, accrobranche et conseils pour préparer la visite."
 slug: parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux
 status: published
 publishedAt: 2026-11-15T00:25:33+01:00
@@ -97,13 +100,27 @@ sources:
     url: https://www.parc-phoenix.org/
   - title: B&B HOTELS - Nice Aéroport Arenas
     url: https://www.hotel-bb.com/fr/hotel/nice-aeroport-arenas
+  - title: Parc Phoenix - Services
+    url: https://www.parc-phoenix.org/le-parc/services/
+  - title: Nissa’venture - Accueil
+    url: https://nissaventure-accrobranche.fr/
+  - title: Nissa’venture - Nos parcours
+    url: https://nissaventure-accrobranche.fr/nos-parcours/
+  - title: Nissa’venture - Tarifs et horaires
+    url: https://nissaventure-accrobranche.fr/tarifs-horaires/
+  - title: Office de tourisme Nice Côte d’Azur - Parc Phoenix
+    url: https://www.explorenicecotedazur.com/culture/parc-phoenix/
+  - title: French Riviera Pass - Parc Phoenix
+    url: https://www.frenchrivierapass.com/activite/parc-phoenix-entree/
+  - title: French Riviera Pass - FAQ
+    url: https://www.frenchrivierapass.com/faq/
 affiliate:
   enabled: true
   type: travel
   destination: Nice
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/activites/(2026)/(11)/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux/index.md
   targetSha: 25904066a3fe508de3d5526da7be82eb92abb412
@@ -132,40 +149,91 @@ radar:
       - parc pheonix
 ---
 
-## Mission retenue
-Actualiser le guide familial du Parc Phoenix à Nice.
+À l’ouest de Nice, face à l’aéroport, le Parc Phoenix réunit sur sept hectares un jardin botanique, une grande serre tropicale, des espaces animaliers et des jeux pour enfants. Pour une famille, son intérêt tient à cette variété: on peut observer les plantes et les animaux, puis laisser les enfants se dépenser, sans changer de lieu.
 
-## Pourquoi cette mission
-Premier candidat rapidDrop du snapshot du jour, signal uncertain: aucune perte de classement démontrée. Lacune indépendante confirmée par le parc: deux espaces à langer, prêt de poussette et de fauteuil roulant selon disponibilité, restauration sur place, informations déterminantes pour décider de rester deux heures ou une demi-journée, absentes du guide actuel.
+Prévoyez environ deux heures pour quelques étapes choisies, ou une demi-journée avec un pique-nique et de longues pauses aux jeux. Ces durées sont des suggestions pour organiser votre sortie, à adapter à l’âge et aux envies des enfants.
 
-## Décision du lecteur
-Choisir un parcours adapté aux enfants, prévoir le coût réel et le matériel à emporter, décider si l'accrobranche ou un séjour plus large mérite un supplément.
+## La serre, pour regarder les plantes autrement
 
-## Faits à traiter
-- Ajouter les deux espaces à langer (toilettes du jardin d'enfants et près du snack), les toilettes accessibles, le prêt de poussette et fauteuil roulant sous réserve de disponibilité, le snack Côté Jardin ouvert toute l'année selon horaires du parc, et le pique-nique autorisé. Source Services du parc.
-- Préserver les tarifs de 5,50 € et 3,20 €, gratuité des moins de 12 ans dans la limite de trois par adulte payant, gratuités handicap/accompagnateur et résidents avec justificatifs. Exemples de budgets familiaux simples; abonnement annuel 44,10 € et réductions pertinentes si utiles. Billetterie sur place confirmée sur l'accueil malgré le bouton de réservation. Conserver horaires saisonniers, fermeture les 25 décembre et 1er janvier et vigilance météo.
-- Préciser adresse 405 promenade des Anglais, entrée côté tram uniquement, gare Saint-Augustin et parkings publics payants. Conserver serre, éco-refuge, petite ferme, jardins, jeux inclus et aire inclusive, durées indicatives et images/crédits.
-- Accrobranche indépendante Nissa'venture dès 3 ans selon exploitant: vérifier parcours, taille, prix et conditions d'accompagnement sur ses pages officielles avant publication; réservation non nécessaire sous dix personnes hors groupes/anniversaires selon le parc, chaussures de sport requises. Ne pas supposer que le billet du parc couvre cette activité.
-- Le French Riviera Pass inclut l'entrée du parc, pas l'accrobranche; pas de tarif enfant spécifique selon FAQ officielle. Ne pas recommander un pass pour cette seule sortie peu coûteuse. Klook affiche des offres expirées et épuisées; ne pas insérer ce lien comme réservation disponible.
+<!-- article-image-body:01 -->
 
-## Sources de départ
-- https://www.parc-phoenix.org/le-parc/services/
-- https://www.parc-phoenix.org/le-parc/infos-pratiques/
-- https://www.parc-phoenix.org/
-- https://www.nice.fr/lieux/parc-phoenix/
-- https://www.parc-phoenix.org/le-parc/presentation/
-- https://www.parc-phoenix.org/la-flore/la-serre/
-- https://www.parc-phoenix.org/activites-pedagogie/accrobranche/
-- https://nissaventure-accrobranche.fr/tarifs-horaires/
-- https://www.frenchrivierapass.com/activite/parc-phoenix-entree/
-- https://www.frenchrivierapass.com/faq/
-- https://www.hotel-bb.com/fr/hotel/nice-aeroport-arenas
+![Végétation tropicale à l'intérieur de la serre du Parc Phoenix à Nice](/images/articles/2026/11/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux-body-01.webp)
 
-## Affiliation
-Conserver https://www.booking.com/hotel/fr/b-amp-b-nice-aeroport.fr.html pour un séjour plus large; Booking bloque la vérification directe, contrôler les caractéristiques sur la fiche officielle de l'hôtel. Aucun billet direct pour le parc identifié sur GetYourGuide, Tiqets ou Klook. French Riviera Pass sur Klook (157521) épuisé et dates de validité dépassées au contrôle; ne pas l'ajouter tant qu'une offre valide n'est pas confirmée.
+<!-- /article-image-body:01 -->
 
-## Continuations internes
-Conserver le guide de destination Nice existant pour les autres sorties et l'organisation du séjour; ne pas élargir inutilement le guide du parc.
+Le « Diamant vert », une serre pyramidale haute de 25 mètres, constitue un bon premier objectif. Sur 7 000 m², elle rassemble six climats tropicaux et subtropicaux, avec notamment des orchidées, des fougères arborescentes et un jardin d’Afrique australe.
+
+Pour accompagner la découverte, proposez une petite recherche: trouver une feuille plus grande que sa main, comparer deux silhouettes de palmiers ou repérer une plante dont la forme étonne.
+
+Dans la partie centrale, les végétaux sont regroupés selon leurs besoins, notamment en eau et en lumière, comme l’explique la [page officielle consacrée à la serre](https://www.parc-phoenix.org/la-flore/la-serre/). Une piste intéressante pour les plus grands: des plantes venues de continents différents peuvent avoir besoin des mêmes conditions pour pousser. Les floraisons de cette partie sont surtout présentes au printemps et en été.
+
+## Des animaux à observer, un refuge à découvrir
+
+<!-- article-image-body:02 -->
+
+![Flamants roses photographiés dans le Parc Phoenix à Nice](/images/articles/2026/11/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux-body-02.webp)
+
+<!-- /article-image-body:02 -->
+
+La petite ferme offre un point de départ familier aux plus jeunes. Les enfants attirés par la faune exotique pourront consacrer davantage de temps aux autres espaces animaliers. Devant un animal, quelques minutes d’observation permettent parfois de découvrir une façon de se déplacer, de manger ou d’utiliser ses pattes que l’on aurait manquée en passant.
+
+Le lieu a aussi une mission moins visible. Selon sa [présentation officielle](https://www.parc-phoenix.org/le-parc/presentation/), le Parc Phoenix est un éco-refuge depuis 2020: il accueille et protège des animaux sauvages exotiques en détresse, notamment issus de saisies douanières ou d’abandons. Cette dimension permet d’aborder avec les enfants les besoins de ces animaux et les difficultés que pose leur détention chez un particulier.
+
+## Deux façons de composer la sortie
+
+<!-- article-image-body:03 -->
+
+![Plantes succulentes du jardin aride du Parc Phoenix à Nice](/images/articles/2026/11/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux-body-03.webp)
+
+<!-- /article-image-body:03 -->
+
+**Pour une visite courte, autour de deux heures**, choisissez la serre, un espace animalier selon les envies des enfants, puis une pause aux jeux. Si les animaux sont leur motivation principale, inversez les deux premières étapes. Les jardins feront la liaison entre ces temps forts.
+
+**Pour une demi-journée**, ajoutez une promenade dans les jardins et un déjeuner sur place. Les collections méditerranéennes, les plantes succulentes et les plantes aromatiques permettent de poursuivre la découverte après la serre, en comparant les formes et les feuillages. Le pique-nique est autorisé.
+
+Les aires de jeux sont comprises dans l’entrée. La [Ville de Nice signale également une aire inclusive et un accès pour les personnes à mobilité réduite](https://www.nice.fr/lieux/parc-phoenix/).
+
+## Avec un bébé ou un jeune enfant
+
+Deux espaces permettent de changer un bébé: dans les sanitaires du jardin d’enfants et dans ceux situés près du snack. Le parc dispose de toilettes accessibles et peut prêter une poussette ou un fauteuil roulant si du matériel est disponible. Consultez les [services du parc](https://www.parc-phoenix.org/le-parc/services/) avant votre venue.
+
+Si vous ne souhaitez pas emporter le déjeuner, le snack Côté Jardin accueille les visiteurs toute l’année pendant les heures d’ouverture du parc. Vous pouvez aussi apporter votre repas.
+
+## Accrobranche: quel parcours selon l’âge ?
+
+Nissa’venture propose une activité indépendante à partir de 3 ans. Les quatre circuits Kid demandent au total environ 45 minutes à une heure, avec un adulte qui suit l’enfant depuis le sol. Le circuit Kid+ est accessible dès 8 ans et 1,30 m minimum; prévoyez 30 à 45 minutes supplémentaires si vous le choisissez, avec un accompagnement adulte au sol ou sur le parcours. Retrouvez les [conditions des parcours](https://nissaventure-accrobranche.fr/nos-parcours/).
+
+Le prix de l’accrobranche s’ajoute à celui de l’entrée du Parc Phoenix. Consultez les [tarifs et le calendrier de Nissa’venture](https://nissaventure-accrobranche.fr/tarifs-horaires/) selon l’âge et la taille de l’enfant. D’après les [consignes du parc](https://www.parc-phoenix.org/activites-pedagogie/accrobranche/), la réservation n’est pas nécessaire pour moins de dix personnes, sauf groupes et anniversaires. Des chaussures fermées adaptées au sport sont nécessaires. L’activité peut être interrompue en cas de mauvais temps.
+
+## Budget, horaires et arrivée sans voiture
+
+Les [informations pratiques du parc](https://www.parc-phoenix.org/le-parc/infos-pratiques/) indiquent:
+
+- **Plein tarif:** 5,50 €. Le tarif réduit de 3,20 € concerne les 12 à 18 ans, les étudiants et les titulaires du Pass Musées de Nice, sur justificatif selon le tarif.
+- **Moins de 12 ans:** gratuit pour trois enfants maximum par adulte payant, puis 3,20 € par enfant supplémentaire.
+- **Horaires:** de 9h30 à 18h du 1er octobre au 31 mars, et de 9h30 à 19h30 du 1er avril au 30 septembre. Fermeture les 25 décembre et 1er janvier. La billetterie ferme une heure avant le parc.
+- **Sans voiture:** tramway ligne 2, arrêt Parc Phœnix, ou train jusqu’à la gare de Nice Saint-Augustin.
+- **Entrée:** au 405 promenade des Anglais, exclusivement du côté du tramway. L’ancienne entrée Arénas est fermée. En voiture, plusieurs parkings publics payants se trouvent à proximité, dont Indigo Arénas et Interparking Nouvel’R.
+
+Deux adultes et deux enfants de moins de 12 ans paient ainsi 11 € au total pour le parc, ou 14,20 € si l’un des enfants a entre 12 et 18 ans. Pour un adulte avec quatre enfants de moins de 12 ans, comptez 8,70 €. Ces exemples excluent l’accrobranche, le transport et les repas. L’abonnement annuel ordinaire coûte 44,10 € (hors expositions et manifestations diverses).
+
+Les habitants de la métropole Nice Côte d’Azur bénéficient de la gratuité le premier week-end complet de chaque mois, avec un justificatif de domicile de moins de trois mois et une pièce d’identité par personne. Une gratuité est aussi prévue pour les visiteurs handicapés sur présentation de la carte d’invalidité, ainsi que pour leur accompagnateur.
+
+Pour les billets, prévoyez un achat sur place: l’[accueil officiel](https://www.parc-phoenix.org/) annonce une billetterie en ligne indisponible, malgré des liens de réservation encore affichés sur le site.
+
+Si vous disposez déjà d’un French Riviera Pass, l’entrée du Parc Phoenix est incluse, mais pas l’accrobranche, selon l’[office de tourisme](https://www.explorenicecotedazur.com/culture/parc-phoenix/). Pour cette seule sortie, le billet ordinaire est plus pertinent. Le pass n’ayant pas de tarif spécifique pour les enfants, comparez le coût des autres visites envisagées avant de l’acheter, en tenant compte des gratuités.
+
+## Une sortie surtout en plein air
+
+La serre apporte une étape abritée, mais les déplacements, les jardins et les jeux se déroulent dehors. Par temps d’averses, un parcours court sera plus facile à adapter qu’une demi-journée avec pique-nique.
+
+Le parc annonce une [fermeture en cas de vigilance orange pour précipitations ou vent violent](https://www.parc-phoenix.org/le-parc/infos-pratiques/), ainsi qu’en cas de force majeure. Lorsque la météo se dégrade, vérifiez les annonces officielles avant de partir.
+
+## Une nuit dans l’Arénas pour prolonger la visite
+
+Si la sortie s’intègre à un week-end niçois, le [B&B HOTEL Nice Aéroport Arenas, près du Parc Phoenix](https://www.booking.com/hotel/fr/b-amp-b-nice-aeroport.fr.html), propose des chambres quadruples avec un grand lit double et deux lits simples. Sa proximité permet de rejoindre le parc à pied. Renseignez vos dates et l’âge des enfants pour vérifier les disponibilités, le tarif total et les conditions d’annulation.
+
+Pour préparer les autres étapes du séjour, consultez notre [guide de Nice en famille](https://www.fam-space.fr/destinations/provence-alpes-cote-d-azur/alpes-maritimes/nice/).
 
 ## Article source exact à préserver et améliorer
 
