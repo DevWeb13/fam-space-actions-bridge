@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -102,13 +105,19 @@ sources:
     url: https://www.evian-tourisme.com/infospratiques/stationner-se-deplacer/
   - title: "Hôtel Le Littoral: situation et présentation des chambres"
     url: https://hotel-littoral-evian.fr/
+  - title: "Organisateur: Une arrivée d’air et de feu"
+    url: https://lesflottins.com/evenement/une-arrivee-dair-et-de-feu/
+  - title: "Organisateur: spectacle Horizon"
+    url: https://lesflottins.com/evenement/spectacle-de-feu-horizon-par-la-cie-salamandre/
+  - title: "Hôtel Le Littoral: chambre triple"
+    url: https://hotel-littoral-evian.fr/fra/room_categories/view/4/tradition-triple
 affiliate:
   enabled: true
   type: travel
   destination: Évian-les-Bains
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/flottins-d-evian-2026-un-village-de-noel-en-bois-flotte-a-decouvrir-en-famille/index.md
   targetSha: 22d857ccc12c990c4eb8940c35fba73f38ee97b2
@@ -135,33 +144,63 @@ radar:
       - Noël Haute-Savoie
 ---
 
-## Mission retenue
-Actualiser le Fabuleux Village des Flottins à Évian, événement culturel gratuit en bois flotté du 11 décembre 2026 au 2 janvier 2027.
+À Évian-les-Bains, au bord du lac Léman, le Fabuleux Village transforme le centre-ville en paysage de sculptures monumentales en bois flotté. Entre ces créatures étranges circulent les Flottins et les Flottines, des personnages qui racontent leurs histoires et interpellent les passants. Pour les enfants, la promenade devient une rencontre avec tout un peuple imaginaire.
 
-## Pourquoi cette mission
-Le snapshot signale une chute rapide d'impressions, sans diagnostic causal. L'article du 12 novembre ne disposait pas encore du détail des temps forts. L'organisateur publie désormais les fiches 2026 d'ouverture et du spectacle Horizon, apportant une amélioration indépendante vérifiée. Metz, Laval et Parc Phoenix sont déjà actualisés aujourd'hui sur master.
+L’[office de tourisme annonce l’édition 2026](https://www.evian-tourisme.com/manifestation/le-fabuleux-village-217054/) **du 11 décembre 2026 au 2 janvier 2027, tous les jours de 15h à 19h, en accès gratuit**. Cette 20e édition explore la nuit: lanternes, effets lumineux et feu doivent révéler chimères, fantômes et petites bêtes nocturnes.
 
-## Décision du lecteur
-Choisir une date et un créneau adaptés aux enfants, en distinguant balade libre et spectacles spécifiques.
+## Du bois échoué aux créatures imaginaires
 
-## Faits à traiter
-- Le 11 décembre, déambulation d'ouverture annoncée de 18 h 30 à 20 h au quai Baron-de-Blonay, avec la compagnie Aerosculpture et des danseuses; conserver la possibilité de préférer un autre jour avec les petits.
-- Le 13 décembre, spectacle de feu Horizon de la Cie Salamandre, plage annoncée de 17 h 30 à 19 h, place des Feux Follets (parking des Thermes). Ne pas assimiler cette plage à la durée effective du spectacle.
-- Conserver les horaires généraux 15 h-19 h, l'accès gratuit, le départ des Flottins le 2 janvier à 17 h 30 et les conseils de visite, accès train/bus/bateau/voiture, poussette, restauration et enfant perdu. Le programme contient encore des mentions scolaires aux jours de semaine correspondant à 2025: ne pas les transposer à 2026 sans confirmation spécifique. Vérifier également les autres animations datées dans le programme actualisé.
+Les troncs et branchages transportés par les cours d’eau jusqu’au Léman finissent sur ses rivages. Des sculpteurs les assemblent pour leur donner une nouvelle existence dans les rues, comme l’explique le [Théâtre de la Toupine, à l’origine du projet](https://lesflottins.com/levenement/).
 
-## Sources de départ
-- https://lesflottins.com/programme/
-- https://lesflottins.com/evenement/une-arrivee-dair-et-de-feu/
-- https://lesflottins.com/evenement/spectacle-de-feu-horizon-par-la-cie-salamandre/
-- https://www.evian-tourisme.com/manifestation/le-fabuleux-village-217054/
-- https://www.evian-tourisme.com/manifestation/depart-des-flottins-248289/
-- https://lesflottins.com/levenement/festival-pratique/
+Avec les enfants, on peut chercher comment une branche devient une patte ou un morceau de tronc un visage. Nul besoin de connaître la légende pour entrer dans cet univers: les formes du bois donnent déjà matière à inventer des histoires.
 
-## Affiliation
-Accès libre. Conserver https://www.booking.com/hotel/fr/le-littoral.fr.html : la fiche indexée référence une chambre triple avec un lit simple et un grand lit double, sans disponibilité confirmée aux dates des fêtes; pour quatre personnes vérifier une configuration adaptée ou plusieurs chambres.
+Les rencontres font le reste. Selon la [présentation de l’organisateur](https://lesflottins.com/), les Flottins et les Flottines déambulent librement, racontent leurs aventures et taquinent parents et enfants. Gardez du temps pour ces échanges imprévus, qui font autant l’intérêt de la visite que les sculptures.
 
-## Continuations internes
-Conserver le renvoi au guide Évian-les-Bains en famille pendant trois jours, avec la réserve sur les activités estivales. Ne pas développer à nouveau le séjour général dans cet article événementiel.
+## Quels jours choisir pour les spectacles ?
+
+- **Vendredi 11 décembre 2026, de 18h30 à 20h:** l’[arrivée des Flottins](https://lesflottins.com/evenement/une-arrivee-dair-et-de-feu/) est annoncée quai Baron-de-Blonay, avec une comète géante, des créations aériennes, de la danse et du feu.
+- **Dimanche 13 décembre, de 17h30 à 19h:** le [spectacle de feu Horizon](https://lesflottins.com/evenement/spectacle-de-feu-horizon-par-la-cie-salamandre/) de la compagnie Salamandre est annoncé place des Feux Follets, au parking des Thermes.
+- **Samedi 2 janvier 2027 à partir de 17h30:** pour leur [départ](https://www.evian-tourisme.com/manifestation/depart-des-flottins-248289/), les personnages doivent embarquer à bord de la barque historique La Savoie.
+
+Ces plages horaires ne correspondent pas nécessairement à la durée effective des spectacles. Si vos enfants fatiguent tôt ou sont impressionnés par le feu, privilégiez une promenade dès 15h un autre jour.
+
+Le [programme de l’organisateur](https://lesflottins.com/programme/) présente ces rendez-vous et annonce également Les Amours en Cage le 11 décembre, mais conserve des indications scolaires de 2025. Les restrictions d’accès de ces anciennes dates ne sont pas confirmées pour 2026. Vérifiez auprès de l’équipe les éventuelles journées réservées aux écoles ainsi que les horaires, âges et inscriptions des ateliers avant de vous déplacer.
+
+## Profiter du jour et des lumières
+
+Commencer en milieu d’après-midi permet d’observer les assemblages de bois avant de découvrir leur mise en lumière au crépuscule. C’est aussi une approche plus progressive pour un enfant impressionné par les fantômes ou les figures fantastiques.
+
+Prévoyez des vêtements chauds et des chaussures adaptées à la marche. Avec une poussette, privilégiez une promenade courte autour de la place Charles-de-Gaulle et prévoyez une halte à la Tanière plutôt que de chercher à parcourir tout le village.
+
+## Venir au village avec des enfants
+
+<!-- article-image-body:01 -->
+
+![Façade du bâtiment voyageurs de la gare d'Évian-les-Bains en juin 2020](/images/articles/2026/10/flottins-d-evian-2026-un-village-de-noel-en-bois-flotte-a-decouvrir-en-famille-body-01.webp)
+
+*Photo: [Remontees](https://commons.wikimedia.org/wiki/File:Bv-evian-les-bains.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+En train, comptez **environ douze minutes à pied entre la gare d’Évian-les-Bains et la place Charles-de-Gaulle**. Pour réduire la marche, les [informations pratiques de l’organisateur](https://lesflottins.com/levenement/festival-pratique/) indiquent deux possibilités en bus: lignes 2 ou 3 depuis « Gare SNCF » jusqu’à « Supermarché Casino », puis quatre minutes à pied; ou lignes 1 ou 4 depuis « Anna de Noailles » (à quatre minutes de la gare) jusqu’à « Hôtel de Ville d’Évian », puis trois minutes à pied. Vérifiez les horaires et l’accessibilité du véhicule avant de partir avec une poussette.
+
+Depuis Lausanne, la traversée en bateau prend environ 35 minutes selon l’organisateur, puis huit minutes à pied depuis l’embarcadère. Un bus peut aussi relier l’embarcadère à l’arrêt Hôtel de Ville. L’office de tourisme annonce une réduction de 20 % sur la liaison Lausanne-Évian les week-ends du 12 décembre au 2 janvier. Vérifiez les conditions de cette offre et les horaires de retour avant de choisir une animation en fin de journée.
+
+En voiture, la [page consacrée au stationnement de l’office de tourisme](https://www.evian-tourisme.com/infospratiques/stationner-se-deplacer/) rassemble les plans, les tarifs et les emplacements adaptés aux personnes à mobilité réduite. Prévoyez aussi le trajet à pied entre votre parking et le village.
+
+## Faire une pause et se retrouver facilement
+
+La [Tanière des Flottins](https://lesflottins.com/levenement/festival-pratique/), au **11 avenue de Narvik**, propose une petite restauration locale, sucrée et salée, avec boissons chaudes, tartines au fromage d’Abondance et guimauves grillées. L’organisateur annonce une ouverture **tous les jours de 15h à 19h** pendant le village. La Vache de Buvette, place Charles-de-Gaulle, propose notamment du chocolat chaud. Le Repaire des Gourmands, sur le parvis du Palais Lumière, réunit d’autres stands de restauration; vérifiez les horaires et les éventuelles exceptions avant de partir.
+
+Avant de vous séparer dans la foule, convenez d’un point de rendez-vous avec les enfants assez grands. L’organisateur recommande un **bracelet portant le nom de l’enfant et un numéro de téléphone**. Si un enfant se perd, ou si vous trouvez un enfant seul, adressez-vous à l’équipe **place Charles-de-Gaulle, à l’Antre des Flottins ou à la Tanière**.
+
+## Rester une nuit pour profiter de la soirée
+
+Si vous venez de loin, dormir dans le centre permet de faire une pause avant les animations et de rejoindre votre hébergement à pied après la promenade.
+
+L’[hôtel Le Littoral, dans le centre face au lac](https://www.booking.com/hotel/fr/le-littoral.fr.html), propose notamment une chambre triple pour trois personnes, avec un grand lit et un couchage individuel. Pour quatre personnes, vérifiez si plusieurs chambres sont nécessaires. Renseignez vos dates, le nombre d’enfants et leur âge pour vérifier les chambres effectivement proposées. Regardez notamment si l’offre prévoit une ou plusieurs chambres, quels couchages sont inclus et quelles conditions d’annulation s’appliquent.
+
+Pour compléter le séjour, notre [guide d’Évian-les-Bains en famille](/articles/voyages/evian-les-bains-en-famille-pendant-3-jours-lac-balades-et-activites-faciles/) donne des idées de promenades sur les quais et de visites culturelles. Il comprend aussi des activités estivales: vérifiez les ouvertures hivernales avant de reprendre son itinéraire.
 
 ## Article source exact à préserver et améliorer
 
