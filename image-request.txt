@@ -491,3 +491,4 @@ automation/image-hero-20261127-pastis-b65d1f1|6adaa2574645a30ba105a5acb80d4adcbe
 automation/image-hero-20261127-pastis-b65d1f1|da6dd4213ee57e9fce04c56f22d36dd26894ed2e
 automation/image-hero-20261127-quatre-413cbe8|b349871dd034aa6eacc5fe706e8d46840a9cfcc8
 automation/image-hero-20261127-quatre-413cbe8|172462a3477095c3f30594c5c1596db7cd312a4a
+automation/image-hero-20261127-nantes-optymo-f9653b9|f9653b99a0f37c7f80a667a0db9d02b6ad7bc427
