@@ -488,3 +488,4 @@ automation/image-hero-20261126-honfleur-5274f1e|f1944fd4acd94522ef32acebf88a475d
 automation/image-hero-20261126-lille-morne-samoens-2df15a9|47d04fcafc7d9f860ecbb1ae68f201e1d2fd69c1
 automation/image-hero-20261126-lille-morne-samoens-2df15a9|83953d6bf67b0eb24894aa8e1076c32efcd944e0
 automation/image-hero-20261127-pastis-b65d1f1|6adaa2574645a30ba105a5acb80d4adcbeec8a8e
+automation/image-hero-20261127-pastis-b65d1f1|da6dd4213ee57e9fce04c56f22d36dd26894ed2e
