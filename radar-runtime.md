@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Meubles d'occasion en Meurthe-et-Moselle: où acheter, donner et réparer ?"
 subtitle: Quatre adresses autour de Nancy, Pont-à-Mousson et Lunéville, avec les horaires et les ventes spéciales à connaître
-summary: "Ressourceries, Emmaüs, dons de meubles et Repair Cafés: quatre adresses en Meurthe-et-Moselle, les horaires utiles et les brocantes SNI de décembre 2026."
+summary: "Quatre adresses de meubles d'occasion en Meurthe-et-Moselle: horaires, dépôts, dons, réparation et ouvertures exceptionnelles de décembre 2026."
 slug: meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer
 status: published
 publishedAt: 2026-10-29T00:59:22+01:00
@@ -109,14 +112,18 @@ sources:
     url: https://repairgrandnancy.fr/calendrier/
   - title: RappelConso - alertes officielles sur les produits
     url: https://rappel.conso.gouv.fr/
+  - title: Service déchets du territoire de Lunéville à Baccarat - Donner, réparer et réemployer
+    url: https://www.trions.fr/reparer-donner/
+  - title: Tourisme Meurthe-et-Moselle - Recyclune
+    url: https://tourisme-meurtheetmoselle.fr/accueil/lessentiel/patrimoine/musees/742003016-recyclune
 affiliate:
   enabled: true
   type: travel
   destination: Meurthe-et-Moselle
-reviewAt: 2026-12-21
+reviewAt: 2026-12-27
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/maison/(2026)/(10)/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/index.md
   targetSha: be9983cf573fb1a2feb8f323c2a5b7df04c6f01b
@@ -145,36 +152,81 @@ radar:
       - magasin de meuble de seconde main
 ---
 
-## Mission retenue
-Actualiser le guide des quatre adresses de mobilier d'occasion et des solutions de don et réparation en Meurthe-et-Moselle.
+Une table pour les repas, un bureau pour les devoirs ou des rangements pour les chambres: meubler une maison familiale coûte vite cher. En Meurthe-et-Moselle, des recycleries et Emmaüs proposent des meubles et des objets de seconde main. D'autres associations récupèrent les dons ou aident à réparer les petits appareils. Voici quatre adresses concrètes, de Nancy à Lunéville, et les précautions utiles avant de vous déplacer.
 
-## Pourquoi cette mission
-Chute rapide d'impressions dont la cause n'est pas établie. Lacunes indépendantes vérifiées: les horaires et conditions de dépôt de Recyclune sont publiés par le service déchets et le tourisme départemental; la Benne Idée annonce une fermeture exceptionnelle; le calendrier SNI consulté ne confirme plus les trois dimanches de décembre cités. Les Flottins, Metz, Laval et Parc Phoenix ont déjà été actualisés aujourd'hui. Le marché de Noël du Département à Dijon conserve le programme déjà traité; pas de nouvelle information majeure trouvée.
+## Où acheter des meubles et des objets d'occasion ?
 
-## Décision du lecteur
-Choisir une adresse adaptée au besoin (achat, don, enlèvement) et un jour de déplacement, particulièrement pendant les fêtes.
+### Jarville-la-Malgrange: La Benne Idée
 
-## Faits à traiter
-- Recyclune: ouverture du lundi au samedi de 14 h à 17 h, dépôt pendant les horaires, objets réutilisables et en bon état. L'adresse de la fiche du tourisme départemental et de la mairie est 4 rue Keller et Guérin, tandis que le service déchets et une annonce récente de service civique indiquent rue du Coq, zone des Faïenceries. Signaler cette divergence et faire confirmer l'entrée auprès de l'association au 07 68 82 28 99; ne pas inventer un déménagement. Le site de l'association redirige vers Facebook inaccessible sans connexion.
-- La Benne Idée: fermeture exceptionnelle samedi 26 décembre annoncée; horaires habituels confirmés; page de contact contradictoire sur l'adhésion de 1 euro (à vie dans les infos pratiques, annuelle plus bas), présenter ce montant sans garantir sa durée, à confirmer sur place. Dépôt sans adhésion.
-- SNI: le calendrier de l'office de tourisme actuellement consulté confirme le 6 décembre 2026 de 14 h à 18 h, mais pas les 13 et 20 décembre; rechercher une confirmation distincte de ces deux dates avant de les maintenir, sans affirmer leur annulation. Horaires ordinaires confirmés par SNI; dépôt direct et enlèvement sur demande à préserver.
-- Préserver les coordonnées Emmaüs 54 (confirmées par Grand Nancy), les réserves sur les horaires non confirmés, les conditions de dons, les conseils de sécurité, les Repair Cafés, la livraison et les prix encore vérifiés. Adapter reviewAt aux informations temporaires effectivement conservées (dont le 26 décembre).
+[La Benne Idée](https://labenneidee.fr/) est une recyclerie spécialisée dans l'univers de la maison: mobilier, vaisselle, décoration et matériaux. Elle possède également un atelier de menuiserie dédié au réemploi du bois. Les arrivages varient, ce qui en fait une bonne adresse pour chercher une petite table, des étagères ou des objets de cuisine sans payer le prix du neuf.
 
-## Sources de départ
-- https://tourisme-meurtheetmoselle.fr/accueil/lessentiel/patrimoine/musees/742003016-recyclune
-- https://www.trions.fr/reparer-donner/
-- https://luneville.fr/accueil/associations/name/recyclune/
-- https://www.service-civique.gouv.fr/trouver-ma-mission/soutenir-lactivite-dune-recyclerie-a-luneville-2-1-6aec444488581-6a50a5435a339a18200c7856
-- https://labenneidee.fr/contact/
-- https://www.sni-pam.fr/secteurs-dinterventions/insertion-par-lactivite-economique/la-recyclerie
-- https://www.tourisme-bassindepontamousson.fr/agenda/1284001280_brocante-salle-des-ventes-sni/
-- https://mhdd.grandnancy.eu/ecogestes/occasion
+Vous pouvez consulter les meubles de sa boutique en ligne, **réserver un article pour venir le voir et le retirer**, sans paiement en ligne ni obligation d'achat. C'est pratique pour éviter un déplacement si vous recherchez une pièce précise.
 
-## Affiliation
-Conserver https://www.kayak.fr/Nancy-Locations-de-Fourgonnette.1239.cvn.ksp : comparateur de véhicules utilitaires vérifié, sans tarif ni disponibilité garanti. Pas d'hébergement pour ce sujet du quotidien.
+**Adresse:** 16 avenue de la Malgrange, 54140 Jarville-la-Malgrange, à la Cité du Faire. Selon les [informations pratiques de l'association](https://labenneidee.fr/contact/), la boutique ouvre le mercredi et le vendredi de 10 h à 17 h, et le samedi de 10 h à 13 h, jusqu'à 17 h le deuxième samedi du mois. L'accès à la boutique nécessite une **adhésion de 1 €**, à régler sur place. L'association indique deux durées de validité différentes sur sa page de contact (annuelle ou à vie): demandez confirmation. La boutique annonce une **fermeture exceptionnelle le samedi 26 décembre 2026**.
 
-## Continuations internes
-Conserver le renvoi au guide des lits superposés et mezzanines d'occasion pour les vérifications spécifiques aux couchages des enfants.
+### Pont-à-Mousson: la Recyclerie SNI
+
+La [Recyclerie SNI](https://www.sni-pam.fr/secteurs-dinterventions/insertion-par-lactivite-economique/la-recyclerie), au **24 rue Thibaut II**, vend à prix solidaires des objets issus de dons et de collectes. Elle propose également une boutique sur Label Emmaüs, accessible depuis son site.
+
+**Horaires habituels confirmés par SNI:** du lundi au vendredi de 8 h à 12 h et de 14 h à 18 h; le samedi de 9 h à 13 h et de 14 h à 17 h. **Téléphone:** 03 83 83 25 15.
+
+**Brocantes exceptionnelles:** l'[office de tourisme du Bassin de Pont-à-Mousson](https://www.tourisme-bassindepontamousson.fr/agenda/1284001280_brocante-salle-des-ventes-sni/) annonce aussi des ventes les **dimanches 6, 13 et 20 décembre 2026, de 14 h à 18 h**, à cette même adresse. Des jouets, jeux et articles pour décorer la table des fêtes sont notamment annoncés. Les ouvertures dominicales sont ponctuelles: vérifiez l'agenda avant votre déplacement.
+
+C'est aussi une piste pour donner du mobilier. La structure peut étudier un enlèvement à domicile, mais ne réalise pas de déménagement. Le débarras d'objets non réemployables peut être payant.
+
+### Vandœuvre-lès-Nancy: Emmaüs 54
+
+La [communauté Emmaüs 54](https://www.emmaus-international.org/fr/membergroup/communaute-emmaus-54/) se trouve au **32 rue du 8e Régiment d'Artillerie, 54500 Vandœuvre-lès-Nancy**. Vous pouvez y chercher du mobilier et des objets pour la maison, selon les arrivages. **Téléphone:** 03 83 29 76 79.
+
+Les horaires de vente et de dépôt n'ont pas été confirmés sur une page officielle locale suffisamment précise. Appelez avant de venir, particulièrement si vous souhaitez donner un meuble encombrant.
+
+### Lunéville: Recyclune
+
+La ressourcerie associative **Recyclune** remet en circulation des objets de seconde main, notamment des meubles, de la vaisselle et du petit équipement. Le [service déchets du territoire](https://www.trions.fr/reparer-donner/) et le [tourisme départemental](https://tourisme-meurtheetmoselle.fr/accueil/lessentiel/patrimoine/musees/742003016-recyclune) indiquent une ouverture du lundi au samedi, **de 14 h à 17 h**. Vous pouvez également déposer des objets en bon état et réutilisables pendant ces heures.
+
+**Adresse à confirmer avant de venir:** le service déchets indique le 6 rue du Coq, dans le quartier des Faïenceries, tandis que le tourisme départemental et la [fiche municipale](https://luneville.fr/accueil/associations/name/recyclune/) mentionnent le 4 rue Keller et Guérin. Appelez l'association au **07 68 82 28 99** pour identifier l'entrée actuelle et vérifier les ouvertures pendant les fêtes.
+
+## Donner des meubles: dépôt ou enlèvement à domicile ?
+
+Les conditions varient selon les structures. Pour éviter de charger inutilement un véhicule, vérifiez d'abord si le meuble peut être repris.
+
+À Jarville, [La Benne Idée reçoit les dons sur place sans rendez-vous ni adhésion](https://labenneidee.fr/collecter/), aux horaires de réception indiqués par l'association. Elle refuse notamment les matelas et les assises rembourrées en mauvais état.
+
+À Pont-à-Mousson, la Recyclerie SNI accepte les objets suffisamment propres, complets et réemployables. Pour un dépôt, une place de déchargement est prévue: sonnez à votre arrivée pour que l'équipe puisse vérifier vos dons. Pour demander un enlèvement, préparez **la liste des objets, des photos, vos coordonnées, vos disponibilités et les conditions d'accès** (étage, ascenseur). L'équipe étudie ensuite la demande; la récupération n'est pas automatique.
+
+Chez Emmaüs, [le dépôt et le ramassage sur rendez-vous](https://emmaus-france.org/donner/) sont possibles selon les capacités de chaque communauté. L'enlèvement des dons acceptés est gratuit. Contactez Emmaüs 54 pour confirmer ce qui peut être récupéré.
+
+Pour un meuble volumineux, communiquez ses dimensions et son état réel dès le premier contact: cela permet à l'association d'évaluer sa reprise.
+
+## Réparer un petit appareil plutôt que le jeter
+
+<!-- article-image-body:01 -->
+
+![Réparation collective d'un appareil électrique dans un Repair Café à Trèves en Allemagne](/images/articles/2026/10/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer-body-01.webp)
+
+*Photo: [RaMa2016](https://commons.wikimedia.org/wiki/File:Repair_Caf%C3%A9_Trier_Reparatur.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+Un grille-pain en panne, une lampe défectueuse ou un autre objet du quotidien peut parfois être réparé. Les [Repair Cafés du Réseau Lorraine](https://repair-cafes-lorraine.org/) organisent des rencontres où des bénévoles recherchent la panne avec vous et tentent une réparation. Le résultat n'est pas garanti.
+
+Le réseau accueille **sans inscription ni rendez-vous**, mais précise qu'il **ne prend pas en charge l'informatique ni les smartphones**. Des ateliers existent notamment à Jarville et Vandœuvre. Les séances ne sont pas permanentes: consultez le [calendrier des Repair Cafés](https://repairgrandnancy.fr/calendrier/) pour choisir le lieu et la date.
+
+Si un appareil présente un câble abîmé, des traces de surchauffe ou une odeur de brûlé, ne le rebranchez pas pour le tester. Signalez son état aux bénévoles.
+
+## Les vérifications avant d'acheter un meuble d'occasion
+
+Pour une table, une commode ou une bibliothèque, quelques contrôles comptent davantage que le prix affiché:
+
+- **Dimensions et transport:** mesurez le meuble, mais aussi les portes, l'escalier, l'ascenseur ou le coffre. Vérifiez s'il se démonte.
+- **État:** inspectez les pieds, les assemblages, les tiroirs, les fixations et les traces d'humidité. Une réparation importante peut annuler l'économie.
+- **Stabilité:** avec de jeunes enfants, choisissez des rangements stables et fixez au mur ceux qui risquent de basculer, avec des fixations adaptées.
+
+Pour un **lit bébé, une chaise haute ou un autre équipement de puériculture**, vérifiez le modèle, les pièces, la notice et les éventuels rappels sur le portail officiel [RappelConso](https://rappel.conso.gouv.fr/). Si l'historique ou les éléments nécessaires à une utilisation sûre manquent, renoncez à l'achat.
+
+Pour un couchage en hauteur, consultez aussi notre [guide sur les lits superposés et mezzanines d'occasion](https://www.fam-space.fr/articles/maison/lit-superpose-ou-mezzanine-pour-un-enfant-les-verifications-avant-d-acheter/).
+
+Pour un achat à La Benne Idée, la recyclerie propose aussi la [livraison dans le Grand Nancy](https://labenneidee.fr/livraison/) à **40 € par voyage de camion**, selon les modalités convenues avec son équipe; hors métropole, le tarif est à demander. Si vous récupérez plusieurs meubles volumineux ailleurs autour de Nancy sans véhicule adapté, vous pouvez [comparer les utilitaires à louer sur KAYAK](https://www.kayak.fr/Nancy-Locations-de-Fourgonnette.1239.cvn.ksp). Vérifiez les dimensions de chargement, le kilométrage et le coût total avant de réserver.
 
 ## Article source exact à préserver et améliorer
 
