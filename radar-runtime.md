@@ -1,4 +1,4 @@
-# Radar Fam Space - actualisation GSC
+# Radar Fam Space - Phase 1/3
 
 ## Mission
 
@@ -8,218 +8,94 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-## Snapshot GSC quotidien
+# Radar - Phase 1/3
 
-Le cache compact est `radar-gsc-snapshot.json` sur `main` de `DevWeb13/fam-space-actions-bridge`. Il ne contient jamais les lignes GSC brutes.
+Tu es rédacteur en chef. Ta seule responsabilité est de choisir la meilleure mission du passage et de préparer un brief éditorial court. **Ne fais aucune plomberie Git et ne reconstruis aucune donnée GSC structurée.**
 
-Cette tâche est séparée de la sélection éditoriale. **S'il n'existe aucune branche Radar active et que le snapshot doit être renouvelé, actualise uniquement le snapshot puis termine le passage. Ne choisis pas de mission dans la même exécution.** Le passage horaire suivant effectuera la phase 1 avec le snapshot prêt.
+Le snapshot GSC du jour est déjà prêt lorsque cette phase commence. Utilise le catalogue compact et l'historique du bridge fournis dans ce runtime, puis utilise le contexte des travaux en cours fourni dans ce runtime. Contrôle seulement les articles nécessaires sur `master`, sans relire tout le catalogue fichier par fichier.
 
-Le snapshot est réutilisable lorsqu'il a `schemaVersion: 1`, a été généré le jour courant en Europe/Paris et que `dataThrough` n'a pas plus de sept jours de retard.
+Examine **en premier** les articles `refresh`, en commençant par ceux marqués `rapidDrop: true`. Ils ont gagné des impressions, puis leur visibilité a fortement diminué en quelques jours. Les articles récents ne doivent pas être pénalisés par leur âge. Les autres pertes significatives viennent ensuite.
 
-Lorsqu'un nouveau snapshot est nécessaire, utilise Windsor.ai avec le compte `sc-domain:fam-space.fr`, connector `searchconsole`, `include_fresh_data: false`. **Chaque appel `get_data` Search Analytics doit filtrer explicitement `search_type = web` avec `filters: [["search_type","eq","web"]]`.** Récupère 28 jours jusqu'à la dernière journée consolidée:
+Lis l'article source complet, ses sources et les requêtes GSC lorsqu'elles ont été diagnostiquées :
+- `rank_loss` : vérifier les intentions dont les positions ont réellement reculé ;
+- `coverage_loss` : examiner les recherches dont l'exposition diminue ;
+- `uncertain` ou `needs_query_check` : une chute d'impressions ne prouve pas la cause. Seule une lacune indépendante et vérifiée peut justifier une amélioration ;
+- `search_potential` : vérifier que la réponse et le titre correspondent réellement à l'intention.
 
-- une lecture `date, clicks, impressions` pour déterminer la fin réelle;
-- quatre lectures consécutives de sept jours `date, page, clicks, impressions, position`;
-- appelle `buildRadarShortlist(pageRows, catalog.articles, { now, siteRows, from, history: catalog.history })` pour identifier les cinq premiers candidats. Pour chacun, récupère les requêtes de sa page exacte sur les deux fenêtres `peakStart..peakEnd` et `recentStart..recentEnd`, avec `search_type = web` (dix appels de requêtes au maximum).
-- regroupe les réponses par article : `queryPairs = [{ url, peakQueries, recentQueries }]`. Appelle ensuite **`buildRadarSnapshot(pageRows, catalog.articles, { now, siteRows, from, history: catalog.history, warnings }, queryPairs)`**, du module embarqué. Écris son résultat directement dans `radar-gsc-snapshot.json`, sans recopier les métriques manuellement.
-- pour les autres articles, le diagnostic reste `needs_query_check` avec des mesures `null`. Si une lecture échoue, signale-le sans inventer de chiffres. Ne confonds jamais « pas de donnée » et zéro.
+**Ne choisis pas un refresh pour changer une date ou forcer un `updatedAt`.** Identifie ce qui serait concrètement meilleur pour la famille, tout en conservant ce qui fonctionne déjà.
 
-Utilise uniquement le module Radar embarqué pour présélectionner les candidats et construire le snapshot. La fonction `buildRadarSnapshot` centralise la mise en forme et le diagnostic par article. Une réponse Windsor est considérée complète lorsque `status: done`, que `data` est un tableau et que `total_rows` correspond à `data.length`, sans indicateur explicite de troncature. **Un nombre rond de lignes, notamment 1 500, n'est jamais à lui seul une preuve de plafonnement et ne doit pas arrêter Radar.** Découpe seulement la période si Windsor signale réellement une réponse incomplète/tronquée, si `total_rows` ne correspond pas au nombre de lignes reçues, ou si `unwrapRows` refuse la réponse, notamment à son seuil conservateur de 5 000 lignes par réponse. Un 429, un refus d'accès ou un plafond réellement non résolu termine le passage. Maximum 50 appels `get_data`. Les réponses brutes restent temporaires.
+**Seulement si aucun article existant n'est réellement améliorable**, cherche un événement exceptionnel avec un fort potentiel d'intérêt et éventuellement d'affiliation. Vérifie ses sources officielles et recherche les doublons de sujet sur `master`, en complément des articles proches déjà listés, ainsi que les contenus Publication/Destination en cours. Ne multiplie pas les nouveaux articles sur de petits événements gratuits.
 
-Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlist `refresh` avec ses diagnostics compacts, `strongPages`, `excluded` et les avertissements utiles.
+Applique directement les règles partenaires ci-dessous.
 
-## Snapshot actuellement disponible
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+
+Le brief doit rester court et contenir uniquement ce qui aidera la rédaction:
+
+## Mission retenue
+Le sujet et ce que c'est réellement.
+
+## Pourquoi cette mission
+Pourquoi elle mérite une amélioration maintenant, ou pourquoi aucun article existant n'était utilement améliorable avant de retenir cet événement.
+
+## Décision du lecteur
+Ce que la page doit permettre au lecteur de comprendre ou de choisir. Formule un résultat pour le lecteur, pas un titre ni un plan. Les consignes de maillage, d'anti-doublon ou d'organisation entre articles appartiennent à `Continuations internes`, pas à la décision.
+
+## Faits à traiter
+Les informations décisives à vérifier, actualiser ou ajouter, et les informations existantes importantes à préserver pour un refresh.
+
+## Sources de départ
+Les meilleures sources officielles ou directement responsables.
+
+## Affiliation
+Les pistes réellement vérifiées, ou l'absence d'affiliation naturelle.
+
+## Continuations internes
+Deux ou trois pistes seulement si elles sont réellement utiles. Indique quand une page existante doit prendre le relais sur un sous-sujet afin d'éviter de le redévelopper dans le nouvel article.
+
+Ensuite, soumets cette décision via le format `action: start` fourni plus bas dans ce runtime. Le modèle ne renseigne jamais le nom de branche, le SHA, `targetPath`, le slug technique d'une opportunity ni les métriques GSC détaillées déjà présentes dans le snapshot.
+
+## Catégories éditoriales autorisées
+
+- sorties — Sorties: Des idées de sorties à partager en famille, près de chez vous.
+- voyages — Voyages: Des conseils et inspirations pour voyager sereinement en famille.
+- evenements — Événements: Les événements à découvrir et à préparer avec les enfants.
+- activites — Activités: Des activités simples et enrichissantes pour tous les âges.
+- vie-pratique — Vie pratique: Des repères concrets pour faciliter le quotidien des familles.
+- maison — Maison: Des solutions pratiques pour une maison familiale agréable.
+- cuisine — Cuisine: Des idées et conseils pour cuisiner simplement en famille.
+- parentalite — Parentalité: Des ressources bienveillantes pour accompagner la vie de famille.
+- bons-plans — Bons plans: Réductions, gratuités, pass et aides pratiques pour économiser en famille.
+
+## Snapshot GSC préparé
 
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-26T07:29:00+01:00",
-  "dataThrough": "2026-11-23",
-  "from": "2026-10-27",
+  "generatedAt": "2026-11-27T09:15:00+01:00",
+  "dataThrough": "2026-11-25",
+  "from": "2026-10-29",
   "refresh": [
-    {
-      "url": "/articles/vie-pratique/ludotheques-autour-de-dinan-emprunter-des-jeux-pour-la-maison/",
-      "title": "Ludothèques autour de Dinan: emprunter des jeux pour la maison",
-      "category": "vie-pratique",
-      "publishedAt": "2026-10-30T11:31:33+01:00",
-      "location": {
-        "city": "",
-        "department": "Côtes-d'Armor",
-        "region": "Bretagne"
-      },
-      "ageDays": 27,
-      "rapidDrop": true,
-      "peakStart": "2026-10-31",
-      "peakEnd": "2026-11-02",
-      "recentStart": "2026-11-21",
-      "recentEnd": "2026-11-23",
-      "peakImpressions": 22,
-      "recentImpressions": 1,
-      "score": 98,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "ludothèque plancoët",
-        "ludotheque plancoet",
-        "ludothèque plancoet",
-        "ludothèque plouer sur rance",
-        "horaire ludothèque"
-      ]
-    },
-    {
-      "url": "/articles/activites/forum-des-sciences-a-villeneuve-d-ascq-en-famille-que-choisir-selon-l-age/",
-      "title": "Forum des Sciences à Villeneuve-d'Ascq en famille: que choisir selon l'âge ?",
-      "category": "activites",
-      "publishedAt": "2026-11-02T00:03:12+01:00",
-      "location": {
-        "city": "Villeneuve-d'Ascq",
-        "department": "Nord",
-        "region": "Hauts-de-France"
-      },
-      "ageDays": 24,
-      "rapidDrop": true,
-      "peakStart": "2026-11-04",
-      "peakEnd": "2026-11-06",
-      "recentStart": "2026-11-21",
-      "recentEnd": "2026-11-23",
-      "peakImpressions": 37,
-      "recentImpressions": 5,
-      "score": 96,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 37 impressions sur trois jours, puis 5 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "forum departemental des sciences villeneuve d'ascq",
-        "forum des sciences",
-        "forum des sciences lille",
-        "forum des sciences villeneuve d'ascq",
-        "forum sciences lille"
-      ]
-    },
-    {
-      "url": "/articles/activites/palais-ideal-du-facteur-cheval-en-famille-visite-et-conseils-a-hauterives/",
-      "title": "Palais idéal du facteur Cheval en famille: visite et conseils à Hauterives",
-      "category": "activites",
-      "publishedAt": "2026-10-27T02:02:18+01:00",
-      "location": {
-        "city": "Hauterives",
-        "department": "Drôme",
-        "region": "Auvergne-Rhône-Alpes"
-      },
-      "ageDays": 30,
-      "rapidDrop": true,
-      "peakStart": "2026-10-28",
-      "peakEnd": "2026-10-30",
-      "recentStart": "2026-11-21",
-      "recentEnd": "2026-11-23",
-      "peakImpressions": 29,
-      "recentImpressions": 0,
-      "score": 87,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 29 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "conseils de réservation",
-        "hauterive cheval",
-        "palais du facteur cheval",
-        "visiter le palais du facteur cheval"
-      ]
-    },
-    {
-      "url": "/articles/cuisine/ateliers-patisserie-en-essonne-ou-cuisiner-avec-ses-enfants/",
-      "title": "Ateliers pâtisserie en Essonne: où cuisiner avec ses enfants?",
-      "category": "cuisine",
-      "publishedAt": "2026-11-12T10:04:02+01:00",
-      "location": {
-        "city": "",
-        "department": "Essonne",
-        "region": "Île-de-France"
-      },
-      "ageDays": 14,
-      "rapidDrop": true,
-      "peakStart": "2026-11-18",
-      "peakEnd": "2026-11-20",
-      "recentStart": "2026-11-21",
-      "recentEnd": "2026-11-23",
-      "peakImpressions": 30,
-      "recentImpressions": 3,
-      "score": 81,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 30 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": []
-    },
-    {
-      "url": "/articles/cuisine/ateliers-de-cuisine-parent-enfant-a-toulouse-chocolat-patisserie-ou-menu-complet/",
-      "title": "Ateliers de cuisine parent-enfant à Toulouse: chocolat, pâtisserie ou menu complet ?",
-      "category": "cuisine",
-      "publishedAt": "2026-11-01T12:00:47+01:00",
-      "location": {
-        "city": "Toulouse",
-        "department": "Haute-Garonne",
-        "region": "Occitanie"
-      },
-      "ageDays": 25,
-      "rapidDrop": true,
-      "peakStart": "2026-11-03",
-      "peakEnd": "2026-11-05",
-      "recentStart": "2026-11-21",
-      "recentEnd": "2026-11-23",
-      "peakImpressions": 34,
-      "recentImpressions": 9,
-      "score": 75,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 34 impressions sur trois jours, puis 9 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "atelier cuisine enfant toulouse",
-        "atelier cuisine ecole clae toulouse",
-        "cours de cuisine enfant toulouse",
-        "cours patisserie toulouse",
-        "stage patisserie toulouse"
-      ]
-    },
-    {
-      "url": "/articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/",
-      "title": "Paris avec une poussette: métro, RER, bus ou tram, que choisir ?",
-      "category": "voyages",
-      "publishedAt": "2026-10-28T12:27:07.504Z",
-      "location": {
-        "city": "Paris",
-        "department": "Paris",
-        "region": "Île-de-France"
-      },
-      "ageDays": 29,
-      "rapidDrop": true,
-      "peakStart": "2026-10-29",
-      "peakEnd": "2026-10-31",
-      "recentStart": "2026-11-21",
-      "recentEnd": "2026-11-23",
-      "peakImpressions": 26,
-      "recentImpressions": 1,
-      "score": 75,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 26 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "métro Paris poussette ascenseur",
-        "RER Paris avec poussette",
-        "bus Paris poussette dépliée",
-        "itinéraire accessible poussette Paris"
-      ]
-    },
     {
       "url": "/articles/activites/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux/",
       "title": "Parc Phoenix à Nice en famille: serre tropicale, animaux et jeux",
@@ -230,55 +106,26 @@ Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlis
         "department": "Alpes-Maritimes",
         "region": "Provence-Alpes-Côte d’Azur"
       },
-      "ageDays": 11,
+      "ageDays": 12,
       "rapidDrop": true,
       "peakStart": "2026-11-16",
       "peakEnd": "2026-11-18",
-      "recentStart": "2026-11-21",
-      "recentEnd": "2026-11-23",
+      "recentStart": "2026-11-23",
+      "recentEnd": "2026-11-25",
       "peakImpressions": 22,
       "recentImpressions": 0,
       "score": 66,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "focusQueries": [
-        "Parc Phoenix en famille",
-        "activité avec enfants à Nice",
-        "serre tropicale Nice"
-      ]
-    },
-    {
-      "url": "/articles/bons-plans/pass-nantes-en-famille-en-2026-tarifs-visites-incluses-et-alternatives-gratuites/",
-      "title": "Pass Nantes en famille en 2026: tarifs, visites incluses et alternatives gratuites",
-      "category": "bons-plans",
-      "publishedAt": "2026-10-27T17:17:43+01:00",
-      "location": {
-        "city": "Nantes",
-        "department": "Loire-Atlantique",
-        "region": "Pays de la Loire"
-      },
-      "ageDays": 30,
-      "rapidDrop": true,
-      "peakStart": "2026-10-29",
-      "peakEnd": "2026-10-31",
-      "recentStart": "2026-11-21",
-      "recentEnd": "2026-11-23",
-      "peakImpressions": 24,
-      "recentImpressions": 2,
-      "score": 66,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 24 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Pass Nantes en famille 2026",
-        "Pass Nantes tarifs famille",
-        "Pass Nantes visites incluses",
-        "visiter Nantes avec enfants pas cher"
+        "avis sur parc phœnix",
+        "nice phoenix",
+        "oui",
+        "parc phenix nice",
+        "parc pheonix"
       ]
     },
     {
@@ -291,92 +138,33 @@ Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlis
         "department": "Meurthe-et-Moselle",
         "region": "Grand Est"
       },
-      "ageDays": 28,
+      "ageDays": 29,
       "rapidDrop": true,
       "peakStart": "2026-10-30",
       "peakEnd": "2026-11-01",
-      "recentStart": "2026-11-21",
-      "recentEnd": "2026-11-23",
+      "recentStart": "2026-11-23",
+      "recentEnd": "2026-11-25",
       "peakImpressions": 23,
-      "recentImpressions": 4,
-      "score": 57,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 23 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "meubles occasion Meurthe-et-Moselle",
-        "ressourcerie Nancy",
-        "donner meubles 54",
-        "Repair Café Lorraine"
-      ]
-    },
-    {
-      "url": "/articles/parentalite/laep-a-colmar-ou-aller-gratuitement-avec-un-enfant-de-0-a-6-ans/",
-      "title": "LAEP à Colmar: où aller gratuitement avec un enfant de 0 à 6 ans",
-      "category": "parentalite",
-      "publishedAt": "2026-08-15T16:36:50+02:00",
-      "location": {
-        "city": "Colmar",
-        "department": "Haut-Rhin",
-        "region": "Grand Est"
-      },
-      "ageDays": 103,
-      "rapidDrop": true,
-      "peakStart": "2026-11-10",
-      "peakEnd": "2026-11-12",
-      "recentStart": "2026-11-21",
-      "recentEnd": "2026-11-23",
-      "peakImpressions": 25,
-      "recentImpressions": 8,
-      "score": 51,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 25 impressions sur trois jours, puis 8 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "LAEP Colmar",
-        "parent enfant Colmar gratuit"
-      ]
-    },
-    {
-      "url": "/articles/evenements/noel-2026-a-besancon-en-famille-contes-gratuits-marche-solidaire-ou-artisans/",
-      "title": "Noël 2026 à Besançon en famille: contes, marché solidaire et artisans",
-      "category": "evenements",
-      "publishedAt": "2026-11-01T06:27:50.750Z",
-      "location": {
-        "city": "Besançon",
-        "department": "Doubs",
-        "region": "Bourgogne-Franche-Comté"
-      },
-      "ageDays": 25,
-      "rapidDrop": true,
-      "peakStart": "2026-11-03",
-      "peakEnd": "2026-11-05",
-      "recentStart": "2026-11-21",
-      "recentEnd": "2026-11-23",
-      "peakImpressions": 28,
-      "recentImpressions": 7,
+      "recentImpressions": 2,
       "score": 63,
-      "signal": "needs_query_check",
-      "basis": "Visibilité récente : 28 impressions sur trois jours, puis 7 sur les trois derniers jours consolidés; cause non établie.",
-      "commonQueries": null,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 23 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
       "positionDelta": null,
-      "impressionRatio": null,
+      "impressionRatio": 0,
       "focusQueries": [
-        "Noël Besançon 2026 enfants",
-        "contes gratuits Musée du Temps décembre 2026",
-        "marché solidaire Noël Chamars 2026",
-        "marché artisanal Besançon 5 6 décembre 2026"
+        "achat vente meuble moselle",
+        "emmaüs meuble",
+        "magasin occasion meuble",
+        "depot meubles occasion",
+        "magasin de meuble de seconde main"
       ]
     },
     {
-      "url": "/articles/evenements/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/",
-      "title": "Écoute, je danse ! à Paris le 5 décembre 2026: spectacle gratuit dès 6 mois",
-      "category": "evenements",
-      "publishedAt": "2026-11-04T21:32:12.084Z",
+      "url": "/articles/activites/pokemon-et-biodiversite-a-paris-le-28-novembre-2026-atelier-dessin-des-10-ans/",
+      "title": "Atelier Pokémon et biodiversité à Paris le 28 novembre 2026: dessin dès 10 ans",
+      "category": "activites",
+      "publishedAt": "2026-11-05T10:32:54.370Z",
       "location": {
         "city": "Paris",
         "department": "Paris",
@@ -384,22 +172,112 @@ Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlis
       },
       "ageDays": 22,
       "rapidDrop": true,
-      "peakStart": "2026-11-09",
-      "peakEnd": "2026-11-11",
-      "recentStart": "2026-11-21",
-      "recentEnd": "2026-11-23",
-      "peakImpressions": 20,
-      "recentImpressions": 0,
-      "score": 60,
+      "peakStart": "2026-11-17",
+      "peakEnd": "2026-11-19",
+      "recentStart": "2026-11-23",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 23,
+      "recentImpressions": 8,
+      "score": 45,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 23 impressions sur trois jours, puis 8 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": []
+    },
+    {
+      "url": "/articles/evenements/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere/",
+      "title": "Lumières de Laval 2026 en famille: balade gratuite, marchés, roue et croisière",
+      "category": "evenements",
+      "publishedAt": "2026-10-30T09:27:15.012Z",
+      "location": {
+        "city": "Laval",
+        "department": "Mayenne",
+        "region": "Pays de la Loire"
+      },
+      "ageDays": 28,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-23",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 228,
+      "recentImpressions": 14,
+      "score": 677,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 228 impressions sur trois jours, puis 14 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "date illumination laval 2026",
+        "illumination laval 2026",
+        "illuminations laval 2026",
+        "laval illumination 2026",
+        "illumination de noel laval 2026"
+      ]
+    },
+    {
+      "url": "/articles/evenements/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants/",
+      "title": "Fontaines dansantes d'hiver à Metz 2026-2027: dates, horaires et conseils en famille",
+      "category": "evenements",
+      "publishedAt": "2026-11-03T06:32:33.518Z",
+      "location": {
+        "city": "Metz",
+        "department": "Moselle",
+        "region": "Grand Est"
+      },
+      "ageDays": 24,
+      "rapidDrop": true,
+      "peakStart": "2026-11-20",
+      "peakEnd": "2026-11-22",
+      "recentStart": "2026-11-23",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 320,
+      "recentImpressions": 112,
+      "score": 624,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 320 impressions sur trois jours, puis 112 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 1 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 1,
+      "positionDelta": -1.659,
+      "impressionRatio": 0.846,
+      "focusQueries": [
+        "fontaine dansante metz 2026",
+        "fontaines dansantes metz",
+        "fontaines dansantes metz 2026",
+        "combien de temps ça dure ?",
+        "fontaine dansante metz horaires"
+      ]
+    },
+    {
+      "url": "/articles/evenements/flottins-d-evian-2026-un-village-de-noel-en-bois-flotte-a-decouvrir-en-famille/",
+      "title": "Flottins d’Évian 2026: un village de Noël en bois flotté à découvrir en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-30T00:37:19+01:00",
+      "location": {
+        "city": "Évian-les-Bains",
+        "department": "Haute-Savoie",
+        "region": "Auvergne-Rhône-Alpes"
+      },
+      "ageDays": 28,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-23",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 155,
+      "recentImpressions": 33,
+      "score": 366,
       "signal": "needs_query_check",
-      "basis": "Visibilité récente : 20 impressions sur trois jours, puis 0 sur les trois derniers jours consolidés; cause non établie.",
+      "basis": "Visibilité récente : 155 impressions sur trois jours, puis 33 sur les trois derniers jours consolidés; cause non établie.",
       "commonQueries": null,
       "positionDelta": null,
       "impressionRatio": null,
       "focusQueries": [
-        "Écoute je danse Paris décembre 2026",
-        "spectacle gratuit bébé Paris 5 décembre",
-        "bibliothèque Gutenberg spectacle 6 mois 3 ans"
+        "Flottins Évian 2026",
+        "Fabuleux Village en famille",
+        "Noël Haute-Savoie"
       ]
     },
     {
@@ -412,17 +290,17 @@ Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlis
         "department": "Côte-d'Or",
         "region": "Bourgogne-Franche-Comté"
       },
-      "ageDays": 28,
+      "ageDays": 29,
       "rapidDrop": true,
       "peakStart": "2026-11-01",
       "peakEnd": "2026-11-03",
-      "recentStart": "2026-11-21",
-      "recentEnd": "2026-11-23",
+      "recentStart": "2026-11-23",
+      "recentEnd": "2026-11-25",
       "peakImpressions": 22,
-      "recentImpressions": 4,
-      "score": 54,
+      "recentImpressions": 2,
+      "score": 60,
       "signal": "needs_query_check",
-      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 4 sur les trois derniers jours consolidés; cause non établie.",
+      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 2 sur les trois derniers jours consolidés; cause non établie.",
       "commonQueries": null,
       "positionDelta": null,
       "impressionRatio": null,
@@ -434,32 +312,87 @@ Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlis
       ]
     },
     {
-      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
-      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
-      "category": "voyages",
-      "publishedAt": "2026-08-29T00:00:45+02:00",
+      "url": "/articles/evenements/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/",
+      "title": "Écoute, je danse ! à Paris le 5 décembre 2026: spectacle gratuit dès 6 mois",
+      "category": "evenements",
+      "publishedAt": "2026-11-04T21:32:12.084Z",
       "location": {
         "city": "Paris",
         "department": "Paris",
         "region": "Île-de-France"
       },
-      "ageDays": 89,
+      "ageDays": 23,
+      "rapidDrop": true,
+      "peakStart": "2026-11-09",
+      "peakEnd": "2026-11-11",
+      "recentStart": "2026-11-23",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 20,
+      "recentImpressions": 1,
+      "score": 57,
+      "signal": "needs_query_check",
+      "basis": "Visibilité récente : 20 impressions sur trois jours, puis 1 sur les trois derniers jours consolidés; cause non établie.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Écoute je danse Paris décembre 2026",
+        "spectacle gratuit bébé Paris 5 décembre",
+        "bibliothèque Gutenberg spectacle 6 mois 3 ans"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/",
+      "title": "Noël 2026 à Chantilly: Le Noël oublié, billets et séances en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-26T21:31:06.019Z",
+      "location": {
+        "city": "Chantilly",
+        "department": "Oise",
+        "region": "Hauts-de-France"
+      },
+      "ageDays": 32,
       "rapidDrop": false,
-      "peakStart": "2026-10-27",
-      "peakEnd": "2026-11-02",
-      "recentStart": "2026-11-17",
-      "recentEnd": "2026-11-23",
-      "peakImpressions": 2410,
-      "recentImpressions": 1618,
-      "score": 792,
+      "peakStart": "2026-10-29",
+      "peakEnd": "2026-11-04",
+      "recentStart": "2026-11-19",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 278,
+      "recentImpressions": 36,
+      "score": 242,
       "signal": "needs_query_check",
       "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
       "commonQueries": null,
       "positionDelta": null,
       "impressionRatio": null,
       "focusQueries": [
-        "transport Paris avec enfants",
-        "Paris Visite ou Navigo famille"
+        "Noël château de Chantilly 2026",
+        "Le Noël oublié spectacle équestre",
+        "billet spectacle Noël Chantilly famille"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/carte-avantage-adulte-sncf-quand-est-elle-interessante-avec-des-enfants/",
+      "title": "Carte Avantage Adulte SNCF: quand est-elle intéressante avec des enfants?",
+      "category": "bons-plans",
+      "publishedAt": "2026-08-29T16:41:39+02:00",
+      "ageDays": 90,
+      "rapidDrop": false,
+      "peakStart": "2026-11-11",
+      "peakEnd": "2026-11-17",
+      "recentStart": "2026-11-19",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 572,
+      "recentImpressions": 407,
+      "score": 165,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Carte Avantage Adulte SNCF",
+        "réduction train famille"
       ]
     },
     {
@@ -472,15 +405,15 @@ Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlis
         "department": "Seine-et-Marne",
         "region": "Île-de-France"
       },
-      "ageDays": 41,
+      "ageDays": 42,
       "rapidDrop": false,
-      "peakStart": "2026-10-27",
-      "peakEnd": "2026-11-02",
-      "recentStart": "2026-11-17",
-      "recentEnd": "2026-11-23",
-      "peakImpressions": 751,
-      "recentImpressions": 474,
-      "score": 277,
+      "peakStart": "2026-10-29",
+      "peakEnd": "2026-11-04",
+      "recentStart": "2026-11-19",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 600,
+      "recentImpressions": 451,
+      "score": 149,
       "signal": "needs_query_check",
       "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
       "commonQueries": null,
@@ -491,6 +424,124 @@ Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlis
         "Safari de Lumières Lumigny tarifs famille",
         "Lumigny Safari de Lumières billet combiné"
       ]
+    },
+    {
+      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
+      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
+      "category": "voyages",
+      "publishedAt": "2026-08-29T00:00:45+02:00",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 90,
+      "rapidDrop": false,
+      "peakStart": "2026-10-29",
+      "peakEnd": "2026-11-04",
+      "recentStart": "2026-11-19",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 1599,
+      "recentImpressions": 1470,
+      "score": 129,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "transport Paris avec enfants",
+        "Paris Visite ou Navigo famille"
+      ]
+    },
+    {
+      "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
+      "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
+      "category": "evenements",
+      "publishedAt": "2026-11-05T05:04:01+01:00",
+      "location": {
+        "city": "",
+        "department": "Pyrénées-Orientales",
+        "region": "Occitanie"
+      },
+      "ageDays": 22,
+      "rapidDrop": false,
+      "peakStart": "2026-11-10",
+      "peakEnd": "2026-11-16",
+      "recentStart": "2026-11-19",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 402,
+      "recentImpressions": 284,
+      "score": 118,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Fêtes de l’Ours 2027",
+        "Fête de l’Ours Pyrénées-Orientales en famille",
+        "Haut-Vallespir carnaval"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/",
+      "title": "Parc floral d’Orléans gratuit en hiver: horaires et sortie avec les enfants",
+      "category": "bons-plans",
+      "publishedAt": "2026-10-26T22:02:51+01:00",
+      "location": {
+        "city": "Orléans",
+        "department": "Loiret",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 32,
+      "rapidDrop": false,
+      "peakStart": "2026-10-29",
+      "peakEnd": "2026-11-04",
+      "recentStart": "2026-11-19",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 117,
+      "recentImpressions": 13,
+      "score": 104,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Parc floral Orléans gratuit hiver 2026 2027",
+        "Parc floral de La Source enfants",
+        "sortie gratuite famille Loiret"
+      ]
+    },
+    {
+      "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
+      "title": "Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite",
+      "category": "sorties",
+      "publishedAt": "2026-08-23T10:46:58+02:00",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 96,
+      "rapidDrop": false,
+      "peakStart": "2026-11-09",
+      "peakEnd": "2026-11-15",
+      "recentStart": "2026-11-19",
+      "recentEnd": "2026-11-25",
+      "peakImpressions": 484,
+      "recentImpressions": 404,
+      "score": 80,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Cité des sciences en famille",
+        "Cité des enfants Paris"
+      ]
     }
   ],
   "strongPages": [
@@ -498,96 +549,96 @@ Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlis
       "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
       "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
       "category": "evenements",
-      "recentImpressions": 373,
-      "recentClicks": 20,
-      "recentPosition": 6.952,
-      "retention": 1.522
+      "recentImpressions": 379,
+      "recentClicks": 18,
+      "recentPosition": 7.158,
+      "retention": 1.349
     },
     {
       "url": "/articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/",
       "title": "Gastronomades 2026 à Angoulême en famille: programme, tarifs et conseils",
       "category": "evenements",
-      "recentImpressions": 357,
-      "recentClicks": 10,
-      "recentPosition": 6.213,
-      "retention": 1.231
+      "recentImpressions": 584,
+      "recentClicks": 16,
+      "recentPosition": 5.993,
+      "retention": 2.014
     },
     {
       "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
       "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
       "category": "evenements",
-      "recentImpressions": 280,
-      "recentClicks": 10,
-      "recentPosition": 3.943,
-      "retention": 0.697
-    },
-    {
-      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
-      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
-      "category": "voyages",
-      "recentImpressions": 1618,
-      "recentClicks": 8,
-      "recentPosition": 8.321,
-      "retention": 0.671
-    },
-    {
-      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
-      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
-      "category": "evenements",
-      "recentImpressions": 474,
-      "recentClicks": 7,
-      "recentPosition": 7.58,
-      "retention": 0.631
-    },
-    {
-      "url": "/articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/",
-      "title": "Recycleries autour de Chartres: où donner et acheter d'occasion ?",
-      "category": "maison",
-      "recentImpressions": 103,
-      "recentClicks": 7,
-      "recentPosition": 9.913,
-      "retention": 0.844
-    },
-    {
-      "url": "/articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/",
-      "title": "Noël à Trévarez 2026 en famille: dates, horaires et réservation",
-      "category": "evenements",
-      "recentImpressions": 1269,
-      "recentClicks": 5,
-      "recentPosition": 8.765,
-      "retention": 5.93
+      "recentImpressions": 284,
+      "recentClicks": 11,
+      "recentPosition": 3.641,
+      "retention": 0.706
     },
     {
       "url": "/articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/",
       "title": "Noël 2026 au château de Goulaine: dates, billets et conseils en famille",
       "category": "evenements",
-      "recentImpressions": 264,
-      "recentClicks": 5,
-      "recentPosition": 7.36,
-      "retention": 1.148
+      "recentImpressions": 352,
+      "recentClicks": 8,
+      "recentPosition": 7.236,
+      "retention": 1.53
     },
     {
-      "url": "/articles/vie-pratique/aide-a-la-cantine-en-haute-garonne-2026-2027-montant-conditions-et-dates/",
-      "title": "Aide à la cantine en Haute-Garonne 2026-2027: montant, conditions et dates",
-      "category": "vie-pratique",
-      "recentImpressions": 214,
-      "recentClicks": 5,
-      "recentPosition": 5.308,
-      "retention": 0.955
+      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
+      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
+      "category": "evenements",
+      "recentImpressions": 451,
+      "recentClicks": 7,
+      "recentPosition": 7.506,
+      "retention": 0.752
+    },
+    {
+      "url": "/articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/",
+      "title": "Déchets verts à Toulouse Métropole en 2027: collecte, broyage et évacuation des gros volumes",
+      "category": "maison",
+      "recentImpressions": 101,
+      "recentClicks": 7,
+      "recentPosition": 6.198,
+      "retention": 0.935
+    },
+    {
+      "url": "/articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/",
+      "title": "Noël à Trévarez 2026 en famille: dates, horaires et réservation",
+      "category": "evenements",
+      "recentImpressions": 1371,
+      "recentClicks": 6,
+      "recentPosition": 8.699,
+      "retention": 5.193
+    },
+    {
+      "url": "/articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/",
+      "title": "Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille",
+      "category": "evenements",
+      "recentImpressions": 439,
+      "recentClicks": 6,
+      "recentPosition": 6.923,
+      "retention": 1.035
     },
     {
       "url": "/articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/",
       "title": "Salon du Cheval de Paris 2026 en famille: ateliers, jumping et Nuit du Cheval",
       "category": "evenements",
-      "recentImpressions": 124,
+      "recentImpressions": 144,
+      "recentClicks": 6,
+      "recentPosition": 7.451,
+      "retention": 2.939
+    },
+    {
+      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
+      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
+      "category": "voyages",
+      "recentImpressions": 1470,
       "recentClicks": 5,
-      "recentPosition": 7.629,
-      "retention": 2.531
+      "recentPosition": 8.401,
+      "retention": 0.919
     }
   ],
   "excluded": {
     "expired": 198,
-    "cooling": 73
+    "cooling": 71
   },
   "warnings": [
     "Diagnostics par requêtes : 5/5.",
@@ -595,524 +646,383 @@ Le snapshot conserve seulement `generatedAt`, `dataThrough`, `from`, la shortlis
   ]
 }
 
-## Module Radar embarqué
+## Catalogue ciblé (doublons et publications récentes)
 
-Le code ci-dessous est fourni directement pour les calculs Radar nécessaires à ce passage. Ne va pas le relire dans un autre fichier.
+### Articles comparables et publications récentes
 
-```javascript
-// Pure JavaScript: usable in Node or a connector orchestration runtime.
-const DAY = 86400000;
-const dayNumber = (date) => {
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(date ?? ""))
-    throw new Error("Date GSC invalide.");
-  const value = Date.parse(`${date}T00:00:00Z`);
-  if (
-    !Number.isFinite(value) ||
-    new Date(value).toISOString().slice(0, 10) !== date
-  )
-    throw new Error("Date GSC invalide.");
-  return value / DAY;
-};
-const isoDay = (value) => new Date(value * DAY).toISOString().slice(0, 10);
-const round = (value) => Math.round(value * 1000) / 1000;
-export function unwrapRows(response) {
-  const value = response?.structuredContent ?? response;
-  if (response?.isError || (value.status && value.status !== "done"))
-    throw new Error("GSC indisponible ou traitement incomplet.");
-  const rows = Array.isArray(value) ? value : value.data;
-  if (
-    !Array.isArray(rows) ||
-    value.truncated === true ||
-    value.has_more === true ||
-    (value.total_rows !== undefined && value.total_rows !== rows.length)
-  )
-    throw new Error("Réponse GSC absente ou tronquée.");
-  // Conservative per-response threshold, not a claimed Windsor plan limit.
-  // Concatenated arrays are allowed after each response has been checked.
-  if (!Array.isArray(value) && rows.length >= 5000)
-    throw new Error(
-      "Réponse GSC potentiellement plafonnée; découper la période.",
-    );
-  if (rows.some((row) => row.search_type && row.search_type !== "web"))
-    throw new Error(
-      "Le périmètre Radar doit contenir seulement la recherche web.",
-    );
-  return rows;
-}
-export function canonicalPage(value) {
-  // Some connector runtimes do not expose the URL global.
-  if (typeof value !== "string") return undefined;
-  const path = value.replace(/^https?:\/\/(?:www\.)?fam-space\.fr(?=\/)/i, "");
-  if (!/^\/articles\/[^/?#]+\/[^/?#]+\/$/.test(path)) return undefined;
-  if (path.split("/").some((part) => part === "." || part === ".."))
-    return undefined;
-  return path;
-}
-const metric = (row, name) => {
-  const value = Number(row[name]);
-  if (
-    row[name] === null ||
-    row[name] === undefined ||
-    !Number.isFinite(value) ||
-    value < 0
-  )
-    throw new Error(`Métrique GSC invalide: ${name}.`);
-  return value;
-};
-function addMetric(target, row) {
-  const impressions = metric(row, "impressions");
-  target.impressions += impressions;
-  target.clicks += metric(row, "clicks");
-  target.positionSum += impressions ? metric(row, "position") * impressions : 0;
-}
-const empty = () => ({ impressions: 0, clicks: 0, positionSum: 0 });
-const view = (sum, days = 7) => ({
-  impressions: round(sum.impressions),
-  clicks: round(sum.clicks),
-  impressionsPerDay: round(sum.impressions / days),
-  position: sum.impressions ? round(sum.positionSum / sum.impressions) : null,
-});
-function windowSum(days, start, end) {
-  const result = empty();
-  for (let date = start; date <= end; date++) {
-    const row = days.get(date);
-    if (row) for (const key of Object.keys(result)) result[key] += row[key];
-  }
-  return result;
-}
-export function buildRadarShortlist(
-  response,
-  catalog,
-  {
-    now = new Date().toISOString(),
-    siteRows,
-    from,
-    limit = 15,
-    history = [],
-  } = {},
-) {
-  const rows = unwrapRows(response);
-  const site = siteRows ? unwrapRows(siteRows) : rows;
-  if (!site.length)
-    throw new Error("GSC ne retourne aucune journée consolidée.");
-  const siteDays = site.map((row) => dayNumber(row.date));
-  const end = siteDays.reduce((max, date) => Math.max(max, date), -Infinity);
-  const observedStart = siteDays.reduce(
-    (min, date) => Math.min(min, date),
-    Infinity,
-  );
-  const today = dayNumber(now.slice(0, 10));
-  if (end > today || today - end > 7)
-    throw new Error(
-      "Données GSC trop anciennes ou datées dans le futur; aucun export historique de secours.",
-    );
-  // Never create comparison weeks before the first observed site day.
-  const start = from ? Math.max(dayNumber(from), observedStart) : observedStart;
-  if (!Number.isFinite(start) || end - start < 13)
-    throw new Error("Au moins 14 jours GSC sont nécessaires.");
-  const byPage = new Map();
-  for (const row of rows) {
-    const page = canonicalPage(row.page),
-      date = dayNumber(row.date);
-    if (!page || date < start || date > end) continue;
-    if (!byPage.has(page)) byPage.set(page, new Map());
-    const days = byPage.get(page);
-    if (!days.has(date)) days.set(date, empty());
-    addMetric(days.get(date), row);
-  }
-  const entries = [];
-  for (const article of catalog) {
-    const page = canonicalPage(article.url);
-    if (
-      !page ||
-      article.status === "draft" ||
-      Date.parse(article.publishedAt) > Date.parse(now)
-    )
-      continue;
-    const days = byPage.get(page) ?? new Map();
-    const publishedDay = dayNumber(article.publishedAt.slice(0, 10));
-    const firstDay = Math.max(start, publishedDay);
-    // Three days of growth followed by three consolidated days of decline
-    // can be detected before a new page has two full GSC weeks.
-    if (end - firstDay < 5) continue;
-    const recent = windowSum(days, end - 6, end);
-    const recent3 = windowSum(days, end - 2, end);
-    let peak3 = empty(), peak3Start = firstDay;
-    for (let first = firstDay; first + 2 < end - 2; first++) {
-      const sum = windowSum(days, first, first + 2);
-      if (sum.impressions > peak3.impressions) {
-        peak3 = sum;
-        peak3Start = first;
-      }
-    }
-    let peak7 = empty(), peak7Start = firstDay;
-    if (end - firstDay >= 13) {
-      for (let first = firstDay; first + 6 < end - 6; first++) {
-        const sum = windowSum(days, first, first + 6);
-        if (sum.impressions > peak7.impressions) {
-          peak7 = sum;
-          peak7Start = first;
-        }
-      }
-    }
-    const total = windowSum(days, firstDay, end);
-    const expired = Boolean(
-      article.eventEndsAt && article.eventEndsAt < now.slice(0, 10),
-    );
-    const reviewDue = Boolean(
-      article.reviewAt && article.reviewAt <= now.slice(0, 10),
-    );
-    const lastRefresh = history
-      .filter((item) => item.url === page && item.mode === "refresh")
-      .map((item) => item.publishedAt)
-      .sort()
-      .at(-1);
-    const cooling = Boolean(
-      lastRefresh && Date.parse(now) - Date.parse(lastRefresh) < 14 * DAY,
-    );
-    const ageDays = today - publishedDay;
-    const firstVisible = [...days]
-      .filter(([date, values]) => date >= firstDay && values.impressions > 0)
-      .map(([date]) => date)
-      .sort((a, b) => a - b)[0];
-    const newlyVisible =
-      ageDays <= 30 ||
-      (firstVisible !== undefined && firstVisible > start && end - firstVisible <= 21);
-    const rapidDrop =
-      newlyVisible &&
-      peak3.impressions >= 20 &&
-      peak3.impressions - recent3.impressions >= 15 &&
-      recent3.impressions <= peak3.impressions * 0.35;
-    const weeklyDecline = end - firstDay >= 13
-      ? Math.max(0, peak7.impressions - recent.impressions) *
-        Math.min(1, peak7.impressions / 35) *
-        Math.min(1, total.impressions / 50)
-      : 0;
-    const rapidScore = rapidDrop ? (peak3.impressions - recent3.impressions) * 3 : 0;
-    const recentPosition = recent.impressions
-      ? recent.positionSum / recent.impressions
-      : null;
-    const clickPotentialScore =
-      end - firstDay >= 13 && recentPosition !== null && recentPosition <= 10
-        ? Math.max(0, recent.impressions * 0.01 - recent.clicks) * 10
-        : 0;
-    const searchPotential =
-      !rapidDrop && clickPotentialScore > weeklyDecline && clickPotentialScore > 0;
-    const score =
-      expired || cooling
-        ? 0
-        : Math.max(rapidScore, weeklyDecline, clickPotentialScore) +
-          (reviewDue ? 35 : 0);
-    // Recent pages must use available, non-overlapping three-day windows.
-    const shortWindow = rapidDrop || end - firstDay < 13;
-    const peak = shortWindow ? peak3 : peak7;
-    const peakStart = shortWindow ? peak3Start : peak7Start;
-    const peakDays = shortWindow ? 3 : 7;
-    const comparedRecent = shortWindow ? recent3 : recent;
-    const comparedRecentStart = shortWindow ? end - 2 : end - 6;
-    const retention = peak.impressions
-      ? comparedRecent.impressions / peak.impressions
-      : 1;
-    entries.push({
-      url: page,
-      title: article.title,
-      category: article.category,
-      location: article.location,
-      keywords: article.keywords ?? article.topic?.keywords ?? [],
-      publishedAt: article.publishedAt,
-      eventEndsAt: article.eventEndsAt,
-      reviewAt: article.reviewAt,
-      expired,
-      cooling,
-      reviewDue,
-      ageDays,
-      rapidDrop,
-      peakStart: isoDay(peakStart),
-      peakEnd: isoDay(peakStart + peakDays - 1),
-      recentStart: isoDay(comparedRecentStart),
-      recentEnd: isoDay(end),
-      peak: view(peak, peakDays),
-      recent: view(comparedRecent, peakDays),
-      retention: round(retention),
-      score: round(score),
-      signal: searchPotential ? "search_potential" : "needs_query_check",
-      basis: rapidDrop
-        ? `Visibilité récente : ${round(peak3.impressions)} impressions sur trois jours, puis ${round(recent3.impressions)} sur les trois derniers jours consolidés; cause non établie.`
-        : "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      ...(searchPotential
-        ? {
-            basis: `Page visible avec ${round(recent.impressions)} impressions, ${round(recent.clicks)} clics et une position moyenne de ${round(recentPosition)} sur sept jours; intention de recherche à examiner.`,
-            commonQueries: null,
-            positionDelta: null,
-            impressionRatio: null,
-            focusQueries: (Array.isArray(article.keywords)
-              ? article.keywords
-              : Array.isArray(article.topic?.keywords)
-                ? article.topic.keywords
-                : []
-            ).slice(0, 5),
-          }
-        : {}),
-    });
-  }
-  return {
-    schemaVersion: 1,
-    retrievedAt: now,
-    dataThrough: isoDay(end),
-    from: isoDay(start),
-    caveat:
-      "Les lignes absentes valent zéro dans les données retournées. GSC peut masquer des requêtes; les signaux ne prouvent ni désindexation ni causalité.",
-    refresh: entries
-      .filter((item) => item.score > 0)
-      .sort((a, b) =>
-        Number(b.rapidDrop && b.category !== "evenements") -
-          Number(a.rapidDrop && a.category !== "evenements") ||
-        Number(b.rapidDrop) - Number(a.rapidDrop) ||
-        b.score - a.score ||
-        a.url.localeCompare(b.url))
-      .slice(0, limit),
-    strongPages: entries
-      .filter(
-        (item) =>
-          !item.expired &&
-          item.recent.impressions >= 35 &&
-          item.retention >= 0.5,
-      )
-      .sort(
-        (a, b) =>
-          b.recent.clicks - a.recent.clicks ||
-          b.recent.impressions - a.recent.impressions ||
-          a.url.localeCompare(b.url),
-      )
-      .slice(0, 10),
-    excluded: {
-      expired: entries.filter((item) => item.expired).length,
-      cooling: entries.filter((item) => item.cooling).length,
-    },
-  };
-}
-export function diagnoseQueries(peakResponse, recentResponse) {
-  const aggregate = (response) => {
-    const result = new Map();
-    for (const row of unwrapRows(response)) {
-      if (typeof row.query !== "string")
-        throw new Error("Requête GSC manquante.");
-      if (!result.has(row.query)) result.set(row.query, empty());
-      addMetric(result.get(row.query), row);
-    }
-    return result;
-  };
-  const peak = aggregate(peakResponse),
-    recent = aggregate(recentResponse);
-  const common = [...peak.keys()].filter(
-    (query) =>
-      peak.get(query).impressions >= 10 &&
-      (recent.get(query)?.impressions ?? 0) >= 3,
-  );
-  let weight = 0,
-    change = 0;
-  for (const query of common) {
-    const first = peak.get(query),
-      last = recent.get(query);
-    const w = Math.min(first.impressions, last.impressions);
-    weight += w;
-    change +=
-      w *
-      (last.positionSum / last.impressions -
-        first.positionSum / first.impressions);
-  }
-  const delta = weight ? change / weight : null;
-  const total = (values) =>
-    [...values.values()].reduce((sum, item) => sum + item.impressions, 0);
-  const ratio = total(peak) ? total(recent) / total(peak) : null;
-  return {
-    signal:
-      delta !== null && delta >= 3
-        ? "rank_loss"
-        : delta !== null &&
-            Math.abs(delta) <= 2 &&
-            ratio !== null &&
-            ratio <= 0.25
-          ? "coverage_loss"
-          : "uncertain",
-    commonQueries: common.length,
-    positionDelta: delta === null ? null : round(delta),
-    impressionRatio: ratio === null ? null : round(ratio),
-    queries: [...new Set([...peak.keys(), ...recent.keys()])]
-      .map((query) => ({
-        query,
-        peak: view(peak.get(query) ?? empty()),
-        recent: view(recent.get(query) ?? empty()),
-      }))
-      .sort((a, b) => b.peak.impressions - a.peak.impressions),
-    caveat:
-      "coverage_loss désigne une baisse d'exposition observée, pas une preuve de désindexation. Les requêtes masquées et la saisonnalité limitent le diagnostic.",
-  };
-}
-// The shortlist ranks pages; only per-page query rows can establish a diagnosis.
-export function attachRadarQueryDiagnosis(item, peakResponse, recentResponse) {
-  const diagnosis = diagnoseQueries(peakResponse, recentResponse);
-  const signal =
-    item.signal === "search_potential" && diagnosis.signal === "uncertain"
-      ? "search_potential"
-      : diagnosis.signal;
-  const priority = (query) => {
-    const lostImpressions = Math.max(0, query.peak.impressions - query.recent.impressions);
-    const lostPositions =
-      query.peak.position !== null && query.recent.position !== null
-        ? Math.max(0, query.recent.position - query.peak.position)
-        : 0;
-    if (signal === "rank_loss")
-      return query.peak.impressions >= 10 && query.recent.impressions >= 3
-        ? lostPositions * Math.min(query.peak.impressions, query.recent.impressions)
-        : 0;
-    if (signal === "search_potential") return query.recent.impressions;
-    return lostImpressions;
-  };
-  const relevantQueries = diagnosis.queries
-    .filter((query) => signal !== "rank_loss" || priority(query) > 0)
-    .sort((a, b) => priority(b) - priority(a) || b.peak.impressions - a.peak.impressions)
-    .slice(0, 5)
-    .map(({ query }) => query);
-  const basis =
-    item.basis + " " +
-    (signal === "rank_loss"
-      ? `Recul moyen de ${diagnosis.positionDelta} positions sur ${diagnosis.commonQueries} requête(s) comparable(s).`
-      : signal === "coverage_loss"
-        ? `Baisse d'exposition sur les requêtes visibles (ratio ${diagnosis.impressionRatio}), sans recul de classement comparable établi.`
-        : signal === "search_potential"
-          ? "Les requêtes visibles ne démontrent pas une perte de classement."
-          : `Diagnostic sur ${diagnosis.commonQueries} requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.`);
-  return {
-    ...item,
-    signal,
-    basis,
-    commonQueries: diagnosis.commonQueries,
-    positionDelta: diagnosis.positionDelta,
-    impressionRatio: diagnosis.impressionRatio,
-    focusQueries: relevantQueries.length ? relevantQueries : item.focusQueries ?? [],
-  };
-}
+- /articles/activites/parc-phoenix-a-nice-en-famille-serre-tropicale-animaux-et-jeux/ | Parc Phoenix à Nice en famille: serre tropicale, animaux et jeux | activites | Nice, Alpes-Maritimes, Provence-Alpes-Côte d’Azur
+- /articles/activites/le-pal-ou-touroparc-en-famille-quel-parc-choisir-en-2026/ | Le PAL ou Touroparc en famille: quel parc choisir en 2026? | activites
+- /articles/activites/parc-de-l-auxois-avec-des-enfants-comment-combiner-animaux-maneges-et-piscine/ | Parc de l'Auxois avec des enfants: comment combiner animaux, manèges et piscine | activites | Arnay-sous-Vitteaux, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/activites/parc-animalier-d-auvergne-en-famille-billets-animaux-et-conseils-de-visite/ | Parc animalier d'Auvergne en famille: billets, animaux et conseils de visite | activites | Ardes, Puy-de-Dôme, Auvergne-Rhône-Alpes
+- /articles/maison/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/ | Meubles d'occasion en Meurthe-et-Moselle: où acheter, donner et réparer ? | maison | Meurthe-et-Moselle, Grand Est
+- /articles/maison/donner-acheter-d-occasion-ou-reparer-dans-le-val-d-oise-cinq-adresses-utiles/ | Donner, acheter d’occasion ou réparer dans le Val-d’Oise: cinq adresses utiles | maison | Cergy, Val-d'Oise, Île-de-France
+- /articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/ | Recycleries autour de Chartres: où donner et acheter d'occasion ? | maison | Chartres, Eure-et-Loir, Centre-Val de Loire
+- /articles/cuisine/cuisiner-local-en-meurthe-et-moselle-producteurs-paniers-et-idees-de-repas/ | Cuisiner local en Meurthe-et-Moselle: producteurs, paniers et idées de repas | cuisine | Meurthe-et-Moselle, Grand Est
+- /articles/activites/pokemon-et-biodiversite-a-paris-le-28-novembre-2026-atelier-dessin-des-10-ans/ | Atelier Pokémon et biodiversité à Paris le 28 novembre 2026: dessin dès 10 ans | activites | Paris, Paris, Île-de-France
+- /articles/activites/atelier-calder-gratuit-a-paris-le-14-novembre-2026-creer-un-mobile-des-5-ans/ | Atelier Calder à Paris le 14 novembre 2026: fabriquer un mobile dès 5 ans | activites | Paris, Paris, Île-de-France
+- /articles/activites/atelier-couture-gratuit-a-paris-le-28-novembre-2026-creer-en-famille-des-8-ans/ | Atelier couture gratuit à Paris le 28 novembre 2026: dès 8 ans | activites | Paris, Paris, Île-de-France
+- /articles/activites/atelier-omamori-gratuit-a-paris-le-21-novembre-2026-creer-une-amulette-japonaise-des-7-ans/ | Atelier omamori gratuit à Paris le 21 novembre 2026: créer une amulette dès 7 ans | activites | Paris, Paris, Île-de-France
+- /articles/evenements/lumieres-de-laval-2026-en-famille-marche-grande-roue-ou-croisiere/ | Lumières de Laval 2026 en famille: balade gratuite, marchés, roue et croisière | evenements | Laval, Mayenne, Pays de la Loire
+- /articles/sorties/exposition-trafic-especes-laval-famille-2026/ | Trafic d’espèces à Laval: une enquête gratuite à vivre en famille | sorties | Laval, Mayenne, Pays de la Loire
+- /articles/evenements/marche-de-noel-de-lille-2026-en-famille-village-grande-roue-et-infos-pratiques/ | Marché de Noël de Lille 2026 en famille: village, Grande Roue et infos pratiques | evenements | Lille, Nord, Hauts-de-France
+- /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | Marché de Noël de Reims 2026 en famille: horaires, grande roue et animations | evenements | Reims, Marne, Grand Est
+- /articles/evenements/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants/ | Fontaines dansantes d'hiver à Metz 2026-2027: dates, horaires et conseils en famille | evenements | Metz, Moselle, Grand Est
+- /articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/ | Traîneau flottant de Noël à Metz 2026: dates, horaires et embarquement | evenements | Metz, Moselle, Grand Est
+- /articles/evenements/noel-a-metz-2026-en-famille-marches-et-sentier-des-lanternes/ | Noël à Metz 2026 en famille: marchés et Sentier des Lanternes | evenements | Metz, Moselle, Grand Est
+- /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | Noël 2026 au château de Goulaine: dates, billets et conseils en famille | evenements | Haute-Goulaine, Loire-Atlantique, Pays de la Loire
+- /articles/evenements/flottins-d-evian-2026-un-village-de-noel-en-bois-flotte-a-decouvrir-en-famille/ | Flottins d’Évian 2026: un village de Noël en bois flotté à découvrir en famille | evenements | Évian-les-Bains, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/voyages/evian-les-bains-en-famille-pendant-3-jours-lac-balades-et-activites-faciles/ | Évian-les-Bains en famille pendant 3 jours: lac, balades et activités faciles | voyages | Évian-les-Bains, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/maison/renovation-energetique-en-haute-savoie-jusqu-a-3-000-d-aide-departementale/ | Rénovation énergétique en Haute-Savoie: jusqu'à 3 000 € d'aide départementale | maison | Annecy, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/cuisine/ferme-du-petit-mont-a-bellevaux-en-famille-quelle-formule-choisir/ | Ferme du Petit Mont à Bellevaux en famille: quelle formule choisir ? | cuisine | Bellevaux, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/ | Marché de Noël 100 % Côte-d’Or à Dijon 2026: horaires, spectacles et Père Noël | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/evenements/festival-des-petits-explorateurs-2026-a-dijon-quels-ateliers-choisir-en-famille/ | Festival des Petits Explorateurs 2026 à Dijon: ateliers, horaires et tarifs | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/evenements/foire-de-dijon-2026-en-famille-dates-ateliers-animaux-et-gratuites/ | Foire de Dijon 2026 avec les enfants: gratuités, ateliers et Ferme Côte-d'Or | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/vie-pratique/frais-scolaires-en-cote-d-or-quelles-aides-demander-au-departement/ | Frais scolaires en Côte-d'Or: quelles aides demander au Département? | vie-pratique | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/evenements/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/ | Écoute, je danse ! à Paris le 5 décembre 2026: spectacle gratuit dès 6 mois | evenements | Paris, Paris, Île-de-France
+- /articles/activites/atelier-laine-cardee-de-noel-a-paris-le-2-decembre-2026-creer-ses-decorations-des-7-ans/ | Atelier laine cardée de Noël à Paris le 2 décembre 2026: décorations dès 7 ans | activites | Paris, Paris, Île-de-France
+- /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | Noël 2026 à Chantilly: Le Noël oublié, billets et séances en famille | evenements | Chantilly, Oise, Hauts-de-France
+- /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | Halloween 2026 au Château de Chantilly avec des enfants: ateliers, nocturnes et spectacle | sorties | Chantilly, Oise, Hauts-de-France
+- /articles/cuisine/atelier-de-creme-chantilly-avec-des-enfants-a-partir-de-quel-age-et-comment-reserver/ | Atelier de crème Chantilly avec des enfants: à partir de quel âge et comment réserver | cuisine | Chantilly, Oise, Hauts-de-France
+- /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | Noël de Casse-Noisette 2026 à Pierrefonds: visites, dates et tarifs en famille | evenements | Pierrefonds, Oise, Hauts-de-France
+- /articles/bons-plans/carte-avantage-adulte-sncf-quand-est-elle-interessante-avec-des-enfants/ | Carte Avantage Adulte SNCF: quand est-elle intéressante avec des enfants? | bons-plans
+- /articles/bons-plans/carte-familles-nombreuses-reductions-demarches/ | Carte Familles Nombreuses: réductions, conditions et demande en ligne | bons-plans
+- /articles/voyages/sarlat-sans-voiture-avec-des-enfants-est-ce-realiste-pour-un-week-end/ | Sarlat sans voiture avec des enfants: est-ce réaliste pour un week-end? | voyages | Sarlat-la-Canéda, Dordogne, Nouvelle-Aquitaine
+- /articles/voyages/train-de-la-rhune-avec-des-enfants-billets-duree-et-conseils-en-2026/ | Train de la Rhune avec des enfants: billets, durée et conseils en 2026 | voyages | Sare, Pyrénées-Atlantiques, Nouvelle-Aquitaine
+- /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille | evenements | Lumigny-Nesles-Ormeaux, Seine-et-Marne, Île-de-France
+- /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | Thoiry Lumières Sauvages 2026-2027: dates, billets et visite en famille | evenements | Thoiry, Yvelines, Île-de-France
+- /articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/ | Planète Préhistorique à Bordeaux: dates, durée et tarifs en famille | sorties | Bordeaux, Gironde, Nouvelle-Aquitaine
+- /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
+- /articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/ | Transports à Paris avec des enfants: quel titre choisir pour payer juste? | voyages | Paris, Paris, Île-de-France
+- /articles/evenements/salon-du-chocolat-paris-2026-avec-des-enfants-quel-billet-choisir-et-quels-ateliers-reserver/ | Salon du Chocolat Paris 2026 avec des enfants: quel billet choisir et quels ateliers réserver | evenements | Paris, Paris, Île-de-France
+- /articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/ | Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite | sorties | Paris, Paris, Île-de-France
+- /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | Mondial de l’Auto 2026 avec des enfants: billets, horaires et créneaux | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/ | Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ? | evenements | Pyrénées-Orientales, Occitanie
+- /articles/parentalite/quel-laep-choisir-a-perpignan-selon-l-age-et-le-jour/ | Quel LAEP choisir à Perpignan selon l'âge et le jour ? | parentalite | Perpignan, Pyrénées-Orientales, Occitanie
+- /articles/activites/parc-animalier-des-angles-en-famille-quel-circuit-choisir-et-comment-preparer-la-visite/ | Parc animalier des Angles en famille: quel circuit choisir et comment préparer la visite ? | activites | Les Angles, Pyrénées-Orientales, Occitanie
+- /articles/bons-plans/musee-de-tautavel-moins-cher-avec-lio-le-bon-plan-a-connaitre/ | Musée de Tautavel moins cher avec liO: le bon plan à connaître | bons-plans | Tautavel, Pyrénées-Orientales, Occitanie
+- /articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/ | Parc floral d’Orléans gratuit en hiver: horaires et sortie avec les enfants | bons-plans | Orléans, Loiret, Centre-Val de Loire
+- /articles/maison/composteur-gratuit-a-orleans-metropole-comment-en-profiter-en-2026/ | Composteur gratuit à Orléans Métropole: comment en profiter en 2026 | maison | Orléans, Loiret, Centre-Val de Loire
+- /articles/sorties/chasse-motifs-loire-orleans-famille-2026/ | Chasse aux motifs de Loire à Orléans: une balade gratuite pour les 6 à 12 ans | sorties | Orléans, Loiret, Centre-Val de Loire
+- /articles/activites/mobe-d-orleans-en-famille-fossiles-jeux-et-biodiversite/ | MOBE d’Orléans en famille: fossiles, jeux et biodiversité | activites | Orléans, Loiret, Centre-Val de Loire
+- /articles/activites/stages-de-science-a-la-cite-des-sciences-pendant-la-toussaint-2026-lequel-choisir-selon-l-age/ | Stages de science à la Cité des sciences à la Toussaint 2026: durées, âges et tarifs | activites | Paris, Paris, Île-de-France
+- /articles/evenements/cite-immersive-des-fables-a-paris-decouvrir-la-fontaine-en-famille/ | Cité immersive des Fables à Paris: découvrir La Fontaine en famille | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | Rencontres du ciel et de l’espace 2026 à Paris: ateliers, âges et billets en famille | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/ | Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants | evenements | Le Mans, Sarthe, Pays de la Loire
+- /articles/voyages/le-mans-sans-voiture-avec-des-enfants-ou-dormir-et-comment-organiser-un-week-end/ | Le Mans sans voiture avec des enfants: où dormir et comment organiser un week-end | voyages | Le Mans, Sarthe, Pays de la Loire
+- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
+- /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | Marché de Noël d'Avignon 2026 en famille: horaires, Père Noël et animations | evenements | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
+- /articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/ | Gastronomades 2026 à Angoulême en famille: programme, tarifs et conseils | evenements | Angoulême, Charente, Nouvelle-Aquitaine
+- /articles/sorties/musee-de-la-bd-a-angouleme-en-famille-tarifs-horaires-et-conseils-de-visite/ | Musée de la BD à Angoulême en famille: tarifs, horaires et conseils de visite | sorties | Angoulême, Charente, Nouvelle-Aquitaine
+- /articles/voyages/ou-dormir-a-angouleme-avec-des-enfants-pour-visiter-la-ville-a-pied/ | Où dormir à Angoulême avec des enfants pour visiter la ville à pied | voyages | Angoulême, Charente, Nouvelle-Aquitaine
+- /articles/parentalite/decouvrir-la-bd-avec-ses-enfants-a-angouleme/ | Découvrir la BD avec ses enfants à Angoulême | parentalite | Angoulême, Charente, Nouvelle-Aquitaine
+- /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
+- /articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/ | Noël à Trévarez 2026 en famille: dates, horaires et réservation | evenements | Saint-Goazec, Finistère, Bretagne
+- /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | Noël des Siècles 2026 à Champs-sur-Marne: billets, budget et horaires en famille | evenements | Champs-sur-Marne, Seine-et-Marne, Île-de-France
+- /articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/ | Déchets verts à Toulouse Métropole en 2027: collecte, broyage et évacuation des gros volumes | maison | Toulouse, Haute-Garonne, Occitanie
+- /articles/activites/accrocamp-toulouse-avec-des-enfants-quel-pass-choisir-selon-leur-taille/ | AccroCamp Toulouse avec des enfants: quel pass choisir selon leur taille? | activites | Toulouse, Haute-Garonne, Occitanie
+- /articles/bons-plans/halle-de-la-machine-et-envol-des-pionniers-quels-billets-choisir-en-famille/ | Halle de la Machine et Envol des Pionniers: quels billets choisir en famille ? | bons-plans | Toulouse, Haute-Garonne, Occitanie
+- /articles/voyages/cite-de-l-espace-a-toulouse-en-famille-en-2026-une-journee-suffit-elle-et-ou-dormir/ | Cité de l'espace à Toulouse en famille en 2026: une journée suffit-elle et où dormir | voyages | Toulouse, Haute-Garonne, Occitanie
+- /articles/evenements/train-de-noel-de-la-haute-somme-2026-en-famille-dates-tarifs-et-reservation/ | Train de Noël de la Haute Somme 2026 en famille: dates, tarifs et réservation | evenements | La Neuville-les-Bray, Somme, Hauts-de-France
+- /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | Noël 2026 à Brest en famille: marché, projections et horaires | evenements | Brest, Finistère, Bretagne
+- /articles/evenements/train-du-pere-noel-a-toucy-2026-horaires-tarifs-et-reservation/ | Train du Père Noël à Toucy 2026: horaires, tarifs et réservation | evenements | Toucy, Yonne, Bourgogne-Franche-Comté
+- /articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/ | Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille | evenements | Nevers, Nièvre, Bourgogne-Franche-Comté
+- /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | Noël à Chartres 2026 en famille: marché et illuminations | evenements | Chartres, Eure-et-Loir, Centre-Val de Loire
+- /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | Noël à Caen 2026 en famille: marché de Noël et visite illuminée | evenements | Caen, Calvados, Normandie
+- /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
+- /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | Salon du Cheval de Paris 2026 en famille: ateliers, jumping et Nuit du Cheval | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/creations-savoir-faire-2026-a-paris-en-famille-quel-jour-et-quels-ateliers-choisir/ | Créations & savoir-faire 2026 à Paris en famille: billets, ateliers et dates | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
+- /articles/maison/composter-en-famille-dans-la-metropole-lilloise-avec-ou-sans-jardin/ | Composter en famille dans la métropole lilloise: avec ou sans jardin | maison | Nord, Hauts-de-France
+- /articles/sorties/petit-cocotier-au-morne-rouge-decouvrir-la-vanille-en-famille/ | Petit Cocotier au Morne-Rouge: découvrir la vanille en famille | sorties | Le Morne-Rouge, Martinique, Martinique
+- /articles/voyages/samoens-en-famille-cet-hiver-un-premier-sejour-a-la-neige-avec-ou-sans-ski/ | Samoëns en famille cet hiver: un premier séjour à la neige avec ou sans ski | voyages | Samoëns, Haute-Savoie, Auvergne-Rhône-Alpes
+- /articles/voyages/honfleur-en-famille-hors-saison-que-faire-le-temps-d-un-week-end/ | Honfleur en famille hors saison: que faire le temps d'un week-end ? | voyages | Honfleur, Calvados, Normandie
+- /articles/activites/accrobranche-au-maido-en-famille-preparer-sa-sortie-a-enler-pied-bois/ | Accrobranche au Maïdo en famille: préparer sa sortie à Enlèr Pied’Bois | activites | Saint-Paul, La Réunion, La Réunion
+- /articles/bons-plans/pass-chateaux-du-loir-et-cher-quelles-economies-en-famille/ | Pass châteaux du Loir-et-Cher: quelles économies en famille ? | bons-plans | Loir-et-Cher, Centre-Val de Loire
+- /articles/vie-pratique/se-deplacer-en-famille-en-haute-saone-sans-voiture-au-quotidien/ | Se déplacer en famille en Haute-Saône sans voiture au quotidien | vie-pratique | Haute-Saône, Bourgogne-Franche-Comté
+- /articles/vie-pratique/metz-en-famille-sans-voiture-train-bus-et-bagages/ | Metz en famille sans voiture: train, bus et bagages | vie-pratique | Metz, Moselle, Grand Est
+- /articles/voyages/musee-de-l-illusion-a-lille-une-visite-a-partager-en-famille/ | Musée de l’Illusion à Lille: une visite à partager en famille | voyages | Lille, Nord, Hauts-de-France
+- /articles/bons-plans/bordeaux-citypass-en-famille-quel-pass-choisir-pour-economiser/ | Bordeaux CityPass en famille: quel pass choisir pour économiser ? | bons-plans | Bordeaux, Gironde, Nouvelle-Aquitaine
+- /articles/sorties/le-sourou-a-roura-en-famille-une-journee-entre-pirogue-kayak-et-foret/ | Le Sourou à Roura en famille: une journée entre pirogue, kayak et forêt | sorties | Roura, Guyane, Guyane
+- /articles/evenements/sculptures-sur-glace-et-neige-a-valloire-en-janvier-2027/ | Sculptures sur glace et neige à Valloire en janvier 2027 | evenements | Valloire, Savoie, Auvergne-Rhône-Alpes
+- /articles/bons-plans/sainte-chapelle-et-conciergerie-en-famille-a-paris-quels-billets-choisir/ | Sainte-Chapelle et Conciergerie en famille à Paris: quels billets choisir ? | bons-plans | Paris, Paris, Île-de-France
+- /articles/activites/a-pointe-noire-decouvrir-la-riviere-en-famille-avec-l-aquarando-d-acomat/ | À Pointe-Noire, découvrir la rivière en famille avec l’aquarando d’Acomat | activites | Pointe-Noire, Guadeloupe, Guadeloupe
+- /articles/vie-pratique/ludotheques-en-sarthe-ou-jouer-et-emprunter-des-jeux-avec-les-enfants/ | Ludothèques en Sarthe: où jouer et emprunter des jeux avec les enfants ? | vie-pratique | Sarthe, Pays de la Loire
+- /articles/voyages/cherrueix-en-famille-decouvrir-le-char-a-voile-dans-la-baie-du-mont-saint-michel/ | Cherrueix en famille: découvrir le char à voile dans la baie du Mont-Saint-Michel | voyages | Cherrueix, Ille-et-Vilaine, Bretagne
+- /articles/evenements/seraphine-louis-a-metz-decouvrir-l-exposition-avec-les-enfants/ | Séraphine Louis à Metz: découvrir l’exposition avec les enfants | evenements | Metz, Moselle, Grand Est
+- /articles/voyages/cassis-en-famille-hors-saison-calanques-en-bateau-et-balades/ | Cassis en famille hors saison: calanques en bateau et balades | voyages | Cassis, Bouches-du-Rhône, Provence-Alpes-Côte d’Azur
+- /articles/cuisine/fougasse-d-aigues-mortes-recette-moelleuse-a-faire-en-famille/ | Fougasse d’Aigues-Mortes: recette moelleuse à faire en famille | cuisine | Aigues-Mortes, Gard, Occitanie
+- /articles/parentalite/parents-et-jeunes-enfants-a-bergerac-trois-lieux-pour-jouer-et-echanger/ | Parents et jeunes enfants à Bergerac: trois lieux pour jouer et échanger | parentalite | Bergerac, Dordogne, Nouvelle-Aquitaine
+- /articles/activites/musee-de-l-illusion-a-lyon-en-famille-que-voir-et-combien-coute-la-visite/ | Musée de l'Illusion à Lyon en famille: que voir et combien coûte la visite ? | activites | Lyon, Rhône, Auvergne-Rhône-Alpes
+- /articles/voyages/pres-de-saint-florent-decouvrir-la-corse-en-ulm-avec-un-ado/ | Près de Saint-Florent, découvrir la Corse en ULM avec un ado | voyages | Haute-Corse, Corse
+- /articles/cuisine/ficelle-picarde-la-recette-familiale-des-crepes-gratinees-d-amiens/ | Ficelle picarde: la recette familiale des crêpes gratinées d'Amiens | cuisine | Amiens, Somme, Hauts-de-France
+- /articles/sorties/forteresse-royale-de-chinon-en-famille-tours-histoire-et-jeux/ | Forteresse royale de Chinon en famille: tours, histoire et jeux | sorties | Chinon, Indre-et-Loire, Centre-Val de Loire
+- /articles/vie-pratique/ludotheques-du-val-de-marne-ou-jouer-en-famille-et-emprunter-des-jeux/ | Ludothèques du Val-de-Marne: où jouer en famille et emprunter des jeux ? | vie-pratique | Val-de-Marne, Île-de-France
+- /articles/parentalite/lieux-d-accueil-enfants-parents-en-vendee-ou-aller-avec-un-tout-petit/ | Lieux d'accueil enfants-parents en Vendée: où aller avec un tout-petit ? | parentalite | Vendée, Pays de la Loire
+- /articles/cuisine/kig-ha-farz-en-famille-recette-et-organisation-d-un-repas-breton/ | Kig ha farz en famille: recette et organisation d'un repas breton | cuisine | Finistère, Bretagne
+- /articles/bons-plans/bretagne-en-ter-avec-des-enfants-quels-billets-choisir-pour-payer-moins/ | Bretagne en TER avec des enfants: quels billets choisir pour payer moins? | bons-plans | Bretagne
+
+### Historique Radar lié
+
+- refresh | /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | 2026-11-17T19:34:24.194Z
+- opportunity | /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | 2026-10-20T00:30:38.975Z
+- opportunity | /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | 2026-10-19T06:36:34.978Z
+- refresh | /articles/maison/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/ | 2026-11-12T01:28:37.978Z
+- opportunity | /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | 2026-10-06T19:20:39.093Z
+- opportunity | /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | 2026-10-30T06:28:26.726Z
+- opportunity | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-10-26T21:31:06.119Z
+- refresh | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-11-12T18:32:15.897Z
+- opportunity | /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | 2026-11-03T15:36:10.146Z
+- refresh | /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | 2026-11-13T13:31:11.034Z
+- opportunity | /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | 2026-10-30T21:26:32.584Z
+- refresh | /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | 2026-11-23T07:35:53.457Z
+- opportunity | /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | 2026-10-30T18:26:56.039Z
+- refresh | /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | 2026-11-17T09:28:43.094Z
+- opportunity | /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | 2026-10-27T07:35:50.437Z
+- refresh | /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | 2026-11-16T12:48:08.556Z
+- opportunity | /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | 2026-10-26T18:32:56.730Z
+- opportunity | /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | 2026-10-09T14:37:47.734Z
+- refresh | /articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/ | 2026-11-08T07:28:43.032Z
+- refresh | /articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/ | 2026-10-22T18:35:19.372Z
+- opportunity | /articles/activites/pokemon-et-biodiversite-a-paris-le-28-novembre-2026-atelier-dessin-des-10-ans/ | 2026-11-05T10:32:54.471Z
+- opportunity | /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | 2026-11-04T05:34:42.508Z
+- opportunity | /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | 2026-10-22T04:59:04.773Z
+- refresh | /articles/evenements/salon-du-cheval-de-paris-2026-en-famille-visite-jumping-ou-spectacle/ | 2026-11-19T03:32:19.795Z
+- opportunity | /articles/activites/stages-de-science-a-la-cite-des-sciences-pendant-la-toussaint-2026-lequel-choisir-selon-l-age/ | 2026-10-04T05:39:23.036Z
+- opportunity | /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | 2026-10-24T19:30:32.700Z
+- refresh | /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | 2026-11-13T16:33:40.259Z
+- opportunity | /articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/ | 2026-11-03T03:34:06.534Z
+- refresh | /articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/ | 2026-11-16T08:38:53.929Z
+- refresh | /articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/ | 2026-11-06T21:35:30.246Z
+
+## Travaux éditoriaux en cours
+
+### Publication en cours
+
+- Branche: automation/publication-20261126-2356-musee-des-beaux-arts-de-draguignan-en-famille-gratuites-ateliers-et-bo
+- HEAD: publication: phase 2 20261126-2356-musee-des-beaux-arts-de-draguignan-en-famille-gratuites-ateliers-et-bo
+
+---
+category: "bons-plans"
+title: "Musée des Beaux-Arts de Draguignan en famille: gratuités et ateliers"
+subtitle: "Les bons plans pour découvrir les collections avec les enfants dans le Var"
+summary: "Entrées gratuites, tarifs réduits et ateliers créatifs: préparez une visite en famille au musée des Beaux-Arts de Draguignan sans dépasser votre budget."
+keywords:
+  - "musée des Beaux-Arts de Draguignan"
+  - "musée gratuit Var"
+  - "sortie famille Draguignan"
+  - "atelier enfants musée"
+location:
+  city: "Draguignan"
+  department: "Var"
+  region: "Provence-Alpes-Côte d’Azur"
+sources:
+  - title: "Musée des Beaux-Arts - Exposition permanente"
+    url: "https://mba-draguignan.fr/expositions/un-parcours-de-visite-reinvente-2/"
+  - title: "Musée des Beaux-Arts - Infos pratiques"
+    url: "https://mba-draguignan.fr/venir-au-musee/venir-au-musee/"
+  - title: "Billetterie culturelle de la Dracénie - Billet d'entrée"
+    url: "https://billetterieculture.dracenie.com/billet-d-entree.html"
+  - title: "Musée des Beaux-Arts - Visites et ateliers familles"
+    url: "https://mba-draguignan.fr/venir-au-musee/visites-et-ateliers-familles/"
+  - title: "Ville de Draguignan - Programme de la Fête de la glisse 2026"
+    url: "https://www.ville-draguignan.fr/wp-content/uploads/2026/11/Programme-FDG-2026-1.pdf"
+  - title: "Musée des Beaux-Arts - Accessibilité"
+    url: "https://mba-draguignan.fr/venir-au-musee/accessibilite/"
+  - title: "Musée des Beaux-Arts - Horaires et tarifs"
+    url: "https://mba-draguignan.fr/informations-pratiques/horaires-et-tarifs-du-musee/"
+---
+
+Au cœur de Draguignan, dans le Var, le musée des Beaux-Arts réunit tableaux, sculptures et objets parfois insolites. Les enfants peuvent y découvrir des univers très différents au fil des salles, et les parents profiter de plusieurs formules économiques pour organiser une sortie culturelle.
+
+## Quand peut-on visiter le musée gratuitement ?
+
+Le billet ordinaire coûte 6 € et les visiteurs de moins de 26 ans ne paient pas l'entrée. Pour les adultes, le tarif réduit de 4 € concerne notamment les familles nombreuses et les plus de 65 ans. D'autres gratuités existent, en particulier pour les demandeurs d'emploi, les bénéficiaires de minima sociaux et les personnes en situation de handicap accompagnées.
+
+Le bon plan pour toute la famille reste le premier dimanche de chaque mois, où l'accès est gratuit pour tous. Une famille de passage peut ainsi consacrer son budget à une autre activité ou à un goûter en ville.
+
+Les habitants qui souhaitent revenir régulièrement peuvent aussi choisir un abonnement annuel à 15 € pour une personne ou 25 € pour deux. Retrouvez les conditions sur la [page des informations pratiques du musée](https://mba-draguignan.fr/venir-au-musee/venir-au-musee/) et les billets sur la [billetterie culturelle de la Dracénie](https://billetterieculture.dracenie.com/billet-d-entree.html).
+
+## Une visite libre qui ne ressemble pas à un cours d'histoire de l'art
+
+Le [parcours permanent](https://mba-draguignan.fr/expositions/un-parcours-de-visite-reinvente-2/) rassemble notamment plus de 150 œuvres restaurées. Au rez-de-chaussée, les peintures permettent d'observer les personnages, les paysages et les manières de représenter le monde au fil des siècles. À l'étage, les cabinets thématiques offrent un changement de décor, jusqu'au cabinet de curiosités.
+
+Avec de jeunes enfants, mieux vaut choisir quelques œuvres qui attirent leur regard plutôt que vouloir tout voir. On peut chercher un animal dans un tableau, inventer l'histoire d'un personnage ou comparer deux portraits. Les plus grands pourront imaginer à quoi servait un objet avant de lire son cartel.
+
+Prévoyez une heure environ pour une première découverte, quitte à prolonger la visite si les enfants accrochent. Les audioguides et les textes de salles permettent d'approfondir les œuvres qui intéressent chacun.
+
+## Les ateliers du mercredi pour passer de l'observation à la création
+
+Les familles qui préfèrent une activité accompagnée peuvent consulter la [programmation des visites et ateliers](https://mba-draguignan.fr/venir-au-musee/visites-et-ateliers-familles/). Les ateliers du mercredi associent découverte des collections et pratique artistique, avec des sujets qui changent au fil du calendrier.
+
+Le [programme municipal de décembre 2026](https://www.ville-draguignan.fr/wp-content/uploads/2026/11/Programme-FDG-2026-1.pdf#page=12) précise que ces rendez-vous durent deux heures et accueillent les enfants dès 6 ans avec un adulte. Il annonce un tarif habituel de 3 € par enfant en 2026, puis de 4 € à compter du 1er janvier 2027, contre 6 € par adulte.
+
+Ces ateliers se font sur réservation auprès du musée (mba@ville-draguignan.fr). Certaines animations de vacances bénéficient de gratuités ponctuelles: vérifiez le prix applicable au créneau choisi au moment de réserver. Pour les moins de 6 ans, surveillez les visites spécialement destinées aux tout-petits, proposées selon la programmation.
+
+## Préparer sa sortie dans le centre de Draguignan
+
+Le musée se trouve au 9 rue de la République. Il est ouvert de 10 h à 18 h, sauf le mardi et les 1er janvier, 1er mai, 1er novembre et 25 décembre. La [page des horaires et tarifs](https://mba-draguignan.fr/informations-pratiques/horaires-et-tarifs-du-musee/) indique également les éventuels horaires particuliers, notamment le 31 décembre.
+
+Les espaces d'exposition sont desservis par un ascenseur. Des sièges pliants et un fauteuil roulant sont disponibles à l'accueil; des reproductions tactiles permettent aussi de découvrir certaines œuvres autrement. Les familles peuvent consulter les [conditions d'accessibilité](https://mba-draguignan.fr/venir-au-musee/accessibilite/) avant leur venue et contacter le musée au 04 98 10 26 85 pour toute question particulière.
+
+Si vous arrivez en voiture, les informations pratiques du musée donnent accès à une carte des parkings voisins. Sa situation en centre-ville permet de prolonger la sortie par une promenade et une pause gourmande sans reprendre la voiture entre deux activités.
 
 
-/** Prepare one compact snapshot from one shortlist and per-page query responses. */
-export function buildRadarSnapshot(pageRows, catalog, options = {}, queryPairs = []) {
-  const shortlist = buildRadarShortlist(pageRows, catalog, options);
-  const pairs = new Map(queryPairs.map((pair) => [canonicalPage(pair.url), pair]));
-  const refresh = shortlist.refresh.map((candidate, index) => {
-    const pair = index < 5 ? pairs.get(candidate.url) : undefined;
-    const item = pair
-      ? attachRadarQueryDiagnosis(candidate, pair.peakQueries, pair.recentQueries)
-      : candidate;
-    return {
-      url: item.url,
-      title: item.title,
-      category: item.category,
-      publishedAt: item.publishedAt,
-      location: item.location,
-      ageDays: item.ageDays,
-      rapidDrop: item.rapidDrop,
-      peakStart: item.peakStart,
-      peakEnd: item.peakEnd,
-      recentStart: item.recentStart,
-      recentEnd: item.recentEnd,
-      peakImpressions: item.peak.impressions,
-      recentImpressions: item.recent.impressions,
-      score: item.score,
-      signal: item.signal,
-      basis: item.basis,
-      commonQueries: item.commonQueries ?? null,
-      positionDelta: item.positionDelta ?? null,
-      impressionRatio: item.impressionRatio ?? null,
-      focusQueries: item.focusQueries ?? item.keywords.slice(0, 5),
-    };
-  });
-  return {
-    schemaVersion: 1,
-    generatedAt: options.now ?? new Date().toISOString(),
-    dataThrough: shortlist.dataThrough,
-    from: shortlist.from,
-    refresh,
-    strongPages: shortlist.strongPages.map((item) => ({
-      url: item.url,
-      title: item.title,
-      category: item.category,
-      recentImpressions: item.recent.impressions,
-      recentClicks: item.recent.clicks,
-      recentPosition: item.recent.position,
-      retention: item.retention,
-    })),
-    excluded: shortlist.excluded,
-    warnings: [
-      ...(options.warnings ?? []),
-      `Diagnostics par requêtes : ${refresh.slice(0, 5).filter((item) => item.signal !== "needs_query_check" && item.commonQueries !== null).length}/${Math.min(5, refresh.length)}.`,
-      "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement.",
-    ],
-  };
-}
+### Destination en cours
 
-const STOP = new Set(
-  "avec pour dans sans famille familles enfant enfants tarif tarifs duree conseil conseils visite visiter billet billets activite activites sortie sorties evenement evenements preparation pratique pratiques autour leur leurs aussi quoi comment quel quelle quelles quels quand faire partir 2026 2027".split(
-    " ",
-  ),
-);
-const words = (value) =>
-  new Set(
-    String(value)
-      .replace(/œ/g, "oe")
-      .normalize("NFD")
-      .replace(/\p{Diacritic}/gu, "")
-      .toLowerCase()
-      .split(/[^a-z0-9]+/)
-      .filter((word) => word.length >= 3 && !STOP.has(word)),
-  );
-export function probableDuplicates(subject, catalog, limit = 5) {
-  const terms = words(
-    [
-      subject.title,
-      ...(subject.keywords ?? subject.topic?.keywords ?? []),
-    ].join(" "),
-  );
-  return catalog
-    .filter(
-      (article) => canonicalPage(article.url) !== canonicalPage(subject.url),
-    )
-    .map((article) => {
-      const candidate = words(
-        [
-          article.title,
-          ...(article.keywords ?? article.topic?.keywords ?? []),
-        ].join(" "),
-      );
-      const shared = [...terms].filter((word) => candidate.has(word));
-      const sameCity = Boolean(
-        subject.location?.city &&
-          subject.location.city === article.location?.city,
-      );
-      const sameDepartment = Boolean(
-        subject.location?.department &&
-          subject.location.department === article.location?.department,
-      );
-      return {
-        url: article.url,
-        title: article.title,
-        location: article.location,
-        sharedTerms: shared,
-        score:
-          shared.length / Math.max(1, new Set([...terms, ...candidate]).size) +
-          (sameCity ? 0.2 : sameDepartment ? 0.1 : 0),
-      };
-    })
-    .filter(
-      (item) =>
-        item.sharedTerms.length >= 2 ||
-        (item.sharedTerms.length === 1 && item.sharedTerms[0].length >= 6),
-    )
-    .sort((a, b) => b.score - a.score || a.url.localeCompare(b.url))
-    .slice(0, limit);
-}
+- Branche: automation/destination-20261010-0720-vincennes
+- HEAD: content: destination candidate Vincennes
+
+---
+result: enriched
+kind: city
+name: "Vincennes"
+url: "/destinations/ile-de-france/val-de-marne/vincennes/"
+intro:
+  - "Vincennes est une base pratique pour visiter l'est parisien sans voiture : le château et le Parc floral se combinent à pied, tandis que le zoo de Paris mérite une sortie distincte."
+sections:
+  - title: "Une journée sur place : associer le château au Parc floral"
+    paragraphs:
+      - "Pour une journée mêlant découverte et temps de jeu, commencez par le château, puis rejoignez le Parc floral par l'esplanade du château. Comptez environ 1 h 30 à 2 h pour le monument avant de laisser les enfants profiter des aires de jeux du parc. Les pique-niques ne sont pas autorisés dans l'enceinte du château, mais le Parc floral dispose de tables de pique-nique, de points d'eau et de toilettes avec table à langer."
+      - "Avec de jeunes enfants qui supportent mal les visites intérieures, faites plutôt du Parc floral la sortie principale : ses jeux et ses jardins évitent de construire la journée autour du donjon et de ses escaliers. L'accès au Parc floral est gratuit d'octobre à mars et payant d'avril à septembre ; le château est un site distinct avec son propre billet."
+  - title: "Sur deux jours, garder le zoo pour une autre sortie"
+    paragraphs:
+      - "Le Parc zoologique de Paris se trouve du côté de la Porte Dorée, dans le 12e arrondissement, et non à côté du château ou à l'intérieur du Parc floral. Depuis le terminus Château de Vincennes du métro 1, le bus 46 permet de le rejoindre. Le zoo recommande au minimum deux heures de visite : avec le trajet et les pauses, mieux vaut lui réserver une seconde journée plutôt que de l'ajouter à la visite du château et du Parc floral."
+      - "Pour un séjour d'une seule journée, choisissez donc entre le duo château et Parc floral, facile à enchaîner à pied, et une visite du zoo avec trajet dédié. Ce choix évite de traverser inutilement le bois avec des enfants fatigués."
+  - title: "Métro ou RER avec une poussette : deux arrivées différentes"
+    paragraphs:
+      - "La ligne 1 arrive au pied du château, mais la station Château de Vincennes comporte de nombreuses marches entre les quais et la rue. La gare Vincennes du RER A est équipée d'un ascenseur et d'escalators ; elle se situe à environ dix minutes à pied du château. Avec une poussette lourde ou des difficultés à emprunter les escaliers, le RER A peut donc être plus pratique malgré la marche supplémentaire. Vérifiez l'état des équipements avant de partir."
+accommodation:
+  title: "Où dormir selon les sorties prévues ?"
+  paragraphs:
+    - "Si votre programme privilégie le château, le Parc floral et le départ du bus 46 vers le zoo, cherchez un hébergement vers l'avenue de Paris et le terminus Château de Vincennes. Si vous prévoyez aussi plusieurs allers-retours vers le centre de Paris, la proximité de la gare Vincennes du RER A est un autre choix pratique. Avec une poussette, comparez surtout la distance réelle à pied jusqu'à la gare ou au métro plutôt que de réserver simplement un logement annoncé à Vincennes."
+sources:
+  - title: "Fam Space - Destination Vincennes et ses deux articles"
+    url: "https://www.fam-space.fr/destinations/ile-de-france/val-de-marne/vincennes/"
+    accessedAt: "2026-10-10"
+  - title: "Fam Space - Château de Vincennes en famille"
+    url: "https://www.fam-space.fr/articles/sorties/chateau-de-vincennes-en-famille-tarifs-parcours-et-conseils-de-visite/"
+    accessedAt: "2026-10-10"
+  - title: "Fam Space - Monument jeu d'enfant 2026 au château de Vincennes"
+    url: "https://www.fam-space.fr/articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/"
+    accessedAt: "2026-10-10"
+  - title: "Ville de Paris - Parc floral de Paris"
+    url: "https://www.paris.fr/lieux/parc-floral-de-paris-1"
+    accessedAt: "2026-10-10"
+  - title: "Château de Vincennes - Informations pratiques"
+    url: "https://www.chateau-de-vincennes.fr/visiter/informations-pratiques"
+    accessedAt: "2026-10-10"
+  - title: "Château de Vincennes - Offre adaptée aux visiteurs en mobilité réduite"
+    url: "https://www.chateau-de-vincennes.fr/visiter/visiteurs-en-situation-de-handicap/offre-adaptee-aux-visiteurs-en-mobilite-reduite"
+    accessedAt: "2026-10-10"
+  - title: "Parc zoologique de Paris - Tarifs, horaires et accès"
+    url: "https://www.parczoologiquedeparis.fr/fr/tarifs-horaires-acces"
+    accessedAt: "2026-10-10"
+  - title: "Parc zoologique de Paris - Services et conseils de visite"
+    url: "https://www.parczoologiquedeparis.fr/fr/services-conseils-de-visite"
+    accessedAt: "2026-10-10"
+---
+
+### Destination en cours
+
+- Branche: automation/destination-20261013-0112-haut-rhin
+- HEAD: content: destination Haut-Rhin enrichment candidate
+
+---
+result: enriched
+kind: department
+name: "Haut-Rhin"
+url: "/destinations/grand-est/haut-rhin/"
+intro:
+  - "Colmar, Mulhouse et Ungersheim ne se visitent pas de la même manière en famille. Le choix de la base dépend des musées, des villages et de la possibilité de se déplacer sans voiture."
+sections:
+  - title: "Colmar pour les villages, Mulhouse pour les musées"
+    paragraphs:
+      - "Colmar convient à une journée dans le centre suivie d'une sortie vers Turckheim ou Munster, accessibles sur la ligne de train vers Metzeral. Pour Riquewihr, Kaysersberg ou Eguisheim, cette ligne ne suffit pas : il faut vérifier les bus ou prévoir une voiture."
+      - "Mulhouse est une meilleure base pour les musées techniques : la Cité du Train et Electropolis sont desservis par le tram 3, et le Musée national de l'Automobile par le tram 1. Si ces visites sont prioritaires, dormir à Mulhouse évite de revenir chaque soir depuis Colmar."
+  - title: "Deux parcs à Ungersheim : prévoir deux journées"
+    paragraphs:
+      - "Le Parc du Petit Prince et l'Écomusée d'Alsace sont proches, mais le premier recommande déjà cinq à sept heures de visite. Une famille qui souhaite découvrir les deux aura plus de temps pour profiter de chaque site en leur réservant une journée distincte."
+      - "Sans voiture, le train rejoint Bollwiller, puis il faut prévoir une navette à la demande vers les sites. Le Parc du Petit Prince indique le service Filéa ; l'Écomusée annonce une navette Soléa ou trente minutes de marche. Réservez et vérifiez le retour avant d'acheter les billets."
+  - title: "Ne pas confondre train et bus touristique"
+    paragraphs:
+      - "Le Kut'zig dessert en saison plusieurs villages viticoles depuis Colmar, mais ne circule pas toute l'année : sa saison 2026 s'est achevée le 11 octobre. Hors saison, la ligne ferroviaire vers Turckheim et Munster offre un autre choix de sortie, sous réserve des horaires du jour."
+accommodation:
+  title: "Où se baser dans le Haut-Rhin ?"
+  paragraphs:
+    - "Choisissez Colmar pour le centre historique, les villages et la vallée de Munster ; choisissez Mulhouse pour les musées et une excursion vers Ungersheim via Bollwiller. Si le séjour combine plusieurs jours dans chaque secteur, deux hébergements peuvent éviter des allers-retours répétés avec les enfants."
+sources:
+  - title: "Fam Space - Haut-Rhin"
+    url: "https://www.fam-space.fr/destinations/grand-est/haut-rhin/"
+    accessedAt: "2026-10-13"
+  - title: "Mulhouse Tourisme - Transports en commun"
+    url: "https://www.tourisme-mulhouse.com/en/what-to-do-in-mulhouse/getting-around-mulhouse-by-public-transport/"
+    accessedAt: "2026-10-13"
+  - title: "Parc du Petit Prince - Informations pratiques"
+    url: "https://parcdupetitprince.com/infos-pratiques"
+    accessedAt: "2026-10-13"
+  - title: "Écomusée d'Alsace - Accès"
+    url: "https://www.ecomusee.alsace/preparez-votre-visite/acces/"
+    accessedAt: "2026-10-13"
+  - title: "Ville de Turckheim - Accès"
+    url: "https://www.turckheim.fr/acces-et-plan/"
+    accessedAt: "2026-10-13"
+  - title: "Office de tourisme de Colmar - Kut'zig"
+    url: "https://www.tourisme-colmar.com/fr/pratique/se-deplacer/kut-zig-le-bus-touristique-cabriolet"
+    accessedAt: "2026-10-13"
+---
+
+### Phase 1 - refresh
+
+Écris `radar-request.md` avec seulement la décision éditoriale:
+
+```yaml
+---
+action: start
+mode: refresh
+targetUrl: "/articles/categorie/slug/"
+decision: "Décision précise du lecteur à mieux servir"
+affiliationPotential: "Offre existante à conserver, nouvelle action naturelle à vérifier, ou absence d'affiliation naturelle"
+---
+
+Brief éditorial court demandé par la phase 1.
 ```
 
-## Résultat attendu
+Ne fournis ni branche, ni SHA, ni `targetPath`, ni `commonQueries`, ni `positionDelta`, ni `impressionRatio`, ni `focusQueries`. Le script les prend dans Git et dans le snapshot.
 
-Actualise uniquement radar-gsc-snapshot.json sur la branche main de DevWeb13/fam-space-actions-bridge avec le snapshot compact décrit ci-dessus, puis termine ce passage. Ne choisis aucune mission Radar dans la même exécution et ne modifie aucun autre fichier interne.
+### Phase 1 - opportunity
+
+Écris le minimum éditorial nécessaire au futur article:
+
+```yaml
+---
+action: start
+mode: opportunity
+title: "Titre de travail"
+subtitle: "Sous-titre utile"
+summary: "Résumé"
+category: sorties
+location:
+  city: "Ville"
+  department: "Département"
+  region: "Région"
+keywords:
+  - "mot-clé utile"
+sources:
+  - title: "Source officielle"
+    url: "https://..."
+gscSignal: strong_page
+gscSourceUrl: "/articles/categorie/page-forte/"
+decision: "Décision précise du lecteur"
+affiliationPotential: "Piste commerciale réellement vérifiée ou absence naturelle"
+---
+
+Brief éditorial court demandé par la phase 1.
+```
+
+Le slug, la branche, le SHA et la provenance technique sont générés par le script. Pour `seasonal_opportunity`, utilise `gscSignal: seasonal_opportunity` et omets `gscSourceUrl`: la source officielle du frontmatter sert de preuve. Pour `strong_page`, `gscSourceUrl` reste obligatoire et doit correspondre à une page réellement présente dans `strongPages`.
+
+## Écriture autorisée
+
+N'effectue aucune plomberie Git. Ne crée, ne nomme et ne supprime aucune branche Radar; ne choisis aucun SHA; ne modifie aucun fichier de DevWeb13/fam-space-qwik.
+
+Écris uniquement radar-request.md sur la branche main de DevWeb13/fam-space-actions-bridge selon le format fourni dans ce runtime. Le workflow GitHub se charge du reste. Une fois cette requête écrite, termine le passage.
