@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -48,13 +58,6 @@ Pour une sortie, une activité, une visite, un événement, un voyage ou une des
 Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
-
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
 
 ## Candidat validé de la phase précédente
 
@@ -89,7 +92,7 @@ updatedAt: null
 readingTime: 2
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(11)/ecoute-je-danse-a-paris-le-5-decembre-2026-spectacle-gratuit-pour-les-6-mois-3-ans/index.md
   targetSha: f23c1cc27da3595778b663e4d90c5db294339a8b
@@ -114,33 +117,39 @@ radar:
       - Écoute je danse Paris décembre 2026
       - spectacle gratuit bébé Paris 5 décembre
       - bibliothèque Gutenberg spectacle 6 mois 3 ans
+affiliate:
+  enabled: true
+  type: travel
+  destination: Paris
 ---
 
-## Mission retenue
-Actualiser le spectacle Écoute, je danse ! à la bibliothèque Gutenberg, Paris 15e, le 5 décembre 2026.
+<!-- article-image-credit -->
+*Photo: [Guilhem Vellut from Paris, France](https://commons.wikimedia.org/wiki/File:Biblioth%C3%A8que_Gutenberg_@_Paris_(26728362855).jpg) - [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Chute rapide d'impressions, cause non établie. Lacune éditoriale indépendante: l'article indique que la présence d'une table à langer n'est pas confirmée alors que la fiche municipale confirme toilettes et table à langer, ainsi que les espaces publics de plain-pied. Ces informations sont directement utiles au public de 6 mois à 3 ans. Les articles Parc Phoenix, Metz, Laval, Flottins et meubles d'occasion ont déjà été actualisés; l'atelier Pokémon du lendemain dispose déjà des informations sur les équipements bébé et le programme du marché départemental de Dijon reste inchangé.
+Le samedi **5 décembre 2026**, la bibliothèque Gutenberg, dans le 15e arrondissement de Paris, accueille **Écoute, je danse !**, un spectacle de danse, de musique et d'exploration sensorielle destiné aux enfants **de 6 mois à 3 ans**. La séance est **gratuite**, de **11 h à 11 h 45**, mais **la réservation est obligatoire**.
 
-## Décision du lecteur
-Déterminer si la sortie convient à son enfant et préparer sa venue en connaissant les conditions d'accueil.
+## Que vont découvrir les tout-petits ?
 
-## Faits à traiter
-- Maintenir date, gratuité, réservation obligatoire, 11 h-11 h 45, âge de 6 mois à 3 ans, nature du spectacle, adresse et téléphone 01 45 54 69 76. La fiche de l'événement indique aussi une adresse électronique bibliotheque.gutenberg@paris.fr: proposer le contact, sans garantir une réservation par mail ni une place.
-- Corriger le passage sur la table à langer: toilettes et table à langer sont explicitement confirmées par la Ville; espaces publics de plain-pied, bibliothèque sur une dalle piétonne. Aucun emplacement réservé aux poussettes ni espace dédié à l'alimentation du bébé confirmé.
-- Bibliothèque ouverte le samedi matin de 10 h à 12 h 30 sur la période du 3 novembre au 12 décembre; arrivée possible avant le spectacle sous réserve des consignes d'accueil. Les arrêts indiqués par la Ville sont Pont du Garigliano, Lourmel et Parc André Citroën. Vérifier leurs modes/lignes si précisés dans l'article; privilégier le lien vers le guide poussette. Ne pas garantir un parcours intégralement sans marches.
-- Conserver les réserves sur le volume sonore, les sorties et retours pendant la séance et l'accompagnement. Accessibilité confirmée aux catégories de handicap indiquées par la Ville, accueil en langue des signes non disponible.
-- Conserver le crédit image et eventEndsAt au 5 décembre 2026.
+La [Ville de Paris](https://www.paris.fr/evenements/ecoute-je-danse-117403) présente une exploration sonore et dansante dans l'ambiance des fêtes de fin d'année. Il s'agit d'un spectacle, et non d'un atelier de fabrication ou d'une activité demandant à l'enfant de réaliser quelque chose.
 
-## Sources de départ
-- https://www.paris.fr/evenements/ecoute-je-danse-117403
-- https://www.paris.fr/lieux/bibliotheque-gutenberg-1736
+La fiche ne précise pas le volume sonore ni les possibilités de sortir et de revenir pendant la représentation. Pour un bébé sensible aux sons ou peu habitué aux spectacles, la bibliothèque pourra préciser les conditions d'accueil.
 
-## Affiliation
-Spectacle gratuit sur inscription, aucune billetterie partenaire naturelle. Si un séjour est envisagé, https://www.booking.com/hotel/fr/novotel-paris-pte-versailles.fr.html propose une chambre familiale avec grand lit double et canapé-lit (fiche indexée vérifiée; accès direct soumis à contrôle anti-robot). Vérifier capacité, lit bébé, prix et disponibilité selon les dates et les âges, sans garantie. Intégrer brièvement et naturellement, avec les métadonnées affiliation adaptées si nécessaire.
+## Comment réserver ?
 
-## Continuations internes
-Conserver le guide Paris avec une poussette, route vérifiée: /articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/. Ne pas répéter son contenu sur les transports.
+Contactez la **bibliothèque Gutenberg au 01 45 54 69 76** ou à l'adresse bibliotheque.gutenberg@paris.fr pour connaître les modalités d'inscription, les places restantes et les conditions d'accompagnement des enfants. La gratuité ne garantit pas la disponibilité d'une place.
+
+## Adresse et accueil avec un bébé
+
+**Bibliothèque Gutenberg, 8 rue de la Montagne d'Aulas, Paris 15e.** La [fiche officielle de la bibliothèque](https://www.paris.fr/lieux/bibliotheque-gutenberg-1736) indique une accessibilité aux personnes à mobilité réduite et à plusieurs catégories de handicap, mais **pas d'accueil en langue des signes**. La bibliothèque dispose de **toilettes et d'une table à langer**. Les espaces publics sont de plain-pied et le bâtiment se trouve sur une dalle piétonne. Aucun espace dédié aux repas des bébés ni emplacement réservé aux poussettes n'est confirmé.
+
+Le samedi 5 décembre, la bibliothèque annonce une ouverture au public de 10 h à 12 h 30 le matin. Demandez à quelle heure arriver pour le spectacle. Les arrêts indiqués par la Ville sont Pont du Garigliano, Lourmel et Parc André Citroën. Vérifiez le parcours avec votre poussette avant de partir.
+
+Pour préparer le trajet, consultez notre guide [Paris avec une poussette: métro, RER, bus ou tram, que choisir ?](https://www.fam-space.fr/articles/voyages/paris-avec-une-poussette-metro-rer-ou-bus-quel-trajet-choisir/).
+
+## Si vous passez le week-end à Paris
+
+Dans le 15e arrondissement, le [Novotel Paris Porte Versailles sur Booking.com](https://www.booking.com/hotel/fr/novotel-paris-pte-versailles.fr.html) propose notamment une chambre familiale avec grand lit et canapé-lit. Un lit bébé est annoncé gratuit sur demande pour les 0 à 2 ans, sous réserve de disponibilité. Renseignez les âges des enfants pour vérifier la capacité, le tarif total et les disponibilités aux dates du séjour.
 
 ## Article source exact à préserver et améliorer
 
