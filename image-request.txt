@@ -489,3 +489,4 @@ automation/image-hero-20261126-lille-morne-samoens-2df15a9|47d04fcafc7d9f860ecbb
 automation/image-hero-20261126-lille-morne-samoens-2df15a9|83953d6bf67b0eb24894aa8e1076c32efcd944e0
 automation/image-hero-20261127-pastis-b65d1f1|6adaa2574645a30ba105a5acb80d4adcbeec8a8e
 automation/image-hero-20261127-pastis-b65d1f1|da6dd4213ee57e9fce04c56f22d36dd26894ed2e
+automation/image-hero-20261127-quatre-413cbe8|b349871dd034aa6eacc5fe706e8d46840a9cfcc8
