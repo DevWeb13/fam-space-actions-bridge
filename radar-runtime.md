@@ -733,6 +733,14 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 - /articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/ | Recycleries autour de Chartres: où donner et acheter d'occasion ? | maison | Chartres, Eure-et-Loir, Centre-Val de Loire
 - /articles/cuisine/apres-une-cueillette-en-eure-et-loir-5-recettes-faciles-a-faire-avec-les-enfants/ | Après une cueillette en Eure-et-Loir: 5 recettes faciles à faire avec les enfants | cuisine | Chartres, Eure-et-Loir, Centre-Val de Loire
 - /articles/maison/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/ | Meubles d'occasion en Meurthe-et-Moselle: où acheter, donner et réparer ? | maison | Meurthe-et-Moselle, Grand Est
+- /articles/maison/composter-en-famille-au-pays-basque-quelle-solution-choisir-selon-son-logement/ | Composter en famille au Pays Basque: quelle solution choisir selon son logement ? | maison | Pyrénées-Atlantiques, Nouvelle-Aquitaine
+- /articles/activites/musee-de-la-nacre-a-meru-en-famille-des-dominos-aux-ateliers-creatifs/ | Musée de la Nacre à Méru en famille: des dominos aux ateliers créatifs | activites | Méru, Oise, Hauts-de-France
+- /articles/evenements/spectacles-pour-enfants-a-nantes-en-fevrier-2027-que-choisir-pendant-les-vacances/ | Spectacles pour enfants à Nantes en février 2027: que choisir pendant les vacances ? | evenements | Nantes, Loire-Atlantique, Pays de la Loire
+- /articles/sorties/abbaye-de-cluny-avec-des-enfants-retrouver-une-eglise-presque-disparue/ | Abbaye de Cluny avec des enfants: retrouver une église presque disparue | sorties | Cluny, Saône-et-Loire, Bourgogne-Franche-Comté
+- /articles/vie-pratique/location-de-velos-familiaux-a-bourg-en-bresse-tester-le-cargo-au-quotidien/ | Location de vélos familiaux à Bourg-en-Bresse: tester le cargo au quotidien | vie-pratique | Bourg-en-Bresse, Ain, Auvergne-Rhône-Alpes
+- /articles/activites/a-lyon-decouvrir-l-impression-sur-soie-en-famille-chez-brochier/ | À Lyon, découvrir l’impression sur soie en famille chez Brochier | activites | Lyon, Rhône, Auvergne-Rhône-Alpes
+- /articles/voyages/visiter-le-theatre-antique-d-orange-en-famille/ | Visiter le Théâtre antique d’Orange en famille | voyages | Orange, Vaucluse, Provence-Alpes-Côte d’Azur
+- /articles/parentalite/accompagnement-a-la-scolarite-dans-l-herault-comment-le-clas-aide-les-familles/ | Accompagnement à la scolarité dans l'Hérault: comment le CLAS aide les familles | parentalite | Hérault, Occitanie
 - /articles/sorties/illusion-nantes-en-famille-jouer-avec-les-trompe-l-oeil/ | Illusion Nantes en famille: jouer avec les trompe-l’œil | sorties | Nantes, Loire-Atlantique, Pays de la Loire
 - /articles/vie-pratique/transports-scolaires-optymo-dans-le-territoire-de-belfort-quelle-carte-choisir/ | Transports scolaires Optymo dans le Territoire de Belfort: quelle carte choisir ? | vie-pratique | Territoire de Belfort, Bourgogne-Franche-Comté
 - /articles/activites/seaquarium-du-grau-du-roi-en-famille-decouvrir-la-vie-marine-hors-saison/ | Seaquarium du Grau-du-Roi en famille: découvrir la vie marine hors saison | activites | Le Grau-du-Roi, Gard, Occitanie
@@ -753,22 +761,14 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 - /articles/sorties/le-sourou-a-roura-en-famille-une-journee-entre-pirogue-kayak-et-foret/ | Le Sourou à Roura en famille: une journée entre pirogue, kayak et forêt | sorties | Roura, Guyane, Guyane
 - /articles/evenements/sculptures-sur-glace-et-neige-a-valloire-en-janvier-2027/ | Sculptures sur glace et neige à Valloire en janvier 2027 | evenements | Valloire, Savoie, Auvergne-Rhône-Alpes
 - /articles/bons-plans/sainte-chapelle-et-conciergerie-en-famille-a-paris-quels-billets-choisir/ | Sainte-Chapelle et Conciergerie en famille à Paris: quels billets choisir ? | bons-plans | Paris, Paris, Île-de-France
-- /articles/activites/a-pointe-noire-decouvrir-la-riviere-en-famille-avec-l-aquarando-d-acomat/ | À Pointe-Noire, découvrir la rivière en famille avec l’aquarando d’Acomat | activites | Pointe-Noire, Guadeloupe, Guadeloupe
-- /articles/vie-pratique/ludotheques-en-sarthe-ou-jouer-et-emprunter-des-jeux-avec-les-enfants/ | Ludothèques en Sarthe: où jouer et emprunter des jeux avec les enfants ? | vie-pratique | Sarthe, Pays de la Loire
-- /articles/voyages/cherrueix-en-famille-decouvrir-le-char-a-voile-dans-la-baie-du-mont-saint-michel/ | Cherrueix en famille: découvrir le char à voile dans la baie du Mont-Saint-Michel | voyages | Cherrueix, Ille-et-Vilaine, Bretagne
-- /articles/evenements/seraphine-louis-a-metz-decouvrir-l-exposition-avec-les-enfants/ | Séraphine Louis à Metz: découvrir l’exposition avec les enfants | evenements | Metz, Moselle, Grand Est
-- /articles/voyages/cassis-en-famille-hors-saison-calanques-en-bateau-et-balades/ | Cassis en famille hors saison: calanques en bateau et balades | voyages | Cassis, Bouches-du-Rhône, Provence-Alpes-Côte d’Azur
-- /articles/cuisine/fougasse-d-aigues-mortes-recette-moelleuse-a-faire-en-famille/ | Fougasse d’Aigues-Mortes: recette moelleuse à faire en famille | cuisine | Aigues-Mortes, Gard, Occitanie
-- /articles/parentalite/parents-et-jeunes-enfants-a-bergerac-trois-lieux-pour-jouer-et-echanger/ | Parents et jeunes enfants à Bergerac: trois lieux pour jouer et échanger | parentalite | Bergerac, Dordogne, Nouvelle-Aquitaine
-- /articles/activites/musee-de-l-illusion-a-lyon-en-famille-que-voir-et-combien-coute-la-visite/ | Musée de l'Illusion à Lyon en famille: que voir et combien coûte la visite ? | activites | Lyon, Rhône, Auvergne-Rhône-Alpes
 
 ### Historique Radar lié
 
-- opportunity | /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | 2026-10-06T19:20:39.093Z
 - opportunity | /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | 2026-10-30T06:28:26.726Z
 - refresh | /articles/evenements/noel-2026-a-rochefort-en-terre-avec-des-enfants-village-et-illuminations/ | 2026-11-15T12:33:21.761Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-10-26T21:31:06.119Z
 - refresh | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-11-12T18:32:15.897Z
+- refresh | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-11-28T11:29:58.641Z
 - opportunity | /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | 2026-11-03T15:36:10.146Z
 - refresh | /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | 2026-11-13T13:31:11.034Z
 - opportunity | /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | 2026-10-30T21:26:32.584Z
@@ -796,6 +796,57 @@ Ensuite, soumets cette décision via le format `action: start` fourni plus bas d
 - refresh | /articles/evenements/ville-de-noel-d-arras-2026-en-famille-grande-roue-patinoire-et-horaires/ | 2026-11-23T13:28:43.287Z
 
 ## Travaux éditoriaux en cours
+
+### Publication en cours
+
+- Branche: automation/publication-20261128-1233-mediatheques-gratuites-dans-l-eurometropole-de-strasbourg-profiter-de-
+- HEAD: publication: phase 3 20261128-1233-mediatheques-gratuites-dans-l-eurometropole-de-strasbourg-profiter-de-
+
+---
+category: "bons-plans"
+title: "Médiathèques gratuites dans l'Eurométropole de Strasbourg: profiter de la carte Pass’relle en famille"
+subtitle: "Des mangas aux livres numériques, des loisirs à renouveler toute l'année"
+summary: "Découvrez comment inscrire vos enfants gratuitement dans le réseau Pass’relle, emprunter des documents et profiter des ressources numériques à Strasbourg."
+keywords:
+  - "médiathèques gratuites Strasbourg"
+  - "carte Pass’relle"
+  - "bibliothèque famille Bas-Rhin"
+location:
+  department: "Bas-Rhin"
+  region: "Grand Est"
+sources:
+  - title: "Strasbourg.eu: carte Pass’relle"
+    url: "https://www.strasbourg.eu/fr/carte_passrelle"
+  - title: "Médiathèques EMS: inscription"
+    url: "https://www.mediatheques.strasbourg.eu/Default/infos-pratiques-s-inscrire-en-mediatheque.aspx"
+  - title: "Médiathèques EMS: FAQ gratuité"
+    url: "https://www.mediatheques.strasbourg.eu/default/aide-faq-sur-la-gratuite.aspx?_lg=fr-FR"
+---
+
+Un enfant qui dévore les mangas, un autre qui préfère les histoires audio: dans l'agglomération strasbourgeoise, leurs envies de lecture peuvent être satisfaites sans acheter de nouveaux livres chaque semaine. Depuis le 1er janvier 2026, l'inscription au réseau Pass’relle est gratuite. Il réunit 34 médiathèques à Strasbourg, dans les communes voisines et jusqu'à Kehl, de l'autre côté du Rhin.
+
+## Inscrire toute la famille
+
+Même si vous habitez en dehors de l'Eurométropole, vous pouvez obtenir une carte personnelle. Rendez-vous à l'accueil d'un établissement du réseau, à l'exception de Kehl. Pour inscrire un adulte, une pièce d'identité suffit pour les emprunts ordinaires.
+
+Pour un enfant, préparez les justificatifs d'identité du représentant légal et du mineur (ou un document officiel attestant sa date de naissance), ainsi que l'autorisation parentale signée. Le formulaire est disponible sur la [page des inscriptions](https://www.mediatheques.strasbourg.eu/Default/infos-pratiques-s-inscrire-en-mediatheque.aspx). Pensez à renouveler les cartes chaque année.
+
+## Choisir ses emprunts selon la médiathèque
+
+Dans les établissements gérés par la Ville et l'Eurométropole, chaque lecteur peut emprunter jusqu'à 30 documents par médiathèque durant quatre semaines, avec une possibilité de prolongation. Ce quota inclut notamment un jeu vidéo et deux œuvres d'art. Pour ces dernières, une attestation d'assurance responsabilité civile est nécessaire.
+
+Les bibliothèques communales fixent leurs propres limites de prêt. Si vous avez obtenu votre carte dans l'une d'elles, faites activer votre inscription dans un établissement municipal ou métropolitain en présentant votre carte et une pièce d'identité. Vous pourrez alors bénéficier des services de ce second réseau. Retrouvez les différences dans la [FAQ officielle sur la gratuité](https://www.mediatheques.strasbourg.eu/default/aide-faq-sur-la-gratuite.aspx?_lg=fr-FR).
+
+## Des histoires à emporter même sans sac de livres
+
+Les ressources numériques permettent de préparer les vacances ou d'occuper un trajet sans encombrer les bagages. Le réseau municipal et métropolitain autorise le prêt de quatre livres numériques pendant huit semaines. Il propose également des livres audio, de la presse et des ressources d'apprentissage en ligne.
+
+## Une sortie gratuite, même sans carte
+
+Vous pouvez aussi venir simplement passer un moment avec vos enfants. Selon l'établissement, vous trouverez des espaces de lecture, des jeux de société ou des animations culturelles. Consultez le [portail accessible depuis la présentation de la carte Pass’relle](https://www.strasbourg.eu/fr/carte_passrelle) pour choisir une médiathèque et repérer les rendez-vous adaptés à leur âge. Vérifiez les éventuelles conditions de réservation avant de partir.
+
+Pour les emprunts, gardez un œil sur les échéances dans votre compte lecteur: un retard bloque temporairement les nouveaux prêts. Les documents détériorés ou perdus restent à remplacer ou à rembourser. Un panier réservé aux livres de la médiathèque à la maison peut aider les enfants à retrouver facilement leurs emprunts avant le prochain passage.
+
 
 ### Destination en cours
 
