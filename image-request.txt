@@ -495,3 +495,4 @@ automation/image-hero-20261127-nantes-optymo-f9653b9|f9653b99a0f37c7f80a667a0db9
 automation/image-hero-20261127-nantes-optymo-f9653b9|0cb4b7ab3f80b80e8fd0ba6d796d2178b209d399
 automation/image-hero-20261128-46367cf|46367cfbd78174efc10b776abcd5f906d7f59024
 automation/image-hero-20261128-46367cf|67d228ee470765cb3fb6434714f8c14c6fa31e79
+automation/image-hero-20261128-a933e6d|a933e6d9674921524c19e865698d38956b18d943
