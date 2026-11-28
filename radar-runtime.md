@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 1/3
+# Radar Fam Space - Phase 2/3
 
 ## Mission
 
@@ -8,23 +8,22 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 1/3
+# Radar - Phase 2/3
 
-Tu es rédacteur en chef. Ta seule responsabilité est de choisir la meilleure mission du passage et de préparer un brief éditorial court. **Ne fais aucune plomberie Git et ne reconstruis aucune donnée GSC structurée.**
+Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
 
-Le snapshot GSC du jour est déjà prêt lorsque cette phase commence. Utilise le catalogue compact et l'historique du bridge fournis dans ce runtime, puis utilise le contexte des travaux en cours fourni dans ce runtime. Contrôle seulement les articles nécessaires sur `master`, sans relire tout le catalogue fichier par fichier.
+Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
 
-Examine **en premier** les articles `refresh`, en commençant par ceux marqués `rapidDrop: true`. Ils ont gagné des impressions, puis leur visibilité a fortement diminué en quelques jours. Les articles récents ne doivent pas être pénalisés par leur âge. Les autres pertes significatives viennent ensuite.
+Suis le diagnostic éditorial du brief:
+- `rank_loss`: réponds mieux aux intentions réellement en recul;
+- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
+- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
+- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
+- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
 
-Lis l'article source complet, ses sources et les requêtes GSC lorsqu'elles ont été diagnostiquées :
-- `rank_loss` : vérifier les intentions dont les positions ont réellement reculé ;
-- `coverage_loss` : examiner les recherches dont l'exposition diminue ;
-- `uncertain` ou `needs_query_check` : une chute d'impressions ne prouve pas la cause. Seule une lacune indépendante et vérifiée peut justifier une amélioration ;
-- `search_potential` : vérifier que la réponse et le titre correspondent réellement à l'intention.
+Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
 
-**Ne choisis pas un refresh pour changer une date ou forcer un `updatedAt`.** Identifie ce qui serait concrètement meilleur pour la famille, tout en conservant ce qui fonctionne déjà.
-
-**Seulement si aucun article existant n'est réellement améliorable**, cherche un événement exceptionnel avec un fort potentiel d'intérêt et éventuellement d'affiliation. Vérifie ses sources officielles et recherche les doublons de sujet sur `master`, en complément des articles proches déjà listés, ainsi que les contenus Publication/Destination en cours. Ne multiplie pas les nouveaux articles sur de petits événements gratuits.
+Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
 
 Applique directement les règles partenaires ci-dessous.
 
@@ -51,971 +50,256 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
 
-Le brief doit rester court et contenir uniquement ce qui aidera la rédaction:
+Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
+
+Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
+
+Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
+
+## Candidat validé de la phase précédente
+
+---
+title: "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?"
+subtitle: Trois villages du Haut-Vallespir, des traditions spectaculaires et des précautions à connaître avec des enfants
+summary: À Prats-de-Mollo, Saint-Laurent-de-Cerdans et Arles-sur-Tech, découvrez les Fêtes de l’Ours 2027 et préparez votre sortie en famille.
+slug: fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales
+status: published
+publishedAt: 2026-11-05T05:04:01+01:00
+updatedAt: null
+category: evenements
+readingTime: 4
+location:
+  city: ""
+  department: Pyrénées-Orientales
+  region: Occitanie
+topic:
+  key: evenements|pyrenees-orientales|fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales|2026
+  keywords:
+    - Fêtes de l’Ours 2027
+    - Fête de l’Ours Pyrénées-Orientales en famille
+    - Haut-Vallespir carnaval
+image:
+  src: /images/articles/2026/11/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales.webp
+  alt: Participants à la Fête de l’Ours de Prats-de-Mollo en 2016, édition antérieure à 2027
+sources:
+  - title: Fêtes de l’Ours du Haut-Vallespir - présentation
+    url: https://www.fetesdelours.com/
+  - title: Fête de l’Ours de Prats-de-Mollo - organisateurs
+    url: https://www.fetesdelours.com/les-fetes-de-lours/fete-de-lours-de-prats-de-mollo-la-preste/
+  - title: Fête de l’Ours de Saint-Laurent-de-Cerdans - organisateurs
+    url: https://www.fetesdelours.com/les-fetes-de-lours/fete-de-lours-de-saint-laurent-de-cerdans/
+  - title: Tourisme Occitanie - Fêtes de l’Ours 2027
+    url: https://www.tourisme-occitanie.com/fr/fiche/fete-et-manifestation/fetes-de-l-ours-prats-de-mollo-la-preste_TFOFMALAR0660018062/
+  - title: UNESCO - Les fêtes de l’Ours dans les Pyrénées
+    url: https://ich.unesco.org/fr/RL/les-ftes-de-lours-dans-les-pyrnes-01846
+affiliate:
+  enabled: true
+  type: travel
+  destination: Pyrénées-Orientales
+radar:
+  schemaVersion: 1
+  phase: 1
+  mode: refresh
+  targetPath: src/routes/articles/evenements/(2026)/(11)/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/index.md
+  targetSha: e412b91dd3b45e24e01e143896c92aba63d46464
+  targetUrl: /articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/
+  decision: Choisir entre les fêtes traditionnelles et les fêtes de l'ours junior selon la sensibilité des enfants, puis identifier les dates réellement confirmées avant de réserver un séjour.
+  affiliationPotential: Conserver le Costabonne sur Booking.com, chambres familiales et lit bébé sur demande vérifiés; disponibilité aux dates de fête non confirmée. Pas de billetterie générale payante identifiée.
+  gsc:
+    retrievedAt: 2026-11-28T07:56:00+01:00
+    dataThrough: 2026-11-26
+    signal: uncertain
+    basis: "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer. Diagnostic sur 5 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante."
+    peakStart: 2026-11-10
+    peakEnd: 2026-11-16
+    recentStart: 2026-11-20
+    recentEnd: 2026-11-26
+    peakImpressions: 402
+    recentImpressions: 285
+    commonQueries: 5
+    positionDelta: 0.065
+    impressionRatio: 0.678
+    focusQueries:
+      - fete de l'ours 2027
+      - fête de l'ours 2027
+      - fête de l ours prats de mollo 2027
+      - fête de lours 2027
+      - fete de l ours
+---
 
 ## Mission retenue
-Le sujet et ce que c'est réellement.
+Améliorer le comparatif des trois fêtes de l'Ours du Haut-Vallespir.
 
 ## Pourquoi cette mission
-Pourquoi elle mérite une amélioration maintenant, ou pourquoi aucun article existant n'était utilement améliorable avant de retenir cet événement.
+Les candidats précédents ont déjà été actualisés aujourd'hui. La baisse d'exposition de cette page ne démontre pas une perte de classement. Lacune indépendante vérifiée: Destination Canigó indique que chaque village organise une fête de l'ours junior, option familiale absente du guide. Le passage sur Arles-sur-Tech est également trop vague alors que le tourisme départemental décrit son repas collectif et son rituel distinct.
 
 ## Décision du lecteur
-Ce que la page doit permettre au lecteur de comprendre ou de choisir. Formule un résultat pour le lecteur, pas un titre ni un plan. Les consignes de maillage, d'anti-doublon ou d'organisation entre articles appartiennent à `Continuations internes`, pas à la décision.
+Choisir une fête ou une animation junior adaptée à son enfant et savoir quand réserver.
 
 ## Faits à traiter
-Les informations décisives à vérifier, actualiser ou ajouter, et les informations existantes importantes à préserver pour un refresh.
+Mettre les dates 2027 en évidence dès le début: Saint-Laurent du 12 au 14 février selon Tourisme Occitanie; les deux autres dates restent à venir. Ne pas recycler les dates 2026. Vérifier les modalités des fêtes junior et distinguer leur existence traditionnelle de leur programmation 2027 encore inconnue. Décrire le rituel propre à Arles-sur-Tech sans promettre une ambiance calme. Préserver les conseils de sécurité, les précautions poussette, vêtements, stationnement, l'inscription UNESCO, les images et crédits, ainsi que les hébergements pertinents.
 
 ## Sources de départ
-Les meilleures sources officielles ou directement responsables.
+- https://www.visit-canigo.com/pratique-agenda/agenda-manifestations/les-temps-forts-en-hiver/fetes-de-lours/
+- https://www.tourisme-pyreneesorientales.com/agenda/grands-evenements/fetes-de-lours/
+- https://www.tourisme-occitanie.com/fr/fiche/fete-et-manifestation/fetes-de-l-ours-prats-de-mollo-la-preste_TFOFMALAR0660018062/
+- https://www.fetesdelours.com/
+- Conserver les sources officielles existantes.
 
 ## Affiliation
-Les pistes réellement vérifiées, ou l'absence d'affiliation naturelle.
+https://www.booking.com/hotel/fr/restaurant-le-costabonne.fr.html : chambres familiales, restaurant et lit bébé gratuit sur demande confirmés sur la fiche. Conserver Falgos si son offre familiale est revérifiée. Ne pas garantir les disponibilités.
 
 ## Continuations internes
-Deux ou trois pistes seulement si elles sont réellement utiles. Indique quand une page existante doit prendre le relais sur un sous-sujet afin d'éviter de le redévelopper dans le nouvel article.
+Éventuellement proposer le parc animalier des Angles ou le musée de Tautavel uniquement si une extension de séjour cohérente est établie; sinon aucun lien forcé.
 
-Ensuite, soumets cette décision via le format `action: start` fourni plus bas dans ce runtime. Le modèle ne renseigne jamais le nom de branche, le SHA, `targetPath`, le slug technique d'une opportunity ni les métriques GSC détaillées déjà présentes dans le snapshot.
+## Article source exact à préserver et améliorer
 
-## Catégories éditoriales autorisées
+Chemin: src/routes/articles/evenements/(2026)/(11)/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/index.md
 
-- sorties — Sorties: Des idées de sorties à partager en famille, près de chez vous.
-- voyages — Voyages: Des conseils et inspirations pour voyager sereinement en famille.
-- evenements — Événements: Les événements à découvrir et à préparer avec les enfants.
-- activites — Activités: Des activités simples et enrichissantes pour tous les âges.
-- vie-pratique — Vie pratique: Des repères concrets pour faciliter le quotidien des familles.
-- maison — Maison: Des solutions pratiques pour une maison familiale agréable.
-- cuisine — Cuisine: Des idées et conseils pour cuisiner simplement en famille.
-- parentalite — Parentalité: Des ressources bienveillantes pour accompagner la vie de famille.
-- bons-plans — Bons plans: Réductions, gratuités, pass et aides pratiques pour économiser en famille.
+---
+title: "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?"
+subtitle: Trois villages du Haut-Vallespir, des traditions spectaculaires et des précautions à connaître avec des enfants
+summary: À Prats-de-Mollo, Saint-Laurent-de-Cerdans et Arles-sur-Tech, découvrez les Fêtes de l’Ours 2027 et préparez votre sortie en famille.
+slug: fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales
+status: published
+publishedAt: 2026-11-05T05:04:01+01:00
+updatedAt: null
+category: evenements
+readingTime: 4
+location:
+  city: ""
+  department: Pyrénées-Orientales
+  region: Occitanie
+topic:
+  key: evenements|pyrenees-orientales|fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales|2026
+  keywords:
+    - Fêtes de l’Ours 2027
+    - Fête de l’Ours Pyrénées-Orientales en famille
+    - Haut-Vallespir carnaval
+image:
+  src: "/images/articles/2026/11/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales.webp"
+  alt: "Participants à la Fête de l’Ours de Prats-de-Mollo en 2016, édition antérieure à 2027"
+sources:
+  - title: Fêtes de l’Ours du Haut-Vallespir - présentation
+    url: https://www.fetesdelours.com/
+  - title: Fête de l’Ours de Prats-de-Mollo - organisateurs
+    url: https://www.fetesdelours.com/les-fetes-de-lours/fete-de-lours-de-prats-de-mollo-la-preste/
+  - title: Fête de l’Ours de Saint-Laurent-de-Cerdans - organisateurs
+    url: https://www.fetesdelours.com/les-fetes-de-lours/fete-de-lours-de-saint-laurent-de-cerdans/
+  - title: Tourisme Occitanie - Fêtes de l’Ours 2027
+    url: https://www.tourisme-occitanie.com/fr/fiche/fete-et-manifestation/fetes-de-l-ours-prats-de-mollo-la-preste_TFOFMALAR0660018062/
+  - title: UNESCO - Les fêtes de l’Ours dans les Pyrénées
+    url: https://ich.unesco.org/fr/RL/les-ftes-de-lours-dans-les-pyrnes-01846
+affiliate:
+  enabled: true
+  type: travel
+  destination: Pyrénées-Orientales
+---
+<!-- article-image-credit -->
+*Photo: [Fabricio Cardenas](https://commons.wikimedia.org/wiki/File:Prats-de-Mollo_-_F%C3%AAte_de_l%27ours_1.JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Snapshot GSC préparé
+Chaque hiver, dans trois villages du Haut-Vallespir, des habitants déguisés en ours surgissent dans les rues, poursuivent la foule puis sont capturés. À **Prats-de-Mollo-la-Preste, Saint-Laurent-de-Cerdans et Arles-sur-Tech**, les Fêtes de l’Ours mêlent carnaval, musique et traditions catalanes. Un spectacle étonnant à découvrir en famille, mais qui peut impressionner les enfants sensibles au bruit, aux masques ou aux mouvements de foule.
 
-{
-  "schemaVersion": 1,
-  "generatedAt": "2026-11-28T07:56:00+01:00",
-  "dataThrough": "2026-11-26",
-  "from": "2026-10-30",
-  "refresh": [
-    {
-      "url": "/articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/",
-      "title": "Marché de Noël 100 % Côte-d’Or à Dijon 2026: horaires, spectacles et Père Noël",
-      "category": "evenements",
-      "publishedAt": "2026-10-29T14:26:32.176Z",
-      "location": {
-        "city": "Dijon",
-        "department": "Côte-d'Or",
-        "region": "Bourgogne-Franche-Comté"
-      },
-      "ageDays": 30,
-      "rapidDrop": true,
-      "peakStart": "2026-11-01",
-      "peakEnd": "2026-11-03",
-      "recentStart": "2026-11-24",
-      "recentEnd": "2026-11-26",
-      "peakImpressions": 22,
-      "recentImpressions": 3,
-      "score": 57,
-      "signal": "uncertain",
-      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0,
-      "focusQueries": [
-        "dijon marche de noel 2026",
-        "marché de noël dijon 2026",
-        "dijon noel 2026",
-        "place de la libération"
-      ]
-    },
-    {
-      "url": "/articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/",
-      "title": "Noël 2026 à Chantilly: Le Noël oublié, billets et séances en famille",
-      "category": "evenements",
-      "publishedAt": "2026-10-26T21:31:06.019Z",
-      "location": {
-        "city": "Chantilly",
-        "department": "Oise",
-        "region": "Hauts-de-France"
-      },
-      "ageDays": 33,
-      "rapidDrop": false,
-      "peakStart": "2026-10-30",
-      "peakEnd": "2026-11-05",
-      "recentStart": "2026-11-20",
-      "recentEnd": "2026-11-26",
-      "peakImpressions": 247,
-      "recentImpressions": 31,
-      "score": 216,
-      "signal": "uncertain",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0.018,
-      "focusQueries": [
-        "chateau de chantilly noel 2026",
-        "spectacle noël chantilly 2026",
-        "noel a chantilly 2026",
-        "spectacle equestre chantilly noel 2026",
-        "chantilly noel 2026"
-      ]
-    },
-    {
-      "url": "/articles/bons-plans/carte-avantage-adulte-sncf-quand-est-elle-interessante-avec-des-enfants/",
-      "title": "Carte Avantage Adulte SNCF: quand est-elle intéressante avec des enfants?",
-      "category": "bons-plans",
-      "publishedAt": "2026-08-29T16:41:39+02:00",
-      "ageDays": 91,
-      "rapidDrop": false,
-      "peakStart": "2026-11-11",
-      "peakEnd": "2026-11-17",
-      "recentStart": "2026-11-20",
-      "recentEnd": "2026-11-26",
-      "peakImpressions": 572,
-      "recentImpressions": 409,
-      "score": 163,
-      "signal": "uncertain",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer. Diagnostic sur 1 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 1,
-      "positionDelta": -7.425,
-      "impressionRatio": 0.706,
-      "focusQueries": [
-        "carte avantage adulte",
-        "carte sncf enfant famille",
-        "accompagnant carte avantage",
-        "carte avantage adulte accompagnant",
-        "carte avantage famille"
-      ]
-    },
-    {
-      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
-      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
-      "category": "voyages",
-      "publishedAt": "2026-08-29T00:00:45+02:00",
-      "location": {
-        "city": "Paris",
-        "department": "Paris",
-        "region": "Île-de-France"
-      },
-      "ageDays": 91,
-      "rapidDrop": false,
-      "peakStart": "2026-11-13",
-      "peakEnd": "2026-11-19",
-      "recentStart": "2026-11-20",
-      "recentEnd": "2026-11-26",
-      "peakImpressions": 1592,
-      "recentImpressions": 1478,
-      "score": 117.8,
-      "signal": "search_potential",
-      "basis": "Page visible avec 1478 impressions, 3 clics et une position moyenne de 8.32 sur sept jours; intention de recherche à examiner. Les requêtes visibles ne démontrent pas une perte de classement.",
-      "commonQueries": 0,
-      "positionDelta": null,
-      "impressionRatio": 0.719,
-      "focusQueries": [
-        "prix metro enfant paris",
-        "metro paris enfant",
-        "prix ticket metro paris enfant",
-        "ticket metro paris enfant",
-        "les enfants paient ils le metro a paris"
-      ]
-    },
-    {
-      "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
-      "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
-      "category": "evenements",
-      "publishedAt": "2026-11-05T05:04:01+01:00",
-      "location": {
-        "city": "",
-        "department": "Pyrénées-Orientales",
-        "region": "Occitanie"
-      },
-      "ageDays": 23,
-      "rapidDrop": false,
-      "peakStart": "2026-11-10",
-      "peakEnd": "2026-11-16",
-      "recentStart": "2026-11-20",
-      "recentEnd": "2026-11-26",
-      "peakImpressions": 402,
-      "recentImpressions": 285,
-      "score": 117,
-      "signal": "uncertain",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer. Diagnostic sur 5 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
-      "commonQueries": 5,
-      "positionDelta": 0.065,
-      "impressionRatio": 0.678,
-      "focusQueries": [
-        "fete de l'ours 2027",
-        "fête de l'ours 2027",
-        "fête de l ours prats de mollo 2027",
-        "fête de lours 2027",
-        "fete de l ours"
-      ]
-    },
-    {
-      "url": "/articles/evenements/luminescences-2026-2027-a-amneville-en-famille-soiree-seule-ou-zoo-et-lanternes/",
-      "title": "Luminescences 2026-2027 au zoo d'Amnéville: billets, pass annuel et horaires",
-      "category": "evenements",
-      "publishedAt": "2026-10-22T09:37:18.454Z",
-      "location": {
-        "city": "Amnéville",
-        "department": "Moselle",
-        "region": "Grand Est"
-      },
-      "ageDays": 37,
-      "rapidDrop": false,
-      "peakStart": "2026-11-06",
-      "peakEnd": "2026-11-12",
-      "recentStart": "2026-11-20",
-      "recentEnd": "2026-11-26",
-      "peakImpressions": 205,
-      "recentImpressions": 88,
-      "score": 117,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Luminescences Amnéville 2026 2027",
-        "festival lanternes zoo Amnéville enfants",
-        "Luminescences Amnéville tarifs",
-        "zoo Amnéville lanternes poussette"
-      ]
-    },
-    {
-      "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
-      "title": "Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite",
-      "category": "sorties",
-      "publishedAt": "2026-08-23T10:46:58+02:00",
-      "location": {
-        "city": "Paris",
-        "department": "Paris",
-        "region": "Île-de-France"
-      },
-      "ageDays": 97,
-      "rapidDrop": false,
-      "peakStart": "2026-11-09",
-      "peakEnd": "2026-11-15",
-      "recentStart": "2026-11-20",
-      "recentEnd": "2026-11-26",
-      "peakImpressions": 484,
-      "recentImpressions": 393,
-      "score": 91,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Cité des sciences en famille",
-        "Cité des enfants Paris"
-      ]
-    },
-    {
-      "url": "/articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/",
-      "title": "Parc floral d’Orléans gratuit en hiver: horaires et sortie avec les enfants",
-      "category": "bons-plans",
-      "publishedAt": "2026-10-26T22:02:51+01:00",
-      "location": {
-        "city": "Orléans",
-        "department": "Loiret",
-        "region": "Centre-Val de Loire"
-      },
-      "ageDays": 33,
-      "rapidDrop": false,
-      "peakStart": "2026-10-30",
-      "peakEnd": "2026-11-05",
-      "recentStart": "2026-11-20",
-      "recentEnd": "2026-11-26",
-      "peakImpressions": 102,
-      "recentImpressions": 12,
-      "score": 90,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Parc floral Orléans gratuit hiver 2026 2027",
-        "Parc floral de La Source enfants",
-        "sortie gratuite famille Loiret"
-      ]
-    },
-    {
-      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
-      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
-      "category": "evenements",
-      "publishedAt": "2026-10-16T17:46:42.359Z",
-      "location": {
-        "city": "Lumigny-Nesles-Ormeaux",
-        "department": "Seine-et-Marne",
-        "region": "Île-de-France"
-      },
-      "ageDays": 43,
-      "rapidDrop": false,
-      "peakStart": "2026-10-30",
-      "peakEnd": "2026-11-05",
-      "recentStart": "2026-11-20",
-      "recentEnd": "2026-11-26",
-      "peakImpressions": 526,
-      "recentImpressions": 446,
-      "score": 80,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Lumigny Safari de Lumières 2026 2027",
-        "Safari de Lumières Lumigny tarifs famille",
-        "Lumigny Safari de Lumières billet combiné"
-      ]
-    },
-    {
-      "url": "/articles/evenements/fetes-de-saint-nicolas-2026-a-nancy-en-famille-defile-dates-et-visite/",
-      "title": "Fêtes de Saint-Nicolas 2026 à Nancy en famille: défilé, villages et animations",
-      "category": "evenements",
-      "publishedAt": "2026-10-19T16:47:56.167Z",
-      "location": {
-        "city": "Nancy",
-        "department": "Meurthe-et-Moselle",
-        "region": "Grand Est"
-      },
-      "ageDays": 40,
-      "rapidDrop": false,
-      "peakStart": "2026-11-08",
-      "peakEnd": "2026-11-14",
-      "recentStart": "2026-11-20",
-      "recentEnd": "2026-11-26",
-      "peakImpressions": 89,
-      "recentImpressions": 25,
-      "score": 64,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "fêtes Saint-Nicolas Nancy 2026 en famille",
-        "grand défilé Saint-Nicolas Nancy 5 décembre 2026",
-        "villages Saint-Nicolas Nancy enfants"
-      ]
-    },
-    {
-      "url": "/articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/",
-      "title": "Noël à Trévarez 2026 en famille: dates, horaires et réservation",
-      "category": "evenements",
-      "publishedAt": "2026-09-24T05:57:30+02:00",
-      "location": {
-        "city": "Saint-Goazec",
-        "department": "Finistère",
-        "region": "Bretagne"
-      },
-      "ageDays": 65,
-      "rapidDrop": false,
-      "peakStart": "2026-11-13",
-      "peakEnd": "2026-11-19",
-      "recentStart": "2026-11-20",
-      "recentEnd": "2026-11-26",
-      "peakImpressions": 346,
-      "recentImpressions": 1332,
-      "score": 63.2,
-      "signal": "search_potential",
-      "basis": "Page visible avec 1332 impressions, 7 clics et une position moyenne de 8.697 sur sept jours; intention de recherche à examiner.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Noël à Trévarez 2026",
-        "Trévarez en famille"
-      ]
-    },
-    {
-      "url": "/articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/",
-      "title": "Noël à Pau 2026 en famille: marchés, village et illuminations",
-      "category": "evenements",
-      "publishedAt": "2026-10-19T11:02:20+02:00",
-      "location": {
-        "city": "Pau",
-        "department": "Pyrénées-Atlantiques",
-        "region": "Nouvelle-Aquitaine"
-      },
-      "ageDays": 40,
-      "rapidDrop": false,
-      "peakStart": "2026-11-10",
-      "peakEnd": "2026-11-16",
-      "recentStart": "2026-11-20",
-      "recentEnd": "2026-11-26",
-      "peakImpressions": 99,
-      "recentImpressions": 37,
-      "score": 62,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Noël à Pau 2026 en famille",
-        "marché de Noël Pau enfants"
-      ]
-    },
-    {
-      "url": "/articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/",
-      "title": "Marché de Noël de Reims 2026 en famille: horaires, grande roue et animations",
-      "category": "evenements",
-      "publishedAt": "2026-10-20T00:30:38.892Z",
-      "location": {
-        "city": "Reims",
-        "department": "Marne",
-        "region": "Grand Est"
-      },
-      "ageDays": 39,
-      "rapidDrop": false,
-      "peakStart": "2026-11-13",
-      "peakEnd": "2026-11-19",
-      "recentStart": "2026-11-20",
-      "recentEnd": "2026-11-26",
-      "peakImpressions": 153,
-      "recentImpressions": 92,
-      "score": 61,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "marché de Noël Reims 2026 famille",
-        "marché de Noël Reims enfants horaires",
-        "marché de Noël Reims grande roue"
-      ]
-    },
-    {
-      "url": "/articles/vie-pratique/cantine-au-college-en-essonne-obtenir-son-tarif-2026-2027-sans-refaire-la-mauvaise-demarche/",
-      "title": "Cantine au collège en Essonne: obtenir son tarif 2026-2027 sans refaire la mauvaise démarche",
-      "category": "vie-pratique",
-      "publishedAt": "2026-09-13T16:03:15+02:00",
-      "location": {
-        "city": "Évry-Courcouronnes",
-        "department": "Essonne",
-        "region": "Île-de-France"
-      },
-      "ageDays": 76,
-      "rapidDrop": false,
-      "peakStart": "2026-11-03",
-      "peakEnd": "2026-11-09",
-      "recentStart": "2026-11-20",
-      "recentEnd": "2026-11-26",
-      "peakImpressions": 187,
-      "recentImpressions": 130,
-      "score": 57,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "tarif cantine collège Essonne 2026-2027",
-        "restauration scolaire Essonne"
-      ]
-    },
-    {
-      "url": "/articles/cuisine/fete-de-la-truffe-2027-a-sarlat-en-famille-que-faire-et-que-gouter/",
-      "title": "Fête de la Truffe 2027 à Sarlat en famille: que faire et que goûter ?",
-      "category": "cuisine",
-      "publishedAt": "2026-11-09T02:03:08+01:00",
-      "location": {
-        "city": "Sarlat-la-Canéda",
-        "department": "Dordogne",
-        "region": "Nouvelle-Aquitaine"
-      },
-      "ageDays": 19,
-      "rapidDrop": false,
-      "peakStart": "2026-11-10",
-      "peakEnd": "2026-11-16",
-      "recentStart": "2026-11-20",
-      "recentEnd": "2026-11-26",
-      "peakImpressions": 127,
-      "recentImpressions": 75,
-      "score": 52,
-      "signal": "needs_query_check",
-      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
-      "commonQueries": null,
-      "positionDelta": null,
-      "impressionRatio": null,
-      "focusQueries": [
-        "Fête de la Truffe Sarlat 2027",
-        "Sarlat en famille janvier",
-        "truffe noire du Périgord"
-      ]
-    }
-  ],
-  "strongPages": [
-    {
-      "url": "/articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/",
-      "title": "Gastronomades 2026 à Angoulême en famille: programme, tarifs et conseils",
-      "category": "evenements",
-      "recentImpressions": 807,
-      "recentClicks": 21,
-      "recentPosition": 5.934,
-      "retention": 2.783
-    },
-    {
-      "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
-      "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
-      "category": "evenements",
-      "recentImpressions": 402,
-      "recentClicks": 16,
-      "recentPosition": 7.321,
-      "retention": 1.327
-    },
-    {
-      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
-      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
-      "category": "evenements",
-      "recentImpressions": 446,
-      "recentClicks": 11,
-      "recentPosition": 7.538,
-      "retention": 0.848
-    },
-    {
-      "url": "/articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/",
-      "title": "Noël 2026 au château de Goulaine: dates, billets et conseils en famille",
-      "category": "evenements",
-      "recentImpressions": 395,
-      "recentClicks": 9,
-      "recentPosition": 7.218,
-      "retention": 1.717
-    },
-    {
-      "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
-      "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
-      "category": "evenements",
-      "recentImpressions": 285,
-      "recentClicks": 9,
-      "recentPosition": 3.74,
-      "retention": 0.709
-    },
-    {
-      "url": "/articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/",
-      "title": "Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille",
-      "category": "evenements",
-      "recentImpressions": 521,
-      "recentClicks": 8,
-      "recentPosition": 6.359,
-      "retention": 1.176
-    },
-    {
-      "url": "/articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/",
-      "title": "Noël à Trévarez 2026 en famille: dates, horaires et réservation",
-      "category": "evenements",
-      "recentImpressions": 1332,
-      "recentClicks": 7,
-      "recentPosition": 8.697,
-      "retention": 3.85
-    },
-    {
-      "url": "/articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/",
-      "title": "Déchets verts à Toulouse Métropole en 2027: collecte, broyage et évacuation des gros volumes",
-      "category": "maison",
-      "recentImpressions": 100,
-      "recentClicks": 7,
-      "recentPosition": 6.27,
-      "retention": 0.926
-    },
-    {
-      "url": "/articles/evenements/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants/",
-      "title": "Fontaines dansantes d'hiver à Metz 2026-2027: dates, horaires et conseils en famille",
-      "category": "evenements",
-      "recentImpressions": 495,
-      "recentClicks": 5,
-      "recentPosition": 8.345,
-      "retention": 3.75
-    },
-    {
-      "url": "/articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/",
-      "title": "Recycleries autour de Chartres: où donner et acheter d'occasion ?",
-      "category": "maison",
-      "recentImpressions": 116,
-      "recentClicks": 5,
-      "recentPosition": 10.397,
-      "retention": 0.975
-    }
-  ],
-  "excluded": {
-    "expired": 198,
-    "cooling": 71
-  },
-  "warnings": [
-    "Diagnostics par requêtes : 5/5.",
-    "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement."
-  ]
-}
+## Trois villages, trois ambiances
 
-## Catalogue ciblé (doublons et publications récentes)
+<!-- article-image-body:02 -->
 
-### Articles comparables et publications récentes
+![Rasage rituel lors de la Fête de l'Ours à Arles-sur-Tech en février 2025](/images/articles/2026/11/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales-body-02.webp)
 
-- /articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/ | Marché de Noël 100 % Côte-d’Or à Dijon 2026: horaires, spectacles et Père Noël | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/evenements/festival-des-petits-explorateurs-2026-a-dijon-quels-ateliers-choisir-en-famille/ | Festival des Petits Explorateurs 2026 à Dijon: ateliers, horaires et tarifs | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/evenements/foire-de-dijon-2026-en-famille-dates-ateliers-animaux-et-gratuites/ | Foire de Dijon 2026 avec les enfants: gratuités, ateliers et Ferme Côte-d'Or | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/vie-pratique/frais-scolaires-en-cote-d-or-quelles-aides-demander-au-departement/ | Frais scolaires en Côte-d'Or: quelles aides demander au Département? | vie-pratique | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
-- /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | Noël 2026 à Chantilly: Le Noël oublié, billets et séances en famille | evenements | Chantilly, Oise, Hauts-de-France
-- /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | Halloween 2026 au Château de Chantilly avec des enfants: ateliers, nocturnes et spectacle | sorties | Chantilly, Oise, Hauts-de-France
-- /articles/cuisine/atelier-de-creme-chantilly-avec-des-enfants-a-partir-de-quel-age-et-comment-reserver/ | Atelier de crème Chantilly avec des enfants: à partir de quel âge et comment réserver | cuisine | Chantilly, Oise, Hauts-de-France
-- /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | Noël de Casse-Noisette 2026 à Pierrefonds: visites, dates et tarifs en famille | evenements | Pierrefonds, Oise, Hauts-de-France
-- /articles/bons-plans/carte-avantage-adulte-sncf-quand-est-elle-interessante-avec-des-enfants/ | Carte Avantage Adulte SNCF: quand est-elle intéressante avec des enfants? | bons-plans
-- /articles/bons-plans/carte-familles-nombreuses-reductions-demarches/ | Carte Familles Nombreuses: réductions, conditions et demande en ligne | bons-plans
-- /articles/voyages/sarlat-sans-voiture-avec-des-enfants-est-ce-realiste-pour-un-week-end/ | Sarlat sans voiture avec des enfants: est-ce réaliste pour un week-end? | voyages | Sarlat-la-Canéda, Dordogne, Nouvelle-Aquitaine
-- /articles/voyages/train-de-la-rhune-avec-des-enfants-billets-duree-et-conseils-en-2026/ | Train de la Rhune avec des enfants: billets, durée et conseils en 2026 | voyages | Sare, Pyrénées-Atlantiques, Nouvelle-Aquitaine
-- /articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/ | Transports à Paris avec des enfants: quel titre choisir pour payer juste? | voyages | Paris, Paris, Île-de-France
-- /articles/evenements/salon-du-chocolat-paris-2026-avec-des-enfants-quel-billet-choisir-et-quels-ateliers-reserver/ | Salon du Chocolat Paris 2026 avec des enfants: quel billet choisir et quels ateliers réserver | evenements | Paris, Paris, Île-de-France
-- /articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/ | Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite | sorties | Paris, Paris, Île-de-France
-- /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | Mondial de l’Auto 2026 avec des enfants: billets, horaires et créneaux | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/ | Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ? | evenements | Pyrénées-Orientales, Occitanie
+<!-- /article-image-body:02 -->
+
+<!-- article-image-body:01 -->
+
+![Fête de l'Ours de Saint-Laurent-de-Cerdans photographiée en février 2018](/images/articles/2026/11/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales-body-01.webp)
+
+*Photo: [Fabricio Cardenas](https://commons.wikimedia.org/wiki/File:2018-02-25_-_F%C3%AAte_de_l%27ours_Saint-Laurent-de-Cerdans_11.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+**Prats-de-Mollo-la-Preste: une chasse à l’ours mouvementée.** Trois jeunes portent des toisons et s'enduisent d'un mélange d'huile et de noir de fumée. Ils poursuivent les participants et peuvent leur laisser une marque noire sur le visage. Leur capture et leur rasage symbolique marquent le retour à l'humanité. C'est une fête très physique, à envisager avec des enfants à l'aise dans une foule animée. Le [site des organisateurs](https://www.fetesdelours.com/les-fetes-de-lours/fete-de-lours-de-prats-de-mollo-la-preste/) décrit le rituel, mais affiche encore le programme **2026**.
+
+**Saint-Laurent-de-Cerdans: l’ours au milieu du carnaval.** Le défilé accueille plusieurs figures traditionnelles, dont la **Monaca**. L'ours, capturé par le Meneur, est présenté à la foule sur les places du village. Costumes et personnages peuvent fasciner les enfants, mais les courses-poursuites restent impressionnantes. La [présentation des organisateurs](https://www.fetesdelours.com/les-fetes-de-lours/fete-de-lours-de-saint-laurent-de-cerdans/) détaille ces traditions. Son programme visible est également celui de **2026**.
+
+**Arles-sur-Tech: une autre interprétation du même rite.** Cette troisième fête appartient au cycle traditionnel du Haut-Vallespir. Sans programme détaillé pour 2027, impossible de garantir une ambiance plus calme ou un parcours mieux adapté aux petits. Consultez le [site commun des Fêtes de l’Ours](https://www.fetesdelours.com/) avant de choisir.
+
+## Pourquoi chasse-t-on l’ours ?
+
+Les ours sont joués par des habitants, pas par des animaux. La poursuite, la capture et la transformation finale évoquent la fin de l'hiver, le retour du printemps et la relation entre les humains et la nature. Le mythe de Jean de l'Ours, être mi-homme, mi-ours, nourrit cet imaginaire.
+
+Ces fêtes se transmettent au sein des villages, des associations et des familles. Depuis **2022**, les [fêtes de l’Ours dans les Pyrénées sont inscrites au patrimoine culturel immatériel de l’humanité par l’UNESCO](https://ich.unesco.org/fr/RL/les-ftes-de-lours-dans-les-pyrnes-01846). Cette reconnaissance concerne cinq villages en France et en Andorre, dont les trois communes du Haut-Vallespir.
+
+## Avec des enfants: comment profiter de la fête ?
+
+Avant de venir, expliquez que les ours sont des personnes costumées et que les poursuites font partie du rituel. Pour une première découverte, privilégiez un endroit où vous pourrez vous éloigner rapidement si l'enfant prend peur. Évitez les passages étroits et le cœur des attroupements.
+
+À Prats-de-Mollo, le noir de fumée peut tacher les vêtements. Prévoyez des habits peu fragiles, des chaussures fermées et des vêtements chauds pour février. Avec un bébé ou une poussette, ne comptez pas sur une circulation fluide au milieu des défilés. Aucun parcours accessible ni espace calme spécifique pour 2027 n'est confirmé.
+
+Il n'existe pas de village à recommander sans réserve aux tout-petits. Un enfant qui aime les carnavals bruyants peut apprécier la fête; un autre préférera observer de loin, voire éviter les séquences de poursuite.
+
+## Dates des Fêtes de l’Ours 2027
+
+La fiche de [Tourisme Occitanie](https://www.tourisme-occitanie.com/fr/fiche/fete-et-manifestation/fetes-de-l-ours-prats-de-mollo-la-preste_TFOFMALAR0660018062/) annonce les rendez-vous suivants:
+
+- **Saint-Laurent-de-Cerdans: du 12 au 14 février 2027**, sous réserve de confirmation du programme par les organisateurs.
+- **Prats-de-Mollo-la-Preste: date 2027 à venir.**
+- **Arles-sur-Tech: date 2027 à venir.**
+
+Ces dates ne précisent pas à elles seules l'heure de la chasse à l'ours. Les horaires des poursuites, les animations annexes et les lieux de départ doivent encore être confirmés. Attention aux programmes **2026** toujours visibles sur les sites des organisateurs.
+
+## Organiser la visite
+
+Les trois villages se trouvent dans le Haut-Vallespir, au sud du Canigó. En février, vérifiez la météo et les conditions de circulation avant de partir. Les éventuelles restrictions de stationnement, navettes et fermetures de rues pour 2027 ne sont pas encore précisées.
+
+Les poursuites sont des fêtes populaires et aucune billetterie générale payante n'a été identifiée. Certains repas, bals ou événements annexes peuvent toutefois demander une réservation ou une participation: vérifiez le programme du village choisi.
+
+## Où dormir pour prolonger la découverte ?
+
+Si vous venez de loin, passer une nuit sur place permet de profiter des festivités sans reprendre immédiatement la route. Deux hébergements à considérer selon le village retenu:
+
+- **À Prats-de-Mollo-la-Preste**, le [FASTHOTEL Le Costabonne](https://www.booking.com/hotel/fr/restaurant-le-costabonne.fr.html), place du Foiral, propose notamment des chambres familiales et un restaurant.
+- **À Saint-Laurent-de-Cerdans**, le [Domaine de Falgos Golf & Spa](https://www.booking.com/hotel/fr/le-domaine-de-falgos.fr.html) dispose de chambres et d'une piscine intérieure. Vérifiez les conditions d'accès aux équipements avec des enfants.
+
+Confirmez d'abord la date et le programme de votre fête, puis vérifiez les chambres disponibles et leurs conditions. Les tarifs et disponibilités pour février 2027 ne sont pas garantis.
+
+## Contexte éditorial ciblé pour le maillage et les doublons
+
+### Articles proches préparés mécaniquement
+
 - /articles/parentalite/quel-laep-choisir-a-perpignan-selon-l-age-et-le-jour/ | Quel LAEP choisir à Perpignan selon l'âge et le jour ? | parentalite | Perpignan, Pyrénées-Orientales, Occitanie
 - /articles/activites/parc-animalier-des-angles-en-famille-quel-circuit-choisir-et-comment-preparer-la-visite/ | Parc animalier des Angles en famille: quel circuit choisir et comment préparer la visite ? | activites | Les Angles, Pyrénées-Orientales, Occitanie
 - /articles/bons-plans/musee-de-tautavel-moins-cher-avec-lio-le-bon-plan-a-connaitre/ | Musée de Tautavel moins cher avec liO: le bon plan à connaître | bons-plans | Tautavel, Pyrénées-Orientales, Occitanie
-- /articles/evenements/luminescences-2026-2027-a-amneville-en-famille-soiree-seule-ou-zoo-et-lanternes/ | Luminescences 2026-2027 au zoo d'Amnéville: billets, pass annuel et horaires | evenements | Amnéville, Moselle, Grand Est
-- /articles/activites/snowworld-amneville-en-famille-luge-bouees-ou-ski/ | SnowWorld Amnéville en famille: luge, bouées ou ski ? | activites | Amnéville, Moselle, Grand Est
-- /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/noel-a-metz-2026-en-famille-marches-et-sentier-des-lanternes/ | Noël à Metz 2026 en famille: marchés et Sentier des Lanternes | evenements | Metz, Moselle, Grand Est
-- /articles/activites/stages-de-science-a-la-cite-des-sciences-pendant-la-toussaint-2026-lequel-choisir-selon-l-age/ | Stages de science à la Cité des sciences à la Toussaint 2026: durées, âges et tarifs | activites | Paris, Paris, Île-de-France
-- /articles/evenements/cite-immersive-des-fables-a-paris-decouvrir-la-fontaine-en-famille/ | Cité immersive des Fables à Paris: découvrir La Fontaine en famille | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | Rencontres du ciel et de l’espace 2026 à Paris: ateliers, âges et billets en famille | evenements | Paris, Paris, Île-de-France
-- /articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/ | Parc floral d’Orléans gratuit en hiver: horaires et sortie avec les enfants | bons-plans | Orléans, Loiret, Centre-Val de Loire
-- /articles/maison/composteur-gratuit-a-orleans-metropole-comment-en-profiter-en-2026/ | Composteur gratuit à Orléans Métropole: comment en profiter en 2026 | maison | Orléans, Loiret, Centre-Val de Loire
-- /articles/sorties/chasse-motifs-loire-orleans-famille-2026/ | Chasse aux motifs de Loire à Orléans: une balade gratuite pour les 6 à 12 ans | sorties | Orléans, Loiret, Centre-Val de Loire
-- /articles/activites/mobe-d-orleans-en-famille-fossiles-jeux-et-biodiversite/ | MOBE d’Orléans en famille: fossiles, jeux et biodiversité | activites | Orléans, Loiret, Centre-Val de Loire
-- /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille | evenements | Lumigny-Nesles-Ormeaux, Seine-et-Marne, Île-de-France
-- /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | Thoiry Lumières Sauvages 2026-2027: dates, billets et visite en famille | evenements | Thoiry, Yvelines, Île-de-France
-- /articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/ | Planète Préhistorique à Bordeaux: dates, durée et tarifs en famille | sorties | Bordeaux, Gironde, Nouvelle-Aquitaine
-- /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/evenements/fetes-de-saint-nicolas-2026-a-nancy-en-famille-defile-dates-et-visite/ | Fêtes de Saint-Nicolas 2026 à Nancy en famille: défilé, villages et animations | evenements | Nancy, Meurthe-et-Moselle, Grand Est
-- /articles/evenements/saint-nicolas-2026-a-saint-nicolas-de-port-village-defile-ou-procession-en-famille/ | Saint-Nicolas-de-Port 2026 en famille: horaires du défilé et de la procession | evenements | Saint-Nicolas-de-Port, Meurthe-et-Moselle, Grand Est
-- /articles/parentalite/ludotheques-du-grand-nancy-ou-jouer-en-famille-et-emprunter-des-jeux/ | Ludothèques du Grand Nancy: où jouer en famille et emprunter des jeux | parentalite | Meurthe-et-Moselle, Grand Est
-- /articles/evenements/saint-nicolas-2026-a-epinal-en-famille-defile-du-5-decembre-ou-marche-de-noel/ | Saint-Nicolas 2026 à Épinal: cortège du 5 décembre et marché de Noël en famille | evenements | Épinal, Vosges, Grand Est
-- /articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/ | Noël à Trévarez 2026 en famille: dates, horaires et réservation | evenements | Saint-Goazec, Finistère, Bretagne
-- /articles/evenements/train-de-noel-de-la-haute-somme-2026-en-famille-dates-tarifs-et-reservation/ | Train de Noël de la Haute Somme 2026 en famille: dates, tarifs et réservation | evenements | La Neuville-les-Bray, Somme, Hauts-de-France
-- /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | Noël 2026 à Brest en famille: marché, projections et horaires | evenements | Brest, Finistère, Bretagne
-- /articles/evenements/train-du-pere-noel-a-toucy-2026-horaires-tarifs-et-reservation/ | Train du Père Noël à Toucy 2026: horaires, tarifs et réservation | evenements | Toucy, Yonne, Bourgogne-Franche-Comté
-- /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
-- /articles/evenements/noel-2026-a-rochefort-en-terre-avec-des-enfants-village-et-illuminations/ | Noël 2026 à Rochefort-en-Terre avec des enfants: village et illuminations | evenements | Rochefort-en-Terre, Morbihan, Bretagne
-- /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | Noël à Caen 2026 en famille: marché de Noël et visite illuminée | evenements | Caen, Calvados, Normandie
-- /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | Noël à Chartres 2026 en famille: marché et illuminations | evenements | Chartres, Eure-et-Loir, Centre-Val de Loire
-- /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | Marché de Noël de Reims 2026 en famille: horaires, grande roue et animations | evenements | Reims, Marne, Grand Est
-- /articles/evenements/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/ | Marchés de Noël de Tours 2026 en famille: horaires, animations et budget | evenements | Tours, Indre-et-Loire, Centre-Val de Loire
-- /articles/evenements/ville-de-noel-d-arras-2026-en-famille-grande-roue-patinoire-et-horaires/ | Ville de Noël d’Arras 2026 en famille: horaires, attractions et budget | evenements | Arras, Pas-de-Calais, Hauts-de-France
-- /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | Marché de Noël de Bordeaux 2026 en famille: horaires, animations et budget | evenements | Bordeaux, Gironde, Nouvelle-Aquitaine
-- /articles/vie-pratique/cantine-au-college-en-essonne-obtenir-son-tarif-2026-2027-sans-refaire-la-mauvaise-demarche/ | Cantine au collège en Essonne: obtenir son tarif 2026-2027 sans refaire la mauvaise démarche | vie-pratique | Évry-Courcouronnes, Essonne, Île-de-France
-- /articles/bons-plans/cantine-au-college-dans-l-herault-jusqu-a-3-60-d-aide-par-repas/ | Cantine au collège dans l'Hérault: jusqu'à 3,60 € d'aide par repas | bons-plans | Montpellier, Hérault, Occitanie
-- /articles/vie-pratique/cantine-au-college-en-deux-sevres-comment-s-inscrire-en-ligne-pour-2026-2027/ | Cantine au collège en Deux-Sèvres: comment s'inscrire en ligne pour 2026-2027 | vie-pratique | Niort, Deux-Sèvres, Nouvelle-Aquitaine
-- /articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/ | Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers | vie-pratique | Hénin-Beaumont, Pas-de-Calais, Hauts-de-France
-- /articles/cuisine/fete-de-la-truffe-2027-a-sarlat-en-famille-que-faire-et-que-gouter/ | Fête de la Truffe 2027 à Sarlat en famille: que faire et que goûter ? | cuisine | Sarlat-la-Canéda, Dordogne, Nouvelle-Aquitaine
-- /articles/evenements/l-ours-et-la-louve-a-sarlat-faut-il-reserver-pour-ce-spectacle-gratuit-des-3-ans/ | L'Ours et la Louve à Sarlat: faut-il réserver pour ce spectacle gratuit dès 3 ans? | evenements | Sarlat-la-Canéda, Dordogne, Nouvelle-Aquitaine
-- /articles/cuisine/huile-de-noix-du-perigord-du-moulin-de-neuvic-a-la-cuisine-familiale/ | Huile de noix du Périgord: du moulin de Neuvic à la cuisine familiale | cuisine | Neuvic, Dordogne, Nouvelle-Aquitaine
-- /articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/ | Gastronomades 2026 à Angoulême en famille: programme, tarifs et conseils | evenements | Angoulême, Charente, Nouvelle-Aquitaine
-- /articles/sorties/musee-de-la-bd-a-angouleme-en-famille-tarifs-horaires-et-conseils-de-visite/ | Musée de la BD à Angoulême en famille: tarifs, horaires et conseils de visite | sorties | Angoulême, Charente, Nouvelle-Aquitaine
-- /articles/voyages/ou-dormir-a-angouleme-avec-des-enfants-pour-visiter-la-ville-a-pied/ | Où dormir à Angoulême avec des enfants pour visiter la ville à pied | voyages | Angoulême, Charente, Nouvelle-Aquitaine
-- /articles/parentalite/decouvrir-la-bd-avec-ses-enfants-a-angouleme/ | Découvrir la BD avec ses enfants à Angoulême | parentalite | Angoulême, Charente, Nouvelle-Aquitaine
-- /articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/ | Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants | evenements | Le Mans, Sarthe, Pays de la Loire
-- /articles/voyages/le-mans-sans-voiture-avec-des-enfants-ou-dormir-et-comment-organiser-un-week-end/ | Le Mans sans voiture avec des enfants: où dormir et comment organiser un week-end | voyages | Le Mans, Sarthe, Pays de la Loire
-- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
-- /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | Marché de Noël d'Avignon 2026 en famille: horaires, Père Noël et animations | evenements | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
-- /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | Noël 2026 au château de Goulaine: dates, billets et conseils en famille | evenements | Haute-Goulaine, Loire-Atlantique, Pays de la Loire
-- /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
-- /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | Noël des Siècles 2026 à Champs-sur-Marne: billets, budget et horaires en famille | evenements | Champs-sur-Marne, Seine-et-Marne, Île-de-France
+- /articles/sorties/insectes-compagnie-perpignan-famille-2026/ | Insectes et compagnie à Perpignan: trois visites ludiques en famille en août | sorties | Perpignan, Pyrénées-Orientales, Occitanie
+- /articles/cuisine/anchois-de-collioure-quelle-visite-choisir-avec-des-enfants/ | Anchois de Collioure: quelle visite choisir avec des enfants? | cuisine | Collioure, Pyrénées-Orientales, Occitanie
+- /articles/evenements/course-des-chateaux-d-ottrott-2026-quelles-epreuves-choisir-pour-les-enfants/ | Course des Châteaux d'Ottrott 2026: quelles épreuves choisir pour les enfants? | evenements | Ottrott, Bas-Rhin, Grand Est
 - /articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/ | Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille | evenements | Nevers, Nièvre, Bourgogne-Franche-Comté
-- /articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/ | Déchets verts à Toulouse Métropole en 2027: collecte, broyage et évacuation des gros volumes | maison | Toulouse, Haute-Garonne, Occitanie
-- /articles/activites/accrocamp-toulouse-avec-des-enfants-quel-pass-choisir-selon-leur-taille/ | AccroCamp Toulouse avec des enfants: quel pass choisir selon leur taille? | activites | Toulouse, Haute-Garonne, Occitanie
-- /articles/bons-plans/halle-de-la-machine-et-envol-des-pionniers-quels-billets-choisir-en-famille/ | Halle de la Machine et Envol des Pionniers: quels billets choisir en famille ? | bons-plans | Toulouse, Haute-Garonne, Occitanie
-- /articles/voyages/cite-de-l-espace-a-toulouse-en-famille-en-2026-une-journee-suffit-elle-et-ou-dormir/ | Cité de l'espace à Toulouse en famille en 2026: une journée suffit-elle et où dormir | voyages | Toulouse, Haute-Garonne, Occitanie
-- /articles/evenements/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants/ | Fontaines dansantes d'hiver à Metz 2026-2027: dates, horaires et conseils en famille | evenements | Metz, Moselle, Grand Est
-- /articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/ | Traîneau flottant de Noël à Metz 2026: dates, horaires et embarquement | evenements | Metz, Moselle, Grand Est
-- /articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/ | Recycleries autour de Chartres: où donner et acheter d'occasion ? | maison | Chartres, Eure-et-Loir, Centre-Val de Loire
-- /articles/cuisine/apres-une-cueillette-en-eure-et-loir-5-recettes-faciles-a-faire-avec-les-enfants/ | Après une cueillette en Eure-et-Loir: 5 recettes faciles à faire avec les enfants | cuisine | Chartres, Eure-et-Loir, Centre-Val de Loire
-- /articles/maison/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/ | Meubles d'occasion en Meurthe-et-Moselle: où acheter, donner et réparer ? | maison | Meurthe-et-Moselle, Grand Est
-- /articles/maison/composter-en-famille-au-pays-basque-quelle-solution-choisir-selon-son-logement/ | Composter en famille au Pays Basque: quelle solution choisir selon son logement ? | maison | Pyrénées-Atlantiques, Nouvelle-Aquitaine
-- /articles/activites/musee-de-la-nacre-a-meru-en-famille-des-dominos-aux-ateliers-creatifs/ | Musée de la Nacre à Méru en famille: des dominos aux ateliers créatifs | activites | Méru, Oise, Hauts-de-France
+- /articles/sorties/lascaux-iv-en-famille-decouvrir-les-peintures-et-choisir-sa-visite/ | Lascaux IV en famille: découvrir les peintures et choisir sa visite | sorties | Montignac-Lascaux, Dordogne, Nouvelle-Aquitaine
+- /articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/ | Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ? | evenements | Pyrénées-Orientales, Occitanie
+- /articles/voyages/banyuls-sur-mer-en-famille-aquarium-et-balade-hors-saison/ | Banyuls-sur-Mer en famille: aquarium et balade hors saison | voyages | Banyuls-sur-Mer, Pyrénées-Orientales, Occitanie
+- /articles/sorties/forteresse-de-salses-en-famille-ce-que-change-le-nouveau-parcours/ | Forteresse de Salses en famille: ce que change le nouveau parcours | sorties | Salses-le-Château, Pyrénées-Orientales, Occitanie
+- /articles/maison/renover-une-facade-a-perpignan-jusqu-a-40-d-aide-selon-le-secteur/ | Rénover une façade à Perpignan: jusqu'à 40 % d'aide selon le secteur | maison | Perpignan, Pyrénées-Orientales, Occitanie
+- /articles/vie-pratique/location-de-voiture-a-perpignan-en-famille-sieges-enfant-agences-et-bons-reflexes/ | Louer une voiture à Perpignan: aéroport, gare et stationnement | vie-pratique | Perpignan, Pyrénées-Orientales, Occitanie
 - /articles/evenements/spectacles-pour-enfants-a-nantes-en-fevrier-2027-que-choisir-pendant-les-vacances/ | Spectacles pour enfants à Nantes en février 2027: que choisir pendant les vacances ? | evenements | Nantes, Loire-Atlantique, Pays de la Loire
-- /articles/sorties/abbaye-de-cluny-avec-des-enfants-retrouver-une-eglise-presque-disparue/ | Abbaye de Cluny avec des enfants: retrouver une église presque disparue | sorties | Cluny, Saône-et-Loire, Bourgogne-Franche-Comté
-- /articles/vie-pratique/location-de-velos-familiaux-a-bourg-en-bresse-tester-le-cargo-au-quotidien/ | Location de vélos familiaux à Bourg-en-Bresse: tester le cargo au quotidien | vie-pratique | Bourg-en-Bresse, Ain, Auvergne-Rhône-Alpes
-- /articles/activites/a-lyon-decouvrir-l-impression-sur-soie-en-famille-chez-brochier/ | À Lyon, découvrir l’impression sur soie en famille chez Brochier | activites | Lyon, Rhône, Auvergne-Rhône-Alpes
-- /articles/voyages/visiter-le-theatre-antique-d-orange-en-famille/ | Visiter le Théâtre antique d’Orange en famille | voyages | Orange, Vaucluse, Provence-Alpes-Côte d’Azur
-- /articles/parentalite/accompagnement-a-la-scolarite-dans-l-herault-comment-le-clas-aide-les-familles/ | Accompagnement à la scolarité dans l'Hérault: comment le CLAS aide les familles | parentalite | Hérault, Occitanie
-- /articles/sorties/illusion-nantes-en-famille-jouer-avec-les-trompe-l-oeil/ | Illusion Nantes en famille: jouer avec les trompe-l’œil | sorties | Nantes, Loire-Atlantique, Pays de la Loire
-- /articles/vie-pratique/transports-scolaires-optymo-dans-le-territoire-de-belfort-quelle-carte-choisir/ | Transports scolaires Optymo dans le Territoire de Belfort: quelle carte choisir ? | vie-pratique | Territoire de Belfort, Bourgogne-Franche-Comté
-- /articles/activites/seaquarium-du-grau-du-roi-en-famille-decouvrir-la-vie-marine-hors-saison/ | Seaquarium du Grau-du-Roi en famille: découvrir la vie marine hors saison | activites | Le Grau-du-Roi, Gard, Occitanie
-- /articles/vie-pratique/mediatheques-escales-dans-les-vosges-emprunter-des-livres-et-des-jeux-en-famille/ | Médiathèques Escales dans les Vosges: emprunter des livres et des jeux en famille | vie-pratique | Vosges, Grand Est
-- /articles/voyages/alligator-bay-en-famille-decouvrir-les-reptiles-et-preparer-sa-visite/ | Alligator Bay en famille: découvrir les reptiles et préparer sa visite | voyages | Beauvoir, Manche, Normandie
-- /articles/bons-plans/musee-des-beaux-arts-de-draguignan-en-famille-gratuites-et-ateliers/ | Musée des Beaux-Arts de Draguignan en famille: gratuités et ateliers | bons-plans | Draguignan, Var, Provence-Alpes-Côte d’Azur
-- /articles/cuisine/pastis-landais-maison-la-recette-du-gouter-sans-alcool-ajoute/ | Pastis landais maison: la recette du goûter sans alcool ajouté | cuisine | Landes, Nouvelle-Aquitaine
-- /articles/maison/composter-en-famille-dans-la-metropole-lilloise-avec-ou-sans-jardin/ | Composter en famille dans la métropole lilloise: avec ou sans jardin | maison | Nord, Hauts-de-France
-- /articles/sorties/petit-cocotier-au-morne-rouge-decouvrir-la-vanille-en-famille/ | Petit Cocotier au Morne-Rouge: découvrir la vanille en famille | sorties | Le Morne-Rouge, Martinique, Martinique
-- /articles/voyages/samoens-en-famille-cet-hiver-un-premier-sejour-a-la-neige-avec-ou-sans-ski/ | Samoëns en famille cet hiver: un premier séjour à la neige avec ou sans ski | voyages | Samoëns, Haute-Savoie, Auvergne-Rhône-Alpes
-- /articles/voyages/honfleur-en-famille-hors-saison-que-faire-le-temps-d-un-week-end/ | Honfleur en famille hors saison: que faire le temps d'un week-end ? | voyages | Honfleur, Calvados, Normandie
-- /articles/activites/accrobranche-au-maido-en-famille-preparer-sa-sortie-a-enler-pied-bois/ | Accrobranche au Maïdo en famille: préparer sa sortie à Enlèr Pied’Bois | activites | Saint-Paul, La Réunion, La Réunion
-- /articles/bons-plans/pass-chateaux-du-loir-et-cher-quelles-economies-en-famille/ | Pass châteaux du Loir-et-Cher: quelles économies en famille ? | bons-plans | Loir-et-Cher, Centre-Val de Loire
-- /articles/vie-pratique/se-deplacer-en-famille-en-haute-saone-sans-voiture-au-quotidien/ | Se déplacer en famille en Haute-Saône sans voiture au quotidien | vie-pratique | Haute-Saône, Bourgogne-Franche-Comté
-- /articles/vie-pratique/metz-en-famille-sans-voiture-train-bus-et-bagages/ | Metz en famille sans voiture: train, bus et bagages | vie-pratique | Metz, Moselle, Grand Est
-- /articles/voyages/musee-de-l-illusion-a-lille-une-visite-a-partager-en-famille/ | Musée de l’Illusion à Lille: une visite à partager en famille | voyages | Lille, Nord, Hauts-de-France
-- /articles/bons-plans/bordeaux-citypass-en-famille-quel-pass-choisir-pour-economiser/ | Bordeaux CityPass en famille: quel pass choisir pour économiser ? | bons-plans | Bordeaux, Gironde, Nouvelle-Aquitaine
-- /articles/sorties/le-sourou-a-roura-en-famille-une-journee-entre-pirogue-kayak-et-foret/ | Le Sourou à Roura en famille: une journée entre pirogue, kayak et forêt | sorties | Roura, Guyane, Guyane
+- /articles/evenements/cite-immersive-des-fables-a-paris-decouvrir-la-fontaine-en-famille/ | Cité immersive des Fables à Paris: découvrir La Fontaine en famille | evenements | Paris, Paris, Île-de-France
 - /articles/evenements/sculptures-sur-glace-et-neige-a-valloire-en-janvier-2027/ | Sculptures sur glace et neige à Valloire en janvier 2027 | evenements | Valloire, Savoie, Auvergne-Rhône-Alpes
-- /articles/bons-plans/sainte-chapelle-et-conciergerie-en-famille-a-paris-quels-billets-choisir/ | Sainte-Chapelle et Conciergerie en famille à Paris: quels billets choisir ? | bons-plans | Paris, Paris, Île-de-France
+- /articles/evenements/seraphine-louis-a-metz-decouvrir-l-exposition-avec-les-enfants/ | Séraphine Louis à Metz: découvrir l’exposition avec les enfants | evenements | Metz, Moselle, Grand Est
+- /articles/evenements/festival-contes-et-rencontres-2027-en-lozere-quels-spectacles-voir-en-famille/ | Festival Contes et Rencontres 2027 en Lozère: quels spectacles voir en famille ? | evenements | Lozère, Occitanie
+- /articles/evenements/lumieres-d-afrique-2026-2027-a-sigean-les-lanternes-en-famille/ | Lumières d’Afrique 2026-2027 à Sigean: les lanternes en famille | evenements | Sigean, Aude, Occitanie
+- /articles/evenements/natur-armor-2027-a-paimpol-preparer-sa-visite-en-famille/ | Natur’Armor 2027 à Paimpol: préparer sa visite en famille | evenements | Paimpol, Côtes-d'Armor, Bretagne
+- /articles/evenements/noel-a-brive-2026-en-famille-animations-dates-et-parcours/ | Noël à Brive 2026 en famille: animations, dates et parcours | evenements | Brive-la-Gaillarde, Corrèze, Nouvelle-Aquitaine
+- /articles/evenements/musee-maurice-denis-en-famille-decouvrir-les-nabis-a-saint-germain-en-laye/ | Musée Maurice Denis en famille: découvrir les Nabis à Saint-Germain-en-Laye | evenements | Saint-Germain-en-Laye, Yvelines, Île-de-France
 
 ### Historique Radar lié
 
-- opportunity | /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | 2026-10-30T06:28:26.726Z
-- refresh | /articles/evenements/noel-2026-a-rochefort-en-terre-avec-des-enfants-village-et-illuminations/ | 2026-11-15T12:33:21.761Z
-- opportunity | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-10-26T21:31:06.119Z
-- refresh | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-11-12T18:32:15.897Z
-- refresh | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-11-28T11:29:58.641Z
-- opportunity | /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | 2026-11-03T15:36:10.146Z
-- refresh | /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | 2026-11-13T13:31:11.034Z
-- opportunity | /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | 2026-10-30T21:26:32.584Z
-- refresh | /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | 2026-11-23T07:35:53.457Z
-- opportunity | /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | 2026-10-30T18:26:56.039Z
-- refresh | /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | 2026-11-17T09:28:43.094Z
-- opportunity | /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | 2026-10-27T07:35:50.437Z
-- refresh | /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | 2026-11-16T12:48:08.556Z
-- opportunity | /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | 2026-10-26T18:32:56.730Z
-- opportunity | /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | 2026-10-09T14:37:47.734Z
-- refresh | /articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/ | 2026-11-08T07:28:43.032Z
-- refresh | /articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/ | 2026-10-22T18:35:19.372Z
-- opportunity | /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | 2026-11-04T05:34:42.508Z
-- opportunity | /articles/evenements/saint-nicolas-2026-a-epinal-en-famille-defile-du-5-decembre-ou-marche-de-noel/ | 2026-11-01T21:31:28.158Z
-- opportunity | /articles/evenements/saint-nicolas-2026-a-saint-nicolas-de-port-village-defile-ou-procession-en-famille/ | 2026-11-02T23:31:49.432Z
-- refresh | /articles/evenements/saint-nicolas-2026-a-saint-nicolas-de-port-village-defile-ou-procession-en-famille/ | 2026-11-22T08:32:50.321Z
-- refresh | /articles/activites/snowworld-amneville-en-famille-luge-bouees-ou-ski/ | 2026-11-09T17:37:32.610Z
-- opportunity | /articles/activites/stages-de-science-a-la-cite-des-sciences-pendant-la-toussaint-2026-lequel-choisir-selon-l-age/ | 2026-10-04T05:39:23.036Z
-- opportunity | /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | 2026-10-24T19:30:32.700Z
-- refresh | /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | 2026-11-13T16:33:40.259Z
-- opportunity | /articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/ | 2026-11-03T03:34:06.534Z
-- refresh | /articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/ | 2026-11-16T08:38:53.929Z
-- refresh | /articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/ | 2026-11-06T21:35:30.246Z
-- opportunity | /articles/evenements/ville-de-noel-d-arras-2026-en-famille-grande-roue-patinoire-et-horaires/ | 2026-10-29T20:30:33.011Z
-- refresh | /articles/evenements/ville-de-noel-d-arras-2026-en-famille-grande-roue-patinoire-et-horaires/ | 2026-11-23T13:28:43.287Z
+- refresh | /articles/voyages/banyuls-sur-mer-en-famille-aquarium-et-balade-hors-saison/ | 2026-11-11T08:29:29.427Z
 
-## Travaux éditoriaux en cours
+### Phases 2 et 3
 
-### Publication en cours
+Écris `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées et le corps complet de l'article. **Ne recopie pas les métadonnées inchangées et n'ajoute aucun bloc `radar`.** Le script normalise la syntaxe sûre de la requête, reprend mécaniquement les autres métadonnées et le bloc Radar de la phase précédente, puis incrémente la phase.
 
-- Branche: automation/publication-20261128-1634-titre-de-travail-palais-fesch-a-ajaccio-en-famille-decouvrir-la-peintu
-- HEAD: publication: phase 3 20261128-1634-titre-de-travail-palais-fesch-a-ajaccio-en-famille-decouvrir-la-peintu
+Pour un refresh, le script conserve de lui-même les champs protégés de l'article source. Pour une opportunity, il conserve la catégorie, le territoire et le slug choisis en phase 1.
 
----
-category: "activites"
-title: "Palais Fesch à Ajaccio: découvrir la peinture en famille"
-subtitle: "Des parcours ludiques et des visites adaptées dès 18 mois"
-summary: "Explorez les collections du Palais Fesch avec vos enfants, choisissez un parcours ludique ou une visite accompagnée et préparez votre sortie à Ajaccio."
-keywords:
-  - "Palais Fesch en famille"
-  - "musée Ajaccio enfants"
-  - "activités culturelles Corse-du-Sud"
-location:
-  city: "Ajaccio"
-  department: "Corse-du-Sud"
-  region: "Corse"
-sources:
-  - title: "Palais Fesch: informations pratiques"
-    url: "https://www.musee-fesch.com/infos-pratiques"
-  - title: "Palais Fesch: activités et parcours famille"
-    url: "https://www.musee-fesch.com/offre-educative-activites/famille"
-  - title: "Ajaccio Tourisme: Palais Fesch"
-    url: "https://www.ajaccio-tourisme.com/visites-loisirs/palais-fesch-musee-des-beaux-arts/"
----
-
-Au cœur d'Ajaccio, le Palais Fesch abrite un musée des beaux-arts réputé pour ses peintures italiennes. Des tableaux de la Renaissance aux portraits de la famille Bonaparte, en passant par les artistes corses, ses collections offrent de nombreux points de départ pour éveiller la curiosité des enfants, même un jour de pluie.
-
-## Transformer la visite en jeu d'observation
-
-Plutôt que de parcourir toutes les salles, choisissez quelques œuvres autour d'un thème. Les natures mortes du deuxième étage se prêtent particulièrement bien à un jeu de recherche: quels fruits reconnaît-on, quels objets semblent précieux, d'où vient la lumière ?
-
-Avec les plus grands, comparez les expressions et les vêtements des personnages. Dans les salles napoléoniennes, imaginez ce que les portraits cherchent à raconter sur les personnes représentées. Les peintures corses permettent ensuite de retrouver des paysages familiers ou de découvrir une autre image de l'île.
-
-Le musée propose également des [parcours familiaux à télécharger](https://www.musee-fesch.com/offre-educative-activites/famille), avec des jeux autour de Napoléon, des héros mythologiques ou de la peinture italienne. Choisissez-en un avant de partir pour donner un fil conducteur à la sortie. Des fiches créatives permettent aussi de prolonger l'expérience à la maison.
-
-L'[office de tourisme d'Ajaccio](https://www.ajaccio-tourisme.com/visites-loisirs/palais-fesch-musee-des-beaux-arts/) estime la durée moyenne de visite à une heure et demie. Avec un jeune enfant, mieux vaut sélectionner quelques salles et terminer avant que la fatigue ne s'installe.
-
-## Des visites accompagnées selon l'âge
-
-La programmation familiale 2026-2027 distingue plusieurs formats:
-
-- De 18 à 36 mois: découverte sensorielle des œuvres pendant 45 minutes, à 10 € pour un enfant et son parent.
-- De 3 à 6 ans: séances thématiques de 45 minutes, parfois contées ou musicales, à 12 € pour le duo.
-- De 7 à 11 ans: des séances d'une heure figurent notamment dans la programmation des vacances de la Toussaint 2026, à 12 € pour le duo.
-
-Les groupes sont restreints et chaque enfant est accompagné d'un seul parent. Certaines séances ne comprennent pas de pratique artistique. Pour connaître les prochaines dates et réserver, utilisez le calendrier familial du musée indiqué plus haut. Les créneaux des prochaines vacances pour les 7-11 ans restent à confirmer.
-
-Si vous venez avec plusieurs enfants d'âges différents, le parcours autonome permet de rester ensemble sans dépendre des conditions d'âge des séances encadrées.
-
-## Préparer sa sortie au Palais Fesch
-
-Le musée se trouve au 50-52 rue Cardinal Fesch, à environ dix minutes de marche de la gare. La visite libre ne nécessite pas de réservation préalable. Des ascenseurs facilitent les déplacements entre les niveaux et une poussette peut être empruntée gratuitement au vestiaire contre présentation d'une pièce d'identité.
-
-Du 1er novembre au 30 avril, les salles sont accessibles de 9 h à 17 h. Entre mai et octobre, elles ouvrent de 9 h 15 à 18 h. Prévoyez votre sortie en dehors du 25 décembre et de la fermeture annuelle du 1er au 15 janvier. La chapelle impériale accueille les visiteurs individuels uniquement en saison estivale.
-
-Pour le budget, le musée affiche actuellement un plein tarif de 9 €, tandis que l'office de tourisme indique 10 € et annonce la gratuité jusqu'à 18 ans inclus. Consultez les [informations pratiques et la billetterie du Palais Fesch](https://www.musee-fesch.com/infos-pratiques) avant votre déplacement pour confirmer le tarif applicable. Les séances familiales suivent leur propre tarification.
-
-Emportez un petit sac plutôt qu'un grand sac à dos: les bagages volumineux ne sont pas admis dans le musée.
-
-## Prolonger la découverte d'Ajaccio
-
-Pour un séjour de plusieurs jours, l'[Hôtel Fesch & Spa](https://www.booking.com/hotel/fr/fesch.html) propose notamment des suites avec lit et canapé-lit dans le centre-ville. Vérifiez la capacité adaptée à votre famille et les disponibilités pour vos dates. Vous pourrez rejoindre le musée à pied et consacrer une autre journée à [la balade de la Parata et aux îles Sanguinaires](https://www.fam-space.fr/articles/voyages/la-parata-et-les-iles-sanguinaires-en-famille-balades-et-sortie-en-mer/) si la météo le permet.
-
-
-### Destination en cours
-
-- Branche: automation/destination-20261010-0720-vincennes
-- HEAD: content: destination candidate Vincennes
-
----
-result: enriched
-kind: city
-name: "Vincennes"
-url: "/destinations/ile-de-france/val-de-marne/vincennes/"
-intro:
-  - "Vincennes est une base pratique pour visiter l'est parisien sans voiture : le château et le Parc floral se combinent à pied, tandis que le zoo de Paris mérite une sortie distincte."
-sections:
-  - title: "Une journée sur place : associer le château au Parc floral"
-    paragraphs:
-      - "Pour une journée mêlant découverte et temps de jeu, commencez par le château, puis rejoignez le Parc floral par l'esplanade du château. Comptez environ 1 h 30 à 2 h pour le monument avant de laisser les enfants profiter des aires de jeux du parc. Les pique-niques ne sont pas autorisés dans l'enceinte du château, mais le Parc floral dispose de tables de pique-nique, de points d'eau et de toilettes avec table à langer."
-      - "Avec de jeunes enfants qui supportent mal les visites intérieures, faites plutôt du Parc floral la sortie principale : ses jeux et ses jardins évitent de construire la journée autour du donjon et de ses escaliers. L'accès au Parc floral est gratuit d'octobre à mars et payant d'avril à septembre ; le château est un site distinct avec son propre billet."
-  - title: "Sur deux jours, garder le zoo pour une autre sortie"
-    paragraphs:
-      - "Le Parc zoologique de Paris se trouve du côté de la Porte Dorée, dans le 12e arrondissement, et non à côté du château ou à l'intérieur du Parc floral. Depuis le terminus Château de Vincennes du métro 1, le bus 46 permet de le rejoindre. Le zoo recommande au minimum deux heures de visite : avec le trajet et les pauses, mieux vaut lui réserver une seconde journée plutôt que de l'ajouter à la visite du château et du Parc floral."
-      - "Pour un séjour d'une seule journée, choisissez donc entre le duo château et Parc floral, facile à enchaîner à pied, et une visite du zoo avec trajet dédié. Ce choix évite de traverser inutilement le bois avec des enfants fatigués."
-  - title: "Métro ou RER avec une poussette : deux arrivées différentes"
-    paragraphs:
-      - "La ligne 1 arrive au pied du château, mais la station Château de Vincennes comporte de nombreuses marches entre les quais et la rue. La gare Vincennes du RER A est équipée d'un ascenseur et d'escalators ; elle se situe à environ dix minutes à pied du château. Avec une poussette lourde ou des difficultés à emprunter les escaliers, le RER A peut donc être plus pratique malgré la marche supplémentaire. Vérifiez l'état des équipements avant de partir."
-accommodation:
-  title: "Où dormir selon les sorties prévues ?"
-  paragraphs:
-    - "Si votre programme privilégie le château, le Parc floral et le départ du bus 46 vers le zoo, cherchez un hébergement vers l'avenue de Paris et le terminus Château de Vincennes. Si vous prévoyez aussi plusieurs allers-retours vers le centre de Paris, la proximité de la gare Vincennes du RER A est un autre choix pratique. Avec une poussette, comparez surtout la distance réelle à pied jusqu'à la gare ou au métro plutôt que de réserver simplement un logement annoncé à Vincennes."
-sources:
-  - title: "Fam Space - Destination Vincennes et ses deux articles"
-    url: "https://www.fam-space.fr/destinations/ile-de-france/val-de-marne/vincennes/"
-    accessedAt: "2026-10-10"
-  - title: "Fam Space - Château de Vincennes en famille"
-    url: "https://www.fam-space.fr/articles/sorties/chateau-de-vincennes-en-famille-tarifs-parcours-et-conseils-de-visite/"
-    accessedAt: "2026-10-10"
-  - title: "Fam Space - Monument jeu d'enfant 2026 au château de Vincennes"
-    url: "https://www.fam-space.fr/articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/"
-    accessedAt: "2026-10-10"
-  - title: "Ville de Paris - Parc floral de Paris"
-    url: "https://www.paris.fr/lieux/parc-floral-de-paris-1"
-    accessedAt: "2026-10-10"
-  - title: "Château de Vincennes - Informations pratiques"
-    url: "https://www.chateau-de-vincennes.fr/visiter/informations-pratiques"
-    accessedAt: "2026-10-10"
-  - title: "Château de Vincennes - Offre adaptée aux visiteurs en mobilité réduite"
-    url: "https://www.chateau-de-vincennes.fr/visiter/visiteurs-en-situation-de-handicap/offre-adaptee-aux-visiteurs-en-mobilite-reduite"
-    accessedAt: "2026-10-10"
-  - title: "Parc zoologique de Paris - Tarifs, horaires et accès"
-    url: "https://www.parczoologiquedeparis.fr/fr/tarifs-horaires-acces"
-    accessedAt: "2026-10-10"
-  - title: "Parc zoologique de Paris - Services et conseils de visite"
-    url: "https://www.parczoologiquedeparis.fr/fr/services-conseils-de-visite"
-    accessedAt: "2026-10-10"
----
-
-### Destination en cours
-
-- Branche: automation/destination-20261013-0112-haut-rhin
-- HEAD: content: destination Haut-Rhin enrichment candidate
-
----
-result: enriched
-kind: department
-name: "Haut-Rhin"
-url: "/destinations/grand-est/haut-rhin/"
-intro:
-  - "Colmar, Mulhouse et Ungersheim ne se visitent pas de la même manière en famille. Le choix de la base dépend des musées, des villages et de la possibilité de se déplacer sans voiture."
-sections:
-  - title: "Colmar pour les villages, Mulhouse pour les musées"
-    paragraphs:
-      - "Colmar convient à une journée dans le centre suivie d'une sortie vers Turckheim ou Munster, accessibles sur la ligne de train vers Metzeral. Pour Riquewihr, Kaysersberg ou Eguisheim, cette ligne ne suffit pas : il faut vérifier les bus ou prévoir une voiture."
-      - "Mulhouse est une meilleure base pour les musées techniques : la Cité du Train et Electropolis sont desservis par le tram 3, et le Musée national de l'Automobile par le tram 1. Si ces visites sont prioritaires, dormir à Mulhouse évite de revenir chaque soir depuis Colmar."
-  - title: "Deux parcs à Ungersheim : prévoir deux journées"
-    paragraphs:
-      - "Le Parc du Petit Prince et l'Écomusée d'Alsace sont proches, mais le premier recommande déjà cinq à sept heures de visite. Une famille qui souhaite découvrir les deux aura plus de temps pour profiter de chaque site en leur réservant une journée distincte."
-      - "Sans voiture, le train rejoint Bollwiller, puis il faut prévoir une navette à la demande vers les sites. Le Parc du Petit Prince indique le service Filéa ; l'Écomusée annonce une navette Soléa ou trente minutes de marche. Réservez et vérifiez le retour avant d'acheter les billets."
-  - title: "Ne pas confondre train et bus touristique"
-    paragraphs:
-      - "Le Kut'zig dessert en saison plusieurs villages viticoles depuis Colmar, mais ne circule pas toute l'année : sa saison 2026 s'est achevée le 11 octobre. Hors saison, la ligne ferroviaire vers Turckheim et Munster offre un autre choix de sortie, sous réserve des horaires du jour."
-accommodation:
-  title: "Où se baser dans le Haut-Rhin ?"
-  paragraphs:
-    - "Choisissez Colmar pour le centre historique, les villages et la vallée de Munster ; choisissez Mulhouse pour les musées et une excursion vers Ungersheim via Bollwiller. Si le séjour combine plusieurs jours dans chaque secteur, deux hébergements peuvent éviter des allers-retours répétés avec les enfants."
-sources:
-  - title: "Fam Space - Haut-Rhin"
-    url: "https://www.fam-space.fr/destinations/grand-est/haut-rhin/"
-    accessedAt: "2026-10-13"
-  - title: "Mulhouse Tourisme - Transports en commun"
-    url: "https://www.tourisme-mulhouse.com/en/what-to-do-in-mulhouse/getting-around-mulhouse-by-public-transport/"
-    accessedAt: "2026-10-13"
-  - title: "Parc du Petit Prince - Informations pratiques"
-    url: "https://parcdupetitprince.com/infos-pratiques"
-    accessedAt: "2026-10-13"
-  - title: "Écomusée d'Alsace - Accès"
-    url: "https://www.ecomusee.alsace/preparez-votre-visite/acces/"
-    accessedAt: "2026-10-13"
-  - title: "Ville de Turckheim - Accès"
-    url: "https://www.turckheim.fr/acces-et-plan/"
-    accessedAt: "2026-10-13"
-  - title: "Office de tourisme de Colmar - Kut'zig"
-    url: "https://www.tourisme-colmar.com/fr/pratique/se-deplacer/kut-zig-le-bus-touristique-cabriolet"
-    accessedAt: "2026-10-13"
----
-
-### Phase 1 - refresh
-
-Écris `radar-request.md` avec seulement la décision éditoriale:
-
-```yaml
----
-action: start
-mode: refresh
-targetUrl: "/articles/categorie/slug/"
-decision: "Décision précise du lecteur à mieux servir"
-affiliationPotential: "Offre existante à conserver, nouvelle action naturelle à vérifier, ou absence d'affiliation naturelle"
----
-
-Brief éditorial court demandé par la phase 1.
-```
-
-Ne fournis ni branche, ni SHA, ni `targetPath`, ni `commonQueries`, ni `positionDelta`, ni `impressionRatio`, ni `focusQueries`. Le script les prend dans Git et dans le snapshot.
-
-### Phase 1 - opportunity
-
-Écris le minimum éditorial nécessaire au futur article:
-
-```yaml
----
-action: start
-mode: opportunity
-title: "Titre de travail"
-subtitle: "Sous-titre utile"
-summary: "Résumé"
-category: sorties
-location:
-  city: "Ville"
-  department: "Département"
-  region: "Région"
-keywords:
-  - "mot-clé utile"
-sources:
-  - title: "Source officielle"
-    url: "https://..."
-gscSignal: strong_page
-gscSourceUrl: "/articles/categorie/page-forte/"
-decision: "Décision précise du lecteur"
-affiliationPotential: "Piste commerciale réellement vérifiée ou absence naturelle"
----
-
-Brief éditorial court demandé par la phase 1.
-```
-
-Le slug, la branche, le SHA et la provenance technique sont générés par le script. Pour `seasonal_opportunity`, utilise `gscSignal: seasonal_opportunity` et omets `gscSourceUrl`: la source officielle du frontmatter sert de preuve. Pour `strong_page`, `gscSourceUrl` reste obligatoire et doit correspondre à une page réellement présente dans `strongPages`.
+En phase 3 seulement, ajoute `radarReview` avec `summary`, `sources` et, pour un refresh, `regressionCheck`. Une seule correction factuelle vérifiée peut être suffisante.
 
 ## Écriture autorisée
 
