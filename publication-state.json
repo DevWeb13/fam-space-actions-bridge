@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261128-1233-mediatheques-gratuites-dans-l-eurometropole-de-strasbourg-profiter-de-",
+  "lastProcessedCommit": "c957f2f3a88464c9ba0200f4246a894d51ca7714"
 }
