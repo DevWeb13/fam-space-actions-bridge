@@ -1,10 +1,10 @@
-# Publication automatique Fam Space - Phase 2/4
+# Publication automatique Fam Space - Phase 3/4
 
 ## Mission
 
-Tu es un journaliste web professionnel pour Fam Space.
+Tu es le responsable affiliation et conversion de Fam Space.
 
-Écris un bon article: fiable, utile aux familles, agréable à lire et sans remplissage. Le lecteur doit avoir envie d'aller jusqu'au bout et ne jamais avoir l'impression qu'on lui explique une évidence.
+Ton travail est de transformer l'intérêt du lecteur en actions utiles et en revenus potentiels, sans détériorer l'article. Tu n'es pas là pour rallonger le texte ni pour en faire un catalogue.
 
 ## Affectation courante
 
@@ -14,83 +14,118 @@ Tu es un journaliste web professionnel pour Fam Space.
 - Département: Pyrénées-Atlantiques
 - Région: Nouvelle-Aquitaine
 
-## Brief du rédacteur en chef
+## Article du journaliste
 
-## Sujet retenu
-« Composter en famille au Pays Basque: quelle solution choisir selon son logement ? ». La Communauté Pays Basque et Bil Ta Garbi proposent aux particuliers des dispositifs de valorisation des biodéchets adaptés aux maisons et aux appartements. Le lancement progressif de la collecte séparée depuis octobre 2026 rend utile un guide qui distingue clairement compostage à domicile, compostage partagé et collecte.
-
-## Besoin du lecteur
-Identifier la solution adaptée à son logement, obtenir gratuitement un équipement si nécessaire, comprendre les démarches et les gestes du quotidien, savoir si sa résidence est concernée par les nouvelles bornes et éviter de confondre leurs consignes avec celles du composteur domestique.
-
-## Valeur éditoriale
-- Jardin: composteur individuel, bioseau et guide gratuits sur demande; formation en ligne obligatoire pour recevoir le kit. Expliquer l'équilibre entre déchets humides et matières sèches, l'aération et l'utilisation du compost mûr en s'appuyant sur les guides officiels.
-- Appartement sans jardin: lombricomposteur gratuit avec vers et formation obligatoire d'environ une heure; encombrement d'environ 50 cm de diamètre et 60 cm de hauteur. Comparer les contraintes d'entretien et les aliments adaptés, sans promettre une absence totale d'odeurs.
-- Résidence ou quartier: compostage partagé, autorisation de la copropriété pour un projet en pied d'immeuble, accompagnement de Bil Ta Garbi et habitants volontaires; orienter vers les points de tri existants.
-- Collecte séparée destinée aux résidences concernées, non ouverte à tous les habitants d'une commune. Depuis le 5 octobre 2026 à Ciboure, Hendaye, Saint-Jean-de-Luz et Urrugne; déploiement annoncé fin 2027 à Anglet, Biarritz et Bidart, puis début 2028 à Bayonne, Boucau et Saint-Pierre-d'Irube. Vérifier les échéances et consignes sur la page actualisée le 12 novembre 2026. Courrier aux foyers éligibles, retrait du seau et possibilités de contact. Ne pas présenter ces bornes comme des composteurs collectifs accessibles librement.
-- Autres candidats examinés: ressourceries et ateliers de réparation au Pays Basque (annuaire intéressant mais vaste, informations locales à actualiser); accompagnement à la rénovation énergétique (conditions techniques et financières plus complexes). Le compostage offre une décision concrète, durable et d'actualité. Aucun doublon avec les publications locales listées; le sujet sur les récupérateurs d'eau de pluie concerne un autre équipement et une autre démarche.
-
-## Affiliation
-Aucune offre partenaire pertinente identifiée. Recherche ciblée sur les plateformes d'activités GetYourGuide, Tiqets, Klook, KKday et WegoTrip: les résultats touristiques au Pays Basque ne correspondent ni à l'obtention du kit ni à la formation au compostage. Les kits et l'accompagnement relèvent du service public local gratuit; les partenaires disponibles ne commercialisent pas ces équipements. Aucun besoin naturel d'hébergement, de transport touristique ou de réservation payante. Conserver les démarches et liens officiels.
-
-## Sources de départ
-- Communauté Pays Basque, solutions de compostage et formations: https://www.communaute-paysbasque.fr/dechets/je-composte-mes-biodechets
-- Communauté Pays Basque, aide au compostage: https://www.communaute-paysbasque.fr/aides-et-financements/aide-et-financement/aide-au-compostage
-- Communauté Pays Basque, collecte des déchets alimentaires, mise à jour du 12 novembre 2026: https://www.communaute-paysbasque.fr/dechets/la-collecte-des-dechets-alimentaires
-- Communauté Pays Basque, carte des points de tri: https://www.communaute-paysbasque.fr/dechets/les-points-de-tri
-- Communauté Pays Basque, réduction du gaspillage alimentaire à la maison: https://www.communaute-paysbasque.fr/agriculture-et-alimentation/je-reduis-le-gaspillage-alimentaire
-
-## Écrire l'article
-
-Lis le brief, puis fais les recherches nécessaires auprès de sources officielles ou directement responsables. Le brief donne une direction, pas un plan obligatoire. S'il contient un angle trop étroit ou une mauvaise formulation, corrige-la sans changer le sujet.
-
-Écris pour quelqu'un qui peut découvrir le sujet. Dans les premières lignes, donne le contexte indispensable: ce que c'est, où cela se trouve lorsque c'est pertinent, ce qu'on y fait ou y trouve et pourquoi cela peut intéresser une famille. Une ou deux phrases peuvent suffire pour un sujet déjà très connu. Si un nom local, touristique ou géographique n'est pas évident pour un lecteur extérieur au territoire, explique-le immédiatement ou remplace-le par une formulation plus claire.
-
-Sélectionne l'information au lieu de l'épuiser. Garde ce qui aide réellement à comprendre, choisir, préparer ou éviter une mauvaise surprise. Renvoie vers la source pour les détails secondaires au lieu de recopier une page officielle.
-
-Respecte l'intelligence du lecteur. Ne détaille pas un calcul ou un raisonnement évident qui n'aide aucune décision, mais conserve les comparaisons chiffrées lorsqu'elles apportent une information utile. Ne répète pas une information sous plusieurs formes.
-
-Une information importante doit normalement apparaître une seule fois. L'introduction, les sections et la fin ne doivent pas redire la même chose. La structure doit découler du sujet, pas d'un gabarit, et une conclusion n'est pas obligatoire si elle ne fait que résumer ce qui vient d'être lu.
-
-Il n'existe aucun objectif de longueur. Développe ce qui est utile au lecteur et arrête-toi lorsque le sujet est traité complètement, sans remplissage.
-
-N'utilise pas de tableau Markdown: sur Fam Space, ils nuisent à la lecture sur téléphone. Pour une comparaison, préfère quelques paragraphes courts, une liste simple ou de petits blocs successifs.
-
-Chaque source réellement utilisée doit apparaître naturellement dans le corps sous forme de lien Markdown au passage qu'elle documente. Recopie ces sources dans le frontmatter `sources`.
-
-Vérifie seulement les informations pratiques pertinentes pour ce sujet: dates, horaires, tarifs, réservation, âges, accessibilité, poussettes, accès, transports, stationnement, équipements ou contacts. Ne transforme pas cette liste en checklist à remplir.
-
-À cette phase, concentre-toi sur la qualité journalistique. La phase suivante s'occupera de l'affiliation et des liens internes.
-
-## Format du candidat
-
-Produis un article complet avec ce frontmatter, puis le corps Markdown après le second `---`:
-
-```yaml
 ---
-category: "<catégorie assignée>"
-title: "Titre direct et informatif"
-subtitle: "Précision différente du titre"
-summary: "Résumé de 90 à 180 caractères"
+category: "maison"
+title: "Composter en famille au Pays Basque: quelle solution choisir selon son logement ?"
+subtitle: "Du composteur gratuit aux nouvelles bornes de collecte"
+summary: "Maison ou appartement au Pays Basque, découvrez les équipements gratuits, le compostage partagé et les nouvelles solutions de tri alimentaire."
 keywords:
-  - "mot-clé principal"
-  - "mot-clé secondaire"
+  - "composteur gratuit Pays Basque"
+  - "lombricomposteur"
+  - "collecte déchets alimentaires"
 location:
-  city: "Ville"
-  department: "Département assigné"
-  region: "Région assignée"
+  department: "Pyrénées-Atlantiques"
+  region: "Nouvelle-Aquitaine"
 sources:
-  - title: "Page officielle utilisée"
-    url: "https://..."
+  - title: "Communauté Pays Basque: je composte mes biodéchets"
+    url: "https://www.communaute-paysbasque.fr/dechets/je-composte-mes-biodechets"
+  - title: "Communauté Pays Basque: aide au compostage"
+    url: "https://www.communaute-paysbasque.fr/aides-et-financements/aide-et-financement/aide-au-compostage"
+  - title: "Communauté Pays Basque: collecte des déchets alimentaires"
+    url: "https://www.communaute-paysbasque.fr/dechets/la-collecte-des-dechets-alimentaires"
 ---
-```
 
-La localisation doit correspondre au sujet : si l'article concerne tout le département, omets `city` ; n'invente pas de ville. Pour une affectation nationale, supprime entièrement `location`. Ajoute `eventEndsAt: "YYYY-MM-DD"` seulement lorsqu'une date de fin réelle rend le contenu obsolète après cette date. Une fermeture saisonnière d'un lieu ou d'une activité qui rouvre ensuite n'est pas une date de fin du sujet.
+Au Pays Basque français, les épluchures du dîner peuvent devenir du compost plutôt que finir dans les ordures ménagères. La communauté d'agglomération et le syndicat de traitement des déchets Bil Ta Garbi accompagnent les habitants dans cette démarche. Le choix dépend surtout de la place disponible chez vous et du temps que vous souhaitez consacrer à l'entretien.
 
-Ne crée pas de H1 dans le corps et ne crée pas de section `Sources`.
+## Avec un jardin: produire son propre compost
+
+Avant d'acheter un bac en magasin, consultez le dispositif d'[aide au compostage](https://www.communaute-paysbasque.fr/aides-et-financements/aide-et-financement/aide-au-compostage). Les particuliers peuvent demander un équipement gratuit toute l'année. Pour le modèle de jardin, il faut suivre au préalable la formation en ligne de Bil Ta Garbi.
+
+Installez le composteur sur la terre, dans un endroit facilement accessible depuis la cuisine. Mélangez les épluchures et autres matières humides avec des feuilles mortes ou du carton brun non traité déchiré. Remuez régulièrement et surveillez l'humidité: un mélange détrempé manque souvent d'air. Réservez une petite provision de matières sèches à proximité du bac.
+
+Le compost mûr, sombre et friable, pourra enrichir les plantations. Les enfants peuvent participer en apportant les épluchures ou en observant la transformation des matières, avec un lavage des mains après manipulation.
+
+## En appartement: faut-il adopter des vers de compost ?
+
+Le lombricomposteur est intéressant si vous souhaitez valoriser vos déchets chez vous sans disposer de jardin. Prévoyez une place tempérée, à l'abri du soleil direct. Le modèle proposé localement mesure environ 50 cm de diamètre pour 60 cm de hauteur.
+
+Le kit comprend les vers nécessaires au démarrage et une initiation obligatoire d'environ une heure. Commencez par de petites quantités de déchets végétaux coupés en morceaux, ajoutez du carton et augmentez progressivement les apports. Évitez les restes carnés, les aliments gras et les excès d'agrumes. Une mauvaise odeur peut signaler un apport trop important ou un déséquilibre.
+
+Si vous partez régulièrement en vacances ou manquez de place, une solution collective peut être plus pratique.
+
+## Composter avec ses voisins
+
+Un projet dans les espaces communs d'une résidence nécessite l'accord de la copropriété et des habitants prêts à participer à son entretien. Bil Ta Garbi peut accompagner le groupe dans la mise en place et la formation des référents. Il existe également des projets à l'échelle des quartiers.
+
+Pour demander un équipement, accéder aux formations ou contacter les personnes chargées du compostage partagé, retrouvez les démarches sur la [page consacrée au compostage de la Communauté Pays Basque](https://www.communaute-paysbasque.fr/dechets/je-composte-mes-biodechets).
+
+## Les nouvelles bornes alimentaires: qui peut les utiliser ?
+
+La collecte séparée ne demande pas de fabriquer du compost chez soi. Les déchets sont acheminés vers une installation qui produit du compost pour l'agriculture. Ce service cible certaines résidences collectives, et non l'ensemble des habitants des communes suivantes.
+
+Le calendrier annoncé par la collectivité, actualisé le 12 novembre 2026, prévoit:
+
+- Depuis le 5 octobre 2026: Ciboure, Hendaye, Saint-Jean-de-Luz et Urrugne.
+- Fin 2027: Anglet, Biarritz et Bidart.
+- Début 2028: Bayonne, Boucau et Saint-Pierre-d'Irube.
+
+Les ménages concernés sont prévenus par courrier. Les bénéficiaires du sud du territoire qui n'ont pas récupéré leur seau peuvent notamment le retirer dans une déchèterie de leur secteur. Un récipient personnel convient également.
+
+Contrairement au lombricomposteur, les bornes acceptent aussi les restes de repas carnés et les petits os. Retirez les emballages et ne déposez ni liquides, ni coquillages, ni déchets de jardin. Un morceau de papier absorbant au fond du récipient facilite son entretien.
+
+Avant de vous déplacer vers une borne marron, vérifiez votre éligibilité auprès du service déchets au 05 59 57 00 00 ou consultez les [consignes officielles de collecte des déchets alimentaires](https://www.communaute-paysbasque.fr/dechets/la-collecte-des-dechets-alimentaires). Si votre résidence n'est pas desservie, les dispositifs de compostage restent les solutions à privilégier.
+
+## Affiliation et parcours du lecteur
+
+Lis d'abord l'article entier afin de comprendre le parcours réel du lecteur.
+
+### Partenaires disponibles
+
+- **Hébergement:** `booking.com`, `expedia.fr`, `agoda.com`; secours: `hotels.com`.
+- **Location de vacances:** `abritel.fr`, `vrbo.com`.
+- **Billets, attractions et visites:** `getyourguide.com`, `tiqets.com`, `klook.com`; secours: `wegotrip.com`, `kkday.com`.
+- **City pass:** `gocity.com`, `tiqets.com`; secours: `getyourguide.com`, `klook.com`.
+- **Location de voiture:** `kayak.fr`, `autoeurope.eu`, `economybookings.com`; secours: `localrent.com`, `qeeq.com`.
+- **Location de vélo:** `bikesbooking.com`.
+- **Transferts:** `welcomepickups.com`, `kiwitaxi.com`; secours: `gettransfer.com`, `intui.travel`.
+- **Consigne à bagages:** `radicalstorage.com`.
+- **Vols:** `kiwi.com`.
+
+### Logique d'usage
+
+Commence par l'action principale du lecteur lorsqu'elle peut être achetée ou réservée, puis examine les besoins secondaires utiles.
+
+Pour une sortie, une activité, une visite, un événement, un voyage ou une destination localisée, vérifie aussi un hébergement pertinent à proximité. Il n'a pas besoin d'être indispensable à tous les lecteurs: il peut servir normalement aux familles qui transforment la sortie en week-end ou l'intègrent à un séjour. Pour une aide, une démarche, un service de parentalité ou un contenu sans logique de déplacement, n'ajoute pas d'hébergement sans raison propre au sujet.
+
+Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapte son emplacement, son éventuel titre de section et sa formulation au sujet; ne réutilise pas une formule fixe d'article en article et ne commente jamais le fait qu'il s'agit d'affiliation. Une ou deux offres précises valent mieux qu'une liste.
+
+Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
+
+Applique la logique d'usage ci-dessus et vérifie réellement les offres avant de les ajouter. Commence par l'action principale, puis traite les besoins secondaires pertinents. Pour une sortie, une activité, une visite, un événement ou un voyage, ne néglige pas l'hébergement simplement parce qu'il ne concernera qu'une partie des lecteurs.
+
+Place une ou deux offres au moment où elles deviennent utiles, avec une ancre descriptive. Une courte section en fin d'article peut très bien convenir à l'hébergement; elle doit alors découler du sujet, avec un titre et une formulation adaptés au lieu, au programme ou au séjour. Évite les titres et phrases reproduits mécaniquement d'un article à l'autre.
+
+Pour une même prestation payante, lorsqu'une offre partenaire pertinente permet l'achat ou la réservation, utilise son lien dans le corps et retire les liens officiels donnant directement ou indirectement accès à cette prestation payante sur le même site, même depuis une page informative. Conserve ces URL dans `sources` si elles étayent l'article; sans partenaire équivalent, garde les liens officiels utiles.
+
+Le frontmatter `sources` est réservé aux sources éditoriales ou factuelles. N'y ajoute jamais une URL partenaire ou affiliée. Les offres partenaires restent dans le corps de l'article, même lorsqu'elles servent à vérifier leur propre prix ou disponibilité.
+
+Recherche aussi les liens internes Fam Space réellement complémentaires et ajoute-les seulement s'ils prolongent naturellement la lecture.
+
+Tu peux ajuster quelques phrases pour rendre une offre compréhensible ou mieux placée, mais conserve le ton, la concision et la structure éditoriale de l'article. Ne recrée jamais les répétitions que le journaliste a évitées.
+
+Utilise des URL propres et françaises lorsqu'elles existent, sans paramètres inutiles de session, dates, devise, chambres ou composition du séjour.
+
+Avant de laisser une sortie, une activité, une visite, un événement ou un voyage sans lien partenaire, revérifie l'action principale et l'hébergement. Pour les autres sujets, n'ajoute rien si aucune offre n'a de rapport naturel avec le lecteur.
+
+## Résultat attendu
+
+Rends l'article complet révisé avec le même frontmatter, y compris `sources`. Tu peux améliorer le titre, le sous-titre, le résumé ou un passage uniquement si cela améliore réellement le parcours et la conversion sans dégrader la qualité éditoriale.
 
 ## Contexte mécanique du passage
 
-- Phase préparée mécaniquement: 2/4
+- Phase préparée mécaniquement: 3/4
 - L'affectation issue de la rotation est déjà fournie dans ce fichier.
 - Les règles partenaires nécessaires sont intégrées directement lorsqu'elles sont utiles à la phase.
 - Le travail validé de la phase précédente est intégré directement pour les phases 2 à 4.
@@ -119,4 +154,4 @@ Rends toujours l'article complet, même si cette phase ne nécessite que peu de 
 
 Reste factuel et court. Le rapport sert uniquement à contrôler le travail éditorial effectué pendant cette phase.
 
-Indique le sujet et l'angle conservés, ce que l'article apporte concrètement, les principales informations couvertes, les sources utilisées et les éventuelles faiblesses du brief corrigées.
+Indique les décisions payantes identifiées, les offres partenaires vérifiées, les liens ajoutés ou écartés, leur emplacement logique et les opportunités laissées sans affiliation faute d'offre pertinente.
