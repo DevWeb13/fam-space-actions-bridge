@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 3/3
+# Radar Fam Space - Phase 1/3
 
 ## Mission
 
@@ -8,34 +8,25 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 3/3
+# Radar - Phase 1/3
 
-Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
+Tu es rédacteur en chef. Ta seule responsabilité est de choisir la meilleure mission du passage et de préparer un brief éditorial court. **Ne fais aucune plomberie Git et ne reconstruis aucune donnée GSC structurée.**
 
-Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
+Le snapshot GSC du jour est déjà prêt lorsque cette phase commence. Utilise le catalogue compact et l'historique du bridge fournis dans ce runtime, puis utilise le contexte des travaux en cours fourni dans ce runtime. Contrôle seulement les articles nécessaires sur `master`, sans relire tout le catalogue fichier par fichier.
 
-Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
+Examine **en premier** les articles `refresh`, en commençant par ceux marqués `rapidDrop: true`. Ils ont gagné des impressions, puis leur visibilité a fortement diminué en quelques jours. Les articles récents ne doivent pas être pénalisés par leur âge. Les autres pertes significatives viennent ensuite.
 
-Ensuite:
-- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
-- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
-- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
-- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
-- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
-- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
-- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
-- ne force ni longueur ni affiliation.
+Lis l'article source complet, ses sources et les requêtes GSC lorsqu'elles ont été diagnostiquées :
+- `rank_loss` : vérifier les intentions dont les positions ont réellement reculé ;
+- `coverage_loss` : examiner les recherches dont l'exposition diminue ;
+- `uncertain` ou `needs_query_check` : une chute d'impressions ne prouve pas la cause. Seule une lacune indépendante et vérifiée peut justifier une amélioration ;
+- `search_potential` : vérifier que la réponse et le titre correspondent réellement à l'intention.
 
-Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
+**Ne choisis pas un refresh pour changer une date ou forcer un `updatedAt`.** Identifie ce qui serait concrètement meilleur pour la famille, tout en conservant ce qui fonctionne déjà.
 
-Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
-- `summary`: contrôles et corrections réellement effectués;
-- `sources`: URLs factuelles revérifiées;
-- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+**Seulement si aucun article existant n'est réellement améliorable**, cherche un événement exceptionnel avec un fort potentiel d'intérêt et éventuellement d'affiliation. Vérifie ses sources officielles et recherche les doublons de sujet sur `master`, en complément des articles proches déjà listés, ainsi que les contenus Publication/Destination en cours. Ne multiplie pas les nouveaux articles sur de petits événements gratuits.
 
-**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
-
-## Règles partenaires
+Applique directement les règles partenaires ci-dessous.
 
 ### Partenaires disponibles
 
@@ -59,323 +50,972 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-## Candidat validé de la phase précédente
-
----
-title: "Métro à Paris avec des enfants: prix des tickets et forfaits en famille"
-subtitle: "Tarifs selon l'âge, correspondances, Navigo et Paris Visite: choisissez le bon titre pour chaque voyageur"
-summary: "Métro gratuit avant 4 ans, ticket enfant à 1,30 € de 4 à 9 ans en 2026: comparez les tickets, Navigo et Paris Visite selon votre séjour en famille."
-slug: transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste
-status: published
-publishedAt: 2026-08-29T00:00:45+02:00
-updatedAt: 2026-11-06T21:35:30.174Z
-category: voyages
-readingTime: 7
-location:
-  city: Paris
-  department: Paris
-  region: Île-de-France
-topic:
-  key: voyages|paris|transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste|2026
-  keywords:
-    - transport Paris avec enfants
-    - Paris Visite ou Navigo famille
-image:
-  src: /images/articles/2026/08/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste.webp
-  alt: Quai de la station Stalingrad sur la ligne 2 du métro de Paris
-radar:
-  schemaVersion: 1
-  phase: 2
-  mode: refresh
-  targetPath: src/routes/articles/voyages/(2026)/(08)/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/index.md
-  targetSha: 7d68dc4f53f2f55ec7b20eedcee08e381d09808a
-  targetUrl: /articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/
-  decision: Connaître immédiatement le prix du métro selon l'âge de chaque enfant, puis choisir et acheter les titres adaptés aux correspondances, au nombre de déplacements et aux jours du séjour.
-  affiliationPotential: Aucune offre partenaire vérifiée équivalente aux titres ordinaires IDFM; conserver les liens officiels. Hôtel Terminus Lyon sur Booking.com, chambre familiale pour quatre personnes et proximité gare/RER vérifiées dans la fiche indexée; prix et disponibilité selon dates non confirmés. Ne pas confondre les pass touristiques d'attractions et les titres de transport.
-  gsc:
-    retrievedAt: 2026-11-28T07:56:00+01:00
-    dataThrough: 2026-11-26
-    signal: search_potential
-    basis: Page visible avec 1478 impressions, 3 clics et une position moyenne de 8.32 sur sept jours; intention de recherche à examiner. Les requêtes visibles ne démontrent pas une perte de classement.
-    peakStart: 2026-11-13
-    peakEnd: 2026-11-19
-    recentStart: 2026-11-20
-    recentEnd: 2026-11-26
-    peakImpressions: 1592
-    recentImpressions: 1478
-    commonQueries: 0
-    positionDelta: null
-    impressionRatio: 0.719
-    focusQueries:
-      - prix metro enfant paris
-      - metro paris enfant
-      - prix ticket metro paris enfant
-      - ticket metro paris enfant
-      - les enfants paient ils le metro a paris
-reviewAt: 2027-01-02
-sources:
-  - title: "Île-de-France Mobilités: Tarifs 2026"
-    url: https://www.iledefrance-mobilites.fr/tarifs-titre-de-transport-en-commun-2026
-  - title: "Île-de-France Mobilités: Réductions enfants"
-    url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/tarifs-reduits/enfants-4-10-ans
-  - title: "Île-de-France Mobilités: Voyager en règle"
-    url: https://www.iledefrance-mobilites.fr/comment-voyager-en-regle
-  - title: "Île-de-France Mobilités: Gratuité avant 4 ans"
-    url: https://tzen4.iledefrance-mobilites.fr/gratuite-pour-les-enfants-de-moins-de-4-ans
-  - title: "Île-de-France Mobilités: Ticket Métro-Train-RER"
-    url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/ticket-metro-train-rer
-  - title: "Île-de-France Mobilités: Ticket Bus-Tram"
-    url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/ticket-bus-tram
-  - title: "Île-de-France Mobilités: Correspondances"
-    url: https://www.iledefrance-mobilites.fr/correspondance-voie-publique
-  - title: "Île-de-France Mobilités: Navigo Easy"
-    url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/supports/passe-navigo-easy
-  - title: "Île-de-France Mobilités: Titres sur téléphone et compatibilité"
-    url: https://www.iledefrance-mobilites.fr/aide-et-contacts/chargement-des-titres-sur-mon-telephone/quels-titres-de-transport-charges-sur-telephone
-  - title: "Île-de-France Mobilités: Cartes virtuelles"
-    url: https://www.iledefrance-mobilites.fr/aide-et-contacts/valider-avec-son-telephone/choisir-cartes-navigo-iphone-android-montre-connectee
-  - title: "Île-de-France Mobilités: Fin des tickets carton"
-    url: https://www.iledefrance-mobilites.fr/aide-et-contacts/titres-unitaires-tarifs-reduits/avenir-tickets-t-et-od-en-carton
-  - title: "Île-de-France Mobilités: Navigo Jour"
-    url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/forfait-navigo-jour
-  - title: "Île-de-France Mobilités: Navigo Liberté+"
-    url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/liberte-plus
-  - title: "Île-de-France Mobilités: Éligibilité Liberté+"
-    url: https://www.iledefrance-mobilites.fr/aide-et-contacts/navigo-liberte-plus-sur-telephone/quelles-conditions-navigo-liberte
-  - title: "Île-de-France Mobilités: Souscription Liberté+"
-    url: https://www.iledefrance-mobilites.fr/aide-et-contacts/navigo-liberte-plus/comment-souscrire-un-contrat-navigo-liberte-plus
-  - title: "Île-de-France Mobilités: Navigo Semaine"
-    url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/forfait-navigo-semaine
-  - title: "Île-de-France Mobilités: CGVU Navigo Semaine"
-    url: https://www.iledefrance-mobilites.fr/cgvu-forfaits-navigo-mois-navigo-semaine
-  - title: "Île-de-France Mobilités: Navigo Découverte"
-    url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/supports/passe-navigo-decouverte
-  - title: "Île-de-France Mobilités: Paris Visite"
-    url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/forfait-paris-visite
-  - title: "Île-de-France Mobilités: Ticket Paris Région Aéroports"
-    url: https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/ticket-paris-region-aeroports
----
-
-<!-- article-image-credit -->
-*Photo: [최광모](https://commons.wikimedia.org/wiki/File:Paris_Metro_-_Ligne_2_-_station_Stalingrad_platform.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
-<!-- /article-image-credit -->
-
-En 2026, **le métro parisien est gratuit pour les moins de 4 ans et coûte 1,30 € par trajet pour les enfants de 4 à 9 ans inclus**. Dès 10 ans, le prix ordinaire est de 2,55 €, sauf si l'enfant bénéficie d'un autre droit à réduction. Pour un séjour en famille, ces différences d'âge peuvent rendre les tickets à l'unité plus économiques qu'un forfait acheté pour tout le monde.
 
-## Combien coûte chaque déplacement selon l'âge ?
-
-Voici les [tarifs officiels 2026 d'Île-de-France Mobilités](https://www.iledefrance-mobilites.fr/tarifs-titre-de-transport-en-commun-2026), pour les trajets ordinaires et les principales liaisons ferroviaires aéroportuaires:
-
-- Moins de 4 ans: gratuit, sans titre de transport, sauf sur Filéo.
-- De 4 à moins de 10 ans: 1,30 € en métro, train ou RER; 1,05 € en bus ou tram; 7 € avec le ticket Paris Région Aéroports.
-- À partir de 10 ans: respectivement 2,55 €, 2,05 € et 14 €, en l'absence d'un autre droit à réduction.
-
-Gardez de quoi justifier l'âge des enfants bénéficiant du tarif réduit. Avec un bébé dans les bras, vous pouvez franchir les portiques avec lui; avec une poussette, demandez à un agent d'ouvrir le passage adapté. Les règles de gratuité et de contrôle sont précisées sur la page [Comment voyager en règle ?](https://www.iledefrance-mobilites.fr/comment-voyager-en-regle).
-
-## Quand faut-il utiliser un deuxième ticket ?
-
-Le [Ticket Métro-Train-RER](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/ticket-metro-train-rer) couvre la région hors gares aéroportuaires. Il permet de changer de métro ou de passer au RER et au train pendant les deux heures suivant la première validation, sans quitter le réseau. Certaines correspondances à pied, signalées par l'opérateur, font exception à la règle de sortie. Consultez la [liste des cheminements autorisés](https://www.iledefrance-mobilites.fr/correspondance-voie-publique) avant de ressortir d'une gare.
-
-Le [Ticket Bus-Tram](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/ticket-bus-tram) est distinct: les correspondances entre bus, tram et câble C1 sont possibles pendant 90 minutes, mais pas un aller-retour ou une interruption sur une même ligne. Avec des tickets unitaires, passer du métro au bus nécessite donc normalement deux titres. Le funiculaire de Montmartre utilise un Ticket Métro-Train-RER sans correspondance.
-
-## Acheter les tickets pour plusieurs enfants
-
-Le [passe Navigo Easy](https://www.iledefrance-mobilites.fr/titres-et-tarifs/supports/passe-navigo-easy) coûte 2 €. Il est rechargeable au guichet, sur automate ou depuis un smartphone compatible. Chaque voyageur payant doit avoir son propre titre et, avec les passes physiques, sa propre carte.
-
-Les tickets au tarif normal et ceux au tarif réduit ne peuvent pas être stockés ensemble sur une même carte. Il en va également des tickets Métro-Train-RER et Paris Région Aéroports. Prévoyez des supports distincts si vous devez conserver ces deux derniers types de tickets simultanément.
-
-Sur iPhone et sur Android utilisant les services Google compatibles, il est désormais possible de créer plusieurs cartes virtuelles et de sélectionner celle de chaque voyageur avant son passage. Il faut pouvoir présenter tous les titres au contrôle et effectuer correctement chaque validation, y compris les correspondances et les sorties qui l'exigent. Pour une famille qui préfère éviter ces manipulations aux portiques, des passes Easy séparés restent pratiques. Consultez les [instructions officielles pour les cartes virtuelles](https://www.iledefrance-mobilites.fr/aide-et-contacts/valider-avec-son-telephone/choisir-cartes-navigo-iphone-android-montre-connectee).
-
-Il vous reste des tickets en carton ? Ils ne sont déjà plus acceptés dans les bus et les trams. Les anciens t+ restent utilisables dans le métro jusqu'au 14 décembre 2026 inclus, et les anciens billets Origine-Destination sur leur parcours autorisé jusqu'à cette même date. Jusqu'au 14 janvier 2027, vous pouvez les échanger en guichet RATP ou SNCF, à raison de cinq par jour au maximum, sur un passe Easy acheté au préalable. Pas de remboursement. Les t+ dématérialisés, eux, n'expirent pas à cette date. Voir les [modalités d'échange](https://www.iledefrance-mobilites.fr/aide-et-contacts/titres-unitaires-tarifs-reduits/avenir-tickets-t-et-od-en-carton).
-
-## Tickets à l'unité ou Navigo Jour: calculez pour chaque personne
-
-Le [Navigo Jour](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/forfait-navigo-jour) coûte 12,30 € par personne, sans tarif enfant spécifique. Il permet de se déplacer librement sur les réseaux ordinaires des zones 1 à 5 pendant une journée, hors dessertes aéroportuaires concernées. Pour une journée uniquement en métro:
-
-- Adulte: quatre trajets distincts coûtent 10,20 €. À cinq trajets (12,75 €), le forfait devient moins cher.
-- Enfant de 4 à 9 ans: quatre trajets coûtent 5,20 €. Il faut atteindre dix trajets distincts (13 €) pour que le forfait soit moins cher.
-
-Une famille de deux adultes et deux enfants de 6 et 9 ans faisant quatre trajets chacun dépense ainsi 30,80 € en tickets, hors achat des supports. Quatre Navigo Jour reviendraient à 49,20 €. Avec un programme très mobile, vous pouvez aussi prendre un forfait uniquement pour les adultes et conserver les tickets réduits pour les enfants.
-
-## Navigo Liberté+: surtout pour les Franciliens
-
-Le service [Navigo Liberté+](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/liberte-plus) facture les déplacements réellement effectués le mois suivant: 2,04 € en métro, train ou RER et 1,64 € en bus ou tram. Pour les bénéficiaires du tarif réduit sur passe, comptez 1,02 € et 0,82 €. Le tarif réduit Liberté+ n'est pas proposé sur téléphone. Les déplacements ordinaires sont plafonnés à 12,30 € par jour, les trajets aéroportuaires étant facturés séparément.
-
-Quatre trajets ordinaires en métro coûtent ainsi 8,16 € au lieu de 10,20 € en tickets classiques; six coûtent 12,24 €, sans devoir acheter d'avance un forfait illimité.
-
-Cette formule nécessite un contrat, un RIB et une souscription avant le voyage. Elle est réservée aux personnes qui habitent ou travaillent en Île-de-France. Si vous résidez hors de la région mais y travaillez, la souscription sur passe en agence est possible avec un justificatif de l'employeur; la formule sur téléphone n'est pas accessible aux non-résidents. Un touriste non éligible doit choisir un autre titre.
-
-Pour la souscription, les tarifs enfants et le choix du support, consultez notre guide [Navigo Liberté+ en famille](/articles/bons-plans/navigo-liberte-en-famille-en-2026-tarif-enfant-passe-ou-telephone/).
-
-## Navigo Semaine ou Paris Visite pour plusieurs jours ?
-
-Le [Navigo Semaine](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/forfait-navigo-semaine) toutes zones coûte 32,40 €. Sa validité va du lundi au dimanche: ce ne sont pas sept jours glissants. Vous pouvez l'acheter à partir du vendredi précédent jusqu'au jeudi de la semaine choisie inclus. Dès le vendredi, l'achat concerne la semaine suivante. Un séjour du lundi au vendredi convient donc bien à ce forfait; un séjour du vendredi au mardi couvre deux semaines.
-
-En toutes zones, il inclut Orly par la ligne 14 et CDG par le RER B, mais pas Orlyval. Les visiteurs peuvent le charger sur téléphone compatible ou sur un [passe Navigo Découverte](https://www.iledefrance-mobilites.fr/titres-et-tarifs/supports/passe-navigo-decouverte), à 5 €, nominatif et accompagné d'une photo.
-
-Le [forfait Paris Visite](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/forfait-paris-visite) couvre les zones 1 à 5, aéroports et Orlyval compris, pendant 1, 2, 3 ou 5 jours consécutifs. En 2026, les tarifs adultes sont de 30,60 €, 45,40 €, 63,80 € et 78 € respectivement. Les enfants de 4 à 9 ans paient la moitié, soit 15,30 €, 22,70 €, 31,90 € ou 39 €. Le forfait n'est pas valable sur Filéo.
-
-Paris Visite peut être pertinent si vous combinez aéroports, Versailles ou Disneyland Paris, et que votre séjour chevauche deux semaines. Sans aéroport, quelques trajets ordinaires reviennent souvent moins cher avec des tickets. Pour le budget des activités elles-mêmes, consultez nos guides [Disneyland Paris en famille](/articles/voyages/disneyland-paris-en-famille-en-2026-combien-de-jours-quel-hotel-et-quel-budget-prevoir/) et [Cité des sciences en famille](/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/).
-
-## Arrivée à Orly ou Charles-de-Gaulle: comptez les liaisons séparément
-
-Le [Ticket Paris Région Aéroports](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/ticket-paris-region-aeroports) dessert Orly via la ligne 14 ou Orlyval, et CDG via le RER B. Pour un adulte, l'aller-retour représente 28 €. Les trajets aéroportuaires concernés avec Liberté+ restent facturés à part, en dehors du plafond quotidien.
-
-Exemple pour deux jours avec un aller-retour aéroport en métro ou RER: deux Navigo Jour et les deux tickets aéroport coûtent 52,60 € par adulte, contre 45,40 € pour Paris Visite deux jours. Dans ce scénario, Paris Visite économise 7,20 € par adulte, à condition de faire suffisamment de trajets urbains pour justifier les deux Navigo Jour dans la comparaison.
-
-Pour comparer les itinéraires et les alternatives avec poussette et valises, retrouvez nos guides [rejoindre Orly en famille](/articles/voyages/aeroport-d-orly-avec-des-enfants-metro-14-orlyval-ou-taxi/) et [rejoindre Roissy-CDG en famille](/articles/voyages/rejoindre-l-aeroport-paris-cdg-en-famille-rer-b-bus-9517-ou-taxi/).
-
-## Où dormir pour limiter les déplacements ?
-
-Si vous arrivez en train à Gare de Lyon, dormir près de la gare facilite les déplacements en métro et RER et évite un premier trajet chargé de bagages. L'[Hôtel Terminus Lyon](https://www.booking.com/hotel/fr/hotelterminuslyon.fr.html), en face de la gare, propose notamment une chambre familiale avec un grand lit double et deux lits simples. Vérifiez le prix et la disponibilité pour les dates et la composition de votre famille.
-
-Si l'heure d'arrivée ou de départ ne coïncide pas avec celle de votre hébergement, consultez notre guide des [consignes à bagages à Paris](/articles/vie-pratique/consigne-a-bagages-a-paris-en-famille-gare-ou-depot-en-ville/) pour éviter de transporter toutes vos affaires pendant les visites.
-
-## Article source exact à préserver et améliorer
-
-Chemin: src/routes/articles/voyages/(2026)/(08)/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/index.md
-
----
-title: "Transports à Paris avec des enfants: quel titre choisir pour payer juste?"
-subtitle: "Tickets, Navigo Liberté+, Navigo Jour, Semaine ou Paris Visite: comparez selon votre éligibilité, les âges et les aéroports"
-summary: Comparez les tarifs 2026 des transports parisiens en famille, y compris Navigo Liberté+ pour les personnes éligibles, selon les trajets et les aéroports.
-slug: transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste
-status: published
-publishedAt: 2026-08-29T00:00:45+02:00
-updatedAt: 2026-11-06T21:35:30.174Z
-category: voyages
-readingTime: 7
-location:
-  city: Paris
-  department: Paris
-  region: Île-de-France
-topic:
-  key: voyages|paris|transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste|2026
-  keywords:
-    - transport Paris avec enfants
-    - Paris Visite ou Navigo famille
-image:
-  src: /images/articles/2026/08/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste.webp
-  alt: Quai de la station Stalingrad sur la ligne 2 du métro de Paris
----
-
-<!-- article-image-credit -->
-*Photo: [최광모](https://commons.wikimedia.org/wiki/File:Paris_Metro_-_Ligne_2_-_station_Stalingrad_platform.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
-<!-- /article-image-credit -->
-
-À Paris, acheter automatiquement un forfait illimité pour toute la famille n'est pas toujours le choix le plus économique. En 2026, un ticket Métro-Train-RER coûte 2,55 € au plein tarif et 1,30 € au tarif réduit. Le Navigo Jour coûte 12,30 €, tandis que Paris Visite commence à 30,60 € pour un adulte sur une journée. Pour les personnes qui résident ou travaillent en Île-de-France, Navigo Liberté+ peut aussi réduire la facture. Le bon choix dépend du nombre de déplacements, de l'âge des enfants, des dates du séjour et des trajets vers les aéroports.
-
-Les montants ci-dessous proviennent des [tarifs officiels 2026 d'Île-de-France Mobilités](https://www.iledefrance-mobilites.fr/tarifs-titre-de-transport-en-commun-2026).
-
-## Pour peu de trajets, les tickets à l'unité restent souvent les plus simples
-
-Le Ticket Métro-Train-RER coûte 2,55 € par trajet au plein tarif. Il permet de voyager en métro, train et RER dans toute l'Île-de-France, hors dessertes des aéroports. Le Ticket Bus-Tram coûte 2,05 € au plein tarif.
-
-Pour un adulte qui effectue deux allers-retours en métro dans la journée, soit quatre trajets, la dépense atteint 10,20 €. Elle reste inférieure aux 12,30 € d'un Navigo Jour. À partir de cinq trajets Métro-Train-RER dans la même journée, le total des tickets à l'unité atteint 12,75 €: le Navigo Jour devient légèrement moins cher.
-
-Ces titres peuvent être chargés sur un smartphone compatible ou sur un [passe Navigo Easy](https://www.iledefrance-mobilites.fr/titres-et-tarifs/supports/passe-navigo-easy). Le passe physique coûte 2 € et chaque voyageur doit avoir son propre support pour voyager simultanément avec les autres membres de la famille.
-
-## Navigo Liberté+: avantageux, mais pas accessible à tous les visiteurs
-
-Avant de comparer les prix, vérifiez votre éligibilité. [Île-de-France Mobilités précise](https://www.iledefrance-mobilites.fr/aide-et-contacts/navigo-liberte-plus-sur-telephone/quelles-conditions-navigo-liberte) que Navigo Liberté+ s'adresse aux personnes **résidant ou travaillant en Île-de-France**. Un touriste de passage qui ne remplit aucune de ces conditions ne doit donc pas compter sur cette formule. Le service sur téléphone n'est pas disponible aux résidents hors Île-de-France; une personne qui habite ailleurs mais travaille dans la région peut souscrire sur passe en agence avec un justificatif de son employeur francilien.
-
-Pour une personne éligible, les [tarifs Liberté+ 2026](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/liberte-plus) sont de **2,04 € en métro, train ou RER** et **1,64 € en bus ou tram** au plein tarif. Sur passe, les personnes ayant droit au tarif réduit paient respectivement 1,02 € et 0,82 €; **le tarif réduit n'est pas disponible sur téléphone**. La facturation intervient le mois suivant les déplacements, et la dépense quotidienne est plafonnée au prix du Navigo Jour pour les trajets ordinaires, hors liaisons aéroportuaires.
-
-Quatre trajets en métro coûtent ainsi 8,16 € avec Liberté+ contre 10,20 € en tickets classiques. Pour six trajets distincts, le total atteint 12,24 €, sous le plafond journalier de 12,30 €. Contrairement au Navigo Jour acheté à l'avance, Liberté+ facture les déplacements réellement effectués, dans la limite du plafond applicable.
-
-Il faut toutefois **souscrire avant de voyager**, fournir un RIB et disposer du support adapté. La [souscription sur passe](https://www.iledefrance-mobilites.fr/aide-et-contacts/navigo-liberte-plus/comment-souscrire-un-contrat-navigo-liberte-plus) peut se faire en ligne ou dans les points d'accueil prévus; sur téléphone, elle se fait dans l'application Île-de-France Mobilités, sous conditions. Pour les justificatifs, les modalités et le choix du support, consultez notre guide [Navigo Liberté+ en famille: tarif enfant, passe ou téléphone](/articles/bons-plans/navigo-liberte-en-famille-en-2026-tarif-enfant-passe-ou-telephone/).
-
-## Avec un enfant de moins de 10 ans, ne copiez pas forcément le choix des adultes
-
-Les enfants de moins de 4 ans voyagent gratuitement. De 4 ans à moins de 10 ans, ils bénéficient notamment de 50 % de réduction sur les tickets Métro-Train-RER, Bus-Tram et Paris Région vers les aéroports. En 2026, cela donne 1,30 € pour un trajet Métro-Train-RER et 1,05 € pour un trajet Bus-Tram. Les conditions figurent sur la [page officielle consacrée aux enfants de 4 à moins de 10 ans](https://www.iledefrance-mobilites.fr/titres-et-tarifs/tarifs-reduits/enfants-4-10-ans).
-
-Le Navigo Jour coûte 12,30 € sans tarif enfant spécifique. Une famille peut donc choisir Navigo Jour pour un adulte qui multiplie les déplacements et des tickets à tarif réduit pour un enfant qui voyage moins. Pour un enfant éligible au tarif réduit Liberté+ sur passe, il faut aussi tenir compte des conditions propres à ce contrat: ne présumez pas que le tarif réduit s'applique sur téléphone.
-
-## Navigo Jour devient intéressant lors d'une journée très mobile
-
-Le Navigo Jour coûte 12,30 € en 2026 et permet des déplacements illimités dans les zones 1 à 5 pendant une journée. Il couvre métro, train, RER, tram et bus, mais pas les dessertes aéroportuaires concernées vers Orly ou Charles-de-Gaulle.
-
-Pour une journée comprenant plusieurs quartiers éloignés, des retours à l'hôtel ou un programme susceptible de changer, l'illimité évite de compter chaque déplacement. Pour deux ou trois trajets en métro, les tickets restent généralement moins chers. Une personne déjà abonnée à Liberté+ bénéficie quant à elle du plafonnement quotidien sans avoir à acheter Navigo Jour.
-
-## Pour plusieurs jours du lundi au dimanche, vérifiez Navigo Semaine avant Paris Visite
-
-Le [Navigo Semaine](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/forfait-navigo-semaine) coûte 32,40 € toutes zones en 2026. C'est un tarif compétitif pour un séjour avec de nombreux déplacements, mais il fonctionne sur une semaine fixe du lundi au dimanche, et non pendant sept jours glissants à compter de l'achat.
-
-En toutes zones, il couvre métro, train et RER dans les zones 1 à 5, notamment Orly par la ligne 14 et Charles-de-Gaulle par le RER B. Orlyval reste exclu.
-
-Un séjour du lundi au vendredi entre dans une seule période de validité. Un séjour du vendredi au mardi chevauche deux semaines et rend la formule moins évidente.
-
-Pour un visiteur qui souhaite un support physique, le [passe Navigo Découverte](https://www.iledefrance-mobilites.fr/titres-et-tarifs/supports/passe-navigo-decouverte) est destiné notamment aux touristes et visiteurs. Il coûte 5 €, est personnel et nécessite nom, prénom et photo.
-
-## Paris Visite devient surtout pertinent quand ses avantages correspondent au séjour
-
-Le forfait [Paris Visite](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/forfait-paris-visite) est valable pendant 1, 2, 3 ou 5 jours consécutifs dans toute l'Île-de-France. En 2026, il coûte 30,60 € pour 1 jour, 45,40 € pour 2 jours, 63,80 € pour 3 jours et 78 € pour 5 jours au tarif adulte. Les enfants de 4 ans à moins de 10 ans bénéficient du demi-tarif.
-
-Son avantage pratique face au Navigo Jour et aux tickets classiques est d'inclure les dessertes d'Orly et de Charles-de-Gaulle ainsi que l'ensemble des zones 1 à 5. Il peut devenir cohérent avec un aéroport et plusieurs déplacements lointains, par exemple Versailles ou Disneyland Paris, surtout si les dates rendent Navigo Semaine peu avantageux.
-
-Si Disneyland fait partie du voyage, chiffrez séparément cette étape avec notre guide [Disneyland Paris en famille: combien de jours, quel hôtel et quel budget prévoir](/articles/voyages/disneyland-paris-en-famille-en-2026-combien-de-jours-quel-hotel-et-quel-budget-prevoir/).
-
-Pour une journée à La Villette, notre guide [Cité des sciences en famille: billets, espaces enfants et organisation de la visite](/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/) aide à construire le programme autour d'un créneau de visite.
-
-## Arrivée par Orly ou CDG: ajoutez le coût de l'aéroport avant de comparer
-
-Le [Ticket Paris Région Aéroports](https://www.iledefrance-mobilites.fr/titres-et-tarifs/detail/ticket-paris-region-aeroports) coûte 14 € par trajet au plein tarif et 7 € au tarif réduit. Il concerne notamment Orly via la ligne 14 ou Orlyval et Charles-de-Gaulle via le RER B. Navigo Liberté+ facture également les trajets aéroportuaires concernés à part: ils ne bénéficient pas du plafond journalier ordinaire.
-
-Pour préparer ces liaisons avec enfants, poussette et bagages, consultez nos guides pour [rejoindre Orly en métro 14, Orlyval ou taxi](/articles/voyages/aeroport-d-orly-avec-des-enfants-metro-14-orlyval-ou-taxi/) et [rejoindre Roissy-CDG en RER B, bus 9517 ou taxi](/articles/voyages/rejoindre-l-aeroport-paris-cdg-en-famille-rer-b-bus-9517-ou-taxi/).
-
-Pour un adulte, un aller-retour aéroport représente 28 € à lui seul. Il faut l'ajouter au coût des déplacements urbains lorsque le titre choisi ne couvre pas ces liaisons.
-
-Exemple: sur deux jours, deux Navigo Jour coûtent 24,60 €. Avec un aller-retour aéroport à 28 €, le total atteint 52,60 € par adulte. Paris Visite 2 jours coûte 45,40 € et inclut les dessertes d'aéroport: dans ce scénario, il revient 7,20 € moins cher, avant ses éventuels avantages culturels ou commerciaux.
-
-Si vous arrivez tôt ou repartez tard avec les valises, notre guide [consigne à bagages à Paris en famille: gare ou dépôt en ville ?](/articles/vie-pratique/consigne-a-bagages-a-paris-en-famille-gare-ou-depot-en-ville/) compare les solutions selon le quartier et le temps disponible.
-
-## Contexte éditorial ciblé pour le maillage et les doublons
-
-### Articles proches préparés mécaniquement
-
+Le brief doit rester court et contenir uniquement ce qui aidera la rédaction:
+
+## Mission retenue
+Le sujet et ce que c'est réellement.
+
+## Pourquoi cette mission
+Pourquoi elle mérite une amélioration maintenant, ou pourquoi aucun article existant n'était utilement améliorable avant de retenir cet événement.
+
+## Décision du lecteur
+Ce que la page doit permettre au lecteur de comprendre ou de choisir. Formule un résultat pour le lecteur, pas un titre ni un plan. Les consignes de maillage, d'anti-doublon ou d'organisation entre articles appartiennent à `Continuations internes`, pas à la décision.
+
+## Faits à traiter
+Les informations décisives à vérifier, actualiser ou ajouter, et les informations existantes importantes à préserver pour un refresh.
+
+## Sources de départ
+Les meilleures sources officielles ou directement responsables.
+
+## Affiliation
+Les pistes réellement vérifiées, ou l'absence d'affiliation naturelle.
+
+## Continuations internes
+Deux ou trois pistes seulement si elles sont réellement utiles. Indique quand une page existante doit prendre le relais sur un sous-sujet afin d'éviter de le redévelopper dans le nouvel article.
+
+Ensuite, soumets cette décision via le format `action: start` fourni plus bas dans ce runtime. Le modèle ne renseigne jamais le nom de branche, le SHA, `targetPath`, le slug technique d'une opportunity ni les métriques GSC détaillées déjà présentes dans le snapshot.
+
+## Catégories éditoriales autorisées
+
+- sorties — Sorties: Des idées de sorties à partager en famille, près de chez vous.
+- voyages — Voyages: Des conseils et inspirations pour voyager sereinement en famille.
+- evenements — Événements: Les événements à découvrir et à préparer avec les enfants.
+- activites — Activités: Des activités simples et enrichissantes pour tous les âges.
+- vie-pratique — Vie pratique: Des repères concrets pour faciliter le quotidien des familles.
+- maison — Maison: Des solutions pratiques pour une maison familiale agréable.
+- cuisine — Cuisine: Des idées et conseils pour cuisiner simplement en famille.
+- parentalite — Parentalité: Des ressources bienveillantes pour accompagner la vie de famille.
+- bons-plans — Bons plans: Réductions, gratuités, pass et aides pratiques pour économiser en famille.
+
+## Snapshot GSC préparé
+
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-11-28T07:56:00+01:00",
+  "dataThrough": "2026-11-26",
+  "from": "2026-10-30",
+  "refresh": [
+    {
+      "url": "/articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/",
+      "title": "Marché de Noël 100 % Côte-d’Or à Dijon 2026: horaires, spectacles et Père Noël",
+      "category": "evenements",
+      "publishedAt": "2026-10-29T14:26:32.176Z",
+      "location": {
+        "city": "Dijon",
+        "department": "Côte-d'Or",
+        "region": "Bourgogne-Franche-Comté"
+      },
+      "ageDays": 30,
+      "rapidDrop": true,
+      "peakStart": "2026-11-01",
+      "peakEnd": "2026-11-03",
+      "recentStart": "2026-11-24",
+      "recentEnd": "2026-11-26",
+      "peakImpressions": 22,
+      "recentImpressions": 3,
+      "score": 57,
+      "signal": "uncertain",
+      "basis": "Visibilité récente : 22 impressions sur trois jours, puis 3 sur les trois derniers jours consolidés; cause non établie. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0,
+      "focusQueries": [
+        "dijon marche de noel 2026",
+        "marché de noël dijon 2026",
+        "dijon noel 2026",
+        "place de la libération"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/",
+      "title": "Noël 2026 à Chantilly: Le Noël oublié, billets et séances en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-26T21:31:06.019Z",
+      "location": {
+        "city": "Chantilly",
+        "department": "Oise",
+        "region": "Hauts-de-France"
+      },
+      "ageDays": 33,
+      "rapidDrop": false,
+      "peakStart": "2026-10-30",
+      "peakEnd": "2026-11-05",
+      "recentStart": "2026-11-20",
+      "recentEnd": "2026-11-26",
+      "peakImpressions": 247,
+      "recentImpressions": 31,
+      "score": 216,
+      "signal": "uncertain",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer. Diagnostic sur 0 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0.018,
+      "focusQueries": [
+        "chateau de chantilly noel 2026",
+        "spectacle noël chantilly 2026",
+        "noel a chantilly 2026",
+        "spectacle equestre chantilly noel 2026",
+        "chantilly noel 2026"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/carte-avantage-adulte-sncf-quand-est-elle-interessante-avec-des-enfants/",
+      "title": "Carte Avantage Adulte SNCF: quand est-elle intéressante avec des enfants?",
+      "category": "bons-plans",
+      "publishedAt": "2026-08-29T16:41:39+02:00",
+      "ageDays": 91,
+      "rapidDrop": false,
+      "peakStart": "2026-11-11",
+      "peakEnd": "2026-11-17",
+      "recentStart": "2026-11-20",
+      "recentEnd": "2026-11-26",
+      "peakImpressions": 572,
+      "recentImpressions": 409,
+      "score": 163,
+      "signal": "uncertain",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer. Diagnostic sur 1 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 1,
+      "positionDelta": -7.425,
+      "impressionRatio": 0.706,
+      "focusQueries": [
+        "carte avantage adulte",
+        "carte sncf enfant famille",
+        "accompagnant carte avantage",
+        "carte avantage adulte accompagnant",
+        "carte avantage famille"
+      ]
+    },
+    {
+      "url": "/articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/",
+      "title": "Transports à Paris avec des enfants: quel titre choisir pour payer juste?",
+      "category": "voyages",
+      "publishedAt": "2026-08-29T00:00:45+02:00",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 91,
+      "rapidDrop": false,
+      "peakStart": "2026-11-13",
+      "peakEnd": "2026-11-19",
+      "recentStart": "2026-11-20",
+      "recentEnd": "2026-11-26",
+      "peakImpressions": 1592,
+      "recentImpressions": 1478,
+      "score": 117.8,
+      "signal": "search_potential",
+      "basis": "Page visible avec 1478 impressions, 3 clics et une position moyenne de 8.32 sur sept jours; intention de recherche à examiner. Les requêtes visibles ne démontrent pas une perte de classement.",
+      "commonQueries": 0,
+      "positionDelta": null,
+      "impressionRatio": 0.719,
+      "focusQueries": [
+        "prix metro enfant paris",
+        "metro paris enfant",
+        "prix ticket metro paris enfant",
+        "ticket metro paris enfant",
+        "les enfants paient ils le metro a paris"
+      ]
+    },
+    {
+      "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
+      "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
+      "category": "evenements",
+      "publishedAt": "2026-11-05T05:04:01+01:00",
+      "location": {
+        "city": "",
+        "department": "Pyrénées-Orientales",
+        "region": "Occitanie"
+      },
+      "ageDays": 23,
+      "rapidDrop": false,
+      "peakStart": "2026-11-10",
+      "peakEnd": "2026-11-16",
+      "recentStart": "2026-11-20",
+      "recentEnd": "2026-11-26",
+      "peakImpressions": 402,
+      "recentImpressions": 285,
+      "score": 117,
+      "signal": "uncertain",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer. Diagnostic sur 5 requête(s) comparable(s) : cause de la baisse non établie; vérifier une lacune éditoriale indépendante.",
+      "commonQueries": 5,
+      "positionDelta": 0.065,
+      "impressionRatio": 0.678,
+      "focusQueries": [
+        "fete de l'ours 2027",
+        "fête de l'ours 2027",
+        "fête de l ours prats de mollo 2027",
+        "fête de lours 2027",
+        "fete de l ours"
+      ]
+    },
+    {
+      "url": "/articles/evenements/luminescences-2026-2027-a-amneville-en-famille-soiree-seule-ou-zoo-et-lanternes/",
+      "title": "Luminescences 2026-2027 au zoo d'Amnéville: billets, pass annuel et horaires",
+      "category": "evenements",
+      "publishedAt": "2026-10-22T09:37:18.454Z",
+      "location": {
+        "city": "Amnéville",
+        "department": "Moselle",
+        "region": "Grand Est"
+      },
+      "ageDays": 37,
+      "rapidDrop": false,
+      "peakStart": "2026-11-06",
+      "peakEnd": "2026-11-12",
+      "recentStart": "2026-11-20",
+      "recentEnd": "2026-11-26",
+      "peakImpressions": 205,
+      "recentImpressions": 88,
+      "score": 117,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Luminescences Amnéville 2026 2027",
+        "festival lanternes zoo Amnéville enfants",
+        "Luminescences Amnéville tarifs",
+        "zoo Amnéville lanternes poussette"
+      ]
+    },
+    {
+      "url": "/articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/",
+      "title": "Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite",
+      "category": "sorties",
+      "publishedAt": "2026-08-23T10:46:58+02:00",
+      "location": {
+        "city": "Paris",
+        "department": "Paris",
+        "region": "Île-de-France"
+      },
+      "ageDays": 97,
+      "rapidDrop": false,
+      "peakStart": "2026-11-09",
+      "peakEnd": "2026-11-15",
+      "recentStart": "2026-11-20",
+      "recentEnd": "2026-11-26",
+      "peakImpressions": 484,
+      "recentImpressions": 393,
+      "score": 91,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Cité des sciences en famille",
+        "Cité des enfants Paris"
+      ]
+    },
+    {
+      "url": "/articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/",
+      "title": "Parc floral d’Orléans gratuit en hiver: horaires et sortie avec les enfants",
+      "category": "bons-plans",
+      "publishedAt": "2026-10-26T22:02:51+01:00",
+      "location": {
+        "city": "Orléans",
+        "department": "Loiret",
+        "region": "Centre-Val de Loire"
+      },
+      "ageDays": 33,
+      "rapidDrop": false,
+      "peakStart": "2026-10-30",
+      "peakEnd": "2026-11-05",
+      "recentStart": "2026-11-20",
+      "recentEnd": "2026-11-26",
+      "peakImpressions": 102,
+      "recentImpressions": 12,
+      "score": 90,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Parc floral Orléans gratuit hiver 2026 2027",
+        "Parc floral de La Source enfants",
+        "sortie gratuite famille Loiret"
+      ]
+    },
+    {
+      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
+      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
+      "category": "evenements",
+      "publishedAt": "2026-10-16T17:46:42.359Z",
+      "location": {
+        "city": "Lumigny-Nesles-Ormeaux",
+        "department": "Seine-et-Marne",
+        "region": "Île-de-France"
+      },
+      "ageDays": 43,
+      "rapidDrop": false,
+      "peakStart": "2026-10-30",
+      "peakEnd": "2026-11-05",
+      "recentStart": "2026-11-20",
+      "recentEnd": "2026-11-26",
+      "peakImpressions": 526,
+      "recentImpressions": 446,
+      "score": 80,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Lumigny Safari de Lumières 2026 2027",
+        "Safari de Lumières Lumigny tarifs famille",
+        "Lumigny Safari de Lumières billet combiné"
+      ]
+    },
+    {
+      "url": "/articles/evenements/fetes-de-saint-nicolas-2026-a-nancy-en-famille-defile-dates-et-visite/",
+      "title": "Fêtes de Saint-Nicolas 2026 à Nancy en famille: défilé, villages et animations",
+      "category": "evenements",
+      "publishedAt": "2026-10-19T16:47:56.167Z",
+      "location": {
+        "city": "Nancy",
+        "department": "Meurthe-et-Moselle",
+        "region": "Grand Est"
+      },
+      "ageDays": 40,
+      "rapidDrop": false,
+      "peakStart": "2026-11-08",
+      "peakEnd": "2026-11-14",
+      "recentStart": "2026-11-20",
+      "recentEnd": "2026-11-26",
+      "peakImpressions": 89,
+      "recentImpressions": 25,
+      "score": 64,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "fêtes Saint-Nicolas Nancy 2026 en famille",
+        "grand défilé Saint-Nicolas Nancy 5 décembre 2026",
+        "villages Saint-Nicolas Nancy enfants"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/",
+      "title": "Noël à Trévarez 2026 en famille: dates, horaires et réservation",
+      "category": "evenements",
+      "publishedAt": "2026-09-24T05:57:30+02:00",
+      "location": {
+        "city": "Saint-Goazec",
+        "department": "Finistère",
+        "region": "Bretagne"
+      },
+      "ageDays": 65,
+      "rapidDrop": false,
+      "peakStart": "2026-11-13",
+      "peakEnd": "2026-11-19",
+      "recentStart": "2026-11-20",
+      "recentEnd": "2026-11-26",
+      "peakImpressions": 346,
+      "recentImpressions": 1332,
+      "score": 63.2,
+      "signal": "search_potential",
+      "basis": "Page visible avec 1332 impressions, 7 clics et une position moyenne de 8.697 sur sept jours; intention de recherche à examiner.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël à Trévarez 2026",
+        "Trévarez en famille"
+      ]
+    },
+    {
+      "url": "/articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/",
+      "title": "Noël à Pau 2026 en famille: marchés, village et illuminations",
+      "category": "evenements",
+      "publishedAt": "2026-10-19T11:02:20+02:00",
+      "location": {
+        "city": "Pau",
+        "department": "Pyrénées-Atlantiques",
+        "region": "Nouvelle-Aquitaine"
+      },
+      "ageDays": 40,
+      "rapidDrop": false,
+      "peakStart": "2026-11-10",
+      "peakEnd": "2026-11-16",
+      "recentStart": "2026-11-20",
+      "recentEnd": "2026-11-26",
+      "peakImpressions": 99,
+      "recentImpressions": 37,
+      "score": 62,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Noël à Pau 2026 en famille",
+        "marché de Noël Pau enfants"
+      ]
+    },
+    {
+      "url": "/articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/",
+      "title": "Marché de Noël de Reims 2026 en famille: horaires, grande roue et animations",
+      "category": "evenements",
+      "publishedAt": "2026-10-20T00:30:38.892Z",
+      "location": {
+        "city": "Reims",
+        "department": "Marne",
+        "region": "Grand Est"
+      },
+      "ageDays": 39,
+      "rapidDrop": false,
+      "peakStart": "2026-11-13",
+      "peakEnd": "2026-11-19",
+      "recentStart": "2026-11-20",
+      "recentEnd": "2026-11-26",
+      "peakImpressions": 153,
+      "recentImpressions": 92,
+      "score": 61,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "marché de Noël Reims 2026 famille",
+        "marché de Noël Reims enfants horaires",
+        "marché de Noël Reims grande roue"
+      ]
+    },
+    {
+      "url": "/articles/vie-pratique/cantine-au-college-en-essonne-obtenir-son-tarif-2026-2027-sans-refaire-la-mauvaise-demarche/",
+      "title": "Cantine au collège en Essonne: obtenir son tarif 2026-2027 sans refaire la mauvaise démarche",
+      "category": "vie-pratique",
+      "publishedAt": "2026-09-13T16:03:15+02:00",
+      "location": {
+        "city": "Évry-Courcouronnes",
+        "department": "Essonne",
+        "region": "Île-de-France"
+      },
+      "ageDays": 76,
+      "rapidDrop": false,
+      "peakStart": "2026-11-03",
+      "peakEnd": "2026-11-09",
+      "recentStart": "2026-11-20",
+      "recentEnd": "2026-11-26",
+      "peakImpressions": 187,
+      "recentImpressions": 130,
+      "score": 57,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "tarif cantine collège Essonne 2026-2027",
+        "restauration scolaire Essonne"
+      ]
+    },
+    {
+      "url": "/articles/cuisine/fete-de-la-truffe-2027-a-sarlat-en-famille-que-faire-et-que-gouter/",
+      "title": "Fête de la Truffe 2027 à Sarlat en famille: que faire et que goûter ?",
+      "category": "cuisine",
+      "publishedAt": "2026-11-09T02:03:08+01:00",
+      "location": {
+        "city": "Sarlat-la-Canéda",
+        "department": "Dordogne",
+        "region": "Nouvelle-Aquitaine"
+      },
+      "ageDays": 19,
+      "rapidDrop": false,
+      "peakStart": "2026-11-10",
+      "peakEnd": "2026-11-16",
+      "recentStart": "2026-11-20",
+      "recentEnd": "2026-11-26",
+      "peakImpressions": 127,
+      "recentImpressions": 75,
+      "score": 52,
+      "signal": "needs_query_check",
+      "basis": "Baisse d'impressions possible; cause non établie, diagnostic par requêtes à effectuer.",
+      "commonQueries": null,
+      "positionDelta": null,
+      "impressionRatio": null,
+      "focusQueries": [
+        "Fête de la Truffe Sarlat 2027",
+        "Sarlat en famille janvier",
+        "truffe noire du Périgord"
+      ]
+    }
+  ],
+  "strongPages": [
+    {
+      "url": "/articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/",
+      "title": "Gastronomades 2026 à Angoulême en famille: programme, tarifs et conseils",
+      "category": "evenements",
+      "recentImpressions": 807,
+      "recentClicks": 21,
+      "recentPosition": 5.934,
+      "retention": 2.783
+    },
+    {
+      "url": "/articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/",
+      "title": "Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants",
+      "category": "evenements",
+      "recentImpressions": 402,
+      "recentClicks": 16,
+      "recentPosition": 7.321,
+      "retention": 1.327
+    },
+    {
+      "url": "/articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/",
+      "title": "Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille",
+      "category": "evenements",
+      "recentImpressions": 446,
+      "recentClicks": 11,
+      "recentPosition": 7.538,
+      "retention": 0.848
+    },
+    {
+      "url": "/articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/",
+      "title": "Noël 2026 au château de Goulaine: dates, billets et conseils en famille",
+      "category": "evenements",
+      "recentImpressions": 395,
+      "recentClicks": 9,
+      "recentPosition": 7.218,
+      "retention": 1.717
+    },
+    {
+      "url": "/articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/",
+      "title": "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?",
+      "category": "evenements",
+      "recentImpressions": 285,
+      "recentClicks": 9,
+      "recentPosition": 3.74,
+      "retention": 0.709
+    },
+    {
+      "url": "/articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/",
+      "title": "Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille",
+      "category": "evenements",
+      "recentImpressions": 521,
+      "recentClicks": 8,
+      "recentPosition": 6.359,
+      "retention": 1.176
+    },
+    {
+      "url": "/articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/",
+      "title": "Noël à Trévarez 2026 en famille: dates, horaires et réservation",
+      "category": "evenements",
+      "recentImpressions": 1332,
+      "recentClicks": 7,
+      "recentPosition": 8.697,
+      "retention": 3.85
+    },
+    {
+      "url": "/articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/",
+      "title": "Déchets verts à Toulouse Métropole en 2027: collecte, broyage et évacuation des gros volumes",
+      "category": "maison",
+      "recentImpressions": 100,
+      "recentClicks": 7,
+      "recentPosition": 6.27,
+      "retention": 0.926
+    },
+    {
+      "url": "/articles/evenements/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants/",
+      "title": "Fontaines dansantes d'hiver à Metz 2026-2027: dates, horaires et conseils en famille",
+      "category": "evenements",
+      "recentImpressions": 495,
+      "recentClicks": 5,
+      "recentPosition": 8.345,
+      "retention": 3.75
+    },
+    {
+      "url": "/articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/",
+      "title": "Recycleries autour de Chartres: où donner et acheter d'occasion ?",
+      "category": "maison",
+      "recentImpressions": 116,
+      "recentClicks": 5,
+      "recentPosition": 10.397,
+      "retention": 0.975
+    }
+  ],
+  "excluded": {
+    "expired": 198,
+    "cooling": 71
+  },
+  "warnings": [
+    "Diagnostics par requêtes : 5/5.",
+    "Les baisses d'impressions ne prouvent ni désindexation ni perte de classement."
+  ]
+}
+
+## Catalogue ciblé (doublons et publications récentes)
+
+### Articles comparables et publications récentes
+
+- /articles/evenements/marche-de-noel-100-cote-d-or-2026-a-dijon-samedi-ou-dimanche-avec-les-enfants/ | Marché de Noël 100 % Côte-d’Or à Dijon 2026: horaires, spectacles et Père Noël | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/evenements/festival-des-petits-explorateurs-2026-a-dijon-quels-ateliers-choisir-en-famille/ | Festival des Petits Explorateurs 2026 à Dijon: ateliers, horaires et tarifs | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/evenements/foire-de-dijon-2026-en-famille-dates-ateliers-animaux-et-gratuites/ | Foire de Dijon 2026 avec les enfants: gratuités, ateliers et Ferme Côte-d'Or | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/vie-pratique/frais-scolaires-en-cote-d-or-quelles-aides-demander-au-departement/ | Frais scolaires en Côte-d'Or: quelles aides demander au Département? | vie-pratique | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
+- /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | Noël 2026 à Chantilly: Le Noël oublié, billets et séances en famille | evenements | Chantilly, Oise, Hauts-de-France
+- /articles/sorties/halloween-2026-au-chateau-de-chantilly-quelle-activite-choisir-avec-des-enfants/ | Halloween 2026 au Château de Chantilly avec des enfants: ateliers, nocturnes et spectacle | sorties | Chantilly, Oise, Hauts-de-France
+- /articles/cuisine/atelier-de-creme-chantilly-avec-des-enfants-a-partir-de-quel-age-et-comment-reserver/ | Atelier de crème Chantilly avec des enfants: à partir de quel âge et comment réserver | cuisine | Chantilly, Oise, Hauts-de-France
+- /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | Noël de Casse-Noisette 2026 à Pierrefonds: visites, dates et tarifs en famille | evenements | Pierrefonds, Oise, Hauts-de-France
+- /articles/bons-plans/carte-avantage-adulte-sncf-quand-est-elle-interessante-avec-des-enfants/ | Carte Avantage Adulte SNCF: quand est-elle intéressante avec des enfants? | bons-plans
+- /articles/bons-plans/carte-familles-nombreuses-reductions-demarches/ | Carte Familles Nombreuses: réductions, conditions et demande en ligne | bons-plans
+- /articles/voyages/sarlat-sans-voiture-avec-des-enfants-est-ce-realiste-pour-un-week-end/ | Sarlat sans voiture avec des enfants: est-ce réaliste pour un week-end? | voyages | Sarlat-la-Canéda, Dordogne, Nouvelle-Aquitaine
+- /articles/voyages/train-de-la-rhune-avec-des-enfants-billets-duree-et-conseils-en-2026/ | Train de la Rhune avec des enfants: billets, durée et conseils en 2026 | voyages | Sare, Pyrénées-Atlantiques, Nouvelle-Aquitaine
+- /articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/ | Transports à Paris avec des enfants: quel titre choisir pour payer juste? | voyages | Paris, Paris, Île-de-France
+- /articles/evenements/salon-du-chocolat-paris-2026-avec-des-enfants-quel-billet-choisir-et-quels-ateliers-reserver/ | Salon du Chocolat Paris 2026 avec des enfants: quel billet choisir et quels ateliers réserver | evenements | Paris, Paris, Île-de-France
 - /articles/sorties/cite-des-sciences-en-famille-tarifs-cite-des-enfants-et-conseils-de-visite/ | Cité des sciences en famille: tarifs, Cité des enfants et conseils de visite | sorties | Paris, Paris, Île-de-France
 - /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | Mondial de l’Auto 2026 avec des enfants: billets, horaires et créneaux | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/planete-ocean-a-paris-preparer-la-visite-en-famille/ | Planète Océan à Paris: préparer la visite en famille | evenements | Paris, Paris, Île-de-France
-- /articles/evenements/salon-du-chocolat-paris-2026-avec-des-enfants-quel-billet-choisir-et-quels-ateliers-reserver/ | Salon du Chocolat Paris 2026 avec des enfants: quel billet choisir et quels ateliers réserver | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/ | Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ? | evenements | Pyrénées-Orientales, Occitanie
+- /articles/parentalite/quel-laep-choisir-a-perpignan-selon-l-age-et-le-jour/ | Quel LAEP choisir à Perpignan selon l'âge et le jour ? | parentalite | Perpignan, Pyrénées-Orientales, Occitanie
+- /articles/activites/parc-animalier-des-angles-en-famille-quel-circuit-choisir-et-comment-preparer-la-visite/ | Parc animalier des Angles en famille: quel circuit choisir et comment préparer la visite ? | activites | Les Angles, Pyrénées-Orientales, Occitanie
+- /articles/bons-plans/musee-de-tautavel-moins-cher-avec-lio-le-bon-plan-a-connaitre/ | Musée de Tautavel moins cher avec liO: le bon plan à connaître | bons-plans | Tautavel, Pyrénées-Orientales, Occitanie
+- /articles/evenements/luminescences-2026-2027-a-amneville-en-famille-soiree-seule-ou-zoo-et-lanternes/ | Luminescences 2026-2027 au zoo d'Amnéville: billets, pass annuel et horaires | evenements | Amnéville, Moselle, Grand Est
+- /articles/activites/snowworld-amneville-en-famille-luge-bouees-ou-ski/ | SnowWorld Amnéville en famille: luge, bouées ou ski ? | activites | Amnéville, Moselle, Grand Est
+- /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | Nuits Indiennes 2026-2027 au Jardin d’Acclimatation: billets et horaires en famille | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/noel-a-metz-2026-en-famille-marches-et-sentier-des-lanternes/ | Noël à Metz 2026 en famille: marchés et Sentier des Lanternes | evenements | Metz, Moselle, Grand Est
+- /articles/activites/stages-de-science-a-la-cite-des-sciences-pendant-la-toussaint-2026-lequel-choisir-selon-l-age/ | Stages de science à la Cité des sciences à la Toussaint 2026: durées, âges et tarifs | activites | Paris, Paris, Île-de-France
 - /articles/evenements/cite-immersive-des-fables-a-paris-decouvrir-la-fontaine-en-famille/ | Cité immersive des Fables à Paris: découvrir La Fontaine en famille | evenements | Paris, Paris, Île-de-France
-- /articles/activites/atelier-couture-gratuit-a-paris-le-28-novembre-2026-creer-en-famille-des-8-ans/ | Atelier couture gratuit à Paris le 28 novembre 2026: dès 8 ans | activites | Paris, Paris, Île-de-France
-- /articles/vie-pratique/changer-de-gare-a-paris-avec-des-enfants-preparer-sa-correspondance/ | Changer de gare à Paris avec des enfants: préparer sa correspondance | vie-pratique | Paris, Paris, Île-de-France
-- /articles/activites/atelier-laine-cardee-de-noel-a-paris-le-2-decembre-2026-creer-ses-decorations-des-7-ans/ | Atelier laine cardée de Noël à Paris le 2 décembre 2026: décorations dès 7 ans | activites | Paris, Paris, Île-de-France
-- /articles/bons-plans/sainte-chapelle-et-conciergerie-en-famille-a-paris-quels-billets-choisir/ | Sainte-Chapelle et Conciergerie en famille à Paris: quels billets choisir ? | bons-plans | Paris, Paris, Île-de-France
-- /articles/parentalite/maisons-des-1000-premiers-jours-a-paris-deux-adresses-pour-les-parents-et-les-bebes/ | Maisons des 1000 premiers jours à Paris: deux adresses pour les parents et les bébés | parentalite | Paris, Paris, Île-de-France
-- /articles/activites/atelier-musical-gratuit-a-paris-le-18-novembre-2026-fabriquer-un-baton-de-pluie-des-6-ans/ | Atelier bâton de pluie gratuit à Paris le 18 novembre 2026: dès 6 ans | activites | Paris, Paris, Île-de-France
-- /articles/activites/lecture-d-hiver-gratuite-a-paris-le-12-decembre-2026-deux-seances-pour-les-1-3-ans/ | Lecture d'hiver gratuite à Paris le 12 décembre 2026: deux séances pour les 1-3 ans | activites | Paris, Paris, Île-de-France
-- /articles/evenements/spectacle-de-noel-gratuit-a-paris-le-5-decembre-2026-p-tit-loup-et-la-magie-en-famille/ | Spectacle de Noël gratuit à Paris le 5 décembre 2026: Mon p'tit loup magique | evenements | Paris, Paris, Île-de-France
-- /articles/activites/bricolages-de-noel-gratuits-a-paris-le-19-decembre-2026-creer-en-famille-des-4-ans/ | Bricolages de Noël gratuits à Paris le 19 décembre 2026: un atelier dès 4 ans | activites | Paris, Paris, Île-de-France
-- /articles/activites/atelier-deco-de-noel-gratuit-a-paris-le-28-novembre-2026-creer-en-recup-art-des-8-ans/ | Atelier déco de Noël gratuit à Paris le 28 novembre 2026: bricolage dès 8 ans | activites | Paris, Paris, Île-de-France
-- /articles/sorties/soiree-jeux-gratuite-a-paris-le-21-novembre-2026-jeux-video-et-jeux-de-societe-en-famille/ | Soirée jeux gratuite à Paris le 21 novembre 2026: jeux vidéo et jeux de société en famille | sorties | Paris, Paris, Île-de-France
-- /articles/activites/atelier-calder-gratuit-a-paris-le-14-novembre-2026-creer-un-mobile-des-5-ans/ | Atelier Calder à Paris le 14 novembre 2026: fabriquer un mobile dès 5 ans | activites | Paris, Paris, Île-de-France
-- /articles/evenements/contes-gratuits-a-paris-le-14-novembre-2026-quel-spectacle-choisir-selon-l-age/ | Contes gratuits à Paris le 14 novembre 2026: trois rendez-vous en famille | evenements | Paris, Paris, Île-de-France
+- /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | Rencontres du ciel et de l’espace 2026 à Paris: ateliers, âges et billets en famille | evenements | Paris, Paris, Île-de-France
+- /articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/ | Parc floral d’Orléans gratuit en hiver: horaires et sortie avec les enfants | bons-plans | Orléans, Loiret, Centre-Val de Loire
+- /articles/maison/composteur-gratuit-a-orleans-metropole-comment-en-profiter-en-2026/ | Composteur gratuit à Orléans Métropole: comment en profiter en 2026 | maison | Orléans, Loiret, Centre-Val de Loire
+- /articles/sorties/chasse-motifs-loire-orleans-famille-2026/ | Chasse aux motifs de Loire à Orléans: une balade gratuite pour les 6 à 12 ans | sorties | Orléans, Loiret, Centre-Val de Loire
+- /articles/activites/mobe-d-orleans-en-famille-fossiles-jeux-et-biodiversite/ | MOBE d’Orléans en famille: fossiles, jeux et biodiversité | activites | Orléans, Loiret, Centre-Val de Loire
+- /articles/evenements/lumigny-safari-de-lumieres-2026-2027-balade-nocturne-ou-billet-combine-en-famille/ | Lumigny Safari de Lumières 2026-2027: billets, dates et visite en famille | evenements | Lumigny-Nesles-Ormeaux, Seine-et-Marne, Île-de-France
+- /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | Thoiry Lumières Sauvages 2026-2027: dates, billets et visite en famille | evenements | Thoiry, Yvelines, Île-de-France
+- /articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/ | Planète Préhistorique à Bordeaux: dates, durée et tarifs en famille | sorties | Bordeaux, Gironde, Nouvelle-Aquitaine
+- /articles/evenements/fete-des-lumieres-2026-a-lyon-en-famille-dates-horaires-et-parcours/ | Fête des Lumières 2026 à Lyon en famille: dates, horaires et accès | evenements | Lyon, Rhône, Auvergne-Rhône-Alpes
+- /articles/evenements/fetes-de-saint-nicolas-2026-a-nancy-en-famille-defile-dates-et-visite/ | Fêtes de Saint-Nicolas 2026 à Nancy en famille: défilé, villages et animations | evenements | Nancy, Meurthe-et-Moselle, Grand Est
+- /articles/evenements/saint-nicolas-2026-a-saint-nicolas-de-port-village-defile-ou-procession-en-famille/ | Saint-Nicolas-de-Port 2026 en famille: horaires du défilé et de la procession | evenements | Saint-Nicolas-de-Port, Meurthe-et-Moselle, Grand Est
+- /articles/parentalite/ludotheques-du-grand-nancy-ou-jouer-en-famille-et-emprunter-des-jeux/ | Ludothèques du Grand Nancy: où jouer en famille et emprunter des jeux | parentalite | Meurthe-et-Moselle, Grand Est
+- /articles/evenements/saint-nicolas-2026-a-epinal-en-famille-defile-du-5-decembre-ou-marche-de-noel/ | Saint-Nicolas 2026 à Épinal: cortège du 5 décembre et marché de Noël en famille | evenements | Épinal, Vosges, Grand Est
+- /articles/evenements/noel-a-trevarez-2026-en-famille-dates-horaires-et-reservation/ | Noël à Trévarez 2026 en famille: dates, horaires et réservation | evenements | Saint-Goazec, Finistère, Bretagne
+- /articles/evenements/train-de-noel-de-la-haute-somme-2026-en-famille-dates-tarifs-et-reservation/ | Train de Noël de la Haute Somme 2026 en famille: dates, tarifs et réservation | evenements | La Neuville-les-Bray, Somme, Hauts-de-France
+- /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | Noël 2026 à Brest en famille: marché, projections et horaires | evenements | Brest, Finistère, Bretagne
+- /articles/evenements/train-du-pere-noel-a-toucy-2026-horaires-tarifs-et-reservation/ | Train du Père Noël à Toucy 2026: horaires, tarifs et réservation | evenements | Toucy, Yonne, Bourgogne-Franche-Comté
+- /articles/evenements/noel-a-pau-2026-en-famille-marches-village-et-illuminations/ | Noël à Pau 2026 en famille: marchés, village et illuminations | evenements | Pau, Pyrénées-Atlantiques, Nouvelle-Aquitaine
+- /articles/evenements/noel-2026-a-rochefort-en-terre-avec-des-enfants-village-et-illuminations/ | Noël 2026 à Rochefort-en-Terre avec des enfants: village et illuminations | evenements | Rochefort-en-Terre, Morbihan, Bretagne
+- /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | Noël à Caen 2026 en famille: marché de Noël et visite illuminée | evenements | Caen, Calvados, Normandie
+- /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | Noël à Chartres 2026 en famille: marché et illuminations | evenements | Chartres, Eure-et-Loir, Centre-Val de Loire
+- /articles/evenements/marche-de-noel-de-reims-2026-en-famille-horaires-animations-et-acces/ | Marché de Noël de Reims 2026 en famille: horaires, grande roue et animations | evenements | Reims, Marne, Grand Est
+- /articles/evenements/marches-de-noel-de-tours-2026-en-famille-chalets-ou-village-gourmand/ | Marchés de Noël de Tours 2026 en famille: horaires, animations et budget | evenements | Tours, Indre-et-Loire, Centre-Val de Loire
+- /articles/evenements/ville-de-noel-d-arras-2026-en-famille-grande-roue-patinoire-et-horaires/ | Ville de Noël d’Arras 2026 en famille: horaires, attractions et budget | evenements | Arras, Pas-de-Calais, Hauts-de-France
+- /articles/evenements/marche-de-noel-de-bordeaux-2026-en-famille-dates-animations-et-acces/ | Marché de Noël de Bordeaux 2026 en famille: horaires, animations et budget | evenements | Bordeaux, Gironde, Nouvelle-Aquitaine
+- /articles/vie-pratique/cantine-au-college-en-essonne-obtenir-son-tarif-2026-2027-sans-refaire-la-mauvaise-demarche/ | Cantine au collège en Essonne: obtenir son tarif 2026-2027 sans refaire la mauvaise démarche | vie-pratique | Évry-Courcouronnes, Essonne, Île-de-France
+- /articles/bons-plans/cantine-au-college-dans-l-herault-jusqu-a-3-60-d-aide-par-repas/ | Cantine au collège dans l'Hérault: jusqu'à 3,60 € d'aide par repas | bons-plans | Montpellier, Hérault, Occitanie
+- /articles/vie-pratique/cantine-au-college-en-deux-sevres-comment-s-inscrire-en-ligne-pour-2026-2027/ | Cantine au collège en Deux-Sèvres: comment s'inscrire en ligne pour 2026-2027 | vie-pratique | Niort, Deux-Sèvres, Nouvelle-Aquitaine
+- /articles/vie-pratique/cantine-au-college-dans-le-pas-de-calais-les-tarifs-2026-et-les-reductions-pour-les-boursiers/ | Cantine au collège dans le Pas-de-Calais: les tarifs 2026 et les réductions pour les boursiers | vie-pratique | Hénin-Beaumont, Pas-de-Calais, Hauts-de-France
+- /articles/cuisine/fete-de-la-truffe-2027-a-sarlat-en-famille-que-faire-et-que-gouter/ | Fête de la Truffe 2027 à Sarlat en famille: que faire et que goûter ? | cuisine | Sarlat-la-Canéda, Dordogne, Nouvelle-Aquitaine
+- /articles/evenements/l-ours-et-la-louve-a-sarlat-faut-il-reserver-pour-ce-spectacle-gratuit-des-3-ans/ | L'Ours et la Louve à Sarlat: faut-il réserver pour ce spectacle gratuit dès 3 ans? | evenements | Sarlat-la-Canéda, Dordogne, Nouvelle-Aquitaine
+- /articles/cuisine/huile-de-noix-du-perigord-du-moulin-de-neuvic-a-la-cuisine-familiale/ | Huile de noix du Périgord: du moulin de Neuvic à la cuisine familiale | cuisine | Neuvic, Dordogne, Nouvelle-Aquitaine
+- /articles/evenements/gastronomades-2026-a-angouleme-en-famille-faut-il-prevoir-le-week-end/ | Gastronomades 2026 à Angoulême en famille: programme, tarifs et conseils | evenements | Angoulême, Charente, Nouvelle-Aquitaine
+- /articles/sorties/musee-de-la-bd-a-angouleme-en-famille-tarifs-horaires-et-conseils-de-visite/ | Musée de la BD à Angoulême en famille: tarifs, horaires et conseils de visite | sorties | Angoulême, Charente, Nouvelle-Aquitaine
+- /articles/voyages/ou-dormir-a-angouleme-avec-des-enfants-pour-visiter-la-ville-a-pied/ | Où dormir à Angoulême avec des enfants pour visiter la ville à pied | voyages | Angoulême, Charente, Nouvelle-Aquitaine
+- /articles/parentalite/decouvrir-la-bd-avec-ses-enfants-a-angouleme/ | Découvrir la BD avec ses enfants à Angoulême | parentalite | Angoulême, Charente, Nouvelle-Aquitaine
+- /articles/evenements/cirque-de-noel-2026-au-mans-horaires-tarifs-et-seance-a-choisir-avec-des-enfants/ | Cirque de Noël 2026 au Mans: horaires, tarifs et séance à choisir avec des enfants | evenements | Le Mans, Sarthe, Pays de la Loire
+- /articles/voyages/le-mans-sans-voiture-avec-des-enfants-ou-dormir-et-comment-organiser-un-week-end/ | Le Mans sans voiture avec des enfants: où dormir et comment organiser un week-end | voyages | Le Mans, Sarthe, Pays de la Loire
+- /articles/evenements/marche-de-noel-de-strasbourg-2026-en-famille-quels-marches-choisir-et-quand-venir/ | Marché de Noël de Strasbourg 2026 en famille: quels marchés visiter avec des enfants? | evenements | Strasbourg, Bas-Rhin, Grand Est
+- /articles/evenements/marche-de-noel-d-avignon-2026-en-famille-dates-horaires-et-acces/ | Marché de Noël d'Avignon 2026 en famille: horaires, Père Noël et animations | evenements | Avignon, Vaucluse, Provence-Alpes-Côte d’Azur
+- /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | Noël 2026 au château de Goulaine: dates, billets et conseils en famille | evenements | Haute-Goulaine, Loire-Atlantique, Pays de la Loire
+- /articles/evenements/marche-de-noel-de-grenoble-2026-en-famille-quand-voir-le-pere-noel/ | Marché de Noël de Grenoble 2026 en famille: horaires et Père Noël | evenements | Grenoble, Isère, Auvergne-Rhône-Alpes
+- /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | Noël des Siècles 2026 à Champs-sur-Marne: billets, budget et horaires en famille | evenements | Champs-sur-Marne, Seine-et-Marne, Île-de-France
+- /articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/ | Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille | evenements | Nevers, Nièvre, Bourgogne-Franche-Comté
+- /articles/maison/dechets-verts-a-toulouse-metropole-en-2027-collecte-broyage-et-compostage/ | Déchets verts à Toulouse Métropole en 2027: collecte, broyage et évacuation des gros volumes | maison | Toulouse, Haute-Garonne, Occitanie
+- /articles/activites/accrocamp-toulouse-avec-des-enfants-quel-pass-choisir-selon-leur-taille/ | AccroCamp Toulouse avec des enfants: quel pass choisir selon leur taille? | activites | Toulouse, Haute-Garonne, Occitanie
+- /articles/bons-plans/halle-de-la-machine-et-envol-des-pionniers-quels-billets-choisir-en-famille/ | Halle de la Machine et Envol des Pionniers: quels billets choisir en famille ? | bons-plans | Toulouse, Haute-Garonne, Occitanie
+- /articles/voyages/cite-de-l-espace-a-toulouse-en-famille-en-2026-une-journee-suffit-elle-et-ou-dormir/ | Cité de l'espace à Toulouse en famille en 2026: une journée suffit-elle et où dormir | voyages | Toulouse, Haute-Garonne, Occitanie
+- /articles/evenements/fontaines-dansantes-d-hiver-a-metz-2026-2027-quand-voir-le-spectacle-avec-les-enfants/ | Fontaines dansantes d'hiver à Metz 2026-2027: dates, horaires et conseils en famille | evenements | Metz, Moselle, Grand Est
+- /articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/ | Traîneau flottant de Noël à Metz 2026: dates, horaires et embarquement | evenements | Metz, Moselle, Grand Est
+- /articles/maison/recycleries-autour-de-chartres-ou-donner-et-acheter-d-occasion/ | Recycleries autour de Chartres: où donner et acheter d'occasion ? | maison | Chartres, Eure-et-Loir, Centre-Val de Loire
+- /articles/cuisine/apres-une-cueillette-en-eure-et-loir-5-recettes-faciles-a-faire-avec-les-enfants/ | Après une cueillette en Eure-et-Loir: 5 recettes faciles à faire avec les enfants | cuisine | Chartres, Eure-et-Loir, Centre-Val de Loire
+- /articles/maison/meubles-d-occasion-en-meurthe-et-moselle-ou-acheter-donner-et-reparer/ | Meubles d'occasion en Meurthe-et-Moselle: où acheter, donner et réparer ? | maison | Meurthe-et-Moselle, Grand Est
+- /articles/maison/composter-en-famille-au-pays-basque-quelle-solution-choisir-selon-son-logement/ | Composter en famille au Pays Basque: quelle solution choisir selon son logement ? | maison | Pyrénées-Atlantiques, Nouvelle-Aquitaine
+- /articles/activites/musee-de-la-nacre-a-meru-en-famille-des-dominos-aux-ateliers-creatifs/ | Musée de la Nacre à Méru en famille: des dominos aux ateliers créatifs | activites | Méru, Oise, Hauts-de-France
+- /articles/evenements/spectacles-pour-enfants-a-nantes-en-fevrier-2027-que-choisir-pendant-les-vacances/ | Spectacles pour enfants à Nantes en février 2027: que choisir pendant les vacances ? | evenements | Nantes, Loire-Atlantique, Pays de la Loire
+- /articles/sorties/abbaye-de-cluny-avec-des-enfants-retrouver-une-eglise-presque-disparue/ | Abbaye de Cluny avec des enfants: retrouver une église presque disparue | sorties | Cluny, Saône-et-Loire, Bourgogne-Franche-Comté
+- /articles/vie-pratique/location-de-velos-familiaux-a-bourg-en-bresse-tester-le-cargo-au-quotidien/ | Location de vélos familiaux à Bourg-en-Bresse: tester le cargo au quotidien | vie-pratique | Bourg-en-Bresse, Ain, Auvergne-Rhône-Alpes
+- /articles/activites/a-lyon-decouvrir-l-impression-sur-soie-en-famille-chez-brochier/ | À Lyon, découvrir l’impression sur soie en famille chez Brochier | activites | Lyon, Rhône, Auvergne-Rhône-Alpes
 - /articles/voyages/visiter-le-theatre-antique-d-orange-en-famille/ | Visiter le Théâtre antique d’Orange en famille | voyages | Orange, Vaucluse, Provence-Alpes-Côte d’Azur
+- /articles/parentalite/accompagnement-a-la-scolarite-dans-l-herault-comment-le-clas-aide-les-familles/ | Accompagnement à la scolarité dans l'Hérault: comment le CLAS aide les familles | parentalite | Hérault, Occitanie
+- /articles/sorties/illusion-nantes-en-famille-jouer-avec-les-trompe-l-oeil/ | Illusion Nantes en famille: jouer avec les trompe-l’œil | sorties | Nantes, Loire-Atlantique, Pays de la Loire
+- /articles/vie-pratique/transports-scolaires-optymo-dans-le-territoire-de-belfort-quelle-carte-choisir/ | Transports scolaires Optymo dans le Territoire de Belfort: quelle carte choisir ? | vie-pratique | Territoire de Belfort, Bourgogne-Franche-Comté
+- /articles/activites/seaquarium-du-grau-du-roi-en-famille-decouvrir-la-vie-marine-hors-saison/ | Seaquarium du Grau-du-Roi en famille: découvrir la vie marine hors saison | activites | Le Grau-du-Roi, Gard, Occitanie
+- /articles/vie-pratique/mediatheques-escales-dans-les-vosges-emprunter-des-livres-et-des-jeux-en-famille/ | Médiathèques Escales dans les Vosges: emprunter des livres et des jeux en famille | vie-pratique | Vosges, Grand Est
 - /articles/voyages/alligator-bay-en-famille-decouvrir-les-reptiles-et-preparer-sa-visite/ | Alligator Bay en famille: découvrir les reptiles et préparer sa visite | voyages | Beauvoir, Manche, Normandie
+- /articles/bons-plans/musee-des-beaux-arts-de-draguignan-en-famille-gratuites-et-ateliers/ | Musée des Beaux-Arts de Draguignan en famille: gratuités et ateliers | bons-plans | Draguignan, Var, Provence-Alpes-Côte d’Azur
+- /articles/cuisine/pastis-landais-maison-la-recette-du-gouter-sans-alcool-ajoute/ | Pastis landais maison: la recette du goûter sans alcool ajouté | cuisine | Landes, Nouvelle-Aquitaine
+- /articles/maison/composter-en-famille-dans-la-metropole-lilloise-avec-ou-sans-jardin/ | Composter en famille dans la métropole lilloise: avec ou sans jardin | maison | Nord, Hauts-de-France
+- /articles/sorties/petit-cocotier-au-morne-rouge-decouvrir-la-vanille-en-famille/ | Petit Cocotier au Morne-Rouge: découvrir la vanille en famille | sorties | Le Morne-Rouge, Martinique, Martinique
 - /articles/voyages/samoens-en-famille-cet-hiver-un-premier-sejour-a-la-neige-avec-ou-sans-ski/ | Samoëns en famille cet hiver: un premier séjour à la neige avec ou sans ski | voyages | Samoëns, Haute-Savoie, Auvergne-Rhône-Alpes
 - /articles/voyages/honfleur-en-famille-hors-saison-que-faire-le-temps-d-un-week-end/ | Honfleur en famille hors saison: que faire le temps d'un week-end ? | voyages | Honfleur, Calvados, Normandie
+- /articles/activites/accrobranche-au-maido-en-famille-preparer-sa-sortie-a-enler-pied-bois/ | Accrobranche au Maïdo en famille: préparer sa sortie à Enlèr Pied’Bois | activites | Saint-Paul, La Réunion, La Réunion
+- /articles/bons-plans/pass-chateaux-du-loir-et-cher-quelles-economies-en-famille/ | Pass châteaux du Loir-et-Cher: quelles économies en famille ? | bons-plans | Loir-et-Cher, Centre-Val de Loire
+- /articles/vie-pratique/se-deplacer-en-famille-en-haute-saone-sans-voiture-au-quotidien/ | Se déplacer en famille en Haute-Saône sans voiture au quotidien | vie-pratique | Haute-Saône, Bourgogne-Franche-Comté
+- /articles/vie-pratique/metz-en-famille-sans-voiture-train-bus-et-bagages/ | Metz en famille sans voiture: train, bus et bagages | vie-pratique | Metz, Moselle, Grand Est
+- /articles/voyages/musee-de-l-illusion-a-lille-une-visite-a-partager-en-famille/ | Musée de l’Illusion à Lille: une visite à partager en famille | voyages | Lille, Nord, Hauts-de-France
+- /articles/bons-plans/bordeaux-citypass-en-famille-quel-pass-choisir-pour-economiser/ | Bordeaux CityPass en famille: quel pass choisir pour économiser ? | bons-plans | Bordeaux, Gironde, Nouvelle-Aquitaine
+- /articles/sorties/le-sourou-a-roura-en-famille-une-journee-entre-pirogue-kayak-et-foret/ | Le Sourou à Roura en famille: une journée entre pirogue, kayak et forêt | sorties | Roura, Guyane, Guyane
+- /articles/evenements/sculptures-sur-glace-et-neige-a-valloire-en-janvier-2027/ | Sculptures sur glace et neige à Valloire en janvier 2027 | evenements | Valloire, Savoie, Auvergne-Rhône-Alpes
+- /articles/bons-plans/sainte-chapelle-et-conciergerie-en-famille-a-paris-quels-billets-choisir/ | Sainte-Chapelle et Conciergerie en famille à Paris: quels billets choisir ? | bons-plans | Paris, Paris, Île-de-France
 
 ### Historique Radar lié
 
-- opportunity | /articles/activites/atelier-calder-gratuit-a-paris-le-14-novembre-2026-creer-un-mobile-des-5-ans/ | 2026-11-05T16:36:05.180Z
-- opportunity | /articles/activites/atelier-couture-gratuit-a-paris-le-28-novembre-2026-creer-en-famille-des-8-ans/ | 2026-11-05T04:36:26.347Z
-- opportunity | /articles/activites/atelier-deco-de-noel-gratuit-a-paris-le-28-novembre-2026-creer-en-recup-art-des-8-ans/ | 2026-11-05T23:35:44.031Z
-- opportunity | /articles/activites/atelier-laine-cardee-de-noel-a-paris-le-2-decembre-2026-creer-ses-decorations-des-7-ans/ | 2026-11-04T18:34:22.540Z
-- opportunity | /articles/activites/atelier-musical-gratuit-a-paris-le-18-novembre-2026-fabriquer-un-baton-de-pluie-des-6-ans/ | 2026-11-06T12:30:50.449Z
-- opportunity | /articles/activites/bricolages-de-noel-gratuits-a-paris-le-19-decembre-2026-creer-en-famille-des-4-ans/ | 2026-11-06T03:27:40.597Z
-- opportunity | /articles/evenements/contes-gratuits-a-paris-le-14-novembre-2026-quel-spectacle-choisir-selon-l-age/ | 2026-11-05T13:27:24.356Z
-- opportunity | /articles/activites/lecture-d-hiver-gratuite-a-paris-le-12-decembre-2026-deux-seances-pour-les-1-3-ans/ | 2026-11-06T09:33:42.136Z
-- refresh | /articles/parentalite/maisons-des-1000-premiers-jours-a-paris-deux-adresses-pour-les-parents-et-les-bebes/ | 2026-11-18T05:37:16.469Z
-- opportunity | /articles/evenements/mondial-de-l-auto-2026-a-paris-avec-des-enfants-quel-jour-billet-et-creneau-choisir/ | 2026-10-06T19:20:39.093Z
+- opportunity | /articles/evenements/noel-2026-a-brest-en-famille-marche-projections-et-jours-a-privilegier/ | 2026-10-30T06:28:26.726Z
+- refresh | /articles/evenements/noel-2026-a-rochefort-en-terre-avec-des-enfants-village-et-illuminations/ | 2026-11-15T12:33:21.761Z
+- opportunity | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-10-26T21:31:06.119Z
+- refresh | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-11-12T18:32:15.897Z
+- refresh | /articles/evenements/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/ | 2026-11-28T11:29:58.641Z
+- opportunity | /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | 2026-11-03T15:36:10.146Z
+- refresh | /articles/evenements/noel-2026-au-chateau-de-goulaine-le-spectacle-immersif-vaut-il-la-sortie-en-famille/ | 2026-11-13T13:31:11.034Z
+- opportunity | /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | 2026-10-30T21:26:32.584Z
+- refresh | /articles/evenements/noel-a-caen-2026-en-famille-marche-ou-visite-des-illuminations/ | 2026-11-23T07:35:53.457Z
+- opportunity | /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | 2026-10-30T18:26:56.039Z
+- refresh | /articles/evenements/noel-a-chartres-2026-en-famille-marche-ou-illuminations-quel-soir-venir/ | 2026-11-17T09:28:43.094Z
+- opportunity | /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | 2026-10-27T07:35:50.437Z
+- refresh | /articles/evenements/noel-de-casse-noisette-2026-a-pierrefonds-visite-libre-feerie-ou-aventure-a-jouer/ | 2026-11-16T12:48:08.556Z
+- opportunity | /articles/evenements/noel-des-siecles-2026-au-chateau-de-champs-sur-marne-billets-et-horaires-en-famille/ | 2026-10-26T18:32:56.730Z
+- opportunity | /articles/evenements/nuits-indiennes-2026-2027-au-jardin-d-acclimatation-en-famille/ | 2026-10-09T14:37:47.734Z
+- refresh | /articles/bons-plans/parc-floral-d-orleans-gratuit-en-hiver-horaires-et-sortie-avec-les-enfants/ | 2026-11-08T07:28:43.032Z
+- refresh | /articles/sorties/planete-prehistorique-a-bordeaux-avec-des-enfants-age-duree-et-tarifs/ | 2026-10-22T18:35:19.372Z
+- opportunity | /articles/evenements/rencontres-du-ciel-et-de-l-espace-2026-a-paris-que-choisir-avec-des-enfants/ | 2026-11-04T05:34:42.508Z
+- opportunity | /articles/evenements/saint-nicolas-2026-a-epinal-en-famille-defile-du-5-decembre-ou-marche-de-noel/ | 2026-11-01T21:31:28.158Z
+- opportunity | /articles/evenements/saint-nicolas-2026-a-saint-nicolas-de-port-village-defile-ou-procession-en-famille/ | 2026-11-02T23:31:49.432Z
+- refresh | /articles/evenements/saint-nicolas-2026-a-saint-nicolas-de-port-village-defile-ou-procession-en-famille/ | 2026-11-22T08:32:50.321Z
+- refresh | /articles/activites/snowworld-amneville-en-famille-luge-bouees-ou-ski/ | 2026-11-09T17:37:32.610Z
+- opportunity | /articles/activites/stages-de-science-a-la-cite-des-sciences-pendant-la-toussaint-2026-lequel-choisir-selon-l-age/ | 2026-10-04T05:39:23.036Z
+- opportunity | /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | 2026-10-24T19:30:32.700Z
+- refresh | /articles/evenements/thoiry-lumieres-sauvages-2026-2027-billet-soiree-ou-journee-en-famille/ | 2026-11-13T16:33:40.259Z
+- opportunity | /articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/ | 2026-11-03T03:34:06.534Z
+- refresh | /articles/evenements/traineau-flottant-du-pere-noel-a-metz-2026-quand-embarquer-en-famille/ | 2026-11-16T08:38:53.929Z
+- refresh | /articles/voyages/transports-a-paris-avec-des-enfants-quel-titre-choisir-pour-payer-juste/ | 2026-11-06T21:35:30.246Z
+- opportunity | /articles/evenements/ville-de-noel-d-arras-2026-en-famille-grande-roue-patinoire-et-horaires/ | 2026-10-29T20:30:33.011Z
+- refresh | /articles/evenements/ville-de-noel-d-arras-2026-en-famille-grande-roue-patinoire-et-horaires/ | 2026-11-23T13:28:43.287Z
 
-### Phases 2 et 3
+## Travaux éditoriaux en cours
 
-Écris `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées et le corps complet de l'article. **Ne recopie pas les métadonnées inchangées et n'ajoute aucun bloc `radar`.** Le script normalise la syntaxe sûre de la requête, reprend mécaniquement les autres métadonnées et le bloc Radar de la phase précédente, puis incrémente la phase.
+### Publication en cours
 
-Pour un refresh, le script conserve de lui-même les champs protégés de l'article source. Pour une opportunity, il conserve la catégorie, le territoire et le slug choisis en phase 1.
+- Branche: automation/publication-20261128-1634-titre-de-travail-palais-fesch-a-ajaccio-en-famille-decouvrir-la-peintu
+- HEAD: publication: phase 3 20261128-1634-titre-de-travail-palais-fesch-a-ajaccio-en-famille-decouvrir-la-peintu
 
-En phase 3 seulement, ajoute `radarReview` avec `summary`, `sources` et, pour un refresh, `regressionCheck`. Une seule correction factuelle vérifiée peut être suffisante.
+---
+category: "activites"
+title: "Palais Fesch à Ajaccio: découvrir la peinture en famille"
+subtitle: "Des parcours ludiques et des visites adaptées dès 18 mois"
+summary: "Explorez les collections du Palais Fesch avec vos enfants, choisissez un parcours ludique ou une visite accompagnée et préparez votre sortie à Ajaccio."
+keywords:
+  - "Palais Fesch en famille"
+  - "musée Ajaccio enfants"
+  - "activités culturelles Corse-du-Sud"
+location:
+  city: "Ajaccio"
+  department: "Corse-du-Sud"
+  region: "Corse"
+sources:
+  - title: "Palais Fesch: informations pratiques"
+    url: "https://www.musee-fesch.com/infos-pratiques"
+  - title: "Palais Fesch: activités et parcours famille"
+    url: "https://www.musee-fesch.com/offre-educative-activites/famille"
+  - title: "Ajaccio Tourisme: Palais Fesch"
+    url: "https://www.ajaccio-tourisme.com/visites-loisirs/palais-fesch-musee-des-beaux-arts/"
+---
+
+Au cœur d'Ajaccio, le Palais Fesch abrite un musée des beaux-arts réputé pour ses peintures italiennes. Des tableaux de la Renaissance aux portraits de la famille Bonaparte, en passant par les artistes corses, ses collections offrent de nombreux points de départ pour éveiller la curiosité des enfants, même un jour de pluie.
+
+## Transformer la visite en jeu d'observation
+
+Plutôt que de parcourir toutes les salles, choisissez quelques œuvres autour d'un thème. Les natures mortes du deuxième étage se prêtent particulièrement bien à un jeu de recherche: quels fruits reconnaît-on, quels objets semblent précieux, d'où vient la lumière ?
+
+Avec les plus grands, comparez les expressions et les vêtements des personnages. Dans les salles napoléoniennes, imaginez ce que les portraits cherchent à raconter sur les personnes représentées. Les peintures corses permettent ensuite de retrouver des paysages familiers ou de découvrir une autre image de l'île.
+
+Le musée propose également des [parcours familiaux à télécharger](https://www.musee-fesch.com/offre-educative-activites/famille), avec des jeux autour de Napoléon, des héros mythologiques ou de la peinture italienne. Choisissez-en un avant de partir pour donner un fil conducteur à la sortie. Des fiches créatives permettent aussi de prolonger l'expérience à la maison.
+
+L'[office de tourisme d'Ajaccio](https://www.ajaccio-tourisme.com/visites-loisirs/palais-fesch-musee-des-beaux-arts/) estime la durée moyenne de visite à une heure et demie. Avec un jeune enfant, mieux vaut sélectionner quelques salles et terminer avant que la fatigue ne s'installe.
+
+## Des visites accompagnées selon l'âge
+
+La programmation familiale 2026-2027 distingue plusieurs formats:
+
+- De 18 à 36 mois: découverte sensorielle des œuvres pendant 45 minutes, à 10 € pour un enfant et son parent.
+- De 3 à 6 ans: séances thématiques de 45 minutes, parfois contées ou musicales, à 12 € pour le duo.
+- De 7 à 11 ans: des séances d'une heure figurent notamment dans la programmation des vacances de la Toussaint 2026, à 12 € pour le duo.
+
+Les groupes sont restreints et chaque enfant est accompagné d'un seul parent. Certaines séances ne comprennent pas de pratique artistique. Pour connaître les prochaines dates et réserver, utilisez le calendrier familial du musée indiqué plus haut. Les créneaux des prochaines vacances pour les 7-11 ans restent à confirmer.
+
+Si vous venez avec plusieurs enfants d'âges différents, le parcours autonome permet de rester ensemble sans dépendre des conditions d'âge des séances encadrées.
+
+## Préparer sa sortie au Palais Fesch
+
+Le musée se trouve au 50-52 rue Cardinal Fesch, à environ dix minutes de marche de la gare. La visite libre ne nécessite pas de réservation préalable. Des ascenseurs facilitent les déplacements entre les niveaux et une poussette peut être empruntée gratuitement au vestiaire contre présentation d'une pièce d'identité.
+
+Du 1er novembre au 30 avril, les salles sont accessibles de 9 h à 17 h. Entre mai et octobre, elles ouvrent de 9 h 15 à 18 h. Prévoyez votre sortie en dehors du 25 décembre et de la fermeture annuelle du 1er au 15 janvier. La chapelle impériale accueille les visiteurs individuels uniquement en saison estivale.
+
+Pour le budget, le musée affiche actuellement un plein tarif de 9 €, tandis que l'office de tourisme indique 10 € et annonce la gratuité jusqu'à 18 ans inclus. Consultez les [informations pratiques et la billetterie du Palais Fesch](https://www.musee-fesch.com/infos-pratiques) avant votre déplacement pour confirmer le tarif applicable. Les séances familiales suivent leur propre tarification.
+
+Emportez un petit sac plutôt qu'un grand sac à dos: les bagages volumineux ne sont pas admis dans le musée.
+
+## Prolonger la découverte d'Ajaccio
+
+Pour un séjour de plusieurs jours, l'[Hôtel Fesch & Spa](https://www.booking.com/hotel/fr/fesch.html) propose notamment des suites avec lit et canapé-lit dans le centre-ville. Vérifiez la capacité adaptée à votre famille et les disponibilités pour vos dates. Vous pourrez rejoindre le musée à pied et consacrer une autre journée à [la balade de la Parata et aux îles Sanguinaires](https://www.fam-space.fr/articles/voyages/la-parata-et-les-iles-sanguinaires-en-famille-balades-et-sortie-en-mer/) si la météo le permet.
+
+
+### Destination en cours
+
+- Branche: automation/destination-20261010-0720-vincennes
+- HEAD: content: destination candidate Vincennes
+
+---
+result: enriched
+kind: city
+name: "Vincennes"
+url: "/destinations/ile-de-france/val-de-marne/vincennes/"
+intro:
+  - "Vincennes est une base pratique pour visiter l'est parisien sans voiture : le château et le Parc floral se combinent à pied, tandis que le zoo de Paris mérite une sortie distincte."
+sections:
+  - title: "Une journée sur place : associer le château au Parc floral"
+    paragraphs:
+      - "Pour une journée mêlant découverte et temps de jeu, commencez par le château, puis rejoignez le Parc floral par l'esplanade du château. Comptez environ 1 h 30 à 2 h pour le monument avant de laisser les enfants profiter des aires de jeux du parc. Les pique-niques ne sont pas autorisés dans l'enceinte du château, mais le Parc floral dispose de tables de pique-nique, de points d'eau et de toilettes avec table à langer."
+      - "Avec de jeunes enfants qui supportent mal les visites intérieures, faites plutôt du Parc floral la sortie principale : ses jeux et ses jardins évitent de construire la journée autour du donjon et de ses escaliers. L'accès au Parc floral est gratuit d'octobre à mars et payant d'avril à septembre ; le château est un site distinct avec son propre billet."
+  - title: "Sur deux jours, garder le zoo pour une autre sortie"
+    paragraphs:
+      - "Le Parc zoologique de Paris se trouve du côté de la Porte Dorée, dans le 12e arrondissement, et non à côté du château ou à l'intérieur du Parc floral. Depuis le terminus Château de Vincennes du métro 1, le bus 46 permet de le rejoindre. Le zoo recommande au minimum deux heures de visite : avec le trajet et les pauses, mieux vaut lui réserver une seconde journée plutôt que de l'ajouter à la visite du château et du Parc floral."
+      - "Pour un séjour d'une seule journée, choisissez donc entre le duo château et Parc floral, facile à enchaîner à pied, et une visite du zoo avec trajet dédié. Ce choix évite de traverser inutilement le bois avec des enfants fatigués."
+  - title: "Métro ou RER avec une poussette : deux arrivées différentes"
+    paragraphs:
+      - "La ligne 1 arrive au pied du château, mais la station Château de Vincennes comporte de nombreuses marches entre les quais et la rue. La gare Vincennes du RER A est équipée d'un ascenseur et d'escalators ; elle se situe à environ dix minutes à pied du château. Avec une poussette lourde ou des difficultés à emprunter les escaliers, le RER A peut donc être plus pratique malgré la marche supplémentaire. Vérifiez l'état des équipements avant de partir."
+accommodation:
+  title: "Où dormir selon les sorties prévues ?"
+  paragraphs:
+    - "Si votre programme privilégie le château, le Parc floral et le départ du bus 46 vers le zoo, cherchez un hébergement vers l'avenue de Paris et le terminus Château de Vincennes. Si vous prévoyez aussi plusieurs allers-retours vers le centre de Paris, la proximité de la gare Vincennes du RER A est un autre choix pratique. Avec une poussette, comparez surtout la distance réelle à pied jusqu'à la gare ou au métro plutôt que de réserver simplement un logement annoncé à Vincennes."
+sources:
+  - title: "Fam Space - Destination Vincennes et ses deux articles"
+    url: "https://www.fam-space.fr/destinations/ile-de-france/val-de-marne/vincennes/"
+    accessedAt: "2026-10-10"
+  - title: "Fam Space - Château de Vincennes en famille"
+    url: "https://www.fam-space.fr/articles/sorties/chateau-de-vincennes-en-famille-tarifs-parcours-et-conseils-de-visite/"
+    accessedAt: "2026-10-10"
+  - title: "Fam Space - Monument jeu d'enfant 2026 au château de Vincennes"
+    url: "https://www.fam-space.fr/articles/evenements/monument-jeu-d-enfant-2026-au-chateau-de-vincennes-quel-atelier-choisir/"
+    accessedAt: "2026-10-10"
+  - title: "Ville de Paris - Parc floral de Paris"
+    url: "https://www.paris.fr/lieux/parc-floral-de-paris-1"
+    accessedAt: "2026-10-10"
+  - title: "Château de Vincennes - Informations pratiques"
+    url: "https://www.chateau-de-vincennes.fr/visiter/informations-pratiques"
+    accessedAt: "2026-10-10"
+  - title: "Château de Vincennes - Offre adaptée aux visiteurs en mobilité réduite"
+    url: "https://www.chateau-de-vincennes.fr/visiter/visiteurs-en-situation-de-handicap/offre-adaptee-aux-visiteurs-en-mobilite-reduite"
+    accessedAt: "2026-10-10"
+  - title: "Parc zoologique de Paris - Tarifs, horaires et accès"
+    url: "https://www.parczoologiquedeparis.fr/fr/tarifs-horaires-acces"
+    accessedAt: "2026-10-10"
+  - title: "Parc zoologique de Paris - Services et conseils de visite"
+    url: "https://www.parczoologiquedeparis.fr/fr/services-conseils-de-visite"
+    accessedAt: "2026-10-10"
+---
+
+### Destination en cours
+
+- Branche: automation/destination-20261013-0112-haut-rhin
+- HEAD: content: destination Haut-Rhin enrichment candidate
+
+---
+result: enriched
+kind: department
+name: "Haut-Rhin"
+url: "/destinations/grand-est/haut-rhin/"
+intro:
+  - "Colmar, Mulhouse et Ungersheim ne se visitent pas de la même manière en famille. Le choix de la base dépend des musées, des villages et de la possibilité de se déplacer sans voiture."
+sections:
+  - title: "Colmar pour les villages, Mulhouse pour les musées"
+    paragraphs:
+      - "Colmar convient à une journée dans le centre suivie d'une sortie vers Turckheim ou Munster, accessibles sur la ligne de train vers Metzeral. Pour Riquewihr, Kaysersberg ou Eguisheim, cette ligne ne suffit pas : il faut vérifier les bus ou prévoir une voiture."
+      - "Mulhouse est une meilleure base pour les musées techniques : la Cité du Train et Electropolis sont desservis par le tram 3, et le Musée national de l'Automobile par le tram 1. Si ces visites sont prioritaires, dormir à Mulhouse évite de revenir chaque soir depuis Colmar."
+  - title: "Deux parcs à Ungersheim : prévoir deux journées"
+    paragraphs:
+      - "Le Parc du Petit Prince et l'Écomusée d'Alsace sont proches, mais le premier recommande déjà cinq à sept heures de visite. Une famille qui souhaite découvrir les deux aura plus de temps pour profiter de chaque site en leur réservant une journée distincte."
+      - "Sans voiture, le train rejoint Bollwiller, puis il faut prévoir une navette à la demande vers les sites. Le Parc du Petit Prince indique le service Filéa ; l'Écomusée annonce une navette Soléa ou trente minutes de marche. Réservez et vérifiez le retour avant d'acheter les billets."
+  - title: "Ne pas confondre train et bus touristique"
+    paragraphs:
+      - "Le Kut'zig dessert en saison plusieurs villages viticoles depuis Colmar, mais ne circule pas toute l'année : sa saison 2026 s'est achevée le 11 octobre. Hors saison, la ligne ferroviaire vers Turckheim et Munster offre un autre choix de sortie, sous réserve des horaires du jour."
+accommodation:
+  title: "Où se baser dans le Haut-Rhin ?"
+  paragraphs:
+    - "Choisissez Colmar pour le centre historique, les villages et la vallée de Munster ; choisissez Mulhouse pour les musées et une excursion vers Ungersheim via Bollwiller. Si le séjour combine plusieurs jours dans chaque secteur, deux hébergements peuvent éviter des allers-retours répétés avec les enfants."
+sources:
+  - title: "Fam Space - Haut-Rhin"
+    url: "https://www.fam-space.fr/destinations/grand-est/haut-rhin/"
+    accessedAt: "2026-10-13"
+  - title: "Mulhouse Tourisme - Transports en commun"
+    url: "https://www.tourisme-mulhouse.com/en/what-to-do-in-mulhouse/getting-around-mulhouse-by-public-transport/"
+    accessedAt: "2026-10-13"
+  - title: "Parc du Petit Prince - Informations pratiques"
+    url: "https://parcdupetitprince.com/infos-pratiques"
+    accessedAt: "2026-10-13"
+  - title: "Écomusée d'Alsace - Accès"
+    url: "https://www.ecomusee.alsace/preparez-votre-visite/acces/"
+    accessedAt: "2026-10-13"
+  - title: "Ville de Turckheim - Accès"
+    url: "https://www.turckheim.fr/acces-et-plan/"
+    accessedAt: "2026-10-13"
+  - title: "Office de tourisme de Colmar - Kut'zig"
+    url: "https://www.tourisme-colmar.com/fr/pratique/se-deplacer/kut-zig-le-bus-touristique-cabriolet"
+    accessedAt: "2026-10-13"
+---
+
+### Phase 1 - refresh
+
+Écris `radar-request.md` avec seulement la décision éditoriale:
+
+```yaml
+---
+action: start
+mode: refresh
+targetUrl: "/articles/categorie/slug/"
+decision: "Décision précise du lecteur à mieux servir"
+affiliationPotential: "Offre existante à conserver, nouvelle action naturelle à vérifier, ou absence d'affiliation naturelle"
+---
+
+Brief éditorial court demandé par la phase 1.
+```
+
+Ne fournis ni branche, ni SHA, ni `targetPath`, ni `commonQueries`, ni `positionDelta`, ni `impressionRatio`, ni `focusQueries`. Le script les prend dans Git et dans le snapshot.
+
+### Phase 1 - opportunity
+
+Écris le minimum éditorial nécessaire au futur article:
+
+```yaml
+---
+action: start
+mode: opportunity
+title: "Titre de travail"
+subtitle: "Sous-titre utile"
+summary: "Résumé"
+category: sorties
+location:
+  city: "Ville"
+  department: "Département"
+  region: "Région"
+keywords:
+  - "mot-clé utile"
+sources:
+  - title: "Source officielle"
+    url: "https://..."
+gscSignal: strong_page
+gscSourceUrl: "/articles/categorie/page-forte/"
+decision: "Décision précise du lecteur"
+affiliationPotential: "Piste commerciale réellement vérifiée ou absence naturelle"
+---
+
+Brief éditorial court demandé par la phase 1.
+```
+
+Le slug, la branche, le SHA et la provenance technique sont générés par le script. Pour `seasonal_opportunity`, utilise `gscSignal: seasonal_opportunity` et omets `gscSourceUrl`: la source officielle du frontmatter sert de preuve. Pour `strong_page`, `gscSourceUrl` reste obligatoire et doit correspondre à une page réellement présente dans `strongPages`.
 
 ## Écriture autorisée
 
