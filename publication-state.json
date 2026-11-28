@@ -1,3 +1,5 @@
 {
-  "phase": 1
+  "phase": 2,
+  "activeBranch": "automation/publication-20261128-0401-musee-de-la-nacre-a-meru-en-famille-fabriquer-un-jeu-et-decouvrir-les-",
+  "lastProcessedCommit": "c9c6e79cdc6dff553bd82e027f6710197910867f"
 }
