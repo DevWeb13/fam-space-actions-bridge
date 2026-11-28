@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
-title: "Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ?"
-subtitle: Trois villages du Haut-Vallespir, des traditions spectaculaires et des précautions à connaître avec des enfants
-summary: À Prats-de-Mollo, Saint-Laurent-de-Cerdans et Arles-sur-Tech, découvrez les Fêtes de l’Ours 2027 et préparez votre sortie en famille.
+title: "Fêtes de l’Ours 2027: dates et fêtes junior dans les Pyrénées-Orientales"
+subtitle: "Prats-de-Mollo, Arles-sur-Tech et Saint-Laurent-de-Cerdans: choisir une fête adaptée aux enfants"
+summary: Dates annoncées pour février 2027, traditions des trois villages du Haut-Vallespir, fêtes de l’Ours junior et conseils pour préparer une sortie en famille.
 slug: fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales
 status: published
 publishedAt: 2026-11-05T05:04:01+01:00
@@ -92,13 +95,19 @@ sources:
     url: https://www.tourisme-occitanie.com/fr/fiche/fete-et-manifestation/fetes-de-l-ours-prats-de-mollo-la-preste_TFOFMALAR0660018062/
   - title: UNESCO - Les fêtes de l’Ours dans les Pyrénées
     url: https://ich.unesco.org/fr/RL/les-ftes-de-lours-dans-les-pyrnes-01846
+  - title: Destination Canigó - Traditions et fêtes junior
+    url: https://www.visit-canigo.com/canigo-terre-des-catalans/la-culture-catalane/les-fetes-de-lours-classement-unesco/
+  - title: Tourisme Pyrénées-Orientales - Les trois fêtes
+    url: https://www.tourisme-pyreneesorientales.com/agenda/grands-evenements/fetes-de-lours/
+  - title: Tourisme Occitanie - Domaine de Falgos, saison 2026
+    url: https://www.tourisme-occitanie.com/fr/fiche/hebergement-collectif/domaine-de-falgos-golf-resort-et-spa-saint-laurent-de-cerdans_TFORETOULAR066000F5/
 affiliate:
   enabled: true
   type: travel
   destination: Pyrénées-Orientales
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(11)/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/index.md
   targetSha: e412b91dd3b45e24e01e143896c92aba63d46464
@@ -127,30 +136,76 @@ radar:
       - fete de l ours
 ---
 
-## Mission retenue
-Améliorer le comparatif des trois fêtes de l'Ours du Haut-Vallespir.
+<!-- article-image-credit -->
+*Photo: [Fabricio Cardenas](https://commons.wikimedia.org/wiki/File:Prats-de-Mollo_-_F%C3%AAte_de_l%27ours_1.JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Les candidats précédents ont déjà été actualisés aujourd'hui. La baisse d'exposition de cette page ne démontre pas une perte de classement. Lacune indépendante vérifiée: Destination Canigó indique que chaque village organise une fête de l'ours junior, option familiale absente du guide. Le passage sur Arles-sur-Tech est également trop vague alors que le tourisme départemental décrit son repas collectif et son rituel distinct.
+En février 2027, les Fêtes de l'Ours reviennent dans le Haut-Vallespir. Pour choisir une sortie avec des enfants, comparez les dates annoncées et les animations junior. Chaque hiver, dans trois villages du Haut-Vallespir, des habitants déguisés en ours surgissent dans les rues, poursuivent la foule puis sont capturés. À **Prats-de-Mollo-la-Preste, Saint-Laurent-de-Cerdans et Arles-sur-Tech**, les Fêtes de l’Ours mêlent carnaval, musique et traditions catalanes. Un spectacle étonnant à découvrir en famille, mais qui peut impressionner les enfants sensibles au bruit, aux masques ou aux mouvements de foule.
 
-## Décision du lecteur
-Choisir une fête ou une animation junior adaptée à son enfant et savoir quand réserver.
+## Dates des Fêtes de l’Ours 2027
 
-## Faits à traiter
-Mettre les dates 2027 en évidence dès le début: Saint-Laurent du 12 au 14 février selon Tourisme Occitanie; les deux autres dates restent à venir. Ne pas recycler les dates 2026. Vérifier les modalités des fêtes junior et distinguer leur existence traditionnelle de leur programmation 2027 encore inconnue. Décrire le rituel propre à Arles-sur-Tech sans promettre une ambiance calme. Préserver les conseils de sécurité, les précautions poussette, vêtements, stationnement, l'inscription UNESCO, les images et crédits, ainsi que les hébergements pertinents.
+La fiche de [Tourisme Occitanie](https://www.tourisme-occitanie.com/fr/fiche/fete-et-manifestation/fetes-de-l-ours-prats-de-mollo-la-preste_TFOFMALAR0660018062/) annonce les rendez-vous suivants:
 
-## Sources de départ
-- https://www.visit-canigo.com/pratique-agenda/agenda-manifestations/les-temps-forts-en-hiver/fetes-de-lours/
-- https://www.tourisme-pyreneesorientales.com/agenda/grands-evenements/fetes-de-lours/
-- https://www.tourisme-occitanie.com/fr/fiche/fete-et-manifestation/fetes-de-l-ours-prats-de-mollo-la-preste_TFOFMALAR0660018062/
-- https://www.fetesdelours.com/
-- Conserver les sources officielles existantes.
+- **Saint-Laurent-de-Cerdans: du 12 au 14 février 2027**, sous réserve de confirmation du programme par les organisateurs.
+- **Prats-de-Mollo-la-Preste: date 2027 à venir.**
+- **Arles-sur-Tech: date 2027 à venir.**
 
-## Affiliation
-https://www.booking.com/hotel/fr/restaurant-le-costabonne.fr.html : chambres familiales, restaurant et lit bébé gratuit sur demande confirmés sur la fiche. Conserver Falgos si son offre familiale est revérifiée. Ne pas garantir les disponibilités.
+Ces dates ne précisent pas à elles seules l'heure de la chasse à l'ours. Les horaires des poursuites, les animations annexes et les lieux de départ doivent encore être confirmés. Attention aux programmes **2026** toujours visibles sur les sites des organisateurs.
 
-## Continuations internes
-Éventuellement proposer le parc animalier des Angles ou le musée de Tautavel uniquement si une extension de séjour cohérente est établie; sinon aucun lien forcé.
+## Trois villages, trois ambiances
+
+<!-- article-image-body:02 -->
+
+![Rasage rituel lors de la Fête de l'Ours à Arles-sur-Tech en février 2025](/images/articles/2026/11/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales-body-02.webp)
+
+<!-- /article-image-body:02 -->
+
+<!-- article-image-body:01 -->
+
+![Fête de l'Ours de Saint-Laurent-de-Cerdans photographiée en février 2018](/images/articles/2026/11/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales-body-01.webp)
+
+*Photo: [Fabricio Cardenas](https://commons.wikimedia.org/wiki/File:2018-02-25_-_F%C3%AAte_de_l%27ours_Saint-Laurent-de-Cerdans_11.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:01 -->
+
+**Prats-de-Mollo-la-Preste: une chasse à l’ours mouvementée.** Trois jeunes portent des toisons et s'enduisent d'un mélange d'huile et de noir de fumée. Ils poursuivent les participants et peuvent leur laisser une marque noire sur le visage. Leur capture et leur rasage symbolique marquent le retour à l'humanité. C'est une fête très physique, à envisager avec des enfants à l'aise dans une foule animée. Le [site des organisateurs](https://www.fetesdelours.com/les-fetes-de-lours/fete-de-lours-de-prats-de-mollo-la-preste/) décrit le rituel, mais affiche encore le programme **2026**.
+
+**Saint-Laurent-de-Cerdans: l’ours au milieu du carnaval.** Le défilé accueille plusieurs figures traditionnelles, dont la **Monaca**. L'ours, capturé par le Meneur, est présenté à la foule sur les places du village. Costumes et personnages peuvent fasciner les enfants, mais les courses-poursuites restent impressionnantes. La [présentation des organisateurs](https://www.fetesdelours.com/les-fetes-de-lours/fete-de-lours-de-saint-laurent-de-cerdans/) détaille ces traditions. Son programme visible est également celui de **2026**.
+
+**Arles-sur-Tech: une histoire jouée dans les rues.** Le rituel met en scène Roseta, un ours et un trappeur. Les personnages se déplacent entre les places, où le public participe aux scènes jusqu'au rasage final. Le [tourisme départemental](https://www.tourisme-pyreneesorientales.com/agenda/grands-evenements/fetes-de-lours/) décrit aussi un repas collectif qui ouvre traditionnellement la journée. Ces traditions ne garantissent ni un programme identique en 2027 ni une ambiance plus calme. Consultez le [site commun des Fêtes de l’Ours](https://www.fetesdelours.com/) avant de choisir.
+
+## Les fêtes de l'Ours junior: une autre façon de découvrir la tradition
+
+Les trois villages organisent traditionnellement une version junior pour transmettre le rituel aux enfants, comme l'explique [Destination Canigó](https://www.visit-canigo.com/canigo-terre-des-catalans/la-culture-catalane/les-fetes-de-lours-classement-unesco/). Si votre enfant hésite devant les grands ours, cherchez d'abord cette animation dans le programme du village. Elle ne constitue pas pour autant une garantie de calme: costumes, bruit et poursuites peuvent aussi impressionner. Les dates, âges de participation, modalités d'inscription et horaires des éditions junior 2027 ne sont pas confirmés. Ne réservez pas un séjour uniquement sur la base des dates de la fête principale.
+
+## Pourquoi chasse-t-on l’ours ?
+
+Les ours sont joués par des habitants, pas par des animaux. La poursuite, la capture et la transformation finale évoquent la fin de l'hiver, le retour du printemps et la relation entre les humains et la nature. Le mythe de Jean de l'Ours, être mi-homme, mi-ours, nourrit cet imaginaire.
+
+Ces fêtes se transmettent au sein des villages, des associations et des familles. Depuis **2022**, les [fêtes de l’Ours dans les Pyrénées sont inscrites au patrimoine culturel immatériel de l’humanité par l’UNESCO](https://ich.unesco.org/fr/RL/les-ftes-de-lours-dans-les-pyrnes-01846). Cette reconnaissance concerne cinq villages en France et en Andorre, dont les trois communes du Haut-Vallespir.
+
+## Avec des enfants: comment profiter de la fête ?
+
+Avant de venir, expliquez que les ours sont des personnes costumées et que les poursuites font partie du rituel. Pour une première découverte, privilégiez un endroit où vous pourrez vous éloigner rapidement si l'enfant prend peur. Évitez les passages étroits et le cœur des attroupements.
+
+À Prats-de-Mollo, le noir de fumée peut tacher les vêtements. Prévoyez des habits peu fragiles, des chaussures fermées et des vêtements chauds pour février. Avec un bébé ou une poussette, ne comptez pas sur une circulation fluide au milieu des défilés. Aucun parcours accessible ni espace calme spécifique pour 2027 n'est confirmé.
+
+Il n'existe pas de village à recommander sans réserve aux tout-petits. Un enfant qui aime les carnavals bruyants peut apprécier la fête; un autre préférera observer de loin, voire éviter les séquences de poursuite.
+
+## Organiser la visite
+
+Les trois villages se trouvent dans le Haut-Vallespir, au sud du Canigó. En février, vérifiez la météo et les conditions de circulation avant de partir. Les éventuelles restrictions de stationnement, navettes et fermetures de rues pour 2027 ne sont pas encore précisées.
+
+Les poursuites sont des fêtes populaires et aucune billetterie générale payante n'a été identifiée. Certains repas, bals ou événements annexes peuvent toutefois demander une réservation ou une participation: vérifiez le programme du village choisi.
+
+## Où dormir pour prolonger la découverte ?
+
+Si vous venez de loin, passer une nuit sur place permet de profiter des festivités sans reprendre immédiatement la route. À Prats-de-Mollo, un hébergement dans le village permet de limiter les déplacements:
+
+- **À Prats-de-Mollo-la-Preste**, le [FASTHOTEL Le Costabonne](https://www.booking.com/hotel/fr/restaurant-le-costabonne.fr.html), place du Foiral, propose notamment des chambres familiales et un restaurant, ainsi qu'un lit bébé sur demande.
+À Saint-Laurent-de-Cerdans, le Domaine de Falgos dispose de chambres familiales et d'une piscine intérieure, mais son ouverture en février 2027 n'est pas confirmée: la saison 2026 annoncée par Tourisme Occitanie allait d'avril à novembre. Ne comptez donc pas sur cet établissement sans confirmation préalable.
+
+Confirmez d'abord la date et le programme de votre fête, puis vérifiez les chambres disponibles et leurs conditions. Les tarifs et disponibilités pour février 2027 ne sont pas garantis.
 
 ## Article source exact à préserver et améliorer
 
@@ -266,17 +321,18 @@ Confirmez d'abord la date et le programme de votre fête, puis vérifiez les cha
 
 ### Articles proches préparés mécaniquement
 
+- /articles/bons-plans/musee-de-tautavel-moins-cher-avec-lio-le-bon-plan-a-connaitre/ | Musée de Tautavel moins cher avec liO: le bon plan à connaître | bons-plans | Tautavel, Pyrénées-Orientales, Occitanie
 - /articles/parentalite/quel-laep-choisir-a-perpignan-selon-l-age-et-le-jour/ | Quel LAEP choisir à Perpignan selon l'âge et le jour ? | parentalite | Perpignan, Pyrénées-Orientales, Occitanie
 - /articles/activites/parc-animalier-des-angles-en-famille-quel-circuit-choisir-et-comment-preparer-la-visite/ | Parc animalier des Angles en famille: quel circuit choisir et comment préparer la visite ? | activites | Les Angles, Pyrénées-Orientales, Occitanie
-- /articles/bons-plans/musee-de-tautavel-moins-cher-avec-lio-le-bon-plan-a-connaitre/ | Musée de Tautavel moins cher avec liO: le bon plan à connaître | bons-plans | Tautavel, Pyrénées-Orientales, Occitanie
 - /articles/sorties/insectes-compagnie-perpignan-famille-2026/ | Insectes et compagnie à Perpignan: trois visites ludiques en famille en août | sorties | Perpignan, Pyrénées-Orientales, Occitanie
-- /articles/cuisine/anchois-de-collioure-quelle-visite-choisir-avec-des-enfants/ | Anchois de Collioure: quelle visite choisir avec des enfants? | cuisine | Collioure, Pyrénées-Orientales, Occitanie
-- /articles/evenements/course-des-chateaux-d-ottrott-2026-quelles-epreuves-choisir-pour-les-enfants/ | Course des Châteaux d'Ottrott 2026: quelles épreuves choisir pour les enfants? | evenements | Ottrott, Bas-Rhin, Grand Est
+- /articles/evenements/carnaval-de-limoux-2027-en-famille-dates-fecos-et-conseils-pratiques/ | Carnaval de Limoux 2027 en famille: dates, Fécos et conseils pratiques | evenements | Limoux, Aude, Occitanie
+- /articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/ | Fête foraine de Dijon 2026: dates, horaires et budget avec les enfants | evenements | Dijon, Côte-d'Or, Bourgogne-Franche-Comté
 - /articles/evenements/nevers-en-fete-2026-quand-voir-les-illuminations-et-le-marche-de-noel-en-famille/ | Nevers en fête 2026: quand voir les illuminations et le marché de Noël en famille | evenements | Nevers, Nièvre, Bourgogne-Franche-Comté
-- /articles/sorties/lascaux-iv-en-famille-decouvrir-les-peintures-et-choisir-sa-visite/ | Lascaux IV en famille: découvrir les peintures et choisir sa visite | sorties | Montignac-Lascaux, Dordogne, Nouvelle-Aquitaine
+- /articles/evenements/chambly-kids-festival-2027-quatre-spectacles-pour-les-enfants-dates-et-ages/ | Chambly Kids Festival 2027: quatre spectacles pour les enfants, dates et âges | evenements | Chambly, Oise, Hauts-de-France
 - /articles/evenements/fetes-de-l-ours-2027-quelle-fete-choisir-en-famille-dans-les-pyrenees-orientales/ | Fêtes de l’Ours 2027: quelle fête choisir en famille dans les Pyrénées-Orientales ? | evenements | Pyrénées-Orientales, Occitanie
 - /articles/voyages/banyuls-sur-mer-en-famille-aquarium-et-balade-hors-saison/ | Banyuls-sur-Mer en famille: aquarium et balade hors saison | voyages | Banyuls-sur-Mer, Pyrénées-Orientales, Occitanie
 - /articles/sorties/forteresse-de-salses-en-famille-ce-que-change-le-nouveau-parcours/ | Forteresse de Salses en famille: ce que change le nouveau parcours | sorties | Salses-le-Château, Pyrénées-Orientales, Occitanie
+- /articles/cuisine/anchois-de-collioure-quelle-visite-choisir-avec-des-enfants/ | Anchois de Collioure: quelle visite choisir avec des enfants? | cuisine | Collioure, Pyrénées-Orientales, Occitanie
 - /articles/maison/renover-une-facade-a-perpignan-jusqu-a-40-d-aide-selon-le-secteur/ | Rénover une façade à Perpignan: jusqu'à 40 % d'aide selon le secteur | maison | Perpignan, Pyrénées-Orientales, Occitanie
 - /articles/vie-pratique/location-de-voiture-a-perpignan-en-famille-sieges-enfant-agences-et-bons-reflexes/ | Louer une voiture à Perpignan: aéroport, gare et stationnement | vie-pratique | Perpignan, Pyrénées-Orientales, Occitanie
 - /articles/evenements/spectacles-pour-enfants-a-nantes-en-fevrier-2027-que-choisir-pendant-les-vacances/ | Spectacles pour enfants à Nantes en février 2027: que choisir pendant les vacances ? | evenements | Nantes, Loire-Atlantique, Pays de la Loire
@@ -287,11 +343,12 @@ Confirmez d'abord la date et le programme de votre fête, puis vérifiez les cha
 - /articles/evenements/lumieres-d-afrique-2026-2027-a-sigean-les-lanternes-en-famille/ | Lumières d’Afrique 2026-2027 à Sigean: les lanternes en famille | evenements | Sigean, Aude, Occitanie
 - /articles/evenements/natur-armor-2027-a-paimpol-preparer-sa-visite-en-famille/ | Natur’Armor 2027 à Paimpol: préparer sa visite en famille | evenements | Paimpol, Côtes-d'Armor, Bretagne
 - /articles/evenements/noel-a-brive-2026-en-famille-animations-dates-et-parcours/ | Noël à Brive 2026 en famille: animations, dates et parcours | evenements | Brive-la-Gaillarde, Corrèze, Nouvelle-Aquitaine
-- /articles/evenements/musee-maurice-denis-en-famille-decouvrir-les-nabis-a-saint-germain-en-laye/ | Musée Maurice Denis en famille: découvrir les Nabis à Saint-Germain-en-Laye | evenements | Saint-Germain-en-Laye, Yvelines, Île-de-France
 
 ### Historique Radar lié
 
 - refresh | /articles/voyages/banyuls-sur-mer-en-famille-aquarium-et-balade-hors-saison/ | 2026-11-11T08:29:29.427Z
+- opportunity | /articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/ | 2026-10-25T17:34:53.718Z
+- refresh | /articles/evenements/fete-foraine-de-dijon-2026-en-famille-horaires-maneges-et-budget/ | 2026-11-12T12:32:06.313Z
 
 ### Phases 2 et 3
 
