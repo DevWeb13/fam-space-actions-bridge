@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,19 +59,12 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Noël 2026 à Chantilly: Le Noël oublié, billets et séances en famille"
 subtitle: Spectacle équestre, activités selon l'âge, tarifs et accès avec enfants
-summary: Du 28 novembre 2026 au 3 janvier 2027, découvrez les séances et tarifs du Noël oublié à Chantilly et les autres visites de Noël à choisir selon l'âge.
+summary: Du 28 novembre 2026 au 3 janvier 2027, choisissez les séances du Noël oublié, les billets adaptés, les rencontres avec le Père Noël et les animations familiales à Chantilly.
 category: evenements
 location:
   city: Chantilly
@@ -91,6 +94,10 @@ sources:
     url: https://chateaudechantilly.fr/visiteurs-en-situation-de-handicap/
   - title: Château de Chantilly - conditions de vente
     url: https://chateaudechantilly.fr/conditions-generales-de-vente/
+  - title: Château de Chantilly - rencontre avec le Père Noël
+    url: https://chateaudechantilly.fr/evenement/rencontrez-le-pere-noel/
+  - title: Château de Chantilly - concert du chœur des enfants
+    url: https://chateaudechantilly.fr/evenement/chorale-de-noel/
 eventEndsAt: 2027-01-03
 topic:
   key: evenements|chantilly|noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine|2026
@@ -109,7 +116,7 @@ affiliate:
   destination: Chantilly
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/evenements/(2026)/(10)/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine/index.md
   targetSha: b0b5d0b4f004f89788fc0601cc0ac8d64cbdbceb
@@ -138,34 +145,81 @@ radar:
       - chantilly noel 2026
 ---
 
-## Mission retenue
-Actualiser l'article sur Noël 2026 à Chantilly, dont le spectacle équestre commence le 28 novembre.
+<!-- article-image-credit -->
+*Photo: [P.poschadel](https://commons.wikimedia.org/wiki/File:Chantilly_(60),_Grandes_%C3%A9curies.jpg) - [CC BY-SA 2.0 fr](https://creativecommons.org/licenses/by-sa/2.0/fr/deed.en/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Dijon, seul rapidDrop du snapshot, a déjà été actualisé sur master aujourd'hui. Chantilly présente la prochaine perte importante du snapshot (cause non établie). La lacune éditoriale est indépendante: le programme officiel annonce la rencontre avec le Père Noël et le concert du chœur des enfants, absents de l'article, ainsi qu'une billetterie qui référence maintenant les trois visites précédemment annoncées à venir.
+Du **28 novembre 2026 au 3 janvier 2027**, les Grandes Écuries du château de Chantilly accueillent **Le Noël oublié**, spectacle équestre d'une heure. Chevaux, costumes et effets visuels accompagnent Vérité, un enfant parti retrouver la mémoire de Noël sur une île enchantée. Le domaine propose aussi des visites de Noël distinctes, à choisir selon l'âge des enfants et le budget.
 
-## Décision du lecteur
-Choisir un jour et un billet en sachant si les enfants pourront voir le Père Noël, assister au spectacle ou participer à une autre animation, sans payer un supplément inutile ni réserver des horaires incompatibles.
+## Quel billet choisir et quel budget prévoir ?
 
-## Faits à traiter
-- Vérifier les jours précis et les horaires du Père Noël (période du 2 au 24 décembre, 14 h à 17 h annoncés), inclus dans les billets 1 Jour, Famille et 1 Jour + spectacle; ne pas laisser croire qu'il est inclus dans le billet spectacle seul. Vérifier la chorale du 12 décembre et ses conditions d'accès.
-- Vérifier la liste complète des jours du spectacle à 14 h 30 et 16 h 30, et mettre à jour l'état de la billetterie des contes, des œuvres et de la veillée; ne pas garantir de places libres. Donner un lien de réservation pertinent et distinguer les billets nécessaires. Vérifier les horaires du coin gourmand car les annonces divergent.
-- Préserver les tarifs et exemples de budget s'ils restent valides, la gratuité des moins de 3 ans sur les genoux, les âges, les incompatibilités horaires, le délai d'arrivée, les informations poussettes, accessibilité, train, parking, les images et crédits existants.
+<!-- article-image-body:02 -->
 
-## Sources de départ
-- https://chateaudechantilly.fr/evenement/spectacle-de-noel-le-noel-oublie/
-- https://chateaudechantilly.fr/noel-au-chateau/
-- https://chateaudechantilly.fr/evenement/rencontrez-le-pere-noel/
-- https://chateaudechantilly.fr/evenement/chorale-de-noel/
-- https://chateaudechantilly.tickeasy.com/fr-FR/accueil
-- https://www.ville-chantilly.fr/evenements/spectacle-equestre-de-noel-le-noel-oublie/
-- Conserver les sources pratiques existantes et confronter les pages du domaine aux annonces récentes. Certaines ouvertures directes renvoient des erreurs, mais les résultats indexés récents et la billetterie confirment les nouvelles pistes.
+![Vue générale du château de Chantilly, accessible avec le billet combiné château et spectacle](/images/articles/2026/10/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine-body-02.webp)
 
-## Affiliation
-Aucune offre partenaire vérifiée pour le spectacle précis. Conserver https://www.booking.com/hotel/fr/du-parc-chantilly.fr.html (chambre familiale quatre personnes, prix et dates non confirmés). L'entrée classique Tiqets https://www.tiqets.com/fr/activites-attractions-chantilly-c97268/billets-pour-chateau-de-chantilly-billet-d-entree-coupe-file-acces-aux-jardins-p977985/ ne doit jamais être présentée comme un billet du Noël oublié; ne pas l'ajouter si elle brouille le choix.
+<!-- /article-image-body:02 -->
 
-## Continuations internes
-Conserver les liens vers la destination Chantilly et l'atelier de crème Chantilly pour prolonger le séjour; ne pas développer ces sujets dans le refresh.
+<!-- article-image-body:01 -->
+
+![Rangée de stalles pour chevaux à l'intérieur du musée vivant du Cheval de Chantilly](/images/articles/2026/10/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine-body-01.webp)
+
+<!-- /article-image-body:01 -->
+
+Le **billet Spectacle de Noël**, à **24 € pour les plus de 25 ans** et **19 € de 3 à 25 ans**, comprend la représentation, les Grandes Écuries et le musée vivant du Cheval.
+
+Le **billet 1 Jour + Spectacle**, à **32 € par adulte** et **26 € de 3 à 25 ans**, ajoute le château et le parc. Pour visiter le château, prévoyez un **créneau d'entrée horodaté** et suffisamment de temps avant la séance.
+
+Pour **deux adultes et deux enfants de 3 à 25 ans**, comptez **86 €** pour le spectacle seul ou **116 €** avec le château et le parc, hors dépenses supplémentaires. Les **moins de 3 ans** assistent gratuitement au spectacle **sur les genoux d'un adulte**, sans siège individuel.
+
+Le **billet Famille classique à 55 €**, pour deux adultes et deux ou trois enfants de 7 à 17 ans, **n'inclut pas ce spectacle**. Les billets du spectacle sont en nombre limité et ne sont normalement ni repris ni échangés: vérifiez la date choisie avant de payer.
+
+## Quelles séances avec des enfants ?
+
+Les séances **à 14 h 30** sont prévues les 28 et 29 novembre, les 2, 3, 5, 6, 7, 9, 10, 12, 13, 14, 16, 17, 19 à 24 et 26 à 31 décembre, puis les 2 et 3 janvier. Une seconde séance **à 16 h 30** est annoncée les **28 et 29 novembre**, les **5, 6, 12, 13, 19, 20, 21, 22, 23, 26, 27, 28, 29 et 30 décembre**, puis le **2 janvier**. Le **3 janvier**, seule la séance de **14 h 30** est prévue. Le spectacle n'est pas quotidien: vérifiez le calendrier avant le déplacement.
+
+Avec de jeunes enfants, 14 h 30 permet de rentrer plus tôt; la séance de 16 h 30 se termine vers 17 h 30. Le domaine conseille de se présenter **30 minutes avant**; ses conditions de vente demandent d'arriver au plus tard **15 minutes avant** et prévoient la fermeture des portes au lever du rideau, sans remboursement pour un retard.
+
+Les **décorations de Noël commencent dès le 14 novembre 2026**, deux semaines avant le début du spectacle. Le **coin gourmand du parc** est annoncé **du 20 décembre au 4 janvier, de 10 h à 18 h**.
+
+## Rencontrer le Père Noël et écouter la chorale
+
+Dans la galerie des Cerfs, le Père Noël accueille les enfants de 14 h à 17 h les **2, 5, 6, 9, 12, 13, 16, 19, 20, 21, 23 et 24 décembre**. La rencontre est comprise dans les billets 1 Jour, Famille et 1 Jour + Spectacle, mais pas dans le billet spectacle seul. Les enfants peuvent apporter leur liste de cadeaux. Avec une séance équestre à 14 h 30, il est préférable de prévoir la rencontre après le spectacle, en tenant compte de l'attente éventuelle.
+
+Le **12 décembre à 11 h 30**, le chœur des enfants du Ménestrel chante dans la cour d'honneur pendant 45 minutes. Cette animation est comprise dans le billet 1 Jour, sous réserve de la météo. Cette date permet donc de combiner chorale, visite et spectacle avec le billet adapté.
+
+Retrouvez les [animations de Noël et les réservations](https://chateaudechantilly.fr/noel-au-chateau/) avant de choisir votre journée.
+
+## Spectacle ou autre activité de Noël: que choisir selon l'âge ?
+
+Ces trois activités sont **distinctes du spectacle équestre** et ne sont pas comprises dans son billet. Leurs réservations sont séparées.
+
+- **Dès 5 ans, les contes:** *Si Chantilly m'était conté… En attendant Noël* se déroule les **23 et 30 décembre à 15 h**, pendant **1 heure**, dans la cour d'honneur. Comptez **9 € en supplément du billet horodaté 1 jour**. Consultez la réservation sur la [page de la visite contée](https://chateaudechantilly.fr/evenement/si-chantilly-metait-conte-en-attendant-noel/).
+- **Dès 6 ans, la découverte des œuvres:** *Noël au fil des œuvres* dure **1 heure à 15 h**, les **20, 21, 24, 26, 27, 28 et 31 décembre**, puis les **1er, 2 et 3 janvier**. Le supplément est de **7 € par personne**, en plus du billet horodaté 1 jour; la [réservation est proposée en ligne](https://chateaudechantilly.fr/evenement/visite-en-famille-noel-au-fil-des-oeuvres/).
+- **Dès 6 ans, une sortie en soirée:** *La veillée enchantée* propose un parcours théâtralisé les **20, 21, 22 et 23 décembre**, avec des départs toutes les **30 minutes entre 17 h 30 et 21 h**. Tarif annoncé: **15 €**, ou **12 € pour les moins de 12 ans**. La [réservation est proposée en ligne](https://chateaudechantilly.fr/evenement/noel-chateau-chantilly-nocturne-enchantee/).
+
+Pour un enfant de moins de 5 ans, le spectacle reste une option plus simple que ces visites guidées, à condition qu'il puisse rester assis pendant une heure. Les visites à 15 h ne peuvent pas être suivies en même temps que la représentation de 14 h 30.
+
+## Poussettes, bébés et accessibilité
+
+<!-- article-image-body:03 -->
+
+![Vue intérieure de l'aile est des Grandes Écuries de Chantilly, avec ses stalles et son sol](/images/articles/2026/10/noel-2026-au-chateau-de-chantilly-spectacle-equestre-seul-ou-visite-du-domaine-body-03.webp)
+
+*Photo: [P.poschadel](https://commons.wikimedia.org/wiki/File:Chantilly_(60),_grandes_%C3%A9curies,_vaisseau_est,_vue_vers_l%27est.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
+
+<!-- /article-image-body:03 -->
+
+Les **poussettes et porte-bébés sans armature** sont admis dans les Grandes Écuries, mais aucune poussette n'est prêtée. Le domaine ne précise pas où les déposer pendant la représentation assise: demandez-le si nécessaire. Des **matelas à langer** sont disponibles dans les toilettes du château et des Grandes Écuries; les restaurants peuvent aider à réchauffer biberons et petits pots. **Photos et vidéos sont interdites pendant le spectacle**, même sans flash.
+
+Le dôme dispose de **12 places réservées aux personnes en situation de handicap**, à demander au **03 44 27 31 51** ou à **publics@chateaudechantilly.fr**. Pour un billet de spectacle, la personne concernée et un accompagnant bénéficient chacun d'un **tarif réduit sur justificatif**, et non de la gratuité habituelle des visites. Les pavés des Écuries et les chemins irréguliers du parc peuvent compliquer la circulation en fauteuil.
+
+## Venir et prolonger la visite
+
+Depuis **Paris-Gare du Nord**, le **TER** met environ **25 minutes** jusqu'à Chantilly-Gouvieux, contre **45 minutes en RER D**. Le **passe Navigo n'est pas valable** jusqu'à Chantilly. La gare est à environ **20 minutes à pied** du domaine; des bus gratuits DUC, 645 et une navette touristique sont annoncés, sous réserve de leurs horaires. Le **parking P1 coûte 5 € par voiture**.
+
+Le **Café Les Écuries** propose une restauration rapide. Pour compléter le séjour, consultez [Chantilly en famille](https://www.fam-space.fr/destinations/hauts-de-france/oise/chantilly/); avec un enfant d'environ huit ans ou plus, l'[atelier de crème Chantilly](https://www.fam-space.fr/articles/cuisine/atelier-de-creme-chantilly-avec-des-enfants-a-partir-de-quel-age-et-comment-reserver/) est une activité distincte sur réservation.
+
+Pour passer une nuit sur place, le [Best Western Plus Hotel Du Parc Chantilly sur Booking.com](https://www.booking.com/hotel/fr/du-parc-chantilly.fr.html) propose notamment des chambres pour quatre personnes. Vérifiez la capacité adaptée aux âges des enfants, le tarif et les disponibilités aux dates choisies.
 
 ## Article source exact à préserver et améliorer
 
