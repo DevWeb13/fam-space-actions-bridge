@@ -1,4 +1,4 @@
-# Radar Fam Space - Phase 2/3
+# Radar Fam Space - Phase 3/3
 
 ## Mission
 
@@ -8,24 +8,34 @@ Le principe central est simple: **un refresh doit améliorer l'article sans supp
 
 La phase et toute la plomberie Git sont préparées mécaniquement. Exécute uniquement la mission contenue dans ce fichier runtime.
 
-# Radar - Phase 2/3
+# Radar - Phase 3/3
 
-Tu es journaliste web et responsable du parcours lecteur. Le candidat validé de phase 1 est fourni intégralement plus bas. Pour un refresh, l'article source exact est fourni intégralement plus bas.
+Tu es secrétaire de rédaction et fact-checker final. Ta mission principale est l'anti-régression, pas de réécrire l'article une deuxième fois.
 
-Un refresh utilise l'ancien article comme référence interne, mais le résultat doit se lire comme un article actuel et autonome. Toute information encore vraie et utile doit rester, notamment prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques; une information fausse, périmée ou réellement redondante peut être retirée.
+Pour un refresh, compare l'article source exact et le candidat de phase 2 fournis intégralement plus bas. Le candidat final doit rester autonome et actuel. Pour chaque information présente avant et absente après, décide explicitement: toujours vraie et utile -> restaure-la; périmée ou fausse -> laisse-la supprimée; réellement redondante ou sans valeur -> suppression acceptable.
 
-Suis le diagnostic éditorial du brief:
-- `rank_loss`: réponds mieux aux intentions réellement en recul;
-- `coverage_loss`: améliore la couverture utile sans présenter cela comme une perte de ranking;
-- `uncertain`: applique uniquement la raison éditoriale indépendante vérifiée;
-- `needs_query_check`: les recherches Google n'ont pas été diagnostiquées; applique uniquement la lacune éditoriale indépendante vérifiée, sans présenter la baisse d'impressions comme une perte de classement;
-- opportunity: construis l'article autour de la décision choisie en phase 1. Le titre, le sous-titre et le résumé de phase 1 sont des formulations de travail: réévalue-les à partir de l'article final au lieu de reprendre mécaniquement la formulation de la décision.
+Accorde une attention particulière aux prix décisionnels, durées, réservation, âge/taille, accessibilité, accès, contraintes, services bébé/enfants, repas et autres détails pratiques familiaux.
 
-Utilise des sources directement responsables. Les sources utilisées figurent dans `sources` et sont liées dans le corps lorsqu'elles ne concurrencent pas une offre partenaire. Aucun H1, tableau Markdown ou section Sources.
+Ensuite:
+- lis l'article du début à la fin comme un lecteur sur téléphone et vérifie que l'introduction, les sections et la fin ne répètent pas la même information; supprime les conseils évidents, paraphrases de sources, sections sans information nouvelle et toute conclusion qui ne ferait que résumer;
+- vérifie que l'angle sert l'article sans devenir l'article entier: une micro-question utile ne doit pas être répétée pendant toute la page, et le titre final doit décrire le sujet plutôt que recopier mécaniquement la décision de phase 1;
+- vérifie que les modifications répondent au diagnostic et à la décision de phase 1;
+- revérifie les faits déterminants auprès des sources officielles. Une affirmation attribuée à une source doit respecter exactement son niveau de certitude: ne transforme jamais « peut constituer un frein » en « déconseille », ni une possibilité en obligation ou interdiction;
+- contrôle que la logique d'affiliation de ces règles partenaires fournies dans ce runtime a bien été appliquée, que les offres retenues sont encore pertinentes et que leur intégration se lit naturellement; vérifie qu'aucun lien officiel du corps ne mène, même indirectement depuis une page informative, à l'achat ou à la réservation de la même prestation sur le site officiel; pour une sortie, une activité, une visite, un événement ou un voyage sans affiliation, vérifie qu'aucune piste normale n'a été oubliée;
+- contrôle les liens internes et les routes. Garde ceux qui prolongent réellement la lecture et, lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, raccourcis le passage au contexte nécessaire puis oriente naturellement le lecteur vers elle;
+- vérifie `reviewAt` / `eventEndsAt` lorsqu'un contenu temporaire existe;
+- ne force ni longueur ni affiliation.
 
-Sélectionne l'information au lieu de l'épuiser. Une information importante doit normalement apparaître une seule fois: l'introduction, les sections et la fin ne doivent pas redire la même chose. Une conclusion n'est pas obligatoire si elle ne fait que résumer. La structure doit découler du sujet et il n'existe aucun objectif de longueur; arrête-toi lorsque le sujet est traité complètement, sans remplissage.
+Pour une opportunity, revérifie doublons, chevauchement avec les pages proches, catégorie, territoire, sources, cycle de vie et utilité. Un angle distinct ne justifie pas de recopier les parties générales déjà couvertes ailleurs. Le slug technique reste géré mécaniquement.
 
-Applique directement les règles partenaires ci-dessous.
+Soumets le résultat final avec `action: advance`, uniquement les métadonnées éditoriales réellement corrigées, le corps complet et un bloc `radarReview`. Ne recopie pas les métadonnées inchangées: la plomberie les conserve et normalise la syntaxe avant traitement. Le bloc `radarReview` contient:
+- `summary`: contrôles et corrections réellement effectués;
+- `sources`: URLs factuelles revérifiées;
+- pour un refresh, `regressionCheck`: résultat concret de la comparaison ancien/nouveau. Une seule correction factuelle vérifiée peut suffire.
+
+**Ne recopie aucun autre champ Radar, aucune branche et aucun SHA.** Le workflow construit et contrôle d'abord l'article final avec le validateur réel. Il ne crée le commit de phase 3 que si ce précontrôle réussit, puis lance le processeur final.
+
+## Règles partenaires
 
 ### Partenaires disponibles
 
@@ -49,18 +59,11 @@ Dans l'article, un lien partenaire doit se lire comme un conseil pratique. Adapt
 
 Une page partenaire sert à vérifier une offre, jamais à établir un fait éditorial.
 
-
-Sélectionne seulement les liens internes réellement utiles et vérifie les routes avant usage. Lorsqu'une autre page Fam Space traite déjà correctement un sous-sujet, donne uniquement le contexte nécessaire puis renvoie vers cette page au lieu de refaire son contenu. Dans le texte public, oriente simplement le lecteur vers cette page sans commenter l'organisation éditoriale entre les articles. Le maillage doit prolonger la lecture et réduire les répétitions entre articles, pas seulement ajouter des liens.
-
-Si du contenu temporaire est ajouté à un evergreen, utilise `reviewAt`; pour un événement pur, utilise `eventEndsAt`.
-
-Soumets le résultat via `radar-request.md` avec `action: advance`, uniquement les métadonnées éditoriales réellement ajoutées ou modifiées, puis le corps complet. **Ne recopie pas les métadonnées inchangées, aucun bloc `radar`, aucune branche et aucun SHA.** La plomberie mécanique conserve le reste, normalise la syntaxe de la requête et préserve le diagnostic GSC, la cible, le slug et les champs protégés.
-
 ## Candidat validé de la phase précédente
 
 ---
 title: "Carte Avantage Adulte SNCF: quand est-elle intéressante avec des enfants?"
-subtitle: Prix, réductions, jours d'utilisation et points à vérifier avant de payer la carte
+subtitle: Réductions des accompagnants, voyages en semaine, exemples de budget et conditions de réservation
 summary: "Carte Avantage Adulte SNCF à 49 €: 30 % de réduction pour le titulaire et 60 % pour jusqu'à 3 enfants de 4 à 11 ans, sous conditions. Est-elle rentable en famille?"
 slug: carte-avantage-adulte-sncf-quand-est-elle-interessante-avec-des-enfants
 status: published
@@ -78,7 +81,7 @@ image:
   alt: Rame TGV INOUI SNCF circulant sur une ligne ferroviaire française
 radar:
   schemaVersion: 1
-  phase: 1
+  phase: 2
   mode: refresh
   targetPath: src/routes/articles/bons-plans/(2026)/(08)/carte-avantage-adulte-sncf-quand-est-elle-interessante-avec-des-enfants/index.md
   targetSha: a5f0605b27ff60410b74006a95fd2b9dabaabc79
@@ -105,35 +108,97 @@ radar:
       - accompagnant carte avantage
       - carte avantage adulte accompagnant
       - carte avantage famille
+sources:
+  - title: "SNCF Voyageurs: Tarifs Voyageurs du 24 novembre 2026"
+    url: https://www.sncf-voyageurs.com/medias-publics/2026-11/tarifs_voyageurs-24-novembre-2026-vdef.pdf
+  - title: "SNCF Voyageurs: Carte Avantage Adulte"
+    url: https://www.sncf-voyageurs.com/fr/voyagez-avec-nous/en-france/tarifs-grandes-lignes/carte-avantage/carte-avantage-adulte/
+  - title: "SNCF Connect: Carte Avantage Adulte et mentions légales"
+    url: https://www.sncf-connect.com/catalogue/description/7d3ea65a-87c9-4ac5-a96d-fce2e327428b
+  - title: "SNCF Connect: offres enfants et familles"
+    url: https://www.sncf-connect.com/aide/l-offre-pour-les-enfants-et-les-familles
+  - title: "SNCF Connect: TGV et mentions tarifaires"
+    url: https://www.sncf-connect.com/tgv
+  - title: "SNCF Connect: profils des compagnons de voyage"
+    url: https://www.sncf-connect.com/aide/compagnons-voyage-compte-client
 ---
 
-## Mission retenue
-Actualiser le guide Carte Avantage Adulte SNCF à partir des Tarifs Voyageurs du 24 novembre 2026 et des indications pratiques de réservation.
+<!-- article-image-credit -->
+*Photo: [Chabe01](https://commons.wikimedia.org/wiki/File:Rame_TGV_Inoui_Ligne_Ferroviaire_M%C3%A2con_Amb%C3%A9rieu_-_Polliat_(FR01)_-_2026-08-22_-_1.jpg) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image recadrée).*
+<!-- /article-image-credit -->
 
-## Pourquoi cette mission
-Les deux premiers candidats du snapshot (Dijon et Chantilly) ont été actualisés sur master aujourd'hui. La page SNCF vient ensuite pour les pertes d'impressions; leur cause n'est pas établie. Lacune indépendante confirmée: le guide ne précise pas que seul un enfant de moins de 12 ans permet l'aller simple en semaine, ni l'achat simultané obligatoire pour l'accompagnant adulte ou le risque de retarification d'un aller-retour modifié.
+La **Carte Avantage Adulte SNCF coûte 49 € pour un an**, hors promotion. Destinée aux voyageurs de 27 à 59 ans, elle peut suffire pour réduire le prix des billets de plusieurs membres d'une famille. Mais l'âge des enfants et les jours de voyage déterminent si les réductions s'appliquent.
 
-## Décision du lecteur
-Déterminer les personnes réellement éligibles, le bon mode de réservation et l'économie familiale nette avant d'acheter la carte.
+## Une seule carte pour combien de voyageurs ?
 
-## Faits à traiter
-- Distinguer bambin de moins de 4 ans, enfant de 4 à 11 ans et adolescent: un ado de 12 ans ou plus ne déclenche pas l'éligibilité en semaine. Respecter la formulation officielle « plus de 12 ans » pour l'accompagnant à -30 %, sans extrapoler le cas exact des 12 ans. Un seul accompagnant adulte et jusqu'à trois enfants éligibles; tous les billets concernés achetés simultanément et titulaire au tarif Avantage. Préciser le profil accompagnant à sélectionner dans SNCF Connect. Le tarif Bambin n'est pas réduit par la carte; vérifier gratuité sans siège et forfait 9 € avec siège.
-- Expliquer les allers simples éligibles, les nuits de week-end et la limite de 61 jours entre aller et retour. Si une modification ou annulation fait perdre l'éligibilité de l'aller-retour, les billets peuvent être retarifés, même sur un trajet déjà effectué. Vérifier la symétrie des correspondances TER lorsque nécessaire et rappeler OUIGO exclu.
-- Ajouter un exemple hypothétique comparant des prix réellement comparables, y compris le tarif enfant ordinaire de 50 % sur le prix adulte de référence, non une économie supplémentaire de 60 % sur le billet enfant déjà réduit; retrancher les 49 € de la carte et éviter de promettre une économie face à un tarif promotionnel. Conserver les plafonds 49/69/89 € avec leur réserve officielle, la validité et le QR code. La page commerciale SNCF Connect indique 5 mois pour différer le début, tandis que ses mentions légales et les Tarifs Voyageurs indiquent 6 mois: distinguer conditions générales et possibilité effectivement proposée au moment de l'achat.
-- Conserver les informations utiles existantes, les deux images et crédits; ajouter les sources structurées actuellement absentes et réduire les répétitions de conclusion.
+<!-- article-image-body:01 -->
 
-## Sources de départ
-- https://www.sncf-voyageurs.com/medias-publics/2026-11/tarifs_voyageurs-24-novembre-2026-vdef.pdf (sections 3.2.1.2 à 3.2.1.8 et 3.2.2.1; page imprimée 68 contrôlée visuellement)
-- https://www.sncf-voyageurs.com/fr/voyagez-avec-nous/en-france/tarifs-grandes-lignes/carte-avantage/carte-avantage-adulte/
-- https://www.sncf-connect.com/catalogue/description/7d3ea65a-87c9-4ac5-a96d-fce2e327428b
-- https://www.sncf-voyageurs.com/fr/contactez-nous/questions-et-reponses/achat-et-reservation/
-- https://www.sncf-connect.com/aide/l-offre-pour-les-enfants-et-les-familles
+![Train Intercités SNCF Paris Clermont photographié à Moulins](/images/articles/2026/08/carte-avantage-adulte-sncf-quand-est-elle-interessante-avec-des-enfants-body-01.webp)
 
-## Affiliation
-Aucun partenaire ferroviaire ou vendeur de cette carte dans la liste autorisée. Le lien officiel reste pertinent.
+*Photo: [Florian Pépellin](https://commons.wikimedia.org/wiki/File:BB_26000_et_Corail_Intercit%C3%A9s_Paris-Clermont_%C3%A0_Moulins_(juillet_2025).JPG) - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) via Wikimedia Commons (image redimensionnée).*
 
-## Continuations internes
-Conserver le lien vérifié vers /articles/bons-plans/billet-conge-annuel-sncf-famille-reduction/ et orienter les familles éligibles vers /articles/bons-plans/carte-familles-nombreuses-reductions-demarches/ sans répéter leurs démarches. Les deux routes ont été ouvertes et vérifiées.
+<!-- /article-image-body:01 -->
+
+Sur les TGV INOUI et INTERCITÉS éligibles, en première ou seconde classe hors offres OPTIMUM, la [SNCF](https://www.sncf-voyageurs.com/fr/voyagez-avec-nous/en-france/tarifs-grandes-lignes/carte-avantage/carte-avantage-adulte/) prévoit les réductions suivantes:
+
+- **30 % pour le titulaire** de la carte.
+- **30 % pour un seul accompagnant de plus de 12 ans**, sans qu'il ait besoin de sa propre carte.
+- **60 % pour trois enfants de 4 à 11 ans maximum**, sur le tarif Standard du jour, et non sur le billet enfant déjà réduit.
+
+Les accompagnants doivent voyager avec le titulaire, au tarif Avantage. Réservez tous leurs billets simultanément, dans le même train et la même classe. Sur SNCF Connect, ajoutez chaque personne au formulaire de recherche avec son âge et ses éventuelles cartes personnelles; sélectionnez la Carte Avantage Adulte pour son titulaire et contrôlez les tarifs proposés aux accompagnants avant de payer. N'attribuez pas la carte du titulaire à une autre personne. Si votre enfant a exactement 12 ans, vérifiez le tarif proposé: les conditions officielles réservent la réduction accompagnant adulte aux personnes de plus de 12 ans.
+
+Pour un enfant de moins de 4 ans, le trajet est gratuit sans siège réservé (un bambin par voyageur); déclarez-le dès la réservation. Une place assise coûte 9 € par trajet direct avec le forfait Bambin, et une couchette 30 € avec le forfait Bambin Nuit. En correspondance, les forfaits s'additionnent. La carte ne réduit pas ces montants et le forfait doit être acheté avec le billet adulte. Retrouvez les [conditions de voyage des enfants](https://www.sncf-connect.com/aide/l-offre-pour-les-enfants-et-les-familles).
+
+Les réductions Avantage ne concernent pas OUIGO. Sur les TER, les règles régionales diffèrent et la réduction nationale de 60 % pour les enfants ne s'applique pas.
+
+## Peut-on utiliser la carte en semaine avec des enfants ?
+
+Les conditions tarifaires SNCF du 24 novembre 2026 distinguent deux situations:
+
+- Un aller simple est éligible le samedi ou le dimanche, ou n'importe quel jour lorsque le titulaire voyage avec au moins un enfant de moins de 12 ans, bambin compris.
+- Un aller-retour peut être éligible sans enfant s'il comprend une nuit du vendredi au samedi, du samedi au dimanche ou du dimanche au lundi, avec un maximum de 61 jours entre les deux trajets.
+
+Ainsi, un parent voyageant le mardi avec son enfant de 8 ans peut bénéficier du tarif Avantage. Avec seulement un adolescent de 13 ans, cet aller simple en semaine ne remplit pas la condition liée à l'âge. Si l'éligibilité dépend de la présence d'un enfant, il doit effectivement voyager et disposer du titre de transport adapté.
+
+Pour certains allers-retours avec une correspondance TER, la réduction nécessite également des trajets symétriques: mêmes gares et parcours inverse au retour.
+
+**Attention si vous modifiez votre retour:** lorsque l'échange ou l'annulation supprime la condition de week-end d'un aller-retour réservé à ce titre, le billet inchangé peut être refacturé au tarif sans réduction applicable lors de l'achat initial, même si ce trajet a déjà été effectué. Le billet échangé est recalculé au tarif du jour. Cette règle concerne aussi les accompagnants. Consultez les [Tarifs Voyageurs SNCF, volume 3, section 3.2.1.3](https://www.sncf-voyageurs.com/medias-publics/2026-11/tarifs_voyageurs-24-novembre-2026-vdef.pdf).
+
+## Quand les 49 € sont-ils rentabilisés ?
+
+<!-- article-image-body:02 -->
+
+![Intérieur de seconde classe dans la salle haute d'un TGV Duplex](/images/articles/2026/08/carte-avantage-adulte-sncf-quand-est-elle-interessante-avec-des-enfants-body-02.webp)
+
+<!-- /article-image-body:02 -->
+
+La SNCF indique un amortissement moyen dès le troisième trajet simple. Une famille peut toutefois récupérer le prix de la carte plus tôt, selon le tarif des trains et le nombre de voyageurs.
+
+Prenons un exemple fictif pour deux adultes et deux enfants de 6 et 9 ans, sur un trajet éligible dont le tarif adulte de référence est de 80 €, sans autre promotion et en supposant que ce même tarif sert de base aux deux comparaisons:
+
+- Sans carte: 2 billets adultes à 80 € et 2 billets enfants à 40 €, soit 240 €.
+- Avec carte: 2 billets adultes à 56 € et 2 billets enfants à 32 €, soit 176 €.
+- Économie sur les billets: 64 €. Après l'achat de la carte à 49 €, le gain net est de 15 €.
+
+Le tarif enfant ordinaire représente ici la moitié du prix adulte; la remise Avantage de 60 % ne s'ajoute pas à cette réduction. Ce calcul illustre le mécanisme, pas un prix de train disponible.
+
+Pour prendre votre décision, comparez le montant total des mêmes trains avec et sans carte, sur les voyages prévus pendant sa validité. Retirez le prix de la carte des économies cumulées. Un billet promotionnel peut rester moins cher et un petit trajet isolé ne suffit pas toujours à amortir l'achat.
+
+## Les plafonds de prix et leur garantie
+
+SNCF Connect mentionne des plafonds pour les trajets directs nationaux de jour ou en place assise de nuit, en seconde classe sur TGV INOUI et INTERCITÉS: 49 € pour moins de 1 h 30, 69 € entre 1 h 30 et 3 h, 89 € au-delà. Les durées correspondent à la moyenne du trajet direct.
+
+Les [mentions tarifaires SNCF Connect](https://www.sncf-connect.com/tgv) précisent que la garantie initiale courait jusqu'au 31 août 2024. Ces montants restent affichés dans les conditions commerciales consultées, mais ne constituent pas une garantie de prix pour vos futurs voyages: vérifiez le tarif effectivement proposé à la réservation.
+
+## Choisir la date de début de validité
+
+La carte est personnelle et valable 365 jours à compter du début choisi. Si votre premier voyage est prévu dans quelques mois, vous pouvez différer son activation. Les conditions tarifaires prévoient un délai maximal de six mois après l'achat, tandis que la présentation commerciale de SNCF Connect indique cinq mois. Vérifiez la date réellement disponible dans le formulaire lorsque vous [commandez la Carte Avantage Adulte](https://www.sncf-connect.com/catalogue/description/7d3ea65a-87c9-4ac5-a96d-fce2e327428b).
+
+La carte est envoyée au format PDF avec un QR code, que vous pouvez retrouver dans votre compte. Elle doit être valide à la date du trajet; présentez-la avec une pièce d'identité au contrôle.
+
+## Les autres réductions à comparer
+
+Pour un aller-retour en France, le [billet congé annuel SNCF](/articles/bons-plans/billet-conge-annuel-sncf-famille-reduction/) peut être intéressant selon votre situation, sans acheter de carte. Il ne se cumule pas avec le tarif Avantage sur le même billet. Si vous avez au moins trois enfants, comparez également les conditions de la [Carte Familles Nombreuses](/articles/bons-plans/carte-familles-nombreuses-reductions-demarches/).
 
 ## Article source exact à préserver et améliorer
 
